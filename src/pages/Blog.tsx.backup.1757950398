@@ -280,8 +280,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
 };
 >>>>>>> origin/dependabot/npm_and_yarn/next-themes-0.4.6

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -13,7 +12,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   color = 'blue',
   text,
   fullScreen = false
-=======
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
@@ -35,7 +33,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     xl: 'w-16 h-16'
   };
 
-<<<<<<< HEAD
   const colorClasses = {
     blue: 'text-blue-600',
     white: 'text-white',
@@ -63,7 +60,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
 
   return spinner;
-=======
   return (
     <motion.div
       className={`${sizeClasses[size]} ${color} ${className}`}
@@ -92,4 +88,3 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 >>>>>>> origin/aggressive-merge-backup-20250915-162542
 };
 
-export default LoadingSpinner;

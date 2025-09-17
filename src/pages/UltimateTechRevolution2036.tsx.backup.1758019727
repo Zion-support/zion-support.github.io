@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 >>>>>>> origin/backup-main-20250916-071805
 import Header from '../Header';
@@ -249,8 +247,6 @@ const UltimateTechRevolution2036: React.FC = () => {
                 <li>• Infinite dimensional control</li>
               </ul>
             </divdiv>
-<<<<<<< HEAD
-=======
             </motion.div>
 >>>>>>> origin/backup-main-20250916-071805
           </div>
@@ -258,8 +254,6 @@ const UltimateTechRevolution2036: React.FC = () => {
 
         {/* Call to Action */}
         <divdiv
-<<<<<<< HEAD
-=======
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

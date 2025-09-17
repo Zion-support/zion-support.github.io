@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface ServicesoverviewProps {
-  // Add props here as needed
-
-;
-import React from 'react';
-interface ServicesoverviewProps  {// Add props here as needed;
-import * as React from 'react';
-interface ServicesoverviewProps  {// Add props here as needed;
-}export default function Servicesoverview() {import Link from \'next/link\'; import Head from \'next/head\'; export default function ServicesOverview() { const contact = { \"phone\": \'+1 302 464 0950,\',\"email\": \'kleber@ziontechgroup.com\',\"address\": \'364 E Main St STE 1008 Middletown D,E 19709,\',\"site\": \'https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name=\"description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries.\" />\"<meta name=\"keywords\" content=\"services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions\" />\"<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />\"<meta name=\"robots\" content=\"index,follow\" />\"<link rel=\"canonical\" href={`${contact.site}/services-overview`} />\"<meta property=\""og\": title\" content=\"Services Overview - Zion Tech Group\" />\"<meta property=\"og:description\" content=\"Comprehensive overview of Zion Tech Group\'s 340+ innovative services including micro SaaS products AI services,and IT solutions across multiple industries.\" />\"<meta property=\""og\": url\" content={`${contact.site}/services-overview`} />\"<meta property=\""og\": type\" content=\"website\" />></div> \"<main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\" role=\"main\">{}\"<div className=\"text-center bg-slate-900/60 rounded-xl border border-white/10 p-12\">\"<h2 className=\"text-3xl font-bold mb-6\">Ready to Transform Your Business?</h2>\"<p className=\"text-xl text-slate-300 mb-8 max-w-2xl mx-auto\"> Let our experts help you choose the right solutions for your specific needs and industry requirements.</p>\"<div className=\"flex flex-col \"sm\": flex-row items-center justify-center gap-4\"><Link \"; href=\"/contact; className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900\""; aria-label=\"Contact us for a consultation\"> Get Free Consultation</Link><Link \"; href=\"/services-catalog; className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900\""; aria-label=\"Browse our services catalog\"> Browse Catalog</Link></div></div></div></section></mai,n>></div> )} </div></div></div></div></div></div></div></div>;
-const Link from "next/link"; import Head from "next/head"; export default function ServicesOverview() { const contact = { phone: "+1 302 464 0950,",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown D,E 19709,",site: "https: return (<><Head><title>Services Overview - Zion Tech Group</title><meta name="description" content="Comprehensive overview of Zion Tech Group"s 340+ innovative services including micro SaaS products,AI services,and IT solutions across multiple industries." />"<meta name="keywords" content="services overview,micro SaaS,AI services,IT solutions,technology services,enterprise solutions" />"<meta name="viewport" content="width=device-width,initial-scale=1" />"<meta name="robots" content="index,follow" />"<link rel="canonical" href={`${contact.site}/services-overview`} />"<meta property="og: title" content="Services Overview - Zion Tech Group" />"<meta property="og:description" content="Comprehensive overview of Zion Tech Group"s 340+ innovative services including micro SaaS products AI services,and IT solutions across multiple industries." />"<meta property="og: url" content={`${contact.site}/services-overview`} />"<meta property="og: type" content="website" />></div> "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">{}"<div className="text-center bg-slate-900/60 rounded-xl border border-white/10 p-12">"<h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>"<p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto"> Let our experts help you choose the right solutions for your specific needs and industry requirements.</p>"<div className="flex flex-col sm: flex-row items-center justify-center gap-4"><Link "; href="/contact; className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900""; aria-label="Contact us for a consultation"> Get Free Consultation</Link><Link "; href="/services-catalog; className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900""; aria-label="Browse our services catalog"> Browse Catalog</Link></div></div></div></section></mai,n>></div> )} </div></div></div></div></div></div></div></div>""`"`;
-interface ServicesoverviewProps  {// Add props here as needed;
-}
-
-export default function Servicesoverview({ }: ServicesoverviewProps) {
+const services-overview: React.FC = () => {
   return (
-    <div>
-      <h1>Servicesoverview</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">services-overview</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default services-overview;

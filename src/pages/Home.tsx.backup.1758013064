@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -89,8 +87,6 @@ const Home: React.FC = () => {
               Revolutionary AI systems that exhibit true consciousness and self-awareness, 
               capable of independent thought and creative problem-solving.
             </p>
-<<<<<<< HEAD
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
@@ -129,8 +125,6 @@ const Home: React.FC = () => {
               Advanced AI-powered security systems that predict and prevent threats 
               before they occur, protecting across all dimensions.
             </p>
-<<<<<<< HEAD
-=======
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />

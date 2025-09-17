@@ -1,74 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-
+const global-bounties: React.FC = () => {
   return (
-    <EnhancedLayout>
-      <div className="max-w-5xl mx-auto py-10">
-        <h1 className="text-3xl font-bold">Global Bounties</h1>
-
-        <ul className="mt-6 space-y-4">
-          {items.map((it, idx) => (
-            <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
-
-                {it.title}
-              </a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()}
-              </div>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
-            </li>
-          ))}
-        </ul>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>global-bounties | Zion Tech Group</title>
+        <meta name="description" content="global-bounties - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">global-bounties</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </EnhancedLayout>
+    </div>
   );
 };
 
-                {it.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </Link>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                {it.repo} · {it.language} · {new Date(it.created_at).toLocaleString()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
-
-
-
-
-            </li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </ul>;
-      </div>;
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-
-}
-}
-
-
-
-
-
-
-
-
-
+export default global-bounties;

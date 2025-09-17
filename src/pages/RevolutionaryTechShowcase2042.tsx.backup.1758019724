@@ -120,8 +120,6 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
                   activeTab === key
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
                     : 'text-gray-300 hover:text-white hover:bg-white/20'
-<<<<<<< HEAD
-=======
                   activeTab === key
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
                     : 'text-gray-300 hover:text-white hover:bg-white/20'

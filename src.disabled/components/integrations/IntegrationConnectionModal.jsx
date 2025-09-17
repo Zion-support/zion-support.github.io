@@ -1,4 +1,12 @@
-' ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)';"";""}
-' \' \' \' \"export\": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ \"autoCreateContacts\": \'tru\',e,\"pushNotes\": \'fals\',e,\"syncJobDetails\": \'tru\',e,\"syncApplicantData\": \'true\'}) const handleConnectOAuth = () => { setIsConnecting(true)\';\"";
-" " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
-' ' ' ' "export": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ "autoCreateContacts": 'tru',e,"pushNotes": 'fals',e,"syncJobDetails": 'tru',e,"syncApplicantData": 'true'}) const handleConnectOAuth = () => { setIsConnecting(true)';"";""}
+import React from 'react';
+
+const IntegrationConnectionModal: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">IntegrationConnectionModal</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default IntegrationConnectionModal;

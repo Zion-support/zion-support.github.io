@@ -1,7 +1,14 @@
-import React from 'react';
 import Link from 'next/link';
 
 const posts = [
+  { href: '/blog/ai-2026-guardrail-scorecards-executive-brief', title: 'Guardrail Scorecards — Executive Brief (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-zero-downtime-agent-rollouts', title: 'AI 2026: Zero‑Downtime Agent Rollouts', tag: 'New' },
+  { href: '/blog/ai-2026-agentic-cost-controls-deep-dive', title: 'Agentic Cost Controls — Deep Dive (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-enterprise-ai-readiness-checklist', title: 'Enterprise AI Readiness Checklist (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-production-agent-runbooks-templates', title: 'Production Agent Runbooks — Templates (2026)', tag: 'New' },
+  { href: '/blog/trusted-rag-2026-grounded-answer-scorecards', title: 'Trusted RAG — Grounded Answer Scorecards (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-eval-gated-safety-scorecards', title: 'Eval‑Gated Safety Scorecards (2026)', tag: 'New' },
+  { href: '/blog/ai-2026-enterprise-ai-readiness-checklist', title: 'Enterprise AI Readiness Checklist (2026)', tag: 'New' },
   { href: '/blog/ai-2026-evidence-hub-architecture', title: 'Production Evidence Hub Architecture (2026)', tag: 'New' },
   { href: '/blog/ai-2026-policy-as-code-blueprint', title: 'Policy‑as‑Code Blueprint (2026)', tag: 'New' },
   { href: '/blog/ai-2026-policy-as-code-starter-kit', title: 'Policy‑as‑Code Starter Kit (2026)', tag: 'New' },

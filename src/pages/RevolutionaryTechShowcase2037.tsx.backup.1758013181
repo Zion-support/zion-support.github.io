@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import React from 'react';
 import React, { useState } from 'react';
 >>>>>>> origin/backup-main-20250916-071805
@@ -137,8 +135,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                     <div className="text-3xl font-bold text-indigo-300 mb-2">Revolutionary</div>
                     <div className="text-sm text-indigo-200">This demo will fundamentally change your understanding of technology</div>
                   </div>
-<<<<<<< HEAD
-=======
         {/* Interactive Technology Demos */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -224,8 +220,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                   Manipulate Reality
                 </button>
               </div>
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2037: React.FC = () => {
@@ -374,8 +368,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
               <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
                 Enter Portal
               </button>
-<<<<<<< HEAD
-=======
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Demo Selector */}
           <div className="space-y-6">
@@ -436,8 +428,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </div>
@@ -516,8 +506,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Learn More
-<<<<<<< HEAD
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Your Future?</h2>
           <p className="text-xl mb-8 opacity-90">
             Join the technological revolution and be part of the future today

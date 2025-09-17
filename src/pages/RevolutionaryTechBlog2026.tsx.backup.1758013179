@@ -289,8 +289,6 @@ const RevolutionaryTechBlog2026: React.FC = () => {
       </div>
     </div>
     </>
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const RevolutionaryTechBlog2026: React.FC = () => {

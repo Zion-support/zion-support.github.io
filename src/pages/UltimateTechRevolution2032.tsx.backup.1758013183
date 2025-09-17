@@ -55,8 +55,6 @@ const UltimateTechRevolution2032: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             The most comprehensive technological revolution that will redefine what's possible
           </p>
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
 >>>>>>> origin/backup-main-20250916-071805
@@ -474,8 +472,6 @@ const UltimateTechRevolution2032: React.FC = () => {
             <a href="/pages/RevolutionaryTechBreakthrough2032" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               Explore Breakthroughs
             </a>
-<<<<<<< HEAD
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -503,8 +499,6 @@ const UltimateTechRevolution2032: React.FC = () => {
               Schedule Demo
             </button>
           </div>
-<<<<<<< HEAD
-=======
         </div>
       </div>
               </motion.div>

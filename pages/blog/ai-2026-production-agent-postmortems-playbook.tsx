@@ -1,3 +1,30 @@
+import Head from 'next/head'
+
+export default function ProductionAgentPostmortemsPlaybook() {
+  return (
+    <>
+      <Head>
+        <title>Production Agent Postmortems — Playbook (2026) | Zion Tech Group</title>
+        <meta name="description" content="Blameless, evidence‑driven postmortems that improve agent safety and delivery speed." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-production-agent-postmortems-playbook" />
+      </Head>
+      <main className="container mx-auto px-4 py-16 prose prose-invert">
+        <h1>Production Agent Postmortems — Playbook (2026)</h1>
+        <p>
+          Turn incidents into lasting improvements with structured postmortems that
+          link evaluation failures, policy events, and traces to action items.
+        </p>
+        <h2>Core Steps</h2>
+        <ol>
+          <li>Capture evidence bundle (evals, traces, incidents, approvals)</li>
+          <li>Identify contributing factors and missing guardrails</li>
+          <li>Define remediations and verification tests</li>
+        </ol>
+      </main>
+    </>
+  )
+}
+
 import React from 'react';
 import Link from 'next/link';
 

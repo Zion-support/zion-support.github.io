@@ -118,8 +118,6 @@ const TranscendentAI2026: React.FC = () => {
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-pink-500 to-red-500 h-2 rounded-full w-full"></div>
               </div>
-<<<<<<< HEAD
-=======
               </div>
 >>>>>>> origin/backup-main-20250916-071805
       {/* AI Evolution Phases */}

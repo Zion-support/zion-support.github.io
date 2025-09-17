@@ -3,7 +3,6 @@ import React, { useState, useCallback } from 'react';
 import { ArrowRight, Brain } from 'lucide-react';
 
 interface ServiceCardProps {
-<<<<<<< HEAD
   service: {
     id: string;
     name: string;
@@ -17,12 +16,10 @@ interface ServiceCardProps {
   index: number;
   isCurrent: boolean;
   onClick: (service: { slug: string }) => void;
-=======
   title: string;
   description: string;
   icon: string;
 
-<<<<<<< HEAD
   features: string[];
   className?: string;
 >>>>>>> origin/aggressive-merge-backup-20250915-162542
@@ -74,7 +71,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Card Content */}
       <div className="relative z-10 p-6 h-full flex flex-col">
         {/* Header Section */}
@@ -205,9 +201,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
       {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
     </divdiv>
-=======
     </div>
-=======
         </div>
 
         <ul className="space-y-2">
@@ -224,4 +218,3 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
   );
 };
 
-export default ServiceCard;

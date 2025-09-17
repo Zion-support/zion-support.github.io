@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
@@ -11,7 +10,6 @@ import AutonomousBusinessOperations2026Showcase from './components/AutonomousBus
 import ContentSpotlight from './components/ContentSpotlight';
 import NewContentAdBanner from './components/NewContentAdBanner';
 import DynamicContentCarousel from './components/DynamicContentCarousel';
-=======
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
@@ -61,11 +59,9 @@ import InteractiveTechShowcase2027 from './components/InteractiveTechShowcase202
 import QuantumAIBreakthroughBanner from './components/QuantumAIBreakthroughBanner';
 import RevolutionaryTechShowcase2026 from './components/RevolutionaryTechShowcase2026';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
-<<<<<<< HEAD
 import FeaturedContentShowcase from './components/FeaturedContentShowcase';
 import ContentPromotionBanner from './components/ContentPromotionBanner';
 import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
-=======
 >>>>>>> origin/backup-main-20250916-090016
 import AdvancedTechAdvertising2027 from './components/AdvancedTechAdvertising2027';
 import UltimateRevolutionaryTechShowcase2027 from './components/UltimateRevolutionaryTechShowcase2027';
@@ -95,7 +91,6 @@ import QuantumComputingBreakthrough2035 from './components/QuantumComputingBreak
 import NeuralInterfaceRevolution2036 from './components/NeuralInterfaceRevolution2036';
 import InterdimensionalTechShowcase2037 from './components/InterdimensionalTechShowcase2037';
 import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromotionBanner2035';
-<<<<<<< HEAD
 import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
 import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
@@ -139,7 +134,6 @@ import EdgeAICompliance2026 from './pages/EdgeAICompliance2026';
 import InnovationShowcase2025 from './pages/InnovationShowcase2025';
 import InnovationShowcase2026 from './pages/InnovationShowcase2026';
 import InterdimensionalTech2027 from './pages/InterdimensionalTech2027';
-=======
 import QuantumComputingBreakthrough2035Page from './pages/QuantumComputingBreakthrough2035';
 import NeuralInterfaceRevolution2036Page from './pages/NeuralInterfaceRevolution2036';
 >>>>>>> origin/backup-main-20250916-090016
@@ -158,7 +152,6 @@ const App: React.FC = () => {
               {/* Hero Section */}
               <EnhancedHeroSection />
               
-<<<<<<< HEAD
               {/* Revolutionary Content Banner 2026 */}
               <div className="mb-12">
                 <RevolutionaryContentBanner2026 />
@@ -204,7 +197,6 @@ const App: React.FC = () => {
                 <ContentPromotionBanner />
               </div>
 
-=======
 >>>>>>> origin/backup-main-20250916-090016
               {/* NEW: Advanced Tech Breakthrough Banner */}
               <div className="mb-12">
@@ -218,7 +210,6 @@ const App: React.FC = () => {
 
               {/* Featured Content Section */}
               <FeaturedContentSection />
-<<<<<<< HEAD
 
               {/* Blog Showcase from data/blog-posts */}
               <div className="mb-12">
@@ -233,7 +224,6 @@ const App: React.FC = () => {
 
               {/* Latest Content Spotlight */}
               <ContentSpotlight />
-=======
 >>>>>>> origin/backup-main-20250916-090016
               
               {/* Dynamic Content Carousel */}
@@ -410,7 +400,6 @@ const App: React.FC = () => {
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
           <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
-<<<<<<< HEAD
           <Route path="/pages/EdgeAICompliance2026" element={<EdgeAICompliance2026 />} />
           <Route path="/pages/AIIncidentResponse2026" element={<AIIncidentResponse2026 />} />
           <Route path="/pages/AgenticOpsControls2026" element={<AgenticOpsControls2026 />} />
@@ -418,7 +407,6 @@ const App: React.FC = () => {
           {/* New Content Routes 2026 */}
           <Route path="/ai-innovation-showcase-2026" element={<AIInnovationShowcase2026 />} />
           <Route path="/next-gen-tech-trends-2026" element={<NextGenTechTrends2026 />} />
-=======
 >>>>>>> origin/backup-main-20250916-090016
         </Routes>
         
@@ -428,4 +416,3 @@ const App: React.FC = () => {
   );
 };
 
-export default App;

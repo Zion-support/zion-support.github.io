@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+export const securityConfig = {
   csp: {
     directives: {
-
       defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
-      fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https:"],
       scriptSrc: ["'self'"],
       connectSrc: ["'self'"],
@@ -16,14 +11,9 @@
       objectSrc: ["'none'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       upgradeInsecureRequests: [],
     },
   },
-
   // Security Headers
   headers: {
     "X-Frame-Options": "DENY",
@@ -31,7 +21,6 @@
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
   },
-
   // Rate Limiting
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -40,7 +29,3 @@
 };
 
 export default securityConfig;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

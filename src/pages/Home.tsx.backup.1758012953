@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-=======
 import React, { useEffect } from 'react';
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
 import { motion } from 'framer-motion';
@@ -29,7 +26,6 @@ const Home: React.FC = () => {
       duration: 5000
     });
   }, [addNotification]);
-=======
 import { HeroSection } from "@/components/HeroSection";
 import { SEO } from "@/components/SEO";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
@@ -64,7 +60,6 @@ import type { ComponentType, SyntheticEvent } from 'react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NewContentPromoBanner } from "@/components/NewContentPromoBanner";
-=======
 import React from 'react';
 >>>>>>> origin/merged-prs
 
@@ -92,7 +87,6 @@ const AIServicesShowcase = React.lazy(() => import("@/components/AIServicesShowc
 const InteractiveTestimonials = React.lazy(() => import("@/components/InteractiveTestimonials"));
 const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"));
 
-<<<<<<< HEAD
 interface StatItem {
   value: string;
   label: string;
@@ -171,7 +165,6 @@ export default function Home() {
       description: "Round-the-clock technical assistance",
       icon: Clock,
       color: "from-blue-400 to-indigo-500"
-=======
 const Home: React.FC = () => {
   const features = [
     {
@@ -406,7 +399,6 @@ const Home: React.FC = () => {
         <meta name="keywords" content="AI solutions, quantum computing, cybersecurity, technology innovation, Zion Tech Group" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div 
@@ -414,8 +406,6 @@ const Home: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-=======
-<<<<<<< HEAD
         {/* Promo: Policy-as-Code in Production */}
         <motion.section 
           className="py-6 px-4 sm:px-6 lg:px-8"
@@ -470,7 +460,6 @@ const Home: React.FC = () => {
               Revolutionary AI systems that exhibit true consciousness and self-awareness, 
               capable of independent thought and creative problem-solving.
             </p>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🌟 Ultimate Tech Showcase →
@@ -481,7 +470,6 @@ const Home: React.FC = () => {
               <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 📚 Tech Blog 2026 →
               </a>
-=======
             <div className="text-center">
               <Link 
                 to="/pages/RevolutionaryAIServices2026" 
@@ -517,7 +505,6 @@ const Home: React.FC = () => {
               Advanced AI-powered security systems that predict and prevent threats 
               before they occur, protecting across all dimensions.
             </p>
-<<<<<<< HEAD
         {/* Content Showcases */}
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
@@ -551,7 +538,6 @@ const Home: React.FC = () => {
               <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                 Schedule Consultation
               </button>
-=======
             <div className="text-center">
               <Link 
                 to="/pages/CybersecurityFortress2025" 
@@ -636,15 +622,11 @@ const Home: React.FC = () => {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
     </div>
-=======
     </>
-=======
     </div>
 >>>>>>> origin/merged-prs
 >>>>>>> origin/aggressive-merge-backup-20250915-162542
   );
 };
 
-export default Home;

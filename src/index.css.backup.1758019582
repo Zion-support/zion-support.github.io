@@ -1,17 +1,13 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-=======
 /* Fonts loaded via HTML/Head to avoid PostCSS import issues */
 >>>>>>> origin/aggressive-merge-backup-20250915-162944
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Base styles */
 html {
   scroll-behavior: smooth;
-=======
 @import './styles/enhanced-futuristic.css';
 /* External font import removed for build compatibility; load via HTML or Next Head if needed */
 @import './styles/accessibility.css';
@@ -127,4 +123,3 @@ body {
   .text-4xl {
     font-size: 1.75rem;
   }
-}

@@ -1,8 +1,6 @@
 import React from 'react';
 
 const UltimateContentBanner2037: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -61,7 +59,6 @@ const UltimateContentBanner2037: React.FC = () => {
             Experience the most revolutionary technological advances that will reshape our world in 2037
           </p>
         </div>
-<<<<<<< HEAD
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -112,7 +109,6 @@ const UltimateContentBanner2037: React.FC = () => {
             </a>
           </div>
         </div>
-=======
 
         {/* Feature Grid */}
         <div className="grid md:grid-cols-4 gap-8 mt-20">

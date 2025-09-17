@@ -1,8 +1,6 @@
 import React from 'react';
 
 const AIConsciousnessRevolution2025: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [consciousnessLevel, setConsciousnessLevel] = useState(0);
   const [isSimulating, setIsSimulating] = useState(false);
   const [neuralActivity, setNeuralActivity] = useState<number[]>([]);
@@ -97,8 +95,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Features Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -207,8 +203,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Case Studies */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -462,8 +456,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Schedule Demo
-<<<<<<< HEAD
-=======
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
         <div className="container mx-auto px-4 text-center">

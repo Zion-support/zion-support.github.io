@@ -1,6 +1,5 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 9201,
     title: "AI 2026: Evidence-First Agent Stack — Practical Guide",
     excerpt: "Design agents with verifiable traces, evals, and policy events wired to delivery.",
@@ -350,7 +349,6 @@ export const blogPosts = [
     title: "AI 2026: Safe Rollouts in Production",
     excerpt: "Progressive delivery with eval gates, rollback contracts, and release scorecards.",
     content: "Ship changes safely with evaluation-gated rollouts, canaries tied to scorecards, and deterministic rollback. This guide includes reference policies, example checks, and dashboards you can adapt today.",
-=======
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
@@ -420,7 +418,6 @@ export const blogPosts = [
     authorRole: "Platform Staff Engineer",
     publishDate: "2025-09-16",
     readTime: "6 min read",
-<<<<<<< HEAD
     category: "Operations",
     tags: ["Safe Rollouts", "Canary", "Scorecards", "Policy-as-Code"],
     featured: true,
@@ -552,7 +549,6 @@ export const blogPosts = [
     title: "AI 2026: Runtime Guardrails Blueprint",
     excerpt: "Runtime checks, policy-as-code, and safe tool envelopes for agents.",
     content: "Design runtime guardrails that keep agent behavior safe and reliable. This post covers permissioning, scoped tools, IO validation, intent classification that fails closed, escalation paths, and telemetry-driven policies.",
-=======
     category: "Safety",
     tags: ["Sandbox", "Tool Use", "Guards"],
     featured: true,
@@ -570,7 +566,6 @@ export const blogPosts = [
     publishDate: "2025-09-16",
     readTime: "7 min read",
     category: "Safety",
-<<<<<<< HEAD
     tags: ["Guardrails", "Policy-as-Code", "Runtime", "Agents"],
     featured: true,
     imageUrl: "/images/blog/ai-2026-runtime-guardrails.jpg",
@@ -611,7 +606,6 @@ export const blogPosts = [
     title: "Guardrailed Tooling: Secure Actions with Risk Tiers",
     excerpt: "Risk‑tiered adapters, approvals, and budgets that keep agent actions safe.",
     content: "Implement secure tool adapters with explicit capabilities, approvals, and budget caps. We show reference designs, policy bundles, and red-team scenarios to validate controls before rollout.",
-=======
     tags: ["Tooling", "Risk Tiers", "Policy-as-Code"],
     featured: true,
     imageUrl: "/images/blog/safe-tool-use-blueprint-2026.jpg",
@@ -642,7 +636,6 @@ export const blogPosts = [
     authorRole: "Director of SRE",
     publishDate: "2025-09-16",
     readTime: "7 min read",
-<<<<<<< HEAD
     category: "Security",
     tags: ["Guardrails", "Tooling", "Risk Tiers", "Approvals"],
     featured: true,
@@ -669,7 +662,6 @@ export const blogPosts = [
     title: "AI 2026: Cost Optimization Blueprint",
     excerpt: "Predictable spend with token budgets, caps, and cost-aware routing.",
     content: "Implement FinOps as code for AI systems with budgets, circuit breakers, and adaptive model routing. Includes reference dashboards and sampling strategies.",
-=======
     category: "Observability",
     tags: ["Tracing", "Telemetry", "Evals"],
     featured: true,
@@ -686,7 +678,6 @@ export const blogPosts = [
     authorRole: "FinOps Lead",
     publishDate: "2025-09-16",
     readTime: "6 min read",
-<<<<<<< HEAD
     category: "FinOps",
     tags: ["FinOps", "Budgets", "Routing", "Cost"],
     featured: true,
@@ -698,7 +689,6 @@ export const blogPosts = [
     title: "AI 2026: Evaluation-Driven Release Engineering",
     excerpt: "Ship safer autonomy with eval-gated rollouts, canary scorecards, and automated rollback.",
     content: "Evaluation-driven release engineering hardens autonomous systems by gating each lifecycle step with objective signals. This article shows how to wire pre-merge checks, shadow runs, and progressive delivery to an evaluation hub. You will learn how to define pass/fail policy as code, track real-time scorecards (safety, quality, cost), and trigger automated rollback when guardrails breach. We include reference metrics, traces, and a minimal example you can adapt to your stack.",
-=======
     category: "Risk",
     tags: ["Risk", "Metrics", "Guardrails"],
     featured: true,
@@ -2429,4 +2419,3 @@ export const allBlogPosts = [...blogPosts, ...newContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
-export const BLOG_POSTS = allBlogPosts;

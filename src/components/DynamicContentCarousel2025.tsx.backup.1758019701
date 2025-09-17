@@ -56,8 +56,6 @@ const DynamicContentCarousel2025: React.FC = () => {
       rating: 4.6,
       views: "1.9M",
       gradient: "from-purple-500 to-pink-600"
-<<<<<<< HEAD
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselItems = [
     {
@@ -292,8 +290,6 @@ const DynamicContentCarousel2025: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-=======
       </div>
 
       {/* Background Animation */}

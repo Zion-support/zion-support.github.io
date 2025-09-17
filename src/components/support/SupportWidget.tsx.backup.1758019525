@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -32,9 +28,7 @@ export function SupportWidget() {
           <MessageSquare className="h-6 w-6" />
         </Button>
       )}
-<<<<<<< HEAD
       
-=======
       {/* Support panel */}
       {isOpen && (;
         <div
@@ -53,8 +47,6 @@ export function SupportWidget() {
                 className={cn(
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                 )}
@@ -119,10 +111,6 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -153,10 +141,6 @@ export function SupportWidget() {;
     </>
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs

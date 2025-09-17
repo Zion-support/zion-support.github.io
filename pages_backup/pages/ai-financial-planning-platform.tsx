@@ -1,89 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AiFinancialPlanningPlatform() {
-	return (
-		<ServiceLanding
+import { Helmet } from 'react-helmet-async';
 
-
-			title="AI Financial Planning Platform"
-			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
-			subtitle="Smarter, faster financial decisions"
-			pricePerMonthUSD={349}
-			implementationWeeks="1-2 weeks"
-			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
-			features={[
-				"Driver-based planning and what-if scenarios"
-				"Automated variance analysis and anomaly detection"
-				"Cohort and retention-aware revenue forecasting"
-				"Cash flow projections and runway insights"
-				"Budget vs. actuals with alerting"
-				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake"
-				"Executive dashboards and board-ready reports"
-
-				"Headcount planning and hiring plans"
-			]}
-			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
-			title="AI Financial Planning Platform"
-			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
-			subtitle="Smarter, faster financial decisions"
-			pricePerMonthUSD={349}
-
-			pricePerMonthUSD={349  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-			implementationWeeks="1-2 weeks"
-			roiNote="Finance teams report 36x ROI via faster cycles and improved accuracy"
-			features={[
-				"Driver-based planning and what-if scenarios"
-				"Automated variance analysis and anomaly detection"
-				"Cohort and retention-aware revenue forecasting"
-				"Cash flow projections and runway insights"
-				"Budget vs. actuals with alerting"
-				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake"
-				"Executive dashboards and board-ready reports"
-
-				"Headcount planning and hiring plans"
-
-			]}
-			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
-			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
-		/>
-	)
+const ai-financial-planning-platform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-financial-planning-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-financial-planning-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-financial-planning-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-financial-planning-platform";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
+export default ai-financial-planning-platform;

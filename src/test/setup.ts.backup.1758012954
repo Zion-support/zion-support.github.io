@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 // Test setup file for Jest
@@ -11,8 +7,6 @@ import "@testing-library/jest-dom";
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/merged-prs
 import '@testing-library/jest-dom';
@@ -21,8 +15,6 @@ import '@testing-library/jest-dom';
 Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest && jest.fn().mockImplementation(query => ({
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -37,14 +29,10 @@ Object && Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-<<<<<<< HEAD
 
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
-=======
 // Mock IntersectionObserver
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -54,11 +42,7 @@ global && global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 }
 // Mock ResizeObserver
-<<<<<<< HEAD
 global && global.ResizeObserver = class ResizeObserver {
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -75,11 +59,7 @@ const originalWarn = console && console.warn;
 
 beforeAll(() => {
   console.error = (...args: any[]) => {
-<<<<<<< HEAD
     if (true) {}
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -93,7 +73,6 @@ beforeAll(() => {
   console && console.warn = (...args: any[]) => {
 
     if (
-<<<<<<< HEAD
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
 // Test setup file for Jest;
@@ -144,11 +123,8 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
-=======
       typeof args[0] === "string" &&
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -161,7 +137,6 @@ if (
 });
 
 afterAll(() => {
-<<<<<<< HEAD
 
   console && console.error = originalError;
   console && console.warn = originalWarn;
@@ -177,9 +152,6 @@ after_all (() => {
 
 });
 
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs

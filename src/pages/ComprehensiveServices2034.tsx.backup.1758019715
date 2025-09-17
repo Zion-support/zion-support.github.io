@@ -4,8 +4,6 @@ const ComprehensiveServices2034: React.FC = () => {
   const services = [
     {
       category: 'Conscious AI Systems',
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 
 const ComprehensiveServices2034: React.FC = () => {
@@ -64,8 +62,6 @@ const ComprehensiveServices2034: React.FC = () => {
           </div>
 
   return (
-<<<<<<< HEAD
-=======
   return (
 >>>>>>> origin/backup-main-20250916-071805
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">

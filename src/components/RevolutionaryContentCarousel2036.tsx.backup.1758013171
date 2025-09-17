@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
-=======
 
   const slides = [
     {
@@ -77,8 +75,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       border: "border-emerald-400/30",
       textColor: "text-emerald-100",
       link: "/pages/RevolutionaryTechShowcase2036"
-<<<<<<< HEAD
-=======
       buttonColor: "bg-white text-emerald-600 hover:bg-emerald-50"
     },
     {
@@ -122,8 +118,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology Carousel 2036</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto mb-6">
             Discover the most advanced technologies that will reshape humanity's future
-<<<<<<< HEAD
-=======
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -148,8 +142,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
         
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
-<<<<<<< HEAD
-=======
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Revolutionary Technology Content
           </h2>
@@ -169,8 +161,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
               {slides.map((slide) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
                   <div className={`bg-gradient-to-br ${slide.gradient} backdrop-blur-sm rounded-xl p-8 border ${slide.border} hover:scale-105 transition-all duration-300`}>
-<<<<<<< HEAD
-=======
                   <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                       <div>
@@ -196,8 +186,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                       >
                         Explore Technology →
                       </a>
-<<<<<<< HEAD
-=======
                       <div className="flex justify-center space-x-4">
                         <a 
                           href={slide.link}
@@ -237,8 +225,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             </div>
           </div>
           
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/backup-main-20250916-071805
           {/* Navigation Dots */}
@@ -258,8 +244,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-<<<<<<< HEAD
-=======
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -273,8 +257,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-<<<<<<< HEAD
-=======
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
 >>>>>>> origin/backup-main-20250916-071805
@@ -287,9 +269,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
           <a href="/pages/NextGenTechRevolution2036" className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Explore All Revolutionary Technologies →
           </a>
-<<<<<<< HEAD
         </div>
-=======
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">

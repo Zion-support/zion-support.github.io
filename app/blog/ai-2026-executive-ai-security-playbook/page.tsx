@@ -2,6 +2,84 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata = {
+  title: 'Executive AI Security Playbook (2026)',
+  description:
+    'Board‑ready controls: policy‑as‑code, eval gates, runtime guardrails, and audit evidence to ship safely at scale.',
+};
+
+export default function ExecutiveAISecurityPlaybookPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white">
+      <main className="container mx-auto px-6 py-12">
+        <nav className="mb-8">
+          <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+            ← Back to Blog
+          </Link>
+        </nav>
+
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-10">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="px-3 py-1 bg-emerald-400/20 text-emerald-300 text-sm rounded-full border border-emerald-400/30">
+                Security
+              </span>
+              <span className="text-white/60 text-sm">September 16, 2025</span>
+              <span className="text-white/40">•</span>
+              <span className="text-white/60 text-sm">9 min read</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-transparent">
+              Executive AI Security Playbook
+            </h1>
+            <p className="text-white/80 text-lg">
+              A pragmatic model for securing autonomous systems with measurable controls and audit‑ready evidence.
+            </p>
+          </header>
+
+          <div className="prose prose-invert prose-lg max-w-none">
+            <h2>Core controls</h2>
+            <ol>
+              <li>Policy‑as‑code with risk tiers and approvals</li>
+              <li>Evaluation gates enforced in CI/CD</li>
+              <li>Runtime guardrails and safe tool envelopes</li>
+              <li>Incident lifecycle with post‑release checks</li>
+              <li>Evidence hub for traceability and audits</li>
+            </ol>
+
+            <h3>Minimum scorecard</h3>
+            <pre><code>{`scorecard:
+  safety: 0.80
+  privacy: 0.85
+  reliability: 0.90
+  financial: 0.90
+gates:
+  - name: critical_evals
+    min_pass_rate: 0.95
+`}</code></pre>
+
+            <h3>Operating model</h3>
+            <p>
+              Establish weekly governance standups, automate captures to the evidence hub, and block promotions when
+              scorecards regress. Treat exceptions as incidents with documented mitigations.
+            </p>
+          </div>
+
+          <footer className="mt-12 pt-6 border-t border-white/10 flex items-center justify-between">
+            <span className="text-white/60 text-sm">Written by Zion Tech Group</span>
+            <div className="flex gap-4">
+              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300">More articles</Link>
+              <Link href="/contact" className="text-fuchsia-300 hover:text-fuchsia-200">Get in touch</Link>
+            </div>
+          </footer>
+        </article>
+      </main>
+    </div>
+  );
+}
+
+import Link from 'next/link';
+import React from 'react';
+
+export const metadata = {
 	title: 'AI 2026: Executive AI Security Playbook',
 	description:
 		'Practical, board-ready playbook for securing AI systems: policy-as-code, eval-gated releases, and evidence-driven assurance.',
