@@ -3,32 +3,13 @@
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🤖 AI INNOVATION HUB 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6">
-              AI Innovation Hub 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              The world's most advanced AI innovation center, where artificial intelligence meets human creativity 
-              to solve the most complex challenges of our time
             </p>
             <div className="flex justify-center space-x-4">
               <button className="bg-gradient-to-r from-pink-500 to-violet-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
                 🚀 Explore AI Hub
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-bold text-lg">
-                🧠 AI Research
-              </button>
-            </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-pink-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧠</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Cognitive AI</h3>
-            <p className="text-pink-100 mb-6 text-center">
-              Advanced AI systems that mimic human cognitive processes
             </p>
             <ul className="text-pink-200 space-y-2 text-sm mb-6">
               <li>• Natural language understanding</li>
@@ -36,8 +17,6 @@
               <li>• Decision making and reasoning</li>
               <li>• Creative problem solving</li>
             </ul>
-            <button className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center">
-              Explore Cognitive AI →
             </button>
           </div>
 
