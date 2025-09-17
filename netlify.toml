@@ -4,6 +4,9 @@
   # Build the root Vite app and publish static assets
   command = "npm run build:netlify"
   publish = "dist"
+  # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
+  base = "."
+# ci: retrigger Netlify deploy (no functional change) 2025-09-17T12:45:30Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -98,8 +101,7 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-## Note: Next.js plugin removed; this project builds a static Vite app with Vite
-
+# Removed Next.js plugin since this is a Vite project (no-op)
 
 # Redirects for SEO/legacy URLs
 [[redirects]]
@@ -186,5 +188,4 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# For Next.js, plugin handles routing and publishing; do not add SPA catch-all
-# build-ok: 2025-09-17T12:56:57Z
+# build trigger: chore(netlify): retrigger Netlify deploy (no-op change) 2025-09-17T12:45:30Z
