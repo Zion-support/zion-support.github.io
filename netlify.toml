@@ -1,4 +1,4 @@
-# Netlify build configuration for Vite app
+# Netlify build configuration for Next.js app
 # noop: retrigger netlify build (2025-09-17 16:32 UTC) - local build verified OK
 [build]
   # Build Next.js app in zion-website; Next.js plugin will handle routing/output
@@ -12,6 +12,11 @@
   CANONICAL_URL = "https://ziontechgroup.com"
   # Prevent Netlify from attempting to checkout Git submodules (none are required)
   GIT_SUBMODULE_STRATEGY = "none"
+  # Additional npm config for better compatibility
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_STRICT_SSL = "false"
+  NPM_CONFIG_BUILD_FROM_SOURCE = "false"
+  NPM_CONFIG_PREFER_OFFLINE = "true"
 
 [functions]
   # Keep functions path relative to repo root
