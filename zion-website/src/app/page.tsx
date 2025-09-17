@@ -56,10 +56,21 @@ const solutions = [
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
+<<<<<<< HEAD
             New: Realtime Agent Observatory 1.0 & Evals Control Plane —
             <a href="/updates/realtime-agent-observatory-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">observatory</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/real-time-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">evals control plane</a>
+=======
+            New: Zero‑Trust Agent Controllers v1.0 —
+            <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see details</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Enterprise Retrieval Observability (2026) —
+            <a href="/updates/enterprise-retrieval-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the report</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Real‑Time Retrieval Architectures (2026) —
+            <a href="/updates/real-time-retrieval-architectures-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore the guide</a>
+>>>>>>> origin/feat/new-updates-and-promos
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
@@ -90,8 +101,19 @@ const solutions = [
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
+<<<<<<< HEAD
             New: State of Agent Tooling (2026) —
             <a href="/updates/state-of-agent-tooling-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the deep dive</a>
+=======
+            Fresh: Real‑Time Agent Cost Optimizer 2.0 —
+            <a href="/updates/real-time-agent-cost-optimizer-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Zero‑Trust Agent Controllers —
+            <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">view</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Retrieval Architectures —
+            <a href="/updates/real-time-retrieval-architectures-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">read</a>
+>>>>>>> origin/feat/new-updates-and-promos
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
           </p>
@@ -106,6 +128,7 @@ const solutions = [
           <p className="mt-4 text-lg leading-8 text-gray-300">Don’t miss our newest blueprints and releases.</p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-6 lg:mt-14 lg:max-w-none lg:grid-cols-3">
+<<<<<<< HEAD
           <a href="/updates/incident-simulation-toolkit-1-2" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
             <div className="text-xs text-blue-300">Launch</div>
             <h3 className="mt-2 text-lg font-semibold text-white">Autonomous Incident Simulator v1.2</h3>
@@ -122,6 +145,24 @@ const solutions = [
             <div className="text-xs text-blue-300">Deep Dive</div>
             <h3 className="mt-2 text-lg font-semibold text-white">Enterprise Agent Observability</h3>
             <p className="mt-2 text-sm text-gray-300">Traces, metrics, and alerting patterns for production agents.</p>
+=======
+          <a href="/updates/zero-trust-agent-controllers-1-0" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Launch</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Zero‑Trust Agent Controllers v1.0</h3>
+            <p className="mt-2 text-sm text-gray-300">Runtime approvals, budgets, and adaptive policies for safe tool use.</p>
+            <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Discover →</span>
+          </a>
+          <a href="/updates/real-time-retrieval-architectures-2026" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Guide</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Real‑Time Retrieval Architectures (2026)</h3>
+            <p className="mt-2 text-sm text-gray-300">Reference designs and trade‑offs for low‑latency retrieval.</p>
+            <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Read more →</span>
+          </a>
+          <a href="/updates/enterprise-retrieval-observability-2026" className="rounded-2xl bg-white/5 p-6 hover:bg-white/10 transition-colors">
+            <div className="text-xs text-blue-300">Report</div>
+            <h3 className="mt-2 text-lg font-semibold text-white">Enterprise Retrieval Observability (2026)</h3>
+            <p className="mt-2 text-sm text-gray-300">SLIs, traces, and eval overlays for reliable systems.</p>
+>>>>>>> origin/feat/new-updates-and-promos
             <span className="mt-4 inline-block text-sm font-semibold text-blue-400">Learn →</span>
           </a>
         </div>
@@ -159,11 +200,20 @@ const solutions = [
         </div>
         <div className="mt-8 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4 text-center">
           <p className="text-sm font-semibold text-blue-200">
+<<<<<<< HEAD
             New: Real-Time Evals Control Plane —
             <a href="/updates/real-time-evals-control-plane" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Also see: <a href="/updates/realtime-agent-observatory-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Realtime Agent Observatory 1.0</a>
 >>>>>>> origin/feat/content-and-homepage-promos-20250916
+=======
+            New: Zero‑Trust Agent Controllers v1.0 —
+            <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">explore</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Also read: <a href="/updates/real-time-retrieval-architectures-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Retrieval Architectures</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            <a href="/updates/enterprise-retrieval-observability-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Retrieval Observability</a>
+>>>>>>> origin/feat/new-updates-and-promos
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">

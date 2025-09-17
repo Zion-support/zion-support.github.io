@@ -6,6 +6,7 @@ export type SiteUpdate = {
   tag?: string
 }
 
+<<<<<<< HEAD
 export const siteUpdates: SiteUpdate[] = [
 <<<<<<< HEAD
 =======
@@ -143,5 +144,142 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
     date: '2025-09-01',
     href: '/updates/ai-research-lab-sept',
   },
+=======
+// Consolidated, deduplicated updates list (most recent first)
+export const updates: UpdateItem[] = [
+	{
+		title: 'Launch: Zero‑Trust Agent Controllers v1.0',
+		summary: 'Runtime approvals, budgets, and adaptive policies for safe tool use.',
+		href: '/updates/zero-trust-agent-controllers-1-0',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Operational Risk Metrics for Agents (2026)',
+		summary: 'Standardize violations, overrides, groundedness, and MTTR across teams.',
+		href: '/updates/agent-risk-metrics-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Guide: Real‑Time Retrieval Architectures (2026)',
+		summary: 'Reference designs and trade‑offs for low‑latency, high‑quality retrieval.',
+		href: '/updates/real-time-retrieval-architectures-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Report: Enterprise Retrieval Observability (2026)',
+		summary: 'SLIs, traces, and eval overlays for reliable retrieval systems in prod.',
+		href: '/updates/enterprise-retrieval-observability-2026',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
+		title: 'Launch: Real‑Time Agent Cost Optimizer v2.0',
+		summary: 'Dynamic routing and token budgeting with live cost/quality trade‑offs.',
+		href: '/updates/real-time-agent-cost-optimizer-2-0',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Evals‑in‑Prod Best Practices (2026 Preview)',
+		summary: 'Blueprint for safe iteration using canaries, auto‑rollbacks, and quality gates.',
+		href: '/updates/evals-in-prod-best-practices-2026',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Report: Autonomous Failure Analysis Toolkit v1.0',
+		summary: 'Root‑cause analysis for agent incidents with trace diffs and evidence bundles.',
+		href: '/updates/autonomous-failure-analysis-toolkit-1-0',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
+		title: 'Report: State of Agent Reliability (2026 Preview)',
+		summary: 'Incident patterns, SLOs, and resilience tactics from large-scale agent systems.',
+		href: '/updates/agent-reliability-report-2026',
+		date: '2025-09-16',
+		tag: 'Report',
+	},
+	{
+		title: 'Launch: Real‑Time Agent Observability Console v1.1',
+		summary: 'Live traces, tool metrics, and eval overlays for production agents.',
+		href: '/updates/agent-observability-console-1-1',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Launch: Autonomous Support Copilot v1.2',
+		summary: 'Faster resolutions with evidence bundles, safer tool-use, and proactive guardrails.',
+		href: '/updates/autonomous-support-copilot-1-2',
+		date: '2025-09-16',
+		tag: 'Launch',
+	},
+	{
+		title: 'Guide: Benchmarking Multimodal RAG (2026 Preview)',
+		summary: 'Evaluate retrieval quality, sync, and latency across text, image, and video pipelines.',
+		href: '/updates/multimodal-rag-benchmarking-2026',
+		date: '2025-09-15',
+		tag: 'Guide',
+	},
+	{
+		title: 'Case Study: 50% MTTR Reduction with Evals-in-Prod',
+		summary: 'Incident-driven improvements using live evals, guardrails, and cost-aware routing.',
+		href: '/updates/mttr-reduction-evals-in-prod',
+		date: '2025-09-14',
+		tag: 'Case Study',
+	},
+	{
+		title: 'Launch: Compliance Auditor v1.0',
+		summary: 'Automated compliance checks with policy-as-code and evidence collection.',
+		href: '/updates/compliance-auditor-1-0',
+		date: '2025-09-15',
+		tag: 'Launch',
+	},
+	{
+		title: 'Report: State of AI Automation (2026 Preview)',
+		summary: 'Trends, metrics, and adoption patterns shaping the next wave of AI-led automation.',
+		href: '/insights/state-of-ai-automation-2025',
+		date: '2025-09-15',
+		tag: 'Report',
+	},
+	{
+		title: 'Announcement: Website UX Refresh and Accessibility Upgrades',
+		summary: 'Improved navigation, performance, and WCAG-focused accessibility enhancements across the site.',
+		href: '/updates/website-ux-refresh-2025',
+		date: '2025-09-13',
+		tag: 'Announcement',
+	},
+	{
+		title: 'New Course: GenAI Engineering Masterclass',
+		summary: 'Hands-on RAG, agents, evals, safety, and productionization.',
+		href: '/updates/genai-engineering-masterclass',
+		date: '2025-09-13',
+		tag: 'Course',
+	},
+	{
+		title: 'Community Challenge: Build a DApp',
+		summary: 'Join the DApp challenge and win prizes up to $1000 in ZION tokens.',
+		href: '/updates/dapp-challenge',
+		date: '2025-09-05',
+		tag: 'Challenge',
+	},
+	{
+		title: 'Research Release: Autonomous Agents for IT Operations',
+		summary: 'New paper and demo exploring agentic automation for enterprise IT workflows.',
+		href: '/updates/ai-research-it-ops',
+		date: '2025-09-03',
+		tag: 'Research',
+	},
+	{
+		title: 'Zion OS v1.2 Released',
+		summary: 'Performance improvements, modular deployments, and enhanced governance tooling.',
+		href: '/updates/zion-os-1-2',
+		date: '2025-09-01',
+		tag: 'Release',
+	},
+>>>>>>> origin/feat/new-updates-and-promos
 ]
 
