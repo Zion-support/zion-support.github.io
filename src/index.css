@@ -908,8 +908,8 @@
 }
 
 @media (min-width: 1536px) {
-  .2xl\:block { display: block; }
-  .2xl\:hidden { display: none; }
-  .2xl\:flex { display: flex; }
-  .2xl\:grid { display: grid; }
+  .block { display: block; }
+  .hidden { display: none; }
+  .flex { display: flex; }
+  .grid { display: grid; }
 }
