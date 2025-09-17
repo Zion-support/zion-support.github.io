@@ -27,9 +27,12 @@ export default defineConfig(({ mode }) => {
       VitePWA({
         registerType: 'autoUpdate',
         workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-          globIgnores: ['**/reports/**', '**/static-reports/**'],
-          maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
+          globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,webp}'],
+          globIgnores: ['**/reports/**', '**/static-reports/**', '**/node_modules/**'],
+          maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
+          cleanupOutdatedCaches: true,
+          skipWaiting: true,
+          clientsClaim: true,
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -50,6 +53,17 @@ export default defineConfig(({ mode }) => {
                 expiration: {
                   maxEntries: 10,
                   maxAgeSeconds: 60 * 60 * 24 * 365,
+                },
+              },
+            },
+            {
+              urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp)$/,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'images-cache',
+                expiration: {
+                  maxEntries: 100,
+                  maxAgeSeconds: 60 * 60 * 24 * 30,
                 },
               },
             },
@@ -112,14 +126,24 @@ export default defineConfig(({ mode }) => {
         polyfill: true,
       },
       assetsInlineLimit: 4096,
+      reportCompressedSize: false,
+      chunkSizeWarningLimit: 2000,
       terserOptions: {
         compress: {
           drop_console: isProduction,
           drop_debugger: isProduction,
           pure_funcs: isProduction ? ['console.log', 'console.info'] : [],
+          passes: 2,
+          unsafe_comps: true,
+          unsafe_math: true,
+          unsafe_proto: true,
         },
         mangle: {
           safari10: true,
+          toplevel: true,
+        },
+        format: {
+          comments: false,
         },
       },
       rollupOptions: {
@@ -127,13 +151,31 @@ export default defineConfig(({ mode }) => {
           main: './index.html'
         },
         output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom'],
-            'router-vendor': ['react-router-dom'],
-            'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
-            'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-            'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
-            'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
+          manualChunks: (id) => {
+            // React ecosystem
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
+            }
+            // UI libraries
+            if (id.includes('@radix-ui') || id.includes('lucide-react') || id.includes('framer-motion')) {
+              return 'ui-vendor';
+            }
+            // Form handling
+            if (id.includes('react-hook-form') || id.includes('@hookform') || id.includes('zod')) {
+              return 'form-vendor';
+            }
+            // Utility libraries
+            if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('date-fns')) {
+              return 'utils-vendor';
+            }
+            // Charts and visualization
+            if (id.includes('recharts') || id.includes('d3-')) {
+              return 'charts-vendor';
+            }
+            // Large dependencies
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
           },
           chunkFileNames: (chunkInfo) => {
             const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -158,7 +200,6 @@ export default defineConfig(({ mode }) => {
           warn(warning);
         },
       },
-      chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'react-router-dom'],

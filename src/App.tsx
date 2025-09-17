@@ -1,6 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
+import ErrorBoundary from './components/ErrorBoundary';
+import SEO from './components/SEO';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import { setupGlobalErrorHandling } from './utils/errorHandler';
 import AIIncidentResponse2026 from './pages/AIIncidentResponse2026';
 import AIRevolutionaryBreakthrough2026 from './pages/AIRevolutionaryBreakthrough2026';
 import AdvancedAIConsciousness2027 from './pages/AdvancedAIConsciousness2027';
@@ -58,15 +62,26 @@ import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBan
 import Home from './pages/Home';
 
 const App: React.FC = () => {
+  // Setup global error handling
+  React.useEffect(() => {
+    setupGlobalErrorHandling();
+  }, []);
+
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <header className="bg-black/20 backdrop-blur-sm border-b border-white/10">
-          <div className="container mx-auto px-4 py-6">
-            <h1 className="text-3xl font-bold text-white">Zion Tech Group</h1>
-          </div>
-        </header>
-        <main>
+    <ErrorBoundary>
+      <SEO 
+        title="Zion Holdings - Advanced Financial Solutions"
+        description="Leading provider of comprehensive financial services, investment solutions, and wealth management strategies."
+        keywords="financial services, investment, wealth management, banking, fintech, AI, quantum computing"
+      />
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <header className="bg-black/20 backdrop-blur-sm border-b border-white/10">
+            <div className="container mx-auto px-4 py-6">
+              <h1 className="text-3xl font-bold text-white">Zion Tech Group</h1>
+            </div>
+          </header>
+          <main>
           <Routes>
             <Route path="/" element={<Home />} />
             {/* Home content moved into Home component */}
@@ -511,8 +526,10 @@ const App: React.FC = () => {
           </Routes>
         </main>
         <Footer />
+        <PerformanceMonitor />
       </div>
     </Router>
+    </ErrorBoundary>
   );
 };
 
