@@ -2632,6 +2632,8 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
+
+const extraContent2029 = [
   {
     id: 9501,
     title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
@@ -3560,6 +3562,5 @@ export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
 
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)
