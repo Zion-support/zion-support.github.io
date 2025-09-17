@@ -37,6 +37,8 @@ export default function CheckoutPage({ }: CheckoutPageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/CheckoutPage.jsx
 }
 }

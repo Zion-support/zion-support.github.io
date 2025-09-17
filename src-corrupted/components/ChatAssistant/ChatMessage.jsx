@@ -1,1 +1,12 @@
-import {jsx as _jsx, jsxs as _jsxs} from 'react/jsx-runtime import {Avatar, AvatarFallback, AvatarImage} from @/components/ui/Avatar import {cn} from @/lib/utils export function ChatMessage(props: any) {return (_jsxs(div, { className: cn(flex gap-3 mb-4';, isUser ? 'flex-row-reverse' : 'flex-row'), children[_jsxs(Avatar, { className: 'w-8 h-8', children[_jsx(AvatarImage, { src: isUser ? '/user-avatar.png' : '/ai-avatar.png' }), _jsx(AvatarFallback, {className: cn('text-xs', isUser ? 'bg-zion-purple text-white' : 'bg-zion-cyan text-white'), children: isUser ? 'U' : 'AI'})] }), _jsxs('div', { className: cn('flex-1 max-w-[80%]', isUser ? 'text-right' : 'text-left'), children[_jsx('div', { className: cn('inline-block p-3 rounded-lg', isUser ? 'bg-zion-purple text-white'' : 'bg-zion-blue-light text-white'), children: _jsx('p', { className: 'text-sm', children: message })}), _jsx('p', {className: 'text-xs text-zion-slate-light mt-1', children: timestamp.toLocaleTimeString()})] })] }))}"'"
+import React from 'react';
+
+const ChatMessage: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ChatMessage</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ChatMessage;

@@ -1,54 +1,22 @@
-import {Link} from 'react-router-dom';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function Training(props: any) {return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+const Training: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Training | Zion Tech Group</title>
+        <meta name="description" content="Training - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Training
-          </h1>
-          <p className="text-xl text-gray-600 mb-12">
-            Welcome to our training page          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              <MessageSquare className="w-5 h-5 mr-2"  />
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5"  />
-            </Link>
-            <Link
-              to="/services"
-              className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 hover:text-white hover:border-cyan-500 font-semibold rounded-lg transition-all duration-200"
-            >
-              <Rocket className="w-5 h-5 mr-2"  />
-              Explore Services
-            </Link>
-          </div>
+          <h1 className="text-4xl font-bold mb-6">Training</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-        
-        <div className="text-center">
-          <Link 
-            to="/contact" 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
-          >
-            Get Started
-          </Link>
-        </div>
-</section>
-    </div>) ;};
+      </div>
+    </div>
+  );
+};
 
 export default Training;
-
-export {Training};
-
-export {Training};
-
-export {Training};
-
-export {Training};
-
-export {Training};
-
-</div>

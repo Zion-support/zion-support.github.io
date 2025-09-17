@@ -1,1 +1,12 @@
-import React, {useState, useRef, useEffect} from 'react'; import {Link} from 'react-router-dom'; import {User, Settings, LogOut, ChevronDown, Bell, ShoppingCart} from 'lucide-react'; import {useAuth} from "../../hooks/useAuth"; export const UserMenu = (props: any) => {; const [isOpen, setIsOpen] = useState(false); const menuRef = useRef(null); const { user, logout } = useAuth(); useEffect(() => {; const handleClickOutside = (props: any) => {; if(menuRef.current && !menuRef.current.contains(event.target)) {; setIsOpen(false)}; }; document.addEventListener('mousedown', handleClickOutside); return () => document.removeEventListener('mousedown', handleClickOutside)}, []); const handleLogout = async () => {; try {; await logout(); setIsOpen(false)}; catch(error) {;"
+import React from 'react';
+
+const UserMenu.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UserMenu.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default UserMenu.js;

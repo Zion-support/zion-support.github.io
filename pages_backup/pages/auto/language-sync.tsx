@@ -1,32 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const LanguageSync: NextPage = () => {
+const language-sync: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Global Language Sync Agent</title>
-        <meta name="description" content="AI-powered translation backfill for locale files." />
-      </Head>
-      <main className="space-y-4">
-        <h1 className="text-2xl font-bold">Global Language Sync Agent</h1>
-        <p>This autonomous agent scans English strings and backfills missing translations in Portuguese, Spanish, and Arabic. It opens commits automatically.</p>
-        <div className="space-x-4 text-blue-600 underline">
-          <Link href="/public/locales/en/common.json">EN</Link>
-          <Link href="/public/locales/pt/common.json">PT</Link>
-          <Link href="/public/locales/es/common.json">ES</Link>
-          <Link href="/public/locales/ar/common.json">AR</Link>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>language-sync | Zion Tech Group</title>
+        <meta name="description" content="language-sync - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">language-sync</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </main>
+      </div>
     </div>
-  )
+  );
+};
 
-}
-export default LanguageSync;
-
-},
-export default LanguageSync,
-},
-},
-export default LanguageSync,
-},
-
+export default language-sync;

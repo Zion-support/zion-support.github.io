@@ -1,48 +1,12 @@
+import React from 'react';
 
-import { Education } from '@/types/resume';
-import { format } from 'date-fns';
-
-interface EducationSectionProps {
-  education: Education[];
-}
-
-export function EducationSection({ education }: EducationSectionProps) {
-  // Sort education by date (newest first)
-    if (a.is_current && !b.is_current) return -1;
-    if (!a.is_current && b.is_current) return 1;
-    
-    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
-    return dateB.getTime() - dateA.getTime();
-  });
-
-  const formatDate = (date: Date | string | undefined) => {
-    if (!date) return '';
-    if (typeof date === 'string') {
-  };
-
-  if (sortedEducation.length === 0) return null;
-  
+const EducationSection: React.FC = () => {
   return (
-    <div className="mb-6">
-      <h2 className="text-lg font-semibold border-b mb-3">Education</h2>
-      <div className="space-y-4">
-              <span className="text-sm">
-                {formatDate(edu.start_date)} - {edu.is_current ? 'Present' : formatDate(edu.end_date)}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <p className="text-sm">{edu.institution}</p>
-              {edu.location && (
-                <span className="text-sm">{edu.location}</span>
-              )}
-            </div>
-            {edu.description && (
-              <p className="text-sm mt-2">{edu.description}</p>
-            )}
-          </div>
-        ))}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EducationSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default EducationSection;
