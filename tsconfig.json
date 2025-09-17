@@ -14,24 +14,27 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "incremental": true,
+<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"],
-      "@layout/*": ["src/layout/*"],
-      "@utils/*": ["src/utils/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@types/*": ["src/types/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"],
-      "@data/*": ["src/data/*"],
-      "@services/*": ["src/services/*"],
-      "@context/*": ["src/context/*"],
-      "@constants/*": ["src/constants/*"]
+      "@/*": ["src/*"]
     },
     "types": ["vite/client", "node"]
+=======
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "noImplicitOverride": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["react", "react-dom", "node"]
+>>>>>>> origin/website-improvements-v2
   },
   "include": [
     "src/**/*",
@@ -49,6 +52,9 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "coverage",
+    "zion-website",
+    "zion-os"
   ]
 }
