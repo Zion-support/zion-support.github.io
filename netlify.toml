@@ -1,5 +1,5 @@
 # Netlify build configuration for Next.js app
-# noop: retrigger netlify build (2025-09-17 16:32 UTC) - local build verified OK
+# noop: retrigger netlify build (2025-09-17 17:05 UTC) - local build verified OK
 [build]
   # Netlify installs dependencies automatically; run only the build step
   command = "npm run build:netlify"
