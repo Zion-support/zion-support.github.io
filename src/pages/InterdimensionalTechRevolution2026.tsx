@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 const InterdimensionalTechRevolution2026 = () => {
   return (
@@ -6,6 +7,27 @@ const InterdimensionalTechRevolution2026 = () => {
         <div>
           <h1>Interdimensional Tech Revolution2026</h1>
           <p>Content coming soon...</p>
+=======
+import React from 'react';
+
+import React from 'react';
+import React from 'react';
+
+
+const InterdimensionalTechRevolution2026: React.FC = () => {
+  return (
+import React from 'react';
+import React, { useState, useEffect } from 'react';
+import React from 'react';
+
+import React from 'react';
+
+
+const InterdimensionalTechRevolution2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">

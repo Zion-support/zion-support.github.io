@@ -1,6 +1,22 @@
 import React from 'react';
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const RevolutionaryTech2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">

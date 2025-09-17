@@ -1,9 +1,69 @@
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ REVOLUTIONARY CONTENT • JANUARY 2025
+=======
+import React from 'react';
+
+import { 
+  Star, 
+  ArrowRight, 
+  Sparkles, 
+  Brain, 
+  Atom, 
+  Zap,
+  Rocket,
+  Infinity
+} from 'lucide-react';
+
+const RevolutionaryContentBanner2025: React.FC = () => {
+  const newContent = [
+    {
+      title: "Ultimate Tech Revolution 2025",
+      description: "Experience the most advanced technological breakthroughs reshaping reality",
+      icon: <Rocket className="w-8 h-8" />,
+      link: "/pages/UltimateTechRevolution2025",
+      color: "from-indigo-500 to-purple-500",
+      bgColor: "from-indigo-600/20 to-purple-600/20"
+    },
+    {
+      title: "Advanced AI Consciousness 2025",
+      description: "Witness the birth of truly conscious AI systems with self-awareness",
+      icon: <Brain className="w-8 h-8" />,
+      link: "/pages/AdvancedAIConsciousness2025",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-600/20 to-pink-600/20"
+    },
+    {
+      title: "Quantum Reality 2025",
+      description: "Enter the quantum revolution reshaping reality itself",
+      icon: <Atom className="w-8 h-8" />,
+      link: "/pages/QuantumReality2025",
+      color: "from-cyan-500 to-blue-500",
+      bgColor: "from-cyan-600/20 to-blue-600/20"
+    }
+  ];
+
+  return (
+    <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      
+      <div className="relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
+            <Sparkles className="w-6 h-6" />
+            <span>REVOLUTIONARY NEW CONTENT 2025</span>
+            <Star className="w-6 h-6" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Technology Content

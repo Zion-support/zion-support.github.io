@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
+=======
+import React, { useState, useEffect } from 'react';
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const RevolutionaryTechBanner2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20">

@@ -1,5 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { useNotifications } from '../components/NotificationSystem';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+
+import React from 'react';
+
+import { Helmet } from 'react-helmet-async';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
+import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
+import NeuralRealityBanner from '../components/NeuralRealityBanner';
+import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
+import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
+import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
+import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
+import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
+import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertisingBanner';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 
 const Home: React.FC = () => {
   return (

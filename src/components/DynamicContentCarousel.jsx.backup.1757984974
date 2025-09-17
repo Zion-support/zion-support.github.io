@@ -90,8 +90,11 @@ const DynamicContentCarousel = () => {
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+<<<<<<< HEAD:src/components/DynamicContentCarousel.jsx.backup.1757984974
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5:src/components/DynamicContentCarousel.jsx
             }`}
           />
         ))}

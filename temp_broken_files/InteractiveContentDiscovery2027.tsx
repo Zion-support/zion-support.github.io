@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscovery2027.tsx
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5:src/components/InteractiveContentDiscovery2027.tsx
 const InteractiveContentDiscovery2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);

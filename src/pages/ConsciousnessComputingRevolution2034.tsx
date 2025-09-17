@@ -144,9 +144,15 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                   </ul>
                 </div>
               </div>
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 import Header from '../Header';
 import Footer from '../Footer';
 const ConsciousnessComputingRevolution2034: React.FC = () => {

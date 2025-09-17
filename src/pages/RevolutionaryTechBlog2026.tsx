@@ -1,4 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import React from 'react';
+
+import React, { useState } from 'react';
+import React from 'react';
+
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const RevolutionaryTechBlog2026: React.FC = () => {
   const blogPosts = [
     {

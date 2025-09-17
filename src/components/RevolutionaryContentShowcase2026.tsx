@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useState } from 'react';
+import React from 'react';
+
+import React, { useState } from 'react';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const RevolutionaryContentShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);

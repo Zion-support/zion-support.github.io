@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/QuantumConsciousnessRevolution2028.tsx
 import { motion } from 'framer-motion';
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5:src/pages/QuantumConsciousnessRevolution2028.tsx
 const QuantumConsciousnessRevolution2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">

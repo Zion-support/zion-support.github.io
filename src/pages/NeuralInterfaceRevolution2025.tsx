@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
+=======
+import React from 'react';
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">

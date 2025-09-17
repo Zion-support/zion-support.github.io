@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -9,6 +10,9 @@
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,9 +21,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 /* Custom animations for enhanced content */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -254,6 +261,7 @@
   --zion-slate-light: #94a3b8;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* Base Styles */
 * {
@@ -816,6 +824,24 @@ html {
   --glass-border: rgba(255, 255, 255, 0.2);
 }
 
+=======
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 /* Custom utilities */
 .gradient-text {
   background: var(--primary-gradient);
@@ -827,6 +853,7 @@ html {
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+<<<<<<< HEAD
 }
 
 /* Mobile optimizations */
@@ -1094,6 +1121,8 @@ body {
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1133,6 +1162,7 @@ body {
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .high-contrast button,
 .high-contrast input,
@@ -1266,6 +1296,10 @@ body {
 .loading::after {
   content: '';
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+.loading::after {
+  content: '';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
   position: absolute;
   top: 0;
   left: -100%;
@@ -1283,6 +1317,9 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 /* Animations */
 @keyframes fadeInUp {
 >>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
@@ -1296,11 +1333,15 @@ body {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 
 .animate-slide-in {
   animation: slideIn 0.6s ease-out;
 }
 
+<<<<<<< HEAD
 /* Hover Effects */
 .hover-scale:hover {
   transform: scale(1.05);
@@ -1331,6 +1372,8 @@ body {
 
 /* Responsive Design */
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 /* Responsive design */
 >>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
 @media (max-width: 768px) {
@@ -1338,6 +1381,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -1539,3 +1583,6 @@ body {
 =======
 }
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5

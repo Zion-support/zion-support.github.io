@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+=======
+import React from 'react';
+
+import Header from '../Header';
+import Footer from '../Footer';
+import React, { useState, useEffect } from 'react';
+
+import React from 'react';
+
+import Header from '../Header';
+import Footer from '../Footer';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const UltimateTechRevolution2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
