@@ -220,12 +220,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
               Explore Insights
@@ -240,7 +238,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
             <div className="text-5xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI Consciousness</h3>
             <p className="text-purple-100 mb-6 text-center">
@@ -373,7 +370,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 </div>
               </motion.div>
 
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
               <motion.div
@@ -382,8 +378,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
-<<<<<<< HEAD
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
             </div>
@@ -566,4 +560,3 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
-export default RevolutionaryTechInsights2026;

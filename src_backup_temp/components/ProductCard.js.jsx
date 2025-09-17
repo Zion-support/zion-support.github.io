@@ -1,47 +1,12 @@
-import React, {useState} from 'react';
-import {useAuth} from '../hooks/useAuth';
-import {useWishlist} from '../hooks/useWishlist';
-import {useRouter} from 'next/router';
-import {useSnackbar} from 'notistack';
-import {useDispatch} from 'react-redux';
-import {captureException} from '@sentry/nextjs';
-;
-export default function ProductCard("props": "any) {;
-  const { isAuthenticated "} = useAuth();
-  const {isWishlisted, toggle} = useWishlist();
-  const [imageError, setImageError] = useState(false);
-  const router = useRouter();
-  const {enqueueSnackbar} = useSnackbar();
-  ;
-  if (!product || ;
-      typeof product.id !== "string" || ;
-      typeof product.title !== "string" || ;
-      product.title.trim() === "") {;
-    captureException(new Error("Invalid product data received by ProductCard"), { ;
-      "extra": "{ product "} ;
-    });
-    return (;
-      <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">;
-        <p className="text-destructive text-sm">;
-          Product information unavailable.;
-        </p>;
-      </div>;
-  if (!product || 
-      typeof product.id !== "string" || 
-      typeof product.title !== "string" || 
-      product.title.trim() === "") {
-    captureException(new Error("Invalid product data received by ProductCard"), { 
-      extra: { product } 
-    }
-    );
-    return (
-      <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
-        <p className="text-destructive text-sm">
-          Product information unavailable.
-        </p>
-      </div>
-    );
-  }
-  ;
-  const active = isWishlisted(product.id);
-  const dispatch = useDispatch();
+import React from 'react';
+
+const ProductCard.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ProductCard.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ProductCard.js;

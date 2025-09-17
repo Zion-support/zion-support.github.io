@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
-=======
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -324,7 +322,6 @@ export default function Contact() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Why Choose Us Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -340,7 +337,6 @@ export default function Contact() {
               exceptional results for our clients.
             </p>
           </motion.div>
-=======
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
               <div className="grid grid-cols-1 gap-6">

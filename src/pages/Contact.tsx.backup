@@ -1,43 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-<<<<<<< HEAD
-=======
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
 <<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -54,64 +21,15 @@ import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link';
 
-
 export default function Contact() {
   const { showToast: toast } = useToast();
 =======
+>>>>>>> origin/merge-new-content-1757989975
 import React, { useState } from 'react';
-
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-1912
 
 const Contact: React.FC = () => {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-bec3
-
-const Contact: React.FC = () => {
->>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
-
-const Contact: React.FC = () => {
->>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -158,40 +76,15 @@ const Contact: React.FC = () => {
 
   const services = [
     "AI & Machine Learning",
-    "Cloud & DevOps",
-    "Cybersecurity",
-    "Data Analytics",
-    "Digital Transformation",
-    "IT Infrastructure",
-    "Micro SaaS Solutions",
     "Quantum Computing",
-    "Blockchain Services",
-    "IoT Solutions"
+    "Cybersecurity",
+    "Neural Interfaces",
+    "Conscious AI Systems",
+    "Interdimensional Computing",
+    "Digital Transformation",
+    "Cloud Solutions"
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -201,19 +94,22 @@ const Contact: React.FC = () => {
       
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Contact Us
+=======
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Let's Build the Future
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Together</span>
+>>>>>>> origin/merge-new-content-1757989975
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge AI and technology solutions? 
-            Our team of experts is here to help you navigate the digital landscape.
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Ready to transform your business with revolutionary technology? 
+            Get in touch with our experts and discover what's possible.
           </p>
         </div>
       </section>
@@ -221,19 +117,18 @@ const Contact: React.FC = () => {
       {/* Contact Methods Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+=======
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
+>>>>>>> origin/merge-new-content-1757989975
             {contactMethods.map((method, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
               >
                 <div className="text-cyan-400 mb-4">{method.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
@@ -248,11 +143,16 @@ const Contact: React.FC = () => {
       {/* Contact Form Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div
+<<<<<<< HEAD
+          <motion.div
+            className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6 }}
+=======
+          <div
             className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
+>>>>>>> origin/merge-new-content-1757989975
           >
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Send Us a Message</h2>
@@ -262,12 +162,17 @@ const Contact: React.FC = () => {
             </div>
 
             {isSubmitted ? (
+<<<<<<< HEAD
+              <motion.div
+=======
               <div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+>>>>>>> origin/merge-new-content-1757989975
                 className="text-center py-12"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
               >
-                <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
+                <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
@@ -277,123 +182,103 @@ const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name *
-                    </label>
+                    <label className="block text-white font-semibold mb-2">Name *</label>
                     <input
                       type="text"
-                      id="name"
                       name="name"
-                      required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter your full name"
+                      required
+                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
+                      placeholder="Your full name"
                     />
                   </div>
-                  
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address *
-                    </label>
+                    <label className="block text-white font-semibold mb-2">Email *</label>
                     <input
                       type="email"
-                      id="email"
                       name="email"
-                      required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter your email"
+                      required
+                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
+                      placeholder="your.email@company.com"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
-                    </label>
+                    <label className="block text-white font-semibold mb-2">Company</label>
                     <input
                       type="text"
-                      id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter company name"
+                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
+                      placeholder="Your company name"
                     />
                   </div>
-                  
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    </label>
+                    <label className="block text-white font-semibold mb-2">Phone</label>
                     <input
                       type="tel"
-                      id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Enter phone number"
+                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
+                      placeholder="+1 (555) 123-4567"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service of Interest
-                  </label>
+                  <label className="block text-white font-semibold mb-2">Service Interest</label>
                   <select
-                    id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
-                      <option key={index} value={service}>{service}</option>
+                      <option key={index} value={service} className="bg-gray-800 text-white">
+                        {service}
+                      </option>
                     ))}
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Project Details *
-                  </label>
+                  <label className="block text-white font-semibold mb-2">Message *</label>
                   <textarea
-                    id="message"
                     name="message"
-                    required
-                    rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                    placeholder="Tell us about your project, goals, and timeline..."
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300 resize-none"
+                    placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
 
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="h-5 w-5 mr-2" />
-                        Send Message
-                      </>
-                    )}
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      <span>Send Message</span>
+                    </>
+                  )}
+                </button>
               </form>
             )}
           </div>
@@ -403,24 +288,31 @@ const Contact: React.FC = () => {
       {/* Emergency Support Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div
+<<<<<<< HEAD
+          <motion.div
+            className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+=======
+          <div
             className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
+>>>>>>> origin/merge-new-content-1757989975
           >
             <h3 className="text-2xl font-bold text-white mb-4">🚨 Emergency Support</h3>
             <p className="text-gray-300 mb-6">
               Need immediate assistance? Our 24/7 emergency support team is here to help.
             </p>
 <<<<<<< HEAD
-<<<<<<< HEAD
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Emergency Support
+            </a>
+          </motion.div>
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e4b8
->>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
@@ -452,18 +344,6 @@ const Contact: React.FC = () => {
               <li>• Technology consulting</li>
             </ul>
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -481,63 +361,14 @@ const Contact: React.FC = () => {
               </a>
             </div>
           </div>
+>>>>>>> origin/merge-new-content-1757989975
         </div>
       </section>
 
-<<<<<<< HEAD
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
-              <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
-                  <Card
-                    key={index}
-                    className="bg-zion-blue-dark border border-zion-blue-light p-6"
-                  >
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {office.name}
-                    </h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
-                          {office.address}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
-                          {office.phone}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <a
-                          href={`mailto:${office.email}`}
-                          className="text-zion-cyan hover:underline"
-                        >
-                          {office.email}
-                        </a>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-=======
       {/* Why Choose Us Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
-          <motion.div
-=======
           <div
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
@@ -549,12 +380,8 @@ const Contact: React.FC = () => {
           </motion.div>
 =======
           </div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> origin/merge-new-content-1757989975
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -573,10 +400,13 @@ const Contact: React.FC = () => {
             ].map((feature, index) => (
               <div
                 key={index}
+                className="text-center"
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 + 0.1 * index }}
-                className="text-center"
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975
               >
                 <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -587,32 +417,22 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-5863
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
->>>>>>> cursor/create-and-deploy-new-content-bec3
           </div>
         </div>
       </section>
+=======
+import React from 'react';
+
+const Contact: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">Contact</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
     </div>
   );
 };
