@@ -62,7 +62,7 @@ export default function AdvancedFeaturesShowcase() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((featureindex) => (
-            <divdiv
+            <div
               key={feature.title}
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -86,7 +86,7 @@ export default function AdvancedFeaturesShowcase() {
                   </li>
                 ))}
               </ul>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>

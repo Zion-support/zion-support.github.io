@@ -196,7 +196,7 @@ const InteractiveAICalculator: React.FC = () => {
             </div>
           ) : result ? (
             <div>
-              <divdiv
+              <div
                 className="space-y-4"
               >
                 <div className="grid grid-cols-2 gap-4">
@@ -251,7 +251,7 @@ const InteractiveAICalculator: React.FC = () => {
                     </span>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
           ) : null}
         </div>

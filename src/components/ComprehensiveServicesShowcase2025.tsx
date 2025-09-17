@@ -216,7 +216,7 @@ const ComprehensiveServicesShowcase2025 = () => {
           </divp>
           
           {/* Stats */}
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
@@ -236,11 +236,11 @@ const ComprehensiveServicesShowcase2025 = () => {
               <div className="text-3xl font-bold text-orange-600 mb-2">4.9/5</div>
               <div className="text-gray-600">Customer Rating</div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Service Navigation */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -261,10 +261,10 @@ const ComprehensiveServicesShowcase2025 = () => {
               }`} />
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Featured Service */}
-          <divdiv
+          <div
             key={activeService}
             className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
           >
@@ -363,16 +363,16 @@ const ComprehensiveServicesShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* All Services Grid */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {services.map((serviceindex) => (
-            <divdiv
+            <div
               key={service.id}
               whileInView={{ opacity: 1, y: 0 }}
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
@@ -421,12 +421,12 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </a>
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center"
         >
@@ -454,7 +454,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

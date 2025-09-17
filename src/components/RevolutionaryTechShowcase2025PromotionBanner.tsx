@@ -56,15 +56,15 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
           >
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
             >
               <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-300 font-medium">Revolutionary Technology 2025</span>
-            </divdiv>
+            </div>
 
             {/* Main Heading */}
             <divh1
@@ -84,7 +84,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
             </divp>
 
             {/* Rotating Features */}
-            <divdiv
+            <div
               className="mb-8"
             >
               <div className="flex items-center text-lg text-gray-300">
@@ -97,10 +97,10 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
                   </divspan>
                 </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center group">
@@ -111,11 +111,11 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
                 <Star className="w-5 h-5 mr-2" />
                 Learn More
               </button>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
 
           {/* Right Content - Stats & Visual */}
-          <divdiv
+          <div
             className="relative"
           >
             {/* Main Visual */}
@@ -135,13 +135,13 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={stat.label}
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
@@ -153,11 +153,11 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
 
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-3xl blur-3xl -z-10"></div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Bottom Stats Bar */}
-        <divdiv
+        <div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
@@ -166,7 +166,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
             { icon: Rocketlabel: ''Deployments', 'value: '1000+' },
             { icon: Starlabel: ''Rating', 'value: '5.0/5.0' }
           ].map((itemindex) => (
-            <divdiv
+            <div
               key={item.label}
               className="text-center"
             >
@@ -175,9 +175,9 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
               </div>
               <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
               <div className="text-sm text-gray-400">{item.label}</div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
       </div>
     </div>
   );

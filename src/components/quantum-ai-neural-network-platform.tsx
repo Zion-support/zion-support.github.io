@@ -44,7 +44,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="flex justify-center mb-6">
@@ -74,14 +74,14 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 Schedule Demo
               </divbutton>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -92,11 +92,11 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Harness the power of quantum mechanics to revolutionize AI neural network performance and capabilities.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -106,7 +106,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                   <Check className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -115,7 +115,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -123,11 +123,11 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Quantum Advantage Benefits
             </h2>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -137,7 +137,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                   <Star className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{benefit}</h3>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -146,7 +146,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       {/* Pricing Section */}
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -157,11 +157,11 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Choose the perfect plan for your quantum AI neural network journey.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([plan, price], index) => (
-              <divdiv
+              <div
                 key={plan}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -178,7 +178,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 >
                   Get Started
                 </divbutton>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -187,7 +187,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -202,7 +202,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             >
               Start Your Quantum Journey Today
             </divbutton>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>

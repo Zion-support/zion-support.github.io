@@ -226,7 +226,7 @@ export default function ComprehensivePricingPage() {
               </divp>
               
               {/* Market Stats */}
-              <divdiv 
+              <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
               >
                 {marketStats.map((stat, index) => (
@@ -236,10 +236,10 @@ export default function ComprehensivePricingPage() {
                     <div className="text-gray-500 text-xs">{stat.description}</div>
                   </div>
                 ))}
-              </divdiv>
+              </div>
 
               {/* CTA Buttons */}
-              <divdiv 
+              <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               >
                 <Button 
@@ -258,7 +258,7 @@ export default function ComprehensivePricingPage() {
                   Browse All Services
                   <Search className="ml-2 w-5 h-5" />
                 </Button>
-              </divdiv>
+              </div>
             </div>
           </div>
         </section>
@@ -286,7 +286,7 @@ export default function ComprehensivePricingPage() {
         {/* Pricing Tiers */}
         <section id="pricing-tiers" className="py-20">
           <div className="container mx-auto px-4">
-            <divdiv 
+            <div 
               className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -301,15 +301,15 @@ export default function ComprehensivePricingPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {pricingTiers.map((tier, index) => (
-                <divdiv
+                <div
                   key={tier.name}
                 >
                   <UltraFuturisticCard
@@ -356,9 +356,9 @@ export default function ComprehensivePricingPage() {
                       </Button>
                     </div>
                   </UltraFuturisticCard>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           </div>
         </section>
 
@@ -366,7 +366,7 @@ export default function ComprehensivePricingPage() {
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
-            <divdiv 
+            <div 
               className="mb-8"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -433,10 +433,10 @@ export default function ComprehensivePricingPage() {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Services Display */}
-            <divdiv 
+            <div 
               className={viewMode === 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
@@ -445,7 +445,7 @@ export default function ComprehensivePricingPage() {
               viewport={{ once: true }}
             >
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                 >
                   <UltraFuturisticCard
@@ -552,12 +552,12 @@ export default function ComprehensivePricingPage() {
                       </div>
                     )}
                   </UltraFuturisticCard>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
 
             {filteredServices.length === 0 && (
-              <divdiv 
+              <div 
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -573,7 +573,7 @@ export default function ComprehensivePricingPage() {
                  >
                    Clear Filters
                  </Button>
-              </divdiv>
+              </div>
             )}
           </div>
         </section>
@@ -581,7 +581,7 @@ export default function ComprehensivePricingPage() {
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
-            <divdiv 
+            <div 
               className="max-w-4xl mx-auto"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -629,7 +629,7 @@ export default function ComprehensivePricingPage() {
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

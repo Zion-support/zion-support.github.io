@@ -1,0 +1,96 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      '@': '/workspace/src'
+    }
+  },
+  define: {
+    global: 'globalThis',
+  },
+  optimizeDeps: {
+    include: ['framer-motion']
+  },
+  plugins: [
+    react()
+  ],
+  build: {
+    rollupOptions: {
+      external: ['fs', 'path', 'os', 'crypto', 'stream', 'util', 'events', 'child_process', 'https', 'http', 'url', 'querystring', 'framer-motion'],
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+<<<<<<< HEAD
+          ui: ['lucide-react', 'react-helmet-async'],
+          router: ['react-router-dom']
+        }
+=======
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
+          utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
+          charts: ['recharts'],
+          forms: ['react-hook-form', '@hookform/resolvers']
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        drop_debugger: true
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  }
+});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2
+      },
+      mangle: {
+        safari10: true
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+      }
+    },
+    commonjsOptions: {
+      include: [/node_modules/]
+    }
+  },
+  server: {
+    port: 3000,
+    host: true
+<<<<<<< HEAD
+=======
+  },
+  optimizeDeps: {
+<<<<<<< HEAD
+    include: ['react', 'react-dom', 'framer-motion'],
+    exclude: ['@vite/client', '@vite/env']
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+  }
+});
+=======
+    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+  },
+<<<<<<< HEAD
+});
+=======
+});
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs

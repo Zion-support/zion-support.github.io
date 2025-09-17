@@ -153,7 +153,7 @@ export default function NewsPage() {
     },
     {
       id: 2,
-            </divdiv>
+            </div>
           </div>
         </section>
 
@@ -161,7 +161,7 @@ export default function NewsPage() {
         {featuredArticle && (
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <divdiv
+              <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="text-center mb-12"
@@ -169,9 +169,9 @@ export default function NewsPage() {
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   Featured Story
                 </h2>
-              </divdiv>
+              </div>
               
-              <divdiv
+              <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden"
@@ -223,7 +223,7 @@ export default function NewsPage() {
                     </div>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             </div>
           </section>
         )}
@@ -259,7 +259,7 @@ export default function NewsPage() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our latest developments and breakthroughs
               </p>
-            </divdiv>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
@@ -269,7 +269,7 @@ export default function NewsPage() {
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"
@@ -319,14 +319,14 @@ export default function NewsPage() {
                   </div>
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-16"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
                 <Newspaper className="w-4 h-4 mr-2" />
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
-            <divdiv
+            <div
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -339,12 +339,12 @@ export default function NewsPage() {
                 Stay updated with the latest developments, breakthroughs, and innovations 
                 from Zion Tech Group and the technology industry.
               </p>
-            </divdiv>
+            </div>
 
         {/* Category Filter */}
         <section className="py-10 px-4">
           <div className="container mx-auto max-w-6xl">
-            <divdiv
+            <div
               className="flex flex-wrap justify-center gap-4"
             >
               {categories.map((category, index) => (
@@ -540,7 +540,7 @@ export default function News() {
           </divp>
           
           {/* Search and Filter */}
-          <divdiv
+          <div
             className="max-w-4xl mx-auto"
           >
             <div className="relative mb-8">
@@ -569,7 +569,7 @@ export default function News() {
                 </button>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -614,7 +614,7 @@ export default function News() {
           >
             Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group.
           </divp>
-          <divdiv 
+          <div 
             className="flex flex-wrap justify-center gap-4"
           >
             <a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
@@ -624,7 +624,7 @@ export default function News() {
             <a href="#insights" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
               Industry Insights
             </a>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -651,7 +651,7 @@ export default function News() {
       {/* Featured News */}
       <section id="featured" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv 
+          <div 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -662,7 +662,7 @@ export default function News() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our most important announcements and breakthrough developments.
             </p>
-          </divdiv>
+          </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredNews.map((article, index) => (
@@ -719,7 +719,7 @@ export default function News() {
       {/* Recent News */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv 
+          <div 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -730,7 +730,7 @@ export default function News() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Stay current with our latest developments and industry updates.
             </p>
-          </divdiv>
+          </div>
           
           <div className="grid lg:grid-cols-2 gap-8">
             {recentNews.map((article, index) => (
@@ -782,7 +782,7 @@ export default function News() {
       {/* Industry Insights */}
       <section id="insights" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv 
+          <div 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -793,11 +793,11 @@ export default function News() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Deep analysis and thought leadership on emerging technologies and industry trends.
             </p>
-          </divdiv>
+          </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
             {industryInsights.map((insight, index) => (
-              <divdiv 
+              <div 
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -826,7 +826,7 @@ export default function News() {
                   <span>Read Insight</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -835,7 +835,7 @@ export default function News() {
       {/* Newsletter Signup */}
       <section className="py-20 bg-gradient-to-r from-gray-900 to-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv 
+          <div 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -855,7 +855,7 @@ export default function News() {
                 Subscribe
               </button>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -970,7 +970,7 @@ export default function News() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {upcomingEvents.map((event, index) => (
-              <divdiv
+              <div
                 key={event.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -1018,7 +1018,7 @@ export default function News() {
                     </a>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -1027,7 +1027,7 @@ export default function News() {
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="p-8 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/20"
@@ -1053,19 +1053,19 @@ export default function News() {
             <p className="text-sm text-gray-400 mt-4">
               No spam, unsubscribe at any time. We respect your privacy.
             </p>
-          </divdiv>
+          </div>
         </div>
       </section>
 
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our most recent developments and announcements
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
@@ -1108,7 +1108,7 @@ export default function News() {
                 Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing.
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
               <p className="text-xl text-gray-400 mb-8">
@@ -1124,7 +1124,7 @@ export default function News() {
                   Subscribe
                 </button>
               </div>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pressReleases.map((release, index) => (
@@ -1159,7 +1159,7 @@ export default function News() {
         {/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -1170,11 +1170,11 @@ export default function News() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore news by category to find updates in your areas of interest.
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {newsCategories.map((category, index) => (
-                <divdiv
+                <div
                   key={category.name}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -1189,7 +1189,7 @@ export default function News() {
                     {category.name}
                   </h3>
                   <p className="text-gray-400 text-xs">{category.count} articles</p>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -1198,7 +1198,7 @@ export default function News() {
         {/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -1209,7 +1209,7 @@ export default function News() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Stay updated with our latest announcements and developments.
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {recentNews.map((news, index) => (
@@ -1250,7 +1250,7 @@ export default function News() {
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -1276,7 +1276,7 @@ export default function News() {
                   Press Kit
                 </a>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>
@@ -1284,7 +1284,7 @@ export default function News() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -1310,7 +1310,7 @@ export default function News() {
                 Contact Our Team
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>
@@ -1319,7 +1319,7 @@ export default function News() {
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv 
+          <div 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -1338,7 +1338,7 @@ export default function News() {
                 About Zion Tech Group
               </a>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>

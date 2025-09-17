@@ -196,7 +196,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
-      <divdiv
+      <div
         className="mb-8"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -205,10 +205,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
         <p className="text-gray-300 text-lg">
           Explore cutting-edge AI researchbreakthrough technologiesand future innovations
         </p>
-      </divdiv>
+      </div>
 
       {/* Search and Filters */}
-      <divdiv
+      <div
         className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
       >
         <div className="flex flex-col lg:flex-row gap-4">
@@ -274,10 +274,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             </button>
           </div>
         </div>
-      </divdiv>
+      </div>
 
       {/* Content Grid */}
-      <divdiv
+      <div
         className={`grid gap-6 ${
           viewMode === 'grid' 
             ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -290,7 +290,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             const CategoryIcon = getCategoryIcon(item.category);
             
             return (
-              <divdiv
+              <div
                 key={item.id}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 group cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
@@ -433,20 +433,20 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                     </div>
                   </>
                 )}
-              </divdiv>
+              </div>
             );
           })}
         </div>
-      </divdiv>
+      </div>
 
       {/* Content Detail Modal */}
       <div>
         {selectedContent && (
-          <divdiv
+          <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedContent(null)}
           >
-            <divdiv
+            <div
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -513,8 +513,8 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                   </button>
                 </div>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         )}
       </div>
     </div>

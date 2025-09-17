@@ -14,7 +14,7 @@ const NewContentPromotionalBanner: React.FC = () => {
       linkText: "Read Article",
       gradient: "from-indigo-500 to-purple-600",
       bgGradient: "from-indigo-500/10 to-purple-500/10"
-    },
+
     {
       title: "⚛️ Quantum Computing Breakthrough",
       description: "Harness exponential power for optimization, simulation, and analytics",
@@ -22,7 +22,7 @@ const NewContentPromotionalBanner: React.FC = () => {
       linkText: "Read Article",
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-500/10 to-blue-500/10"
-    },
+
     {
       title: "🔗 Blockchain 3.0 Platform",
       description: "Next-gen blockchain with cross-chain interoperability and enterprise security",
@@ -30,7 +30,7 @@ const NewContentPromotionalBanner: React.FC = () => {
       linkText: "Read Article",
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500/10 to-teal-500/10"
-    },
+
     {
       title: "⚛️ Quantum Computing Solutions",
       description: "Harness exponential computational power for complex business optimization",
@@ -38,7 +38,7 @@ const NewContentPromotionalBanner: React.FC = () => {
       linkText: "Explore Solutions",
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-500/10 to-blue-500/10"
-    },
+
     {
       title: "🤖 AI Customer Success Platform",
       description: "Reduce churn by 40% with AI-powered customer success automation",
@@ -46,7 +46,7 @@ const NewContentPromotionalBanner: React.FC = () => {
       linkText: "Learn More",
       gradient: "from-indigo-500 to-purple-600",
       bgGradient: "from-indigo-500/10 to-purple-500/10"
-    }
+
   ];
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const NewContentPromotionalBanner: React.FC = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900/95 to-slate-800/95 backdrop-blur-sm border-b border-gray-700/50"
       >
         <div className="max-w-7xl mx-auto px-4 py-3">
@@ -99,7 +99,7 @@ const NewContentPromotionalBanner: React.FC = () => {
               </button>
 
               {/* Slide Content */}
-                <divdiv
+                <div
                   key={currentSlide}
                   className="flex items-center space-x-4 flex-1"
                 >
@@ -126,7 +126,7 @@ const NewContentPromotionalBanner: React.FC = () => {
                     <span>{promotionalContent[currentSlide].linkText}</span>
                     <ArrowRight className="w-3 h-3" />
                   </Link>
-                </divdiv>
+                </div>
               </div>
 
               {/* Navigation Arrow */}
@@ -165,9 +165,9 @@ const NewContentPromotionalBanner: React.FC = () => {
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <divdiv
-              y: [0, -10, 0],
-              rotate: [0, 5, 0],
+          <div
+
+
             }}
               duration: 3,
               repeat: Infinity,
@@ -176,10 +176,10 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-2 left-10"
           >
             <Star className="w-4 h-4 text-yellow-400 opacity-60" />
-          </divdiv>
-          <divdiv
-              y: [0, 10, 0],
-              rotate: [0, -5, 0],
+          </div>
+          <div
+
+
             }}
               duration: 4,
               repeat: Infinity,
@@ -189,10 +189,10 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-3 right-20"
           >
             <Zap className="w-3 h-3 text-purple-400 opacity-60" />
-          </divdiv>
-          <divdiv
-              y: [0, -8, 0],
-              x: [0, 5, 0],
+          </div>
+          <div
+
+
             }}
               duration: 5,
               repeat: Infinity,
@@ -202,9 +202,9 @@ const NewContentPromotionalBanner: React.FC = () => {
             className="absolute top-1 right-32"
           >
             <TrendingUp className="w-3 h-3 text-green-400 opacity-60" />
-          </divdiv>
+          </div>
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

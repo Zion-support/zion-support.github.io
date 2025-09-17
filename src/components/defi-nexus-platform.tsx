@@ -72,7 +72,7 @@ export default function DeFiNexusPlatform() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <divdiv
+          <div
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
@@ -89,10 +89,10 @@ export default function DeFiNexusPlatform() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive decentralized finance platform providing yield farming, liquidity provision, and cross-chain DeFi services.
             </p>
-          </divdiv>
+          </div>
 
           {/* CTA Buttons */}
-          <divdiv
+          <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
@@ -109,14 +109,14 @@ export default function DeFiNexusPlatform() {
               <Phone className="w-5 h-5 mr-2" />
               Contact Sales
             </a>
-          </divdiv>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -127,11 +127,11 @@ export default function DeFiNexusPlatform() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of decentralized finance with multi-chain support, automated yield optimization, and comprehensive DeFi analytics.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -141,7 +141,7 @@ export default function DeFiNexusPlatform() {
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function DeFiNexusPlatform() {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -161,11 +161,11 @@ export default function DeFiNexusPlatform() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options designed for DeFi users of all levels, from beginners to institutional investors.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -203,7 +203,7 @@ export default function DeFiNexusPlatform() {
                 <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                   Get Started
                 </button>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -212,7 +212,7 @@ export default function DeFiNexusPlatform() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -223,10 +223,10 @@ export default function DeFiNexusPlatform() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how DeFi Nexus Platform can revolutionize your decentralized finance experience.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center"
@@ -236,9 +236,9 @@ export default function DeFiNexusPlatform() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center"
@@ -248,9 +248,9 @@ export default function DeFiNexusPlatform() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center"
@@ -260,7 +260,7 @@ export default function DeFiNexusPlatform() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>

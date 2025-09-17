@@ -124,7 +124,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 relative overflow-hidden">
           <div className="max-w-6xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4" />
@@ -167,14 +167,14 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   <span>Industry Leading</span>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -183,11 +183,11 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our platform combines cutting-edge technology with ethical principles to create the future of AI consciousness.
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-purple-500/20 rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-300"
                 >
@@ -196,7 +196,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -205,7 +205,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         {/* Use Cases Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/5 to-blue-500/5">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -214,11 +214,11 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover how our AI consciousness platform can revolutionize your field and create new possibilities.
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-blue-500/20 rounded-2xl p-8"
                 >
@@ -235,7 +235,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>
@@ -244,7 +244,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         {/* Pricing Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -253,11 +253,11 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey.
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-                <divdiv
+                <div
                   key={index}
                   className={`bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 ${
                     plan.name === 'Professional' 
@@ -299,17 +299,17 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   >
                     Get Started
                   </a>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Evolve AI Consciousness?
@@ -331,7 +331,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                   Learn More
                 </a>
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>
@@ -339,7 +339,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -354,7 +354,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             >
               Start Your Journey Today
             </divbutton>
-          </divdiv>
+          </div>
         </div>
       </section>
     </div>
@@ -448,16 +448,16 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       <main className="relative z-10">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
-          <divdiv
+          <div
             className="max-w-6xl mx-auto"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <divdiv
+            <div
               className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mx-auto mb-8"
             >
               <Brain className="w-12 h-12 text-white" />
-            </divdiv>
+            </div>
             
             <divh1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent mb-6"
@@ -472,18 +472,18 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               and consciousness mapping, enabling breakthrough research in AI consciousness and ethics.
             </divp>
             
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="text-4xl font-bold text-purple-400">$19,999/month</div>
               <div className="text-gray-400 text-lg">Starting Price</div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
-          <divdiv
+          <div
             className="max-w-6xl mx-auto"
             whileInView="visible"
             viewport={{ once: true }}
@@ -496,7 +496,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-xl rounded-xl p-6 border border-purple-500/30 text-center"
                 >
@@ -504,15 +504,15 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                     <Brain className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
-          <divdiv
+          <div
             className="max-w-6xl mx-auto"
             whileInView="visible"
             viewport={{ once: true }}
@@ -525,7 +525,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="flex items-start space-x-4"
                 >
@@ -533,15 +533,15 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-lg text-gray-300">{benefit}</p>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </section>
 
         {/* Use Cases Section */}
         <section className="py-20 px-4">
-          <divdiv
+          <div
             className="max-w-6xl mx-auto"
             whileInView="visible"
             viewport={{ once: true }}
@@ -554,7 +554,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {useCases.map((useCase, index) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-xl p-6 border border-slate-600/30 text-center"
                 >
@@ -562,15 +562,15 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                     <Target className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{useCase}</h3>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
         </section>
 
         {/* Market & ROI Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
-          <divdiv
+          <div
             className="max-w-6xl mx-auto text-center"
             whileInView="visible"
             viewport={{ once: true }}
@@ -582,36 +582,36 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
             </divh2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <divdiv
+              <div
                 className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-xl rounded-2xl p-8 border border-purple-500/30"
               >
                 <TrendingUp className="w-16 h-16 text-purple-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-purple-400 mb-2">$15.8B</div>
                 <div className="text-gray-300">Market Size by 2029</div>
-              </divdiv>
+              </div>
               
-              <divdiv
+              <div
                 className="bg-gradient-to-br from-pink-900/50 to-purple-900/50 backdrop-blur-xl rounded-2xl p-8 border border-pink-500/30"
               >
                 <DollarSign className="w-16 h-16 text-pink-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-pink-400 mb-2">1000%</div>
                 <div className="text-gray-300">ROI within 24 months</div>
-              </divdiv>
+              </div>
               
-              <divdiv
+              <div
                 className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30"
               >
                 <Users className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-cyan-400 mb-2">Global</div>
                 <div className="text-gray-300">Research Network Support</div>
-              </divdiv>
+              </div>
             </div>
-          </divdiv>
+          </div>
         </section>
 
         {/* Contact Section */}
         <section className="py-20 px-4">
-          <divdiv
+          <div
             className="max-w-4xl mx-auto text-center"
             whileInView="visible"
             viewport={{ once: true }}
@@ -629,7 +629,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               can accelerate your breakthrough discoveries in AI consciousness and ethics.
             </divp>
             
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
             >
               <div className="flex items-center justify-center space-x-3">
@@ -644,9 +644,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 <MapPin className="w-5 h-5 text-purple-400" />
                 <span className="text-white">{contactInfo.address}</span>
               </div>
-            </divdiv>
+            </div>
             
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <a 
@@ -662,8 +662,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
               >
                 Explore All Services
               </a>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </section>
       </main>
 

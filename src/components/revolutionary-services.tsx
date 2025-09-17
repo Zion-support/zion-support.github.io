@@ -213,7 +213,7 @@ export default function RevolutionaryServicesPage() {
               </divp>
               
               {/* Service Count Stats */}
-              <divdiv 
+              <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
               >
                 <div className="text-center">
@@ -232,10 +232,10 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>
                   <div className="text-gray-400">Average ROI</div>
                 </div>
-              </divdiv>
+              </div>
 
               {/* CTA Buttons */}
-              <divdiv 
+              <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               >
                 <Button 
@@ -254,7 +254,7 @@ export default function RevolutionaryServicesPage() {
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
                 </Button>
-              </divdiv>
+              </div>
             </div>
           </div>
         </section>
@@ -282,13 +282,13 @@ export default function RevolutionaryServicesPage() {
         {/* Category Navigation */}
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {enhancedCategories.map((category, index) => (
-                <divdiv
+                <div
                   key={category.name}
                 >
                   <UltraFuturisticCard
@@ -305,16 +305,16 @@ export default function RevolutionaryServicesPage() {
                     <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
                     <div className="text-xs text-gray-500">Services</div>
                   </UltraFuturisticCard>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           </div>
         </section>
 
         {/* Popular Services Showcase */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <divdiv 
+            <div 
               className="text-center mb-12"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -329,15 +329,15 @@ export default function RevolutionaryServicesPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
-            </divdiv>
+            </div>
 
-            <divdiv 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {popularServices.slice(0, 6).map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                 >
                   <UltraFuturisticCard
@@ -375,9 +375,9 @@ export default function RevolutionaryServicesPage() {
                            </Button>
                     </div>
                   </UltraFuturisticCard>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           </div>
         </section>
 
@@ -385,7 +385,7 @@ export default function RevolutionaryServicesPage() {
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
-            <divdiv 
+            <div 
               className="mb-8"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -452,10 +452,10 @@ export default function RevolutionaryServicesPage() {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* Services Display */}
-            <divdiv 
+            <div 
               className={viewMode === 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
@@ -464,7 +464,7 @@ export default function RevolutionaryServicesPage() {
               viewport={{ once: true }}
             >
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                 >
                   <UltraFuturisticCard
@@ -563,12 +563,12 @@ export default function RevolutionaryServicesPage() {
                       </div>
                     )}
                   </UltraFuturisticCard>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
 
             {filteredServices.length === 0 && (
-              <divdiv 
+              <div 
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -584,7 +584,7 @@ export default function RevolutionaryServicesPage() {
                          >
                            Clear Filters
                          </Button>
-              </divdiv>
+              </div>
             )}
           </div>
         </section>
@@ -592,11 +592,11 @@ export default function RevolutionaryServicesPage() {
         {/* Service Details Modal */}
         <div>
           {selectedService && (
-            <divdiv
+            <div
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
               onClick={() => setSelectedService(null)}
             >
-              <divdiv
+              <div
                 className="bg-slate-900 rounded-2xl border border-cyan-400/30 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -709,15 +709,15 @@ export default function RevolutionaryServicesPage() {
                     </div>
                   </div>
                 </div>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           )}
         </div>
 
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
-            <divdiv 
+            <div 
               className="max-w-4xl mx-auto"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -765,7 +765,7 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

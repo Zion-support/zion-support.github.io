@@ -52,7 +52,7 @@ const InteractiveContentWidget = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4">
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -61,10 +61,10 @@ const InteractiveContentWidget = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
           </p>
-        </divdiv>
+        </div>
 
         {/* Category Selector */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(contentCategories).map(([keycategory]) => (
@@ -81,15 +81,15 @@ const InteractiveContentWidget = () => {
               {category.title}
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Content Grid */}
-          <divdiv
+          <div
             key={selectedCategory}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
           >
             {contentCategories[selectedCategory].items.map((itemindex) => (
-              <divdiv
+              <div
                 key={item.title}
                 onHoverStart={() => setHoveredItem(item.title)}
                 onHoverEnd={() => setHoveredItem(null)}
@@ -127,17 +127,17 @@ const InteractiveContentWidget = () => {
                 </a>
                 
                 {hoveredItem === item.title && (
-                  <divdiv
+                  <div
                     className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none"
                   />
                 )}
-              </divdiv>
+              </div>
             ))}
-          </divdiv>
+          </div>
         </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <a 
@@ -146,7 +146,7 @@ const InteractiveContentWidget = () => {
           >
             🚀 Access Full Content Library
           </a>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

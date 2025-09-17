@@ -126,7 +126,7 @@ export default function Revolutionary2028Pricing() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -183,7 +183,7 @@ export default function Revolutionary2028Pricing() {
                 <div className="text-cyan-300">Free Trial</div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -201,7 +201,7 @@ export default function Revolutionary2028Pricing() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
-              <divdiv
+              <div
                 key={tier.name}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -250,7 +250,7 @@ export default function Revolutionary2028Pricing() {
                     </a>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-3xl font-bold text-white mb-8 text-center">{category.category}</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {category.services.map((service, serviceIndex) => (
-                  <divdiv
+                  <div
                     key={service.id}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -319,7 +319,7 @@ export default function Revolutionary2028Pricing() {
                         </div>
                       </div>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -340,7 +340,7 @@ export default function Revolutionary2028Pricing() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
@@ -353,9 +353,9 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-green-400">30%</div>
               <div className="text-purple-300">Lower than Market</div>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
@@ -368,9 +368,9 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
               <div className="text-blue-300">Transparent Pricing</div>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
@@ -383,7 +383,7 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-pink-400">5x</div>
               <div className="text-pink-300">ROI Guarantee</div>
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>
@@ -391,7 +391,7 @@ export default function Revolutionary2028Pricing() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="space-y-8"
@@ -435,7 +435,7 @@ export default function Revolutionary2028Pricing() {
                 <span>Cancel Anytime</span>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 

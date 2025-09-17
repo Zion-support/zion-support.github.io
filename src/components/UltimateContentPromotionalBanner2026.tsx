@@ -6,11 +6,11 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-12">
-          <divdiv
+          <div
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-lg font-bold mb-8 animate-pulse"
           >
             🚀 ULTIMATE BREAKTHROUGH CONTENT • JANUARY 2026
-          </divdiv>
+          </div>
           <divh2
             className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
           >
@@ -24,7 +24,7 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
           </divp>
         </div>
         
-        <divdiv
+        <div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -77,9 +77,9 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               Explore Breakthrough →
             </a>
           </div>
-        </divdiv>
+        </div>
 
-        <divdiv
+        <div
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
@@ -105,9 +105,9 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               </div>
             </div>
           </div>
-        </divdiv>
+        </div>
 
-        <divdiv
+        <div
           className="text-center mt-8"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -121,7 +121,7 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               🚀 Ultimate Breakthrough
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

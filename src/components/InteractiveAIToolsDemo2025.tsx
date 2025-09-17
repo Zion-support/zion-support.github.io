@@ -284,7 +284,7 @@ Recommendations:
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv 
+        <div 
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
@@ -300,7 +300,7 @@ Recommendations:
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Try our cutting-edge AI tools in real-time. Generate contentcreate visualswrite codeand much more with just a few clicks.
           </p>
-        </divdiv>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Tools Sidebar */}
@@ -419,7 +419,7 @@ Recommendations:
 
               {/* Progress Bar */}
               {isProcessing && (
-                <divdiv
+                <div
                   className="mb-8"
                 >
                   <div className="flex items-center justify-between mb-2">
@@ -427,11 +427,11 @@ Recommendations:
                     <span className="text-gray-400">{Math.round(progress)}%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
-                    <divdiv
+                    <div
                       className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
                     />
                   </div>
-                </divdiv>
+                </div>
               )}
 
               {/* Output Section */}
@@ -441,11 +441,11 @@ Recommendations:
                 </label>
                 <div className="bg-slate-800 rounded-lg p-6 min-h-[200px] border border-white/10">
                   {results[selectedTool] ? (
-                    <divdiv
+                    <div
                       className="text-gray-300 whitespace-pre-wrap"
                     >
                       {results[selectedTool]}
-                    </divdiv>
+                    </div>
                   ) : (
                     <div className="text-gray-500 italic">
                       {isProcessing ? 'Processing your request...' : 'Click "Process" to see the AI output'}
@@ -471,7 +471,7 @@ Recommendations:
         </div>
 
         {/* Call to Action */}
-        <divdiv 
+        <div 
           className="text-center mt-20"
         >
           <h3 className="text-3xl font-bold text-white mb-4">
@@ -490,7 +490,7 @@ Recommendations:
               View API Docs
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

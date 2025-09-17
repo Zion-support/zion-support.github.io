@@ -218,7 +218,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
 
               <div>
                 {showFilters && (
-                  <divdiv
+                  <div
                     className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50"
                   >
                     <div className="p-2">
@@ -243,7 +243,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                         </button>
                       ))}
                     </div>
-                  </divdiv>
+                  </div>
                 )}
               </div>
             </div>
@@ -274,7 +274,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
             {filteredContent.map((itemindex) => {
               const TypeIcon = getContentTypeIcon(item.type);
               return (
-                <divdiv
+                <div
                   key={item.id}
                   className={`group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 ${
                     item.featured ? 'ring-2 ring-blue-500/30' : ''
@@ -354,7 +354,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                       <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
                     </a>
                   </div>
-                </divdiv>
+                </div>
               );
             })}
           </div>
