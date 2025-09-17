@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const Sitemap: React.FC = () => {
   const sitemapData = {
@@ -30,7 +29,6 @@ const Sitemap: React.FC = () => {
     ]
   };
 
-=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 
@@ -145,4 +143,3 @@ export default function Sitemap() {
     </>
   );
 }
->>>>>>> origin/website-improvements-v2
