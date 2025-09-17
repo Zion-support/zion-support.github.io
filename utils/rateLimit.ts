@@ -11,7 +11,7 @@ import type { NextApiRequestNextApiResponse } from 'next';
 const WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 const MAX_REQUESTS = 30; // per IP per endpoint per window
 
-const store: Map<string, number[]> = new Map();
+const store: Map<stringnumber[]> = new Map();
 
 export function rateLimit(req: NextApiRequestres: NextApiResponse): boolean {
   const ip = (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || 'unknown';

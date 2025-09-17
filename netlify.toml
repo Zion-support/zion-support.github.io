@@ -22,14 +22,12 @@
   # Keep functions path relative to repo root
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["zion-website/public/**/*", "public/**/*"]
+  included_files = ["public/**/*"]
 
 [build.processing]
   skip_processing = true
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
+# No plugins needed for Vite static site
 # Fix MIME type issues
 [[headers]]
   for = "/js/*"
@@ -98,6 +96,18 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none';"
+
 [[headers]]
   for = "/sw.js"
   [headers.values]
@@ -112,8 +122,6 @@
   for = "/site.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json"
-
-# Using Next.js static export; no Netlify Next plugin required
 
 # Redirects for SEO/legacy URLs
 [[redirects]]
@@ -196,9 +204,7 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js plugin removed; this is a Vite static site build
-
-# Note: Do not add SPA catch-all redirects for Next.js; the plugin manages routing
+# Note: This is a Vite static site build with SPA routing handled by _redirects
 
 # Security Headers
 [[headers]]
@@ -215,3 +221,9 @@
   for = "*.js"
   [headers.values]
     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
+
+# SPA catch-all redirect for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

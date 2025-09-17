@@ -1,4 +1,4 @@
-import { NavigationItemNavigationCategory, NavigationConfig } from '../types/navigation';
+import { NavigationItemNavigationCategoryNavigationConfig } from '../types/navigation';
 
 export class NavigationGenerator {
   private services: NavigationItem[] = [];
@@ -621,8 +621,7 @@ export class NavigationGenerator {
       id: name.toLowerCase().replace(/\s+/g, '-'),
       nameslug: name.toLowerCase().replace(/\s+/g, '-'),
       icon: this.getCategoryIcon(name),
-      serviceCount: services.length,
-      services: services.map(s => s.id),
+      serviceCount: services.lengthservices: services.map(s => s.id),
       priority: this.getCategoryPriority(name)
     }));
 
@@ -641,8 +640,7 @@ export class NavigationGenerator {
         name: 'Resources',
         slug: 'resources',
         icon: '📚',
-        serviceCount: 0,
-        services: [],
+        serviceCount: 0services: [],
         priority: 2
       },
       {
