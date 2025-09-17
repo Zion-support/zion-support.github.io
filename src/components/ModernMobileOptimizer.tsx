@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const ModernMobileOptimizer: React.FC = () => {
@@ -80,3 +81,11 @@ const ModernMobileOptimizer: React.FC = () => {
 };
 
 export default ModernMobileOptimizer;
+=======
+import React from 'react';
+
+export default function ModernMobileOptimizer(): JSX.Element {
+  return <></>;
+}
+
+>>>>>>> fix/netlify-build

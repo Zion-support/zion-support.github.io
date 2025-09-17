@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const EnhancedAccessibilityPanel: React.FC = () => {
@@ -58,3 +59,11 @@ const EnhancedAccessibilityPanel: React.FC = () => {
 };
 
 export default EnhancedAccessibilityPanel;
+=======
+import React from 'react';
+
+export default function EnhancedAccessibilityPanel(): JSX.Element {
+  return <></>;
+}
+
+>>>>>>> fix/netlify-build

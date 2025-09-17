@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 const ModernPerformanceMonitor: React.FC = () => {
@@ -77,3 +78,11 @@ const ModernPerformanceMonitor: React.FC = () => {
 };
 
 export default ModernPerformanceMonitor;
+=======
+import React from 'react';
+
+export default function ModernPerformanceMonitor(): JSX.Element {
+  return <></>;
+}
+
+>>>>>>> fix/netlify-build

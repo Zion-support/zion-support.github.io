@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const ModernSEOOptimizer: React.FC = () => {
@@ -59,3 +60,11 @@ const ModernSEOOptimizer: React.FC = () => {
 };
 
 export default ModernSEOOptimizer;
+=======
+import React from 'react';
+
+export default function ModernSEOOptimizer(): JSX.Element {
+  return <></>;
+}
+
+>>>>>>> fix/netlify-build

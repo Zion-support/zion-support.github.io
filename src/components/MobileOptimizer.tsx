@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const MobileOptimizer: React.FC = () => {
@@ -85,3 +86,11 @@ const MobileOptimizer: React.FC = () => {
 };
 
 export default MobileOptimizer;
+=======
+import React from 'react';
+
+export default function MobileOptimizer(): JSX.Element {
+  return <></>;
+}
+
+>>>>>>> fix/netlify-build

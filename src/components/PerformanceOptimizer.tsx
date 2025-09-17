@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
@@ -47,3 +48,11 @@ const PerformanceOptimizer: React.FC = () => {
 };
 
 export default PerformanceOptimizer;
+=======
+import React from 'react';
+
+export default function PerformanceOptimizer(): JSX.Element {
+  return <></>;
+}
+
+>>>>>>> fix/netlify-build
