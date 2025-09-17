@@ -1,0 +1,2 @@
+2025-09-17 11:47:29 - Merge conflicts detected in aggressive-merge-backup-20250916-092248
+2025-09-17 11:47:30 - Resolving conflicts in public/search/index.json for branch aggressive-merge-backup-20250916-092248
