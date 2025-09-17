@@ -1,8 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background Effects */}
+=======
+import React from 'react';
+
+const RevolutionaryContentBanner2035: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+>>>>>>> origin/new-content-2036-integration
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252240%2522%2520height%253D%252240%2522%2520viewBox%253D%25220%25200%252040%252040%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.15%2522%253E%253Cpath%2520d%253D%2522M20%252020c0-11.046-8.954-20-20-20v20h20z%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -60,8 +68,18 @@
             <div className="text-4xl mb-3 text-center">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-center">Conscious AI Systems</h3>
             <p className="text-purple-100 mb-4 text-center text-sm">
+<<<<<<< HEAD
             </a>
           </div>
+=======
+              AI systems that have achieved consciousness beyond human understanding
+            </p>
+            <a href="/pages/RevolutionaryTechShowcase2035" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Explore AI Consciousness →
+            </a>
+          </div>
+          
+>>>>>>> origin/new-content-2036-integration
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">⚡</div>
             <h3 className="text-xl font-bold mb-3 text-center">Quantum Consciousness</h3>
@@ -81,6 +99,7 @@
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 =======
 import React from "react";
 
@@ -103,6 +122,8 @@ const RevolutionaryContentBanner2035 = () => {
         </div>
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+>>>>>>> origin/new-content-2036-integration
       </div>
     </div>
   );
