@@ -31,22 +31,5 @@ const Sentry = {
   wrapErrorGetInitialPropsWithSentry: jest.fn((handler) => handler),
   // If you use any specific Sentry integrations or features, mock them as needed
 };
-const init = Sentry.init;
-const captureException = Sentry.captureException;
-const captureMessage = Sentry.captureMessage;
-const addBreadcrumb = Sentry.addBreadcrumb;
-const setContext = Sentry.setContext;
-const setUser = Sentry.setUser;
-const setTag = Sentry.setTag;
-const setExtra = Sentry.setExtra;
-const withScope = Sentry.withScope;
-const withSentryConfig = Sentry.withSentryConfig;
-const wrapApiHandlerWithSentry = Sentry.wrapApiHandlerWithSentry;
-const wrapGetServerSidePropsWithSentry =
-  Sentry.wrapGetServerSidePropsWithSentry;
-const wrapGetStaticPropsWithSentry = Sentry.wrapGetStaticPropsWithSentry;
-const wrapAppGetInitialPropsWithSentry =
-  Sentry.wrapAppGetInitialPropsWithSentry;
-const wrapErrorGetInitialPropsWithSentry =
-  Sentry.wrapErrorGetInitialPropsWithSentry;
-default Sentry;
+
+export default Sentry;
