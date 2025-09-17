@@ -6,7 +6,7 @@ interface AccessibilityConfig {
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
   enableAriaLabels?: boolean;
-};
+}
 const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
@@ -42,7 +42,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
-    };
+    }
   }, [isHighContrast, enableHighContrast]);
 
   // Focus management
@@ -63,7 +63,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         setFocusVisible(true);
-      };
+      }
     };
 
     const handleMouseDown = () => {
@@ -94,8 +94,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
         const main = document.querySelector('main, [role="main"]');
         if (main) {
           (main as HTMLElement).focus();
-        };
-      };
+        }
+      }
       // Escape key handling
       if (e.key === 'Escape') {
         const modal = document.querySelector('[role="dialog"]:not([aria-hidden="true"])');
@@ -103,9 +103,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
           const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
           if (closeButton) {
             (closeButton as HTMLElement).click();
-          };
-        };
-      };
+          }
+        }
+      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -189,8 +189,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
       if (content) {
         content.setAttribute('role', 'main');
         content.id = content.id || 'main-content';
-      };
-    };
+      }
+    }
     // Add navigation landmarks
     const navs = document.querySelectorAll('nav:not([role])');
     navs.forEach(nav => nav.setAttribute('role', 'navigation'));
@@ -199,12 +199,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityConfig> = ({
     const header = document.querySelector('header:not([role])');
     if (header) {
       header.setAttribute('role', 'banner');
-    };
+    }
     // Add contentinfo landmark
     const footer = document.querySelector('footer:not([role])');
     if (footer) {
       footer.setAttribute('role', 'contentinfo');
-    };
+    }
   }, [enableAriaLabels]);
 
   return (

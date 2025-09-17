@@ -79,6 +79,47 @@ const baseRoutes = [
 ];
 
 function App() {
+  const { prefetchResource, cacheResource, measurePerformance } = usePerformanceOptimization({
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCodeSplitting: true,
+    enablePrefetching: true,
+    enableCaching: true
+  });
+
+  useEffect(() => {
+    // Prefetch critical resources
+    measurePerformance('App initialization', () => {
+      prefetchResource('/assets/vendor-DgTrhVr3.js', 'script');
+      prefetchResource('/assets/index-CWbMb2zs.js', 'script');
+    });
+
+    // Cache app configuration
+    cacheResource('app-config', {
+      version: '1.0.0',
+      features: ['performance-monitoring', 'accessibility', 'error-boundary']
+    }, 300000); // 5 minutes
+
+    // Initialize performance monitoring
+    const perfMonitor = new PerformanceMonitor();
+    
+    // Report performance metrics after page load
+    const handleLoad = () => {
+      setTimeout(() => {
+        if (perfMonitor.reportMetrics) {
+          perfMonitor.reportMetrics();
+        }
+      }, 2000);
+    };
+    window.addEventListener('load', handleLoad);
+    
+    return () => {
+      if (perfMonitor.cleanup) {
+        perfMonitor.cleanup();
+      }
+      window.removeEventListener('load', handleLoad);
+    };
+  }, [prefetchResource, cacheResource, measurePerformance]);
   return (
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
