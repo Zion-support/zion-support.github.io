@@ -11,6 +11,7 @@ import { Brain, Zap, Shield, Globe, Play, Code, Settings, ArrowRight } from 'luc
 =======
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 
 >>>>>>> origin/feat/realtime-rag-content
 const InteractiveTechShowcase2025: React.FC = () => {
@@ -81,6 +82,34 @@ const InteractiveTechShowcase2025: React.FC = () => {
       bgColor: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30"
   const technologies = [
+=======
+import { motion, AnimatePresence } from 'framer-motion';
+
+const InteractiveTechShowcase2025: React.FC = () => {
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const demos = [
+    {
+      id: 0,
+      title: "AI Consciousness Simulator",
+      description: "Experience how our AI systems develop consciousness and make autonomous decisions",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      features: [
+        "Real-time consciousness metrics",
+        "Decision tree visualization",
+        "Emotional state analysis",
+        "Learning pattern recognition"
+      ],
+      interactive: true
+    },
+>>>>>>> origin/resolved-merge-conflicts-2025
     {
       id: 1,
       name: "Quantum AI Processing",
@@ -259,6 +288,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const currentCategory = techCategories[activeTab];
 
   return (
@@ -361,12 +391,22 @@ const InteractiveTechShowcase2025: React.FC = () => {
       textColor: "text-violet-100",
       accentColor: "text-violet-400"
     }
+=======
+  const techStats = [
+    { label: "Processing Power", value: "∞ PetaFLOPS", icon: "⚡" },
+    { label: "Consciousness Level", value: "99.9%", icon: "🧠" },
+    { label: "Quantum States", value: "2^64", icon: "⚛️" },
+    { label: "Neural Connections", value: "10^15", icon: "🧬" },
+    { label: "Reality Layers", value: "∞", icon: "🌌" },
+    { label: "Success Rate", value: "100%", icon: "🎯" }
+>>>>>>> origin/resolved-merge-conflicts-2025
   ];
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 mb-12 text-white">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm"></div>
       <div className="relative z-10">
+<<<<<<< HEAD
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE TECH SHOWCASE • JANUARY 2025
@@ -390,6 +430,53 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 activeTab === index
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                   : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+=======
+        {/* Header */}
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: isVisible ? 1 : 0.8, opacity: isVisible ? 1 : 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse"
+          >
+            🚀 INTERACTIVE DEMO • LIVE NOW
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent"
+          >
+            Interactive Technology Showcase
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-xl text-white/80 max-w-4xl mx-auto"
+          >
+            Experience our revolutionary technologies through interactive demonstrations and real-time simulations
+          </motion.p>
+        </div>
+
+        {/* Demo Selection */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          {demos.map((demo, index) => (
+            <motion.button
+              key={demo.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onMouseEnter={() => setHoveredItem(demo.id)}
+              onMouseLeave={() => setHoveredItem(null)}
+              onClick={() => setActiveDemo(demo.id)}
+              className={`p-6 rounded-xl border transition-all duration-300 ${
+                activeDemo === demo.id
+                  ? `bg-gradient-to-br ${demo.color}/30 border-white/40 shadow-lg`
+                  : 'bg-white/10 border-white/20 hover:bg-white/20'
+>>>>>>> origin/resolved-merge-conflicts-2025
               }`}
             >
               <span className="mr-2">{tech.icon}</span>
@@ -521,6 +608,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   transition={{ delay: index * 0.1 }}
                   className="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300"
                 >
+<<<<<<< HEAD
                   <div className="absolute top-4 right-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                       tech.status === 'Live'
@@ -529,6 +617,15 @@ const InteractiveTechShowcase2025: React.FC = () => {
                     }`}>
                       {tech.status}
                     </span>
+=======
+                  {demos[activeDemo].icon}
+                </motion.div>
+                <div className="bg-white/10 rounded-lg p-4">
+                  <div className="text-sm text-white/70 mb-2">Live Demo Status</div>
+                  <div className="flex items-center justify-center">
+                    <div className="w-3 h-3 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                    <span className="text-green-400 font-semibold">Active</span>
+>>>>>>> origin/resolved-merge-conflicts-2025
                   </div>
 
                   <div className="space-y-4">
@@ -573,6 +670,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </motion.div>
         </AnimatePresence>
+<<<<<<< HEAD
       </div>
     </section>
 =======
@@ -1088,6 +1186,60 @@ const InteractiveTechShowcase2025: React.FC = () => {
               Schedule Demo
 >>>>>>> origin/integrate-new-content
             </button>
+=======
+
+        {/* Technology Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
+        >
+          {techStats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
+              transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-300"
+            >
+              <div className="text-2xl mb-2">{stat.icon}</div>
+              <div className="text-2xl font-bold mb-1 text-white">{stat.value}</div>
+              <div className="text-sm text-white/70">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8, delay: 2.0 }}
+          className="text-center mt-12"
+        >
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold mb-4 text-white">Ready to Experience the Future?</h3>
+            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+              Join thousands of innovators who are already using our revolutionary technologies to transform their industries and create the impossible.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+              >
+                Start Your Journey
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Schedule Demo
+              </motion.button>
+            </div>
+>>>>>>> origin/resolved-merge-conflicts-2025
           </div>
         </div>
 =======
