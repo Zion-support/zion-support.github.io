@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Zap, Brain, Target, TrendingUp, Users, Shield } from 'lucide-react';
+import { Link }  from 'react-router-dom';
+import { ArrowRight, Star, Zap, Brain, Target, TrendingUp, Users, Shield }  from 'lucide-react';
 
 const RevolutionaryContentPromotionBanner2026 = () => {
   return (
@@ -140,21 +140,21 @@ const RevolutionaryContentPromotionBanner2026 = () => {
               title: "Advanced AI Consciousness 2026",
               description: "AI with genuine consciousness and emotional intelligence",
               link: "/advanced-ai-consciousness-2026",
-              icon: Brain,
+              icon: "Brain",
               color: "from-blue-500 to-cyan-500"
             },
             {
               title: "Autonomous Business Operations",
               description: "Complete business automation with self-managing AI systems",
               link: "/autonomous-business-operations-2026",
-              icon: Target,
+              icon: "Target",
               color: "from-green-500 to-emerald-500"
             },
             {
               title: "Quantum Computing Guide 2026",
               description: "Master quantum computing and its applications",
               link: "/quantum-computing-guide-2026",
-              icon: Zap,
+              icon: "Zap",
               color: "from-purple-500 to-pink-500"
             }
           ].map((item, index) => (
@@ -208,6 +208,6 @@ const RevolutionaryContentPromotionBanner2026 = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentPromotionBanner2026;

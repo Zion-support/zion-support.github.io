@@ -5,13 +5,13 @@ export class PerformanceMonitor {
     if (typeof window !== "undefined" && "PerformanceObserver" in window) {
       try {
         this.observer = new PerformanceObserver(() => {});
-      } catch {
+      } ,catch {
         this.observer = null;
       }
     }
   }
 
-  reportMetrics(): void {
+  ,reportMetrics(): void {
     if (typeof window === "undefined") return;
     try {
       const timing = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
@@ -22,26 +22,25 @@ export class PerformanceMonitor {
         timeToFirstByteMs: timing ? timing.responseStart : undefined,
         domContentLoadedMs: timing ? timing.domContentLoadedEventEnd : undefined,
         firstContentfulPaintMs: fcp ? fcp.startTime : undefined,
-        cumulativeLayoutShift: clsEntry ? clsEntry.value : undefined,
-      };
-
+        cumulativeLayoutShift: clsEntry ? clsEntry.value : undefined}
+];
       if (process.env.NODE_ENV !== "production") {
         // eslint-disable-next-line no-console
         console.log("Performance metrics", metrics);
       }
-    } catch {
+    } ,catch {
       // no-op
     }
   }
 
-  cleanup(): void {
+  ,cleanup(): void {
     try {
       this.observer?.disconnect();
-    } catch {
+    } ,catch {
       // no-op
     }
   }
 }
 
-export default PerformanceMonitor;
+,export default PerformanceMonitor;
 

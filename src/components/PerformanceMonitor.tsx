@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect }  from 'react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -53,7 +53,7 @@ export const PerformanceMonitor: React.FC = () => {
         Object.entries(metrics).forEach(([key, value]) => {
           if (value !== undefined) {
             window.gtag('event', 'performance_metric', {
-              metric_name: key,
+              metric_name: "key",
               metric_value: Math.round(value),
               event_category: 'Performance'
             });
@@ -85,7 +85,7 @@ export const PerformanceMonitor: React.FC = () => {
           total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
           limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
         });
-      };
+      }
       
       // Log memory usage every 30 seconds
       const memoryInterval = setInterval(logMemoryUsage, 30000);

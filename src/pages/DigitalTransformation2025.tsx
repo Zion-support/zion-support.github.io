@@ -11,6 +11,6 @@ const DigitalTransformation2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default DigitalTransformation2025;

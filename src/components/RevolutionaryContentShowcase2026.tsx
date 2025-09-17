@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState }  from 'react';
+import { motion }  from 'framer-motion';
 
 const RevolutionaryContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -39,8 +39,8 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           {contentItems.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 20 }}
+              animate={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-300"
             >
@@ -71,6 +71,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentShowcase2026;

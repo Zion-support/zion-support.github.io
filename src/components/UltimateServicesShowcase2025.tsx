@@ -11,6 +11,6 @@ const UltimateServicesShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateServicesShowcase2025;

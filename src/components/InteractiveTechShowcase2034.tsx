@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 
 const InteractiveTechShowcase2034: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
   const technologies = [
     {
-      id: 1,
+      id: "1",
       title: "Conscious AI Systems",
       description: "Self-aware artificial intelligence with emotional intelligence and creative problem-solving capabilities",
       icon: "🧠",
@@ -26,7 +26,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
       demoUrl: "/pages/UltimateTechBreakthrough2034"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Consciousness",
       description: "Revolutionary quantum computing systems that achieve consciousness through quantum entanglement",
       icon: "⚛️",
@@ -47,7 +47,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
       demoUrl: "/pages/RevolutionaryTechShowcase2034"
     },
     {
-      id: 3,
+      id: "3",
       title: "Interdimensional Computing",
       description: "Breakthrough technology enabling computing across multiple dimensions with infinite resources",
       icon: "🌌",
@@ -68,7 +68,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
       demoUrl: "/pages/ComprehensiveServices2034"
     },
     {
-      id: 4,
+      id: "4",
       title: "Neural Interface Technology",
       description: "Direct neural interfaces between human consciousness and AI systems for enhanced collaboration",
       icon: "🧬",
@@ -267,6 +267,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveTechShowcase2034;

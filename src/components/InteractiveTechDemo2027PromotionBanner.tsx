@@ -11,6 +11,6 @@ const InteractiveTechDemo2027PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveTechDemo2027PromotionBanner;

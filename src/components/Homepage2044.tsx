@@ -11,6 +11,6 @@ const Homepage2044: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default Homepage2044;

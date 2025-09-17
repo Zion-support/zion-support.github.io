@@ -11,6 +11,6 @@ const DynamicContentCarousel: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default DynamicContentCarousel;

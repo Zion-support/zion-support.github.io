@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link }  from 'react-router-dom';
 import NewContentAdvertisingBanner2026 from './components/NewContentAdvertisingBanner2026';
 import AutonomousAgentsInProduction2025 from './pages/AutonomousAgentsInProduction2025';
 
@@ -18,8 +18,8 @@ const HomeLanding: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 const AppEntrypoint: React.FC = () => {
   return (
     <Router>
@@ -29,7 +29,7 @@ const AppEntrypoint: React.FC = () => {
       </Routes>
     </Router>
   );
-};
-
+  }
+];
 export default AppEntrypoint;
 

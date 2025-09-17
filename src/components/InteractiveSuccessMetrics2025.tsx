@@ -11,6 +11,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveSuccessMetrics2025;

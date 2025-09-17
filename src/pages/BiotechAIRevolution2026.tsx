@@ -332,6 +332,6 @@ const BiotechAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default BiotechAIRevolution2026;

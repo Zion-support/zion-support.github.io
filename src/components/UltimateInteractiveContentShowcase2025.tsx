@@ -11,6 +11,6 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateInteractiveContentShowcase2025;

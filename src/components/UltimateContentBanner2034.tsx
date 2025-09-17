@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const UltimateContentBanner2034: React.FC = () => {
   return (
@@ -12,6 +12,6 @@ const UltimateContentBanner2034: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateContentBanner2034;

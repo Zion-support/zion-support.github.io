@@ -11,6 +11,6 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NeuralConsensus2026PromotionBanner;

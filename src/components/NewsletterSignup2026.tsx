@@ -11,6 +11,6 @@ const NewsletterSignup2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NewsletterSignup2026;

@@ -50,7 +50,7 @@ function App() {
           perfMonitor.reportMetrics();
         }
       }, 2000);
-    };
+    }
     
     window.addEventListener('load', handleLoad);
     
@@ -59,7 +59,7 @@ function App() {
         perfMonitor.cleanup();
       }
       window.removeEventListener('load', handleLoad);
-    };
+    }
   }, []);
 
   return (

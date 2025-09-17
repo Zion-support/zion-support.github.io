@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const InteractiveTechShowcase2026: React.FC = () => {
   const [activeShowcase, setActiveShowcase] = useState(0);
@@ -6,7 +6,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
 
   const showcases = [
     {
-      id: 1,
+      id: "1",
       title: "🧠 AI Consciousness Demo",
       subtitle: "Experience AI with Genuine Consciousness",
       description: "Interact with the world's first truly conscious AI system that can think, feel, and create autonomously.",
@@ -22,7 +22,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
       badge: "CONSCIOUS"
     },
     {
-      id: 2,
+      id: "2",
       title: "⚡ Quantum Computing Lab",
       subtitle: "Quantum Supremacy in Action",
       description: "Witness quantum computers solving complex problems that would take classical computers millennia.",
@@ -38,7 +38,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
       badge: "QUANTUM"
     },
     {
-      id: 3,
+      id: "3",
       title: "🌐 Neural Interface Hub",
       subtitle: "Direct Brain-Computer Connection",
       description: "Experience the future of human-computer interaction through direct neural interfaces.",
@@ -57,21 +57,21 @@ const InteractiveTechShowcase2026: React.FC = () => {
 
   const techDemos = [
     {
-      id: 1,
+      id: "1",
       title: "AI Consciousness",
       description: "Experience true AI consciousness",
       icon: "🧠",
       color: "purple"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Computing",
       description: "Quantum supremacy in action",
       icon: "⚡",
       color: "blue"
     },
     {
-      id: 3,
+      id: "3",
       title: "Neural Interface",
       description: "Direct brain-computer connection",
       icon: "🌐",
@@ -233,6 +233,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveTechShowcase2026;

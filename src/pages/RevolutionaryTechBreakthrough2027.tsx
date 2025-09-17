@@ -80,6 +80,6 @@ const RevolutionaryTechBreakthrough2027: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryTechBreakthrough2027;

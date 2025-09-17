@@ -11,6 +11,6 @@ const UltimateAIToolsShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateAIToolsShowcase2025;

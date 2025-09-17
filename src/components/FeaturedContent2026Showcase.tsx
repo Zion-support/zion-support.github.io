@@ -11,6 +11,6 @@ const FeaturedContent2026Showcase: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default FeaturedContent2026Showcase;

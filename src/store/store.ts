@@ -3,16 +3,15 @@ export interface RootState {
   app: {
     loading: boolean;
     error: string | null;
-  };
+  }
+];
 }
 
-const initialState: RootState = {
+,const initialState: RootState = {
   app: {
-    loading: false,
-    error: null,
-  },
-};
-
+    loading: "false",
+    error: "null"}}
+];
 // Simple store implementation
 class SimpleStore {
   private state: RootState = initialState;
@@ -22,7 +21,7 @@ class SimpleStore {
     return this.state;
   }
 
-  dispatch(action: any): any {
+  ,dispatch(action: any): any {
     // Simple reducer logic
     switch (action.type) {
       case 'SET_LOADING':
@@ -30,18 +29,16 @@ class SimpleStore {
           ...this.state,
           app: {
             ...this.state.app,
-            loading: action.payload,
-          },
-        };
+            loading: action.payload}}
+];
         break;
       case 'SET_ERROR':
         this.state = {
           ...this.state,
           app: {
             ...this.state.app,
-            error: action.payload,
-          },
-        };
+            error: action.payload}}
+];
         break;
       default:
         break;
@@ -52,21 +49,21 @@ class SimpleStore {
     return action;
   }
 
-  subscribe(listener: () => void): () => void {
+  ,subscribe(listener: () => void): () => void {
     this.listeners.push(listener);
     return () => {
       this.listeners = this.listeners.filter(l => l !== listener);
-    };
+  }
+];
   }
 }
 
-export const store = new SimpleStore();
+,export const store = new SimpleStore();
 export const persistor = {
   purge: () => Promise.resolve(),
   flush: () => Promise.resolve(),
   pause: () => {},
   persist: () => {},
-  restore: () => {},
-};
-
+  restore: () => {}}
+];
 export type AppDispatch = typeof store.dispatch;

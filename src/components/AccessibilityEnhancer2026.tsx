@@ -11,6 +11,6 @@ const AccessibilityEnhancer2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AccessibilityEnhancer2026;

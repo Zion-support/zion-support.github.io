@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
@@ -96,8 +96,8 @@ const InteractiveContentShowcase2026: React.FC = () => {
         ]
       }
     }
-  };
-
+  }
+];
   return (
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
       <div className="text-center mb-12">
@@ -211,6 +211,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveContentShowcase2026;

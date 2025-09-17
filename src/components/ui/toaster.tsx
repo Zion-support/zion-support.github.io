@@ -6,4 +6,5 @@ export const ToastContainer: React.FC = () => {
       {/* Toast notifications will be rendered here */}
     </div>
   );
-};
+  }
+];

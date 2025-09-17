@@ -11,6 +11,6 @@ const FeaturedBlogPost2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default FeaturedBlogPost2026;

@@ -11,6 +11,6 @@ const FuturePredictionsShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default FuturePredictionsShowcase2025;

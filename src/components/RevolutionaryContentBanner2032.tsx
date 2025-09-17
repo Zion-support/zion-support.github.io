@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect }  from 'react';
+import { Link }  from 'react-router-dom';
 
 const RevolutionaryContentBanner2032: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -147,6 +147,6 @@ const RevolutionaryContentBanner2032: React.FC = () => {
       </div>
     </divdiv>
   );
-};
-
+  }
+];
 export default RevolutionaryContentBanner2032;

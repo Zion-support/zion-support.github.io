@@ -11,6 +11,6 @@ const AIToolsShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AIToolsShowcase2026;

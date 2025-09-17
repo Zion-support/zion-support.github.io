@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const SocialProofShowcase2034: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -11,13 +11,13 @@ const SocialProofShowcase2034: React.FC = () => {
 
   const testimonials = [
     {
-      id: 1,
+      id: "1",
       name: "Dr. Sarah Chen",
       title: "Chief Technology Officer",
       company: "FutureTech Corp",
       image: "👩‍💼",
       quote: "Zion Tech Group's revolutionary AI solutions have completely transformed our operations. We've seen a 500% increase in productivity and a 60% reduction in costs. Their conscious AI systems are truly groundbreaking.",
-      rating: 5,
+      rating: "5",
       results: [
         "500% productivity increase",
         "60% cost reduction",
@@ -28,13 +28,13 @@ const SocialProofShowcase2034: React.FC = () => {
       projectDuration: "6 months"
     },
     {
-      id: 2,
+      id: "2",
       name: "Marcus Rodriguez",
       title: "CEO",
       company: "Quantum Solutions Inc",
       image: "👨‍💼",
       quote: "The quantum computing solutions provided by Zion Tech Group have solved problems we thought were impossible. Their interdimensional computing technology is absolutely revolutionary.",
-      rating: 5,
+      rating: "5",
       results: [
         "Exponential processing power",
         "Impossible problem solving",
@@ -45,13 +45,13 @@ const SocialProofShowcase2034: React.FC = () => {
       projectDuration: "4 months"
     },
     {
-      id: 3,
+      id: "3",
       name: "Dr. Elena Volkov",
       title: "Research Director",
       company: "Interdimensional Labs",
       image: "👩‍🔬",
       quote: "Working with Zion Tech Group has opened up entirely new possibilities for scientific research. Their neural interface technology allows us to explore consciousness itself.",
-      rating: 5,
+      rating: "5",
       results: [
         "Consciousness exploration",
         "Neural data breakthrough",
@@ -62,13 +62,13 @@ const SocialProofShowcase2034: React.FC = () => {
       projectDuration: "8 months"
     },
     {
-      id: 4,
+      id: "4",
       name: "James Thompson",
       title: "CTO",
       company: "Global Manufacturing Co",
       image: "👨‍🔧",
       quote: "The AI-powered automation systems from Zion Tech Group have revolutionized our manufacturing processes. We've achieved unprecedented efficiency and quality improvements.",
-      rating: 5,
+      rating: "5",
       results: [
         "75% efficiency increase",
         "90% quality improvement",
@@ -79,13 +79,13 @@ const SocialProofShowcase2034: React.FC = () => {
       projectDuration: "5 months"
     },
     {
-      id: 5,
+      id: "5",
       name: "Dr. Maria Santos",
       title: "Chief Medical Officer",
       company: "HealthFirst Medical",
       image: "👩‍⚕️",
       quote: "Zion Tech Group's AI diagnostic systems have transformed healthcare delivery. We can now diagnose conditions with superhuman accuracy and speed.",
-      rating: 5,
+      rating: "5",
       results: [
         "99.8% diagnostic accuracy",
         "60% faster diagnosis",
@@ -96,13 +96,13 @@ const SocialProofShowcase2034: React.FC = () => {
       projectDuration: "7 months"
     },
     {
-      id: 6,
+      id: "6",
       name: "David Kim",
       title: "VP of Engineering",
       company: "FinTech Innovations",
       image: "👨‍💻",
       quote: "The AI fraud detection and risk assessment systems from Zion Tech Group have completely eliminated fraud losses while reducing false positives by 70%.",
-      rating: 5,
+      rating: "5",
       results: [
         "100% fraud elimination",
         "70% fewer false positives",
@@ -198,8 +198,8 @@ const SocialProofShowcase2034: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 50 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 1 }}
           className="text-center mb-16"
         >
@@ -220,8 +220,8 @@ const SocialProofShowcase2034: React.FC = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: "0", scale: 0.5 }}
+              animate={{ opacity: "1", scale: 1 }}
               transition={{ delay: index * 0.1 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 text-center border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300 hover:scale-105"
             >
@@ -240,9 +240,9 @@ const SocialProofShowcase2034: React.FC = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTestimonial}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial={{ opacity: "0", x: 50 }}
+                animate={{ opacity: "1", x: 0 }}
+                exit={{ opacity: "0", x: -50 }}
                 transition={{ duration: 0.5 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 border border-purple-500/30"
               >
@@ -314,8 +314,8 @@ const SocialProofShowcase2034: React.FC = () => {
             {caseStudies.map((study, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: "0", y: 50 }}
+                animate={{ opacity: "1", y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 hover:border-green-400/60 transition-all duration-300"
               >
@@ -388,6 +388,6 @@ const SocialProofShowcase2034: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default SocialProofShowcase2034;

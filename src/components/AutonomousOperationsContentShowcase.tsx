@@ -11,6 +11,6 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AutonomousOperationsContentShowcase;

@@ -11,6 +11,6 @@ const ContentRecommendationEngine: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default ContentRecommendationEngine;

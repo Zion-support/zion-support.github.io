@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { useNotifications } from '../components/NotificationSystem';
+import React, { useEffect, useState, useCallback }  from 'react';
+import { Link }  from 'react-router-dom';
+import { motion, useInView }  from 'framer-motion';
+import { Helmet }  from 'react-helmet-async';
+import { useNotifications }  from '../components/NotificationSystem';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: "true", margin: "-100px" });
 
   useEffect(() => {
     setIsLoaded(true);
@@ -61,8 +61,8 @@ const Home: React.FC = () => {
         <motion.div 
           ref={ref}
           className="text-center"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          initial={{ opacity: "0", y: 50 }}
+          animate={isVisible ? { opacity: "1", y: 0 } : { opacity: "0", y: 50 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -149,8 +149,8 @@ const Home: React.FC = () => {
         <div id="services" className="container mx-auto px-4 py-20">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 30 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -162,8 +162,8 @@ const Home: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 50 }}
+              whileInView={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -180,8 +180,8 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 50 }}
+              whileInView={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -198,8 +198,8 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 50 }}
+              whileInView={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -216,8 +216,8 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 50 }}
+              whileInView={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -234,8 +234,8 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 50 }}
+              whileInView={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -252,8 +252,8 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 50 }}
+              whileInView={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
               className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -340,8 +340,8 @@ const Home: React.FC = () => {
         <div id="about" className="container mx-auto px-4 py-20">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 30 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -373,6 +373,6 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default Home;

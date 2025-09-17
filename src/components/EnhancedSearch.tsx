@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 
 const EnhancedSearch: React.FC = () => {
@@ -23,8 +23,8 @@ const EnhancedSearch: React.FC = () => {
   return (
     <div className="relative max-w-2xl mx-auto">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: "0", y: 20 }}
+        animate={{ opacity: "1", y: 0 }}
         transition={{ duration: 0.6 }}
         className="relative"
       >
@@ -46,9 +46,9 @@ const EnhancedSearch: React.FC = () => {
         <AnimatePresence>
           {isFocused && searchTerm && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              initial={{ opacity: "0", y: -10 }}
+              animate={{ opacity: "1", y: 0 }}
+              exit={{ opacity: "0", y: -10 }}
               transition={{ duration: 0.2 }}
               className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 max-h-80 overflow-y-auto"
             >
@@ -57,8 +57,8 @@ const EnhancedSearch: React.FC = () => {
                   {filteredSuggestions.map((suggestion, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: "0", x: -20 }}
+                      animate={{ opacity: "1", x: 0 }}
                       transition={{ duration: 0.2, delay: index * 0.05 }}
                       className="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors"
                     >
@@ -83,8 +83,8 @@ const EnhancedSearch: React.FC = () => {
 
       {/* Quick Access Buttons */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: "0", y: 20 }}
+        animate={{ opacity: "1", y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex flex-wrap justify-center gap-3 mt-6"
       >
@@ -107,6 +107,6 @@ const EnhancedSearch: React.FC = () => {
       </motion.div>
     </div>
   );
-};
-
+  }
+];
 export default EnhancedSearch;

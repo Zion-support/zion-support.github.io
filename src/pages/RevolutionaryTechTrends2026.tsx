@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const RevolutionaryTechTrends2026: React.FC = () => {
   const [currentTrend, setCurrentTrend] = useState(0);
@@ -110,8 +110,8 @@ const RevolutionaryTechTrends2026: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 50 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -141,8 +141,8 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       <div className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 30 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
@@ -154,8 +154,8 @@ const RevolutionaryTechTrends2026: React.FC = () => {
             {marketData.map((data, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: "0", scale: 0.8 }}
+                whileInView={{ opacity: "1", scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
               >
@@ -174,8 +174,8 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       <div className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 50 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -192,9 +192,9 @@ const RevolutionaryTechTrends2026: React.FC = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentTrend}
-                  initial={{ opacity: 0, x: 300 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -300 }}
+                  initial={{ opacity: "0", x: 300 }}
+                  animate={{ opacity: "1", x: 0 }}
+                  exit={{ opacity: "0", x: -300 }}
                   transition={{ duration: 0.5 }}
                   className={`bg-gradient-to-br ${trends[currentTrend].gradient} p-12 rounded-2xl`}
                 >
@@ -290,8 +290,8 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 50 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -305,8 +305,8 @@ const RevolutionaryTechTrends2026: React.FC = () => {
             {predictions.map((prediction, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: "0", y: 50 }}
+                whileInView={{ opacity: "1", y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
               >
@@ -334,8 +334,8 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       <div className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 50 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-6">Stay Ahead of the Curve</h2>
@@ -356,6 +356,6 @@ const RevolutionaryTechTrends2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryTechTrends2026;

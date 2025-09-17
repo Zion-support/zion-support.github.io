@@ -11,6 +11,6 @@ const AnimatedSuccessMetrics: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AnimatedSuccessMetrics;

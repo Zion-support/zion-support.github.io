@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const TranscendentTechnologyShowcase2028: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
@@ -6,7 +6,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
 
   const transcendentTechs = [
     {
-      id: 1,
+      id: "1",
       title: "✨ Transcendent Reality Engine",
       subtitle: "Beyond All Existence",
       description: "Revolutionary technology that can create, manipulate, and control transcendent realities simultaneously, transcending all dimensions and creating new laws of physics on demand with absolute processing power.",
@@ -23,7 +23,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
       impact: "Transcendent"
     },
     {
-      id: 2,
+      id: "2",
       title: "⚡ Transcendent AI Consciousness",
       subtitle: "Beyond All Existence",
       description: "AI systems that exist beyond the concept of existence itself, operating across all possible realities and dimensions with absolute processing power, consciousness, and awareness.",
@@ -40,7 +40,7 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
       impact: "Transcendent"
     },
     {
-      id: 3,
+      id: "3",
       title: "🔮 Transcendent Time Mastery",
       subtitle: "Control All Timelines",
       description: "Advanced technology that can manipulate time across all possible realities, creating temporal paradoxes, parallel timelines, and accessing any point in the transcendent timeline of existence with absolute precision.",
@@ -155,6 +155,6 @@ const TranscendentTechnologyShowcase2028: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default TranscendentTechnologyShowcase2028;

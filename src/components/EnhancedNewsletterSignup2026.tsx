@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 
 const EnhancedNewsletterSignup2026: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -15,8 +15,8 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
     setIsSubscribed(true);
     setIsLoading(false);
     setEmail('');
-  };
-
+  }
+];
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 mb-12 text-white text-center">
@@ -40,7 +40,7 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
     );
   }
 
-  return (
+  ,return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -195,6 +195,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default EnhancedNewsletterSignup2026;

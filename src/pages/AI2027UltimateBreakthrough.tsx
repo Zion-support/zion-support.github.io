@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet }  from 'react-helmet-async';
 
 const AI2027UltimateBreakthrough: React.FC = () => {
   return (
@@ -45,6 +45,6 @@ const AI2027UltimateBreakthrough: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2027UltimateBreakthrough;

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState }  from 'react';
+import { Link }  from 'react-router-dom';
 
 const UltimateContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('all');
 
   const content = [
     {
-      id: 1,
+      id: "1",
       title: "AI Innovation Hub",
       description: "Explore cutting-edge AI technologies and their applications",
       icon: "🤖",
@@ -14,7 +14,7 @@ const UltimateContentShowcase2026: React.FC = () => {
       link: "/pages/AIInnovationHub2026"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Computing",
       description: "Revolutionary quantum technologies transforming computing",
       icon: "⚛️",
@@ -22,7 +22,7 @@ const UltimateContentShowcase2026: React.FC = () => {
       link: "/pages/QuantumComputingGuide2026"
     },
     {
-      id: 3,
+      id: "3",
       title: "Advanced Analytics",
       description: "Data-driven insights and predictive analytics",
       icon: "📊",
@@ -30,7 +30,7 @@ const UltimateContentShowcase2026: React.FC = () => {
       link: "/pages/AdvancedAnalyticsDashboard2026"
     },
     {
-      id: 4,
+      id: "4",
       title: "Biotech Revolution",
       description: "Breakthrough biotechnology and life sciences",
       icon: "🧬",
@@ -38,7 +38,7 @@ const UltimateContentShowcase2026: React.FC = () => {
       link: "/pages/BiotechRevolution2026"
     },
     {
-      id: 5,
+      id: "5",
       title: "Space Technology",
       description: "Advanced space exploration and technology",
       icon: "🚀",
@@ -46,7 +46,7 @@ const UltimateContentShowcase2026: React.FC = () => {
       link: "/pages/SpaceTechInnovation2026"
     },
     {
-      id: 6,
+      id: "6",
       title: "Neural Interfaces",
       description: "Brain-computer interface technologies",
       icon: "🧠",
@@ -135,6 +135,6 @@ const UltimateContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateContentShowcase2026;

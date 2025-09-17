@@ -11,6 +11,6 @@ const AIRevolutionContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AIRevolutionContentShowcase;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -140,6 +140,6 @@ const RevolutionaryContentBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentBanner;

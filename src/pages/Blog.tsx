@@ -41,6 +41,6 @@ const Blog: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default Blog;

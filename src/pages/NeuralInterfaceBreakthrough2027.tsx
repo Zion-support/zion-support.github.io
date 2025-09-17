@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet }  from 'react-helmet-async';
 
 const NeuralInterfaceBreakthrough2027: React.FC = () => {
   return (
@@ -45,6 +45,6 @@ const NeuralInterfaceBreakthrough2027: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NeuralInterfaceBreakthrough2027;

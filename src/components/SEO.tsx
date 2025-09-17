@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect }  from 'react';
 
 interface SEOProps {
   title?: string;
@@ -17,7 +17,7 @@ interface SEOProps {
   nofollow?: boolean;
 }
 
-const SEO: React.FC<SEOProps> = ({
+,const SEO: React.FC<SEOProps> = ({
   title = 'Zion Holdings - Advanced Financial Solutions',
   description = 'Leading provider of comprehensive financial services, investment solutions, and wealth management strategies.',
   keywords = 'financial services, investment, wealth management, banking, fintech',
@@ -31,14 +31,13 @@ const SEO: React.FC<SEOProps> = ({
   canonical,
   robots = 'index, follow',
   noindex = false,
-  nofollow = false,
-}) => {
+  nofollow = false}) => {
   useEffect(() => {
     // Update document title
     document.title = title;
 
     // Update or create meta tags
-    const updateMetaTag = (name: string, content: string, property?: boolean) => {
+    const updateMetaTag = (name: "string", content: "string", property?: boolean) => {
       const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
       let meta = document.querySelector(selector) as HTMLMetaElement;
       
@@ -46,14 +45,14 @@ const SEO: React.FC<SEOProps> = ({
         meta = document.createElement('meta');
         if (property) {
           meta.setAttribute('property', name);
-        } else {
+        } ,else {
           meta.setAttribute('name', name);
         }
-        document.head.appendChild(meta);
+        ,document.head.appendChild(meta);
       }
-      meta.setAttribute('content', content);
-    };
-
+      ,meta.setAttribute('content', content);
+  }
+];
     // Basic meta tags
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords);
@@ -78,7 +77,7 @@ const SEO: React.FC<SEOProps> = ({
     if (publishedTime) {
       updateMetaTag('article:published_time', publishedTime, true);
     }
-    if (modifiedTime) {
+    ,if (modifiedTime) {
       updateMetaTag('article:modified_time', modifiedTime, true);
     }
 
@@ -90,31 +89,27 @@ const SEO: React.FC<SEOProps> = ({
         link.setAttribute('rel', 'canonical');
         document.head.appendChild(link);
       }
-      link.setAttribute('href', canonical);
+      ,link.setAttribute('href', canonical);
     }
 
     // JSON-LD structured data
     const jsonLd = {
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'Organization',
-      name: siteName,
+      name: "siteName",
       description,
       url,
       ...(type === 'article' && {
-        headline: title,
+        headline: "title",
         author: {
           '@type': 'Person',
-          name: author,
-        },
+          name: "author"},
         publisher: {
           '@type': 'Organization',
-          name: siteName,
-        },
+          name: "siteName"},
         ...(publishedTime && { datePublished: publishedTime }),
-        ...(modifiedTime && { dateModified: modifiedTime }),
-      }),
-    };
-
+        ...(modifiedTime && { dateModified: modifiedTime })})}
+];
     // Remove existing JSON-LD
     const existingJsonLd = document.querySelector('script[type="application/ld+json"]');
     if (existingJsonLd) {
@@ -129,6 +124,6 @@ const SEO: React.FC<SEOProps> = ({
   }, [title, description, keywords, image, url, type, siteName, author, publishedTime, modifiedTime, canonical, robots, noindex, nofollow]);
 
   return null;
-};
-
+  }
+];
 export default SEO;

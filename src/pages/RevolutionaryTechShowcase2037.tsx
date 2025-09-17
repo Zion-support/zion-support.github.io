@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const RevolutionaryTechShowcase2037: React.FC = () => {
   return (
@@ -162,6 +162,6 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryTechShowcase2037;

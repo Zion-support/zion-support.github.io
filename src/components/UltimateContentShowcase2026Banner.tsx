@@ -11,6 +11,6 @@ const UltimateContentShowcase2026Banner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateContentShowcase2026Banner;

@@ -5,7 +5,7 @@ const NextGenInnovationHub2037: React.FC = () => {
 
   const innovations = [
     {
-      id: 1,
+      id: "1",
       title: "Conscious AI Development Platform",
       description: "Build and deploy conscious AI systems with our revolutionary development platform",
       category: "ai",
@@ -14,7 +14,7 @@ const NextGenInnovationHub2037: React.FC = () => {
       color: "from-purple-600 to-pink-600"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Reality Engine",
       description: "Process reality itself with our quantum computing breakthrough",
       category: "quantum",
@@ -23,7 +23,7 @@ const NextGenInnovationHub2037: React.FC = () => {
       color: "from-cyan-600 to-blue-600"
     },
     {
-      id: 3,
+      id: "3",
       title: "Interdimensional Data Storage",
       description: "Store infinite data across multiple dimensions",
       category: "storage",
@@ -32,7 +32,7 @@ const NextGenInnovationHub2037: React.FC = () => {
       color: "from-emerald-600 to-teal-600"
     },
     {
-      id: 4,
+      id: "4",
       title: "Neural Interface SDK",
       description: "Connect minds to machines with our neural interface toolkit",
       category: "neural",
@@ -41,7 +41,7 @@ const NextGenInnovationHub2037: React.FC = () => {
       color: "from-green-600 to-emerald-600"
     },
     {
-      id: 5,
+      id: "5",
       title: "Consciousness Transfer Protocol",
       description: "Transfer consciousness between digital and biological systems",
       category: "consciousness",
@@ -50,7 +50,7 @@ const NextGenInnovationHub2037: React.FC = () => {
       color: "from-orange-600 to-red-600"
     },
     {
-      id: 6,
+      id: "6",
       title: "Reality Manipulation API",
       description: "Manipulate reality itself through quantum programming interfaces",
       category: "quantum",
@@ -239,6 +239,6 @@ const NextGenInnovationHub2037: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NextGenInnovationHub2037;
