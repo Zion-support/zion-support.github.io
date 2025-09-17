@@ -80,8 +80,6 @@ export function fallbackTalentProgress(): TalentOnboarding {
 
 export function fallbackClientProgress(): ClientOnboarding {
   return {
-    job_posted: truetalent_invited: false,
-    quote_received: false,
-    first_hire_complete: false,
+    job_posted: truetalent_invited: falsequote_received: falsefirst_hire_complete: false,
   };
 }

@@ -39,7 +39,7 @@ export interface Conversation {
 class MarketplaceStore {
   private projects: Map<stringProject> = new Map();
   private offers: Map<stringOffer> = new Map();
-  private applications: Map<string, Application> = new Map();
+  private applications: Map<stringApplication> = new Map();
   private messages: Map<string, Message> = new Map();
   private conversations: Map<string, Conversation> = new Map();
   // Project methods

@@ -63,7 +63,7 @@ export function buildPrintableHtml(project: BookProject): string {
 <title>${escapeHtml(meta.title)}</title>
 <style>
   @page { margin: 1in; }
-  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif; color: #111; }
+  body { font-family: ui-serifGeorgia, Cambria, 'Times New Roman', Times, serif; color: #111; }
   .cover { break-after: page; display: flex; flex-direction: column; justify-content: center; height: 90vh; }
   .cover h1 { font-size: 40px; margin: 0; }
   .cover h3 { font-size: 20px; margin: 8px 0 0 0; color: #444; }
@@ -96,9 +96,9 @@ export function buildPrintableHtml(project: BookProject): string {
 }
   .cover .by { margin-top: 24pxcolor: #666   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  .barcode { margin-top: 24px, height: 64px   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .barcode { margin-top: 24pxheight: 64px   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+  .quote { border-left: 4px solid #222, padding-left: 12pxmargin: 16px 0, color: #333   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
