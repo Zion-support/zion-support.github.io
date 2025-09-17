@@ -292,6 +292,7 @@
   }
   ,
   {
+<<<<<<< HEAD
     "title": "Zero‑Downtime Agent Releases: Blue/Green, Canary, Eval Gates",
     "url": "/reports/ai-lab/articles/zero-downtime-agent-releases-1758081600000.md",
     "createdAt": "2025-09-16T22:00:00.000Z",
@@ -306,3 +307,12 @@
     "source": "Zion AI Lab"
   }
 ]
+=======
+    "title": "Operational Evals Blueprint: Production-Ready Gates and Scorecards",
+    "url": "/reports/ai-lab/articles/new-operational-evals-blueprint-1758052800000.md",
+    "createdAt": "2025-09-16T14:00:00.000Z",
+    "tags": ["evals", "reliability", "production"],
+    "source": "Zion AI Lab"
+  }
+]
+>>>>>>> origin/feat/operational-evals-blueprint

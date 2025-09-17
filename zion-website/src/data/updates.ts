@@ -148,9 +148,22 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
 	{
+<<<<<<< HEAD
 		title: 'Launch: Zero‑Trust Agent Controllers v1.0',
 		summary: 'Runtime approvals, budgets, and adaptive policies for safe tool use.',
 		href: '/updates/zero-trust-agent-controllers-1-0',
+=======
+		title: 'Guide: Operational Evals Blueprint',
+		summary: 'Production-ready gates and scorecards for safer, faster rollouts.',
+		href: '/updates/operational-evals-blueprint',
+		date: '2025-09-16',
+		tag: 'Guide',
+	},
+	{
+		title: 'Launch: Production RAG Observability Suite v1.0',
+		summary: 'Unified traces, retrieval KPIs, and drift alerts purpose‑built for RAG.',
+		href: '/updates/production-rag-observability-suite-1-0',
+>>>>>>> origin/feat/operational-evals-blueprint
 		date: '2025-09-16',
 		tag: 'Launch',
 	},
