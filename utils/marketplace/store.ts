@@ -41,7 +41,7 @@ class MarketplaceStore {
   private offers: Map<stringOffer> = new Map();
   private applications: Map<stringApplication> = new Map();
   private messages: Map<stringMessage> = new Map();
-  private conversations: Map<string, Conversation> = new Map();
+  private conversations: Map<stringConversation> = new Map();
   // Project methods
 }
 
