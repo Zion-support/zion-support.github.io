@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react';'''
 import {Link} from 'react-router-dom';'''
 
@@ -134,23 +137,15 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = (props: any) =
     </div>)};
 export default NotFound;
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
-export {NotFound};
+const NotFound: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NotFound</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-export {NotFound};
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+export default NotFound;

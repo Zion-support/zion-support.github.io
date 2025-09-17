@@ -12,9 +12,9 @@ export type SEOProps = {
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 2025, breakthrough',
-  image = '/og-image.jpg',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
+  image = 'https://zion.app/images/zion-tech-group-logo.png',
   url = 'https://zion.app',
   type = 'website'
 }) => {
@@ -37,6 +37,5 @@ const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
-
 export default SEO;
-
+export { SEO };

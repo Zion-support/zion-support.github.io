@@ -1,12 +1,8 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
 
 const NeuralInterfaceFuture: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
-      <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -267,8 +263,6 @@ const NeuralInterfaceFuture: React.FC = () => {
           </div>
         </div>
       </main>
-      
-      <Footer />
     </div>
   );
 };

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const BenefitsSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">BenefitsSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default BenefitsSection;
+=======
 import React, {useState} from 'react';
 
 import {Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award} from 'lucide-react';
@@ -313,3 +327,4 @@ export default BenefitsSection;
 </motion>;
 </div>;
 </number>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

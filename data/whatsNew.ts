@@ -11,6 +11,94 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
+    id: "evidence-driven-agent-lifecycle-2026",
+    title: "AI 2026: Evidence‑Driven Agent Lifecycle — Blueprint",
+    description:
+      "Gate every lifecycle phase with evals: design, test, deploy, operate. Audit‑ready evidence.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-evidence-driven-agent-lifecycle-blueprint",
+    emoji: "🧪",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "enterprise-ai-readiness-checklist-2026",
+    title: "AI 2026: Enterprise AI Readiness Checklist",
+    description:
+      "A practical, audit‑ready readiness framework for safe and reliable AI at scale.",
+    ctaLabel: "Read Checklist",
+    href: "/blog/ai-2026-enterprise-ai-readiness-checklist",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "operational-reliability-blueprint-2026",
+    title: "Operational Reliability Blueprint (2026)",
+    description:
+      "Eval‑gated releases, rollback contracts, error budgets, and observability for dependable agents.",
+    ctaLabel: "Read Blueprint",
+    href: "/blog/ai-2026-operational-reliability-blueprint",
+    emoji: "🛠️",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "executive-ai-security-playbook-2026",
+    title: "Executive AI Security Playbook",
+    description:
+      "Board‑ready controls: policy‑as‑code, eval gates, and audit evidence to ship safely.",
+    ctaLabel: "Read Playbook",
+    href: "/blog/ai-2026-executive-ai-security-playbook",
+    emoji: "🛡️",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "evidence-hub-architecture-2026",
+    title: "Evidence Hub Architecture",
+    description:
+      "Unify traces, evals, incidents, and KPIs to power scorecards and release gates.",
+    ctaLabel: "View Architecture",
+    href: "/blog/ai-2026-evidence-hub-architecture",
+    emoji: "🗃️",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "realtime-agent-routing-2026",
+    title: "AI 2026: Real‑Time Agent Routing — Best Practices",
+    description:
+      "Latency‑aware, eval‑gated, policy‑driven routing across models, tools, and regions.",
+    ctaLabel: "Read Best Practices",
+    href: "/blog/ai-2026-realtime-agent-routing-best-practices",
+    emoji: "🧭",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "agentic-billing-controls-2026",
+    title: "AI 2026: Agentic Billing Controls",
+    description:
+      "Budgets, approvals, and eval‑gated execution for predictable agent costs.",
+    ctaLabel: "Read Guide",
+    href: "/blog/ai-2026-agentic-billing-controls",
+    emoji: "💳",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
+    id: "agentic-evidence-hub-overview-2026",
+    title: "Agentic Evidence Hub — Executive Overview",
+    description:
+      "Centralize evals, releases, incidents, and guardrails for audit‑ready autonomy.",
+    ctaLabel: "Read Overview",
+    href: "/content/ai-2026-agentic-evidence-hub-overview",
+    emoji: "🗃️",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "safe-rollouts-2026",
     title: "AI 2026: Safe Rollouts in Production",
     description:
@@ -120,4 +208,5 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     highlight: true,
     date: "2025-09-16",
   },
-  {
+];
+

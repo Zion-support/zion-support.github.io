@@ -192,16 +192,8 @@ const AdvancedHolographicReality2026: React.FC = () => {
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-80 mb-8">Join the holographic revolution and transform your business</p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
-              Download Brochure
-            </button>
-          </div>
+          <h1 className="text-4xl font-bold mb-6">AdvancedHolographicReality2026</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>

@@ -199,7 +199,7 @@ const RevolutionaryTech2026: React.FC = () => {
             </a>
             </divbutton>
           </div>
-        </divdiv>
+        </div>
           </div>
         </motion.div>
       </div>

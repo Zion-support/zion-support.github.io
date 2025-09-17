@@ -1,4 +1,11 @@
-export default function AiRiskMitigationGuide2026() {
+import React from 'react'
+
+export const metadata = {
+  title: 'Guide: AI Risk Mitigation in Production (2026)',
+  description: 'Practical controls, eval gates, and incident playbooks for safe AI operations.',
+}
+
+export default function AIRiskMitigationGuide2026() {
   return (
     <div className="min-h-screen bg-white">
       <section className="py-16">
@@ -6,24 +13,17 @@ export default function AiRiskMitigationGuide2026() {
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Guide: AI Risk Mitigation in Production (2026)</h1>
           <p className="text-gray-600 mb-8">Practical controls, eval gates, and incident playbooks for safe AI operations.</p>
           <div className="prose prose-gray max-w-none">
-            <h2>Overview</h2>
-            <p>
-              This guide outlines actionable practices to mitigate AI risk in production: objective evaluations, policy-as-code
-              guardrails, runtime observability, and incident response.
-            </p>
-            <h3>Key Controls</h3>
+            <h2>Controls and Safeguards</h2>
             <ul>
-              <li>Pre-deploy eval gates with measurable rubrics</li>
-              <li>Runtime policy checks and budget guardrails</li>
-              <li>Tracing, metrics, and safety telemetry</li>
-              <li>Post-incident analysis with causal graphs</li>
+              <li>Pre-deployment evaluation gates with red-team scenarios</li>
+              <li>Runtime guardrails and evidence capture</li>
+              <li>Incident response with blameless postmortems</li>
             </ul>
-            <h3>Rollout Checklist</h3>
+            <h3>Implementation Steps</h3>
             <ol>
-              <li>Define SLIs/SLOs for quality, latency, and cost</li>
-              <li>Integrate eval suites into CI/CD</li>
-              <li>Enable runtime guardrails and alerts</li>
-              <li>Establish incident runbooks and evidence capture</li>
+              <li>Define risk taxonomies and SLAs</li>
+              <li>Integrate policy-as-code with CI/CD</li>
+              <li>Instrument runtime for anomalies and rollback triggers</li>
             </ol>
           </div>
         </div>

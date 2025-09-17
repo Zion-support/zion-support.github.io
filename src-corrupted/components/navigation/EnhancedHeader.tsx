@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const EnhancedHeader: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedHeader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default EnhancedHeader;
+=======
 import React { useState, useEffect } from 'react',;',';';
     ';';';';
 
@@ -61,3 +75,4 @@ import React {useState, useEffect } from 'react',;';';
     ';';' { icon: Phon e, text: '+1 302 464 0950', href: 'tel:+13024640950' } { icon: Mai l, text: 'kleber@ziontechgroup.com', href: 'mailto: klebe r@ziontechgroup.com' } { icon: MapPi n, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: Reac t.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {'}}}';';
 "';';';
 "';';';';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

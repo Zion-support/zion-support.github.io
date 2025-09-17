@@ -1,62 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 
 const FutureTechVision2026: React.FC = () => {
-  const visionSections = [
-    {
-      title: "Consciousness Computing",
-      icon: "🧠",
-      description: "AI systems that achieve true consciousness and self-awareness",
-      timeline: "2026-2027",
-      impact: "Revolutionary",
-      details: [
-        "Self-aware artificial intelligence",
-        "Emotional intelligence processing",
-        "Creative problem solving",
-        "Autonomous decision making"
-      ]
-    },
-    {
-      title: "Quantum Reality",
-      icon: "⚡",
-      description: "Quantum computing that can simulate entire universes",
-      timeline: "2026-2028",
-      impact: "Transformative",
-      details: [
-        "Universe-scale simulations",
-        "Quantum entanglement networks",
-        "Parallel reality processing",
-        "Infinite computational power"
-      ]
-    },
-    {
-      title: "Neural Integration",
-      icon: "🧬",
-      description: "Seamless integration between human and artificial intelligence",
-      timeline: "2026-2029",
-      impact: "Evolutionary",
-      details: [
-        "Direct brain-computer interfaces",
-        "Enhanced cognitive abilities",
-        "Shared consciousness networks",
-        "Human-AI symbiosis"
-      ]
-    },
-    {
-      title: "Omniversal Access",
-      icon: "🌟",
-      description: "Access to information and processing across all dimensions",
-      timeline: "2026-2030",
-      impact: "Transcendent",
-      details: [
-        "Multi-dimensional data access",
-        "Universal knowledge processing",
-        "Infinite information networks",
-        "Cosmic intelligence systems"
-      ]
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}

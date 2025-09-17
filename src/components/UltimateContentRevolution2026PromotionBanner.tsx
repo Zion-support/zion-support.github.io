@@ -1,53 +1,23 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  ArrowRight
-  X,
-  Play,
-  Star,
-  TrendingUp,
-  Users,
-  Award
-} from 'lucide-react';
-
-const UltimateContentRevolution2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
+const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 border-b border-purple-500/30 shadow-2xl"
         >
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex items-center gap-4">
-                <divdiv
+                <div
                   className="flex-shrink-0"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
-                </divdiv>
+                </div>
                 
                 <div className="hidden md:block">
                   <div className="flex items-center gap-2 mb-1">
@@ -146,7 +116,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
 
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <divdiv
+            <div
               className="absolute top-2 left-4 w-2 h-2 bg-yellow-400 rounded-full"
                 y: [0-10],
                 opacity: [0.510.5],
@@ -156,7 +126,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
                 ease: "easeInOut"
               }}
             />
-            <divdiv
+            <div
               className="absolute top-3 right-8 w-1 h-1 bg-pink-400 rounded-full"
                 y: [0-80],
                 opacity: [0.30.80.3],
@@ -167,7 +137,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {
                 delay: 0.5
               }}
             />
-            <divdiv
+            <div
               className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full"
                 y: [0-60],
                 opacity: [0.40.90.4],
@@ -179,10 +149,11 @@ const UltimateContentRevolution2026PromotionBanner = () => {
               }}
             />
           </div>
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default UltimateContentRevolution2026PromotionBanner;
+</div></div></div></div></div></div>

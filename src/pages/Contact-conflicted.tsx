@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -16,40 +13,16 @@ import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/create-and-deploy-new-content-79ca
 
 export default function Contact() {
   const { showToast: toast } = useToast();
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 import React, { useState } from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/create-and-deploy-new-content-79ca
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-
 const Contact: React.FC = () => {
-<<<<<<< HEAD
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-6f93
-
 const Contact: React.FC = () => {
-
 const Contact: React.FC = () => {
-=======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -60,14 +33,12 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -86,14 +57,12 @@ const Contact: React.FC = () => {
       });
     }, 3000);
   };
-
   const contactMethods = [
     { icon: <Phone className="h-6 w-6" />, title: "Phone", details: "+1 (302) 464-0950", description: "Available Mon-Fri, 9AM-6PM EST" },
     { icon: <Mail className="h-6 w-6" />, title: "Email", details: "kleber@ziontechgroup.com", description: "We'll respond within 24 hours" },
     { icon: <MapPin className="h-6 w-6" />, title: "Office", details: "364 E Main St STE 1008, Middletown DE 19709", description: "Visit us for a consultation" },
     { icon: <Clock className="h-6 w-6" />, title: "Business Hours", details: "Monday - Friday", description: "9:00 AM - 6:00 PM EST" }
   ];
-
   const services = [
     "AI & Machine Learning",
     "Cloud & DevOps",
@@ -106,60 +75,31 @@ const Contact: React.FC = () => {
     "Blockchain Services",
     "IoT Solutions"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI-powered technology solutions, consulting, and innovative business services."
       />
-      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-        <divdiv
-=======
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
+        <div
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Let's Build the Future
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Together</span>
-          </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Ready to transform your business with cutting-edge AI and technology solutions? 
             Our team of experts is here to help you navigate the digital landscape.
-          </p>
-<<<<<<< HEAD
-        </divdiv>
-=======
-        </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-      </section>
-
       {/* Contact Methods Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <divdiv
+          <div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {contactMethods.map((method, index) => (
-              <divdiv
-=======
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {contactMethods.map((method, index) => (
-              <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93
+              <div
                 key={index}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
@@ -167,65 +107,31 @@ const Contact: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
                 <p className="text-lg text-cyan-400 font-medium mb-2">{method.details}</p>
                 <p className="text-gray-400 text-sm">{method.description}</p>
-<<<<<<< HEAD
-              </divdiv>
             ))}
-          </divdiv>
-=======
-              </motion.div>
-            ))}
-          </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-        </div>
-      </section>
-
       {/* Contact Form Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
-          <divdiv
-=======
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
+          <div
             className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
           >
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Send Us a Message</h2>
               <p className="text-gray-300">
                 Tell us about your project and we'll get back to you within 24 hours
-              </p>
-            </div>
-
             {isSubmitted ? (
-<<<<<<< HEAD
-              <divdiv
-=======
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
+              <div
                 className="text-center py-12"
               >
                 <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
-                </p>
-<<<<<<< HEAD
-              </divdiv>
-=======
-              </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
-                    </label>
                     <input
                       type="text"
                       id="name"
@@ -236,12 +142,9 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your full name"
                     />
-                  </div>
-                  
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
-                    </label>
                     <input
                       type="email"
                       id="email"
@@ -252,14 +155,10 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter your email"
                     />
-                  </div>
-                </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company
-                    </label>
                     <input
                       type="text"
                       id="company"
@@ -269,12 +168,9 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter company name"
                     />
-                  </div>
-                  
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
-                    </label>
                     <input
                       type="tel"
                       id="phone"
@@ -284,13 +180,9 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter phone number"
                     />
-                  </div>
-                </div>
-
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service of Interest
-                  </label>
                   <select
                     id="service"
                     name="service"
@@ -302,13 +194,9 @@ const Contact: React.FC = () => {
                     {services.map((service, index) => (
                       <option key={index} value={service}>{service}</option>
                     ))}
-                  </select>
-                </div>
-
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Project Details *
-                  </label>
                   <textarea
                     id="message"
                     name="message"
@@ -319,8 +207,6 @@ const Contact: React.FC = () => {
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                     placeholder="Tell us about your project, goals, and timeline..."
                   />
-                </div>
-
                 <div className="text-center">
                   <button
                     type="submit"
@@ -338,36 +224,16 @@ const Contact: React.FC = () => {
                         Send Message
                       </>
                     )}
-                  </button>
-                </div>
-              </form>
             )}
-<<<<<<< HEAD
-          </divdiv>
-=======
-          </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-        </div>
-      </section>
-
       {/* Emergency Support Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <divdiv
-=======
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
+          <div
             className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
           >
             <h3 className="text-2xl font-bold text-white mb-4">🚨 Emergency Support</h3>
             <p className="text-gray-300 mb-6">
               Need immediate assistance? Our 24/7 emergency support team is here to help.
-            </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -375,71 +241,22 @@ const Contact: React.FC = () => {
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call Now
-              </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-300"
               >
                 <Mail className="h-5 w-5 mr-2" />
                 Email Support
-              </a>
-            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          </div>
-=======
-          </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-79ca
-        </div>
-      </section>
-
-<<<<<<< HEAD
-=======
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
-          <motion.div
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-=======
-          <divdiv
->>>>>>> cursor/create-and-deploy-new-content-79ca
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
-            </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
-          </divdiv>
->>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> cursor/create-and-deploy-new-content-79ca
-=======
-          </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -455,32 +272,16 @@ const Contact: React.FC = () => {
                 description: "Round-the-clock support ensures your business never stops, with rapid response times for critical issues."
               }
             ].map((feature, index) => (
-<<<<<<< HEAD
-              <divdiv
-=======
-              <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93
+              <div
                 key={index}
                 className="text-center"
               >
                 <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="h-8 w-8 text-white" />
-                  </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
-<<<<<<< HEAD
-              </divdiv>
-=======
-              </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
             ))}
-          </div>
-        </div>
-      </section>
-    </div>
   );
 };
-
 export default Contact;

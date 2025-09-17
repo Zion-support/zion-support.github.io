@@ -61,6 +61,21 @@ const ContentShowcaseBanner2026 = () => {
     }
   ];
 
+  // Append our new 2026 evidence-led ops article to featured slides
+  featuredContent.push({
+    id: 5,
+    title: "Autonomous, Evidence‑Led Ops",
+    subtitle: "Run agents with auditable traces and eval gates",
+    description: "Operationalize agents with traces, evaluation gates, and runtime guardrails that drive reliable autonomy.",
+    image: "/images/hero/evidence-led-ops-2026.jpg",
+    category: "Operations",
+    readTime: "6 min read",
+    featured: true,
+    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    icon: Zap,
+    stats: { views: "1.1M", rating: 4.8 }
+  });
+
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {

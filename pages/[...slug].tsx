@@ -1,33 +1,22 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const knownPrefixes = ['services']
-
-export default function GenericPage(){
-  const router = useRouter()
-  const slugParts = Array.isArray(router.query.slug) ? router.query.slug : []
-  const path = '/' + slugParts.join('/')
-
-  const isServiceDetail = slugParts.length === 2 && slugParts[0] === 'services'
-
-  if (isServiceDetail) {
-    // Let the statically generated services/[id] handle it by linking
-    const id = slugParts[1]
-    return (
-      <main style={{padding:20,fontFamily:'sans-serif'}}>
-        <h1>Redirecting…</h1>
-        <p>This service is available here: <Link href={`/services/${id}/`}>{`/services/${id}/`}</Link></p>
-        <p><Link href="/services/">Back to Services</Link></p>
-      </main>
-    )
-  }
-
+const [...slug]: React.FC = () => {
   return (
-    <main style={{padding:20,fontFamily:'sans-serif'}}>
-      <h1>{path || 'Page'}</h1>
-      <p>This page is under construction. Please check back soon.</p>
-      <p><Link href="/">Go to Home</Link></p>
-      <p><Link href="/services/">Browse Services</Link></p>
-    </main>
-  )
-}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>[...slug] | Zion Tech Group</title>
+        <meta name="description" content="[...slug] - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">[...slug]</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default [...slug];

@@ -1,146 +1,153 @@
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { ArrowRight, BookOpen, Brain, DollarSign, Heart, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryContent2026Banner = () => {
   return (
-    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-        }}></div>
+    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
+      {/* Animated background pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-12"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent via-white/5 to-transparent transform skew-y-12"></div>
       </div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 NEW 2026 CONTENT</span>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-6">
+            <Star className="h-10 w-10 text-yellow-400 mr-4 animate-spin" />
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+              Revolutionary Content 2026
+            </h2>
+            <Star className="h-10 w-10 text-yellow-400 ml-4 animate-spin" />
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Revolutionary AI Content 2026
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the future of AI with our groundbreaking 2026 content series. 
-            From enterprise transformation to quantum AI revolutionexplore the technologies that will reshape business.
+          
+          <p className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-5xl mx-auto leading-relaxed">
+            Experience the future of technology through our groundbreaking content covering 
+            the most advanced AI innovations, sustainable solutions, and transformative breakthroughs
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {/* Featured Article 1 */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-2xl">🏢</span>
+        {/* Content categories showcase */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Left column */}
+          <div className="space-y-6">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
+              <div className="flex items-center mb-4">
+                <Brain className="h-12 w-12 text-purple-400 mr-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold">AI Innovation Hub</h3>
               </div>
-              <div>
-                <h3 className="text-lg font-bold">Enterprise AI Transformation</h3>
-                <p className="text-sm opacity-80">Complete Implementation Guide</p>
+              <p className="text-gray-300 mb-6 text-lg">
+                Discover cutting-edge AI technologies that are reshaping industries and transforming the way we work, live, and interact.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Consciousness AI</span>
+                <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Quantum Computing</span>
+                <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Neural Interfaces</span>
               </div>
+              <Link 
+                to="/ai-innovation-hub-2026" 
+                className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:translate-x-2 transition-transform"
+              >
+                Explore AI Innovations <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
-            <p className="text-sm opacity-90 mb-4">
-              Comprehensive roadmap for enterprise AI transformation in 2025. Learn implementation strategies
-              best practicesand real-world case studies.
-            </p>
-            <a 
-              href="/blog/ai-2025-enterprise-transformation-complete-guide"
-              className="inline-flex items-center text-purple-300 hover:text-purple-200 font-semibold text-sm"
-            >
-              Read More →
-            </a>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
+              <div className="flex items-center mb-4">
+                <Heart className="h-12 w-12 text-red-400 mr-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold">Healthcare Revolution</h3>
+              </div>
+              <p className="text-gray-300 mb-6 text-lg">
+                Revolutionary AI healthcare solutions that detect diseases years in advance and provide personalized treatment recommendations.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">Early Detection</span>
+                <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">AI Diagnosis</span>
+                <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">Personalized Care</span>
+              </div>
+              <Link 
+                to="/blog/ai-driven-healthcare-breakthrough-early-disease-detection" 
+                className="inline-flex items-center text-red-400 hover:text-red-300 font-semibold group-hover:translate-x-2 transition-transform"
+              >
+                Learn About Healthcare AI <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
           </div>
 
-          {/* Featured Article 2 */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-2xl">⚛️</span>
+          {/* Right column */}
+          <div className="space-y-6">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
+              <div className="flex items-center mb-4">
+                <DollarSign className="h-12 w-12 text-green-400 mr-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold">Financial AI</h3>
               </div>
-              <div>
-                <h3 className="text-lg font-bold">Quantum AI Revolution</h3>
-                <p className="text-sm opacity-80">Business Transformation 2026</p>
+              <p className="text-gray-300 mb-6 text-lg">
+                Advanced AI investment platforms delivering 300% better returns through intelligent market analysis and automated optimization.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Smart Investing</span>
+                <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Risk Management</span>
+                <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Portfolio AI</span>
               </div>
+              <Link 
+                to="/blog/financial-ai-revolution-smart-investment-strategies" 
+                className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold group-hover:translate-x-2 transition-transform"
+              >
+                Discover Financial AI <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
-            <p className="text-sm opacity-90 mb-4">
-              Explore the revolutionary impact of Quantum AI on business operations
-              competitive advantageand market dynamics in 2026.
-            </p>
-            <a 
-              href="/blog/quantum-ai-2026-business-revolution"
-              className="inline-flex items-center text-blue-300 hover:text-blue-200 font-semibold text-sm"
-            >
-              Read More →
-            </a>
-          </div>
 
-          {/* Featured Resource */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-2xl">📚</span>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
+              <div className="flex items-center mb-4">
+                <BookOpen className="h-12 w-12 text-blue-400 mr-4 group-hover:scale-110 transition-transform" />
+                <h3 className="text-2xl font-bold">Education Revolution</h3>
               </div>
-              <div>
-                <h3 className="text-lg font-bold">AI Implementation Guide</h3>
-                <p className="text-sm opacity-80">Enterprise Strategy 2026</p>
+              <p className="text-gray-300 mb-6 text-lg">
+                AI-powered personalized learning platforms that adapt to each student's needs, improving performance by 400%.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Personalized Learning</span>
+                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">AI Tutoring</span>
+                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Adaptive Education</span>
               </div>
+              <Link 
+                to="/blog/ai-powered-education-personalized-learning-revolution" 
+                className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:translate-x-2 transition-transform"
+              >
+                Explore Education AI <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
-            <p className="text-sm opacity-90 mb-4">
-              The definitive guide to enterprise AI implementation in 2026. 
-              Complete strategyexecution frameworkand best practices.
-            </p>
-            <a 
-              href="/resources/ai-implementation-enterprise-guide-2026"
-              className="inline-flex items-center text-green-300 hover:text-green-200 font-semibold text-sm"
-            >
-              Read More →
-            </a>
           </div>
         </div>
 
-        {/* Key Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300 mb-2">500+</div>
-            <div className="text-sm opacity-80">AI Use Cases</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-300 mb-2">98%</div>
-            <div className="text-sm opacity-80">Success Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-300 mb-2">340%</div>
-            <div className="text-sm opacity-80">Average ROI</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-pink-300 mb-2">24/7</div>
-            <div className="text-sm opacity-80">Expert Support</div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/blog"
-              className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+        {/* Call to action section */}
+        <div className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-12 border border-white/20">
+          <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+            Ready to Transform Your Future?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join thousands of forward-thinking organizations already leveraging our revolutionary AI solutions 
+            to achieve unprecedented success and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/blog"
+              className="group bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-10 py-4 rounded-full font-bold text-xl hover:from-emerald-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
             >
               Explore All Content
-            </a>
-            <a
-              href="/resources"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
+              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            
+            <Link
+              to="/contact"
+              className="group border-2 border-white text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
-              View Resources
-            </a>
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-colors"
-            >
-              Get Expert Consultation
-            </a>
+              Get Started Today
+              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

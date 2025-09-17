@@ -1,95 +1,221 @@
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Brain, 
+  Zap, 
+  ArrowRight, 
+  Star, 
+  X, 
+  Play,
+  TrendingUp,
+  Users,
+  CheckCircle
+} from 'lucide-react';
 
-const AI2027UltimateBreakthroughBanner: React.FC = () => {
+const AI2027UltimateBreakthroughBanner = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  const features = [
+    "Conscious AI Systems",
+    "Quantum Neural Networks", 
+    "500% Performance Boost",
+    "Global AI Ecosystem"
+  ];
+
+  const stats = [
+    { icon: Brain, value: "99.9%", label: "Accuracy" },
+    { icon: Users, value: "10M+", label: "Users" },
+    { icon: TrendingUp, value: "500%", label: "Boost" },
+    { icon: Zap, value: "24/7", label: "Uptime" }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
-    <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/2 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-2000"></div>
-      </div>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -100 }}
+        className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
+      >
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 py-6">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            {/* Left Content */}
+            <div className="flex-1 text-center lg:text-left">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex items-center justify-center lg:justify-start gap-2 mb-3"
+              >
+                <div className="flex items-center gap-1">
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                </div>
+                <span className="text-yellow-400 text-sm font-medium ml-2">Revolutionary AI Breakthrough 2027</span>
+              </motion.div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-full px-6 py-2 mb-8">
-            <span className="text-sm font-bold">🚀 AI 2027 ULTIMATE BREAKTHROUGH</span>
-          </div>
+              <motion.h2
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-2xl md:text-3xl font-bold text-white mb-2"
+              >
+                The Ultimate AI Breakthrough is Here!
+              </motion.h2>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-            The Future of
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"> AI</span>
-            <br />
-            <span className="text-4xl md:text-6xl">Starts Here</span>
-          </h1>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex items-center justify-center lg:justify-start gap-2 mb-4"
+              >
+                <span className="text-gray-300">Featuring:</span>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentFeature}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="text-blue-400 font-semibold"
+                  >
+                    {features[currentFeature]}
+                  </motion.span>
+                </AnimatePresence>
+              </motion.div>
 
-          {/* Subheading */}
-          <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed opacity-90">
-            Revolutionary AI technologies that will transform businesses and industries in 2027. 
-            Experience the next generation of autonomous systems, quantum-neural fusion, and synthetic intelligence.
-          </p>
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-gray-300 text-sm md:text-base mb-4 max-w-2xl"
+              >
+                Experience conscious AI systems, quantum neural networks, and unprecedented capabilities 
+                that will transform how you work, live, and think.
+              </motion.p>
 
-          {/* Key Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold mb-2">Neural Superintelligence</h3>
-              <p className="text-sm opacity-80">Advanced AI consciousness that learns and adapts in real-time</p>
+              {/* Stats */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-4"
+              >
+                {stats.map((stat, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <stat.icon className="w-4 h-4 text-blue-400" />
+                    <span className="text-white font-semibold">{stat.value}</span>
+                    <span className="text-gray-400 text-sm">{stat.label}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg transition-all duration-300"
+                >
+                  <Play className="w-4 h-4" />
+                  Explore Now
+                  <ArrowRight className="w-4 h-4" />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                >
+                  Learn More
+                </motion.button>
+              </motion.div>
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-2">Quantum-Neural Fusion</h3>
-              <p className="text-sm opacity-80">Revolutionary computing that merges quantum and neural technologies</p>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold mb-2">Autonomous Ecosystems</h3>
-              <p className="text-sm opacity-80">Self-managing business systems that operate independently</p>
-            </div>
-          </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/ai-2027-breakthrough"
-              className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105"
+            {/* Right Content - Visual Element */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="relative"
             >
-              Explore 2027 Breakthrough
-            </a>
-            <a
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all"
-            >
-              Get Early Access
-            </a>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">1000%</div>
-              <div className="text-sm opacity-80">Expected ROI Increase</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
-              <div className="text-sm opacity-80">System Reliability</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">50x</div>
-              <div className="text-sm opacity-80">Processing Speed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-              <div className="text-sm opacity-80">Autonomous Operation</div>
-            </div>
+              <div className="w-32 h-32 md:w-40 md:h-40 relative">
+                {/* Animated Brain Icon */}
+                <motion.div
+                  animate={{ 
+                    rotate: [0, 5, -5, 0],
+                    scale: [1, 1.05, 1]
+                  }}
+                  transition={{ 
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center"
+                >
+                  <Brain className="w-16 h-16 md:w-20 md:h-20 text-white" />
+                </motion.div>
+                
+                {/* Orbiting Elements */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ 
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                  className="absolute inset-0"
+                >
+                  <div className="absolute top-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full transform -translate-x-1/2 -translate-y-1"></div>
+                  <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-purple-400 rounded-full transform -translate-x-1/2 translate-y-1"></div>
+                  <div className="absolute left-0 top-1/2 w-2 h-2 bg-green-400 rounded-full transform -translate-x-1 -translate-y-1/2"></div>
+                  <div className="absolute right-0 top-1/2 w-2 h-2 bg-yellow-400 rounded-full transform translate-x-1 -translate-y-1/2"></div>
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Close Button */}
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200"
+        >
+          <X className="w-5 h-5" />
+        </motion.button>
+
+        {/* Progress Bar */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 origin-left"
+          style={{ width: '100%' }}
+        />
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

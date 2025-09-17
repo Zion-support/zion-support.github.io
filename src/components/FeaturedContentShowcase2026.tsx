@@ -1,186 +1,247 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Clock, Users, TrendingUp, Star, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, User, Tag, Eye, Heart, Share2, BookOpen } from 'lucide-react';
-import { getFeaturedBlogPosts, getRecentBlogPosts } from '../data/blog-posts';
 
-const FeaturedContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('featured');
-  const featuredPosts = getFeaturedBlogPosts();
-  const recentPosts = getRecentBlogPosts(6);
+interface FeaturedContentShowcase2026Props {
+  className?: string;
+}
 
-  const tabs = [
-    { id: 'featured', label: 'Featured Content', count: featuredPosts.length },
-    { id: 'recent', label: 'Latest Articles', count: recentPosts.length },
-    { id: 'trending', label: 'Trending Now', count: 8 }
+const FeaturedContentShowcase2026: React.FC<FeaturedContentShowcase2026Props> = ({ className = '' }) => {
+  const featuredContent = [
+    {
+      id: 'autonomous-systems',
+      title: 'Next-Generation Autonomous AI Systems',
+      excerpt: 'Revolutionary autonomous AI systems that learn, adapt, and evolve to transform enterprise automation.',
+      category: 'AI Innovation',
+      readTime: '12 min read',
+      publishedDate: 'Jan 15, 2026',
+      image: '/api/placeholder/400/250',
+      gradient: 'from-purple-500 to-blue-600',
+      stats: { views: '2.4k', likes: '156' },
+      tags: ['Autonomous AI', 'Enterprise', 'Machine Learning'],
+      featured: true
+    },
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing Enterprise Solutions',
+      excerpt: 'Harness quantum computing power to solve complex business challenges with unprecedented speed.',
+      category: 'Quantum Technology',
+      readTime: '15 min read',
+      publishedDate: 'Jan 14, 2026',
+      image: '/api/placeholder/400/250',
+      gradient: 'from-emerald-500 to-cyan-600',
+      stats: { views: '1.8k', likes: '98' },
+      tags: ['Quantum Computing', 'Enterprise', 'Innovation'],
+      featured: true
+    },
+    {
+      id: 'ai-consciousness',
+      title: 'AI Consciousness Breakthrough',
+      excerpt: 'Explore the dawn of sentient artificial intelligence and its transformative impact on human-AI collaboration.',
+      category: 'AI Research',
+      readTime: '18 min read',
+      publishedDate: 'Jan 13, 2026',
+      image: '/api/placeholder/400/250',
+      gradient: 'from-rose-500 to-pink-600',
+      stats: { views: '3.2k', likes: '234' },
+      tags: ['Consciousness', 'AI Research', 'Future Tech'],
+      featured: true
+    },
+    {
+      id: 'transformation-roadmap',
+      title: 'Enterprise AI Transformation 2026',
+      excerpt: 'Complete implementation roadmap for successful AI transformation with proven strategies and frameworks.',
+      category: 'Business Strategy',
+      readTime: '20 min read',
+      publishedDate: 'Jan 12, 2026',
+      image: '/api/placeholder/400/250',
+      gradient: 'from-orange-500 to-red-600',
+      stats: { views: '2.9k', likes: '187' },
+      tags: ['AI Transformation', 'Strategy', 'Implementation'],
+      featured: false
+    }
   ];
 
-  const getContentForTab = () => {
-    switch (activeTab) {
-      case 'featured':
-        return featuredPosts.slice(0, 6);
-      case 'recent':
-        return recentPosts;
-      case 'trending':
-        return [...featuredPosts, ...recentPosts].slice(0, 6);
-      default:
-        return featuredPosts.slice(0, 6);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
   };
 
-  const content = getContentForTab();
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className={`py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200 mb-6">
-            <BookOpen className="w-5 h-5 text-blue-600 mr-2" />
-            <span className="text-sm font-medium text-blue-700">CONTENT SHOWCASE</span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center mb-4">
+            <Star className="w-6 h-6 text-yellow-500 mr-2" />
+            <span className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">
+              Featured Content
+            </span>
           </div>
-          
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Discover Our Latest
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> AI Insights</span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Latest AI Innovations & Insights
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead of the curve with cutting-edge AI research, breakthrough technologies, 
-            and revolutionary insights from industry experts.
+            Discover cutting-edge AI technologies, breakthrough research, and practical implementation strategies 
+            that are shaping the future of enterprise automation and artificial intelligence.
           </p>
-        </div>
-
-        {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-              }`}
-            >
-              {tab.label}
-              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
-                {tab.count}
-              </span>
-            </button>
-          ))}
-        </div>
+        </motion.div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {content.map((post, index) => (
-            <article
-              key={post.id}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+        >
+          {featuredContent.map((content, index) => (
+            <motion.div
+              key={content.id}
+              variants={itemVariants}
+              whileHover={{ y: -8 }}
+              className="group"
             >
-              {/* Image */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 text-gray-800 text-xs font-semibold rounded-full">
-                    {post.category}
-                  </span>
-                </div>
-                <div className="absolute bottom-4 right-4">
-                  <div className="flex items-center text-white/80 text-sm">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {post.readTime}
-                  </div>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <User className="w-4 h-4 mr-1" />
-                    {post.author}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    {new Date(post.publishDate).toLocaleDateString()}
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                  {post.title}
-                </h3>
-
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags.slice(0, 3).map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
-                    >
-                      {tag}
+              <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                {/* Featured Badge */}
+                {content.featured && (
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 text-white">
+                      <Star className="w-3 h-3 mr-1" />
+                      Featured
                     </span>
-                  ))}
+                  </div>
+                )}
+
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-90`} />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <BookOpen className="w-16 h-16 text-white/80" />
+                  </div>
+                  <div className="absolute inset-0 bg-black/20" />
                 </div>
 
-                {/* Actions */}
-                <div className="flex items-center justify-between">
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Link>
+                {/* Content */}
+                <div className="p-6">
+                  {/* Category & Stats */}
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-indigo-100 text-indigo-800">
+                      {content.category}
+                    </span>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <TrendingUp className="w-4 h-4 mr-1" />
+                        {content.stats.views}
+                      </div>
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {content.stats.likes}
+                      </div>
+                    </div>
+                  </div>
 
-                  <div className="flex items-center space-x-4 text-gray-400">
-                    <button className="hover:text-red-500 transition-colors">
-                      <Heart className="w-4 h-4" />
-                    </button>
-                    <button className="hover:text-blue-500 transition-colors">
-                      <Share2 className="w-4 h-4" />
-                    </button>
-                    <button className="hover:text-green-500 transition-colors">
-                      <Eye className="w-4 h-4" />
-                    </button>
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-200">
+                    {content.title}
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {content.excerpt}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {content.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Meta & CTA */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Clock className="w-4 h-4 mr-1" />
+                      <span className="mr-4">{content.readTime}</span>
+                      <span>{content.publishedDate}</span>
+                    </div>
+
+                    <Link
+                      to={`/blog/${content.id}`}
+                      className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-200"
+                    >
+                      Read More
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/5 group-hover:to-indigo-500/10 transition-all duration-300" />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
-              Ready to Dive Deeper?
+              Ready to Transform Your Business with AI?
             </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Explore our comprehensive collection of AI insights, case studies, and breakthrough technologies. 
-              Join thousands of professionals who are already transforming their industries with our expertise.
+            <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
+              Join thousands of forward-thinking organizations already leveraging our AI solutions 
+              to drive innovation, efficiency, and competitive advantage.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/blog"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                to="/services"
+                className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors duration-200"
               >
-                View All Content
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Explore Our AI Services
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-              
               <Link
-                to="/newsletter-signup"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-indigo-500 text-white font-semibold rounded-xl hover:bg-indigo-400 transition-colors duration-200"
               >
-                Subscribe for Updates
+                Schedule Consultation
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

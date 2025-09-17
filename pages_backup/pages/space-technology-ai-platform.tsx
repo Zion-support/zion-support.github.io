@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 
@@ -235,39 +237,25 @@ export default function SpaceTechnologyAIPlatform() {
     return this.props.children;
   }
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',;
-  };
-
-
-    website: 'https://ziontechgroup.com'
-  },
-
-
-  const features = [
-    'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
-    'API accessExpert consultation'
-  ],
-  const useCases = [
-    'Satellite operationsSpace explorationEarth observationSpace debris monitoringMission planningSpace research'
-  ],
-  const integrations = [
-    'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
-  ],
-  const competitors = [
-
-
-
-
-
-
-    'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
-  ],
+const space-technology-ai-platform: React.FC = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>space-technology-ai-platform | Zion Tech Group</title>
+        <meta name="description" content="space-technology-ai-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">space-technology-ai-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+=======
     <UltraAdvancedFuturisticBackground
       intensity="extreme"
       colorScheme="neural-network"
@@ -952,74 +940,10 @@ function SpaceTechnologyAIPlatform() {
             </motion.div>
           </div>
         </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       </div>
-    </UltraAdvancedFuturisticBackground>
+    </div>
+  );
+};
 
-
-
-
-
-
-
-
-
-  )
-}
-
-              <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6 mb - 8'>                <motion.a;
-                  href={`tel:${contact_info.mobile}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className='flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - indigo - 600 text - white font - semibold rounded - xl shadow - lg shadow - blue - 500 / 25 hover:shadow - xl hover:shadow - blue - 500 / 40 transition - all duration - 200';
-                >;
-                  <Phone className='w - 5 h - 5' />;
-                  <span > Call {contact_info.mobile}</span>;
-                </motion.a>;
-                <motion.a;
-                  href={`mailto:${contact_info.email}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className='flex items - center space - x-2 px - 8 py - 4 border - 2 border - blue - 500 / 50 text - blue - 400 font - semibold rounded - xl hover:bg - blue - 500 / 10 transition - all duration - 200';
-                >;
-                  <Mail className='w - 5 h - 5' />                  <span > Email Us</span>;
-                </motion.a>;
-              </div>;
-              <div className='p - 6 bg - gradient - to - r from - blue - 900 / 20 via - indigo - 900 / 20 to - purple - 900 / 20 rounded - 2xl border border - blue - 500 / 20'>;
-                <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center'>;
-                  <div>;
-                    <Phone className='w - 6 h - 6 text - blue - 400 mx - auto mb - 2' />;
-                    <p className='text - white font - medium'>;
-                      {contact_info.mobile}
-                    </p>;
-                  </div>;
-                  <div>;
-                    <Mail className='w - 6 h - 6 text - indigo - 400 mx - auto mb - 2' />;
-                    <p className='text - white font - medium'>;
-                      {contact_info.email}
-                    </p>;
-                  </div>;
-                  <div>;
-                    <MapPin className='w - 6 h - 6 text - purple - 400 mx - auto mb - 2' />;
-                    <p className='text - white font - medium'>;
-                      {contact_info.address}
-                    </p>                  </div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-;
-
-
-
-
-
-
-
-
-
-
-
-
+export default space-technology-ai-platform;

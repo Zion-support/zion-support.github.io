@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const SecurityComplianceDashboard: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SecurityComplianceDashboard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default SecurityComplianceDashboard;
+=======
 import React, {useState, useCallback} from 'react';'''';';
 
 import {Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square} from 'lucide-react';
@@ -303,3 +317,4 @@ export default Component
 const React,{useState,useCallback} from "react";" '"`'"`
 import { useState } from 'react';,
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

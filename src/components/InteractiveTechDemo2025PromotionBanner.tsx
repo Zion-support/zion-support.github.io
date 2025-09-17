@@ -1,113 +1,10 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  Pause
-  RotateCcw
-  Settings
-  Zap
-  Brain
-  Cpu
-  Database,
-  Cloud,
-  Smartphone,
-  Laptop,
-  Server,
-  Network,
-  Shield,
-  Target,
-  TrendingUp,
-  Users,
-  Globe,
-  Code,
-  Atom,
-  Rocket,
-  Star,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ArrowRight,
-  Download,
-  Share2,
-  Heart,
-  MessageCircle,
-  BookOpen,
-  Lightbulb,
-  X,
-  Eye,
-  MousePointer,
-  Monitor
-} from 'lucide-react';
-
-const InteractiveTechDemo2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [isPlayingsetIsPlaying] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-advance demos
-    const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % 4);
-    }3000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const demos = [
-    {
-      title: "AI Consciousness Evolution",
-      subtitle: "Experience Synthetic Intelligence",
-      description: "Interact with breakthrough AI systems achieving 99.7% consciousness accuracy in real-time neural pattern analysis.",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      metrics: "99.7% Accuracy • 8.9/10 Consciousness Index"
-    },
-    {
-      title: "Quantum Neural Fusion",
-      subtitle: "Witness Quantum Computing Power",
-      description: "See the first successful integration of quantum computing with neural networksachieving 1000x processing speed.",
-      icon: Atom,
-      color: "from-indigo-500 to-purple-500",
-      metrics: "1000x Speed • 99.8% Qubit Coherence"
-    },
-    {
-      title: "Brain-Computer Interface",
-      subtitle: "Direct Neural Communication",
-      description: "Control computing systems with your thoughts through our advanced BCI technology with 99.9% accuracy.",
-      icon: Cpu,
-      color: "from-green-500 to-teal-500",
-      metrics: "99.9% Accuracy • 12ms Response Time"
-    },
-    {
-      title: "Edge AI Processing",
-      subtitle: "Real-Time Distributed Intelligence",
-      description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,000+ processing nodes.",
-      icon: Network,
-      color: "from-blue-500 to-cyan-500",
-      metrics: "95% Latency Reduction • 10K+ Nodes"
-    }
-  ];
-
-  const features = [
-    { icon: Playtext: "Interactive Demos" },
-    { icon: Braintext: "AI Technologies" },
-    { icon: Atomtext: "Quantum Computing" },
-    { icon: Cputext: "Neural Interfaces" },
-    { icon: Networktext: "Edge Processing" },
-    { icon: Rocketext: "Future Tech" }
-  ];
-
-  if (isDismissed) return null;
-
+const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
   return (
     <div>
       {isVisible && (
-        <divdiv
+        <div
           className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -120,7 +17,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex-1 pr-8">
-                <divdiv
+                <div
                   key={currentDemo}
                   className="space-y-4"
                 >
@@ -179,12 +76,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       Download SDK
                     </button>
                   </div>
-                </divdiv>
+                </div>
               </div>
 
               {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg:block flex-shrink-0">
-                <divdiv
+                <div
                   key={currentDemo}
                   className="relative w-80 h-48"
                 >
@@ -207,7 +104,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('AI Consciousness') && (
                           <div className="grid grid-cols-4 gap-2">
                             {[...Array(8)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scale: isPlaying ? [1.21] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
@@ -225,7 +122,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
                             {[...Array(4)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   rotate: isPlaying ? 360 : 0,
                                   scale: isPlaying ? [1.1] : 1
@@ -247,7 +144,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
                             {[...Array(3)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scaleY: isPlaying ? [121] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
@@ -269,7 +166,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(6)].map((_, i) => (
-                              <divdiv
+                              <div
                                 key={i}
                                   scale: isPlaying ? [1.31] : 1,
                                   opacity: isPlaying ? [0.610.6] : 0.8
@@ -304,18 +201,18 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   </div>
 
                   {/* Floating Elements */}
-                  <divdiv
+                  <div
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
-                  </divdiv>
+                  </div>
 
-                  <divdiv
+                  <div
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
                     <MousePointer className="w-5 h-5 text-white" />
-                  </divdiv>
-                </divdiv>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -342,10 +239,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
           >
             <X className="w-5 h-5" />
           </button>
-        </divdiv>
+        </div>
       )}
     </div>
   );
 };
 
 export default InteractiveTechDemo2025PromotionBanner;
+</div></div></div></div></div></div>

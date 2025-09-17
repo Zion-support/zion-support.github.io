@@ -1,47 +1,6 @@
-'use client';
-
 import React from 'react';
-ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAwardLightbulb
 
-const RevolutionaryInnovationBanner2026 = () => {
-  const innovations = [
-    {
-      title: "Conscious AI Systems",
-      description: "First generation of AI with self-awareness and emotional intelligence capabilities",
-      icon: <Brain className="w-8 h-8 text-blue-400" />,
-      impact: "Revolutionary",
-      timeline: "2026 Q2"
-    },
-    {
-      title: "Quantum Neural Networks",
-      description: "Hybrid quantum-classical neural networks that process information at quantum speeds",
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
-      impact: "Breakthrough",
-      timeline: "2026 Q3"
-    },
-    {
-      title: "Universal Translation AI",
-      description: "Real-time translation of any languageincluding non-human communication patterns",
-      icon: <Globe className="w-8 h-8 text-green-400" />,
-      impact: "Transformative",
-      timeline: "2026 Q4"
-    },
-    {
-      title: "Predictive Reality Engine",
-      description: "AI system that predicts and simulates future scenarios with 99.7% accuracy",
-      icon: <Rocket className="w-8 h-8 text-indigo-400" />,
-      impact: "Game-Changing",
-      timeline: "2027 Q1"
-    }
-  ];
-
-  const stats = [
-    { number: "10,000x"label: "Faster Processing"description: "Compared to current AI systems" },
-    { number: "99.9%"label: "Accuracy Rate"description: "Across all prediction models" },
-    { number: "150+"label: "Countries"description: "Global deployment coverage" },
-    { number: "24/7"label: "Availability"description: "Continuous operation guarantee" }
-  ];
-
+const RevolutionaryInnovationBanner2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Animated background elements */}
@@ -54,7 +13,7 @@ const RevolutionaryInnovationBanner2026 = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -74,15 +33,15 @@ const RevolutionaryInnovationBanner2026 = () => {
             Discover groundbreaking technologies that will reshape entire industries and 
             create new possibilities that were once thought impossible.
           </p>
-        </divdiv>
+        </div>
 
         {/* Innovations Grid */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           {innovations.map((innovationindex) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
@@ -112,12 +71,12 @@ const RevolutionaryInnovationBanner2026 = () => {
                 <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
                 <span>In Active Development</span>
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
@@ -127,7 +86,7 @@ const RevolutionaryInnovationBanner2026 = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((statindex) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
@@ -135,13 +94,13 @@ const RevolutionaryInnovationBanner2026 = () => {
                 <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-lg font-bold text-blue-300 mb-2">{stat.label}</div>
                 <div className="text-gray-400 text-sm">{stat.description}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center"
         >
@@ -173,10 +132,11 @@ const RevolutionaryInnovationBanner2026 = () => {
               </divbutton>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
 
 export default RevolutionaryInnovationBanner2026;
+</div></div>

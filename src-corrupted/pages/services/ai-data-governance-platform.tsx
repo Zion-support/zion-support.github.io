@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ai-data-governance-platform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-data-governance-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-data-governance-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+=======
 import React from 'react',;',';';
     ';';';';
 
@@ -414,12 +427,20 @@ import {SEO } from '@/components/SEO';
 export default function aidatagovernanceplatform(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="aidatagovernanceplatform - Zion Tech Group" description="Professional aidatagovernanceplatform services by Zion Tech Group"  />
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">aidatagovernanceplatform</h1>
-        <p className="text-gray-300 text-lg">
-          Professional aidatagovernanceplatform services to help your business grow.
-        </p>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-data-governance-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
+<<<<<<< HEAD
+    </div>
+  );
+};
+
+export default ai-data-governance-platform;
+=======
   )
       )}
     </div>';
@@ -1113,3 +1134,4 @@ import { Link  } from 'react-router-dom'; import { Database, Shield, Search, Fil
 </motion>
 </motion>
 </motion>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

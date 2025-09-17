@@ -1,52 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
-
-interface AnalyticsData {
-  visitors: {
-    total: number;
-    unique: number;
-    returning: number;
-    new: number;
-    growth: number;
-  };
-  traffic: {
-    organic: number;
-    direct: number;
-    social: number;
-    referral: number;
-    paid: number;
-  };
-  engagement: {
-    bounceRate: number;
-    avgSessionDuration: number;
-    pagesPerSession: number;
-    conversionRate: number;
-  };
-  performance: {
-    pageLoadTime: number;
-    serverResponseTime: number;
-    errorRate: number;
-    uptime: number;
-  };
-  revenue: {
-    total: number;
-    growth: number;
-    avgOrderValue: number;
-    transactions: number;
-  };
-}
-
-interface TimeRange {
-  label: string;
-  value: string;
-  days: number;
-}
-
-const timeRanges: TimeRange[] = [
-  { label: 'Last 7 days', value: '7d', days: 7 },
-  { label: 'Last 30 days', value: '30d', days: 30 },
-  { label: 'Last 90 days', value: '90d', days: 90 },
-  { label: 'Last year', value: '1y', days: 365 }
-];
+import React from 'react';
 
 const AdvancedAnalyticsDashboard: React.FC = () => {
   const [selectedTimeRange, setSelectedTimeRange] = useState<TimeRange>(timeRanges[1]);
@@ -176,7 +128,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
     type?: 'currency' | 'percentage' | 'number';
     icon: string;
   }) => (
-    <divdiv
+    <div
       className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600"
     >
       <div className="flex items-center justify-between mb-4">
@@ -194,7 +146,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
       <div className="text-sm text-gray-600 dark:text-gray-400">
         {title}
       </div>
-    </divdiv>
+    </div>
   );
 
   const ProgressBar = ({ value, max, label, color = 'blue' }: {
@@ -219,7 +171,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
           <span>{formatNumber(value)}</span>
         </div>
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-          <divdiv
+          <div
             className={`h-2 rounded-full ${colorClasses[color as keyof typeof colorClasses]}`}
           />
         </div>
@@ -243,239 +195,9 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-      {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Analytics Dashboard
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            Comprehensive insights into your application performance
-          </p>
-        </div>
-        
-        <div className="flex space-x-2 mt-4 md:mt-0">
-          {timeRanges.map((range) => (
-            <button
-              key={range.value}
-              onClick={() => setSelectedTimeRange(range)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                selectedTimeRange.value === range.value
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-              }`}
-            >
-              {range.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <MetricCard
-          title="Total Visitors"
-          value={analyticsData.visitors.total}
-          growth={analyticsData.visitors.growth}
-          icon="👥"
-        />
-        <MetricCard
-          title="Unique Visitors"
-          value={analyticsData.visitors.unique}
-          icon="🎯"
-        />
-        <MetricCard
-          title="Conversion Rate"
-          value={analyticsData.engagement.conversionRate}
-          type="percentage"
-          icon="💰"
-        />
-        <MetricCard
-          title="Total Revenue"
-          value={analyticsData.revenue.total}
-          growth={analyticsData.revenue.growth}
-          type="currency"
-          icon="💵"
-        />
-      </div>
-
-      {/* Detailed Analytics */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        {/* Traffic Sources */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-            Traffic Sources
-          </h3>
-          
-          <div className="space-y-4">
-            <ProgressBar
-              value={analyticsData.traffic.organic}
-              max={analyticsData.visitors.total}
-              label="Organic Search"
-              color="green"
-            />
-            <ProgressBar
-              value={analyticsData.traffic.direct}
-              max={analyticsData.visitors.total}
-              label="Direct Traffic"
-              color="blue"
-            />
-            <ProgressBar
-              value={analyticsData.traffic.social}
-              max={analyticsData.visitors.total}
-              label="Social Media"
-              color="purple"
-            />
-            <ProgressBar
-              value={analyticsData.traffic.referral}
-              max={analyticsData.visitors.total}
-              label="Referral"
-              color="yellow"
-            />
-            <ProgressBar
-              value={analyticsData.traffic.paid}
-              max={analyticsData.visitors.total}
-              label="Paid Advertising"
-              color="red"
-            />
-          </div>
-        </div>
-
-        {/* Engagement Metrics */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-            Engagement Metrics
-          </h3>
-          
-          <div className="space-y-6">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Bounce Rate</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.engagement.bounceRate, 'percentage')}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Avg Session Duration</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {Math.round(analyticsData.engagement.avgSessionDuration / 60)}m {Math.round(analyticsData.engagement.avgSessionDuration % 60)}s
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Pages per Session</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.engagement.pagesPerSession)}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Conversion Rate</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.engagement.conversionRate, 'percentage')}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Performance & Revenue */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Performance Metrics */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-            Performance Metrics
-          </h3>
-          
-          <div className="space-y-6">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Page Load Time</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.performance.pageLoadTime)}ms
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Server Response</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.performance.serverResponseTime)}ms
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Error Rate</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.performance.errorRate, 'percentage')}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Uptime</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.performance.uptime, 'percentage')}
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Revenue Metrics */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-600">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-            Revenue Metrics
-          </h3>
-          
-          <div className="space-y-6">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Total Revenue</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.revenue.total, 'currency')}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Growth</span>
-              <span className={`text-2xl font-bold ${getGrowthColor(analyticsData.revenue.growth)}`}>
-                {formatNumber(analyticsData.revenue.growth, 'percentage')}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Avg Order Value</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.revenue.avgOrderValue, 'currency')}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600 dark:text-gray-400">Transactions</span>
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                {formatNumber(analyticsData.revenue.transactions)}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Action Buttons */}
-      <div className="mt-8 flex flex-wrap gap-4 justify-center">
-        <button
-          onClick={fetchAnalyticsData}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
-        >
-          Refresh Data
-        </button>
-        <button
-          className="px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors"
-        >
-          Export Report
-        </button>
-        <button
-          className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors"
-        >
-          Schedule Report
-        </button>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdvancedAnalyticsDashboard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const metadata = {
 	title: 'AI 2026: Production Evidence Hub — Blueprint',
 	description: 'Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven AI operations.',
@@ -51,4 +49,3 @@ export default function Page() {
 		</main>
 	)
 }
-

@@ -1,49 +1,15 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  ArrowRight
-  Brain
-  Zap
-  Cpu
-  Star,
-  TrendingUp,
-  Award,
-  Rocket,
-  X
-} from 'lucide-react';
-
-const AI2025_2026UltimateInnovationPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  const features = [
-    { icon: Braintext: 'Quantum-AI Fusion 'Technology', 'color: 'text-purple-400' },
-    { icon: Zaptext: '10,000x Processing 'Speed', 'color: 'text-yellow-400' },
-    { icon: Cputext: 'Neural Consensus 'Revolution', 'color: 'text-blue-400' },
-    { icon: Startext: 'Synthetic 'Consciousness', 'color: 'text-green-400' }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
+const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
   return (
     <div>
-      <divdiv
+      <div
         className="relative bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 text-white overflow-hidden"
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-pink-600/30" />
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -51,11 +17,11 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left mb-4 lg:mb-0">
               <div className="flex items-center justify-center lg:justify-start mb-3">
-                <divdiv
+                <div
                   className="mr-3"
                 >
                   <Sparkles className="w-6 h-6 text-yellow-400" />
-                </divdiv>
+                </div>
                 <span className="text-sm font-semibold text-yellow-400 uppercase tracking-wide">
                   🚀 New 2025-2026 Innovation Showcase
                 </span>
@@ -66,7 +32,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
               </h2>
               
               <div className="flex items-center justify-center lg:justify-start mb-4">
-                <divdiv
+                <div
                   key={currentFeature}
                   className="flex items-center"
                 >
@@ -74,7 +40,7 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
                   <span className="text-lg font-semibold">
                     {features[currentFeature].text}
                   </span>
-                </divdiv>
+                </div>
               </div>
               
               <p className="text-gray-200 text-sm lg:text-base max-w-2xl">
@@ -113,13 +79,14 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
 
         {/* Animated Progress Bar */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-black/20">
-          <divdiv
+          <div
             className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
           />
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };
 
 export default AI2025_2026UltimateInnovationPromotionBanner;
+</div></div></div></div></div></div>

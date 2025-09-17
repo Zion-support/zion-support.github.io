@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const UltimateTechBanner2026: React.FC = () => {
   const [currentBanner, setCurrentBanner] = useState(0);

@@ -21,10 +21,10 @@
     "types": ["vite/client", "node"]
   },
   "include": [
-    "src/**/*",
-    "src/types/offline-shims.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "src/**/*",
+    "src/types/offline-shims.d.ts",
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -36,7 +36,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "coverage"
+    "**/*.spec.tsx"
   ]
 }
