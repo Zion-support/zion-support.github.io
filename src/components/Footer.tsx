@@ -73,6 +73,7 @@ export function Footer() {
     { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-700' },
     { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-500' }
   ];
+
   return (
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Background Pattern */}

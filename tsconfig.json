@@ -37,11 +37,18 @@
     "**/*.ts",
     "**/*.tsx",
     "src/**/*",
-    "src/types/offline-shims.d.ts"
+    "src/types/offline-shims.d.ts",
+    "tailwind.config.js",
+    "postcss.config.js"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build"
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ]
 }
