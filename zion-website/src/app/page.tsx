@@ -62,6 +62,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '../data/updates'
 import React from 'react'
+<<<<<<< HEAD
 import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
@@ -191,7 +192,10 @@ const features = [
 import React from 'react'
 import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2e91
 import { getLatestUpdates } from '@/data/updates'
+import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
@@ -381,6 +385,7 @@ export default function HomePage() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-black">
     <div className="bg-black">
     <div className="bg-black">
@@ -417,11 +422,14 @@ export default function HomePage() {
             </p>
       <div className="mx-auto max-w-7xl px-6 pt-24">
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2e91
     <div className="bg-black min-h-screen">
       {/* Promo banner for fresh content */}
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
+<<<<<<< HEAD
             New: Zero‑Trust Agent Controllers —
             <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -464,11 +472,22 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Cost Optimizer v2.0 —
             <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">deep dive</a>
+=======
+            New: Evidence Vault v1.1 —
+            <a href="/updates/agent-evidence-vault-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what's new</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Also: Agent Risk Dashboard v1.1 —
+            <a href="/updates/agent-risk-dashboard-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch details</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Guide: Multimodal Agents Guardrails (2026) —
+            <a href="/updates/production-guardrails-multimodal-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2e91
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
           </p>
         </div>
       </div>
+<<<<<<< HEAD
 
       <div className="mx-auto max-w-7xl px-6 pt-16">
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
@@ -487,6 +506,8 @@ export default function HomePage() {
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
           </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2e91
         </div>
       </div>
 

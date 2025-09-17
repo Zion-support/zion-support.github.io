@@ -721,7 +721,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: linear-gradient(45deg, #7c3aed, #db2777);
+}
+
+/* Accessibility Enhancements */
+.high-contrast {
+  filter: contrast(150%) brightness(120%);
 }
 
 /* Additional high contrast styles */
@@ -811,6 +816,19 @@ html {
   --glass-border: rgba(255, 255, 255, 0.2);
 }
 
+/* Custom utilities */
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
 /* Mobile optimizations */
 .mobile-optimized {
   -webkit-tap-highlight-color: transparent;
@@ -880,17 +898,10 @@ html {
   --glass-border: rgba(255, 255, 255, 0.2);
 }
 
-/* Custom utilities */
-.gradient-text {
-  background: var(--primary-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+/* Focus management */
+.focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
 /* High contrast mode */
