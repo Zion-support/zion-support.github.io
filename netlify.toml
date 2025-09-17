@@ -1,5 +1,5 @@
 # Netlify build configuration for Vite app
-# noop: retrigger netlify build (2025-09-17T18:45:00Z)
+# noop: retrigger netlify build (2025-09-17 20:05 UTC) - post-massive-merge: all PRs merged, build verified
 [build]
   # Build the root Vite app and publish static assets
   command = "npm run build:netlify"
@@ -74,6 +74,11 @@
   for = "*.gif"
   [headers.values]
     Content-Type = "image/gif"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "*.webp"

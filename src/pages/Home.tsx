@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { useNotifications } from '../components/NotificationSystem';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
@@ -15,11 +15,57 @@ import ComprehensiveServices2028Banner from '../components/ComprehensiveServices
 import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
 
 const Home: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    setIsLoaded(true);
+    if (isInView) {
+      setIsVisible(true);
+    }
+  }, [isInView]);
+
+  const handleGetStarted = useCallback(() => {
+    // Smooth scroll to services section
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
+  const handleLearnMore = useCallback(() => {
+    // Smooth scroll to about section
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <Helmet>
+        <title>Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions</title>
+        <meta name="description" content="Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Interactive AI calculator, enterprise case studies, and personalized recommendations." />
+        <meta name="keywords" content="AI, artificial intelligence, quantum computing, cybersecurity, technology solutions, enterprise software" />
+        <meta property="og:title" content="Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions." />
+      </Helmet>
+      
       <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+        <motion.div 
+          ref={ref}
+          className="text-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -30,14 +76,22 @@ const Home: React.FC = () => {
             Interactive AI calculator, enterprise case studies, and personalized recommendations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+            <button 
+              onClick={handleGetStarted}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
+              aria-label="Get started with our services"
+            >
               Get Started
             </button>
-            <button className="border border-white text-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-lg transition-colors">
+            <button 
+              onClick={handleLearnMore}
+              className="border border-white text-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white"
+              aria-label="Learn more about our company"
+            >
               Learn More
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* NEW: Ultimate Tech Showcase 2027 Banner */}
         <div className="container mx-auto px-4">
@@ -92,13 +146,19 @@ const Home: React.FC = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
+        <div id="services" className="container mx-auto px-4 py-20">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Solutions</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Explore our comprehensive range of cutting-edge technologies and services
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
@@ -275,6 +335,41 @@ const Home: React.FC = () => {
           <ServicesShowcase />
           <RevolutionaryContentShowcase2027 />
         </React.Suspense>
+
+        {/* About Section */}
+        <div id="about" className="container mx-auto px-4 py-20">
+          <motion.div 
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-8">About Zion Tech Group</h2>
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              We are pioneers in the field of artificial intelligence, quantum computing, and cybersecurity. 
+              Our mission is to transform businesses through innovative technology solutions that drive growth, 
+              enhance security, and unlock new possibilities.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-semibold mb-2">Innovation</h3>
+                <p className="text-gray-400">Cutting-edge technology solutions</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">🔒</div>
+                <h3 className="text-xl font-semibold mb-2">Security</h3>
+                <p className="text-gray-400">Enterprise-grade security protocols</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-semibold mb-2">Performance</h3>
+                <p className="text-gray-400">Optimized for speed and efficiency</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </>
   );
