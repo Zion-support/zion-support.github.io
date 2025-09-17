@@ -269,4 +269,6 @@ const NewContent2025UltimateBanner = () => {
       </div>
     </section>
   );
-}
+};
+
+export default NewContent2025UltimateBanner;

@@ -1,74 +1,42 @@
-"use client";
 import React from 'react';
 import Link from 'next/link';
-import { WHATS_NEW_ITEMS, type WhatsNewItem } from '../../data/whatsNew';
 
-type WhatsNewProps = {
-  limit?: number;
-  highlightOnly?: boolean;
-  className?: string;
-  title?: string;
-  subtitle?: string;
-};
-
-function sortByDateDesc(items: WhatsNewItem[]): WhatsNewItem[] {
-  return [...items].sort((a, b) => {
-    const ad = a.date ? new Date(a.date).getTime() : 0;
-    const bd = b.date ? new Date(b.date).getTime() : 0;
-    return bd - ad;
-  });
-}
-
-const WhatsNew: React.FC<WhatsNewProps> = ({
-  limit = 6,
-  highlightOnly = false,
-  className,
-  title = "What's new",
-  subtitle = 'Fresh articles, guides, and blueprints'
-}) => {
-  const items = sortByDateDesc(
-    highlightOnly ? WHATS_NEW_ITEMS.filter((i) => i.highlight) : WHATS_NEW_ITEMS
-  ).slice(0, limit);
-
-  if (items.length === 0) return null;
-
+const WhatsNew: React.FC = () => {
   return (
-    <section className={`py-10 ${className ?? ''}`}>
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-purple-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-6">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{title}</h2>
-            <p className="text-gray-600 mt-1">{subtitle}</p>
-          </div>
-          <Link href="/content" className="text-purple-600 font-semibold hover:text-purple-800">View all</Link>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">What's New</h2>
+          <p className="text-lg text-gray-600">Stay updated with our latest features and content</p>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item) => (
-            <div key={item.id} className="bg-white rounded-xl shadow p-6 border border-gray-100 flex flex-col">
-              <div className="flex items-center gap-2 text-sm">
-                <span className="text-2xl leading-none">{item.emoji ?? '🆕'}</span>
-                {item.date && (
-                  <span className="text-gray-500">{new Date(item.date).toLocaleDateString()}</span>
-                )}
-                {item.highlight && (
-                  <span className="ml-auto inline-flex items-center px-2 py-0.5 text-xs font-medium bg-purple-50 text-purple-700 rounded">
-                    Featured
-                  </span>
-                )}
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mt-3">{item.title}</h3>
-              <p className="text-gray-600 mt-2 flex-1">{item.description}</p>
-              <div className="mt-4">
-                <Link
-                  href={item.href}
-                  className="inline-block bg-purple-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-700"
-                >
-                  {item.ctaLabel}
-                </Link>
-              </div>
-            </div>
-          ))}
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="text-sm font-semibold text-blue-600 mb-2">New Feature</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026 Content Hub</h3>
+            <p className="text-gray-600 mb-4">Discover the latest AI insights and breakthroughs for 2026.</p>
+            <Link href="/blog" className="text-blue-600 font-semibold hover:text-blue-800">
+              Explore →
+            </Link>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="text-sm font-semibold text-purple-600 mb-2">Update</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Enhanced Analytics</h3>
+            <p className="text-gray-600 mb-4">New analytics dashboard with real-time insights and reporting.</p>
+            <Link href="/analytics" className="text-purple-600 font-semibold hover:text-purple-800">
+              Learn More →
+            </Link>
+          </div>
+          
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="text-sm font-semibold text-green-600 mb-2">Case Study</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Success Stories</h3>
+            <p className="text-gray-600 mb-4">Read how our clients achieved 500%+ ROI with our solutions.</p>
+            <Link href="/case-studies" className="text-green-600 font-semibold hover:text-green-800">
+              View Stories →
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -76,4 +44,3 @@ const WhatsNew: React.FC<WhatsNewProps> = ({
 };
 
 export default WhatsNew;
-
