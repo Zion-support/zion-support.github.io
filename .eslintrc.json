@@ -51,6 +51,22 @@
     "temp_conflicted_files",
     "temp_exclude",
     "dist",
-    "node_modules"
+    "node_modules",
+    "src_backup_temp",
+    "temp-backup",
+    "temp-problematic-pages",
+    "tests",
+    "zion.app",
+    "src/pages-disabled",
+    "src/utils-disabled",
+    "src/components-disabled",
+    "src/data",
+    "src/hooks",
+    "src/integrations",
+    "src/lib",
+    "src/store",
+    "src/setupTests.ts",
+    "utils",
+    "types"
   ]
 }
