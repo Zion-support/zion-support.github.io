@@ -11,6 +11,6 @@ const card = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default card;

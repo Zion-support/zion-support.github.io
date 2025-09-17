@@ -11,6 +11,6 @@ const AI2035FutureVisionPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2035FutureVisionPromotionBanner;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link }  from 'react-router-dom';
 
 const RevolutionaryContentBanner2026: React.FC = () => {
   return (
@@ -131,6 +131,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentBanner2026;

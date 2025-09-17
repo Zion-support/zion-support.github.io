@@ -11,6 +11,6 @@ const ContentDiscoveryWidget: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default ContentDiscoveryWidget;

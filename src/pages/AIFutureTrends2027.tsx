@@ -170,6 +170,6 @@ const AIFutureTrends2027: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AIFutureTrends2027;

@@ -10,8 +10,6 @@ const NotificationList = () => {
       </div>
     </div>
   );
-
-};
-
-
+  }
+];
 export default NotificationList;

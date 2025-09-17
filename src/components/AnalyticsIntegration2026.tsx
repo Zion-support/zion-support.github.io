@@ -11,6 +11,6 @@ const AnalyticsIntegration2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AnalyticsIntegration2026;

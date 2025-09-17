@@ -11,6 +11,6 @@ const SecurityMonitoringSystem: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default SecurityMonitoringSystem;

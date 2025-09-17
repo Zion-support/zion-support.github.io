@@ -41,7 +41,27 @@ const LoadingSpinner = () => (
 );
 
 function App() {
+  const { prefetchResource, cacheResource, measurePerformance } = usePerformanceOptimization({
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCodeSplitting: true,
+    enablePrefetching: true,
+    enableCaching: true
+  });
+
   useEffect(() => {
+    // Prefetch critical resources
+    measurePerformance('App initialization', () => {
+      prefetchResource('/assets/vendor-DgTrhVr3.js', 'script');
+      prefetchResource('/assets/index-CWbMb2zs.js', 'script');
+    });
+
+    // Cache app configuration
+    cacheResource('app-config', {
+      version: '1.0.0',
+      features: ['performance-monitoring', 'accessibility', 'error-boundary']
+    }, 300000); // 5 minutes
+
     // Initialize performance monitoring
     const perfOptimizer = PerformanceOptimizer.getInstance();
     const perfMonitor = PerformanceMonitor.getInstance();
@@ -59,7 +79,7 @@ function App() {
         const score = perfMonitor.getPerformanceScore();
         console.log(`Performance Score: ${score}/100`);
       }, 2000);
-    };
+    }
     
     window.addEventListener('load', handleLoad);
     
@@ -68,7 +88,7 @@ function App() {
       perfMonitor.cleanup();
       window.removeEventListener('load', handleLoad);
     };
-  }, []);
+  }, [prefetchResource, cacheResource, measurePerformance]);
 
   return (
     <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
@@ -105,9 +125,9 @@ function App() {
               <Footer />
             </div>
           </Router>
-          </WhitelabelProvider>
-        </ThemeProvider>
-      </EnhancedErrorBoundary>
+        </WhitelabelProvider>
+      </ThemeProvider>
+    </EnhancedErrorBoundary>
   );
 }
 

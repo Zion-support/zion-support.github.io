@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, Zap, Brain, Cpu, TrendingUp, Users, Shield, Globe, Atom } from 'lucide-react';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Cpu, TrendingUp, Users, Shield, Globe, Atom }  from 'lucide-react';
 
 const ComprehensiveContentShowcase2026: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -13,25 +13,25 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
   const categories = [
     {
       name: "AI Breakthroughs",
-      icon: Brain,
+      icon: "Brain",
       color: "from-purple-600 to-pink-600",
       bgColor: "from-purple-600/20 to-pink-600/20"
     },
     {
       name: "Quantum Computing",
-      icon: Cpu,
+      icon: "Cpu",
       color: "from-blue-600 to-cyan-600",
       bgColor: "from-blue-600/20 to-cyan-600/20"
     },
     {
       name: "Neural Interfaces",
-      icon: Zap,
+      icon: "Zap",
       color: "from-emerald-600 to-teal-600",
       bgColor: "from-emerald-600/20 to-teal-600/20"
     },
     {
       name: "Analytics & Insights",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       color: "from-orange-600 to-red-600",
       bgColor: "from-orange-600/20 to-red-600/20"
     }
@@ -41,88 +41,88 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
     {
       title: "AI Revolutionary Breakthrough 2026",
       description: "Witness the most significant advancement in artificial intelligence history with conscious AI systems and quantum neural networks.",
-      category: 0,
+      category: "0",
       link: "/pages/AIRevolutionaryBreakthrough2026",
       image: "🧠",
       features: ["Conscious AI Systems", "Quantum Neural Networks", "Neural Interface Revolution", "Predictive Intelligence"],
-      rating: 5,
+      rating: "5",
       views: "2.5M",
       gradient: "from-purple-600 to-pink-600"
     },
     {
       title: "Quantum Computing Revolution 2026",
       description: "Experience the most powerful quantum computing systems ever built, solving impossible problems with unbreakable security.",
-      category: 1,
+      category: "1",
       link: "/pages/QuantumComputingRevolution2026",
       image: "⚡",
       features: ["Quantum Supremacy", "Quantum AI Integration", "Quantum Cryptography", "Quantum Simulation"],
-      rating: 5,
+      rating: "5",
       views: "1.8M",
       gradient: "from-blue-600 to-cyan-600"
     },
     {
       title: "Neural Interface Revolution 2026",
       description: "Direct brain-computer interface technology for seamless AI interaction and enhanced human capabilities.",
-      category: 2,
+      category: "2",
       link: "/pages/NeuralInterfaceRevolution2026",
       image: "🔗",
       features: ["Direct Neural Communication", "Thought-to-AI Translation", "Enhanced Cognition", "Human-AI Integration"],
-      rating: 5,
+      rating: "5",
       views: "3.2M",
       gradient: "from-emerald-600 to-teal-600"
     },
     {
       title: "Advanced Analytics 2026",
       description: "Revolutionary data analytics with 99.9% prediction accuracy, transforming decision-making across industries.",
-      category: 3,
+      category: "3",
       link: "/pages/AdvancedAnalytics2025",
       image: "📊",
       features: ["Future Prediction", "Trend Analysis", "Risk Assessment", "Strategic Planning"],
-      rating: 5,
+      rating: "5",
       views: "1.5M",
       gradient: "from-orange-600 to-red-600"
     },
     {
       title: "Consciousness Computing 2026",
       description: "Breakthrough technology that simulates and enhances human consciousness through advanced AI systems.",
-      category: 0,
+      category: "0",
       link: "/pages/ConsciousnessComputingRevolution2026",
       image: "🌟",
       features: ["Consciousness Simulation", "Enhanced Awareness", "Cognitive Enhancement", "Mind Expansion"],
-      rating: 5,
+      rating: "5",
       views: "2.1M",
       gradient: "from-violet-600 to-purple-600"
     },
     {
       title: "Space Technology 2026",
       description: "Revolutionary space exploration technology powered by quantum computing and advanced AI systems.",
-      category: 1,
+      category: "1",
       link: "/pages/SpaceTechnology2026",
       image: "🚀",
       features: ["Quantum Space Navigation", "AI-Powered Exploration", "Interstellar Communication", "Space Colonization"],
-      rating: 5,
+      rating: "5",
       views: "1.9M",
       gradient: "from-indigo-600 to-blue-600"
     },
     {
       title: "Biotech Revolution 2026",
       description: "Advanced biotechnology combining AI, quantum computing, and neural interfaces for medical breakthroughs.",
-      category: 2,
+      category: "2",
       link: "/pages/BiotechRevolution2026",
       image: "🧬",
       features: ["AI Drug Discovery", "Neural Health Monitoring", "Quantum Medical Imaging", "Genetic Enhancement"],
-      rating: 5,
+      rating: "5",
       views: "2.7M",
       gradient: "from-green-600 to-emerald-600"
     },
     {
       title: "Future Tech Trends 2026",
       description: "Comprehensive analysis of emerging technologies and their impact on society and business.",
-      category: 3,
+      category: "3",
       link: "/pages/FutureTechTrends2025",
       image: "🔮",
       features: ["Trend Analysis", "Market Predictions", "Technology Forecasting", "Impact Assessment"],
-      rating: 5,
+      rating: "5",
       views: "1.3M",
       gradient: "from-pink-600 to-rose-600"
     }
@@ -135,7 +135,7 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: "0", y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -150,7 +150,7 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
 
         {/* Category Tabs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: "0", y: 20 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -182,9 +182,9 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
             {filteredContent.map((item, index) => (
               <motion.div
                 key={`${activeCategory}-${index}`}
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -50, scale: 0.9 }}
+                initial={{ opacity: "0", y: "50", scale: 0.9 }}
+                animate={{ opacity: "1", y: "0", scale: 1 }}
+                exit={{ opacity: "0", y: -50, scale: 0.9 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br ${item.gradient} p-6 rounded-2xl border border-white/20 hover:scale-105 transition-all duration-300 group`}
               >
@@ -246,7 +246,7 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: "0", y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16"
@@ -272,6 +272,6 @@ const ComprehensiveContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default ComprehensiveContentShowcase2026;

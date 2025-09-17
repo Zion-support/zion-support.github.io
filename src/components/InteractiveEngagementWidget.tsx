@@ -11,6 +11,6 @@ const InteractiveEngagementWidget: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveEngagementWidget;

@@ -5,7 +5,7 @@ export type SecurityConfig = {
 
 export const defaultSecurityConfig: SecurityConfig = {
   enableCSP: false,
-  sanitizeDOM: true,
+  sanitizeDOM: true
 };
 
 export class SecurityManager {
@@ -26,7 +26,7 @@ export class SecurityManager {
     try {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
       const handlerAttributes = [
-        "onerror","onload","onclick","onmouseover","onfocus","onblur","onchange","onsubmit",
+        "onerror","onload","onclick","onmouseover","onfocus","onblur","onchange","onsubmit"
       ];
       let node = walker.nextNode() as Element | null;
       while (node) {

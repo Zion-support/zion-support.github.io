@@ -10,8 +10,6 @@ const TalentOnboardingSteps = () => {
       </div>
     </div>
   );
-
-};
-
-
+  }
+];
 export default TalentOnboardingSteps;

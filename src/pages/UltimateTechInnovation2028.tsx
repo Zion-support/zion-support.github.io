@@ -200,6 +200,6 @@ const UltimateTechInnovation2028: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateTechInnovation2028;

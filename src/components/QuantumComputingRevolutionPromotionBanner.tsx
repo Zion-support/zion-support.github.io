@@ -11,6 +11,6 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default QuantumComputingRevolutionPromotionBanner;

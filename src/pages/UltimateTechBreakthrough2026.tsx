@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet }  from 'react-helmet-async';
 
 const UltimateTechBreakthrough2026: React.FC = () => {
   return (
@@ -133,6 +133,6 @@ const UltimateTechBreakthrough2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateTechBreakthrough2026;

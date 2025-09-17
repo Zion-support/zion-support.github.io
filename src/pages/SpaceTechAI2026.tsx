@@ -286,6 +286,6 @@ const SpaceTechAI2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default SpaceTechAI2026;

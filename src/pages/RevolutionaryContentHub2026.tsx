@@ -11,6 +11,6 @@ const RevolutionaryContentHub2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentHub2026;

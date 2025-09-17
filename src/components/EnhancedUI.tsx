@@ -11,6 +11,6 @@ const EnhancedUI: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default EnhancedUI;

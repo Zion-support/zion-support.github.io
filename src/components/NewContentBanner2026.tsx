@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, Zap, Brain, Cpu, TrendingUp, X } from 'lucide-react';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Cpu, TrendingUp, X }  from 'lucide-react';
 
 const NewContentBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,7 +28,7 @@ const NewContentBanner2026: React.FC = () => {
       link: "/pages/AIRevolutionaryBreakthrough2026",
       gradient: "from-purple-600 to-pink-600",
       bgGradient: "from-purple-900/20 to-pink-900/20",
-      icon: Brain,
+      icon: "Brain",
       features: ["Conscious AI Systems", "Quantum Neural Networks", "Neural Interface Revolution", "Predictive Intelligence"]
     },
     {
@@ -39,7 +39,7 @@ const NewContentBanner2026: React.FC = () => {
       link: "/pages/QuantumComputingRevolution2026",
       gradient: "from-blue-600 to-cyan-600",
       bgGradient: "from-blue-900/20 to-cyan-900/20",
-      icon: Cpu,
+      icon: "Cpu",
       features: ["Quantum Supremacy", "Quantum AI Integration", "Quantum Cryptography", "Quantum Simulation"]
     },
     {
@@ -50,7 +50,7 @@ const NewContentBanner2026: React.FC = () => {
       link: "/pages/NeuralInterfaceRevolution2026",
       gradient: "from-emerald-600 to-teal-600",
       bgGradient: "from-emerald-900/20 to-teal-900/20",
-      icon: Zap,
+      icon: "Zap",
       features: ["Direct Neural Communication", "Thought-to-AI Translation", "Enhanced Cognition", "Human-AI Integration"]
     },
     {
@@ -61,7 +61,7 @@ const NewContentBanner2026: React.FC = () => {
       link: "/pages/AdvancedAnalytics2025",
       gradient: "from-orange-600 to-red-600",
       bgGradient: "from-orange-900/20 to-red-900/20",
-      icon: TrendingUp,
+      icon: "TrendingUp",
       features: ["Future Prediction", "Trend Analysis", "Risk Assessment", "Strategic Planning"]
     }
   ];
@@ -72,9 +72,9 @@ const NewContentBanner2026: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+          initial={{ opacity: "0", y: -100 }}
+          animate={{ opacity: "1", y: 0 }}
+          exit={{ opacity: "0", y: -100 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-400/30"
         >
@@ -89,9 +89,9 @@ const NewContentBanner2026: React.FC = () => {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentSlide}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: "0", x: 50 }}
+                    animate={{ opacity: "1", x: 0 }}
+                    exit={{ opacity: "0", x: -50 }}
                     transition={{ duration: 0.5 }}
                     className="flex items-center space-x-6"
                   >
@@ -174,7 +174,7 @@ const NewContentBanner2026: React.FC = () => {
               className="h-full bg-gradient-to-r from-purple-400 to-pink-400"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
-              transition={{ duration: 5, ease: "linear" }}
+              transition={{ duration: "5", ease: "linear" }}
               key={currentSlide}
             />
           </div>
@@ -182,6 +182,6 @@ const NewContentBanner2026: React.FC = () => {
       )}
     </AnimatePresence>
   );
-};
-
+  }
+];
 export default NewContentBanner2026;

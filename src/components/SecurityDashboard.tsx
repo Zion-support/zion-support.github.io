@@ -11,6 +11,6 @@ const SecurityDashboard: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default SecurityDashboard;

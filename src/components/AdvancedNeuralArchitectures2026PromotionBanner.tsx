@@ -11,6 +11,6 @@ const AdvancedNeuralArchitectures2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AdvancedNeuralArchitectures2026PromotionBanner;

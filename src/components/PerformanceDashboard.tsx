@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<any>(null);
@@ -10,7 +10,7 @@ const PerformanceDashboard: React.FC = () => {
       return;
     }
 
-    const measurePerformance = () => {
+    ,const measurePerformance = () => {
       if ('performance' in window) {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -20,13 +20,13 @@ const PerformanceDashboard: React.FC = () => {
             totalTime: perfData.loadEventEnd - perfData.fetchStart,
             firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
             firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
-          };
-          
+  }
+];
           setMetrics(performanceMetrics);
         });
       }
-    };
-
+  }
+];
     measurePerformance();
   }, []);
 
@@ -35,7 +35,7 @@ const PerformanceDashboard: React.FC = () => {
     return null;
   }
 
-  return (
+  ,return (
     <div className="fixed top-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -71,6 +71,6 @@ const PerformanceDashboard: React.FC = () => {
       )}
     </div>
   );
-};
-
+  }
+];
 export default PerformanceDashboard;

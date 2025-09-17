@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion }  from 'framer-motion';
 
 const RevolutionaryTechBreakthrough2038: React.FC = () => {
   return (
@@ -9,8 +9,8 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -39,8 +39,8 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
           >
@@ -57,8 +57,8 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-teal-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30"
           >
@@ -75,8 +75,8 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            whileInView={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
           >
@@ -103,8 +103,8 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
         
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: "0", x: -20 }}
+            whileInView={{ opacity: "1", x: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
           >
@@ -127,8 +127,8 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: "0", x: 20 }}
+            whileInView={{ opacity: "1", x: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30"
           >
@@ -156,32 +156,32 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-8 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: "0", scale: 0.8 }}
+            whileInView={{ opacity: "1", scale: 1 }}
             transition={{ duration: 0.6 }}
           >
             <div className="text-4xl font-bold mb-2">∞</div>
             <div className="text-lg opacity-90">Processing Power</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: "0", scale: 0.8 }}
+            whileInView={{ opacity: "1", scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <div className="text-4xl font-bold mb-2">100%</div>
             <div className="text-lg opacity-90">Consciousness Fidelity</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: "0", scale: 0.8 }}
+            whileInView={{ opacity: "1", scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="text-4xl font-bold mb-2">0ms</div>
             <div className="text-lg opacity-90">Transfer Time</div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: "0", scale: 0.8 }}
+            whileInView={{ opacity: "1", scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div className="text-4xl font-bold mb-2">∞</div>
@@ -193,8 +193,8 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          whileInView={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Revolutionary Breakthrough?</h2>
@@ -213,6 +213,6 @@ const RevolutionaryTechBreakthrough2038: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryTechBreakthrough2038;

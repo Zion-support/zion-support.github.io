@@ -236,6 +236,6 @@ const CosmicIntelligence2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default CosmicIntelligence2026;

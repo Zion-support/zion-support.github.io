@@ -11,6 +11,6 @@ const RevolutionaryContentDiscoveryWidget: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentDiscoveryWidget;

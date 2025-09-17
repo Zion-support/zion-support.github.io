@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion }  from 'framer-motion';
 
 const RevolutionaryTechShowcase2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -85,7 +85,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: "0", y: 50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
         transition={{ duration: 1 }}
         className="relative overflow-hidden"
@@ -139,7 +139,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
           {technologies.map((tech, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: "0", y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
               className={`bg-gradient-to-br ${tech.color} rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer`}
@@ -238,7 +238,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: "0", y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700"
@@ -283,6 +283,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryTechShowcase2030;

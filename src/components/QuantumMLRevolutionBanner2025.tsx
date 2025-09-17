@@ -11,6 +11,6 @@ const QuantumMLRevolutionBanner2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default QuantumMLRevolutionBanner2025;

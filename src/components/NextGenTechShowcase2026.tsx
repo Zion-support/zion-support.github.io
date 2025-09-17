@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 
 const NextGenTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -92,8 +92,8 @@ const NextGenTechShowcase2026: React.FC = () => {
         }
       ]
     }
-  };
-
+  }
+];
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -200,6 +200,6 @@ const NextGenTechShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NextGenTechShowcase2026;

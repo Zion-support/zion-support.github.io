@@ -11,6 +11,6 @@ const RevolutionaryContentRecommendationEngine2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentRecommendationEngine2026;

@@ -11,6 +11,6 @@ const AI2030FutureTechPreview: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2030FutureTechPreview;

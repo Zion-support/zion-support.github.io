@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const RevolutionaryServices2034: React.FC = () => {
   const [activeService, setActiveService] = useState(0);
@@ -11,7 +11,7 @@ const RevolutionaryServices2034: React.FC = () => {
 
   const services = [
     {
-      id: 1,
+      id: "1",
       title: "Consciousness Transfer Service",
       description: "Complete digital immortality through consciousness transfer technology",
       features: [
@@ -27,7 +27,7 @@ const RevolutionaryServices2034: React.FC = () => {
       category: "Consciousness Technology"
     },
     {
-      id: 2,
+      id: "2",
       title: "Reality Manipulation Engine",
       description: "Quantum-powered technology to alter the fundamental laws of physics",
       features: [
@@ -43,7 +43,7 @@ const RevolutionaryServices2034: React.FC = () => {
       category: "Quantum Technology"
     },
     {
-      id: 3,
+      id: "3",
       title: "Universal Translation Matrix",
       description: "Instant translation across all species, languages, and dimensions",
       features: [
@@ -59,7 +59,7 @@ const RevolutionaryServices2034: React.FC = () => {
       category: "Communication Technology"
     },
     {
-      id: 4,
+      id: "4",
       title: "Temporal Navigation System",
       description: "Precise control over time and space with temporal event manipulation",
       features: [
@@ -75,7 +75,7 @@ const RevolutionaryServices2034: React.FC = () => {
       category: "Temporal Technology"
     },
     {
-      id: 5,
+      id: "5",
       title: "Neural Interface Matrix",
       description: "Direct brain-computer interfaces for thought-based control",
       features: [
@@ -91,7 +91,7 @@ const RevolutionaryServices2034: React.FC = () => {
       category: "Neural Technology"
     },
     {
-      id: 6,
+      id: "6",
       title: "Interdimensional Gateway",
       description: "Technology for travel between dimensions and realities",
       features: [
@@ -133,7 +133,7 @@ const RevolutionaryServices2034: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: "0", y: 50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
         transition={{ duration: 1 }}
         className="relative overflow-hidden"
@@ -162,7 +162,7 @@ const RevolutionaryServices2034: React.FC = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: "0", y: 30 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
                 className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center"
@@ -205,7 +205,7 @@ const RevolutionaryServices2034: React.FC = () => {
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: "0", y: 50 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
               transition={{ delay: 1 + index * 0.1, duration: 0.8 }}
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -261,6 +261,6 @@ const RevolutionaryServices2034: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryServices2034;

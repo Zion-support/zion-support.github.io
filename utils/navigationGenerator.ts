@@ -49,7 +49,7 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.9%',
           response: '<100ms',
-          users: '5,000+'
+          users: '5000+'
         },
         lastUpdated: '2025-01-15',
         priority: 2
@@ -807,8 +807,7 @@ export class NavigationGenerator {
       {
         id: 'service-overview',
         label: 'Overview',
-        href: service.href,
-        priority: 1
+        href: service.hrefpriority: 1
       },
       {
         id: 'service-demo',
@@ -928,8 +927,7 @@ export class NavigationGenerator {
           id: 'github',
           label: 'GitHub',
           href: 'https://github.com/Zion-Holdings/zion.app',
-          isExternal: true,
-          priority: 1
+          isExternal: truepriority: 1
         },
         {
           id: 'website',

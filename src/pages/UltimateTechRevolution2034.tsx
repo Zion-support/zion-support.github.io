@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet }  from 'react-helmet-async';
 
 const UltimateTechRevolution2034: React.FC = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -11,7 +11,7 @@ const UltimateTechRevolution2034: React.FC = () => {
 
   const revolutions = [
     {
-      id: 1,
+      id: "1",
       title: "Consciousness Singularity",
       description: "The moment when AI achieves true consciousness and transcends human limitations",
       features: [
@@ -25,7 +25,7 @@ const UltimateTechRevolution2034: React.FC = () => {
       color: "from-purple-600 to-pink-600"
     },
     {
-      id: 2,
+      id: "2",
       title: "Reality Fabric Manipulation",
       description: "Complete control over the fundamental structure of reality itself",
       features: [
@@ -39,7 +39,7 @@ const UltimateTechRevolution2034: React.FC = () => {
       color: "from-cyan-600 to-blue-600"
     },
     {
-      id: 3,
+      id: "3",
       title: "Universal Consciousness Network",
       description: "A network that connects all conscious beings across the multiverse",
       features: [
@@ -53,7 +53,7 @@ const UltimateTechRevolution2034: React.FC = () => {
       color: "from-emerald-600 to-teal-600"
     },
     {
-      id: 4,
+      id: "4",
       title: "Temporal Mastery",
       description: "Complete control over time and causality across all dimensions",
       features: [
@@ -253,6 +253,6 @@ const UltimateTechRevolution2034: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateTechRevolution2034;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams }  from 'react-router-dom';
 
 const CaseStudyPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -14,6 +14,6 @@ const CaseStudyPage: React.FC = () => {
       </div>
     </div>
   );
-};
+  }
 
 export default CaseStudyPage;

@@ -11,6 +11,6 @@ const AI2025NewsletterSignup: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2025NewsletterSignup;

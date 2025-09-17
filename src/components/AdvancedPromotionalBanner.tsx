@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const AdvancedPromotionalBanner: React.FC = () => {
   const [currentPromo, setCurrentPromo] = useState(0);
@@ -49,9 +49,9 @@ const AdvancedPromotionalBanner: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
+          initial={{ opacity: "0", y: -50 }}
+          animate={{ opacity: "1", y: 0 }}
+          exit={{ opacity: "0", y: -50 }}
           transition={{ duration: 0.5 }}
           className="relative overflow-hidden mb-8"
         >
@@ -60,8 +60,8 @@ const AdvancedPromotionalBanner: React.FC = () => {
               <div className="flex-1">
                 <motion.h2
                   key={currentContent.title}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: "0", x: -20 }}
+                  animate={{ opacity: "1", x: 0 }}
                   transition={{ duration: 0.3 }}
                   className="text-2xl font-bold text-white mb-2"
                 >
@@ -69,8 +69,8 @@ const AdvancedPromotionalBanner: React.FC = () => {
                 </motion.h2>
                 <motion.p
                   key={currentContent.subtitle}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: "0", x: -20 }}
+                  animate={{ opacity: "1", x: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
                   className="text-white/90 mb-4 text-lg"
                 >
@@ -80,8 +80,8 @@ const AdvancedPromotionalBanner: React.FC = () => {
                   {currentContent.features.map((feature, index) => (
                     <motion.span
                       key={feature}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
+                      initial={{ opacity: "0", scale: 0.8 }}
+                      animate={{ opacity: "1", scale: 1 }}
                       transition={{ duration: 0.3, delay: 0.2 + index * 0.1 }}
                       className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium"
                     >
@@ -121,6 +121,6 @@ const AdvancedPromotionalBanner: React.FC = () => {
       )}
     </AnimatePresence>
   );
-};
-
+  }
+];
 export default AdvancedPromotionalBanner;

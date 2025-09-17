@@ -9,4 +9,5 @@ export const EnhancedLoading: React.FC = () => {
       </div>
     </div>
   );
-};
+  }
+];

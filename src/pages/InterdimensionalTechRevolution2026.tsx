@@ -11,6 +11,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InterdimensionalTechRevolution2026;

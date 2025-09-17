@@ -11,6 +11,6 @@ const InteractiveCaseStudies2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveCaseStudies2025;

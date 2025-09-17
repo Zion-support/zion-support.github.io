@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback }  from 'react';
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -11,7 +11,7 @@ export const usePerformanceMonitor = () => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
     }
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    ,const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     const metrics: Partial<PerformanceMetrics> = {};
     // Load time
@@ -47,7 +47,7 @@ export const usePerformanceMonitor = () => {
     if (navigation) {
       metrics.timeToInteractive = navigation.domContentLoadedEventEnd - navigation.navigationStart;
     }
-    return metrics as PerformanceMetrics;
+    ,return metrics as PerformanceMetrics;
   }, []);
   const logPerformanceMetrics = useCallback((metrics: PerformanceMetrics) => {
     console.group('🚀 Performance Metrics');
@@ -82,20 +82,23 @@ export const usePerformanceMonitor = () => {
           logPerformanceMetrics(metrics);
         }
       }, 1000);
-    };
+  }
+];
     if (document.readyState === 'complete') {
       handleLoad();
-    } else {
+    } ,else {
       window.addEventListener('load', handleLoad);
     }
-    return () => {
+    ,return () => {
       window.removeEventListener('load', handleLoad);
-    };
+  }
+];
   }, [measurePerformance, logPerformanceMetrics]);
   return {
     measurePerformance,
     logPerformanceMetrics
-  };
-};
-
+  }
+];
+  }
+];
 export default usePerformanceMonitor;

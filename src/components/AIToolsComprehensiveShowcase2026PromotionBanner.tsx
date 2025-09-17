@@ -11,6 +11,6 @@ const AIToolsComprehensiveShowcase2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AIToolsComprehensiveShowcase2026PromotionBanner;
