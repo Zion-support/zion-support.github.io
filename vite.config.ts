@@ -6,7 +6,7 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
   
   return {
@@ -98,14 +98,14 @@ export default defineConfig(({ command, mode }) => {
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
-        '@components': path.resolve(__dirname, './src/components'),
-        '@pages': path.resolve(__dirname, './src/pages'),
-        '@utils': path.resolve(__dirname, './src/utils'),
-        '@hooks': path.resolve(__dirname, './src/hooks'),
-        '@types': path.resolve(__dirname, './src/types'),
-        '@styles': path.resolve(__dirname, './src/styles'),
-        '@assets': path.resolve(__dirname, './src/assets'),
+        '@': path.resolve(import.meta.dirname, './src'),
+        '@components': path.resolve(import.meta.dirname, './src/components'),
+        '@pages': path.resolve(import.meta.dirname, './src/pages'),
+        '@utils': path.resolve(import.meta.dirname, './src/utils'),
+        '@hooks': path.resolve(import.meta.dirname, './src/hooks'),
+        '@types': path.resolve(import.meta.dirname, './src/types'),
+        '@styles': path.resolve(import.meta.dirname, './src/styles'),
+        '@assets': path.resolve(import.meta.dirname, './src/assets'),
       },
       dedupe: ['date-fns', 'react', 'react-dom'],
     },
