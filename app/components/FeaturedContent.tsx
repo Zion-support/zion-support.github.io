@@ -3,6 +3,24 @@ import ContentCard from './ContentCard';
 
 const featuredContent = [
   {
+    title: "AI 2026: Policy‑as‑Code Blueprint",
+    description: "Encode approvals, risk tiers, and evaluation gates as versioned policy.",
+    href: "/blog/ai-2026-policy-as-code-blueprint",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Policy-as-Code", "Governance", "Evals"]
+  },
+  {
+    title: "AI 2026: Agentic Observability — Deep Dive",
+    description: "Traces, evals, incidents, and KPIs to run agent platforms reliably.",
+    href: "/blog/ai-2026-agentic-observability-deep-dive",
+    category: "Observability",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Observability", "Evals", "Incidents"]
+  },
+  {
     title: "AI 2025: The Enterprise Automation Revolution",
     description: "Discover how AI is transforming enterprise operations in 2025 with intelligent automation, predictive analytics, and autonomous decision-making systems.",
     href: "/blog/ai-2025-enterprise-automation-revolution",
@@ -12,6 +30,24 @@ const featuredContent = [
     tags: ["AI", "Enterprise", "Automation", "2025"]
   },
   {
+    title: "AI 2026: Trusted GenAI Operations",
+    description: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
+    href: "/content/trusted-genai-operations-2026",
+    category: "Operations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Governance", "Evaluations", "Policy-as-Code"]
+  },
+  {
+    title: "AI 2026: Production Evals — Practical Cookbook",
+    description: "Scenario recipes, metrics, and wiring patterns for evaluation‑first teams.",
+    href: "/blog/ai-2026-production-evals-practical-cookbook",
+    category: "Evaluations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Evals", "Metrics", "Cookbook"]
+  },
+  {
     title: "AI 2025: Next-Generation Cybersecurity Revolution",
     description: "Explore how AI is revolutionizing cybersecurity with advanced threat detection, autonomous response systems, and predictive security analytics.",
     href: "/blog/ai-2025-cybersecurity-revolution-next-generation-threat-protection",
@@ -19,6 +55,24 @@ const featuredContent = [
     date: "2025-01-14",
     featured: true,
     tags: ["AI", "Cybersecurity", "Threat Detection", "2025"]
+  },
+  {
+    title: "AI 2026: Production Evals Best Practices",
+    description: "Evaluation-first patterns, SLOs, and safeguards to run AI safely in production.",
+    href: "/blog/ai-2026-production-evals-best-practices",
+    category: "Evaluations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["AI", "Evaluations", "Reliability", "2026"]
+  },
+  {
+    title: "Trustworthy Autonomous Agents Blueprint (2026)",
+    description: "Governance-by-design: evals-as-code, policy-as-code, safety telemetry, and risk-tiered autonomy.",
+    href: "/blog/ai-2026-trustworthy-autonomous-agents-blueprint",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Agents", "Safety", "Governance", "2026"]
   },
   {
     title: "Fortune 500 AI Transformation: 340% ROI Success Story",

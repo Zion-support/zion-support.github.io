@@ -17,6 +17,66 @@ export default function Blog() {
       image: '/blog/ai-automation-trends.jpg'
     },
     {
+      id: 'ai-2026-foundation-model-quality-engineering',
+      title: 'Foundation Model Quality Engineering (2026)',
+      excerpt: 'Quality, safety, and reliability playbook for foundation models: evals, SLOs, and incident readiness.',
+      author: 'Quality Engineering Team',
+      date: '2025-09-16',
+      readTime: '9 min read',
+      category: 'AI Quality',
+      tags: ['GenAI', 'Quality', 'Evals', 'SLOs'],
+      featured: true,
+      image: '/blog/fm-quality-2026.jpg'
+    },
+    {
+      id: 'cloud-cost-optimization-2025',
+      title: 'Cloud Cost Optimization 2025',
+      excerpt: 'Actionable FinOps tactics to reduce spend while improving reliability and performance.',
+      author: 'FinOps Team',
+      date: '2025-09-10',
+      readTime: '7 min read',
+      category: 'Cloud & DevOps',
+      tags: ['FinOps', 'Cloud', 'Optimization'],
+      featured: false,
+      image: '/blog/cloud-cost-2025.jpg'
+    },
+    {
+      id: 'genai-2025-practical-compliance-patterns',
+      title: 'GenAI for Regulated Industries (2025)',
+      excerpt: 'Practical compliance patterns for healthcare, finance, and public sector GenAI.',
+      author: 'Compliance Team',
+      date: '2025-09-05',
+      readTime: '8 min read',
+      category: 'AI & Ethics',
+      tags: ['Compliance', 'Governance', 'Audits'],
+      featured: false,
+      image: '/blog/genai-compliance-2025.jpg'
+    },
+    {
+      id: 'agentic-crm-autonomous-revenue-workflows-2025',
+      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
+      excerpt: 'Design patterns for safe, autonomous prospecting and pipeline maintenance with agents.',
+      author: 'RevOps Team',
+      date: '2025-09-01',
+      readTime: '6 min read',
+      category: 'Agentic Systems',
+      tags: ['Agentic', 'CRM', 'Sales'],
+      featured: false,
+      image: '/blog/agentic-crm-2025.jpg'
+    },
+    {
+      id: 'ai-2026-evidence-led-operations-blueprint',
+      title: 'Evidence‑Led Operations Blueprint (2026)',
+      excerpt: 'Centralize evals, incidents, KPIs, and customer signals to drive safer, faster decisions.',
+      author: 'Operations Engineering',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      category: 'Operations',
+      tags: ['Evals', 'Incidents', 'SLOs', 'Governance'],
+      featured: true,
+      image: '/blog/evidence-led-ops-2026.jpg'
+    },
+    {
       id: 'cloud-native-security',
       title: 'Building Secure Cloud-Native Applications',
       excerpt: 'Learn the essential security practices for developing and deploying cloud-native applications in today\'s threat landscape.',

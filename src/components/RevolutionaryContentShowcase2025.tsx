@@ -55,6 +55,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
+        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
       }, 5000);
       return () => clearInterval(interval);
     }

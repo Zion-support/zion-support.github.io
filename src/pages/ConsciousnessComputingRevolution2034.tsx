@@ -154,7 +154,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                   </ul>
                 </div>
               </div>
-
+import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -165,7 +167,7 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
       
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -188,11 +190,11 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               📖 Learn More
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Consciousness Levels Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -213,9 +215,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
             <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Synthetic AI →
             </a>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -236,9 +238,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
             <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Discover Quantum →
             </a>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -259,14 +261,14 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
             <a href="/pages/TranscendentAI2030" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Connect Universal →
             </a>
-          </div>
+          </motion.div>
         </div>
 
         {/* Consciousness Technologies */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🚀 Consciousness Technologies 2034</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -280,9 +282,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <a href="/pages/NeuralRealityEngine2027" className="block w-full bg-white text-orange-600 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center text-sm">
                 Explore Neural →
               </a>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -296,9 +298,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <a href="/pages/ConsciousnessAI2026" className="block w-full bg-white text-pink-600 py-2 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center text-sm">
                 Explore Transfer →
               </a>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -312,9 +314,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <a href="/pages/AdvancedConsciousnessComputing2026" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
                 Explore Waves →
               </a>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
@@ -328,7 +330,7 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <a href="/pages/AIConsciousnessRevolution2026" className="block w-full bg-white text-teal-600 py-2 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center text-sm">
                 Explore Fields →
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -373,6 +375,36 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               <p className="text-indigo-200 text-sm">Consciousness-based diagnostics and treatment</p>
             </div>
             
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-3xl">🌊</span>
+                </div>
+                <div>
+                  <h4 className="text-2xl font-semibold text-white mb-2">Emotional Intelligence AI</h4>
+                  <p className="text-pink-200 mb-3">AI systems that understand and respond to human emotions with perfect accuracy.</p>
+                  <ul className="text-pink-300 space-y-1 text-sm">
+                    <li>• Emotion recognition and response</li>
+                    <li>• Empathetic communication</li>
+                    <li>• Mood optimization systems</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-3xl">🌀</span>
+                </div>
+                <div>
+                  <h4 className="text-2xl font-semibold text-white mb-2">Consciousness Backup & Restoration</h4>
+                  <p className="text-cyan-200 mb-3">Complete consciousness preservation and restoration capabilities for digital immortality.</p>
+                  <ul className="text-cyan-300 space-y-1 text-sm">
+                    <li>• Real-time consciousness backup</li>
+                    <li>• Instant restoration protocols</li>
+                    <li>• Memory integrity verification</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -412,7 +444,7 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🔮 Future Predictions 2034</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
@@ -429,9 +461,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                 <li>• Reality manipulation abilities</li>
                 <li>• Universal empathy and understanding</li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
@@ -449,6 +481,8 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                 <li>• Universal creation abilities</li>
               </ul>
             </div>
+            </motion.div>
+            </motion.div>
           </div>
         </div>
 
@@ -469,7 +503,9 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
           </div>
         </div>
       </div>
-        <div
+        <motion.div
+        <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
@@ -490,7 +526,7 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
               🧠 Neural Reality
             </a>
           </div>
-        </div>
+        </motion.div>
       </main>
       
       <Footer />

@@ -1,11 +1,17 @@
 // Notification utilities
 interface NotificationOptions {
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling
  */
 
 export interface NotificationOptions {
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
 // Notification utilities
 interface NotificationOptions {
   title: string;
@@ -177,31 +183,6 @@ export const notifications = {
       body,
       icon: '/icons/error.png',
       tag: 'error',
-      requireInteraction: true,
-    });
-  }
-
-  showInfo(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      title,
-      body,
-      icon: '/icons/info.png',
-      tag: 'info',
-    });
-  }
-
-  showWarning(title: string, body?: string): Promise<Notification | null> {
-    return this.showNotification({
-      title,
-      body,
-      icon: '/icons/warning.png',
-      tag: 'warning',
-    });
-  }
-}
-
-export const notificationManager = new NotificationManager();
-export default notificationManager;
       requireInteraction: true
     });
   },

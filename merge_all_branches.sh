@@ -1,66 +1,39 @@
 #!/bin/bash
 
-# Script to merge all open PRs and resolve conflicts automatically
-set -e
+# Script to merge all cursor branches into main
+echo "🚀 Starting merge process for all cursor branches..."
 
-echo "Starting merge process for all open PRs..."
+# Get all cursor branches
+branches=$(git branch -r | grep "cursor/create-and-deploy-new-content" | head -20)
 
-# Fetch all remote branches
-git fetch origin
-
-# Get list of recent cursor branches
-RECENT_BRANCHES=(
-    "origin/cursor/create-and-deploy-new-content-f527"
-    "origin/cursor/create-and-deploy-new-content-f495"
-    "origin/cursor/create-and-deploy-new-content-f105"
-    "origin/cursor/create-and-deploy-new-content-e94e"
-    "origin/cursor/create-and-deploy-new-content-df08"
-    "origin/cursor/create-and-deploy-new-content-dde5"
-    "origin/cursor/create-and-deploy-new-content-db47"
-    "origin/cursor/create-and-deploy-new-content-d9ce"
-    "origin/cursor/create-and-deploy-new-content-d41d"
-    "origin/cursor/create-and-deploy-new-content-d342"
-)
-
-# Function to merge a branch with conflict resolution
-merge_branch() {
-    local branch=$1
-    echo "Attempting to merge $branch..."
+for branch in $branches; do
+    branch_name=$(echo $branch | sed 's/origin\///')
+    echo "🔄 Processing branch: $branch_name"
     
-    if git merge "$branch" --no-edit; then
-        echo "Successfully merged $branch"
-        return 0
+    # Try to merge the branch
+    if git merge "origin/$branch_name" --no-commit 2>/dev/null; then
+        echo "  ✅ Successfully merged $branch_name"
+        git commit -m "Merge $branch_name - clean merge"
     else
-        echo "Merge conflict in $branch, resolving..."
+        echo "  ⚠️  Merge conflicts detected for $branch_name, resolving in favor of main..."
         
-        # Resolve conflicts by accepting our version
-        git checkout --ours . 2>/dev/null || true
-        git add . 2>/dev/null || true
+        # Resolve conflicts by keeping our version (main branch)
+        git checkout --ours . 2>/dev/null
+        git add . 2>/dev/null
         
-        if git commit -m "Merge $branch - resolved conflicts by accepting our version"; then
-            echo "Successfully resolved conflicts and merged $branch"
-            return 0
+        if git commit -m "Merge $branch_name - resolved conflicts in favor of main branch" 2>/dev/null; then
+            echo "  ✅ Successfully resolved conflicts and merged $branch_name"
         else
-            echo "Failed to merge $branch, aborting merge"
-            git merge --abort 2>/dev/null || true
-            return 1
+            echo "  ❌ Failed to merge $branch_name, aborting..."
+            git merge --abort 2>/dev/null
         fi
     fi
-}
-
-# Merge each branch
-for branch in "${RECENT_BRANCHES[@]}"; do
-    if git show-ref --verify --quiet "refs/remotes/$branch"; then
-        merge_branch "$branch"
-    else
-        echo "Branch $branch does not exist, skipping..."
-    fi
+    
+    echo "  ---"
 done
 
-echo "Merge process completed!"
+# Push all changes to main branch
+echo "📤 Pushing all changes to main branch..."
+git push origin main
 
-# Push all changes
-echo "Pushing changes to main branch..."
-git push origin main --force
-
-echo "All merges completed and pushed to main branch!"
+echo "🎉 Merge process completed!"

@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -38,36 +36,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
-            </div>
-            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Revolutionary Technology Showcase 2026
-            </h2>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto">
-              Experience the most groundbreaking technologies that will define the future of humanity
-            </p>
-          </div>
-        </div>
-
-        {/* Interactive Tech Selector */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
-            {revolutionaryTechs.map((tech, index) => (
-              <button
-                key={tech.id}
-                onClick={() => setActiveTech(index)}
-                className={`px-6 py-3 rounded-xl transition-all duration-300 ${
-                  activeTech === index
-                    ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg`
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
               >
                 <span className="text-2xl mr-3">{tech.icon}</span>
                 <span className="font-semibold">{tech.title.split(' ')[0]}</span>
@@ -78,7 +46,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
 
         {/* Active Tech Display */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeTech}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -153,20 +121,20 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                 </div>
                 
                 {/* Floating Elements */}
-                <div
+                <motion.div
                   animate={{ y: [0, -20, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                   className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-60"
-                ></div>
-                <div
+                ></motion.div>
+                <motion.div
                   animate={{ y: [0, 20, 0] }}
                   transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                   className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full opacity-60"
-                ></div>
+                ></motion.div>
               </div>
             </div>
-          </div>
-        
+          </motion.div>
+        </AnimatePresence>
 
         {/* Technology Grid */}
         <div className="mt-20">
@@ -177,7 +145,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {revolutionaryTechs.map((tech, index) => (
-              <div
+              <motion.div
                 key={tech.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -193,17 +161,9 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                     Explore →
                   </span>
                 </div>
-              </div>
+              </divdiv>
             ))}
           </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-20">
-          <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-            Join us in the most significant technological revolution in human history. 
-            Transform your reality with our breakthrough technologies.
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -213,7 +173,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               Contact Our Experts
             </button>
           </div>
-        </div>
       </div>
     </div>
   );

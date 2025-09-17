@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Sparkles
@@ -197,10 +196,7 @@ const AIPoweredContentRecommendationSystem = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-700 text-sm font-medium mb-6">
@@ -219,13 +215,10 @@ const AIPoweredContentRecommendationSystem = () => {
             Discover the most relevant content tailored to your interests using our advanced AI algorithms. 
             Get personalized recommendations that match your reading patterns and preferences.
           </p>
-        </div>
+        </divdiv>
 
         {/* AI Stats */}
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <divdiv
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
         >
           {[
@@ -242,13 +235,10 @@ const AIPoweredContentRecommendationSystem = () => {
               <div className="text-gray-600 text-sm">{stat.label}</div>
             </div>
           ))}
-        </div>
+        </divdiv>
 
         {/* Category Filter */}
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <divdiv
           className="mb-8"
         >
           <div className="flex flex-wrap gap-2 justify-center">
@@ -270,38 +260,30 @@ const AIPoweredContentRecommendationSystem = () => {
               </button>
             ))}
           </div>
-        </div>
+        </divdiv>
 
         {/* AI Processing Indicator */}
         {isLoading && (
-          <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+          <divdiv
             className="text-center mb-8"
           >
             <div className="inline-flex items-center px-6 py-3 bg-purple-100 rounded-full text-purple-700">
               <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
               AI is analyzing your preferences and generating recommendations...
             </div>
-          </div>
+          </divdiv>
         )}
 
         {/* Recommendations Grid */}
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <divdiv
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          
+          <div>
             {recommendations.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               return (
-                <div
+                <divdiv
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
                 >
                   {/* Header */}
@@ -399,17 +381,14 @@ const AIPoweredContentRecommendationSystem = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </divdiv>
               );
             })}
-          
-        </div>
+          </div>
+        </divdiv>
 
         {/* Load More */}
-        <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <divdiv
           className="text-center mt-12"
         >
           <button 
@@ -419,7 +398,7 @@ const AIPoweredContentRecommendationSystem = () => {
             <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
             Generate More Recommendations
           </button>
-        </div>
+        </divdiv>
       </div>
     </div>
   );

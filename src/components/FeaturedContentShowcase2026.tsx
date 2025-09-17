@@ -1,163 +1,184 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Clock, User, Tag, Eye, Heart, Share2, BookOpen } from 'lucide-react';
+import { getFeaturedBlogPosts, getRecentBlogPosts } from '../data/blog-posts';
 
 const FeaturedContentShowcase2026: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('featured');
+  const featuredPosts = getFeaturedBlogPosts();
+  const recentPosts = getRecentBlogPosts(6);
+
+  const tabs = [
+    { id: 'featured', label: 'Featured Content', count: featuredPosts.length },
+    { id: 'recent', label: 'Latest Articles', count: recentPosts.length },
+    { id: 'trending', label: 'Trending Now', count: 8 }
+  ];
+
+  const getContentForTab = () => {
+    switch (activeTab) {
+      case 'featured':
+        return featuredPosts.slice(0, 6);
+      case 'recent':
+        return recentPosts;
+      case 'trending':
+        return [...featuredPosts, ...recentPosts].slice(0, 6);
+      default:
+        return featuredPosts.slice(0, 6);
+    }
+  };
+
+  const content = getContentForTab();
+
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-4">
-          🌟 FEATURED CONTENT 2026
-        </div>
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest AI 2026 Resources</h2>
-        <p className="text-xl text-gray-600">Discover the most comprehensive AI transformation content available</p>
-      </div>
-      
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300">
-          <div className="flex items-center space-x-3 mb-4">
-            <div className="text-3xl">📚</div>
-            <div>
-              <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-semibold">GUIDE</span>
-              <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full font-semibold ml-2">NEW</span>
-            </div>
+    <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200 mb-6">
+            <BookOpen className="w-5 h-5 text-blue-600 mr-2" />
+            <span className="text-sm font-medium text-blue-700">CONTENT SHOWCASE</span>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">AI 2026 Revolutionary Breakthrough Guide</h3>
-          <p className="text-gray-600 mb-4 text-sm">
-            The ultimate comprehensive guide to AI 2026 technologies including synthetic intelligence, 
-            quantum computing, and consciousness AI with implementation strategies.
+          
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Discover Our Latest
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> AI Insights</span>
+          </h2>
+          
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Stay ahead of the curve with cutting-edge AI research, breakthrough technologies, 
+            and revolutionary insights from industry experts.
           </p>
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-gray-500">25 min read</span>
-            <span className="text-sm text-purple-600 font-semibold">Premium Content</span>
-          </div>
-          <a href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide" className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:shadow-md transition-all duration-300 font-semibold text-center">
-            Read Full Guide →
-          </a>
         </div>
 
-        <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 border border-cyan-200 hover:shadow-lg transition-all duration-300">
-          <div className="flex items-center space-x-3 mb-4">
-            <div className="text-3xl">🏆</div>
-            <div>
-              <span className="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full font-semibold">CASE STUDY</span>
-              <span className="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-semibold ml-2">800% ROI</span>
-            </div>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">Fortune 500 AI Transformation Success</h3>
-          <p className="text-gray-600 mb-4 text-sm">
-            Discover how a Fortune 500 manufacturing company achieved 800% ROI through AI 2026 
-            transformation with detailed implementation insights and results.
-          </p>
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-gray-500">18 min read</span>
-            <span className="text-sm text-cyan-600 font-semibold">Success Story</span>
-          </div>
-          <a href="/content/case-studies/fortune-500-ai-transformation-800-roi-success" className="block w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-2 rounded-lg hover:shadow-md transition-all duration-300 font-semibold text-center">
-            View Case Study →
-          </a>
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                activeTab === tab.id
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+              }`}
+            >
+              {tab.label}
+              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
+                {tab.count}
+              </span>
+            </button>
+          ))}
         </div>
 
-        <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-6 border border-emerald-200 hover:shadow-lg transition-all duration-300">
-          <div className="flex items-center space-x-3 mb-4">
-            <div className="text-3xl">🛠️</div>
-            <div>
-              <span className="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-full font-semibold">IMPLEMENTATION</span>
-              <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-semibold ml-2">FREE</span>
-            </div>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">AI 2026 Implementation Guide</h3>
-          <p className="text-gray-600 mb-4 text-sm">
-            Step-by-step framework for implementing AI 2026 technologies in your organization 
-            with proven strategies and best practices.
-          </p>
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-gray-500">12 min read</span>
-            <span className="text-sm text-emerald-600 font-semibold">Actionable Guide</span>
-          </div>
-          <a href="/content/resources/ai-2026-implementation-guide" className="block w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-2 rounded-lg hover:shadow-md transition-all duration-300 font-semibold text-center">
-            Download Guide →
-          </a>
+        {/* Content Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {content.map((post, index) => (
+            <article
+              key={post.id}
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+            >
+              {/* Image */}
+              <div className="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 bg-white/90 text-gray-800 text-xs font-semibold rounded-full">
+                    {post.category}
+                  </span>
+                </div>
+                <div className="absolute bottom-4 right-4">
+                  <div className="flex items-center text-white/80 text-sm">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {post.readTime}
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <User className="w-4 h-4 mr-1" />
+                    {post.author}
+                  </div>
+                  <div className="text-sm text-gray-500">
+                    {new Date(post.publishDate).toLocaleDateString()}
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                  {post.title}
+                </h3>
+
+                <p className="text-gray-600 mb-4 line-clamp-3">
+                  {post.excerpt}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {post.tags.slice(0, 3).map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Actions */}
+                <div className="flex items-center justify-between">
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                  >
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+
+                  <div className="flex items-center space-x-4 text-gray-400">
+                    <button className="hover:text-red-500 transition-colors">
+                      <Heart className="w-4 h-4" />
+                    </button>
+                    <button className="hover:text-blue-500 transition-colors">
+                      <Share2 className="w-4 h-4" />
+                    </button>
+                    <button className="hover:text-green-500 transition-colors">
+                      <Eye className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
 
-        <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200 hover:shadow-lg transition-all duration-300">
-          <div className="flex items-center space-x-3 mb-4">
-            <div className="text-3xl">🚀</div>
-            <div>
-              <span className="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-semibold">TECHNOLOGY</span>
-              <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-semibold ml-2">BREAKTHROUGH</span>
+        {/* Call to Action */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Dive Deeper?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Explore our comprehensive collection of AI insights, case studies, and breakthrough technologies. 
+              Join thousands of professionals who are already transforming their industries with our expertise.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/blog"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                View All Content
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              
+              <Link
+                to="/newsletter-signup"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+              >
+                Subscribe for Updates
+              </Link>
             </div>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">Synthetic Intelligence Revolution</h3>
-          <p className="text-gray-600 mb-4 text-sm">
-            Explore the revolutionary capabilities of synthetic intelligence that goes beyond 
-            traditional AI to achieve consciousness and autonomous decision-making.
-          </p>
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-gray-500">15 min read</span>
-            <span className="text-sm text-orange-600 font-semibold">Future Tech</span>
-          </div>
-          <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-2 rounded-lg hover:shadow-md transition-all duration-300 font-semibold text-center">
-            Explore Technology →
-          </a>
-        </div>
-
-        <div className="bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-xl p-6 border border-violet-200 hover:shadow-lg transition-all duration-300">
-          <div className="flex items-center space-x-3 mb-4">
-            <div className="text-3xl">⚡</div>
-            <div>
-              <span className="px-2 py-1 bg-violet-100 text-violet-700 text-xs rounded-full font-semibold">QUANTUM</span>
-              <span className="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded-full font-semibold ml-2">1000+ QUBITS</span>
-            </div>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum Computing Breakthrough</h3>
-          <p className="text-gray-600 mb-4 text-sm">
-            Discover how 1000+ qubit quantum computers are solving impossible problems 
-            and revolutionizing business optimization and analytics.
-          </p>
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-gray-500">20 min read</span>
-            <span className="text-sm text-violet-600 font-semibold">Quantum Tech</span>
-          </div>
-          <a href="/pages/AdvancedQuantumComputing2026" className="block w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-2 rounded-lg hover:shadow-md transition-all duration-300 font-semibold text-center">
-            Go Quantum →
-          </a>
-        </div>
-
-        <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl p-6 border border-rose-200 hover:shadow-lg transition-all duration-300">
-          <div className="flex items-center space-x-3 mb-4">
-            <div className="text-3xl">🧬</div>
-            <div>
-              <span className="px-2 py-1 bg-rose-100 text-rose-700 text-xs rounded-full font-semibold">NEURAL</span>
-              <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full font-semibold ml-2">REVOLUTION</span>
-            </div>
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">Neural Interface Evolution</h3>
-          <p className="text-gray-600 mb-4 text-sm">
-            Experience the future of human-computer interaction with direct neural interfaces 
-            enabling thought-controlled technology and brain-computer communication.
-          </p>
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-sm text-gray-500">22 min read</span>
-            <span className="text-sm text-rose-600 font-semibold">Future Interface</span>
-          </div>
-          <a href="/pages/NeuralInterfaceEvolution2026" className="block w-full bg-gradient-to-r from-rose-600 to-pink-600 text-white py-2 rounded-lg hover:shadow-md transition-all duration-300 font-semibold text-center">
-            Connect Mind & Machine →
-          </a>
-        </div>
-      </div>
-
-      <div className="text-center mt-8">
-        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-6 border border-gray-200">
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">🎯 Ready to Transform Your Organization?</h3>
-          <p className="text-gray-600 mb-6">
-            Get personalized AI 2026 implementation guidance from our expert team
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Schedule Consultation
-            </a>
-            <a href="/content/resources/ai-2026-implementation-guide" className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Download Free Guide
-            </a>
           </div>
         </div>
       </div>
