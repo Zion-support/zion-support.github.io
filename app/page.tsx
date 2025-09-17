@@ -1,85 +1,15 @@
-import React, { Suspense, lazy } from 'react';
-import Link from 'next/link';
-import ErrorBoundary from './components/ErrorBoundary';
-import SEO from './components/SEO';
-import LoadingSpinner from './components/LoadingSpinner';
+import React from 'react';
 
-// Import new advanced AI components
-import AdvancedContentRecommendationEngine from './components/AdvancedContentRecommendationEngine';
-import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
-import IntelligentSearchEngine from './components/IntelligentSearchEngine';
-import AdvancedAIAssistant from './components/AdvancedAIAssistant';
-import BusinessIntelligenceDashboard from './components/BusinessIntelligenceDashboard';
-import AdvancedSecurityMonitor from './components/AdvancedSecurityMonitor';
-import AdvancedAnalyticsEngine from './components/AdvancedAnalyticsEngine';
-import AutomationWorkflowEngine from './components/AutomationWorkflowEngine';
-import EnterpriseDataManagement from './components/EnterpriseDataManagement';
-import APIManagementSystem from './components/APIManagementSystem';
+const page: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-// Lazy load heavy components
-const ROICalculator = lazy(() => import('./components/ROICalculator'));
-const StructuredData = lazy(() => import('./components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
-const TechnologyStack = lazy(() => import('./components/TechnologyStack'));
-
-// Import key promotional components
-import NewContentPromotionBanner from './components/NewContentPromotionBanner';
-import InteractiveContentDiscoveryWidget from './components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from './components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from './components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from './components/NewContent2026Showcase';
-import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
-import EnhancedContentPromotionBanner2026 from './components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from './components/ComprehensiveContentShowcase2026';
-import RevolutionaryContent2025Banner from './components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
-
-// Import new promotional components
-import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
-import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
-
-// Import additional promotional components
-import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
-import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
-
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from './components/RevolutionaryContentBanner2025';
-
-// Import new promotional components
-import RevolutionaryAI2026ContentBanner from './components/RevolutionaryAI2026ContentBanner';
-import NewContent2026UltimateShowcase from './components/NewContent2026UltimateShowcase';
-
-// Import new 2025 quantum AI promotional components
-import QuantumAIRevolutionBanner2025 from './components/QuantumAIRevolutionBanner2025';
-import NewContent2025UltimateShowcase from './components/NewContent2025UltimateShowcase';
-
-// Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
-import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
-
-// Import new 2025 advanced automation promotional components
-import NewContent2025AdvancedAutomationBanner from './components/NewContent2025AdvancedAutomationBanner';
-import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
-
-// Import new 2025 analytics promotional components
-import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
-import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
-import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
-
-// Import new 2026 content promotional components
-import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
-import AI2026ContentShowcaseBanner from './components/AI2026ContentShowcaseBanner';
+export default page;
 import Link from 'next/link';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -102,18 +32,24 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Real‑Time RAG + Autonomous Ops</h2>
-              <p className="text-gray-600 mt-2">Deep dives on low‑latency retrieval architectures and an ops playbook for AI systems.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Causal Evals for Autonomous Agents</h2>
+              <p className="text-gray-600 mt-2">Measure cause‑effect correctness to ship safer, aligned agent systems.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Real‑Time RAG</Link>
-              <Link href="/content/ai-2026-autonomous-ops-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Autonomous Ops</Link>
+              <Link href="/blog/ai-2026-causal-evals-for-autonomous-agents" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
+              <Link href="/content/ai-2026-evaluation-harness-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Harness</Link>
+              <Link href="/blog/ai-2026-eval-gated-release-checklists" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Release Checklists</Link>
             </div>
           </div>
         </div>
       </section>
       
       <div className='min-h-screen bg-white'>
+        {/* NEW FEATURED: AI 2026 Breakthrough Banners */}
+        <AI2026UltimateBreakthroughBanner />
+        <QuantumAI2026RevolutionBanner />
+        <NeuralInterface2026Banner />
+        
         {/* New Content 2025 Ultimate Showcase Banner - FEATURED */}
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
@@ -128,7 +64,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* New Promo: Agentic Sandbox Patterns (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
@@ -256,6 +191,38 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* New Promo: Agent Posture Management (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-sky-50 to-cyan-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-cyan-100">
+            <div>
+              <p className="text-sm font-semibold text-cyan-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Agent Posture Management — Executive Guide</h2>
+              <p className="text-gray-600 mt-2">Continuously assess safety, reliability, security, and cost with evidence-led posture scores.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-agent-posture-management" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Read Guide</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promo: Trusted RAG (Sept 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Trusted RAG — Guardrailed Retrieval That Ships</h2>
+              <p className="text-gray-600 mt-2">Groundedness evals, freshness windows, and rollback contracts wired to scorecards.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-trusted-rag-guardrailed-retrieval" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* New Promo: Agent Risk Metrics + Governed Tool Use + Starter Kit (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -278,7 +245,7 @@ export default function HomePage() {
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gray-50 rounded-xl shadow p-6">
               <div className="text-sm font-semibold text-purple-700 mb-2">Incident Response</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Incident Response Playbook</h3>
@@ -286,11 +253,65 @@ export default function HomePage() {
               <Link href="/content/ai-2026-agent-incident-response-playbook" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
             </div>
             <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">Reliability</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Post‑Incident Learning Loops — Operational Excellence</h3>
+              <p className="text-gray-600 mb-4">Turn incidents into durable improvements with evidence‑led scorecards.</p>
+              <Link href="/blog/ai-2026-post-incident-learning-loops" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
               <div className="text-sm font-semibold text-purple-700 mb-2">Operations</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Agents‑On‑Call Automation</h3>
               <p className="text-gray-600 mb-4">Design agents that respond safely with eval gates and observability.</p>
               <Link href="/blog/ai-2026-agents-oncall-automation" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
             </div>
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <div className="text-sm font-semibold text-purple-700 mb-2">Evaluations</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Continuous Eval Gates at Scale</h3>
+              <p className="text-gray-600 mb-4">Ship faster with policy‑gated scenario suites and automated rollbacks.</p>
+              <Link href="/blog/ai-2026-continuous-eval-gates-at-scale" className="text-purple-600 font-semibold hover:text-purple-800">Read →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New: Fresh blog highlights (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Foundational Model Routing Patterns</h3>
+              <p className="text-gray-600 mb-4">Balance cost, quality, and latency with policy‑gated routing.</p>
+              <Link href="/blog/ai-2026-foundational-model-routing-patterns" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Causal Evaluation Blueprint</h3>
+              <p className="text-gray-600 mb-4">Gate behavior with counterfactuals, interventions, and scorecards.</p>
+              <Link href="/blog/ai-2026-causal-evaluation-blueprint" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6 border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New on the blog</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agent Postmortems: Lessons Learned</h3>
+              <p className="text-gray-600 mb-4">From incidents to policies, evals, and runbooks that stick.</p>
+              <Link href="/blog/ai-2026-agent-postmortems-lessons-learned" className="text-emerald-700 font-semibold hover:text-emerald-900">Read →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Mini‑Promos: Eval‑Ready Gateways + Post‑Incident Learning (Sept 16, 2025) */}
+      <section className="py-6 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-eval-ready-api-gateways" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition border border-gray-100">
+              <div className="text-sm font-semibold text-purple-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Eval‑Ready API Gateways</h3>
+              <p className="text-gray-600">Policy checks, scorecards, and rollback contracts wired at ingress.</p>
+            </Link>
+            <Link href="/blog/ai-2026-post-incident-learning-loops" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition border border-gray-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Post‑Incident Learning Loops</h3>
+              <p className="text-gray-600">Turn incidents into policies, tests, and runbooks that stick.</p>
+            </Link>
           </div>
         </div>
       </section>
@@ -394,10 +415,10 @@ export default function HomePage() {
 
         {/* Analytics Content Showcase 2025 - NEW FEATURED */}
         <AnalyticsContentShowcase2025 />
-        
+      
         {/* New Content 2025 Advanced Automation Banner - NEW FEATURED */}
         <NewContent2025AdvancedAutomationBanner />
-        
+      
         {/* Advanced Automation Content Showcase 2025 - NEW FEATURED */}
         <AdvancedAutomationContentShowcase2025 />
         
@@ -493,8 +514,13 @@ export default function HomePage() {
         {/* Revolutionary Content 2025 Banner - NEW CONTENT */}
         <RevolutionaryContent2025Banner />
         
-        {/* New Content 2025 Ultimate Banner - FEATURED */}
-        <NewContent2025UltimateBanner />
+        {/* New Content 2025 Ultimate Banner - temporarily removed */}
+        
+        {/* New Content 2026 Ultimate Banner - NEW FEATURED */}
+        <NewContent2026UltimateBanner />
+        
+        {/* AI 2026 Breakthrough Showcase - NEW FEATURED */}
+        <AI2026BreakthroughShowcase />
         
         {/* AI 2025 Breakthrough Banner */}
         <AI2025BreakthroughBanner />
@@ -568,6 +594,20 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* New Revolutionary AI 2026 Banner - FEATURED */}
+        <RevolutionaryAI2026Banner />
+
+        {/* New Content 2026 Promotion Banner - FEATURED */}
+        <NewContent2026PromotionBanner />
+
+        {/* AI Innovation Showcase 2026 - FEATURED */}
+        <AIInnovationShowcase2026 />
+
+        {/* New Content 2026 Promotional Banners - FEATURED */}
+        <NewContent2026UltimateShowcaseBanner />
+        <NewContent2026SyntheticIntelligenceBanner />
+        <NewContent2026NeuralInterfaceBanner />
 
         {/* New Content 2026 Promotional Banners */}
         <NewContent2026UltimateBanner />
@@ -666,7 +706,7 @@ export default function HomePage() {
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <FeaturedContentShowcase2026 />
-        <NewContentPromotionBanner />
+        {/* NewContentPromotionBanner temporarily removed */}
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
@@ -684,34 +724,13 @@ export default function HomePage() {
         <EnterpriseDataManagement />
         <APIManagementSystem />
 
-        {/* Structured Data */}
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." />}>
-          <StructuredData 
-            type="Organization" 
-            data={{
-              name: "Zion Tech Group",
-              description: "Transforming businesses through cutting-edge technology solutions",
-              url: "https://zion.app",
-              logo: "https://zion.app/images/zion-tech-group-logo.png",
-              sameAs: [
-                "https://twitter.com/ZionTechGroup",
-                "https://linkedin.com/company/zion-tech-group"
-              ]
-            }} 
-          />
-          <StructuredData 
-            type="WebSite" 
-            data={{
-              name: "Zion Tech Group",
-              url: "https://zion.app",
-              potentialAction: {
-                "@type": "SearchAction",
-                "target": "https://zion.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }} 
-          />
-        </Suspense>
+        {/* New Revolutionary Components */}
+        <AdvancedPerformanceOptimizer2026 />
+        <RevolutionaryTech2026Showcase />
+        <AdvancedAI2026Dashboard />
+        <QuantumConsciousnessShowcase2026 />
+
+        {/* Structured Data temporarily disabled (build compatibility) */}
       </div>
     </ErrorBoundary>
   );

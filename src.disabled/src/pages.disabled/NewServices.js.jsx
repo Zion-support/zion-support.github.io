@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const NewServices.js: React.FC = () => {
@@ -11,9 +10,3 @@ const NewServices.js: React.FC = () => {
 };
 
 export default NewServices.js;
-=======
-
-
-const React,{ useState } from "react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

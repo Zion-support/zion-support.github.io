@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const BrokenLinkFixer: React.FC = () => {
@@ -11,9 +10,3 @@ const BrokenLinkFixer: React.FC = () => {
 };
 
 export default BrokenLinkFixer;
-=======
-
-
-const React,{ useState,useEffect,useCallback } from "react"; '"`'"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

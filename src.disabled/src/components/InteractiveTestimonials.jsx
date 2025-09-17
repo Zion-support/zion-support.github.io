@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const InteractiveTestimonials: React.FC = () => {
@@ -11,9 +10,3 @@ const InteractiveTestimonials: React.FC = () => {
 };
 
 export default InteractiveTestimonials;
-=======
- export default Component}}}}}
- export default Component}}}}}
-const React,{ useState,useEffect } from "react";  export default Component}}}}}""`"`
- export default Component}}}}}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

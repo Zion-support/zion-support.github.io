@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const ModernNavigation: React.FC = () => {
@@ -11,11 +10,3 @@ const ModernNavigation: React.FC = () => {
 };
 
 export default ModernNavigation;
-=======
-"
-</motion>
-</string>
-</any>
-</any>;';';
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

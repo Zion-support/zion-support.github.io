@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIChatbot.js: React.FC = () => {
@@ -11,9 +10,3 @@ const AIChatbot.js: React.FC = () => {
 };
 
 export default AIChatbot.js;
-=======
-
-
-const React,{ useState,useCallback,useEffect,useRef } from "react"; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

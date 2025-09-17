@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const ServicesOverview: React.FC = () => {
@@ -11,9 +10,3 @@ const ServicesOverview: React.FC = () => {
 };
 
 export default ServicesOverview;
-=======
-
-
-const { Brain,Cloud,Shield,Database,Wifi,Link as LinkIcon,Zap,Server,Users,Target,Check,ArrowRight } from "lucide - react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIConsciousnessSimulator: React.FC = () => {
@@ -11,9 +10,3 @@ const AIConsciousnessSimulator: React.FC = () => {
 };
 
 export default AIConsciousnessSimulator;
-=======
-
-
-const React from "react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

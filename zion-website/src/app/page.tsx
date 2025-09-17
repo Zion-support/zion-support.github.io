@@ -55,6 +55,14 @@ import { getLatestUpdates } from '../data/updates'
       'World-class researchers and engineers pushing the boundaries of technology.',
     icon: UserGroupIcon
   }
+import React from 'react';
+
+const solutions = [
+  { name: 'Global Clients', value: '1000+' },
+  { name: 'Patents Filed', value: '25+' }
+]
+
+export default page;
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
   { name: 'Quantum Computing', description: 'Next-generation quantum neural networks for solving complex computational problems.', icon: CpuChipIcon },
   { name: 'Global Solutions', description: 'Worldwide deployment of autonomous business operations and digital transformation.', icon: GlobeAltIcon },
@@ -108,6 +116,8 @@ const whatsNew = [
 ]
 
 export default function HomePage() {
+  const latest = getLatestUpdates(6)
+
   return (
     <div className="bg-black min-h-screen">
       {/* Promo banner */}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIClimatePredictionPlatform: React.FC = () => {
@@ -11,9 +10,3 @@ const AIClimatePredictionPlatform: React.FC = () => {
 };
 
 export default AIClimatePredictionPlatform;
-=======
-
-
-const React from "react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

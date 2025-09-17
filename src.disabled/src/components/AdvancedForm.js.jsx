@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AdvancedForm.js: React.FC = () => {
@@ -11,9 +10,3 @@ const AdvancedForm.js: React.FC = () => {
 };
 
 export default AdvancedForm.js;
-=======
-
-
-const { useState,useEffect,useCallback } from "react";"; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

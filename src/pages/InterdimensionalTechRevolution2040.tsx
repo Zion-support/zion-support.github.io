@@ -154,10 +154,4 @@ const InterdimensionalTechRevolution2040: React.FC = () => {
               Learn About Safety Protocols
             </button>
           </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
 export default InterdimensionalTechRevolution2040;

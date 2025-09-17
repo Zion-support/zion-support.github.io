@@ -182,9 +182,5 @@ const RevolutionaryTechBreakthrough2036: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
 export default RevolutionaryTechBreakthrough2036;

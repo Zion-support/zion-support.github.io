@@ -130,34 +130,14 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
 
       {/* Technology Showcase */}
       <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
-          <p className="text-xl opacity-80">Discover the technologies that will define the next decade</p>
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {technologies.map((tech, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-              className={`bg-gradient-to-br ${tech.color} rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setActiveTab(index)}
-            >
-              <div className="text-6xl mb-4 text-center">{tech.icon}</div>
-              <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
-              <p className="text-lg opacity-90 mb-6 text-center">{tech.description}</p>
-              <ul className="space-y-2">
-                {tech.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-2">
-                    <span className="text-green-400">✓</span>
-                    <span className="text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+          </div>
+        </div>
+      </div>
+
+          </div>
         </div>
       </div>
 

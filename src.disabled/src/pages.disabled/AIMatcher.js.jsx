@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIMatcher.js: React.FC = () => {
@@ -11,9 +10,3 @@ const AIMatcher.js: React.FC = () => {
 };
 
 export default AIMatcher.js;
-=======
-
-
-const React,{ useState } from "react";"""; '"`'"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

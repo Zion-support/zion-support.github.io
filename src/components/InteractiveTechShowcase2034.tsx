@@ -90,28 +90,10 @@ const InteractiveTechShowcase2034: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setActiveTech((prev) => (prev + 1) % technologies.length);
-        setIsAnimating(false);
-      }, 500);
-    }, 6000);
+  const [activeTab, setActiveTab] = useState('ai');
 
     return () => clearInterval(interval);
   }, [technologies.length]);
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white mb-12">
-      <div className="text-center mb-12">
-        <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-          Interactive Tech Showcase 2034
-        </h2>
-        <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-          Explore our revolutionary 2034 technologies with interactive demonstrations and real-time capabilities
-        </p>
-      </div>
 
       <div className="grid md:grid-cols-4 gap-4 mb-8">
         {Object.entries(technologies).map(([key, tech]) => (

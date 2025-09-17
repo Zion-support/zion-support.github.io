@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const QuickAccess: React.FC = () => {
@@ -8,27 +7,6 @@ const QuickAccess: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-=======
-import React, { useState } from 'react';
-
-export default function Page("props": "any) {;
-",";
-    { "name": "Consulting", "count": "6", "color": "from-yellow-500 to-orange-500" },";
-    { "name": "Innovation", "count": "1 0", "color": "from-green-500 to-teal-500" },;";
-    { "name": "Business", "count": "1 4", "color": "from-indigo-500 to-purple-500" };      "scale": "1",;
-      "transition": "{;
-        "duration": 0.5",;";
-        "ease": "easeOut"}}};
-;
-  const hoverVariants = {;
-  "hover": "{;
-      "y": -8",      "scale": "1.02",;
-      "transition": "{;
-        "duration": 0.3",;"  "ease": "easeOut";
-      ;
-}}};
-;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 };
 
 export default QuickAccess;

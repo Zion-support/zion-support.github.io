@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap, BarChart3, Star, TrendingUp, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'

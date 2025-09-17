@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const ContentQualityEnhancer: React.FC = () => {
@@ -11,9 +10,3 @@ const ContentQualityEnhancer: React.FC = () => {
 };
 
 export default ContentQualityEnhancer;
-=======
-
-
-const React,{ useState,useEffect,useCallback } from "react"; '"`'"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

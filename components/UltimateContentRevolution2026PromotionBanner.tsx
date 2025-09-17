@@ -1,40 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  ArrowRight
-  X,
-  Play,
-  Star,
-  TrendingUp,
-  Users,
-  Award
-} from 'lucide-react';
-
-const UltimateContentRevolution2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
   return (

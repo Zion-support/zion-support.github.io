@@ -2,45 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const RevolutionaryAdBanner2026: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentAd, setCurrentAd] = useState(0);
-
-  const adContent = [
-    {
-      title: "🚀 NEW: Revolutionary Tech Showcase 2026",
-      subtitle: "Experience AI Consciousness, Quantum Supremacy & Neural Interfaces",
-      cta: "Explore Now",
-      link: "/pages/RevolutionaryTechShowcase2026",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      icon: "🧠"
-    },
-    {
-      title: "🤖 AI Business Automation 2026",
-      subtitle: "Transform Your Business with Autonomous AI Systems",
-      cta: "Get Started",
-      link: "/pages/AIBusinessAutomation2026",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      icon: "⚡"
-    },
-    {
-      title: "⚛️ Quantum Computing Revolution",
-      subtitle: "Breakthrough Quantum Solutions Solving Impossible Problems",
-      cta: "Go Quantum",
-      link: "/pages/QuantumReality2026",
-      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      icon: "⚛️"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentAd((prev) => (prev + 1) % adContent.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
-
-  if (!isVisible) return null;
-
   return (
     <div className="relative mb-8">
       {/* Main Banner */}
@@ -52,22 +13,27 @@ const RevolutionaryAdBanner2026: React.FC = () => {
             <h3 className="text-3xl font-bold">{adContent[currentAd].title}</h3>
             <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
           </div>
-          <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-            {adContent[currentAd].subtitle}
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a 
-              href={adContent[currentAd].link}
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg"
+
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <Link 
+              to="/pages/RevolutionaryTechInsights2026" 
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
             >
-              {adContent[currentAd].cta} →
-            </a>
-            <button 
-              onClick={() => setIsVisible(false)}
-              className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
+              Explore Tech Insights
+            </Link>
+            <Link 
+              to="/pages/RevolutionaryCaseStudies2026" 
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
             >
-              ✕ Dismiss
-            </button>
+              View Case Studies
+            </Link>
+            <Link 
+              to="/contact" 
+              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       </div>

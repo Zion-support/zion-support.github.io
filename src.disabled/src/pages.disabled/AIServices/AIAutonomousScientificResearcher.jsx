@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIAutonomousScientificResearcher: React.FC = () => {
@@ -11,9 +10,3 @@ const AIAutonomousScientificResearcher: React.FC = () => {
 };
 
 export default AIAutonomousScientificResearcher;
-=======
-
-
-const React from "react";"""; ""`"`
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

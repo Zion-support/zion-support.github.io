@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AllServicesIndex2026: React.FC = () => {
@@ -11,9 +10,3 @@ const AllServicesIndex2026: React.FC = () => {
 };
 
 export default AllServicesIndex2026;
-=======
-
-
-
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

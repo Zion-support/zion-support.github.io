@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const ComprehensiveServicesOverview: React.FC = () => {
@@ -11,9 +10,3 @@ const ComprehensiveServicesOverview: React.FC = () => {
 };
 
 export default ComprehensiveServicesOverview;
-=======
- ))
- ))
-const React,{ useState,useMemo } from "react";""";  ))'"`'"`
- ))
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

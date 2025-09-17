@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const AIBusinessIntelligence.js: React.FC = () => {
@@ -11,9 +10,3 @@ const AIBusinessIntelligence.js: React.FC = () => {
 };
 
 export default AIBusinessIntelligence.js;
-=======
-
-
-const React from "react";"""; """
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

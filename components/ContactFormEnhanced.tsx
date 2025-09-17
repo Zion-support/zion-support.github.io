@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-"use client";
-import React, { useState } from 'react';
-
-import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ContactFormEnhanced: React.FC = () => {
   return (

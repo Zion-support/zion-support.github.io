@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const ComprehensiveMarketingPage2026: React.FC = () => {
@@ -11,9 +10,3 @@ const ComprehensiveMarketingPage2026: React.FC = () => {
 };
 
 export default ComprehensiveMarketingPage2026;
-=======
-
-
-
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
