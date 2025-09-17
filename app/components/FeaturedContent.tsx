@@ -1,7 +1,33 @@
-import React from 'react';
 import ContentCard from './ContentCard';
 
 const featuredContent = [
+  {
+    title: "AI 2026: Enterprise AI Readiness Checklist",
+    description: "A step-by-step readiness framework covering governance, evals, observability, security, and reliability.",
+    href: "/blog/ai-2026-enterprise-ai-readiness-checklist",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Readiness", "Governance", "Evals", "2026"]
+  },
+  {
+    title: "AI 2026: Evidence‑Driven Agent Lifecycle — Blueprint",
+    description: "Gate each lifecycle phase with evals and audit‑ready evidence.",
+    href: "/blog/ai-2026-evidence-driven-agent-lifecycle-blueprint",
+    category: "Operations",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Evals", "Lifecycle", "Evidence"]
+  },
+  {
+    title: "AI 2026: Governed Agent Tool‑Use Patterns",
+    description: "Risk‑tiered autonomy, eval‑gated tools, and policy‑as‑code patterns for safe, scalable tool‑use.",
+    href: "/blog/ai-2026-governed-agent-tool-use-patterns",
+    category: "Governance",
+    date: "2025-09-16",
+    featured: true,
+    tags: ["Agents", "Tool‑Use", "Policy‑as‑Code"]
+  },
   {
     title: "AI 2026: Policy‑as‑Code Blueprint",
     description: "Encode approvals, risk tiers, and evaluation gates as versioned policy.",
@@ -100,16 +126,17 @@ export default function FeaturedContent() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
-            <ContentCard
-              key={index}
-              title={content.title}
-              description={content.description}
-              href={content.href}
-              category={content.category}
-              date={content.date}
-              featured={content.featured}
-              tags={content.tags}
-            />
+            <div key={index}>
+              <ContentCard
+                title={content.title}
+                description={content.description}
+                href={content.href}
+                category={content.category}
+                date={content.date}
+                featured={content.featured}
+                tags={content.tags}
+              />
+            </div>
           ))}
         </div>
         

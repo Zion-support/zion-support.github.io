@@ -4,6 +4,7 @@ import SocialShareButtons from '@/components/blog/SocialShareButtons'
 import AdvancedSEO from '@/components/seo/AdvancedSEO'
 import fs from 'fs'
 import path from 'path'
+import process from 'process'
 import ReactMarkdown from 'react-markdown'
 
 type BlogPost = {
@@ -33,7 +34,7 @@ function parseMarkdown(filePath: string): BlogPost | null {
 
 interface BlogPostPageProps { initialPost: BlogPost | null }
 
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
+const BlogPostPage = ({ initialPost }: BlogPostPageProps) => {
   const post = initialPost
   if (!post) return <div>Article not found</div>
 
@@ -50,7 +51,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
             src={post.author.avatarUrl}
             alt={post.author.name}
             className="w-10 h-10 rounded-full"
-            onError={(e) => {
+            onError={(e: any) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
             }}
@@ -68,7 +69,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
               src={post.featuredImage}
               alt={post.title}
               className="object-cover w-full h-full"
-              onError={(e) => {
+              onError={(e: any) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
               }}
@@ -88,8 +89,8 @@ export default BlogPostPage
 
 export const getStaticPaths = async () => {
   const dir = path.join(process.cwd(), 'contentblog')
-  const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.md')) : []
-  const paths = files.map((f) => ({ params: { slug: f.replace(/\.md$/, '') } }))
+  const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f: string) => f.endsWith('.md')) : []
+  const paths = files.map((f: string) => ({ params: { slug: f.replace(/\.md$/, '') } }))
   return { paths, fallback: 'blocking' }
 }
 

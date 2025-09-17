@@ -5,6 +5,102 @@ import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react
 export default function Blog() {
   const blogPosts = [
     {
+      id: 'ai-2026-agent-release-health-scorecards',
+      title: 'Agent Release Health Scorecards',
+      excerpt: 'Turn traces, evals, policy events, and incidents into release health.',
+      author: 'Reliability Engineering',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      category: 'Reliability',
+      tags: ['Scorecards', 'Evals', 'Traces'],
+      featured: true,
+      image: '/blog/agent-release-health-scorecards.jpg'
+    },
+    {
+      id: 'ai-2026-governed-runtime-rollback-strategies',
+      title: 'Governed Runtime Rollback Strategies',
+      excerpt: 'Safe, auditable rollbacks using eval gates and evidence bundles.',
+      author: 'Operations Engineering',
+      date: '2025-09-16',
+      readTime: '5 min read',
+      category: 'Operations',
+      tags: ['Rollback', 'Policy', 'Evidence'],
+      featured: false,
+      image: '/blog/governed-runtime-rollback-strategies.jpg'
+    },
+    {
+      id: 'ai-2026-release-evidence-scorecards-blueprint',
+      title: 'Release Evidence Scorecards — Blueprint',
+      excerpt: 'A pragmatic template to make every release auditable.',
+      author: 'Leadership',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      category: 'Leadership',
+      tags: ['Scorecards', 'Governance', 'Evals'],
+      featured: true,
+      image: '/blog/release-evidence-scorecards-blueprint.jpg'
+    },
+    {
+      id: 'ai-2026-governed-real-time-observability',
+      title: 'Governed Real‑Time Observability (2026)',
+      excerpt: 'Telemetry patterns that preserve sub‑200ms latency while enforcing safety and budget.',
+      author: 'Platform Engineering',
+      date: '2025-09-16',
+      readTime: '6 min read',
+      category: 'Observability',
+      tags: ['Observability', 'Real‑Time', 'Governance'],
+      featured: true,
+      image: '/blog/governed-real-time-observability-2026.jpg'
+    },
+    {
+      id: 'ai-2026-zero-trust-agents',
+      title: 'Zero-Trust Agents (2026)',
+      excerpt: 'Risk‑tiered tools, scoped credentials, and JIT approvals for safe autonomy.',
+      author: 'Security Engineering',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      category: 'Security',
+      tags: ['Security', 'Agents', 'Governance'],
+      featured: true,
+      image: '/blog/zero-trust-agents-2026.jpg'
+    },
+    {
+      id: 'ai-2026-enterprise-architecture-modernization',
+      title: 'Enterprise Architecture Modernization (2026)',
+      excerpt: 'Evolve to AI‑ready, event‑driven platforms with SLOs and guardrails.',
+      author: 'Platform Architecture',
+      date: '2025-09-16',
+      readTime: '8 min read',
+      category: 'Architecture',
+      tags: ['Architecture', 'Platforms', 'SLOs'],
+      featured: true,
+      image: '/blog/enterprise-architecture-modernization-2026.jpg'
+    },
+    {
+      id: 'ai-2026-real-time-evals-inference-guardrails',
+      title: 'Real-Time Evals & Inference Guardrails (2026)',
+      excerpt: 'Live evaluation hooks and runtime guardrails to keep quality high in production.',
+      author: 'AI Reliability Team',
+      date: '2025-09-16',
+      readTime: '7 min read',
+      category: 'AI Quality',
+      tags: ['Evaluations', 'Safety', 'Runtime'],
+      featured: true,
+      image: '/blog/real-time-evals-guardrails-2026.jpg'
+    },
+    {
+      id: 'ai-2026-edge-agents-production-guide',
+      title: 'Edge Agents in Production — 2026 Guide',
+      excerpt: 'Architectural patterns and safeguards for running agentic systems on the edge.',
+      author: 'Platform Engineering',
+      date: '2025-09-16',
+      readTime: '8 min read',
+      category: 'Edge Computing',
+      tags: ['Edge', 'Agents', 'Reliability'],
+      featured: false,
+      image: '/blog/edge-agents-production-2026.jpg'
+    },
+    {
       id: 'ai-2026-runtime-evidence-bundles',
       title: 'Runtime Evidence Bundles (2026)',
       excerpt: 'Bundle evals, traces, policy events, and incidents per release for audits.',

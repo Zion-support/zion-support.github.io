@@ -142,11 +142,125 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Promo: Freshly Added — Approvals Blueprint + Incident Command Center */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-orange-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-approvals-blueprint-starter" className="bg-white rounded-xl shadow p-6 border border-amber-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Approvals Blueprint Starter — Copy‑Paste Policies</h3>
+              <p className="text-gray-600">Risk‑tiered approvals with evidence fields that flow to scorecards.</p>
+            </Link>
+            <Link href="/blog/ai-2026-incident-command-center" className="bg-white rounded-xl shadow p-6 border border-amber-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Incident Command Center — Operational Playbook</h3>
+              <p className="text-gray-600">Triage, containment, and learning loops with audit‑ready evidence.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Policy‑as‑Code Approvals Starter (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <div>
+              <p className="text-sm font-semibold text-blue-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Policy‑as‑Code Approvals Starter</h2>
+              <p className="text-gray-600 mt-2">Minimal approval policies with risk tiers and evidence you can ship today.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/content/ai-2026-policy-approvals-starter" className="inline-block bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700">Read Starter</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promos: Newly published on Sept 16, 2025 */}
+      <section className="py-6 bg-gradient-to-r from-emerald-50 to-emerald-100/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-eval-gated-safety-scorecards" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Eval‑Gated Safety Scorecards (2026)</h3>
+              <p className="text-gray-600">Objective safety gates wired into CI/CD and runtime policy.</p>
+            </Link>
+            <Link href="/blog/ai-2026-zero-downtime-agent-rollouts" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Zero‑Downtime Agent Rollouts</h3>
+              <p className="text-gray-600">Eval‑gated releases, rollback contracts, and guardrails to ship without outages.</p>
+            </Link>
+            <Link href="/blog/ai-2026-agentic-cost-controls-deep-dive" className="bg-white rounded-xl shadow p-6 border border-green-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-green-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agentic Cost Controls — Deep Dive</h3>
+              <p className="text-gray-600">Policy‑aware budgets, approvals, and cost scorecards for predictable spend.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Incident Lifecycle Playbook (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-rose-50 to-red-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-red-100">
+            <div>
+              <p className="text-sm font-semibold text-rose-700">New guide</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Incident Lifecycle Playbook</h2>
+              <p className="text-gray-600 mt-2">Detect, triage, contain, and learn with evidence at every step.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/content/ai-2026-incident-lifecycle-playbook" className="inline-block bg-rose-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-rose-700">Open Playbook</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promos: Operational Reliability (Sept 16, 2025) */}
+      <section className="py-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-operational-reliability-blueprint" className="bg-white rounded-xl shadow p-6 border border-indigo-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-indigo-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Operational Reliability Blueprint (2026)</h3>
+              <p className="text-gray-600">Eval‑gated releases, rollback contracts, error budgets, and observability.</p>
+            </Link>
+            <Link href="/content/ai-2026-reliability-operations-guide" className="bg-white rounded-xl shadow p-6 border border-indigo-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-indigo-700 mb-2">Guide</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026 Reliability Operations Guide</h3>
+              <p className="text-gray-600">Scorecards, runbooks, rollback patterns, and evidence‑driven SLOs.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* New Promos: Sept 16, 2025 */}
       {/* Quick spotlight for newly added articles */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-autonomous-change-management-blueprint" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Autonomous Change Management — Blueprint</h3>
+              <p className="text-gray-600">Eval gates, policy-as-code, and automated rollbacks for safe releases.</p>
+            </Link>
+            <Link href="/blog/ai-2026-production-evidence-hub-starter" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Production Evidence Hub — Starter</h3>
+              <p className="text-gray-600">Centralize traces, evals, and policy events for auditable autonomy.</p>
+            </Link>
+            <Link href="/blog/ai-2026-production-de-risking-checklist" className="bg-amber-50 rounded-xl shadow p-6 hover:shadow-md transition border border-amber-100">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Production De‑Risking Checklist</h3>
+              <p className="text-gray-600">High‑leverage preflight, canary, and post‑release checks to avoid incidents.</p>
+            </Link>
+            <Link href="/blog/ai-2026-evidence-first-release-engineering" className="bg-amber-50 rounded-xl shadow p-6 hover:shadow-md transition border border-amber-100">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Evidence‑First Release Engineering</h3>
+              <p className="text-gray-600">Make every release auditable with scorecards, traces, and policy events.</p>
+            </Link>
+            <Link href="/blog/ai-2026-safe-tool-envelopes-blueprint" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Safe Tool Envelopes — Production Blueprint</h3>
+              <p className="text-gray-600">Policy‑bound tool use with approvals, budgets, and eval‑gated runtime guardrails.</p>
+            </Link>
             <Link href="/blog/ai-2026-responsible-autonomy-release-engineering" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
               <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Responsible Autonomy — Release Engineering</h3>
@@ -396,6 +510,22 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3">
               <Link href="/blog/ai-2026-eval-gated-ci-cd-blueprint" className="inline-block bg-pink-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-pink-700">Eval‑Gated CI/CD</Link>
               <Link href="/blog/ai-2026-agentic-observability-deep-dive" className="inline-block border border-pink-600 text-pink-700 px-5 py-3 rounded-lg font-semibold hover:bg-pink-50">Observability Deep Dive</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Production Agent Runbooks — Templates (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-100">
+            <div>
+              <p className="text-sm font-semibold text-blue-700">New templates</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Production Agent Runbooks — Templates</h2>
+              <p className="text-gray-600 mt-2">Copy‑paste runbooks for incidents, rollbacks, and eval‑gated releases.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-production-agent-runbooks-templates" className="inline-block bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700">Get Templates</Link>
+              <Link href="/blog" className="inline-block border border-blue-600 text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-blue-50">More Articles</Link>
             </div>
           </div>
         </div>

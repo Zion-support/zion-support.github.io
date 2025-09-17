@@ -9,6 +9,22 @@ export type ContentItem = {
 
 export const latestContent: ContentItem[] = [
   {
+    id: "ai-2026-autonomous-change-approvals-blueprint",
+    title: "AI 2026: Autonomous Change Approvals — Blueprint",
+    summary: "Policy‑as‑code approvals with eval gates and signed evidence bundles.",
+    href: "/blog/ai-2026-autonomous-change-approvals-blueprint",
+    tag: "Blueprint",
+    date: "2025-09-16",
+  },
+  {
+    id: "ai-2026-real-time-agent-benchmark-suite-1-0",
+    title: "AI 2026: Real‑Time Agent Benchmark Suite v1.0 — Launch",
+    summary: "Scenario benchmarks for quality, safety, latency, and cost with CI/CD gates.",
+    href: "/blog/ai-2026-real-time-agent-benchmark-suite-1-0",
+    tag: "Launch",
+    date: "2025-09-16",
+  },
+  {
     id: "agentic-product-playbooks",
     title: "Agentic Product Playbooks",
     summary: "Blueprints to ship agentic workflows with eval gates and observability.",

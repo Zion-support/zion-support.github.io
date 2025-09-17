@@ -34,17 +34,29 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
+            New: Agent Posture Monitor —
+            <a href="/updates/real-time-agent-posture-monitor-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Agent Safety Red‑Team Playbooks —
+            <a href="/updates/agent-safety-redteam-playbooks-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Real‑Time Guardrail Metrics v1.1 —
+            <a href="/updates/real-time-guardrail-metrics-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             New: Real‑Time Agent Benchmark Suite —
             <a href="/updates/real-time-agent-benchmark-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Postmortems — Evidence‑First Templates —
-            <a href="/updates/production-agent-postmortems-evidence-first" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            Agentic Evidence Hub —
+            <a href="/updates/agentic-evidence-hub-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence‑Driven Rollback Playbook —
+            <a href="/updates/evidence-driven-rollback-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             New: Real‑Time Agent FinOps Dashboard —
             <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Zero‑Downtime Agent Releases —
-            <a href="/updates/zero-downtime-agent-releases-1758081600000" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            Zero‑Downtime Agent Rollouts —
+            <a href="/blog/ai-2026-zero-downtime-agent-rollouts" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Zero‑Trust Agent Controllers —
             <a href="/updates/zero-trust-agent-controllers-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
@@ -88,6 +100,12 @@ export default function HomePage() {
             Real‑Time Guardrail Metrics —
             <a href="/updates/real-time-guardrail-metrics-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
+            Safety Governance Checklist —
+            <a href="/updates/agent-safety-governance-checklist-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Autonomous Rollback Controller —
+            <a href="/updates/autonomous-rollback-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Failure Analysis Toolkit (2026) —
             <a href="/updates/autonomous-failure-analysis-toolkit-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">report</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -96,6 +114,24 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Cost Optimizer v2.0 —
             <a href="/blog/ai-2026-real-time-agent-cost-optimizer-deep-dive" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">deep dive</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Guardrail Metrics Widgets —
+            <a href="/updates/real-time-agent-metrics-widgets-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Incident Simulation Toolkit v1.1 —
+            <a href="/updates/incident-simulation-toolkit-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Agent Safety Center —
+            <a href="/updates/agent-safety-center-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Production Agent Change Windows —
+            <a href="/updates/production-agent-change-windows-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence Ledger for AI Systems —
+            <a href="/updates/evidence-ledger-for-ai-systems-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Agent Posture Trends Q3 2025 —
+            <a href="/updates/agent-posture-trends-q3-2025" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new report</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -129,11 +165,20 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
           <p className="text-sm sm:text-base font-semibold text-blue-200">
+            Fresh: Agent Posture Monitor —
+            <a href="/updates/real-time-agent-posture-monitor-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Agent Safety Red‑Team Playbooks —
+            <a href="/updates/agent-safety-redteam-playbooks-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Real‑Time Guardrail Metrics v1.1 —
+            <a href="/updates/real-time-guardrail-metrics-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new blueprint</a>
+            <span className="mx-2 text-blue-300/60">|</span>
             Fresh: Real‑Time Agent Benchmark Suite —
             <a href="/updates/real-time-agent-benchmark-suite-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
             <span className="mx-2 text-blue-300/60">|</span>
-            Postmortems — Evidence‑First Templates —
-            <a href="/updates/production-agent-postmortems-evidence-first" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
+            Evidence‑Driven Rollback Playbook —
+            <a href="/updates/evidence-driven-rollback-playbook-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             Fresh: Real‑Time Agent FinOps Dashboard —
             <a href="/updates/real-time-agent-finops-dashboard-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">new launch</a>
@@ -185,6 +230,18 @@ export default function HomePage() {
             <span className="mx-2 text-blue-300/60">|</span>
             Grounded Generation Guardrails —
             <a href="/updates/grounded-generation-guardrails-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Guardrail Metrics Widgets —
+            <a href="/updates/real-time-agent-metrics-widgets-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Incident Simulation Toolkit v1.1 —
+            <a href="/updates/incident-simulation-toolkit-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Knowledge Graph Builder —
+            <a href="/updates/autonomous-knowledge-graph-builder-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new launch</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Evidence‑First Release Management —
+            <a href="/updates/evidence-first-release-management-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">new guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             See all <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">updates</a>
             <span className="mx-2 text-blue-300/60">|</span>
@@ -258,6 +315,8 @@ export default function HomePage() {
             Also read: <a href="/updates/evals-in-prod-best-practices-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Evals‑in‑Prod Guide</a>
             <span className="mx-2 text-blue-300/60">|</span>
             <a href="/updates/autonomous-failure-analysis-toolkit-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Failure Analysis Toolkit</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            New report: <a href="/updates/state-of-enterprise-agent-safety-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">Enterprise Agent Safety (2026)</a>
           </p>
         </div>
       </div>

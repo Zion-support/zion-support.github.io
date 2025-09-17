@@ -10,7 +10,142 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
-    // AI Lab fresh articles (2025-09-17) — newly added
+    // New content (2025-09-16 - additional featured additions)
+    {
+        title: 'Launch: Autonomous Knowledge Graph Builder v1.0',
+        summary: 'Automated entity extraction, linking, and provenance with eval-gated updates.',
+        href: '/updates/autonomous-knowledge-graph-builder-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Evidence-First Release Management (2026)',
+        summary: 'Plan, gate, and verify AI releases with signed evidence and rollback triggers.',
+        href: '/updates/evidence-first-release-management-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    // Fresh AI Lab content (2025-09-17)
+    {
+        title: 'Field Guide: Real-Time Agent SLO Blueprints',
+        summary: 'Define and enforce latency, quality, and cost SLOs with eval gates and evidence.',
+        href: '/reports/ai-lab/articles/real-time-agent-slo-blueprints-1758141600000.md',
+        date: '2025-09-17',
+        tag: 'Field Guide',
+    },
+    {
+        title: 'Guide: Agent Guardrails for Synthetic Data',
+        summary: 'Safe generation patterns using policy-as-code, dual eval gates, and evidence.',
+        href: '/reports/ai-lab/articles/new-agent-guardrails-for-synthetic-data-1758139800000.md',
+        date: '2025-09-17',
+        tag: 'Guide',
+    },
+    // Fresh blog content (2025-09-16)
+    {
+        title: 'Guide: Zero‑Downtime Agent Rollouts (2026)',
+        summary: 'Ship agent changes with canaries, shadow, eval gates, and safe auto‑rollback.',
+        href: '/blog/ai-2026-zero-downtime-agent-rollouts',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    // Fresh content (2025-09-16 - newly added set)
+    {
+        title: 'Launch: Agent Safety Center v1.0',
+        summary: 'Unified hub for guardrails, eval gates, and signed evidence in one place.',
+        href: '/updates/agent-safety-center-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Production Agent Change Windows (2026)',
+        summary: 'Plan, gate, and verify agent changes with SLOs, evals, and rollback criteria.',
+        href: '/updates/production-agent-change-windows-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Blueprint: Evidence Ledger for AI Systems',
+        summary: 'Tamper‑evident ledger of artifacts, policies, eval signals, and lineage.',
+        href: '/updates/evidence-ledger-for-ai-systems-2026',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Report: Agent Posture Trends Q3 2025',
+        summary: 'Top risks, common violations, and control effectiveness across enterprise agents.',
+        href: '/updates/agent-posture-trends-q3-2025',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
+    // New blog content (2025-09-16)
+    {
+        title: 'Blueprint: Agent Posture Scorecards (2026)',
+        summary: 'Define SLIs/SLOs, thresholds, and alerts for live agent posture.',
+        href: '/blog/ai-2026-agent-posture-scorecards-blueprint',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Blueprint: Evidence‑Led Operations (2026)',
+        summary: 'Operate with eval gates, policy‑as‑code, and signed evidence bundles.',
+        href: '/blog/ai-2026-evidence-led-operations-blueprint',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    // Added new blog posts (2025-09-16)
+    {
+        title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
+        summary: 'Tiered permissions, runtime checks, and signed evidence for safer operations.',
+        href: '/blog/ai-2026-runtime-policy-enforcement-blueprint',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Guide: Production Agent Incident Playbooks (2026)',
+        summary: 'Standardized runbooks for containment, rollback, and RCA with signed evidence.',
+        href: '/blog/ai-2026-production-agent-incident-playbooks',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    // New content (2025-09-16)
+    {
+        title: 'Launch: Real‑Time Agent Posture Monitor v1.0',
+        summary: 'Continuous policy posture checks, alerts, and remediation guidance for agents.',
+        href: '/updates/real-time-agent-posture-monitor-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Evidence‑Driven Rollback Playbook (2026)',
+        summary: 'How to trigger, execute, and verify safe rollbacks with signed evidence.',
+        href: '/updates/evidence-driven-rollback-playbook-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    // New blog (2025-09-16)
+    {
+        title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
+        summary: 'Tiered permissions, runtime checks, and signed evidence for safer operations.',
+        href: '/blog/ai-2026-runtime-policy-enforcement-blueprint',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    // New content (2025-09-16 - additional batch)
+    {
+        title: 'Guide: Agent Safety Governance Checklist (2026)',
+        summary: 'Operational checklist covering policies, eval gates, incident runbooks, and evidence.',
+        href: '/updates/agent-safety-governance-checklist-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Launch: Autonomous Rollback Controller v1.0',
+        summary: 'Automated policy-gated rollbacks with signed evidence and objective thresholds.',
+        href: '/updates/autonomous-rollback-controller-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    // AI Lab fresh articles (2025-09-17)
     {
         title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
         summary: 'Tiered permissions, runtime checks, and signed evidence for safer operations.',
@@ -25,27 +160,72 @@ export const updates: UpdateItem[] = [
         date: '2025-09-17',
         tag: 'Field Guide',
     },
-    // AI Lab fresh articles (2025-09-17)
+    // New content (2025-09-16 - batch 3)
     {
-        title: 'Guide: Evals‑in‑Prod — Rollbacks and Safe Iteration',
-        summary: 'Shadow, canary, and progressive delivery with objective gates and clear rollbacks.',
-        href: '/reports/ai-lab/articles/new-ai-lab-content-evals-in-prod-rollback-1758134400000.md',
-        date: '2025-09-17',
+        title: 'Launch: Agentic Evidence Hub v1.0',
+        summary: 'Central place to browse, search, and share signed evidence bundles and scorecards.',
+        href: '/updates/agentic-evidence-hub-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Report: State of Enterprise Agent Safety (2026 Preview)',
+        summary: 'Key risks, posture trends, and control patterns from early enterprise deployments.',
+        href: '/updates/state-of-enterprise-agent-safety-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
+    // Newly added updates (2025-09-16 - batch 2)
+    {
+        title: 'Launch: Real‑Time Guardrail Metrics Widgets v1.0',
+        summary: 'Drop-in UI widgets for live safety, latency and quality guardrails with alerts.',
+        href: '/updates/real-time-agent-metrics-widgets-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Incident Simulation Toolkit v1.1',
+        summary: 'Run realistic failure drills with eval gates, evidence capture, and rollback practice.',
+        href: '/updates/incident-simulation-toolkit-1-1',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    // Fresh content (2025-09-16 - new additions)
+    {
+        title: 'Launch: Autonomous Change Approvals v1.0',
+        summary: 'Policy-gated approvals with eval signals and signed evidence for AI changes.',
+        href: '/updates/autonomous-change-approvals-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Agent Safety Red‑Team Playbooks (2026)',
+        summary: 'Reusable red‑team scenarios, risk tiers, and remediation patterns for agents.',
+        href: '/updates/agent-safety-redteam-playbooks-2026',
+        date: '2025-09-16',
         tag: 'Guide',
     },
     {
-        title: 'Blueprint: Agent Evidence Bundles',
-        summary: 'Standardize capture for incidents and audits with signed provenance and eval metrics.',
-        href: '/reports/ai-lab/articles/new-ai-lab-content-agent-evidence-bundles-1758132600000.md',
-        date: '2025-09-17',
+        title: 'Blueprint: Real‑Time Guardrail Metrics v1.1',
+        summary: 'Expanded live metrics for tool‑use violations, remediation speed, and risk posture.',
+        href: '/updates/real-time-guardrail-metrics-1-1',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    // Newly added updates (2025-09-16 - set 2)
+    {
+        title: 'Blueprint: Production Agent Safety Runbooks (2026)',
+        summary: 'Incident-ready runbooks with eval gates, rollback plans, and signed evidence.',
+        href: '/updates/production-agent-safety-runbooks-2026',
+        date: '2025-09-16',
         tag: 'Blueprint',
     },
     {
-        title: 'Field Guide: Grounded RAG Guardrails',
-        summary: 'Layered retrieval and answer constraints with objective eval gates in production.',
-        href: '/reports/ai-lab/articles/new-ai-lab-content-guardrails-for-rag-1758130800000.md',
-        date: '2025-09-17',
-        tag: 'Field Guide',
+        title: 'Report: State of Multimodal RAG (2026 Preview)',
+        summary: 'Benchmarks for groundedness, sync, and latency across image, audio, and text.',
+        href: '/updates/state-of-multimodal-rag-2026',
+        date: '2025-09-16',
+        tag: 'Report',
     },
     // Newly added updates (2025-09-16 - additional)
     {

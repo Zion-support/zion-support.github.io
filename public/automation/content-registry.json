@@ -89,6 +89,161 @@
   ],
   "items": [
     {
+      "title": "AI 2026: Autonomous Release Guardrails",
+      "href": "/blog/ai-2026-autonomous-release-guardrails",
+      "desc": "Preflight, canary, scorecards, and rollback patterns for auditable releases.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Governed Agent Deployments",
+      "href": "/blog/ai-2026-governed-agent-deployments",
+      "desc": "Approvals, policy checks, and evidence woven into delivery pipelines.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Real‑Time Observability (2026)",
+      "href": "/blog/ai-2026-governed-real-time-observability",
+      "desc": "Streaming metrics and governed traces for reliable, auditable autonomy.",
+      "createdAt": "2025-09-16T23:59:59.995Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Production De‑Risking Checklist",
+      "href": "/blog/ai-2026-production-de-risking-checklist",
+      "desc": "High‑leverage preflight, canary, and post‑release checks to avoid incidents.
+",
+      "createdAt": "2025-09-16T23:59:59.990Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Evidence‑First Release Engineering",
+      "href": "/blog/ai-2026-evidence-first-release-engineering",
+      "desc": "Make every release auditable with scorecards, traces, policy events.",
+      "createdAt": "2025-09-16T23:59:59.985Z",
+      "source": "blog"
+    },
+    {
+      "title": "Production Agent Postmortems — Playbook (2026)",
+      "href": "/blog/ai-2026-production-agent-postmortems-playbook",
+      "desc": "Evidence-first templates and workflows to turn incidents into improvements.",
+      "createdAt": "2025-09-16T23:59:59.980Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Agent Governance Blueprint",
+      "href": "/blog/ai-2026-agent-governance-blueprint",
+      "desc": "Approvals, audit trails, policy checks, and rollback patterns for safe autonomy.",
+      "createdAt": "2025-09-16T23:59:59.970Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Real-Time Agent Posture Management",
+      "href": "/blog/ai-2026-agent-posture-management",
+      "desc": "Continuously assess, score, and adapt agent capabilities with policy-aware controls.",
+      "createdAt": "2025-09-16T23:59:59.960Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Evidence Bundles — Executive Guide",
+      "href": "/blog/ai-2026-evidence-bundles-exec-guide",
+      "desc": "Make AI decisions auditable by bundling traces, evals, policy events, and incidents.",
+      "createdAt": "2025-09-16T23:59:59.955Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Real‑Time Evals & Inference Guardrails",
+      "href": "/blog/ai-2026-real-time-evals-inference-guardrails",
+      "desc": "Live evaluation hooks and runtime guardrails to keep quality high in prod.",
+      "createdAt": "2025-09-16T23:59:59.950Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Edge Agents in Production — Field Guide",
+      "href": "/blog/ai-2026-edge-agents-production-guide",
+      "desc": "Architectural patterns and safeguards for running agents on the edge.",
+      "createdAt": "2025-09-16T23:59:59.940Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Low‑Latency Agent Observability",
+      "href": "/blog/ai-2026-low-latency-agent-observability.md",
+      "desc": "Streaming metrics and lean traces for real-time reliability with minimal overhead.",
+      "createdAt": "2025-09-16T23:59:59.900Z",
+      "source": "blog"
+    },
+    {
+      "title": "Guide — Low‑Latency Observability for Agentic Systems",
+      "href": "/reports/guides/guide-2025-09-low-latency-observability.md",
+      "desc": "Monitor agents in real time without adding drag.",
+      "createdAt": "2025-09-16T23:59:50.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Agent Rollback with Evaluation Scorecards",
+      "href": "/reports/briefs/brief-2025-09-agent-rollback-scorecards.md",
+      "desc": "Tie rollback decisions to live evidence for safe autonomy.",
+      "createdAt": "2025-09-16T23:59:40.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "AI 2026: Low‑Latency Agent Observability",
+      "href": "/blog/ai-2026-low-latency-agent-observability",
+      "desc": "Streaming metrics and lean traces for real-time reliability with minimal overhead.",
+      "createdAt": "2025-09-16T23:59:59.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Agent Safety Evidence Integration",
+      "href": "/blog/ai-2026-agent-safety-evidence-integration",
+      "desc": "Unify policy events, evaluations, and artifacts into a queryable evidence layer.",
+      "createdAt": "2025-09-16T23:59:58.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Cost‑Aware Real‑Time Routing",
+      "href": "/blog/ai-2026-cost-aware-real-time-routing",
+      "desc": "Budget-aligned policy routing with graceful fallbacks and online evals.",
+      "createdAt": "2025-09-16T23:59:57.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Agent Release Control Plane — Blueprint",
+      "href": "/blog/ai-2026-agent-release-control-plane-blueprint",
+      "desc": "Approvals, canary, rollback, and evidence capture wired to SLOs.",
+      "createdAt": "2025-09-16T23:59:30.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Incident Response Runbooks for Agentic Systems",
+      "href": "/blog/ai-2026-incident-response-runbooks",
+      "desc": "Scorecard-driven containment, evidence-first postmortems, and MTTR reduction.",
+      "createdAt": "2025-09-16T23:59:20.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Evidence Bundles in Practice",
+      "href": "/blog/ai-2026-evidence-bundles-in-practice",
+      "desc": "Bundle evals, traces, policy events, and incidents per release.",
+      "createdAt": "2025-09-16T23:59:10.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Safe Agent Rollouts Checklist",
+      "href": "/blog/ai-2026-safe-agent-rollouts-checklist",
+      "desc": "Practical preflight, canary, and rollback steps to ship safely",
+      "createdAt": "2025-09-16T23:59:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Production Evidence Hubs — Blueprint",
+      "href": "/blog/ai-2026-evidence-hubs-blueprint",
+      "desc": "Traces, artifacts, and policy events for auditable AI",
+      "createdAt": "2025-09-16T23:58:00.000Z",
+      "source": "blog"
+    },
+    {
       "title": "Agent Runbooks with Guardrails (2026)",
       "href": "/reports/ai-lab/articles/agent-runbooks-guardrails-1758092400000.md",
       "desc": "Scorecard-driven incident response with policy events and containment",

@@ -3,6 +3,18 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'ai-2026-runtime-policy-enforcement-blueprint',
+    title: 'AI 2026: Runtime Policy Enforcement — Blueprint',
+    summary:
+      'Tiered permissions, runtime checks, and signed evidence for safer production agents.'
+  },
+  {
+    slug: 'ai-2026-zero-downtime-agent-rollouts',
+    title: 'AI 2026: Zero‑Downtime Agent Rollouts — Guide',
+    summary:
+      'Ship changes safely with canaries, shadow, eval gates, and auto‑rollback backed by signed evidence.'
+  },
+  {
     slug: 'ai-2026-agent-evidence-bundles-blueprint',
     title: 'AI 2026: Agent Evidence Bundles — Blueprint',
     summary:
@@ -336,6 +348,19 @@ const posts = [
     title: 'AI 2026: Autonomous Finance Operating System',
     summary:
       'Real-time cash, autonomous close, and policy-as-code guardrails.'
+  }
+  ,
+  {
+    slug: 'ai-2026-autonomous-change-approvals-blueprint',
+    title: 'AI 2026: Autonomous Change Approvals — Blueprint',
+    summary:
+      'Policy‑as‑code approvals with eval gates, evidence bundles, and rollback safety nets.'
+  },
+  {
+    slug: 'ai-2026-real-time-agent-benchmark-suite-1-0',
+    title: 'AI 2026: Real‑Time Agent Benchmark Suite v1.0 — Launch',
+    summary:
+      'Scenario‑driven benchmarks for quality, safety, latency, and cost with CI/CD gates.'
   }
   ,
   {
