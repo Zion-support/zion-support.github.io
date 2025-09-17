@@ -1,22 +1,22 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const FiveGTechnologyAndItsImpactOnIotChat: NextPage = () => {
+const 5g-technology-and-its-impact-on-iot-chat: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>5G Technology and its Impact on IoT - Zion Tech Solutions</title>
-        <meta name="description" content="5G Technology and its Impact on IoT blog post" />
-      </Head>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>5g-technology-and-its-impact-on-iot-chat | Zion Tech Group</title>
+        <meta name="description" content="5g-technology-and-its-impact-on-iot-chat - Revolutionary technology solutions" />
+      </Helmet>
       
-      <main>
-        <h1>5G Technology and its Impact on IoT</h1>
-        <p>Blog content coming soon...</p>
-        <Link href="/blog">Back to Blog</Link>
-      </main>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">5g-technology-and-its-impact-on-iot-chat</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default FiveGTechnologyAndItsImpactOnIotChat;
+export default 5g-technology-and-its-impact-on-iot-chat;

@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "No upstream configured for current branch.",
+  ],
+  "checks": {
+    "user": {
+      "name": "Cursor Agent",
+      "email": "cursoragent@cursor.com"
+    },
+    },
+    "working": "clean"
+  }
+}

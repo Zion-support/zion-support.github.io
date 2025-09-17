@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-05T15:58:44.701Z",
+  "totalDuration": "130s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 52674,
+      "errors": []
+    },
+    "typescriptFix": {
+      "success": true,
+      "duration": 12508,
+      "errors": []

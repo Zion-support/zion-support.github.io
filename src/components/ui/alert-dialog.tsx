@@ -1,0 +1,17 @@
+
+const AlertDialog = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">AlertDialog</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+};
+
+export default AlertDialog;
+
+=======
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f

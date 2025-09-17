@@ -1,11 +1,9 @@
 import fs from "fs";
 import { glob } from "glob";
-
 function fixUtilsFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
-
     // Fix common patterns in utils files
     content = content.replace(
       /export,\s*interface,\s*([^{]+)\s*{;/g,
@@ -28,11 +26,9 @@ function fixUtilsFile(filePath) {
       /if\s*\(!\s*([^)]+)\s*\)\s*retu,\s*r,\s*n\s*([^;]+);/g,
       "if (!$1) return $2;",
     );
-
     // Fix string literals
     content = content.replace(/'([^']+),\s*([^']+)'/g, "'$1 $2'");
     content = content.replace(/"([^"]+),\s*([^"]+)"/g, '"$1 $2"');
-
     // Fix variable names
     content = content.replace(/ht,\s*m,\s*l/g, "html");
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
@@ -53,7 +49,6 @@ function fixUtilsFile(filePath) {
     content = content.replace(/Obje,\s*c,\s*t/g, "Object");
     content = content.replace(/defineProper,\s*t,\s*y/g, "defineProperty");
     content = content.replace(/Even,\s*t/g, "Event");
-
     // Fix type annotations
     content = content.replace(/stri,\s*n,\s*g/g, "string");
     content = content.replace(/numb,\s*e,\s*r/g, "number");
@@ -119,7 +114,6 @@ function fixUtilsFile(filePath) {
     );
     content = content.replace(/supabaseMiddleware/g, "supabaseMiddleware");
     content = content.replace(/au,\s*t,\s*h/g, "auth");
-
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
       console.log(`Fixed: ${filePath}`);
@@ -131,20 +125,16 @@ function fixUtilsFile(filePath) {
     return false;
   }
 }
-
 async function fixAllUtilsFiles() {
   const files = await glob("utils/**/*.{ts,tsx}", {
     ignore: ["node_modules/**", ".next/**"],
   });
-
   let fixedCount = 0;
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++;
     }
   }
-
   console.log(`Fixed ${fixedCount} utils files.`);
 }
-
 fixAllUtilsFiles();
