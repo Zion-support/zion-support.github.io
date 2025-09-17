@@ -1,5 +1,7 @@
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import Link from 'next/link';
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 import Link from 'next/link';
 import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
 =======
@@ -23,6 +25,7 @@ import QuantumAI2026RevolutionBanner from './components/QuantumAI2026RevolutionB
 import AI2030FutureInnovationBanner from './components/AI2030FutureInnovationBanner';
 import InterdimensionalTech2037Banner from './components/InterdimensionalTech2037Banner';
 import QuantumConsciousness2036Banner from './components/QuantumConsciousness2036Banner';
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -38,8 +41,9 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
-      {/* New Promos: Newly published on Sept 16, 2025 */}
-      <section className="py-6 bg-gradient-to-r from-emerald-50 to-emerald-100/30">
+          </div>
+        </div>
+      </section>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/blog/ai-2026-eval-gated-safety-scorecards" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
@@ -549,17 +553,12 @@ export default function HomePage() {
       {/* New Promo: Reliable Upgrades + Release Scorecards (Sept 16, 2025) */}
 =======
       {/* Promo: Real-Time RAG + Autonomous Ops (New) */}
+>>>>>>> origin/feat/realtime-rag-content
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Real‑Time RAG + Autonomous Ops</h2>
-              <p className="text-gray-600 mt-2">Low‑latency retrieval architectures and an ops playbook for safe autonomy.</p>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Real‑Time RAG</Link>
-              <Link href="/content/ai-2026-real-time-rag-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">RAG Blueprint</Link>
             </div>
           </div>
         </div>
@@ -580,14 +579,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-=======
-      
-      {/* NEW: Enhanced Content Promotion Banner 2025 */}
-      <NewContentPromotionBanner2025 />
-      
-      {/* NEW: Ultimate Content Showcase 2025 */}
-      <UltimateContentShowcase2025 />
-
       {/* New Promo: Agent Platform SLOs (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -598,6 +589,7 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">A concise SLO set for safety, quality, reliability, and cost—ready to adopt.</p>
             </div>
             <div className="flex gap-3">
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
               <Link href="/blog/ai-2026-agent-slo-blueprint" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Guide</Link>
               <Link href="/blog/ai-2026-agent-slo-blueprint" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">SLO Blueprint</Link>
@@ -621,6 +613,7 @@ export default function HomePage() {
         </div>
       </section>
       
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -685,7 +678,10 @@ export default function HomePage() {
         <NewContent2025UltimateShowcaseBanner />
         {/* New Multimodal Agents 2025 Banner - NEW */}
         <NewMultimodalAgents2025Banner />
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
         {/* Promo: Fresh Content */}
         <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -700,22 +696,6 @@ export default function HomePage() {
                 <Link href="/content/ai-2026-reliability-checklists" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Reliability Checklists</Link>
                 <Link href="/content/ai-2026-evals-maturity-model" className="hidden md:inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evals Maturity</Link>
               </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      {/* New Promo: Agentic Sandbox Patterns (Sept 2025) */}
-      <section className="py-8 bg-gradient-to-r from-violet-50 to-indigo-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
-            <div>
-              <p className="text-sm font-semibold text-indigo-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Agentic Sandbox Patterns</h2>
-              <p className="text-gray-600 mt-2">Isolation domains, least privilege, and runtime guards for safe tool use.</p>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/blog/ai-2026-agentic-sandbox-patterns" className="inline-block bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-indigo-700">Read Overview</Link>
-              <Link href="/content/ai-2026-secure-tooling-permissions-blueprint" className="inline-block border border-indigo-600 text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50">Permissions Blueprint</Link>
             </div>
           </div>
         </div>
@@ -1019,55 +999,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* New Content Promo: Safe Change Management + Evaluation Cookbook (Sept 2025) */}
-      <section className="py-6">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow border border-gray-100">
-            <div>
-              <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Safe Change Management + Evaluation Cookbook</h2>
-              <p className="text-gray-600 mt-2">Eval‑gated releases, progressive delivery, and ready‑to‑use scenario recipes.</p>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/blog/ai-2026-safe-change-management-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Safe Change</Link>
-              <Link href="/blog/ai-2026-evaluation-cookbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Cookbook</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* New Promo: Eval‑Gated Release Runbook (NEW) */}
-      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
-            <div>
-              <p className="text-sm font-semibold text-purple-700">New blog</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Eval‑Gated Release Runbook</h2>
-              <p className="text-gray-600 mt-2">Step‑by‑step SOP for safe, evidence‑led agent releases.</p>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/blog/ai-2026-eval-gated-release-runbook" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Runbook</Link>
-              <Link href="/blog/ai-2026-release-scorecards" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Scorecards</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* New Promo: Live Evals in Production (Sept 2025) */}
-      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
-            <div>
-              <p className="text-sm font-semibold text-purple-700">New content</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Live Evals in Production — Practical Guide</h2>
-              <p className="text-gray-600 mt-2">Instrument, gate, and govern with live evaluations to ship safer and faster.</p>
-            </div>
-            <div className="flex gap-3">
-              <Link href="/blog/ai-2026-live-evals-in-production-practical-guide" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
-            </div>
-          </div>
-        </div>
-      </section>
       
       <div className='min-h-screen bg-white'>
         {/* New Multimodal Agents 2025 Banner - NEW */}
@@ -1112,7 +1043,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
@@ -1181,8 +1114,10 @@ export default function HomePage() {
                 <p className="text-gray-600 max-w-2xl">How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.</p>
               </div>
               <div className="shrink-0">
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
                 <Link href="/blog/ai-2025-enterprise-ai-agents-breakthrough" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
                 <Link href="/blog/ai-2026-multimodal-agents-enterprise-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
               </div>
             </div>
@@ -1320,8 +1255,10 @@ export default function HomePage() {
               <Link href="/blog/ai-2026-secure-agent-routing-strategies" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
               <Link href="/content/ai-2026-agent-incident-response-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Related Playbook</Link>
                 <Link href="/blog/ai-2025-enterprise-ai-agents-breakthrough" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
         {/* New Content Promo: Autonomous Enterprise Blueprint 2026 */}
         <section className="py-6 bg-gradient-to-r from-green-50 to-emerald-50">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">
               <div>
@@ -1330,7 +1267,11 @@ export default function HomePage() {
                 <p className="text-gray-600 mt-2">A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.</p>
               </div>
               <Link href="/blog/ai-2026-autonomous-enterprise-blueprint" className="shrink-0 inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700">
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
                 Read the Blueprint →
               </Link>
             </div>
@@ -1369,6 +1310,9 @@ export default function HomePage() {
           </div>
         </section>
 
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/feature/content-sep-2025
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
 
@@ -1378,6 +1322,7 @@ export default function HomePage() {
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
             <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div>
                 <div className="text-sm font-semibold text-teal-700 mb-2">New Blueprint</div>
@@ -1387,27 +1332,11 @@ export default function HomePage() {
               <div className="shrink-0">
                 <Link href="/content/ai-2026-operational-evals-blueprint" className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700">Read Blueprint</Link>
               </div>
-                <div className="text-sm font-semibold text-blue-700 mb-2">Article</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Edge AI Agents: Real-Time Autonomy</h3>
-                <p className="text-gray-600 mb-4">Unlock ultra-low-latency decisioning and control with edge-native agents.</p>
-                <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Article →</Link>
-              </article>
-              <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">GenAI Governance 2026</h3>
-                <p className="text-gray-600 mb-4">Policies, controls, and guardrails for safe and compliant GenAI at scale.</p>
-                <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold hover:text-indigo-900">Read Framework →</Link>
-              </article>
-              <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-green-700 mb-2">Guide</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Agent Observability 2026</h3>
-                <p className="text-gray-600 mb-4">Metrics, traces, and evals to ship reliable agentic systems.</p>
-                <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold hover:text-green-900">Read Guide →</Link>
               </article>
             </div>
           </div>
         </section>
-
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
 =======
@@ -1430,6 +1359,7 @@ export default function HomePage() {
         <AI2026ContentShowcaseBanner />
 
         
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
 
@@ -1460,8 +1390,12 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
 
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 =======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1535,7 +1469,6 @@ export default function HomePage() {
         <EnhancedContentPromotionBanner2026 />
         <ComprehensiveContentShowcase2026 />
         <FeaturedContentShowcase2026 />
-        {/* NewContentPromotionBanner temporarily removed */}
         <ComprehensiveSolutionsBanner2025 />
         <NewServicesShowcase2025 />
         <NewContent2026Showcase />
@@ -1568,4 +1501,6 @@ export default function HomePage() {
               <div className="shrink-0">
                 <Link href="/content/ai-2026-operational-evals-blueprint" className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700">Read Blueprint</Link>
               </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
 =======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

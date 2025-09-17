@@ -7,67 +7,6 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-  // Added 2025-09-15 (latest content)
-  {
-    title: 'Launch: AI Autonomous Workflow Engine v1.0',
-    summary:
-      'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
-    href: '/updates/ai-autonomous-workflow-engine-1-0',
-  },
-  // Added 2025-09-15 (new content for homepage promotion)
-  {
-    title: 'Launch: Autonomous Incident Simulation Toolkit v1.1',
-    summary:
-      'New real-time scenarios, eval-gated rollbacks, and signed evidence exports to drill agent safety.',
-    href: '/updates/incident-simulation-toolkit-1-1',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Evaluating Real-Time Retrieval in Production (2026)',
-    summary:
-      'Streaming metrics, budgeted latency, and rollout playbooks to harden real-time retrieval.',
-    href: '/updates/evaluating-real-time-retrieval-2026',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  // Added 2025-09-15 (brand new content)
-  {
-    title: 'Launch: Autonomous Data Quality Copilot 1.0',
-    summary:
-      'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
-    href: '/updates/autonomous-data-quality-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  // Added 2025-09-15 (new content created now)
-  {
-    title: 'Launch: Autonomous Security Copilot v1.0',
-    summary:
-      'Proactive threat modeling, policy-aware detections, and incident evidence bundles for AI systems.',
-    href: '/updates/autonomous-security-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Guide: Production Guardrails for Tool Use (2026)',
-    summary:
-      'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
-    href: '/updates/production-guardrails-tool-use-2026',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  // Added 2025-09-15 (brand new content)
-  {
-    title: 'Launch: AI Governance Dashboard v5',
-    summary:
-      'Cross-env policy posture, eval gates, exception workflows, and signed audit evidence with exportable trails. Faster, deeper integrations.',
-    href: '/updates/ai-governance-dashboard-v5',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  // Added 2025-09-15 (brand new content)
-  {
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -76,58 +15,9 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-    title: 'Launch: Autonomous Analytics Copilot v1.0',
     summary:
       'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Launch: Autonomous Innovation Hub v1.0',
-    summary:
-      'Unified workspace with blueprints, live eval gates, and policy‑as‑code to accelerate safe AI launches.',
-    href: '/updates/autonomous-innovation-hub-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Report: AI 2026 Platform Readiness Checklist',
-    summary:
-      'Engineer-ready checklist across data, governance, evals, and observability to ship enterprise AI safely.',
-    href: '/updates/ai-2026-platform-readiness-checklist',
-    date: '2025-09-15',
-    tag: 'Report'
-  },
-  {
-    title: 'Guide: Evaluating Agent Runbooks with Live E2E Evals',
-    summary:
-      'How to score and harden operational runbooks using real traffic, guardrails, and rollout gates.',
-    href: '/updates/agent-runbooks-live-evals',
-    date: '2025-09-15',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: AI Platform 2.0',
-    summary:
-      'Realtime reasoning, tool-use, retrieval observability, and eval-backed releases baked in.',
-    href: '/updates/ai-platform-2-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  {
-    title: 'Customer Win: Finance - MTTR -42%',
-    summary:
-      'How a Fortune 100 finance org cut MTTR and boosted FCR with real-time RAG + guardrails.',
-    href: '/updates/customer-win-finance',
-    date: '2025-09-15',
-    tag: 'Case Study'
-  },
-  {
-    title: 'Launch: Agentic Ops Control Center (v1.0)',
-    summary:
-      'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
-    href: '/updates/agentic-ops-control-center-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -137,15 +27,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Exec-ready strategy copilot that drafts roadmaps, OKRs, and investment memos grounded in telemetry and benchmarks.',
     href: '/updates/autonomous-strategy-copilot-1-0',
-    date: '2025-09-15',
-    tag: 'Launch'
-  },
-  // Added 2025-09-15 (latest)
-  {
-    title: 'Launch: Autonomous Decision Engine v1.0',
-    summary:
-      'Policy-aware agent decisioning with eval gates, budgets, and signed evidence for every action.',
-    href: '/updates/autonomous-decision-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
