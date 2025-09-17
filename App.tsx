@@ -17,20 +17,6 @@ function App() {
     <Router>
       <div className="min-h-screen bg-white">
         <ScrollToTop />
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer />
-        <SEOOptimizer />
-        <MobileOptimizer />
-        <ModernSEOOptimizer />
-        <ModernMobileOptimizer />
-        <EnhancedAccessibilityPanel />
-        <ModernPerformanceMonitor />
-        <PerformanceDashboard />
-        <AdvancedPerformanceOptimizer2025 />
-        <AdvancedSEOOptimizer2025 />
-        <AdvancedAnalyticsTracker2025 />
-        <EnhancedAccessibility2025 />
-        <MobileOptimizer2025 />
         <Header />
 
         <Routes>
