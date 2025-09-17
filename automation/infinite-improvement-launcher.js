@@ -235,7 +235,6 @@ class InfiniteImprovementLauncher {
    */
   displayStatus() {
     console.log('\n📊 System Status:');
-    console.log('================');
     console.log(`🔄 Status: ${this.isRunning ? 'Running' : 'Stopped'}`);
     console.log(`⏰ Started: ${this.startTime?.toISOString() || 'N/A'}`);
     console.log(`🎯 Infinite Loop: ${this.improvementLoop ? 'Active' : 'Inactive'}`);
@@ -251,7 +250,6 @@ class InfiniteImprovementLauncher {
     console.log('\n🔗 Access Points:');
     console.log(`📊 Dashboard: http://localhost:${this.config.dashboardPort}`);
     console.log(`🔍 Improvement Monitor: http://localhost:${this.config.improvementPort}`);
-    console.log('================\n');
   }
 
   /**

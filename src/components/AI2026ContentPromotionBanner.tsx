@@ -1,54 +1,12 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-const AI2026ContentPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 4);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const features = [
-    {
-      icon: "🧠",
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces for unprecedented control",
-      link: "/ai-2026-neural-interface-revolution"
-    },
-    {
-      icon: "⚡",
-      title: "Quantum Neural Fusion",
-      description: "Quantum-enhanced AI for exponential processing power",
-      link: "/ai-2026-quantum-neural-fusion-revolution"
-    },
-    {
-      icon: "🚀",
-      title: "Next-Gen Automation",
-      description: "Autonomous systems that think and adapt independently",
-      link: "/ai-2026-next-generation-business-automation"
-    },
-    {
-      icon: "🔮",
-      title: "Future Predictions",
-      description: "AI-powered forecasting with 99.9% accuracy",
-      link: "/ai-2026-future-predictions-breakthrough"
-    }
-  ];
-
+const AI2026ContentPromotionBanner: React.FC = () => {
   return (
     <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
         <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       </div>
       
       {/* Floating Particles */}
@@ -94,12 +52,12 @@ const AI2026ContentPromotionBanner = () => {
                 <p className="text-gray-300 text-center mb-4">
                   {feature.description}
                 </p>
-                <Link
+                <a
                   href={feature.link}
                   className="block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300"
                 >
                   Explore →
-                </Link>
+                </a>
               </div>
             </div>
           ))}
@@ -114,12 +72,12 @@ const AI2026ContentPromotionBanner = () => {
             <p className="text-xl text-gray-200 mb-6">
               {features[currentFeature].description}
             </p>
-            <Link
+            <a
               href={features[currentFeature].link}
               className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Discover More →
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -141,12 +99,12 @@ const AI2026ContentPromotionBanner = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Link
+          <a
             href="/ai-2026-future-predictions-breakthrough"
             className="inline-block px-12 py-6 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-bold text-xl rounded-full hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
           >
             Start Your AI 2026 Journey →
-          </Link>
+          </a>
         </div>
       </div>
     </div>

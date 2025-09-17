@@ -1,321 +1,81 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles
-  Rocket
-  Zap
-  Brain
-  Globe
-  Target,
-  ArrowRight,
-  Play,
-  Star,
-  TrendingUp,
-  Users,
-  Award
-} from 'lucide-react';
-
-const RevolutionaryContentBanner2025 = () => {
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const slides = [
-    {
-      id: 1,
-      title: "AI-Powered Content Revolution",
-      subtitle: "Transform Your Digital Presence",
-      description: "Experience the future of content creation with our revolutionary AI technology that generatesoptimizesand personalizes content at scale.",
-      features: ["Automated content generation"Real-time optimization"Multi-platform distribution"Performance analytics"],
-      color: "from-blue-600 via-purple-600 to-pink-600",
-      icon: Brain
-    },
-    {
-      id: 2,
-      title: "Quantum Content Intelligence",
-      subtitle: "Next-Generation Processing",
-      description: "Harness the power of quantum computing to process and analyze content with unprecedented speed and accuracy.",
-      features: ["Quantum processing"Instant analysis"Predictive insights"Global scalability"],
-      color: "from-purple-600 via-pink-600 to-red-600",
-      icon: Zap
-    },
-    {
-      id: 3,
-      title: "Autonomous Content Ecosystem",
-      subtitle: "Self-Managing Digital Assets",
-      description: "Create a fully autonomous content ecosystem that managesupdatesand optimizes itself without human intervention.",
-      features: ["Self-optimization"Automatic updates"Smart distribution"Continuous learning"],
-      color: "from-green-600 via-teal-600 to-cyan-600",
-      icon: Globe
-    }
-  ];
-
-  const stats = [
-    { label: "Content Generated"value: "1M+"icon: Target },
-    { label: "Active Users"value: "500K+"icon: Users },
-    { label: "Performance Boost"value: "300%"icon: TrendingUp },
-    { label: "Success Rate"value: "99.9%"icon: Award }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
+const RevolutionaryContentBanner2025: React.FC = () => {
   return (
-    <motion.div
-      className="relative py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-    >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-          variants={itemVariants}
-        >
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Sparkles className="w-5 h-5 text-blue-400" />
-            <span className="text-blue-300 font-medium">Revolutionary Content 2025</span>
-          </motion.div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Content Revolution
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Starts Here
-            </span>
-          </h1>
-          
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the most advanced content creation and management platform 
-            powered by cutting-edge AI technology that transforms how you create
-            distributeand optimize digital content.
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            ⚡ REVOLUTIONARY CONTENT • JANUARY 2025
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary Technology Content
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Experience the most advanced technology content featuring breakthrough innovations and cutting-edge solutions
           </p>
-        </motion.div>
-
-        {/* Stats Section */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-          variants={itemVariants}
-        >
-          {stats.map((statindex) => (
-            <motion.div
-              key={index}
-              className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
-              whileHover={{ scale: 1.05y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Main Content Carousel */}
-        <motion.div
-          className="relative mb-16"
-          variants={itemVariants}
-        >
-          <div className="relative h-96 md:h-[500px] rounded-3xl overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].color} flex items-center`}
-                initial={{ opacity: 0x: 100 }}
-                animate={{ opacity: 1x: 0 }}
-                exit={{ opacity: 0x: -100 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  {/* Content */}
-                  <div className="text-white">
-                    <motion.div
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-6"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      <slides[currentSlide].icon className="w-5 h-5" />
-                      <span className="font-medium">{slides[currentSlide].subtitle}</span>
-                    </motion.div>
-                    
-                    <motion.h2
-                      className="text-4xl md:text-6xl font-bold mb-6"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                    >
-                      {slides[currentSlide].title}
-                    </motion.h2>
-                    
-                    <motion.p
-                      className="text-xl text-white/90 mb-8 leading-relaxed"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 }}
-                    >
-                      {slides[currentSlide].description}
-                    </motion.p>
-                    
-                    <motion.div
-                      className="space-y-3 mb-8"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5 }}
-                    >
-                      {slides[currentSlide].features.map((featureidx) => (
-                        <div key={idx} className="flex items-center gap-3">
-                          <Star className="w-5 h-5 text-yellow-400" />
-                          <span className="text-white/90">{feature}</span>
-                        </div>
-                      ))}
-                    </motion.div>
-                    
-                    <motion.div
-                      className="flex flex-col sm:flex-row gap-4"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.6 }}
-                    >
-                      <motion.button
-                        className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Play className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                        Get Started Now
-                        <motion.div
-                          className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-                          whileHover={{ scale: 1.1 }}
-                        />
-                      </motion.button>
-                      
-                      <motion.button
-                        className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white/30 hover:border-white/60 hover:bg-white/10 transition-all duration-300"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        Learn More
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                      </motion.button>
-                    </motion.div>
-                  </div>
-                  
-                  {/* Visual Element */}
-                  <motion.div
-                    className="relative"
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={{ opacity: 1scale: 1 }}
-                    transition={{ delay: 0.4duration: 0.6 }}
-                  >
-                    <div className="relative w-full h-80 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8">
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl"></div>
-                      <div className="relative z-10 h-full flex flex-col justify-center items-center text-white">
-                        <slides[currentSlide].icon className="w-24 h-24 mb-6 text-white/80" />
-                        <div className="text-center">
-                          <div className="text-2xl font-bold mb-2">Interactive Demo</div>
-                          <div className="text-white/70">Experience the power</div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-            
-            {/* Navigation Dots */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
-              {slides.map((_index) => (
-                <button
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentSlide === index 
-                      ? 'bg-white scale-125' 
-                      : 'bg-white/40 hover:bg-white/60'
-                  }`}
-                  onClick={() => setCurrentSlide(index)}
-                />
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Call to Action Section */}
-        <motion.div
-          className="text-center"
-          variants={itemVariants}
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-blue-500/30">
-            <h3 className="text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Your Content?
-            </h3>
-            <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
-              Join thousands of creatorsmarketersand businesses who are already 
-              using our revolutionary AI technology to create extraordinary content 
-              and achieve unprecedented results.
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🔮</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Reality Manipulation</h3>
+            <p className="text-indigo-100 mb-4 text-sm text-center">
+              Technology that can manipulate the fundamental fabric of reality itself
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
-                className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Rocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                Start Your Revolution
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
-                  whileHover={{ scale: 1.1 }}
-                />
-              </motion.button>
-              
-              <motion.button
-                className="group relative inline-flex items-center gap-3 px-10 py-5 bg-transparent text-white font-semibold rounded-full border-2 border-white/30 hover:border-white/60 hover:bg-white/10 transition-all duration-300 text-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Brain className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
-                Explore Features
-              </motion.button>
+            <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
+              Explore Reality →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🧬</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Neural Interfaces</h3>
+            <p className="text-purple-100 mb-4 text-sm text-center">
+              Direct brain-computer interfaces for thought-controlled technology
+            </p>
+            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+              Connect Mind →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">⚡</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Quantum Teleportation</h3>
+            <p className="text-cyan-100 mb-4 text-sm text-center">
+              Instantaneous matter transportation using quantum entanglement
+            </p>
+            <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              Teleport Now →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🌌</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
+            <p className="text-emerald-100 mb-4 text-sm text-center">
+              Computing that exists across multiple realities and dimensions
+            </p>
+            <a href="/pages/NextGenInnovationHub2025" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+              Enter Dimensions →
+            </a>
+          </div>
+        </div>
+        
+        <div className="text-center mt-8">
+          <div className="inline-flex items-center space-x-4">
+            <div className="text-sm opacity-80">Revolutionary Features:</div>
+            <div className="flex space-x-2">
+              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Reality Control</span>
+              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Mind Interface</span>
+              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Tech</span>
+              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Multi-Dimensional</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

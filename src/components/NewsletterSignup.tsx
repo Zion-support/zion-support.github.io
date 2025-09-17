@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -11,63 +10,16 @@ const NewsletterSignup: React.FC = () => {
     setIsLoading(true);
     
     // Simulate API call
-<<<<<<< HEAD
-    await new Promise(resolve => setTimeout(resolve1000));
-    
-    setIsSubscribed(true);
-    setIsSubmitting(false);
-    setEmail(', ');
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-
-const NewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulate API call
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
     setTimeout(() => {
       setIsSubscribed(true);
       setIsLoading(false);
       setEmail('');
     }, 2000);
-<<<<<<< HEAD
-e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
   };
 
   if (isSubscribed) {
     return (
-<<<<<<< HEAD
-      <div className={`text-center p-6 bg-green-50 border border-green-200 rounded-lg ${className}`}>
-        <div className="text-green-600 text-4xl mb-4">✅</div>
-        <h3 className="text-lg font-semibold text-green-800 mb-2">Successfully Subscribed!</h3>
-        <p className="text-green-700">Thank you for joining our newsletter. 'You', 'll receive our latest AI insights and updates.</p>
-      </div>
-    );
-  }
-
-  if (variant === 'hero') {
-    return (
-      <div className={`bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-2xl ${className}`}>
-        <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold mb-4">🚀 Stay Ahead with AI Insights</h2>
-          <p className="text-xl opacity-90 mb-6">
-            Get exclusive access to breakthrough AI contentcase studiesand implementation guides.
-          </p>
-        </div>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
         className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-center text-white"
       >
         <div className="text-6xl mb-4">🎉</div>
@@ -75,15 +27,13 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
         <p className="text-lg opacity-90">
           You're now subscribed to our exclusive newsletter. Get ready for the latest breakthroughs in AI, quantum computing, and neural interfaces.
         </p>
-      </motion.div>
+      </div>
     );
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
+    <div
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
       className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden"
     >
       {/* Background Effects */}
@@ -102,10 +52,6 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
           </p>
         </div>
 
-<<<<<<< HEAD
-e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col sm:flex-row gap-4">
             <input
@@ -151,18 +97,8 @@ e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
           </div>
         </div>
       </div>
-    </motion.div>
-  );
-<<<<<<< HEAD
-}
-    </motion.div>
+    </div>
   );
 };
 
 export default NewsletterSignup;
-e4ce40ff9b3744a3e3b2e3431e3ef582b02351f7
-=======
-};
-
-export default NewsletterSignup;
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a

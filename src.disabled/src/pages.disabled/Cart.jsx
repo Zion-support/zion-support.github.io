@@ -37,6 +37,8 @@ export default function Cart({ }: CartProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/Cart.jsx
 }
 }

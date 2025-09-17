@@ -15,7 +15,6 @@ export const metadata = {;
 
 
 
->>>>>>> origin/final-merged-improvements
 
 
 };

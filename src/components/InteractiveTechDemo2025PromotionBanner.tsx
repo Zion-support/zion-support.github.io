@@ -1,118 +1,10 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Play
-  Pause
-  RotateCcw
-  Settings
-  Zap
-  Brain
-  Cpu
-  Database,
-  Cloud,
-  Smartphone,
-  Laptop,
-  Server,
-  Network,
-  Shield,
-  Target,
-  TrendingUp,
-  Users,
-  Globe,
-  Code,
-  Atom,
-  Rocket,
-  Star,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ArrowRight,
-  Download,
-  Share2,
-  Heart,
-  MessageCircle,
-  BookOpen,
-  Lightbulb,
-  X,
-  Eye,
-  MousePointer,
-  Monitor
-} from 'lucide-react';
-
-const InteractiveTechDemo2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [isPlayingsetIsPlaying] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Auto-advance demos
-    const interval = setInterval(() => {
-      setCurrentDemo((prev) => (prev + 1) % 4);
-    }3000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const demos = [
-    {
-      title: "AI Consciousness Evolution",
-      subtitle: "Experience Synthetic Intelligence",
-      description: "Interact with breakthrough AI systems achieving 99.7% consciousness accuracy in real-time neural pattern analysis.",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      metrics: "99.7% Accuracy • 8.9/10 Consciousness Index"
-    },
-    {
-      title: "Quantum Neural Fusion",
-      subtitle: "Witness Quantum Computing Power",
-      description: "See the first successful integration of quantum computing with neural networksachieving 1000x processing speed.",
-      icon: Atom,
-      color: "from-indigo-500 to-purple-500",
-      metrics: "1000x Speed • 99.8% Qubit Coherence"
-    },
-    {
-      title: "Brain-Computer Interface",
-      subtitle: "Direct Neural Communication",
-      description: "Control computing systems with your thoughts through our advanced BCI technology with 99.9% accuracy.",
-      icon: Cpu,
-      color: "from-green-500 to-teal-500",
-      metrics: "99.9% Accuracy • 12ms Response Time"
-    },
-    {
-      title: "Edge AI Processing",
-      subtitle: "Real-Time Distributed Intelligence",
-      description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,000+ processing nodes.",
-      icon: Network,
-      color: "from-blue-500 to-cyan-500",
-      metrics: "95% Latency Reduction • 10K+ Nodes"
-    }
-  ];
-
-  const features = [
-    { icon: Playtext: "Interactive Demos" },
-    { icon: Braintext: "AI Technologies" },
-    { icon: Atomtext: "Quantum Computing" },
-    { icon: Cputext: "Neural Interfaces" },
-    { icon: Networktext: "Edge Processing" },
-    { icon: Rocketext: "Future Tech" }
-  ];
-
-  if (isDismissed) return null;
-
+const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <div
           className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -125,11 +17,8 @@ const InteractiveTechDemo2025PromotionBanner = () => {
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex-1 pr-8">
-                <motion.div
+                <div
                   key={currentDemo}
-                  initial={{ opacity: 0x: 20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.5 }}
                   className="space-y-4"
                 >
                   {/* Badge */}
@@ -187,16 +76,13 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       Download SDK
                     </button>
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg:block flex-shrink-0">
-                <motion.div
+                <div
                   key={currentDemo}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  transition={{ duration: 0.5 }}
                   className="relative w-80 h-48"
                 >
                   {/* Demo Container */}
@@ -218,13 +104,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('AI Consciousness') && (
                           <div className="grid grid-cols-4 gap-2">
                             {[...Array(8)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
-                                animate={{
                                   scale: isPlaying ? [1.21] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
                                 }}
-                                transition={{
                                   duration: 2,
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.1
@@ -238,13 +122,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
                             {[...Array(4)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
-                                animate={{
                                   rotate: isPlaying ? 360 : 0,
                                   scale: isPlaying ? [1.1] : 1
                                 }}
-                                transition={{
                                   duration: 3,
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.2
@@ -262,13 +144,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
                             {[...Array(3)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
-                                animate={{
                                   scaleY: isPlaying ? [121] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
                                 }}
-                                transition={{
                                   duration: 1.5,
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.2
@@ -286,13 +166,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(6)].map((_, i) => (
-                              <motion.div
+                              <div
                                 key={i}
-                                animate={{
                                   scale: isPlaying ? [1.31] : 1,
                                   opacity: isPlaying ? [0.610.6] : 0.8
                                 }}
-                                transition={{
                                   duration: 2,
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.1
@@ -323,22 +201,18 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   </div>
 
                   {/* Floating Elements */}
-                  <motion.div
-                    animate={{ y: [0-10] }}
-                    transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
+                  <div
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    animate={{ y: [010] }}
-                    transition={{ duration: 2.5repeat: Infinityease: "easeInOut" }}
+                  <div
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
                     <MousePointer className="w-5 h-5 text-white" />
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -365,10 +239,11 @@ const InteractiveTechDemo2025PromotionBanner = () => {
           >
             <X className="w-5 h-5" />
           </button>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 
 export default InteractiveTechDemo2025PromotionBanner;
+</div></div></div></div></div></div>

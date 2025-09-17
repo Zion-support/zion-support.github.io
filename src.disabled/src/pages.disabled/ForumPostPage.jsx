@@ -37,6 +37,8 @@ export default function ForumPostPage({ }: ForumPostPageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ForumPostPage.jsx
 }
 }

@@ -1,48 +1,57 @@
-import React from 'react';
+import React from "react";
 
 const InnovativeServicesShowcase2025 = () => {
   return (
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Innovative Services Showcase 2025</h1>
-          <p className="text-xl text-gray-700">
-            Explore our comprehensive range of innovative technology services
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Innovative Services Showcase 2025
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Revolutionary technology solutions and insights for the future
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="text-4xl mb-4">🤖</div>
-            <h2 className="text-2xl font-bold mb-4">AI Solutions</h2>
-            <p className="text-gray-600">
-              Advanced artificial intelligence solutions for your business needs.
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-blue-300">AI Services</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced artificial intelligence solutions for modern businesses
             </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Machine Learning</li>
+              <li>• Natural Language Processing</li>
+              <li>• Computer Vision</li>
+            </ul>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="text-4xl mb-4">☁️</div>
-            <h2 className="text-2xl font-bold mb-4">Cloud Services</h2>
-            <p className="text-gray-600">
-              Scalable cloud infrastructure and deployment solutions.
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Quantum Computing</h3>
+            <p className="text-gray-300 mb-4">
+              Revolutionary quantum computing solutions for complex problems
             </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Quantum Algorithms</li>
+              <li>• Quantum Simulation</li>
+              <li>• Quantum Optimization</li>
+            </ul>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="text-4xl mb-4">🔒</div>
-            <h2 className="text-2xl font-bold mb-4">Security</h2>
-            <p className="text-gray-600">
-              Comprehensive cybersecurity solutions and protection.
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Neural Interfaces</h3>
+            <p className="text-gray-300 mb-4">
+              Direct brain-computer interface technology for the future
             </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Brain-Computer Interfaces</li>
+              <li>• Neural Signal Processing</li>
+              <li>• Thought-Controlled Systems</li>
+            </ul>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
         </div>
-      </div>
-    </div>
-  );
-};
-
-
-export default InnovativeServicesShowcase2025;
+        
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            View All Services
+          </button>

@@ -1,38 +1,33 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-c963
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-<<<<<<< HEAD
-=======
   const carouselItems = [
     {
       id: 1,
-      title: "AI Innovation Hub 2026",
-      description: "Explore cutting-edge AI technologies and breakthrough innovations",
-      image: "🧠",
+      title: "AI Innovation Hub",
+      description: "Discover cutting-edge AI technologies and applications",
+      image: "🤖",
       gradient: "from-purple-600 to-pink-600",
-      link: "/pages/AIInnovationHub2026"
+      link: "/pages/AIInnovationHub2025"
     },
     {
       id: 2,
-      title: "Quantum Computing Solutions",
-      description: "Revolutionary quantum computing solutions for complex problems",
+      title: "Quantum Computing Revolution",
+      description: "Discover the power of quantum computing and its applications",
       image: "⚛️",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumComputingSolutions2026"
+      gradient: "from-blue-600 to-cyan-600",
+      link: "/pages/QuantumComputingRevolution2026"
     },
     {
       id: 3,
       title: "Neural Interface Technology",
-      description: "Direct brain-computer interfaces for seamless interaction",
+      description: "Experience the future of brain-computer interfaces",
       image: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceTechnology2026"
+      gradient: "from-green-600 to-teal-600",
+      link: "/pages/NeuralInterfaceRevolution2026"
     },
     {
       id: 4,
@@ -41,114 +36,74 @@ const DynamicContentCarousel = () => {
       image: "📚",
       gradient: "from-indigo-600 to-purple-600",
       link: "/pages/AITransformationGuide2026"
-    },
-    {
-      id: 5,
-      title: "Transcendent AI 2031",
-      description: "Experience the next evolution of artificial intelligence",
-      image: "🌟",
-      gradient: "from-violet-600 to-fuchsia-600",
-      link: "/pages/TranscendentAI2031"
-    },
-    {
-      id: 6,
-      title: "Universal Tech Revolution 2032",
-      description: "Technology that transcends space, time, and reality itself",
-      image: "🌌",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/UniversalTechRevolution2032"
->>>>>>> cursor/create-and-deploy-new-content-c963
     }
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
     const interval = setInterval(() => {
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-            }`}
-          />
-        ))}
-=======
-    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
     }, 5000);
 
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, [carouselItems.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselItems.length) % carouselItems.length);
-  };
-
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-8">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="flex items-center justify-between"
-          >
-            <div className="flex-1 pr-8">
-              <div className="text-6xl mb-4">{carouselItems[currentSlide].image}</div>
-              <h3 className="text-3xl font-bold text-white mb-4">
-                {carouselItems[currentSlide].title}
-              </h3>
-              <p className="text-gray-300 text-lg mb-6">
-                {carouselItems[currentSlide].description}
-              </p>
-              <a
-                href={carouselItems[currentSlide].link}
-                className={`inline-block bg-gradient-to-r ${carouselItems[currentSlide].gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-              >
-                Explore Now →
-              </a>
-            </div>
-            <div className="flex-1">
-              <div className={`w-full h-64 bg-gradient-to-br ${carouselItems[currentSlide].gradient} rounded-xl flex items-center justify-center text-8xl`}>
-                {carouselItems[currentSlide].image}
+    <div className="py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Dynamic Content Carousel
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our latest technology content and insights
+          </p>
+        </div>
+
+        <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: 300 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -300 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
+                <div className="flex items-center justify-between">
+                  <div className="flex-1">
+                    <div className="text-6xl mb-4">{carouselItems[currentSlide].image}</div>
+                    <h3 className="text-4xl font-bold mb-4">{carouselItems[currentSlide].title}</h3>
+                    <p className="text-xl mb-6 max-w-2xl">{carouselItems[currentSlide].description}</p>
+                    <a
+                      href={carouselItems[currentSlide].link}
+                      className="inline-block bg-white text-gray-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                    >
+                      Explore Now →
+                    </a>
+                  </div>
+                  <div className="hidden md:block">
+                    <div className="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center">
+                      <span className="text-8xl">{carouselItems[currentSlide].image}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-        >
-          ←
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-        >
-          →
-        </button>
-
-        {/* Dots Indicator */}
+        {/* Navigation Dots */}
         <div className="flex justify-center mt-6 space-x-2">
           {carouselItems.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              className={`w-3 h-3 rounded-full transition-colors ${
+                currentSlide === index ? 'bg-purple-600' : 'bg-gray-300'
               }`}
             />
           ))}
         </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </div>
   );

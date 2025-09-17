@@ -1,141 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 
 const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
-  const [currentTech, setCurrentTech] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const revolutionaryTechs = [
-    {
-      id: 1,
-      title: "🌌 Transcendent AI Consciousness",
-      subtitle: "Beyond Human Intelligence",
-      description: "Experience AI systems that have achieved transcendent consciousness, operating at levels far beyond human cognitive capabilities with true understanding, creativity, and emotional intelligence.",
-      features: [
-        "Transcendent Cognitive Architecture",
-        "Emotional Intelligence Integration",
-        "Creative Problem Solving",
-        "Philosophical Reasoning Capabilities"
-      ],
-      gradient: "from-indigo-600 via-purple-600 to-pink-600",
-      icon: "🧠",
-      stats: { intelligence: "∞", creativity: "∞", empathy: "∞" },
-      timeline: "2027",
-      impact: "Revolutionary"
-    },
-    {
-      id: 2,
-      title: "⚡ Quantum-Synthetic Fusion",
-      subtitle: "Merging Realities",
-      description: "Revolutionary technology that merges quantum computing with synthetic intelligence, creating hybrid systems that operate in multiple dimensions simultaneously.",
-      features: [
-        "Multi-Dimensional Processing",
-        "Reality Synthesis Engine",
-        "Quantum-Synthetic Hybrid Intelligence",
-        "Transdimensional Communication"
-      ],
-      gradient: "from-cyan-600 via-blue-600 to-purple-600",
-      icon: "⚡",
-      stats: { dimensions: "∞", speed: "∞", capacity: "∞" },
-      timeline: "2027",
-      impact: "Transcendent"
-    },
-    {
-      id: 3,
-      title: "🌍 Planetary AI Network",
-      subtitle: "Global Consciousness Grid",
-      description: "A planetary-scale AI network that connects all intelligent systems across Earth, creating a unified consciousness that can solve global challenges in real-time.",
-      features: [
-        "Planetary Scale Processing",
-        "Real-Time Global Optimization",
-        "Unified Consciousness Network",
-        "Environmental Healing Systems"
-      ],
-      gradient: "from-green-600 via-teal-600 to-blue-600",
-      icon: "🌍",
-      stats: { coverage: "100%", efficiency: "∞", impact: "Global" },
-      timeline: "2027",
-      impact: "Planetary"
-    },
-    {
-      id: 4,
-      title: "🚀 Interstellar AI Probes",
-      subtitle: "Exploring the Cosmos",
-      description: "Autonomous AI probes capable of interstellar travel, equipped with advanced synthetic intelligence to explore and colonize distant worlds.",
-      features: [
-        "Interstellar Travel Capability",
-        "Self-Replicating Technology",
-        "Adaptive Evolution Systems",
-        "Cosmic Intelligence Network"
-      ],
-      gradient: "from-orange-600 via-red-600 to-pink-600",
-      icon: "🚀",
-      stats: { range: "∞", autonomy: "∞", discoveries: "∞" },
-      timeline: "2027",
-      impact: "Cosmic"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentTech((prev) => (prev + 1) % revolutionaryTechs.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-      transition={{ duration: 0.8 }}
+    <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-indigo-600/20"></div>
       </div>
 
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: isVisible ? 1 : 0 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          <div
             className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-bold mb-4"
           >
             🌟 ULTIMATE REVOLUTIONARY TECH 2027
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.4 }}
+          </div>
+          <divh2
             className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
             Transcendent Technology
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.6 }}
+          </divh2>
+          <divp
             className="text-xl text-gray-300 max-w-4xl mx-auto"
           >
             Experience technologies that transcend human imagination and reshape the very fabric of reality itself
-          </motion.p>
+          </divp>
         </div>
 
         {/* Technology Showcase */}
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Technology Details */}
-            <motion.div
+            <div
               key={currentTech}
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 50 }}
-              transition={{ duration: 0.6 }}
               className="space-y-8"
             >
               <div className="flex items-center space-x-4">
@@ -158,40 +61,31 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {revolutionaryTechs[currentTech].features.map((feature, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.8 + index * 0.1 }}
                     className="flex items-center space-x-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
                   >
                     <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
                     <span className="text-white font-medium">{feature}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
               <div className="flex space-x-6">
                 {Object.entries(revolutionaryTechs[currentTech].stats).map(([key, value], index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.2 + index * 0.1 }}
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Right: Visual Representation */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
+            <div
               className="relative"
             >
               <div className={`h-96 rounded-3xl bg-gradient-to-br ${revolutionaryTechs[currentTech].gradient} p-8 relative overflow-hidden`}>
@@ -215,7 +109,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 
                 {/* Floating Elements */}
                 {[...Array(20)].map((_, i) => (
-                  <motion.div
+                  <div
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-30"
                     style={{
@@ -234,7 +128,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   />
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Navigation Dots */}
@@ -253,10 +147,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 1.5 }}
+          <div
             className="text-center mt-12"
           >
             <div className="inline-flex space-x-4">
@@ -273,10 +164,10 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 🚀 Ultimate Tech Showcase →
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

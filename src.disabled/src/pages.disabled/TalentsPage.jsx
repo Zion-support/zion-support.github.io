@@ -37,6 +37,8 @@ export default function TalentsPage({ }: TalentsPageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/TalentsPage.jsx
 }
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function Placeholder() {
   return (
@@ -7,12 +7,9 @@ export default function Placeholder() {
       <Head>
         <title>Products - Placeholder</title>
         <meta name="robots" content="noindex" />
-      </Head>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-2xl font-semibold mb-2">Products</h1>
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/products</code>.</p>
-        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>
-      </div>
-    </main>
+        <a href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
   );
 }

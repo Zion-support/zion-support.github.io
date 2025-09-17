@@ -1,2 +1,12 @@
-import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+import React from 'react';
+
+const 404: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">404</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default 404;

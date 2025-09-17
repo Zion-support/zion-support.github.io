@@ -1,2 +1,12 @@
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;
-import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
+import React from 'react';
+
+const test: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">test</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default test;

@@ -32,21 +32,16 @@
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
                         {skill}
                       </Badge>;
-=======
                         {skill}
                       </Badge>
->>>>>>> origin/auto/autonomy-17186719616
                     ))}
                   </div>
                 </div>

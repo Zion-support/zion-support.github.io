@@ -37,6 +37,8 @@ export default function CommunityProfilePage({ }: CommunityProfilePageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/CommunityProfilePage.jsx
 }
 }

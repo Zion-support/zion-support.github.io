@@ -13,14 +13,11 @@ export default function LazyComponent({
   ...props 
 }: LazyComponentProps) {
   const LazyLoadedComponent = lazy(component);
-
   return (
     <Suspense fallback={fallback}>
       <LazyLoadedComponent {...props} />
-    </Suspense>
   );
 }
-
 // Pre-configured lazy components for common use cases
 export const LazyROICalculator = (props: any) => (
   <LazyComponent 
@@ -29,7 +26,6 @@ export const LazyROICalculator = (props: any) => (
     {...props}
   />
 );
-
 export const LazyStructuredData = (props: any) => (
   <LazyComponent 
     component={() => import('./StructuredData')} 
@@ -37,7 +33,6 @@ export const LazyStructuredData = (props: any) => (
     {...props}
   />
 );
-
 export const LazyInteractiveWidget = (props: any) => (
   <LazyComponent 
     component={() => import('./InteractiveContentDiscoveryWidget')} 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
   return (
@@ -7,7 +6,7 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,12 +38,12 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-300">18 min read</span>
-              <Link 
+              <a 
                 href="/blog/ai-2025-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence"
                 className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
               >
                 Read Breakthrough
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -61,12 +60,12 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-300">22 min read</span>
-              <Link 
+              <a 
                 href="/case-studies/global-enterprise-conscious-ai-transformation-2025-15-billion-roi"
                 className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
               >
                 Read Case Study
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -83,12 +82,12 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-300">25 min read</span>
-              <Link 
+              <a 
                 href="/blog/ai-2025-autonomous-business-revolution-complete-guide"
                 className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300"
               >
                 Get Complete Guide
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -104,12 +103,12 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
           <p className="text-gray-200 mb-6 max-w-2xl mx-auto">
             Calculate your potential ROI from AI transformation. Get personalized projections based on your industry, company size, and implementation approach.
           </p>
-          <Link 
+          <a 
             href="/resources/ai-transformation-roi-calculator-2025"
             className="inline-flex items-center bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300"
           >
             Calculate Your ROI
-          </Link>
+          </a>
         </div>
 
         {/* Call to Action */}
@@ -118,18 +117,18 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
             Ready to transform your business with neural consciousness AI?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
             >
               Schedule Consultation
-            </Link>
-            <Link
+            </a>
+            <a
               href="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
               Explore Services
-            </Link>
+            </a>
           </div>
         </div>
       </div>

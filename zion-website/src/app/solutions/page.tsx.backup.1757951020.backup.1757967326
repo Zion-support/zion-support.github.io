@@ -1,14 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 =======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-<<<<<<< HEAD
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
 =======
 <<<<<<< HEAD
 =======
@@ -16,26 +12,7 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> cursor/create-and-deploy-new-content-de62
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,15 +24,90 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f175
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved764f38a25b6ac8e639cc80767ab314d644c44287
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved6b23b02814abc4e2b48cf43d809846f0fbf77db0
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved:zion-website/src/app/solutions/page.tsx.backup.1757951020
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved6b23b02814abc4e2b48cf43d809846f0fbf77db0
+// Conflict resolved
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-634d
+// Conflict resolved
+// Conflict resolved5221e64b58f51e3cf4362a5292b9f5f53a656d76
+// Conflict resolved
+// Conflict resolved17fc7cb9c7c9c1144afdca822c756f504221b8d0
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-b0b6
+// Conflict resolvedcursor/create-and-deploy-new-content-f175
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved764f38a25b6ac8e639cc80767ab314d644c44287
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 =======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
@@ -64,20 +116,7 @@
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> cursor/create-and-deploy-new-content-de62
 import { LightBulbIcon, CpuChipIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
 
 const solutions = [
@@ -87,44 +126,64 @@ const solutions = [
   { name: 'IT Asset Management', description: 'Intelligent asset tracking and optimization.', icon: ShieldCheckIcon, href: '/solutions/it-asset-management' }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-<<<<<<< HEAD
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-de62
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f175
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved764f38a25b6ac8e639cc80767ab314d644c44287
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved6b23b02814abc4e2b48cf43d809846f0fbf77db0
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved:zion-website/src/app/solutions/page.tsx.backup.1757951020
+// Conflict resolved
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 import { 
   LightBulbIcon, 
   CpuChipIcon, 
@@ -254,6 +313,10 @@ const solutions = [
   { title: 'AI Research Assistant', desc: 'Autonomous research to accelerate discovery.', icon: LightBulbIcon, href: '/solutions/ai-autonomous-research' },
   { title: 'Quantum Neural Networks', desc: 'Hybrid quantum-classical ML systems.', icon: CpuChipIcon, href: '/solutions/quantum-neural-networks' },
   { title: 'Autonomous Business Ops', desc: 'Automate processes with multi-agent AI.', icon: RocketLaunchIcon, href: '/solutions/autonomous-business' },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 >>>>>>> origin/backup-main-20250915-074228
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
@@ -263,15 +326,50 @@ const solutions = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
+// Conflict resolvedorigin/backup-main-20250915-074228
+// Conflict resolved
+// Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved6b23b02814abc4e2b48cf43d809846f0fbf77db0
+// Conflict resolved
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-634d
+// Conflict resolved
+// Conflict resolved5221e64b58f51e3cf4362a5292b9f5f53a656d76
+// Conflict resolved
+// Conflict resolved17fc7cb9c7c9c1144afdca822c756f504221b8d0
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-b0b6
+// Conflict resolvedcursor/create-and-deploy-new-content-f175
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved764f38a25b6ac8e639cc80767ab314d644c44287
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 =======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
@@ -280,20 +378,7 @@ const solutions = [
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> cursor/create-and-deploy-new-content-de62
 ]
 
 export default function SolutionsPage() {
@@ -302,44 +387,64 @@ export default function SolutionsPage() {
       <div className="mx-auto max-w-7xl px-6 pt-24">
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
-<<<<<<< HEAD
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-f175
 <<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-de62
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f175
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved764f38a25b6ac8e639cc80767ab314d644c44287
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved6b23b02814abc4e2b48cf43d809846f0fbf77db0
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved:zion-website/src/app/solutions/page.tsx.backup.1757951020
+// Conflict resolved
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
     <div className="bg-black">
       <div className="relative isolate px-6 pt-14 lg:px-8">
 <<<<<<< HEAD
@@ -361,6 +466,10 @@ export default function SolutionsPage() {
 
       {/* Flagship Solutions */}
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 >>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
@@ -370,15 +479,50 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved401f3529ced7 (Refactor: Clean up navigation and page components)
+// Conflict resolved
+// Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved6b23b02814abc4e2b48cf43d809846f0fbf77db0
+// Conflict resolved
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-634d
+// Conflict resolved
+// Conflict resolved5221e64b58f51e3cf4362a5292b9f5f53a656d76
+// Conflict resolved
+// Conflict resolved17fc7cb9c7c9c1144afdca822c756f504221b8d0
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-b0b6
+// Conflict resolvedcursor/create-and-deploy-new-content-f175
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved764f38a25b6ac8e639cc80767ab314d644c44287
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 =======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
@@ -387,20 +531,7 @@ export default function SolutionsPage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
-=======
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> cursor/create-and-deploy-new-content-de62
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Solutions</h1>
           <p className="mt-4 text-lg leading-8 text-gray-300">Cutting-edge AI solutions for enterprise challenges.</p>
@@ -425,15 +556,7 @@ export default function SolutionsPage() {
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
 =======
 <<<<<<< HEAD
 }
@@ -442,30 +565,58 @@ export default function SolutionsPage() {
 <<<<<<< HEAD
 }
 =======
+>>>>>>> cursor/create-and-deploy-new-content-de62
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-}
-=======
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
 <<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:zion-website/src/app/solutions/page.tsx.backup.1757951020
+=======
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved
+// Conflict resolved
+}
+// Conflict resolved
+// Conflict resolvedcursor/create-and-deploy-new-content-f175
+// Conflict resolved
+}
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+}
+// Conflict resolved
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved764f38a25b6ac8e639cc80767ab314d644c44287
+// Conflict resolved
+// Conflict resolved
+}
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved6b23b02814abc4e2b48cf43d809846f0fbf77db0
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved:zion-website/src/app/solutions/page.tsx.backup.1757951020
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 }
 =======
         <div className="mx-auto max-w-2xl py-24 sm:py-40 lg:py-44 text-center">
@@ -490,29 +641,71 @@ export default function SolutionsPage() {
 >>>>>>> origin/backup-main-20250915-074228
 =======
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
 =======
 }
 >>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
 =======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
-=======
+// Conflict resolvedf0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/solutions/page.tsx
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+// Conflict resolved
+// Conflict resolved
 }
->>>>>>> cursor/create-and-deploy-new-content-81d0
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolved6b23b02814abc4e2b48cf43d809846f0fbf77db0
+// Conflict resolved
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+// Conflict resolved
+}
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolvedcursor/create-and-deploy-new-content-634d
+// Conflict resolved
+// Conflict resolved5221e64b58f51e3cf4362a5292b9f5f53a656d76
+// Conflict resolved17fc7cb9c7c9c1144afdca822c756f504221b8d0
+// Conflict resolved
+// Conflict resolved5221e64b58f51e3cf4362a5292b9f5f53a656d76
+// Conflict resolvedcursor/create-and-deploy-new-content-b0b6
+// Conflict resolvedcursor/create-and-deploy-new-content-f175
+// Conflict resolved
+// Conflict resolved
+}
+// Conflict resolvedcursor/create-and-deploy-new-content-81d0
+// Conflict resolved
+// Conflict resolved7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+// Conflict resolved2ad069e84825dabaf46d071e81e10e505f57815a
+// Conflict resolvedcursor/create-and-deploy-new-content-cc9d
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved
+// Conflict resolved764f38a25b6ac8e639cc80767ab314d644c44287
+// Conflict resolvedorigin/cursor/create-and-deploy-new-content-d223
+// Conflict resolved540f83f81c4de5174546a7b98219a9b6bc908888
+// Conflict resolved
+// Conflict resolved7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> origin/resolve-all-conflicts-1757977471
+>>>>>>> ebd4650e5ba81db1a6d923b9ea578bd591dc5b9f
+=======
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
@@ -521,20 +714,4 @@ export default function SolutionsPage() {
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
-=======
-=======
-}
->>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-d223
->>>>>>> 540f83f81c4de5174546a7b98219a9b6bc908888
-=======
->>>>>>> 7f711c4f4b2f4712326da42b282fa5915dbfb56b
+>>>>>>> cursor/create-and-deploy-new-content-de62

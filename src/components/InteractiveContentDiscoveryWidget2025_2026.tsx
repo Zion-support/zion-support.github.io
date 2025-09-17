@@ -1,206 +1,10 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search
-  Filter
-  Grid
-  List
-  Star
-  Clock
-  TrendingUp,
-  ArrowRight,
-  Play,
-  Download,
-  Bookmark,
-  Share2,
-  Eye,
-  Heart,
-  MessageCircle,
-  Zap,
-  Brain,
-  Cpu,
-  Globe,
-  Rocket,
-  Shield,
-  Target,
-  Users,
-  ChevronDown,
-  X
-} from 'lucide-react';
-
-const InteractiveContentDiscoveryWidget2025_2026 = () => {
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [viewModesetViewMode] = useState('grid');
-  const [sortBysetSortBy] = useState('trending');
-  const [isFilterOpensetIsFilterOpen] = useState(false);
-  const [selectedContentsetSelectedContent] = useState(null);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Gridcount: 156 },
-    { id: 'ai-2025'name: 'AI 2025'icon: Braincount: 42 },
-    { id: 'ai-2026'name: 'AI 2026'icon: Cpucount: 38 },
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Zapcount: 24 },
-    { id: ''automation', 'name: ''Automation', 'icon: Targetcount: 32 },
-    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcount: 20 }
-  ];
-
-  const contentItems = [
-    {
-      id: 1,
-      title: 'Neural Consciousness AI: The Future is Here',
-      description: 'Explore the revolutionary AI systems that possess self-awareness and emotional intelligencetransforming how we interact with technology.',
-      category: 'ai-2025',
-      type: 'article',
-      readTime: '8 min read',
-      views: 12500,
-      likes: 892,
-      comments: 156,
-      trending: true,
-      featured: true,
-      image: '/api/placeholder/400/250',
-      author: 'Dr. Sarah Chen',
-      publishedAt: '2025-01-15',
-      tags: [', 'AI', 'Consciousness'Neural 'Networks', 'Future Tech']
-    },
-    {
-      id: 2,
-      title: 'Quantum-Neural Fusion: Computing Revolution',
-      description: 'Discover how quantum computing and neural networks are merging to create unprecedented computational power and intelligence.',
-      category: 'quantum',
-      type: 'video',
-      readTime: '15 min watch',
-      views: 8900,
-      likes: 654,
-      comments: 89,
-      trending: true,
-      featured: false,
-      image: '/api/placeholder/400/250',
-      author: 'Prof. Michael Rodriguez',
-      publishedAt: '2025-01-12',
-      tags: ['Quantum 'Computing', 'Neural 'Networks', 'AI'Technology']
-    },
-    {
-      id: 3,
-      title: 'AI 2026: Global Ecosystem Vision',
-      description: 'A comprehensive look at how AI will create a global ecosystem connecting businessesindividualsand machines worldwide.',
-      category: 'ai-2026',
-      type: 'interactive',
-      readTime: '12 min explore',
-      views: 15600,
-      likes: 1200,
-      comments: 234,
-      trending: false,
-      featured: true,
-      image: '/api/placeholder/400/250',
-      author: 'AI Research Team',
-      publishedAt: '2025-01-10',
-      tags: ['AI 2026'Global 'Ecosystem', 'Future 'Vision', 'Technology']
-    },
-    {
-      id: 4,
-      title: 'Autonomous Business Operations 2025',
-      description: 'Learn how AI is enabling fully autonomous business operationsfrom decision-making to customer service.',
-      category: 'automation',
-      type: 'guide',
-      readTime: '20 min read',
-      views: 7800,
-      likes: 567,
-      comments: 123,
-      trending: false,
-      featured: false,
-      image: '/api/placeholder/400/250',
-      author: 'Business AI Team',
-      publishedAt: '2025-01-08',
-      tags: [', 'Automation', 'Business', 'AI', 'Operations']
-    },
-    {
-      id: 5,
-      title: 'Space-Age AI Computing Systems',
-      description: 'Explore AI systems designed for space exploration and interplanetary communication.',
-      category: 'future-tech',
-      type: 'article',
-      readTime: '10 min read',
-      views: 11200,
-      likes: 789,
-      comments: 145,
-      trending: true,
-      featured: false,
-      image: '/api/placeholder/400/250',
-      author: 'Space Tech Division',
-      publishedAt: '2025-01-05',
-      tags: [', 'Space', 'AI', 'Computing', 'Future Tech']
-    },
-    {
-      id: 6,
-      title: 'Conscious AI Beings: The Next Frontier',
-      description: 'Understanding AI entities with full consciousness and creative capabilities.',
-      category: 'ai-2026',
-      type: 'video',
-      readTime: '18 min watch',
-      views: 9800,
-      likes: 723,
-      comments: 167,
-      trending: false,
-      featured: true,
-      image: '/api/placeholder/400/250',
-      author: 'Consciousness Research Lab',
-      publishedAt: '2025-01-03',
-      tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy']
-    }
-  ];
-
-  const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const sortedContent = [...filteredContent].sort((ab) => {
-    switch (sortBy) {
-      case 'trending':
-        return b.views - a.views;
-      case 'newest':
-        return new Date(b.publishedAt) - new Date(a.publishedAt);
-      case 'popular':
-        return b.likes - a.likes;
-      default:
-        return 0;
-    }
-  });
-
-  const getTypeIcon = (type) => {
-    switch (type) {
-      case 'video': return Play;
-      case 'interactive': return Zap;
-      case 'guide': return Bookmark;
-      default: return Eye;
-    }
-  };
-
-  const getCategoryIcon = (categoryId) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Grid;
-  };
-
+const InteractiveContentDiscoveryWidget2025_2026: React.FC = () => {
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
+      <div
         className="mb-8"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -209,13 +13,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
         <p className="text-gray-300 text-lg">
           Explore cutting-edge AI researchbreakthrough technologiesand future innovations
         </p>
-      </motion.div>
+      </div>
 
       {/* Search and Filters */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6delay: 0.2 }}
+      <div
         className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
       >
         <div className="flex flex-col lg:flex-row gap-4">
@@ -281,31 +82,24 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             </button>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Content Grid */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={isVisible ? { opacity: 1 } : {}}
-        transition={{ duration: 0.6delay: 0.4 }}
+      <div
         className={`grid gap-6 ${
           viewMode === 'grid' 
             ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}
       >
-        <AnimatePresence>
+        <div>
           {sortedContent.map((itemindex) => {
             const TypeIcon = getTypeIcon(item.type);
             const CategoryIcon = getCategoryIcon(item.category);
             
             return (
-              <motion.div
+              <div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 group cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -447,26 +241,20 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                     </div>
                   </>
                 )}
-              </motion.div>
+              </div>
             );
           })}
-        </AnimatePresence>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Content Detail Modal */}
-      <AnimatePresence>
+      <div>
         {selectedContent && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedContent(null)}
           >
-            <motion.div
-              initial={{ scale: 0.8opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8opacity: 0 }}
+            <div
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -533,10 +321,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 };

@@ -1,10 +1,3 @@
-// Cart utilities for managing shopping cart functionality
-
-export const cartUtils = {
-  // Add item to cart
-  addItem: (cart, item) => {
-    const existingItem = cart.find(cartItem => cartItem.id === item.id);
-    
     if (existingItem) {
       return cart.map(cartItem =>
         cartItem.id === item.id
@@ -12,61 +5,23 @@ export const cartUtils = {
           : cartItem
       );
     }
-    
-    return [...cart, { ...item, quantity: 1 }];
-  },
-  
-  // Remove item from cart
   removeItem: (cart, itemId) => {
     return cart.filter(item => item.id !== itemId);
   },
   
-  // Update item quantity
   updateQuantity: (cart, itemId, quantity) => {
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
-    
     return cart.map(item =>
       item.id === itemId ? { ...item, quantity } : item
     );
   },
   
-<<<<<<< HEAD
-  // Clear cart
-  clearCart: () => {
-    return [];
-=======
-  // Get total price
-  getTotalPrice: (cart) => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
-  },
-  
-  // Get total items count
   getTotalItems: (cart) => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   },
   
-<<<<<<< HEAD
-  // Get total price
-  getTotalPrice: (cart) => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-=======
-  // Clear cart
-  clearCart: () => {
-    return [];
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
-  },
-  
-  // Check if item is in cart
-  isInCart: (cart, itemId) => {
-    return cart.some(item => item.id === itemId);
-  },
-  
-  // Get item from cart
-  getItem: (cart, itemId) => {
-    return cart.find(item => item.id === itemId);
   }
 };
 

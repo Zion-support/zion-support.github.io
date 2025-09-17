@@ -1,11 +1,19 @@
-import React from 'react.ts';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const ITOnsiteServices: React.FC = (): JSX.Element => {
+const ITOnsiteServices: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-8">
-      <div className="max-w-3xl text-center text-white">
-        <h1 className="text-4xl font-bold mb-4">IT Onsite Services</h1>
-        <p className="text-lg text-gray-300">Professional onsite support for deployments, maintenance, and troubleshooting.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ITOnsiteServices | Zion Tech Group</title>
+        <meta name="description" content="ITOnsiteServices - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ITOnsiteServices</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
   );

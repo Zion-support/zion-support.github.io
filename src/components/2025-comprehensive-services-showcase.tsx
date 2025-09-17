@@ -1,80 +1,6 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Building, Target, Cpu, Shield, 
-  Check, Phone, Mail, MapPin,
-  TrendingUp, Zap, Globe
-} from 'lucide-react';
+import React from 'react';
 
-// Import our new service data
-import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
-import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
-import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
-import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
-
-const ComprehensiveServicesShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState('all');
-
-// Helper function to get service pricing
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
-  return 'Contact for pricing';
-};
-
-// Helper function to get service features
-const getServiceFeatures = (service: any) => {
-  return service.keyFeatures || service.features || [];
-};
-
-// Helper function to get service setup time
-const getServiceSetupTime = (service: any) => {
-  if (service.setupTime) return service.setupTime;
-  if (service.pricing?.setupTime) return service.pricing.setupTime;
-  if (service.price?.setupTime) return service.price.setupTime;
-  return 'N/A';
-};
-
-// Helper function to get service trial days
-const getServiceTrialDays = (service: any) => {
-  if (service.trialDays) return service.trialDays;
-  if (service.pricing?.trialDays) return service.pricing.trialDays;
-  if (service.price?.trialDays) return service.price.trialDays;
-  return 'N/A';
-};
-
-// All services combined
-const allServices = [
-  ...advancedAIMLServices,
-  ...advancedCybersecurityServices,
-      ...advancedCloudDevOpsServices2025,
-  ...industrySpecificSolutions,
-  ...emergingTechnologyServices
-];
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
-    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },
-    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },
-    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },
-    { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }
-  ];
-
-  const filteredServices = activeTab === 'all' 
-    ? allServices 
-    : allServices.filter(service => {
-        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics');
-        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation');
-        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure');
-        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS');
-        if (activeTab === 'ai-services') return service.category?.includes('AI Services');
-        return true;
-      });
-
+const 2025-comprehensive-services-showcase: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEO 
@@ -87,10 +13,7 @@ const allServices = [
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -110,7 +33,7 @@ const allServices = [
                 Enterprise Ready
               </span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -167,11 +90,8 @@ const allServices = [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
@@ -263,26 +183,19 @@ const allServices = [
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Services Display */}
-          <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
-              <motion.div 
+              <div 
                 key="grid"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {filteredServices.map((service, index) => (
-                  <motion.div
+                  <div
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
                   >
                     {/* Service Header */}
@@ -409,11 +322,11 @@ const allServices = [
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
+          </div>
 
           {/* No Results */}
           {filteredServices.length === 0 && (
@@ -441,10 +354,8 @@ const allServices = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -454,12 +365,10 @@ const allServices = [
               <p className="text-gray-600">
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -469,12 +378,10 @@ const allServices = [
               <p className="text-gray-600">
                 Bank-grade security and compliance for mission-critical business applications
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <div
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -484,7 +391,7 @@ const allServices = [
               <p className="text-gray-600">
                 Cloud-native solutions that scale globally with enterprise-grade reliability
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

@@ -1,9 +1,6 @@
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -24,15 +21,12 @@
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
-=======
 import type { BookProject } from '../book/bookTypes';
 
 export function buildPrintableHtml(project: BookProject): string {
@@ -96,23 +90,44 @@ export function buildPrintableHtml(project: BookProject): string {
   ${chapterHtml}
   ${visualsHtml}
 </body>
+  .cover h1 { font-size: 40px, margin: 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .cover .by { margin-top: 24px, color: #666   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .barcode { margin-top: 24px, height: 64px   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .chapter { break-before: page   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .chapter h2 { font-size: 28px, margin: 0 0 12px 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .visual { break-inside: avoid, margin: 12px 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  .visual img { max-width: 100%, height: auto   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+</style>;
+</head>;
+<body>;
+  <section class="cover">;<div>${escapeHtml(meta.publisher || '')}</div>;
+    <h1>${escapeHtml(meta.title)}</h1>;
+    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
+    <div class="by">By ${escapeHtml(meta.author)}</div>;
+    ${barcode  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  </section>;
+  ${quotesHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  ${chapterHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+  ${visualsHtml  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}
+</body>;
 </html>`;
 }
-
-function paragraphize(text: string): string {
-  if (!text) return '';
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n');
-}
-
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
->>>>>>> origin/auto/autonomy-17186719616

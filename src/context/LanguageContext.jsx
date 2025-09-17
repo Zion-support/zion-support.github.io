@@ -1,60 +1,12 @@
-import React, { createContext, useContext, useState } from 'react';
+import React from 'react';
 
-const LanguageContext = createContext();
-
-<<<<<<< HEAD
-=======
-export const LanguageProvider = ({ children, authState }) => {
-  const [language, setLanguage] = useState('en');
-  const [isLanguageDetected, setIsLanguageDetected] = useState(false);
-
-  const changeLanguage = (newLanguage) => {
-    setLanguage(newLanguage);
-  };
-
-  const value = {
-    language,
-    changeLanguage,
-    isLanguageDetected,
-    setIsLanguageDetected,
-    authState,
-  };
-
+const LanguageContext= () => {
   return (
-    <LanguageContext.Provider value={value}>
-      {children}
-    </LanguageContext.Provider>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LanguageContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 
->>>>>>> cursor/create-and-deploy-new-content-c963
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-};
-
-export const LanguageProvider = ({ children, authState }) => {
-  const [language, setLanguage] = useState('en');
-  const [isLanguageDetected, setIsLanguageDetected] = useState(false);
-
-  const changeLanguage = (newLanguage) => {
-    setLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage);
-  };
-
-  const value = {
-    language,
-    changeLanguage,
-    isLanguageDetected,
-    setIsLanguageDetected,
-    authState
-  };
-
-  return (
-    <LanguageContext.Provider value={value}>
-      {children}
-    </LanguageContext.Provider>
-  );
+export default LanguageContext;

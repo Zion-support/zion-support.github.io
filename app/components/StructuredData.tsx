@@ -1,21 +1,11 @@
 import React from 'react';
 
-interface StructuredDataProps {
-  type: string;
-  data: any;
-}
-
-const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data
-  };
-
+const StructuredData: React.FC = () => {
   return (
-    <script
-      type="application/ld+json"
-    />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">StructuredData</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

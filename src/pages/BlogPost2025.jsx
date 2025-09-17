@@ -1,39 +1,58 @@
-import React from 'react';
+import React from "react";
 
 const BlogPost2025 = () => {
   return (
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-100 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Blog Post 2025</h1>
-          <p className="text-xl text-gray-700">
-            Latest insights and updates from our technology experts
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Blog 2025
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Stay updated with the latest insights and trends in revolutionary technology
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-3xl font-bold mb-4">Technology Trends 2025</h2>
-            <p className="text-gray-600 mb-6">
-              Discover the most significant trends shaping our digital future in 2025.
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-blue-300">AI Innovation</h3>
+            <p className="text-gray-300 mb-4">
+              Explore the latest breakthroughs in artificial intelligence and machine learning
             </p>
-            <div className="prose max-w-none">
-              <p>
-                The technology landscape continues to evolve at an unprecedented pace. 
-                From artificial intelligence to quantum computing, we're witnessing 
-                revolutionary changes that will reshape industries and transform how 
-                we work and live.
-              </p>
-            </div>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Neural network advancements</li>
+              <li>• Deep learning applications</li>
+              <li>• AI ethics and governance</li>
+            </ul>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
+          
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Quantum Computing</h3>
+            <p className="text-gray-300 mb-4">
+              Discover the future of computing with quantum technologies
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Quantum algorithms</li>
+              <li>• Quantum cryptography</li>
+              <li>• Quantum machine learning</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Blockchain</h3>
+            <p className="text-gray-300 mb-4">
+              Learn about decentralized technologies and their applications
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Smart contracts</li>
+              <li>• DeFi protocols</li>
+              <li>• NFT innovations</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default BlogPost2025;

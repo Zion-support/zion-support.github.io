@@ -1,16 +1,12 @@
 // @ts-nocheck
 import React from 'react';
+import Link from 'next/link';
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
-  const features = [
-    {
-      icon: "🤖",
-      title: "AI-Powered Intelligence",
-      description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
       features: [
         "ZionGPT Core Integration",
-        "Resume Builder + Proposal AI",
+        "Resume Builder + Proposal AI", 
         "Autonomous Decision Engine",
         "AI Moderation System"
       ],
@@ -76,8 +72,7 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ];
-
+  ],
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -92,12 +87,15 @@ export default function HomePage() {
               <span className="text-white">AI-Powered Digital Economies</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click.
               Built for the future of decentralized business.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+import React from 'react';
               <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <Link href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
@@ -112,28 +110,19 @@ export default function HomePage() {
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
+              </Link>
+              </a>
+              <a href="/news" className="btn-secondary hover-lift">
+                📰 See what's new in 2025
+              </a>
+              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
+                ✅ New: AI Safety & Governance 2025
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-=======
-<<<<<<< HEAD
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
-=======
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
->>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
@@ -142,36 +131,6 @@ export default function HomePage() {
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
-=======
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> cursor/create-and-deploy-new-content-2def
->>>>>>> cursor/create-and-deploy-new-content-7857
-=======
-<<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> origin/cursor/create-and-deploy-new-content-7e3a
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -213,6 +172,114 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Latest News */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest News</h2>
+            <p className="text-white/70 max-w-2xl mx-auto">Product releases, research updates, and ecosystem highlights.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'AI Governance Blueprint 2025',
+                summary: 'New enterprise governance model for responsible AI and autonomy.',
+                href: '/blog/ai-governance-blueprint-2025'
+              },
+              {
+                title: 'Zion OS v2.5 Released',
+                summary: 'Performance boosts, analytics dashboards, and security hardening.',
+                href: '/news/v2-5-release-notes'
+              },
+              {
+                title: 'Autonomous IT Case Study',
+                summary: 'How Zion OS cut infrastructure costs by 40% for a global enterprise.',
+                href: '/case-studies/autonomous-it-40-cost-reduction'
+              }
+            ].map((item) => (
+              <div key={item.title} className="glass-effect rounded-2xl p-6 hover-lift">
+                <h3 className="text-2xl font-semibold mb-2">
+                  <a href={item.href} className="hover:underline">
+                    {item.title}
+                  </a>
+                </h3>
+                <p className="text-white/70">{item.summary}</p>
+                <a href={item.href} className="inline-block mt-4 text-blue-400 hover:text-blue-300">Read more →</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Teaser */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold">Latest News</h2>
+            <Link href="/news" className="text-blue-400 hover:text-blue-300">View all →</Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/news/ai-business-intelligence-platform-launch" className="card group">
+              <div className="w-full h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl mb-4 flex items-center justify-center">
+                <span className="text-blue-400 text-4xl">BI</span>
+              </div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="bg-blue-500/20 text-blue-400 text-xs font-bold px-2 py-1 rounded-full">LAUNCH</span>
+                <span className="text-gray-400 text-sm">Dec 15, 2024</span>
+              </div>
+              <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                AI-Powered Business Intelligence Platform Launch
+              </h3>
+              <p className="text-gray-400 mt-2 line-clamp-2">
+                Real-time insights, predictive analytics, and automated decision support for enterprises.
+              </p>
+            </Link>
+
+            <Link href="/news/quantum-error-correction-breakthrough" className="card group">
+              <div className="w-full h-40 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl mb-4 flex items-center justify-center">
+                <span className="text-purple-400 text-4xl">QC</span>
+              </div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="bg-purple-500/20 text-purple-400 text-xs font-bold px-2 py-1 rounded-full">QUANTUM</span>
+                <span className="text-gray-400 text-sm">Dec 12, 2024</span>
+              </div>
+              <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
+                Quantum Error Correction Breakthrough
+              </h3>
+              <p className="text-gray-400 mt-2 line-clamp-2">
+                New algorithm cuts logical error rates by up to 60% across NISQ devices.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Updates Teaser */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Latest Updates</h2>
+            <p className="text-xl text-white/70">Fresh news from our product, research, and community</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[ 
+              { title: 'Zero-trust orchestration added across all deployments', href: '/news/zero-trust-orchestration-release', date: 'Sep 14, 2025' },
+              { title: 'Multi-region failover achieves 99.995% uptime', href: '/news/multi-region-failover-uptime', date: 'Sep 10, 2025' },
+              { title: 'Zion Academy: AI Governance Blueprint Level II', href: '/news/academy-ai-governance-blueprint-l2', date: 'Sep 06, 2025' },
+            ].map(item => (
+              <a key={item.href} href={item.href} className="group block p-6 rounded-2xl glass-effect hover-lift">
+                <div className="text-sm text-white/60 mb-2">{item.date}</div>
+                <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">{item.title}</h3>
+                <div className="mt-4 text-blue-400 text-sm font-medium">Read more →</div>
+              </a>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <a href="/news" className="btn-secondary">View all updates</a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -223,7 +290,26 @@ export default function HomePage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
+            <div className="mb-8">
+              <p className="text-lg text-blue-300 mb-4">📚 Latest: AI Governance Blueprint 2025</p>
+              <a href="/blog/ai-governance-blueprint-2025" className="text-blue-400 hover:text-blue-300 underline">
+                Read our comprehensive guide to dual-layer policy for safe autonomy →
+              </a>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
+              <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
+                🚀 Start Building Now
+              </a>
+              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📊 Explore Examples
+              </a>
+              </Link>
+              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Operating Systems
+              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Blueprint 2025
+              </a>
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
               </a>
@@ -369,14 +455,19 @@ export default function HomePage() {
   ];
 
   return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default page;
     <div className="min-h-screen">
       {/* Promo: Latest Article */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
-=======
->>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
@@ -423,6 +514,14 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                features={feature.features}
+                gradient={feature.gradient}
+              />
             ))}
           </div>
         </div>
@@ -445,16 +544,12 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
               </a>
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
-=======
->>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             </div>
           </div>
         </div>
@@ -513,6 +608,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 

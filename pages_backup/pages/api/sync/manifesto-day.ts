@@ -70,9 +70,7 @@ export default async function handler(req, res) {
     version
     timestamp: timestamp |Date.now()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
@@ -205,12 +203,10 @@ if (headers["x - zion - signature"] = sig) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 

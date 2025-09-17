@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const featuredContent = [
   {
@@ -63,76 +63,57 @@ const featuredContent = [
 export default function FeaturedContentCarousel() {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [isAutoPlayingsetIsAutoPlaying] = useState(true);
-
   // Auto-advance carousel
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
       );
     }5000);
-
     return () => clearInterval(interval);
   }[isAutoPlaying]);
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
     setIsAutoPlaying(false);
   };
-
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1
     );
     setIsAutoPlaying(false);
   };
-
   const prevSlide = () => {
     setCurrentIndex((prevIndex => 
       prevIndex === 0 ? featuredContent.length - 1 : prevIndex - 1
     ));
     setIsAutoPlaying(false);
   };
-
   const currentContent = featuredContent[currentIndex];
-
   return (
     <section className="relative py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Featured Revolutionary Content
-          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover our latest breakthrough technologies and revolutionary solutions
-          </p>
-        </div>
-
         {/* Carousel Container */}
         <div className="relative">
           {/* Main Content Card */}
           <div className={`bg-gradient-to-r ${currentContent.gradient} rounded-3xl p-8 md:p-12 text-white overflow-hidden relative`}>
             {/* Background Pattern */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-            
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
             <div className="relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 {/* Content */}
                 <div>
                   <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${currentContent.badgeColor} text-white text-sm font-semibold mb-6 animate-pulse`}>
                     {currentContent.badge}
-                  </div>
-                  
                   <h3 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                     {currentContent.title}
-                  </h3>
-                  
                   <p className="text-xl text-gray-300 mb-8">
                     {currentContent.description}
-                  </p>
-                  
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mb-8">
                     {currentContent.features.map((featureindex) => (
@@ -141,36 +122,22 @@ export default function FeaturedContentCarousel() {
                         className="bg-white/20 backdrop-blur-lg px-4 py-2 rounded-full text-sm font-semibold border border-white/30"
                       >
                         {feature}
-                      </span>
                     ))}
-                  </div>
-                  
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link 
+                    <a 
                       href={currentContent.href}
                       className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
                     >
                       Explore Now
-                    </Link>
-                    <Link 
+                    <a 
                       href="/contact"
                       className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
                     >
                       Get Started
-                    </Link>
-                  </div>
-                </div>
-                
                 {/* Image/Icon */}
                 <div className="text-center lg:text-right">
                   <div className="text-9xl mb-4 opacity-80">
                     {currentContent.image}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-center mt-8 space-x-4">
             <button
@@ -180,9 +147,6 @@ export default function FeaturedContentCarousel() {
             >
               <svg className="w-6 h-6 text-gray-600" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
             <button
               onClick={nextSlide}
               className="p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors"
@@ -190,10 +154,6 @@ export default function FeaturedContentCarousel() {
             >
               <svg className="w-6 h-6 text-gray-600" fill%3D%22none%22 stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center mt-6 space-x-2">
             {featuredContent.map((_index) => (
@@ -208,17 +168,13 @@ export default function FeaturedContentCarousel() {
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
-          </div>
-        </div>
-
         {/* All Content Grid */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">
             All Revolutionary Content
-          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredContent.map((content) => (
-              <Link
+              <a
                 key={content.id}
                 href={content.href}
                 className={`bg-gradient-to-r ${content.gradient} rounded-2xl p-6 text-white hover:scale-105 transition-all duration-300 transform`}
@@ -233,14 +189,9 @@ export default function FeaturedContentCarousel() {
                       className="bg-white/20 px-2 py-1 rounded-full text-xs font-semibold"
                     >
                       {feature}
-                    </span>
                   ))}
-                </div>
-              </Link>
             ))}
-          </div>
-        </div>
-      </div>
-    </section>
   );
-}
+};
+
+export default FeaturedContentCarousel;

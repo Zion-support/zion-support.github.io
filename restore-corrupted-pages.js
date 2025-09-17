@@ -37,32 +37,3 @@ function findBestBackup(pagePath) {
     } catch (error) {
       console.log(`Error reading backup ${backupPath}:`, error.message);
     }
-  }
-  
-  return null;
-}
-
-// Function to restore a corrupted page
-function restorePage(pagePath) {
-  try {
-    const currentContent = fs.readFileSync(pagePath, 'utf8');
-    
-    // Check if the page is corrupted
-    const isCorrupted = !currentContent.includes('export default') || 
-                        currentContent.length < 100 ||
-                        !currentContent.includes('return');
-    
-    if (!isCorrupted) {
-      return { restored: false, reason: 'Page is not corrupted' };
-    }
-    
-    // Find backup
-    const backupPath = findBestBackup(pagePath);
-    if (!backupPath) {
-      return { restored: false, reason: 'No valid backup found' };
-    }
-    
-    // Read backup content
-    let backupContent = fs.readFileSync(backupPath, 'utf8');
-    
-    // Handle merge conflicts by taking the content after the conflict markers

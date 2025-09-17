@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+=======
+    return price >= minPrice && price <= maxPrice;
+  });
+};
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

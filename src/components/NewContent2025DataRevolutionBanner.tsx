@@ -1,88 +1,11 @@
-"use client";
-import React{ useStateuseEffect } from 'react';
-import Link from 'next/link';
+import React from 'react';
 
-const NewContent2025DataRevolutionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentSlidesetCurrentSlide] = useState(0);
-
-  const contentItems = [
-    {
-      id: 'data-revolution-guide',
-      title: 'AI 2025: The Enterprise Data Revolution',
-      description: 'Complete guide to achieving 500% ROI with AI-powered data transformation',
-      type: 'Blog Post',
-      readingTime: '18 min read',
-      metrics: {
-        roi: '500%',
-        savings: '$2.8B',
-        accuracy: '99.7%',
-        speed: '1,200%'
-      },
-      url: '/blog/ai-2025-enterprise-data-revolution-ultimate-guide',
-      featured: true
-    },
-    {
-      id: 'fortune-500-case-study',
-      title: 'Fortune 500 Data Transformation Success',
-      description: 'How a global manufacturing giant achieved 500% ROI in 8 months',
-      type: 'Case Study',
-      readingTime: '12 min read',
-      metrics: {
-        roi: '500%',
-        savings: '$45M',
-        accuracy: '99.7%',
-        timeline: '8 months'
-      },
-      url: '/case-studies/fortune-500-data-transformation-500-roi-success',
-      featured: true
-    },
-    {
-      id: 'implementation-guide',
-      title: 'AI Data Transformation Implementation Guide',
-      description: 'Step-by-step guide from strategy to 500% ROI',
-      type: 'Resource',
-      readingTime: '25 min read',
-      metrics: {
-        success: '98%',
-        roi: '500%',
-        projects: '500+',
-        timeline: '12 months'
-      },
-      url: '/resources/ai-data-transformation-implementation-guide-2025',
-      featured: true
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentItems.length);
-    }5000);
-
-    return () => clearInterval(interval);
-  }[contentItems.length]);
-
-  const handleDismiss = () => {
-    setIsVisible(false);
-    localStorage.setItem('data-revolution-banner-'dismissed', 'true');
-  };
-
-  useEffect(() => {
-    const dismissed = localStorage.getItem('data-revolution-banner-dismissed');
-    if (dismissed === 'true') {
-      setIsVisible(false);
-    }
-  }[]);
-
-  if (!isVisible) return null;
-
-  const currentItem = contentItems[currentSlide];
-
+const NewContent2025DataRevolutionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-indigo-600/90">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       </div>
 
       <div className="relative z-10">
@@ -130,24 +53,24 @@ const NewContent2025DataRevolutionBanner = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
+                <a
                   href="/blog/ai-2025-enterprise-data-revolution-ultimate-guide"
                   className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Read Complete Guide
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/case-studies/fortune-500-data-transformation-500-roi-success"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   View Success Stories
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/resources/ai-data-transformation-implementation-guide-2025"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   Download Implementation Guide
-                </Link>
+                </a>
               </div>
             </div>
 

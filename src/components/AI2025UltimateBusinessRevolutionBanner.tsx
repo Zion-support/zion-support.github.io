@@ -1,13 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
 
-const AI2025UltimateBusinessRevolutionBanner = () => {
+const AI2025UltimateBusinessRevolutionBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 opacity-20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,24 +125,24 @@ const AI2025UltimateBusinessRevolutionBanner = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link
+            <a
               href="/blog/ai-2025-ultimate-business-revolution-complete-guide"
               className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-cyan-500 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 shadow-2xl"
             >
               Read Complete Guide →
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-white text-purple-900 px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-2xl"
             >
               Get Free Assessment
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/ai-roi-calculator"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:from-purple-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-2xl"
             >
               Calculate Your ROI
-            </Link>
+            </a>
           </div>
 
           {/* Trust Indicators */}

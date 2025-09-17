@@ -1,74 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 
-const SuccessStoriesShowcase = () => {
-  const stories = [
-    {
-      company: 'TechCorp Global',
-      industry: 'Technology',
-      challenge: 'Manual data processing taking 40+ hours weekly',
-      solution: 'Implemented AI-powered automation system',
-      results: {
-        timeSaved: '95%',
-        roi: '3,200%',
-        accuracy: '99.8%'
-      },
-      quote: 'Zion Tech Group transformed our entire operation. What used to take days now happens in minutes.',
-      author: 'Sarah JohnsonCEO',
-      logo: '🏢'
-    },
-    {
-      company: 'FinanceMax Solutions',
-      industry: 'Financial Services',
-      challenge: 'Risk assessment taking 2 weeks per client',
-      solution: 'Deployed quantum-enhanced analytics platform',
-      results: {
-        timeSaved: '90%',
-        roi: '4,500%',
-        accuracy: '99.9%'
-      },
-      quote: 'The quantum computing solutions gave us an edge that competitors simply cannot match.',
-      author: 'Michael ChenCTO',
-      logo: '💰'
-    },
-    {
-      company: 'HealthTech Innovations',
-      industry: 'Healthcare',
-      challenge: 'Patient data analysis bottleneck',
-      solution: 'Neural interface-powered diagnostic system',
-      results: {
-        timeSaved: '85%',
-        roi: '2,800%',
-        accuracy: '99.7%'
-      },
-      quote: 'Our diagnostic accuracy improved dramatically while reducing analysis time by 85%.',
-      author: 'Dr. Emily RodriguezChief Medical Officer',
-      logo: '🏥'
-    },
-    {
-      company: 'ManufacturingPlus',
-      industry: 'Manufacturing',
-      challenge: 'Production line optimization inefficiencies',
-      solution: 'Autonomous operations management system',
-      results: {
-        timeSaved: '92%',
-        roi: '5,100%',
-        accuracy: '99.9%'
-      },
-      quote: 'The autonomous systems run our production 24/7 with zero downtime. Incredible results.',
-      author: 'David ParkOperations Director',
-      logo: '🏭'
-    }
-  ];
-
+const SuccessStoriesShowcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
@@ -77,15 +13,12 @@ const SuccessStoriesShowcase = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Real businesses achieving extraordinary results with our revolutionary AI solutions. See how companies are transforming their operations and achieving unprecedented ROI.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {stories.map((storyindex) => (
-            <motion.div
+            <div
               key={story.company}
-              initial={{ opacity: 0x: index % 2 === 0 ? -30 : 30 }}
-              animate={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6delay: index * 0.2 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               {/* Company Header */}
@@ -130,15 +63,12 @@ const SuccessStoriesShowcase = () => {
                 <p className="text-gray-300 italic">"{story.quote}"</p>
                 <cite className="text-cyan-400 font-semibold">— {story.author}</cite>
               </blockquote>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Statistics Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <div
           className="bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12"
         >
           <h3 className="text-3xl font-bold text-center mb-8 text-white">
@@ -163,13 +93,10 @@ const SuccessStoriesShowcase = () => {
               <div className="text-gray-300">Time Savings</div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 1.0 }}
+        <div
           className="text-center"
         >
           <h3 className="text-3xl font-bold mb-4 text-white">
@@ -180,21 +107,21 @@ const SuccessStoriesShowcase = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <a 
               href="/case-studies" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold rounded-full text-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
             >
               📖 Read All Case Studies
-            </Link>
+            </a>
             
-            <Link 
+            <a 
               href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-full text-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
             >
               💬 Start Your Success Story
-            </Link>
+            </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

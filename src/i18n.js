@@ -8,11 +8,6 @@ const resources = {
   en: {
     translation: {
       welcome: 'Welcome',
-<<<<<<< HEAD
-=======
-      hello: 'Hello',
-      // Add more translations as needed
->>>>>>> cursor/create-and-deploy-new-content-c963
     }
   }
 };
@@ -25,10 +20,5 @@ i18n
     fallbackLng: 'en',
     debug: false,
     interpolation: {
-<<<<<<< HEAD
-=======
-      escapeValue: false,
-    },
->>>>>>> cursor/create-and-deploy-new-content-c963
   });
 

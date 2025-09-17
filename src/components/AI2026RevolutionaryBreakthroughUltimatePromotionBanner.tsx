@@ -1,13 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
-ArrowRightBrainZapTargetTrendingUpUsersGlobeAward
 
-const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = () => {
+const AI2026RevolutionaryBreakthroughUltimatePromotionBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,37 +162,37 @@ const AI2026RevolutionaryBreakthroughUltimatePromotionBanner = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
+            <a
               href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center"
             >
               Read the Complete Guide
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/tools/ai-readiness-assessment"
               className="bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center"
             >
               Free AI Readiness Assessment
               <Brain className="w-5 h-5 ml-2" />
-            </Link>
+            </a>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/tools/ai-roi-calculator"
               className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
             >
               Calculate Your AI ROI
               <TrendingUp className="w-4 h-4 ml-2" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center"
             >
               Schedule Consultation
               <Users className="w-4 h-4 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
 

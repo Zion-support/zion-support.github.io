@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
   Menu, 
   X, 
@@ -16,11 +15,9 @@ import {
   Linkedin, 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 
 import React, { useState } from './react';
 import Link from './next / link';
-import { motion, AnimatePresence  } from './framer-motion';
 
 import {
   Menu,
@@ -65,7 +62,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 import {
 origin/automation-improvements-final
 
@@ -96,22 +92,12 @@ import SearchModal from "./SearchModal";
 
 origin/main
 export default function Navigation() {
-
-
-
-
-
-
-
-
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
 } from './lucide-react';
 import SearchModal from "./SearchModal";
 ;
@@ -145,7 +131,6 @@ function Navigation() {
       description: "Custom SaaS Solutions",
       icon: Zap,
     },
-
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -165,7 +150,6 @@ function Navigation() {
       icon: Shield
     }
   ];
-
 ;
   const solutions = [;
     {
@@ -174,7 +158,6 @@ function Navigation() {
       description: "Large - scale business solutions",
       icon: Building,
     },
-
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -182,7 +165,6 @@ function Navigation() {
       icon: Zap
     }
     {
-
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -261,7 +243,6 @@ function Navigation() {
       href: "/tutorials",
       description: "Step - by - step guides",
     },
-
     {
       name: "Training"
       href: "/training"
@@ -274,8 +255,6 @@ function Navigation() {
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
-
-
   const services = [;
     {;
       name: "AI Services",;
@@ -425,12 +404,8 @@ function Navigation() {
     { name: "Contact", href: "/contact" },;
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
-
   ];
-
-
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-
   return (
     <>;
       {/* Top Bar */}
@@ -447,7 +422,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
-
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -464,7 +438,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   <Twitter className="w-4 h-4" />;
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
-                  <Linkedin className="w-4 h-4" />;
+                  <aedin className="w-4 h-4" />;
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
                   <Instagram className="w-4 h-4" />;
@@ -511,19 +485,17 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   <Twitter className="w - 4 h - 4" />;
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
-                  <Linkedin className="w - 4 h - 4" />;
+                  <aedin className="w - 4 h - 4" />;
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
-
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-
-            <Link href="/" className="flex items-center space-x-2">;
+            <a href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
               </div>;
@@ -537,7 +509,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         <div className="container mx-auto px-4">;
           <div className="flex justify-between items-center py-4">;
             {/* Logo */}
-            <Link href="/" className="flex items - center space - x-2">;
+            <a href="/" className="flex items - center space - x-2">;
               <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
                 <span className="text - white font - bold text - xl">Z</span>;
               </div>;
@@ -546,17 +518,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - gray - 500">;
-
                   Technology Solutions;
                 </div>;
               </div>;
-            </Link>;
-
+            </a>;
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
-              </Link>;
-
-
+              </a>;
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -567,12 +535,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Services;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <AnimatePresence>;
+                <div>;
                   {isServicesOpen && (;
-                    <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -582,12 +547,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           const IconComponent = service && service.icon;
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items - center space - x-8">;
-              <Link;
+              <a;
                 href="/";
                 className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
               >;
                 Home;
-              </Link>;
+              </a>;
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button;
@@ -598,12 +563,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Services;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <AnimatePresence>;
+                <div>;
                   {isServicesOpen && (
-                    <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -612,13 +574,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                         {services.map ((service, index) => {
                           const IconComponent = service.icon;
                           return (
-                            <Link;
+                            <a;
                               key={index}
-
-                </AnimatePresence>;
+                </div>;
               </div>;
-
-
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -629,12 +588,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Solutions;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <AnimatePresence>;
+                <div>;
                   {isSolutionsOpen && (;
-                    <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -654,20 +610,20 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                               <div className="text - sm text - gray - 500">;
                                 {service.description}
                               </div>;
-                            </Link>);
+                            </a>);
                         })}
                       </div>;
                       <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
-                        <Link;
+                        <a;
                           href="/services";
                           className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
                         >;
                           View All Services;
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                        </Link>;
+                        </a>;
                       </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
+                    </div>)}
+                </div>;
               </div>;
               {/* Solutions Dropdown */}
               <div className="relative group">;
@@ -679,12 +635,9 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Solutions;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <AnimatePresence>;
+                <div>;
                   {isSolutionsOpen && (
-                    <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -693,13 +646,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                         {solutions.map ((solution, index) => {
                           const IconComponent = solution.icon;
                           return (
-                            <Link;
+                            <a;
                               key={index}
-
-                </AnimatePresence>;
+                </div>;
               </div>;
-
-
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -710,19 +660,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Industries;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <AnimatePresence>;
+                <div>;
                   {isIndustriesOpen && (;
-                    <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
                     >;
                       <div className="px-6">;
                         {industries && industries.map((industry, index) => (;
-                          <Link
+                          <a
                             key={index}
                             href={industry && industry.href}
                             className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group">;
@@ -732,16 +679,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <div className="text-sm text-gray-500">;
                               {industry && industry.description}
                             </div>;
-                          </Link>;
+                          </a>;
                         ))}
                       </div>;
-                    </motion && motion.div>;
+                    </motion && div>;
                   )}
-
-                </AnimatePresence>;
+                </div>;
               </div>;
-
-
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -752,19 +696,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Resources;
                   <ChevronDown className="w-4 h-4 ml-1" />;
                 </button>;
-                <AnimatePresence>;
+                <div>;
                   {isResourcesOpen && (;
-                    <motion&& motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
                     >;
                       <div className="px-6">;
                         {resources && resources.map((resource, index) => (;
-                          <Link
+                          <a
                             key={index}
                             href={resource && resource.href}
                             className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group">;
@@ -774,26 +715,18 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                             <div className="text-sm text-gray-500">;
                               {resource && resource.description}
                             </div>;
-                          </Link>;
+                          </a>;
                         ))}
                       </div>;
-                    </motion && motion.div>;
+                    </motion && div>;
                   )}
-
-                </AnimatePresence>
-              </div>
-              <Link
+              <a
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Pricing
-              </Link>
-            </div>
-                </AnimatePresence>;
+                </div>;
               </div>;
-
-
-
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -803,39 +736,33 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               >;
                 <Search className="w-5 h-5" />;
               </button>;
-              <Link
+              <a
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
-              <Link
+              <a
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-
               >
                 Get Started
-              </Link>
               <a
                 href="tel:+13024640950"
                 className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors"
               >
                 Call Now
-              </a>
-            </div>
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">;
                 Get Started;
-              </Link>;
+              </a>;
               <a
                 href="tel:+13024640950"
                 className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors">;
                 Call Now;
               </a>;
             </div>;
-
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"
@@ -846,30 +773,21 @@ origin/automation-improvements-final
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
-
             </button>;
           </div>;
-
-
           {/* Mobile Menu */}
-          <AnimatePresence>;
+          <div>;
             {isMenuOpen && (;
-              <motion&& motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+              <motion&& div
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
-                  <Link
+                  <a
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-
                   >;
                     Home;
-                  </Link>;
-
-
+                  </a>;
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -877,20 +795,17 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space-y-1 ml-4">;
                       {services && services.map((service, index) => (;
-                        <Link
+                        <a
                           key={index}
                           href={service && service.href}
                           className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {service && service.name}
-                        </Link>;
+                        </a>;
                       ))}
-
                     </div>;
                   </div>;
-
-
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -898,20 +813,17 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space-y-1 ml-4">;
                       {solutions && solutions.map((solution, index) => (;
-                        <Link
+                        <a
                           key={index}
                           href={solution && solution.href}
                           className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {solution && solution.name}
-                        </Link>;
+                        </a>;
                       ))}
-
                     </div>;
                   </div>;
-
-
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -919,20 +831,17 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space-y-1 ml-4">;
                       {industries && industries.map((industry, index) => (;
-                        <Link
+                        <a
                           key={index}
                           href={industry && industry.href}
                           className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {industry && industry.name}
-                        </Link>;
+                        </a>;
                       ))}
-
                     </div>;
                   </div>;
-
-
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -940,37 +849,32 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space-y-1 ml-4">;
                       {resources && resources.map((resource, index) => (;
-                        <Link
+                        <a
                           key={index}
                           href={resource && resource.href}
                           className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                           onClick={() => setIsMenuOpen(false)}
                         >;
                           {resource && resource.name}
-                        </Link>;
+                        </a>;
                       ))}
-
                     </div>;
                   </div>;
-
-
-                  <Link
+                  <a
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-
                   >;
                     Pricing;
-                  </Link>;
+                  </a>;
                   <div className="px-4 py-2 space-y-2">;
-
-                    <Link
+                    <a
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
                       onClick={() => setIsMenuOpen(false)}
                     >;
                       Get Started;
-                    </Link>;
+                    </a>;
                     <a
                       href="tel:+13024640950"
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -987,20 +891,20 @@ origin/automation-improvements-final
                               <div className="text - sm text - gray - 500">;
                                 {solution.description}
                               </div>;
-                            </Link>);
+                            </a>);
                         })}
                       </div>;
                       <div className="border - t border - gray - 200 mt - 4 pt - 4 px - 6">;
-                        <Link;
+                        <a;
                           href="/solutions";
                           className="flex items - center text - blue - 600 hover:text - blue - 700 font - medium";
                         >;
                           View All Solutions;
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                        </Link>;
+                        </a>;
                       </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
+                    </div>)}
+                </div>;
               </div>;
               {/* Industries Dropdown */}
               <div className="relative group">;
@@ -1012,19 +916,16 @@ origin/automation-improvements-final
                   Industries;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <AnimatePresence>;
+                <div>;
                   {isIndustriesOpen && (
-                    <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
                     >;
                       <div className="px - 6">;
                         {industries.map ((industry, index) => (
-                          <Link;
+                          <a;
                             key={index}
                             href={industry.href}
                             className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
@@ -1035,10 +936,10 @@ origin/automation-improvements-final
                             <div className="text - sm text - gray - 500">;
                               {industry.description}
                             </div>;
-                          </Link>))}
+                          </a>))}
                       </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
+                    </div>)}
+                </div>;
               </div>;
               {/* Resources Dropdown */}
               <div className="relative group">;
@@ -1050,19 +951,16 @@ origin/automation-improvements-final
                   Resources;
                   <ChevronDown className="w - 4 h - 4 ml - 1" />;
                 </button>;
-                <AnimatePresence>;
+                <div>;
                   {isResourcesOpen && (
-                    <motion.div;
-                      initial={{ opacity: 0, coordinate_y: 10 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: 10 }}
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
                     >;
                       <div className="px - 6">;
                         {resources.map ((resource, index) => (
-                          <Link;
+                          <a;
                             key={index}
                             href={resource.href}
                             className="block p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
@@ -1073,17 +971,17 @@ origin/automation-improvements-final
                             <div className="text - sm text - gray - 500">;
                               {resource.description}
                             </div>;
-                          </Link>))}
+                          </a>))}
                       </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
+                    </div>)}
+                </div>;
               </div>;
-              <Link;
+              <a;
                 href="/pricing";
                 className="text - gray - 700 hover:text - blue - 600 font - medium transition - colors";
               >;
                 Pricing;
-              </Link>;
+              </a>;
             </div>;
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items - center space - x-4">;
@@ -1094,12 +992,12 @@ origin/automation-improvements-final
               >;
                 <Search className="w - 5 h - 5" />;
               </button>;
-              <Link;
+              <a;
                 href="/contact";
                 className="bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 2 rounded - lg font - medium transition - colors";
               >;
                 Get Started;
-              </Link>;
+              </a>;
               <a;
                 href="tel:+13024640950";
                 className="bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 6 py - 2 rounded - lg font - medium transition - colors";
@@ -1118,22 +1016,19 @@ origin/automation-improvements-final
             </button>;
           </div>;
           {/* Mobile Menu */}
-          <AnimatePresence>;
+          <div>;
             {isMenuOpen && (
-              <motion.div;
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
+              <div;
                 className="lg:hidden border - t border - gray - 200";
               >;
                 <div className="py - 4 space - y-2">;
-                  <Link;
+                  <a;
                     href="/";
                     className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg";
                     on_click={() => setIsMenuOpen (false)}
                   >;
                     Home;
-                  </Link>;
+                  </a>;
                   {/* Mobile Services */}
                   <div className="px - 4 py - 2">;
                     <div className="font - medium text - gray - 900 mb - 2">;
@@ -1141,14 +1036,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space - y-1 ml - 4">;
                       {services.map ((service, index) => (
-                        <Link;
+                        <a;
                           key={index}
                           href={service.href}
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {service.name}
-                        </Link>))}
+                        </a>))}
                     </div>;
                   </div>;
                   {/* Mobile Solutions */}
@@ -1158,14 +1053,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space - y-1 ml - 4">;
                       {solutions.map ((solution, index) => (
-                        <Link;
+                        <a;
                           key={index}
                           href={solution.href}
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {solution.name}
-                        </Link>))}
+                        </a>))}
                     </div>;
                   </div>;
                   {/* Mobile Industries */}
@@ -1175,14 +1070,14 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space - y-1 ml - 4">;
                       {industries.map ((industry, index) => (
-                        <Link;
+                        <a;
                           key={index}
                           href={industry.href}
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {industry.name}
-                        </Link>))}
+                        </a>))}
                     </div>;
                   </div>;
                   {/* Mobile Resources */}
@@ -1192,31 +1087,31 @@ origin/automation-improvements-final
                     </div>;
                     <div className="space - y-1 ml - 4">;
                       {resources.map ((resource, index) => (
-                        <Link;
+                        <a;
                           key={index}
                           href={resource.href}
                           className="block py - 1 text - sm text - gray - 600 hover:text - blue - 600";
                           on_click={() => setIsMenuOpen (false)}
                         >;
                           {resource.name}
-                        </Link>))}
+                        </a>))}
                     </div>;
                   </div>;
-                  <Link;
+                  <a;
                     href="/pricing";
                     className="block px - 4 py - 2 text - gray - 700 hover:bg - blue - 50 hover:text - blue - 600 rounded - lg";
                     on_click={() => setIsMenuOpen (false)}
                   >;
                     Pricing;
-                  </Link>;
+                  </a>;
                   <div className="px - 4 py - 2 space - y-2">;
-                    <Link;
+                    <a;
                       href="/contact";
                       className="block bg - blue - 600 hover:bg - blue - 700 text - white px - 4 py - 2 rounded - lg font - medium text - center";
                       on_click={() => setIsMenuOpen (false)}
                     >;
                       Get Started;
-                    </Link>;
+                    </a>;
                     <a;
                       href="tel:+13024640950";
                       className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font - medium text - center";
@@ -1226,12 +1121,9 @@ origin/automation-improvements-final
                     </a>;
                   </div>;
                 </div>;
-
-          </AnimatePresence>;
+          </div>;
         </div>;
       </nav>;
-
-
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}
@@ -1239,8 +1131,8 @@ origin/automation-improvements-final
       />;
     </>;
   );
-              </motion.div>)}
-          </AnimatePresence>;
+              </div>)}
+          </div>;
         </div>;
       </nav>;
       {/* Search Modal */}

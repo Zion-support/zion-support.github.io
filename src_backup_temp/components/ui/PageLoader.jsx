@@ -1,6 +1,12 @@
-import {cn} from '@/lib/utils'; export const PageLoader = ("props": "any) => {"}; return (); <div'; className={cn('',',';';
-    'flex flex-col items-center justify-center min-h-screen',; className, )}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <//div>; <p className="mt-4" text-white text-lg font-medium">{text}</p>; </div>;" ); };'; '"'";" ";
-</div>
-import {cn} from &apos;@/lib/utils&apos;; export const PageLoader = (props) => {};; return (); <div&apos;; className={cn(&quot;,&apos;,&apos;; &apos;flex flex-col items-center justify-center min-h-screen&apos;,; className,)}; >; <div className=&quot;animate-spin rounded-full h-32 w-32 border-b-2 border-white> < </div>;&apos;;&apos;;
-const {cn} from "@/lib/utils"; export const PageLoader = (props) => {}; return (); <div"; className={cn(",","; "flex flex-col items-center justify-center min-h-screen",; className,)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> < </div>;";";"""
-import {cn} from '@/lib/utils'; export const PageLoader = (props) => {};; return (); <div'; className={cn(",','; 'flex flex-col items-center justify-center min-h-screen',; className,)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> < </div>;';';''
+import React from 'react';
+
+const PageLoader: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PageLoader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default PageLoader;

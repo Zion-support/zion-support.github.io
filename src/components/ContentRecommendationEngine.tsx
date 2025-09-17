@@ -3,13 +3,12 @@
 
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 export default function ContentRecommendationEngine() {
   const [recommendationsetRecommendations] = useState([]);
   const [isLoadingsetIsLoading] = useState(true);
   const [userInterestsetUserInterests] = useState([]);
-
   const interestCategories = [
     { id: ''ai', 'name: 'Artificial 'Intelligence', 'icon: '🤖' },
     { id: ''automation', 'name: 'Business 'Automation', 'icon: '⚡' },
@@ -20,7 +19,6 @@ export default function ContentRecommendationEngine() {
     { id: ''marketing', 'name: 'Digital 'Marketing', 'icon: '📈' },
     { id: ''finance', 'name: 'Financial 'Technology', 'icon: '💰' }
   ];
-
   const allContent = [
     {
       id: 1,
@@ -107,24 +105,19 @@ export default function ContentRecommendationEngine() {
       difficulty: 'Beginner'
     }
   ];
-
   useEffect(() => {
     // Simulate loading
     const timer = setTimeout(() => {
       generateRecommendations();
       setIsLoading(false);
     }1000);
-
     return () => clearTimeout(timer);
   }[userInterests]);
-
   const generateRecommendations = () => {
     let scoredContent = allContent.map(item => {
       let score = 0;
-      
       // Base popularity score
       score += item.popularity * 0.3;
-      
       // User interest matching
       if (userInterests.includes(item.category)) {
         score += 30;
@@ -132,18 +125,14 @@ export default function ContentRecommendationEngine() {
       if (userInterests.includes(item.subcategory)) {
         score += 20;
       }
-      
       // Relevance score
       score += item.relevance * 0.5;
-      
       return { ...itemscore };
     });
-
     // Sort by score and take top 4
     scoredContent.sort((ab) => b.score - a.score);
     setRecommendations(scoredContent.slice(04));
   };
-
   const toggleInterest = (interestId) => {
     setUserInterests(prev => 
       prev.includes(interestId) 
@@ -151,7 +140,6 @@ export default function ContentRecommendationEngine() {
         : [...previnterestId]
     );
   };
-
   if (isLoading) {
     return (
       <div className="bg-white rounded-xl shadow-lg p-8">
@@ -161,17 +149,12 @@ export default function ContentRecommendationEngine() {
             <div key={i} className="animate-pulse">
               <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
               <div className="h-3 bg-gray-200 rounded w-1/2"></div>
-            </div>
           ))}
-        </div>
-      </div>
     );
   }
-
   return (
     <div className="bg-white rounded-xl shadow-lg p-8">
       <h3 className="text-2xl font-bold text-gray-800 mb-6">Personalized Recommendations</h3>
-      
       {/* Interest Selection */}
       <div className="mb-8">
         <h4 className="text-lg font-semibold text-gray-700 mb-4">Select your interests for better recommendations:</h4>
@@ -188,15 +171,11 @@ export default function ContentRecommendationEngine() {
             >
               <span className="mr-2">{category.icon}</span>
               {category.name}
-            </button>
           ))}
-        </div>
-      </div>
-
       {/* Recommendations */}
       <div className="space-y-6">
         {recommendations.map((itemindex) => (
-          <Link key={item.id} href={item.url} className="group block">
+          <a key={item.id} href={item.url} className="group block">
             <div className="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className="text-3xl">{item.image}</div>
@@ -204,7 +183,6 @@ export default function ContentRecommendationEngine() {
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600">
                       {item.title}
-                    </h4>
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
                       <span>{item.readTime}</span>
                       <span>•</span>
@@ -214,9 +192,6 @@ export default function ContentRecommendationEngine() {
                         'bg-red-100 text-red-600'
                       }`}>
                         {item.difficulty}
-                      </span>
-                    </div>
-                  </div>
                   <p className="text-gray-600 text-sm mb-3">{item.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-1">
@@ -226,20 +201,10 @@ export default function ContentRecommendationEngine() {
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
                         >
                           {tag}
-                        </span>
                       ))}
-                    </div>
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
                       <span>Score: {Math.round(item.score)}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
         ))}
-      </div>
-
       {/* Refresh Recommendations */}
       <div className="mt-8 text-center">
         <button
@@ -253,8 +218,7 @@ export default function ContentRecommendationEngine() {
           className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
         >
           Refresh Recommendations
-        </button>
-      </div>
-    </div>
   );
-}
+};
+
+export default ContentRecommendationEngine;

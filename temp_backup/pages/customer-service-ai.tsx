@@ -1,40 +1,22 @@
 import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, MessageSquare, Star } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { Helmet } from 'react-helmet-async';
 
-export default function CustomerServiceAIPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/customer-service-ai'));
-  if (!service) return null;
-
+const customer-service-ai: React.FC = () => {
   return (
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
-        <link rel="canonical" href="https://ziontechgroup.com/customer-service-ai" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-pink-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
-              <p className="text-slate-300 mb-6">{service.description}</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-pink-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>customer-service-ai | Zion Tech Group</title>
+        <meta name="description" content="customer-service-ai - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">customer-service-ai</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
+    </div>
   );
-}
+};
 
+export default customer-service-ai;

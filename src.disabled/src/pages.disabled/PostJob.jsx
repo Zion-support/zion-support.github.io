@@ -37,6 +37,8 @@ export default function PostJob({ }: PostJobProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/PostJob.jsx
 }
 }

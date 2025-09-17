@@ -37,6 +37,8 @@ export default function NewProductsPage({ }: NewProductsPageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/NewProductsPage.jsx
 }
 }

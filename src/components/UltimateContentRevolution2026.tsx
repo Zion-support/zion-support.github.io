@@ -1,143 +1,11 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Sparkles
-  Zap
-  Brain
-  Rocket
-  Target
-  TrendingUp
-  Users
-  Award,
-  ChevronRight,
-  Play,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Globe,
-  Shield,
-  Lightbulb,
-  BarChart3
-} from 'lucide-react';
-
-const UltimateContentRevolution2026 = () => {
-  const [activeTabsetActiveTab] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const contentSections = [
-    {
-      id: 'ai-breakthroughs',
-      title: 'AI Breakthroughs 2026',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      content: {
-        headline: 'Revolutionary AI Technologies That Will Transform Your Business',
-        description: 'Discover the latest AI innovations that are reshaping industries and creating unprecedented opportunities for growth.',
-        features: [
-          'Neural Interface Integration',
-          'Quantum-Enhanced Machine Learning',
-          'Autonomous Decision Making Systems',
-          'Predictive Analytics 2.0',
-          'Emotional Intelligence AI',
-          'Real-time Language Processing'
-        ],
-        stats: [
-          { label: 'ROI 'Increase', 'value: '340%'icon: TrendingUp },
-          { label: 'Efficiency 'Gain', 'value: '85%'icon: Zap },
-          { label: 'Cost 'Reduction', 'value: '60%'icon: Target }
-        ]
-      }
-    },
-    {
-      id: 'quantum-computing',
-      title: 'Quantum Computing Revolution',
-      icon: Zap,
-      color: 'from-cyan-600 to-blue-600',
-      content: {
-        headline: 'Quantum Supremacy in Business Applications',
-        description: 'Harness the power of quantum computing to solve complex problems and unlock new possibilities.',
-        features: [
-          'Quantum Machine Learning',
-          'Cryptographic Security',
-          'Optimization Algorithms',
-          'Simulation Capabilities',
-          'Quantum Networking',
-          'Error Correction Systems'
-        ],
-        stats: [
-          { label: 'Processing 'Speed', 'value: '1000'x', 'icon: Zap },
-          { label: 'Security 'Level', 'value: '99.9%'icon: Shield },
-          { label: 'Problem 'Solving', 'value: '∞'icon: Brain }
-        ]
-      }
-    },
-    {
-      id: 'automation',
-      title: 'Intelligent Automation',
-      icon: Rocket,
-      color: 'from-orange-600 to-red-600',
-      content: {
-        headline: 'Autonomous Systems That Work 24/7',
-        description: 'Deploy intelligent automation solutions that never sleep and continuously optimize your operations.',
-        features: [
-          'Process Automation',
-          'Intelligent Monitoring',
-          'Predictive Maintenance',
-          'Resource Optimization',
-          'Quality Assurance',
-          'Customer Service Bots'
-        ],
-        stats: [
-          { label: ''Uptime', 'value: '99.9%'icon: CheckCircle },
-          { label: 'Cost 'Savings', 'value: '75%'icon: TrendingUp },
-          { label: 'Error 'Reduction', 'value: '95%'icon: Target }
-        ]
-      }
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Chen',
-      role: 'CTOTechCorp',
-      company: 'Fortune 500',
-      content: 'Zion\'s AI solutions increased our operational efficiency by 340% in just 6 months.',
-      avatar: '/api/placeholder/64/64',
-      rating: 5
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'CEOInnovateLabs',
-      company: 'Startup',
-      content: 'The quantum computing integration transformed our data processing capabilities completely.',
-      avatar: '/api/placeholder/64/64',
-      rating: 5
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Head of R&D',
-      company: 'Global Corp',
-      content: 'Revolutionary technology that delivered results beyond our wildest expectations.',
-      avatar: '/api/placeholder/64/64',
-      rating: 5
-    }
-  ];
-
+const UltimateContentRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-6 animate-pulse">
@@ -151,13 +19,10 @@ const UltimateContentRevolution2026 = () => {
             Experience the most advanced AIquantum computingand automation technologies 
             that are reshaping the future of business and technology.
           </p>
-        </motion.div>
+        </div>
 
         {/* Content Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -178,13 +43,8 @@ const UltimateContentRevolution2026 = () => {
           </div>
 
           {/* Tab Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeTab}
-              initial={{ opacity: 0x: 20 }}
-              animate={{ opacity: 1x: 0 }}
-              exit={{ opacity: 0x: -20 }}
-              transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
               <div className="grid lg:grid-cols-2 gap-8">
@@ -219,15 +79,12 @@ const UltimateContentRevolution2026 = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+          </div>
+        </div>
 
         {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center mb-12 text-white">
@@ -235,11 +92,8 @@ const UltimateContentRevolution2026 = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: 0.1 * index }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -259,16 +113,13 @@ const UltimateContentRevolution2026 = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -287,7 +138,7 @@ const UltimateContentRevolution2026 = () => {
               Get Started
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

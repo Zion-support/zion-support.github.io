@@ -1,206 +1,14 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Rocket
-  Brain
-  Zap
-  Globe
-  Star
-  TrendingUp
-  Users
-  Award,
-  ChevronRight,
-  Play,
-  Download,
-  Lightbulb,
-  Target,
-  Shield,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  CheckCircle,
-  ArrowRight,
-  Eye,
-  Sparkles
-} from 'lucide-react';
-
-const FutureTechnologyShowcase2026 = () => {
-  const [activeCategorysetActiveCategory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const categories = [
-    {
-      id: 'quantum-computing',
-      title: 'Quantum Computing',
-      icon: Rocket,
-      color: 'from-purple-600 to-pink-600',
-      description: 'Revolutionary quantum computing solutions for exponential performance',
-      technologies: [
-        {
-          name: 'Quantum Neural Networks',
-          description: 'Hybrid quantum-classical neural networks for superior pattern recognition',
-          status: 'Available Now',
-          impact: '1000x faster processing',
-          applications: ['Drug 'Discovery', 'Financial 'Modeling', 'Climate Simulation']
-        },
-        {
-          name: 'Quantum Cryptography',
-          description: 'Unbreakable encryption using quantum principles',
-          status: 'Beta Testing',
-          impact: 'Theoretically unbreakable',
-          applications: ['Secure 'Communications', 'Data 'Protection', 'Blockchain Security']
-        },
-        {
-          name: 'Quantum Optimization',
-          description: 'Solving complex optimization problems in seconds',
-          status: 'In Development',
-          impact: 'Exponential speedup',
-          applications: [', 'Logistics', 'Supply 'Chain', 'Resource Allocation']
-        }
-      ]
-    },
-    {
-      id: 'neural-interfaces',
-      title: 'Neural Interfaces',
-      icon: Brain,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Direct brain-computer interfaces for thought-controlled computing',
-      technologies: [
-        {
-          name: 'Thought-Controlled Computing',
-          description: 'Control devices and applications using only your thoughts',
-          status: 'Available Now',
-          impact: '95% accuracy in neural signal processing',
-          applications: [', 'Accessibility', 'Gaming'Medical Devices']
-        },
-        {
-          name: 'Memory Enhancement',
-          description: 'AI-powered memory augmentation and cognitive enhancement',
-          status: 'Beta Testing',
-          impact: '300% memory improvement',
-          applications: [', 'Learning', 'Medical 'Treatment', 'Cognitive Therapy']
-        },
-        {
-          name: 'Emotional AI',
-          description: 'AI systems that understand and respond to human emotions',
-          status: 'In Development',
-          impact: '99.7% emotional recognition',
-          applications: ['Mental 'Health', 'Customer 'Service', 'Education']
-        }
-      ]
-    },
-    {
-      id: 'space-technology',
-      title: 'Space Technology',
-      icon: Globe,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Advanced space-based technology solutions for global connectivity',
-      technologies: [
-        {
-          name: 'Satellite Internet Networks',
-          description: 'Global high-speed internet coverage from space',
-          status: 'Available Now',
-          impact: 'Global coverage with 1ms latency',
-          applications: ['Remote 'Areas', 'IoT 'Connectivity', 'Emergency Communications']
-        },
-        {
-          name: 'Space Manufacturing',
-          description: 'Manufacturing in zero-gravity for superior materials',
-          status: 'Beta Testing',
-          impact: 'Revolutionary material properties',
-          applications: [', 'Semiconductors', 'Pharmaceuticals'Advanced Materials']
-        },
-        {
-          name: 'Asteroid Mining',
-          description: 'Extracting rare materials from asteroids',
-          status: 'In Development',
-          impact: 'Unlimited rare earth elements',
-          applications: [', 'Electronics', 'Renewable 'Energy', 'Space Exploration']
-        }
-      ]
-    },
-    {
-      id: 'biotech-ai',
-      title: 'Biotech AI',
-      icon: Zap,
-      color: 'from-orange-600 to-red-600',
-      description: 'Combining biotechnology with AI for personalized medicine',
-      technologies: [
-        {
-          name: 'Personalized Medicine',
-          description: 'AI-powered personalized treatment plans based on genetics',
-          status: 'Available Now',
-          impact: '50% better treatment outcomes',
-          applications: ['Cancer 'Treatment', 'Rare 'Diseases', 'Preventive Care']
-        },
-        {
-          name: 'Synthetic Biology',
-          description: 'Designing biological systems using AI',
-          status: 'Beta Testing',
-          impact: 'Revolutionary drug development',
-          applications: ['Drug 'Discovery', 'Biofuels'Environmental Cleanup']
-        },
-        {
-          name: 'Longevity Research',
-          description: 'AI-driven research into extending human lifespan',
-          status: 'In Development',
-          impact: 'Potential 50% lifespan extension',
-          applications: ['Anti-'Aging', 'Disease 'Prevention', 'Health Optimization']
-        }
-      ]
-    }
-  ];
-
-  const stats = [
-    { label: ''Technologies', 'value: '50+'icon: Lightbulb },
-    { label: ''Patents', 'value: '200+'icon: Award },
-    { label: 'Research 'Papers', 'value: '500+'icon: Star },
-    { label: 'Global 'Impact', 'value: '1M+'icon: Users }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Quantum PhysicistMIT',
-      content: 'The quantum computing platform has revolutionized our research capabilities. We can now solve problems that would take classical computers centuries.',
-      rating: 5,
-      company: 'MIT'
-    },
-    {
-      name: 'Prof. Michael Rodriguez',
-      role: 'NeuroscientistStanford',
-      content: 'The neural interface technology is groundbreaking. It has opened up entirely new possibilities for human-computer interaction.',
-      rating: 5,
-      company: 'Stanford University'
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Biotech ResearcherHarvard',
-      content: 'The biotech AI integration has accelerated our drug discovery process by 1000x. We are seeing results that were impossible before.',
-      rating: 5,
-      company: 'Harvard Medical'
-    }
-  ];
-
+const FutureTechnologyShowcase2026: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
@@ -221,13 +29,10 @@ const FutureTechnologyShowcase2026 = () => {
             Explore cutting-edge technologies that will define the future of humanity
             from quantum computing to neural interfaces and space technology.
           </p>
-        </motion.div>
+        </div>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => (
@@ -239,13 +44,10 @@ const FutureTechnologyShowcase2026 = () => {
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Category Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -268,13 +70,8 @@ const FutureTechnologyShowcase2026 = () => {
           </div>
 
           {/* Category Content */}
-          <AnimatePresence mode="wait">
-            <motion.div
+            <div
               key={activeCategory}
-              initial={{ opacity: 0x: 20 }}
-              animate={{ opacity: 1x: 0 }}
-              exit={{ opacity: 0x: -20 }}
-              transition={{ duration: 0.3 }}
               className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
             >
               <div className="mb-8">
@@ -288,11 +85,8 @@ const FutureTechnologyShowcase2026 = () => {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {categories[activeCategory].technologies.map((techindex) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5delay: index * 0.1 }}
                     className="group"
                   >
                     <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 h-full border border-white/10 group-hover:border-indigo-400/50 transition-all duration-300">
@@ -332,18 +126,15 @@ const FutureTechnologyShowcase2026 = () => {
                         Learn More
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+          </div>
+        </div>
 
         {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -351,11 +142,8 @@ const FutureTechnologyShowcase2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5delay: 0.7 + index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-1 mb-4">
@@ -369,16 +157,13 @@ const FutureTechnologyShowcase2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-indigo-400 text-sm">{testimonial.company}</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 border border-indigo-400/30">
@@ -403,7 +188,7 @@ const FutureTechnologyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

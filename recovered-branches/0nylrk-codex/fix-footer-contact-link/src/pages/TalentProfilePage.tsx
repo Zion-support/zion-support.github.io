@@ -15,17 +15,13 @@
   useEffect(() => {
     if (error) {
       toast({
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
-=======
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive",
@@ -39,7 +35,6 @@
 
   if (error || !profile) {
     return <ProfileErrorState error={error} />;
->>>>>>> origin/auto/autonomy-17186719616
   }
 
   const handleRequestHire = () => {
@@ -75,20 +70,15 @@
           </Button>
         </div>
       </StickyAction>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
       {/* Request to Hire Modal */}
       <HireRequestModal
-=======
       
       {/* Request to Hire Modal */}
       <HireRequestModal 
->>>>>>> origin/auto/autonomy-17186719616
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}

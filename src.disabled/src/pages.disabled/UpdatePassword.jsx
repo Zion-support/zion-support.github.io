@@ -37,6 +37,8 @@ export default function UpdatePassword({ }: UpdatePasswordProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/UpdatePassword.jsx
 }
 }

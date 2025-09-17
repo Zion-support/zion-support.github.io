@@ -1,57 +1,40 @@
 import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+    <divsection
       className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%3D%224%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <div
             className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6"
           >
             <span className="text-sm font-medium">🚀 NEW CONTENT 2025</span>
-          </motion.div>
+          </div>
           
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+          <divh2
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
           >
             AI 2025 Automation Revolution
-          </motion.h2>
+          </divh2>
           
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <divp
             className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
             Discover the complete guide to enterprise automation transformation. 
             Learn how leading companies achieve 1200% ROI with AI-powered solutions.
-          </motion.p>
+          </divp>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Featured Content Card */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+          <div
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
           >
             <div className="flex items-center mb-4">
@@ -76,20 +59,17 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               <span className="bg-green-600 bg-opacity-50 px-3 py-1 rounded-full text-sm">Best Practices</span>
             </div>
             
-            <Link
+            <a
               href="/blog/ai-2025-enterprise-automation-revolution-complete-guide"
               className="inline-flex items-center bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read Complete Guide
               <span className="ml-2">→</span>
-            </Link>
-          </motion.div>
+            </a>
+          </div>
 
           {/* Case Study Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+          <div
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20"
           >
             <div className="flex items-center mb-4">
@@ -119,21 +99,18 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
               </div>
             </div>
             
-            <Link
+            <a
               href="/case-studies/ai-2025-global-manufacturing-automation-1200-roi-success-story"
               className="inline-flex items-center bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               View Case Study
               <span className="ml-2">→</span>
-            </Link>
-          </motion.div>
+            </a>
+          </div>
         </div>
 
         {/* Key Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
         >
           <div className="text-center">
@@ -152,33 +129,31 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
             <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
             <div className="text-gray-300 text-sm">Success Rate</div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+        <div
           className="text-center"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <a
               href="/services/ai-automation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore AI Automation Services
-            </Link>
-            <Link
+            </a>
+            <a
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
             >
               Get Implementation Consultation
-            </Link>
+            </a>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </divsection>
   );
 };
 
 export default NewContent2025AutomationRevolutionBanner;
+</div></div></div>

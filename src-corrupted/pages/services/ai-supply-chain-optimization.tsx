@@ -1,3 +1,22 @@
-import React from 'react'; import { Helmet  } from 'react-helmet-async'; import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain  } from 'lucide-react'; import { Link  } from 'react-router-dom'; ; return (; <>; <Helmet>; <title>AI Supply Chain Optimization - Zion Tech Group</title>; <meta name="description" content="Transform your supply chain with AI-powered optimization.Reduce costs, improve efficiency, and enhance visibility across your entire supply network."    />" <meta name="keywords" content="AI supply chain, supply chain optimization, logistics AI, inventory management, demand forecasting, supply chain analytics"    />" <link rel="canonical" href="https:
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-</Helmet>
+const ai-supply-chain-optimization: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-supply-chain-optimization | Zion Tech Group</title>
+        <meta name="description" content="ai-supply-chain-optimization - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-supply-chain-optimization</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-supply-chain-optimization;

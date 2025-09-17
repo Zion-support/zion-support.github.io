@@ -40,4 +40,3 @@ export interface NextGenAIService2026 {
   reviews: number;
 }
   }
-];

@@ -3,11 +3,9 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const WINDOW_MS = 5 * 60 * 1000; // 5 minutes
@@ -33,4 +31,3 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
   return true;
 }
->>>>>>> origin/auto/autonomy-17186719616

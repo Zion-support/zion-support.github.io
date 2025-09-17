@@ -37,6 +37,8 @@ export default function ForumCategoryPage({ }: ForumCategoryPageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ForumCategoryPage.jsx
 }
 }
