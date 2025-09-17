@@ -1,8 +1,11 @@
 // Notification utilities
 interface NotificationOptions {
+<<<<<<< HEAD
 // Notifications utility for handling browser notifications and toast messages
 
 interface NotificationOptions {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling

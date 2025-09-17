@@ -37,4 +37,8 @@
     "**/*.spec.ts",
     "**/*.spec.tsx"
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a

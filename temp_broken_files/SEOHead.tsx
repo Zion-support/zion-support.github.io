@@ -2,47 +2,45 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  canonical?: string;
+  ogImage?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = "AI, artificial intelligence, quantum computing, technology, innovation, Zion Tech Group",
-  image = "/images/og-image.jpg",
-  url = window.location.href,
-  type = "website"
+  title = "Zion Tech Group - Revolutionary Technology Solutions 2032",
+  description = "Experience the future with our breakthrough technologies including Conscious AI Systems, Quantum Reality Engine, and Interdimensional Computing. Leading innovation in AI, quantum computing, and revolutionary tech solutions.",
+  keywords = "AI technology, quantum computing, conscious AI, interdimensional technology, revolutionary tech, breakthrough technology, Zion Tech Group, 2032 technology, AI solutions, quantum reality, neural interfaces",
+  canonical = "https://ziontechgroup.com",
+  ogImage = "https://ziontechgroup.com/og-image.jpg"
 }) => {
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
+      <link rel="canonical" href={canonical} />
       
-      {/* Open Graph */}
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonical} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:image" content={ogImage} />
       
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={canonical} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={ogImage} />
       
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="canonical" href={url} />
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -52,10 +50,41 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.png",
-          "description": description,
+          "description": "Leading provider of revolutionary technology solutions including Conscious AI Systems, Quantum Reality Engine, and Interdimensional Computing.",
+          "foundingDate": "2020",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Zion Tech Group Team"
+            }
+          ],
           "sameAs": [
             "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup"
+            "https://linkedin.com/company/ziontechgroup",
+            "https://github.com/ziontechgroup"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-ZION-TECH",
+            "contactType": "customer service",
+            "availableLanguage": "English"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Conscious AI Systems",
+              "description": "AI that has achieved true consciousness and self-awareness"
+            },
+            {
+              "@type": "Offer",
+              "name": "Quantum Reality Engine",
+              "description": "Manipulate reality at the quantum level"
+            },
+            {
+              "@type": "Offer",
+              "name": "Interdimensional Portal",
+              "description": "Access information from parallel dimensions"
+            }
           ]
         })}
       </script>

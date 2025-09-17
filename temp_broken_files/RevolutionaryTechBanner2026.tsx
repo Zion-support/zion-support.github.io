@@ -61,6 +61,7 @@ const RevolutionaryTechBanner2026: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
+<<<<<<< HEAD:temp_broken_files/RevolutionaryTechBanner2026.tsx
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -321,6 +322,8 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/RevolutionaryTechBanner2026.tsx
     </div>
   );
 };

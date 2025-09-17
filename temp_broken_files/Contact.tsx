@@ -306,6 +306,7 @@ const Contact: React.FC = () => {
             <p className="text-gray-300 mb-6">
               Need immediate assistance? Our 24/7 emergency support team is here to help.
             </p>
+<<<<<<< HEAD:temp_broken_files/Contact.tsx
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
@@ -335,6 +336,28 @@ const Contact: React.FC = () => {
               <li>• Custom development</li>
               <li>• Technology consulting</li>
             </ul>cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-300"
+              >
+                <Phone className="h-5 w-5 mr-2" />
+                Call Now
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-300"
+              >
+                <Mail className="h-5 w-5 mr-2" />
+                Email Support
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/Contact.tsx
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -345,8 +368,11 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
+<<<<<<< HEAD:temp_broken_files/Contact.tsx
           </motion.div>
           </div>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/Contact.tsx
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[

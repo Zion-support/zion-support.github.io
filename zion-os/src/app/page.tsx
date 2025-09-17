@@ -1,8 +1,19 @@
 // @ts-nocheck
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import React from 'react';
 import FeatureCard from './components/FeatureCard';
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+import Link from 'next/link';
+import React from 'react';
+>>>>>>> origin/feat/blog-content-and-promo
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+import FeatureCard from './components/FeatureCard';
+>>>>>>> origin/feature/new-blog-content-and-promo
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 
 export default function HomePage() {
 
@@ -241,6 +252,10 @@ export default function HomePage() {
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
   ],
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
   ];
 
   return (
@@ -264,14 +279,29 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
+<<<<<<< HEAD
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <Link href="/multiverse/launch" className="btn-primary hover-lift">
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               </a>
               <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
                 📰 New: AI Governance Framework 2025
@@ -282,10 +312,19 @@ export default function HomePage() {
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
                 🔬 New: Foundation Models 2025
               </a>
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               </Link>
               <a href="/multiverse/launch" className="btn-primary hover-lift">🚀 Launch Your Economy</a>
               <a href="/admin/instances" className="btn-secondary hover-lift">📊 View Instances</a>
               <a href="/news" className="btn-secondary hover-lift">📰 See what's new in 2025</a>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/new-blog-content-and-promo
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
@@ -295,11 +334,23 @@ export default function HomePage() {
               <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
                 ✅ New: AI Safety & Governance 2025
               </a>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/blog-content-2025
+>>>>>>> origin/feat/news-content
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
@@ -308,10 +359,24 @@ export default function HomePage() {
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
+<<<<<<< HEAD
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
       {/* Latest Blog Content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+      {/* Latest Blog Content */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
         <div className="max-w-7xl mx-auto">
           <div className="glass-effect rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
@@ -323,6 +388,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/news-content
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -509,6 +578,11 @@ export default function HomePage() {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
               <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
@@ -525,6 +599,7 @@ export default function HomePage() {
               </a>
               <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Blueprint 2025
+<<<<<<< HEAD
               <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Blueprint 2025
               <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
@@ -536,18 +611,52 @@ export default function HomePage() {
               <a href="/blog/ai-safety-audit-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Safety Audit 2025
               </a>
+=======
+>>>>>>> origin/feature/new-content-2025-09-15
+              <a href="/blog/ai-governance-blueprint-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Blueprint 2025
+>>>>>>> origin/feature/new-content-2025
+              <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: Edge AI Compliance 2025
+>>>>>>> origin/feature/content-sept15-2025
+              <a href="/blog/ai-agent-safety-playbook-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Agent Safety Playbook 2025
+>>>>>>> origin/feature/add-ai-agent-safety-post
+              <a href="/blog/ai-governance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance 2025
+>>>>>>> origin/feat/blog-ai-governance
+              <a href="/blog/ai-safety-audit-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Safety Audit 2025
+>>>>>>> origin/feat/blog-content-and-promo
+>>>>>>> origin/feat/content-promo
+              </a>
+>>>>>>> origin/feature/new-content-promotion
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/feat/news-content
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/feat/news-content
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/news-content
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -605,6 +714,11 @@ export default function HomePage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -689,6 +803,12 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+<<<<<<< HEAD
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
@@ -802,12 +922,23 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
+<<<<<<< HEAD
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
               </a>
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
+<<<<<<< HEAD
+=======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
+>>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
             </div>
           </div>
         </div>
@@ -869,6 +1000,11 @@ export default function HomePage() {
   );
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">;
@@ -893,3 +1029,9 @@ export default function HomePage() {
       </section>;
     </div>;
   )}}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/merge-pr-12271
+>>>>>>> origin/feat/news-content
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a

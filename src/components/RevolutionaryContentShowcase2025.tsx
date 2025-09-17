@@ -7,6 +7,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   const revolutionaryContent = [
     {
       id: 1,
+<<<<<<< HEAD
       title: "AI Consciousness Revolution 2025",
       description: "The first artificial intelligence systems that demonstrate genuine consciousness and self-awareness, capable of creative thought and emotional understanding.",
       image: "🧠",
@@ -14,6 +15,17 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       borderColor: "border-purple-400",
       bgColor: "from-purple-600/30 to-pink-600/30",
       features: ["Self-aware AI agents", "Emotional intelligence", "Creative problem solving", "Ethical decision making"],cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+      title: "AI Consciousness Revolution",
+      description: "Experience the first AI system with genuine consciousness and self-awareness",
+      image: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      features: ["Self-Aware", "Creative", "Autonomous", "Emotional Intelligence"],
+      link: "/pages/RevolutionaryTechBreakthrough2025"
+    },
+    {
+      id: 2,
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       title: "Quantum Reality Engine",
       description: "Manipulate reality itself through quantum computing and parallel universe exploration",
       image: "⚡",
@@ -32,6 +44,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     },
     {
       id: 4,
+<<<<<<< HEAD
       title: "Interdimensional Computing",
       description: "Computing systems that operate across multiple dimensions and parallel universes simultaneously.",
       image: "🌌",
@@ -62,17 +75,55 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       bgColor: "from-pink-600/30 to-rose-600/30",
       features: ["Digital consciousness", "Immortality technology", "Mind uploading", "Virtual existence"],
       link: "/pages/ConsciousnessComputingRevolution2030"cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+      title: "Consciousness Transfer Technology",
+      description: "Achieve digital immortality through consciousness transfer between biological and artificial bodies",
+      image: "🌟",
+      gradient: "from-violet-600 to-fuchsia-600",
+      features: ["Digital Immortality", "Body Transfer", "Consciousness Backup", "Life Extension"],
+      link: "/pages/ConsciousnessComputing2026"
+    },
+    {
+      id: 5,
+      title: "Interdimensional Computing",
+      description: "Access computing power from parallel dimensions and alternate realities",
+      image: "🌌",
+      gradient: "from-indigo-600 to-purple-600",
+      features: ["Parallel Processing", "Dimension Access", "Reality Manipulation", "Infinite Computing"],
+      link: "/pages/InterdimensionalRealityEngine2028"
+    }
+  ];
+
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       }, 5000);
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, revolutionaryContent.length]);
 
   const nextSlide = () => {
+<<<<<<< HEAD
     setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+    setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex((prevIndex) => (prevIndex - 1 + revolutionaryContent.length) % revolutionaryContent.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  return (
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -125,6 +176,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             >
               {revolutionaryContent.map((content, index) => (
                 <div key={content.id} className="w-full flex-shrink-0">
+<<<<<<< HEAD
                   <div className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-2xl p-12 border ${content.borderColor}/30`}>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                       <div>
@@ -142,6 +194,35 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                         <a 
                           href={content.link}
                           className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+                  <div className={`bg-gradient-to-br ${content.gradient} p-12 min-h-[600px] flex items-center`}>
+                    <div className="grid md:grid-cols-2 gap-12 items-center w-full">
+                      {/* Content */}
+                      <div className="space-y-6">
+                        <div className="text-8xl mb-6">{content.image}</div>
+                        <h3 className="text-4xl font-bold text-white mb-4">{content.title}</h3>
+                        <p className="text-xl text-white/90 mb-6">{content.description}</p>
+                        
+                        {/* Features */}
+                        <div className="flex flex-wrap gap-2 mb-8">
+                          {content.features.map((feature, featureIndex) => (
+                            <span
+                              key={featureIndex}
+                              className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold"
+                            >
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        <a
+                          href={content.link}
+                          className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
+                        >
+                          Explore {content.title} →
+                        </a>
+                      </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
                       
                       {/* Visual Element */}
                       <div className="relative">
@@ -157,6 +238,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -227,6 +309,8 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                   Explore →
                 </a>
               </div>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-8">
             {revolutionaryContent.map((_, index) => (

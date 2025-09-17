@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 
 const RevolutionaryContentCarousel2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+=======
+  const [isAnimating, setIsAnimating] = useState(false);
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/RevolutionaryContentCarousel2027.tsx
 
   const slides = [
     {
@@ -41,6 +45,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
     },
     {
       id: 4,
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
       title: "Interdimensional Computing",
       description: "Access computing power from parallel dimensions and alternate realities.",
       image: "🌌",
@@ -65,12 +70,25 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       link: "/pages/FutureTechBreakthrough2026",
       gradient: "from-rose-600 to-pink-600",
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
+=======
+      title: "Ultimate Tech Breakthrough 2026",
+      subtitle: "Revolutionary Advances • Cutting-edge Technology • Future Innovation",
+      description: "The most revolutionary technological advances that will reshape our world in 2026",
+      image: "🌟",
+      color: "from-orange-600 to-red-600",
+      link: "/pages/UltimateTechBreakthrough2026",
+      badge: "FEATURED",
+      features: ["Revolutionary Advances", "Cutting-edge Tech", "Future Innovation"]
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/RevolutionaryContentCarousel2027.tsx
     }
   ];
 
   useEffect(() => {
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
     if (!isAutoPlaying) return;
 
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/RevolutionaryContentCarousel2027.tsx
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
@@ -154,6 +172,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                     </Link>
                   </div>
                   
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
                   <div className="relative z-10 h-full flex items-center">
                     <div className="container mx-auto px-8">
                       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -265,6 +284,15 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                           </ul>
                         </div>
                       </div>
+=======
+                  {/* Visual */}
+                  <div className="text-center">
+                    <div className="text-8xl md:text-9xl mb-4 opacity-80">
+                      {slide.image}
+                    </div>
+                    <div className="text-2xl font-bold opacity-60">
+                      {slide.title.split(' ')[0]}
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/RevolutionaryContentCarousel2027.tsx
                     </div>
                   </div>
                 </div>
@@ -308,6 +336,7 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
         ))}
       </div>
 
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentCarousel2027.tsx
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-6">
           {contentItems.map((_, index) => (
@@ -336,6 +365,14 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             </a>
           ))}
         </div>
+=======
+      {/* Progress Bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+        <div
+          className="h-full bg-white transition-all duration-100 ease-linear"
+          style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
+        />
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/RevolutionaryContentCarousel2027.tsx
       </div>
     </div>
   );

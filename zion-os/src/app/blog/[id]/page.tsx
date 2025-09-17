@@ -5,6 +5,11 @@ import { getPostById } from '../../../data/blog';
 type Params = { params: { id: string } };
 
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
+<<<<<<< HEAD
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
@@ -21,9 +26,20 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Key components include AI ethics committees, risk assessment protocols, bias detection systems, and audit trails for AI decisions.',
       'The framework addresses regulatory requirements including EU AI Act, NIST AI Risk Management Framework, and industry-specific guidelines.',
       'Case studies demonstrate how organizations have successfully implemented AI governance, reducing risks by 60% and improving stakeholder trust.'
+<<<<<<< HEAD
   'ai-governance-framework-2025': {
     id: 'ai-governance-framework-2025',
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+  'ai-governance-framework-2025': {
+    id: 'ai-governance-framework-2025',
+    title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/feature/new-blog-content-and-promo
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -55,6 +71,10 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Traditional supply chains suffer from information lag and brittle handoffs. Multi-agent orchestration enables local decision-making with global constraints, improving throughput and reducing stockouts.',
       'We cover agent roles (procurement, logistics, quality), shared state models, incentive design, and exception handling. Includes reference events, KPIs, and an adoption roadmap.'
+<<<<<<< HEAD
+=======
+>>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
     ]
   },
   'agent-safety-red-teaming-2025': {
@@ -119,6 +139,11 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We cover policy engines, capability scoping, red-teaming, incident response, and post-incident learning loops. Templates and reference checklists are included to accelerate implementation.'
     ]
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/add-ai-agent-safety-post
+>>>>>>> origin/feat/content-promo
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
@@ -134,6 +159,10 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'This blueprint outlines roles, policy grammars, escalation thresholds, and audit trails. It includes a rollout sequence and measurable safety KPIs.'
     ]
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/content-promo
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
   'edge-ai-marketplaces': {
     id: 'edge-ai-marketplaces',
     title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
@@ -146,6 +175,10 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
     content: [
       'Edge-native marketplaces reduce round trips and keep sensitive data local while enabling autonomous negotiation and fulfillment.',
       'We cover reference topologies, event buses, local policy enforcement, and synchronization with cloud systems for compliance and analytics.'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/new-content-2025-09-15
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
     ]
   'ai-governance-blueprint-2025': {
     id: 'ai-governance-blueprint-2025',
@@ -165,10 +198,18 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'Implementation patterns include risk-tiered action pipelines, signed policies with provenance, and sandboxed evaluation environments. We map responsibilities across product, security, compliance, and operations.',
       'The result is a governance system that enables faster iteration while reducing risk, with transparent accountability across stakeholders.'
     ],
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/new-content-2025
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
       'Edge AI agents unlock sub-second inference and decision-making where data is produced. This reduces bandwidth costs, preserves privacy, and increases resilience when connectivity is limited.',
       'We outline deployment patterns using containerized runtimes, model compression, and event-driven synchronization with the cloud. Observability and policy propagation are covered to ensure safe, consistent behavior across fleets.',
       'Use cases include smart facilities, industrial inspection, retail analytics, and on-site incident response with autonomous remediation.'
     ]
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/new-blog-content-and-promo
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
   'ai-safety-governance-blueprint-2025': {
     id: 'ai-safety-governance-blueprint-2025',
     title: 'AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises',
@@ -216,6 +257,10 @@ const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
       'We cover identity, permissioning, human-in-the-loop checkpoints, incident response, and auditability. We also include rollout patterns and KPIs to measure effectiveness without blocking innovation.'
     ]
   },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/blog-ai-governance
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
     ]
   },
   'sovereign-ai-commerce-2025': {
@@ -443,9 +488,21 @@ export default function BlogPostPage({ params }: Params) {
       </div>
     </article>
   );
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+}
+
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 }
 
 }
-
 }
-}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/blog-content-and-promo
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a

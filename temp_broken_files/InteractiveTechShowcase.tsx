@@ -89,6 +89,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center"
               >
                 {technologies[activeTech].demo}
+<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
               </button>
             </div>
           </div>
@@ -159,6 +160,8 @@ const InteractiveTechShowcase: React.FC = () => {
         </div>
       </div>
 
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
       {/* Technology Comparison */}
       <div className="mt-16">
         <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h3>
@@ -206,7 +209,53 @@ const InteractiveTechShowcase: React.FC = () => {
                   </tr>
                 ))}
               </tbody>
+<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
             </table>cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+            </table>
+import { motion } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const technologies = [
+    {
+      id: 1,
+      name: "AI Consciousness",
+      icon: "🧠",
+      description: "Self-aware AI systems with emotional intelligence and conscious decision-making",
+      features: ["Self-awareness", "Emotional intelligence", "Ethical reasoning", "Autonomous learning"],
+      gradient: "from-purple-600 to-pink-600",
+      stats: { accuracy: 98, speed: 0.001, efficiency: 95 }
+    },
+    {
+      id: 2,
+      name: "Quantum Reality",
+      icon: "⚛️",
+      description: "Quantum-powered virtual reality with physics manipulation and consciousness integration",
+      features: ["Quantum simulation", "Reality manipulation", "Neural interface", "Dimensional exploration"],
+      gradient: "from-indigo-600 to-purple-600",
+      stats: { accuracy: 99.7, speed: 0.0001, efficiency: 98 }
+    },
+    {
+      id: 3,
+      name: "Neural Interface",
+      icon: "🧬",
+      description: "Direct brain-computer communication with thought control and cognitive enhancement",
+      features: ["Thought control", "Neural enhancement", "Mind communication", "Cognitive augmentation"],
+      gradient: "from-emerald-600 to-teal-600",
+      stats: { accuracy: 99.2, speed: 0.05, efficiency: 97 }
+    },
+    {
+      id: 4,
+      name: "Synthetic Intelligence",
+      icon: "🤖",
+      description: "Hybrid biological-digital intelligence with unprecedented capabilities",
+      features: ["Hybrid intelligence", "Biological integration", "Adaptive learning", "Consciousness transfer"],
+      gradient: "from-cyan-600 to-blue-600",
+      stats: { accuracy: 97.5, speed: 0.01, efficiency: 96 }
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
     }
   ];
 
@@ -225,6 +274,7 @@ const InteractiveTechShowcase: React.FC = () => {
   const currentTech = technologies[activeTech];
 
   const currentTech = technologies[activeTech];
+<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
 
   const currentTech = technologies[activeTech];
       ]
@@ -234,6 +284,12 @@ const InteractiveTechShowcase: React.FC = () => {
 
   const currentTech = technologies[activeTech];
 cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+
+
+  const currentTech = technologies[activeTech];
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
     quantum: {
       title: "Quantum Computing",
       subtitle: "Exponential Computational Power",
@@ -296,6 +352,7 @@ cursor/fix-netlify-build-and-merge-to-main-a068
     }
   };
 
+<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -307,6 +364,32 @@ cursor/fix-netlify-build-and-merge-to-main-a068
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
       link: "/pages/AdvancedAnalyticsDashboard2026"cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+    }
+  ];
+
+  const currentTech = technologies[activeTech];
+
+  return (
+    <div className="mb-16">
+      <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold mb-6">Interactive Technology Showcase</h2>
+          <p className="text-xl text-gray-300">Click through our revolutionary technologies</p>
+        </div>
+
+        {/* Technology Selector */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
+            {technologies.map((tech, index) => (
+              </a>
+              <button
+                onClick={() => setIsAnimating(!isAnimating)}
+                className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold"
+              >
+                {isAnimating ? '⏸️ Pause Animation' : '▶️ Start Animation'}
+              </button>
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
 
               {/* Demo Button */}
               <div className="text-center">
@@ -323,6 +406,7 @@ cursor/fix-netlify-build-and-merge-to-main-a068
             </div>
           </div>
 
+<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -341,6 +425,138 @@ cursor/fix-netlify-build-and-merge-to-main-a068
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
               Download Brochure
             </button>cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+          {/* Technology Visual */}
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
+            <div className="relative h-full min-h-[400px]">
+              <div className={`absolute inset-0 bg-gradient-to-br ${currentTech.color} rounded-2xl opacity-20`}></div>
+              <div className="relative z-10 flex items-center justify-center h-full">
+                <motion.div
+                  key={activeTech}
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-9xl"
+                >
+                  {currentTech.icon}
+                </motion.div>
+              </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                {[...Array(20)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-white rounded-full opacity-30"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                    }}
+                    animate={{
+                      y: [0, -100, 0],
+                      opacity: [0.3, 1, 0.3],
+                      scale: [1, 2, 1],
+                    }}
+                    transition={{
+                      duration: 3 + Math.random() * 2,
+                      repeat: Infinity,
+                      delay: Math.random() * 2,
+                    }}
+                  />
+                ))}
+          {/* Interactive Demo */}
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform -translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
+              <h4 className="text-3xl font-bold mb-6 text-center">Interactive Demo</h4>
+              
+              {/* Demo Visualization */}
+              <div className="relative mb-8">
+                <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-white/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4 animate-bounce">
+                      {currentTech.icon}
+                    </div>
+                    <p className="text-gray-400">Interactive {currentTech.name} Demo</p>
+                    <p className="text-sm text-gray-500 mt-2">Click to interact</p>
+                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full animate-ping"></div>
+                <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                <div className="absolute top-1/2 left-4 w-1 h-1 bg-pink-400 rounded-full animate-bounce"></div>
+              </div>
+
+              {/* Demo Controls */}
+              <div className="space-y-4">
+                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Start Interactive Demo
+                </button>
+                <button className="w-full border border-purple-400 text-purple-400 py-3 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors">
+                  View Documentation
+                </button>
+                <button className="w-full border border-cyan-400 text-cyan-400 py-3 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors">
+                  Schedule Live Demo
+                </button>
+              </div>
+
+              {/* Real-time Data */}
+              <div className="mt-8 p-4 bg-gray-800/50 rounded-lg">
+                <h5 className="text-lg font-bold mb-3 text-center">Real-time Data</h5>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-purple-400">
+                      {Math.floor(Math.random() * 100) + 80}%
+                    </div>
+                    <div className="text-sm text-gray-400">Active</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-cyan-400">
+                      {Math.floor(Math.random() * 1000) + 500}
+                    </div>
+                    <div className="text-sm text-gray-400">Processes</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-emerald-400">
+                      {Math.floor(Math.random() * 50) + 25}ms
+                    </div>
+                    <div className="text-sm text-gray-400">Latency</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Visual Element */}
+          <div className="hidden md:block">
+            <div className="text-8xl opacity-30 text-center">
+              {technologies[activeTech].icon}
+            </div>
+          </div>
+        </div>
+      </div>
+
+        {/* Technology Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">∞</div>
+            <div className="text-gray-300">Computational Power</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">0ms</div>
+            <div className="text-gray-300">Processing Latency</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">100%</div>
+            <div className="text-gray-300">Accuracy Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">∞</div>
+            <div className="text-gray-300">Learning Capacity</div>
+          </div>
+        </div>
+        </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
       {/* Technology Grid */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         {technologies.map((tech, index) => (
@@ -362,7 +578,10 @@ cursor/fix-netlify-build-and-merge-to-main-a068
   );
 };
 
+<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
 export default InteractiveTechShowcase;
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -496,6 +715,7 @@ export default InteractiveTechShowcase;
               </button>
             </motion.div>
 export default InteractiveTechShowcase;
+<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
 
               {/* Demo Button */}
               <div className="text-center">
@@ -518,3 +738,7 @@ export default InteractiveTechShowcase;
         </div>
 
 export default InteractiveTechShowcase;
+=======
+export default InteractiveTechShowcase;
+export default InteractiveTechShowcase;
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
