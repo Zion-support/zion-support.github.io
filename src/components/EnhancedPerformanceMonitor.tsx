@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const UserExperienceOptimizer: React.FC = () => {
+const EnhancedPerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [animationPhase, setAnimationPhase] = useState(0);
 
@@ -19,7 +19,7 @@ const UserExperienceOptimizer: React.FC = () => {
   return (
     <div className="enhanced-component">
       <div className="component-header">
-        <h2>UX Optimization Engine</h2>
+        <h2>Advanced Performance Monitoring</h2>
         <div className="status-indicator">
           <span className="status-dot active"></span>
           <span>Enhanced & Active</span>
@@ -49,4 +49,4 @@ const UserExperienceOptimizer: React.FC = () => {
   );
 };
 
-export default UserExperienceOptimizer;
+export default EnhancedPerformanceMonitor;
