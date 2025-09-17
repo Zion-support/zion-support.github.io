@@ -7,10 +7,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-01e2
     setIsLoading(true);
     
     // Simulate API call
@@ -123,9 +119,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               <div className="text-2xl font-bold">24/7</div>
               <div className="text-2xl font-bold">Updates</div>
             </div>
-<<<<<<< HEAD
-=======
-=======
     // Simulate subscription
     setIsSubscribed(true);
     setTimeout(() => setIsSubscribed(false), 3000);
@@ -194,8 +187,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
             <div className="text-3xl mb-2">🌌</div>
             <h3 className="text-lg font-semibold mb-2">Space Updates</h3>
             <p className="text-sm opacity-90">Space exploration missions and cosmic discoveries</p>
->>>>>>> cursor/create-and-deploy-new-content-9601
->>>>>>> cursor/create-and-deploy-new-content-01e2
           </div>
         </div>
       </div>

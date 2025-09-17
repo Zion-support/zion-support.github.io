@@ -1,63 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
-=======
->>>>>>> cursor/create-and-deploy-new-content-9601
-=======
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
 import React from 'react';
-<<<<<<< HEAD
-=======
->>>>>>> main
 import { motion } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
 import React from 'react';
 
->>>>>>> cursor/create-and-deploy-new-content-b461
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-=======
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
->>>>>>> cursor/create-and-deploy-new-content-e4b8
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌌 INTERDIMENSIONAL TECH 2026
           </div>
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
             Interdimensional Technology Revolution
           </h1>
@@ -65,8 +30,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             Break through dimensional barriers with revolutionary technology that transcends 
             physical limitations and opens portals to infinite possibilities
           </p>
-<<<<<<< HEAD
-=======
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
               🌌 Enter the Multiverse →
@@ -119,13 +82,10 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               <li>• Matter-energy conversion systems</li>
             </ul>
             <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-=======
-=======
 
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -154,9 +114,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
                 Explore Parallel Worlds
               </button>
             </div>
-<<<<<<< HEAD
           </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-e4b8
         </div>
 
         {/* Dimensional Technology Grid */}
@@ -206,12 +164,9 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               Transfer human consciousness across dimensions and digital realms
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-<<<<<<< HEAD
               <li>• Digital consciousness backup</li>
               <li>• Cross-dimensional awareness</li>
               <li>• Immortality through transfer</li>
-=======
-=======
           </div>
         </div>
       </div>
@@ -284,20 +239,16 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               Technology that can alter the fundamental laws of physics within localized areas
             </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
               <li>• Physics law modification</li>
               <li>• Gravity manipulation</li>
               <li>• Time flow control</li>
               <li>• Matter creation/destruction</li>
             </ul>
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
               Manipulate Reality →
             </button>
           </motion.div>
 
-<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -312,7 +263,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <ul className="text-indigo-200 space-y-3 text-base mb-6">
               <li>• Cross-dimensional consciousness transfer</li>
               <li>• Alternate self integration</li>
->>>>>>> cursor/create-and-deploy-new-content-e4b8
               <li>• Collective consciousness networks</li>
             </ul>
             <div className="text-center">
@@ -396,14 +346,10 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="bg-gradient-to-r from-pink-500 to-violet-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
               Enter the Portal
             </button>
-<<<<<<< HEAD
             <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 font-bold text-lg">
               Learn More
-=======
-=======
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-5 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-2xl">
               📚 Learn More
-=======
           {/* Parallel Universe Mining */}
           <motion.div
             whileHover={{ scale: 1.05, rotateY: 5 }}
@@ -518,15 +464,11 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               <div className="text-emerald-200">Cross-dimensional communication</div>
             </motion.div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-e4b8
         </div>
-=======
               Manipulate Reality →
             </button>
-<<<<<<< HEAD
           </motion.div>
 
-<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -550,7 +492,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           </motion.div>
         </div>
 
-<<<<<<< HEAD
         {/* Revolutionary Capabilities */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -584,7 +525,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
-=======
       {/* Dimensional Statistics */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
@@ -708,12 +648,9 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Dimensional Demo
->>>>>>> cursor/create-and-deploy-new-content-5863
             </button>
           </div>
         </motion.div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-f420
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -721,9 +658,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌌 INTERDIMENSIONAL TECH 2026
           </div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -731,7 +665,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌌 INTERDIMENSIONAL TECH 2026
           </div>
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-violet-400 bg-clip-text text-transparent">
             Interdimensional Technology Revolution
           </h1>
@@ -740,7 +673,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             physical limitations and opens portals to infinite possibilities
           </p>
         </div>
-<<<<<<< HEAD
 
         {/* Dimensional Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -766,9 +698,7 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
-=======
       </div>
->>>>>>> cursor/create-and-deploy-new-content-f995
 
         {/* Multiverse Applications */}
         <motion.div
@@ -777,11 +707,9 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="mb-16"
         >
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Multiverse Applications
           </h2>
-=======
           <h2 className="text-5xl font-bold mb-6">🌌 Interdimensional Technologies</h2>
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Access technologies from infinite parallel dimensions and universes
@@ -796,7 +724,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           >
             <div className="text-6xl mb-6 text-center">🚪🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Dimension Gateway</h3>
->>>>>>> cursor/create-and-deploy-new-content-3fd6
             <p className="text-indigo-100 mb-6 text-center">
               Alter the fundamental properties of reality through advanced quantum field manipulation
             </p>
@@ -873,10 +800,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
         {/* Safety and Ethics */}
         <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-red-400">Safety & Ethics</h2>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-orange-400">Safety Protocols</h3>
@@ -910,28 +833,16 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="bg-gradient-to-r from-pink-500 to-violet-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
               Enter the Portal
             </button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-5 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-2xl">
               📚 Learn More
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
             <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 font-bold text-lg">
               Learn More
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
           {/* Parallel Universe Mining */}
           <motion.div
-=======
           </div>
 
           {/* Parallel Universe Mining */}
           <div
->>>>>>> cursor/create-and-deploy-new-content-b461
             whileHover={{ scale: 1.05, rotateY: 5 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:shadow-2xl transition-all duration-300"
           >
@@ -949,17 +860,14 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Start Mining →
             </button>
-<<<<<<< HEAD
           </motion.div>
 
           {/* Dimensional Communication */}
           <motion.div
-=======
           </div>
 
           {/* Dimensional Communication */}
           <div
->>>>>>> cursor/create-and-deploy-new-content-b461
             whileHover={{ scale: 1.05, rotateY: 5 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:shadow-2xl transition-all duration-300"
           >
@@ -977,17 +885,14 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Connect Now →
             </button>
-<<<<<<< HEAD
           </motion.div>
 
           {/* Multiverse Database */}
           <motion.div
-=======
           </div>
 
           {/* Multiverse Database */}
           <div
->>>>>>> cursor/create-and-deploy-new-content-b461
             whileHover={{ scale: 1.05, rotateY: 5 }}
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:shadow-2xl transition-all duration-300"
           >
@@ -1005,22 +910,16 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Access Database →
             </button>
-<<<<<<< HEAD
           </motion.div>
-=======
           </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
         </div>
       </div>
 
       {/* Dimensional Statistics */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
           <motion.div
-=======
           <div
->>>>>>> cursor/create-and-deploy-new-content-b461
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1030,80 +929,61 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               The incredible reach of our interdimensional technologies
             </p>
-<<<<<<< HEAD
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
-=======
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div
->>>>>>> cursor/create-and-deploy-new-content-b461
               whileHover={{ scale: 1.1 }}
               className="text-center"
             >
               <div className="text-6xl font-bold text-indigo-400 mb-2">∞</div>
               <div className="text-xl font-semibold mb-2">Dimensions</div>
               <div className="text-indigo-200">Accessible parallel universes</div>
-<<<<<<< HEAD
             </motion.div>
             <motion.div
-=======
             </div>
             <div
->>>>>>> cursor/create-and-deploy-new-content-b461
               whileHover={{ scale: 1.1 }}
               className="text-center"
             >
               <div className="text-6xl font-bold text-purple-400 mb-2">10^24</div>
               <div className="text-xl font-semibold mb-2">Operations/Second</div>
               <div className="text-purple-200">Cross-dimensional processing</div>
-<<<<<<< HEAD
             </motion.div>
             <motion.div
-=======
             </div>
             <div
->>>>>>> cursor/create-and-deploy-new-content-b461
               whileHover={{ scale: 1.1 }}
               className="text-center"
             >
               <div className="text-6xl font-bold text-cyan-400 mb-2">100%</div>
               <div className="text-xl font-semibold mb-2">Success Rate</div>
               <div className="text-cyan-200">Dimensional gateway stability</div>
-<<<<<<< HEAD
             </motion.div>
             <motion.div
-=======
             </div>
             <div
->>>>>>> cursor/create-and-deploy-new-content-b461
               whileHover={{ scale: 1.1 }}
               className="text-center"
             >
               <div className="text-6xl font-bold text-emerald-400 mb-2">0ms</div>
               <div className="text-xl font-semibold mb-2">Latency</div>
               <div className="text-emerald-200">Cross-dimensional communication</div>
-<<<<<<< HEAD
             </motion.div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
             </div>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
         </div>
       </div>
 
       {/* Success Stories */}
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
         <motion.div
-=======
         <div
->>>>>>> cursor/create-and-deploy-new-content-b461
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -1113,17 +993,14 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Real results from our interdimensional technology implementations
           </p>
-<<<<<<< HEAD
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <motion.div
-=======
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <div
->>>>>>> cursor/create-and-deploy-new-content-b461
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30"
           >
@@ -1133,15 +1010,12 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               "We accessed parallel universes where space travel is 1000x more advanced. This gave us the technology to reach Mars in 2 days instead of 9 months."
             </p>
             <div className="text-indigo-300 font-semibold">- NASA Advanced Projects</div>
-<<<<<<< HEAD
           </motion.div>
 
           <motion.div
-=======
           </div>
 
           <div
->>>>>>> cursor/create-and-deploy-new-content-b461
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
           >
@@ -1151,15 +1025,12 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               "By accessing medical knowledge from parallel universes, we cured 15 previously incurable diseases in just 6 months."
             </p>
             <div className="text-purple-300 font-semibold">- Global Health Institute</div>
-<<<<<<< HEAD
           </motion.div>
 
           <motion.div
-=======
           </div>
 
           <div
->>>>>>> cursor/create-and-deploy-new-content-b461
             whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
           >
@@ -1169,21 +1040,15 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
               "We found a parallel universe where they solved fusion energy 50 years ago. Now we have unlimited clean energy for the entire planet."
             </p>
             <div className="text-cyan-300 font-semibold">- International Energy Agency</div>
-<<<<<<< HEAD
           </motion.div>
-=======
           </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
         </div>
       </div>
 
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
         <motion.div
-=======
         <div
->>>>>>> cursor/create-and-deploy-new-content-b461
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -1199,18 +1064,9 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-xl">
               Schedule Dimensional Demo
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
             </button>
           </div>
         </div>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
-=======
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
@@ -1433,21 +1289,12 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-xl">
               📞 Contact Reality Team
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
             </button>
           </div>
         </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
             </button>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const RevolutionaryAdBanner: React.FC = () => {
-<<<<<<< HEAD
   const [currentAd, setCurrentAd] = useState(0);
   
   const ads = [
@@ -81,7 +80,6 @@ const RevolutionaryAdBanner: React.FC = () => {
               }`}
             />
           ))}
-=======
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -108,7 +106,6 @@ const RevolutionaryAdBanner: React.FC = () => {
           <a href="/pages/FutureTechBreakthroughs2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
             🚀 Future Tech 2028 →
           </a>
->>>>>>> cursor/create-and-deploy-new-content-b461
         </div>
       </motion.div>
     </div>

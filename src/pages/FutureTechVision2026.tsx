@@ -58,9 +58,6 @@ const FutureTechVision2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -71,14 +68,6 @@ const FutureTechVision2026: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6">Future Tech Vision 2026</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Envisioning the future of technology and its transformative impact on humanity
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -123,13 +112,6 @@ const FutureTechVision2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6">🚀 Technology Roadmap</h2>
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Our comprehensive roadmap for the next decade of technological advancement.
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
-=======
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -140,11 +122,6 @@ const FutureTechVision2026: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6">Future Tech Vision 2026</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Envisioning the future of technology and its transformative impact on humanity
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
           </p>
         </div>
 
@@ -209,15 +186,6 @@ const FutureTechVision2026: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
       {/* Impact Predictions */}
       <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -273,12 +241,7 @@ const FutureTechVision2026: React.FC = () => {
               <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
               <div className="text-lg opacity-80 mb-2">Consciousness</div>
               <div className="text-sm opacity-60">AI achievement</div>
-<<<<<<< HEAD
             </motion.div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
         {/* Vision Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
@@ -467,8 +430,6 @@ const FutureTechVision2026: React.FC = () => {
                 <p className="text-lg opacity-90">Complete transcendence of physical limitations and universal access</p>
               </div>
             </div>
-<<<<<<< HEAD
-=======
       {/* Impact Predictions */}
       <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -525,21 +486,11 @@ const FutureTechVision2026: React.FC = () => {
               <div className="text-lg opacity-80 mb-2">Consciousness</div>
               <div className="text-sm opacity-60">AI achievement</div>
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
             </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Impact Predictions */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">📈 Impact Predictions</h2>
@@ -579,14 +530,6 @@ const FutureTechVision2026: React.FC = () => {
             <a href="/pages/NextGenInnovationHub2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Innovation Hub →
             </a>
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
       {/* Future Applications */}
       <div className="container mx-auto px-4 py-16">
         <div
@@ -683,13 +626,6 @@ const FutureTechVision2026: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Learn More
             </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
-<<<<<<< HEAD
-=======
-=======
         {/* Impact Predictions */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">📈 Impact Predictions</h2>
@@ -729,15 +665,10 @@ const FutureTechVision2026: React.FC = () => {
             <a href="/pages/NextGenInnovationHub2026" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Innovation Hub →
             </a>
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
           </div>
         </motion.div>
-=======
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-b461
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
-<<<<<<< HEAD
   const [currentBanner, setCurrentBanner] = useState(0);
   
   const banners = [
@@ -25,7 +24,6 @@ const RevolutionaryContentBanner: React.FC = () => {
       link: "/pages/NextGenInnovationHub2026",
       gradient: "from-green-600 to-teal-600",
       textColor: "text-white"
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const featuredContent = [
@@ -52,13 +50,11 @@ const RevolutionaryContentBanner: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600",
       icon: "🎯",
       badge: "FEATURED"
->>>>>>> cursor/create-and-deploy-new-content-12a7
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-<<<<<<< HEAD
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -98,7 +94,6 @@ const RevolutionaryContentBanner: React.FC = () => {
                         <a 
                           href={banner.link}
                           className={`inline-block bg-white ${banner.textColor} px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-=======
       setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -150,14 +145,12 @@ const RevolutionaryContentBanner: React.FC = () => {
                         <a
                           href={content.link}
                           className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
->>>>>>> cursor/create-and-deploy-new-content-12a7
                         >
                           Explore Now →
                         </a>
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
                 ))}
               </div>
             </div>
@@ -189,7 +182,6 @@ const RevolutionaryContentBanner: React.FC = () => {
               </a>
             ))}
           </div>
-=======
                 </div>
               ))}
             </div>
@@ -227,7 +219,6 @@ const RevolutionaryContentBanner: React.FC = () => {
               </div>
             </a>
           ))}
->>>>>>> cursor/create-and-deploy-new-content-12a7
         </div>
       </div>
     </div>

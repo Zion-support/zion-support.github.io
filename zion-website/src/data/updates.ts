@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type SiteUpdate = {
   title: string
   summary: string
@@ -9,48 +7,14 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-<<<<<<< HEAD
-=======
   // Fresh content added 2025-09-15
   {
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
-<<<<<<< HEAD
-=======
     title: 'Guide: Agent Platform Operations (2026)',
-=======
     title: 'Launch: Autonomous Ops and SRE for Agents',
-=======
     title: 'Blueprint: Policy‑as‑Code in Production (2026)',
-=======
     title: 'Report: State of AI Automation (2026 Preview)',
-=======
     title: 'Launch: Autonomous Ops Control Center 2.0',
-=======
     title: 'Launch: Agentic Ops Dashboard (v1.0)',
     summary:
       'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
@@ -76,7 +40,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Autonomous Sales Copilot (v1.0)',
->>>>>>> origin/feat/new-updates-and-homepage-promo
     summary:
       'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
     href: '/updates/autonomous-ops-control-center-2-0',
@@ -101,7 +64,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Guide: Real-Time Evals Starter Kit',
->>>>>>> origin/feat/new-updates-and-home-ad
     summary:
       'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
     href: '/insights/state-of-ai-automation-2025',
@@ -118,7 +80,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
->>>>>>> origin/feat/content-sept15-1757928952
     summary:
       'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
     href: '/blog/ai-2026-policy-as-code-production-blueprint',
@@ -127,7 +88,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Autonomous Sales Copilot v1.0',
->>>>>>> origin/feat/content-policy-as-code
     summary:
       'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
     href: '/updates/autonomous-ops-sre-for-agents',
@@ -136,7 +96,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: AI Agent Safety Certification (Beta)',
->>>>>>> origin/feature/autonomous-ops-sre-content
     summary:
       'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
     href: '/updates/agent-platform-operations',
@@ -161,46 +120,14 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: AI Governance Toolkit (v2)',
->>>>>>> origin/feature/content-updates-2025-09-15
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
   // Fresh content added 2025-09-15
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
     title: 'Guide: Agent Platform Operations (2026)',
-=======
     title: 'Launch: Autonomous Ops and SRE for Agents',
-=======
     title: 'Blueprint: Policy‑as‑Code in Production (2026)',
-=======
     title: 'Report: State of AI Automation (2026 Preview)',
-=======
     title: 'Launch: Autonomous Ops Control Center 2.0',
-=======
     title: 'Launch: Agentic Ops Dashboard (v1.0)',
     summary:
       'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
@@ -226,7 +153,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Autonomous Sales Copilot (v1.0)',
->>>>>>> origin/feat/new-updates-and-homepage-promo
     summary:
       'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
     href: '/updates/autonomous-ops-control-center-2-0',
@@ -251,7 +177,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Guide: Real-Time Evals Starter Kit',
->>>>>>> origin/feat/new-updates-and-home-ad
     summary:
       'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
     href: '/insights/state-of-ai-automation-2025',
@@ -268,7 +193,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
->>>>>>> origin/feat/content-sept15-1757928952
     summary:
       'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
     href: '/blog/ai-2026-policy-as-code-production-blueprint',
@@ -277,7 +201,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: Autonomous Sales Copilot v1.0',
->>>>>>> origin/feat/content-policy-as-code
     summary:
       'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
     href: '/updates/autonomous-ops-sre-for-agents',
@@ -286,7 +209,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: AI Agent Safety Certification (Beta)',
->>>>>>> origin/feature/autonomous-ops-sre-content
     summary:
       'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
     href: '/updates/agent-platform-operations',
@@ -311,23 +233,9 @@ export const siteUpdates: SiteUpdate[] = [
   },
   {
     title: 'Launch: AI Governance Toolkit (v2)',
->>>>>>> origin/feature/content-updates-2025-09-15
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
   // Fresh content added 2025-09-15
   {
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
     summary:
       'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.',
     href: '/blog/ai-2026-enterprise-agent-observability-deep-dive',
@@ -350,65 +258,7 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Blueprint'
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-376e
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Launch: Real-Time AI Analytics Dashboard v3.0',
     summary:
       'Advanced real-time monitoring and analytics platform with predictive insights, anomaly detection, and comprehensive performance visualization.',
@@ -431,136 +281,12 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-testing-framework-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
   },
   {
->>>>>>> cursor/create-and-deploy-new-content-1912
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
->>>>>>> cursor/create-and-deploy-new-content-8472
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
->>>>>>> cursor/create-and-deploy-new-content-de62
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-0dce
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-0dce
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
   },
   // Added 2025-09-15 (new content for homepage promotion)
   {
@@ -571,22 +297,6 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
   // Added 2025-09-15 (brand new content)
   {
     title: 'Launch: AI Governance Dashboard v5',
@@ -604,8 +314,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/ai-autonomous-workflow-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
   },
   // Newly added 2025-09-15 (to advertise on homepage)
   {
@@ -615,131 +323,35 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/enterprise-retrieval-observability-2026',
     date: '2025-09-15',
     tag: 'Report'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-<<<<<<< HEAD
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8069
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8069
   },
   {
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
->>>>>>> cursor/create-and-deploy-new-content-0dce
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   },
   {
     title: 'Launch: AI Lab Open Benchmarks Portal',
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
-=======
->>>>>>> cursor/create-and-deploy-new-content-0dce
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> cursor/create-and-deploy-new-content-f995
   },
   {
->>>>>>> main
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
     summary:
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-b461
   },
   {
     title: 'Launch: AI Lab Open Benchmarks Portal',
     summary:
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
-<<<<<<< HEAD
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
   // Added 2025-09-15 (new content created now)
   {
     title: 'Launch: Autonomous Security Copilot v1.0',
     summary: 'Advanced security automation with real-time threat detection and response capabilities.',
     href: '/updates/autonomous-security-copilot-1-0',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
     date: '2025-09-15',
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Guide: Production Guardrails for Tool Use (2026)',
     summary:
       'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
@@ -758,14 +370,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   // Added 2025-09-15 (brand new content)
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -774,11 +378,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Launch: Autonomous Analytics Copilot v1.0',
     summary:
       'Trustworthy dashboards, KPI narratives, and anomaly alerts grounded in telemetry with audit-ready evidence.',
@@ -831,20 +430,12 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
     href: '/updates/agentic-ops-control-center-1-0',
-=======
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -1772,41 +1363,14 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Task suites, rubrics, and golden datasets for production agents across domains.',
     href: '/updates/agent-benchmark-suite-v1',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-=======
       'End-to-end workflow automation with intelligent routing, error handling, and comprehensive audit trails.',
     href: '/updates/ai-autonomous-workflow-engine-1-0',
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
     date: '2025-09-15',
     tag: 'Launch'
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Guide: Production Guardrails for Tool Use (2026)',
     summary:
       'Design runtime policies, sandboxing, and least-privilege adapters with live eval gates.',
@@ -1825,14 +1389,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   // Added 2025-09-15 (brand new content)
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -1841,11 +1397,6 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f175
     title: 'Launch: Autonomous Analytics Copilot v1.0',
     summary:
       'Trustworthy dashboards, KPI narratives, and anomaly alerts grounded in telemetry with audit-ready evidence.',
@@ -1898,20 +1449,12 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Unified runbooks, eval gates, and incident workflows for reliable agent operations.',
     href: '/updates/agentic-ops-control-center-1-0',
-=======
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-634d
-=======
     title: 'Launch: Autonomous Data Quality Copilot 1.0',
     summary: 'Automated data quality monitoring and remediation with intelligent anomaly detection.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-=======
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-f175
     date: '2025-09-15',
     tag: 'Launch'
   },
@@ -2839,13 +2382,6 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Task suites, rubrics, and golden datasets for production agents across domains.',
     href: '/updates/agent-benchmark-suite-v1',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
     date: '2025-09-15',
     tag: 'Launch'
   }
@@ -3097,10 +2633,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/eval-ready-agent-release-automation',
     date: '2025-09-15',
     tag: 'Guide'
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
   }
   ,
   // New updates added by background automation on 2025-09-15 (even later batch)
@@ -3353,33 +2885,6 @@ export const siteUpdates: SiteUpdate[] = [
   }
 ]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
-<<<<<<< HEAD
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
@@ -3387,18 +2892,15 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
     .slice(0, limit)
 }
 
-=======
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
-=======
 export type UpdateItem = {
   id: string
   title: string
   summary: string
   date: string
   href?: string
-=======
 export interface UpdateItem {
   id: string;
   title: string;
@@ -3406,20 +2908,13 @@ export interface UpdateItem {
   href: string;
   date: string;
   tag: 'Course' | 'Announcement' | 'Challenge' | 'Research' | 'Release';
->>>>>>> origin/feat/updates-content-and-advertising
 }
 
 export const updates: UpdateItem[] = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     id: 'advanced-blockchain-course',
-=======
     id: 'ai-security-blueprint',
     title: 'Guide: AI Security Blueprint 2025',
-=======
     id: 'ai-agents-lab-opening',
     title: 'Launch: AI Agents Innovation Lab',
     summary:
@@ -3435,7 +2930,6 @@ export const updates: UpdateItem[] = [
       'We partnered with leading research institutions to accelerate quantum neural networks for enterprise.',
     href: '/updates/quantum-partnership',
     date: '2025-09-14',
-=======
     id: 'ai-governance-bootcamp',
     title: 'New Bootcamp: Enterprise AI Governance (Oct 2025)',
     summary:
@@ -3460,13 +2954,11 @@ export const updates: UpdateItem[] = [
       'Improved navigation, better performance, and WCAG-focused accessibility enhancements across the site.',
     href: '/updates/website-ux-refresh-2025',
     date: '2025-09-13',
->>>>>>> origin/feat/updates-and-fixes
     tag: 'Announcement',
   },
   {
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
->>>>>>> origin/feat/new-updates-ads
     summary:
       'Best practices for securing AI systems in production: model, data, and pipeline.',
     href: '/updates/ai-security-blueprint-2025',
@@ -3493,13 +2985,11 @@ export const updates: UpdateItem[] = [
   },
   {
     id: 'advanced-blockchain-dev-course',
->>>>>>> origin/feature/updates-2025-09
     title: 'New Course: Advanced Blockchain Development',
     summary:
       'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
     date: '2025-09-10',
     href: '/updates/advanced-blockchain-course',
-=======
     id: 'advanced-blockchain-dev-course',
     title: 'New Course: Advanced Blockchain Development',
     summary:
@@ -3516,13 +3006,11 @@ export const updates: UpdateItem[] = [
     href: '/updates/web3-fundamentals',
     date: '2025-09-08',
     tag: 'Course',
->>>>>>> origin/feat/updates-content-and-advertising
   },
   {
     id: 'dapp-challenge',
     title: 'Community Challenge: Build a DApp',
     summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-<<<<<<< HEAD
     date: '2025-09-08',
     href: '/updates/dapp-challenge',
   },
@@ -3542,8 +3030,6 @@ export const updates: UpdateItem[] = [
   },
 ]
 
->>>>>>> origin/feature/updates-content
-=======
     href: '/updates/dapp-challenge',
     date: '2025-09-05',
     tag: 'Challenge',
@@ -3572,40 +3058,9 @@ export const getLatestUpdates = (limit = 6) => {
     .slice(0, limit);
 };
 
->>>>>>> origin/feat/updates-content-and-advertising
->>>>>>> cursor/create-and-deploy-new-content-376e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 ]
 
 export function getLatestUpdates(count: number = 6): SiteUpdate[] {
   return siteUpdates.slice(0, count)
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461

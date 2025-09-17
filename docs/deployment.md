@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Deployment Guide
 
 ## Production Build
@@ -51,7 +50,6 @@ VITE_APP_ENV=production
 ---
 
 _Generated automatically by Smart Documentation Generator_
-=======
 # Deployment Strategies and Processes
 
 This document outlines the deployment strategies and processes for the various components of the Zion platform.
@@ -172,4 +170,3 @@ The Next.js frontend application has two main deployment configurations:
 - **Zero-Downtime Deployments:** For critical services, aim for zero-downtime deployment strategies (e.g., blue-green deployments, rolling updates). The `.github/workflows/blue-green-deploy.yml` suggests this is already a consideration for some parts.
 
 _This document will continue to evolve. Create detailed playbooks for each environment and update this guide whenever deployment steps change._
->>>>>>> origin/auto/autonomy-17186719616

@@ -5,7 +5,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
 
   const contentData = {
     ai: {
-<<<<<<< HEAD
       title: "Revolutionary AI Breakthrough 2025",
       description: "Experience the most advanced AI technologies reshaping industries",
       icon: "🧠",
@@ -49,7 +48,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
         "Medical Applications"
       ],
       link: "/pages/NeuralInterfaceRevolution2025"
-=======
       title: 'AI Revolution',
       icon: '🧠',
       color: 'from-purple-600 to-pink-600',
@@ -96,14 +94,12 @@ const InteractiveContentShowcase2025: React.FC = () => {
         ],
         link: '/pages/AdvancedBiotechRevolution2026'
       }
->>>>>>> cursor/create-and-deploy-new-content-f420
     }
   };
 
   const currentContent = contentData[activeTab as keyof typeof contentData];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -114,7 +110,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
           <h2 className="text-5xl font-bold mb-6">🌟 Interactive Technology Showcase</h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Explore our revolutionary 2025 technology breakthroughs with interactive features and detailed insights
-=======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-indigo-600/10 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -123,12 +118,10 @@ const InteractiveContentShowcase2025: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore our revolutionary technologies through interactive experiences. 
             Click on different categories to discover the future of innovation.
->>>>>>> cursor/create-and-deploy-new-content-f420
           </p>
         </div>
 
         {/* Tab Navigation */}
-<<<<<<< HEAD
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 flex space-x-2">
             {Object.entries(contentData).map(([key, content]) => (
@@ -143,7 +136,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
               >
                 <span className="text-2xl mr-2">{content.icon}</span>
                 {content.title.split(' ')[0]}
-=======
         <div className="flex justify-center mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">
             {Object.entries(contentTabs).map(([key, tab]) => (
@@ -158,14 +150,12 @@ const InteractiveContentShowcase2025: React.FC = () => {
               >
                 <span className="text-xl mr-2">{tab.icon}</span>
                 {tab.title}
->>>>>>> cursor/create-and-deploy-new-content-f420
               </button>
             ))}
           </div>
         </div>
 
         {/* Content Display */}
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="text-8xl mb-6 text-center md:text-left">{currentContent.icon}</div>
@@ -215,7 +205,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
                 <span className="text-white/90">Competitive advantage</span>
-=======
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -243,7 +232,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
                 >
                   Explore {contentTabs[activeTab as keyof typeof contentTabs].title} →
                 </a>
->>>>>>> cursor/create-and-deploy-new-content-f420
               </div>
               <div className="text-center">
                 <div className="text-8xl mb-4 opacity-50">
@@ -257,7 +245,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -279,7 +266,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
                 View All Services
               </a>
             </div>
-=======
         {/* Additional Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           <div className="text-center">
@@ -296,7 +282,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
             <div className="text-4xl mb-3">🔮</div>
             <h3 className="text-lg font-semibold mb-2">Future Predictions</h3>
             <p className="text-sm opacity-90">AI-powered predictions about technology trends and developments</p>
->>>>>>> cursor/create-and-deploy-new-content-f420
           </div>
         </div>
       </div>

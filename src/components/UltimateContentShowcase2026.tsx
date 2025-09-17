@@ -2,14 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 
 const UltimateContentShowcase2026: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f995
-<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
@@ -72,32 +64,15 @@ const UltimateContentShowcase2026: React.FC = () => {
             <a href="/pages/NeuralInterfaceEvolution2026" className="block w-full bg-white text-emerald-600 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-bold text-center mt-6">
               Connect Mind & Machine →
             </a>
-=======
-<<<<<<< HEAD
 
   const showcaseItems = [
     {
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b461
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-=======
-<<<<<<< HEAD
   const [activeCategory, setActiveCategory] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-=======
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
@@ -160,16 +135,9 @@ const UltimateContentShowcase2026: React.FC = () => {
             <a href="/pages/NeuralInterfaceEvolution2026" className="block w-full bg-white text-emerald-600 py-4 rounded-lg hover:bg-emerald-50 transition-colors font-bold text-center mt-6">
               Connect Mind & Machine →
             </a>
-=======
->>>>>>> cursor/create-and-deploy-new-content-e4b8
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
   const showcaseItems = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       id: 'ai-consciousness',
       name: 'AI Consciousness',
       icon: '🧠',
@@ -430,10 +398,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
             Hear from leading experts about our revolutionary technologies
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -482,32 +446,8 @@ const UltimateContentShowcase2026: React.FC = () => {
               📞 Schedule Demo
             </button>
           </div>
-<<<<<<< HEAD
         </motion.div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-f420
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
         </div>
-=======
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-b461
       id: 1,
       title: "Ultimate Tech Breakthrough 2026",
       description: "Experience the most revolutionary technologies ever created",
@@ -553,22 +493,6 @@ const UltimateContentShowcase2026: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-36f9
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-9601
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
@@ -576,7 +500,6 @@ const UltimateContentShowcase2026: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 ULTIMATE BREAKTHROUGH 2026 • JANUARY 2026
-=======
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -588,7 +511,6 @@ const UltimateContentShowcase2026: React.FC = () => {
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 ULTIMATE SHOWCASE 2026
->>>>>>> cursor/create-and-deploy-new-content-b461
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Technology Showcase
@@ -597,7 +519,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             Experience the most advanced technologies that will reshape our world forever
           </p>
         </div>
-<<<<<<< HEAD
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -616,7 +537,6 @@ const UltimateContentShowcase2026: React.FC = () => {
               Explore Consciousness →
             </a>
           </div>
-=======
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
@@ -636,7 +556,6 @@ const UltimateContentShowcase2026: React.FC = () => {
               Explore Consciousness →
             </a>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-261d
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">⚡</div>
@@ -678,25 +597,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             🌟 Experience the Ultimate Revolution →
           </a>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 
         <div className="relative max-w-6xl mx-auto">
           {/* Main Showcase Carousel */}
@@ -792,7 +692,6 @@ const UltimateContentShowcase2026: React.FC = () => {
               />
             ))}
           </div>
->>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 
           {/* Auto-play Toggle */}
           <div className="flex justify-center mt-6">
@@ -806,9 +705,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-079e
->>>>>>> cursor/create-and-deploy-new-content-e4b8
           </div>
         </div>
         
@@ -817,14 +713,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             🌟 Experience the Ultimate Revolution →
           </a>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
-=======
->>>>>>> cursor/create-and-deploy-new-content-261d
-=======
           </div>
         </div>
 
@@ -863,11 +751,6 @@ const UltimateContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8069
->>>>>>> cursor/create-and-deploy-new-content-502e
->>>>>>> cursor/create-and-deploy-new-content-b461
       </div>
     </div>
   );

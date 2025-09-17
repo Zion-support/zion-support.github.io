@@ -2,17 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const InteractiveTechShowcase2026: React.FC = () => {
-<<<<<<< HEAD
   const [activeShowcase, setActiveShowcase] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
   const showcases = [
-=======
-<<<<<<< HEAD
   const [activeDemo, setActiveDemo] = useState(0);
 
   const techDemos = [
-=======
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -21,8 +17,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
   }, []);
 
   const technologies = [
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
     {
       id: 1,
       title: "🧠 AI Consciousness Demo",
@@ -99,7 +93,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
   }, [isHovered, showcases.length]);
 
   return (
-<<<<<<< HEAD
     <div className="relative mb-16 overflow-hidden">
       {/* Main Showcase Banner */}
       <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
@@ -165,15 +158,12 @@ const InteractiveTechShowcase2026: React.FC = () => {
                           🚀 Try Interactive Demo →
                         </a>
                       </div>
-=======
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE DEMO • JANUARY 2026
           </div>
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-4">🌟 Interactive Technology Showcase 2026</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most advanced technologies through interactive demonstrations
@@ -198,14 +188,12 @@ const InteractiveTechShowcase2026: React.FC = () => {
                     <div>
                       <h3 className="text-2xl font-bold">{techDemos[activeDemo].title}</h3>
                       <p className="text-lg opacity-80">{techDemos[activeDemo].subtitle}</p>
->>>>>>> cursor/create-and-deploy-new-content-b461
                     </div>
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
 
-<<<<<<< HEAD
             {/* Navigation Controls */}
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
               {showcases.map((_, index) => (
@@ -218,7 +206,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 />
               ))}
             </div>
-=======
         {/* Demo Navigation */}
         <div className="flex justify-center space-x-2 mb-8">
           {techDemos.map((_, index) => (
@@ -245,7 +232,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               }`}
               onClick={() => setActiveDemo(index)}
             >
-=======
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
@@ -284,14 +270,12 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 ))}
               </div>
               
->>>>>>> cursor/create-and-deploy-new-content-3a26
               <div className="text-center">
                 <div className="text-4xl mb-4">{demo.icon}</div>
                 <h3 className="text-lg font-bold mb-2">{demo.title}</h3>
                 <p className="text-sm opacity-90 mb-4">{demo.subtitle}</p>
                 <div className="text-xs opacity-75">Click to explore →</div>
               </div>
-<<<<<<< HEAD
             </motion.div>
           ))}
         </div>
@@ -311,7 +295,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 📞 Contact Us
               </button>
             </div>
-=======
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
@@ -324,7 +307,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 }`}
               />
             ))}
->>>>>>> cursor/create-and-deploy-new-content-b461
           </div>
         </div>
       </div>
@@ -382,7 +364,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             <div className="text-sm text-gray-300">Countries Reached</div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
 
       {/* Call to Action */}
@@ -400,15 +381,9 @@ const InteractiveTechShowcase2026: React.FC = () => {
             📞 Schedule Private Demo
           </a>
         </div>
-<<<<<<< HEAD
-=======
-=======
-=======
             </div>
           ))}
         </div>
->>>>>>> cursor/create-and-deploy-new-content-3a26
->>>>>>> cursor/create-and-deploy-new-content-b461
       </div>
     </div>
   );
