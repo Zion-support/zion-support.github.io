@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
@@ -26,9 +22,6 @@ const DynamicContentCarousel: React.FC = () => {
           <h4 className="text-xl font-semibold mb-2">Neural Interfaces</h4>
           <p>Brain-computer interface solutions</p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feature/revolutionary-2026-content
       </div>
     </div>
@@ -36,8 +29,5 @@ const DynamicContentCarousel: React.FC = () => {
 };
 
 export default DynamicContentCarousel;
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
 >>>>>>> origin/feature/revolutionary-2026-content

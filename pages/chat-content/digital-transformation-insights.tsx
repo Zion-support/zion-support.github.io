@@ -1,20 +1,22 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const DigitalTransformationInsights: NextPage = () => {
+const digital-transformation-insights: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>DigitalTransformationInsights - Zion Tech Solutions</title>
-        <meta name="description" content="DigitalTransformationInsights page" />
-      </Head>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>digital-transformation-insights | Zion Tech Group</title>
+        <meta name="description" content="digital-transformation-insights - Revolutionary technology solutions" />
+      </Helmet>
       
-      <main>
-        <h1>DigitalTransformationInsights</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">digital-transformation-insights</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default DigitalTransformationInsights;
+export default digital-transformation-insights;

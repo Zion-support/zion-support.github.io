@@ -37,6 +37,8 @@ export default function Orders({ }: OrdersProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/Orders.jsx
 }
 }

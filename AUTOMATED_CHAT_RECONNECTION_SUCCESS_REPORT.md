@@ -78,7 +78,7 @@ A comprehensive automated chat reconnection system that enables:
 
 ```bash
 📊 Test Results Summary
-========================
+===
 ✅ Passed: 6/6
 ❌ Failed: 0/6
 📈 Success Rate: 100.0%
