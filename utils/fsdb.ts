@@ -2,16 +2,16 @@
 
 ursor/automate-test-improve-and-merge-code-646c;
 // Mock file system database utility;
-export function readJson<T>(filePath: string, defaultValue: T): T {// Mock file system database utility;
-export function readJson<T>(filePath: string, defaultValue: T): T {}
+export function readJson<T>(filePath: stringdefaultValue: T): T {// Mock file system database utility;
+export function readJson<T>(filePath: stringdefaultValue: T): T {}
 // Mock file system database utility;
-export function readJson<T>(filePath: string, defaultValue: T): T {// Mock file system database utility;
-export function readJson<T>(filePath: string, defaultValue: T): T {}
+export function readJson<T>(filePath: stringdefaultValue: T): T {// Mock file system database utility;
+export function readJson<T>(filePath: stringdefaultValue: T): T {}
 }
   }
 }}
 }}export async function ensureDisputeUploadDir(caseId: string): Promise<string> {const dir = getDisputeUploadDir(caseId)await mkdir(dir, { recursive: true })return dir;} catch (error) {// Mock file system database utility;
-export function read_json < T>(file_path: string, default_value: T): T {import fs from 'fs';
+export function read_json < T>(file_path: stringdefault_value: T): T {import fs from 'fs';
 import path from 'path';
 import { promisify  } from 'util';
 import crypto from 'crypto';
@@ -22,12 +22,12 @@ const mkdir = promisify(fs.mkdir)const readFile = promisify(fs.readFile)const wr
 }}
   } catch (error) {console.error('Error reading file:', error)await writeAllDisputes(all)} catch (error) {console.error("Error reading file:", error)}
   return defaultValue;
-}export function writeJson<T>(filePath: string, data: T): void {try {const fs = require("fs")const path = require("path")const dir = path.dirname(filePath)if (!fs.existsSync(dir)) {fs.mkdirSync(dir, { recursive: true })}
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2))} catch (error) {console.error("Error writing file:", error)fs.writeFileSync(filePath, JSON.stringify(data, null, 2))} catch (error) {console.error("Error writing file:", error)fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2))fs.writeFileSync(filePath, JSON.stringify(data, null, 2))} catch (error) {console.error("Error writing file:", error)fs.writeFileSync(filePath, JSON.stringify(data, null, 2))} catch (error) {console.error("Error writing file:", error)fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2))console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })ursor/automate-test-improve-and-merge-code-646c;
+}export function writeJson<T>(filePath: stringdata: T): void {try {const fs = require("fs")const path = require("path")const dir = path.dirname(filePath)if (!fs.existsSync(dir)) {fs.mkdirSync(dir, { recursive: true })}
+    fs.writeFileSync(filePathJSON.stringify(datanull2))} catch (error) {console.error("Error writing file:", error)fs.writeFileSync(filePath, JSON.stringify(data, null, 2))} catch (error) {console.error("Error writing file:", error)fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2))fs.writeFileSync(filePath, JSON.stringify(data, null, 2))} catch (error) {console.error("Error writing file:", error)fs.writeFileSync(filePath, JSON.stringify(data, null, 2))} catch (error) {console.error("Error writing file:", error)fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2))console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })ursor/automate-test-improve-and-merge-code-646c;
 // Mock file system database utility
-export function readJson<T>(filePath: string, defaultValue: T): T {
+export function readJson<T>(filePath: stringdefaultValue: T): T {
 // Mock file system database utility
-export function readJson<T>(filePath: string, defaultValue: T): T {}
+export function readJson<T>(filePath: stringdefaultValue: T): T {}
 }
 
 }

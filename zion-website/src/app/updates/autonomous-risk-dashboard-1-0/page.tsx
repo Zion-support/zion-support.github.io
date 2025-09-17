@@ -1,38 +1,32 @@
-export default function AutonomousRiskDashboard() {
+import React from "react";
+
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
-        <p className="text-sm font-semibold leading-6 text-blue-400">Launch</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Launch: Autonomous Risk Dashboard v1.0
-        </h1>
-        <p className="mt-2 text-gray-400">2025-09-15</p>
-        <div className="prose prose-invert mt-8">
-          <p>
-            The Autonomous Risk Dashboard unifies critical risk signals for AI systems, including
-            override rates, groundedness scores, policy violations, and incident MTTR. It provides
-            live drilldowns by service, dataset, and model, with exportable evidence bundles.
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
+        <div className="mb-8">
+          <div className="text-xs text-blue-300">Update</div>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Page Title
+          </h1>
+          <p className="mt-4 text-gray-300">
+            Page description and summary.
           </p>
-          <h2>Highlights</h2>
+        </div>
+        <div className="prose prose-invert prose-headings:text-white prose-a:text-blue-300">
+          <h2>Overview</h2>
+          <p>Content overview and details.</p>
+          <h2>Key features</h2>
           <ul>
-            <li>Real-time risk posture with trend charts and alerts</li>
-            <li>Deep links to traces, evals, and guardrail events</li>
-            <li>Policy-as-code status and exception workflows</li>
-            <li>Signed, audit-ready evidence bundles</li>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
           </ul>
-          <h2>Get started</h2>
           <p>
-            Connect your telemetry sources and enable out-of-the-box dashboards. Our team can help
-            tailor risk views to your environment.
-          </p>
-          <p className="mt-8">
-            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
-              Request a demo
-            </a>
+            <a href="/contact">Contact us →</a>
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
-

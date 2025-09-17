@@ -67,9 +67,7 @@ import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 
-<<<<<<< HEAD
 const App: React.FC = () => {
-=======
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -321,7 +319,6 @@ function App() {
             </div>
           } />
           
-<<<<<<< HEAD
           {/* Routes for all pages */}
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
@@ -358,7 +355,6 @@ function App() {
         <Footer />
       </div>
     </Router>
-=======
           <main className="flex-1">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
@@ -479,4 +475,3 @@ function App() {
   );
 };
 
-export default App;

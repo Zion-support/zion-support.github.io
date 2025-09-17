@@ -36,7 +36,10 @@ export default function ForumCategoryPage({ }: ForumCategoryPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
 
+
+}
 :src.disabled/src/pages.disabled/ForumCategoryPage.jsx
 }
 }

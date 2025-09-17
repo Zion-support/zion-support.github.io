@@ -1,4 +1,23 @@
 ---
+title: "AI 2026: Agentic Observability — Deep Dive"
+description: "Traces, evals, incidents, and KPIs to operate autonomous agent platforms reliably."
+date: 2025-09-16
+tags: [observability, evaluations, incidents, reliability]
+slug: ai-2026-agentic-observability-deep-dive
+---
+
+Agent platforms need production-grade observability. This guide details event models, traces across multi-step tools, eval signals, policy decisions, and incident hooks that produce an audit-ready evidence trail.
+
+What to instrument:
+
+- Task graphs and tool spans
+- Policy decisions and approvals
+- Eval gates and score outputs
+- Incident triggers, mitigations, and rollbacks
+
+Adopt a single evidence hub to correlate events, drive SLOs, and improve safety.
+
+---
 title: AI 2026: Agentic Observability Deep Dive — Traces, Evals, and Safety Telemetry
 description: How to observe agents end‑to‑end with evaluation traces, policy events, and production safety telemetry.
 created: 2025-09-16

@@ -37,6 +37,8 @@ export default function Signup({ }: SignupProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/Signup.jsx
 }
 }

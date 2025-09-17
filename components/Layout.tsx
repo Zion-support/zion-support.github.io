@@ -1,54 +1,24 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import { Sidebar } from './Sidebar';
-import Footer from './Footer';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface LayoutProps {
-  children: React.ReactNode;
   title?: string;
   description?: string;
-  keywords?: string;
-  ogImage?: string;
-  noIndex?: boolean;
+  children: React.ReactNode;
 }
 
-export default function Layout({
-  children,
-  title = 'Zion Tech Group - Leading AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
-  keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
-  ogImage = '/images/og-image.jpg',
-  noIndex = false
-}: LayoutProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+const Layout: React.FC<LayoutProps> = ({ title = "Zion Tech Group", description = "Leading Technology Solutions Provider", children }) => {
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        {noIndex && <meta name="robots" content="noindex,nofollow" />}
-        <link rel="canonical" href="https://ziontechgroup.com" />
-      </Head>
-      
+      </Helmet>
       <div className="min-h-screen bg-gray-50">
-        <Header onMenuClick={() => setIsSidebarOpen(true)} />
-        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-        <main className="pt-16">
-          {children}
-        </main>
-        <Footer />
+        {children}
       </div>
     </>
   );
-}
+};
+
+export default Layout;

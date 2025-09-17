@@ -1,37 +1,47 @@
-import React from 'react'
+import React from 'react';
 
-export default function RealTimeAgentDebugger11() {
-	return (
-		<div className="bg-black min-h-screen">
-			<div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
-				<h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Real‑Time Agent Debugger v1.1</h1>
-				<p className="mt-4 text-lg leading-8 text-gray-300">
-					Live traces, tool snapshots, and policy violations surfaced in one console for faster incident triage.
-				</p>
-				<div className="mt-8 space-y-6 text-gray-300">
-					<ul className="list-disc pl-6 space-y-2">
-						<li>Unified timeline: prompts, tools, and outputs</li>
-						<li>Policy violation overlays with remediation hints</li>
-						<li>Streaming telemetry for latency and token spend</li>
-						<li>Exportable traces for audits and postmortems</li>
-					</ul>
-					<p>Related: <a className="text-blue-400 underline" href="/updates/production-ready-agent-guardrails-1-0">Agent Guardrails v1.0</a></p>
-				</div>
-			</div>
-		</div>
-	)
-}
-
-"use client"
-export default function Page() {
+export default function RealTimeAgentDebuggerPage() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
-        <h1 className="text-3xl font-bold text-white">Launch: Realtime Agent Debugger v1.1</h1>
-        <p className="mt-4 text-gray-300">Trace diffs, token timelines, and tool-call replay with evidence export. Faster triage for production agents.</p>
-        <div className="mt-8 text-sm text-gray-400">Published: 2025-09-15 · Tag: Launch</div>
+      <div className="mx-auto max-w-4xl px-6 pt-24">
+        <div className="prose prose-invert max-w-none">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8">
+            Real-Time Agent Debugger v1.1
+          </h1>
+          
+          <div className="text-lg text-gray-300 mb-8">
+            Advanced debugging and monitoring tools for production AI agents with real-time insights and diagnostics.
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
+            <p className="text-gray-300 leading-relaxed">
+              The Real-Time Agent Debugger v1.1 provides comprehensive debugging and monitoring capabilities 
+              for production AI agents. This advanced toolkit enables real-time insights, diagnostics, and 
+              troubleshooting for complex agent systems.
+            </p>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
+            <ul className="text-gray-300 space-y-2">
+              <li>• Real-time agent execution monitoring</li>
+              <li>• Advanced debugging and diagnostics</li>
+              <li>• Performance profiling and optimization</li>
+              <li>• Interactive debugging interface</li>
+              <li>• Integration with monitoring systems</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
+            <h2 className="text-2xl font-semibold text-white mb-4">Implementation</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Deploy the Real-Time Agent Debugger in your environment with our comprehensive setup guide. 
+              Includes configuration examples, integration instructions, and troubleshooting best practices.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-  )
+  );
 }
-

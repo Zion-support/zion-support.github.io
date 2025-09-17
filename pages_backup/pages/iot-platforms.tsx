@@ -1,52 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-
-import type { NextPage } from 'next',
-import Head from 'next/head',
-const IotPlatforms: NextPage = () => {
+const iot-platforms: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>IotPlatforms - Zion Tech Solutions</title>
-        <meta name="description" content="IotPlatforms page" />
-      </Head>
-
-
-
-
-      <main>
-        <h1>IotPlatforms</h1>
-        <p>This page is under construction.</p>
-      </main>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>iot-platforms | Zion Tech Group</title>
+        <meta name="description" content="iot-platforms - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">iot-platforms</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-
-  ),
+  );
 };
 
-export default IotPlatforms;
-  )
-
-}
-export default IotPlatforms;
-
-
-},
-export default IotPlatforms,
-
-
-
-
-export default IotPlatforms;
-
-
-
-
-
-
-
-
-
-
-
+export default iot-platforms;
