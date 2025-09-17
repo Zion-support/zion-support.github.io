@@ -71,3 +71,5 @@ export const PerformanceDashboard: React.FC<DashboardProps> = ({ isVisible, onTo
     </div>
   );
 };
+
+export default PerformanceDashboard;
