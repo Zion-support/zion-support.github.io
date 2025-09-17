@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Notification utilities
 interface NotificationOptions {
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ interface NotificationOptions {
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2fe4
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling
@@ -91,7 +94,11 @@ export const notifications = {
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
+<<<<<<< HEAD
         actions: options.actions || []
+=======
+        actions: options.actions || [],
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2fe4
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
