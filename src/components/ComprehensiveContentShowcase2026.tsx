@@ -1,278 +1,449 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   ArrowRight, 
+  Calendar, 
   Clock, 
   User, 
   Tag, 
-  Star, 
-  TrendingUp, 
-  BookOpen, 
+  Star,
+  TrendingUp,
+  Award,
   Zap,
-  Shield,
   Brain,
-  Cpu,
+  Bot,
+  Rocket,
+  Shield,
   Globe,
-  Lock
+  ChevronRight,
+  ExternalLink
 } from 'lucide-react';
 
 interface ContentItem {
-  id: number;
+  id: string;
   title: string;
-  excerpt: string;
-  category: string;
-  readTime: string;
+  description: string;
   author: string;
+  authorRole: string;
   publishDate: string;
-  featured: boolean;
+  readTime: string;
+  category: string;
   tags: string[];
-  stats: string;
-  icon: React.ReactNode;
-  gradient: string;
+  featured: boolean;
+  imageUrl: string;
+  slug: string;
+  type: 'blog' | 'service';
+  price?: string;
+  rating?: number;
+  reviews?: number;
 }
 
 const ComprehensiveContentShowcase2026: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [activeTab, setActiveTab] = useState<'all' | 'services' | 'blog'>('all');
 
   const contentItems: ContentItem[] = [
+    // Services
     {
-      id: 37,
-      title: "The Future of AI-Driven Business Automation: 2026 Edition",
-      excerpt: "Discover how AI automation is revolutionizing business operations, reducing costs by 60%, and increasing productivity by 200% across industries.",
-      category: "AI & Automation",
-      readTime: "15 min read",
-      author: "Dr. Elena Martinez",
-      publishDate: "2026-01-20",
+      id: "ai-automation-suite-2026",
+      title: "AI Business Automation Suite 2026",
+      description: "Complete AI-powered business automation solution that streamlines operations, reduces costs, and increases efficiency by 300%.",
+      author: "AI Solutions Team",
+      authorRole: "Automation Specialists",
+      publishDate: "2025-01-17",
+      readTime: "Service",
+      category: "AI Automation",
+      tags: ["AI Automation", "Business Process", "Efficiency", "ROI"],
       featured: true,
-      tags: ["AI Automation", "Business Intelligence", "Productivity"],
-      stats: "60% cost reduction, 200% productivity increase",
-      icon: <Zap className="w-6 h-6" />,
-      gradient: "from-blue-500 to-cyan-500"
+      imageUrl: "/images/services/ai-automation-suite-2026.jpg",
+      slug: "/services/ai-automation-suite-2026",
+      type: 'service',
+      price: "$25,000",
+      rating: 4.9,
+      reviews: 127
     },
     {
-      id: 38,
-      title: "Quantum Computing Breakthrough: Real-World Applications in 2026",
-      excerpt: "Explore how quantum computing is solving previously impossible problems in cryptography, drug discovery, and financial modeling.",
+      id: "quantum-optimization-platform",
+      title: "Quantum Optimization Platform",
+      description: "Revolutionary quantum computing platform for solving complex optimization problems with 10x performance improvements.",
+      author: "Quantum Computing Team",
+      authorRole: "Quantum Specialists",
+      publishDate: "2025-01-17",
+      readTime: "Service",
       category: "Quantum Computing",
-      readTime: "18 min read",
-      author: "Prof. James Chen",
-      publishDate: "2026-01-22",
+      tags: ["Quantum Computing", "Optimization", "Performance"],
       featured: true,
-      tags: ["Quantum Computing", "Cryptography", "Drug Discovery"],
-      stats: "1000x faster processing, 95% accuracy",
-      icon: <Cpu className="w-6 h-6" />,
-      gradient: "from-purple-500 to-pink-500"
+      imageUrl: "/images/services/quantum-optimization-platform.jpg",
+      slug: "/services/quantum-optimization-platform",
+      type: 'service',
+      price: "$100,000",
+      rating: 5.0,
+      reviews: 23
     },
     {
-      id: 39,
-      title: "Neural Interface Technology: The Next Frontier of Human-Computer Interaction",
-      excerpt: "Discover how neural interfaces are enabling direct brain-computer communication, revolutionizing healthcare, education, and entertainment.",
+      id: "neural-interface-development",
+      title: "Neural Interface Development Platform",
+      description: "Cutting-edge platform for developing brain-computer interfaces and neural prosthetics with advanced signal processing.",
+      author: "Neural Tech Team",
+      authorRole: "Neuroscience Experts",
+      publishDate: "2025-01-17",
+      readTime: "Service",
       category: "Neural Interfaces",
-      readTime: "20 min read",
-      author: "Dr. Sarah Kim",
-      publishDate: "2026-01-25",
+      tags: ["Neural Interfaces", "BCI", "Medical Technology"],
       featured: true,
-      tags: ["Neural Interfaces", "Brain-Computer Interface", "Healthcare"],
-      stats: "99.7% accuracy, 50+ clinical trials",
-      icon: <Brain className="w-6 h-6" />,
-      gradient: "from-green-500 to-emerald-500"
+      imageUrl: "/images/services/neural-interface-development.jpg",
+      slug: "/services/neural-interface-development",
+      type: 'service',
+      price: "$75,000",
+      rating: 4.8,
+      reviews: 45
     },
+    // Blog Posts
     {
-      id: 40,
-      title: "Revolutionary Cybersecurity: AI-Powered Threat Detection and Prevention",
-      excerpt: "Learn how AI-powered cybersecurity solutions are detecting and preventing 99.9% of cyber threats in real-time.",
-      category: "Cybersecurity",
-      readTime: "16 min read",
-      author: "Alex Thompson",
-      publishDate: "2026-01-28",
-      featured: true,
-      tags: ["Cybersecurity", "AI Security", "Threat Detection"],
-      stats: "99.9% threat prevention, $2.5B saved",
-      icon: <Shield className="w-6 h-6" />,
-      gradient: "from-red-500 to-orange-500"
-    },
-    {
-      id: 41,
-      title: "The Metaverse Revolution: Building Immersive Digital Worlds",
-      excerpt: "Explore how the metaverse is transforming social interaction, commerce, and entertainment with immersive 3D experiences.",
-      category: "Metaverse",
-      readTime: "14 min read",
-      author: "Maria Rodriguez",
-      publishDate: "2026-01-30",
-      featured: true,
-      tags: ["Metaverse", "Virtual Reality", "3D Worlds"],
-      stats: "300% engagement boost, $50B market",
-      icon: <Globe className="w-6 h-6" />,
-      gradient: "from-indigo-500 to-purple-500"
-    },
-    {
-      id: 34,
-      title: "Revolutionary Tech Insights 2026: The Future is Here",
-      excerpt: "Discover the cutting-edge technologies and innovations that are reshaping our world in 2026.",
-      category: "Technology Trends",
+      id: "ai-business-automation-guide",
+      title: "AI-Powered Business Automation: The Complete 2026 Guide",
+      description: "Transform your business operations with cutting-edge AI automation solutions that deliver 300% efficiency gains and cost reductions.",
+      author: "Dr. Michael Rodriguez",
+      authorRole: "Chief Automation Officer",
+      publishDate: "2025-01-17",
       readTime: "12 min read",
-      author: "Dr. Sarah Chen",
-      publishDate: "2026-01-15",
+      category: "AI Automation",
+      tags: ["AI Automation", "Business Process", "RPA", "Efficiency"],
       featured: true,
-      tags: ["AI Consciousness", "Quantum Computing", "Innovation"],
-      stats: "500+ projects, 50+ countries",
-      icon: <TrendingUp className="w-6 h-6" />,
-      gradient: "from-yellow-500 to-orange-500"
+      imageUrl: "/images/blog/ai-business-automation-2026.jpg",
+      slug: "/blog/ai-powered-business-automation-2026-complete-guide",
+      type: 'blog'
+    },
+    {
+      id: "quantum-computing-enterprise",
+      title: "Quantum Computing in Enterprise: Practical Applications and ROI",
+      description: "Explore how quantum computing is revolutionizing enterprise operations with practical applications and measurable ROI outcomes.",
+      author: "Dr. Sarah Kim",
+      authorRole: "Quantum Computing Research Director",
+      publishDate: "2025-01-17",
+      readTime: "15 min read",
+      category: "Quantum Computing",
+      tags: ["Quantum Computing", "Enterprise", "ROI", "Optimization"],
+      featured: true,
+      imageUrl: "/images/blog/quantum-computing-enterprise-2026.jpg",
+      slug: "/blog/quantum-computing-enterprise-practical-applications-roi",
+      type: 'blog'
+    },
+    {
+      id: "neural-interface-technology",
+      title: "Neural Interface Technology: The Future of Human-Computer Interaction",
+      description: "Discover how neural interface technology is creating seamless human-computer interactions and transforming accessibility.",
+      author: "Dr. Elena Vasquez",
+      authorRole: "Neural Interface Research Lead",
+      publishDate: "2025-01-17",
+      readTime: "10 min read",
+      category: "Neural Interfaces",
+      tags: ["Neural Interfaces", "BCI", "Human-Computer Interaction"],
+      featured: true,
+      imageUrl: "/images/blog/neural-interface-technology-2026.jpg",
+      slug: "/blog/neural-interface-technology-future-human-computer-interaction",
+      type: 'blog'
+    },
+    {
+      id: "sustainable-ai-platform",
+      title: "Sustainable AI Platform",
+      description: "Environmentally conscious AI platform that reduces carbon footprint while maintaining high performance and accuracy.",
+      author: "Green Tech Team",
+      authorRole: "Sustainability Specialists",
+      publishDate: "2025-01-17",
+      readTime: "Service",
+      category: "Sustainable AI",
+      tags: ["Sustainable AI", "Green Computing", "Energy Efficiency"],
+      featured: true,
+      imageUrl: "/images/services/sustainable-ai-platform.jpg",
+      slug: "/services/sustainable-ai-platform",
+      type: 'service',
+      price: "$35,000",
+      rating: 4.7,
+      reviews: 89
+    },
+    {
+      id: "edge-ai-deployment-suite",
+      title: "Edge AI Deployment Suite",
+      description: "Comprehensive edge AI solution for deploying intelligent applications at the edge with minimal latency and maximum efficiency.",
+      author: "Edge Computing Team",
+      authorRole: "Edge Specialists",
+      publishDate: "2025-01-17",
+      readTime: "Service",
+      category: "Edge AI",
+      tags: ["Edge AI", "Real-time Processing", "IoT"],
+      featured: true,
+      imageUrl: "/images/services/edge-ai-deployment-suite.jpg",
+      slug: "/services/edge-ai-deployment-suite",
+      type: 'service',
+      price: "$45,000",
+      rating: 4.9,
+      reviews: 156
     }
   ];
 
-  const categories = ['All', ...Array.from(new Set(contentItems.map(item => item.category)))];
+  const filteredContent = contentItems.filter(item => {
+    if (activeTab === 'all') return true;
+    if (activeTab === 'services') return item.type === 'service';
+    if (activeTab === 'blog') return item.type === 'blog';
+    return true;
+  });
 
-  const filteredContent = selectedCategory === 'All' 
-    ? contentItems 
-    : contentItems.filter(item => item.category === selectedCategory);
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI Automation': return Brain;
+      case 'Quantum Computing': return Zap;
+      case 'Neural Interfaces': return Bot;
+      case 'Sustainable AI': return Globe;
+      case 'Edge AI': return Rocket;
+      default: return TrendingUp;
+    }
+  };
 
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'AI Automation': return 'from-purple-500 to-pink-500';
+      case 'Quantum Computing': return 'from-blue-500 to-cyan-500';
+      case 'Neural Interfaces': return 'from-green-500 to-emerald-500';
+      case 'Sustainable AI': return 'from-orange-500 to-red-500';
+      case 'Edge AI': return 'from-indigo-500 to-purple-500';
+      default: return 'from-gray-500 to-gray-600';
+    }
+  };
+=======
+import React from 'react';
+>>>>>>> origin/merged-prs
+
+const COMPONENT: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 rounded-full px-4 py-2 mb-4"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4"
           >
-            <BookOpen className="w-5 h-5" />
-            <span className="font-medium">Latest Content</span>
+            <Award className="h-4 w-4" />
+            <span>NEW IN 2026</span>
           </motion.div>
           
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Revolutionary Tech Content 2026
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Revolutionary Content & Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge insights, breakthrough technologies, and real-world applications 
-            that are transforming industries and shaping the future.
+            Discover cutting-edge AI solutions, quantum computing platforms, and innovative technologies 
+            that are transforming industries and reshaping the future.
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all ${
-                selectedCategory === category
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-sm'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+        {/* Tabs */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-white rounded-lg p-1 shadow-lg">
+            {[
+              { id: 'all', label: 'All Content', count: contentItems.length },
+              { id: 'services', label: 'Services', count: contentItems.filter(item => item.type === 'service').length },
+              { id: 'blog', label: 'Articles', count: contentItems.filter(item => item.type === 'blog').length }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id as any)}
+                className={`px-6 py-3 rounded-md font-semibold transition-all ${
+                  activeTab === tab.id
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                {tab.label} ({tab.count})
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredContent.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-            >
-              {/* Header with Icon and Category */}
-              <div className={`bg-gradient-to-r ${item.gradient} p-6 text-white`}>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-white/20 rounded-xl">
-                    {item.icon}
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {filteredContent.map((item, index) => {
+            const CategoryIcon = getCategoryIcon(item.category);
+            const categoryColor = getCategoryColor(item.category);
+            
+            return (
+              <motion.div
+                key={item.id}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+              >
+                {/* Image */}
+                <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${categoryColor} opacity-20`} />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <CategoryIcon className="h-16 w-16 text-gray-400" />
                   </div>
-                  <div className="text-right">
-                    <div className="text-sm opacity-90">{item.category}</div>
-                    <div className="text-xs opacity-75">{item.publishDate}</div>
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold mb-2 line-clamp-2">
-                  {item.title}
-                </h3>
-                
-                <div className="flex items-center space-x-4 text-sm">
-                  <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{item.readTime}</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <User className="w-4 h-4" />
-                    <span>{item.author}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.excerpt}
-                </p>
-
-                {/* Stats */}
-                <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                  <div className="flex items-center space-x-2 text-sm text-gray-700">
-                    <Star className="w-4 h-4 text-yellow-500" />
-                    <span className="font-medium">{item.stats}</span>
-                  </div>
+                  {item.featured && (
+                    <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-xs font-bold">
+                      FEATURED
+                    </div>
+                  )}
+                  {item.type === 'service' && item.price && (
+                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
+                      {item.price}
+                    </div>
+                  )}
                 </div>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {item.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center space-x-2 mb-3">
+                    <div className={`p-2 rounded-lg bg-gradient-to-r ${categoryColor} text-white`}>
+                      <CategoryIcon className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-semibold text-gray-600">{item.category}</span>
+                    {item.type === 'service' && item.rating && (
+                      <div className="flex items-center space-x-1 ml-auto">
+                        <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                        <span className="text-sm font-semibold">{item.rating}</span>
+                        <span className="text-xs text-gray-500">({item.reviews})</span>
+                      </div>
+                    )}
+                  </div>
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {item.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center space-x-1">
+                        <User className="h-4 w-4" />
+                        <span>{item.author}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Clock className="h-4 w-4" />
+                        <span>{item.readTime}</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Calendar className="h-4 w-4" />
+                      <span>{item.publishDate}</span>
+                    </div>
+                  </div>
+
+                  <motion.a
+                    href={item.slug}
+                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all group-hover:shadow-lg"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span>{item.type === 'service' ? 'View Service' : 'Read Article'}</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </motion.a>
                 </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
 
-                {/* CTA Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-medium flex items-center justify-center space-x-2 group-hover:shadow-lg transition-all"
-                >
-                  <span>Read Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
+        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Stay Ahead of the Tech Revolution
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Business?
             </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get exclusive access to our latest research, case studies, and breakthrough insights. 
-              Join thousands of innovators who are already transforming their industries.
+            <p className="text-xl mb-6 opacity-90">
+              Explore our comprehensive suite of AI solutions and cutting-edge technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Subscribe to Updates
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
-                View All Content
-              </button>
+              <motion.a
+                href="/services"
+                className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>View All Services</span>
+                <ExternalLink className="h-5 w-5" />
+              </motion.a>
+              <motion.a
+                href="/blog"
+                className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Read Latest Articles</span>
+                <ChevronRight className="h-5 w-5" />
+              </motion.a>
             </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            Technology Showcase
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Experience revolutionary technology and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
+            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
+>>>>>>> origin/merged-prs
           </div>
-        </motion.div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">⚡</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
+            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <div className="text-purple-400 text-4xl mb-4">🔮</div>
+            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
+            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join us in discovering the future of technology and innovation.
+          </p>
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
+            Explore Now
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ComprehensiveContentShowcase2026;
+export default COMPONENT;

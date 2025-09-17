@@ -1,7 +1,5 @@
-/**
  * Cart utility functions for managing shopping cart operations
  */
-
 export interface CartItem {
   id: string;
   name: string;
@@ -11,8 +9,6 @@ export interface CartItem {
   description?: string;
   category?: string;
   metadata?: Record<string, any>;
-}
-
 export interface Cart {
   items: CartItem[];
   subtotal: number;
@@ -21,8 +17,6 @@ export interface Cart {
   total: number;
   currency: string;
   updatedAt: string;
-}
-
 export interface CartSummary {
   itemCount: number;
   totalItems: number;
@@ -30,8 +24,6 @@ export interface CartSummary {
   tax: number;
   shipping: number;
   total: number;
-}
-
 class CartManager {
   private cart: Cart = {
     items: [],
@@ -42,17 +34,14 @@ class CartManager {
     currency: 'USD',
     updatedAt: new Date().toISOString()
   };
-
   private taxRate = 0.08; // 8% tax rate
   private freeShippingThreshold = 100; // Free shipping over $100
   private shippingCost = 9.99; // Standard shipping cost
-
   /**
    * Add an item to the cart
    */
   addItem(item: Omit<CartItem, 'quantity'> | CartItem): void {
     const existingItemIndex = this.cart.items.findIndex(cartItem => cartItem.id === item.id);
-
     if (existingItemIndex >= 0) {
       // Item exists, increase quantity
       this.cart.items[existingItemIndex].quantity += (item as CartItem).quantity || 1;
@@ -63,18 +52,15 @@ class CartManager {
         quantity: (item as CartItem).quantity || 1
       });
     }
-
     this.recalculateCart();
-  }
-
+  };
   /**
    * Remove an item from the cart
    */
   removeItem(itemId: string): void {
     this.cart.items = this.cart.items.filter(item => item.id !== itemId);
     this.recalculateCart();
-  }
-
+  };
   /**
    * Update item quantity
    */
@@ -83,35 +69,30 @@ class CartManager {
       this.removeItem(itemId);
       return;
     }
-
     const itemIndex = this.cart.items.findIndex(item => item.id === itemId);
     if (itemIndex >= 0) {
       this.cart.items[itemIndex].quantity = quantity;
       this.recalculateCart();
     }
-  }
-
+  };
   /**
    * Clear all items from cart
    */
   clearCart(): void {
     this.cart.items = [];
     this.recalculateCart();
-  }
-
+  };
   /**
    * Get cart items
    */
   getCart(): Cart {
     return { ...this.cart };
-  }
-
+  };
   /**
    * Get cart summary
    */
   getCartSummary(): CartSummary {
     const totalItems = this.cart.items.reduce((sum, item) => sum + item.quantity, 0);
-    
     return {
       itemCount: this.cart.items.length,
       totalItems,
@@ -120,49 +101,40 @@ class CartManager {
       shipping: this.cart.shipping,
       total: this.cart.total
     };
-  }
-
+  };
   /**
    * Check if cart is empty
    */
   isEmpty(): boolean {
     return this.cart.items.length === 0;
-  }
-
+  };
   /**
    * Get item count
    */
   getItemCount(): number {
     return this.cart.items.reduce((sum, item) => sum + item.quantity, 0);
-  }
-
+  };
   /**
    * Find item by ID
    */
   findItem(itemId: string): CartItem | undefined {
     return this.cart.items.find(item => item.id === itemId);
-  }
-
+  };
   /**
    * Calculate cart totals
    */
   private recalculateCart(): void {
     // Calculate subtotal
     this.cart.subtotal = this.cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
     // Calculate tax
     this.cart.tax = this.cart.subtotal * this.taxRate;
-
     // Calculate shipping
     this.cart.shipping = this.cart.subtotal >= this.freeShippingThreshold ? 0 : this.shippingCost;
-
     // Calculate total
     this.cart.total = this.cart.subtotal + this.cart.tax + this.cart.shipping;
-
     // Update timestamp
     this.cart.updatedAt = new Date().toISOString();
-  }
-
+  };
   /**
    * Apply discount
    */
@@ -170,46 +142,39 @@ class CartManager {
     if (percentage < 0 || percentage > 100) {
       throw new Error('Discount percentage must be between 0 and 100');
     }
-
     const discountAmount = this.cart.subtotal * (percentage / 100);
     this.cart.subtotal -= discountAmount;
     this.recalculateCart();
-  }
-
+  };
   /**
    * Set shipping cost
    */
   setShippingCost(cost: number): void {
     this.shippingCost = cost;
     this.recalculateCart();
-  }
-
+  };
   /**
    * Set tax rate
    */
   setTaxRate(rate: number): void {
     this.taxRate = rate;
     this.recalculateCart();
-  }
-
+  };
   /**
    * Set free shipping threshold
    */
   setFreeShippingThreshold(threshold: number): void {
     this.freeShippingThreshold = threshold;
     this.recalculateCart();
-  }
-
+  };
   /**
    * Validate cart
    */
   validateCart(): { isValid: boolean; errors: string[] } {
     const errors: string[] = [];
-
     if (this.cart.items.length === 0) {
       errors.push('Cart is empty');
     }
-
     for (const item of this.cart.items) {
       if (item.quantity <= 0) {
         errors.push(`Invalid quantity for item: ${item.name}`);
@@ -218,32 +183,27 @@ class CartManager {
         errors.push(`Invalid price for item: ${item.name}`);
       }
     }
-
     return {
       isValid: errors.length === 0,
       errors
     };
-  }
-
+  };
   /**
    * Export cart data
    */
   exportCart(): string {
     return JSON.stringify(this.cart, null, 2);
-  }
-
+  };
   /**
    * Import cart data
    */
   importCart(cartData: string): boolean {
     try {
       const importedCart = JSON.parse(cartData);
-      
       // Validate imported cart structure
       if (!importedCart.items || !Array.isArray(importedCart.items)) {
         throw new Error('Invalid cart structure');
       }
-
       this.cart = importedCart;
       this.recalculateCart();
       return true;
@@ -251,12 +211,9 @@ class CartManager {
       console.error('Failed to import cart:', error);
       return false;
     }
-  }
-}
-
+  };
 // Create default instance
 const cartManager = new CartManager();
-
 // Export convenience functions
 export const cartUtils = {
   addItem: (item: Omit<CartItem, 'quantity'> | CartItem) => cartManager.addItem(item),
@@ -275,6 +232,44 @@ export const cartUtils = {
   validateCart: () => cartManager.validateCart(),
   exportCart: () => cartManager.exportCart(),
   importCart: (cartData: string) => cartManager.importCart(cartData)
-};
-
 export default cartManager;
+  total: number;
+  itemCount: number;
+export const cartUtils = {
+    const existingItem = cart.items.find(cartItem => cartItem.id === item.id);
+    if (existingItem) {
+      // Update quantity if item already exists
+      return cartUtils.updateItemQuantity(cart, item.id, existingItem.quantity + 1);
+    } else {
+      // Add new item
+      const newItem: CartItem = { ...item, quantity: 1 };
+      const newItems = [...cart.items, newItem];
+      return cartUtils.calculateTotals({ ...cart, items: newItems });
+    }
+  },
+  // Remove item from cart
+    const newItems = cart.items.filter(item => item.id !== itemId);
+    return cartUtils.calculateTotals({ ...cart, items: newItems });
+  },
+  // Update item quantity
+    if (quantity <= 0) {
+      return cartUtils.removeItem(cart, itemId);
+    }
+    const newItems = cart.items.map(item =>
+      item.id === itemId ? { ...item, quantity } : item
+    );
+    return cartUtils.calculateTotals({ ...cart, items: newItems });
+  },
+  // Calculate totals
+    const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
+    return {
+      ...cart,
+      total: Math.round(total * 100) / 100, // Round to 2 decimal places
+    };
+  },
+  // Clear cart
+    return cart.items.some(item => item.id === itemId);
+  },
+  // Get cart summary
+export default cartUtils;

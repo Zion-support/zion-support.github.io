@@ -1,5 +1,4 @@
 import React from 'react';
-
 const services-advertising: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -7,6 +6,7 @@ const services-advertising: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+
 };
 
 export default function ServicesAdvertisingPage() {
@@ -1011,4 +1011,3 @@ export default function ServicesAdvertisingPage() {
 					<a href="mailto:kleber@ziontechgroup.com" className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a>
 					<a href="/pricing" className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
 	);
-}

@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function DeveloperPage() {
   return (
@@ -19,4 +21,3 @@ export default function DeveloperPage() {
         <a href="/support" className="text-cyan-400 underline">Support</a>
     </>
   );
-}

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Sparkles, Zap, Brain, Globe, Rocket } from 'lucide-react';
-
 const NewContentBanner2025 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const bannerContent = [
     {
       id: 1,
@@ -44,19 +42,14 @@ const NewContentBanner2025 = () => {
       textColor: "text-white"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, []);
-
   const currentBanner = bannerContent[currentSlide];
-
   if (!isVisible) return null;
-
   return (
     <div className="relative overflow-hidden">
       <AnimatePresence mode="wait">
@@ -72,7 +65,6 @@ const NewContentBanner2025 = () => {
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
           </div>
-
           <div className="relative z-10">
             <div className="flex items-center justify-between">
               <div className="flex-1">
@@ -89,7 +81,6 @@ const NewContentBanner2025 = () => {
                     <span className="text-yellow-300 font-semibold text-sm">NEW CONTENT</span>
                   </div>
                 </div>
-
                 <h2 className={`text-2xl font-bold ${currentBanner.textColor} mb-2`}>
                   {currentBanner.title}
                 </h2>
@@ -99,7 +90,6 @@ const NewContentBanner2025 = () => {
                 <p className={`text-sm ${currentBanner.textColor} opacity-90 mb-4`}>
                   {currentBanner.description}
                 </p>
-
                 <div className="flex items-center space-x-4">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -114,7 +104,6 @@ const NewContentBanner2025 = () => {
                   </button>
                 </div>
               </div>
-
               <div className="hidden md:block">
                 <motion.div
                   animate={{ 
@@ -139,7 +128,6 @@ const NewContentBanner2025 = () => {
               </div>
             </div>
           </div>
-
           {/* Slide Indicators */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {bannerContent.map((_, index) => (
@@ -154,7 +142,6 @@ const NewContentBanner2025 = () => {
               />
             ))}
           </div>
-
           {/* Close Button */}
           <button
             onClick={() => setIsVisible(false)}
@@ -168,6 +155,7 @@ const NewContentBanner2025 = () => {
       </AnimatePresence>
     </div>
   );
+
 };
 
 export default NewContentBanner2025;

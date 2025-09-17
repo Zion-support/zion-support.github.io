@@ -6,13 +6,11 @@ const RevolutionaryTechShowcase2037: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ REVOLUTIONARY SHOWCASE • JANUARY 2037
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            🌟 Revolutionary Tech Showcase 2037
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+          <h1 className="text-6xl font-bold mb-6">🚀 Revolutionary Tech Showcase 2037</h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Interactive showcase of cutting-edge technologies that will define the future of humanity
           </p>
         </div>

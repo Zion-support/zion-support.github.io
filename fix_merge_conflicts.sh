@@ -1,29 +1,15 @@
 #!/bin/bash
 
-echo "Finding files with merge conflicts..."
-
-# Find all files with merge conflict markers
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.css" --include="*.md" | cut -d: -f1 | sort -u)
-
-echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
-
-# Process each file
-for file in $files_with_conflicts; do
-    echo "Processing: $file"
-    
-    # Skip backup files and node_modules
-    if [[ "$file" == *".backup"* ]] || [[ "$file" == *"node_modules"* ]] || [[ "$file" == *".git"* ]]; then
-        echo "Skipping backup/git file: $file"
-        continue
-    fi
-    
-    # Create a backup
-    cp "$file" "$file.backup.$(date +%s)"
+# Find all files with merge conflicts and fix them
+find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
+    echo "Fixing merge conflicts in: $file"
     
     # Remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d; /^=======/d; /^>>>>>>> /d' "$file"
-    
-    echo "Fixed: $file"
+    sed -i '/^<<<<<<< HEAD$/d' "$file"
+    sed -i '/^=======$/,/^>>>>>>> /d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+  fi
 done
 
-echo "Merge conflict resolution complete!"
+echo "Merge conflicts fixed!"

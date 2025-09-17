@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedUI: React.FC = () => {
   return (
     <divbutton
@@ -26,13 +25,10 @@ const EnhancedUI: React.FC = () => {
     </divbutton>
   );
 };
-
 interface CardProps {
   children: React.ReactNode;
   hover?: boolean;
   className?: string;
-}
-
 export const EnhancedCard: React.FC<CardProps> = ({
   children,
   hover = true,
@@ -45,13 +41,9 @@ export const EnhancedCard: React.FC<CardProps> = ({
       {children}
     </div>
   );
-};
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: string;
-}
-
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'blue'
@@ -61,28 +53,22 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'h-8 w-8',
     lg: 'h-12 w-12'
   };
-  
   const colors = {
     blue: 'border-blue-600',
     white: 'border-white',
     gray: 'border-gray-600'
   };
-  
   return (
     <div
       className={`animate-spin rounded-full border-2 border-gray-300 ${colors[color as keyof typeof colors]} ${sizes[size]}`}
       style={{ borderTopColor: 'transparent' }}
     />
   );
-};
-
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
   children: React.ReactNode;
-}
-
 export const EnhancedModal: React.FC<ModalProps> = ({
   isOpen,
   onClose,
@@ -95,12 +81,10 @@ export const EnhancedModal: React.FC<ModalProps> = ({
     } else {
       document.body.style.overflow = 'unset';
     }
-    
     return () => {
       document.body.style.overflow = 'unset';
     };
   }[isOpen]);
-  
   return (
     <div>
       {isOpen && (
@@ -132,13 +116,9 @@ export const EnhancedModal: React.FC<ModalProps> = ({
       )}
     </div>
   );
-};
-
 interface ProgressBarProps {
   progress: number;
   className?: string;
-}
-
 export const EnhancedProgressBar: React.FC<ProgressBarProps> = ({
   progress,
   className = ', '
@@ -150,28 +130,22 @@ export const EnhancedProgressBar: React.FC<ProgressBarProps> = ({
       />
     </div>
   );
-};
-
 interface TooltipProps {
   children: React.ReactNode;
   content: string;
   position?: 'top' | 'bottom' | 'left' | 'right';
-}
-
 export const EnhancedTooltip: React.FC<TooltipProps> = ({
   children,
   content,
   position = 'top'
 }) => {
   const [isVisiblesetIsVisible] = useState(false);
-  
   const positions = {
     top: 'bottom-full left-1/2 transform -translate-x-1/2 mb-2',
     bottom: 'top-full left-1/2 transform -translate-x-1/2 mt-2',
     left: 'right-full top-1/2 transform -translate-y-1/2 mr-2',
     right: 'left-full top-1/2 transform -translate-y-1/2 ml-2'
   };
-  
   return (
     <div
       className="relative inline-block"
@@ -196,7 +170,7 @@ export const EnhancedTooltip: React.FC<TooltipProps> = ({
       </div>
     </div>
   );
-};
+
 
 export default {
   EnhancedButton,
@@ -205,4 +179,3 @@ export default {
   EnhancedModal,
   EnhancedProgressBar,
   EnhancedTooltip
-};

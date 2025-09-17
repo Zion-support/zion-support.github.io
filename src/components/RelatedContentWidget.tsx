@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RelatedContentWidget: React.FC = () => {
   return (
     <section className="py-16 bg-gray-50">
@@ -22,6 +21,7 @@ const RelatedContentWidget: React.FC = () => {
                   {post.excerpt}
           ))}
   );
+
 };
 
 export default RelatedContentWidget;

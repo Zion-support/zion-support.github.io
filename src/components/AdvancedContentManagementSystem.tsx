@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdvancedContentManagementSystem: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -29,7 +28,6 @@ const AdvancedContentManagementSystem: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Stats Overview */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
@@ -53,7 +51,6 @@ const AdvancedContentManagementSystem: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Navigation Tabs */}
         <div
           className="mb-8"
@@ -81,7 +78,6 @@ const AdvancedContentManagementSystem: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Content Types Overview */}
         <div
           className="mb-8"
@@ -101,7 +97,6 @@ const AdvancedContentManagementSystem: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Recent Content */}
         <div
           className="bg-white rounded-xl shadow-lg p-6"
@@ -123,7 +118,6 @@ const AdvancedContentManagementSystem: React.FC = () => {
               </button>
             </div>
           </div>
-
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -189,12 +183,12 @@ const AdvancedContentManagementSystem: React.FC = () => {
                       </td>
                     </tr>
                   );
+};
                 })}
               </tbody>
             </table>
           </div>
         </div>
-
         {/* Analytics Charts Placeholder */}
         <div
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6"
@@ -208,7 +202,6 @@ const AdvancedContentManagementSystem: React.FC = () => {
               </div>
             </div>
           </div>
-          
           <div className="bg-white rounded-xl shadow-lg p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Engagement Trends</h3>
             <div className="h-64 flex items-center justify-center bg-gray-50 rounded-lg">
@@ -222,6 +215,6 @@ const AdvancedContentManagementSystem: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default AdvancedContentManagementSystem;

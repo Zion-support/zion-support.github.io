@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function QuantumAI2026BreakthroughPromotionBanner() {
   return (
@@ -57,4 +59,3 @@ export default function QuantumAI2026BreakthroughPromotionBanner() {
               <span className="text-cyan-400">✓</span>
               <span>99.9% Accuracy</span>
   );
-}

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
   return (
     <div
@@ -7,7 +6,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -18,20 +16,17 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 <Building2 className="w-4 h-4" />
                 <span>Enterprise Solutions</span>
               </div>
-              
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Enterprise
                 <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   with AI Automation
                 </span>
               </h2>
-              
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Streamline processesreduce costsand accelerate growth with our comprehensive 
                 suite of AI-powered automation solutions designed for enterprise scale.
               </p>
             </div>
-
             {/* Features List */}
             <div
               className="space-y-4"
@@ -48,7 +43,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -58,12 +52,10 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 <span>View Solutions</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
-              
               <button className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/20">
                 Schedule Demo
               </button>
             </div>
-
             {/* Dynamic Stats */}
             <div
               className="pt-8 border-t border-white/10"
@@ -84,7 +76,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Right Content - Solutions Showcase */}
           <div
             className="relative"
@@ -114,7 +105,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Additional Solutions */}
             <div className="grid grid-cols-2 gap-4">
               {solutions.slice(4).map((solutionindex) => (
@@ -134,7 +124,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Floating Elements */}
             <div
                 y: [0-10],
@@ -148,7 +137,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             >
               <Zap className="w-8 h-8 text-white" />
             </div>
-
             <div
                 y: [010],
                 rotate: [0-50]
@@ -162,7 +150,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             >
               <Brain className="w-6 h-6 text-white" />
             </div>
-
             {/* Performance Indicators */}
             <div className="absolute top-0 right-0 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium">
               <div className="flex items-center space-x-1">
@@ -172,7 +159,6 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Stats Grid */}
         <div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -193,11 +179,11 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
     </div>
   );
+
 };
 
 export default EnterpriseAutomationSolutions2025PromotionBanner;

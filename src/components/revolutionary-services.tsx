@@ -5,6 +5,8 @@ import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
+};
+
 
 export default function RevolutionaryServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -33,12 +35,12 @@ export default function RevolutionaryServicesPage() {
   // Category filter
   if (selectedCategory !== 'All') {
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
-  }
+  };
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
-  }
+  };
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -47,7 +49,7 @@ export default function RevolutionaryServicesPage() {
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
-  }
+  };
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
@@ -603,6 +605,6 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
   );
-};
+
 
 export default revolutionary-services;

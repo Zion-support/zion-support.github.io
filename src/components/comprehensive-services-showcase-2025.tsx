@@ -6,13 +6,11 @@ import {
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3,
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
 } from 'lucide-react';
-
 // Import service data
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-
 interface Service {
   id: string;
   name: string;
@@ -29,8 +27,6 @@ interface Service {
   launchDate: string;
   badge?: string;
   icon?: React.ReactNode;
-}
-
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service => ({
     ...service,
@@ -52,31 +48,26 @@ const allServices: Service[] = [
     category: 'Quantum & Emerging Tech',
     icon: <Atom className="w-6 h-6" />
   }))
-];
-
 const categories = [
   { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
   { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length },
   { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length },
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length },
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
-];
-
 const priceRanges = [
   { label: 'All Prices', value: 'all' },
   { label: 'Under $50/month', value: 'under-50' },
   { label: '$50 - $200/month', value: '50-200' },
   { label: '$200 - $500/month', value: '200-500' },
   { label: 'Over $500/month', value: 'over-500' }
-];
-
 const sortOptions = [
   { label: 'Most Popular', value: 'popular' },
   { label: 'Highest Rated', value: 'rating' },
   { label: 'Newest', value: 'newest' },
   { label: 'Price: Low to High', value: 'price-low' },
   { label: 'Price: High to Low', value: 'price-high' }
-];
+};
+
 
 export default function ComprehensiveServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -450,4 +441,3 @@ export default function ComprehensiveServicesShowcase2025() {
               >
                 View Pricing Plans
   );
-}

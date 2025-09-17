@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface DivineCrossDomainOptimization {
   id: string;
   name: string;
@@ -20,8 +19,6 @@ interface DivineCrossDomainOptimization {
   divineOptimizationStrategies: string[];
   crossDomainBenefits: string[];
   transcendentCapabilities: string[];
-}
-
 interface DivineCrossDomainMetrics {
   totalOptimizations: number;
   activeOptimizations: number;
@@ -33,13 +30,12 @@ interface DivineCrossDomainMetrics {
   divineCoherenceProgress: number;
   universalScopeLevel: number;
   consciousnessLevel: number;
-}
-
 interface DivineCrossDomainOptimizerProps {
   showMetrics?: boolean;
   maxOptimizations?: number;
   className?: string;
-}
+};
+
 
 export default function DivineCrossDomainOptimizer({ 
   showMetrics = true, 
@@ -303,7 +299,7 @@ export default function DivineCrossDomainOptimizer({
               <div className="h-3 bg-slate-700 rounded w-2/3"></div>
           ))}
     );
-  }
+  };
   return (
     <div className={className}>
       <div className="mb-6">
@@ -568,6 +564,6 @@ export default function DivineCrossDomainOptimizer({
         >
           View Full Divine Cross-Domain Analytics →
   );
-};
+
 
 export default DivineCrossDomainOptimizer;

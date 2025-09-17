@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCalendarBrainZapGlobeTrendingUpTarget
+};
+
 
 export default function AIFuturePredictionsUltimate2025_2035Banner() {
   return (
@@ -58,4 +60,3 @@ export default function AIFuturePredictionsUltimate2025_2035Banner() {
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>
   );
-}

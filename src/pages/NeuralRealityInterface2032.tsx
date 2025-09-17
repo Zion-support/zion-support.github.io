@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const NeuralRealityInterface2032: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -8,7 +7,6 @@ const NeuralRealityInterface2032: React.FC = () => {
         <title>NeuralRealityInterface2032 | Zion Tech Group</title>
         <meta name="description" content="NeuralRealityInterface2032 - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">NeuralRealityInterface2032</h1>
@@ -17,6 +15,7 @@ const NeuralRealityInterface2032: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NeuralRealityInterface2032;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const 2025-comprehensive-services-showcase: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
@@ -8,7 +7,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
         description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions."
         keywords={["micro SAAS", "IT services", "AI services", "business intelligence", "automation", "cloud infrastructure"]}
       />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -36,7 +34,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Banner */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +59,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Category Tabs */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,7 +80,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,13 +110,11 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Service Content */}
                 <div className="p-6">
                   <p className="text-gray-700 mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Pricing */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Pricing</h4>
@@ -137,7 +130,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>
@@ -150,7 +142,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Market Info */}
                   <div className="mb-4 text-sm">
                     <div className="flex justify-between mb-1">
@@ -162,9 +153,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                       <span className="font-semibold text-gray-900">{service.targetAudience}</span>
                     </div>
                   </div>
-
-
-
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">
                     <a
@@ -186,7 +174,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Services Display */}
             {viewMode === 'grid' ? (
               <div 
@@ -210,7 +197,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-2">{service.name}</h3>
                       <p className="text-blue-100 text-sm">{service.tagline}</p>
-                      
                       {/* Price */}
                       <div className="mt-4">
                         <span className="text-2xl font-bold">
@@ -218,11 +204,9 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                         </span>
                       </div>
                     </div>
-
                     {/* Service Content */}
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-                      
                       {/* Price */}
                       <div className="mb-4">
                         <span className="text-3xl font-bold text-gray-900">
@@ -232,7 +216,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                         </span>
                       </div>
-
                       {/* Features */}
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -245,7 +228,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -253,7 +235,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                           <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
-
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
@@ -263,7 +244,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days
                         </div>
                       </div>
-
                       {/* ROI and Popularity */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-sm">
@@ -278,7 +258,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                             <span className="text-sm font-medium">Popular</span>
                           </div>
                         </div>
-
                         {/* Price and Features */}
                         <div className="lg:w-1/3">
                           <div className="text-right mb-4">
@@ -289,7 +268,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>
                           </div>
-                          
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -301,14 +279,12 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                               ))}
                             </ul>
                           </div>
-
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                               {getCategoryIcon(service.category)}
                               <span className="ml-1">{service.category}</span>
                             </span>
-                            
                             <a
                               href={service.link}
                               target="_blank"
@@ -327,7 +303,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
               </div>
             )}
           </div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
@@ -340,7 +315,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -352,7 +326,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -366,7 +339,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"
@@ -379,7 +351,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                 Bank-grade security and compliance for mission-critical business applications
               </p>
             </div>
-
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"
@@ -395,7 +366,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -405,7 +375,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our innovative services can help you achieve your business goals
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -423,7 +392,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
@@ -444,6 +412,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
       </section>
     </div>
   );
+
 };
 
 export default ComprehensiveServicesShowcase;

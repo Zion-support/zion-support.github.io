@@ -1,6 +1,8 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function FutureTechContentDiscoveryWidget() {
   const [activeCategorysetActiveCategory] = useState('all');
@@ -165,6 +167,6 @@ export default function FutureTechContentDiscoveryWidget() {
               >
                 📚 Latest Articles
   );
-};
+
 
 export default FutureTechContentDiscoveryWidget;

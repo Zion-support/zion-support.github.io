@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+
+const InteractiveTechShowcase2036: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 

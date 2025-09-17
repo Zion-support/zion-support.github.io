@@ -1,45 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 
-const AIInnovationHub2026 = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const innovationCategories = [
-    {
-      id: 0,
-      title: "AI Consciousness",
-      description: "Revolutionary AI that achieves true consciousness and self-awareness",
-      icon: "🧠",
-      color: "from-purple-500 to-pink-500",
-      features: ["Self-Awareness", "Emotional Intelligence", "Creative Problem Solving", "Autonomous Learning"]
-    },
-    {
-      id: 1,
-      title: "Quantum Computing",
-      description: "Breakthrough quantum computing with exponential processing power",
-      icon: "⚛️",
-      color: "from-blue-500 to-cyan-500",
-      features: ["Quantum Supremacy", "Quantum Algorithms", "Quantum Networks", "Quantum AI"]
-    },
-    {
-      id: 2,
-      title: "Neural Interfaces",
-      description: "Direct brain-computer interface technology",
-      icon: "🔗",
-      color: "from-green-500 to-teal-500",
-      features: ["Brain-Computer Interface", "Neural Networks", "Cognitive Enhancement", "Mind Uploading"]
-    },
-    {
-      id: 3,
-      title: "Synthetic Reality",
-      description: "Create and manipulate reality through advanced technology",
-      icon: "🌌",
-      color: "from-indigo-500 to-purple-500",
-      features: ["Reality Manipulation", "Virtual Worlds", "Consciousness Transfer", "Synthetic Biology"]
-    }
-  ];
-
+const AIInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -48,9 +9,9 @@ const AIInnovationHub2026 = () => {
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🚀 REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
+              🤖 AI INNOVATION HUB 2026
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold mb-6">
               AI Innovation Hub 2026
             </h1>
             <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">

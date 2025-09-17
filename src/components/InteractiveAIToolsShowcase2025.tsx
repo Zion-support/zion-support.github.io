@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveAIToolsShowcase2025: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-20 overflow-hidden">
@@ -7,7 +6,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-l from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl -z-10" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
@@ -20,7 +18,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
             Experience the power of artificial intelligence with our comprehensive suite of interactive tools designed to transform your business operations.
           </p>
         </div>
-
         {/* AI Tools Grid */}
         <div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
@@ -43,7 +40,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
                 </div>
                 <h3 className="font-semibold text-slate-900 text-sm">{tool.name}</h3>
               </div>
-              
               {/* Hover Effect */}
               <div>
                 {hoveredTool === key && activeTool !== key && (
@@ -55,7 +51,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
             </divbutton>
           ))}
         </div>
-
         {/* Active Tool Details */}
           <div
             key={activeTool}
@@ -73,7 +68,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
                     <p className="text-slate-600">{aiTools[activeTool as keyof typeof aiTools].description}</p>
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-slate-900 mb-3">Key Features:</h4>
                   <div className="grid grid-cols-2 gap-2">
@@ -85,7 +79,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <div className="grid grid-cols-3 gap-4">
                   {Object.entries(aiTools[activeTool as keyof typeof aiTools].stats).map(([keyvalue]) => (
                     <div key={key} className="text-center p-3 bg-slate-50 rounded-xl">
@@ -95,7 +88,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Interactive Demo */}
               <div className="bg-gradient-to-br from-slate-50 to-indigo-50 rounded-2xl p-6">
                 <h4 className="font-semibold text-slate-900 mb-4">Try It Live:</h4>
@@ -123,7 +115,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Use Cases */}
         <div
           className="mb-16"
@@ -154,7 +145,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Testimonials */}
         <div
           className="mb-16"
@@ -187,7 +177,6 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-white"
@@ -210,6 +199,7 @@ const InteractiveAIToolsShowcase2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default InteractiveAIToolsShowcase2025;

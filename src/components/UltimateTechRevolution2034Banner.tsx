@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateTechRevolution2034Banner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">
@@ -41,6 +40,7 @@ const UltimateTechRevolution2034Banner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateTechRevolution2034Banner;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
   return (
     <div
@@ -12,7 +11,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
         }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-indigo-600/20"></div>
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -32,7 +30,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
             Experience technologies that transcend human imagination and reshape the very fabric of reality itself
           </divp>
         </div>
-
         {/* Technology Showcase */}
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -54,11 +51,9 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className="text-lg text-gray-300 leading-relaxed">
                 {revolutionaryTechs[currentTech].description}
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {revolutionaryTechs[currentTech].features.map((feature, index) => (
                   <div
@@ -70,7 +65,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="flex space-x-6">
                 {Object.entries(revolutionaryTechs[currentTech].stats).map(([key, value], index) => (
                   <div
@@ -83,7 +77,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -106,7 +99,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 {/* Floating Elements */}
                 {[...Array(20)].map((_, i) => (
                   <div
@@ -130,7 +122,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-4 mt-12">
             {revolutionaryTechs.map((_, index) => (
@@ -145,7 +136,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Call to Action */}
           <div
             className="text-center mt-12"
@@ -169,6 +159,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateRevolutionaryTechShowcase2027;

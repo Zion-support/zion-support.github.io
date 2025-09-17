@@ -1,12 +1,10 @@
 import React from 'react';
-
 const NextGenAIInnovationShowcase2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20 opacity-20"></div>
-        
         <div className="relative z-10 container mx-auto px-6 py-20">
           <div
             className="text-center max-w-4xl mx-auto"
@@ -15,7 +13,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
               <Star className="w-4 h-4 mr-2" />
               Next-Generation AI Innovation
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
               The Future of AI
               <br />
@@ -23,12 +20,10 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
                 Starts Here
               </span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Experience groundbreaking AI technologies that will reshape industries
               enhance human capabilitiesand unlock unlimited potential for the next decade.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <divbutton
                 onClick={() => setIsPlaying(!isPlaying)}
@@ -37,7 +32,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
                 <Play className="w-5 h-5" />
                 {isPlaying ? 'Pause Demo' : 'Watch Demo'}
               </divbutton>
-              
               <divbutton
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
@@ -48,7 +42,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto px-6">
@@ -69,7 +62,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Innovation Showcase */}
       <div className="py-20">
         <div className="container mx-auto px-6">
@@ -84,7 +76,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
               Discover the cutting-edge technologies that are defining the future of artificial intelligence
             </p>
           </div>
-
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Innovation Cards */}
             <div className="space-y-6">
@@ -121,7 +112,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Interactive Demo Area */}
             <div className="relative">
                 <div
@@ -133,7 +123,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
                     {React.createElement(innovations[activeFeature].icon{ className: "w-20 h-20 mx-auto mb-6 text-white" })}
                     <h3 className="text-2xl font-bold mb-4">{innovations[activeFeature].title}</h3>
                     <p className="text-lg opacity-90 mb-6">{innovations[activeFeature].description}</p>
-                    
                     {isPlaying && (
                       <div
                         className="space-y-3"
@@ -150,7 +139,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  
                   {/* Animated Background Elements */}
                   <div className="absolute top-4 right-4 w-32 h-32 border border-white/20 rounded-full animate-pulse"></div>
                   <div className="absolute bottom-4 left-4 w-24 h-24 border border-white/20 rounded-full animate-pulse delay-1000"></div>
@@ -160,7 +148,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Testimonials */}
       <div className="py-20 bg-black/30">
         <div className="container mx-auto px-6">
@@ -171,7 +158,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>
             <p className="text-xl text-gray-300">Hear from the visionaries already using our technology</p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
               <div
@@ -194,7 +180,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="py-20">
         <div className="container mx-auto px-6 text-center">
@@ -208,7 +193,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of forward-thinking organizations already leveraging next-generation AI technologies
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <divbutton
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
@@ -216,7 +200,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
                 <Rocket className="w-5 h-5" />
                 Start Your Transformation
               </divbutton>
-              
               <divbutton
                 className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
@@ -224,7 +207,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
                 Schedule Consultation
               </divbutton>
             </div>
-
             <div className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
@@ -244,6 +226,7 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NextGenAIInnovationShowcase2025;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'outline';
@@ -8,7 +7,8 @@ interface ButtonProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-}
+};
+
 
 export default function Button({ 
   children, 
@@ -41,6 +41,6 @@ export default function Button({
     >
       {children}
   );
-};
+
 
 export default Button;

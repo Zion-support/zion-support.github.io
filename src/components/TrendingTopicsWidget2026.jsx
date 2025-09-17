@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TrendingTopicsWidget2026 = () => {
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -30,6 +29,7 @@ const TrendingTopicsWidget2026 = () => {
       </div>
     </div>
   );
+
 };
 
 export default TrendingTopicsWidget2026;

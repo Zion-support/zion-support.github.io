@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateTechRevolution2032Banner: React.FC = () => {
   return (
     <divsection
@@ -12,7 +11,6 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -24,16 +22,13 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
               <Zap className="w-5 h-5 text-purple-400" />
               <span className="text-purple-300 font-semibold">Revolutionary 2032</span>
             </div>
-            
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Ultimate Tech Revolution
             </h2>
-            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Experience the convergence of consciousness, quantum computing, and interdimensional technology. 
               The future beyond imagination awaits.
             </p>
-
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/UltimateTechRevolution2032">
                 <divbutton
@@ -49,7 +44,6 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
               </divbutton>
             </div>
           </div>
-
           {/* Right Content - Feature Grid */}
           <div
             whileInView={{ opacity: 1, x: 0 }}
@@ -96,13 +90,13 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-8 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
       <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
     </divsection>
   );
+
 };
 
 export default UltimateTechRevolution2032Banner;

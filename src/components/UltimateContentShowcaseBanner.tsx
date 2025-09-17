@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function UltimateContentShowcaseBanner() {
   return (
@@ -34,4 +36,3 @@ export default function UltimateContentShowcaseBanner() {
           >
             Latest Breakthrough
   );
-}

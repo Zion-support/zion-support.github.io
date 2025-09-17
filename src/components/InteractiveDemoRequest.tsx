@@ -1,7 +1,6 @@
 "use client";
 import React{ useState } from 'react';
 CalendarClockUsersZapCheckCircleArrowRightX
-
 interface DemoFormData {
   name: string;
   email: string;
@@ -14,23 +13,16 @@ interface DemoFormData {
   preferredDate: string;
   preferredTime: string;
   message: string;
-}
-
 const industries = [
   ', 'Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Other'
-];
-
 const companySizes = [
   '1-10 employees'11-50 employees'51-200 employees'201-1000 employees'1000+ employees'
-];
-
 const interests = [
   'AI 'Automation', 'Cybersecurity'Cloud 'Solutions', 'Data 'Analytics', 'Digital 'Transformation', 'Process Optimization'
-];
-
 const timeSlots = [
   '9:00 AM'10:00 AM'11:00 AM'1:00 PM'2:00 PM'3:00 PM'4:00 PM'
-];
+};
+
 
 export default function InteractiveDemoRequest() {
   const [isOpen, setIsOpen] = useState(false);
@@ -315,6 +307,6 @@ export default function InteractiveDemoRequest() {
         )}
     </>
   );
-};
+
 
 export default InteractiveDemoRequest;

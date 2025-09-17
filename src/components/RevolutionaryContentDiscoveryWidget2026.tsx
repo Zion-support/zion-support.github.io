@@ -1,12 +1,10 @@
 import React from 'react';
-
 const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
@@ -16,20 +14,17 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
             <Sparkles className="w-4 h-4 mr-2" />
             REVOLUTIONARY CONTENT DISCOVERY
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Discover Your
             <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Perfect Content
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             AI-powered content discovery that learns your preferences and recommends the most relevant 
             articlestutorialsand insights tailored to your interests.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20"
@@ -46,7 +41,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className="relative">
               <select
@@ -62,7 +56,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
             </div>
-
             {/* Sort Options */}
             <div className="relative">
               <select
@@ -78,7 +71,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex bg-white/10 rounded-lg p-1">
               <button
@@ -100,7 +92,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Content Grid */}
         <div
           className={`grid gap-6 ${
@@ -127,7 +118,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  
                   {/* Featured Badge */}
                   {item.featured && (
                     <div className="absolute top-3 left-3">
@@ -137,14 +127,12 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
                   {/* Category Badge */}
                   <div className="absolute top-3 right-3">
                     <span className="px-2 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">
                       {categories.find(cat => cat.id === item.category)?.name}
                     </span>
                   </div>
-                  
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
@@ -152,7 +140,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Content */}
                 <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                   <div className="flex items-center justify-between mb-3">
@@ -164,15 +151,12 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
                       <span className="ml-1 text-sm font-medium">{item.rating}</span>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                     {item.title}
                   </h3>
-                  
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                     {item.description}
                   </p>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {item.tags.slice(03).map((tagidx) => (
@@ -184,7 +168,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center">
@@ -199,7 +182,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
                       by {item.author}
                     </div>
                   </div>
-
                   {/* CTA Button */}
                   <a
                     href={`/content/${item.title.toLowerCase().replace(/\s+/g'-')}`}
@@ -213,7 +195,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div
@@ -235,7 +216,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
             </button>
           </div>
         )}
-
         {/* Bottom CTA */}
         <div
           className="text-center mt-16"
@@ -269,6 +249,7 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryContentDiscoveryWidget2026;

@@ -16,11 +16,9 @@ import {
   Shield,
   Rocket
 } from 'lucide-react';
-
 const LatestBlogShowcase2025 = () => {
   const [activePost, setActivePost] = useState(0);
   const [filteredPosts, setFilteredPosts] = useState([]);
-
   const latestPosts = [
     {
       id: 44,
@@ -103,7 +101,6 @@ const LatestBlogShowcase2025 = () => {
       color: "from-teal-600 to-blue-600"
     }
   ];
-
   const categories = [
     { name: "All", count: latestPosts.length },
     { name: "Metaverse Technology", count: latestPosts.filter(p => p.category === "Metaverse Technology").length },
@@ -112,9 +109,7 @@ const LatestBlogShowcase2025 = () => {
     { name: "Digital Twin Technology", count: latestPosts.filter(p => p.category === "Digital Twin Technology").length },
     { name: "Augmented Reality", count: latestPosts.filter(p => p.category === "Augmented Reality").length }
   ];
-
   const [selectedCategory, setSelectedCategory] = useState("All");
-
   useEffect(() => {
     if (selectedCategory === "All") {
       setFilteredPosts(latestPosts);
@@ -122,17 +117,13 @@ const LatestBlogShowcase2025 = () => {
       setFilteredPosts(latestPosts.filter(post => post.category === selectedCategory));
     }
   }, [selectedCategory]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setActivePost((prev) => (prev + 1) % filteredPosts.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [filteredPosts]);
-
   const currentPost = filteredPosts[activePost] || filteredPosts[0];
-
   return (
     <div className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -150,7 +141,6 @@ const LatestBlogShowcase2025 = () => {
             </span>
             <BookOpen className="w-6 h-6 text-blue-500" />
           </motion.div>
-          
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Cutting-Edge Technology Blog
           </h2>
@@ -158,7 +148,6 @@ const LatestBlogShowcase2025 = () => {
             Stay ahead with our latest insights on revolutionary technologies that are shaping the future
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
@@ -175,7 +164,6 @@ const LatestBlogShowcase2025 = () => {
             </button>
           ))}
         </div>
-
         {/* Main Content */}
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Featured Post */}
@@ -216,12 +204,10 @@ const LatestBlogShowcase2025 = () => {
                         <div className="text-sm opacity-75">{currentPost.publishDate}</div>
                       </div>
                     </div>
-
                     {/* Post Content */}
                     <p className="text-lg mb-6 opacity-90">
                       {currentPost.excerpt}
                     </p>
-
                     {/* Author Info */}
                     <div className="flex items-center space-x-4 mb-6">
                       <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
@@ -232,7 +218,6 @@ const LatestBlogShowcase2025 = () => {
                         <div className="text-sm opacity-75">{currentPost.authorRole}</div>
                       </div>
                     </div>
-
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {currentPost.tags.map((tag, index) => (
@@ -244,7 +229,6 @@ const LatestBlogShowcase2025 = () => {
                         </span>
                       ))}
                     </div>
-
                     {/* CTA */}
                     <motion.button
                       whileHover={{ scale: 1.05 }}
@@ -259,7 +243,6 @@ const LatestBlogShowcase2025 = () => {
               )}
             </AnimatePresence>
           </div>
-
           {/* Side Posts */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-gray-900 mb-4">More Articles</h3>
@@ -304,7 +287,6 @@ const LatestBlogShowcase2025 = () => {
             ))}
           </div>
         </div>
-
         {/* Bottom Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -327,6 +309,7 @@ const LatestBlogShowcase2025 = () => {
       </div>
     </div>
   );
+
 };
 
 export default LatestBlogShowcase2025;

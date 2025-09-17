@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ultimate-futuristic-services-showcase-2025: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -8,7 +7,6 @@ const ultimate-futuristic-services-showcase-2025: React.FC = () => {
     </div>
   );
 };
-
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -79,15 +77,13 @@ const serviceCategories = [
     icon: Microscope,
     color: 'from-cyan-500 to-blue-600',
     count: 1
-  }
-];
-
+  };
 const stats = [
   { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' },
   { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
-];
+
 
 export default function UltimateFuturisticServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -360,4 +356,3 @@ export default function UltimateFuturisticServicesShowcase2025() {
               >
                 View Pricing
   );
-}

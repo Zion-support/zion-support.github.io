@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InteractiveContentPromoter: React.FC = () => {
   return (
     <div>
@@ -29,13 +28,11 @@ const InteractiveContentPromoter: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Content */}
           <div className="p-4">
             <p className="text-gray-600 text-sm mb-4">
               {promotions[activePromotion].description}
             </p>
-            
             <div className="flex space-x-2">
               <a
                 href={promotions[activePromotion].link}
@@ -47,7 +44,6 @@ const InteractiveContentPromoter: React.FC = () => {
                 Later
               </button>
             </div>
-
             {/* Progress Indicators */}
             <div className="flex justify-center space-x-1 mt-3">
               {promotions.map((_, index) => (
@@ -67,6 +63,7 @@ const InteractiveContentPromoter: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default InteractiveContentPromoter;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TestimonialSection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">
@@ -18,7 +17,6 @@ const TestimonialSection: React.FC = () => {
             Discover why leading companies trust Zion Tech Group with their most critical technology challenges
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
@@ -31,7 +29,6 @@ const TestimonialSection: React.FC = () => {
               <div className="mb-6">
                 <Quote className="w-8 h-8 text-cyan-400/60 group-hover:text-cyan-400 transition-colors duration-300" />
               </div>
-
               {/* Rating */}
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -42,12 +39,10 @@ const TestimonialSection: React.FC = () => {
                   />
                 ))}
               </div>
-
               {/* Content */}
               <blockquote className="text-gray-300 mb-6 leading-relaxed italic">
                 "{testimonial.content}"
               </blockquote>
-
               {/* Author */}
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
@@ -64,7 +59,6 @@ const TestimonialSection: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
         <div 
           className="text-center mt-16"
@@ -99,6 +93,7 @@ const TestimonialSection: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default TestimonialSection;

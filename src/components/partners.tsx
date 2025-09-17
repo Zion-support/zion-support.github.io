@@ -1,5 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
+};
+
 
 export default function PartnersPage() {
 	return (
@@ -18,4 +20,3 @@ export default function PartnersPage() {
 					<li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 	);
-}

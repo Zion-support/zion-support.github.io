@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const RevolutionaryContentAdvertisingBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const slides = [
     {
       title: "🚀 AI Revolutionary Breakthrough 2026",
@@ -38,7 +36,6 @@ const RevolutionaryContentAdvertisingBanner2026: React.FC = () => {
       gradient: "from-orange-600 via-red-600 to-pink-600"
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -46,18 +43,15 @@ const RevolutionaryContentAdvertisingBanner2026: React.FC = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [slides.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 py-8">
       <div className="absolute inset-0 bg-black/20"></div>
-      
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-48 h-48 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Main Banner Content */}
@@ -74,7 +68,6 @@ const RevolutionaryContentAdvertisingBanner2026: React.FC = () => {
               </p>
             </div>
           </div>
-
           {/* Featured Content Carousel */}
           <div className="relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 overflow-hidden">
             <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
@@ -91,7 +84,6 @@ const RevolutionaryContentAdvertisingBanner2026: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Slide indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {slides.map((_, index) => (
@@ -105,7 +97,6 @@ const RevolutionaryContentAdvertisingBanner2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
             <div className="text-center">
@@ -125,7 +116,6 @@ const RevolutionaryContentAdvertisingBanner2026: React.FC = () => {
               <div className="text-sm text-gray-300">Content Updates</div>
             </div>
           </div>
-
           {/* Newsletter Signup */}
           <div className="mt-8 text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 max-w-md mx-auto">
@@ -147,6 +137,7 @@ const RevolutionaryContentAdvertisingBanner2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryContentAdvertisingBanner2026;

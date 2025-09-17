@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 import { 
   Menu, 
   X, 
@@ -13,14 +12,12 @@ import {
   Sun,
   Moon
 } from 'lucide-react';
-
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -29,12 +26,10 @@ export function AppHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
-
   const navigation = [
     { name: 'Home', href: '/', current: location.pathname === '/' },
     { name: 'About', href: '/about', current: location.pathname === '/about' },
@@ -43,7 +38,6 @@ export function AppHeader() {
     { name: 'Pricing', href: '/comprehensive-pricing', current: location.pathname === '/comprehensive-pricing' },
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
   ];
-
   const servicesDropdown = [
     { name: 'AI Solutions', href: '/comprehensive-services#ai' },
     { name: 'Quantum Technology', href: '/comprehensive-services#quantum' },
@@ -51,7 +45,6 @@ export function AppHeader() {
     { name: 'Cloud Infrastructure', href: '/comprehensive-services#cloud' },
     { name: 'DevOps', href: '/comprehensive-services#devops' },
   ];
-
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -60,12 +53,10 @@ export function AppHeader() {
     }
     return location.pathname.startsWith(path);
   };
-
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     // Here you would typically update the theme context
   };
-
 const AppHeader= () => {
   return (
     <>
@@ -93,7 +84,6 @@ const AppHeader= () => {
                 <div className="text-xs text-zion-cyan font-medium">INNOVATION • TECHNOLOGY • FUTURE</div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main menu">
               {navigation.map((item) => (
@@ -110,7 +100,6 @@ const AppHeader= () => {
                   {item.name}
                 </Link>
               ))}
-              
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-200 rounded-md">
@@ -132,7 +121,6 @@ const AppHeader= () => {
                 </div>
               </div>
             </nav>
-
             {/* Search Bar - Hidden on mobile */}
             <div className="hidden md:flex ml-6 flex-1 max-w-md">
               <form onSubmit={handleSearch} className="relative w-full" role="search">
@@ -153,7 +141,6 @@ const AppHeader= () => {
                 </button>
               </form>
             </div>
-
             {/* Right side actions */}
             <div className="ml-6 flex items-center space-x-4">
               {/* Theme Toggle */}
@@ -164,7 +151,6 @@ const AppHeader= () => {
               >
                 {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </button>
-
               {/* Language Selector */}
               <button 
                 className="hidden lg:flex p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
@@ -172,7 +158,6 @@ const AppHeader= () => {
               >
                 <Globe className="h-5 w-5" />
               </button>
-
               {/* Settings */}
               <button 
                 className="hidden lg:flex p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
@@ -180,7 +165,6 @@ const AppHeader= () => {
               >
                 <Settings className="h-5 w-5" />
               </button>
-
               {/* Notifications */}
               <button 
                 className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10 relative"
@@ -189,7 +173,6 @@ const AppHeader= () => {
                 <Bell className="h-5 w-5" />
                 <span className="absolute top-1 right-1 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></span>
               </button>
-
               {/* User menu */}
               <button 
                 className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
@@ -197,7 +180,6 @@ const AppHeader= () => {
               >
                 <User className="h-5 w-5" />
               </button>
-
               {/* CTA Button */}
               <Link 
                 to="/contact" 
@@ -205,7 +187,6 @@ const AppHeader= () => {
               >
                 Get Started
               </Link>
-
               {/* Mobile menu button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -225,7 +206,6 @@ const AppHeader= () => {
               </button>
             </div>
           </div>
-
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
             <div className="lg:hidden border-t border-white/10">
@@ -250,7 +230,6 @@ const AppHeader= () => {
           )}
         </div>
       </header>
-      
       {/* Spacer to prevent content from hiding behind fixed header */}
       <div className="h-16 lg:h-20"></div>
     </>

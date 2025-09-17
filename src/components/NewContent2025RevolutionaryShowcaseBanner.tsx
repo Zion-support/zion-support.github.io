@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900 relative overflow-hidden">
@@ -7,7 +6,6 @@ const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cpath%20d%3D%22M11%2018c3.866%200%207-3.134%207-7s-3.134-7-7-7-7%203.134-7%207%203.134%207%207%207zm48%2025c3.866%200%207-3.134%207-7s-3.134-7-7-7-7%203.134-7%207%203.134%207%207%207zm-43-7c1.657%200%203-1.343%203-3s-1.343-3-3-3-3%201.343-3%203%201.343%203%203%203zm63%2031c1.657%200%203-1.343%203-3s-1.343-3-3-3-3%201.343-3%203%201.343%203%203%203zM34%2090c1.657%200%203-1.343%203-3s-1.343-3-3-3-3%201.343-3%203%201.343%203%203%203zm56-76c1.657%200%203-1.343%203-3s-1.343-3-3-3-3%201.343-3%203%201.343%203%203%203zM12%2086c2.21%200%204-1.79%204-4s-1.79-4-4-4-4%201.79-4%204%201.79%204%204%204zm28-65c2.21%200%204-1.79%204-4s-1.79-4-4-4-4%201.79-4%204%201.79%204%204%204zm23-11c2.76%200%205-2.24%205-5s-2.24-5-5-5-5%202.24-5%205%202.24%205%205%205zm-6%2060c2.21%200%204-1.79%204-4s-1.79-4-4-4-4%201.79-4%204%201.79%204%204%204zm29%2022c2.76%200%205-2.24%205-5s-2.24-5-5-5-5%202.24-5%205%202.24%205%205%205zM32%2063c2.76%200%205-2.24%205-5s-2.24-5-5-5-5%202.24-5%205%202.24%205%205%205zm57-13c2.76%200%205-2.24%205-5s-2.24-5-5-5-5%202.24-5%205%202.24%205%205%205zm-9-21c1.105%200%202-.895%202-2s-.895-2-2-2-2%20.895-2%202%20.895%202%202%202zM60%2091c1.105%200%202-.895%202-2s-.895-2-2-2-2%20.895-2%202%20.895%202%202%202zM35%2041c1.105%200%202-.895%202-2s-.895-2-2-2-2%20.895-2%202%20.895%202%202%202zM12%2060c1.105%200%202-.895%202-2s-.895-2-2-2-2%20.895-2%202%20.895%202%202%202z%22%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%2F%253E%253C%2Fsvg%253E')] opacity-20 animate-pulse"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-black text-sm font-bold mb-6">
@@ -22,7 +20,6 @@ const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
             Experience groundbreaking innovations that will redefine 'what', 's possible in technologybusinessand human potential.
           </p>
         </div>
-
         {/* Highlights Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {highlights.map((highlightindex) => (
@@ -37,7 +34,6 @@ const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Stats Section */}
         <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 mb-12 border border-white/10">
           <div className="grid md:grid-cols-4 gap-8 text-center">
@@ -59,7 +55,6 @@ const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* CTA */}
         <div className="text-center">
           <a 
@@ -74,6 +69,7 @@ const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default NewContent2025RevolutionaryShowcaseBanner;

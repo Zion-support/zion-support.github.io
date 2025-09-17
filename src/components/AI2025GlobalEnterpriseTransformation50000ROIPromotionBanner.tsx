@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-green-900 to-slate-900 border border-green-500/30 rounded-2xl my-8">
@@ -74,6 +73,7 @@ const AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner: React.FC = ()
       {/* Bottom gradient overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500"></div>
   );
+
 };
 
 export default AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner;

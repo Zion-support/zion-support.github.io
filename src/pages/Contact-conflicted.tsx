@@ -13,6 +13,7 @@ import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
 import Link from 'next/link';
+};
 
 
 export default function Contact() {
@@ -283,5 +284,6 @@ const Contact: React.FC = () => {
                   <p className="text-gray-300">{feature.description}</p>
             ))}
   );
-};
+
+
 export default Contact;

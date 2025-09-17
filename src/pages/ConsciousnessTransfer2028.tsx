@@ -12,7 +12,6 @@ import {
   Award,
   Target
 } from 'lucide-react';
-
 const ConsciousnessTransfer2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -53,7 +52,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +63,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
               Experience the future of human consciousness with our breakthrough consciousness transfer technology
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
@@ -76,7 +73,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                 Complete brain state capture using quantum neural scanners for high-fidelity consciousness preservation
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-purple-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
                 <Zap className="w-6 h-6 text-white" />
@@ -86,7 +82,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                 Seamless consciousness-AI fusion with preserved personality and enhanced cognitive capabilities
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-green-500/10 to-cyan-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-green-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="w-6 h-6 text-white" />
@@ -96,7 +91,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                 Comprehensive ethical guidelines and backup systems for safe consciousness transfer
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-pink-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-pink-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-white" />
@@ -106,7 +100,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                 Preserve human knowledge and experience indefinitely with digital consciousness backup
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-yellow-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
                 <TrendingUp className="w-6 h-6 text-white" />
@@ -116,7 +109,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                 Direct neural communication between humans and AI for unprecedented collaboration
               </p>
             </div>
-
             <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-red-400/50 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
                 <Award className="w-6 h-6 text-white" />
@@ -129,7 +121,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,7 +132,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
               Experience the benefits of consciousness transfer technology
             </p>
           </div>
-
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="space-y-8">
@@ -156,7 +146,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Brain className="w-4 h-4 text-white" />
@@ -168,7 +157,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Users className="w-4 h-4 text-white" />
@@ -180,7 +168,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <Shield className="w-4 h-4 text-white" />
@@ -194,7 +181,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="text-center">
                 <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -218,7 +204,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -230,7 +215,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
               See how consciousness transfer is transforming the world
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
@@ -239,7 +223,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
               <div className="text-white font-semibold mb-2">Additional Revenue</div>
               <div className="text-gray-300">Apple's consciousness platform</div>
             </div>
-
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
                 95%
@@ -247,7 +230,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
               <div className="text-white font-semibold mb-2">User Adoption</div>
               <div className="text-gray-300">Consciousness backup services</div>
             </div>
-
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent mb-2">
                 1000x
@@ -255,7 +237,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
               <div className="text-white font-semibold mb-2">Acceleration</div>
               <div className="text-gray-300">Space technology development</div>
             </div>
-
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent mb-2">
                 ∞
@@ -266,7 +247,6 @@ const ConsciousnessTransfer2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -296,6 +276,7 @@ const ConsciousnessTransfer2028: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default ConsciousnessTransfer2028;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
   return (
     <div>
@@ -16,7 +15,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
               >
                 {breakthroughs[currentBreakthrough].urgency}
               </div>
-              
               {/* Rotating Icon */}
               <div
                 key={`icon-${currentBreakthrough}`}
@@ -25,7 +23,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 <breakthroughs[currentBreakthrough].icon className="w-6 h-6 text-white" />
               </div>
             </div>
-
             {/* Center - Breakthrough Content */}
             <div className="flex-1 text-center px-8">
               <div
@@ -40,7 +37,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/ai-2025-breakthrough-announcement">
@@ -52,7 +48,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                   <ArrowRight className="w-4 h-4" />
                 </divbutton>
               </a>
-              
               <button
                 onClick={() => setIsVisible(false)}
                 className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
@@ -62,10 +57,8 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-        
         {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_i) => (
@@ -89,6 +82,7 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AI2025BreakthroughAnnouncementBanner;

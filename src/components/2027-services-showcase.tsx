@@ -10,6 +10,8 @@ import {
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
+};
+
 
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -309,6 +311,6 @@ export default function ServicesShowcase2027() {
               {' • '}
               <a href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</a>
   );
-};
+
 
 export default 2027-services-showcase;

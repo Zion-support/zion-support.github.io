@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2025UltimateInnovationShowcase: React.FC = () => {
   return (
     <div
@@ -7,7 +6,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div
@@ -24,7 +22,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.
           </p>
         </div>
-
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {innovations.map((innovationindex) => (
@@ -45,7 +42,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Benefits Section */}
         <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
@@ -65,7 +61,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -92,6 +87,7 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AI2025UltimateInnovationShowcase;

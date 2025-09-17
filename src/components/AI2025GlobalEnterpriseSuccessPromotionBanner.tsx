@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2025GlobalEnterpriseSuccessPromotionBanner() {
   return (
@@ -52,4 +54,3 @@ export default function AI2025GlobalEnterpriseSuccessPromotionBanner() {
           <div className="mt-6 text-sm opacity-75">
             ⚡ Exclusive: Download the complete implementation blueprint used by Fortune 500 companies
   );
-}

@@ -1,7 +1,5 @@
 "use client";
 import React{ useEffectuseState } from 'react';
-
-/**
  * Analytics and Monitoring Component
  * 
  * Provides comprehensive analytics and monitoring including:
@@ -11,14 +9,11 @@ import React{ useEffectuseState } from 'react';
  * - User behavior analytics
  * - Real-time metrics
  */
-
 interface AnalyticsConfig {
   ga4MeasurementId?: string;
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;
-}
-
 interface PerformanceMetrics {
   pageLoadTime: number;
   firstContentfulPaint: number;
@@ -26,16 +21,12 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
-}
-
 interface UserBehavior {
   sessionId: string;
   pageViews: number;
   timeOnSite: number;
   bounceRate: number;
   conversionEvents: number;
-}
-
 export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
   ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID,
   enablePerformanceMonitoring = true,
@@ -45,7 +36,6 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
   const [metricsetMetrics] = useState<PerformanceMetrics | null>(null);
   const [userBehaviorsetUserBehavior] = useState<UserBehavior | null>(null);
   const [errorsetErrors] = useState<any[]>([]);
-
   useEffect(() => {
     // Initialize Google Analytics 4
     if (ga4MeasurementId && typeof window !== 'undefined') {
@@ -53,32 +43,26 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`;
       document.head.appendChild(script);
-
       window.gtag = window.gtag || function() {
         (window.gtag as any).q = (window.gtag as any).q || [];
         (window.gtag as any).q.push(arguments);
       };
-      
       (window.gtag as any)(', 'js', 'new Date());
       (window.gtag as any)(', 'config', 'ga4MeasurementId);
     }
-
     // Performance monitoring
     if (enablePerformanceMonitoring) {
       initializePerformanceMonitoring();
     }
-
     // Error tracking
     if (enableErrorTracking) {
       initializeErrorTracking();
     }
-
     // User behavior tracking
     if (enableUserBehaviorTracking) {
       initializeUserBehaviorTracking();
     }
   }[ga4MeasurementIdenablePerformanceMonitoringenableErrorTrackingenableUserBehaviorTracking]);
-
   const initializePerformanceMonitoring = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Core Web Vitals
@@ -87,28 +71,23 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           setMetrics(prev => ({ ...prevcumulativeLayoutShift: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'cls'metric.value);
         });
-
         getFID((metric) => {
           setMetrics(prev => ({ ...prevfirstInputDelay: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'fid'metric.value);
         });
-
         getFCP((metric) => {
           setMetrics(prev => ({ ...prevfirstContentfulPaint: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'fcp'metric.value);
         });
-
         getLCP((metric) => {
           setMetrics(prev => ({ ...prevlargestContentfulPaint: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'lcp'metric.value);
         });
-
         getTTFB((metric) => {
           setMetrics(prev => ({ ...prevtimeToInteractive: metric.value } as PerformanceMetrics));
           trackEvent(', 'web_vitals', 'ttfb'metric.value);
         });
       });
-
       // Page load time
       window.addEventListener('load'() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -118,7 +97,6 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
       });
     }
   };
-
   const initializeErrorTracking = () => {
     if (typeof window !== 'undefined') {
       // JavaScript errors
@@ -131,37 +109,31 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           error: event.error,
           timestamp: new Date().toISOString()
         };
-        
         setErrors(prev => [...preverror]);
         trackEvent(', 'error', 'javascript_error'error.message);
       });
-
       // Unhandled promise rejections
       window.addEventListener('unhandledrejection'(event) => {
         const error = {
           reason: event.reason,
           timestamp: new Date().toISOString()
         };
-        
         setErrors(prev => [...preverror]);
         trackEvent(', 'error', 'unhandled_promise_rejection'event.reason);
       });
     }
   };
-
   const initializeUserBehaviorTracking = () => {
     if (typeof window !== 'undefined') {
       const sessionId = generateSessionId();
       let pageViews = 0;
       let timeOnSite = 0;
       let startTime = Date.now();
-
       // Track page views
       const trackPageView = () => {
         pageViews++;
         timeOnSite += Date.now() - startTime;
         startTime = Date.now();
-
         setUserBehavior({
           sessionId,
           pageViews,
@@ -169,11 +141,9 @@ export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
           bounceRate: calculateBounceRate(),
           conversionEvents: 0
         });
-
         trackEvent(', 'user_behavior', 'page_view'pageViews);
       };
 import React{ useEffect } from 'react';
-
 interface AnalyticsEvent {
   event: string;
   category: string;
@@ -181,7 +151,8 @@ interface AnalyticsEvent {
   label?: string;
   value?: number;
   timestamp: number;
-}
+};
+
 
 export default function AnalyticsMonitor() {
   useEffect(() => {
@@ -330,8 +301,6 @@ export default function AnalyticsMonitor() {
     useConversion,
     trackEvent
   };
-};
-/**
  * Real-time Analytics Dashboard Component
  */
 export const AnalyticsDashboard: React.FC = () => {
@@ -346,7 +315,7 @@ export const AnalyticsDashboard: React.FC = () => {
       >
         📊
     );
-  }
+  };
   return (
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-sm">
       <div className="flex justify-between items-center mb-4">
@@ -383,7 +352,8 @@ export const AnalyticsDashboard: React.FC = () => {
             ))}
       )}
   );
-};
+
+
 export default AnalyticsMonitor;
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
@@ -499,4 +469,3 @@ export default AnalyticsMonitor;
     };
   }[]);
   return null;
-}

@@ -1,5 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
+};
+
 
 export default function InvestorsPage() {
 	return (
@@ -17,4 +19,3 @@ export default function InvestorsPage() {
 					<div className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"><div className="text-2xl font-bold text-white">15+</div><div className="text-slate-400 text-sm">Years experience</div></div>
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 	);
-}

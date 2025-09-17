@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AIToolsInteractiveDemo2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -18,7 +17,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
             Experience the power of cutting-edge AI tools with live demonstrations. 
             Testexploreand discover how AI can transform your workflow.
           </p>
-          
           {/* Search Bar */}
           <div className="max-w-md mx-auto">
             <div className="relative">
@@ -33,7 +31,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -52,7 +49,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Tools Grid */}
           <div className="lg:col-span-2">
@@ -106,9 +102,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                       )}
                     </div>
                   </div>
-
                   <p className="text-gray-300 mb-4">{tool.description}</p>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {tool.features.slice(02).map((featureidx) => (
                       <span
@@ -124,7 +118,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                       </span>
                     )}
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center space-x-1">
@@ -145,14 +138,12 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Demo Panel */}
           <div className="lg:col-span-1">
             <div
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
-              
                 {selectedToolData ? (
                   <div
                     key={selectedToolData.id}
@@ -168,7 +159,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                         {selectedToolData.description}
                       </p>
                     </div>
-
                     {isDemoRunning ? (
                       <div className="space-y-4">
                         <div className="text-center">
@@ -182,7 +172,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                           <p className="text-white font-medium">Running Demo...</p>
                           <p className="text-gray-400 text-sm">{demoProgress}% Complete</p>
                         </div>
-                        
                         <div className="w-full bg-gray-700 rounded-full h-2">
                           <div 
                             className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300"
@@ -199,7 +188,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                             Experience the full power of {selectedToolData.name}
                           </p>
                         </div>
-                        
                         <div className="space-y-3">
                           <h5 className="text-white font-medium">Key Features:</h5>
                           {selectedToolData.features.map((featureindex) => (
@@ -209,7 +197,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         <div className="pt-4 border-t border-white/10">
                           <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                             <span>Users</span>
@@ -227,7 +214,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                             <span className="text-green-400 font-medium">{selectedToolData.pricing}</span>
                           </div>
                         </div>
-
                         <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2">
                           <span>Start Free Trial</span>
                           <ArrowRight className="w-4 h-4" />
@@ -252,7 +238,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Stats Section */}
         <div
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -275,6 +260,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AIToolsInteractiveDemo2025;

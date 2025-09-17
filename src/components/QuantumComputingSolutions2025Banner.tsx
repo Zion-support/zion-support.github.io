@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function QuantumComputingSolutions2025Banner() {
   return (
@@ -81,4 +83,3 @@ export default function QuantumComputingSolutions2025Banner() {
             <div className="text-sm font-bold text-white">Financial Modeling</div>
             <div className="text-xs text-yellow-400">10,000x ROI</div>
   );
-}

@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
   return (
@@ -68,4 +70,3 @@ export default function AI2025GlobalTransformation15000ROIPromotionBanner() {
               <span className="text-yellow-400">✓</span>
               <span>Global Scale Success</span>
   );
-}

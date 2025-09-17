@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -11,7 +10,6 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-blue-600/20"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%221%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         </div>
-
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
@@ -27,7 +25,6 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
                     <span className="text-xs font-bold text-white">!</span>
                   </div>
                 </div>
-                
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">
                     🚀 Ultimate Content Showcase 2025
@@ -37,7 +34,6 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               {/* Rotating Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-purple-500/30"></div>
@@ -62,7 +58,6 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Right Content */}
             <div className="flex items-center gap-4">
               {/* Countdown Timer */}
@@ -72,7 +67,6 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
                   Limited Time Offer
                 </span>
               </div>
-
               {/* Action Buttons */}
               <div className="flex items-center gap-3">
                 <divbutton
@@ -81,14 +75,12 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
                   <Play className="w-4 h-4" />
                   <span className="text-sm font-medium">Preview</span>
                 </divbutton>
-
                 <divbutton
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-purple-500/25"
                 >
                   <span>Explore Now</span>
                   <ArrowRight className="w-4 h-4" />
                 </divbutton>
-
                 <divbutton
                   onClick={() => setIsDismissed(true)}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
@@ -98,7 +90,6 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Mobile Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
@@ -122,7 +113,6 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>
         <div
@@ -131,6 +121,7 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateContentShowcase2025PromotionBanner;

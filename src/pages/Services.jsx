@@ -1,5 +1,4 @@
 import React from "react";
-
 const Services = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -12,7 +11,6 @@ const Services = () => {
             Comprehensive technology solutions tailored to your business needs
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
             <h3 className="text-2xl font-bold mb-4 text-blue-300">AI Development</h3>
@@ -20,14 +18,12 @@ const Services = () => {
               Custom AI solutions and machine learning models
             </p>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
             <h3 className="text-2xl font-bold mb-4 text-purple-300">Cloud Solutions</h3>
             <p className="text-gray-300 mb-4">
               Scalable cloud infrastructure and migration services
             </p>
           </div>
-          
           <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
             <h3 className="text-2xl font-bold mb-4 text-green-300">Data Analytics</h3>
             <p className="text-gray-300 mb-4">
@@ -38,6 +34,7 @@ const Services = () => {
       </div>
     </div>
   );
+
 };
 
 export default Services;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BusinessTransformationRevolution2025: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
@@ -9,7 +8,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-bounce" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div
@@ -20,16 +18,13 @@ const BusinessTransformationRevolution2025: React.FC = () => {
               Business Revolution 2025
             </h2>
           </div>
-          
             Revolutionary business transformation solutions that deliver unprecedented results. 
             Join thousands of companies already experiencing exponential growth.
           </divp>
-
             <Clock className="w-5 h-5 mr-2" />
             Limited Time: 50% Off Implementation
           </div>
         </div>
-
         {/* Stats Section */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -52,7 +47,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Tabs Section */}
         <div className="mb-16">
           {/* Tab Navigation */}
@@ -76,7 +70,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Tab Content */}
           <div
             key={activeTab}
@@ -90,7 +83,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 {tabs[activeTab].content.description}
               </p>
-              
               <div className="space-y-4">
                 {tabs[activeTab].content.benefits.map((benefitindex) => (
                   <div
@@ -103,7 +95,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
                 ))}
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="p-8 bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl border border-white/20">
                 <h4 className="text-2xl font-bold text-white mb-6">Ready to Transform?</h4>
@@ -121,7 +112,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
                     90-day money-back guarantee
                   </div>
                 </div>
-
                 <divbutton
                   className="w-full px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold text-lg rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center"
                 >
@@ -129,7 +119,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </divbutton>
               </div>
-
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-white/5 rounded-lg text-center">
                   <Lightbulb className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
@@ -145,7 +134,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Final CTA */}
         <div
           className="text-center"
@@ -168,6 +156,7 @@ const BusinessTransformationRevolution2025: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default BusinessTransformationRevolution2025;

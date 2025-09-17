@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Atom, Cpu, Zap, Shield, Globe, Brain, CheckCircle, Play, Download } from 'lucide-react';
-
 const QuantumComputingGuide2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('basics');
-
   const tabs = [
     { id: 'basics', label: 'Quantum Basics', icon: Atom },
     { id: 'applications', label: 'Applications', icon: Cpu },
     { id: 'implementation', label: 'Implementation', icon: Zap },
     { id: 'future', label: 'Future Trends', icon: Brain }
   ];
-
   const quantumBasics = [
     {
       concept: "Quantum Superposition",
@@ -29,7 +26,6 @@ const QuantumComputingGuide2026: React.FC = () => {
       example: "Electrons tunneling through insulating materials"
     }
   ];
-
   const applications = [
     {
       title: "Cryptography",
@@ -56,7 +52,6 @@ const QuantumComputingGuide2026: React.FC = () => {
       benefits: ["Weather prediction", "Climate change modeling", "Environmental analysis"]
     }
   ];
-
   const implementationSteps = [
     {
       step: 1,
@@ -89,7 +84,6 @@ const QuantumComputingGuide2026: React.FC = () => {
       duration: "Ongoing"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Hero Section */}
@@ -107,7 +101,6 @@ const QuantumComputingGuide2026: React.FC = () => {
               Guide 2026
             </span>
           </motion.h1>
-          
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -116,7 +109,6 @@ const QuantumComputingGuide2026: React.FC = () => {
           >
             Master the fundamentals and applications of quantum computing in the modern era
           </motion.p>
-
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -134,7 +126,6 @@ const QuantumComputingGuide2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Tabbed Content */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -155,7 +146,6 @@ const QuantumComputingGuide2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           {/* Tab Content */}
           <motion.div
             key={activeTab}
@@ -186,7 +176,6 @@ const QuantumComputingGuide2026: React.FC = () => {
                 </div>
               </div>
             )}
-
             {activeTab === 'applications' && (
               <div>
                 <h2 className="text-3xl font-bold text-white mb-8 text-center">Quantum Computing Applications</h2>
@@ -221,7 +210,6 @@ const QuantumComputingGuide2026: React.FC = () => {
                 </div>
               </div>
             )}
-
             {activeTab === 'implementation' && (
               <div>
                 <h2 className="text-3xl font-bold text-white mb-8 text-center">Implementation Roadmap</h2>
@@ -247,7 +235,6 @@ const QuantumComputingGuide2026: React.FC = () => {
                 </div>
               </div>
             )}
-
             {activeTab === 'future' && (
               <div>
                 <h2 className="text-3xl font-bold text-white mb-8 text-center">Future of Quantum Computing</h2>
@@ -278,7 +265,6 @@ const QuantumComputingGuide2026: React.FC = () => {
                       </li>
                     </ul>
                   </motion.div>
-
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -311,7 +297,6 @@ const QuantumComputingGuide2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Interactive Demo Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -345,7 +330,6 @@ const QuantumComputingGuide2026: React.FC = () => {
           </motion.button>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -380,6 +364,7 @@ const QuantumComputingGuide2026: React.FC = () => {
       </section>
     </div>
   );
+
 };
 
 export default QuantumComputingGuide2026;

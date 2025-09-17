@@ -16,6 +16,8 @@ import {
   TrendingUp,
   Shield
 } from 'lucide-react';
+};
+
 
 export default function AiToolsPage() {
   const aiTools = [
@@ -381,6 +383,6 @@ export default function AiToolsPage() {
               Get AI Consultation
     </>
   );
-};
+
 
 export default ai-tools;

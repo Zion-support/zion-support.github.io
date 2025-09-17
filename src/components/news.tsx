@@ -1,5 +1,4 @@
 import React from 'react';
-
 const news: React.FC = () => {
   return (
     <UltraFuturisticBackground>
@@ -8,7 +7,6 @@ const news: React.FC = () => {
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
-
       id: 1,
       title: "Zion Tech Group Launches Revolutionary Quantum AI Platform",
       excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",
@@ -73,6 +71,9 @@ const news: React.FC = () => {
       readTime: "3 min read",
       image: "/images/news/financial-award.jpg",
       tags: ["Awards", "Financial Services", "Quantum Computing"]
+};
+
+
 export default function News() {
   const featuredNews = [
     {
@@ -86,6 +87,8 @@ export default function News() {
       image: '/api/placeholder/600/400',
       tags: ['AI', 'Quantum Computing', 'Innovation'],
 import Head from 'next/head';
+
+
 export default function NewsPage() {
   const newsArticles = [
     {
@@ -259,6 +262,8 @@ import {
   BookOpen, Globe, Video
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -657,7 +662,6 @@ export default function News() {
               />
               <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300">
                 Subscribe
-}
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(article.category)} text-white`}>
                         {categories.find(c => c.id === article.category)?.name}
@@ -961,7 +965,6 @@ export default function News() {
               >
                 Contact Our Team
   );
-}
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -980,7 +983,6 @@ export default function News() {
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
   );
-}
       title: "Partnership with TechCorp Announced for Cloud Infrastructure",
       excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",
       date: "2025-01-18",
@@ -1140,4 +1142,3 @@ export default function News() {
                     Subscribe
     </>
   );
-}

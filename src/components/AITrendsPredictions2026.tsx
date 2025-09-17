@@ -1,11 +1,10 @@
 import React from 'react';
-
 const AITrendsPredictions2026: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20" />
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/30 via-purple-900/30 to-cyan-900/30" />
         <div className="absolute inset-0">
           {[...Array(30)].map((_i) => (
@@ -27,7 +26,6 @@ const AITrendsPredictions2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
@@ -39,20 +37,17 @@ const AITrendsPredictions2026: React.FC = () => {
             <TrendingUp className="w-4 h-4 mr-2" />
             AI Trends & Predictions 2026
           </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Future of
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
               {' '}Artificial Intelligence
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover the groundbreaking AI trends and predictions that will shape 2026 and beyond. 
             From quantum-enhanced AI to artificial consciousnessexplore the technologies that will revolutionize our world.
           </p>
         </div>
-
         {/* Market Insights */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -69,7 +64,6 @@ const AITrendsPredictions2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Predictions Grid */}
         <div
           className="mb-16"
@@ -77,7 +71,6 @@ const AITrendsPredictions2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Key Predictions for 2026
           </h2>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {predictions.map((predictionindex) => (
               <div
@@ -103,11 +96,9 @@ const AITrendsPredictions2026: React.FC = () => {
                     <div className="text-gray-400 text-sm">Confidence</div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {prediction.description}
                 </p>
-                
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-white/5 rounded-lg">
                     <div className="text-lg font-bold text-white">{prediction.marketValue}</div>
@@ -118,7 +109,6 @@ const AITrendsPredictions2026: React.FC = () => {
                     <div className="text-gray-400 text-sm">Adoption Rate</div>
                   </div>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <Target className="w-5 h-5 text-green-400 mr-2" />
@@ -130,7 +120,6 @@ const AITrendsPredictions2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Detailed Prediction View */}
           <div
             key={activePrediction}
@@ -150,11 +139,9 @@ const AITrendsPredictions2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {predictions[activePrediction].description}
                 </p>
-                
                 <div className="space-y-3">
                   {predictions[activePrediction].keyPoints.map((pointindex) => (
                     <div key={index} className="flex items-center text-gray-300">
@@ -164,7 +151,6 @@ const AITrendsPredictions2026: React.FC = () => {
                   ))}
                 </div>
               </div>
-              
               <div className="relative">
                 <div className={`w-full h-80 bg-gradient-to-br ${predictions[activePrediction].color} rounded-2xl flex items-center justify-center`}>
                   <predictions[activePrediction].icon className="w-32 h-32 text-white opacity-80" />
@@ -176,7 +162,6 @@ const AITrendsPredictions2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Timeline */}
         <div
           className="mb-16"
@@ -184,10 +169,8 @@ const AITrendsPredictions2026: React.FC = () => {
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Innovation Timeline
           </h2>
-          
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-400"></div>
-            
             <div className="space-y-8">
               {timeline.map((itemindex) => (
                 <div
@@ -212,18 +195,15 @@ const AITrendsPredictions2026: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <div className="relative z-10 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center">
                     <Star className="w-4 h-4 text-white" />
                   </div>
-                  
                   <div className="w-1/2"></div>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div
           className="text-center"
@@ -250,6 +230,7 @@ const AITrendsPredictions2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AITrendsPredictions2026;

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-
 interface ErrorLog {
   id: string;
   timestamp: Date;
@@ -10,8 +9,6 @@ interface ErrorLog {
   url: string;
   userAgent: string;
   userId?: string;
-}
-
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;
@@ -21,8 +18,6 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
   memoryUsage?: number;
-}
-
 interface UserSession {
   sessionId: string;
   startTime: Date;
@@ -34,7 +29,8 @@ interface UserSession {
     os: string;
     browser: string;
   };
-}
+};
+
 
 export default function AdvancedMonitoring() {
   const [errorsetErrors] = useState<ErrorLog[]>([]);
@@ -283,7 +279,7 @@ export default function AdvancedMonitoring() {
   // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
-  }
+  };
   return (
     <div className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg text-sm z-50 max-w-md">
       <div className="flex items-center justify-between mb-4">
@@ -345,6 +341,6 @@ export default function AdvancedMonitoring() {
               ))}
       )}
   );
-};
+
 
 export default AdvancedMonitoring;

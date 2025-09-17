@@ -1,3 +1,2 @@
 // api.ts
 // Utility functions
-

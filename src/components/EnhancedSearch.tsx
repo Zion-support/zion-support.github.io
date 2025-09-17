@@ -2,6 +2,23 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedSearch: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const searchSuggestions = [
+    { title: "Consciousness Computing", category: "AI", icon: "🧠" },
+    { title: "Quantum Neural Networks", category: "Quantum", icon: "⚡" },
+    { title: "Holographic Reality", category: "Reality", icon: "🌟" },
+    { title: "Interdimensional Tech", category: "Advanced", icon: "🌌" },
+    { title: "Neural Interface Matrix", category: "Neural", icon: "🔗" },
+    { title: "Revolutionary Breakthrough", category: "Featured", icon: "🚀" }
+  ];
+
+  const filteredSuggestions = searchSuggestions.filter(item =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="relative max-w-2xl mx-auto">
       <motion.div

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AI2025NewContentBreakthroughBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 overflow-hidden">
@@ -7,7 +6,6 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="text-center mb-12">
           {/* Badge */}
@@ -15,7 +13,6 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
             <Star className="w-4 h-4 mr-2" />
             NEW CONTENT BREAKTHROUGH
           </div>
-          
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             🚀 AI 2025 
@@ -25,14 +22,12 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
             <br />
             Revolutionary Breakthrough
           </h1>
-          
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover our latest revolutionary content: Enterprise Automation GuideImplementation Master Guideand Global Transformation Case Study. 
             <span className="text-yellow-400 font-bold">Achieve 4,200% ROI</span> with proven strategies.
           </p>
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Enterprise Automation */}
@@ -57,7 +52,6 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
               Read Full Guide <ArrowRight className="w-4 h-4 ml-2" />
             </a>
           </div>
-
           {/* Implementation Guide */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
             <div className="flex items-center mb-4">
@@ -80,7 +74,6 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
               Get Your Guide <ArrowRight className="w-4 h-4 ml-2" />
             </a>
           </div>
-
           {/* Case Study */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
             <div className="flex items-center mb-4">
@@ -104,7 +97,6 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           <div className="text-center">
@@ -136,7 +128,6 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
             <p className="text-blue-200 text-sm">Prediction and automation</p>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
@@ -164,7 +155,6 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Trust Indicators */}
         <div className="mt-12 text-center">
           <p className="text-blue-200 text-sm mb-4">Trusted by industry leaders worldwide</p>
@@ -178,6 +168,7 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
       </div>
     </section>
   );
+
 };
 
 export default AI2025NewContentBreakthroughBanner;

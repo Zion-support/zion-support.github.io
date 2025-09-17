@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const AIExecutiveStrategy2026: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-16 text-white">
@@ -13,7 +12,6 @@ const AIExecutiveStrategy2026: React.FC = () => {
         This strategy outlines pragmatic steps for executives to realize value from AI while
         ensuring safety, compliance, and measurable ROI.
       </p>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <section className="bg-white/10 border border-white/20 rounded-2xl p-6">
           <h2 className="text-2xl font-semibold mb-3">1. Business Alignment</h2>
@@ -22,7 +20,6 @@ const AIExecutiveStrategy2026: React.FC = () => {
             <li>Prioritize pilots with clear owners, timelines, and success metrics.</li>
           </ul>
         </section>
-
         <section className="bg-white/10 border border-white/20 rounded-2xl p-6">
           <h2 className="text-2xl font-semibold mb-3">2. Data Foundations</h2>
           <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -30,7 +27,6 @@ const AIExecutiveStrategy2026: React.FC = () => {
             <li>Adopt secure, governed access with least privilege.</li>
           </ul>
         </section>
-
         <section className="bg-white/10 border border-white/20 rounded-2xl p-6">
           <h2 className="text-2xl font-semibold mb-3">3. Risk & Compliance</h2>
           <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -38,7 +34,6 @@ const AIExecutiveStrategy2026: React.FC = () => {
             <li>Track evolving AI regulations and vendor obligations.</li>
           </ul>
         </section>
-
         <section className="bg-white/10 border border-white/20 rounded-2xl p-6">
           <h2 className="text-2xl font-semibold mb-3">4. Platform & Operations</h2>
           <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -47,7 +42,6 @@ const AIExecutiveStrategy2026: React.FC = () => {
           </ul>
         </section>
       </div>
-
       <div className="mt-10 bg-white/10 border border-white/20 rounded-2xl p-6">
         <h2 className="text-2xl font-semibold mb-3">Executive Actions</h2>
         <ol className="list-decimal list-inside text-gray-300 space-y-2">
@@ -59,6 +53,7 @@ const AIExecutiveStrategy2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default AIExecutiveStrategy2026;

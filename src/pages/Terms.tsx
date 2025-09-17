@@ -1,14 +1,41 @@
+import React from 'react';
+import {
+  FileText,
+  Shield,
+  Users,
+  Globe,
+  CheckCircle,
+  AlertTriangle,
+  Scale,
+  Lock,
+  Mail,
+  Phone,
+  MapPin,
+  Calendar,
+  CheckCircle as CheckCircle2,
+  AlertTriangle as AlertTriangle2,
+  Lock as Lock2,
+  Eye as Eye2,
+  Database,
+  Zap,
+  Rocket,
+  Brain,
+  Cpu
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+const Terms: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Terms of Service - Zion Tech Group"
         description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions."
       />
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div
+          <divdiv
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
@@ -22,14 +49,13 @@
               These terms govern your use of our services. Please read them carefully
               before using our technology solutions.
             </p>
-          </div>
+          </divdiv>
         </div>
       </section>
-
       {/* Key Terms Overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -40,11 +66,10 @@
               Understanding these fundamental terms helps ensure a smooth
               relationship between you and Zion Tech Group.
             </p>
-          </div>
-
+          </divdiv>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {termsSections.map((section, index) => (
-              <div
+              <divdiv
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
@@ -54,16 +79,15 @@
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{section.title}</h3>
                 <p className="text-gray-300">{section.description}</p>
-              </div>
+              </divdiv>
             ))}
           </div>
         </div>
       </section>
-
       {/* User Obligations */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <div
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -74,28 +98,26 @@
               As a user of our services, you have certain responsibilities
               that help ensure a secure and productive environment.
             </p>
-          </div>
-
+          </divdiv>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {userObligations.map((obligation, index) => (
-              <div
+              <divdiv
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
                 <p className="text-gray-300">{obligation.description}</p>
-              </div>
+              </divdiv>
             ))}
           </div>
         </div>
       </section>
-
       {/* Prohibited Activities */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -116,9 +138,8 @@
                   </div>
                 ))}
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -143,15 +164,14 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </divdiv>
           </div>
         </div>
       </section>
-
       {/* Service Levels */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <div
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -162,12 +182,11 @@
               We provide different levels of support to meet your business needs
               and ensure optimal service delivery.
             </p>
-          </div>
-
+          </divdiv>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceLevels.map((level, index) => (
-                <div
+                <divdiv
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className={`bg-slate-800/50 p-6 rounded-xl border ${
@@ -187,18 +206,17 @@
                     <span className="text-sm text-gray-400">Response Time:</span>
                     <div className="text-lg font-semibold text-white">{level.response}</div>
                   </div>
-                </div>
+                </divdiv>
               ))}
             </div>
           </div>
         </div>
       </section>
-
       {/* Intellectual Property */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div
+            <divdiv
               whileInView={{ opacity: 1, x: 0 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -217,9 +235,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -261,9 +278,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -302,9 +318,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -336,9 +351,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -371,9 +385,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -405,9 +418,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -439,9 +451,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -467,9 +478,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div
+            </divdiv>
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
@@ -495,15 +505,14 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </divdiv>
           </div>
         </div>
       </section>
-
       {/* Limitation of Liability */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <div
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -514,8 +523,7 @@
               We strive to provide reliable services, but it's important to understand
               the scope of our liability and your responsibilities.
             </p>
-          </div>
-
+          </divdiv>
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -558,11 +566,10 @@
           </div>
         </div>
       </section>
-
       {/* Termination */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -573,8 +580,7 @@
               Understanding the terms for ending our service relationship
               helps ensure a smooth transition for all parties.
             </p>
-          </div>
-
+          </divdiv>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
@@ -615,11 +621,10 @@
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <div
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -630,8 +635,7 @@
               If you have questions about these terms or need clarification,
               please contact our legal team.
             </p>
-          </div>
-
+          </divdiv>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -653,11 +657,10 @@
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
-          <div
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -681,16 +684,12 @@
                 Privacy Policy
               </a>
             </div>
-          </div>
+          </divdiv>
         </div>
       </section>
     </div>
   );
+
 };
 
 export default Terms;
-=======
-import React from 'react'; const Terms = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Terms of Service </h1> <p className="text - xl text - gray - 600"> Terms and conditions for using our services. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Acceptance of Terms</h2> <p > By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.</p> <h2 > Use License</h2> <p > Permission is granted to temporarily download one copy of the materials on our website for personal, non - commercial transitory viewing only.</p> <h2 > Disclaimer</h2> <p > The materials on our website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties.</p> <h2 > Limitations</h2> <p > In no event shall our company or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website.</p> </div> </div> </div> )} export default Terms;
-import React from 'react'; const Terms = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Terms of Service </h1> <p className="text-xl text-gray-600"> Terms and conditions for using our services. </p> </div> <div className="max-w-3xl mx-auto prose prose-lg"> <h2>Acceptance of Terms</h2> <p>By accessing and using our services,you accept and agree to be bound by the terms and provision of this agreement.</p> <h2>Use License</h2> <p>Permission is granted to temporarily download one copy of the materials on our website for personal,non-commercial transitory viewing only.</p> <h2>Disclaimer</h2> <p>The materials on our website are provided on an 'as is' basis. We make no warranties,expressed or implied,and hereby disclaim and negate all other warranties.</p> <h2>Limitations</h2> <p>In no event shall our company or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website.</p> </div> </div> </div> )}; export default Terms;
-import React from 'react'; const Terms = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Terms of Service </h1> <p className="text - xl text - gray - 600"> Terms and conditions for using our services. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Acceptance of Terms</h2> <p > By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.</p> <h2 > Use License</h2> <p > Permission is granted to temporarily download one copy of the materials on our website for personal, non - commercial transitory viewing only.</p> <h2 > Disclaimer</h2> <p > The materials on our website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties.</p> <h2 > Limitations</h2> <p > In no event shall our company or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website.</p> </div> </div> </div> )} export default Terms;
-import React from 'react'; const Terms = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Terms of Service </h1> <p className="text - xl text - gray - 600"> Terms and conditions for using our services. </p> </div> <div className="max - w-3xl mx - auto prose prose - lg"> <h2 > Acceptance of Terms</h2> <p > By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.</p> <h2 > Use License</h2> <p > Permission is granted to temporarily download one copy of the materials on our website for personal, non - commercial transitory viewing only.</p> <h2 > Disclaimer</h2> <p > The materials on our website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties.</p> <h2 > Limitations</h2> <p > In no event shall our company or its suppliers be liable for any damages arising out of the use or inability to use the materials on our website.</p> </div> </div> </div> )} export default Terms;

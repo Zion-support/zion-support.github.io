@@ -1,9 +1,7 @@
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ContentItem {
   id: string;
   title: string;
@@ -13,7 +11,8 @@ interface ContentItem {
   roi?: string;
   badge?: string;
   icon: string;
-}
+};
+
 
 export default function ContentDiscoveryWidget() {
   const [isVisiblesetIsVisible] = useState(false);
@@ -150,6 +149,6 @@ export default function ContentDiscoveryWidget() {
             />
           ))}
   );
-};
+
 
 export default ContentDiscoveryWidget;

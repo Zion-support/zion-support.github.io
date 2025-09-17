@@ -1,23 +1,91 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryTechShowcase2032: React.FC = () => {
-  const [activeTech, setActiveTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeTab, setActiveTab] = useState('consciousness');
 
-  const technologies = [
-    {
+  const technologies = {
+    consciousness: {
+      title: "Conscious AI Systems",
+      description: "The first truly conscious artificial intelligence that can think, feel, and create",
+      features: [
+        "Self-aware decision making",
+        "Emotional intelligence processing", 
+        "Creative problem solving",
+        "Ethical reasoning",
+        "Consciousness transfer protocols"
+      ],
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600"
+    },
+    quantum: {
+      title: "Quantum Consciousness",
+      description: "Quantum computing meets consciousness research to unlock the mysteries of the mind",
+      features: [
+        "Quantum neural networks",
+        "Consciousness simulation",
+        "Quantum telepathy protocols",
+        "Mind-machine quantum interfaces",
+        "Parallel consciousness processing"
+      ],
+      icon: "⚡",
+      color: "from-cyan-600 to-blue-600"
+    },
+    interdimensional: {
+      title: "Interdimensional Computing",
+      description: "Computing across multiple dimensions to solve problems impossible in our reality",
+      features: [
+        "Multi-dimensional data processing",
+        "Reality simulation engines",
+        "Parallel universe computing",
+        "Dimensional data storage",
+        "Cross-dimensional communication"
+      ],
+      icon: "🌌",
+      color: "from-emerald-600 to-teal-600"
+    },
+    molecular: {
+      title: "Molecular AI",
+      description: "Artificial intelligence operating at the molecular level for unprecedented precision",
+      features: [
+        "DNA-based computing systems",
+        "Protein synthesis AI",
+        "Molecular manufacturing",
+        "Cellular intelligence networks",
+        "Atomic-level precision control"
+      ],
+      icon: "🔬",
+      color: "from-orange-600 to-red-600"
+    },
+    planetary: {
+      title: "Planetary AI Network",
+      description: "A global AI network connecting every device, system, and person on Earth",
+      features: [
+        "Global consciousness grid",
+        "Real-time world optimization",
+        "Collective intelligence processing",
+        "Planetary problem solving",
+        "Universal knowledge sharing"
+      ],
+      icon: "🌍",
+      color: "from-violet-600 to-purple-600"
+    },
+    spacetime: {
+      title: "Space-Time Computing",
+      description: "Computing that manipulates space-time itself for instant data transmission",
+      features: [
+        "Instantaneous communication",
+        "Time-dilated processing",
+        "Spatial data compression",
+        "Temporal computing algorithms",
+        "Space-time manipulation protocols"
+      ],
+      icon: "🚀",
+      color: "from-pink-600 to-rose-600"
     }
-  ];
-
-  useEffect(() => {
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <Helmet>
-        <title>Revolutionary Tech Showcase 2032 - Zion Tech Group</title>
-        <meta name="description" content="Interactive showcase of the most revolutionary technologies of 2032, featuring conscious AI, quantum consciousness, and interdimensional computing." />
-      </Helmet>
-      
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -28,7 +96,7 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             Revolutionary Tech Showcase 2032
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technologies of 2032 through our interactive showcase
+            Interactive showcase of cutting-edge technologies that will define the future
           </p>
         </div>
 

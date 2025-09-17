@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AutonomousSystems2025RevolutionBanner() {
   return (
@@ -106,4 +108,3 @@ export default function AutonomousSystems2025RevolutionBanner() {
               >
                 Explore Autonomous Solutions
   );
-}

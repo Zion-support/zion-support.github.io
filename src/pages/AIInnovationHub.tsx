@@ -30,6 +30,8 @@ import {
   BookOpen
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+};
+
 
 export default function AIInnovationHub() {
   const aiCapabilities = [
@@ -411,6 +413,6 @@ export default function AIInnovationHub() {
                   <ArrowRight className="w-5 h-5 ml-2" />
     </>
   );
-};
+
 
 export default AIInnovationHub;

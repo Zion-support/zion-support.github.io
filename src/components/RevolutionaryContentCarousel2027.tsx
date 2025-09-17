@@ -1,5 +1,4 @@
-  const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
-  const [currentIndex, setCurrentIndex] = useState(0);
+import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2027: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

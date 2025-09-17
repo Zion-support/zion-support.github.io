@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentDiscoveryWidget2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -15,7 +14,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
             Discover revolutionary AI contentbreakthrough technologiesand transformative insights that will shape the future.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8"
@@ -45,7 +43,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
         return 0;
     }
   });
-
   return (
     <div
       className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -68,7 +65,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
             with our intelligent content discovery system.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -89,7 +85,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className="relative">
               <select
@@ -111,7 +106,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
               Filters
             </button>
           </div>
-
             {/* Sort Options */}
             <div className="relative">
               <select
@@ -126,7 +120,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex bg-white/10 rounded-xl p-1">
               <button
@@ -148,7 +141,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Content Grid */}
         <div
           className={`grid gap-6 ${
@@ -180,7 +172,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
                     <Play className="w-12 h-12 text-white" />
                   </div>
                 </div>
-                
                 <div className={`p-6 ${viewMode === 'list' ? 'w-2/3' : 'w-full'}`}>
                   <div className="flex items-center gap-2 mb-2">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${categories.find(c => c.id === item.category)?.color} text-white`}>
@@ -192,10 +183,8 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
                       </span>
                     )}
                   </div>
-                  
                   <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
                   <p className="text-gray-300 mb-4 line-clamp-2">{item.description}</p>
-                  
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                     <span className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
@@ -210,7 +199,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
                       {item.rating}
                     </span>
                   </div>
-                  
                   <div className="flex items-center justify-between">
                     <div className="flex gap-2">
                       <button
@@ -233,7 +221,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
                         <Share2 className="w-5 h-5" />
                       </button>
                     </div>
-                    
                     <a
                       href={`/content/${item.id}`}
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
@@ -247,7 +234,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* No Results */}
         {sortedContent.length === 0 && (
           <div
@@ -262,6 +248,7 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
         )}
       </div>
   );
+
 };
 
 export default UltimateContentDiscoveryWidget2026;
