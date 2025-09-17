@@ -51,8 +51,13 @@
   },
   {
     "route": "/2036-innovative-services-showcase",
+<<<<<<< HEAD
+    "title": "",
+    "h1": ""
+=======
     "title": "2036-innovative-services-showcase | Zion Tech Group",
     "h1": "2036-innovative-services-showcase"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/500",
@@ -81,8 +86,13 @@
   },
   {
     "route": "/[slug]",
+<<<<<<< HEAD
+    "title": "{service.name} | Zion Tech Group",
+    "h1": "{service.name}"
+=======
     "title": "[slug] | Zion Tech Group",
     "h1": "[slug]"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/_error",
@@ -106,8 +116,13 @@
   },
   {
     "route": "/accessibility",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Web Accessibility"
+=======
     "title": "accessibility | Zion Tech Group",
     "h1": "accessibility"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/advanced-ai-automation-services",
@@ -171,8 +186,13 @@
   },
   {
     "route": "/ai-business-intelligence",
+<<<<<<< HEAD
+    "title": "AI Business Intelligence - Zion Tech Group",
+    "h1": ""
+=======
     "title": "ai-business-intelligence | Zion Tech Group",
     "h1": "ai-business-intelligence"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/ai-consciousness-evolution-2026",
@@ -411,8 +431,13 @@
   },
   {
     "route": "/blockchain-solutions",
+<<<<<<< HEAD
+    "title": "BlockchainSolutions - Zion Tech Solutions",
+    "h1": "BlockchainSolutions"
+=======
     "title": "blockchain-solutions | Zion Tech Group",
     "h1": "blockchain-solutions"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/blog",
@@ -441,8 +466,13 @@
   },
   {
     "route": "/case-studies",
+<<<<<<< HEAD
+    "title": "Case Studies | Zion Tech Solutions",
+    "h1": "Success Stories & Case Studies"
+=======
     "title": "case-studies | Zion Tech Group",
     "h1": "case-studies"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/ci-cd-security-hardening",
@@ -466,8 +496,13 @@
   },
   {
     "route": "/cloudflare-workers-edge-config",
+<<<<<<< HEAD
+    "title": "Cloudflare Workers Edge Config Manager | Zion Tech Group",
+    "h1": "Cloudflare Workers Edge Config"
+=======
     "title": "cloudflare-workers-edge-config | Zion Tech Group",
     "h1": "cloudflare-workers-edge-config"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/compliance",
@@ -546,6 +581,10 @@
   },
   {
     "route": "/contact",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Get in Touch"
+=======
     "title": "contact | Zion Tech Group",
     "h1": "contact"
   },
@@ -553,6 +592,7 @@
     "route": "/contact",
     "title": "contact | Zion Tech Group",
     "h1": "contact"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/content-hub",
@@ -801,8 +841,13 @@
   },
   {
     "route": "/innovative-services-2025",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Innovative Services 2025"
+=======
     "title": "innovative-services-2025 | Zion Tech Group",
     "h1": "innovative-services-2025"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/iot-platforms",
@@ -966,8 +1011,13 @@
   },
   {
     "route": "/prompt-policy-registry",
+<<<<<<< HEAD
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+=======
     "title": "prompt-policy-registry | Zion Tech Group",
     "h1": "prompt-policy-registry"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/quantum-cloud-infrastructure-platform",
@@ -981,6 +1031,15 @@
   },
   {
     "route": "/quantum-cybersecurity-platform",
+<<<<<<< HEAD
+    "title": "Quantum Cybersecurity Platform | Zion Tech Group",
+    "h1": "Quantum Cybersecurity"
+  },
+  {
+    "route": "/quantum-cybersecurity-services",
+    "title": "Quantum Cybersecurity Services - ZionTech Group | Unbreakable Security Solutions",
+    "h1": ""
+=======
     "title": "quantum-cybersecurity-platform | Zion Tech Group",
     "h1": "quantum-cybersecurity-platform"
   },
@@ -988,6 +1047,7 @@
     "route": "/quantum-cybersecurity-services",
     "title": "quantum-cybersecurity-services | Zion Tech Group",
     "h1": "quantum-cybersecurity-services"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/quantum-financial-trading-platform",
@@ -1086,8 +1146,13 @@
   },
   {
     "route": "/revolutionary-2027-services-showcase",
+<<<<<<< HEAD
+    "title": "Revolutionary 2027 Services Showcase - Zion Tech Group | Next-Generation AI, Quantum & Technology Solutions",
+    "h1": "Revolutionary 2027"
+=======
     "title": "revolutionary-2027-services-showcase | Zion Tech Group",
     "h1": "revolutionary-2027-services-showcase"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/roadmap",
@@ -1126,8 +1191,13 @@
   },
   {
     "route": "/services-showcase-2040",
+<<<<<<< HEAD
+    "title": "",
+    "h1": ""
+=======
     "title": "services-showcase-2040 | Zion Tech Group",
     "h1": "services-showcase-2040"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/services",
@@ -1136,8 +1206,13 @@
   },
   {
     "route": "/signup",
+<<<<<<< HEAD
+    "title": "{title}",
+    "h1": "Join Zion Tech Group"
+=======
     "title": "signup | Zion Tech Group",
     "h1": "signup"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/sitemap",
@@ -1211,8 +1286,13 @@
   },
   {
     "route": "/terms",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Terms of Service"
+=======
     "title": "terms | Zion Tech Group",
     "h1": "terms"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/test",
@@ -1301,6 +1381,15 @@
   },
   {
     "route": "/zero-trust-security-platform",
+<<<<<<< HEAD
+    "title": "Zero Trust Security Platform | Zion Tech Group",
+    "h1": ""
+  },
+  {
+    "route": "/zion-tech-group",
+    "title": "About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems",
+    "h1": ""
+=======
     "title": "zero-trust-security-platform | Zion Tech Group",
     "h1": "zero-trust-security-platform"
   },
@@ -1308,6 +1397,7 @@
     "route": "/zion-tech-group",
     "title": "zion-tech-group | Zion Tech Group",
     "h1": "zion-tech-group"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/zion/init",
@@ -1331,8 +1421,13 @@
   },
   {
     "route": "/talent/resume-builder",
+<<<<<<< HEAD
+    "title": "Resume Builder - Zion AI Marketplace",
+    "h1": "Resume Builder"
+=======
     "title": "resume-builder | Zion Tech Group",
     "h1": "resume-builder"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/solutions/enterprise",
@@ -1401,6 +1496,15 @@
   },
   {
     "route": "/services/[slug]",
+<<<<<<< HEAD
+    "title": "{service.name} | Zion Tech Group",
+    "h1": "{service.name}"
+  },
+  {
+    "route": "/services/ai-ml",
+    "title": "AI & Machine Learning Services - Zion Tech Group",
+    "h1": "AI & Machine Learning"
+=======
     "title": "[slug] | Zion Tech Group",
     "h1": "[slug]"
   },
@@ -1408,6 +1512,7 @@
     "route": "/services/ai-ml",
     "title": "ai-ml | Zion Tech Group",
     "h1": "ai-ml"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/services/analytics",
@@ -1416,8 +1521,13 @@
   },
   {
     "route": "/services/cloud",
+<<<<<<< HEAD
+    "title": "Cloud Infrastructure Services - Zion Tech Group",
+    "h1": "Cloud Infrastructure"
+=======
     "title": "cloud | Zion Tech Group",
     "h1": "cloud"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/services/cybersecurity",
@@ -1426,8 +1536,13 @@
   },
   {
     "route": "/services/description-generator",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Service Description Generator"
+=======
     "title": "description-generator | Zion Tech Group",
     "h1": "description-generator"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/services",
@@ -1436,6 +1551,15 @@
   },
   {
     "route": "/services/instagram-content-scheduler",
+<<<<<<< HEAD
+    "title": "InstagramContentScheduler - Zion Tech Solutions",
+    "h1": "InstagramContentScheduler"
+  },
+  {
+    "route": "/services/quantum",
+    "title": "Quantum Computing Services - Zion Tech Group",
+    "h1": "Quantum Computing"
+=======
     "title": "instagram-content-scheduler | Zion Tech Group",
     "h1": "instagram-content-scheduler"
   },
@@ -1443,6 +1567,7 @@
     "route": "/services/quantum",
     "title": "quantum | Zion Tech Group",
     "h1": "quantum"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/services/transformation",
@@ -1491,8 +1616,13 @@
   },
   {
     "route": "/resources/case-studies/[id]",
+<<<<<<< HEAD
+    "title": "Case Study Resource Not Found | Zion Tech Group",
+    "h1": "Case Study Resource Not Found"
+=======
     "title": "[id] | Zion Tech Group",
     "h1": "[id]"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/requests",
@@ -1511,8 +1641,13 @@
   },
   {
     "route": "/reports/performance",
+<<<<<<< HEAD
+    "title": "Performance Reports - bolt.new.zion.app",
+    "h1": "Performance Reports"
+=======
     "title": "performance | Zion Tech Group",
     "h1": "performance"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/reports/blueprints/blueprint-2025-08-18-122901",
@@ -1586,8 +1721,13 @@
   },
   {
     "route": "/plans/enterprise",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Enterprise Plans"
+=======
     "title": "enterprise | Zion Tech Group",
     "h1": "enterprise"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/messages/compose",
@@ -1601,8 +1741,13 @@
   },
   {
     "route": "/media/kit",
+<<<<<<< HEAD
+    "title": "Media Kit - Zion",
+    "h1": "Media Kit"
+=======
     "title": "kit | Zion Tech Group",
     "h1": "kit"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/marketplace/listing/[slug]",
@@ -1621,8 +1766,13 @@
   },
   {
     "route": "/learn",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Zion Academy"
+=======
     "title": "index | Zion Tech Group",
     "h1": "index"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/jobs/[slug]",
@@ -1661,6 +1811,20 @@
   },
   {
     "route": "/help",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Help Center"
+  },
+  {
+    "route": "/governance/trust",
+    "title": "Zion Governance & Trust",
+    "h1": "Governance & Public Trust"
+  },
+  {
+    "route": "/favorites",
+    "title": "",
+    "h1": ""
+=======
     "title": "index | Zion Tech Group",
     "h1": "index"
   },
@@ -1673,6 +1837,7 @@
     "route": "/favorites",
     "title": "index | Zion Tech Group",
     "h1": "index"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/enterprise/admin",
@@ -1681,8 +1846,13 @@
   },
   {
     "route": "/docs/api",
+<<<<<<< HEAD
+    "title": "",
+    "h1": ""
+=======
     "title": "api | Zion Tech Group",
     "h1": "api"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/docs/gitbook",
@@ -1701,6 +1871,15 @@
   },
   {
     "route": "/disputes/new",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Raise a Dispute"
+  },
+  {
+    "route": "/dev/tree",
+    "title": "",
+    "h1": "Zion OS Source Tree"
+=======
     "title": "new | Zion Tech Group",
     "h1": "new"
   },
@@ -1708,6 +1887,7 @@
     "route": "/dev/tree",
     "title": "tree | Zion Tech Group",
     "h1": "tree"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/dashboard/client",
@@ -1751,8 +1931,13 @@
   },
   {
     "route": "/dao",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "DAO Metrics"
+=======
     "title": "index | Zion Tech Group",
     "h1": "index"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/components/Navigation",
@@ -2116,8 +2301,13 @@
   },
   {
     "route": "/blog/cloud-native-automation",
+<<<<<<< HEAD
+    "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
+    "h1": "Building Cloud-Native Automation Infrastructure"
+=======
     "title": "cloud-native-automation | Zion Tech Group",
     "h1": "cloud-native-automation"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/blog/genai-2025-evidence-driven-ai-governance",
@@ -2426,6 +2616,15 @@
   },
   {
     "route": "/admin/support-requests",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Support Requests"
+  },
+  {
+    "route": "/admin/tokens",
+    "title": "",
+    "h1": ""
+=======
     "title": "support-requests | Zion Tech Group",
     "h1": "support-requests"
   },
@@ -2433,6 +2632,7 @@
     "route": "/admin/tokens",
     "title": "tokens | Zion Tech Group",
     "h1": "tokens"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-8d13
   },
   {
     "route": "/admin/translations",
