@@ -445,6 +445,7 @@ function App() {
                     </a>
                     <a href="/pages/NextGenInnovationHub2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🧠 INNOVATION: Next-Gen Hub →
+                    </a>
                     <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       🌟 NEW: Ultimate Breakthrough 2025 →
                     </a>
