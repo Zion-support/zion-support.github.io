@@ -1,9 +1,3 @@
-        </div>
-      </div>
-    </div>
-  )
-}
-
 "use client"
 
 export default function AutonomousItOpsCopilotV1Page() {
@@ -41,4 +35,3 @@ export default function AutonomousItOpsCopilotV1Page() {
     </div>
   )
 }
-

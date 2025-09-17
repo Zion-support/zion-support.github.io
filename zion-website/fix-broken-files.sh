@@ -1,4 +1,7 @@
-import React from "react";
+#!/bin/bash
+
+# Template for fixing broken page.tsx files
+TEMPLATE='import React from "react";
 
 export default function Page() {
   return (
@@ -29,4 +32,12 @@ export default function Page() {
       </div>
     </div>
   );
-}
+}'
+
+# Find files that start with closing div tags and fix them
+find src/app/updates -name "page.tsx" -exec grep -l "^[[:space:]]*</div>" {} \; | head -10 | while read file; do
+  echo "Fixing $file"
+  echo "$TEMPLATE" > "$file"
+done
+
+echo "Fixed broken files"
