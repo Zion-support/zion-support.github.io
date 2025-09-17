@@ -21,8 +21,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       color: "from-purple-600 to-pink-600",
       link: "/pages/RevolutionaryTechTrends2027"
-<<<<<<< HEAD
-=======
       title: "Quantum Technologies",
       icon: "⚡",
       color: "from-cyan-500 to-blue-500",
@@ -229,8 +227,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
               {category.title}
             </button>
           ))}
-<<<<<<< HEAD
-=======
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
             {techCategories.map((category) => (
@@ -288,8 +284,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
               className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
-<<<<<<< HEAD
-=======
               className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
 >>>>>>> origin/backup-main-20250916-071805

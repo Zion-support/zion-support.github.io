@@ -104,8 +104,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-white/30 rounded-full"
-<<<<<<< HEAD
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
@@ -193,8 +191,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-<<<<<<< HEAD
-=======
                 y: [0, -30, 0],
                 opacity: [0.2, 0.8, 0.2],
               }}
@@ -374,8 +370,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

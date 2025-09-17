@@ -7,7 +7,6 @@ import {
   TrendingUp, 
   Star, 
   ArrowRight,
-<<<<<<< HEAD
   BookOpen,
   Users,
   Target,
@@ -39,7 +38,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
       stats: "99.9% Efficiency",
       featured: true,
       readTime: "12 min read"
-=======
   Sparkles,
   Zap,
   Brain,
@@ -80,7 +78,6 @@ const RevolutionaryContentShowcase2026 = () => {
     },
     {
       id: 3,
-<<<<<<< HEAD
       icon: Bot,
       title: "Enterprise Quantum AI Success Story",
       category: "Case Study",
@@ -91,7 +88,6 @@ const RevolutionaryContentShowcase2026 = () => {
       stats: "400% ROI",
       featured: true,
       readTime: "15 min read"
-=======
       title: "Quantum Neural Networks: The Next Computing Paradigm",
       excerpt: "Revolutionary quantum neural networks that process information at the speed of thought.",
       category: "Quantum Computing",
@@ -114,7 +110,6 @@ const RevolutionaryContentShowcase2026 = () => {
       bgGradient: "from-orange-600/20 to-red-600/20",
       stats: "1000% ROI",
       featured: true,
-<<<<<<< HEAD
       readTime: "25 min read"
     }
   ];
@@ -176,7 +171,6 @@ const RevolutionaryContentShowcase2026 = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-=======
       tags: ["Neural Interface", "Brain-Computer", "Communication"],
       type: "blog"
     },
@@ -347,7 +341,6 @@ const RevolutionaryContentShowcase2026 = () => {
             </AnimatePresence>
           </motion.div>
 
-<<<<<<< HEAD
           {/* Content Details Panel */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -425,7 +418,6 @@ const RevolutionaryContentShowcase2026 = () => {
         </div>
 
         {/* All Content Grid */}
-=======
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -518,8 +510,6 @@ const RevolutionaryContentShowcase2026 = () => {
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -790,4 +780,3 @@ const RevolutionaryContentShowcase2026 = () => {
   );
 };
 
-export default RevolutionaryContentShowcase2026;

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+const AIInnovationShowcase2026: React.FC = () => {
+=======
 "use client";
 'use client';
 
@@ -148,12 +152,17 @@ const AIInnovationShowcase2026 = () => {
     }
   ];
 
+>>>>>>> origin/merge-new-content-1757989975
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
+<<<<<<< HEAD
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%25236366F1%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%221.5%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
+=======
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%236366F1" fill-opacity%3D%220.1%22%3E%3Ccircle cx="20" cy="20" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        <divdiv
+>>>>>>> origin/merge-new-content-1757989975
+        <div
           className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
             scale: [1.31],
             opacity: [0.20.50.2],
@@ -163,7 +172,7 @@ const AIInnovationShowcase2026 = () => {
             ease: "easeInOut"
           }}
         />
-        <divdiv
+        <div
           className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
             scale: [1.21.2],
             opacity: [0.30.60.3],
@@ -174,10 +183,9 @@ const AIInnovationShowcase2026 = () => {
           }}
         />
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -194,16 +202,23 @@ const AIInnovationShowcase2026 = () => {
             Discover the cutting-edge AI technologies that are reshaping industries and 
             creating unprecedented opportunities for innovation and growth.
           </p>
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Innovation Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {innovations.map((innovationindex) => {
             const Icon = innovation.icon;
             return (
+<<<<<<< HEAD
               <divbutton
+=======
+              <button
+>>>>>>> origin/merge-new-content-1757989975
                 key={innovation.id}
                 onClick={() => setActiveInnovation(index)}
                 className={`p-6 rounded-2xl transition-all duration-300 ${
@@ -215,19 +230,26 @@ const AIInnovationShowcase2026 = () => {
                 <Icon className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-2">{innovation.title}</h3>
                 <p className="text-sm opacity-90">{innovation.description}</p>
+<<<<<<< HEAD
               </divbutton>
             );
           })}
-        </divdiv>
+        </div>
+=======
+              </button>
+            );
+          })}
+        </div>
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Detailed Innovation Display */}
-          <divdiv
+          <div
             key={activeInnovation}
             className="grid lg:grid-cols-2 gap-12 items-center mb-20"
           >
             {/* Innovation Details */}
             <div>
-              <divdiv
+              <div
                 className="mb-8"
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -246,10 +268,13 @@ const AIInnovationShowcase2026 = () => {
                 <p className="text-xl text-gray-300 mb-8">
                   {currentInnovation.description}
                 </p>
-              </divdiv>
+              </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
               {/* Features */}
-              <divdiv
+              <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
               >
                 {currentInnovation.features.map((featureindex) => (
@@ -258,10 +283,13 @@ const AIInnovationShowcase2026 = () => {
                     <span className="text-lg">{feature}</span>
                   </div>
                 ))}
-              </divdiv>
+              </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
               {/* Impact Metrics */}
-              <divdiv
+              <div
                 className="grid grid-cols-3 gap-6 mb-8"
               >
                 {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
@@ -274,10 +302,13 @@ const AIInnovationShowcase2026 = () => {
                     </div>
                   </div>
                 ))}
-              </divdiv>
+              </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
               {/* Applications */}
-              <divdiv
+              <div
                 className="mb-8"
               >
                 <h4 className="text-lg font-semibold text-white mb-4">Key Applications:</h4>
@@ -291,10 +322,13 @@ const AIInnovationShowcase2026 = () => {
                     </span>
                   ))}
                 </div>
-              </divdiv>
+              </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
               {/* CTA Buttons */}
-              <divdiv
+              <div
                 className="flex flex-wrap gap-4"
               >
                 <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
@@ -305,11 +339,10 @@ const AIInnovationShowcase2026 = () => {
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </button>
-              </divdiv>
+              </div>
             </div>
-
             {/* Visual Representation */}
-            <divdiv
+            <div
               className="relative"
             >
               <div className={`bg-gradient-to-br ${currentInnovation.color} p-8 rounded-3xl shadow-2xl`}>
@@ -321,7 +354,6 @@ const AIInnovationShowcase2026 = () => {
                   <p className="text-lg opacity-90 mb-6">
                     {currentInnovation.description}
                   </p>
-                  
                   {/* Interactive Elements */}
                   <div className="grid grid-cols-2 gap-4">
                     {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
@@ -335,9 +367,8 @@ const AIInnovationShowcase2026 = () => {
                   </div>
                 </div>
               </div>
-              
               {/* Floating Elements */}
-              <divdiv
+              <div
                 className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
                   y: [0-10],
                   rotate: [0180360],
@@ -348,9 +379,12 @@ const AIInnovationShowcase2026 = () => {
                 }}
               >
                 <Star className="w-4 h-4 text-yellow-800" />
-              </divdiv>
+              </div>
+<<<<<<< HEAD
+=======
               
-              <divdiv
+>>>>>>> origin/merge-new-content-1757989975
+              <div
                 className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
                   scale: [1.21],
                   opacity: [0.710.7],
@@ -360,12 +394,15 @@ const AIInnovationShowcase2026 = () => {
                   ease: "easeInOut"
                 }}
               />
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Success Stories */}
-        <divdiv
+        <div
           className="mb-20"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -373,7 +410,7 @@ const AIInnovationShowcase2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((storyindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
@@ -400,13 +437,16 @@ const AIInnovationShowcase2026 = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Final CTA */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
@@ -428,10 +468,12 @@ const AIInnovationShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
-};
+
+
 
 export default AIInnovationShowcase2026;
+</div></div></div>

@@ -1,11 +1,8 @@
 import React from 'react';
 
 const AIConsciousnessRevolution2025: React.FC = () => {
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
   const [consciousnessLevel, setConsciousnessLevel] = useState(0);
   const [isSimulating, setIsSimulating] = useState(false);
   const [neuralActivity, setNeuralActivity] = useState<number[]>([]);
@@ -76,8 +73,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-<<<<<<< HEAD
-=======
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -103,8 +98,6 @@ const AIConsciousnessRevolution2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Features Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -213,9 +206,7 @@ const AIConsciousnessRevolution2025: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
       {/* Case Studies */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">

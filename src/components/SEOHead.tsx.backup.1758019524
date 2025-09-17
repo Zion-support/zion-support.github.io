@@ -15,7 +15,6 @@ interface SEOHeadProps {
   tags?: string[];
 }
 
-<<<<<<< HEAD
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Revolutionary AI Solutions & Technology Innovation",
   description = "Discover cutting-edge AI solutions, quantum computing, and revolutionary technology innovations. Transform your business with our advanced AI services, cybersecurity solutions, and digital transformation expertise.",
@@ -64,8 +63,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             <meta key={index} property="article:tag" content={tag} />
           ))}
         </>
-=======
-<<<<<<< HEAD
 export default function SEOHead({
   title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions',
   description = 'Transform your business with cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000+ companies worldwide.',
@@ -75,7 +72,6 @@ export default function SEOHead({
   type = 'website',
   structuredData
 }: SEOHeadProps) {
-=======
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced IT & AI Solutions',
   description = 'Leading provider of cutting-edge IT services, AI solutions, and digital transformation services. Expert cybersecurity, cloud migration, and custom software development.',
@@ -114,7 +110,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
@@ -122,7 +117,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:type" content={type} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
-=======
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -195,4 +189,3 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   );
 };
 
-export default SEOHead;

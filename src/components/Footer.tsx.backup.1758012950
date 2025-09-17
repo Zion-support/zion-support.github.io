@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
@@ -198,14 +197,11 @@ const Footer: React.FC = () => {
                   </a>
                 ))}
               </div>
-=======
-<<<<<<< HEAD
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link"; // Changed from react-router-dom
 // Temporarily disable missing feedback widget to unblock build
 const FeedbackWidget = () => null;
-=======
 >>>>>>> origin/merged-prs
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
@@ -338,7 +334,6 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-foreground font-semibold mb-4 text-lg">Company</h3>
             <ul className="space-y-2">
-<<<<<<< HEAD
               <li><Link href="/about" className="text-foreground/80 hover:text-primary transition-colors text-sm">About Us</Link></li>
               <li><Link href="/blog" className="text-foreground/80 hover:text-primary transition-colors text-sm">Blog</Link></li>
               <li><Link href="/innovation" className="text-foreground/80 hover:text-primary transition-colors text-sm">Innovation</Link></li>
@@ -370,10 +365,8 @@ export function Footer() {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-=======
         <div className="mt-8 flex justify-end">
           <button
             type="button"
@@ -389,7 +382,6 @@ export function Footer() {
             <ChevronUp className="h-4 w-4" aria-hidden="true" />
             <span>Back to Top</span>
           </button>
-=======
               <li><a href="#" className="hover:text-white transition-colors">AI Solutions</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Cybersecurity</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Cloud Infrastructure</a></li>
@@ -417,7 +409,6 @@ export function Footer() {
               </a>
               <a href="/terms" className="text-gray-400 hover:text-white transition-colors">
                 Terms of Service
-<<<<<<< HEAD
               </a>
               <a href="/cookies" className="text-gray-400 hover:text-white transition-colors">
                 Cookie Policy
@@ -431,7 +422,6 @@ export function Footer() {
 };
 
 export default Footer;
-=======
               </Link>
               <Link
                 href="/status"

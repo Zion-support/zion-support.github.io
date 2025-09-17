@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-e058
-=======
 import React, { useState, useEffect } from 'react';
-=======
 import React, { useState } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-63f0
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
@@ -39,23 +34,16 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • JANUARY 2032
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e058
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • JANUARY 2032
-=======
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
-=======
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • 2032
 >>>>>>> cursor/create-and-deploy-new-content-63f0
@@ -70,7 +58,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -81,7 +68,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Demo
             </button>
-=======
 >>>>>>> origin/backup-main-20250916-090016
         </div>
 
@@ -183,19 +169,13 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             Join us in exploring the most revolutionary technologies that will shape 
             the future of human civilization and consciousness.
           </p>
-<<<<<<< HEAD
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               Explore Technologies
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Contact Our Team
-=======
-=======
 >>>>>>> cad4ed638271abf0c299f946164227bf540b415a
-=======
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e058
 >>>>>>> origin/backup-main-20250916-090016
           </div>
@@ -469,8 +449,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 
         {/* Call to Action */}
 >>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e058
         <div className="text-center bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -483,12 +461,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
               Schedule Consultation
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e058
             </button>
-<<<<<<< HEAD
-=======
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/UltimateTechBreakthrough2032" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Ultimate Breakthrough →
@@ -507,5 +481,4 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 };
 
 export default RevolutionaryTechShowcase2032;
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01

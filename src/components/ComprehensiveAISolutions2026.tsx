@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+const ComprehensiveAISolutions2026: React.FC = () => {
+=======
 "use client";
 'use client';
 
@@ -170,21 +174,20 @@ const ComprehensiveAISolutions2026 = () => {
     }
   ];
 
+>>>>>>> origin/merge-new-content-1757989975
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
             <Brain className="w-4 h-4" />
             COMPREHENSIVE AI SOLUTIONS 2026
           </div>
-          
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Complete AI
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -193,15 +196,17 @@ const ComprehensiveAISolutions2026 = () => {
             <br />
             for Modern Business
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Transform your business with our comprehensive suite of AI solutions
             from enterprise platforms to quantum computing integration.
           </p>
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Solutions Navigation */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -222,9 +227,8 @@ const ComprehensiveAISolutions2026 = () => {
               </button>
             ))}
           </div>
-
           {/* Solution Details */}
-            <divdiv
+            <div
               key={activeSolution}
               className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
             >
@@ -239,7 +243,6 @@ const ComprehensiveAISolutions2026 = () => {
                       {solutions[activeSolution].description}
                     </p>
                   </div>
-
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
                     <div className="grid grid-cols-1 gap-3">
@@ -251,7 +254,6 @@ const ComprehensiveAISolutions2026 = () => {
                       ))}
                     </div>
                   </div>
-
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-4">Use Cases</h4>
                     <div className="flex flex-wrap gap-2">
@@ -266,7 +268,6 @@ const ComprehensiveAISolutions2026 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Right Column - Metrics & Visual */}
                 <div className="space-y-8">
                   <div>
@@ -280,7 +281,6 @@ const ComprehensiveAISolutions2026 = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/10">
                     <div className="text-center">
                       <div className={`w-20 h-20 bg-gradient-to-r ${solutions[activeSolution].color} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -300,12 +300,15 @@ const ComprehensiveAISolutions2026 = () => {
                   </div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Industries Section */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -313,7 +316,7 @@ const ComprehensiveAISolutions2026 = () => {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industryindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="text-center group"
               >
@@ -322,13 +325,16 @@ const ComprehensiveAISolutions2026 = () => {
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{industry.count}</div>
                 <div className="text-gray-400 text-sm">{industry.name}</div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Testimonials */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -336,7 +342,7 @@ const ComprehensiveAISolutions2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
@@ -351,13 +357,16 @@ const ComprehensiveAISolutions2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-blue-400 text-sm">{testimonial.company}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">
@@ -367,14 +376,12 @@ const ComprehensiveAISolutions2026 = () => {
             <p className="text-gray-300 mb-8 text-lg">
               Join thousands of enterprises already leveraging our AI solutions
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2">
                 <Download className="w-5 h-5" />
                 Download Brochure
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              
               <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20">
                 <Award className="w-5 h-5" />
                 Schedule Demo
@@ -382,10 +389,11 @@ const ComprehensiveAISolutions2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default ComprehensiveAISolutions2026;

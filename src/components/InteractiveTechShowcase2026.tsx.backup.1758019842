@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-ec50
 >>>>>>> origin/content/cherrypick-finops-routing
   const demos = [
@@ -23,11 +17,7 @@
     {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-=======
-=======
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 >>>>>>> origin/content/cherrypick-finops-routing
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -52,11 +42,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
   const [progress, setProgress] = useState(0);
 
   const techDemos = [
-<<<<<<< HEAD
 
   const showcases = [
-=======
-=======
 
 const InteractiveTechShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -73,7 +60,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       description: 'Revolutionary AI with autonomous learning and quantum processing',
       features: ['Autonomous Learning', 'Quantum AI Processing', 'Distributed Intelligence'],
       color: 'from-purple-600 to-pink-600',
-=======
       title: 'Conscious AI Systems',
       description: 'AI that achieves true consciousness and self-awareness',
       icon: '🧠',
@@ -86,8 +72,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       title: 'Quantum Reality Engine',
       description: 'Immersive virtual environments powered by quantum computing',
       icon: '⚡',
-<<<<<<< HEAD
-=======
       color: 'from-cyan-500 to-blue-500',
       features: ['Quantum state processing', 'Parallel universe computing', 'Reality manipulation'],
       stats: { processing: 'Exponential', security: 'Unbreakable', applications: 'Infinite' }
@@ -97,10 +81,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       title: 'Neural Interface Pro',
       description: 'Direct brain-computer interface for seamless interaction',
       icon: '🧬',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       id: 0,
       title: "Conscious AI Systems",
       description: "Watch our AI systems demonstrate true consciousness and self-awareness in real-time.",
@@ -185,9 +165,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
         ]
       }
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
-<<<<<<< HEAD
-=======
       color: 'from-emerald-500 to-teal-500',
       features: ['Thought control', 'Neural feedback', 'Memory enhancement'],
       stats: { response: 'Instant', accuracy: '99.8%', safety: '100%' }
@@ -282,7 +259,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </motion.div>
             ))}
           </div>
-=======
     if (isPlaying) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % showcases.length);
@@ -310,7 +286,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Showcase 2026</h2>
 >>>>>>> cursor/create-and-deploy-new-content-af01
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
-<<<<<<< HEAD
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
           </p>
         </motion.div>
@@ -351,10 +326,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 />
               </div>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
             Experience the future with our groundbreaking content on AI Revolution, Quantum Computing, and Neural Interfaces
           </p>
         </div>

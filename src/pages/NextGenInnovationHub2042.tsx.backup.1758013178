@@ -14,8 +14,6 @@ const NextGenInnovationHub2042: React.FC = () => {
     { id: 'matter', name: 'Matter Manipulation', icon: '🔬' }
   ];
   const [selectedInnovation, setSelectedInnovation] = useState(0);
-<<<<<<< HEAD
-=======
   const [selectedInnovation, setSelectedInnovation] = useState(0);
   const [selectedInnovation, setSelectedInnovation] = useState(0);
 >>>>>>> origin/backup-main-20250916-071805

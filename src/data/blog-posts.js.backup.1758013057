@@ -1,11 +1,9 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
     content: "Trusted GenAI Ops brings evaluation-first delivery, policy-as-code controls, and runtime guardrails together. This guide includes a minimal reference stack: dataset/versioning, scenario suites, promotion gates, human-in-the-loop, and evidence publishing.",
-=======
     id: 2001,
     title: "AI 2026: Trusted Autonomy Field Manual",
     excerpt: "Practical controls to ship safe, cost-aware agent systems in production.",
@@ -16,7 +14,6 @@ export const blogPosts = [
     publishDate: "2025-09-16",
     readTime: "9 min read",
     category: "Operations",
-<<<<<<< HEAD
     tags: ["Governance", "Evaluations", "Policy-as-Code"],
     featured: true,
     imageUrl: "/images/blog/trusted-genai-operations-2026.jpg",
@@ -27,7 +24,6 @@ export const blogPosts = [
     title: "AI 2026: Production Evals — Practical Cookbook",
     excerpt: "Scenario recipes, metrics, and wiring patterns for evaluation-first teams.",
     content: "A concise cookbook of production eval recipes: groundedness, tool-correctness, instruction adherence, and safety signals. Shows CI wiring, thresholds, dashboards, and rollback hooks you can copy into your stack.",
-=======
     tags: ["Autonomy", "Policy-as-Code", "Evals", "Guardrails"],
     featured: true,
     imageUrl: "/images/blog/ai-2026-trusted-autonomy-field-manual.jpg",
@@ -43,7 +39,6 @@ export const blogPosts = [
     authorRole: "Director of SRE",
     publishDate: "2025-09-16",
     readTime: "8 min read",
-<<<<<<< HEAD
     category: "Evaluations",
     tags: ["Evals", "Metrics", "Cookbook"],
     featured: true,
@@ -100,7 +95,6 @@ export const blogPosts = [
     title: "AI 2026: Safe Tool Use Blueprint",
     excerpt: "Permissioned tool use with risk tiers, policy-as-code, sandboxes, and runtime checks.",
     content: "Standardize tool catalogs, enforce risk tiers, and gate dangerous actions with human-in-the-loop and eval harnesses. Includes reference policies and enforcement hooks.",
-=======
     category: "Reliability",
     tags: ["Incidents", "SRE", "Guardrails", "Evals"],
     featured: true,
@@ -680,4 +674,3 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;

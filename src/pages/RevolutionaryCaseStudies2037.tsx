@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryCaseStudies2037: React.FC = () => {
   const caseStudies = [
     {
@@ -111,7 +110,6 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
       color: 'pink'
     }
   ];
-
   const getColorClasses = (color: string) => {
     const colorMap = {
       purple: 'from-purple-600/30 to-pink-600/30 border-purple-400/30 text-purple-100',
@@ -123,7 +121,6 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
     };
     return colorMap[color as keyof typeof colorMap] || colorMap.purple;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -143,7 +140,6 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-8">
@@ -160,15 +156,12 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
                   <div className="text-sm opacity-60">{study.industry}</div>
                 </div>
               </div>
-
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-2">Challenge</h4>
                 <p className="text-sm opacity-90 mb-4">{study.challenge}</p>
-                
                 <h4 className="text-lg font-semibold mb-2">Solution</h4>
                 <p className="text-sm opacity-90 mb-4">{study.solution}</p>
               </div>
-
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3">Results</h4>
                 <ul className="space-y-2">
@@ -180,7 +173,6 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div className="border-t border-white/20 pt-4">
                 <blockquote className="text-sm italic mb-3">
                   "{study.testimonial}"
@@ -191,7 +183,6 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Success Metrics */}
       <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
@@ -199,7 +190,6 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Overall Impact</h2>
             <p className="text-xl opacity-90">Cumulative results across all implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
@@ -220,7 +210,6 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -240,6 +229,8 @@ const RevolutionaryCaseStudies2037: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default RevolutionaryCaseStudies2037;

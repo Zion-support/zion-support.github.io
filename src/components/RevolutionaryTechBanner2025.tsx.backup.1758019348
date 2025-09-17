@@ -67,9 +67,7 @@ const RevolutionaryTechBanner2025: React.FC = () => {
             <p className="text-orange-100 text-xs">Multi-dimensional</p>
           </div>
         </div>
-<<<<<<< HEAD
         
-=======
 
         {/* Additional Features */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
@@ -138,7 +136,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       
       {/* Floating Elements */}
       <div className="absolute top-2 left-4 text-2xl animate-bounce">🚀</div>
@@ -219,7 +216,6 @@ const RevolutionaryTechBanner2025: React.FC = () => {
           </div>
         </div>
       </div>
-=======
 >>>>>>> origin/cursor/create-and-deploy-new-content-7128
     </div>
   );

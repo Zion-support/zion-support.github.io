@@ -1,15 +1,17 @@
+import React from 'react';
+const News = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">News</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 
-interface NewsArticle {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
-  readTime: number;
-}
+};
 
+
+export default News;

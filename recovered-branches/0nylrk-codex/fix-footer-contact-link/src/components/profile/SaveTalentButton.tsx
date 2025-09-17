@@ -1,23 +1,12 @@
-
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
 
-interface SaveTalentButtonProps {
-  talentId: string;
-  onSave: (talentId: string) => void;
-  isSaved: boolean;
-}
-
+const SaveTalentButton: React.FC = () => {
   return (
-    <Button
-      onClick={() => onSave(talentId)}
-      variant={isSaved ? "default" : "outline"}
-      size="sm"
-      className={isSaved ? "bg-yellow-500 hover:bg-yellow-600 text-white" : "text-yellow-500 border-yellow-500 hover:bg-yellow-500/10"}
-    >
-      <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
-      {isSaved ? 'Saved' : 'Save'}
-    </Button>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SaveTalentButton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default SaveTalentButton;

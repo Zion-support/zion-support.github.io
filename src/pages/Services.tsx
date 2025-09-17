@@ -1,190 +1,110 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Zap, 
-  Users, 
-  Globe, 
-  Cpu,
-  Lock,
-  Heart,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Code,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  ShoppingCart,
-  Headphones,
-  Mail,
-  Search,
-  HelpCircle,
-  ShieldCheck,
-  Globe2,
-  Leaf,
-  Sparkles,
-  Target,
-  DollarSign,
-  Clock,
-  Award,
-  Phone,
-  Mail as MailIcon,
-  MapPin,
-  Infinity,
-  Building2,
-  Car,
-  Factory,
-  GraduationCap,
-  Scale,
-  Truck,
-  Wheat,
-  Zap2,
-  Brain2,
-  Cloud2,
-  Lock2,
-  ChevronLeft,
-  ChevronRight
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGuide2030';
 
-export default function Services() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('rating');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(12);
-
+const Services: React.FC = () => {
+  const services = [
+    {
+      title: "AI Innovation Hub 2025",
+      description: "Cutting-edge artificial intelligence solutions and research for the future.",
+      path: "/ai-innovation-hub-2025",
+      color: "from-blue-500 to-cyan-500",
+      hoverColor: "hover:from-blue-600 hover:to-cyan-600"
+    },
+    {
+      title: "Advanced AI Solutions 2025",
+      description: "Comprehensive AI implementations for enterprise and research applications.",
+      path: "/advanced-ai-solutions-2025",
+      color: "from-purple-500 to-pink-500",
+      hoverColor: "hover:from-purple-600 hover:to-pink-600"
+    },
+    {
+      title: "Revolutionary Tech 2025",
+      description: "Next-generation technology solutions that redefine what's possible.",
+      path: "/revolutionary-tech-2025",
+      color: "from-green-500 to-teal-500",
+      hoverColor: "hover:from-green-600 hover:to-teal-600"
+    },
+    {
+      title: "Quantum Computing Revolution",
+      description: "Revolutionary quantum computing technologies and applications.",
+      path: "/quantum-computing-revolution-2025",
+      color: "from-indigo-500 to-purple-500",
+      hoverColor: "hover:from-indigo-600 hover:to-purple-600"
+    },
+    {
+      title: "Neural Interface Revolution",
+      description: "Next-generation brain-computer interface technologies.",
+      path: "/neural-interface-revolution-2025",
+      color: "from-pink-500 to-rose-500",
+      hoverColor: "hover:from-pink-600 hover:to-rose-600"
+    },
+    {
+      title: "Advanced Tech Showcase",
+      description: "Comprehensive showcase of our latest technological innovations.",
+      path: "/advanced-tech-showcase-2025",
+      color: "from-yellow-500 to-orange-500",
+      hoverColor: "hover:from-yellow-600 hover:to-orange-600"
+    }
   ];
 
-  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'rating':
-        return b.rating - a.rating;
-      case 'price':
-        return a.price - b.price;
-      case 'reviews':
-        return b.reviewCount - a.reviewCount;
-      case 'name':
-        return a.title.localeCompare(b.title);
-      default:
-        return 0;
-    }
-  });
-
-  // Pagination logic
-  const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentServices = sortedServices.slice(startIndex, endIndex);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 }
-  };
-
-  const getCategoryIcon = (categoryName: string) => {
-    const category = categories.find(cat => cat.id === categoryName);
-    return category ? category.icon : '🚀';
-  };
-
-  const getCategoryColor = (categoryName: string) => {
-    const category = categories.find(cat => cat.id === categoryName);
-    return category ? category.color : 'from-cyan-500 to-blue-500';
-  };
-
-  const handleCategoryChange = (categoryId: string) => {
-    setActiveCategory(categoryId);
-    setCurrentPage(1);
-  };
-
-  const handleSearchChange = (value: string) => {
-    setSearchTerm(value);
-    setCurrentPage(1);
-  };
-
-  const handleSortChange = (value: string) => {
-    setSortBy(value);
-    setCurrentPage(1);
-  };
-
   return (
-    <>
-      <SEO 
-        title="AI & Technology Services | Zion Tech Group"
-        description="Discover our comprehensive suite of AI-powered micro SAAS services, cutting-edge technology solutions, and innovative platforms that transform businesses across industries."
-        keywords="AI services, micro SAAS, technology solutions, business intelligence, cybersecurity, cloud computing, blockchain, IoT, quantum computing"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our comprehensive range of cutting-edge technology solutions designed to 
+            revolutionize industries and shape the future.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <Link
+              key={index}
+              to={service.path}
+              className="group bg-gray-800/50 hover:bg-gray-800/70 p-8 rounded-lg border border-gray-700 hover:border-gray-600 transition-all duration-300 transform hover:scale-105"
             >
+              <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                <span className="text-white font-bold text-lg">
+                  {service.title.charAt(0)}
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-300 transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {service.description}
+              </p>
+              <div className={`inline-flex items-center text-sm font-semibold bg-gradient-to-r ${service.color} ${service.hoverColor} text-white px-4 py-2 rounded-lg transition-all duration-300 group-hover:shadow-lg`}>
+                Learn More
+                <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Link>
+          ))}
+        </div>
 
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full border border-white/20"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                      {service.tags.length > 3 && (
-                        <span className="px-2 py-1 bg-white/10 text-gray-400 text-xs rounded-full border border-white/20">
-                          +{service.tags.length - 3} more
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Service Details */}
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="text-center p-3 bg-white/5 rounded-lg">
-                        <div className="text-lg font-bold text-cyan-400">{service.aiScore}%</div>
-                        <div className="text-xs text-gray-400">AI Score</div>
-                      </div>
-                      <div className="text-center p-3 bg-white/5 rounded-lg">
-                        <div className="text-lg font-bold text-emerald-400">{service.setupTime}</div>
-                        <div className="text-xs text-gray-400">Setup Time</div>
-                      </div>
-                    </div>
-
+        <div className="text-center mt-16">
+          <div className="bg-gray-800/50 p-8 rounded-lg border border-gray-700 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-blue-400">Ready to Transform Your Business?</h2>
+            <p className="text-gray-300 text-lg mb-6">
+              Let's discuss how our innovative solutions can help you achieve your goals and stay ahead of the competition.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
           </div>
-        </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-        {/* CTA Section */}
+export default Services;

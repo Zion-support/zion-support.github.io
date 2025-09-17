@@ -22,6 +22,17 @@ export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
     date: "2025-09-16",
   },
   {
+    id: "enterprise-ai-readiness-checklist-2026",
+    title: "AI 2026: Enterprise AI Readiness Checklist",
+    description:
+      "A practical, audit‑ready readiness framework for safe and reliable AI at scale.",
+    ctaLabel: "Read Checklist",
+    href: "/blog/ai-2026-enterprise-ai-readiness-checklist",
+    emoji: "✅",
+    highlight: true,
+    date: "2025-09-16",
+  },
+  {
     id: "operational-reliability-blueprint-2026",
     title: "Operational Reliability Blueprint (2026)",
     description:

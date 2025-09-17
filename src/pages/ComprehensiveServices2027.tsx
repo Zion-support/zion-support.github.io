@@ -180,7 +180,7 @@ const ComprehensiveServices2027: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <divdiv
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -192,14 +192,14 @@ const ComprehensiveServices2027: React.FC = () => {
               <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
                 Complete technology solutions for the future. From AI and quantum computing to space technology and neural interfaces.
               </p>
-            </divdiv>
+            </div>
           </div>
         </div>
 
         {/* Services by Category */}
         <div className="container mx-auto px-4 py-20">
           {services.map((category, categoryIndex) => (
-            <divdiv
+            <div
               key={category.category}
               whileInView={{ opacity: 1, y: 0 }}
               className="mb-20"
@@ -211,7 +211,7 @@ const ComprehensiveServices2027: React.FC = () => {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
-                  <divdiv
+                  <div
                     key={service.name}
                     whileInView={{ opacity: 1, y: 0 }}
                     className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
@@ -237,10 +237,10 @@ const ComprehensiveServices2027: React.FC = () => {
                         Get Quote
                       </button>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
@@ -256,7 +256,7 @@ const ComprehensiveServices2027: React.FC = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <divdiv
+                <div
                   key={index}
                   whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
@@ -271,7 +271,7 @@ const ComprehensiveServices2027: React.FC = () => {
                     <div className="font-bold">{testimonial.name}</div>
                     <div className="text-blue-300">{testimonial.role}, {testimonial.company}</div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
           </div>

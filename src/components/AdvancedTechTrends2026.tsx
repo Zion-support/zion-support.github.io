@@ -1,6 +1,7 @@
-'use client';
-
 import React from 'react';
+<<<<<<< HEAD
+const AdvancedTechTrends2026: React.FC = () => {
+=======
 import { 
   Brain
   Zap
@@ -62,10 +63,11 @@ const AdvancedTechTrends2026 = () => {
     }
   ];
 
+>>>>>>> origin/merge-new-content-1757989975
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -79,11 +81,14 @@ const AdvancedTechTrends2026 = () => {
             Discover the revolutionary technologies that will transform your business 
             and give you a competitive edge in the next decade.
           </p>
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trends.map((trendindex) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="group relative"
@@ -92,15 +97,12 @@ const AdvancedTechTrends2026 = () => {
                 <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${trend.color} mb-6`}>
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {trend.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {trend.description}
                 </p>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-purple-300 bg-purple-900/30 px-3 py-1 rounded-full">
                     {trend.impact}
@@ -108,11 +110,14 @@ const AdvancedTechTrends2026 = () => {
                   <TrendingUp className="w-5 h-5 text-green-400" />
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
 
-        <divdiv
+>>>>>>> origin/merge-new-content-1757989975
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >
@@ -132,10 +137,11 @@ const AdvancedTechTrends2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
+
 
 export default AdvancedTechTrends2026;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryContentPromoBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-3xl p-8 mb-12">
@@ -11,7 +10,6 @@ const RevolutionaryContentPromoBanner2025: React.FC = () => {
         <div className="absolute bottom-10 left-20 w-12 h-12 bg-white rounded-full animate-pulse delay-2000"></div>
         <div className="absolute bottom-20 right-10 w-24 h-24 bg-white rounded-full animate-pulse delay-500"></div>
       </div>
-
       <div className="relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="flex-1">
@@ -43,7 +41,6 @@ const RevolutionaryContentPromoBanner2025: React.FC = () => {
               </Link>
             </div>
           </div>
-
           <div className="flex-1 grid grid-cols-2 gap-4">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <div className="text-3xl mb-2">🧠</div>
@@ -67,7 +64,6 @@ const RevolutionaryContentPromoBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Stats Row */}
         <div className="mt-8 pt-8 border-t border-white/20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -92,6 +88,8 @@ const RevolutionaryContentPromoBanner2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default RevolutionaryContentPromoBanner2025;

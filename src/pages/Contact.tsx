@@ -1,18 +1,33 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+<<<<<<< HEAD
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
+import { useToast } from '@/components/ui/use-toast';
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+// Tooltip components temporarily removed due to missing module path
+import z from 'zod';
+import { ChatAssistant } from '@/components/ChatAssistant';
+import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
+import Link from 'next/link';
 
 export default function Contact() {
   const { showToast: toast } = useToast();
+=======
+>>>>>>> origin/merge-new-content-1757989975
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-
-const Contact: React.FC = () => {
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-import React from 'react';
-
-const Contact: React.FC = () => {
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -79,34 +94,65 @@ const Contact: React.FC = () => {
       
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-          className="max-w-4xl mx-auto text-center"
-        >
+<<<<<<< HEAD
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Contact Us
+=======
+        <div
+          className="max-w-4xl mx-auto text-center"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Let's Build the Future
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Together</span>
+>>>>>>> origin/merge-new-content-1757989975
           </h1>
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
             Ready to transform your business with revolutionary technology? 
             Get in touch with our experts and discover what's possible.
           </p>
+        </div>
       </section>
 
       {/* Contact Methods Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+=======
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+>>>>>>> origin/merge-new-content-1757989975
+            {contactMethods.map((method, index) => (
+              <div
                 key={index}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
               >
                 <div className="text-cyan-400 mb-4">{method.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
                 <p className="text-lg text-cyan-400 font-medium mb-2">{method.details}</p>
                 <p className="text-gray-400 text-sm">{method.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Contact Form Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
+          <motion.div
             className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+=======
+          <div
+            className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
+>>>>>>> origin/merge-new-content-1757989975
           >
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">Send Us a Message</h2>
@@ -116,6 +162,11 @@ const Contact: React.FC = () => {
             </div>
 
             {isSubmitted ? (
+<<<<<<< HEAD
+              <motion.div
+=======
+              <div
+>>>>>>> origin/merge-new-content-1757989975
                 className="text-center py-12"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -126,6 +177,7 @@ const Contact: React.FC = () => {
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -229,33 +281,94 @@ const Contact: React.FC = () => {
                 </button>
               </form>
             )}
+          </div>
         </div>
       </section>
 
       {/* Emergency Support Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
+          <motion.div
             className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+=======
+          <div
+            className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
+>>>>>>> origin/merge-new-content-1757989975
           >
             <h3 className="text-2xl font-bold text-white mb-4">🚨 Emergency Support</h3>
             <p className="text-gray-300 mb-6">
               Need immediate assistance? Our 24/7 emergency support team is here to help.
             </p>
-        </div>
-      </section>
-
+<<<<<<< HEAD
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Emergency Support
+            </a>
           </motion.div>
+=======
+<<<<<<< HEAD
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• AI-powered automation</li>
+              <li>• Quantum computing breakthroughs</li>
+              <li>• Neural interface technology</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
+            <p className="text-gray-300 mb-4">
+              Discover the latest developments in technology and innovation
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Research and development</li>
+              <li>• Industry partnerships</li>
+              <li>• Future technology trends</li>
+            </ul>
+          </div>
+          
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
+            <p className="text-gray-300 mb-4">
+              Comprehensive technology solutions for modern challenges
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Enterprise solutions</li>
+              <li>• Custom development</li>
+              <li>• Technology consulting</li>
+            </ul>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-300"
+              >
+                <Phone className="h-5 w-5 mr-2" />
+                Call Now
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-300"
+              >
+                <Mail className="h-5 w-5 mr-2" />
+                Email Support
+              </a>
+            </div>
+          </div>
+>>>>>>> origin/merge-new-content-1757989975
         </div>
       </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          <divdiv
+          <div
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
@@ -263,8 +376,12 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
-          </divdiv>
+<<<<<<< HEAD
           </motion.div>
+=======
+          </div>
+>>>>>>> cursor/create-and-deploy-new-content-376e
+>>>>>>> origin/merge-new-content-1757989975
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -281,8 +398,15 @@ const Contact: React.FC = () => {
                 description: "Round-the-clock support ensures your business never stops, with rapid response times for critical issues."
               }
             ].map((feature, index) => (
+              <div
                 key={index}
                 className="text-center"
+<<<<<<< HEAD
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975
               >
                 <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -291,10 +415,24 @@ const Contact: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
+              </div>
             ))}
           </div>
         </div>
+      </section>
+=======
+import React from 'react';
+
+const Contact: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">Contact</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
       </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
     </div>
   );
 };

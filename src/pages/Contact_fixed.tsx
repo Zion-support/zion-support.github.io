@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,14 +13,12 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -40,14 +37,12 @@ const Contact: React.FC = () => {
       });
     }, 3000);
   };
-
   const contactMethods = [
     { icon: <Phone className="h-6 w-6" />, title: "Phone", details: "+1 (302) 464-0950", description: "Available Mon-Fri, 9AM-6PM EST" },
     { icon: <Mail className="h-6 w-6" />, title: "Email", details: "kleber@ziontechgroup.com", description: "We'll respond within 24 hours" },
     { icon: <MapPin className="h-6 w-6" />, title: "Office", details: "364 E Main St STE 1008, Middletown DE 19709", description: "Visit us for a consultation" },
     { icon: <Clock className="h-6 w-6" />, title: "Business Hours", details: "Monday - Friday", description: "9:00 AM - 6:00 PM EST" }
   ];
-
   const services = [
     "AI & Machine Learning",
     "Quantum Computing",
@@ -58,14 +53,12 @@ const Contact: React.FC = () => {
     "Digital Transformation",
     "Cloud Solutions"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for revolutionary AI, quantum computing, and cybersecurity solutions. Contact us today for a consultation." />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         <motion.div 
           className="text-center mb-16"
@@ -81,7 +74,6 @@ const Contact: React.FC = () => {
             Get in touch with our experts and discover what's possible.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div
@@ -91,7 +83,6 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-            
             {isSubmitted ? (
               <motion.div 
                 className="text-center py-12"
@@ -131,7 +122,6 @@ const Contact: React.FC = () => {
                     />
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-white font-semibold mb-2">Company</label>
@@ -156,7 +146,6 @@ const Contact: React.FC = () => {
                     />
                   </div>
                 </div>
-
                 <div>
                   <label className="block text-white font-semibold mb-2">Service Interest</label>
                   <select
@@ -173,7 +162,6 @@ const Contact: React.FC = () => {
                     ))}
                   </select>
                 </div>
-
                 <div>
                   <label className="block text-white font-semibold mb-2">Message *</label>
                   <textarea
@@ -186,7 +174,6 @@ const Contact: React.FC = () => {
                     placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
-
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -207,7 +194,6 @@ const Contact: React.FC = () => {
               </form>
             )}
           </motion.div>
-
           {/* Contact Information */}
           <motion.div
             className="space-y-8"
@@ -222,7 +208,6 @@ const Contact: React.FC = () => {
                 Our team of experts is here to help you explore the possibilities.
               </p>
             </div>
-
             <div className="space-y-6">
               {contactMethods.map((method, index) => (
                 <motion.div
@@ -245,7 +230,6 @@ const Contact: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
             {/* Additional Information */}
             <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">
               <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
@@ -273,6 +257,8 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default Contact;

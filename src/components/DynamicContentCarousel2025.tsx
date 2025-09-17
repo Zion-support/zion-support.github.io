@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Play, ExternalLink, Star } from 'lucide-react';
-
 const DynamicContentCarousel2025: React.FC = () => {
+<<<<<<< HEAD
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const contentItems = [
+=======
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const slides = [
+>>>>>>> origin/new-content-merge-1758000738
     {
       id: 1,
       title: "AI-Powered Analytics Dashboard",
@@ -49,6 +53,7 @@ const DynamicContentCarousel2025: React.FC = () => {
     },
     {
       id: 5,
+<<<<<<< HEAD
       title: "Blockchain Integration Suite",
       description: "Secure, decentralized solutions that enhance transparency and trust in business transactions.",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
@@ -56,29 +61,39 @@ const DynamicContentCarousel2025: React.FC = () => {
       rating: 4.6,
       views: "1.9M",
       gradient: "from-purple-500 to-pink-600"
+=======
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer communication and thought control technology",
+      image: "🧬",
+      gradient: "from-violet-600 to-purple-600",
+      link: "/pages/NeuralInterfaceFuture"
+>>>>>>> origin/new-content-merge-1758000738
     }
   ];
-
   useEffect(() => {
+<<<<<<< HEAD
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % contentItems.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, contentItems.length]);
+=======
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
+>>>>>>> origin/new-content-merge-1758000738
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % contentItems.length);
   };
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-
+<<<<<<< HEAD
   const currentItem = contentItems[currentIndex];
-
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
@@ -100,7 +115,6 @@ const DynamicContentCarousel2025: React.FC = () => {
             Explore our latest breakthroughs and cutting-edge solutions that are shaping the future of technology.
           </p>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl">
@@ -128,15 +142,12 @@ const DynamicContentCarousel2025: React.FC = () => {
                         {currentItem.views} views
                       </div>
                     </div>
-
                     <h3 className="text-4xl font-bold text-white mb-6">
                       {currentItem.title}
                     </h3>
-
                     <p className="text-xl text-gray-300 leading-relaxed mb-8">
                       {currentItem.description}
                     </p>
-
                     <div className="flex flex-col sm:flex-row gap-4">
                       <motion.button
                         whileHover={{ scale: 1.05 }}
@@ -156,7 +167,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                       </motion.button>
                     </div>
                   </div>
-
                   {/* Image */}
                   <div className="relative">
                     <div className="relative overflow-hidden rounded-2xl">
@@ -178,7 +188,6 @@ const DynamicContentCarousel2025: React.FC = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-
           {/* Navigation */}
           <div className="flex items-center justify-between mt-8">
             <div className="flex gap-3">
@@ -194,7 +203,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                 />
               ))}
             </div>
-
             <div className="flex gap-4">
               <button
                 onClick={prevSlide}
@@ -220,10 +228,79 @@ const DynamicContentCarousel2025: React.FC = () => {
               </button>
             </div>
           </div>
+=======
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  return (
+    <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl overflow-hidden shadow-2xl">
+      <div className="relative h-96">
+        {/* Slide Content */}
+        <div className="absolute inset-0 transition-transform duration-500 ease-in-out"
+             style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+          {slides.map((slide, index) => (
+            <div key={slide.id} className="w-full h-full flex-shrink-0 float-left">
+              <div className="h-full flex items-center justify-center p-8">
+                <div className="text-center max-w-4xl mx-auto">
+                  <div className="text-8xl mb-6 animate-pulse">{slide.image}</div>
+                  <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    {slide.title}
+                  </h3>
+                  <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                    {slide.description}
+                  </p>
+                  <a 
+                    href={slide.link}
+                    className={`inline-block bg-gradient-to-r ${slide.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg transform hover:scale-105`}
+                  >
+                    Explore {slide.title} →
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        {/* Dots Indicator */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide 
+                  ? 'bg-white' 
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+            />
+          ))}
+>>>>>>> origin/new-content-merge-1758000738
         </div>
       </div>
     </section>
   );
 };
+
 
 export default DynamicContentCarousel2025;

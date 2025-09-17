@@ -78,8 +78,6 @@ const UltimateContentBanner2034: React.FC = () => {
       {/* Animated Border */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></div>
     </motion.div>
-<<<<<<< HEAD
-=======
   return (
   return (
   return (

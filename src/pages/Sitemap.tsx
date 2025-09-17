@@ -1,31 +1,17 @@
+import React from 'react';
+const Sitemap = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 
-const Sitemap: React.FC = () => {
-  const sitemapData = {
-    main: [
-      { name: 'Home', path: '/' },
-      { name: 'About', path: '/about' },
-      { name: 'Services', path: '/services' },
-      { name: 'Contact', path: '/contact' },
-      { name: 'Careers', path: '/careers' }
-    ],
-    services: [
-      { name: 'AI Services', path: '/services/ai' },
-      { name: 'Cloud Services', path: '/services/cloud' },
-      { name: 'Cybersecurity', path: '/services/cybersecurity' },
-      { name: 'IT Infrastructure', path: '/services/infrastructure' },
-      { name: 'Digital Transformation', path: '/services/transformation' },
-      { name: 'IT Consulting', path: '/services/consulting' }
-    ],
-    resources: [
-      { name: 'Blog', path: '/blog' },
-      { name: 'FAQ', path: '/faq' },
-      { name: 'Partners', path: '/partners' },
-      { name: 'Green IT', path: '/green-it' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', path: '/privacy' },
-      { name: 'Terms of Service', path: '/terms' },
-      { name: 'Cookies', path: '/cookies' }
-    ]
-  };
+};
 
+
+export default Sitemap;

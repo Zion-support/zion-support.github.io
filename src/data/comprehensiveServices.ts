@@ -19,12 +19,11 @@ export interface Service {
     rating: number;
     count: number;
   };
-}
-
 // Import new revolutionary services
 import { newServices2026 } from './newServices2026';
-
+import { newServices2026 as newServices2026Content } from './newContent2026';
 export const COMPREHENSIVE_SERVICES: Service[] = [
+  ...newServices2026Content,
   {
     id: "ai-consciousness-001",
     title: "AI Consciousness Development",
@@ -482,4 +481,3 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     reviews: { rating: 4.9, count: 45 }
   },
   ...newServices2026
-];

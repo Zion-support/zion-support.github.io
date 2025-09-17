@@ -43,8 +43,6 @@ const UltimateTechBreakthrough2036: React.FC = () => {
             Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
-<<<<<<< HEAD
-=======
           <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
             The most revolutionary technological advancement in human history - 
             transcending the boundaries of what was once thought impossible
@@ -318,8 +316,6 @@ const UltimateTechBreakthrough2036: React.FC = () => {
                   <span className="px-3 py-1 bg-pink-500/30 rounded-full text-sm">Universal Knowledge</span>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
             <ul className="text-purple-200 space-y-2 text-sm">
               <li>• Dimensional portal creation</li>
               <li>• Cross-reality communication</li>
@@ -489,8 +485,6 @@ const UltimateTechBreakthrough2036: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-12 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Contact Our Team
-<<<<<<< HEAD
-=======
           <h2 className="text-4xl font-bold mb-6">Ready for the Ultimate Breakthrough?</h2>
 >>>>>>> origin/backup-main-20250916-071805
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
@@ -502,8 +496,6 @@ const UltimateTechBreakthrough2036: React.FC = () => {
             </button>
             <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-<<<<<<< HEAD
-=======
             </button>
             <button className="border border-purple-400 px-12 py-5 rounded-lg hover:bg-purple-500/20 transition-colors text-xl">
               Contact Us

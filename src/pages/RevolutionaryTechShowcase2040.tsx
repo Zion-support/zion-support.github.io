@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-
 const RevolutionaryTechShowcase2040: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const technologies = [
     {
       id: 1,
@@ -96,7 +93,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
       status: "Lab Testing"
     }
   ];
-
   const useCases = [
     {
       category: "Healthcare",
@@ -143,7 +139,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
       color: "from-yellow-500 to-orange-500"
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -151,7 +146,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
         <meta name="description" content="Experience the most revolutionary technology showcase of 2040 featuring Quantum Reality Engine, Neural Consciousness Bridge, and Interdimensional Data Networks." />
         <meta name="keywords" content="revolutionary tech showcase 2040, quantum reality engine, neural consciousness bridge, interdimensional data networks, temporal computing" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
         <div className="container mx-auto px-4 py-16">
           {/* Hero Section */}
@@ -186,7 +180,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
           {/* Technology Showcase */}
           <motion.div 
             initial={{ opacity: 0 }}
@@ -197,7 +190,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
             <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
               Revolutionary Technologies
             </h2>
-            
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {technologies.map((tech, index) => (
                 <motion.div
@@ -222,11 +214,9 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  
                   <p className="text-sm opacity-90 mb-4 leading-relaxed">
                     {tech.description}
                   </p>
-                  
                   <ul className="space-y-2 mb-6">
                     {tech.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-xs">
@@ -235,7 +225,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <button className={`w-full bg-gradient-to-r ${tech.gradient} text-white py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
                     Experience {tech.title.split(' ')[0]} →
                   </button>
@@ -243,7 +232,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           {/* Use Cases by Category */}
           <motion.div 
             initial={{ opacity: 0 }}
@@ -254,7 +242,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
             <h2 className="text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Real-World Applications
             </h2>
-            
             <div className="grid md:grid-cols-2 gap-12">
               {useCases.map((useCase, index) => (
                 <motion.div
@@ -270,7 +257,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
                       {useCase.category}
                     </h3>
                   </div>
-                  
                   <div className="space-y-4">
                     {useCase.applications.map((app, idx) => (
                       <div key={idx} className="flex items-start">
@@ -279,7 +265,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <button className={`mt-6 w-full bg-gradient-to-r ${useCase.color} text-white py-3 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
                     Explore {useCase.category} Solutions →
                   </button>
@@ -287,7 +272,6 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
               ))}
             </div>
           </motion.div>
-
           {/* Interactive Demo Section */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
@@ -315,6 +299,8 @@ const RevolutionaryTechShowcase2040: React.FC = () => {
       </div>
     </>
   );
+
 };
+
 
 export default RevolutionaryTechShowcase2040;

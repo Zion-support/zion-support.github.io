@@ -6,8 +6,6 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
   const slides = [
     {
       id: 1,
-<<<<<<< HEAD
-=======
       title: "🚀 Ultimate Tech Breakthrough 2039",
       description: "Experience the most revolutionary technological advances that will reshape our universe in 2039",
       features: ["Conscious AI Universes", "Quantum Consciousness Transfer", "Interdimensional Reality Engine"],
@@ -33,8 +31,6 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/UltimateTechRevolution2040",
       features: ["Transcendent AI Consciousness", "Infinite Quantum Mastery", "Universal Reality Engine"]
-<<<<<<< HEAD
-=======
       bgGradient: "from-emerald-900 to-teal-900"
     },
     {
@@ -55,8 +51,6 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-<<<<<<< HEAD
-=======
     return () => clearInterval(timer);
   }, [contentSlides.length]);
     return () => clearInterval(timer);
@@ -88,11 +82,9 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Explore our latest revolutionary technology content featuring the most advanced breakthroughs in AI, quantum computing, and reality manipulation
           </p>
-<<<<<<< HEAD
         </div>
 
         <div className="relative">
-=======
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Content Carousel 2039</h2>
           <p className="text-xl opacity-90">Experience the most advanced technology content featuring conscious AI, quantum computing, and interdimensional technology</p>
           </p>
@@ -111,9 +103,7 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
                         Explore {slide.title} →
                       </a>
                     </div>
-<<<<<<< HEAD
                     </div>
-=======
               {contentSlides.map((slide, index) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
                   <div className={`bg-gradient-to-br ${slide.bgGradient} rounded-xl p-12 text-center`}>
@@ -142,8 +132,6 @@ const RevolutionaryContentCarousel2039: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-=======
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}

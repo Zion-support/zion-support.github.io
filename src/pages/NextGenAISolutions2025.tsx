@@ -1,4 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+const NextGenAISolutions2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>NextGenAISolutions2025 | Zion Tech Group</title>
+        <meta name="description" content="NextGenAISolutions2025 - Revolutionary technology solutions" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">NextGenAISolutions2025</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+=======
 
 const NextGenAISolutions2025: React.FC = () => {
   return (
@@ -160,10 +174,13 @@ const NextGenAISolutions2025: React.FC = () => {
               View Case Studies
             </button>
           </div>
+>>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>
   );
+
 };
+
 
 export default NextGenAISolutions2025;

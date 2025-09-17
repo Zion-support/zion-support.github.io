@@ -22,15 +22,12 @@ import {
   DollarSign,
   Headphones
 } from 'lucide-react';
-
 const UltimateServicesShowcase2025 = () => {
   const [activeTab, setActiveTab] = useState('ai-solutions');
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const services = {
     'ai-solutions': {
       title: 'AI-Powered Solutions',
@@ -165,14 +162,12 @@ const UltimateServicesShowcase2025 = () => {
       ]
     }
   };
-
   const stats = [
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Award, value: '50+', label: 'Awards Won' },
     { icon: TrendingUp, value: '99%', label: 'Success Rate' },
     { icon: Clock, value: '24/7', label: 'Support' }
   ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -196,9 +191,7 @@ const UltimateServicesShowcase2025 = () => {
       avatar: '/images/testimonials/emily-rodriguez.jpg'
     }
   ];
-
   const currentService = services[activeTab];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
@@ -209,7 +202,6 @@ const UltimateServicesShowcase2025 = () => {
           <div className="absolute top-40 right-32 w-24 h-24 bg-blue-400/20 rounded-full animate-bounce"></div>
           <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-purple-400/20 rounded-full animate-pulse"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
@@ -217,16 +209,13 @@ const UltimateServicesShowcase2025 = () => {
               <span className="text-sm font-medium">Ultimate Services 2025</span>
               <Star className="w-4 h-4 text-yellow-400" />
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               Revolutionary Technology Solutions
             </h1>
-            
             <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed">
               Transform your business with cutting-edge AI, cybersecurity, cloud solutions, 
               and data analytics. Experience the future of technology today.
             </p>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
               {stats.map((stat, index) => (
@@ -239,7 +228,6 @@ const UltimateServicesShowcase2025 = () => {
                 </div>
               ))}
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -259,7 +247,6 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-
       {/* Services Navigation */}
       <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
@@ -281,7 +268,6 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-
       {/* Services Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -292,7 +278,6 @@ const UltimateServicesShowcase2025 = () => {
             {currentService.subtitle}
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {currentService.services.map((service, index) => (
             <div
@@ -308,14 +293,12 @@ const UltimateServicesShowcase2025 = () => {
                   </div>
                 </div>
               )}
-              
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.name}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{service.price}</div>
                 <div className="text-sm text-gray-500">{service.duration}</div>
               </div>
-
               <div className="space-y-3 mb-8">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center gap-3">
@@ -324,7 +307,6 @@ const UltimateServicesShowcase2025 = () => {
                   </div>
                 ))}
               </div>
-
               <Link
                 to="/contact"
                 className={`w-full block text-center py-3 px-6 rounded-full font-semibold transition-all duration-300 ${
@@ -339,7 +321,6 @@ const UltimateServicesShowcase2025 = () => {
           ))}
         </div>
       </div>
-
       {/* Testimonials */}
       <div className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
@@ -347,7 +328,6 @@ const UltimateServicesShowcase2025 = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Clients Say</h2>
             <p className="text-xl text-gray-600">Real results from real businesses</p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
@@ -371,7 +351,6 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -403,5 +382,6 @@ const UltimateServicesShowcase2025 = () => {
     </div>
   );
 };
+
 
 export default UltimateServicesShowcase2025;

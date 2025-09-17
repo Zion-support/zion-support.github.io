@@ -3,8 +3,6 @@ import React from 'react';
         </div>
 
         {/* Innovation Showcase */}
-<<<<<<< HEAD
-=======
 
 const NextGenInnovationHub2039: React.FC = () => {
   return (
@@ -104,8 +102,6 @@ const NextGenInnovationHub2039: React.FC = () => {
                 <div className="flex items-center space-x-3">
                   <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-sm">Transcendent awareness</span>
-<<<<<<< HEAD
-=======
             <div className="space-y-6">
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex items-center space-x-4 mb-4">
@@ -184,8 +180,6 @@ const NextGenInnovationHub2039: React.FC = () => {
             </div>
             
                 </button>
-<<<<<<< HEAD
-=======
             <div className="space-y-6">
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex items-center space-x-4 mb-4">
@@ -230,9 +224,7 @@ const NextGenInnovationHub2039: React.FC = () => {
         </div>
 
         {/* Innovation Statistics */}
-<<<<<<< HEAD
             </div>
-=======
             <div className="bg-gradient-to-br from-teal-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-teal-400/30">
               <div className="text-5xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-4">Quantum Consciousness Training</h3>
@@ -277,8 +269,6 @@ const NextGenInnovationHub2039: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">

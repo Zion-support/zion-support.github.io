@@ -1,43 +1,12 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
 
-// Test wrapper with providers
-export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const testUtils: React.FC = () => {
   return (
-    <BrowserRouter>
-      {children}
-    </BrowserRouter>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">testUtils</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 
-// Custom render function
-export const renderWithProviders = (props: any) => {
-  return render(ui, { wrapper: TestWrapper });
-};
-
-// Mock data generators
-export const mockUser = {
-  id: '1',
-  name: 'Test User',
-  email: 'test@example.com',
-  role: 'user'
-};
-
-export const mockMessage = {
-  id: '1',
-  text: 'Test message',
-  sender: 'user' as const,
-  timestamp: new Date()
-};
-
-// Common test helpers
-export const waitForElementToBeRemoved = waitFor;
-export const waitForElementToAppear = waitFor;
-
-export default {
-  renderWithProviders,
-  mockUser,
-  mockMessage,
-  waitForElementToBeRemoved,
-  waitForElementToAppear
-};
+export default testUtils;

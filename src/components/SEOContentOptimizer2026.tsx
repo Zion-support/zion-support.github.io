@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOContentOptimizer2026Props {
   title?: string;
   description?: string;
@@ -14,8 +13,6 @@ interface SEOContentOptimizer2026Props {
     section: string;
     tags: string[];
   };
-}
-
 const SEOContentOptimizer2026: React.FC<SEOContentOptimizer2026Props> = ({
   title = "Revolutionary AI Content Collection 2026 - Latest Breakthroughs & Innovations",
   description = "Explore groundbreaking AI content including healthcare breakthroughs, quantum computing, neural interfaces, autonomous systems, and cybersecurity innovations. Discover the future of technology with our comprehensive content collection.",
@@ -128,7 +125,6 @@ const SEOContentOptimizer2026: React.FC<SEOContentOptimizer2026Props> = ({
       }
     }
   };
-
   // Add article-specific structured data if provided
   if (articleData) {
     structuredData["@type"] = "Article";
@@ -142,8 +138,7 @@ const SEOContentOptimizer2026: React.FC<SEOContentOptimizer2026Props> = ({
     }
     structuredData.articleSection = articleData.section;
     structuredData.keywords = articleData.tags.join(", ");
-  }
-
+  };
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -151,7 +146,6 @@ const SEOContentOptimizer2026: React.FC<SEOContentOptimizer2026Props> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(", ")} />
       <link rel="canonical" href={canonicalUrl} />
-      
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -161,36 +155,29 @@ const SEOContentOptimizer2026: React.FC<SEOContentOptimizer2026Props> = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="AI Innovation Hub" />
-      
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
-      
       {/* Language and Region */}
       <meta name="language" content="English" />
       <meta name="geo.region" content="US" />
       <meta name="geo.placename" content="United States" />
-      
       {/* Mobile Optimization */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="mobile-web-app-capable" content="yes" />
-      
       {/* Performance Hints */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
-      
       {/* Additional Schema Markup for Content */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -215,6 +202,8 @@ const SEOContentOptimizer2026: React.FC<SEOContentOptimizer2026Props> = ({
       </script>
     </Helmet>
   );
+
 };
+
 
 export default SEOContentOptimizer2026;

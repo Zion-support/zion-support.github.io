@@ -32,11 +32,9 @@ import {
   Waves,
   Hexagon
 } from 'lucide-react';
-
 const RevolutionaryContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const revolutionaryContent = [
     {
       id: 1,
@@ -174,7 +172,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
       impact: "Transformative"
     }
   ];
-
   const stats = [
     { number: '∞', label: 'Computational Power', icon: Zap },
     { number: '0ms', label: 'Processing Latency', icon: Gauge },
@@ -183,7 +180,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     { number: '∞', label: 'Storage Capacity', icon: Database },
     { number: '∞', label: 'Reality Simulations', icon: Globe }
   ];
-
       title: "Consciousness Transfer Protocol",
       subtitle: "Digital immortality becomes reality",
       description: "Technology that enables the transfer of human consciousness into digital substrates, achieving true digital immortality.",
@@ -196,7 +192,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
       color: "from-orange-600 to-red-600"
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -205,25 +200,25 @@ const RevolutionaryContentCarousel: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, revolutionaryContent.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   const currentContent = revolutionaryContent[currentSlide];
-
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-3xl">
+<<<<<<< HEAD
+=======
+          <div
+            key={currentSlide}
+>>>>>>> origin/merge-new-content-1757989975
             className={`relative bg-gradient-to-br ${currentContent.bgColor} text-white overflow-hidden`}
           >
             {/* Animated Background */}
@@ -231,6 +226,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
               <div className="absolute top-0 left-0 w-full h-full">
                 {[...Array(100)].map((_, i) => (
+<<<<<<< HEAD
+=======
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     key={i}
                     className="absolute w-1 h-1 bg-white rounded-full opacity-30"
                     style={{
@@ -249,11 +248,14 @@ const RevolutionaryContentCarousel: React.FC = () => {
                 ))}
               </div>
             </div>
-
             <div className="relative z-10 p-12 md:p-16">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Content */}
                 <div>
+<<<<<<< HEAD
+=======
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     className="mb-6"
                   >
                     <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4">
@@ -269,14 +271,36 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <p className="text-lg text-white/80 mb-8 leading-relaxed">
                       {currentContent.description}
                     </p>
+<<<<<<< HEAD
+=======
+                  </div>
+
+                  {/* Features */}
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     className="mb-8"
                   >
                     <ul className="space-y-3">
                       {currentContent.features.map((feature, index) => (
+<<<<<<< HEAD
+=======
+                        <divli
+                          key={index}
+>>>>>>> origin/merge-new-content-1757989975
                           className="flex items-center space-x-3"
                         >
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                           <span className="text-white/90">{feature}</span>
+<<<<<<< HEAD
+=======
+                        </divli>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* CTA Buttons */}
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     className="flex flex-col sm:flex-row gap-4"
                   >
                     <a
@@ -290,21 +314,36 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <button className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                       <span>Learn More</span>
                     </button>
+<<<<<<< HEAD
+=======
+                  </div>
+>>>>>>> origin/merge-new-content-1757989975
                 </div>
-
                 {/* Visual */}
                 <div className="relative">
+<<<<<<< HEAD
+=======
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     className="relative"
                   >
                     <div className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}>
                       <currentContent.icon className="w-16 h-16 text-white" />
                     </div>
-                    
                     {/* Floating Elements */}
                     <div className="absolute -top-4 -right-4 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
                     <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/30 rounded-full animate-pulse delay-1000"></div>
                     <div className="absolute top-1/2 -right-8 w-4 h-4 bg-white/40 rounded-full animate-pulse delay-500"></div>
+<<<<<<< HEAD
+=======
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
@@ -318,7 +357,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
         >
           <ArrowRight className="w-6 h-6 text-white" />
         </button>
-
         {/* Play/Pause Button */}
         <button
           onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -332,7 +370,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
         </button>
       </div>
   const currentContent = revolutionaryContent[currentSlide];
-
   return (
     <div className="relative w-full h-[600px] overflow-hidden rounded-3xl">
       {/* Background with animated particles */}
@@ -341,6 +378,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(100)].map((_, i) => (
+<<<<<<< HEAD
+=======
+            <div
+>>>>>>> origin/merge-new-content-1757989975
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
@@ -360,56 +401,105 @@ const RevolutionaryContentCarousel: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
+<<<<<<< HEAD
+=======
+            <div
+              key={currentSlide}
+              className="text-white"
+            >
+              <div className="mb-6">
+                <div
+>>>>>>> origin/merge-new-content-1757989975
                   className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span className="text-sm font-semibold">{currentContent.status}</span>
+<<<<<<< HEAD
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975
               </div>
-
               <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                 {currentContent.title}
               </h2>
-              
               <h3 className="text-xl md:text-2xl text-gray-200 mb-6">
                 {currentContent.subtitle}
               </h3>
-              
               <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl">
                 {currentContent.description}
               </p>
-
               <div className="mb-8">
                 <h4 className="text-lg font-semibold mb-4">Key Features:</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {currentContent.features.map((feature, index) => (
+<<<<<<< HEAD
+=======
+                    <div
+                      key={index}
+>>>>>>> origin/merge-new-content-1757989975
                       className="flex items-center space-x-2 text-sm"
                     >
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       <span className="text-gray-200">{feature}</span>
+<<<<<<< HEAD
+=======
+                    </div>
+>>>>>>> origin/merge-new-content-1757989975
                   ))}
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4">
+<<<<<<< HEAD
+=======
+                <a
+                  href={currentContent.link}
+>>>>>>> origin/merge-new-content-1757989975
                   className={`inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r ${currentContent.color} text-white rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg`}
                 >
                   <Play className="w-5 h-5" />
                   <span>Explore Content</span>
                   <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
+=======
+                </a>
+                <button
+                  className="px-8 py-4 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+
+            {/* Right Content - Visual */}
+            <div
+              key={`visual-${currentSlide}`}
+>>>>>>> origin/merge-new-content-1757989975
               className="relative"
             >
               <div className="relative">
                 {/* Main Icon */}
+<<<<<<< HEAD
+                {/* Floating Elements */}
+                <div className="absolute inset-0">
+                  {stats.map((stat, index) => (
+=======
+                <div
+                  className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}
+                >
+                  <currentContent.icon className="w-16 h-16 text-white" />
+                </div>
 
                 {/* Floating Elements */}
                 <div className="absolute inset-0">
                   {stats.map((stat, index) => (
+                    <div
+                      key={index}
+>>>>>>> origin/merge-new-content-1757989975
                       className="absolute bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                       style={{
                         top: `${20 + (index * 15)}%`,
@@ -420,10 +510,17 @@ const RevolutionaryContentCarousel: React.FC = () => {
                       <stat.icon className="w-6 h-6 text-white mb-2" />
                       <div className="text-2xl font-bold text-white">{stat.number}</div>
                       <div className="text-xs text-gray-300">{stat.label}</div>
+<<<<<<< HEAD
+=======
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+>>>>>>> origin/merge-new-content-1757989975
           </div>
         </div>
       </div>
-
       {/* Navigation Controls */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
         <button
@@ -432,7 +529,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
         >
           <ArrowLeft className="w-5 h-5 text-white" />
         </button>
-        
         <div className="flex space-x-2">
           {revolutionaryContent.map((_, index) => (
             <button
@@ -444,7 +540,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
             />
           ))}
         </div>
-        
         <button
           onClick={nextSlide}
           className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
@@ -452,7 +547,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
           <ArrowRight className="w-5 h-5 text-white" />
         </button>
       </div>
-
       {/* Auto-play Toggle */}
       <div className="absolute top-6 right-6">
         <button
@@ -463,8 +557,12 @@ const RevolutionaryContentCarousel: React.FC = () => {
         >
           <Play className={`w-5 h-5 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
         </button>
-
       {/* Main content */}
+<<<<<<< HEAD
+=======
+        <div
+          key={currentSlide}
+>>>>>>> origin/merge-new-content-1757989975
           className="absolute inset-0 flex items-center"
         >
           <div className="container mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
@@ -478,7 +576,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               <div>
                 <h2 className="text-4xl font-bold mb-2 text-white">
                   {revolutionaryContent[currentSlide].title}
@@ -490,7 +587,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
                   {revolutionaryContent[currentSlide].description}
                 </p>
               </div>
-
               <div className="space-y-4">
                 <div>
                   <h3 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h3>
@@ -505,7 +601,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 <div>
                   <h3 className="text-sm font-semibold text-gray-400 mb-2">Impact:</h3>
                   <p className="text-indigo-300 italic">
@@ -513,7 +608,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-center space-x-6 text-sm text-gray-400">
                 <span className="flex items-center">
                   <span className="mr-1">👁️</span>
@@ -528,7 +622,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
                   {revolutionaryContent[currentSlide].stats.shares}
                 </span>
               </div>
-
               <div className="flex space-x-4">
                 <button className={`bg-gradient-to-r ${revolutionaryContent[currentSlide].color} px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}>
                   Explore Technology →
@@ -538,7 +631,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
                 </button>
               </div>
             </div>
-
             {/* Visual element */}
             <div className="relative">
               <div className={`w-full h-80 bg-gradient-to-br ${revolutionaryContent[currentSlide].color} rounded-2xl flex items-center justify-center text-8xl opacity-20`}>
@@ -547,7 +639,12 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+      </div>
 
+>>>>>>> origin/merge-new-content-1757989975
       {/* Navigation arrows */}
       <button
         onClick={prevSlide}
@@ -561,10 +658,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
       >
         <span className="text-2xl">›</span>
       </button>
-
       {/* Dots indicator */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-
       {/* Dots Navigation */}
       <div className="flex justify-center space-x-3 mt-8">
         {revolutionaryContent.map((_, index) => (
@@ -581,14 +676,24 @@ const RevolutionaryContentCarousel: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+<<<<<<< HEAD
+=======
+        <div
+          className="h-full bg-gradient-to-r from-purple-500 to-indigo-500"
+>>>>>>> origin/merge-new-content-1757989975
           key={currentSlide}
         />
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (
+<<<<<<< HEAD
+=======
+          <button
+            key={content.id}
+            onClick={() => goToSlide(index)}
+>>>>>>> origin/merge-new-content-1757989975
             className={`p-4 rounded-xl text-left transition-all duration-300 ${
               index === currentSlide
                 ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
@@ -602,10 +707,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
             </div>
             <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
             <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </motion.button>
+          </button>
         ))}
       </div>
-
       {/* Dots Navigation */}
       <div className="flex justify-center space-x-3 mt-8">
         {revolutionaryContent.map((_, index) => (
@@ -620,15 +724,12 @@ const RevolutionaryContentCarousel: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (
-          <motion.button
+          <button
             key={content.id}
             onClick={() => goToSlide(index)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
             className={`p-4 rounded-xl text-left transition-all duration-300 ${
               index === currentSlide
                 ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
@@ -642,7 +743,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
             </div>
             <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
             <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </motion.button>
+          </button>
         ))}
       </div>
             <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
@@ -650,7 +751,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
           </divbutton>
         ))}
       </div>
-
       {/* Dots Navigation */}
       <div className="flex justify-center space-x-3 mt-8">
         {revolutionaryContent.map((_, index) => (
@@ -665,7 +765,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (
@@ -694,4 +793,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
   );
 };
 
+
 export default RevolutionaryContentCarousel;
+</div></div></div></div></div></div></div></div>

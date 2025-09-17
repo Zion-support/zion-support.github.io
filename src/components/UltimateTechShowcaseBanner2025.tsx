@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const UltimateTechShowcaseBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 mb-12 border border-purple-500/20">
@@ -10,7 +9,6 @@ const UltimateTechShowcaseBanner2025: React.FC = () => {
         <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-bounce"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-bounce delay-1000"></div>
       </div>
-
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-500 text-white rounded-full text-lg font-bold mb-6">
@@ -27,7 +25,6 @@ const UltimateTechShowcaseBanner2025: React.FC = () => {
             From quantum consciousness to synthetic intelligence - the future is now.
           </p>
         </div>
-
         {/* Featured Technologies Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <Link 
@@ -43,7 +40,6 @@ const UltimateTechShowcaseBanner2025: React.FC = () => {
               Explore Breakthrough →
             </div>
           </Link>
-
           <Link 
             to="/quantum-consciousness-revolution-2025"
             className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
@@ -57,7 +53,6 @@ const UltimateTechShowcaseBanner2025: React.FC = () => {
               Expand Consciousness →
             </div>
           </Link>
-
           <Link 
             to="/synthetic-intelligence-revolution-2025"
             className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-pink-400/50 transition-all duration-300 hover:scale-105"
@@ -72,7 +67,6 @@ const UltimateTechShowcaseBanner2025: React.FC = () => {
             </div>
           </Link>
         </div>
-
         {/* Revolutionary Stats */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -94,7 +88,6 @@ const UltimateTechShowcaseBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4">
@@ -115,6 +108,8 @@ const UltimateTechShowcaseBanner2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default UltimateTechShowcaseBanner2025;

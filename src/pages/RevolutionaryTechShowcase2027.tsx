@@ -1,16 +1,91 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 
+import { Helmet } from 'react-helmet-async';
 const RevolutionaryTechShowcase2027: React.FC = () => {
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const technologies = [
+    {
+      id: 1,
+      title: "Conscious AI Systems",
+      icon: "🧠",
+      description: "AI that thinks, feels, and creates with human-level consciousness",
+      features: [
+        "Emotional Intelligence",
+        "Creative Problem Solving", 
+        "Self-Directed Learning",
+        "Autonomous Decision Making"
+      ],
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/RevolutionaryTechTrends2027"
+    },
+    {
+      id: 2,
+      title: "Quantum Computing",
+      icon: "⚡",
+      description: "Revolutionary computing power that transcends classical limitations",
+      features: [
+        "Quantum Supremacy",
+        "Parallel Processing",
+        "Cryptographic Security",
+        "Molecular Simulation"
+      ],
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/RevolutionaryTechTrends2027"
+    },
+    {
+      id: 3,
+      title: "Holographic Technology",
+      icon: "🔮",
+      description: "Three-dimensional interfaces that revolutionize human-computer interaction",
+      features: [
+        "3D Visualization",
+        "Gesture Control",
+        "Thought Interface",
+        "Real-time Rendering"
+      ],
+      gradient: "from-emerald-600 to-teal-600",
+      link: "/pages/RevolutionaryTechTrends2027"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTech((prev) => (prev + 1) % technologies.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [technologies.length]);
+
+  const handleTechClick = (index: number) => {
+    if (index !== activeTech) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveTech(index);
+        setIsAnimating(false);
+      }, 300);
+    }
+  };
+
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Revolutionary Technology Showcase 2027 | Zion Tech Group</title>
+=======
+        <title>Revolutionary Tech Showcase 2027 - Zion Tech Group</title>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
         <meta name="description" content="Experience the future of technology with our revolutionary 2027 showcase featuring AI, quantum computing, and neural interfaces." />
         <meta name="keywords" content="revolutionary technology, AI 2027, quantum computing, neural interfaces, future tech" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+<<<<<<< HEAD
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -45,7 +120,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
         <meta name="description" content="Experience the most revolutionary technology showcase of 2027 featuring cutting-edge innovations that are reshaping our world" />
         <meta name="keywords" content="tech showcase 2027, revolutionary technology, AI innovation, quantum computing, neural interfaces, space tech" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -59,7 +133,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             Witness the most advanced technology innovations of 2027 that are revolutionizing industries and transforming human capabilities
           </p>
         </div>
-
         {/* Interactive Technology Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="group bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -78,7 +151,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <span className="px-3 py-1 bg-indigo-500/50 rounded-full text-xs font-semibold">AUTONOMOUS</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-spin">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI Fusion</h3>
@@ -95,7 +167,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <span className="px-3 py-1 bg-cyan-500/50 rounded-full text-xs font-semibold">QUANTUM</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-pulse">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Reality Engine</h3>
@@ -112,7 +183,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <span className="px-3 py-1 bg-emerald-500/50 rounded-full text-xs font-semibold">NEURAL</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Tech Revolution</h3>
@@ -129,7 +199,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <span className="px-3 py-1 bg-orange-500/50 rounded-full text-xs font-semibold">COSMIC</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-pulse">🌐</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Metaverse 4.0</h3>
@@ -146,7 +215,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               <span className="px-3 py-1 bg-violet-500/50 rounded-full text-xs font-semibold">IMMERSIVE</span>
             </div>
           </div>
-
           <div className="group bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Biotech Revolution</h3>
@@ -164,7 +232,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Revolutionary Content Grid */}
         <div className="container mx-auto px-4 py-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -185,7 +252,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                 Explore AI Revolution →
               </button>
             </div>
-
             {/* Quantum Computing 2027 */}
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">⚡</div>
@@ -203,7 +269,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                 Go Quantum →
               </button>
             </div>
-
             {/* Neural Interfaces 2027 */}
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">🧬</div>
@@ -221,7 +286,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                 Connect Mind & Machine →
               </button>
             </div>
-
             {/* Blockchain Revolution 2027 */}
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">🔗</div>
@@ -239,7 +303,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                 Explore Blockchain →
               </button>
             </div>
-
             {/* Cloud Computing 2027 */}
             <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">☁️</div>
@@ -257,7 +320,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
                 Cloud Solutions →
               </button>
             </div>
-
             {/* Cybersecurity 2027 */}
             <div className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-6 text-center">🛡️</div>
@@ -276,26 +338,111 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Call to Action Section */}
           <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Future?</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
               Join thousands of forward-thinking companies already using our revolutionary technology solutions
+=======
+        <div className="container mx-auto px-4 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              Revolutionary Tech Showcase 2027
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Experience the future of technology through immersive, interactive demonstrations
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg transform hover:scale-105">
-                Start Your Journey
-              </button>
-              <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-                Learn More
-              </button>
-            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={tech.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className={`bg-gradient-to-br ${tech.gradient} backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
+                onClick={() => handleTechClick(index)}
+              >
+                <div className="text-6xl mb-4">{tech.icon}</div>
+                <h3 className="text-2xl font-bold mb-2">{tech.title}</h3>
+                <p className="text-gray-300 mb-6">{tech.description}</p>
+                
+                <div className="space-y-2 mb-6">
+                  {tech.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center space-x-2">
+                      <span className="text-green-400">✓</span>
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-semibold">
+                    FUTURE
+                  </span>
+                  <a
+                    href={tech.link}
+                    className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors text-sm font-semibold"
+                  >
+                    Explore →
+                  </a>
+                </div>
+              </motion.div>
+            ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center"
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+              Join millions of users who are already experiencing these revolutionary technologies 
+              through our interactive demonstrations
+            </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a 
+                href="/pages/RevolutionaryTechBreakthrough2027" 
+                className="bg-white text-purple-600 px-10 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg"
+              >
+                🚀 Start Interactive Demo
+              </a>
+              <a 
+                href="/contact" 
+                className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg"
+              >
+                📞 Schedule Private Demo
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
     </>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryTechShowcase2027</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
   );
+
 };
 
+
 export default RevolutionaryTechShowcase2027;
+</div></div></div>

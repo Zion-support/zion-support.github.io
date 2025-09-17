@@ -13,7 +13,6 @@ import {
   Zap,
   Clock
 } from 'lucide-react';
-
 interface ContentItem {
   id: string;
   title: string;
@@ -25,13 +24,10 @@ interface ContentItem {
   url: string;
   category: string;
   tags: string[];
-}
-
 const NewContentAdvertisingBanner2025: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentContent, setCurrentContent] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const newContent: ContentItem[] = [
     {
       id: 'ai-transformation-guide',
@@ -82,7 +78,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
       tags: ['AI Implementation', 'Best Practices', 'Checklist']
     }
   ];
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'guide': return <BookOpen className="w-4 h-4" />;
@@ -91,7 +86,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
       default: return <FileText className="w-4 h-4" />;
     }
   };
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'guide': return 'bg-blue-100 text-blue-800 border-blue-200';
@@ -100,7 +94,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -109,17 +102,13 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, newContent.length]);
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   const handleContentClick = () => {
     setIsAutoPlaying(false);
   };
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -131,9 +120,8 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
         </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             {/* Close Button */}
@@ -143,7 +131,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
             >
               <X className="w-5 h-5" />
             </button>
-
             {/* Main Content */}
             <div className="flex-1 pr-8">
               {/* Header */}
@@ -157,7 +144,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
                   <span>Just Published</span>
                 </div>
               </div>
-
               {/* Content Carousel */}
               <div className="relative">
                 <AnimatePresence mode="wait">
@@ -178,7 +164,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
                           {newContent[currentContent].type.replace('-', ' ')}
                         </span>
                       </div>
-
                       {/* Content Details */}
                       <div className="flex-1">
                         <h3 className="text-lg font-bold mb-2 line-clamp-2">
@@ -187,7 +172,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
                         <p className="text-white/90 text-sm mb-3 line-clamp-2">
                           {newContent[currentContent].description}
                         </p>
-                        
                         {/* Meta Information */}
                         <div className="flex items-center gap-4 text-xs text-white/80">
                           <div className="flex items-center gap-1">
@@ -205,7 +189,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
                             </div>
                           )}
                         </div>
-
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mt-3">
                           {newContent[currentContent].tags.slice(0, 3).map((tag, index) => (
@@ -221,7 +204,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
                     </div>
                   </motion.div>
                 </AnimatePresence>
-
                 {/* Navigation Dots */}
                 <div className="flex justify-center gap-2 mt-4">
                   {newContent.map((_, index) => (
@@ -241,7 +223,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* CTA Button */}
             <div className="flex-shrink-0">
               <Link
@@ -254,7 +235,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="mt-4 bg-white/20 rounded-full h-1 overflow-hidden">
             <motion.div
@@ -265,7 +245,6 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
             />
           </div>
         </div>
-
         {/* Floating Elements */}
         <div className="absolute top-4 left-4 w-8 h-8 bg-white/10 rounded-full animate-pulse"></div>
         <div className="absolute bottom-4 right-8 w-6 h-6 bg-white/10 rounded-full animate-pulse delay-1000"></div>
@@ -273,6 +252,8 @@ const NewContentAdvertisingBanner2025: React.FC = () => {
       </motion.div>
     </AnimatePresence>
   );
+
 };
+
 
 export default NewContentAdvertisingBanner2025;

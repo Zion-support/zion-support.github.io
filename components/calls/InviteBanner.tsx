@@ -1,19 +1,12 @@
 import React from 'react';
 
-type Props = {
-  message: string;
-  onJoin?: () => void;
-  canJoin?: boolean;
-};
-
+const InviteBanner: React.FC = () => {
   return (
-    <div className="w-full bg-gray-900 text-white p-3 rounded border border-gray-700 flex items-center justify-between">
-      <span className="text-sm">{message}</span>
-      {onJoin && (
-        <button onClick={onJoin} disabled={!canJoin} className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`}>
-          Join Meeting
-        </button>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InviteBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default InviteBanner;

@@ -31,11 +31,7 @@ interface ServiceLandingTemplateProps {
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   title,
   subtitle,
-<<<<<<< HEAD
   heroImage,
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -72,11 +68,9 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
             {description}
-<<<<<<< HEAD
           </p>
         </div>
       </section>
-=======
 
     <div className="min - h-screen bg - white">;
       <section className="py - 20 px - 4 bg - gradient - to - br from - blue - 50 to - indigo - 100">;
@@ -94,8 +88,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
         </div>;
       </section>;
       {benefits.length > 0 && (
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <section className="py - 16 px - 4">;
@@ -118,8 +110,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
@@ -138,8 +128,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 </div>;
 
               ))}
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       )}
@@ -168,8 +156,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
         </section>)}
 
       {stats.length > 0 && (
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
         <section className="py - 16 px - 4">;
@@ -178,9 +164,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
               {stats.map ((stat, index) => (
                 <div key={index}>;
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
-<<<<<<< HEAD
                     {stat.value}
-=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
                     {stat.value}
@@ -198,9 +182,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 </div>;
 
               ))}
-<<<<<<< HEAD
       )}
-=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
       )}
@@ -216,8 +198,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
           <a
             href={ctaLink}
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             {ctaText}
@@ -243,11 +223,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
-<<<<<<< HEAD
                   </div>
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -291,10 +267,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                       {t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -302,10 +274,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                   </div>
                 </CardFooter>
               </Card>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -320,11 +288,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
-<<<<<<< HEAD
           <a href={ctaLink}>{ctaText}</a>
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs

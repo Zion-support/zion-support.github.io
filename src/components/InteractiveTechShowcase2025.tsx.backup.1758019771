@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2025: React.FC = () => {
-<<<<<<< HEAD
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 import React, { useState, useEffect } from 'react';
@@ -9,7 +8,6 @@ import React, { useState, useEffect } from 'react';
 const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-=======
 >>>>>>> origin/backup-main-20250916-090016
 
   const technologies = [
@@ -76,7 +74,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
   const technologies = [
     {
       id: 1,
-<<<<<<< HEAD
       name: "Quantum AI Processing",
       description: "Revolutionary quantum computing meets artificial intelligence for unprecedented processing power",
       icon: "⚡",
@@ -134,8 +131,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
       color: "from-violet-600 to-purple-600",
       bgColor: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30"
-=======
-=======
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -204,7 +199,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-<<<<<<< HEAD
         setActiveTech((prev) => (prev + 1) % technologies.length);
         setIsAnimating(false);
       }, 300);
@@ -257,7 +251,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   <div className="text-left">
                     <h4 className="font-semibold">{tech.name}</h4>
                     <p className="text-sm opacity-80">{tech.description}</p>
-=======
                   </div>
                 </div>
               </button>
@@ -323,7 +316,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Technology Timeline */}
         <div className="text-center mb-16">
@@ -461,7 +453,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
           </div>
         </div>
-=======
 >>>>>>> cursor/create-and-deploy-new-content-f2c7
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
 >>>>>>> origin/backup-main-20250916-090016
@@ -470,4 +461,3 @@ const InteractiveTechShowcase2025: React.FC = () => {
   );
 };
 
-export default InteractiveTechShowcase2025;

@@ -1,9 +1,7 @@
 import React from 'react';
-
 const UltimateContentBanner2034: React.FC = () => {
   const [currentMessage, setCurrentMessage] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const messages = [
     "🌟 BREAKTHROUGH: Revolutionary Tech 2034 - Experience the Future Today!",
     "🚀 NEW: Consciousness Computing - AI with Genuine Self-Awareness!",
@@ -11,20 +9,16 @@ const UltimateContentBanner2034: React.FC = () => {
     "🔗 NEURAL: Universal Mind Network - Connect All Consciousness!",
     "♾️ IMMORTALITY: Digital Consciousness Transfer - Live Forever!"
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMessage((prev) => (prev + 1) % messages.length);
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   if (!isVisible) return null;
-
   return (
     <motion.div
       initial={{ opacity: 0, y: -100 }}
@@ -35,7 +29,6 @@ const UltimateContentBanner2034: React.FC = () => {
     >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-blue-500/20 animate-pulse"></div>
-      
       {/* Content */}
       <div className="relative z-10 container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-4">
@@ -57,7 +50,6 @@ const UltimateContentBanner2034: React.FC = () => {
             {messages[currentMessage]}
           </motion.div>
         </div>
-        
         <div className="flex items-center space-x-4">
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -74,33 +66,34 @@ const UltimateContentBanner2034: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Animated Border */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></div>
     </motion.div>
+<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+<<<<<<< HEAD
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
+=======
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE BREAKTHROUGH • JANUARY 2034
           </div>
-          
           {/* Main Heading */}
           <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
             🚀 Ultimate Content Banner 2034
           </h2>
-          
           {/* Subheading */}
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most revolutionary content featuring conscious AI, quantum computing, 
             and interdimensional technology that will reshape our world in 2034.
           </p>
-          
           {/* Feature Highlights */}
           <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -119,7 +112,6 @@ const UltimateContentBanner2034: React.FC = () => {
               <p className="text-sm opacity-80">Multi-reality technology</p>
             </div>
           </div>
-          
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105 transform">
@@ -129,7 +121,6 @@ const UltimateContentBanner2034: React.FC = () => {
               📺 Watch Demo
             </button>
           </div>
-          
           {/* Stats */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
@@ -151,7 +142,6 @@ const UltimateContentBanner2034: React.FC = () => {
           </div>
         </div>
       </div>
-      
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -172,7 +162,6 @@ const UltimateContentBanner2034: React.FC = () => {
             Experience the most revolutionary technological advances that will reshape our world in 2034
           </p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
             <div className="text-4xl mb-3">🧠</div>
@@ -184,7 +173,6 @@ const UltimateContentBanner2034: React.FC = () => {
               Explore →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
             <div className="text-4xl mb-3">⚛️</div>
             <h3 className="text-xl font-bold text-white mb-2">Quantum Consciousness</h3>
@@ -195,7 +183,6 @@ const UltimateContentBanner2034: React.FC = () => {
               Discover →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
             <div className="text-4xl mb-3">🌌</div>
             <h3 className="text-xl font-bold text-white mb-2">Interdimensional Computing</h3>
@@ -207,7 +194,6 @@ const UltimateContentBanner2034: React.FC = () => {
             </a>
           </div>
         </div>
-        
         <div className="text-center">
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a href="/pages/UltimateTechBreakthrough2034" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -223,7 +209,10 @@ const UltimateContentBanner2034: React.FC = () => {
         </div>
       </div>
     </div>
+=======
+>>>>>>> origin/new-content-merge-1758000738
   );
 };
+
 
 export default UltimateContentBanner2034;

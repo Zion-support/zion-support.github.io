@@ -1,6 +1,5 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 3001,
     title: "AI 2026: Production RAG Playbook",
     excerpt: "Low-latency, eval‑gated retrieval that ships to prod with confidence.",
@@ -89,7 +88,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/ai-2026-agent-incident-response-runbook.jpg",
     slug: "ai-2026-agent-incident-response-runbook"
-=======
     id: 69,
     title: "Quantum Consciousness AI: The Next Frontier of Artificial Intelligence",
     excerpt: "Discover how quantum computing is revolutionizing AI consciousness, creating systems that can process thoughts across multiple dimensions simultaneously.",
@@ -466,7 +464,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
     id: 34,
     title: "Quantum Computing Breakthrough: Practical Applications in 2026",
     excerpt: "How quantum computing is moving from research labs to real-world business applications.",
@@ -943,7 +940,6 @@ export const blogPosts = [
     category: "Biotech AI",
     tags: ["Biotech AI", "Personalized Medicine", "Healthcare Innovation", "Gene Therapy"],
     featured: true,
-<<<<<<< HEAD
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
   },
@@ -1183,11 +1179,8 @@ export const blogPosts = [
     readTime: "13 min read",
     category: "Temporal AI",
     tags: ["Temporal AI", "Time Computing", "Causality", "Temporal Optimization"],
-=======
-<<<<<<< HEAD
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
-=======
     imageUrl: "/images/blog/next-gen-innovation-hub-2025.jpg",
     slug: "next-gen-innovation-hub-future-born"
   },
@@ -1356,7 +1349,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
-<<<<<<< HEAD
   },
   {
     id: 51,
@@ -1462,8 +1454,6 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/edge-ai-iot-fusion-2026.jpg",
     slug: "edge-ai-iot-perfect-fusion-smart-everything"
-=======
-=======
     imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
     slug: "consciousness-transfer-technology-digital-immortality"
   },
@@ -1604,4 +1594,3 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;

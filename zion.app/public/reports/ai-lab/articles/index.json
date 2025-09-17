@@ -1,5 +1,47 @@
 [
   {
+    "title": "Agent Guardrail Testing Playbook: Red Teams, Fuzzers, and Chaos",
+    "url": "/reports/ai-lab/articles/new-agent-guardrail-testing-playbook-1758151200000.md",
+    "createdAt": "2025-09-17T07:00:00.000Z",
+    "tags": ["safety", "testing", "governance"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Resilient Agent Deployments: Canary + Eval Gates + Auto-Rollback",
+    "url": "/reports/ai-lab/articles/new-resilient-agent-deployments-1758149400000.md",
+    "createdAt": "2025-09-17T06:30:00.000Z",
+    "tags": ["reliability", "evals", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Evidence‑Led Ops Scorecards for Production Agents",
+    "url": "/reports/ai-lab/articles/new-ai-lab-content-evidence-led-ops-scorecards-1758145200000.md",
+    "createdAt": "2025-09-17T05:00:00.000Z",
+    "tags": ["governance", "evals", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Agent Safety Drills: Evidence‑First Exercises for Production Readiness",
+    "url": "/reports/ai-lab/articles/new-ai-lab-content-agent-safety-drills-1758148800000.md",
+    "createdAt": "2025-09-17T06:00:00.000Z",
+    "tags": ["safety", "incidents", "reliability"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Agent Guardrails for Synthetic Data: Patterns for Safe Generation",
+    "url": "/reports/ai-lab/articles/new-agent-guardrails-for-synthetic-data-1758139800000.md",
+    "createdAt": "2025-09-17T03:30:00.000Z",
+    "tags": ["guardrails", "data", "production"],
+    "source": "Zion AI Lab"
+  },
+  {
+    "title": "Real-Time Agent SLO Blueprints: Latency, Quality, Cost",
+    "url": "/reports/ai-lab/articles/real-time-agent-slo-blueprints-1758141600000.md",
+    "createdAt": "2025-09-17T04:00:00.000Z",
+    "tags": ["slo", "reliability", "operations"],
+    "source": "Zion AI Lab"
+  },
+  {
     "title": "Runtime Policy Enforcement for Production Agents",
     "url": "/reports/ai-lab/articles/new-agent-runtime-policy-enforcement-1758138000000.md",
     "createdAt": "2025-09-17T02:40:00.000Z",

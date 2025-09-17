@@ -1,32 +1,12 @@
 import React from 'react';
-;import {Link} from 'react-router-dom';
-export const ErrorPage = (props: any) => {}
-  return()
-    <div className="min-h-screen bg-zion-blue flex items-center justify-center">""""
-<div className="text-center text-white">""""
-        <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>""""
-        <h2 className="text-2xl font-semibold mb-4">{title}</h2>""""
-        <p className="text-lg mb-8 max-w-md mx-auto">{message}</p>""""
-        <div className="space-x-4">"""""
-          <Button asChild >"""""
-            <Link to="/">Go Home</Link>"""""
-          </Button>""""
-          <Button variant="outline" asChild" >""""
-            <Link to="/contact">Contact Support</Link>
-          </Button>
-        </div>
-  )
-}
-};""
-export default ErrorPage"";"
-export default ErrorPage"";""
-""""";"
-  )};"""
-export default ErrorPage"";"""
-""""""""
-  )};"
-export default ErrorPage""
-""""'""
 
-</div>
-</div>
+const ErrorPage.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ErrorPage.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ErrorPage.js;

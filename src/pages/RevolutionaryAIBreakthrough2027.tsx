@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { ArrowRight, Brain, Cpu, Zap, Globe, Shield, Rocket, Star, Infinity } from 'lucide-react';
 
 const RevolutionaryAIBreakthrough2027: React.FC = () => {

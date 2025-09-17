@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react';
-
-const RevolutionaryContentCarousel2027: React.FC = () => {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const getCurrentItems = () => {
     switch (activeTab) {
       case 'blog':
@@ -16,7 +13,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
         return REVOLUTIONARY_BLOG_POSTS_2027;
     }
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const slides = [
     {
       id: 1,
@@ -77,7 +73,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"],
       cta: "Deploy AI Agents",
       link: "/pages/SyntheticIntelligence2027"
-
   const contentItems = [
     {
       id: 1,
@@ -134,41 +129,33 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
     }
   ];
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, slides.length]);
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -182,7 +169,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             Experience the future with our groundbreaking 2027 technology innovations
           </p>
         </div>
-
         {/* Main Carousel */}
         <div className="relative">
           {/* Slide Container */}
@@ -204,7 +190,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                   {/* Background Pattern */}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
-                  
                   <div className="relative z-10 h-full flex items-center">
                     <div className="container mx-auto px-8">
                       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -218,7 +203,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                             <h4 className="text-2xl font-semibold text-cyan-300">{slide.subtitle}</h4>
                             <p className="text-xl opacity-90 leading-relaxed">{slide.description}</p>
                           </div>
-                          
                           {/* Features */}
                           <div className="grid grid-cols-2 gap-4">
                             {slide.features.map((feature, featureIndex) => (
@@ -227,7 +211,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                               </div>
                             ))}
                           </div>
-                          
                           {/* CTA Button */}
                           <div className="pt-4">
                             <a
@@ -238,7 +221,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                             </a>
                           </div>
                         </div>
-                        
                         {/* Visual Element */}
                         <div className="relative">
                           <div className={`w-full h-80 bg-gradient-to-br ${slide.color} rounded-2xl flex items-center justify-center text-8xl animate-pulse`}>
@@ -251,29 +233,23 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, [contentItems.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 mb-12 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Technology Showcase 2027</h2>
           <p className="text-xl text-gray-300">Discover the most advanced technologies that are reshaping reality itself</p>
         </div>
-
         <div className="relative">
           {/* Main Carousel */}
           <div className="overflow-hidden rounded-xl">
@@ -293,7 +269,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-center space-x-4 mt-8">
             <button
@@ -304,7 +279,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
             <button
               onClick={nextSlide}
               className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -314,7 +288,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Slide Indicators */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -330,7 +303,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Auto-play Toggle */}
         <div className="text-center mt-8">
           <button
@@ -346,7 +318,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -356,7 +327,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -366,7 +336,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-6">
           {contentItems.map((_, index) => (
@@ -379,7 +348,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             />
           ))}
         </div>
-
         {/* View All Button */}
         <div className="text-center mt-8">
           <Link
@@ -391,10 +359,25 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
+=======
+import React from "react";
+
+const RevolutionaryContentCarousel2027 = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryContentCarousel2027</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 export default RevolutionaryContentCarousel2027;
