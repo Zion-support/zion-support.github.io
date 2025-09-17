@@ -1,140 +1,202 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const EnhancedAdvertisingBanner: React.FC = () => {
-  const [currentAd, setCurrentAd] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentBanner, setCurrentBanner] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const advertisements = [
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const banners = [
     {
       id: 1,
-      title: "🚀 BREAKTHROUGH: Next-Gen AI 2026",
-      subtitle: "Experience Revolutionary Synthetic Intelligence",
-      description: "Discover the future of AI with our groundbreaking synthetic intelligence systems that transcend traditional computing",
+      title: "🚀 Revolutionary AI Breakthrough 2026",
+      subtitle: "Experience the Future of Technology",
+      description: "Discover our latest AI innovations that are transforming industries and reshaping human potential",
       cta: "Explore Now",
-      link: "/pages/SyntheticIntelligence2026",
       gradient: "from-purple-600 via-pink-600 to-red-600",
-      icon: "🧠"
+      icon: "🧠",
+      features: ["Quantum AI", "Neural Interfaces", "Conscious Computing"]
     },
     {
       id: 2,
-      title: "⚡ QUANTUM REVOLUTION 2026",
-      subtitle: "Advanced Quantum Computing Solutions",
-      description: "Unlock exponential processing power with 1000+ qubit quantum processors and quantum supremacy technology",
+      title: "⚛️ Quantum Computing Revolution",
+      subtitle: "Unlock Exponential Processing Power",
+      description: "Harness the power of quantum computing for unprecedented speed and problem-solving capabilities",
       cta: "Go Quantum",
-      link: "/pages/AdvancedQuantumComputing2026",
       gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      icon: "⚛️"
+      icon: "⚡",
+      features: ["1000x Speed", "Complex Simulation", "Secure Encryption"]
     },
     {
       id: 3,
-      title: "🧬 NEURAL INTERFACE 2026",
-      subtitle: "Direct Brain-Computer Communication",
-      description: "Bridge mind and machine with revolutionary neural interface technology for thought-controlled devices",
-      cta: "Connect Mind & Machine",
-      link: "/pages/NeuralInterfaceRevolution2026",
+      title: "🧬 Neural Interface Technology",
+      subtitle: "Bridge Mind and Machine",
+      description: "Direct neural interfaces that enable thought-based control and enhanced cognitive abilities",
+      cta: "Connect Now",
       gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      icon: "🧬"
+      icon: "🧬",
+      features: ["Thought Control", "Memory Enhancement", "Neural Networking"]
     },
     {
       id: 4,
-      title: "🌟 ULTIMATE TECH SHOWCASE",
-      subtitle: "Interactive Technology Experience",
-      description: "Experience the most advanced technologies with live demos, real-time simulations, and hands-on experiments",
-      cta: "Explore Ultimate Showcase",
-      link: "/pages/UltimateTechShowcase2026",
+      title: "🌟 Ultimate Tech Showcase 2026",
+      subtitle: "The Future is Here",
+      description: "Comprehensive showcase of next-generation technologies that will define the next decade",
+      cta: "Explore All",
       gradient: "from-orange-600 via-red-600 to-pink-600",
-      icon: "🌟"
+      icon: "🌟",
+      features: ["AI Revolution", "Quantum Leap", "Neural Breakthrough"]
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentAd((prev) => (prev + 1) % advertisements.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [advertisements.length]);
-
   if (!isVisible) return null;
-
-  const currentAdvertisement = advertisements[currentAd];
 
   return (
     <div className="relative overflow-hidden">
-      {/* Main Advertising Banner */}
-      <div className={`bg-gradient-to-r ${currentAdvertisement.gradient} text-white py-4 px-6 relative`}>
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="text-4xl animate-bounce">{currentAdvertisement.icon}</div>
-              <div>
-                <div className="flex items-center space-x-2 mb-1">
-                  <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-bold animate-pulse">
-                    NEW
-                  </span>
-                  <h3 className="text-xl font-bold">{currentAdvertisement.title}</h3>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentBanner}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className={`bg-gradient-to-r ${banners[currentBanner].gradient} rounded-2xl p-8 text-white relative overflow-hidden`}
+        >
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24"></div>
+          
+          <div className="relative z-10">
+            <div className="flex flex-col lg:flex-row items-center justify-between">
+              {/* Content */}
+              <div className="flex-1 mb-8 lg:mb-0">
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold mb-4 animate-pulse"
+                >
+                  ✨ BREAKTHROUGH TECHNOLOGY • JANUARY 2026
+                </motion.div>
+                
+                <motion.h2
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="text-4xl lg:text-5xl font-bold mb-4 leading-tight"
+                >
+                  {banners[currentBanner].title}
+                </motion.h2>
+                
+                <motion.h3
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="text-2xl lg:text-3xl font-semibold mb-4 text-white/90"
+                >
+                  {banners[currentBanner].subtitle}
+                </motion.h3>
+                
+                <motion.p
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  className="text-xl text-white/80 mb-6 max-w-2xl"
+                >
+                  {banners[currentBanner].description}
+                </motion.p>
+
+                {/* Features */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.0 }}
+                  className="flex flex-wrap gap-3 mb-8"
+                >
+                  {banners[currentBanner].features.map((feature, index) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold border border-white/30"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </motion.div>
+
+                {/* CTA Buttons */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.2 }}
+                  className="flex flex-col sm:flex-row gap-4"
+                >
+                  <button className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg hover:scale-105">
+                    {banners[currentBanner].cta} →
+                  </button>
+                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+                    Learn More
+                  </button>
+                </motion.div>
+              </div>
+
+              {/* Visual Element */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="flex-shrink-0 ml-8"
+              >
+                <div className="relative">
+                  <div className="text-9xl mb-4 text-center animate-bounce">
+                    {banners[currentBanner].icon}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-full blur-xl"></div>
                 </div>
-                <p className="text-sm opacity-90">{currentAdvertisement.subtitle}</p>
-              </div>
+              </motion.div>
             </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="hidden md:block text-right">
-                <p className="text-sm opacity-90 max-w-md">{currentAdvertisement.description}</p>
-              </div>
-              <a
-                href={currentAdvertisement.link}
-                className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap"
-              >
-                {currentAdvertisement.cta} →
-              </a>
+          </div>
+
+          {/* Progress Indicator */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            {banners.map((_, index) => (
               <button
-                onClick={() => setIsVisible(false)}
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                ✕
-              </button>
-            </div>
+                key={index}
+                onClick={() => setCurrentBanner(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentBanner
+                    ? 'bg-white scale-125'
+                    : 'bg-white/50 hover:bg-white/75'
+                }`}
+              />
+            ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </AnimatePresence>
 
-      {/* Progress Indicators */}
-      <div className="flex justify-center space-x-2 py-2 bg-gray-50">
-        {advertisements.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentAd(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentAd ? 'bg-blue-600' : 'bg-gray-300'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Additional Promotional Banners */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-center space-x-8 text-sm">
-            <div className="flex items-center space-x-2">
-              <span className="text-lg">⚡</span>
-              <span>Lightning Fast Processing</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-lg">🎯</span>
-              <span>99.9% Accuracy</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-lg">🚀</span>
-              <span>Cutting-Edge Innovation</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-lg">🌟</span>
-              <span>Revolutionary Technology</span>
-            </div>
-          </div>
-        </div>
+      {/* Floating Action Buttons */}
+      <div className="absolute top-4 right-4 flex flex-col space-y-2">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
+        >
+          ⏸️
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
+        >
+          ⏭️
+        </motion.button>
       </div>
     </div>
   );

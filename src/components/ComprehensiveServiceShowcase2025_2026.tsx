@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Cpu
@@ -303,10 +302,7 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
   return (
     <div className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
+      <div
         className="text-center py-16 px-4"
       >
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -317,24 +313,18 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
           Comprehensive AI solutions designed to transform your business and accelerate growth in the digital age.
         </p>
-      </motion.div>
+      </div>
 
       {/* Service Navigation */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8delay: 0.2 }}
+      <div
         className="container mx-auto px-4 mb-12"
       >
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {services.map((serviceindex) => {
             const Icon = service.icon;
             return (
-              <motion.button
+              <button
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                 onClick={() => setActiveService(service.id)}
                 onMouseEnter={() => setHoveredService(service.id)}
                 onMouseLeave={() => setHoveredService(null)}
@@ -357,18 +347,15 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
                     <div className="text-xs opacity-80">{service.subtitle}</div>
                   </div>
                 </div>
-              </motion.button>
+              </button>
             );
           })}
         </div>
-      </motion.div>
+      </div>
 
       {/* Service Details */}
-      <motion.div
+      <div
         key={activeService}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
         className="container mx-auto px-4 mb-16"
       >
         <div className="grid lg:grid-cols-2 gap-12">
@@ -388,16 +375,13 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {currentService.features.map((featureindex) => (
-                  <motion.div
+                  <div
                     key={feature}
-                    initial={{ opacity: 0x: -20 }}
-                    animate={{ opacity: 1x: 0 }}
-                    transition={{ duration: 0.6delay: index * 0.1 }}
                     className="flex items-center gap-3 p-4 bg-slate-800/50 rounded-xl border border-white/20"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{feature}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -407,16 +391,13 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
               <div className="space-y-4">
                 {currentService.benefits.map((benefitindex) => (
-                  <motion.div
+                  <div
                     key={benefit}
-                    initial={{ opacity: 0x: -20 }}
-                    animate={{ opacity: 1x: 0 }}
-                    transition={{ duration: 0.6delay: 0.2 + index * 0.1 }}
                     className="flex items-center gap-3"
                   >
                     <Star className="w-5 h-5 text-yellow-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -446,11 +427,8 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Success Stories</h3>
               <div className="space-y-6">
                 {currentService.caseStudies.map((studyindex) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6delay: index * 0.2 }}
                     className="p-4 bg-slate-700/50 rounded-xl"
                   >
                     <div className="flex items-center justify-between mb-2">
@@ -458,19 +436,16 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
                       <span className="text-green-400 font-bold">{study.result}</span>
                     </div>
                     <p className="text-gray-300 text-sm">{study.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* CTA Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8delay: 0.6 }}
+      <div
         className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border-t border-white/20 py-16"
       >
         <div className="container mx-auto px-4 text-center">
@@ -482,25 +457,21 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
             >
               <Rocket className="w-6 h-6" />
               Start Your AI Journey
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </button>
+            <button
               className="border-2 border-white text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <Users className="w-6 h-6" />
               Schedule Consultation
-            </motion.button>
+            </button>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

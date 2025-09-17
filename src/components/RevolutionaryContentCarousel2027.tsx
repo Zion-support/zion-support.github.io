@@ -1,42 +1,17 @@
-import React, { useState, useEffect } from 'react';
-
-const RevolutionaryContentCarousel2027: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f420
->>>>>>> cursor/create-and-deploy-new-content-9601
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
+  const [activeTab, setActiveTab] = useState<'blog' | 'case-studies' | 'services'>('blog');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const getCurrentItems = () => {
+    switch (activeTab) {
+      case 'blog':
+        return REVOLUTIONARY_BLOG_POSTS_2027;
+      case 'case-studies':
+        return REVOLUTIONARY_CASE_STUDIES_2027;
+      case 'services':
+        return REVOLUTIONARY_SERVICES_2027;
+      default:
+        return REVOLUTIONARY_BLOG_POSTS_2027;
+    }
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const slides = [
     {
       id: 1,
@@ -97,7 +72,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"],
       cta: "Deploy AI Agents",
       link: "/pages/SyntheticIntelligence2027"
-
   const contentItems = [
     {
       id: 1,
@@ -152,111 +126,35 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
       link: "/pages/FutureTechBreakthrough2026",
       gradient: "from-rose-600 to-pink-600",
       features: ["Future Mapping", "Probability Control", "Timeline Manipulation"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-07de
->>>>>>> cursor/create-and-deploy-new-content-f420
->>>>>>> cursor/create-and-deploy-new-content-9601
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
     }
   ];
-
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f420
->>>>>>> cursor/create-and-deploy-new-content-9601
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, slides.length]);
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -270,7 +168,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             Experience the future with our groundbreaking 2027 technology innovations
           </p>
         </div>
-
         {/* Main Carousel */}
         <div className="relative">
           {/* Slide Container */}
@@ -292,7 +189,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                   {/* Background Pattern */}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20"></div>
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
-                  
                   <div className="relative z-10 h-full flex items-center">
                     <div className="container mx-auto px-8">
                       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -306,7 +202,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                             <h4 className="text-2xl font-semibold text-cyan-300">{slide.subtitle}</h4>
                             <p className="text-xl opacity-90 leading-relaxed">{slide.description}</p>
                           </div>
-                          
                           {/* Features */}
                           <div className="grid grid-cols-2 gap-4">
                             {slide.features.map((feature, featureIndex) => (
@@ -315,7 +210,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                               </div>
                             ))}
                           </div>
-                          
                           {/* CTA Button */}
                           <div className="pt-4">
                             <a
@@ -326,7 +220,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                             </a>
                           </div>
                         </div>
-                        
                         {/* Visual Element */}
                         <div className="relative">
                           <div className={`w-full h-80 bg-gradient-to-br ${slide.color} rounded-2xl flex items-center justify-center text-8xl animate-pulse`}>
@@ -339,29 +232,23 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, [contentItems.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 mb-12 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Technology Showcase 2027</h2>
           <p className="text-xl text-gray-300">Discover the most advanced technologies that are reshaping reality itself</p>
         </div>
-
         <div className="relative">
           {/* Main Carousel */}
           <div className="overflow-hidden rounded-xl">
@@ -369,116 +256,18 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {contentItems.map((item) => (
-                <div key={item.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${item.gradient} rounded-xl p-8 text-white`}>
-                    <div className="grid md:grid-cols-2 gap-8 items-center">
-                      <div>
-                        <div className="text-8xl mb-6 text-center md:text-left">{item.image}</div>
-                        <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
-                        <p className="text-xl opacity-90 mb-6">{item.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {item.features.map((feature, index) => (
-                            <span key={index} className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold">
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                        <a 
-                          href={item.link}
-                          className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg"
-                        >
-                          Explore {item.title} →
-                        </a>
-                      </div>
-                      <div className="hidden md:block">
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                          <h4 className="text-xl font-bold mb-4">Key Features</h4>
-                          <ul className="space-y-2">
-                            {item.features.map((feature, index) => (
-                              <li key={index} className="flex items-center space-x-2">
-                                <span className="w-2 h-2 bg-white rounded-full"></span>
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-07de
->>>>>>> cursor/create-and-deploy-new-content-f420
->>>>>>> cursor/create-and-deploy-new-content-9601
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
+              {currentItems.map((item, index) => (
+                <div key={item.id} className="w-1/3 flex-shrink-0 px-4">
+                  {renderItem(item)}
+                </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-f420
->>>>>>> cursor/create-and-deploy-new-content-9601
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
               </div>
             ))}
           </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-center space-x-4 mt-8">
             <button
@@ -489,7 +278,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
             <button
               onClick={nextSlide}
               className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -499,7 +287,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Slide Indicators */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -515,7 +302,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Auto-play Toggle */}
         <div className="text-center mt-8">
           <button
@@ -531,7 +317,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -541,7 +326,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -551,7 +335,6 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-6">
           {contentItems.map((_, index) => (
@@ -564,60 +347,15 @@ const RevolutionaryContentCarousel2027: React.FC = () => {
             />
           ))}
         </div>
+        {/* View All Button */}
+        <div className="text-center mt-8">
+          <Link
+            to="/revolutionary-content-2027"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+          >
+            View All 2027 Content
+            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
 
-        {/* Quick Access Grid */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {contentItems.map((item, index) => (
-            <a
-              key={item.id}
-              href={item.link}
-              className={`bg-gradient-to-br ${item.gradient} rounded-lg p-4 text-white text-center hover:scale-105 transition-all duration-300 ${
-                index === currentSlide ? 'ring-2 ring-white' : ''
-              }`}
-            >
-              <div className="text-3xl mb-2">{item.image}</div>
-              <div className="text-sm font-semibold">{item.title.split(' ')[0]}</div>
-            </a>
-          ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
-=======
->>>>>>> main
-=======
->>>>>>> cursor/create-and-deploy-new-content-3a26
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-1912
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-07de
->>>>>>> cursor/create-and-deploy-new-content-f420
->>>>>>> cursor/create-and-deploy-new-content-9601
-=======
->>>>>>> cursor/create-and-deploy-new-content-5863
->>>>>>> cursor/create-and-deploy-new-content-01e2
-=======
->>>>>>> cursor/create-and-deploy-new-content-36f9
->>>>>>> main
->>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-f995
-=======
->>>>>>> cursor/create-and-deploy-new-content-1c02
->>>>>>> cursor/create-and-deploy-new-content-3a26
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default RevolutionaryContentCarousel2027;

@@ -1,67 +1,12 @@
+import React from 'react';
 
-import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
-
-interface LazyLoadProps {
-  height?: string | number;
-  width?: string | number;
-  children: ReactNode;
-  loadingComponent?: ReactNode;
-  className?: string;
-}
-
-export function LazyLoad({
-  height = "200px",
-  width = "100%",
-  children,
-  loadingComponent,
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-
-  useEffect(() => {
-    if (isVisible) {
-      // Simulate loading delay (remove in production)
-      const timer = setTimeout(() => {
-        setIsLoaded(true);
-      className="rounded-md bg-zion-blue-light/20"
-    />
-  );
-
+const lazy-load: React.FC = () => {
   return (
-    <div
-      ref={containerRef}
-        isLoaded ? "opacity-100" : "opacity-0",
-        className
-      )}
-    >
-      {isVisible ? (
-        <>
-          {!isLoaded && (loadingComponent || defaultLoadingComponent)}
-          {isLoaded && children}
-        </>
-      ) : (
-        loadingComponent || defaultLoadingComponent
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">lazy-load</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default lazy-load;

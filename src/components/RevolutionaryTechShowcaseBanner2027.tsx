@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryTechShowcaseBanner2027: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);

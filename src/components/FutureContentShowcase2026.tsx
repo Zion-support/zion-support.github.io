@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const FutureContentShowcase2026: React.FC = () => {
   const [activeCard, setActiveCard] = useState(0);

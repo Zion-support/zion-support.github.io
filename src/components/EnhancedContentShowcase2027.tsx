@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const EnhancedContentShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState('breakthroughs');

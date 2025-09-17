@@ -7,7 +7,7 @@ const LatestContentPromotion: React.FC = () => {
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-            🚀 NEW CONTENT RELEASE • JANUARY 2026
+            🚀 NEW CONTENT RELEASE • SEPTEMBER 2025
           </div>
           <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary AI 2026 Content Now Available</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
@@ -28,7 +28,7 @@ const LatestContentPromotion: React.FC = () => {
               <li>• Implementation framework</li>
               <li>• ROI optimization strategies</li>
             </ul>
-            <a href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
+            <a href="/blog/ai-2026-real-time-retrieval-architectures" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Read Full Guide →
             </a>
           </div>
@@ -45,7 +45,7 @@ const LatestContentPromotion: React.FC = () => {
               <li>• 400% faster innovation</li>
               <li>• Industry leadership achieved</li>
             </ul>
-            <a href="/content/case-studies/fortune-500-ai-transformation-800-roi-success" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+            <a href="/blog/ai-2026-edge-agents-production-guide" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
               View Case Study →
             </a>
           </div>
@@ -62,7 +62,7 @@ const LatestContentPromotion: React.FC = () => {
               <li>• Change management</li>
               <li>• ROI optimization</li>
             </ul>
-            <a href="/content/resources/ai-2026-implementation-guide" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+            <a href="/blog/ai-2026-production-evidence-hub-blueprint" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Download Guide →
             </a>
           </div>
@@ -70,13 +70,13 @@ const LatestContentPromotion: React.FC = () => {
         
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
-            <a href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <a href="/blog/ai-2026-real-time-retrieval-architectures" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               📚 Read Ultimate Guide
             </a>
-            <a href="/content/case-studies/fortune-500-ai-transformation-800-roi-success" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <a href="/blog/ai-2026-edge-agents-production-guide" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               🏆 View Success Story
             </a>
-            <a href="/content/resources/ai-2026-implementation-guide" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+            <a href="/blog/ai-2026-production-evidence-hub-blueprint" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               🛠️ Get Implementation Guide
             </a>
           </div>

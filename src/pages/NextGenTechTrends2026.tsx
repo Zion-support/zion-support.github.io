@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const NextGenTechTrends2026: React.FC = () => {
   const trends = [
@@ -110,10 +109,7 @@ const NextGenTechTrends2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center text-white"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -134,23 +130,20 @@ const NextGenTechTrends2026: React.FC = () => {
                 Download Report
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Trends Grid */}
       <div className="container mx-auto px-4 py-20">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
+        <div
           whileInView="visible"
           viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {trends.map((trend) => (
-            <motion.div
+            <div
               key={trend.id}
-              variants={itemVariants}
               className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105"
             >
               <div className="text-6xl mb-6 text-center">{trend.icon}</div>
@@ -177,18 +170,16 @@ const NextGenTechTrends2026: React.FC = () => {
               <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Learn More →
               </button>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-purple-900 to-pink-900 py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-white"
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
@@ -204,7 +195,7 @@ const NextGenTechTrends2026: React.FC = () => {
                 Contact Our Experts
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

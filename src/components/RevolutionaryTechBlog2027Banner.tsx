@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryTechBlog2027Banner: React.FC = () => {
   const featuredPosts = [

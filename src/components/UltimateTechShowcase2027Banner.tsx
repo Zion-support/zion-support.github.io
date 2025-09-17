@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateTechShowcase2027Banner: React.FC = () => {
   return (

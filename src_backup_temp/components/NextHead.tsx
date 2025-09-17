@@ -1,83 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
-interface NextHeadProps {;
-  title?: "string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  canonical?: string;
-  noIndex?: boolean;
-  children?: React.ReactNode;
-"}
-;
-const "NextHead": "React.FC<NextHeadProps> = ({;
-  title = 'Zion Tech Group - Leading Technology Solutions'",;
-  description = 'Zion Tech Group provides cutting-edge technology solutions, AI-powered platforms, and enterprise consulting services with global reach.',;
-  keywords = 'technology, AI, software, consulting, enterprise, solutions, innovation',;
-  ogImage = '/og-image.jpg',;
-  ogUrl,;
-  canonical,;
-  noIndex = false,;
-  children;
-}) => {;
-  const fullTitle = title.includes('Zion Tech Group') ? title : "`${title"} | Zion Tech Group`;
-  const fullOgUrl = ogUrl || canonical || '"https": "//ziontechgroup.com';
-;
-}
-const "NextHead": Reac t.FC<NextHeadProps> = ({
-  title = 'Zion Tech Group - Leading Technology Solutions',
-  description = 'Zion Tech Group provides cutting-edge technology solutions, AI-powered platforms, and enterprise consulting services with global reach.',
-  keywords = 'technology, AI, software, consulting, enterprise, solutions, innovation',
-  ogImage = '/og-image.jpg',
-  ogUrl,
-  canonical,
-  noIndex = false,
-  children';
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title}; | Zion Tech Group`;
-  const fullOgUrl = ogUrl || canonical || '"https": //ziontechgroup.com';
-  return (;
-    <Head>;
-      <title>{fullTitle"}</title>;
-      <meta name="description" content={description}   />;
-      <meta name="keywords" content={keywords}   />;
-      {/* Open Graph */}
-      <meta property=""og": titl e" content={fullTitle}   />;
-      <meta property=""og": descriptio n" content={description}   />;
-      <meta property=""og": imag e" content={ogImage}   />;
-      <meta property=""og": ur l" content={fullOgUrl}   />;
-      <meta property=""og": typ e" content="website"   />;
-      <meta property="og: site_nam e" content="Zion Tech Group"   />;
-      {/* Twitter */}
-      <meta name=""twitter": car d" content="summary_large_image"   />;
-      <meta name="twitter: titl e" content={fullTitle}   />;
-      <meta name=""twitter": descriptio n" content={description}   />;
-      <meta name=""twitter": imag e" content={ogImage}   />;
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical}   />}
-;
-      {/* Robots */}
-      {noIndex && <meta name="robots" content="noindex, nofollow"   />}
-;
-      {/* Viewport */}
-      <meta name="viewport" content="width=device-width, initial-scale=1"   />;
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico"   />;
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"   />;
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"   />;
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"   />;
-      {/* Additional meta tags */}
-      <meta name="theme-color" content="#2563eb"   />;
-      <meta name="msapplication-TileColor" content="#2563eb"   />;
-      {/* Custom children */}
-      {children}
-    </Head>;
+
+const NextHead: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NextHead</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
-;
+
 export default NextHead;
-</NextHeadProps>;
-export default NextHead;';
-</NextHeadProps>;';';
-import React from 'react'; import Head from 'next/head'; ; interface NextHeadProps {; title?: string; description?: string; keywords?: string; ogImage?: string; ogUrl?: string; canonical?: string; noIndex?: boolean; children?: React.ReactNode} const NextHead: Reac t.FC<NextHeadProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions',description = 'Zion Tech Group provides cutting-edge technology solutions,AI-powered platforms,and enterprise consulting services with global reach.',keywords = 'technology,AI,software,consulting,enterprise,solutions,innovation',ogImage = '/og-image.jpg',ogUrl,canonical,noIndex = false,children'}) => { const fullTitle = title.includes('Zion Tech Group') ? title : `${title}; | Zion Tech Group`; const fullOgUrl = ogUrl || canonical || 'https: ; return (; <Head>; <title>{fullTitle}</title>; <meta name="description" content={description} />; <meta name="keywords" content={keywords} />; {} <meta property="og: titl e" content={fullTitle} />; <meta property="og: descriptio n" content={description} />; <meta property="og: imag e" content={ogImage} />; <meta property="og: ur l" content={fullOgUrl} />; <meta property="og: typ e" content="website" />; <meta property="og: site_nam e" content="Zion Tech Group" />; {} <meta name="twitter: car d" content="summary_large_image" />; <meta name="twitter: titl e" content={fullTitle} />; <meta name="twitter: descriptio n" content={description} />; <meta name="twitter: imag e" content={ogImage} />; {} {canonical && <link rel="canonical" href={canonical} />} ; {} {noIndex && <meta name="robots" content="noindex,nofollow" />} ; {} <meta name="viewport" content="width=device-width,initial-scale=1" />; {} <link rel="icon" href="/favicon.ico" />; <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />; <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />; <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />; {} <meta name="theme-color" content="#2563eb" />; <meta name="msapplication-TileColor" content="#2563eb" />; {} {children} </Head>; )}; export default NextHead;'; </NextHeadProps>;';';

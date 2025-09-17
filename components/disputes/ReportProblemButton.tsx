@@ -1,0 +1,10 @@
+import Link from 'next/link';
+
+  return (
+    <Link href={`/disputes/new?${query.toString()}`}>
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">
+        Report a Problem
+      </a>
+    </Link>
+  );
+}

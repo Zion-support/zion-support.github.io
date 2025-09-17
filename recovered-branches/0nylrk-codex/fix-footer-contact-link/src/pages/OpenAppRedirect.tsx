@@ -1,100 +1,19 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  
-  useEffect(() => {
-    const attemptAppOpen = async () => {
-      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      const isAndroid = /Android/.test(navigator.userAgent);
-      } else {
-        // Not on mobile, redirect to mobile launch page
-        setStatus('failed');
-        setTimeout(() => {
-
-
-
-
-
-
-      }
-      
-
-      // Clear timeout if page visibility changes (meaning app opened successfully)
-      document.addEventListener("visibilitychange", () => {
-        if (document.hidden && timeout) {
-          clearTimeout(timeout)
-        }
-      })
-
-    }
-    attemptAppOpen()
-  }, [navigate]);
-    },
-    
-    attemptAppOpen()
-  }, [navigate]),
-  
-
+const OpenAppRedirect: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-zion-blue">
-      <SEO
-        title="Opening Zion App"
-          navigate(fallbackUrl);
-        }, 1500);
-      }
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>OpenAppRedirect | Zion Tech Group</title>
+        <meta name="description" content="OpenAppRedirect - Revolutionary technology solutions" />
+      </Helmet>
       
-      // Clear timeout if page visibility changes (meaning app opened successfully)
-      document.addEventListener("visibilitychange", () => {
-        if (document.hidden && timeout) {
-          clearTimeout(timeout);
-        }
-      });
-    };
-    
-    attemptAppOpen();
-  }, [navigate]);
-  
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-zion-blue">
-      <SEO 
-        title="Opening Zion App" 
-        description="Redirecting to the Zion AI Marketplace mobile app"
-        noindex={true}
-      />
-      <div className="text-center p-8">
-        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-        {status === 'redirecting' && (
-          <>
-            <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>
-            <p className="text-gray-300">
-              If nothing happens, download the app first.
-            </p>
-          </>
-        )}
-        {status === 'timeout' && (
-          <>
-            <h1 className="text-2xl font-bold mb-2">App Not Installed</h1>
-            <p className="text-gray-300 mb-6">
-              We're redirecting you to download the Zion app.
-            </p>
-          </>
-        )}
-        {status === 'failed' && (
-          <>
-            <h1 className="text-2xl font-bold mb-2">Opening App Failed</h1>
-            <p className="text-gray-300 mb-6">
-              We're taking you to our mobile app page where you can download the app.
-            </p>
-            <Link to="/mobile-launch">
-              <Button className="bg-zion-cyan hover:bg-zion-cyan/80">
-                Go to Mobile App Page
-              </Button>
-            </Link>
-          </>
-        )}
-
-
-
-export default OpenAppRedirect;
-
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">OpenAppRedirect</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
   );

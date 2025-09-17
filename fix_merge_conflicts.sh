@@ -1,22 +1,22 @@
 #!/bin/bash
 
-# Script to fix merge conflicts in the codebase
-echo "Fixing merge conflicts..."
+# Script to fix merge conflicts in source files
+echo "Fixing merge conflicts in source files..."
 
-# Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" src/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js" | cut -d: -f1 | sort -u)
-
-for file in $files_with_conflicts; do
-    echo "Fixing merge conflicts in: $file"
+# Find all files with merge conflicts in src directory
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
+    echo "Fixing conflicts in: $file"
     
-    # Create a backup
-    cp "$file" "$file.backup.$(date +%s)"
+    # Remove merge conflict markers and keep the more complete version
+    # This is a simple approach - keep everything between ======= and >>>>>>> 
+    # and remove the HEAD section
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i 's/>>>>>>>.*//' "$file"
     
-    # Use sed to remove merge conflict markers and keep the first version
-    sed -i '/<<<<<<< HEAD/,/=======/!d; /=======/d; />>>>>>> /d' "$file"
-    
-    # Remove any remaining conflict markers
-    sed -i '/<<<<<<< HEAD/d; /=======/d; />>>>>>> /d' "$file"
+    # Clean up any remaining empty lines
+    sed -i '/^[[:space:]]*$/d' "$file"
+  fi
 done
 
 echo "Merge conflicts fixed!"

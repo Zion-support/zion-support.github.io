@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Sparkles
@@ -310,14 +309,10 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <AnimatePresence>
+        <div>
           {sortedContent.map((itemindex) => (
-            <motion.div
+            <div
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 group"
             >
               <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">
@@ -415,16 +410,14 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </AnimatePresence>
+        </div>
       </div>
 
       {/* No Results */}
       {sortedContent.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+        <div
           className="text-center py-12"
         >
           <div className="w-24 h-24 mx-auto mb-4 bg-gray-800 rounded-full flex items-center justify-center">
@@ -432,7 +425,7 @@ const RevolutionaryContentRecommendationEngine2026 = () => {
           </div>
           <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
           <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-        </motion.div>
+        </div>
       )}
     </div>
   );
