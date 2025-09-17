@@ -2,7 +2,7 @@
   # Netlify installs dependencies automatically; run only the build step
   command = "npm run build:netlify"
   publish = "dist"
-  # Explicitly specify this is a Vite static site, not a framework
+  # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
 
 [build.environment]
