@@ -191,4 +191,4 @@
   force = true
 
 ## Next.js plugin removed; this is a Vite SPA build
-# build-ok: 2025-09-17T14:25:00Z
+# build-ok: 2025-09-17T14:45:00Z (no-op to retrigger Netlify)
