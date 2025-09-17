@@ -118,7 +118,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
           <a href="/pages/RevolutionaryTechShowcase2036" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience All Technologies →
           </a>
-        </div>
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -133,13 +132,6 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               <p className="text-sm opacity-90">{ad.subtitle}</p>
             </a>
           ))}
-        <div className="text-center mt-8">
-          <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg mr-4">
-            Explore All Technologies
-          </button>
-          <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
-            Learn More
-          </button>
         </div>
       </div>
     </div>

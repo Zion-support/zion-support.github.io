@@ -149,8 +149,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
     return () => clearInterval(interval);
   }, [technologies.length]);
 
-  const currentTech = technologies[activeTech];
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white mb-12">
       <div className="text-center mb-12">
@@ -197,37 +195,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Experience our revolutionary technologies through interactive demonstrations and real-time data
-          </p>
-        </div>
-
-        {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 border border-white/20">
-            {Object.entries(technologies).map(([key, tech]) => (
-              <button
-                key={tech.id}
-                onClick={() => {
-                  setIsAnimating(true);
-                  setTimeout(() => {
-                    setActiveTech(index);
-                    setIsAnimating(false);
-                  }, 300);
-                }}
-                className={`w-full p-6 rounded-2xl border-2 transition-all duration-300 hover:scale-105 ${
-                  activeTech === index
-                    ? `bg-gradient-to-r ${tech.bgColor} ${tech.borderColor} border-2`
-                    : 'bg-gray-800/50 border-gray-600 hover:border-gray-400'
-  return (
-    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
-            🚀 INTERACTIVE SHOWCASE • JANUARY 2034
           </div>
           <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase 2034
@@ -359,170 +326,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     🔬 Deep Dive
                   </button>
                 </div>
-          <div className="space-y-8">
-            {/* Interactive Demo Area */}
-            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <h4 className="text-xl font-semibold mb-6">Interactive Demo</h4>
-              <div className="bg-black/50 rounded-lg p-6 mb-6">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="ml-4 text-sm text-gray-400">Live Demo Terminal</span>
-                </div>
-                <div className="font-mono text-sm space-y-2">
-                  <div className="text-green-400">$ {technologies[activeTab as keyof typeof technologies].title.toLowerCase().replace(/\s+/g, '-')} --demo</div>
-                  <div className="text-blue-400">Initializing {technologies[activeTab as keyof typeof technologies].title}...</div>
-                  <div className="text-yellow-400">Loading quantum processors...</div>
-                  <div className="text-purple-400">Establishing neural connections...</div>
-                  <div className="text-green-400">✓ System ready for interaction</div>
-                  <div className="text-white">> Ready to demonstrate capabilities</div>
-                </div>
-              </div>
-              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Start Interactive Demo
-              </button>
-            </div>
-
-            {/* Real-time Data Visualization */}
-            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
-              <h4 className="text-xl font-semibold mb-6">Real-time Performance</h4>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Processing Power</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-32 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full animate-pulse" style={{width: '95%'}}></div>
-                    </div>
-                    <span className="text-sm font-semibold">95%</span>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Neural Activity</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-32 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full animate-pulse" style={{width: '87%'}}></div>
-                    </div>
-                    <span className="text-sm font-semibold">87%</span>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">Quantum Coherence</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-32 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full animate-pulse" style={{width: '92%'}}></div>
-                    </div>
-                    <span className="text-sm font-semibold">92%</span>
-                  </div>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm">System Stability</span>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-32 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full animate-pulse" style={{width: '99%'}}></div>
-                    </div>
-                    <span className="text-sm font-semibold">99%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Interactive Demo Section */}
-        <div className="mt-20 text-center">
-          <h3 className="text-4xl font-bold mb-8">Try Our Interactive Demo</h3>
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🎮</div>
-                <h4 className="text-2xl font-bold mb-4">Interactive Simulations</h4>
-                <p className="text-gray-300 mb-6">Experience our technologies through hands-on interactive demos</p>
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-                  Start Demo
-                </button>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">🔬</div>
-                <h4 className="text-2xl font-bold mb-4">Real-time Analysis</h4>
-                <p className="text-gray-300 mb-6">Watch our AI systems work in real-time with live data processing</p>
-                <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-                  View Analysis
-                </button>
-              </div>
-              <div className="text-center">
-                <div className="text-6xl mb-4">🌐</div>
-                <h4 className="text-2xl font-bold mb-4">Multi-dimensional View</h4>
-                <p className="text-gray-300 mb-6">Explore our technologies across multiple dimensions and realities</p>
-                <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-                  Enter Dimensions
-                </button>
-              </div>
-            </div>
-        {/* Live Demo Section */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16">
-          <h3 className="text-4xl font-bold text-center mb-12">🎮 Live Interactive Demos</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="text-6xl mb-4">🎯</div>
-              <h4 className="text-2xl font-bold mb-4">AI Consciousness Test</h4>
-              <p className="text-lg opacity-90 mb-6">Test the consciousness level of our AI systems through interactive conversations</p>
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
-                Start Test →
-              </button>
-            </div>
-            <div className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="text-6xl mb-4">⚡</div>
-              <h4 className="text-2xl font-bold mb-4">Quantum Simulator</h4>
-              <p className="text-lg opacity-90 mb-6">Experience quantum computing through our interactive quantum simulator</p>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
-                Launch Simulator →
-              </button>
-            </div>
-            <div className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="text-6xl mb-4">🌌</div>
-              <h4 className="text-2xl font-bold mb-4">Dimension Explorer</h4>
-              <p className="text-lg opacity-90 mb-6">Explore different dimensions and realities through our portal interface</p>
-              <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
-                Enter Portal →
-              </button>
-            </div>
-            <div className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer">
-              <div className="text-6xl mb-4">🧬</div>
-              <h4 className="text-2xl font-bold mb-4">Neural Interface</h4>
-              <p className="text-lg opacity-90 mb-6">Connect your mind directly to our AI systems through neural interface</p>
-              <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300">
-                Connect Mind →
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-3xl p-16">
-          <h3 className="text-5xl font-bold mb-8">Experience the Future Today</h3>
-          <p className="text-2xl opacity-90 mb-12 max-w-4xl mx-auto">
-            Don't just read about the future - experience it firsthand with our revolutionary technology showcase. 
-            Book your interactive demo session today.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <a href="/pages/UltimateTechBreakthrough2034" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              Book Demo Session →
-            </a>
-            <a href="/pages/ComprehensiveServices2034" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              View All Services →
-            </a>
-            <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              Contact Us →
-            </a>
-          <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6">
-            <h4 className="text-xl font-bold mb-4">Live Demo</h4>
-            <div className="bg-black/50 rounded-lg p-4 mb-4">
-              <div className="text-green-400 text-sm font-mono">
-                {activeTab === 'ai' && '🧠 AI Consciousness: ONLINE\n⚡ Quantum Processing: ACTIVE\n🎨 Creative Synthesis: RUNNING'}
-                {activeTab === 'space' && '🚀 Warp Drive: CHARGED\n🌍 Terraforming: READY\n🛸 Exploration: ACTIVE'}
-                {activeTab === 'quantum' && '⚛️ Quantum State: SUPERPOSITION\n🧠 Consciousness: LINKED\n🌊 Wave Function: STABLE'}
-                {activeTab === 'universal' && '🌟 Multi-Dim: CONNECTED\n⚡ Energy: HARNESSED\n🔗 Reality: ENGINEERED'}
               </div>
             </div>
             <a 
@@ -534,19 +337,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
             >
               Experience {technologies[activeTab as keyof typeof technologies].title} →
             </a>
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of organizations already using our revolutionary technologies to transform their operations and achieve unprecedented success.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Journey
-            </button>
-            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
-              Schedule Demo
-            </button>
             <a href="/pages/ComprehensiveServices2034" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
               View All Services →
             </a>

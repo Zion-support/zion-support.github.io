@@ -8,6 +8,34 @@ const InteractiveTechShowcase2027: React.FC = () => {
 
   const techCategories = [
     {
+      id: 'ai-revolution',
+      title: 'Next-Gen AI Revolution 2027',
+      description: 'Conscious AI systems with quantum-enhanced processing',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      borderColor: 'border-purple-400',
+      bgColor: 'from-purple-600/30 to-pink-600/30',
+      link: '/pages/NextGenAIRevolution2027'
+    },
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution 2027',
+      description: '1000+ qubit quantum computers achieving true supremacy',
+      icon: '⚡',
+      color: 'from-cyan-600 to-blue-600',
+      borderColor: 'border-cyan-400',
+      bgColor: 'from-cyan-600/30 to-blue-600/30',
+      link: '/pages/QuantumComputingRevolution2027'
+    },
+    {
+      id: 'neural-interface',
+      title: 'Neural Interface Revolution 2027',
+      description: 'Direct brain-computer communication and thought control',
+      icon: '🧬',
+      color: 'from-emerald-600 to-teal-600',
+      borderColor: 'border-emerald-400',
+      bgColor: 'from-emerald-600/30 to-teal-600/30',
+      link: '/pages/NeuralInterfaceRevolution2027'
       id: 0,
       title: "Conscious AI Systems",
       icon: "🧠",
@@ -21,7 +49,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       color: "from-purple-600 to-pink-600",
       link: "/pages/RevolutionaryTechTrends2027"
-      id: 0,
     },
     {
       id: 1,
@@ -234,10 +261,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
           {techCategories[activeTab].technologies.map((tech, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
-                isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
-              className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
-                isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
               className={`bg-gradient-to-br ${techCategories[activeTab].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${techCategories[activeTab].borderColor} hover:scale-105 transition-all duration-300 cursor-pointer ${
                 isAnimating ? 'opacity-0 transform translate-y-10' : 'opacity-100 transform translate-y-0'
               }`}

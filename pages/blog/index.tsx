@@ -1,3 +1,62 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { NextPage } from 'next';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+
+const BlogIndex: NextPage = () => {
+  const blogPosts = [
+    {
+      title: "AI-Powered Marketplaces: The Future of Digital Commerce",
+      slug: "ai-powered-marketplaces-the-future-of-digital-commerce-chat",
+      excerpt: "Explore how AI is revolutionizing digital marketplaces with personalized experiences, intelligent recommendations, and automated operations.",
+      date: "December 15, 2024",
+      readTime: "8 min read",
+      tags: ["AI", "E-commerce", "Digital Transformation"],
+      featured: true
+    },
+    {
+      title: "Blockchain Technology in Modern Business Solutions",
+      slug: "blockchain-technology-in-modern-business-solutions-chat",
+      excerpt: "Discover how blockchain technology is transforming modern business operations with secure transactions, smart contracts, and decentralized solutions.",
+      date: "December 14, 2024",
+      readTime: "10 min read",
+      tags: ["Blockchain", "Business Solutions", "Digital Innovation"]
+    },
+    {
+      title: "5G Technology and Its Impact on IoT",
+      slug: "5g-technology-and-its-impact-on-iot-chat",
+      excerpt: "Understanding how 5G networks are revolutionizing IoT applications and enabling new possibilities for connected devices.",
+      date: "December 13, 2024",
+      readTime: "7 min read",
+      tags: ["5G", "IoT", "Connectivity"]
+    },
+    {
+      title: "Cybersecurity Trends for 2024 and Beyond",
+      slug: "cybersecurity-trends-for-2024-and-beyond-chat",
+      excerpt: "Stay ahead of emerging cybersecurity threats and learn about the latest trends and technologies protecting digital assets.",
+      date: "December 12, 2024",
+      readTime: "9 min read",
+      tags: ["Cybersecurity", "Security", "Technology Trends"]
+    },
+    {
+      title: "Cloud-Native Architecture Best Practices",
+      slug: "cloud-native-architecture-best-practices-chat",
+      excerpt: "Learn the essential best practices for building scalable, resilient cloud-native applications that can adapt to changing demands.",
+      date: "December 11, 2024",
+      readTime: "6 min read",
+      tags: ["Cloud Computing", "Architecture", "Best Practices"]
+    },
+    {
+      title: "Machine Learning Applications in Enterprise Software",
+      slug: "machine-learning-applications-in-enterprise-software-chat",
+      excerpt: "Discover how machine learning is being integrated into enterprise software to drive efficiency and innovation.",
+      date: "December 10, 2024",
+      readTime: "8 min read",
+      tags: ["Machine Learning", "Enterprise", "Software Development"]
+    }
+  ];
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
@@ -44,76 +103,6 @@ const posts = [
   ,{ slug: 'ai-2026-operationalizing-ai-safety-controls', title: 'Operationalizing AI Safety Controls (2026)', excerpt: 'Turn policies into runtime controls wired to SLOs and incidents.' }
 ]
 
-// Fresh posts (Sept 16, 2025)
-posts.unshift(
-  { slug: 'ai-2026-production-agent-postmortems-playbook', title: 'Production Agent Postmortems — Playbook (2026)', excerpt: 'Blameless, evidence‑driven postmortems that improve safety and speed.' },
-  { slug: 'ai-2026-agent-release-scorecards', title: 'Agent Release Scorecards — Evidence‑First (2026)', excerpt: 'Executive scorecards wired to SLOs, evals, incidents, and budgets.' },
-  { slug: 'ai-2026-agent-rollback-patterns', title: 'Agent Rollback Patterns — Safe Recovery (2026)', excerpt: 'Staged deploys, eval gates, evidence bundles, and containment for safe recovery.' }
-)
-
-// Newly added posts (Sept 2025)
-posts.unshift(
-  { slug: 'ai-2026-governed-agent-operations-checklist', title: 'Governed Agent Operations Checklist (2026)', excerpt: 'A pragmatic, audit-ready checklist for safe, observable agent ops.' },
-  { slug: 'ai-2026-low-latency-agent-observability', title: 'Low‑Latency Agent Observability (2026)', excerpt: 'Telemetry patterns that preserve sub‑200ms perceived latency.' },
-  { slug: 'ai-2026-agent-safety-evidence-integration', title: 'Agent Safety Evidence Integration (2026)', excerpt: 'Unify evals, incidents, and policy events for audits.' },
-  { slug: 'ai-2026-cost-aware-real-time-routing', title: 'Cost‑Aware Real‑Time Routing (2026)', excerpt: 'Balance latency, quality, and spend with policy‑driven routing.' },
-  { slug: 'ai-2026-safe-autonomy-in-production', title: 'AI 2026: Safe Autonomy in Production', excerpt: 'Deploy autonomous agents with guardrails, SLOs, and audit-ready evidence.' },
-  { slug: 'ai-2026-evidence-hub-in-practice', title: 'AI 2026: Evidence Hub in Practice', excerpt: 'Centralize evals, traces, policy events, and incidents to ship faster, safer.' },
-  { slug: 'ai-2026-agent-safety-playbook', title: 'AI 2026: Agent Safety Playbook', excerpt: 'Actionable patterns to ship safe, governed, and trustworthy agentic systems.' },
-  { slug: 'ai-2026-agent-slo-blueprint', title: 'Agent Platform SLO Blueprint (2026)', excerpt: 'A concise SLO set for safety, quality, reliability, and cost.' },
-  { slug: 'ai-2026-governed-tool-use-case-studies', title: 'Governed Tool Use — Case Studies (2026)', excerpt: 'Risk‑tiered adapters, approvals, and runtime checks in practice.' }
-)
-// New article (Sept 2025) — Enterprise Agent Risk Mitigation
-posts.unshift(
-  { slug: 'ai-2026-enterprise-agent-risk-mitigation', title: 'Enterprise Agent Risk Mitigation (2026)', excerpt: 'Practical patterns to reduce safety, reliability, cost, and compliance risks.' }
-)
-
-// Newly added posts (Sept 16, 2025)
-posts.unshift(
-  { slug: 'ai-2026-runtime-evidence-bundles', title: 'Runtime Evidence Bundles (2026)', excerpt: 'Bundle evals, traces, policy events, and incidents per release.' },
-  { slug: 'ai-2026-eval-scorecards-in-practice', title: 'Evaluation Scorecards in Practice (2026)', excerpt: 'Executive‑friendly scorecards wired to gates and incidents.' },
-  { slug: 'ai-2026-governed-tool-approvals', title: 'Governed Tool Approvals (2026)', excerpt: 'Risk‑tiered adapters, budgets, and JIT approvals for safe actions.' }
-)
-
-// New content (Sept 16, 2025) — Added in this change
-posts.unshift(
-  { slug: 'ai-2026-observable-slo-driven-routing', title: 'Observable, SLO‑Driven Routing (2026)', excerpt: 'Route by latency, quality, cost, and safety with live scorecards.' },
-  { slug: 'ai-2026-governed-runtime-rollback-strategies', title: 'Governed Runtime Rollback Strategies (2026)', excerpt: 'Safe, auditable rollbacks using eval gates and evidence bundles.' },
-  { slug: 'ai-2026-cost-aware-observability-blueprint', title: 'AI 2026: Cost‑Aware Observability Blueprint', excerpt: 'Unify traces, evals, and spend to keep systems fast and on budget.' },
-  { slug: 'ai-2026-enterprise-architecture-modernization', title: 'Enterprise Architecture Modernization (2026)', excerpt: 'Evolve to AI-ready, event-driven platforms with SLOs and guardrails.' },
-  { slug: 'ai-2026-zero-trust-agents', title: 'Zero‑Trust Agents (2026)', excerpt: 'Risk‑tiered tools, scoped creds, and JIT approvals for safe autonomy.' },
-  { slug: 'ai-2026-exec-guide-to-agent-slo-scorecards', title: 'AI 2026: Executive Guide to Agent SLO Scorecards', excerpt: 'Translate traces and evals into executive dashboards that drive decisions.' },
-  { slug: 'ai-2026-agent-platform-readiness-checklist', title: 'AI 2026: Agent Platform Readiness Checklist', excerpt: 'A pragmatic checklist to ship safe, observable, and cost‑aware agent platforms.' }
-)
-
-// New articles (Sept 2025) — Real-time Evals, Edge Agents, Trustworthy Routing
-posts.unshift(
-  { slug: 'ai-2026-real-time-evals-inference-guardrails', title: 'Real-Time Evals & Inference Guardrails (2026)', excerpt: 'Enforce quality, safety, and budget at inference time with runtime signals.' },
-  { slug: 'ai-2026-edge-agents-production-guide', title: 'Edge Agents in Production — 2026 Guide', excerpt: 'Design, secure, and observe low-latency agents at the edge.' },
-  { slug: 'ai-2026-trustworthy-model-routing-starter', title: 'Trustworthy Model Routing — Starter Kit (2026)', excerpt: 'Budget-, latency-, and quality-aware routing with safety gates.' }
-)
-
-// New articles (Sept 16, 2025) — Additional
-posts.unshift(
-  { slug: 'ai-2026-real-time-retrieval-architectures', title: 'AI 2026: Real-Time Retrieval Architectures', excerpt: 'Low-latency retrieval with hybrid indexes, caches, and routing.' },
-  { slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
-)
-
-// New content (Sept 16, 2025) — Fresh posts
-posts.unshift(
-  { slug: 'ai-2026-governed-agent-slo-dashboards', title: 'Governed Agent SLO Dashboards (2026)', excerpt: 'Executive‑ready, governed SLOs wired to evals and incidents.' },
-  { slug: 'ai-2026-safe-agent-actions-blueprint', title: 'Safe Agent Actions — Blueprint (2026)', excerpt: 'Risk tiers, scoped creds, approvals, and runtime checks for tool use.' },
-  { slug: 'ai-2026-agent-release-health-scorecards', title: 'Agent Release Health Scorecards (2026)', excerpt: 'Traces, evals, policy events, and incidents as release health signals.' },
-  { slug: 'ai-2026-secure-multi-agent-ops-blueprint', title: 'Secure Multi‑Agent Operations (2026)', excerpt: 'Operate multi‑agent systems safely with risk tiers and runtime controls.' }
-)
-
-// New content (Sept 16, 2025) — Additional (Autonomous Change Mgmt, Red Teaming, Compliance Evidence)
-posts.unshift(
-  { slug: 'ai-2026-autonomous-change-management-blueprint', title: 'Autonomous Change Management — Blueprint (2026)', excerpt: 'Design safe, auditable, and low‑risk change pipelines for agentic systems.' },
-  { slug: 'ai-2026-agent-red-teaming-playbook', title: 'Agent Red Teaming — Practical Playbook (2026)', excerpt: 'Continuously probe agents for jailbreaks, unsafe tool use, and policy gaps.' },
-  { slug: 'ai-2026-compliance-evidence-automation', title: 'Compliance Evidence Automation (2026)', excerpt: 'Automate policy checks and evidence capture to accelerate audits and approvals.' }
-)
-
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground intensity="medium">
@@ -131,6 +120,45 @@ export default function BlogIndexPage() {
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">Practical playbooks and deep dives on AI, cloud, and modern software delivery.</p>
         </div>
 
+        {/* Featured Post */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-8">Featured Article</h2>
+          <div className="bg-black/40 border border-gray-700/50 rounded-lg overflow-hidden backdrop-blur-sm">
+            <div className="md:flex">
+              <div className="md:w-1/2">
+                <div className="h-64 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-2xl font-bold mb-2">AI Revolution</h3>
+                    <p className="text-blue-100">Transforming Digital Commerce</p>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/2 p-8">
+                <div className="flex items-center mb-4">
+                  <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm font-semibold border border-red-500/30">
+                    Featured
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {blogPosts[0].title}
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  {blogPosts[0].excerpt}
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-sm text-gray-400">
+                    <span>{blogPosts[0].date}</span>
+                    <span className="mx-2">•</span>
+                    <span>{blogPosts[0].readTime}</span>
+                  </div>
+                  <Link 
+                    href={`/blog/${blogPosts[0].slug}`}
+                    className="bg-cyan-500 text-black px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 transition-colors"
+                  >
+                    Read More
+                  </Link>
+                </div>
+              </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* New: Agentic Evidence Graphs */}
           <div key="ai-2026-agentic-evidence-graphs" className="p-6 bg-black/40 border border-gray-700/50 hover:border-cyan-500/40 transition-colors rounded-lg backdrop-blur-sm">
@@ -162,6 +190,6 @@ export default function BlogIndexPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  )
-}
+  );
+};
 

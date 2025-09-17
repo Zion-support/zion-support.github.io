@@ -4,8 +4,8 @@ import { ArrowRight, Star, Zap } from 'lucide-react';
 
 const UltimateContentBanner2036: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -73,6 +73,34 @@ const UltimateContentBanner2036: React.FC = () => {
               Experience Breakthrough →
             </a>
           </div>
+          
+          <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">⚡</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Quantum Consciousness</h3>
+            <p className="text-purple-100 mb-4 text-center text-sm">
+              Direct neural interface with quantum computing systems that amplifies human consciousness and enables multi-dimensional thinking.
+            </p>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                <span className="text-purple-200 text-xs">Quantum Neural Networks</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                <span className="text-purple-200 text-xs">Consciousness Amplification</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                <span className="text-purple-200 text-xs">Multi-dimensional Thinking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="text-center mt-8">
+          <a href="/pages/UltimateTechBreakthrough2036" className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            Experience Ultimate Breakthrough →
+          </a>
         </div>
       </div>
     </motion.div>

@@ -73,22 +73,10 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
       ],
       icon: "🌌",
       color: "from-emerald-600 to-teal-600"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
     }
   };
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
@@ -129,9 +117,6 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
                   activeDemo === index
                     ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
                     : 'bg-white/10 text-cyan-200 hover:bg-white/20'
-                  activeTab === key
-                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
-                    : 'text-gray-300 hover:text-white hover:bg-white/20'
                 }`}
               >
                 {tech.icon} {tech.title}

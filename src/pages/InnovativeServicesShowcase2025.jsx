@@ -9,7 +9,7 @@ const InnovativeServicesShowcase2025 = () => {
             Innovative Services Showcase 2025
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive range of cutting-edge technology services
+            Revolutionary technology solutions and insights for the future
           </p>
         </div>
         

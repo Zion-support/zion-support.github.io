@@ -2,8 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const NextGenInnovationHub2029: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredInnovation, setHoveredInnovation] = useState<number | null>(null);
 
@@ -129,7 +127,6 @@ const NextGenInnovationHub2029: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <Helmet>
@@ -137,16 +134,11 @@ const NextGenInnovationHub2029: React.FC = () => {
         <meta name="description" content="Discover and explore the most revolutionary technologies shaping humanity's future in 2029" />
       </Helmet>
       
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2029
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2029
           </h1>
@@ -243,7 +235,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               <div className="text-4xl font-bold text-emerald-400 mb-2">{innovations.length}</div>
               <div className="text-lg opacity-90 mb-2">Active Innovations</div>
               <div className="text-sm opacity-75">In development and testing</div>
-=======
           <h1 className="text-6xl font-bold mb-6">🚀 Next-Gen Innovation Hub 2029</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover and explore the most revolutionary technologies shaping humanity's future
@@ -274,9 +265,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               <span className="px-2 py-1 bg-cyan-500 text-white rounded-full text-xs font-semibold">
                 99.9% Success
               </span>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
             </div>
           </div>
           
@@ -287,18 +275,12 @@ const NextGenInnovationHub2029: React.FC = () => {
               Direct brain-computer interfaces
             </p>
             <div className="text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-90 mb-2">Success Rate</div>
-              <div className="text-sm opacity-75">Proven technology reliability</div>
-=======
               <span className="px-2 py-1 bg-purple-500 text-white rounded-full text-xs font-semibold">
                 Infinite Possibilities
               </span>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-lg opacity-90 mb-2">Success Rate</div>
+              <div className="text-sm opacity-75">Proven technology reliability</div>
             </div>
           </div>
           
@@ -309,8 +291,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               Computing across dimensions
             </p>
             <div className="text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
               <div className="text-lg opacity-90 mb-2">Possibilities</div>
               <div className="text-sm opacity-75">Unlimited potential applications</div>
@@ -319,7 +299,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
               <div className="text-lg opacity-90 mb-2">Development</div>
               <div className="text-sm opacity-75">Continuous innovation cycle</div>
-=======
               <span className="px-2 py-1 bg-orange-500 text-white rounded-full text-xs font-semibold">
                 Revolutionary
               </span>
@@ -391,41 +370,26 @@ const NextGenInnovationHub2029: React.FC = () => {
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-sm opacity-80">Innovation</div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
             </div>
           </div>
         </div>
 
         <div className="text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join our innovation hub and be part of creating the most revolutionary technologies in human history
-=======
           <h2 className="text-3xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
             Be part of the team that's building the future of humanity
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+          <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join our innovation hub and be part of creating the most revolutionary technologies in human history
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Our Team
             </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
-              Submit Your Innovation
-=======
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Explore Innovations
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
+              Submit Your Innovation
             </button>
           </div>
         </div>

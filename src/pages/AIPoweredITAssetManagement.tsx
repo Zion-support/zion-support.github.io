@@ -1,21 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Monitor, 
-  Shield, 
-  TrendingUp, 
-  Database, 
-  Network, 
-  ArrowRight, 
-  Cpu, 
-  HardDrive, 
-  Users, 
-  Globe, 
-  Code, 
-  BarChart3, 
-  Zap, 
-  Target, 
-  Rocket
 import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

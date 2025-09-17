@@ -43,8 +43,6 @@ const RevolutionaryContentBanner2032: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <divdiv
       className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
     >
@@ -146,7 +144,6 @@ const RevolutionaryContentBanner2032: React.FC = () => {
             🚀 Explore 2032 Revolution →
           </divbutton>
         </divdiv>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white mb-12">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -249,9 +246,6 @@ const RevolutionaryContentBanner2032: React.FC = () => {
             </Link>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
       </div>
     </divdiv>
   );

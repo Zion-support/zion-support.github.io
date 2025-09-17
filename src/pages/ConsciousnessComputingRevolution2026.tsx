@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ConsciousnessComputingRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">

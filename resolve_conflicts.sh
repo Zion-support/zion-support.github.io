@@ -1,19 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-echo "Resolving merge conflicts by accepting our changes..."
-
-# Find all files with merge conflicts
-find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Resolving conflicts in: $file"
-    # Accept our changes (HEAD)
-    git checkout --ours "$file"
-  fi
-done
-
-echo "All merge conflicts resolved!"
-=======
 echo "Resolving merge conflicts..."
 
 # Function to resolve merge conflicts in a file
@@ -39,4 +25,33 @@ find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | whil
 done
 
 echo "Merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-d9c7
+# Script to resolve merge conflicts by choosing HEAD version
+# This will remove all merge conflict markers and keep only the HEAD version
+
+echo "Resolving merge conflicts..."
+
+# Find all files with merge conflicts (excluding node_modules)
+find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | \
+grep -v node_modules | \
+while read file; do
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Resolving conflicts in: $file"
+        
+        # Create a temporary file
+        temp_file=$(mktemp)
+        
+        # Process the file to resolve conflicts
+        awk '
+        /^<<<<<<< HEAD/ { in_head = 1; next }
+        /^=======/ { in_head = 0; in_other = 1; next }
+        /^>>>>>>>/ { in_other = 0; next }
+        in_head { print; next }
+        !in_other { print }
+        ' "$file" > "$temp_file"
+        
+        # Replace the original file
+        mv "$temp_file" "$file"
+    fi
+done
+
+echo "Merge conflicts resolved!"

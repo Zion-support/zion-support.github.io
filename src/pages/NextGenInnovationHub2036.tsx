@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const NextGenInnovationHub2036: React.FC = () => {
   return (
-  return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -397,10 +396,6 @@ const NextGenInnovationHub2036: React.FC = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Submit Your Innovation
-            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
-              Start Your Innovation
-            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400/10 transition-colors font-semibold text-lg">
-              Start Your Innovation
             </button>
           </div>
         </div>

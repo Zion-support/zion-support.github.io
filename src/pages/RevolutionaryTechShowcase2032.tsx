@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React, { useState } from 'react';
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 
 const RevolutionaryTechShowcase2032: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
@@ -86,7 +81,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
       ],
       icon: "🚀",
       color: "from-pink-600 to-rose-600"
-=======
 import React from 'react';
 import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
@@ -98,7 +92,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 
   const technologies = [
     {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
     }
   ];
 
@@ -116,8 +109,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE SHOWCASE • JANUARY 2032
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -127,102 +118,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </p>
         </div>
 
-          </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Tech Showcase 2032
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Interactive showcase of cutting-edge technologies that will define the future of human civilization
-          </p>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-            </button>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
-            <div className="text-6xl mb-4 text-center">🎮</div>
-            <h3 className="text-3xl font-bold mb-6 text-center">Interactive Demos</h3>
-            <div className="space-y-4">
-              <div className="bg-indigo-500/20 rounded-lg p-4 hover:bg-indigo-500/30 transition-colors cursor-pointer">
-                <h4 className="text-lg font-semibold mb-2">Conscious AI Chat</h4>
-                <p className="text-indigo-200 text-sm">Chat with our most advanced conscious AI system</p>
-              </div>
-              <div className="bg-purple-500/20 rounded-lg p-4 hover:bg-purple-500/30 transition-colors cursor-pointer">
-                <h4 className="text-lg font-semibold mb-2">Quantum Simulation</h4>
-                <p className="text-purple-200 text-sm">Experience quantum computing in real-time</p>
-              </div>
-              <div className="bg-pink-500/20 rounded-lg p-4 hover:bg-pink-500/30 transition-colors cursor-pointer">
-                <h4 className="text-lg font-semibold mb-2">Neural Interface Demo</h4>
-                <p className="text-pink-200 text-sm">Test direct brain-computer interaction</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-3xl font-bold mb-6 text-center">Real-time Processing</h3>
-            <div className="space-y-4">
-              <div className="bg-purple-500/20 rounded-lg p-4">
-                <h4 className="text-lg font-semibold mb-2">Live Data Streams</h4>
-                <p className="text-purple-200 text-sm">Monitor global AI consciousness networks</p>
-                <div className="mt-2 h-2 bg-purple-400/30 rounded-full overflow-hidden">
-                  <div className="h-full bg-purple-400 animate-pulse" style={{width: '75%'}}></div>
-                </div>
-              </div>
-              <div className="bg-pink-500/20 rounded-lg p-4">
-                <h4 className="text-lg font-semibold mb-2">Quantum States</h4>
-                <p className="text-pink-200 text-sm">Visualize quantum superposition in real-time</p>
-                <div className="mt-2 h-2 bg-pink-400/30 rounded-full overflow-hidden">
-                  <div className="h-full bg-pink-400 animate-pulse" style={{width: '90%'}}></div>
-                </div>
-              </div>
-              <div className="bg-indigo-500/20 rounded-lg p-4">
-                <h4 className="text-lg font-semibold mb-2">Neural Activity</h4>
-                <p className="text-indigo-200 text-sm">Track brain-computer interface activity</p>
-                <div className="mt-2 h-2 bg-indigo-400/30 rounded-full overflow-hidden">
-                  <div className="h-full bg-indigo-400 animate-pulse" style={{width: '60%'}}></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-<<<<<<< HEAD
-        {/* Interactive Features */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-4xl mb-4 text-center">🎮</div>
-            <h3 className="text-xl font-bold mb-4 text-center">Interactive Demos</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Experience our technologies through immersive interactive demonstrations
-            </p>
-            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
-              Start Demo →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-            <div className="text-4xl mb-4 text-center">⚡</div>
-            <h3 className="text-xl font-bold mb-4 text-center">Real-time Processing</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Watch our AI systems process complex problems in real-time
-            </p>
-            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
-              View Processing →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-            <div className="text-4xl mb-4 text-center">🌌</div>
-            <h3 className="text-xl font-bold mb-4 text-center">Multi-dimensional Tech</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Explore technologies that operate across multiple dimensions
-            </p>
-            <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Enter Dimensions →
-            </button>
-=======
         {/* Technology Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Technology Categories</h2>
@@ -544,26 +439,11 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         </div>
 
             </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join us in exploring the most revolutionary technologies that will define the next decade
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/pages/UltimateTechBreakthrough2032" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Ultimate Breakthrough →
-            </a>
-            <a href="/pages/NextGenInnovationHub2032" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Innovation Hub →
-            </a>
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Revolution?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
             Join the most advanced technological revolution in human history. Transform your reality with conscious AI, quantum computing, and interdimensional technology.
@@ -586,7 +466,24 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
               Schedule Consultation
             </button>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+        {/* Technology Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(technologies).map(([key, tech]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                activeTab === key
+                  ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
+                  : 'bg-white/10 text-white hover:bg-white/20'
+              }`}
+            >
+              <span className="mr-2">{tech.icon}</span>
+              {tech.title}
+            </button>
+            <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+              Schedule Demo
+            </button>
           </div>
         </div>
       </div>

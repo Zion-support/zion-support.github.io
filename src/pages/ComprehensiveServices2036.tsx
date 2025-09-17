@@ -1,7 +1,9 @@
 import React from 'react';
 
 const ComprehensiveServices2036: React.FC = () => {
-  const services = [
+  const [activeCategory, setActiveCategory] = useState(0);
+
+  const serviceCategories = [
     {
       id: 1,
       title: "Conscious AI Development",
@@ -163,99 +165,47 @@ const ComprehensiveServices2036: React.FC = () => {
                   View Results →
                 </button>
               </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Ultimate AI Consciousness</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Full Quantum Integration</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Unlimited Dimensional Access</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Dedicated Support Team</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Custom Development</span>
+                </li>
+              </ul>
+              <button className="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors font-semibold">
+                Contact Sales
               </button>
             </div>
-          ))}
-        </div>
-
-        {/* Success Metrics */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">📊 Service Success Metrics</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Our comprehensive services have achieved unprecedented success across all industries
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">500+</div>
-              <div className="text-lg font-semibold mb-1">Active Clients</div>
-              <div className="text-sm opacity-80">Fortune 500 companies</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">$2B+</div>
-              <div className="text-lg font-semibold mb-1">Cost Savings</div>
-              <div className="text-sm opacity-80">Total client savings</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">99.9%</div>
-              <div className="text-lg font-semibold mb-1">Success Rate</div>
-              <div className="text-sm opacity-80">Project completion</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">24/7</div>
-              <div className="text-lg font-semibold mb-1">Support</div>
-              <div className="text-sm opacity-80">Round-the-clock assistance</div>
-            </div>
           </div>
         </div>
 
-        {/* Testimonials */}
-        <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">💬 Client Testimonials</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Hear from industry leaders who have transformed their businesses with our services
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <div className="text-4xl mb-4">"</div>
-              <p className="text-lg mb-6 italic">
-                "The conscious AI development service has revolutionized our decision-making process. It's like having a genius advisor available 24/7."
-              </p>
-              <div className="font-semibold">Sarah Johnson</div>
-              <div className="text-sm opacity-80">CEO, TechCorp Global</div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <div className="text-4xl mb-4">"</div>
-              <p className="text-lg mb-6 italic">
-                "Quantum computing solutions have given us capabilities we never thought possible. The processing power is truly revolutionary."
-              </p>
-              <div className="font-semibold">Dr. Michael Chen</div>
-              <div className="text-sm opacity-80">CTO, Quantum Solutions Inc.</div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <div className="text-4xl mb-4">"</div>
-              <p className="text-lg mb-6 italic">
-                "Interdimensional technology has opened up entirely new possibilities for our research. It's beyond anything we imagined."
-              </p>
-              <div className="font-semibold">Prof. Elena Rodriguez</div>
-              <div className="text-sm opacity-80">Director, Advanced Research Lab</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-2xl opacity-90 mb-8 max-w-4xl mx-auto">
-            Join hundreds of companies that have already revolutionized their operations with our comprehensive services
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join thousands of businesses already using our revolutionary 2036 services
           </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
-              Start Your Journey
-            </button>
-            <button className="border border-purple-400 px-12 py-5 rounded-lg hover:bg-purple-500/20 transition-colors text-xl">
-              Schedule Demo
-            </button>
-            <button className="border border-pink-400 px-12 py-5 rounded-lg hover:bg-pink-500/20 transition-colors text-xl">
-              Contact Us
-            </button>
+          <div className="flex justify-center space-x-4">
+            <a href="/pages/UltimateTechBreakthrough2036" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Learn More →
+            </a>
+            <a href="/pages/RevolutionaryTechShowcase2036" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg">
+              View Showcase
+            </a>
           </div>
         </div>
       </div>
