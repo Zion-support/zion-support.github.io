@@ -205,7 +205,6 @@ const UltimateContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

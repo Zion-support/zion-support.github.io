@@ -48,6 +48,7 @@ interface ContentItem {
     roi: number;
     impact: number;
   };
+}
 const AdvancedContentShowcase2026: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [sortBy, setSortBy] = useState('trending');
@@ -461,7 +462,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -48,7 +48,6 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
       </div>
     </motion.div>
   );
-
 };
 
 

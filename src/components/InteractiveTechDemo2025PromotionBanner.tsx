@@ -51,7 +51,6 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                           {feature.text}
                         </div>
                       );
-};
                     })}
                   </div>
                   {/* Action Buttons */}

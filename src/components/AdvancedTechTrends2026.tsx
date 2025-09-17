@@ -69,7 +69,6 @@ const AdvancedTechTrends2026: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

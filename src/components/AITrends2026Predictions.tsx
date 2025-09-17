@@ -3,7 +3,7 @@ const AITrends2026Predictions: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20"></div>
+      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20"></div>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -95,7 +95,6 @@ const AITrends2026Predictions: React.FC = () => {
                 {category.title}
               </button>
             );
-};
           })}
         </div>
         {/* Predictions Grid */}

@@ -7,19 +7,18 @@ interface PerformanceMonitorProps {
 const PerformanceMonitorComponent: React.FC<PerformanceMonitorProps> = ({ 
   enabled = process.env.NODE_ENV === 'development' 
 }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isMonitoring, setIsMonitoring] = useState(true);
+  const [alerts, setAlerts] = useState<string[]>([]);
+  const observerRef = useRef<PerformanceObserver | null>(null);
   useEffect(() => {
-    if (!enabled) return;
-    const monitor = PerformanceMonitor.getInstance();
-    // Measure Web Vitals
-    measureWebVitals();
-    // Log performance report on page unload
-    const handleBeforeUnload = () => {
-      const report = monitor.getReport();
-      console.log('Performance Report:', report);
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    if (isMonitoring) {
+      startPerformanceMonitoring();
+    }
     return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
     };
   }, [enabled]);
   // This component doesn't render anything

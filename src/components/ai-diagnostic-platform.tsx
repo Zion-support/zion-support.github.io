@@ -16,6 +16,7 @@ const features = [
   'Multi-specialty coverage',
   'Mobile app integration',
   'HIPAA-compliant platform'
+];
 const pricingPlans = [
   {
     name: 'Starter',
@@ -197,3 +198,4 @@ export default function AIDiagnosticPlatform() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
   );
+}

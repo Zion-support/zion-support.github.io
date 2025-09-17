@@ -7,6 +7,7 @@ const benefits = [
   "Weekly tech insights & trends",
   "Free consultation calls",
   "Priority support & updates"
+];
 const testimonials = [
   {
     name: "Sarah Chen",
@@ -47,7 +48,7 @@ export default function NewsletterSignupForm() {
           <p className="text-green-100 text-sm">
             🎉 'You', 'll receive your first update within 24 hours with exclusive content and early access to new features!
     );
-  };
+  }
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">

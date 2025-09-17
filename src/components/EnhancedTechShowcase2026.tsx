@@ -145,7 +145,6 @@ const EnhancedTechShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

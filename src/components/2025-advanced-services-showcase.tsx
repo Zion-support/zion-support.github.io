@@ -14,10 +14,12 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+};
 const allServices = [
   ...advancedEnterpriseServices2025,
       ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices
+];
 const categories = [
   {
     id: 'all',
@@ -60,15 +62,18 @@ const categories = [
     icon: <Atom className="w-6 h-6" />,
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
-  };
+  }
+];
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
   return 'Other';
+};
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';
+};
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;

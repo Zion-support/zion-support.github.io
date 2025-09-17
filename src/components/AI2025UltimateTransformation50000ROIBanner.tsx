@@ -111,7 +111,6 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-purple-400 rounded-full opacity-20 animate-pulse delay-500"></div>
     </section>
   );
-
 };
 
 

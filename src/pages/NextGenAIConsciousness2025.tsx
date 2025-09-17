@@ -138,7 +138,6 @@ const NextGenAIConsciousness2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -302,7 +302,6 @@ const BlockchainInnovation2025: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

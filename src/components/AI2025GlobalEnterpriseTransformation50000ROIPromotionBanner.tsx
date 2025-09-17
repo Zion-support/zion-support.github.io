@@ -73,7 +73,6 @@ const AI2025GlobalEnterpriseTransformation50000ROIPromotionBanner: React.FC = ()
       {/* Bottom gradient overlay */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500"></div>
   );
-
 };
 
 

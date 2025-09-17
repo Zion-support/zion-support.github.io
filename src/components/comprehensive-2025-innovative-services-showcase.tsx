@@ -104,7 +104,6 @@ const comprehensive-2025-innovative-services-showcase: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>

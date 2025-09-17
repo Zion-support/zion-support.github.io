@@ -185,7 +185,6 @@ const AI2025RevolutionaryContentBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

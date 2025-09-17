@@ -230,7 +230,6 @@ const ContentShowcase: React.FC = () => {
             ))}
           </div>
         );
-};
       case 'case-studies':
         return (
           <div className="space-y-8">
@@ -487,6 +486,7 @@ const ContentShowcase: React.FC = () => {
       </div>
     </div>
   );
+};
 export { ContentShowcase };
 
 

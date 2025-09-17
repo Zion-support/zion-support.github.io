@@ -102,7 +102,6 @@ const AIToolsUltimateShowcase2026PromotionBanner: React.FC = () => {
                             <div className="text-xs text-gray-400">{category.count}</div>
                           </div>
                         );
-};
                       })}
                     </div>
                     {/* Active Tool */}

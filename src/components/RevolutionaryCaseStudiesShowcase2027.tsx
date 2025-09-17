@@ -175,7 +175,6 @@ const RevolutionaryCaseStudiesShowcase2027: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

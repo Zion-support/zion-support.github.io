@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState, useEffect } from 'react';
-export default Search;
-
-export default function Page(props: any) {
-,
-    { id: 'equipment', name: 'Equipment', count: 0 },
-    { id: 'companies', name: 'Companies', count: 0 },
-  ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Search: React.FC = () => {
   return (

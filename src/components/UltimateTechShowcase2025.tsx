@@ -256,7 +256,6 @@ const UltimateTechShowcase2025 = () => {
       </div>
     </div>
   );
-
 };
 
 

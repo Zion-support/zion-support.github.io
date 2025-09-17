@@ -43,7 +43,6 @@ const FuturePredictionsShowcase2025: React.FC = () => {
                 <span className="text-sm opacity-75">{yearData.title}</span>
               </button>
             );
-};
           })}
         </div>
         {/* Predictions Display */}

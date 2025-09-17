@@ -784,7 +784,6 @@ const AdvancedAISolutions2027: React.FC = () => {
       `}</style>
     </div>
   );
-
 };
 
 

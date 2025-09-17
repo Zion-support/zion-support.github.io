@@ -429,6 +429,7 @@ export default function EnhancedServicesShowcase() {
                   View Pricing
                   <DollarSign className="ml-2 w-6 h-6" />
   );
+}
 // Button component (if not imported)
 const Button = ({ 
   href, 
@@ -461,8 +462,9 @@ const Button = ({
       <a href={href} className={classes}>
         {children}
     );
-  };
+  }
   return (
     <button onClick={onClick} className={classes}>
       {children}
   );
+};

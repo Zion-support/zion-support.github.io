@@ -120,7 +120,6 @@ const AI2025BreakthroughShowcaseBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

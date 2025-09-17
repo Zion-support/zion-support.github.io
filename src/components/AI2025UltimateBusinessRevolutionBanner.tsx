@@ -164,7 +164,6 @@ const AI2025UltimateBusinessRevolutionBanner: React.FC = () => {
       <div className="absolute bottom-20 right-10 w-14 h-14 bg-pink-400 rounded-full opacity-20 animate-bounce delay-500"></div>
     </section>
   );
-
 };
 
 

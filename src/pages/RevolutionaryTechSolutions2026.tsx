@@ -266,7 +266,6 @@ const RevolutionaryTechSolutions2026: React.FC = () => {
                 {tab.title}
               </button>
             );
-};
           })}
         </div>
         {/* Tab Content */}

@@ -568,7 +568,6 @@ const UltimateTechShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

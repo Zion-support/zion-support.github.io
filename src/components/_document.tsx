@@ -13,3 +13,4 @@ const _document: React.FC = () => {
         <Main />
         <NextScript />
   )
+}

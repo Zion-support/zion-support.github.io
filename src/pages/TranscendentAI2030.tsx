@@ -151,7 +151,6 @@ const TranscendentAI2030: React.FC = () => {
       <EnhancedFooter />
     </div>
   );
-
 };
 
 

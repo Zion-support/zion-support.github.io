@@ -252,7 +252,6 @@ const NextGenTechBreakthrough2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

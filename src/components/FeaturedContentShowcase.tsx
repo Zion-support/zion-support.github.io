@@ -191,7 +191,6 @@ const FeaturedContentShowcase = () => {
       </div>
     </section>
   );
-
 };
 
 

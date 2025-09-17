@@ -101,7 +101,6 @@ const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

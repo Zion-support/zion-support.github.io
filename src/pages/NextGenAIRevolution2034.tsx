@@ -205,7 +205,6 @@ const NextGenAIRevolution2034: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

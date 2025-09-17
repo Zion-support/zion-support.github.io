@@ -93,7 +93,6 @@ const UltimateContentPromoBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

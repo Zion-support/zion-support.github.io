@@ -151,7 +151,6 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

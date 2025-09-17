@@ -116,7 +116,6 @@ const UltimateContentAdvertisingBanner2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

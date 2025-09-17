@@ -254,7 +254,6 @@ const RevolutionaryTechBlog2027: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

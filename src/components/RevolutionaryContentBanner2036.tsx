@@ -95,7 +95,6 @@ const RevolutionaryContentBanner2036: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

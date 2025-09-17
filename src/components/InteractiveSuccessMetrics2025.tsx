@@ -181,7 +181,6 @@ const InteractiveSuccessMetrics2025: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

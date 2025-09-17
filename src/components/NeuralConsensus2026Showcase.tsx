@@ -140,7 +140,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

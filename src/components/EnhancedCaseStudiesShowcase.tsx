@@ -111,7 +111,6 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

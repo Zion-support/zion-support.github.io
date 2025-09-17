@@ -84,7 +84,6 @@ const AITrendsPredictions2025: React.FC = () => {
                     </div>
                   </div>
                 );
-};
               })}
             </div>
             {/* Predictions */}

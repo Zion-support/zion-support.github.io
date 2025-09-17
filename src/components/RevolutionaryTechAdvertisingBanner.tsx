@@ -56,7 +56,6 @@ const RevolutionaryTechAdvertisingBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

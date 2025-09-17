@@ -1,5 +1,3 @@
- * Cart utility functions for managing shopping cart operations
- */
 export interface CartItem {
   id: string;
   name: string;

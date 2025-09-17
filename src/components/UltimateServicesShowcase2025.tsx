@@ -97,7 +97,8 @@ const services = [
     color: "from-purple-500 to-indigo-600",
     popular: false,
     category: "Consulting"
-  };
+  }
+];
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"];
 };
 

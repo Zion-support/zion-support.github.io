@@ -4,6 +4,7 @@ interface LeadGenerationFormProps {
   subtitle?: string;
   variant?: 'default' | 'compact' | 'modal';
   onSuccess?: (data: any) => void;
+}
 const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
   title = "Get Your Free AI Consultation",
   subtitle = "Discover how our AI solutions can transform your business",
@@ -72,8 +73,7 @@ const LeadGenerationForm: React.FC<LeadGenerationFormProps> = ({
         </div>
       </div>
     );
-};
-  };
+  }
   const containerClasses = variant === 'compact' 
     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6'
     : variant === 'modal'

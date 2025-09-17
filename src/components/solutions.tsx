@@ -203,7 +203,6 @@ const solutions: React.FC = () => {
       </section>
     </Layout>
   );
-
 };
 
 

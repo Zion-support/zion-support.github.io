@@ -49,7 +49,6 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
                     </div>
                   );
-};
                 })}
               </div>
               {/* CTA Buttons */}

@@ -46,7 +46,7 @@ export default function MobileLaunchPage() {
       setStatus('error');
       setError(err?.message || 'Something went wrong.');
     }
-  };
+  }
   return (
     <EnhancedLayout>
       <Head>
@@ -145,3 +145,4 @@ export default function MobileLaunchPage() {
           <span>•</span>
           <a href="/download"><a className="underline">Shareable link: /download</a></a>
   );
+}

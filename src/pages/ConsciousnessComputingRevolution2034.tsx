@@ -489,7 +489,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
       <Footer />
     </div>
   );
-
 };
 
 

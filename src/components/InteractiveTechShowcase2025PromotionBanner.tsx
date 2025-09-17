@@ -106,7 +106,6 @@ const InteractiveTechShowcase2025PromotionBanner: React.FC = () => {
                   <span className="text-white font-medium">{feature.text}</span>
                 </div>
               );
-};
             })}
           </div>
           {/* CTA Buttons */}

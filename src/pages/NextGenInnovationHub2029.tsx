@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const NextGenInnovationHub2029: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredInnovation, setHoveredInnovation] = useState<number | null>(null);
   const categories = [
@@ -118,13 +115,42 @@ const NextGenInnovationHub2029: React.FC = () => {
       default: return 'text-gray-400';
     }
   };
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2029
           </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🧬</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Neural Reality</h3>
+            <p className="text-purple-100 mb-4 text-center text-sm">
+              Direct brain-computer interfaces
+            </p>
+            <div className="text-center">
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🌌</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
+            <p className="text-orange-100 mb-4 text-center text-sm">
+              Computing across dimensions
+            </p>
+            <div className="text-center">
+            </div>
+          </div>
+        </div>
+        <div className="text-center">
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Join Our Team
+            </button>
+            </button>
+          </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2029
           </h1>
@@ -213,27 +239,9 @@ const NextGenInnovationHub2029: React.FC = () => {
               <div className="text-4xl font-bold text-emerald-400 mb-2">{innovations.length}</div>
               <div className="text-lg opacity-90 mb-2">Active Innovations</div>
               <div className="text-sm opacity-75">In development and testing</div>
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🧬</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Neural Reality</h3>
-            <p className="text-purple-100 mb-4 text-center text-sm">
-              Direct brain-computer interfaces
-            </p>
-            <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
               <div className="text-lg opacity-90 mb-2">Success Rate</div>
               <div className="text-sm opacity-75">Proven technology reliability</div>
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🌌</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
-            <p className="text-orange-100 mb-4 text-center text-sm">
-              Computing across dimensions
-            </p>
-            <div className="text-center">
               <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
               <div className="text-lg opacity-90 mb-2">Possibilities</div>
               <div className="text-sm opacity-75">Unlimited potential applications</div>
@@ -242,18 +250,9 @@ const NextGenInnovationHub2029: React.FC = () => {
               <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
               <div className="text-lg opacity-90 mb-2">Development</div>
               <div className="text-sm opacity-75">Continuous innovation cycle</div>
-            </div>
-          </div>
-        </div>
-        <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join our innovation hub and be part of creating the most revolutionary technologies in human history
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Join Our Team
-            </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Submit Your Innovation
             </button>

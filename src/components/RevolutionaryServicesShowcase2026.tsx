@@ -425,7 +425,6 @@ const RevolutionaryServicesShowcase2026 = () => {
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
             );
-};
           })}
         </div>
         {/* Services Grid */}

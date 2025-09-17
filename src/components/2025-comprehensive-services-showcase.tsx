@@ -412,7 +412,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

@@ -650,7 +650,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

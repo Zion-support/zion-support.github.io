@@ -59,7 +59,6 @@ const UltimateTechAdvertisingBanner2027: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -10,6 +10,7 @@ interface BreakthroughContent {
   icon: string;
   href: string;
   featured: boolean;
+}
 const breakthroughContent: BreakthroughContent[] = [
   {
     id: 'ai-2025-ultimate-breakthrough',

@@ -82,7 +82,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

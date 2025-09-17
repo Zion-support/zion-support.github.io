@@ -12,6 +12,7 @@ const heroStats = [
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
+];
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -341,3 +342,4 @@ export default function CuttingEdgeServicesShowcase2025() {
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
     </>
   );
+}

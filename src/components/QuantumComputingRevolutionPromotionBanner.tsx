@@ -113,7 +113,6 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

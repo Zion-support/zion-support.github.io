@@ -41,7 +41,6 @@ const NeuralRealityBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -142,7 +142,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
       </div>
     </divsection>
   );
-
 };
 
 

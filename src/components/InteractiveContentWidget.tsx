@@ -94,7 +94,6 @@ const InteractiveContentWidget: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

@@ -178,7 +178,6 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>

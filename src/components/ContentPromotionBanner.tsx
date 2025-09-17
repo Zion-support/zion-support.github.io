@@ -1,5 +1,4 @@
 import React from 'react';
-import { getFeaturedBlogPosts, getRecentBlogPosts } from '../data/blog-posts';
 const ContentPromotionBanner: React.FC = () => {
   const featured = getFeaturedBlogPosts();
   const recent = getRecentBlogPosts(3);
@@ -36,7 +35,6 @@ const ContentPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

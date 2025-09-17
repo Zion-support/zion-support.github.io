@@ -14,6 +14,7 @@ interface ContentItem {
   isTrending?: boolean;
   roi?: string;
   industry?: string;
+}
 interface FeaturedContent2026ShowcaseProps {
   title?: string;
   subtitle?: string;
@@ -240,4 +241,5 @@ export default function FeaturedContent2026Showcase({
               >
                 Download Free Playbook
   );
+}
 export { FeaturedContent2026Showcase };

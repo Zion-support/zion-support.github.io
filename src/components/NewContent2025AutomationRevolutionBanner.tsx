@@ -137,7 +137,6 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
       </div>
     </divsection>
   );
-
 };
 
 

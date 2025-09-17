@@ -132,7 +132,6 @@ const FeaturedContent2025Showcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

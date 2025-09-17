@@ -130,7 +130,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -93,7 +93,6 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
       <div className="absolute bottom-32 left-20 w-5 h-5 bg-blue-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1s' }}></div>
     </divsection>
   );
-
 };
 
 

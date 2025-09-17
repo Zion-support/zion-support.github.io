@@ -87,7 +87,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -163,7 +163,6 @@ const EnterpriseSuccessStories: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

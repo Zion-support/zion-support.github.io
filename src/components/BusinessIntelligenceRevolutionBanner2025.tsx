@@ -125,7 +125,6 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
       <div className="absolute bottom-40 right-10 w-5 h-5 bg-pink-400 rounded-full animate-pulse delay-500"></div>
     </section>
   );
-
 };
 
 

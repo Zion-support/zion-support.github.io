@@ -40,7 +40,6 @@ const UltimateTechRevolution2034Banner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

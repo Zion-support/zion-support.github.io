@@ -88,7 +88,6 @@ const UltimateTechRevolutionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -41,7 +41,6 @@ const CaseStudyShowcase2026: React.FC = () => {
                 {industry.title}
               </button>
             );
-};
           })}
         </div>
         {/* Case Studies Grid */}

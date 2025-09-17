@@ -56,7 +56,6 @@ const EnhancedHome: React.FC = () => {
                     <div className="text-blue-200 text-sm">{stat.label}</div>
                   </div>
                 );
-};
               })}
             </div>
           </div>

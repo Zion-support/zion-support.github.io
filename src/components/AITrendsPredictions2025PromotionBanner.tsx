@@ -128,7 +128,6 @@ const AITrendsPredictions2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

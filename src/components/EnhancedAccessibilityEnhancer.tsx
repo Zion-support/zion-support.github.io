@@ -180,7 +180,6 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

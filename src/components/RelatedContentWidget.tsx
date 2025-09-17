@@ -21,7 +21,6 @@ const RelatedContentWidget: React.FC = () => {
                   {post.excerpt}
           ))}
   );
-
 };
 
 

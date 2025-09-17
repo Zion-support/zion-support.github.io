@@ -17,7 +17,6 @@ const QuantumReality2026: React.FC = () => {
       <Footer />
     </div>
   );
-
 };
 
 

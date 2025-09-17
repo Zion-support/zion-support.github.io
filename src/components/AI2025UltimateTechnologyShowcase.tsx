@@ -57,7 +57,6 @@ const AI2025UltimateTechnologyShowcase: React.FC = () => {
                   <span className="font-semibold">{tech.title}</span>
                 </button>
               );
-};
             })}
           </div>
         </div>

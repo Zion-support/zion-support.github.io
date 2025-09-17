@@ -74,7 +74,6 @@ const InteractiveContentDiscoveryWidget: React.FC = () => {
                             </span>
                           </button>
                         );
-};
                       })}
                     </div>
                   </div>

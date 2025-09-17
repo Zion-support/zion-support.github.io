@@ -1,13 +1,3 @@
-// Safe storage utility for handling localStorage and sessionStorage
-// with error handling and fallbacks
-// Safe storage utilities for browser compatibility
-export const safeStorage = {
-  getItem: (key) => {
-    try {
-      return typeof localStorage !== 'undefined' ? localStorage.getItem(key) : null;
-    } catch (e) {
-      console.warn('localStorage not available:', e);
-      return null;
     }
   },
   setItem: (key, value) => {

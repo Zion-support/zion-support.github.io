@@ -62,7 +62,7 @@ export default function SalaryInsightsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }
   useEffect(() => {
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -93,7 +93,7 @@ export default function SalaryInsightsPage() {
         alert('Insight saved locally');
       } catch {}
     })();
-  };
+  }
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];
     const min = data.minHourlyUsd;

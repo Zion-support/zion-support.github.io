@@ -248,7 +248,6 @@ const UltimateContentDiscoveryWidget2026: React.FC = () => {
         )}
       </div>
   );
-
 };
 
 

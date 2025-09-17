@@ -135,7 +135,6 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

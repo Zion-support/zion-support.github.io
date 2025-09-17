@@ -187,7 +187,6 @@ const OmniversalAIConsciousness2035: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

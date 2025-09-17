@@ -157,7 +157,6 @@ const BusinessSuccessStoriesShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

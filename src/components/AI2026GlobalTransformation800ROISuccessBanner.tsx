@@ -307,7 +307,6 @@ const AI2026GlobalTransformation800ROISuccessBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

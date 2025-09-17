@@ -88,7 +88,6 @@ const BusinessSuccessStoriesShowcase2026PromotionBanner: React.FC = () => {
                     <div className="text-sm text-purple-200">{stat.label}</div>
                   </div>
                 );
-};
               })}
             </div>
             {/* CTA Buttons */}

@@ -6,7 +6,6 @@ const RevolutionaryTechAdvertisingBanner2027: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-
 };
 
 

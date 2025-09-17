@@ -233,7 +233,6 @@ const reports: React.FC = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
 };
 
 

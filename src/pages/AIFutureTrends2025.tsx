@@ -215,7 +215,6 @@ const AIFutureTrends2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -269,7 +269,6 @@ const InteractiveTechShowcase2042: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

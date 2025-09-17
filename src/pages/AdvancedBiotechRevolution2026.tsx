@@ -16,7 +16,6 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -65,7 +65,6 @@ const AdvancedPricing: React.FC = () => {
             Contact our sales team
             <Infinity className="h-4 w-4 ml-2" />
   );
-
 };
 
 

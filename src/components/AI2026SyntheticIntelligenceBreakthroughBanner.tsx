@@ -121,7 +121,6 @@ const AI2026SyntheticIntelligenceBreakthroughBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

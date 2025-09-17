@@ -6,7 +6,7 @@ const InteractiveAIToolsDemo2027: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-};
+};`,
         time: 2.3
       }
     },

@@ -88,7 +88,6 @@ const AIToolsPromotionBanner2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -263,7 +263,6 @@ const EnhancedContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

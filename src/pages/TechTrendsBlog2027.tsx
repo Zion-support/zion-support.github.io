@@ -33,7 +33,6 @@ const TechTrendsBlog2027: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

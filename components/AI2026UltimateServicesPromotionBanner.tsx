@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-import { 
-  Brain
-  Zap
-  ArrowRight
-  Star
-  Sparkles,
-  TrendingUp,
-  Users,
-  CheckCircle
-} from 'lucide-react';
-
-const AI2026UltimateServicesPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const features = [
-    "Neural Interface Revolution",
-    "Quantum AI Fusion",
-    "Autonomous Operations",
-    "Advanced Security AI"
-  ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AI2026UltimateServicesPromotionBanner: React.FC = () => {
   return (

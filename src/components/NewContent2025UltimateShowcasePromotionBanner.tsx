@@ -163,7 +163,6 @@ const NewContent2025UltimateShowcasePromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

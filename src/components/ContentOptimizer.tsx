@@ -12,7 +12,6 @@ const ContentOptimizer: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

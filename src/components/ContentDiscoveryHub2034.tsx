@@ -24,7 +24,6 @@ const ContentDiscoveryHub2034: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

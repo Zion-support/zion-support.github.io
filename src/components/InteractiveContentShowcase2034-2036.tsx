@@ -203,7 +203,6 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

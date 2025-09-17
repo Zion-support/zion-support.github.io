@@ -1,37 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import {
-  ShoppingCart,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  BarChart3,
-  Clock,
-  Award,
-  Brain,
-  Shield,
-  Target,
-  TrendingUp,
-  Globe,
-  Building,
-  Rocket,
-  Lock,
-  Activity,
-  CreditCard,
-  FileText,
-  Database,
-  Smartphone,
-  DollarSign
-} from 'lucide-react';
-import Layout from '../../components/Layout';
-import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const retail: React.FC = () => {
   return (

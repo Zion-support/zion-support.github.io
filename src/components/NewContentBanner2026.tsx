@@ -14,6 +14,7 @@ interface NewContentBanner2026Props {
   onClose?: () => void;
   autoHide?: boolean;
   hideDelay?: number;
+}
 const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({ 
   onClose, 
   autoHide = true, 
@@ -166,7 +167,6 @@ const NewContentBanner2026: React.FC<NewContentBanner2026Props> = ({
       </motion.div>
     </AnimatePresence>
   );
-
 };
 
 

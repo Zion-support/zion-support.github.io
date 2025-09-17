@@ -146,7 +146,6 @@ const InteractiveAIDemo2025: React.FC = () => {
                 <p className="text-purple-300 text-sm">{feature.description}</p>
               </div>
             );
-};
           })}
         </div>
       </div>

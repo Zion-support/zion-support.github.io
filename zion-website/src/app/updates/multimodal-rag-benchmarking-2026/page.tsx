@@ -1,36 +1,47 @@
-<<<<<<< HEAD
 import React from 'react';
 
-const page: React.FC = () => {
+export default function MultimodalRagBenchmarkingPage() {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-black text-white">
-      <section className="px-6 py-16 lg:px-8">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-sm text-blue-300">Guide • 2026 Preview</p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Benchmarking Multimodal RAG</h1>
-          <p className="mt-4 text-lg text-gray-300">Evaluate retrieval quality, synchronization, and latency across text, image, and video pipelines.</p>
-          <hr className="my-8 border-white/10" />
-          <div className="prose prose-invert max-w-none">
-            <p>Multimodal RAG introduces cross-signal synchronization challenges. This brief outlines:</p>
-            <ul>
-              <li>Dataset construction and relevance metrics</li>
-              <li>Latency budgeting and pipeline instrumentation</li>
-              <li>Grounding quality and hallucination checks</li>
-              <li>Reproducible benchmarking methodology</li>
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-4xl px-6 pt-24">
+        <div className="prose prose-invert max-w-none">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8">
+            Multimodal RAG Benchmarking 2026
+          </h1>
+          
+          <div className="text-lg text-gray-300 mb-8">
+            Comprehensive benchmarking framework for multimodal retrieval-augmented generation systems with performance metrics and evaluation standards.
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
+            <p className="text-gray-300 leading-relaxed">
+              The Multimodal RAG Benchmarking 2026 framework provides standardized evaluation metrics and testing procedures 
+              for multimodal retrieval-augmented generation systems. This comprehensive toolkit enables fair comparison 
+              and performance optimization across different multimodal AI architectures.
+            </p>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
+            <ul className="text-gray-300 space-y-2">
+              <li>• Standardized evaluation metrics for multimodal systems</li>
+              <li>• Comprehensive test datasets and benchmarks</li>
+              <li>• Performance comparison tools and dashboards</li>
+              <li>• Integration with popular ML frameworks</li>
+              <li>• Automated evaluation and reporting</li>
             </ul>
-            <p>Adopt these practices to compare architectures and drive measurable improvements.</p>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
+            <h2 className="text-2xl font-semibold text-white mb-4">Implementation</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Get started with the Multimodal RAG Benchmarking framework using our detailed implementation guide. 
+              Includes setup instructions, sample configurations, and best practices for accurate evaluation.
+            </p>
           </div>
         </div>
-      </section>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
+      </div>
     </div>
   );
-};
-
-export default page;
+}
