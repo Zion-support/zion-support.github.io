@@ -12,6 +12,7 @@ import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
+const AdvancedDashboard = React.lazy(() => import('./pages/AdvancedDashboard'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -124,6 +125,8 @@ function App() {
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/dashboard" element={<AdvancedDashboard />} />
+                    <Route path="/advanced-dashboard" element={<AdvancedDashboard />} />
                     
                     {/* Catch all route */};
                     <Route path="*" element={<Home />} />
