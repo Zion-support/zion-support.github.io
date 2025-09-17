@@ -326,13 +326,14 @@ html {
   backdrop-filter: blur(10px);
 }
 
->>>>>>> main
 /* High contrast mode */
 @media (prefers-contrast: high) {
   :root {
     --glass-bg: rgba(0, 0, 0, 0.8);
     --glass-border: rgba(255, 255, 255, 0.8);
-=======
+  }
+}
+
 /* Print styles */
 @media print {
   .no-print {
@@ -410,7 +411,9 @@ body {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
-=======
+  }
+}
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .high-contrast-mode {
