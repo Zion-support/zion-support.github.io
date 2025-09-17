@@ -169,9 +169,6 @@ const NewContentShowcase2026: React.FC = () => {
               >
                 Explore →
               </a>
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-const NewContentShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const newContent = [
     {
