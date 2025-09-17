@@ -1,16 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-
-import { 
-  TrendingUp, Brain, Shield, Zap, Target, 
-  BarChart3, Cpu, Globe, Users, Award,
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const defi-nexus-platform: React.FC = () => {
   return (

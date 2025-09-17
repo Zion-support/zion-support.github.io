@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { Star, TrendingUp, Clock, DollarSign, ArrowRight, ExternalLink, Phone, Mail, MapPin, Zap, Brain, Rocket, Globe, Cpu, Lock, Eye, Shield, Target, Users, Award } from 'lucide-react';
-import Button from './Button';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticServiceCard: React.FC = () => {
   return (

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-"
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const micro-saas-solutions-comprehensive: React.FC = () => {
   return (

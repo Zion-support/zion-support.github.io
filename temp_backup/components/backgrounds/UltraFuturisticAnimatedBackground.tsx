@@ -1,26 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useRef, useState } from 'react';
-
-
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  opacity: number;
-  color: string;
-}
-
-interface NeonGrid {
-  x: number;
-  y: number;
-  opacity: number;
-  scale: number;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticAnimatedBackground: React.FC = () => {
   return (

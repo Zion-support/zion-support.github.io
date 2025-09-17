@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { Cpu, Brain, Rocket, Zap, Shield, Target, ArrowRight, Play, Star, Cog, Wrench, Globe } from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const autonomous-systems: React.FC = () => {
   return (

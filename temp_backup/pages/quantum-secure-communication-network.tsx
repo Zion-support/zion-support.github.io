@@ -1,18 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Shield, Lock, Zap, Target, Globe, Users, Award, Check,
-  Clock, DollarSign, ArrowUpRight, Play, BookOpen, Code,
-  Network, Cpu, Server
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const quantum-secure-communication-network: React.FC = () => {
   return (

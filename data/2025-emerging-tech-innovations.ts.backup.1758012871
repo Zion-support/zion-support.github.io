@@ -1,8 +1,0 @@
-<<<<<<< HEAD
-=======
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
->>>>>>> origin/aggressive-merge-backup-20250915-162542

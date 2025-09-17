@@ -17,10 +17,8 @@ import {
   Play,
   BookOpen
 } from 'lucide-react';
-
 const EnhancedFeaturedContent2026 = () => {
   const [activeTab, setActiveTab] = useState('featured');
-
   const featuredContent = [
     {
       id: 51,
@@ -131,21 +129,18 @@ const EnhancedFeaturedContent2026 = () => {
       likes: 987
     }
   ];
-
   const tabs = [
     { id: 'featured', label: 'Featured', count: featuredContent.length },
     { id: 'trending', label: 'Trending', count: 12 },
     { id: 'latest', label: 'Latest', count: 8 },
     { id: 'popular', label: 'Popular', count: 15 }
   ];
-
   const formatNumber = (num) => {
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'k';
     }
     return num.toString();
   };
-
   return (
     <div className="py-16 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -172,7 +167,6 @@ const EnhancedFeaturedContent2026 = () => {
             </p>
           </motion.div>
         </div>
-
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {tabs.map((tab) => (
@@ -190,7 +184,6 @@ const EnhancedFeaturedContent2026 = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredContent.map((post, index) => (
@@ -223,7 +216,6 @@ const EnhancedFeaturedContent2026 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Content */}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
@@ -231,15 +223,12 @@ const EnhancedFeaturedContent2026 = () => {
                     <span className="text-gray-400">•</span>
                     <span className="text-gray-400 text-sm">{post.readTime}</span>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
-
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
-
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
                     <div className="flex items-center gap-1">
                       <User className="w-4 h-4" />
@@ -250,7 +239,6 @@ const EnhancedFeaturedContent2026 = () => {
                       <span>{post.publishDate}</span>
                     </div>
                   </div>
-
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <div className="flex items-center gap-1">
@@ -263,7 +251,6 @@ const EnhancedFeaturedContent2026 = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 2).map((tag) => (
                       <span
@@ -274,7 +261,6 @@ const EnhancedFeaturedContent2026 = () => {
                       </span>
                     ))}
                   </div>
-
                   <Link
                     to={`/blog/${post.slug}`}
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all group-hover:gap-3"
@@ -288,7 +274,6 @@ const EnhancedFeaturedContent2026 = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -325,6 +310,7 @@ const EnhancedFeaturedContent2026 = () => {
       </div>
     </div>
   );
+
 };
 
 export default EnhancedFeaturedContent2026;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const OmniversalAIConsciousness2045: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -8,7 +7,6 @@ const OmniversalAIConsciousness2045: React.FC = () => {
         <title>OmniversalAIConsciousness2045 | Zion Tech Group</title>
         <meta name="description" content="OmniversalAIConsciousness2045 - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">OmniversalAIConsciousness2045</h1>
@@ -17,6 +15,7 @@ const OmniversalAIConsciousness2045: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default OmniversalAIConsciousness2045;

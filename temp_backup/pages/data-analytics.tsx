@@ -1,51 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-import { BarChart3, TrendingUp, PieChart, Activity, Database, Brain, Zap, Target } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-export default function DataAnalytics() {
-  const services = [
-    {
-      icon: <BarChart3 className="w-12 h-12 text-cyan-400" />,
-      title: "Business Intelligence",
-      description: "Advanced analytics and reporting platforms for data-driven decisions",
-      href: "/intelligent-hr-analytics-platform"
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-blue-400" />,
-      title: "Performance Monitoring",
-      description: "Real-time performance analytics and SLO tracking systems",
-      href: "/status-pages-slo"
-    },
-    {
-      icon: <PieChart className="w-12 h-12 text-purple-400" />,
-      title: "Data Visualization",
-      description: "Interactive dashboards and data visualization tools",
-      href: "/vector-search-starter"
-    },
-    {
-      icon: <Activity className="w-12 h-12 text-green-400" />,
-      title: "Real-time Analytics",
-      description: "Live data streaming and real-time business intelligence",
-      href: "/mlops-starter"
-    },
-    {
-      icon: <Database className="w-12 h-12 text-yellow-400" />,
-      title: "Data Management",
-      description: "Data governance, quality, and lifecycle management",
-      href: "/managed-postgres-ha"
-    },
-    {
-      icon: <Brain className="w-12 h-12 text-pink-400" />,
-      title: "AI-Powered Analytics",
-      description: "Machine learning enhanced analytics and predictive insights",
-      href: "/ai-powered-decision-engine"
-    }
-  ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const data-analytics: React.FC = () => {
   return (

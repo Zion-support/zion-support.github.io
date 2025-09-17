@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect, useRef } from 'react';
-
-import { Search, X, Filter, ArrowRight, Globe, Brain, Shield, Rocket, Atom } from 'lucide-react';
-import Link from 'next/link';
-import AccessibilityEnhancer from './AccessibilityEnhancer';
-
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  type: 'service' | 'solution' | 'page' | 'resource';
-  url: string;
-  category: string;
-  tags: string[];
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const SearchComponent: React.FC = () => {
   return (

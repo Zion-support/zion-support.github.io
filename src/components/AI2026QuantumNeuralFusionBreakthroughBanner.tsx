@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2026QuantumNeuralFusionBreakthroughBanner() {
   return (
@@ -59,4 +61,3 @@ export default function AI2026QuantumNeuralFusionBreakthroughBanner() {
               <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
               <span>Revolutionary Breakthrough</span>
   );
-}

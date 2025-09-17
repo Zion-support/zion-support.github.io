@@ -23,19 +23,19 @@ const RevolutionaryContent2026Banner = () => {
       author: "Sarah Chen",
       role: "CMO, TechCorp Global",
       metric: "500% Engagement"
-    },
+
     {
       quote: "Quantum cybersecurity gave us 99.99% security uptime with zero incidents.",
       author: "Michael Rodriguez",
       role: "CTO, SecureBank International",
       metric: "99.99% Security"
-    },
+
     {
       quote: "Autonomous business intelligence transformed our decision-making process completely.",
       author: "Dr. Lisa Wang",
       role: "CEO, DataFlow Analytics",
       metric: "400% Speed"
-    }
+
   ];
   const features = [
     { icon: Brain, title: "AI Content Marketing", metric: "500% Engagement" },
@@ -204,8 +204,8 @@ const RevolutionaryContent2026Banner = () => {
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
+
+
           }}
           transition={{
             duration: 8,
@@ -216,8 +216,8 @@ const RevolutionaryContent2026Banner = () => {
         />
         <motion.div
           animate={{
-            x: [0, -80, 0],
-            y: [0, 60, 0],
+
+
           }}
           transition={{
             duration: 6,
@@ -228,8 +228,8 @@ const RevolutionaryContent2026Banner = () => {
         />
         <motion.div
           animate={{
-            x: [0, 60, 0],
-            y: [0, -40, 0],
+
+
           }}
           transition={{
             duration: 10,

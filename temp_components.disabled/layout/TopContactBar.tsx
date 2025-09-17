@@ -1,36 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState } from 'react';
-
-import { 
-  Phone, Mail, MapPin, Globe, 
-  Clock, ChevronDown, ChevronUp,
-  MessageCircle, Calendar, Star,
-  Sparkles,
-  ArrowRight,
-  ExternalLink
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-  hours: 'Mon-Fri: 9AM-6PM EST',
-  rating: '4.9/5 (500+ Reviews)'
-};
-
-const quickActions = [
-  { name: 'Get Quote', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
-  { name: 'Book Demo', href: '/contact', icon: <Calendar className="w-4 h-4" /> },
-  { name: 'Q4 2025 Services', href: '/q4-2025-innovative-services-showcase', icon: <Star className="w-4 h-4" /> },
-  { name: 'Live Chat', href: '/support', icon: <MessageCircle className="w-4 h-4" /> }
-];
-
-export default function TopContactBar() {
-  const [isExpanded, setIsExpanded] = useState(false);
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const TopContactBar: React.FC = () => {
   return (

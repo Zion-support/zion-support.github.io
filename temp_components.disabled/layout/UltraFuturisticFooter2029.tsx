@@ -1,23 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-  BookOpen, MessageCircle, Star, TrendingUp, Target,
-  Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
-  Earth, Factory, Car, Building, GraduationCap, Scale,
-  Palette, Camera, Video, Music, Gamepad2, Heart,
-  Leaf, Sun, Moon, Wind, Droplets, Mountain,
-  Code, Wrench, Smartphone, BarChart3, Eye, 
-  CircuitBoard, Satellite, Dna, Beaker, TestTube,
-  Truck, Plane, Ship, Train, Bus, ArrowRight,
-  Phone, Mail, MapPin, ExternalLink, Github, 
-  Linkedin, Twitter, Facebook, Instagram, Youtube
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticFooter2029: React.FC = () => {
   return (

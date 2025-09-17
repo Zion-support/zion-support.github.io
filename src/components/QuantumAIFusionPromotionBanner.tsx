@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function QuantumAIFusionPromotionBanner() {
   return (
@@ -43,4 +45,3 @@ export default function QuantumAIFusionPromotionBanner() {
         <div className="absolute bottom-10 left-20 w-12 h-12 bg-emerald-500 rounded-full opacity-20 animate-ping delay-2000"></div>
         <div className="absolute bottom-20 right-10 w-14 h-14 bg-cyan-400 rounded-full opacity-20 animate-ping delay-500"></div>
   );
-}

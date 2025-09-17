@@ -22,37 +22,37 @@ const NewContent2026PromotionBanner = () => {
       title: "AI Content Marketing",
       metric: "500% Engagement",
       color: "from-purple-500 to-pink-500"
-    },
+
     {
       icon: Shield,
       title: "Quantum Security",
       metric: "99.99% Protection",
       color: "from-blue-500 to-cyan-500"
-    },
+
     {
       icon: BarChart3,
       title: "Autonomous BI",
       metric: "400% Speed",
       color: "from-green-500 to-emerald-500"
-    },
+
     {
       icon: CpuIcon,
       title: "Synthetic Intelligence",
       metric: "1000% Improvement",
       color: "from-orange-500 to-red-500"
-    },
+
     {
       icon: Globe,
       title: "Metaverse Business",
       metric: "500% Collaboration",
       color: "from-indigo-500 to-purple-500"
-    },
+
     {
       icon: RocketIcon,
       title: "Revolutionary Tech",
       metric: "600% Innovation",
       color: "from-pink-500 to-rose-500"
-    }
+
   ];
   useEffect(() => {
     const interval = setInterval(() => {
@@ -162,8 +162,8 @@ const NewContent2026PromotionBanner = () => {
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
           <motion.div
             animate={{
-              x: [0, 100, 0],
-              y: [0, -50, 0],
+
+
             }}
             transition={{
               duration: 8,
@@ -174,8 +174,8 @@ const NewContent2026PromotionBanner = () => {
           />
           <motion.div
             animate={{
-              x: [0, -80, 0],
-              y: [0, 60, 0],
+
+
             }}
             transition={{
               duration: 6,
@@ -186,8 +186,8 @@ const NewContent2026PromotionBanner = () => {
           />
           <motion.div
             animate={{
-              x: [0, 60, 0],
-              y: [0, -40, 0],
+
+
             }}
             transition={{
               duration: 10,

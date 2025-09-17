@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-ArrowRightBrainZapShieldGlobeTargetTrendingUp
-import Link from 'next/link';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const RevolutionaryAIServices2025: React.FC = () => {
   return (

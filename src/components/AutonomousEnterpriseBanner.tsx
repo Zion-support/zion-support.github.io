@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightCpuBrainZapShieldTrendingUpUsersActivity
+};
+
 
 export default function AutonomousEnterpriseBanner() {
   return (
@@ -132,4 +134,3 @@ export default function AutonomousEnterpriseBanner() {
             >
               Explore Automation Services
   );
-}

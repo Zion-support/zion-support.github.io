@@ -20,7 +20,6 @@ import {
   Building,
   ArrowRight
 } from 'lucide-react';
-
 interface Service {
   id: string;
   title: string;
@@ -36,8 +35,6 @@ interface Service {
   price: string;
   marketPrice: string;
   link: string;
-}
-
 const SERVICES: Service[] = [
   {
     id: "ai-content-generator",
@@ -198,9 +195,7 @@ const SERVICES: Service[] = [
     price: "$399/audit",
     marketPrice: "$999/audit",
     link: "/services-showcase"
-  }
-];
-
+  };
 const categories = [
   "All Categories",
   "AI & Machine Learning",
@@ -213,7 +208,8 @@ const categories = [
   "Creative",
   "Design",
   "Performance"
-];
+};
+
 
 export default function ServicesShowcase() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -352,4 +348,3 @@ export default function ServicesShowcase() {
                 <span>Contact Our Team</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
   );
-}

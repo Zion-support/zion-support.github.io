@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Star } from 'lucide-react';
+};
+
 
 export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
   return (
@@ -139,4 +141,3 @@ export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
             <p className="mb-2">🚀 <strong>Limited Time:</strong> Get exclusive access to our QNS implementation blueprint</p>
             <p>📈 <strong>Proven Results:</strong> Join 500+ enterprises already transforming with QNS</p>
   );
-}

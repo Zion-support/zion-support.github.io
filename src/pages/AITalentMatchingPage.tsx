@@ -1,6 +1,8 @@
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
+};
+
 
 export default function AITalentMatchingPage() {
     {
@@ -34,4 +36,3 @@ export default function AITalentMatchingPage() {
       ctaLink="/request-quote"
     />
   );
-}

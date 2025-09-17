@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryTechInsightsBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl shadow-2xl">
@@ -9,14 +8,12 @@ const RevolutionaryTechInsightsBanner2025: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-gradient-to-r from-pink-400/20 to-blue-400/20 rounded-full blur-xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
@@ -24,20 +21,17 @@ const RevolutionaryTechInsightsBanner2025: React.FC = () => {
               <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></span>
               Latest Research & Insights
             </div>
-            
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Revolutionary Tech
               <span className="block bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
                 Insights 2025
               </span>
             </h2>
-            
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
               Dive deep into the cutting-edge technologies that are reshaping our world. 
               From AI breakthroughs to quantum computing advances, discover the future today.
             </p>
           </div>
-
           {/* Article Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <Link 
@@ -62,7 +56,6 @@ const RevolutionaryTechInsightsBanner2025: React.FC = () => {
                 </svg>
               </div>
             </Link>
-
             <Link 
               to="/blog/quantum-computing-revolution-2025"
               className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
@@ -85,7 +78,6 @@ const RevolutionaryTechInsightsBanner2025: React.FC = () => {
                 </svg>
               </div>
             </Link>
-
             <Link 
               to="/blog/neural-interface-technology-2025"
               className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
@@ -108,7 +100,6 @@ const RevolutionaryTechInsightsBanner2025: React.FC = () => {
                 </svg>
               </div>
             </Link>
-
             <Link 
               to="/blog/synthetic-intelligence-2025"
               className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
@@ -132,7 +123,6 @@ const RevolutionaryTechInsightsBanner2025: React.FC = () => {
               </div>
             </Link>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <Link
@@ -149,6 +139,7 @@ const RevolutionaryTechInsightsBanner2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryTechInsightsBanner2025;

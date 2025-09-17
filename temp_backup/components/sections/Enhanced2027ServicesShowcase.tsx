@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-"use client";
-import React{ useState } from 'react';
-import Link from 'next/link';
-
-import { 
-  ArrowRightStarTrendingUpZapBrainAtom
-  RocketShieldTargetCheckCircleExternalLink,
-  SearchFilterGridListChevronDown
-} from 'lucide-react';
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Enhanced2027ServicesShowcase: React.FC = () => {
   return (

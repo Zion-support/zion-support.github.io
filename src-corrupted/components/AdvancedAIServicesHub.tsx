@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-
-import {
-    ArrowRight,
-    Brain,
-    CheckCircle,
-    Cpu,
-    Database,
-    Globe,
-    Rocket,
-    Shield,
-    TrendingUp,
-    Users
-} from 'lucide-react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-interface AIService {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  features: string[];
-  pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-  };
-  icon: React.ComponentType<any>;
-  route: string;
-  status: 'active' | 'beta' | 'coming-soon';
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AdvancedAIServicesHub: React.FC = () => {
   return (

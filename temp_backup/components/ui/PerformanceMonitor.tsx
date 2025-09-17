@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useState } from 'react';
-
-import { 
-  Activity, TrendingUp, TrendingDown, Clock, 
-  Zap, AlertTriangle, CheckCircle, Info
-} from 'lucide-react';
-
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  timestamp: number;
-}
-
-interface PerformanceScore {
-  score: number;
-  grade: 'A' | 'B' | 'C' | 'D' | 'F';
-  color: string;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const PerformanceMonitor: React.FC = () => {
   return (

@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function SyntheticIntelligence2026Banner() {
   return (
@@ -25,4 +27,3 @@ export default function SyntheticIntelligence2026Banner() {
             >
               Join the Revolution
   );
-}

@@ -1,5 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
+};
+
 
 export default function DiversityInclusionPage() {
 	return (
@@ -16,4 +18,3 @@ export default function DiversityInclusionPage() {
 					<li>Equal opportunities and career development</li>
 					<li>Respectful, safe, and collaborative culture</li>
 	);
-}

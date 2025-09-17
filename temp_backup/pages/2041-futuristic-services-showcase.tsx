@@ -19,8 +19,4 @@ const 2041-futuristic-services-showcase: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default 2041-futuristic-services-showcase;
-=======
-// Import motion from framer-motion
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

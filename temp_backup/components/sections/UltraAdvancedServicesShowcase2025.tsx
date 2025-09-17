@@ -1,26 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState } from 'react';
-
-import { 
-  Brain, Rocket, Atom, Cpu, Target,
-  ArrowRight, Star, Zap, Users, Award, Globe, Search,
-  ExternalLink, Sparkles, Eye,
-  Clock, CheckCircle, TrendingUp, DollarSign, Phone
-} from 'lucide-react';
-
-// Import service data
-import { advancedFuturisticMicroSaasServices2025 } from '../../data/2025-advanced-futuristic-micro-saas';
-import { cuttingEdgeAIInnovations2025 } from '../../data/2025-cutting-edge-ai-innovations';
-import { innovativeRealMicroSaasServices2025 } from '../../data/2025-innovative-real-micro-saas-services';
-import { innovativeAIServicesEnhanced2025 } from '../../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../../data/2025-emerging-tech-services-enhanced';
-import { advancedAIAutomationServices } from '../../data/2026-advanced-ai-automation-services';
-import { advancedITInfrastructureServices2025 } from '../../data/2025-advanced-it-infrastructure-services';
-import { innovativeBusinessSolutions2025 } from '../../data/2025-innovative-business-solutions';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraAdvancedServicesShowcase2025: React.FC = () => {
   return (

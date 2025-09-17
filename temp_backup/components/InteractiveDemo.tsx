@@ -1,20 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useState, useEffect, useCallback } from 'react';
-
-import { Play, Pause, RotateCcw, ChevronRight, ChevronLeft, Zap, Brain, Shield, Rocket, Cpu, Database, Atom } from 'lucide-react';
-
-interface DemoStep {
-  id: number;
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  color: string;
-  duration: number;
-  features: string[];
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const InteractiveDemo: React.FC = () => {
   return (

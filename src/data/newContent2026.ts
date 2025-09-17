@@ -12,8 +12,6 @@ export interface BlogPost {
   featured: boolean;
   imageUrl: string;
   slug: string;
-}
-
 export interface Service {
   id: string;
   title: string;
@@ -35,8 +33,6 @@ export interface Service {
     rating: number;
     count: number;
   };
-}
-
 // New Blog Posts for 2026
 export const newBlogPosts2026: BlogPost[] = [
   {
@@ -113,9 +109,7 @@ export const newBlogPosts2026: BlogPost[] = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-revolution-2026.jpg",
     slug: "edge-ai-revolution-intelligent-devices-2026"
-  }
-];
-
+  };
 // New Services for 2026
 export const newServices2026: Service[] = [
   {
@@ -212,5 +206,4 @@ export const newServices2026: Service[] = [
     deliveryTime: "9-12 months",
     support: "Edge AI specialists",
     reviews: { rating: 4.7, count: 56 }
-  }
-];
+  };

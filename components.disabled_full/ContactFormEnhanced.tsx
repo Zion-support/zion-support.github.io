@@ -8,10 +8,3 @@ const ContactFormEnhanced: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-
-export default ContactFormEnhanced;
-=======
-export default ContactFormEnhanced;
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

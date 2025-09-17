@@ -1,45 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-const EnhancedAnalytics: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedAnalytics</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
-export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({;
-  enabled = true,: any;
-  showDashboard = false,: any;
-export const "EnhancedAnalytics": React.FC<EnhancedAnalyticsProps> = ({;
-  enabled = true",: "any;
-  showDashboard = false",: "any;
-  trackingId = 'G-XXXXXXXXXX': any;
-"}) => {;
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(;
-    null;
-export default function Page(props: any) {
-;
-  performance: {
-    loadTime: number;
-    coreWebVitals: {
-      fcp: number;
-      lcp: number;
-      fid: number;
-      cls: number}}}
-interface EnhancedAnalyticsProps {
-  // Add your props here: any;
-  enabled?: boolean;
-  showDashboard?: boolean;
-  trackingId?: string;
-export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
-  enabled = true,: any;
-  showDashboard = false,: any;
-  trackingId = 'G-XXXXXXXXXX': any;
-}) => {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
-    null
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

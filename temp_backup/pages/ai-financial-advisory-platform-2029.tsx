@@ -1,20 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  TrendingUp, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
-  Zap, Sparkles, Shield, Cpu, Database, Cloud, Lock, 
-  Users, Briefcase, BookOpen, MessageCircle, Brain, 
-  Target, Layers, Globe, Atom, Building, DollarSign,
-  PieChart, BarChart3, LineChart, Calculator, Wallet, CreditCard
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-financial-advisory-platform-2029: React.FC = () => {
   return (

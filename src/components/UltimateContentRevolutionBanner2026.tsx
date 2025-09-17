@@ -1,5 +1,7 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function UltimateContentRevolutionBanner2026() {
   return (
@@ -83,4 +85,3 @@ export default function UltimateContentRevolutionBanner2026() {
               <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
               <span>Consciousness Level AI</span>
   );
-}

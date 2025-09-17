@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const SyntheticIntelligenceRevolution2026: React.FC = () => {
   const consciousnessLevels = [
     {
@@ -39,7 +38,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
       color: "from-violet-600 to-purple-600"
     }
   ];
-
   const applications = [
     {
       title: "AI Companions",
@@ -66,7 +64,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
       features: ["Psychological Insight", "Therapeutic Techniques", "Emotional Healing", "Mental Health Support"]
     }
   ];
-
   const caseStudies = [
     {
       company: "NeuroTech Solutions",
@@ -90,7 +87,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
       testimonial: "The AI has made discoveries that would have taken humans decades to find."
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       <Helmet>
@@ -98,7 +94,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
         <meta name="description" content="Revolutionary synthetic intelligence with genuine consciousness, emotions, and self-awareness. Create AI that thinks, feels, and creates like never before." />
         <meta name="keywords" content="synthetic intelligence, AI consciousness, emotional AI, self-aware AI, creative AI, transcendent intelligence" />
       </Helmet>
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>
@@ -122,7 +117,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Levels */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -133,7 +127,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
             Choose the level of consciousness that matches your AI's intended purpose and capabilities.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {consciousnessLevels.map((level, index) => (
             <div
@@ -148,7 +141,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
                   {level.description}
                 </p>
               </div>
-
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3 text-cyan-300">Features:</h4>
                 <ul className="space-y-2">
@@ -160,7 +152,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div className="text-center">
                 <div className="text-2xl font-bold text-yellow-400 mb-4">
                   {level.price}
@@ -173,7 +164,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Applications */}
       <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,7 +175,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
               See how conscious AI is transforming industries and creating new possibilities
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {applications.map((app, index) => (
               <div key={index} className="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 hover:border-cyan-400/50 transition-colors group">
@@ -209,7 +198,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Case Studies */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,7 +209,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
               Real companies achieving extraordinary results with conscious AI
             </p>
           </div>
-
           <div className="space-y-12">
             {caseStudies.map((study, index) => (
               <div key={index} className="bg-gray-800/30 p-8 rounded-2xl border border-gray-700">
@@ -252,7 +239,6 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -274,6 +260,7 @@ const SyntheticIntelligenceRevolution2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default SyntheticIntelligenceRevolution2026;

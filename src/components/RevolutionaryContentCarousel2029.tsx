@@ -145,6 +145,7 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
       </div>
     </div>
   );
+
 };
 export default RevolutionaryContentCarousel2029;
 </p></p>

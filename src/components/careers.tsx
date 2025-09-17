@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
+
   const departments = [
     { id: 'all', name: 'All Departments' },
     { id: 'engineering', name: 'Engineering' },
@@ -16,6 +17,7 @@ export default function Careers() {
     { id: 'marketing', name: 'Marketing' },
     { id: 'operations', name: 'Operations' }
   ];
+
   const jobOpenings = [
     {
       id: 1,
@@ -93,6 +95,7 @@ export default function Careers() {
       ]
     }
   ];
+
   const companyValues = [
     {
       icon: <Brain className="w-8 h-8" />,
@@ -115,6 +118,7 @@ export default function Careers() {
       description: 'We strive for the highest quality in everything we do.'
     }
   ];
+
   const benefits = [
     'Competitive salary and equity packages',
     'Comprehensive health, dental, and vision insurance',
@@ -125,15 +129,19 @@ export default function Careers() {
     'Modern technology and equipment',
     'Collaborative and inclusive work environment'
   ];
+
   const filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
     : jobOpenings.filter(job => job.department === selectedDepartment);
+
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
         <Head>
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
+        </Head>
+
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div 
@@ -141,9 +149,13 @@ export default function Careers() {
         >
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
             Join Our Team
+          </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Be part of a team that's revolutionizing technology through AI, quantum computing, 
             and space technology. Help us build the future.
+          </p>
+        </div>
+
         {/* Company Culture */}
         <div 
           className="mb-16"
@@ -154,9 +166,14 @@ export default function Careers() {
               <div key={index} className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 text-center">
                 <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-400">
                   {value.icon}
+                </div>
                 <h3 className="text-lg font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm">{value.description}</p>
+              </div>
             ))}
+          </div>
+        </div>
+
         {/* Benefits */}
         <div 
           className="mb-16"
@@ -168,12 +185,18 @@ export default function Careers() {
                 <div key={index} className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
+                </div>
               ))}
+            </div>
+          </div>
+        </div>
+
         {/* Job Openings */}
         <div 
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
+          
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {departments.map((dept) => (
@@ -187,7 +210,10 @@ export default function Careers() {
                 }`}
               >
                 {dept.name}
+              </button>
             ))}
+          </div>
+
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
@@ -201,19 +227,29 @@ export default function Careers() {
                     <div className="flex flex-wrap gap-3 text-sm">
                       <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">
                         {departments.find(d => d.id === job.department)?.name}
+                      </span>
                       <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full">
                         {job.location}
+                      </span>
                       <span className="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">
                         {job.type}
+                      </span>
                       <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">
                         {job.experience}
+                      </span>
+                    </div>
+                  </div>
                   <a
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Apply Now
                     <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </div>
+                
                 <p className="text-gray-300 mb-4">{job.description}</p>
+                
                 <div>
                   <h4 className="text-white font-semibold mb-2">Requirements:</h4>
                   <ul className="space-y-1">
@@ -221,8 +257,14 @@ export default function Careers() {
                       <li key={index} className="flex items-start text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                         {req}
+                      </li>
                     ))}
+                  </ul>
+                </div>
+              </div>
             ))}
+          </div>
+
           {filteredJobs.length === 0 && (
             <div className="text-center py-12">
               <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
@@ -230,7 +272,11 @@ export default function Careers() {
               <p className="text-gray-500">
                 We don't have any open positions in this department at the moment. 
                 Check back later or send us your resume for future opportunities.
+              </p>
+            </div>
           )}
+        </div>
+
         {/* General Application */}
         <div 
           className="text-center"
@@ -240,6 +286,7 @@ export default function Careers() {
             <p className="text-gray-300 mb-6">
               We're always looking for talented individuals to join our team. 
               Send us your resume and let's discuss how you can contribute to our mission.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
@@ -247,11 +294,19 @@ export default function Careers() {
               >
                 Send Your Resume
                 <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
               <a 
                 href="/about" 
                 className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 Learn More About Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
   );
 };
+
 export default CareersPage;

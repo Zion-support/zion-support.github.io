@@ -1,23 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-"use client";
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-
-import Link from 'next/link';
-import { 
-  Menu, X, ChevronDown, Search, Globe, Brain, Rocket, Shield, 
-  Cpu, Database, Atom, Target, Star, Sparkles, Zap, Eye, Heart
-} from 'lucide-react';
-
-interface NavigationItem {
-  name: string;
-  href: string;
-  icon: React.ComponentType<{ className?: string }>;
-  description: string;
-  subItems?: NavigationItem[];
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticNavigation2040: React.FC = () => {
   return (

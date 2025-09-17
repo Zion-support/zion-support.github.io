@@ -1,31 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { useEffect, useState } from 'react';
-
-import { 
-  Shield, 
-  AlertTriangle, 
-  CheckCircle, 
-  X
-} from 'lucide-react';
-
-interface SecurityStatus {
-  csp: boolean;
-  hsts: boolean;
-  xss: boolean;
-  frameOptions: boolean;
-  contentType: boolean;
-  referrerPolicy: boolean;
-}
-
-interface SecurityThreat {
-  type: 'high' | 'medium' | 'low';
-  description: string;
-  recommendation: string;
-  timestamp: Date;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const SecurityEnhancer: React.FC = () => {
   return (

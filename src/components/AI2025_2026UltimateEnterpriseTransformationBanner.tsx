@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { ArrowRightIconSparklesIconChartBarIconCpuChipIcon } from '@heroicons/react/24/outline';
+};
+
 
 export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
   return (
@@ -68,4 +70,3 @@ export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent"></div>
   );
-}

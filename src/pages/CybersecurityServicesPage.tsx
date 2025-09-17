@@ -35,11 +35,9 @@ import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { QuoteFormSection } from '@/components/QuoteFormSection';
-
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
-);
 const SECURITY_SERVICE_CATEGORIES = [
   {
     id: 'threat-detection',
@@ -54,8 +52,10 @@ const SECURITY_SERVICE_CATEGORIES = [
     description: 'Identity verification and access management',
     icon: Lock,
     services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
-  }
-];
+  };
+};
+
+
 export default function CybersecurityServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   // Data arrays
@@ -919,4 +919,3 @@ export default function CybersecurityServicesPage() {
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
       <TrustedBySection />
   );
-}

@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-import Button from './Button';
-import EnhancedFuturisticCard from './EnhancedFuturisticCard';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ServiceCard: React.FC = () => {
   return (

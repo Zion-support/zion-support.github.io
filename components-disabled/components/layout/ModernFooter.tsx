@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ModernFooter: React.FC = () => {
   return (

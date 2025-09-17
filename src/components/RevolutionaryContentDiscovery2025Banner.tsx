@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapShieldGlobeTrendingUpStarUsers
+};
+
 
 export default function RevolutionaryContentDiscovery2025Banner() {
   return (
@@ -105,4 +107,3 @@ export default function RevolutionaryContentDiscovery2025Banner() {
                 <Users className="w-4 h-4 mr-2" />
                 Get Consultation
   );
-}

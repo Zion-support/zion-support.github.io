@@ -134,6 +134,7 @@ const UltimateContentCarousel2034: React.FC = () => {
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
     </div>
   );
+
 };
 export default UltimateContentCarousel2034;
 </p></p>

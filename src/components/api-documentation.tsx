@@ -3,6 +3,8 @@ import {
   Code, Database, Shield, Zap, Globe, Cpu, 
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
 } from 'lucide-react';
+};
+
 
 export default function APIDocumentation() {
 	return (
@@ -18,4 +20,3 @@ export default function APIDocumentation() {
 					<li><a className="text-cyan-400" href="/api-documentation-generator">API Documentation Generator</a></li>
 					<li><a className="text-cyan-400" href="/docs">Developer Docs</a></li>
 	);
-}

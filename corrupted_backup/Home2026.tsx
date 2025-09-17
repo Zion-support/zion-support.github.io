@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-
-ursor/fix-syntax-push-and-merge-to-main-40de;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Home2026: React.FC = () => {
   return (
@@ -15,13 +9,4 @@ const Home2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Home2026;
-=======
-
-
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

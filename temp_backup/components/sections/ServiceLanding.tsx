@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { CheckCircle, DollarSign, Phone, Mail, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ServiceLanding: React.FC = () => {
   return (

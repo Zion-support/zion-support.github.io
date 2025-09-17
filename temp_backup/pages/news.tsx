@@ -1,26 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-
-import { 
-  Newspaper, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  ExternalLink,
-  TrendingUp,
-  Award,
-  Rocket,
-  Globe,
-  Brain,
-  Atom,
-  Zap
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const news: React.FC = () => {
   return (

@@ -1,20 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  Shield, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
-  Zap, Sparkles, Lock, Cpu, Database, Cloud, Users, 
-  Briefcase, BookOpen, MessageCircle, TrendingUp,
-  Target, Layers, Globe, Brain, Atom, Building, Network,
-  Eye, Key, Server, LockKeyhole, Fingerprint, ShieldCheck
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const zero-trust-network-architecture-2029: React.FC = () => {
   return (

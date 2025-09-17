@@ -8,32 +8,3 @@ const AIChatbotSystem: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-
-export default AIChatbotSystem;
-=======
-export default AIChatbotSystem;
-</motion>
-</motion>
-</motion>
-</motion>
-</any>
-;
-export default AIChatbotSystem;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</any>;
-</ChatMessage>;
-</AIChatbotSystemProps>;
-</any>
-</any>
-</ChatMessage>
-</AIChatbotSystemProps>
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

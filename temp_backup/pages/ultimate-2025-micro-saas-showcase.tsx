@@ -1,17 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Filter, Grid, List, ChevronDown, ChevronUp
-} from 'lucide-react';
-import { Layout } from '../components/layout/Layout';
-import { ultimateRealMicroSaasServices2025 } from '../data/2025-ultimate-real-micro-saas-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ultimate-2025-micro-saas-showcase: React.FC = () => {
   return (

@@ -1,6 +1,8 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapTargetTrendingUpUsersGlobeLightbulb
+};
+
 
 export default function AI2025ContentRevolutionBreakthroughBanner() {
   return (
@@ -82,4 +84,3 @@ export default function AI2025ContentRevolutionBreakthroughBanner() {
           <p className="text-purple-200 text-sm">
             Join 500+ companies already experiencing the content revolution
   );
-}
