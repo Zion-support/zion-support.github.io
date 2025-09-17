@@ -1,51 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zion Tech Group - Innovative IT Solutions and Services" />
-    <meta name="keywords" content="IT services, technology solutions, digital transformation, AI, cloud computing" />
-    <meta name="author" content="Zion Tech Group" />
+    <meta name="description" content="Revolutionary AI solutions for enterprise transformation - Zion App" />
+    <meta name="keywords" content="AI, artificial intelligence, enterprise, transformation, technology" />
+    <meta name="author" content="Zion Holdings" />
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ziontechgroup.com/" />
-    <meta property="og:title" content="Zion Tech Group - Innovative IT Solutions" />
-    <meta property="og:description" content="Leading provider of IT services, digital transformation, and innovative technology solutions." />
-    <meta property="og:image" content="/og-image.svg" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ziontechgroup.com/" />
-    <meta property="twitter:title" content="Zion Tech Group - Innovative IT Solutions" />
-    <meta property="twitter:description" content="Leading provider of IT services, digital transformation, and innovative technology solutions." />
-    <meta property="twitter:image" content="/og-image.svg" />
-    
-    <title>Zion Tech Group - Innovative IT Solutions and Services</title>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="/src/main.js" as="script" />
+    <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IHsgU3RyaWN0TW9kZSB9IGZyb20gJ3JlYWN0JwppbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tL2NsaWVudCcKaW1wb3J0IHsgQnJvd3NlclJvdXRlciB9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nCmltcG9ydCBBcHAgZnJvbSAnLi9BcHAnCmltcG9ydCB7IEVycm9yQm91bmRhcnkgfSBmcm9tICcuL2NvbXBvbmVudHMvRXJyb3JCb3VuZGFyeScKaW1wb3J0ICcuL2luZGV4LmNzcycKClJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSEpLnJlbmRlcigKICA8U3RyaWN0TW9kZT4KICAgIDxCcm93c2VyUm91dGVyPgogICAgICA8RXJyb3JCb3VuZGFyeT4KICAgICAgICA8QXBwIC8+CiAgICAgIDwvRXJyb3JCb3VuZGFyeT4KICAgIDwvQnJvd3NlclJvdXRlcj4KICA8L1N0cmljdE1vZGU+KQo=" as="script" />
     
-    <!-- Manifest for PWA -->
-    <link rel="manifest" href="/manifest.json" />
+    <!-- Critical CSS inline -->
+    <style>
+      /* Critical CSS for above-the-fold content */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
     
-    <!-- Theme color -->
-    <meta name="theme-color" content="#0f172a" />
-    <script type="module" crossorigin src="/js/index-win_DXfA.js"></script>
-    <link rel="modulepreload" crossorigin href="/js/react-vendor-DbsIrEBC.js">
-    <link rel="modulepreload" crossorigin href="/js/ui-vendor-BfdVzBDX.js">
-    <link rel="modulepreload" crossorigin href="/js/animation-vendor-DeTuWl_y.js">
-    <link rel="modulepreload" crossorigin href="/js/icons-vendor-CuGsFszC.js">
-    <link rel="stylesheet" crossorigin href="/css/index-BN3hgzJm.css">
+    <!-- Performance monitoring -->
+    <script src="/performance-monitor.js" defer></script>
+    
+    <title>Zion App - Revolutionary AI Solutions</title>
+    <script type="module" crossorigin src="/assets/index-CzB7OaLl.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-B7em09cl.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-BL9Js5AC.js">
+    <link rel="modulepreload" crossorigin href="/assets/router-Cz_5C9O_.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-D8QLdmyF.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading-screen">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw-optimized.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
-  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988

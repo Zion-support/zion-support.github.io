@@ -19,7 +19,8 @@ const Blog: React.FC = () => {
       excerpt: 'Essential cybersecurity strategies to protect your business.',
       date: '2025-01-05',
       author: 'Zion Tech Team'
-    };
+    }
+  ];
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">

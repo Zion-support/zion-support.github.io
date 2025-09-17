@@ -15,16 +15,16 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost2025'));
+const PartnersPage = React.lazy(() => import('../Partners.tsx'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
+const Careers = React.lazy(() => import('../Careers'));
+const Privacy = React.lazy(() => import('../Privacy'));
+const Terms = React.lazy(() => import('../Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
+const ServicesPage = React.lazy(() => import('./pages/services/AIServices'));
 const AdvancedDashboard = React.lazy(() => import('./pages/AdvancedDashboard'));
 
 // Error Fallback Component
