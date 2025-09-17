@@ -161,7 +161,6 @@
   status = 301
 
 [[redirects]]
-<<<<<<< HEAD
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
@@ -212,16 +211,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-=======
-from = "/affiliate-attribution-suite"
-to = "/services/affiliate-attribution-suite/"
-<<<<<<< HEAD
-status = 301
-=======
-<<<<<<< HEAD
-status = 301
-=======
-status = 301
->>>>>>> 79992479b4902964b4a5ef1267a2a2e3ae279c60
->>>>>>> aab6cad50d24864653d33f46d023039adfa50215
->>>>>>> origin/merge-pr-12271

@@ -1,76 +1,3 @@
-import React from 'react';
-
-const RevolutionaryContentBanner2027: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-8 mb-8 rounded-2xl relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 BREAKTHROUGH CONTENT • JANUARY 2027
-          </div>
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology Content 2027
-          </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-            Discover the most advanced technological innovations that will reshape our world in 2027
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🚀</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Revolutionary Tech Trends 2027</h3>
-            <p className="text-purple-100 text-sm mb-4 text-center">
-              Explore conscious AI systems, quantum consciousness, and interdimensional computing
-            </p>
-            <a 
-              href="/pages/RevolutionaryTechTrends2027" 
-              className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center"
-            >
-              Explore Trends →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🤖</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Next-Gen AI Breakthrough</h3>
-            <p className="text-cyan-100 text-sm mb-4 text-center">
-              Experience synthetic consciousness, quantum neural networks, and autonomous AI ecosystems
-            </p>
-            <a 
-              href="/pages/NextGenAIBreakthrough2027" 
-              className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center"
-            >
-              Discover AI →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🌟</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Ultimate Tech Showcase</h3>
-            <p className="text-emerald-100 text-sm mb-4 text-center">
-              Interactive demos of holographic computing, molecular manufacturing, and reality manipulation
-            </p>
-            <a 
-              href="/pages/UltimateTechShowcase2027" 
-              className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center"
-            >
-              View Showcase →
-            </a>
-          </div>
-        </div>
-        
-        <div className="text-center mt-8">
-          <div className="inline-flex items-center space-x-4">
-            <span className="text-sm opacity-75">Featured Technologies:</span>
-            <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Conscious AI</span>
-            <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Computing</span>
-            <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Holographic Tech</span>
-            <span className="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Molecular Manufacturing</span>
-          </div>
-        </div>
-      </div>
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -82,7 +9,7 @@ const RevolutionaryContentBanner2027: React.FC = () => {
     "🧠 Conscious AI Systems",
     "⚡ Quantum Consciousness", 
     "🌌 Interdimensional Computing",
-    "📚 Revolutionary Insights"
+    "🧬 Molecular Manufacturing"
   ];
 
   useEffect(() => {
@@ -93,127 +20,48 @@ const RevolutionaryContentBanner2027: React.FC = () => {
     return () => clearInterval(interval);
   }, [features.length]);
 
-  if (!isVisible) return null;
-
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white overflow-hidden">
-      {/* Animated Background */}
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 to-transparent animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-l from-blue-500/10 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          {/* Left Content */}
-          <div className="flex-1 mb-4 md:mb-0">
-            <div className="flex items-center mb-2">
-              <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mr-3 animate-pulse">
-                🌟 BREAKTHROUGH 2027
-              </span>
-              <span className="text-sm opacity-80">NEW CONTENT AVAILABLE</span>
-            </div>
-            
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              Revolutionary Technology Content 2027
-            </h2>
-            
-            <div className="flex items-center mb-3">
-              <span className="text-lg opacity-90 mr-4">Featuring:</span>
-              <div className="text-lg font-semibold bg-white/20 backdrop-blur-sm px-3 py-1 rounded-lg">
-                {features[currentFeature]}
-              </div>
-            </div>
-            
-            <p className="text-sm opacity-80 max-w-2xl">
-              Experience the most advanced technology content featuring conscious AI, quantum computing, 
-              neural interfaces, and interdimensional technology. Interactive demos, expert insights, and breakthrough research.
+      
+      <div className="relative z-10 py-16 px-8">
+        <div className="text-center">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            Revolutionary Content 2027
+          </h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+            Experience the future of technology with our cutting-edge 2027 innovations
+          </p>
+          
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold mb-4">Next-Generation Technologies</h3>
+            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+              Discover revolutionary technologies that will reshape humanity's future
             </p>
-          </div>
-
-          {/* Right Content - Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              to="/pages/NextGenTechRevolution2027"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse"
+            
+            <div className="flex flex-wrap justify-center gap-2 mb-6">
+              {features.map((feature, index) => (
+                <span 
+                  key={index}
+                  className={`px-3 py-1 rounded-full text-xs transition-all duration-300 ${
+                    index === currentFeature 
+                      ? 'bg-white text-purple-600' 
+                      : 'bg-white/20 text-white'
+                  }`}
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+            
+            <Link 
+              to="/pages/RevolutionaryContent2027"
+              className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
             >
-              🚀 Explore 2027 Content
-            </Link>
-            <Link
-              to="/pages/UltimateTechShowcase2027"
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center"
-            >
-              ⚡ Interactive Demos
-            </Link>
-            <Link
-              to="/pages/RevolutionaryTechInsights2027"
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center"
-            >
-              📚 Expert Insights
-            </Link>
-          </div>
-
-          {/* Close Button */}
-          <button
-            onClick={() => setIsVisible(false)}
-            className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        {/* Quick Links */}
-        <div className="mt-6 pt-6 border-t border-white/20">
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              to="/pages/NextGenTechRevolution2027"
-              className="text-sm hover:text-purple-300 transition-colors flex items-center"
-            >
-              <span className="mr-1">🧠</span> Conscious AI
-            </Link>
-            <Link
-              to="/pages/UltimateTechShowcase2027"
-              className="text-sm hover:text-cyan-300 transition-colors flex items-center"
-            >
-              <span className="mr-1">⚡</span> Quantum Computing
-            </Link>
-            <Link
-              to="/pages/RevolutionaryTechInsights2027"
-              className="text-sm hover:text-emerald-300 transition-colors flex items-center"
-            >
-              <span className="mr-1">🧬</span> Neural Interfaces
-            </Link>
-            <Link
-              to="/pages/NextGenTechRevolution2027"
-              className="text-sm hover:text-orange-300 transition-colors flex items-center"
-            >
-              <span className="mr-1">🌌</span> Interdimensional Tech
-            </Link>
-            <Link
-              to="/pages/UltimateTechBreakthrough2026"
-              className="text-sm hover:text-pink-300 transition-colors flex items-center"
-            >
-              <span className="mr-1">🌟</span> 2026 Breakthroughs
+              Explore 2027 Technologies
             </Link>
           </div>
         </div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="absolute top-4 left-8 text-2xl opacity-20 animate-bounce" style={{ animationDelay: '0s' }}>
-        🧠
-      </div>
-      <div className="absolute top-8 right-12 text-xl opacity-20 animate-bounce" style={{ animationDelay: '1s' }}>
-        ⚡
-      </div>
-      <div className="absolute bottom-8 left-12 text-xl opacity-20 animate-bounce" style={{ animationDelay: '2s' }}>
-        🌌
-      </div>
-      <div className="absolute bottom-4 right-8 text-2xl opacity-20 animate-bounce" style={{ animationDelay: '3s' }}>
-        📚
       </div>
     </div>
   );
