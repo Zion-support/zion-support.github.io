@@ -1,7 +1,6 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
-import compression from 'vite-plugin-compression'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -74,18 +73,6 @@ export default defineConfig(({ mode }) => {
             },
           ],
         },
-      }),
-      compression({
-        algorithm: 'brotliCompress',
-        ext: '.br',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
-      compression({
-        algorithm: 'gzip',
-        ext: '.gz',
-        threshold: 10240,
-        deleteOriginFile: false,
       }),
       ...(isProduction ? [
         visualizer({
@@ -166,7 +153,6 @@ export default defineConfig(({ mode }) => {
           warn(warning);
         },
       },
-      brotliSize: true,
       chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
