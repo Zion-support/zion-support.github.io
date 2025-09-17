@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
 // Lazy load pages for better performance
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
+const Home = React.lazy(() => import('./pages/SimpleHome'));
+const About = React.lazy(() => import('./pages/SimpleContact'));
+const Contact = React.lazy(() => import('./pages/SimpleContact'));
+const Blog = React.lazy(() => import('./pages/SimpleBlog'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
@@ -33,28 +33,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
-  </div>
-);
-
-// Simple home component
-const Home = () => (
-  <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
-    <div className="container mx-auto px-4 py-16">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold text-white mb-6">
-          Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-300 mb-8">
-          Leading AI, Quantum Computing & Cybersecurity Solutions
-        </p>
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
-          <p className="text-white">
-            Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. 
-            Interactive AI calculator, enterprise case studies, and personalized recommendations.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 );
 
