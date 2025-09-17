@@ -9,6 +9,7 @@ export interface UpdateItem {
 }
 
 export const updates: UpdateItem[] = [
+  // Fresh content added 2025-09-15
   {
     title: 'Launch: Agentic Ops Dashboard (v1.0)',
     summary: 'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
@@ -71,6 +72,13 @@ export const updates: UpdateItem[] = [
     href: '/blog/ai-2026-policy-as-code-production-blueprint',
     date: '2025-09-15',
     tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Sales Copilot v1.0',
+    summary: 'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
+    href: '/updates/autonomous-ops-sre-for-agents',
+    date: '2025-09-15',
+    tag: 'Launch'
   },
   {
     title: 'Launch: AI Agent Safety Certification (Beta)',

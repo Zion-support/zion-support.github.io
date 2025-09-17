@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-  ChartBarIcon,
-  { name: 'Global Clients', value: '1,000+' },
-  { name: 'Patents Filed', value: '25+' },
-]
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
-
-const solutions = [
-  { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' }
-]
-
-<<<<<<< HEAD
-export default page;
-=======
 // @ts-nocheck
 import { getLatestUpdates } from '@/data/updates'
 import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
@@ -367,14 +349,6 @@ export default function HomePage() {
     </div>
   )
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-=======
-const solutions = [
-    href: '/solutions/autonomous-business'
-    href: '/solutions/it-asset-management'
-  }
-    <div className="bg-black min-h-screen">
-    <div className="bg-black">
       <div className="relative isolate px-6 pt-14 lg:px-8">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Leading the Future of{' '}
@@ -453,6 +427,3 @@ const solutions = [
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our technology can accelerate your growth and innovation.</p>
 }
-
-}
->>>>>>> 6995d05efbf958465be8e251001703bdbc87a50a
