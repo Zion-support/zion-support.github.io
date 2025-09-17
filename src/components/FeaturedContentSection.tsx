@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 const FeaturedContentSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const featuredContent = [
