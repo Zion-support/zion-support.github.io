@@ -5,10 +5,6 @@ import Footer from './components/Footer';
 import AppRouter from './components/Router';
 import './index.css';
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/netlify-build-fixes
 export default function App(): React.JSX.Element {
   return (
     <Router>

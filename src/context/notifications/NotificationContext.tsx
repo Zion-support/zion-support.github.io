@@ -1,5 +1,5 @@
 // Notification provider component
-import React from 'react';
+import React, { useContext } from 'react';
 import { NotificationContext } from './NotificationContext';
 
 export const NotificationProvider = ({ children }) => {
@@ -14,11 +14,7 @@ export const NotificationProvider = ({ children }) => {
       {children}
     </NotificationContext.Provider>
   );
-<<<<<<< HEAD
-};
-=======
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useNotifications = () => useContext(NotificationContext);
->>>>>>> origin/netlify-build-fixes
