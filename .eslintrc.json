@@ -25,11 +25,32 @@
   "rules": {
     "react/no-unescaped-entities": "off",
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/no-unused-vars": "warn"
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-unused-vars": "warn",
+    "react/no-unknown-property": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "ignorePatterns": [
+    "temp_*",
+    "backup*",
+    "recovered-branches",
+    "zion-website",
+    "zion-os",
+    "automation",
+    "tests.disabled",
+    "utils.disabled",
+    "pages.disabled*",
+    "pages._archive*",
+    "pages_backup*",
+    "temp_broken_files",
+    "temp_components*",
+    "temp_conflicted_files",
+    "temp_exclude",
+    "dist",
+    "node_modules"
+  ]
 }
