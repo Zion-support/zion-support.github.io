@@ -1,34 +1,32 @@
+import React from "react";
+
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <p className="text-sm text-blue-700 font-semibold mb-2">Guide</p>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Operational Evals Blueprint</h1>
-        <p className="text-gray-600 mb-8">Production-ready gates and scorecards for safer, faster rollouts.</p>
-        <div className="prose prose-lg max-w-none">
-          <p>
-            Operational evaluations in production move beyond offline benchmarks. This blueprint outlines
-            a practical design for eval gates, live scorecards, and incident-driven improvements.
-          </p>
-          <h2>Highlights</h2>
-          <ul>
-            <li>Define typed risks and map them to guardrail policies</li>
-            <li>Gate deployments with scenario-driven checks and SLO-aware thresholds</li>
-            <li>Stream eval events into tracing for unified debugging</li>
-            <li>Use cost- and risk-weighted scoring to guide rollouts</li>
-          </ul>
-          <h2>Implementation Notes</h2>
-          <ul>
-            <li>Start with a small set of high-signal scenarios</li>
-            <li>Establish latency and cost budgets per eval stage</li>
-            <li>Automate post-incident scenario generation and regression tests</li>
-          </ul>
-          <p>
-            Read the full article in the AI Lab: <a href="/reports/ai-lab/articles/new-operational-evals-blueprint-1758052800000.md">Operational Evals Blueprint</a>.
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
+        <div className="mb-8">
+          <div className="text-xs text-blue-300">Update</div>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Page Title
+          </h1>
+          <p className="mt-4 text-gray-300">
+            Page description and summary.
           </p>
         </div>
-      </article>
+        <div className="prose prose-invert prose-headings:text-white prose-a:text-blue-300">
+          <h2>Overview</h2>
+          <p>Content overview and details.</p>
+          <h2>Key features</h2>
+          <ul>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
+          </ul>
+          <p>
+            <a href="/contact">Contact us →</a>
+          </p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
-
