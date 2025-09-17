@@ -12,6 +12,8 @@
   NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
   NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
+  # Prevent Netlify from attempting to checkout Git submodules (none are required)
+  GIT_SUBMODULE_STRATEGY = "none"
 
 [functions]
   directory = "netlify/functions"
