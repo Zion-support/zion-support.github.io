@@ -175,6 +175,11 @@
     "h1": "ai-business-intelligence"
   },
   {
+<<<<<<< HEAD
+    "route": "/ai-consciousness-evolution-2026",
+    "title": "AI Consciousness Evolution 2026 | Zion Tech Group",
+    "h1": "AI Consciousness Evolution 2026"
+=======
     "route": "/ai-consciousness-evolution-2025",
     "title": "AI Consciousness Evolution 2025 | Zion Tech Group",
     "h1": "AI Consciousness Evolution 2025"
@@ -188,6 +193,7 @@
     "route": "/ai-consciousness-evolution-2029",
     "title": "Ai Consciousness Evolution 2029 - Zion Tech Group",
     "h1": "Ai Consciousness Evolution 2029"
+>>>>>>> origin/cursor/create-and-deploy-new-content-169f
   },
   {
     "route": "/ai-content-intelligence-platform",
@@ -1935,6 +1941,9 @@
     "h1": "Agent Platform SLO Blueprint (2026)"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-agentic-billing-controls",
+=======
     "route": "/blog/ai-2026-agentic-observability-deep-dive",
     "title": "AI 2026: Agentic Observability — Deep Dive | Zion Tech Group",
     "h1": "AI 2026: Agentic Observability — Deep Dive"
@@ -1956,6 +1965,7 @@
   },
   {
     "route": "/blog/ai-2026-edge-agents-production-guide",
+>>>>>>> origin/cursor/create-and-deploy-new-content-169f
     "title": "",
     "h1": "Reliable Autonomy: Agentic Billing Controls"
   },
@@ -2135,6 +2145,14 @@
     "h1": "AI 2026: Reliable Autonomy Operations"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-reliable-real-time-agents",
+    "title": "Reliable Real‑Time Agents (2026) | Zion Tech Group",
+    "h1": "Reliable Real‑Time Agents (2026)"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-169f
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
     "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
     "h1": "AI 2026: Runtime Guardrails Blueprint"
@@ -2173,6 +2191,8 @@
     "route": "/blog/ai-roadmap-2026",
     "title": "AI Roadmap 2026: Practical Enterprise Adoption Guide | Zion Tech Group",
     "h1": "AI Roadmap 2026: Practical Enterprise Adoption Guide"
+<<<<<<< HEAD
+=======
   },
   {
     "route": "/blog/autonomous-evaluation-playbooks-2025",
@@ -2188,6 +2208,7 @@
     "route": "/blog/cloud-native-automation",
     "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
     "h1": "Building Cloud-Native Automation Infrastructure"
+>>>>>>> origin/cursor/create-and-deploy-new-content-169f
   },
   {
     "route": "/blog/autonomous-evaluation-playbooks-2025",
