@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+=======
 /* Custom animations for enhanced content */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -223,15 +225,100 @@
   }
 }
 
+>>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
 /* Custom CSS Variables */
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --zion-purple: #8b5cf6;
+  --zion-purple-dark: #7c3aed;
+  --zion-purple-light: #a78bfa;
+  --zion-cyan: #06b6d4;
+  --zion-blue: #3b82f6;
+  --zion-blue-light: #dbeafe;
+  --zion-slate-dark: #1e293b;
+  --zion-slate-light: #94a3b8;
 }
 
+<<<<<<< HEAD
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+/* Utility Classes */
+.text-zion-purple {
+  color: var(--zion-purple);
+}
+
+.bg-zion-purple {
+  background-color: var(--zion-purple);
+}
+
+.border-zion-purple {
+  border-color: var(--zion-purple);
+}
+
+.text-zion-cyan {
+  color: var(--zion-cyan);
+}
+
+.bg-zion-cyan {
+  background-color: var(--zion-cyan);
+}
+
+.border-zion-cyan {
+  border-color: var(--zion-cyan);
+}
+
+.text-zion-blue {
+  color: var(--zion-blue);
+}
+
+.bg-zion-blue {
+  background-color: var(--zion-blue);
+}
+
+.border-zion-blue {
+  border-color: var(--zion-blue);
+}
+
+.text-zion-slate-dark {
+  color: var(--zion-slate-dark);
+}
+
+.bg-zion-slate-dark {
+  background-color: var(--zion-slate-dark);
+}
+
+.text-zion-slate-light {
+  color: var(--zion-slate-light);
+}
+
+.bg-zion-slate-light {
+  background-color: var(--zion-slate-light);
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-zion {
+  background: linear-gradient(135deg, var(--zion-purple) 0%, var(--zion-cyan) 100%);
+}
+
+.bg-gradient-zion-dark {
+  background: linear-gradient(135deg, var(--zion-purple-dark) 0%, var(--zion-cyan) 100%);
+}
+
+/* Animations */
+@keyframes fadeIn {
+=======
 /* New Animations for 2027 Components */
 @keyframes fade-in {
+>>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -242,6 +329,8 @@
   }
 }
 
+<<<<<<< HEAD
+=======
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -278,10 +367,14 @@
   }
 }
 
+>>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
 .animate-fade-in {
-  animation: fade-in 0.8s ease-out;
+  animation: fadeIn 0.6s ease-out;
 }
 
+<<<<<<< HEAD
+@keyframes slideIn {
+=======
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -529,16 +622,54 @@ body {
 
 /* Animations */
 @keyframes fadeInUp {
+>>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
+<<<<<<< HEAD
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+/* Hover Effects */
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Custom Components */
+.btn-primary {
+  @apply bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-lg p-6 border border-gray-200;
+}
+
+.card-hover {
+  @apply card hover:shadow-xl hover:border-zion-purple/20 transition-all duration-300;
+}
+
+/* Responsive Design */
+=======
 /* Responsive design */
+>>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
 @media (max-width: 768px) {
   .container {
     padding-left: 1rem;
@@ -546,9 +677,23 @@ body {
   }
 }
 
+<<<<<<< HEAD
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0f172a;
+    color: #f1f5f9;
+  }
+  
+  .card {
+    @apply bg-slate-800 border-slate-700;
+  }
+}
+=======
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+>>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
