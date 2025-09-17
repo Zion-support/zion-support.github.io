@@ -1025,7 +1025,6 @@ export default function ITServices() {
     },
     {
       icon: Cpu,
-<<<<<<< HEAD
       name: 'Edge Computing Solutions',
       description: 'Distributed computing at the edge for low-latency applications',
       features: [
@@ -1035,7 +1034,6 @@ export default function ITServices() {
         'Offline capability'
       ],
       category: 'Infrastructure'
-=======
       name: 'Quantum Computing Infrastructure',
       description: 'Quantum computing infrastructure setup, algorithm development, and quantum-classical hybrid systems.',
       features: [
@@ -1079,19 +1077,16 @@ export default function ITServices() {
         'Real-time decision making capabilities'
       ],
       category: 'Edge Computing'
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
     },
     {
       icon: Shield,
       name: 'Zero Trust Security Architecture',
-<<<<<<< HEAD
       description: 'Comprehensive security framework with zero-trust principles',
       features: [
         'Identity verification',
         'Device trust assessment',
         'Network segmentation',
         'Continuous monitoring'
-=======
       description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
       features: [
         'Zero trust network architecture design',
@@ -1109,26 +1104,21 @@ export default function ITServices() {
         'Reduced attack surface',
         'Improved compliance and governance',
         'Automated threat response'
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       ],
       category: 'Security'
     },
     {
       icon: Database,
-<<<<<<< HEAD
       name: 'Database Management Solutions',
       description: 'Comprehensive database administration and optimization',
-=======
       name: 'Blockchain & Distributed Ledger Solutions',
       description: 'Blockchain infrastructure, smart contract development, and decentralized application deployment.',
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       features: [
         'Database design and optimization',
         'Performance tuning',
         'Backup and recovery',
         'Security hardening'
       ],
-<<<<<<< HEAD
       category: 'Data Management'
     },
     {
@@ -1140,7 +1130,6 @@ export default function ITServices() {
         'GPU cluster management',
         'Data pipeline automation',
         'Model monitoring'
-=======
       pricing: '$75,000 – $750,000 project',
       projectPricing: '$5,000 – $50,000/month managed',
       timeline: '16–32 weeks',
@@ -1218,28 +1207,22 @@ export default function ITServices() {
         'Automated ML operations',
         'Scalable AI infrastructure',
         'Enhanced model performance and reliability'
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       ],
       category: 'AI Infrastructure'
     },
     {
       icon: Server,
-<<<<<<< HEAD
       name: 'Server Management Solutions',
       description: 'Comprehensive server administration and maintenance',
-=======
       name: 'Serverless & Microservices Architecture',
       description: 'Serverless architecture implementation with microservices design and API management.',
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       features: [
         'Server provisioning',
         'Performance monitoring',
         'Automated maintenance',
         'Disaster recovery'
       ],
-<<<<<<< HEAD
       category: 'Infrastructure'
-=======
       pricing: '$75,000 – $750,000 project',
       projectPricing: '$5,000 – $50,000/month managed',
       timeline: '12–24 weeks',
@@ -1342,7 +1325,6 @@ export default function ITServices() {
         'Advanced data processing and analysis'
       ],
       category: 'High-Performance Computing'
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
     }
   ];
 

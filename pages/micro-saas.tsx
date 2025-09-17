@@ -1,11 +1,10 @@
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Smartphone, Calendar, Video, Package, Target } from 'lucide-react';
-=======
 import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
 
 export default function MicroSaaS() {
   const contact = {
@@ -1074,9 +1073,7 @@ export default function MicroSaaS() {
     {
       icon: Brain,
       name: 'AI-Powered Email Responder',
-<<<<<<< HEAD
       description: 'Intelligent email automation and response system',
-=======
       description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
       features: [
         'Natural language processing for email understanding',
@@ -1087,7 +1084,6 @@ export default function MicroSaaS() {
         'Learning from user feedback and corrections'
       ],
       pricing: '$299 – $1,999/month',
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       timeline: '3–4 weeks',
       benefits: [
         '50% reduction in email response time',
@@ -1103,12 +1099,10 @@ export default function MicroSaaS() {
       description: 'Comprehensive analytics for online stores',
       timeline: '2–3 weeks',
       benefits: [
-<<<<<<< HEAD
         'Real-time sales tracking',
         'Customer behavior insights',
         'Inventory management',
         'Revenue forecasting'
-=======
         '60% higher completion rates',
         'Real-time customer insights',
         'Mobile-optimized user experience',
@@ -1223,16 +1217,13 @@ export default function MicroSaaS() {
         'Automated return workflows',
         'Improved customer experience',
         'Reduced return processing costs'
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       ],
       category: 'E-Commerce'
     },
     {
-<<<<<<< HEAD
       icon: Shield,
       name: 'Cybersecurity Compliance Manager',
       description: 'Automated compliance monitoring and reporting',
-=======
       icon: Mail,
       name: 'Automated Email Follow-up Service',
       description: 'Intelligent email sequence automation with personalization, A/B testing, and conversion optimization.',
@@ -1333,7 +1324,6 @@ export default function MicroSaaS() {
         'Integration with security tools'
       ],
       pricing: '$599 – $3,999/month',
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       timeline: '4–6 weeks',
       benefits: [
         'Automated compliance checks',
@@ -1341,9 +1331,7 @@ export default function MicroSaaS() {
         'Regulatory reporting',
         'Risk assessment tools'
       ],
-<<<<<<< HEAD
       category: 'Security'
-=======
       category: 'Cybersecurity'
     },
     {
@@ -1367,7 +1355,6 @@ export default function MicroSaaS() {
         'Cutting-edge research capabilities'
       ],
       category: 'Quantum Computing'
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
     }
   ];
 

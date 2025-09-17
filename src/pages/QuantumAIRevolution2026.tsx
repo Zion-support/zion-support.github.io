@@ -302,11 +302,8 @@ const QuantumAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
 export default QuantumAIRevolution2026;
-=======
 };
 
 export default QuantumAIRevolution2026;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

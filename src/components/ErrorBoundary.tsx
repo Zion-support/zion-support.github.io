@@ -2,13 +2,10 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-<<<<<<< HEAD
   fallback?: ReactNode;
 };
-=======
 }
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 interface State {
   hasError: boolean;
   error?: Error;
@@ -28,7 +25,6 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-<<<<<<< HEAD
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -40,12 +36,10 @@ class ErrorBoundary extends Component<Props, State> {
       if (this.props.fallback) {
         return this.props.fallback;
       };
-=======
   }
 
   render() {
     if (this.state.hasError) {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -57,7 +51,6 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
               <h2 className="text-xl font-semibold text-gray-900">Something went wrong</h2>
             </div>
-<<<<<<< HEAD
             
             <div className="mt-4">
               <p className="text-sm text-gray-600">
@@ -87,7 +80,6 @@ class ErrorBoundary extends Component<Props, State> {
               <button
                 onClick={() => window.location.reload()};
                 className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-=======
             <p className="text-gray-600 mb-4">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
@@ -95,7 +87,6 @@ class ErrorBoundary extends Component<Props, State> {
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
               >
                 Refresh Page
               </button>
@@ -122,13 +113,10 @@ class ErrorBoundary extends Component<Props, State> {
       );
     };
     return this.props.children;
-<<<<<<< HEAD
   };
 };
 export default ErrorBoundary;
-=======
   }
 }
 
 export { ErrorBoundary };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

@@ -65,7 +65,6 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Accessibility', path: '/accessibility' },
         { name: 'Security', path: '/security' },
         { name: 'Compliance', path: '/compliance' }
->>>>>>> cursor/create-and-deploy-new-content-d7eb
       ]
     }
   ];

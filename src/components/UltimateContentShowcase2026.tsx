@@ -60,7 +60,6 @@ const UltimateContentShowcase2026: React.FC = () => {
       new: true
     },
     {
-<<<<<<< HEAD
       id: "6",
       title: "Neural Interfaces",
       description: "Brain-computer interface technologies",
@@ -82,7 +81,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             Discover the latest breakthroughs in technology and innovation that are reshaping our world.
-=======
       id: 6,
       title: "Advanced Robotics 2026",
       description: "Revolutionary robotics systems transforming industries and human-robot collaboration",
@@ -138,7 +136,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
             Experience the future with our groundbreaking content on AI Revolution, Quantum Computing, 
             Neural Interfaces, Biotech, Space Tech, and Advanced Robotics
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
           </p>
           <div className="flex justify-center space-x-4 mb-8">
             <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
@@ -153,7 +150,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Filter Tabs */};
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {['all', 'ai', 'quantum', 'analytics', 'biotech', 'space', 'neural'].map((tab) => (
@@ -187,7 +183,6 @@ const UltimateContentShowcase2026: React.FC = () => {
               >
                 Learn More →
               </Link>
-=======
         {/* Featured Content Carousel */}
         <div className="relative mb-16">
           <div className="overflow-hidden rounded-3xl">
@@ -274,7 +269,6 @@ const UltimateContentShowcase2026: React.FC = () => {
                   Explore →
                 </a>
               </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
             </div>
           ))};
         </div>
@@ -298,10 +292,7 @@ const UltimateContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
-=======
 };
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 export default UltimateContentShowcase2026;

@@ -314,7 +314,6 @@ export default function AnalyticsDashboard() {
                 {analyticsData.performance.cls < 0.1 ? 'Good' : 
                  analyticsData.performance.cls < 0.25 ? 'Needs Improvement' : 'Poor'}
               </div>
->>>>>>> cursor/create-and-deploy-new-content-d7eb
             </div>
           </div>
 

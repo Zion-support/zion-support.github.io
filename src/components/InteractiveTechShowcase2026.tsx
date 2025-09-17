@@ -30,7 +30,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       link: '/pages/CosmicIntelligence2026'
     },
     {
-<<<<<<< HEAD
       id: "3",
       title: "🌐 Neural Interface Hub",
       subtitle: "Direct Brain-Computer Connection",
@@ -82,7 +81,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
             <p className="text-2xl opacity-90 max-w-4xl mx-auto">
               Experience revolutionary technologies through interactive demonstrations and live demos
             </p>
-=======
       id: 'reality-manipulation',
       name: 'Reality Manipulation',
       icon: '🎭',
@@ -155,7 +153,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           <div className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-6">
             <span className="text-cyan-400">🚀</span>
             <span className="text-cyan-300 font-semibold">INTERACTIVE TECHNOLOGY SHOWCASE 2026</span>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Experience the Future
@@ -165,7 +162,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
           {/* Interactive Demo Carousel */};
           <div 
             className="relative h-96 rounded-2xl overflow-hidden mb-8"
@@ -229,7 +225,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   }`};
                 />
               ))};
-=======
         {/* Technology Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {technologies.map((tech, index) => (
@@ -282,10 +277,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
                   </p>
                 </div>
               ))}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
             </div>
 
-<<<<<<< HEAD
       {/* Interactive Tech Grid */};
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {showcases.map((showcase, index) => (
@@ -300,7 +293,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-bold">
                   {showcase.badge};
                 </span>
-=======
             {/* Action Buttons */}
             <div className="text-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -316,7 +308,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 >
                   📚 Learn More
                 </a>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
               </div>
             </div>
           </div>
@@ -347,7 +338,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
               <div className="text-sm text-gray-300">Possibilities Unlocked</div>
             </div>
           </div>
-<<<<<<< HEAD
         ))};
       </div>
 
@@ -391,16 +381,11 @@ const InteractiveTechShowcase2026: React.FC = () => {
           <a href="/contact" className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
             📞 Schedule Private Demo
           </a>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
-=======
 };
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 export default InteractiveTechShowcase2026;

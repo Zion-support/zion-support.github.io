@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+import Link from 'next/link';
+
 const navigation = {
   main: [
     { name: 'About', href: '/about' },
@@ -45,30 +30,119 @@ const navigation = {
       ),
     },
   ],
-}
-<<<<<<< HEAD
+};
 
-<<<<<<< HEAD
-=======
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
->>>>>>> cursor/create-and-deploy-new-content-8472
-=======
-<<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> cursor/create-and-deploy-new-content-ee06
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center">
-          <p>&copy; 2025 Zion Holdings. All rights reserved.</p>
+    <footer className="bg-slate-900" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">
+        Footer
+      </h2>
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div className="space-y-8">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            </Link>
+            <p className="text-sm leading-6 text-slate-300">
+              Empowering businesses with cutting-edge AI, cloud, and digital transformation solutions.
+              Your trusted partner for innovation and growth.
+            </p>
+            <div className="flex space-x-6">
+              {navigation.social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-slate-400 hover:text-slate-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  <li>
+                    <Link href="/services" className="text-sm leading-6 text-slate-300 hover:text-white transition-colors">
+                      AI Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services" className="text-sm leading-6 text-slate-300 hover:text-white transition-colors">
+                      Cloud Solutions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services" className="text-sm leading-6 text-slate-300 hover:text-white transition-colors">
+                      Digital Transformation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services" className="text-sm leading-6 text-slate-300 hover:text-white transition-colors">
+                      Consulting
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  <li>
+                    <Link href="/about" className="text-sm leading-6 text-slate-300 hover:text-white transition-colors">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/research" className="text-sm leading-6 text-slate-300 hover:text-white transition-colors">
+                      Research
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="text-sm leading-6 text-slate-300 hover:text-white transition-colors">
+                      Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/privacy" className="text-sm leading-6 text-slate-300 hover:text-white transition-colors">
+                      Privacy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-16 border-t border-slate-700 pt-8 sm:mt-20 lg:mt-24">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs leading-5 text-slate-400">
+              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="mt-4 sm:mt-0">
+              <Link
+                href="/terms"
+                className="text-xs leading-5 text-slate-400 hover:text-slate-300 transition-colors mr-6"
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-xs leading-5 text-slate-400 hover:text-slate-300 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
