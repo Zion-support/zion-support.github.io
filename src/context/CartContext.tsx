@@ -6,6 +6,7 @@ interface CartItem {
   price: number;
   quantity: number;
   image?: string;
+  description?: string;
 }
 
 interface CartState {
@@ -34,12 +35,14 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case 'ADD_ITEM': {
       const existingItem = state.items.find(item => item.id === action.payload.id);
+      
       if (existingItem) {
         const updatedItems = state.items.map(item =>
           item.id === action.payload.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
+        
         return {
           ...state,
           items: updatedItems,
@@ -49,6 +52,7 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       } else {
         const newItem = { ...action.payload, quantity: 1 };
         const updatedItems = [...state.items, newItem];
+        
         return {
           ...state,
           items: updatedItems,
@@ -57,8 +61,10 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
         };
       }
     }
+    
     case 'REMOVE_ITEM': {
       const updatedItems = state.items.filter(item => item.id !== action.payload);
+      
       return {
         ...state,
         items: updatedItems,
@@ -66,12 +72,14 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
         itemCount: updatedItems.reduce((sum, item) => sum + item.quantity, 0)
       };
     }
+    
     case 'UPDATE_QUANTITY': {
       const updatedItems = state.items.map(item =>
         item.id === action.payload.id
           ? { ...item, quantity: Math.max(0, action.payload.quantity) }
           : item
       ).filter(item => item.quantity > 0);
+      
       return {
         ...state,
         items: updatedItems,
@@ -79,12 +87,14 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
         itemCount: updatedItems.reduce((sum, item) => sum + item.quantity, 0)
       };
     }
+    
     case 'CLEAR_CART':
       return {
         items: [],
         total: 0,
         itemCount: 0
       };
+    
     default:
       return state;
   }
@@ -96,7 +106,11 @@ const initialState: CartState = {
   itemCount: 0
 };
 
-export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+interface CartProviderProps {
+  children: ReactNode;
+}
+
+export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   const addItem = (item: Omit<CartItem, 'quantity'>) => {
@@ -115,23 +129,27 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     dispatch({ type: 'CLEAR_CART' });
   };
 
+  const value: CartContextType = {
+    state,
+    addItem,
+    removeItem,
+    updateQuantity,
+    clearCart
+  };
+
   return (
-    <CartContext.Provider value={{
-      state,
-      addItem,
-      removeItem,
-      updateQuantity,
-      clearCart
-    }}>
+    <CartContext.Provider value={value}>
       {children}
     </CartContext.Provider>
   );
 };
 
-export const useCart = () => {
+export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
   if (context === undefined) {
     throw new Error('useCart must be used within a CartProvider');
   }
   return context;
 };
+
+export default CartContext;

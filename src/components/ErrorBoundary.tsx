@@ -27,6 +27,11 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
   }
 
   render() {
@@ -78,6 +83,12 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 Refresh Page
               </button>
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors mt-2"
+              >
+                Try Again
+              </button>
             </div>
           </div>
         </div>
@@ -89,3 +100,4 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+export { ErrorBoundary };
