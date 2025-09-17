@@ -1,0 +1,4 @@
+ export const ContentQualityEnhancer = ({ className = ',showAnalysis = true,autoAnalyze = true,targetElements = ['p','h1','h2','h3','h4','h5','h6','div[class*="content"]','article','section'] }) => {}}
+ export const ContentQualityEnhancer = ({ className = \'',showAnalysis = true,autoAnalyze = true,targetElements = [\'p\',\'h1\',\'h2\',\'h3\',\'h4\',\'h5\',\'h6\',\'div[class*=\"content\"]\',\'article\',\'section\'] }) => {}}
+const React,{ useState,useEffect,useCallback } from "react";  export const ContentQualityEnhancer = ({ className = "",showAnalysis = true,autoAnalyze = true,targetElements = ["p","h1","h2","h3","h4","h5","h6","div[class*="content"]","article","section"] }) => {}}'"'"
+ export const ContentQualityEnhancer = ({ className = ',showAnalysis = true,autoAnalyze = true,targetElements = ['p','h1','h2','h3','h4','h5','h6','div[class*="content"]','article','section'] }) => {}}
