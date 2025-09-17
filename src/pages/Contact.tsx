@@ -306,7 +306,6 @@ const Contact: React.FC = () => {
             <p className="text-gray-300 mb-6">
               Need immediate assistance? Our 24/7 emergency support team is here to help.
             </p>
-<<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
@@ -335,74 +334,7 @@ const Contact: React.FC = () => {
               <li>• Enterprise solutions</li>
               <li>• Custom development</li>
               <li>• Technology consulting</li>
-            </ul>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-300"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Call Now
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-300"
-              >
-                <Mail className="h-5 w-5 mr-2" />
-                Email Support
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
-              <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
-                  <Card
-                    key={index}
-                    className="bg-zion-blue-dark border border-zion-blue-light p-6"
-                  >
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {office.name}
-                    </h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
-                          {office.address}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
-                          {office.phone}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <a
-                          href={`mailto:${office.email}`}
-                          className="text-zion-cyan hover:underline"
-                        >
-                          {office.email}
-                        </a>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-          <div
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+            </ul>cursor/fix-netlify-build-and-merge-to-main-a068
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -413,11 +345,8 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
-<<<<<<< HEAD
           </motion.div>
           </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[

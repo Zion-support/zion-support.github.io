@@ -61,7 +61,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden">
-<<<<<<< HEAD
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -322,8 +321,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
           </div>
         </div>
       </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     </div>
   );
 };

@@ -1,35 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 
 const QuantumRealityEngine2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
-    <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-<<<<<<< HEAD
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-=======
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+    <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white">cursor/fix-netlify-build-and-merge-to-main-a068
             ⚡ QUANTUM REALITY ENGINE • JANUARY 2027
           </div>
           <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
@@ -72,57 +46,13 @@ const QuantumRealityEngine2027: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Enter Quantum Reality →
             </button>
-<<<<<<< HEAD
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
-              Learn More
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-            </button>
-          </div>
-        </div>
-
-            </ul>
-          </div>
-
-<<<<<<< HEAD
-        {/* Quantum Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Field Manipulation</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Control quantum fields to manipulate matter, energy, and the fundamental forces of nature
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Matter reconstruction</li>
-              <li>• Energy manipulation</li>
-              <li>• Force field generation</li>
-              <li>• Quantum tunneling</li>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+              Learn Morecursor/fix-netlify-build-and-merge-to-main-a068
             </ul>
           </div>
 
           <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌌</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Dimension Control</h3>
-            <p className="text-indigo-100 mb-6 text-center">
-              Access and manipulate multiple dimensions, creating portals between realities
-            </p>
-<<<<<<< HEAD
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Wormhole creation</li>
-              <li>• Time dilation fields</li>
-              <li>• Dimensional portals</li>
-              <li>• Space compression</li>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+          <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">cursor/fix-netlify-build-and-merge-to-main-a068
             <ul className="text-indigo-200 space-y-2 text-sm">
               <li>• Interdimensional portals</li>
               <li>• Parallel universe access</li>
@@ -293,7 +223,6 @@ const QuantumRealityEngine2027: React.FC = () => {
 
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
-<<<<<<< HEAD
             <h3 className="text-2xl font-bold mb-4 text-center">Probability Manipulation</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Alter the probability of events and outcomes to shape reality according to your will
@@ -305,103 +234,17 @@ const QuantumRealityEngine2027: React.FC = () => {
               <li>• Reality selection</li>
             </ul>
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
-              Shape Probability →
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌟</div>
-<<<<<<< HEAD
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
-            <p className="text-violet-100 mb-6 text-center">
-              Merge consciousness with quantum fields to achieve omnipresent awareness
-            </p>
-            <ul className="text-violet-200 space-y-2 mb-6 text-sm">
-              <li>• Universal awareness</li>
-              <li>• Quantum telepathy</li>
-              <li>• Omnipresent consciousness</li>
-              <li>• Reality perception</li>
-            </ul>
-            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
-              Merge with Quantum →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚛️</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Entanglement</h3>
-            <p className="text-rose-100 mb-6 text-center">
-              Create instant connections between any two points in space and time
-            </p>
-            <ul className="text-rose-200 space-y-2 mb-6 text-sm">
-              <li>• Instant communication</li>
-              <li>• Quantum teleportation</li>
-              <li>• Entangled particles</li>
-              <li>• Spooky action at distance</li>
-            </ul>
-            <button className="w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold">
-              Create Entanglement →
-            </button>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🌊</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Wave Functions</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              Control quantum wave functions to create matter from pure energy
-            </p>
-            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-              <li>• Matter creation</li>
-              <li>• Energy conversion</li>
-              <li>• Wave function collapse</li>
-              <li>• Quantum superposition</li>
-            </ul>
-            <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
-              Control Waves →
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+              Shape Probability →cursor/fix-netlify-build-and-merge-to-main-a068
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Quantum Technology Showcase */}
         <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">⚡ Quantum Reality Technology</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Revolutionary quantum technology that allows manipulation of reality at the most fundamental level
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-<<<<<<< HEAD
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-2xl font-bold mb-4 text-cyan-400">Quantum Field Generators</h3>
-                <p className="text-gray-200 mb-4">
-                  Massive quantum field generators that can manipulate the fundamental forces of nature across vast distances.
-                </p>
-                <div className="flex items-center space-x-2 text-sm text-cyan-300">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  <span>Planetary Scale</span>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-2xl font-bold mb-4 text-purple-400">Space-Time Manipulators</h3>
-                <p className="text-gray-200 mb-4">
-                  Advanced devices that can create localized distortions in space-time for transportation and time manipulation.
-                </p>
-                <div className="flex items-center space-x-2 text-sm text-purple-300">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                  <span>Interstellar Range</span>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+              Revolutionary quantum technology that allows manipulation of reality at the most fundamental levelcursor/fix-netlify-build-and-merge-to-main-a068
                 </div>
               </div>
             </div>
@@ -492,7 +335,6 @@ const QuantumRealityEngine2027: React.FC = () => {
               </p>
               <div className="text-emerald-400 font-semibold">Quantum Healing</div>
             </div>
-<<<<<<< HEAD
         {/* Quantum Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Quantum Applications</h2>
@@ -522,22 +364,7 @@ const QuantumRealityEngine2027: React.FC = () => {
                 Heal any injury or disease by manipulating matter at the quantum level for perfect cellular repair.
               </p>
               <div className="text-emerald-400 font-semibold">Quantum Healing</div>
-            </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-          </div>
-        </div>
-
-        {/* Call to Action */}
-<<<<<<< HEAD
-        <div className="text-center">
-        <div className="text-center bg-gradient-to-br from-violet-900/50 to-indigo-900/50 rounded-2xl p-12">
-          <h2 className="text-5xl font-bold mb-6">Control Reality Itself</h2>
-          <p className="text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
-            The Quantum Reality Engine represents the pinnacle of human achievement - 
-            the ability to control the very fabric of existence. The future is in your hands.
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+            </div>cursor/fix-netlify-build-and-merge-to-main-a068
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <button className="bg-gradient-to-r from-violet-500 to-indigo-500 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
@@ -549,36 +376,9 @@ const QuantumRealityEngine2027: React.FC = () => {
             <button className="border-2 border-indigo-400 text-indigo-400 px-10 py-5 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-bold text-xl">
               Get Started
         <div className="text-center">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Control Reality Itself?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and become a master of reality manipulation
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <button className="bg-gradient-to-r from-violet-500 to-indigo-500 text-white px-10 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
-              Control Reality →
-            </button>
-            <button className="border-2 border-violet-400 text-violet-400 px-10 py-5 rounded-lg hover:bg-violet-400 hover:text-white transition-all duration-300 font-bold text-xl">
-              Learn More
-            </button>
-            <button className="border-2 border-indigo-400 text-indigo-400 px-10 py-5 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-bold text-xl">
-              Get Started
-        <div className="text-center">
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold mb-6">Ready to Control Reality Itself?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the quantum revolution and become a master of reality manipulation
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Begin Quantum Training
-            </button>
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+            Join the quantum revolution and become a master of reality manipulationcursor/fix-netlify-build-and-merge-to-main-a068
         <div className="text-center">
               Schedule Demo
             </button>

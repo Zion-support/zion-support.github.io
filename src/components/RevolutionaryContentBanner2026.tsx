@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const RevolutionaryContentBanner2026: React.FC = () => {
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+import { motion, AnimatePresence } from 'framer-motion';cursor/fix-netlify-build-and-merge-to-main-a068
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner2026: React.FC = () => {
@@ -43,7 +39,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       description: "Direct brain-computer communication enabling thought-controlled technology",
       link: "/pages/NeuralInterfaceEvolution2026",
       gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-<<<<<<< HEAD
       icon: "🧬",
       badge: "NEURAL"
       icon: "🧬"
@@ -53,95 +48,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       link: "/pages/UltimateTechRevolution2026",
       gradient: "from-indigo-600 to-purple-600",
       icon: "🌟",
-      badge: "ULTIMATE"
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-    },
-    {
-      id: 5,
-      title: "🤖 Synthetic Intelligence 2026",
-      subtitle: "Beyond artificial intelligence",
-      description: "Create AI agents with synthetic consciousness and autonomous capabilities",
-      link: "/pages/SyntheticIntelligence2026",
-      gradient: "from-violet-600 to-fuchsia-600",
-      icon: "🤖",
-      badge: "SYNTHETIC"
-    },
-    {
-      id: 6,
-      title: "💭 Consciousness Computing 2026",
-      subtitle: "AI that truly understands existence",
-      description: "The first computing system to achieve genuine consciousness and self-awareness",
-      link: "/pages/ConsciousnessComputing2026",
-      gradient: "from-rose-600 to-pink-600",
-      icon: "💭",
-      badge: "CONSCIOUSNESS"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [contentSlides.length]);
-
-  return (
-    <div className="relative mb-12 overflow-hidden">
-      {/* Main Banner */}
-      <div className={`bg-gradient-to-r ${contentSlides[currentSlide].gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden transition-all duration-1000`}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-        <div className="relative z-10">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-            <h3 className="text-3xl font-bold">REVOLUTIONARY CONTENT 2026</h3>
-            <span className="text-4xl animate-bounce">{contentSlides[currentSlide].icon}</span>
-  return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2026
-          </div>
-          <h2 className="text-4xl font-bold mb-4">{contentSlides[currentSlide].title}</h2>
-          <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-            {contentSlides[currentSlide].description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href={contentSlides[currentSlide].link}
-              className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30"
-            >
-              🌟 Explore Now →
-            </a>
-            <a 
-              href="/pages/UltimateTechRevolution2026"
-              className="bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30"
-            >
-              🚀 View All Content →
-            </a>
-          </div>
-        </div>
-<<<<<<< HEAD
-        <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
-          Experience the future of technology with our groundbreaking new content featuring Ultimate Tech Revolution 2026, 
-          Interdimensional Technology, Consciousness Computing, and Revolutionary Tech Blog 2027
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-          <a href="/pages/UltimateTechBreakthrough2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🌟 Ultimate Tech 2026 →
-          </a>
-          <a href="/pages/InterdimensionalTechRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🌌 Interdimensional Tech →
-          </a>
-          <a href="/pages/ConsciousnessComputingRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🧠 Consciousness Computing →
-          </a>
-          <a href="/pages/RevolutionaryTechBlog2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            📝 Tech Blog 2027 →
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+      badge: "ULTIMATE"cursor/fix-netlify-build-and-merge-to-main-a068
       </div>
 
       {/* Slide Indicators */}
@@ -157,90 +64,8 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             }`}
           />
         ))}
-<<<<<<< HEAD
       {/* Dynamic Content Carousel */}
-      <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
-        <div className="relative z-10">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🚀 FEATURED BREAKTHROUGH • JANUARY 2026
-            </div>
-            <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary Technology Showcase</h2>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto">
-              Discover the most advanced technologies that are reshaping the future of humanity
-            </p>
-          </div>
-
-          <div className="relative h-80 rounded-xl overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30"
-              >
-                <div className="flex items-center justify-between h-full">
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <span className="text-6xl">{contentSlides[currentSlide].icon}</span>
-                      <div>
-                        <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-xs font-bold">
-                          {contentSlides[currentSlide].badge}
-                        </span>
-                      </div>
-                    </div>
-                    <h3 className="text-3xl font-bold mb-4">{contentSlides[currentSlide].title}</h3>
-                    <p className="text-xl mb-4 opacity-90">{contentSlides[currentSlide].subtitle}</p>
-                    <p className="text-lg mb-6 opacity-80">{contentSlides[currentSlide].description}</p>
-                    <a 
-                      href={contentSlides[currentSlide].link}
-                      className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-lg"
-                    >
-                      Explore {contentSlides[currentSlide].title.split(' ')[0]} →
-                    </a>
-                  </div>
-                  <div className="hidden md:block">
-                    <div className="text-8xl opacity-30">{contentSlides[currentSlide].icon}</div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Navigation Dots */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-              {contentSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-            </div>
-<<<<<<< HEAD
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Revolutionary Tech Showcase</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Interactive showcase of cutting-edge technologies that will define the future
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Interactive Demos</li>
-              <li>• Real-time Processing</li>
-              <li>• Multi-dimensional Tech</li>
-            </ul>
-            <a href="/pages/RevolutionaryTechShowcase2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              View Showcase →
-            </a>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+      <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-8 text-white relative overflow-hidden">cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
         </div>
       </div>
