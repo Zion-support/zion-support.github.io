@@ -216,7 +216,6 @@ const InterdimensionalTechRevolution2027: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

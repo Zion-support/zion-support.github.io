@@ -198,7 +198,6 @@ const RevolutionaryTech2030: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

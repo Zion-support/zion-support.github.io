@@ -9,31 +9,3 @@ const AccessibilityProvider: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AccessibilityProvider;
-=======
-</motion>
-</motion>
-</AccessibilityContext>
-</any>
-</any>
-;
-</motion>;
-</motion>;
-</AccessibilityContext>;
-</any>;
-</any>;
-</any>;
-</any>;
-</any>;
-</AccessibilityProviderProps>;
-</AccessibilityContextType>;
-</any>
-</any>
-</any>
-</AccessibilityProviderProps>
-</AccessibilityContextType>
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

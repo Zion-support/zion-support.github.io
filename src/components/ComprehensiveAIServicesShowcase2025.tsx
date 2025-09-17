@@ -220,7 +220,6 @@ const ComprehensiveAIServicesShowcase2025: React.FC = () => {
       </div>
     </divsection>
   );
-
 };
 
 

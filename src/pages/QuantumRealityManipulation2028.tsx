@@ -259,7 +259,6 @@ const QuantumRealityManipulation2028: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

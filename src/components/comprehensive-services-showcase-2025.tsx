@@ -27,6 +27,7 @@ interface Service {
   launchDate: string;
   badge?: string;
   icon?: React.ReactNode;
+}
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service => ({
     ...service,
@@ -48,18 +49,21 @@ const allServices: Service[] = [
     category: 'Quantum & Emerging Tech',
     icon: <Atom className="w-6 h-6" />
   }))
+];
 const categories = [
   { name: 'All Services', icon: <Globe className="w-5 h-5" />, count: allServices.length },
   { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5" />, count: innovativeRealMicroSaasServices2025.length },
   { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5" />, count: innovativeAIServicesEnhanced2025.length },
   { name: 'Enterprise IT', icon: <Shield className="w-5 h-5" />, count: innovativeITServicesEnhanced2025.length },
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5" />, count: emergingTechServicesEnhanced2025.length }
+];
 const priceRanges = [
   { label: 'All Prices', value: 'all' },
   { label: 'Under $50/month', value: 'under-50' },
   { label: '$50 - $200/month', value: '50-200' },
   { label: '$200 - $500/month', value: '200-500' },
   { label: 'Over $500/month', value: 'over-500' }
+];
 const sortOptions = [
   { label: 'Most Popular', value: 'popular' },
   { label: 'Highest Rated', value: 'rating' },
@@ -442,3 +446,4 @@ export default function ComprehensiveServicesShowcase2025() {
               >
                 View Pricing Plans
   );
+}

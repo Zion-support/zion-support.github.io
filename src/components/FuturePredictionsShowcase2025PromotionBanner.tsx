@@ -125,7 +125,6 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

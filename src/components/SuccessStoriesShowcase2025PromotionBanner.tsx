@@ -76,7 +76,6 @@ const SuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                     <div className="text-xs opacity-80">{stat.label}</div>
                   </div>
                 );
-};
               })}
             </div>
             {/* Right Content - CTA Buttons */}

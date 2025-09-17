@@ -164,7 +164,6 @@ const BusinessSuccessStories2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

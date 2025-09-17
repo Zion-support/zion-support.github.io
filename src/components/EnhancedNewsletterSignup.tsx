@@ -84,7 +84,6 @@ const EnhancedNewsletterSignup: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

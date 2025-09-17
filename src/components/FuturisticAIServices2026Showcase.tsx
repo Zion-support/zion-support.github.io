@@ -118,7 +118,6 @@ const FuturisticAIServices2026Showcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

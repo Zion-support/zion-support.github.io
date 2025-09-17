@@ -139,7 +139,6 @@ const RevolutionaryTechShowcase2026Banner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

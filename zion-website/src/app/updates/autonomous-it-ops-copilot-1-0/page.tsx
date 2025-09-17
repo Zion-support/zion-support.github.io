@@ -1,51 +1,47 @@
-<<<<<<< HEAD
 import React from 'react';
 
-const page: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
-"use client"
-
-export default function AutonomousItOpsCopilotV1Page() {
+export default function AutonomousItOpsCopilotPage() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
-        <div className="mb-8">
-          <div className="text-xs text-blue-300">Launch • 2025-09-15</div>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Launch: Autonomous IT Operations Copilot (v1.0)
+      <div className="mx-auto max-w-4xl px-6 pt-24">
+        <div className="prose prose-invert max-w-none">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8">
+            Autonomous IT Ops Copilot v1.0
           </h1>
-          <p className="mt-2 text-gray-400">
-            The Autonomous IT Operations Copilot continuously detects incidents, suggests remediation steps,
-            and automates safe changes with guardrails. It uses live evaluation gates, policy-as-code,
-            and budget-aware routing to balance reliability, latency, and cost.
-          </p>
-        </div>
-        <div className="prose prose-invert">
-          <h2>What's inside</h2>
-          <ul>
-            <li>Signal fusion across logs, traces, metrics, and user reports</li>
-            <li>Playbook recommendations with evidence and risk scores</li>
-            <li>Safe automation guarded by approvals, canaries, and rollbacks</li>
-            <li>SLO-aware routing and throttling to protect critical paths</li>
-          </ul>
-          <h2>Why it matters</h2>
-          <p>
-            Teams cut MTTR, reduce toil, and standardize operations with measurable reliability.
-          </p>
-          <p className="mt-8">
-            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
-              Request a demo
-            </a>
-          </p>
+          
+          <div className="text-lg text-gray-300 mb-8">
+            AI-powered IT operations automation with intelligent incident response and proactive monitoring.
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
+            <p className="text-gray-300 leading-relaxed">
+              The Autonomous IT Ops Copilot v1.0 revolutionizes IT operations with AI-driven automation, 
+              intelligent incident response, and proactive monitoring capabilities. This comprehensive 
+              solution reduces manual overhead while improving system reliability and performance.
+            </p>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
+            <ul className="text-gray-300 space-y-2">
+              <li>• Intelligent incident detection and classification</li>
+              <li>• Automated root cause analysis and remediation</li>
+              <li>• Proactive monitoring and alerting</li>
+              <li>• Self-healing infrastructure capabilities</li>
+              <li>• Integration with existing IT tools and workflows</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
+            <h2 className="text-2xl font-semibold text-white mb-4">Implementation</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Deploy the Autonomous IT Ops Copilot in your environment with our step-by-step implementation guide. 
+              Includes configuration templates, integration examples, and best practices for production deployment.
+            </p>
+          </div>
         </div>
       </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
     </div>
   );
-};
-
-export default page;
+}

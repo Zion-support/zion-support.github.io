@@ -371,7 +371,6 @@ const QuantumSupremacy2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

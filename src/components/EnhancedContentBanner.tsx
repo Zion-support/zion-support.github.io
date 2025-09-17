@@ -140,7 +140,6 @@ const EnhancedContentBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

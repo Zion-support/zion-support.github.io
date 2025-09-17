@@ -1,23 +1,17 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Brain, Shield, Database, Cpu, Globe, Rocket } from 'lucide-react';
 const UltimateTechShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
-  const techCategories = {
-    ai: {
-      title: "Artificial Intelligence Revolution",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      description: "Experience the next generation of AI with autonomous reasoning, quantum-enhanced processing, and global neural networks.",
-      features: [
-        "Autonomous AI Agents",
-        "Quantum-Enhanced Processing", 
-        "Global Neural Networks",
-        "Real-time Learning",
-        "Predictive Analytics",
-        "Natural Language Understanding"
-      ]
+  const technologies = [
+    {
+      title: "Conscious AI Systems",
+      description: "AI that exhibits true self-awareness and independent thought processes",
+      features: ["Self-learning algorithms", "Emotional intelligence", "Creative problem-solving", "Multi-dimensional reasoning"],
+      icon: <Brain className="w-12 h-12" />,
+      color: "from-blue-500 to-cyan-500",
+      applications: ["Business automation", "Research assistance", "Creative industries", "Healthcare diagnostics"]
     },
     quantum: {
       title: "Quantum Computing Breakthrough",
@@ -31,187 +25,167 @@ const UltimateTechShowcase2026: React.FC = () => {
         "Climate Modeling",
         "Drug Discovery",
         "Financial Optimization"
+      ],
+      demos: [
+        {
+          title: "Quantum Supremacy Demo",
+          description: "See quantum computers solve problems impossible for classical computers",
+          video: "🔬",
+          stats: "10^50 operations per second"
+        },
+        {
+          title: "Molecular Simulation",
+          description: "Real-time simulation of complex molecular structures",
+          video: "🧬",
+          stats: "99.9% accuracy"
+        }
       ]
-    },
-    neural: {
-      title: "Neural Interface Technology",
-      icon: "🧠",
-      description: "Direct brain-computer communication and enhancement",
-      features: [
-        "Non-invasive brain-computer interfaces",
-        "Thought-to-action conversion",
-        "Memory enhancement and augmentation",
-        "Telepathic communication networks",
-        "Consciousness transfer capabilities"
-      ],
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-600/20 to-teal-600/20",
-      borderColor: "border-emerald-400/30"
-    },
-    synthetic: {
-      title: "Synthetic Intelligence",
-      icon: "🤖",
-      description: "Artificially created consciousness and intelligence",
-      features: [
-        "Artificial consciousness and self-awareness",
-        "Creative synthesis and innovation",
-        "Collective intelligence networks",
-        "Emotional and social intelligence",
-        "Autonomous learning and evolution"
-      ],
-      color: "from-orange-600 to-red-600",
-      bgColor: "from-orange-600/20 to-red-600/20",
-      borderColor: "border-orange-400/30"
-    },
-    space: {
-      title: "Space Technology Innovation",
-      icon: "🚀",
-      description: "Revolutionary space exploration and colonization",
-      features: [
-        "Faster-than-light propulsion systems",
-        "Self-sustaining space habitats",
-        "Asteroid mining and resource extraction",
-        "Interplanetary communication networks",
-        "Terraforming and planet engineering"
-      ],
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-600/20 to-purple-600/20",
-      borderColor: "border-indigo-400/30"
-    },
-    biotech: {
-      title: "Biotechnology Revolution",
-      icon: "🧬",
-      description: "Advanced biotechnology and genetic engineering",
-      features: [
-        "Precision gene editing and therapy",
-        "Synthetic biology and organisms",
-        "Neural-biotech interfaces",
-        "Longevity and life extension",
-        "Quantum bioimaging and diagnostics"
-      ],
-      color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-600/20 to-emerald-600/20",
-      borderColor: "border-green-400/30"
     }
   };
 
+  const [isAnimating, setIsAnimating] = useState(false);
+  const technologies = {
+    ai: {
+      title: "Artificial Intelligence Revolution",
+      icon: "🧠",
+      description: "Next-generation AI systems with consciousness and creativity",
+      features: [
+        "Synthetic consciousness and self-awareness",
+        "Quantum-enhanced neural processing",
+        "Emotional intelligence and empathy",
+        "Creative problem solving beyond human capability",
+        "Autonomous decision making with ethical frameworks"
+      ],
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-600/20 to-pink-600/20",
+      borderColor: "border-purple-400/30"
+    },
+    {
+      title: "Multi-Dimensional Security",
+      description: "Cybersecurity that protects across multiple dimensions and realities",
+      features: ["Threat prediction", "Reality-based protection", "Quantum encryption", "AI-powered defense"],
+      icon: <Shield className="w-12 h-12" />,
+      color: "from-green-500 to-emerald-500",
+      applications: ["Enterprise security", "Government defense", "Financial protection", "Personal privacy"]
+    },
+    {
+      title: "Consciousness Transfer Technology",
+      description: "Advanced systems for transferring consciousness across platforms",
+      features: ["Neural mapping", "Consciousness backup", "Platform migration", "Identity preservation"],
+      icon: <Globe className="w-12 h-12" />,
+      color: "from-orange-500 to-red-500",
+      applications: ["Digital immortality", "Platform migration", "Backup systems", "Research applications"]
+    },
+    {
+      title: "Quantum Data Processing",
+      description: "Processing information across infinite dimensions simultaneously",
+      features: ["Infinite scalability", "Parallel processing", "Quantum storage", "Reality synchronization"],
+      icon: <Database className="w-12 h-12" />,
+      color: "from-indigo-500 to-purple-500",
+      applications: ["Big data analytics", "Scientific research", "Market analysis", "Predictive modeling"]
+    },
+    {
+      title: "Autonomous Space Technology",
+      description: "Self-managing systems for interplanetary and interstellar operations",
+      features: ["Self-repair capabilities", "Resource optimization", "Mission adaptation", "Communication networks"],
+      icon: <Rocket className="w-12 h-12" />,
+      color: "from-teal-500 to-blue-500",
+      applications: ["Space exploration", "Satellite management", "Interplanetary travel", "Resource mining"]
+    }
+  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-        <div className="absolute inset-0">
-          {[...Array(100)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-              }}
-            />
-          ))}
-        </div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 ULTIMATE TECH SHOWCASE • JANUARY 2026
-            </div>
-            <h1 className="text-7xl font-bold text-white mb-6">
-              Ultimate Technology Showcase 2026
-            </h1>
-            <p className="text-2xl text-purple-200 mb-8 max-w-5xl mx-auto">
-              Experience the most advanced technologies that will reshape our world. 
-              From artificial consciousness to quantum supremacy, discover the future today.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore All Technologies
-              </button>
-              <button className="border border-purple-400 text-purple-200 px-8 py-4 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors text-lg">
-                Watch Live Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Technology Categories */}
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <Helmet>
+        <title>Ultimate Tech Showcase 2026: Revolutionary Technologies | Zion Tech Group</title>
+        <meta name="description" content="Explore our ultimate showcase of revolutionary technologies: conscious AI, quantum-neural computing, multi-dimensional security, and consciousness transfer systems." />
+        <meta name="keywords" content="revolutionary technology, conscious AI, quantum computing, cybersecurity, consciousness transfer, space technology" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Choose Your Technology</h2>
-          <p className="text-xl opacity-90">Explore different categories of revolutionary technology</p>
-        </div>
-        {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(techCategories).map(([key, category]) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`px-8 py-4 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === key
-                  ? `bg-gradient-to-r ${category.color} text-white shadow-lg scale-105`
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Ultimate Tech Showcase 2026
+          </h1>
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Experience the future of technology with our revolutionary suite of AI, quantum computing, and consciousness technologies that are reshaping reality itself.
+          </p>
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <Zap className="w-8 h-8 text-yellow-400" />
+            <span className="text-xl text-yellow-400 font-semibold">Next-Generation Technologies</span>
+          </div>
+        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {technologies.map((tech, index) => (
+            <motion.div
+              key={index}
+              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
             >
-              <span className="text-2xl mr-3">{category.icon}</span>
-              {category.title}
-            </button>
+              <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${tech.color} flex items-center justify-center text-white mb-6`}>
+                {tech.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">{tech.title}</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">{tech.description}</p>
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                <div className="grid grid-cols-2 gap-2">
+                  {tech.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                      <span className="text-sm text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-white mb-3">Applications</h4>
+                <div className="flex flex-wrap gap-2">
+                  {tech.applications.map((app, appIndex) => (
+                    <span key={appIndex} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm">
+                      {app}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <Link 
+                to="/pages/RevolutionaryAIServices2026" 
+                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+              >
+                Learn More <ArrowRight className="w-4 h-4" />
+              </Link>
+            </motion.div>
           ))}
         </div>
-        {/* Category Content */}
-        <AnimatePresence mode="wait">
-          {Object.entries(techCategories).map(([key, category]) => (
-            activeTab === key && (
-              <motion.div
-                key={key}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-              >
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                    {category.title}
-                  </h3>
-                  <p className="text-lg opacity-90 leading-relaxed">
-                    {category.description}
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {category.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                        <span className="text-white/90">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">{category.icon}</div>
-                      <h4 className="text-xl font-semibold mb-2">Live Demo</h4>
-                      <p className="text-white/70 mb-6">Experience this technology in action</p>
-                      <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold">
-                        Launch Demo
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )
-          ))}
-        </AnimatePresence>
+        <motion.div 
+          className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-purple-400/30 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <h2 className="text-4xl font-bold text-white mb-8">The Future is Revolutionary</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            These technologies represent the pinnacle of human innovation. Our systems are already implementing 
+            these revolutionary capabilities to deliver unprecedented results across all industries and dimensions.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link 
+              to="/pages/RevolutionaryAIServices2026" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Explore All Technologies
+            </Link>
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Get Started Today
+            </Link>
+          </div>
+        </motion.div>
       </div>
-    </div>
-  );
-};
-
-export default UltimateTechShowcase2026;

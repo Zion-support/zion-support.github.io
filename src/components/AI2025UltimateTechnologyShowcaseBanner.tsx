@@ -124,7 +124,6 @@ const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
                     </div>
                   </div>
                 );
-};
               })}
               {/* Connection Lines */}
               <svg className="absolute inset-0 w-full h-full">

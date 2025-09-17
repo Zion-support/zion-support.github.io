@@ -119,7 +119,6 @@ const UltimateContentRevolution2026Banner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

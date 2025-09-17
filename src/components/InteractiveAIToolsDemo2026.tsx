@@ -172,7 +172,6 @@ const InteractiveAIToolsDemo2026: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

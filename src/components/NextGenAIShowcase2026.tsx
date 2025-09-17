@@ -202,7 +202,6 @@ const NextGenAIShowcase2026: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

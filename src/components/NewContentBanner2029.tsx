@@ -68,7 +68,6 @@ const NewContentBanner2029: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

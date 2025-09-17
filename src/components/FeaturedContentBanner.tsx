@@ -12,6 +12,7 @@ interface FeaturedContent {
   badgeColor: string;
   link: string;
   icon: string;
+}
 const featuredContent: FeaturedContent[] = [
   {
     id: '1',

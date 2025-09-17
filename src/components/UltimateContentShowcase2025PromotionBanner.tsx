@@ -121,7 +121,6 @@ const UltimateContentShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

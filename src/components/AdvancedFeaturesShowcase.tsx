@@ -29,7 +29,6 @@ const AdvancedFeaturesShowcase: React.FC = () => {
                 ))}
           ))}
   );
-
 };
 
 

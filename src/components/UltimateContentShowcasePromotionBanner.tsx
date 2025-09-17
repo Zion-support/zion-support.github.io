@@ -115,7 +115,6 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

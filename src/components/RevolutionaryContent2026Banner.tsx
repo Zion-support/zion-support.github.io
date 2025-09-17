@@ -1,146 +1,246 @@
-import { ArrowRight, BookOpen, Brain, DollarSign, Heart, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  BarChart3,
+  Brain,
+  CheckCircle,
+  Cpu as CpuIcon,
+  Globe,
+  Rocket as RocketIcon,
+  Shield,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Zap
+} from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 const RevolutionaryContent2026Banner = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const testimonials = [
+    {
+      quote: "The AI content marketing solution increased our engagement by 500% in just 3 months!",
+      author: "Sarah Chen",
+      role: "CMO, TechCorp Global",
+      metric: "500% Engagement"
+
+    {
+      quote: "Quantum cybersecurity gave us 99.99% security uptime with zero incidents.",
+      author: "Michael Rodriguez",
+      role: "CTO, SecureBank International",
+      metric: "99.99% Security"
+
+    {
+      quote: "Autonomous business intelligence transformed our decision-making process completely.",
+      author: "Dr. Lisa Wang",
+      role: "CEO, DataFlow Analytics",
+      metric: "400% Speed"
+
+  ];
+  const features = [
+    { icon: Brain, title: "AI Content Marketing", metric: "500% Engagement" },
+    { icon: Shield, title: "Quantum Security", metric: "99.99% Protection" },
+    { icon: BarChart3, title: "Autonomous BI", metric: "400% Speed" },
+    { icon: CpuIcon, title: "Synthetic Intelligence", metric: "1000% Improvement" },
+    { icon: Globe, title: "Metaverse Business", metric: "500% Collaboration" },
+    { icon: RocketIcon, title: "Revolutionary Tech", metric: "600% Innovation" }
+  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-      {/* Animated background pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-12"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent via-white/5 to-transparent transform skew-y-12"></div>
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M50%2050c0-27.614-22.386-50-50-50v100c27.614%200%2050-22.386%2050-50z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <Star className="h-10 w-10 text-yellow-400 mr-4 animate-spin" />
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              Revolutionary Content 2026
-            </h2>
-            <Star className="h-10 w-10 text-yellow-400 ml-4 animate-spin" />
-          </div>
-          <p className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-5xl mx-auto leading-relaxed">
-            Experience the future of technology through our groundbreaking content covering 
-            the most advanced AI innovations, sustainable solutions, and transformative breakthroughs
-          </p>
-        </div>
-        {/* Content categories showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {/* Left column */}
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
-              <div className="flex items-center mb-4">
-                <Brain className="h-12 w-12 text-purple-400 mr-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold">AI Innovation Hub</h3>
-              </div>
-              <p className="text-gray-300 mb-6 text-lg">
-                Discover cutting-edge AI technologies that are reshaping industries and transforming the way we work, live, and interact.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Consciousness AI</span>
-                <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Quantum Computing</span>
-                <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Neural Interfaces</span>
-              </div>
-              <Link 
-                to="/ai-innovation-hub-2026" 
-                className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:translate-x-2 transition-transform"
-              >
-                Explore AI Innovations <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
-              <div className="flex items-center mb-4">
-                <Heart className="h-12 w-12 text-red-400 mr-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold">Healthcare Revolution</h3>
-              </div>
-              <p className="text-gray-300 mb-6 text-lg">
-                Revolutionary AI healthcare solutions that detect diseases years in advance and provide personalized treatment recommendations.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">Early Detection</span>
-                <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">AI Diagnosis</span>
-                <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-sm">Personalized Care</span>
-              </div>
-              <Link 
-                to="/blog/ai-driven-healthcare-breakthrough-early-disease-detection" 
-                className="inline-flex items-center text-red-400 hover:text-red-300 font-semibold group-hover:translate-x-2 transition-transform"
-              >
-                Learn About Healthcare AI <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-          {/* Right column */}
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
-              <div className="flex items-center mb-4">
-                <DollarSign className="h-12 w-12 text-green-400 mr-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold">Financial AI</h3>
-              </div>
-              <p className="text-gray-300 mb-6 text-lg">
-                Advanced AI investment platforms delivering 300% better returns through intelligent market analysis and automated optimization.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Smart Investing</span>
-                <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Risk Management</span>
-                <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Portfolio AI</span>
-              </div>
-              <Link 
-                to="/blog/financial-ai-revolution-smart-investment-strategies" 
-                className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold group-hover:translate-x-2 transition-transform"
-              >
-                Discover Financial AI <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 group">
-              <div className="flex items-center mb-4">
-                <BookOpen className="h-12 w-12 text-blue-400 mr-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-2xl font-bold">Education Revolution</h3>
-              </div>
-              <p className="text-gray-300 mb-6 text-lg">
-                AI-powered personalized learning platforms that adapt to each student's needs, improving performance by 400%.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Personalized Learning</span>
-                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">AI Tutoring</span>
-                <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Adaptive Education</span>
-              </div>
-              <Link 
-                to="/blog/ai-powered-education-personalized-learning-revolution" 
-                className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:translate-x-2 transition-transform"
-              >
-                Explore Education AI <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-        {/* Call to action section */}
-        <div className="text-center bg-white/10 backdrop-blur-md rounded-2xl p-12 border border-white/20">
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-            Ready to Transform Your Future?
-          </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of forward-thinking organizations already leveraging our revolutionary AI solutions 
-            to achieve unprecedented success and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/blog"
-              className="group bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-10 py-4 rounded-full font-bold text-xl hover:from-emerald-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
+      <div className="relative z-10">
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
             >
-              Explore All Content
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/contact"
-              className="group border-2 border-white text-white px-10 py-4 rounded-full font-bold text-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="h-6 w-6 text-yellow-400" />
+                  <span className="text-yellow-400 font-semibold text-sm uppercase tracking-wider">
+                    Revolutionary Content 2026
+                  </span>
+                </div>
+                <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+                Transform Your Business with
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  {" "}Revolutionary Content
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Discover the most advanced AI, quantum, and autonomous technology solutions that are delivering unprecedented results for businesses worldwide.
+              </p>
+              {/* Feature Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                {features.slice(0, 4).map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:border-white/20 transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <feature.icon className="h-4 w-4 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-white font-semibold text-sm">{feature.title}</div>
+                        <div className="text-purple-300 text-xs">{feature.metric}</div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/ultimate-content-showcase-2026"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
+                >
+                  Explore All Content
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
+                >
+                  Get Started
+                  <Zap className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </motion.div>
+            {/* Right Content - Testimonials & Metrics */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
             >
-              Get Started Today
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </Link>
+              {/* Testimonial */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <motion.div
+                  key={currentTestimonial}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="space-y-4"
+                >
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="text-white text-lg italic">
+                    "{testimonials[currentTestimonial].quote}"
+                  </blockquote>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-white font-semibold">{testimonials[currentTestimonial].author}</div>
+                      <div className="text-purple-200 text-sm">{testimonials[currentTestimonial].role}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-purple-400">{testimonials[currentTestimonial].metric}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+              {/* Metrics Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-500/20">
+                  <div className="text-3xl font-bold text-white mb-2">500%</div>
+                  <div className="text-purple-200 text-sm">Engagement Increase</div>
+                </div>
+                <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl p-6 border border-blue-500/20">
+                  <div className="text-3xl font-bold text-white mb-2">99.99%</div>
+                  <div className="text-blue-200 text-sm">Security Effectiveness</div>
+                </div>
+                <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl p-6 border border-green-500/20">
+                  <div className="text-3xl font-bold text-white mb-2">400%</div>
+                  <div className="text-green-200 text-sm">Decision Speed</div>
+                </div>
+                <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-xl p-6 border border-orange-500/20">
+                  <div className="text-3xl font-bold text-white mb-2">1000%</div>
+                  <div className="text-orange-200 text-sm">ROI Improvement</div>
+                </div>
+              </div>
+              {/* Call to Action */}
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-6 border border-purple-500/30">
+                <div className="flex items-center gap-3 mb-4">
+                  <CheckCircle className="h-6 w-6 text-green-400" />
+                  <span className="text-white font-semibold">Limited Time Offer</span>
+                </div>
+                <p className="text-purple-100 mb-4">
+                  Get exclusive access to our revolutionary content solutions with a 30-day free trial.
+                </p>
+                <Link
+                  to="/contact"
+                  className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center group"
+                >
+                  Start Free Trial
+                  <TrendingUp className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </div>
+      </div>
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          animate={{
+
+
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-20 left-10 w-4 h-4 bg-pink-400/20 rounded-full"
+        />
+        <motion.div
+          animate={{
+
+
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-40 right-20 w-3 h-3 bg-purple-400/20 rounded-full"
+        />
+        <motion.div
+          animate={{
+
+
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute bottom-20 left-20 w-2 h-2 bg-cyan-400/20 rounded-full"
+        />
       </div>
     </div>
   );
-
 };
 
 

@@ -183,7 +183,6 @@ const UltimateInnovationHub2027: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -94,7 +94,6 @@ const NewContent2025UltimateTransformationBanner: React.FC = () => {
               >
                 View All Content
   );
-
 };
 
 

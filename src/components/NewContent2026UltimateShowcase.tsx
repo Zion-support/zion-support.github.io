@@ -115,7 +115,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
       </div>
     </divsection>
   );
-
 };
 
 

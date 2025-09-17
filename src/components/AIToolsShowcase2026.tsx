@@ -4,7 +4,7 @@ const AIToolsShowcase2026: React.FC = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
+        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50"></div>
         <div className="absolute inset-0">
           {[...Array(15)].map((_i) => (
@@ -67,7 +67,6 @@ const AIToolsShowcase2026: React.FC = () => {
                 </span>
               </button>
             );
-};
           })}
         </div>
         {/* Tools Grid */}

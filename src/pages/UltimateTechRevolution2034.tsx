@@ -166,7 +166,6 @@ const UltimateTechRevolution2034: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

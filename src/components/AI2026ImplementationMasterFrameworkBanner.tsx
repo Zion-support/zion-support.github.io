@@ -130,7 +130,6 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
       <div className="absolute bottom-40 right-32 w-5 h-5 bg-teal-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1.4s' }}></div>
     </divsection>
   );
-
 };
 
 

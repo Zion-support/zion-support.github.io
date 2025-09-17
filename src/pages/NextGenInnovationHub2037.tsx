@@ -1,11 +1,12 @@
-import React from 'react';
-const NextGenInnovationHub2037 = () => {
+const NextGenInnovationHub2037: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">NextGenInnovationHub2037</h1>
-          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧠 INNOVATION HUB • JANUARY 2037
+          </div>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Discover and explore the most revolutionary technologies shaping humanity's future
+          </p>
         </div>
       </div>
     </div>

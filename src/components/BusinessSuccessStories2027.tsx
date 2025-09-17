@@ -209,7 +209,6 @@ const BusinessSuccessStories2027: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

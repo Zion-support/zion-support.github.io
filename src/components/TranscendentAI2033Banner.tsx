@@ -98,7 +98,6 @@ const TranscendentAI2033Banner: React.FC = () => {
       <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
     </divsection>
   );
-
 };
 
 

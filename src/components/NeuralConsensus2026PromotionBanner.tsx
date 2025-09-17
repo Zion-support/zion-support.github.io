@@ -100,7 +100,6 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

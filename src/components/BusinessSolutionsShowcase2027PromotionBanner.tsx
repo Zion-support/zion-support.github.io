@@ -118,7 +118,6 @@ const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

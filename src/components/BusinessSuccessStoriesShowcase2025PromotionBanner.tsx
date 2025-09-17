@@ -122,7 +122,6 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

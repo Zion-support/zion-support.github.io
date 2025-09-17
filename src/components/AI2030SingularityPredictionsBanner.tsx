@@ -215,7 +215,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

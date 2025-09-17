@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const InteractiveTechDemo2034: React.FC = () => {
     </div>
   );
-
 };
 
 

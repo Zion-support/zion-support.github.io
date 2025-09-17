@@ -77,7 +77,6 @@ const AI2026QuantumNeuralFusionRevolutionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

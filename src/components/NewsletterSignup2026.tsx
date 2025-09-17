@@ -5,7 +5,7 @@ const NewsletterSignup2026: React.FC = () => {
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-blue-900/20" />
+      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/600')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-blue-900/30" />
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -73,7 +73,6 @@ const NewsletterSignup2026: React.FC = () => {
                     </div>
                   </div>
                 );
-};
               })}
             </div>
             {/* Stats */}

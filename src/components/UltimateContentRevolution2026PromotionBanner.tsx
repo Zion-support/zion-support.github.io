@@ -144,7 +144,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

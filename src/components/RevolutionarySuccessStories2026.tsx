@@ -189,7 +189,6 @@ const RevolutionarySuccessStories2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

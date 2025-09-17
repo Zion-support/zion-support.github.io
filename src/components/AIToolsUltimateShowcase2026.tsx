@@ -44,7 +44,6 @@ const AIToolsUltimateShowcase2026: React.FC = () => {
                 </div>
               </div>
             );
-};
           })}
         </div>
         {/* Category Navigation */}

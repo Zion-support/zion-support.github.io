@@ -157,9 +157,11 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
     };
   }[]);
   return <>{children}</>;
+}
 // Global type declarations
 declare global {
   interface Window {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
-  };
+  }
+}

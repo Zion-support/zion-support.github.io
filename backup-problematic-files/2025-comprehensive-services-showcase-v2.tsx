@@ -1,29 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import SEO from '../components/SEO';
-
-import {
-  Brain
-  Atom
-  Shield
-  Target
-  Rocket
-  ArrowRight
-  Check
-  Star
-  TrendingUp
-  Users
-  Globe
-  Zap
-  Lock
-  Cloud
-  Smartphone
-  Building
-  Phone
-  Mail
-  MapPin;} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const 2025-comprehensive-services-showcase-v2: React.FC = () => {
   return (

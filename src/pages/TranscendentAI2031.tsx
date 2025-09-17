@@ -202,7 +202,6 @@ const TranscendentAI2031: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

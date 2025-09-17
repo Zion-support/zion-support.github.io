@@ -140,7 +140,6 @@ const NewContentNavigation: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

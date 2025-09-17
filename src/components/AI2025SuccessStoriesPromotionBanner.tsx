@@ -143,7 +143,6 @@ const AI2025SuccessStoriesPromotionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

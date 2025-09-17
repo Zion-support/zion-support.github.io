@@ -46,6 +46,7 @@ interface Service {
   deliveryTime: string;
   complexity: 'simple' | 'moderate' | 'complex' | 'expert';
   tags: string[];
+}
 const services: Service[] = [
   {
     id: 'ai-consulting',
@@ -174,13 +175,15 @@ const services: Service[] = [
     deliveryTime: '1-3 weeks',
     complexity: 'simple',
     tags: [', 'Training', 'Education', 'Skills', 'Workshops']
-  };
+  }
+];
 const categories = [', 'All', 'Consulting', 'Development', 'Automation', 'Analytics', 'Security', 'Infrastructure', 'Integration'Education'];
 const pricingTypes = {
   free: { label: ''Free', 'color: 'bg-gray-100 text-gray-800' },
   starter: { label: ''Starter', 'color: 'bg-green-100 text-green-800' },
   professional: { label: ''Professional', 'color: 'bg-blue-100 text-blue-800' },
   enterprise: { label: ''Enterprise', 'color: 'bg-purple-100 text-purple-800' }
+};
 const complexityLevels = {
   simple: { label: ''Simple', 'color: 'text-green-400' },
   moderate: { label: ''Moderate', 'color: 'text-yellow-400' },

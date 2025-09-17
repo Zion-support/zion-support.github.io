@@ -33,3 +33,4 @@ export default function BrowserAutomationCloudPage() {
 							<ExternalLink className="w-4 h-4" /> Puppeteer
 		</>
 	);
+}

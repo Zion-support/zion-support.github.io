@@ -322,7 +322,6 @@ const EnterpriseSolutions2025: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

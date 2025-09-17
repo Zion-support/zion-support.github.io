@@ -275,7 +275,6 @@ const EnhancedHomepage: React.FC = () => {
       </div>
     </>
   );
-
 };
 
 

@@ -157,7 +157,6 @@ const UltimateTechBreakthrough2039: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

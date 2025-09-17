@@ -76,7 +76,6 @@ const RevolutionaryContentBanner2027-2030: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

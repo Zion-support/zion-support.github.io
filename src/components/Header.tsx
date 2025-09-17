@@ -167,6 +167,7 @@ function Header() {
 			</div>
 		</header>
 	);
+}
 export { Header };
 };
 

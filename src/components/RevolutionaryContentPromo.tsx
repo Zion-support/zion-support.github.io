@@ -109,7 +109,6 @@ const RevolutionaryContentPromo: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -182,6 +182,51 @@ export const blogPosts = [
     slug: "trusted-rag-2026-freshness-citation-kit"
   },
   {
+    id: 9903,
+    title: "AI 2026: Real-Time Evals — Ship With Confidence",
+    excerpt: "Add live eval gates, freshness windows, and rollback recipes to every release.",
+    content: "Production AI demands objective, automated checks. This post ships a minimal live eval pipeline with freshness windows, semantic drift monitors, and budget-aware routing. Copy the JSON contracts, wire thresholds into CI, and make every rollout reversible by design.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Live Evals", "Rollback", "Freshness"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-evals-ship-with-confidence-2026.jpg",
+    slug: "ai-2026-real-time-evals-ship-with-confidence"
+  },
+  {
+    id: 9902,
+    title: "Executive Brief: Grounded Answers At Scale",
+    excerpt: "A concise blueprint to achieve groundedness with trace-linked evidence hubs.",
+    content: "Executives need guarantees, not guesses. We outline a practical approach to grounded answers: freshness windows, citation coverage, semantic drift checks, and evidence hubs that attach verifiable artifacts to traces. Includes a one-page rollout plan and success metrics.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "RAG",
+    tags: ["Groundedness", "Evidence Hubs", "Citations"],
+    featured: true,
+    imageUrl: "/images/blog/executive-brief-grounded-answers-2026.jpg",
+    slug: "executive-brief-grounded-answers-at-scale"
+  },
+  {
+    id: 9901,
+    title: "FinOps 2026: Cost-Aware Model Routing Starter",
+    excerpt: "Cut spend 30–40% with policy-guarded routing and objective scorecards.",
+    content: "Start cost-aware routing in hours, not weeks. This starter kit includes a minimal routing policy JSON, budget bands, latency SLOs, and groundedness thresholds. We show dashboards, CI gates, and rollback ladders that make every decision auditable and reversible.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "SLOs"],
+    featured: true,
+    imageUrl: "/images/blog/finops-cost-aware-routing-starter-2026.jpg",
+    slug: "finops-2026-cost-aware-model-routing-starter"
+  },
+  {
     id: 9804,
     title: "AI Innovation Hub 2026: The Future of Artificial Intelligence",
     excerpt: "Explore the revolutionary AI innovations that are reshaping technology and transforming industries worldwide.",
@@ -2384,7 +2429,9 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/real-time-evals-guardrails-2026.jpg",
     slug: "real-time-evals-ship-guardrails-fast"
-  };
+  }
+];
+
 // Fresh promoted content (2025-09-16)
 export const newPromoted2025 = [
   {
@@ -2437,7 +2484,9 @@ export const newPromoted2025 = [
     featured: true,
     imageUrl: "/images/blog/evidence-driven-ai-governance-2026.jpg",
     slug: "ai-2026-evidence-driven-ai-governance"
-  };
+  }
+];
+
 // Latest additions (2025-09-16)
 const latest2025 = [
   {
@@ -2487,7 +2536,7 @@ const latest2025 = [
     featured: true,
     imageUrl: "/images/blog/budget-aware-routing-2026.jpg",
     slug: "finops-budget-aware-routing-30-percent-savings"
-  };
+  }
   ,
   {
     id: 10024,
@@ -2536,17 +2585,27 @@ const latest2025 = [
     featured: true,
     imageUrl: "/images/blog/agentic-systems-maturity-2026.jpg",
     slug: "ai-2026-operational-maturity-models-for-agentic-systems"
-  };
+  }
+];
+
 export const getBlogPostBySlug = (slug) => {
   return blogPosts.find(post => post.slug === slug);
+};
+
 export const getBlogPostsByCategory = (category) => {
   return blogPosts.filter(post => post.category === category);
+};
+
 export const getFeaturedBlogPosts = () => {
   return BLOG_POSTS.filter(post => post.featured);
+};
+
 export const getRecentBlogPosts = (limit = 3) => {
   return [...BLOG_POSTS]
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
     .slice(0, limit);
+};
+
 export const searchBlogPosts = (query) => {
   const searchTerm = query.toLowerCase();
   return blogPosts.filter(post =>
@@ -2555,12 +2614,16 @@ export const searchBlogPosts = (query) => {
     post.content.toLowerCase().includes(searchTerm) ||
     post.tags.some(tag => tag.toLowerCase().includes(searchTerm))
   );
+};
+
 export const getBlogCategories = () => {
   const categories = [...new Set(blogPosts.map(post => post.category))];
   return categories.map(category => ({
     name: category,
     count: blogPosts.filter(post => post.category === category).length
   }));
+};
+
 export const getBlogTags = () => {
   const allTags = blogPosts.flatMap(post => post.tags);
   const uniqueTags = [...new Set(allTags)];
@@ -2568,8 +2631,9 @@ export const getBlogTags = () => {
     name: tag,
     count: allTags.filter(t => t === tag).length
   }));
-// New content added for enhanced engagement
-export const newContent2026 = [
+};
+
+const extraContent2029 = [
   {
     id: 9501,
     title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
@@ -2974,7 +3038,7 @@ export const newContent2026 = [
     featured: true,
     imageUrl: "/images/blog/future-work-ai-human-collaboration-2026.jpg",
     slug: "future-work-ai-human-collaboration-excellence"
-  };
+  }
   ,
   {
     id: 8101,
@@ -3005,7 +3069,7 @@ export const newContent2026 = [
     featured: true,
     imageUrl: "/images/blog/agent-platform-slos-practical-2026.jpg",
     slug: "agent-platform-slos-practical-blueprint"
-  };
+  }
   ,
   {
     id: 9103,
@@ -3081,7 +3145,7 @@ export const newContent2026 = [
     featured: true,
     imageUrl: "/images/blog/cost-aware-model-routing-2025.jpg",
     slug: "cost-aware-model-routing-copy-paste-policy"
-  };
+  }
   ,
   {
     id: 9510,
@@ -3142,7 +3206,9 @@ export const newContent2026 = [
     featured: true,
     imageUrl: "/images/blog/incident-lifecycle-playbook-2026.jpg",
     slug: "ai-2026-incident-lifecycle-playbook"
-  };
+  }
+];
+
 // Additional fresh content (2029 preview)
 export const extraContent2029 = [
   {
@@ -3280,7 +3346,7 @@ export const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/production-eval-gates-2029.jpg",
     slug: "production-eval-gates-2029"
-  };
+  }
   ,
   {
     id: 9907,
@@ -3407,7 +3473,9 @@ export const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-2025.jpg",
     slug: "edge-ai-bringing-intelligence-network-edge"
-  };
+  }
+];
+
 // Latest 2026 Content - Fresh and Engaging
 const latestContent2026 = [
   {
@@ -3484,7 +3552,9 @@ const latestContent2026 = [
     featured: true,
     imageUrl: "/images/blog/ai-powered-education-2026.jpg",
     slug: "ai-powered-education-personalized-learning-revolution"
-  };
+  }
+];
+
 // Merge new content with existing blog posts
 export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...latestContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list

@@ -1,5 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 interface AdvancedHeroProps {
   title: string;
   subtitle: string;
@@ -7,8 +8,7 @@ interface AdvancedHeroProps {
   ctaText?: string;
   ctaLink?: string;
   backgroundImage?: string;
-};
-
+}
 
 
 export default function AdvancedHero({
@@ -29,25 +29,38 @@ export default function AdvancedHero({
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
         )}
+      </div>
+      
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             {title}
+          </h1>
           <p className="text-xl md:text-2xl text-purple-300 mb-8">
             {subtitle}
+          </p>
           <p className="text-lg text-white/80 max-w-3xl mx-auto mb-12">
             {description}
+          </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={ctaLink}
               className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
             >
               {ctaText}
+            </a>
             <a
               href="/about"
               className="inline-block px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
             >
               Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
+}

@@ -201,7 +201,6 @@ const AI2027UltimateBreakthroughBanner = () => {
       </motion.div>
     </AnimatePresence>
   );
-
 };
 
 

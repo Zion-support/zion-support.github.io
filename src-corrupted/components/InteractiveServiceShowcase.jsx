@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, {useState} from 'react';
-export default InteractiveServiceShowcase;
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const InteractiveServiceShowcase: React.FC = () => {
   return (

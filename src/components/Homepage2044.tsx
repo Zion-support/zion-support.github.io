@@ -309,7 +309,6 @@ const Homepage2044: React.FC = () => {
       </Layout>
     </>
   );
-
 };
 
 

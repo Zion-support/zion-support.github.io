@@ -49,7 +49,6 @@ const ComprehensiveServiceShowcase2025_2026: React.FC = () => {
                 </div>
               </divbutton>
             );
-};
           })}
         </div>
       </div>

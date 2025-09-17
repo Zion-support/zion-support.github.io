@@ -100,7 +100,6 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

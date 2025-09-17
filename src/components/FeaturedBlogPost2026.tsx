@@ -210,7 +210,6 @@ const FeaturedBlogPost2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

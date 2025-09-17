@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, {useState, useEffect} from 'react';
-export default EnhancedScrollToTop;
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedScrollToTop: React.FC = () => {
   return (

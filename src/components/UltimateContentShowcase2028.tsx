@@ -193,7 +193,6 @@ const UltimateContentShowcase2028: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

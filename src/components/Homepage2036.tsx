@@ -10,11 +10,13 @@ const Homepage2036: React.FC = () => {
 const featuredServices = [
   ...real2036InnovativeServices.slice(0, 3),
   ...real2036SpecializedServices.slice(0, 3)
+];
 const stats = [
   { label: 'Services Available', value: '500+', icon: <Rocket className="w-6 h-6" /> },
   { label: 'Market Coverage', value: '$200B+', icon: <TrendingUp className="w-6 h-6" /> },
   { label: 'Client Satisfaction', value: '98%', icon: <Star className="w-6 h-6" /> },
   { label: 'Global Reach', value: '50+', icon: <Globe className="w-6 h-6" /> }
+];
 const categories = [
   { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, count: 150, color: 'from-green-500 to-emerald-600' },
   { name: 'Quantum Technology', icon: <Atom className="w-6 h-6" />, count: 80, color: 'from-cyan-500 to-blue-600' },
@@ -325,3 +327,4 @@ export default function Homepage2036() {
                   <Phone className="w-5 h-5" />
                   Call Us Now
   );
+}

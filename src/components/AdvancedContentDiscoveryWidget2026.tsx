@@ -74,7 +74,6 @@ const AdvancedContentDiscoveryWidget2026: React.FC = () => {
                   {category.name}
                 </button>
               );
-};
             })}
           </div>
         </div>

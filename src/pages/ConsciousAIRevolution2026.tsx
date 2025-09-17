@@ -252,7 +252,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

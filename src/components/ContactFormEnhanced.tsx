@@ -103,7 +103,6 @@ const ContactFormEnhanced: React.FC = () => {
       </form>
     </div>
   );
-
 };
 
 

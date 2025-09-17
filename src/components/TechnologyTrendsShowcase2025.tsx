@@ -47,7 +47,6 @@ const TechnologyTrendsShowcase2025: React.FC = () => {
                 {trend.title.split(' ')[0]}
               </divbutton>
             );
-};
           })}
         </div>
         {/* Main Trend Display */}

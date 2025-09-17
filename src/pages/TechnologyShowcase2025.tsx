@@ -242,7 +242,6 @@ const TechnologyShowcase2025: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

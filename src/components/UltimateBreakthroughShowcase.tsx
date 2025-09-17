@@ -176,7 +176,6 @@ const UltimateBreakthroughShowcase: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

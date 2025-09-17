@@ -123,7 +123,6 @@ const AdvancedContentManagementSystemPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

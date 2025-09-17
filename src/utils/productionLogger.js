@@ -1,10 +1,3 @@
-// Production logger utility for safe logging in production environments
-const isDevelopment = process.env.NODE_ENV === 'development';
-// Production-safe logging utility
-export const productionLogger = {
-  log: (...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(...args);
     }
   },
   error: (...args) => {

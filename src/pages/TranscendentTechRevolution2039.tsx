@@ -162,7 +162,6 @@ const TranscendentTechRevolution2039: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

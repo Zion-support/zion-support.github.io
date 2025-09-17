@@ -86,7 +86,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                   </a>
                 </div>
               );
-};
             })}
           </div>
         </div>

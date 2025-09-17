@@ -16,6 +16,7 @@ const features = [
   'DeFi analytics dashboard',
   'Mobile app integration',
   'Staking and governance'
+];
 const pricingPlans = [
   {
     name: 'Starter',
@@ -197,3 +198,4 @@ export default function DeFiNexusPlatform() {
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
   );
+}

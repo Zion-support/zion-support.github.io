@@ -59,7 +59,6 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
       setCurrentIndex((prevIndex) => 
         prevIndex === neuralInterfaceContent.length - 1 ? 0 : prevIndex + 1
       );
-};
     }8000);
     return () => clearInterval(interval);
   }[]);
@@ -90,7 +89,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
         </div>
       </div>
     );
-  };
+  }
   const currentContent = neuralInterfaceContent[currentIndex];
   return (
     <div>

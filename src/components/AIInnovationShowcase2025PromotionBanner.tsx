@@ -102,7 +102,6 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

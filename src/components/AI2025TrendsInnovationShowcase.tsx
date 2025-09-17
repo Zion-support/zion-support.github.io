@@ -144,7 +144,6 @@ const AI2025TrendsInnovationShowcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

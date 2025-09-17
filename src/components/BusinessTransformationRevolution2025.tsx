@@ -156,7 +156,6 @@ const BusinessTransformationRevolution2025: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

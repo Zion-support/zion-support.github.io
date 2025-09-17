@@ -69,7 +69,6 @@ const NewContent2025RevolutionaryShowcaseBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

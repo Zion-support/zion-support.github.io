@@ -7,7 +7,7 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 overflow-hidden"
         >
           {/* Background Pattern */}
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-indigo-900/40"></div>
+          <div className="absolute inset-0 bg-[url('/api/placeholder/1920/200')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 via-purple-900/80 to-indigo-900/80"></div>
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
@@ -160,7 +160,6 @@ const AITrends2026PredictionsPromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

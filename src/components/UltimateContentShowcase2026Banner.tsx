@@ -142,7 +142,6 @@ const UltimateContentShowcase2026Banner = () => {
       </div>
     </div>
   );
-
 };
 
 

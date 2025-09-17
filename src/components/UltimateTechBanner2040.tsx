@@ -89,7 +89,6 @@ const UltimateTechBanner2040: React.FC = () => {
       </div>
     </motion.div>
   );
-
 };
 
 

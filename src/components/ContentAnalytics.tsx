@@ -6,6 +6,7 @@ interface ContentMetrics {
   scrollDepth: number;
   clickThroughRate: number;
   bounceRate: number;
+}
 interface ContentAnalyticsProps {
   pageId: string;
   pageTitle: string;
@@ -76,7 +77,7 @@ export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsPr
   // 'Don', 't render in production
   if (process.env.NODE_ENV === 'production') {
     return null;
-  };
+  }
   return (
     <>
       {/* Analytics Toggle Button */}

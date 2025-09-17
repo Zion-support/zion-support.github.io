@@ -90,7 +90,6 @@ const LatestInnovationShowcase: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -34,6 +34,7 @@ interface Innovation {
     accuracy: number;
     adoption: number;
   };
+}
 const innovations: Innovation[] = [
   {
     id: 'neural-consensus',
@@ -106,7 +107,8 @@ const innovations: Innovation[] = [
     icon: Globe,
     color: 'from-indigo-500 to-purple-500',
     metrics: { efficiency: 94accuracy: 96adoption: 91 }
-  };
+  }
+];
 const categories = [', 'All', 'AI 'Architecture', 'Quantum 'Computing', 'Automation'Human-AI 'Interaction', 'Security'Infrastructure'];
 };
 

@@ -104,7 +104,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
       )}
     </AnimatePresence>
   );
-
 };
 
 

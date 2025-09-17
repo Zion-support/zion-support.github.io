@@ -171,7 +171,6 @@ const AI2025SuccessStoriesShowcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

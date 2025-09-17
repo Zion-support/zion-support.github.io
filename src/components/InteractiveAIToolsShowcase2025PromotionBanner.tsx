@@ -126,7 +126,6 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

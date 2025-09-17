@@ -200,7 +200,6 @@ const RevolutionaryTech2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 
@@ -208,4 +207,5 @@ export default RevolutionaryTech2026;
 
 
 
+export default RevolutionaryTech2026;
 export default RevolutionaryTech2026;

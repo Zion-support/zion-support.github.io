@@ -198,7 +198,6 @@ const AI2026RevolutionaryBreakthroughUltimatePromotionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 
