@@ -91,10 +91,7 @@ export default [
       'coverage/**',
 
       // Large/legacy sources and disabled dirs
-<<<<<<< HEAD
       'src/**',
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-bc8e
       'src-corrupted/**',
       'src.corrupted/**',
       'src.disabled/**',
@@ -102,11 +99,7 @@ export default [
       'src.pages.disabled/**',
       'src_backup_temp/**',
       'src_backup/**',
-<<<<<<< HEAD
-      'src-corrupted/**',
       'src-clean/**',
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-bc8e
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
@@ -235,13 +228,12 @@ export default [
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
-<<<<<<< HEAD
       'start-*.js',
       'test-*.js',
       'syntax-fixer.js',
       'workbox-config.js',
       'vite.config-backup.ts',
-      'talent/[id].js.jsx',
+      'talent/**',
       'test-utils.jsx',
       '*-*.js',
       '*-*.jsx',
@@ -291,17 +283,6 @@ export default [
       'AIMatcher.tsx',
       'AdvancedServicesPage.jsx',
       'App.tsx',
-=======
-      'start-all-automations.js',
-      'start-dev.js',
-      'test-build.js',
-      'syntax-fixer.js',
-      'workbox-config.js',
-      'vite.config-backup.ts',
-      'talent/**',
-      'test-utils.jsx',
-      'store/**',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-bc8e
 
       // Misc root configs that were being linted
       '.eslintrc.js',
