@@ -114,8 +114,60 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">Fault‑tolerant, eval‑gated, and cost‑aware patterns to harden agents.</p>
             </div>
             <div className="flex gap-3">
+<<<<<<< HEAD
               <Link href="/blog/ai-2026-resilient-agent-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
               <Link href="/content/ai-2026-operational-excellence-handbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">OpEx Handbook</Link>
+=======
+              <Link href="/content/trusted-genai-operations-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Guide</Link>
+              <Link href="/content/ai-2026-safe-evaluation-hub" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evaluation Hub</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Promo: Evaluation-Driven Release Engineering (New Article) */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-yellow-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-amber-100">
+            <div>
+              <p className="text-sm font-semibold text-amber-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Evaluation‑Driven Release Engineering</h2>
+              <p className="text-gray-600 mt-2">Eval‑gated rollouts, canary scorecards, and automated rollback for safer autonomy.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-evaluation-driven-release-engineering" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Runtime Guardrails + Eval Cookbook + Cost Blueprint */}
+      <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
+            <div>
+              <p className="text-sm font-semibold text-purple-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Guardrails, Evals, and FinOps</h2>
+              <p className="text-gray-600 mt-2">Production guardrails, evaluation recipes, and predictable AI cost controls.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Guardrails</Link>
+              <Link href="/blog/ai-2026-agent-observability-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Observability</Link>
+              <Link href="/blog/ai-2026-evaluation-cookbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval Cookbook</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Promo: Evaluation-Driven Release Engineering (New Article) */}
+      <section className="py-8 bg-gradient-to-r from-amber-50 to-yellow-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-amber-100">
+            <div>
+              <p className="text-sm font-semibold text-amber-700">New content</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">AI 2026: Evaluation‑Driven Release Engineering</h2>
+              <p className="text-gray-600 mt-2">Eval‑gated rollouts, canary scorecards, and automated rollback for safer autonomy.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-evaluation-driven-release-engineering" className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-amber-700">Read Article</Link>
+>>>>>>> origin/feat/add-sept16-content-promos
             </div>
           </div>
         </div>
