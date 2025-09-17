@@ -9,9 +9,8 @@ const AlertDialog = () => {
         </div>
       </div>
     </div>
+  )
 };
 
 export default AlertDialog;
 
-=======
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f

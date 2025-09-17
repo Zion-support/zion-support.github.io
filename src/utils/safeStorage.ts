@@ -1,3 +1,89 @@
+/**
+ * Safe storage utility for handling localStorage and sessionStorage
+ * with error handling and fallbacks
+ */
+export const safeStorage = {
+  getItem: (key: string): string | null => {
+    try {
+      if (typeof window === 'undefined') return null;
+      return localStorage.getItem(key);
+    } catch (error) {
+      console.warn('Failed to get item from localStorage:', error);
+      return null;
+    }
+  },
+  setItem: (key: string, value: string): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      localStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      console.warn('Failed to set item in localStorage:', error);
+      return false;
+    }
+  },
+  removeItem: (key: string): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      localStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.warn('Failed to remove item from localStorage:', error);
+      return false;
+    }
+  },
+  getSessionItem: (key: string): string | null => {
+    try {
+      if (typeof window === 'undefined') return null;
+      return sessionStorage.getItem(key);
+    } catch (error) {
+      console.warn('Failed to get item from sessionStorage:', error);
+      return null;
+    }
+  },
+  setSessionItem: (key: string, value: string): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      sessionStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      console.warn('Failed to set item in sessionStorage:', error);
+      return false;
+    }
+  },
+  removeSessionItem: (key: string): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      sessionStorage.removeItem(key);
+      return true;
+    } catch (error) {
+      console.warn('Failed to remove item from sessionStorage:', error);
+      return false;
+    }
+  },
+  clear: (): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      localStorage.clear();
+      return true;
+    } catch (error) {
+      console.warn('Failed to clear localStorage:', error);
+      return false;
+    }
+  },
+  clearSession: (): boolean => {
+    try {
+      if (typeof window === 'undefined') return false;
+      sessionStorage.clear();
+      return true;
+    } catch (error) {
+      console.warn('Failed to clear sessionStorage:', error);
+      return false;
+    }
+  },
+};
+
+export default safeStorage;
 // Safe storage utilities for browser compatibility
 export const safeStorage = {
   getItem: (key: string): string | null => {
