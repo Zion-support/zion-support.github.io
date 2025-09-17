@@ -6,10 +6,3 @@
       this.errors.forEach(error => {
       });
     }
-  }
-}
-const fixer = new LintingIssuesFixer();
-fixer.run().catch(error => {
-  console.error('❌ Failed to run linting issues "fixer": ', error);
-  process.exit(1);
-});

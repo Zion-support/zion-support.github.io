@@ -1,42 +1,22 @@
-<<<<<<< HEAD
-import { useState } from "react",
-import { DynamicListingPage } from "@/components/DynamicListingPage",
-import { ProductListing } from "@/types/listings",
-import { MORE_PRODUCTS } from "@/data/moreProductsData",
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const CATEGORY_FILTERS = Array.from(
-  new Set(MORE_PRODUCTS.map(p => p.category))
-).map(c => ({ label: c, value: c })),
-
-export default function MoreProductsPage() {
-  const [listings] = useState<ProductListing[]>([...MORE_PRODUCTS]),
-=======
-import { useState } from "react";
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { MORE_PRODUCTS } from "@/data/moreProductsData";
-
-const CATEGORY_FILTERS = Array.from(
-  new Set(MORE_PRODUCTS.map(p => p.category))
-).map(c => ({ label: c, value: c }));
-
-export default function MoreProductsPage() {
-  const [listings] = useState<ProductListing[]>([...MORE_PRODUCTS]);
->>>>>>> origin/auto/autonomy-17186719616
-
+const MoreProductsPage: React.FC = () => {
   return (
-    <DynamicListingPage
-      title="More Products"
-      description="Browse additional offerings priced for the average market."
-      categorySlug="more-products"
-      listings={listings}
-      categoryFilters={CATEGORY_FILTERS}
-      initialPrice={{ min: 0, max: 2000 }}
-    />
-<<<<<<< HEAD
-  ),
-=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>MoreProductsPage | Zion Tech Group</title>
+        <meta name="description" content="MoreProductsPage - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">MoreProductsPage</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
->>>>>>> origin/auto/autonomy-17186719616
-}
+};
 
+export default MoreProductsPage;

@@ -1,28 +1,12 @@
-<<<<<<< HEAD
-import Document{ HtmlHeadMainNextScriptDocumentContext } from 'next/document';
-=======
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
->>>>>>> origin/auto/autonomy-17186719616
+import React from 'react';
 
-export default function Document() {
+const _document: React.FC = () => {
   return (
-    <Html lang="en">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0a0a0a" />
-<<<<<<< HEAD
-        <meta name="viewport" content="width=device-widthinitial-scale=1viewport-fit=cover" />
-=======
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
->>>>>>> origin/auto/autonomy-17186719616
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
-}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">_document</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default _document;

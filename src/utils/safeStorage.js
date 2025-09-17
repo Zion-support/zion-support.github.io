@@ -1,89 +1,41 @@
-<<<<<<< HEAD
-// Safe storage utility for browser compatibility
-export const safeStorage = {
-  getItem: (key) => {
-    try {
-      return localStorage.getItem(key);
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-      return null;
     }
   },
-  
   setItem: (key, value) => {
     try {
-      localStorage.setItem(key, value);
-      return true;
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-      return false;
-    }
-  },
-  
-  removeItem: (key) => {
-    try {
-      localStorage.removeItem(key);
-      return true;
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-      return false;
-    }
-  },
-  
-  clear: () => {
-    try {
-      localStorage.clear();
-      return true;
-    } catch (error) {
-      console.warn('localStorage not available:', error);
-      return false;
-=======
-// Safe storage utility for handling localStorage and sessionStorage
-// with error handling and fallbacks
-
-export const safeStorage = {
-  // Safe localStorage operations
-  localStorage: {
-    getItem: (key) => {
-      try {
-        return localStorage.getItem(key);
-      } catch (error) {
-        console.warn('localStorage.getItem failed:', error);
-        return null;
-      }
-    },
-    
-    setItem: (key, value) => {
-      try {
+      if (typeof localStorage !== 'undefined') {
         localStorage.setItem(key, value);
         return true;
-      } catch (error) {
-        console.warn('localStorage.setItem failed:', error);
-        return false;
       }
-    },
-    
-    removeItem: (key) => {
-      try {
-        localStorage.removeItem(key);
-        return true;
-      } catch (error) {
-        console.warn('localStorage.removeItem failed:', error);
-        return false;
-      }
-    },
-    
-    clear: () => {
-      try {
-        localStorage.clear();
-        return true;
-      } catch (error) {
-        console.warn('localStorage.clear failed:', error);
-        return false;
-      }
+      return false;
+    } catch (e) {
+      console.warn('localStorage not available:', e);
+      return false;
     }
   },
-  
+  removeItem: (key) => {
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.removeItem(key);
+        return true;
+      }
+      return false;
+    } catch (e) {
+      console.warn('localStorage not available:', e);
+      return false;
+    }
+  },
+  clear: () => {
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.clear();
+        return true;
+      }
+      return false;
+    } catch (e) {
+      console.warn('localStorage not available:', e);
+      return false;
+    }
+  },
   // Safe sessionStorage operations
   sessionStorage: {
     getItem: (key) => {
@@ -94,7 +46,6 @@ export const safeStorage = {
         return null;
       }
     },
-    
     setItem: (key, value) => {
       try {
         sessionStorage.setItem(key, value);
@@ -104,7 +55,6 @@ export const safeStorage = {
         return false;
       }
     },
-    
     removeItem: (key) => {
       try {
         sessionStorage.removeItem(key);
@@ -114,7 +64,6 @@ export const safeStorage = {
         return false;
       }
     },
-    
     clear: () => {
       try {
         sessionStorage.clear();
@@ -125,7 +74,6 @@ export const safeStorage = {
       }
     }
   },
-  
   // JSON-safe operations
   json: {
     getItem: (key, storage = 'localStorage') => {
@@ -138,7 +86,6 @@ export const safeStorage = {
         return null;
       }
     },
-    
     setItem: (key, value, storage = 'localStorage') => {
       try {
         const storageObj = storage === 'sessionStorage' ? safeStorage.sessionStorage : safeStorage.localStorage;
@@ -147,9 +94,8 @@ export const safeStorage = {
         console.warn('JSON stringify failed:', error);
         return false;
       }
->>>>>>> cursor/create-and-deploy-new-content-d952
     }
-  }
+  };
 };
 
 export default safeStorage;

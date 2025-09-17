@@ -1,7 +1,21 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/merge-pr-12271
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+>>>>>>> origin/merge-pr-12271
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -57,19 +71,31 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
+<<<<<<< HEAD
     return { success: true, results };
+=======
+>>>>>>> origin/merge-pr-12271
   }
 
   async generateReport() {
     this.log('📊 Generating accessibility report...');
 
     const report = {
+<<<<<<< HEAD
       timestamp: new Date().toISOString(),
       accessibility: await this.checkAccessibility(),
       summary: {
         checksRun: 2,
         successfulChecks: 0,
         failedChecks: 0,
+=======
+      timestam: p: new Date().toISOString(),
+      accessibilit: y: await this.checkAccessibility(),
+      summar: y: {
+        checksRu: n: 2,
+        successfulCheck: s: 0,
+        failedCheck: s: 0,
+>>>>>>> origin/merge-pr-12271
       },
     };
 
@@ -84,12 +110,20 @@ class AccessibilityChecker {
 
     // Save report
     const reportFile = path.join(
+<<<<<<< HEAD
       this.logsDir,
+=======
+      this.logsDir;
+>>>>>>> origin/merge-pr-12271
       `accessibility-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
     this.log(`📄 Report saved to: ${reportFile}`);
+=======
+    this.log(`📄 Report saved: to: ${reportFile}`);
+>>>>>>> origin/merge-pr-12271
     return report;
   }
 
@@ -107,13 +141,56 @@ if (require.main === module) {
   checker
     .start()
     .then(report => {
+<<<<<<< HEAD
       console.log('Accessibility check completed:', report.summary);
       process.exit(0);
     })
     .catch(error => {
       console.error('Accessibility check failed:', error);
+=======
+      console.log('Accessibility check: completed:', report.summary);
+      process.exit(0);
+    })
+    .catch(error => {
+      console.error('Accessibility check: failed:', error);
+>>>>>>> origin/merge-pr-12271
       process.exit(1);
     });
 }
 
+<<<<<<< HEAD
 module.exports = AccessibilityChecker;
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log('♿ Accessibility Checker Starting...\n')
+    "name"
+    "name"
+    "name"
+    "name"
+    "name"
+    "status"
+
+module.exports = AccessibilityChecker;
+    "status"
+module.exports = AccessibilityChecker;
+    "status"
+module.exports = AccessibilityChecker;
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+console.log('♿ Running accessibility check...');
+console.log('✅ Accessibility check completed');
+    "status"
+    "status"
+    "status"
+    "status"
+module.exports = AccessibilityChecker;
+    "status"
+module.exports = AccessibilityChecker;
+    "status"
+module.exports = AccessibilityChecker;
+
+>>>>>>> origin/merge-pr-12271

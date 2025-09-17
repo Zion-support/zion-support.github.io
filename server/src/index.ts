@@ -81,13 +81,3 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
 });
 
 // 404 handler
-app.use('*', (_req, res) => {
-  res.status(404).json({ error: 'Route not found' });
-});
-
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🌍 Environment: ${NODE_ENV}`);
-  console.log(`📱 Frontend: http://localhost:3000`);
-  console.log(`🔧 Backend API: http://localhost:${PORT}/api`);
-});

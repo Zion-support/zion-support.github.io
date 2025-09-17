@@ -11,7 +11,6 @@ export default function ContractBuilderRedirect() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -69,7 +68,6 @@ router.replace ('/automation / contract - builder');
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

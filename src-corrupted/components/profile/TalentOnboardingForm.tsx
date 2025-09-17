@@ -122,7 +122,6 @@ export function TalentOnboardingForm() {
 import { useAuth } from "@/hooks/useAuth",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
   const form = useForm<TalentFormValues>({
@@ -208,11 +207,8 @@ import { useAuth } from "@/hooks/useAuth",
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
     // Preview the image
@@ -257,10 +253,8 @@ const form = useForm<TalentFormValues> ({
   resolver: zodResolver (talentSchema), defaultValues: {
   basicInfo: {
   cv: undefined
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 }

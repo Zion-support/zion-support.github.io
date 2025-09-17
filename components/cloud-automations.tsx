@@ -1,53 +1,12 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseState } from 'react';
+import React from 'react';
 
-export default function CloudAutomationsPage() {
-  const [datasetData] = useState<any>(null);
-=======
-import React, { useEffect, useState } from 'react';
-
-export default function CloudAutomationsPage() {
-  const [data, setData] = useState<any>(null);
->>>>>>> origin/auto/autonomy-17186719616
-  useEffect(() => {
-    fetch('/api/cloud-automations-status')
-      .then((r) => r.json())
-      .then(setData)
-      .catch(() => setData({ ok: false }));
-<<<<<<< HEAD
-  }[]);
-=======
-  }, []);
->>>>>>> origin/auto/autonomy-17186719616
-
-  const items = data?.data ? Object.entries(data.data) : [];
-
+const cloud-automations: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">Cloud Automations</h1>
-      <p className="text-gray-600 dark:text-gray-300">Autonomous agents running in the cloud. No servers to babysit. No manual ops.</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-        {items.map(([keyvalue]: any) => (
-=======
-        {items.map(([key, value]: any) => (
->>>>>>> origin/auto/autonomy-17186719616
-          <div key={key} className="border rounded p-4 bg-gray-50 dark:bg-gray-900">
-            <h2 className="text-xl font-semibold">{value.name || key}</h2>
-            <p className="text-sm text-gray-500">Started: {value.startedAt || '—'}</p>
-            <p className="text-sm text-gray-500">Finished: {value.finishedAt || '—'}</p>
-            <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
-            {value.metrics ? (
-<<<<<<< HEAD
-              <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metricsnull2)}</pre>
-=======
-              <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
->>>>>>> origin/auto/autonomy-17186719616
-            ) : null}
-          </div>
-        ))}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">cloud-automations</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default cloud-automations;

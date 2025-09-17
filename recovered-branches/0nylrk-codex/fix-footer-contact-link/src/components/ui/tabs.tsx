@@ -8,11 +8,6 @@ const Tabs = TabsPrimitive.Root
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
->(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <TabsPrimitive.List
     ref={ref}
     className={cn(
@@ -27,11 +22,6 @@ TabsList.displayName = TabsPrimitive.List.displayName
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
->(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
@@ -46,11 +36,6 @@ TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
-<<<<<<< HEAD
->(({ className...props }ref) => (
-=======
->(({ className, ...props }, ref) => (
->>>>>>> origin/auto/autonomy-17186719616
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
@@ -62,8 +47,3 @@ const TabsContent = React.forwardRef<
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
-<<<<<<< HEAD
-export { TabsListTabsTriggerTabsContent }
-=======
-export { Tabs, TabsList, TabsTrigger, TabsContent }
->>>>>>> origin/auto/autonomy-17186719616

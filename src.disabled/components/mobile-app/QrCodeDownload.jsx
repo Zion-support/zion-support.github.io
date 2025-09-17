@@ -1,2 +1,12 @@
-import { QrCode,Smartphone,Download,Share2,Copy,Check export const QrCodeDownload = () => { const [copied,setCopied] = useState(false) const [activeTab,setActiveTab] = useState(\'ios\') const downloadLinks = { \"ios\": { name: \'iOS: App Store,\',\"url\": \'https:\''\'"\",;
-const { QrCode,Smartphone,Download,Share2,Copy,Check export const QrCodeDownload = () => { const [copied,setCopied] = useState(false) const [activeTab,setActiveTab] = useState("ios") const downloadLinks = { ios: { name: "iOS: App Store,",url: "https:""""",;'"'"
+import React from 'react';
+
+const QrCodeDownload: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">QrCodeDownload</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default QrCodeDownload;

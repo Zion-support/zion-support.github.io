@@ -1,46 +1,12 @@
-import React, {useState} from 'react';
-const Dialog({children, open, onOpenChange}) {
-    const [internalOpen, setInternalOpen] = useState(false);
-    const isOpen = isControlled ? open : internalOpen;
-    const setIsOpen = (props: any) => {
-        if (!isControlled) {
-            setInternalOpen(newOpen)}
-        if (onOpenChange) {onOpenChange(newOpen)}
-    };
-    return (<DialogContext.Provider value = {
-  { isOpen,
-  setIsOpen 
+import React from 'react';
 
-}}>
-      <div className="relative">
-        {children}
-      </div>
-    </DialogContext.Provider>)}
-export function DialogTrigger(props: any) {
-    const context = useContext(DialogContext);
-    if (!context)
-        throw new Error('DialogTrigger must be used within Dialog');
-    if (asChild) {
-        return (<div onClick={() => context.setIsOpen(true)}>
-        {children}
-      </div>)}
-    return (<div onClick={() => context.setIsOpen(true)}>
-      {children}
-    </div>)}
-export function DialogContent(props: any) {
-    const context = useContext(DialogContext);
-    if (!context)
-        throw new Error('DialogContent must be used within Dialog');
-    if (!context.isOpen)
-        return null;
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)}/>
-      <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
-        {children}
-      </div>
-    </div>)}
-export function DialogFooter(props: any) {
-    return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}
+const dialog.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">dialog.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-</div>
-</DialogContext>
+export default dialog.js;

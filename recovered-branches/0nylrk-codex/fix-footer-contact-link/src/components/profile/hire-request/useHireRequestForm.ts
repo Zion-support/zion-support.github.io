@@ -64,12 +64,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
         talent: {
           id: talent.id || "",
           full_name: talent.full_name,
-<<<<<<< HEAD
-          professional_title: talent.professional_title},
-=======
-          professional_title: talent.professional_title,
-        },
->>>>>>> origin/auto/autonomy-17186719616
         requester: {
           name: values.requesterName,
           email: values.requesterEmail,

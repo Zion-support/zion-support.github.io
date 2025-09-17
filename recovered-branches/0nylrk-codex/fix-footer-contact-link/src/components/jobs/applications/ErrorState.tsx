@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-import { CardContent } from "@/components/ui/card";
-=======
-import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 
 interface ErrorStateProps {
   error: string;
