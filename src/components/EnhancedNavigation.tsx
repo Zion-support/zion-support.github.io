@@ -39,6 +39,7 @@ const EnhancedNavigation: React.FC = () => {
       title: 'Neural Interfaces',
       path: '/neural',
       icon: '🧬',
+<<<<<<< HEAD
       description: 'Brain-computer interfaces and neural tech',
       subItems: [
         { title: 'Neural Interface 2026', path: '/pages/NeuralInterfaceRevolution2026' },
@@ -138,6 +139,10 @@ const EnhancedNavigation: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+    },
+
+>>>>>>> origin/feature/enhanced-content-showcase-2025
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">

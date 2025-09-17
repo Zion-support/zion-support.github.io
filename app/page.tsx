@@ -32,6 +32,10 @@ import RevolutionaryContent2025Banner from './components/RevolutionaryContent202
 import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
 import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
 
+// Import our new enhanced content components
+import NewContentPromotionBanner2025 from './components/NewContentPromotionBanner2025';
+import InteractiveContentDiscoveryWidget2025 from './components/InteractiveContentDiscoveryWidget2025';
+
 // Import new promotional components
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
@@ -130,6 +134,7 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+<<<<<<< HEAD
       {/* Promo: Real-Time RAG + Autonomous Ops (New) */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -763,6 +768,15 @@ export default function HomePage() {
       </section>
 <<<<<<< HEAD
 =======
+=======
+      
+      {/* NEW: Enhanced Content Promotion Banner 2025 */}
+      <NewContentPromotionBanner2025 />
+      
+      {/* NEW: Ultimate Content Showcase 2025 */}
+      <UltimateContentShowcase2025 />
+
+>>>>>>> origin/feature/enhanced-content-showcase-2025
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
