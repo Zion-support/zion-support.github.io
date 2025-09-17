@@ -4,7 +4,7 @@
   {
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
-    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    summary: "Deploy guardrailed support agents with routingevals, and observability for higher CSAT.",
     href: "/blog/ai-2026-autonomous-customer-support-agents",
 =======
     tag: "Guide",

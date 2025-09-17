@@ -72,7 +72,7 @@ export interface MonthlyReport {
     suspicious: number;
     dangerous: number;
   };
-  bySource: Record<MonitoredSource, number>;
+  bySource: Record<MonitoredSourcenumber>;
   falsePositives: number; // count of IGNORED actions
   topReasons: Array<{ reason: string; count: number }>;
 }

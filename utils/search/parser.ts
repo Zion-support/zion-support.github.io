@@ -70,7 +70,7 @@ function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: nu
     const max = parseInt(perHour[1], 10);
     return { maxBudgetUsd: max };
   }
-  const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec(lower);
+  const under = /(under|below|less than)\s*\$?\s*(\d{14})/.exec(lower);
   if (under) {
     const max = parseInt(under[2], 10);
     return { maxBudgetUsd: max };
@@ -79,13 +79,13 @@ function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: nu
   if (between) {
     const min = parseInt(between[2], 10);
     const max = parseInt(between[4], 10);
-    return { minBudgetUsd: min, maxBudgetUsd: max };
+    return { minBudgetUsd: minmaxBudgetUsd: max };
   }
   const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower);
   if (range) {
     const min = parseInt(range[1], 10);
     const max = parseInt(range[2], 10);
-    return { minBudgetUsd: min, maxBudgetUsd: max };
+    return { minBudgetUsd: minmaxBudgetUsd: max };
   }
   return {};
 }
