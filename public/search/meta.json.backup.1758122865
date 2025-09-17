@@ -78,6 +78,19 @@
     "route": "/ProductsList",
     "title": "ProductsList | Zion Tech Group",
     "h1": "ProductsList"
+<<<<<<< HEAD
+  },
+  {
+    "route": "/MicroSAAS",
+    "title": "MicroSAAS | Zion Tech Group",
+    "h1": "MicroSAAS"
+  },
+  {
+    "route": "/ProductsList",
+    "title": "ProductsList | Zion Tech Group",
+    "h1": "ProductsList"
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9df6
   },
   {
     "route": "/[...slug]",
@@ -413,6 +426,19 @@
     "route": "/autonomous-business-operations-platform",
     "title": "autonomous-business-operations-platform | Zion Tech Group",
     "h1": "autonomous-business-operations-platform"
+<<<<<<< HEAD
+  },
+  {
+    "route": "/automation",
+    "title": "automation | Zion Tech Group",
+    "h1": "automation"
+  },
+  {
+    "route": "/autonomous-business-operations-platform",
+    "title": "autonomous-business-operations-platform | Zion Tech Group",
+    "h1": "autonomous-business-operations-platform"
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9df6
   },
   {
     "route": "/aws-cost-anomaly-monitor",
@@ -1970,6 +1996,89 @@
     "h1": "Agent Rollback Patterns — Safe Recovery (2026)"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-agent-safety-playbook",
+    "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
+    "h1": "AI 2026: Agent Safety Playbook"
+  },
+  {
+    "route": "/blog/ai-2026-agent-slo-blueprint",
+    "title": "Agent Platform SLO Blueprint (2026) | Zion Tech Group",
+    "h1": "Agent Platform SLO Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-billing-controls",
+    "title": "",
+    "h1": "Reliable Autonomy: Agentic Billing Controls"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-evidence-graphs",
+    "title": "Agentic Evidence Graphs (2026) | Zion Tech Group",
+    "h1": "Agentic Evidence Graphs (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-observability-deep-dive",
+    "title": "AI 2026: Agentic Observability — Deep Dive | Zion Tech Group",
+    "h1": "AI 2026: Agentic Observability — Deep Dive"
+  },
+  {
+    "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
+    "title": "",
+    "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-autonomous-evidence-led-ops",
+    "title": "Autonomous, Evidence‑Led Ops (2026) | Zion Tech Group",
+    "h1": "Autonomous, Evidence‑Led Ops (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-autonomous-incident-response-blueprint",
+    "title": "AI 2026: Autonomous Incident Response Blueprint | Zion Tech Group",
+    "h1": "Autonomous Incident Response Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-cost-aware-routing-in-practice",
+    "title": "Cost-Aware Routing in Practice (2026) | Zion Tech Group",
+    "h1": "Cost-Aware Routing in Practice (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-cost-optimization-blueprint",
+    "title": "",
+    "h1": "AI 2026: Cost Optimization Blueprint"
+  },
+  {
+    "route": "/blog/agentic-crm-autonomous-revenue-workflows-2025",
+    "title": "Agentic CRM: Autonomous Revenue Workflows (2025) | Zion Tech Group",
+    "h1": "Agentic CRM: Autonomous Revenue Workflows (2025)"
+  },
+  {
+    "route": "/blog/agentic-product-playbooks",
+    "title": "Agentic Product Playbooks: Shipping Autonomous Workflows | Zion Tech Group",
+    "h1": "Agentic Product Playbooks: Shipping Autonomous Workflows"
+  },
+  {
+    "route": "/blog/ai-2025-enterprise-automation-strategy",
+    "title": "Enterprise Automation Strategy 2025: Practical AI Patterns | Zion Tech Group",
+    "h1": "Enterprise Automation Strategy 2025: Practical AI Patterns"
+  },
+  {
+    "route": "/blog/ai-2026-agent-observability-blueprint",
+    "title": "AI 2026: Agent Observability Blueprint | Zion Tech Group",
+    "h1": "Agent Observability Blueprint (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agent-observability-scorecards",
+    "title": "Agent Observability Scorecards (2026) | Zion Tech Group",
+    "h1": "Agent Observability Scorecards (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agent-platform-slos-best-practices",
+    "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
+    "h1": "AI 2026: Agent Platform SLOs — Best Practices"
+  },
+  {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9df6
     "route": "/blog/ai-2026-agent-safety-playbook",
     "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
     "h1": "AI 2026: Agent Safety Playbook"
