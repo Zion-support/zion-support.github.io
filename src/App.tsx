@@ -13,7 +13,7 @@ const baseRoutes = [
   { path: '/', element: <Home /> },
 ];
 
-function App() {
+export default function App(): React.JSX.Element {
   return (
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
@@ -32,5 +32,3 @@ function App() {
     </WhitelabelProvider>
   );
 }
-
-export default App;

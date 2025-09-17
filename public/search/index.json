@@ -2215,6 +2215,7 @@
     "h1": "AI 2026: Agent Safety Playbook"
   },
   {
+<<<<<<< HEAD
     "route": "/blog/ai-2026-agent-slo-blueprint",
     "title": "Agent Platform SLO Blueprint (2026) | Zion Tech Group",
     "h1": "Agent Platform SLO Blueprint (2026)"
@@ -2230,6 +2231,8 @@
     "h1": "AI 2026: Agentic Observability — Deep Dive"
   },
   {
+=======
+>>>>>>> 55e4f6541840635599f56dfc534787cdc8e35250
     "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
     "title": "",
     "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
@@ -2310,21 +2313,27 @@
     "h1": "Operationalizing Agentic Workflows in 2026"
   },
   {
+<<<<<<< HEAD
     "route": "/blog/ai-2026-production-eval-gates-live-ops",
     "title": "Production Eval Gates (2026) | Zion Tech Group",
     "h1": "Production Eval Gates (2026)"
   },
   {
+=======
+>>>>>>> 55e4f6541840635599f56dfc534787cdc8e35250
     "route": "/blog/ai-2026-production-evidence-hub-blueprint",
     "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
     "h1": "AI 2026: Production Evidence Hub Blueprint"
   },
   {
+<<<<<<< HEAD
     "route": "/blog/ai-2026-real-time-evals-inference-guardrails",
     "title": "AI 2026: Real-Time Evals & Inference Guardrails | Zion Tech Group",
     "h1": "AI 2026: Real-Time Evals & Inference Guardrails"
   },
   {
+=======
+>>>>>>> 55e4f6541840635599f56dfc534787cdc8e35250
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
     "title": "",
     "h1": "AI 2026: Real-Time Retrieval Architectures"
@@ -2365,11 +2374,14 @@
     "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
   },
   {
+<<<<<<< HEAD
     "route": "/blog/ai-2026-trustworthy-model-routing-starter",
     "title": "AI 2026: Trustworthy Model Routing — Starter Kit | Zion Tech Group",
     "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
   },
   {
+=======
+>>>>>>> 55e4f6541840635599f56dfc534787cdc8e35250
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
