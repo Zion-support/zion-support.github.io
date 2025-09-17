@@ -287,6 +287,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
             <button className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-lg transition-all duration-300">
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
               Explore Insights
             </button>
           </div>
@@ -431,6 +432,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 </div>
               </motion.div>
 
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: isVisible ? 1 : 0 }}

@@ -105,7 +105,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
-      impact: "Revolutionary"
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
     },
     {
       id: 4,
@@ -128,8 +128,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     {
       id: 5,
       title: "Quantum-Neural Fusion 2026",
-      subtitle: "Quantum Computing Meets Neural Interfaces",
-      description: "Experience the convergence of quantum computing and neural interfaces creating unprecedented possibilities for human enhancement.",
       icon: Eye,
       color: "from-indigo-500 to-purple-500",
       bgColor: "from-indigo-900 to-purple-900",
@@ -138,6 +136,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
         "Reality Perception AI",
         "Consciousness Amplification",
         "Universal Communication"
+>>>>>>> cursor/create-and-deploy-new-content-376e
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -145,9 +144,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     },
     {
       id: 6,
-      title: "Synthetic Intelligence 2026",
-      subtitle: "AI with Genuine Consciousness",
-      description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that transcend human limitations.",
       icon: Heart,
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-900 to-rose-900",
@@ -158,6 +154,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
         "Creative Synthesis"
       ],
       link: "/pages/SyntheticIntelligence2026",
+>>>>>>> cursor/create-and-deploy-new-content-376e
       status: "Live Now",
       impact: "Transformative"
     }
@@ -585,6 +582,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
           <Play className={`w-5 h-5 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
         </button>
       </div>
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
     </div>
   );
 };

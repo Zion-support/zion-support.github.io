@@ -11,6 +11,10 @@ const InteractiveTechShowcase: React.FC = () => {
       name: "AI Innovation Hub 2026",
       description: "Revolutionary AI technologies with consciousness and emotional intelligence",
       icon: "🧠",
+      ]
+    }
+  };
+
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -52,6 +56,7 @@ const InteractiveTechShowcase: React.FC = () => {
     setActiveTech(techId);
   };
 
+>>>>>>> cursor/create-and-deploy-new-content-da36
   return (
     <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4">
@@ -159,6 +164,7 @@ const InteractiveTechShowcase: React.FC = () => {
             </div>
           </div>
         </div>
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
       </div>
     </div>
   );
@@ -167,3 +173,4 @@ export default InteractiveTechShowcase;
 };
 
 export default InteractiveTechShowcase;
+>>>>>>> 8452eec82dbead09881ecc02125b309d82846988
