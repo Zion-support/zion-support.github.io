@@ -11,24 +11,8 @@ export type WhatsNewItem = {
 
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
-<<<<<<< HEAD
     id: "evidence-driven-agent-lifecycle-2026",
     title: "AI 2026: Evidence‑Driven Agent Lifecycle — Blueprint",
-=======
-    id: "operational-evals-blueprint-2026",
-    title: "AI 2026: Operational Evals — Blueprint",
-    description:
-      "Eval gates, canary scorecards, and automated rollback with an audit‑ready evidence hub.",
-    ctaLabel: "Read Blueprint",
-    href: "/blog/ai-2026-operational-evals-blueprint",
-    emoji: "🧩",
-    highlight: true,
-    date: "2025-09-16",
-  },
-  {
-    id: "agent-benchmarking-best-practices-2026",
-    title: "AI 2026: Agent Benchmarking Best Practices",
->>>>>>> origin/feat/new-operational-evals-blueprint
     description:
       "Gate every lifecycle phase with evals: design, test, deploy, operate. Audit‑ready evidence.",
     ctaLabel: "Read Blueprint",

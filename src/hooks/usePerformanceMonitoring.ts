@@ -71,4 +71,6 @@ export const usePerformanceMonitoring = () => {
       });
     }
   }, []);
+};
+
 export default usePerformanceMonitoring;

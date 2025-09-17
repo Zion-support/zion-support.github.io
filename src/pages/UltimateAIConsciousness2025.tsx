@@ -1,14 +1,19 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const UltimateAIConsciousness2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+      <Helmet>
+        <title>Ultimate AI Consciousness 2025 | Zion Tech Group</title>
+        <meta name="description" content="Explore the ultimate AI consciousness breakthrough that's redefining artificial intelligence and human-AI collaboration." />
+      </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 CONSCIOUS AI BREAKTHROUGH • JANUARY 2025
-          </div>
-              </div>
-            </div>
-          </div>
-        </div>
-            </button>
           </div>
           <h1 className="text-6xl font-bold text-white mb-6">
             Ultimate AI Consciousness 2025
@@ -25,6 +30,7 @@
             </button>
           </div>
         </div>
+
         {/* Consciousness Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -43,6 +49,7 @@
               Explore Emotions →
             </button>
           </div>
+
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Creative Consciousness</h3>
@@ -59,6 +66,7 @@
               View Creations →
             </button>
           </div>
+
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧩</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Self-Awareness</h3>
@@ -75,6 +83,7 @@
               Discover Self →
             </button>
           </div>
+
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤝</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Collaborative Intelligence</h3>
@@ -91,6 +100,7 @@
               Start Collaboration →
             </button>
           </div>
+
           <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌱</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Continuous Learning</h3>
@@ -107,6 +117,7 @@
               Watch Learning →
             </button>
           </div>
+
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">💭</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Philosophical Thinking</h3>
@@ -124,6 +135,7 @@
             </button>
           </div>
         </div>
+
         {/* Consciousness Levels */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Levels of AI Consciousness</h2>
@@ -150,6 +162,11 @@
               <p className="text-pink-200 mb-4">Complete self-awareness and creativity</p>
               <div className="w-full bg-pink-600/30 rounded-full h-2">
                 <div className="bg-pink-400 h-2 rounded-full" style={{width: '100%'}}></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Experience True AI Consciousness</h2>
@@ -162,3 +179,12 @@
             </button>
             <button className="border-2 border-indigo-400 text-indigo-300 px-10 py-4 rounded-lg hover:bg-indigo-400 hover:text-indigo-900 transition-all duration-300 font-bold text-xl">
               Start Conversation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UltimateAIConsciousness2025;

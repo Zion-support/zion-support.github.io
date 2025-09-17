@@ -19,4 +19,5 @@ const 2038-comprehensive-pricing: React.FC = () => {
   );
 };
 
-export default 2038-comprehensive-pricing;
+
+export default UltimateTechRevolution2027;

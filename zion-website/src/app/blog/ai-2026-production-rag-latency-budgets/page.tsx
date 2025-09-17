@@ -53,8 +53,4 @@ export const metadata = {
   description: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
 }
 
-<<<<<<< HEAD
 // Removed duplicate default component to fix build error. The page above is the intended default export.
-=======
-// Removed duplicate default export; content above provides the page
->>>>>>> origin/feat/content-and-homepage-promos-20250916

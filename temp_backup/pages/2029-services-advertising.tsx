@@ -19,4 +19,5 @@ const 2029-services-advertising: React.FC = () => {
   );
 };
 
-export default 2029-services-advertising;
+
+export default RevolutionaryTechBlog2027;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 title: "AI Implementation Checklist 2025: Your Complete Guide to Successful AI Deployment"
 description: "A comprehensive, step-by-step checklist for implementing AI solutions in your organization. Includes timelines, budgets, success metrics, and proven strategies for 95% implementation success rate."
 date: "2025-01-17"

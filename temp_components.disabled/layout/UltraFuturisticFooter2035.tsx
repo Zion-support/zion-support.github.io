@@ -9,4 +9,5 @@ const UltraFuturisticFooter2035: React.FC = () => {
   );
 };
 
-export default UltraFuturisticFooter2035;
+
+export default UltimateContentBanner2035;

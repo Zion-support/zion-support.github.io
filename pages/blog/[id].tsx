@@ -22,7 +22,6 @@ const registry: Record<string, React.ComponentType> = {
   'ai-2026-real-time-rag-architectures': require('../../blog/ai-2026-real-time-rag-architectures').default,
   'ai-2026-guardrailed-tooling-risk-tiers': require('../../blog/ai-2026-guardrailed-tooling-risk-tiers').default,
   'ai-2026-production-evidence-hub-blueprint': require('../../blog/ai-2026-production-evidence-hub-blueprint').default,
-<<<<<<< HEAD
   'ai-2026-agent-slo-blueprint': require('../../blog/ai-2026-agent-slo-blueprint').default,
   'ai-2026-governed-tool-use-case-studies': require('../../blog/ai-2026-governed-tool-use-case-studies').default,
   'ai-2026-agent-slo-scorecards': require('../../blog/ai-2026-agent-slo-scorecards').default,
@@ -43,12 +42,6 @@ const registry: Record<string, React.ComponentType> = {
   'ai-2026-reliable-real-time-agents': require('../../blog/ai-2026-reliable-real-time-agents').default,
   // New: Governed Agent Operations Checklist (2026)
   'ai-2026-governed-agent-operations-checklist': require('../../blog/ai-2026-governed-agent-operations-checklist').default,
-=======
-  'ai-2026-agent-slo-scorecards': require('../../blog/ai-2026-agent-slo-scorecards').default,
-  'ai-2026-cost-aware-model-routing': require('../../blog/ai-2026-cost-aware-model-routing').default,
-  'ai-2026-agent-slo-blueprint': require('../../blog/ai-2026-agent-slo-blueprint').default,
-  'ai-2026-governed-tool-use-case-studies': require('../../blog/ai-2026-governed-tool-use-case-studies').default,
->>>>>>> origin/feat/new-sept-content-and-promos
 }
 
 export default function BlogPostRouter() {

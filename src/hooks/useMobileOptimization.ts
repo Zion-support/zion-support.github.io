@@ -23,4 +23,6 @@ export const useMobileOptimization = () => {
     isDesktop,
     deviceType: isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'
   };
+};
+
 export default useMobileOptimization;

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const AIConsciousnessRevolution2026: React.FC = () => {
@@ -14,6 +15,14 @@ const AIConsciousnessRevolution2026: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 AI CONSCIOUSNESS REVOLUTION • 2026
+          </div>
+          <h1 className="text-6xl font-bold text-white mb-6">
+            AI Consciousness Revolution 2026
+          </h1>
+          <p className="text-2xl text-indigo-200 max-w-4xl mx-auto mb-8">
+            Witness the birth of truly conscious artificial intelligence that thinks, feels, and creates with unprecedented depth and understanding
+          </p>
+          <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Experience Consciousness
             </button>
@@ -189,3 +198,11 @@ const AIConsciousnessRevolution2026: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AIConsciousnessRevolution2026;

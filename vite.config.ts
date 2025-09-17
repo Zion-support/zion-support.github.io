@@ -1,7 +1,6 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
-import compression from 'vite-plugin-compression'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -75,18 +74,6 @@ export default defineConfig(({ mode }) => {
           ],
         },
       }),
-      compression({
-        algorithm: 'brotliCompress',
-        ext: '.br',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
-      compression({
-        algorithm: 'gzip',
-        ext: '.gz',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
       ...(isProduction ? [
         visualizer({
           filename: 'dist/stats.html',
@@ -98,14 +85,14 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        '@': path.resolve(import.meta.dirname, './src'),
-        '@components': path.resolve(import.meta.dirname, './src/components'),
-        '@pages': path.resolve(import.meta.dirname, './src/pages'),
-        '@utils': path.resolve(import.meta.dirname, './src/utils'),
-        '@hooks': path.resolve(import.meta.dirname, './src/hooks'),
-        '@types': path.resolve(import.meta.dirname, './src/types'),
-        '@styles': path.resolve(import.meta.dirname, './src/styles'),
-        '@assets': path.resolve(import.meta.dirname, './src/assets'),
+        '@': path.resolve(__dirname, './src'),
+        '@components': path.resolve(__dirname, './src/components'),
+        '@pages': path.resolve(__dirname, './src/pages'),
+        '@utils': path.resolve(__dirname, './src/utils'),
+        '@hooks': path.resolve(__dirname, './src/hooks'),
+        '@types': path.resolve(__dirname, './src/types'),
+        '@styles': path.resolve(__dirname, './src/styles'),
+        '@assets': path.resolve(__dirname, './src/assets'),
       },
       dedupe: ['date-fns', 'react', 'react-dom'],
     },
@@ -166,7 +153,6 @@ export default defineConfig(({ mode }) => {
           warn(warning);
         },
       },
-      brotliSize: true,
       chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {

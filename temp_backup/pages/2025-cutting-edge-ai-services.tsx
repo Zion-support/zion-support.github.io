@@ -19,4 +19,5 @@ const 2025-cutting-edge-ai-services: React.FC = () => {
   );
 };
 
-export default 2025-cutting-edge-ai-services;
+
+export default NeuralInterfaceRevolution2026;
