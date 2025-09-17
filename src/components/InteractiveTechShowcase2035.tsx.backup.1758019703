@@ -59,8 +59,6 @@ const InteractiveTechShowcase2035: React.FC = () => {
           </h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore our revolutionary technologies through interactive demonstrations and immersive experiences
-<<<<<<< HEAD
-=======
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Explore our revolutionary technologies through interactive demonstrations and immersive experiences
 >>>>>>> origin/backup-main-20250916-071805

@@ -3,18 +3,15 @@ import React from 'react';
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e058
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
-=======
 
 
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
 >>>>>>> cursor/create-and-deploy-new-content-e058
-=======
 
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
@@ -31,14 +28,11 @@ import { motion } from 'framer-motion';
 const NeuralInterfaceRevolution2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-=======
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e058
-=======
 >>>>>>> origin/aggressive-merge-backup-20250916-072750
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -675,7 +669,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           </div>
         </div>
 
-=======
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <motion.div
@@ -1148,7 +1141,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
 
         {/* Call to Action */}
         <div
-=======
         <div
         {/* Neural Interface Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -1198,7 +1190,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
 
         {/* Call to Action */}
         <motion.div
-=======
         <motion.div
 >>>>>>> origin/aggressive-merge-backup-20250916-072750
           initial={{ opacity: 0, y: 40 }}
@@ -1219,9 +1210,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e058
-=======
           </div>
         </motion.div>
 
@@ -1636,7 +1625,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
               Explore All Services
             </a>
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
 >>>>>>> origin/aggressive-merge-backup-20250916-072750
           </div>
         </div>

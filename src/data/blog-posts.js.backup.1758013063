@@ -1,11 +1,9 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 1010,
     title: "AI 2026: Trusted GenAI Operations",
     excerpt: "Eval gates, policy‑as‑code, and risk‑tiered tool use for safe scale.",
     content: "Trusted GenAI Ops brings evaluation-first delivery, policy-as-code controls, and runtime guardrails together. This guide includes a minimal reference stack: dataset/versioning, scenario suites, promotion gates, human-in-the-loop, and evidence publishing.",
-=======
     id: 3001,
     title: "AI 2026: Production RAG Playbook",
     excerpt: "Low-latency, eval‑gated retrieval that ships to prod with confidence.",
@@ -382,8 +380,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
-=======
     id: 34,
     title: "Quantum Computing Breakthrough: Practical Applications in 2026",
     excerpt: "How quantum computing is moving from research labs to real-world business applications.",
@@ -861,8 +857,6 @@ export const blogPosts = [
     category: "Biotech AI",
     tags: ["Biotech AI", "Personalized Medicine", "Healthcare Innovation", "Gene Therapy"],
     featured: true,
-<<<<<<< HEAD
-=======
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
   },
@@ -1166,7 +1160,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
   }
 ];
@@ -1217,7 +1210,6 @@ export const getBlogTags = () => {
 };
 
 export const BLOG_POSTS = blogPosts;
-=======
   },
   {
     id: 51,

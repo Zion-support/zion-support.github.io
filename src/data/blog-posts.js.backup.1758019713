@@ -1512,8 +1512,6 @@ export const blogPosts = [
     tags: ["Temporal AI", "Time Computing", "Causality", "Temporal Optimization"],
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
-<<<<<<< HEAD
-=======
     imageUrl: "/images/blog/next-gen-innovation-hub-2025.jpg",
     slug: "next-gen-innovation-hub-future-born"
 >>>>>>> origin/backup-main-20250916-071805
@@ -1680,8 +1678,6 @@ export const blogPosts = [
     category: "Consciousness Technology",
     tags: ["Consciousness Transfer", "Digital Immortality", "Brain-Computer Interface", "Human Enhancement"],
     featured: true,
-<<<<<<< HEAD
-=======
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
   },
@@ -1882,7 +1878,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/universal-translation-matrix-breaking-barriers.jpg",
     slug: "universal-translation-matrix-breaking-language-barriers"
-<<<<<<< HEAD
   },
   {
     id: 5001,
@@ -2003,7 +1998,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-revolution-intelligence-speed-light.jpg",
     slug: "edge-ai-revolution-intelligence-speed-light"
-=======
 >>>>>>> origin/backup-main-20250916-071805
   }
 ];
@@ -2394,4 +2388,3 @@ export const allBlogPosts = [...blogPosts, ...newContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
-export const BLOG_POSTS = allBlogPosts;

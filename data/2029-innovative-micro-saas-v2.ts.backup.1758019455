@@ -1,8 +1,0 @@
-<<<<<<< HEAD
-=======
-export interface InnovativeMicroSaasService2029V2 {
-  id: string;
-  name: string;
-  }
-];
->>>>>>> origin/aggressive-merge-backup-20250915-162542

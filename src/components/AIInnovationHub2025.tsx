@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+const AIInnovationHub2025: React.FC = () => {
+=======
 "use client";
 'use client';
 
@@ -289,10 +293,11 @@ const AIInnovationHub2025 = () => {
     }
   };
 
+>>>>>>> origin/merge-new-content-1757989975
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
-      <divdiv
+      <div
         className="relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-purple-600/20" />
@@ -309,11 +314,14 @@ const AIInnovationHub2025 = () => {
             </p>
           </div>
         </div>
-      </divdiv>
+      </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
       <div className="container mx-auto px-4 py-8">
         {/* Search and Filters */}
-        <divdiv
+        <div
           className="mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between mb-6">
@@ -328,7 +336,6 @@ const AIInnovationHub2025 = () => {
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex items-center gap-2">
               <button
@@ -349,7 +356,6 @@ const AIInnovationHub2025 = () => {
               </button>
             </div>
           </div>
-
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-4 justify-center">
             {Object.entries(categories).map(([keycategory]) => (
@@ -367,10 +373,13 @@ const AIInnovationHub2025 = () => {
               </button>
             ))}
           </div>
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Content Grid */}
-        <divdiv
+        <div
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -378,7 +387,7 @@ const AIInnovationHub2025 = () => {
           }`}
         >
           {filteredInnovations.map((itemindex) => (
-            <divdiv
+            <div
               key={item.id}
               onHoverStart={() => setHoveredItem(item.id)}
               onHoverEnd={() => setHoveredItem(null)}
@@ -389,12 +398,10 @@ const AIInnovationHub2025 = () => {
               <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${item.color} 
                 ${hoveredItem === item.id ? 'scale-105 shadow-2xl' : 'shadow-lg'} 
                 transition-all duration-300 ${viewMode === 'list' ? 'flex-1' : 'h-full'}`}>
-                
                 {/* Status Badge */}
                 <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getStatusColor(item.status)} text-white`}>
                   {item.status}
                 </div>
-
                 <div className={`p-6 ${viewMode === 'list' ? 'flex items-center gap-6' : ''}`}>
                   {/* Icon */}
                   <div className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mb-4'}`}>
@@ -402,12 +409,10 @@ const AIInnovationHub2025 = () => {
                       <item.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
-
                   {/* Content */}
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                     <p className="text-gray-200 mb-4 text-sm">{item.description}</p>
-                    
                     {/* Features */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {item.features.slice(02).map((featureidx) => (
@@ -421,13 +426,11 @@ const AIInnovationHub2025 = () => {
                         </span>
                       )}
                     </div>
-
                     {/* Meta Info */}
                     <div className="flex items-center justify-between text-sm text-gray-300 mb-4">
                       <span className={getDifficultyColor(item.difficulty)}>{item.difficulty}</span>
                       <span>{item.downloads} downloads</span>
                     </div>
-
                     {/* Rating and Price */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
@@ -441,10 +444,9 @@ const AIInnovationHub2025 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Hover Overlay */}
                 {hoveredItem === item.id && (
-                  <divdiv
+                  <div
                     className="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center"
                   >
                     <div className="flex gap-4">
@@ -457,25 +459,29 @@ const AIInnovationHub2025 = () => {
                         Download
                       </button>
                     </div>
-                  </divdiv>
+                  </div>
                 )}
               </div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Load More */}
-        <divdiv
+        <div
           className="text-center mt-12"
         >
           <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center mx-auto">
             <RefreshCw className="w-5 h-5 mr-2" />
             Load More Innovations
           </button>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default AIInnovationHub2025;

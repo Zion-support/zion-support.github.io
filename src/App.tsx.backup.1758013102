@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import Header from './Header';
-=======
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 >>>>>>> origin/aggressive-merge-backup-20250916-084432
 import Footer from './Footer';
@@ -46,8 +44,6 @@ import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
 import RevolutionaryInnovationHub2026 from './pages/RevolutionaryInnovationHub2026';
 import ComprehensiveCaseStudies2026 from './pages/ComprehensiveCaseStudies2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
-<<<<<<< HEAD
-=======
 import NewContentPromoBannerClean from './components/NewContentPromoBannerClean';
 import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 >>>>>>> origin/aggressive-merge-backup-20250916-084432
@@ -97,11 +93,9 @@ import QuantumComputingBreakthrough2035 from './components/QuantumComputingBreak
 import NeuralInterfaceRevolution2036 from './components/NeuralInterfaceRevolution2036';
 import InterdimensionalTechShowcase2037 from './components/InterdimensionalTechShowcase2037';
 import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromotionBanner2035';
-<<<<<<< HEAD
 import QuantumComputingBreakthrough2035Page from './pages/QuantumComputingBreakthrough2035';
 import NeuralInterfaceRevolution2036Page from './pages/NeuralInterfaceRevolution2036';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
-=======
 import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
 import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
@@ -208,8 +202,6 @@ const App: React.FC = () => {
                 <NewServicesShowcase2026 />
               </div>
               
-<<<<<<< HEAD
-=======
               {/* New Content Promo Banner */}
               <div className="mb-12">
                 <NewlyAddedContentPromo />
@@ -233,8 +225,6 @@ const App: React.FC = () => {
 
               {/* Featured Content Section */}
               <FeaturedContentSection />
-<<<<<<< HEAD
-=======
 
               {/* Blog Showcase from data/blog-posts */}
               <div className="mb-12">
@@ -430,4 +420,3 @@ const App: React.FC = () => {
   );
 };
 
-export default App;

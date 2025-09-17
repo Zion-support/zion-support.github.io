@@ -2,12 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   const slides = [
     {
@@ -49,9 +43,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       image: "🌐",
       gradient: "from-indigo-600 to-blue-600",
       link: "/pages/UniversalConsciousnessNetwork2040"
-=======
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
 >>>>>>> cursor/create-and-deploy-new-content-ec50
 >>>>>>> origin/content/cherrypick-finops-routing
   
@@ -209,8 +201,5 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
 };
 
 export default RevolutionaryContentCarousel2036;
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing

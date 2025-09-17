@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 const UltimateContentShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
-
   const categories = [
     { id: 'all', name: 'All Content', icon: '🌟' },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠' },
@@ -19,7 +16,6 @@ const UltimateContentShowcase2025: React.FC = () => {
     { id: 'automation', name: 'Automation', icon: '🤖' },
     { id: 'future', name: 'Future Tech', icon: '🚀' }
   ];
-
   const contentItems = [
     {
       id: 1,
@@ -150,13 +146,10 @@ const UltimateContentShowcase2025: React.FC = () => {
       color: 'from-violet-500 to-purple-600'
     }
   ];
-
   const filteredContent = activeCategory === 'all' 
     ? contentItems 
     : contentItems.filter(item => item.category === activeCategory);
-
   const featuredContent = contentItems.filter(item => item.featured);
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
@@ -166,8 +159,8 @@ const UltimateContentShowcase2025: React.FC = () => {
         </div>
       </div>
     );
-  }
-
+};
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Header */}
@@ -196,7 +189,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             </button>
           </div>
         </motion.div>
-
         {/* Featured Content Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -244,7 +236,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -270,7 +261,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Content Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -323,7 +313,6 @@ const UltimateContentShowcase2025: React.FC = () => {
             </AnimatePresence>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -352,6 +341,7 @@ const UltimateContentShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default UltimateContentShowcase2025;

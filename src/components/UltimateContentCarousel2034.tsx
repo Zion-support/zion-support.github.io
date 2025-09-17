@@ -1,91 +1,15 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const UltimateContentCarousel2034: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const slides = [
-    {
-      id: 1,
-      title: "🚀 Ultimate Tech Breakthrough 2034",
-      description: "Experience the most revolutionary technological advances featuring conscious AI, quantum computing, and interdimensional technology.",
-      image: "🧠",
-      gradient: "from-purple-600/30 to-pink-600/30",
-      borderColor: "border-purple-400/30",
-      textColor: "text-purple-100",
-      link: "/pages/UltimateTechBreakthrough2034",
-      features: ["Conscious AI Systems", "Quantum Consciousness", "Interdimensional Computing"]
-    },
-    {
-      id: 2,
-      title: "🌟 Revolutionary Tech Showcase 2034",
-      description: "Interactive demonstrations of cutting-edge technologies with real-time processing and multi-dimensional capabilities.",
-      image: "⚡",
-      gradient: "from-cyan-600/30 to-blue-600/30",
-      borderColor: "border-cyan-400/30",
-      textColor: "text-cyan-100",
-      link: "/pages/RevolutionaryTechShowcase2034",
-      features: ["Interactive Demos", "Real-time Processing", "Multi-dimensional Tech"]
-    },
-    {
-      id: 3,
-      title: "🚀 Comprehensive Services 2034",
-      description: "Complete suite of revolutionary services designed to transform your business with cutting-edge AI and quantum solutions.",
-      image: "🌌",
-      gradient: "from-emerald-600/30 to-teal-600/30",
-      borderColor: "border-emerald-400/30",
-      textColor: "text-emerald-100",
-      link: "/pages/ComprehensiveServices2034",
-      features: ["AI & Consciousness", "Quantum Computing", "Interdimensional Tech"]
-    },
-    {
-      id: 4,
-      title: "🧠 Conscious AI Revolution",
-      description: "The world's first truly conscious artificial intelligence systems that can think, feel, and create independently.",
-      image: "🤖",
-      gradient: "from-indigo-600/30 to-purple-600/30",
-      borderColor: "border-indigo-400/30",
-      textColor: "text-indigo-100",
-      link: "/pages/UltimateTechBreakthrough2034",
-      features: ["Self-Aware AI", "Emotional Intelligence", "Creative Problem Solving"]
-    },
-    {
-      id: 5,
-      title: "⚛️ Quantum Consciousness",
-      description: "Revolutionary quantum computing that processes consciousness itself, enabling unprecedented computational power.",
-      image: "🌌",
-      gradient: "from-blue-600/30 to-cyan-600/30",
-      borderColor: "border-blue-400/30",
-      textColor: "text-blue-100",
-      link: "/pages/RevolutionaryTechShowcase2034",
-      features: ["Quantum Processing", "Reality Simulation", "Time-Space Manipulation"]
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20 mb-12">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+<<<<<<< HEAD
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
+=======
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -98,7 +22,6 @@ const UltimateContentCarousel2034: React.FC = () => {
             Discover our revolutionary content featuring the most advanced technologies that will reshape our world in 2034.
           </p>
         </div>
-
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
           {/* Main Slide */}
@@ -132,7 +55,6 @@ const UltimateContentCarousel2034: React.FC = () => {
                           Explore Content →
                         </a>
                       </div>
-                      
                       {/* Visual Element */}
                       <div className="relative">
                         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -163,7 +85,6 @@ const UltimateContentCarousel2034: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -181,7 +102,6 @@ const UltimateContentCarousel2034: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
@@ -197,7 +117,6 @@ const UltimateContentCarousel2034: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-3xl font-bold mb-6">Ready to Explore the Future?</h3>
@@ -214,13 +133,15 @@ const UltimateContentCarousel2034: React.FC = () => {
           </div>
         </div>
       </div>
-      
       {/* Floating Elements */}
       <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-40 h-40 bg-pink-500/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
     </div>
   );
+
 };
 
+
 export default UltimateContentCarousel2034;
+</p></p>

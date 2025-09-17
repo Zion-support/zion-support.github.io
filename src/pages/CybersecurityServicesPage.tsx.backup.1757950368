@@ -501,7 +501,6 @@ export default function CybersecurityServicesPage() {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
       {/* Security Threats Overview */}
@@ -619,7 +618,6 @@ export default function CybersecurityServicesPage() {
                   </div>
                 </CardContent>
               </Card>
-=======
 
           <div className="flex flex-wrap gap-1">
             {service.tags.map((tag: string, index: number) => (

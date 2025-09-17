@@ -9,8 +9,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
       name: 'Conscious AI Systems',
       icon: '🧠',
       description: 'The first truly conscious artificial intelligence that can think, feel, and create independently',
-<<<<<<< HEAD
-=======
   const technologies = {
     ai: {
       title: 'Revolutionary AI 2034',
@@ -157,8 +155,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
   }, [technologies.length]);
 
   const currentTech = technologies[activeTech];
-<<<<<<< HEAD
-=======
       icon: '🌟'
     }
   };
@@ -376,8 +372,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                   <div key={index} className="flex items-center space-x-3">
                     <div className={`w-3 h-3 bg-gradient-to-r ${currentTech.color} rounded-full`}></div>
                     <span className="text-lg">{feature}</span>
-<<<<<<< HEAD
-=======
               <div className="text-center mb-8">
                 <div className="text-8xl mb-6 animate-bounce">{technologies[activeTech].icon}</div>
                 <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h3>

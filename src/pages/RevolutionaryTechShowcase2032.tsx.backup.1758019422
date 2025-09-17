@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect } from 'react';
-=======
 >>>>>>> origin/add-revolutionary-2032-content
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -12,8 +10,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
 
   const technologies = [
     {
-<<<<<<< HEAD
-=======
       id: 'conscious-ai',
       name: 'Conscious AI Systems',
       icon: '🧠',
@@ -65,8 +61,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
@@ -89,10 +83,8 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 REVOLUTIONARY SHOWCASE • JANUARY 2032
-=======
 >>>>>>> origin/add-revolutionary-2032-content
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 INTERACTIVE SHOWCASE • JANUARY 2032
@@ -105,7 +97,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary Tech Showcase 2032
@@ -375,7 +366,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
                   }`}
                 />
               ))}
-=======
 >>>>>>> origin/add-revolutionary-2032-content
         {/* Interactive Technology Selector */}
         <div className="mb-16">
@@ -489,8 +479,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Success Metrics */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-12">📊 Breakthrough Achievements</h2>
@@ -519,7 +507,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Revolution?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
@@ -531,7 +518,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-=======
 >>>>>>> origin/add-revolutionary-2032-content
         <div className="text-center bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -552,8 +538,6 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default RevolutionaryTechShowcase2032;
-=======
 export default RevolutionaryTechShowcase2032;
 >>>>>>> origin/add-revolutionary-2032-content

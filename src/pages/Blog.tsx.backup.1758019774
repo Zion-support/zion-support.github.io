@@ -56,16 +56,12 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-a7bf
 >>>>>>> origin/backup-main-20250916-090016
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Blog;
-=======
 export default Blog;
 >>>>>>> origin/backup-main-20250916-090016

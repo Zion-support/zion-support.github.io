@@ -13,8 +13,6 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lu
 import React from 'react';
 
 const Contact: React.FC = () => {
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -87,8 +85,6 @@ const Contact: React.FC = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
           className="max-w-4xl mx-auto text-center"
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
@@ -138,8 +134,6 @@ const Contact: React.FC = () => {
             </div>
 
             {isSubmitted ? (
-<<<<<<< HEAD
-=======
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -165,8 +159,6 @@ const Contact: React.FC = () => {
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
-<<<<<<< HEAD
-=======
                 <p className="text-gray-300">We'll get back to you within 24 hours.</p>
               </motion.div>
 >>>>>>> origin/backup-main-20250916-071805
@@ -337,8 +329,6 @@ const Contact: React.FC = () => {
                 </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
           </motion.div>
 
           {/* Contact Information */}

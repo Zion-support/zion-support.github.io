@@ -207,8 +207,6 @@ const LatestContentShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Clock, User, Tag, Star, TrendingUp, Zap, Globe, Shield, Brain } from 'lucide-react';

@@ -13,10 +13,8 @@
       link: '/pages/ConsciousAIBreakthrough2026'
     },
     {
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-=======
 import React, { useState, useEffect } from 'react';
 
 const InteractiveTechShowcase2026 = () => {
@@ -36,8 +34,6 @@ import {
   Rocket,
   Sparkles,
   ChevronRight,
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -64,8 +60,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
   const [progress, setProgress] = useState(0);
 
   const techDemos = [
-<<<<<<< HEAD
-=======
 
 const InteractiveTechShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -80,8 +74,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       description: 'Revolutionary AI with autonomous learning and quantum processing',
       features: ['Autonomous Learning', 'Quantum AI Processing', 'Distributed Intelligence'],
       color: 'from-purple-600 to-pink-600',
-<<<<<<< HEAD
-=======
       title: 'Conscious AI Systems',
       description: 'AI that achieves true consciousness and self-awareness',
       icon: '🧠',
@@ -94,8 +86,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       title: 'Quantum Reality Engine',
       description: 'Immersive virtual environments powered by quantum computing',
       icon: '⚡',
-<<<<<<< HEAD
-=======
       color: 'from-cyan-500 to-blue-500',
       features: ['Quantum state processing', 'Parallel universe computing', 'Reality manipulation'],
       stats: { processing: 'Exponential', security: 'Unbreakable', applications: 'Infinite' }
@@ -105,8 +95,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       title: 'Neural Interface Pro',
       description: 'Direct brain-computer interface for seamless interaction',
       icon: '🧬',
-<<<<<<< HEAD
-=======
       id: 0,
       title: "Conscious AI Systems",
       description: "Watch our AI systems demonstrate true consciousness and self-awareness in real-time.",
@@ -256,10 +244,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
     setTimeout(() => setIsRunning(false), 3000);
   };
 
-<<<<<<< HEAD
   return (
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-=======
       id: 'conscious-ai',
       title: 'Conscious AI Systems',
       icon: '🧠',
@@ -568,10 +554,8 @@ const InteractiveTechShowcase2026: React.FC = () => {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Experience our cutting-edge technology solutions with interactive features and real-time demonstrations
-=======
     if (isPlaying) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % showcases.length);
@@ -680,8 +664,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 />
               </div>
             </div>
-<<<<<<< HEAD
-=======
             Experience the future with our groundbreaking content on AI Revolution, Quantum Computing, and Neural Interfaces
           </p>
         </div>
@@ -783,8 +765,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
 
           {/* Demo Display */}
           <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/30">
-<<<<<<< HEAD
-=======
 
             {/* Demo Visualization */}
             <div className="space-y-6">
@@ -924,8 +904,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
                     {demos.find(d => d.id === activeDemo)?.description}
                   </p>
                 </div>
-<<<<<<< HEAD
-=======
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Experience the future of technology through interactive demonstrations
           </p>
@@ -1093,8 +1071,6 @@ const InteractiveTechShowcase2026: React.FC = () => {
       bgColor: 'from-orange-600/30 to-red-600/30',
     },
   ];
-<<<<<<< HEAD
-=======
                 {renderDemo()}
               </motion.div>
             </AnimatePresence>
@@ -1161,9 +1137,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
             <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
             <div className="text-gray-300 text-sm">Possibilities</div>
           </div>
-<<<<<<< HEAD
           </motion.div>
-=======
                 <div className="flex items-center mb-6">
                   <div className={`bg-gradient-to-r ${currentDemo.color} p-4 rounded-xl mr-4`}>
                     <currentDemo.icon className="w-10 h-10 text-white" />

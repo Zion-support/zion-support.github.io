@@ -196,7 +196,7 @@ const FutureTechnologyShowcase2026 = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
@@ -217,10 +217,10 @@ const FutureTechnologyShowcase2026 = () => {
             Explore cutting-edge technologies that will define the future of humanity
             from quantum computing to neural interfaces and space technology.
           </p>
-        </divdiv>
+        </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => (
@@ -232,10 +232,10 @@ const FutureTechnologyShowcase2026 = () => {
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Category Navigation */}
-        <divdiv
+        <div
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -258,7 +258,7 @@ const FutureTechnologyShowcase2026 = () => {
           </div>
 
           {/* Category Content */}
-            <divdiv
+            <div
               key={activeCategory}
               className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
             >
@@ -273,7 +273,7 @@ const FutureTechnologyShowcase2026 = () => {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {categories[activeCategory].technologies.map((techindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="group"
                   >
@@ -314,15 +314,15 @@ const FutureTechnologyShowcase2026 = () => {
                         Learn More
                       </button>
                     </div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Testimonials */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -330,7 +330,7 @@ const FutureTechnologyShowcase2026 = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonialindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
               >
@@ -345,13 +345,13 @@ const FutureTechnologyShowcase2026 = () => {
                   <div className="text-gray-400 text-sm">{testimonial.role}</div>
                   <div className="text-indigo-400 text-sm">{testimonial.company}</div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 border border-indigo-400/30">
@@ -376,7 +376,7 @@ const FutureTechnologyShowcase2026 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

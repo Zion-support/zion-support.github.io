@@ -2,8 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const NextGenInnovationHub2029: React.FC = () => {
-<<<<<<< HEAD
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <Helmet>
@@ -17,8 +15,6 @@ const NextGenInnovationHub2029: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2029
           </div>
-<<<<<<< HEAD
-=======
           <h1 className="text-6xl font-bold mb-6">🚀 Next-Gen Innovation Hub 2029</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover and explore the most revolutionary technologies shaping humanity's future
@@ -60,8 +56,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               Direct brain-computer interfaces
             </p>
             <div className="text-center">
-<<<<<<< HEAD
-=======
               <span className="px-2 py-1 bg-purple-500 text-white rounded-full text-xs font-semibold">
                 Infinite Possibilities
               </span>
@@ -76,8 +70,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               Computing across dimensions
             </p>
             <div className="text-center">
-<<<<<<< HEAD
-=======
               <span className="px-2 py-1 bg-orange-500 text-white rounded-full text-xs font-semibold">
                 Revolutionary
               </span>
@@ -155,8 +147,6 @@ const NextGenInnovationHub2029: React.FC = () => {
         </div>
 
         <div className="text-center">
-<<<<<<< HEAD
-=======
           <h2 className="text-3xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
             Be part of the team that's building the future of humanity
@@ -166,8 +156,6 @@ const NextGenInnovationHub2029: React.FC = () => {
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Our Team
             </button>
-<<<<<<< HEAD
-=======
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Explore Innovations
 >>>>>>> origin/add-2029-content-and-advertising
@@ -179,4 +167,3 @@ const NextGenInnovationHub2029: React.FC = () => {
   );
 };
 
-export default NextGenInnovationHub2029;

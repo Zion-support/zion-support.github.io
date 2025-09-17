@@ -79,8 +79,6 @@ import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromot
 import QuantumComputingBreakthrough2035Page from './pages/QuantumComputingBreakthrough2035';
 import NeuralInterfaceRevolution2036Page from './pages/NeuralInterfaceRevolution2036';
 import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
-<<<<<<< HEAD
-=======
 import NewContentShowcaseBanner2026 from './components/NewContentShowcaseBanner2026';
 import NewServicesShowcase2026 from './components/NewServicesShowcase2026';
 >>>>>>> origin/aggressive-merge-backup-20250916-072750

@@ -285,8 +285,6 @@ export const blogPosts = [
     slug: "interdimensional-ai-computing-multiple-realities"
   },
   {
-<<<<<<< HEAD
-=======
     id: 39,
     title: "Revolutionary AI Consciousness Breakthrough 2026",
     excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",
@@ -393,8 +391,6 @@ export const blogPosts = [
     slug: "ai-2026-agent-runbooks-blueprint"
   },
   {
-<<<<<<< HEAD
-=======
     id: 34,
     title: "Quantum Computing Breakthrough: Practical Applications in 2026",
     excerpt: "How quantum computing is moving from research labs to real-world business applications.",
@@ -872,8 +868,6 @@ export const blogPosts = [
     category: "Biotech AI",
     tags: ["Biotech AI", "Personalized Medicine", "Healthcare Innovation", "Gene Therapy"],
     featured: true,
-<<<<<<< HEAD
-=======
     imageUrl: "/images/blog/biotech-ai-revolution-2026.jpg",
     slug: "biotech-ai-revolution-personalized-medicine-scale"
   },
@@ -1283,9 +1277,7 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/temporal-ai-computing-across-time-2026.jpg",
     slug: "temporal-ai-computing-across-time-itself"
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
   },
   {
     id: 51,
@@ -1532,4 +1524,3 @@ export const getBlogTags = () => {
   }));
 };
 
-export const BLOG_POSTS = blogPosts;

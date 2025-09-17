@@ -15,8 +15,6 @@ const RevolutionaryTechBreakthrough2037: React.FC = () => {
           <div className="text-center mb-12">
           </div>
 
-<<<<<<< HEAD
-=======
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -227,8 +225,6 @@ const RevolutionaryTechBreakthrough2037: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Schedule Demo
-<<<<<<< HEAD
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join thousands of organizations already using our revolutionary technologies to transform their operations

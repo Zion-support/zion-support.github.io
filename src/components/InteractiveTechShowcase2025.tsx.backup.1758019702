@@ -69,8 +69,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
       color: "from-violet-600 to-purple-600",
       bgColor: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30"
-<<<<<<< HEAD
-=======
     }
   ];
 
@@ -196,8 +194,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
       color: "from-violet-600 to-purple-600",
       bgColor: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30"
-<<<<<<< HEAD
-=======
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -317,8 +313,6 @@ const InteractiveTechShowcase2025: React.FC = () => {
                   <div className="text-left">
                     <h4 className="font-semibold">{tech.name}</h4>
                     <p className="text-sm opacity-80">{tech.description}</p>
-<<<<<<< HEAD
-=======
         setActiveDemo((prev) => (prev + 1) % demos.length);
         setIsAnimating(false);
       }, 500);
@@ -455,11 +449,9 @@ const InteractiveTechShowcase2025: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
               Schedule Consultation
-<<<<<<< HEAD
             </button>
           </div>
         </div>
-=======
           {/* Interactive Demo Area */}
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
             <div className="text-center mb-8">

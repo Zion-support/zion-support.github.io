@@ -3,9 +3,7 @@ import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-<<<<<<< HEAD
   color?: string;
-=======
   color?: 'primary' | 'secondary' | 'white';
 >>>>>>> origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
   className?: string;
@@ -13,9 +11,7 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-<<<<<<< HEAD
   color = 'text-blue-500',
-=======
   color = 'primary',
 >>>>>>> origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
   className = '' 
@@ -33,7 +29,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-<<<<<<< HEAD
     <motion.div
       className={`${sizeClasses[size]} ${color} ${className}`}
       animate={{ rotate: 360 }}
@@ -59,7 +54,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </motion.div>
   );
 };
-=======
     <div className={`flex items-center justify-center ${className}`}>
       <div className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}>
         <svg
@@ -90,4 +84,3 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 export default LoadingSpinner;
 >>>>>>> origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
 
-export default LoadingSpinner;

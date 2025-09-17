@@ -351,8 +351,6 @@ const UltimateContentShowcase2025: React.FC = () => {
         </motion.div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEOOptimizer2025 from '../components/SEOOptimizer2025';

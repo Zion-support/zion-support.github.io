@@ -1,8 +1,6 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export function Button({ children, variant = 'default', size = 'md', asChild = false, className = '', onClick, type = 'button', disabled = false }) {
-=======
 export function Button({
   children,
   variant = 'default',
@@ -31,7 +29,6 @@ export function Button({
     icon: 'w-10 h-10 p-0'
   };
   const classes = `${baseClasses} ${variantClasses[variant] || variantClasses.default} ${sizeClasses[size] || sizeClasses.md} ${className}`;
-<<<<<<< HEAD
 
   if (asChild && React.isValidElement(children)) {
     return React.cloneElement(children, {
@@ -42,7 +39,6 @@ export function Button({
     });
   }
 
-=======
   if (asChild) {
     return <span className={classes}>{children}</span>;
   }
@@ -54,8 +50,7 @@ export function Button({
   );
 }
 
-<<<<<<< HEAD
+
 export default Button;
 
-=======
 >>>>>>> origin/feat/new-content-2026-evals

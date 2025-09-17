@@ -76,9 +76,7 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
       bgGradient: "from-orange-600/20 to-red-600/20",
       stats: "1000% ROI",
       featured: true,
-<<<<<<< HEAD
       readTime: "25 min read"
-=======
       tags: ["Neural Interface", "Brain-Computer", "Communication"],
       type: "blog"
     },
@@ -129,11 +127,9 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
   const currentContent = revolutionaryContent[currentIndex];
 
   return (
-<<<<<<< HEAD
     <div className={`revolutionary-content-showcase-2026 ${className}`}>
       {/* Header */}
       <div className="text-center mb-12">
-=======
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
@@ -144,10 +140,8 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
           transition={{ duration: 0.6 }}
           className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 rounded-full mb-4"
         >
-<<<<<<< HEAD
           <Star className="w-5 h-5 text-white mr-2" />
           <span className="text-white font-semibold">REVOLUTIONARY CONTENT 2026</span>
-=======
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
             Revolutionary Content Showcase
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
@@ -191,7 +185,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
         </motion.p>
       </div>
 
-<<<<<<< HEAD
       {/* Main Content Showcase */}
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -202,7 +195,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
             transition={{ duration: 0.8 }}
             className="relative"
           >
-=======
         {/* Main Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl">
@@ -391,8 +383,6 @@ const RevolutionaryContentShowcase2026: React.FC<RevolutionaryContentShowcase202
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">

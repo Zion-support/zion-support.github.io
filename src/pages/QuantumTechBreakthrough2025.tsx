@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { ArrowRight, Atom, Zap, Lock, Globe, Brain } from 'lucide-react';
-
 const QuantumTechBreakthrough2025: React.FC = () => {
   const breakthroughs = [
     {
@@ -43,7 +42,6 @@ const QuantumTechBreakthrough2025: React.FC = () => {
       status: 'Research Phase'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
       {/* Hero Section */}
@@ -66,7 +64,6 @@ const QuantumTechBreakthrough2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Breakthroughs Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -77,14 +74,12 @@ const QuantumTechBreakthrough2025: React.FC = () => {
             Our quantum technology breakthroughs are pushing the boundaries of what's scientifically possible.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {breakthroughs.map((breakthrough) => {
             const IconComponent = breakthrough.icon;
             const statusColor = breakthrough.status === 'Production Ready' ? 'bg-green-500' :
                               breakthrough.status === 'Deployed' ? 'bg-blue-500' :
                               breakthrough.status === 'Pilot Phase' ? 'bg-yellow-500' : 'bg-purple-500';
-            
             return (
               <Card key={breakthrough.id} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <div className="absolute top-4 right-4 z-10">
@@ -128,10 +123,10 @@ const QuantumTechBreakthrough2025: React.FC = () => {
                 </CardContent>
               </Card>
             );
+};
           })}
         </div>
       </div>
-
       {/* Quantum Stats */}
       <div className="bg-gradient-to-r from-gray-900 to-purple-900 text-white py-16">
         <div className="container mx-auto px-4">
@@ -163,7 +158,6 @@ const QuantumTechBreakthrough2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-16">
         <div className="container mx-auto px-4 text-center">
@@ -185,6 +179,7 @@ const QuantumTechBreakthrough2025: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default QuantumTechBreakthrough2025;

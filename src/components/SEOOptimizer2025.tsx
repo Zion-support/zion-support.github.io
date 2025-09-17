@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOOptimizer2025Props {
   title?: string;
   description?: string;
@@ -13,8 +12,6 @@ interface SEOOptimizer2025Props {
   articleSection?: string;
   articleTags?: string[];
   structuredData?: any;
-}
-
 const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
   title = "Ultimate Tech Showcase 2025 - Revolutionary Technology Insights",
   description = "Discover the most comprehensive collection of technology insights, AI breakthroughs, and future innovations. Stay ahead with expert analysis and cutting-edge research.",
@@ -101,7 +98,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       ]
     }
   };
-
   const breadcrumbStructuredData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -126,7 +122,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       }
     ]
   };
-
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -157,11 +152,9 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
     "timeRequired": "PT8M",
     "inLanguage": "en-US"
   };
-
   useEffect(() => {
     // Update page title for better SEO
     document.title = title;
-    
     // Add meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -172,7 +165,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       meta.content = description;
       document.head.appendChild(meta);
     }
-
     // Add meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
@@ -183,7 +175,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       meta.content = keywords.join(', ');
       document.head.appendChild(meta);
     }
-
     // Add canonical URL
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
@@ -195,7 +186,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       document.head.appendChild(link);
     }
   }, [title, description, keywords, canonicalUrl]);
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -203,7 +193,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
-      
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
@@ -212,7 +201,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content="Ultimate Tech Showcase 2025" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
@@ -220,7 +208,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@techinnovation" />
       <meta name="twitter:creator" content="@techinnovation" />
-      
       {/* Article Specific Meta Tags */}
       {articleAuthor && <meta property="article:author" content={articleAuthor} />}
       {articlePublishedTime && <meta property="article:published_time" content={articlePublishedTime} />}
@@ -229,7 +216,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       {articleTags && articleTags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
-      
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
@@ -241,7 +227,6 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       <meta name="revisit-after" content="7 days" />
       <meta name="rating" content="general" />
       <meta name="distribution" content="global" />
-      
       {/* Mobile Optimization */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       <meta name="theme-color" content="#8B5CF6" />
@@ -249,34 +234,30 @@ const SEOOptimizer2025: React.FC<SEOOptimizer2025Props> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Tech Showcase 2025" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
-      
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbStructuredData)}
       </script>
-      
       <script type="application/ld+json">
         {JSON.stringify(articleStructuredData)}
       </script>
-      
       {/* Additional SEO Links */}
       <link rel="alternate" type="application/rss+xml" title="Tech Innovation RSS Feed" href={`${canonicalUrl}/rss.xml`} />
       <link rel="sitemap" type="application/xml" title="Sitemap" href={`${canonicalUrl}/sitemap.xml`} />
-      
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-      
       {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
     </Helmet>
   );
+
 };
+
 
 export default SEOOptimizer2025;

@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> origin/content/cherrypick-finops-routing
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -326,8 +320,5 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
 };
 
 export default RevolutionaryCaseStudies2025;
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing

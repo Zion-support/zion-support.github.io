@@ -1,9 +1,16 @@
-import ServicePage{ getStaticProps as getSlugStaticProps } from './services/[slug]';
+import React from "react";
 
-export async function getStaticProps() {
-	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
-}
+const function AIAutonomousMarketingPlatform(props: any) { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AIAutonomousMarketingPlatform(props: any) {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default function AIAutonomousMarketingPlatform(props: any) {
-	return <ServicePage {...props} />;
-}
+export default function AIAutonomousMarketingPlatform(props: any) {;

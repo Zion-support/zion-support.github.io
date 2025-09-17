@@ -19,15 +19,12 @@ import {
   Rocket
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-
 const UltimateAIServicesShowcase2026 = () => {
   const [activeTab, setActiveTab] = useState('ai-solutions');
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const services = {
     'ai-solutions': {
       title: "Revolutionary AI Solutions",
@@ -134,7 +131,6 @@ const UltimateAIServicesShowcase2026 = () => {
       ]
     }
   };
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -155,14 +151,12 @@ const UltimateAIServicesShowcase2026 = () => {
       rating: 5
     }
   ];
-
   const stats = [
     { number: "500+", label: "Successful Projects" },
     { number: "99.9%", label: "Uptime Guarantee" },
     { number: "24/7", label: "Expert Support" },
     { number: "50+", label: "Countries Served" }
   ];
-
   return (
     <>
       <SEOHead
@@ -220,7 +214,6 @@ const UltimateAIServicesShowcase2026 = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Stats Section */}
       <motion.div 
         className="py-16 bg-white/10 backdrop-blur-sm"
@@ -245,7 +238,6 @@ const UltimateAIServicesShowcase2026 = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Services Tabs */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -266,7 +258,6 @@ const UltimateAIServicesShowcase2026 = () => {
               </button>
             ))}
           </div>
-
           {/* Tab Content */}
           <motion.div
             key={activeTab}
@@ -279,7 +270,6 @@ const UltimateAIServicesShowcase2026 = () => {
               <h2 className="text-4xl font-bold text-white mb-4">{services[activeTab].title}</h2>
               <p className="text-xl text-gray-300">{services[activeTab].subtitle}</p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {services[activeTab].services.map((service, index) => (
                 <motion.div
@@ -310,7 +300,6 @@ const UltimateAIServicesShowcase2026 = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Testimonials Section */}
       <div className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -318,7 +307,6 @@ const UltimateAIServicesShowcase2026 = () => {
             <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
             <p className="text-xl text-gray-300">Trusted by industry leaders worldwide</p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -343,7 +331,6 @@ const UltimateAIServicesShowcase2026 = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -373,6 +360,8 @@ const UltimateAIServicesShowcase2026 = () => {
       </div>
     </>
   );
+
 };
+
 
 export default UltimateAIServicesShowcase2026;

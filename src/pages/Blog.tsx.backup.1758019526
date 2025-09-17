@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import LatestContentPromotion from '@/components/LatestContentPromotion';
 
@@ -24,7 +23,6 @@ const Blog: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
             <p className="text-gray-300 mb-4">
               Cutting-edge solutions that push the boundaries of what's possible
-=======
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -166,10 +164,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default Blog;
-=======
 }
 >>>>>>> origin/aggressive-merge-backup-20250915-162542

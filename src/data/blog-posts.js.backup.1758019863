@@ -1617,7 +1617,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/augmented-reality-business-future.jpg",
     slug: "augmented-reality-business-future-customer-experience"
-<<<<<<< HEAD
   },
   {
     id: 51,
@@ -1888,7 +1887,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-revolution-intelligence-speed-light.jpg",
     slug: "edge-ai-revolution-intelligence-speed-light"
-=======
 >>>>>>> origin/content-showcase-2025-integration
   }
 ];
@@ -2279,4 +2277,3 @@ export const allBlogPosts = [...blogPosts, ...newContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
-export const BLOG_POSTS = allBlogPosts;

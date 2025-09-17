@@ -1,8 +1,6 @@
 import { getRecentBlogPosts } from '../data/blog-posts';
-
 const NewContentPromoBanner: React.FC = () => {
 	const recent = getRecentBlogPosts(3);
-
 	return (
 		<div className="px-4 md:px-8 lg:px-12 py-8 bg-gradient-to-r from-indigo-900 via-purple-900 to-fuchsia-900 rounded-xl border border-purple-500/30">
 			<h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Latest from the blog</h2>
@@ -27,5 +25,6 @@ const NewContentPromoBanner: React.FC = () => {
 		</div>
 	);
 };
+
 
 export default NewContentPromoBanner;

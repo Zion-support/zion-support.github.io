@@ -4,8 +4,6 @@ import { getRecentBlogPosts } from '../data/blog-posts';
 const NewContentPromoBanner: React.FC = () => {
 	const recent = getRecentBlogPosts(3);
 
-<<<<<<< HEAD
-=======
   return (
     <div className="mb-10 rounded-2xl p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">

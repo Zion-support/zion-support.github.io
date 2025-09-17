@@ -36,7 +36,6 @@ import {
   Infinity,
   Thunderbolt
 } from 'lucide-react';
-
 interface AdCampaign {
   id: string;
   title: string;
@@ -62,15 +61,12 @@ interface AdCampaign {
     rating: number;
     companies: number;
   };
-}
-
 const InteractiveAdvertisingBanner2026: React.FC = () => {
   const [currentCampaign, setCurrentCampaign] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
   const [timeLeft, setTimeLeft] = useState(7200000); // 2 hours in milliseconds
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
-
   const campaigns: AdCampaign[] = [
     {
       id: 'ai-transformation-masterclass-2026',
@@ -205,15 +201,12 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
       }
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentCampaign((prev) => (prev + 1) % campaigns.length);
     }, 8000);
-
     return () => clearInterval(timer);
   }, [campaigns.length]);
-
   useEffect(() => {
     const countdown = setInterval(() => {
       setTimeLeft((prev) => {
@@ -221,17 +214,14 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
         return prev - 1000;
       });
     }, 1000);
-
     return () => clearInterval(countdown);
   }, []);
-
   const formatTime = (milliseconds: number) => {
     const hours = Math.floor(milliseconds / 3600000);
     const minutes = Math.floor((milliseconds % 3600000) / 60000);
     const seconds = Math.floor((milliseconds % 60000) / 1000);
     return `${hours}h ${minutes}m ${seconds}s`;
   };
-
   const getUrgencyColor = (urgency: string) => {
     switch (urgency) {
       case 'Limited Time':
@@ -246,7 +236,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
         return 'bg-gray-500 text-white';
     }
   };
-
   const getBadgeColor = (badge: string) => {
     switch (badge) {
       case 'HOT':
@@ -261,19 +250,15 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
         return 'bg-blue-500 text-white';
     }
   };
-
   const currentAd = campaigns[currentCampaign];
-
   if (!isVisible) return null;
-
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl shadow-2xl border border-white/10">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 via-blue-600/30 to-indigo-600/30 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] animate-pulse"></div>
       </div>
-
       {/* Content */}
       <div className="relative z-10 p-8">
         {/* Header */}
@@ -292,7 +277,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
               <p className="text-white/80 text-sm">{currentAd.subtitle}</p>
             </div>
           </div>
-          
           <div className="flex items-center space-x-3">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
@@ -310,7 +294,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Main Content */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -325,7 +308,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
             <p className="text-white/90 text-lg leading-relaxed max-w-4xl">
               {currentAd.description}
             </p>
-
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
@@ -345,7 +327,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
                 <div className="text-white/70 text-sm">Time Left</div>
               </div>
             </div>
-
             {/* Social Proof */}
             <div className="flex items-center justify-between bg-white/5 backdrop-blur-sm rounded-xl p-4">
               <div className="flex items-center space-x-6">
@@ -365,7 +346,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
                 </span>
               </div>
             </div>
-
             {/* Features (Expandable) */}
             <AnimatePresence>
               {isExpanded && (
@@ -398,7 +378,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-
             {/* CTA Section */}
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-between bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6">
               <div className="flex items-center space-x-4">
@@ -412,7 +391,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
                   <Bell className="w-5 h-5" />
                 </button>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to={currentAd.ctaLink}
@@ -421,7 +399,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
                   <span>{currentAd.ctaText}</span>
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                
                 <button className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/30 transition-all duration-300">
                   <Download className="w-5 h-5" />
                   <span>Download Info</span>
@@ -430,7 +407,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
             </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Navigation Dots */}
         <div className="flex justify-center space-x-2 mt-6">
           {campaigns.map((_, index) => (
@@ -445,7 +421,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Bottom Stats */}
         <div className="grid grid-cols-4 gap-4 mt-8 pt-6 border-t border-white/20">
           <div className="text-center">
@@ -466,7 +441,6 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-60"></div>
@@ -476,6 +450,8 @@ const InteractiveAdvertisingBanner2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default InteractiveAdvertisingBanner2026;

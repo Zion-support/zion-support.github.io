@@ -17,11 +17,9 @@ body {
   line-height: 1.6;
 }
 
-<<<<<<< HEAD
 /* Custom utilities */
 .gradient-text {
   background: var(--primary-gradient);
-=======
 .bg-futuristic::before {
   content: '';
   position: absolute;
@@ -631,4 +629,3 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-}

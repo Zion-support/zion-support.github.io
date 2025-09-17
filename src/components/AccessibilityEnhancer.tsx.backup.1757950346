@@ -74,12 +74,10 @@ export function AccessibilityEnhancer() {
 		});
 	}, [announce]);
 
-<<<<<<< HEAD
 	// Large text mode
 	const toggleLargeText = useCallback(() => {
 		setFeatures(prev => {
 			const newFeatures = { ...prev, largeText: !prev.largeText };
-=======
       // Skip to footer
       if (event.key === 'Tab' && event.ctrlKey) {
         event.preventDefault();
@@ -316,7 +314,6 @@ export function AccessibilityEnhancer() {
 				</AnimatePresence>
 			</div>
 
-<<<<<<< HEAD
 			{/* Screen Reader Announcements */}
 			<div
 				aria-live="polite"
@@ -332,7 +329,6 @@ export function AccessibilityEnhancer() {
 			</div>
 		</>
 	);
-=======
                 <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     <strong>Keyboard Shortcuts:</strong><br />

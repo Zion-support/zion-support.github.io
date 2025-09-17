@@ -1,46 +1,11 @@
 import React from 'react';
-import Head from 'next/head';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  url?: string;
-  image?: string;
-  type?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords = 'AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
-  url = '',
-  image = '/images/og-image.jpg',
-  type = 'website'
-}) => {
+const SEO: React.FC = () => {
   return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      
-      {/* Canonical URL */}
-      {url && <link rel="canonical" href={url} />}
-    </Head>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SEO</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

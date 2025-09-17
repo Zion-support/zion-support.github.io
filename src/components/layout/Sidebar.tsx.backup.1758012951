@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 import React from 'react';
-=======
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -255,17 +251,13 @@ export default Sidebar;
       </div>,
     </motion.aside>,
   ),
-<<<<<<< HEAD
 
 };
 
-=======
 };
   );
 };
 export default Sidebar;
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs

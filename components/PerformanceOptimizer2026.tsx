@@ -1,73 +1,12 @@
-"use client";
-import React{ useEffect } from 'react';
+import React from 'react';
 
-export default function PerformanceOptimizer2026() {
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/images/ai-2025-hero.jpg',
-        '/images/quantum-computing-breakthrough.jpg',
-        '/images/neural-interface-revolution.jpg'
-      ];
-      
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
-      });
-    };
+const PerformanceOptimizer2026: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PerformanceOptimizer2026</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-    };
-
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        (script as HTMLScriptElement).defer = true;
-      });
-    };
-
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    deferNonCriticalJS();
-
-    // Performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:'entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            console.log('FID:'fidEntry.processingStart - fidEntry.startTime);
-          }
-        });
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-'paint', 'first-input'] });
-    }
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
-  }[]);
-
-  return null;
-}
+export default PerformanceOptimizer2026;

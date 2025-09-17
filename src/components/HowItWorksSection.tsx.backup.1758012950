@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 import React from 'react';
-=======
 
 >>>>>>> origin/merged-prs
 import { GradientHeading } from "./GradientHeading";
@@ -57,7 +55,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
           
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
-<<<<<<< HEAD
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
@@ -78,7 +75,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                 </div>
 
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">
-=======
 
 export default Component;
 
@@ -115,8 +111,6 @@ export default Component;
     </section>
   );
 }
-<<<<<<< HEAD
-=======
 }
 }
 ;
