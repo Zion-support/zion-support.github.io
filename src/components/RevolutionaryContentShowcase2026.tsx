@@ -1,7 +1,6 @@
 import React from 'react';
 
 const RevolutionaryContentShowcase2026: React.FC = () => {
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState(0);
 
   const contentItems = [
@@ -21,8 +20,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600",
       features: ["Research Labs", "Innovation Process", "Global Network", "Breakthrough Ideas"];
     };
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -42,7 +39,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 gap-8">
           {contentItems.map((item, index) => (
             <motion.div
@@ -75,7 +71,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               </div>
             </motion.div>
           ))};
-=======
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Ultimate Tech Revolution */}
@@ -272,15 +267,11 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
               📚 Read the Blog
             </a>
           </div>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
-=======
 };
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 export default RevolutionaryContentShowcase2026;

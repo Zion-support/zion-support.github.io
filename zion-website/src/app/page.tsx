@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import {
   ChartBarIcon,
@@ -10,9 +8,7 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '../data/updates'
-=======
 import { getLatestUpdates } from "../data/updates"
->>>>>>> cursor/create-and-deploy-new-content-ee06
 
 const features = [
   {
@@ -108,15 +104,10 @@ const whatsNew = [
   },
 ]
 
-=======
 import { getLatestUpdates } from '../data/updates'
 
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
         <div className="text-center">
@@ -126,53 +117,27 @@ export default function HomePage() {
               AI & Technology
             </span>
           </h1>
-=======
->>>>>>> cursor/create-and-deploy-new-content-ee06
     <div className="bg-black">
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
               New: Real-Time AI Analytics Dashboard v3.0 —
               <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
               AI Agent Orchestration Platform v2.0 —
               <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
               New: AI Autonomous Workflow Engine v1.0 —
               <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
-=======
               New: Real-Time Agent Cost Controller v1.0 —
               <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
->>>>>>> cursor/create-and-deploy-new-content-ee06
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-security-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">security launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> cursor/create-and-deploy-new-content-ee06
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
             </p>
@@ -488,7 +453,6 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">What's New</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</p>
-<<<<<<< HEAD
           <p className="mt-6 text-lg leading-8 text-gray-300">Fresh content and announcements. Visit Updates for more.</p>
         </div>
         <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
@@ -585,8 +549,6 @@ export default function HomePage() {
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
-=======
->>>>>>> 60aabff78405a73f1a20f7e802e2036f236d650f
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
             Join the revolution that is reshaping industries worldwide.
@@ -605,12 +567,10 @@ export default function HomePage() {
         </div>
         
         <div className="mt-24">
->>>>>>> cursor/create-and-deploy-new-content-ee06
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Latest Updates</h2>
             <p className="mt-4 text-lg text-gray-300">Stay informed with our latest content and announcements</p>
           </div>
-<<<<<<< HEAD
           <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
@@ -692,7 +652,6 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
-=======
           <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
             {latest.map((item) => (
               <div key={item.title} className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
@@ -707,7 +666,6 @@ export default function HomePage() {
                 </a>
               </div>
             ))}
->>>>>>> cursor/create-and-deploy-new-content-ee06
           </div>
         </div>
       </div>

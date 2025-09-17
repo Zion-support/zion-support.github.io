@@ -162,11 +162,8 @@ const InteractiveTechShowcase: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
 export default InteractiveTechShowcase;
-=======
 };
 
 export default InteractiveTechShowcase;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

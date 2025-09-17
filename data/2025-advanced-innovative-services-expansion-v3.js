@@ -520,10 +520,7 @@ export const advancedInnovativeServices2025V3 = [
         reviews: 203
     }
 ];
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/systematic-improvements-merge
 export const advancedITServices2025 = [
     // Quantum Computing Infrastructure Setup
     {

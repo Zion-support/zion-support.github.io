@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const RevolutionaryContentCarousel: React.FC = () => {
   return (
@@ -13,7 +12,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
   );
   };
 export default RevolutionaryContentCarousel;
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -592,4 +590,3 @@ const RevolutionaryContentCarousel: React.FC = () => {
 };
 
 export default RevolutionaryContentCarousel;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

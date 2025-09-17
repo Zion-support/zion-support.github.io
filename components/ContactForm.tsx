@@ -22,39 +22,13 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-<<<<<<< HEAD
-  const validateForm = useCallback((data: FormData): Partial<FormData> => {
-    const newErrors: Partial<FormData> = {}
-    if (!data.name.trim()) newErrors.name = 'Name is required';
-    if (!data.email.trim()) newErrors.email = 'Email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) newErrors.email = 'Invalid email format';
-    if (!data.message.trim()) newErrors.message = 'Message is required';
-    
-    return newErrors;
-  }, []);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-<<<<<<< HEAD
-    
-    // Clear error when user starts typing
-    if (errors[name as keyof FormData]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
-    }
-=======
   };
-
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -73,17 +47,15 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       });
-<<<<<<< HEAD
-    } catch {
-=======
       
       setSubmitStatus('success');
     } catch (error) {
->>>>>>> cursor/analyze-improve-and-deploy-application-ab82
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
+  };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {submitStatus === 'success' && (

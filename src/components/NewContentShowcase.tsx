@@ -97,13 +97,10 @@ const NewContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
 export { NewContentShowcase
   };
-=======
 };
 
 export { NewContentShowcase };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 export default NewContentShowcase;

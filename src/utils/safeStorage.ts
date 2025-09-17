@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Safe storage utilities for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
@@ -54,11 +53,9 @@ export const safeStorage = {
         console.warn('localStorage.clear failed:', error);
         return false;
       }
-=======
     } catch (error) {
       console.warn('localStorage not available:', error);
       return null;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
     }
   },
     } catch (error) {

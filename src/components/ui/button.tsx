@@ -27,12 +27,9 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   className?: string;
-<<<<<<< HEAD
 };
-=======
 }
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
@@ -46,9 +43,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = 'Button';
 
-<<<<<<< HEAD
 export { Button, buttonVariants
   };
-=======
 export { Button, buttonVariants };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

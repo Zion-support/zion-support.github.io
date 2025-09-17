@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 const Sidebar = () => {
   return (
@@ -13,7 +12,6 @@ const Sidebar = () => {
   );
   };
 export default Sidebar;
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -263,4 +261,3 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
     </motion.aside>
   );
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

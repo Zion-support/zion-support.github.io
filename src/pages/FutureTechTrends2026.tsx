@@ -269,11 +269,8 @@ const FutureTechTrends2026: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
 export default FutureTechTrends2026;
-=======
 };
 
 export default FutureTechTrends2026;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

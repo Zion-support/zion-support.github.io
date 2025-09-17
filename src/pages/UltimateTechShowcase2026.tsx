@@ -24,7 +24,6 @@ const UltimateTechShowcase2026: React.FC = () => {
               <div className="text-6xl font-bold text-rose-400 mb-2">0ms</div>
               <div className="text-xl text-rose-200">Reality Lag Time</div>
             </div>
-=======
     <>
       <Helmet>
         <title>Ultimate Tech Showcase 2026 - Zion Tech Group</title>
@@ -136,7 +135,6 @@ const UltimateTechShowcase2026: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-=======
         <div className="container mx-auto px-4 py-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -161,11 +159,8 @@ const UltimateTechShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
 export default UltimateTechShowcase2026;
-=======
 };
 
 export default UltimateTechShowcase2026;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

@@ -2,7 +2,6 @@ import React from 'react';
 
 const AIInnovationHub2026: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */};
       <div className="relative overflow-hidden">
@@ -32,9 +31,7 @@ const AIInnovationHub2026: React.FC = () => {
       </div>
 
       {/* AI Innovation Categories */};
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -108,13 +105,10 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Innovation Statistics */};
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-=======
         {/* Interactive AI Showcase */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-indigo-400/30">
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-white mb-6">🚀 Interactive AI Experience</h2>
             <p className="text-2xl text-indigo-100">Experience the future of AI through our immersive interactive showcase</p>
@@ -197,11 +191,8 @@ const AIInnovationHub2026: React.FC = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
   };
 export default AIInnovationHub2026;
-=======
 };
 
 export default AIInnovationHub2026;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

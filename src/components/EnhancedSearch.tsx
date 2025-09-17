@@ -43,7 +43,6 @@ const EnhancedSearch: React.FC = () => {
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-<<<<<<< HEAD
   const searchSuggestions = [
     { title: "Consciousness Computing", category: "AI", icon: "🧠" },
     { title: "Quantum Neural Networks", category: "Quantum", icon: "⚡" },
@@ -64,7 +63,6 @@ const EnhancedSearch: React.FC = () => {
         transition={{ duration: 0.6 }};
         className="relative"
       >
-=======
   // Mock search data
   const searchData: SearchResult[] = [
     {
@@ -291,7 +289,6 @@ const EnhancedSearch: React.FC = () => {
     <div ref={searchRef} className="relative max-w-4xl mx-auto">
       {/* Search Form */}
       <form onSubmit={handleSearch} className="relative">
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <Search className="h-5 w-5 text-gray-400" />
@@ -299,20 +296,17 @@ const EnhancedSearch: React.FC = () => {
           <input
             ref={inputRef}
             type="text"
-<<<<<<< HEAD
             value={searchTerm};
             onChange={(e) => setSearchTerm(e.target.value)};
             onFocus={() => setIsFocused(true)};
             onBlur={() => setTimeout(() => setIsFocused(false), 200)};
             placeholder="Search revolutionary technologies..."
             className="w-full px-6 py-4 pr-12 text-lg border-2 border-gray-300 rounded-full focus:border-purple-500 focus:outline-none transition-all duration-300 shadow-lg"
-=======
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setShowSuggestions(true)}
             placeholder="Search for AI solutions, quantum computing, neural interfaces..."
             className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
           />
           <div className="absolute inset-y-0 right-0 flex items-center">
             <button
@@ -339,7 +333,6 @@ const EnhancedSearch: React.FC = () => {
         </div>
       </form>
 
-<<<<<<< HEAD
         <AnimatePresence>
           {isFocused && searchTerm && (
             <motion.div
@@ -406,7 +399,6 @@ const EnhancedSearch: React.FC = () => {
   );
   };
 export default EnhancedSearch;
-=======
       {/* Filters Panel */}
       {isOpen && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
@@ -691,4 +683,3 @@ export default EnhancedSearch;
 
 
 export default EnhancedSearch;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

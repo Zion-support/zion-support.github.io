@@ -220,14 +220,12 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">RevolutionaryTechInsights2026</h1>
           <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
-=======
     <>
       <Helmet>
         <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
@@ -433,7 +431,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 </div>
               </motion.div>
 
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: isVisible ? 1 : 0 }}
@@ -720,15 +717,11 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </footer>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
       </div>
     </>
   );
-<<<<<<< HEAD
   };
 export default RevolutionaryTechInsights2026;
-=======
 };
 
 export default RevolutionaryTechInsights2026;
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
