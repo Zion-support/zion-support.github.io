@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -83,20 +82,15 @@ const BusinessSuccessStories2027PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <divdiv
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
-            <motion.div
+            <divdiv
               className="absolute inset-0 opacity-30"
-              animate={{
                 background: [
                   'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
                   'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
@@ -104,7 +98,6 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                   'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
                 ]
               }}
-              transition={{ duration: 8repeat: Infinity }}
             />
           </div>
 
@@ -137,13 +130,8 @@ const BusinessSuccessStories2027PromotionBanner = () => {
 
                 {/* Rotating Success Stories */}
                 <div className="flex items-center gap-4 mb-4">
-                  <AnimatePresence mode="wait">
-                    <motion.div
+                    <divdiv
                       key={currentStory}
-                      initial={{ opacity: 0x: 20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      exit={{ opacity: 0x: -20 }}
-                      transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
                       <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${stories[currentStory].color} flex items-center justify-center text-white font-bold text-sm`}>
@@ -157,8 +145,8 @@ const BusinessSuccessStories2027PromotionBanner = () => {
                           {stories[currentStory].industry} • {stories[currentStory].roi} ROI • {stories[currentStory].savings} saved
                         </div>
                       </div>
-                    </motion.div>
-                  </AnimatePresence>
+                    </divdiv>
+                  </div>
                 </div>
 
                 {/* Features */}
@@ -226,9 +214,9 @@ const BusinessSuccessStories2027PromotionBanner = () => {
 
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
-        </motion.div>
+        </divdiv>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

@@ -1,10 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 import { innovative2030Services } from '../data/2030-innovative-services';
 
 export default function Revolutionary2030ServicesPage() {
@@ -80,10 +77,7 @@ export default function Revolutionary2030ServicesPage() {
       {/* Hero Section */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
@@ -92,12 +86,9 @@ export default function Revolutionary2030ServicesPage() {
                 2030 Revolutionary Technology Services
               </span>
             </div>
-          </motion.div>
+          </divdiv>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <divh1
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -107,22 +98,16 @@ export default function Revolutionary2030ServicesPage() {
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Technology Services
             </span>
-          </motion.h1>
+          </divh1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          <divp
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             Experience the next generation of revolutionary technology services. From AI consciousness 
             and quantum computing to space mining and DNA computing, we're building the future today.
-          </motion.p>
+          </divp>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <divdiv
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">
@@ -133,17 +118,15 @@ export default function Revolutionary2030ServicesPage() {
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
               View Pricing
             </button>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
       {/* Services Showcase */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-20"
           >
@@ -161,18 +144,15 @@ export default function Revolutionary2030ServicesPage() {
               Discover our comprehensive range of cutting-edge 2030 technology services that will 
               transform your business and propel you into the future.
             </p>
-          </motion.div>
+          </divdiv>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
             {innovative2030Services.map((service, index) => (
-              <motion.div
+              <divdiv
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
                 className="group cursor-pointer"
               >
                 <div className="p-8 rounded-3xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm">
@@ -239,15 +219,13 @@ export default function Revolutionary2030ServicesPage() {
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
 
           {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center"
           >
@@ -268,18 +246,16 @@ export default function Revolutionary2030ServicesPage() {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with
@@ -315,7 +291,7 @@ export default function Revolutionary2030ServicesPage() {
                 <span className="text-sm">{contactInfo.address}</span>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 

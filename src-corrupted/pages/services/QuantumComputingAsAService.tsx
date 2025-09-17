@@ -13,7 +13,6 @@ const QuantumComputingAsAService: Reac t.FC = (): JSX.Element => {
         'On-premise deployment options',;
         'Research partnerships';
       ],;
-=======
         'Unlimited quantum computing hours','
         'Custom quantum hardware access','
         'Dedicated quantum team','

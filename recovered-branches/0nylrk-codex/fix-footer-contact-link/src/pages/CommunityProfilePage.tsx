@@ -36,7 +36,6 @@ const userPosts: ForumPost[] = [
 
 
 
-=======
     );
   }
 
@@ -181,6 +180,5 @@ const userPosts: ForumPost[] = [
     </AppLayout>
 
 
-=======
   );
 }

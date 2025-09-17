@@ -24,7 +24,6 @@
             {currentStep === 1 && (;
               <div className="mt-6">;
 
-=======
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
@@ -198,6 +197,5 @@ export default function Onboarding() {
 }
 ;
 
-=======
   );
 }

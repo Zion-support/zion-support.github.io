@@ -37,7 +37,6 @@
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO
         title="Opening Zion App"
-=======
           navigate(fallbackUrl);
         }, 1500);
       }
@@ -96,7 +95,6 @@
 
 export default OpenAppRedirect;
 
-=======
       </div>
     </div>
   );

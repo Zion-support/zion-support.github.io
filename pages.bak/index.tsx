@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> cursor/create-and-deploy-new-content-376e
 import React from 'react';
-=======
 
 ;
 import React from 'react';
@@ -68,7 +62,6 @@ export default function Index(): any ({}: IndexProps) {return (<div>;
 }ursor/automate-test-improve-and-merge-code-646c;
 }
 }
->>>>>>> origin/merge-pr-12271
 
 interface IndexProps {
   // Add props here as needed
@@ -82,71 +75,3 @@ export default function Index({ }: IndexProps) {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
-}
-}
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
-
-
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'"
-interface IndexProps {
-  // Add props here as needed
-
-
-
-
-interface IndexProps {
-  // Add props here as needed
-}
-export default function Index({}: IndexProps) {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module && module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'";
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module && module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'";
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module && module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'";
-export default function Home() { return (<main style={{\"padding\": \'20\'}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}
-module && module.exports = default function Home() { return (<main style={{padding: "20"}}><h1>Zion Tech Group</h1><p>Build placeholder page.</p></main>)}'"'";
-interface IndexProps {;
-  // Add props here as needed;
-}
-export default function Index(): any ({}: IndexProps) {;
-  return (
-    <div>;
-      <h1>Index</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  );
-}
-}
-}
->>>>>>> origin/merge-pr-12271
->>>>>>> cursor/create-and-deploy-new-content-376e

@@ -10,19 +10,25 @@ export default defineConfig({
   define: {
     global: 'globalThis',
   },
+  optimizeDeps: {
+    include: ['framer-motion']
+  },
   plugins: [
     react()
   ],
   build: {
     rollupOptions: {
-      external: ['fs', 'path', 'os', 'crypto', 'stream', 'util', 'events', 'child_process', 'https', 'http', 'url', 'querystring'],
+      external: ['fs', 'path', 'os', 'crypto', 'stream', 'util', 'events', 'child_process', 'https', 'http', 'url', 'querystring', 'framer-motion'],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react', 'react-helmet-async'],
+          ui: ['lucide-react', 'react-helmet-async'],
           router: ['react-router-dom']
         }
       }
+    },
+    commonjsOptions: {
+      include: [/node_modules/]
     }
   },
   server: {

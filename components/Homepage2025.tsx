@@ -1,14 +1,13 @@
 "use client";
+
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   ArrowRight,
-  Atom,
   BarChart3,
   Brain,
   Cloud,
   Globe,
   Lock,
-  Rocket,
   Shield,
   Star,
   TrendingUp,
@@ -16,38 +15,25 @@ import {
   Zap
 } from 'lucide-react';
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
-import {
-  emergingTechServicesEnhanced2025
-} from '../data/2025-emerging-tech-services-enhanced';
-import {
-  innovativeAIServicesEnhanced2025
-} from '../data/2025-innovative-ai-services-enhanced';
-import {
-  innovativeITServicesEnhanced2025
-} from '../data/2025-innovative-it-services-enhanced';
-import {
-  innovativeRealMicroSaasServices2025
-} from '../data/2025-innovative-real-micro-saas-services';
-import { advancedAIAutomationServices2026 as advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
-import { advancedCybersecurityServices2026 as advancedCybersecurityServices } from '../data/2026-advanced-cybersecurity-services';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
-import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
+import { useEffect, useState } from 'react';
+// Data imports temporarily disabled due to module resolution conflicts
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
+import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
+import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
+import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
-const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
+const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const [activeSection, setActiveSection] = useState('hero');
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState<number>(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
+      setCurrentServiceIndex(((currentServiceIndex + 1) % 5));
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -61,44 +47,93 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     }
   };
 
-  const allServices = [
-    ...innovativeRealMicroSaasServices2025,
-    ...innovativeAIServicesEnhanced2025,
-    ...innovativeITServicesEnhanced2025,
-    ...emergingTechServicesEnhanced2025,
-    ...advancedAIAutomationServices,
-    ...advancedCybersecurityServices,
-    ...innovativeMicroSaasServices2026,
-    ...specializedITSolutions2026,
-    ...emergingTechServices2026
-  ];
-
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
+  const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
     {
-      title: 'GenAI for Regulated Industries (2025)',
-      href: '/blog/genai-2025-practical-compliance-patterns',
-      tag: 'Compliance',
+      title: 'Agent Platform SLO Blueprint (2026)',
+      href: '/blog/ai-2026-agent-slo-blueprint',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
+      title: 'Governed Tool Use — Case Studies (2026)',
+      href: '/blog/ai-2026-governed-tool-use-case-studies',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
+    },
+    {
+      title: '2025-09 Research Brief — Agentic Business Ops',
+      href: '/reports/briefs/brief-2025-09-agentic-business-ops',
+      tag: 'Brief',
+      gradient: 'from-cyan-500 to-fuchsia-500'
+    },
+    {
+      title: 'Blueprint — Autonomous IT Service Desk (v1)',
+      href: '/reports/blueprints/blueprint-2025-09-autonomous-it-service-desk',
+      tag: 'Blueprint',
       gradient: 'from-emerald-500 to-cyan-500'
     },
     {
-      title: 'Agentic CRM: Autonomous Revenue Workflows',
-      href: '/blog/agentic-crm-autonomous-revenue-workflows-2025',
-      tag: 'RevOps',
+      title: 'Case Study — 32% Cost Savings with FinOps AI',
+      href: '/reports/cases/case-2025-09-finops-ai-savings',
+      tag: 'Case Study',
+      gradient: 'from-cyan-500 to-violet-500'
+    },
+    {
+      title: 'Trustworthy Model Routing — Starter Kit (2026)',
+      href: '/blog/ai-2026-trustworthy-model-routing-starter',
+      tag: 'Starter Kit',
+      gradient: 'from-sky-500 to-blue-600'
+    },
+    {
+      title: 'Enterprise Automation Strategy 2025',
+      href: '/blog/ai-2025-enterprise-automation-strategy',
+      tag: 'Automation',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'Agentic Product Playbooks',
+      href: '/blog/agentic-product-playbooks',
+      tag: 'Agentic',
       gradient: 'from-fuchsia-500 to-indigo-500'
     },
     {
-      title: 'AI 2026: Real-Time Retrieval Architectures',
-      href: '/blog/ai-2026-real-time-retrieval-architectures',
-      tag: 'Article',
-      gradient: 'from-purple-500 to-blue-500'
+      title: 'Safety Evals Operational Checklist (2026)',
+      href: '/blog/ai-2026-safety-evals-operational-checklist',
+      tag: 'Safety',
+      gradient: 'from-emerald-500 to-cyan-500'
     },
     {
-      title: 'AI 2026: Autonomous Ops Playbook',
-      href: '/content/ai-2026-autonomous-ops-playbook',
-      tag: 'Playbook',
-      gradient: 'from-cyan-500 to-blue-600'
+      title: 'Operationalizing Agentic Workflows (2026)',
+      href: '/blog/ai-2026-operationalizing-agentic-workflows',
+      tag: 'Agentic',
+      gradient: 'from-cyan-500 to-purple-500'
+    },
+    {
+      title: 'Operational Evals — Blueprint (2026)',
+      href: '/blog/ai-2026-operational-evals-blueprint',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
+      title: 'Agent Observability Blueprint (2026)',
+      href: '/blog/ai-2026-agent-observability-blueprint',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
+    },
+    {
+      title: 'Customer-Facing AI Agents in 2025',
+      href: '/blog/ai-customer-agents-2025',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-lime-500'
+    }
+    ,
+    {
+      title: 'Evidence‑Led Operations — Centralizing Evals, Incidents, KPIs',
+      href: '/blog/ai-2026-evidence-led-operations-blueprint',
+      tag: 'Operations',
+      gradient: 'from-amber-500 to-pink-500'
     }
   ];
 
@@ -122,7 +157,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     {
       title: "Quantum Computing",
       description: "Next-generation quantum solutions for complex problem-solving and advanced cryptography",
-      icon: Atom
+      icon: Globe
     },
     {
       title: "Cybersecurity Excellence",
@@ -350,6 +385,35 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       {/* Latest Insights */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
+          {/* New Content Promo */}
+          <div className="mb-8 rounded-2xl p-6 bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
+                <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
+                <p className="opacity-90">Operational evals, observability, and customer agents now live.</p>
+              </div>
+              <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
+                <a href="/blog/ai-2026-operational-evals-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Operational Evals — Blueprint (2026)</div>
+                  <div className="text-xs opacity-90">8 min • Evals</div>
+                </a>
+                <a href="/blog/ai-2026-agent-observability-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Agent Observability Blueprint (2026)</div>
+                  <div className="text-xs opacity-90">7 min • Observability</div>
+                </a>
+                <a href="/blog/ai-2026-trustworthy-model-routing-starter" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Trustworthy Model Routing — Starter Kit (2026)</div>
+                  <div className="text-xs opacity-90">6 min • Routing</div>
+                </a>
+                <a href="/blog/ai-2026-evidence-led-operations-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">AI 2026: Evidence‑Led Operations</div>
+                  <div className="text-xs opacity-90">7 min • Operations</div>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -459,7 +523,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" },
               { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" },
               { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" },
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },
+              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Globe, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },
               { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
             ].map((service, index) => (
               <motion.div
@@ -499,13 +563,22 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               href="/comprehensive-services-showcase-2026"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
             >
-              <Rocket className="w-5 h-5 mr-2" />
+              <ArrowRight className="w-5 h-5 mr-2" />
               View All 2026 Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </motion.div>
         </div>
       </section>
+
+      {/* Revolutionary Content Banner 2026 */}
+      <RevolutionaryContentBanner2026 />
+
+      {/* Innovative Services Showcase 2026 */}
+      <InnovativeServicesShowcase2026 />
+
+      {/* Advanced Automation Banner 2026 */}
+      <AdvancedAutomationBanner2026 />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">

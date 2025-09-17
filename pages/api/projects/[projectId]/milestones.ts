@@ -13,7 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (req && req.method === "POST") {
-=======
   if (req.method === 'POST') {
 
     if (!isClient(project, user)) {
@@ -29,7 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
 import {
@@ -53,13 +51,10 @@ if (return) {
   // Check condition
 if ( {) {
   $2
-=======
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
 
-=======
-=======
 }
     res.status (404).json ({ error: "Project not found" });
     return;

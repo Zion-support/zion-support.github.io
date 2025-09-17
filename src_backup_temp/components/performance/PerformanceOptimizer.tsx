@@ -7,7 +7,6 @@ interface PerformanceMetrics {;
   "networkLatency": "number"}
 "export": "const "PerformanceOptimizer": React."FC": = () => {;
   const [metrics", setMetrics] = useState<PerformanceMetrics | null>(null);';
-=======
 interface PerformanceMetrics {
   loadTime: number,
   renderTime: number,
@@ -16,7 +15,6 @@ interface PerformanceMetrics {;
   loadTime: number,;
   renderTime: number,;
   memoryUsage: number,;
-=======
   networkLatency: number}
 export: const PerformanceOptimizer: React.FC: = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);';
@@ -71,7 +69,6 @@ export const PerformanceOptimizer: React.FC = () => {}
         const;const navigation = performance.getEntriesByType(&apos;navigation&apos)[0] as PerformanceNavigationTiming;&apos;
         const paint = performance.getEntriesByType(&apos;paint&apos);&apos;
         const renderTime = paint.find(entry => entry.name === &apos;first-contentful-paint&apos)?.startTime || 0;
-=======
         // Memory usage (if available)&apos;
 export const "PerformanceOptimizer": "React.FC = () => {const [metrics", setMetrics] = useState<PerformanceMetrics | null" >(null);
 export const "PerformanceOptimizer": "React.FC = () => {""';
@@ -90,7 +87,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
         // Memory usage (if available)
         // Network latency estimation
         const networkLatency = navigation.responseEnd - navigation.requestStart;
-=======
         setIsOptimized(isGoodPerformance);
       )"}
     </div>;
@@ -414,7 +410,6 @@ export const "PerformanceOptimizer": "React.FC = () => {""';
     </div>
     );
 }
-=======
   )};
 "export": "default PerformanceOptimizer;
 export default PerformanceOptimizer';

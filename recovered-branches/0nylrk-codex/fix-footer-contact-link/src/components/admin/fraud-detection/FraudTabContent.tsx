@@ -35,7 +35,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
   }
 };
 
-=======
       );
     
     default:

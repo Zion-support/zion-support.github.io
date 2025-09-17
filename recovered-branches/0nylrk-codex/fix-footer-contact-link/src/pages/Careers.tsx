@@ -126,7 +126,6 @@
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               We're always looking for talented individuals who are passionate about AI and technology.
-=======
                   ))}
                 </TabsContent>
               ))}
@@ -196,6 +195,5 @@
 }
 ;
 
-=======
   );
 }

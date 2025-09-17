@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
 import { 
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
   Shield, Zap, Rocket, Brain, Atom, Globe, Target,
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -146,10 +143,7 @@ export default function PricingPage() {
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -189,18 +183,16 @@ export default function PricingPage() {
             <div className="text-center text-gray-400">
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>
             </div>
-          </motion.div>
+          </divdiv>
         </section>
 
         {/* Pricing Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
-              <motion.div
+              <divdiv
                 key={category}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
                 className="mb-20"
               >
@@ -215,11 +207,9 @@ export default function PricingPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {services.map((service, serviceIndex) => (
-                    <motion.div
+                    <divdiv
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className="group cursor-pointer"
                     >
@@ -338,10 +328,10 @@ export default function PricingPage() {
                           <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                         </div>
                       </div>
-                    </motion.div>
+                    </divdiv>
                   ))}
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </section>
@@ -349,10 +339,8 @@ export default function PricingPage() {
         {/* Contact CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -416,7 +404,7 @@ export default function PricingPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </divdiv>
           </div>
         </section>
       </main>

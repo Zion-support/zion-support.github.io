@@ -9,7 +9,6 @@ export interface HelpArticle {
 
 
 
-=======
   lastUpdated: string;
   tags: string[];
 }
@@ -33,4 +32,3 @@ export interface SupportTicket {
 
 
 
-=======

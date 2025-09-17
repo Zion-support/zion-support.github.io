@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -48,10 +47,10 @@ function Header() {
 
 	const quickActions = [
 		{
-			name: 'Latest Insights',
-			href: '/blog/latest',
+			name: 'New: Edge Agents Guide',
+			href: '/blog/ai-2026-edge-agents-production-guide',
 			icon: Sparkles,
-			description: 'Read our newest research',
+			description: 'Fresh: production blueprint',
 			featured: true,
 			color: 'from-amber-500 to-orange-600'
 		},

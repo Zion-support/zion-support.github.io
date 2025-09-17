@@ -9,7 +9,6 @@ import OpenAI from 'openai';
 
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
-=======
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
 
 function ensureStorage() {
@@ -61,7 +60,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
 
 
-=======
       title: generated.title,
       questions: generated.questions || [],
       timeMarkers: generated.timeMarkers || { intro: '00:00', segments: [], closing: '14:30' },

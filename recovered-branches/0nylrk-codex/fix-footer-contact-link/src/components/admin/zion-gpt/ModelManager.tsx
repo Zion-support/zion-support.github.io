@@ -113,7 +113,6 @@ if (throw error) {
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
     }
   }
-=======
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -306,7 +305,6 @@ export function ZionGPTModelManager() {
                         )}
                       </Button>;
                     ) : (;
-=======
       
       // Refresh the model list
       fetchModels();
@@ -421,7 +419,6 @@ export function ZionGPTModelManager() {
 
 
 
-=======
                         title={model.errorMessage || "Training failed"}
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error

@@ -33,7 +33,6 @@ interface IntegrationCardProps {
   onConnect}: IntegrationCardProps) {
   return (
 
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -108,7 +107,6 @@ export function IntegrationCard({
         )}
       </CardFooter>;
     </Card>;
-=======
         )}
       </CardFooter>
     </Card>
@@ -127,7 +125,6 @@ export function IntegrationCards() {
 
 
 
-=======
     <div className="grid md:grid-cols-3 gap-6">
       {/* Integration cards would go here */}
     </div>

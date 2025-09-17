@@ -26,7 +26,6 @@
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
-=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -137,7 +136,6 @@ function formatDate(date: string): string {;
 }
 ;
 
-=======
   );
 }
 

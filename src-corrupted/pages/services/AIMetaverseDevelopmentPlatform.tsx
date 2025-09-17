@@ -16,7 +16,6 @@ export default function AIMetaverseDevelopmentPlatform(props: any) {
         'White-label solutions available',;
         'Enterprise security features';
       ]};
-=======
         'Unlimited virtual worlds','
         'Custom AI algorithms','
         '24/7 dedicated support',;'

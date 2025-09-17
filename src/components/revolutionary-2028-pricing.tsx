@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
@@ -9,8 +8,6 @@ import {
   Building, Factory, Camera, Video, Music, Gamepad2,
   Crown, Award, Target, Users, Clock, Globe2
 } from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
@@ -129,10 +126,7 @@ export default function Revolutionary2028Pricing() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -189,7 +183,7 @@ export default function Revolutionary2028Pricing() {
                 <div className="text-cyan-300">Free Trial</div>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 
@@ -207,11 +201,9 @@ export default function Revolutionary2028Pricing() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
-              <motion.div
+              <divdiv
                 key={tier.name}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative ${tier.popular ? 'scale-105' : ''}`}
               >
@@ -258,7 +250,7 @@ export default function Revolutionary2028Pricing() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
         </div>
@@ -281,11 +273,9 @@ export default function Revolutionary2028Pricing() {
               <h3 className="text-3xl font-bold text-white mb-8 text-center">{category.category}</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {category.services.map((service, serviceIndex) => (
-                  <motion.div
+                  <divdiv
                     key={service.id}
-                    initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                     viewport={{ once: true }}
                     className="group relative"
                   >
@@ -329,7 +319,7 @@ export default function Revolutionary2028Pricing() {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </divdiv>
                 ))}
               </div>
             </div>
@@ -350,10 +340,8 @@ export default function Revolutionary2028Pricing() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
             >
@@ -365,12 +353,10 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-green-400">30%</div>
               <div className="text-purple-300">Lower than Market</div>
-            </motion.div>
+            </divdiv>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
@@ -382,12 +368,10 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
               <div className="text-blue-300">Transparent Pricing</div>
-            </motion.div>
+            </divdiv>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
@@ -399,7 +383,7 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-pink-400">5x</div>
               <div className="text-pink-300">ROI Guarantee</div>
-            </motion.div>
+            </divdiv>
           </div>
         </div>
       </section>
@@ -407,10 +391,8 @@ export default function Revolutionary2028Pricing() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
@@ -453,7 +435,7 @@ export default function Revolutionary2028Pricing() {
                 <span>Cancel Anytime</span>
               </div>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </section>
 

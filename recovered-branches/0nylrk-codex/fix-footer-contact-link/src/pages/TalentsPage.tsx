@@ -6,7 +6,6 @@ import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
-=======
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 

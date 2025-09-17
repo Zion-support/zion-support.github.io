@@ -97,7 +97,6 @@ export function AutocompleteSuggestions({
   visible
 }: AutocompleteSuggestionsProps) {
   if (!visible |suggestions.length === 0) return null;
-=======
 import React from "react";
 import { SearchSuggestion, SearchHighlight } from "@/types/search";
 

@@ -1,95 +1,183 @@
-import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Star, Clock, TrendingUp, Sparkles } from 'lucide-react';
 
-const NewContentPromotionBanner2026 = () => {
+interface NewContentPromotionBanner2026Props {
+  className?: string;
+}
+
+const NewContentPromotionBanner2026: React.FC<NewContentPromotionBanner2026Props> = ({ className = '' }) => {
+  const [currentContent, setCurrentContent] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const newContent = [
+    {
+      title: "AI 2026: Next-Generation Breakthrough Technologies",
+      excerpt: "Explore revolutionary AI technologies reshaping industries",
+      category: "AI Technology",
+      readTime: "12 min read",
+      views: "15.6K",
+      isHot: true,
+      urgency: "Hot Topic"
+    },
+    {
+      title: "Quantum Computing for Business: Complete Implementation Guide",
+      excerpt: "Learn how businesses leverage quantum computing for competitive advantage",
+      category: "Quantum Computing",
+      readTime: "15 min read",
+      views: "18.9K",
+      isHot: true,
+      urgency: "Must Read"
+    },
+    {
+      title: "Autonomous Systems in Enterprise: Complete Transformation Guide",
+      excerpt: "Discover how autonomous AI systems revolutionize enterprise operations",
+      category: "Autonomous Systems",
+      readTime: "18 min read",
+      views: "22.3K",
+      isHot: true,
+      urgency: "Trending"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % newContent.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [newContent.length]);
+
+  const handleDismiss = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white py-16">
-      {/* Animated background particles */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/6 w-2 h-2 bg-white rounded-full opacity-60 animate-ping"></div>
-        <div className="absolute top-3/4 right-1/6 w-3 h-3 bg-yellow-300 rounded-full opacity-60 animate-ping" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-300 rounded-full opacity-60 animate-ping" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-pink-300 rounded-full opacity-60 animate-ping" style={{animationDelay: '0.5s'}}></div>
-      </div>
-      
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🆕 NEW CONTENT ALERT</span>
-          </div>
-          
-          {/* Main heading */}
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Discover the Future of AI
-            <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              AI 2026 Revolution
-            </span>
-          </h2>
-          
-          {/* Description */}
-          <p className="text-lg md:text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Explore groundbreaking AI technologies including Neural Superintelligence, 
-            Quantum-Neural Fusion, and Autonomous Business Ecosystems that will transform your business.
-          </p>
-          
-          {/* Content preview cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 border border-white border-opacity-20">
-              <div className="text-2xl mb-2">🧠</div>
-              <h3 className="font-bold text-sm mb-1">Neural Superintelligence</h3>
-              <p className="text-xs opacity-80">Human-level AI reasoning</p>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        className={`relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 p-1 rounded-lg shadow-2xl ${className}`}
+      >
+        <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-lg p-6">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2">
+                <Sparkles className="h-5 w-5 text-yellow-400" />
+                <span className="text-yellow-400 font-bold text-sm">NEW CONTENT</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                <span className="text-gray-300 text-sm">Featured</span>
+              </div>
             </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 border border-white border-opacity-20">
-              <div className="text-2xl mb-2">⚛️</div>
-              <h3 className="font-bold text-sm mb-1">Quantum-Neural Fusion</h3>
-              <p className="text-xs opacity-80">Quantum computing meets AI</p>
-            </div>
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 border border-white border-opacity-20">
-              <div className="text-2xl mb-2">🤖</div>
-              <h3 className="font-bold text-sm mb-1">Autonomous Ecosystems</h3>
-              <p className="text-xs opacity-80">Self-managing business AI</p>
+            <div className="flex items-center space-x-2">
+              <TrendingUp className="h-4 w-4 text-green-400" />
+              <span className="text-green-400 text-sm font-medium">Trending</span>
             </div>
           </div>
-          
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/ai-2026-revolution"
-              className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 transform hover:scale-105"
+
+          {/* Content Carousel */}
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentContent}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-3"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="bg-purple-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                        {newContent[currentContent].category}
+                      </span>
+                      <span className="bg-red-600 text-white px-2 py-1 rounded-full text-xs font-medium animate-pulse">
+                        {newContent[currentContent].urgency}
+                      </span>
+                    </div>
+                    <h3 className="text-white font-bold text-lg leading-tight mb-2">
+                      {newContent[currentContent].title}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-3">
+                      {newContent[currentContent].excerpt}
+                    </p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-400">
+                      <div className="flex items-center space-x-1">
+                        <Clock className="h-4 w-4" />
+                        <span>{newContent[currentContent].readTime}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <TrendingUp className="h-4 w-4" />
+                        <span>{newContent[currentContent].views} views</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Progress Indicators */}
+            <div className="flex space-x-2 mt-4">
+              {newContent.map((_, index) => (
+                <div
+                  key={index}
+                  className={`h-1 flex-1 rounded-full transition-all duration-300 ${
+                    index === currentContent 
+                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500' 
+                      : 'bg-gray-600'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-6 flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-6 py-2 rounded-lg font-medium flex items-center space-x-2 hover:from-purple-700 hover:to-cyan-600 transition-all duration-200"
+              >
+                <span>Explore New Content</span>
+                <ArrowRight className="h-4 w-4" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-gray-300 hover:text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+              >
+                View All Articles
+              </motion.button>
+            </div>
+            
+            <div className="text-right">
+              <div className="text-gray-400 text-xs mb-1">Latest Updates</div>
+              <div className="text-white text-sm font-medium">
+                {newContent.length} New Articles Available
+              </div>
+            </div>
+          </div>
+
+          {/* Floating Elements */}
+          <div className="absolute top-4 right-4 opacity-20">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
-              Explore AI 2026 →
-            </a>
-            <a
-              href="/ai-2026-revolution/demo"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-all duration-300"
-            >
-              Try Interactive Demo
-            </a>
-          </div>
-          
-          {/* Stats */}
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div>
-              <div className="text-2xl font-bold text-yellow-400">1000%</div>
-              <div className="text-xs opacity-80">ROI Potential</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-cyan-400">∞</div>
-              <div className="text-xs opacity-80">Processing Speed</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-green-400">100%</div>
-              <div className="text-xs opacity-80">Autonomous</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-pink-400">2026</div>
-              <div className="text-xs opacity-80">Future Ready</div>
-            </div>
+              <Sparkles className="h-8 w-8 text-yellow-400" />
+            </motion.div>
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

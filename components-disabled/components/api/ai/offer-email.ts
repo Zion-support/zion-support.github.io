@@ -17,7 +17,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======
 
   const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status(200).json({ email: text });

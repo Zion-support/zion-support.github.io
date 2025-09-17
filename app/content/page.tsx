@@ -13,7 +13,69 @@ export default function ContentIndexPage() {
         Stay ahead with our practical guides and deep-dives into enterprise AI and automation.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* New: Sept 2025 additions */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-purple-700 mb-2">Quickstart</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-evidence-driven-operations-quickstart" className="hover:underline">
+              Evidence‑Driven Operations (Quickstart)
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Evaluation‑first delivery with policy gates, incident runbooks, and auditable evidence.
+          </p>
+          <Link href="/content/ai-2026-evidence-driven-operations-quickstart" className="text-purple-700 font-semibold">Start Here →</Link>
+        </article>
+
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-indigo-700 mb-2">Blog</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/blog/ai-2026-safe-rollouts-in-production" className="hover:underline">
+              Safe Rollouts in Production
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Progressive exposure with eval gates, observability, and automated rollbacks.
+          </p>
+          <Link href="/blog/ai-2026-safe-rollouts-in-production" className="text-indigo-700 font-semibold">Read Article →</Link>
+        </article>
         {/* New items added September 2025 */}
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-trusted-autonomy-field-manual" className="hover:underline">
+              AI 2026: Trusted Autonomy Field Manual
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Practical controls to ship safe, cost-aware agent systems in production.
+          </p>
+          <Link href="/content/ai-2026-trusted-autonomy-field-manual" className="text-fuchsia-700 font-semibold">Read Manual →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-rose-700 mb-2">Incident Response</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-incident-response-runbook" className="hover:underline">
+              AI 2026: Agent Incident Response Runbook
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Detect, triage, contain, and learn from agent incidents with evidence-first playbooks.
+          </p>
+          <Link href="/content/ai-2026-agent-incident-response-runbook" className="text-rose-700 font-semibold">Open Runbook →</Link>
+        </article>
+        <article className="bg-white p-6 rounded-xl shadow">
+          <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <Link href="/content/ai-2026-agent-posture-management" className="hover:underline">
+              AI 2026: Agent Posture Management — Practical Guide
+            </Link>
+          </h2>
+          <p className="text-gray-600 mb-4">
+            Continuously assess and harden agents across identity, tools, data, and runtime with evaluation gates and policy-as-code.
+          </p>
+          <Link href="/content/ai-2026-agent-posture-management" className="text-fuchsia-700 font-semibold">Read Guide →</Link>
+        </article>
         <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             <Link href="/content/secure-agentic-data-pipelines-2026" className="hover:underline">
@@ -299,40 +361,6 @@ export default function ContentIndexPage() {
         </article>
 
         <article className="bg-white p-6 rounded-xl shadow">
-<<<<<<< HEAD
-          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/genai-governance-2026" className="hover:underline">
-              GenAI Governance 2026
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
-          </p>
-=======
-          <div className="text-sm font-semibold text-teal-700 mb-2">Blueprint</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/ai-2026-operational-evals-blueprint" className="hover:underline">
-              AI 2026: Operational Evals Blueprint
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            An evaluation-first blueprint with metrics, harnesses, and governance to ship reliable AI systems.
-          </p>
-          <Link href="/content/ai-2026-operational-evals-blueprint" className="text-teal-700 font-semibold">Read Blueprint →</Link>
-        </article>
-
-        <article className="bg-white p-6 rounded-xl shadow">
-          <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            <Link href="/content/genai-governance-2026" className="hover:underline">
-              GenAI Governance 2026
-            </Link>
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Policies, controls, and guardrails to deploy GenAI responsibly across the enterprise.
-          </p>
->>>>>>> cursor/create-and-deploy-new-content-376e
           <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold">Explore Framework →</Link>
         </article>
 

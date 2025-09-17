@@ -41,9 +41,3 @@ export default function ServicesLayout(): any ({;
 
   return <div>{children}</div>;
 }
-<<<<<<< HEAD
-=======
-},export default function ServicesLayout() {return <div>{children}</div>;
-}
-ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/merge-pr-12271

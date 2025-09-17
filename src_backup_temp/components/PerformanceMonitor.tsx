@@ -56,7 +56,6 @@ const "PerformanceMonitor": "React.FC = () => {;
   }, []);
   );
 };
-=======
 ;
   return (;
     <div className="bg-gray-100 p-4 rounded-lg">;

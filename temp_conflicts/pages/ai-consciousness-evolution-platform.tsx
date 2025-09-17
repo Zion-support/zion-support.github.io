@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+
 import { 
   Brain, 
   Sparkles, 
@@ -392,10 +392,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 };
 
 export default AIConsciousnessEvolutionPlatform;
-=======
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import { 
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
   CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,

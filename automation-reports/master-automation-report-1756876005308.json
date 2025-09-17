@@ -55,7 +55,6 @@
       "status": "success",
       "endTime": 1756876005006,
       "duration": 71276,
-      "output": "🔍 Running Code Quality Checks...\n🎨 Checking code style...\n🧮 Checking code complexity...\n🔄 Checking code duplication...\n🔒 Checking security...\n⚡ Checking performance...\n\n📊 Code Quality Results:\n==================================================\nQuality Score: 70/100\nPassed: 2\nFailed: 2\nWarnings: 0\n==================================================\n📄 Report saved to: code-quality-report.json\n✅ Code quality checks completed\n"
     },
     {
       "name": "Health Checker",

@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket
   Brain
@@ -305,74 +304,51 @@ const FutureTechPredictions2025PromotionBanner = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0x: -50 }}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -50 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
           >
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.6delay: 0.2 }}
+            <divdiv
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6"
             >
               <Rocket className="w-5 h-5 text-indigo-400 mr-2" />
               <span className="text-indigo-300 font-medium">Future Tech Predictions 2025-2030</span>
-            </motion.div>
+            </divdiv>
 
             {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8delay: 0.3 }}
+            <divh1
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
               The Future is
               <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                 Closer Than You Think
               </span>
-            </motion.h1>
+            </divh1>
 
             {/* Subheading */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8delay: 0.4 }}
+            <divp
               className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
               Explore our predictions for the next 5 years of technological advancement and prepare for the revolutionary changes that will reshape our world.
-            </motion.p>
+            </divp>
 
             {/* Rotating Predictions */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8delay: 0.5 }}
+            <divdiv
               className="mb-8"
             >
               <div className="flex items-center text-lg text-gray-300">
                 <span className="mr-3">Coming in {years[currentPrediction]}:</span>
-                <AnimatePresence mode="wait">
-                  <motion.span
+                  <divspan
                     key={currentPrediction}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5 }}
                     className="text-indigo-400 font-semibold"
                   >
                     {predictions[currentPrediction]}
-                  </motion.span>
-                </AnimatePresence>
+                  </divspan>
+                </div>
               </div>
-            </motion.div>
+            </divdiv>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8delay: 0.6 }}
+            <divdiv
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center group">
@@ -383,14 +359,11 @@ const FutureTechPredictions2025PromotionBanner = () => {
                 <Calendar className="w-5 h-5 mr-2" />
                 View Timeline
               </button>
-            </motion.div>
-          </motion.div>
+            </divdiv>
+          </divdiv>
 
           {/* Right Content - Stats & Visual */}
-          <motion.div
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8delay: 0.4 }}
+          <divdiv
             className="relative"
           >
             {/* Main Visual */}
@@ -410,16 +383,13 @@ const FutureTechPredictions2025PromotionBanner = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <motion.div
+                  <divdiv
                     key={stat.label}
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
-                    transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
-                  </motion.div>
+                  </divdiv>
                 ))}
               </div>
 
@@ -431,24 +401,18 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl blur-3xl -z-10"></div>
-          </motion.div>
+          </divdiv>
         </div>
 
         {/* Technology Progress Bars */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 1.0 }}
+        <divdiv
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
         >
           <h3 className="text-2xl font-bold text-white text-center mb-6">Technology Development Progress</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((techindex) => (
-              <motion.div
+              <divdiv
                 key={tech.name}
-                initial={{ opacity: 0x: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.6delay: 1.2 + index * 0.1 }}
                 className="space-y-2"
               >
                 <div className="flex justify-between items-center">
@@ -456,23 +420,17 @@ const FutureTechPredictions2025PromotionBanner = () => {
                   <span className="text-gray-400">{tech.progress}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${tech.progress}%` }}
-                    transition={{ duration: 1delay: 1.4 + index * 0.1 }}
+                  <divdiv
                     className={`h-2 rounded-full bg-gradient-to-r ${tech.color}`}
                   />
                 </div>
-              </motion.div>
+              </divdiv>
             ))}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Bottom Stats Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 1.4 }}
+        <divdiv
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
@@ -481,11 +439,8 @@ const FutureTechPredictions2025PromotionBanner = () => {
             { icon: Rocketlabel: ''Years', 'value: '6' },
             { icon: Starlabel: ''Technologies', 'value: '25+' }
           ].map((itemindex) => (
-            <motion.div
+            <divdiv
               key={item.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.6delay: 1.6 + index * 0.1 }}
               className="text-center"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
@@ -493,9 +448,9 @@ const FutureTechPredictions2025PromotionBanner = () => {
               </div>
               <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
               <div className="text-sm text-gray-400">{item.label}</div>
-            </motion.div>
+            </divdiv>
           ))}
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

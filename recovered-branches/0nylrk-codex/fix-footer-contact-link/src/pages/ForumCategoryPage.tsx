@@ -71,7 +71,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 }
 },
 
-=======
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -268,7 +267,6 @@ const iconMap = {
 }
 ;
 
-=======
         
         <div className="mb-6">
           <div className="relative">
