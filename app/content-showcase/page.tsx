@@ -12,7 +12,36 @@ export const metadata = {
 const ContentShowcasePage = () => {
   const featuredContent = [
     {
-      category: "AI Innovation",
+      title: "AI 2025: Quantum Computing Breakthrough - Revolutionary Applications",
+      description: "Discover how quantum computing is revolutionizing AI in 2025. From quantum machine learning to breakthrough applications that were impossible just months ago, explore the future of quantum-enhanced artificial intelligence.",
+      href: "/blog/ai-2025-quantum-computing-breakthrough",
+      icon: "⚛️",
+      category: "Quantum AI",
+      readTime: "28 min read",
+      date: "Feb 15, 2025"
+    },
+    {
+      title: "AI 2025: Neural Interface Revolution - Brain-Computer Integration",
+      description: "Explore the revolutionary neural interface technologies of 2025. Discover how brain-computer interfaces are transforming healthcare, communication, and human-AI interaction.",
+      href: "/blog/ai-2025-neural-interface-revolution",
+      icon: "🧠",
+      category: "Neural Interfaces",
+      readTime: "32 min read",
+      date: "Feb 18, 2025"
+    },
+    {
+      title: "AI 2025: Ethical Governance Framework - Responsible AI Implementation",
+      description: "Learn how to implement comprehensive AI ethical governance frameworks in 2025. Discover best practices for responsible AI development, bias mitigation, and regulatory compliance.",
+      href: "/blog/ai-2025-ethical-governance-framework",
+      icon: "⚖️",
+      category: "AI Ethics",
+      readTime: "35 min read",
+      date: "Feb 20, 2025"
+    },
+    {
+      title: "AI Advanced Automation 2025: Complete Implementation Guide",
+      description: "Master advanced AI automation in 2025 with our comprehensive guide. Learn implementation strategies, best practices, and real-world case studies for enterprise automation success.",
+      href: "/blog/ai-2025-advanced-automation",
       icon: "🤖",
       title: "AI 2025 Ultimate Breakthrough",
       description: "Revolutionary AI innovations that are transforming industries worldwide with unprecedented capabilities.",
@@ -54,32 +83,70 @@ const ContentShowcasePage = () => {
     {
       category: "Space Technology",
       icon: "🚀",
-      title: "Space Tech Innovations",
-      description: "Cutting-edge space technology solutions for interplanetary exploration and satellite operations.",
-      link: "/space-tech",
-      featured: false,
-      views: "8.9K",
-      trending: false
-    },
-    {
-      category: "Automation",
-      icon: "⚡",
-      title: "Ultimate Automation Revolution",
-      description: "Advanced automation systems that streamline processes and maximize operational efficiency.",
-      link: "/ai-2025-ultimate-automation-revolution",
-      featured: false,
-      views: "11.5K",
-      trending: false
+      category: "AI Innovations",
+      readTime: "25 min read",
+      date: "Jan 28, 2025"
     }
   ];
 
-  const categories = [
-    { name: "AI & Machine Learning", count: 89, color: "purple" },
-    { name: "Quantum Computing", count: 34, color: "blue" },
-    { name: "Neural Interfaces", count: 28, color: "green" },
-    { name: "Business Solutions", count: 67, color: "orange" },
-    { name: "Automation", count: 45, color: "pink" },
-    { name: "Space Technology", count: 12, color: "indigo" }
+  const newCaseStudies = [
+    {
+      title: "AI Financial Services Transformation 2025: $50M Savings & 300% ROI",
+      description: "How a Fortune 500 financial services company transformed their operations with AI, achieving unprecedented cost savings, efficiency gains, and customer satisfaction improvements through strategic AI implementation.",
+      href: "/case-studies/ai-2025-financial-services-transformation",
+      icon: "💰",
+      category: "Financial Services AI",
+      result: "$50M Savings",
+      date: "Feb 22, 2025"
+    },
+    {
+      title: "$200M Manufacturing Success: Autonomous AI Systems Case Study 2025",
+      description: "How a Fortune 500 manufacturing company transformed their operations with autonomous AI systems, achieving $200M in annual savings, 60% faster processing times, and 99.7% uptime.",
+      href: "/case-studies/ai-autonomous-manufacturing-success-2025",
+      icon: "🏭",
+      category: "Manufacturing AI",
+      result: "$200M Savings",
+      date: "Jan 28, 2025"
+    },
+    {
+      title: "AI Healthcare Diagnosis Success: 95% Accuracy Achieved",
+      description: "How a major healthcare system transformed patient care with AI-powered diagnostic tools, achieving 95% accuracy, 60% faster diagnosis times, and $2.5M annual savings.",
+      href: "/case-studies/ai-healthcare-diagnosis-success-2025",
+      icon: "🏥",
+      category: "Healthcare AI",
+      result: "95% Accuracy",
+      date: "Jan 30, 2025"
+    }
+  ];
+
+  const newResources = [
+    {
+      title: "AI Implementation Master Guide 2025: Complete 200+ Page Resource",
+      description: "Download our comprehensive AI Implementation Master Guide for 2025. Step-by-step instructions, templates, checklists, and best practices for successful AI deployment.",
+      href: "/resources/ai-2025-implementation-master-guide",
+      icon: "📚",
+      category: "Master Guide",
+      type: "Free Download",
+      date: "Feb 25, 2025"
+    },
+    {
+      title: "AI Implementation Checklist 2025: 150+ Actionable Items",
+      description: "Complete checklist covering every aspect of AI implementation from strategy to deployment, with 150+ actionable items across 7 key categories.",
+      href: "/resources/ai-implementation-checklist-2025",
+      icon: "📋",
+      category: "Checklist",
+      type: "Free Download",
+      date: "Feb 08, 2025"
+    },
+    {
+      title: "AI Security Hardening Checklist: Essential Security Measures",
+      description: "Comprehensive security checklist covering 12 key areas and 80+ essential security measures for AI systems and deployments.",
+      href: "/resources/ai-security-hardening-checklist",
+      icon: "🛡️",
+      category: "Security",
+      type: "Free Download",
+      date: "Feb 06, 2025"
+    }
   ];
 
   return (
