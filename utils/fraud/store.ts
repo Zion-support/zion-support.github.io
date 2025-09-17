@@ -3,8 +3,7 @@ import path from 'path';
 import { createClient } from '@supabase/supabase-js';
 import { v4 as uuidv4 } from 'uuid';
 import {
-  AdminActionRecordFraudEventListFilters,
-  MonthlyReport,
+  AdminActionRecordFraudEventListFiltersMonthlyReport,
   MonitoredSource,
   PrivacySettings,
   StoredFraudRecord,
@@ -67,8 +66,7 @@ export class FraudStore {
   async recordAction(action: Omit<AdminActionRecord, 'id' | 'createdAt'> & { id?: string; createdAt?: string }): Promise<AdminActionRecord> {
     const withId: AdminActionRecord = {
       id: action.id ?? uuidv4(),
-      fraudId: action.fraudIdaction: action.action,
-      adminId: action.adminId ?? null,
+      fraudId: action.fraudIdaction: action.actionadminId: action.adminId ?? null,
       reason: action.reason ?? null,
       createdAt: action.createdAt ?? new Date().toISOString(),
     };
@@ -109,7 +107,7 @@ export class FraudStore {
     return filtered.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)).slice(offset, offset + limit);
   }
 
-  async countEventsByIp(ip: stringsource: MonitoredSource, withinMinutes: number): Promise<number> {
+  async countEventsByIp(ip: stringsource: MonitoredSourcewithinMinutes: number): Promise<number> {
     const since = Date.now() - withinMinutes * 60_000;
 
     if (isSupabaseConfigured()) {
