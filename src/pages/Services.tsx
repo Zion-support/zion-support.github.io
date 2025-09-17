@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Brain, 

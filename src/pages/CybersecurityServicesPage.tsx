@@ -36,7 +36,6 @@ import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { QuoteFormSection } from '@/components/QuoteFormSection';
 
-<<<<<<< HEAD
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
@@ -583,7 +582,6 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
       {/* Contact Information Banner */}
       <div className="bg-white border-b border-gray-200">

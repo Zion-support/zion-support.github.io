@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 const Sitemap: React.FC = () => {
   const sitemapData = {
     main: [

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> origin/website-improvements-v2
 
 export default function Contact() {
   const { showToast: toast } = useToast();
