@@ -184,3 +184,4 @@
 # build trigger: chore(netlify): retrigger Netlify deploy with no functional changes
 
 # ci: retrigger deploy 2025-09-17
+# ci: retrigger netlify build
