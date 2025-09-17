@@ -125,7 +125,7 @@ export default function AdvancedServicesShowcase() {
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (
-    <divdiv
+    <div
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
       }`}
@@ -230,11 +230,11 @@ export default function AdvancedServicesShowcase() {
           </a>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 
   const ServiceList = ({ service }: { service: any }) => (
-    <divdiv
+    <div
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''
       }`}
@@ -337,7 +337,7 @@ export default function AdvancedServicesShowcase() {
           </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 
   return (
@@ -364,7 +364,7 @@ export default function AdvancedServicesShowcase() {
               Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
             </divp>
-            <divdiv 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <div className="flex items-center gap-2 text-white">
@@ -379,7 +379,7 @@ export default function AdvancedServicesShowcase() {
                 <CheckCircle className="w-5 h-5 text-green-300" />
                 <span>Market Validated</span>
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
       </div>

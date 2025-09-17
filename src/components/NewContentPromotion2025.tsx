@@ -1,45 +1,10 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const NewContentPromotion2025: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const promotions = [
-    {
-      title: "🌟 Ultimate Tech Breakthrough 2025",
-      description: "Experience the most revolutionary technological advances that will reshape our world",
-      link: "/pages/UltimateTechBreakthrough2025",
-      color: "from-purple-600 to-pink-600",
-      icon: "🚀"
-    },
-    {
-      title: "⚡ Revolutionary Tech Showcase 2025",
-      description: "Interactive showcase of cutting-edge technologies that will define the future",
-      link: "/pages/RevolutionaryTechShowcase2025",
-      color: "from-cyan-600 to-blue-600",
-      icon: "🧠"
-    },
-    {
-      title: "🌌 Next-Gen Innovation Hub 2025",
-      description: "Discover, explore, and build with the most revolutionary technologies",
-      link: "/pages/NextGenInnovationHub2025",
-      color: "from-emerald-600 to-teal-600",
-      icon: "⚡"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % promotions.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [promotions.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-8">
@@ -51,7 +16,6 @@ const NewContentPromotion2025: React.FC = () => {
             Discover our latest breakthrough technologies and innovative solutions that are reshaping the future
           </p>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
@@ -101,7 +65,6 @@ const NewContentPromotion2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {promotions.map((_, index) => (
@@ -115,7 +78,6 @@ const NewContentPromotion2025: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Links */}
         <div className="mt-8 grid md:grid-cols-3 gap-4">
           {promotions.map((promo, index) => (
@@ -131,6 +93,7 @@ const NewContentPromotion2025: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default NewContentPromotion2025;

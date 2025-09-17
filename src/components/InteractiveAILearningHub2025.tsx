@@ -207,7 +207,7 @@ const InteractiveAILearningHub2025 = () => {
     <div className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -225,10 +225,10 @@ const InteractiveAILearningHub2025 = () => {
             Learn AI from industry experts with hands-on projectsreal-world case studies
             and interactive content designed for all skill levels.
           </p>
-        </divdiv>
+        </div>
 
         {/* Search and Filters */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mb-12"
         >
@@ -262,10 +262,10 @@ const InteractiveAILearningHub2025 = () => {
               ))}
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Category Filter */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -286,16 +286,16 @@ const InteractiveAILearningHub2025 = () => {
               </span>
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Courses Grid */}
-        <divdiv
+        <div
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div>
             {filteredCourses.map((course) => (
-              <divdiv
+              <div
                 key={course.id}
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
@@ -425,13 +425,13 @@ const InteractiveAILearningHub2025 = () => {
                     </div>
                   )}
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Learning Paths Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="mt-20"
         >
@@ -504,10 +504,10 @@ const InteractiveAILearningHub2025 = () => {
               </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-20"
         >
@@ -529,7 +529,7 @@ const InteractiveAILearningHub2025 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

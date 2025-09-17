@@ -24,7 +24,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {
     const dismissed = localStorage.getItem('ai-innovation-banner-dismissed');
     if (!dismissed) {
       setIsVisible(true);
-    }
+
   }[]);
 
   const handleDismiss = () => {
@@ -36,7 +36,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {
 
   return (
     <div>
-      <divdiv
+      <div
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-400/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,9 +115,9 @@ const AIInnovationShowcase2025PromotionBanner = () => {
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <divdiv
-              x: [0100],
-              opacity: [0.30.60.3],
+          <div
+
+
             }}
               duration: 4,
               repeat: Infinity,
@@ -125,9 +125,9 @@ const AIInnovationShowcase2025PromotionBanner = () => {
             }}
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"
           />
-          <divdiv
-              x: [0-100],
-              opacity: [0.20.50.2],
+          <div
+
+
             }}
               duration: 6,
               repeat: Infinity,
@@ -137,7 +137,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {
             className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
           />
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

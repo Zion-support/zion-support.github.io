@@ -1,5 +1,7 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
+};
+
 
 export default function AIAutonomousResearchAssistant() {
 	return (
@@ -23,4 +25,3 @@ export default function AIAutonomousResearchAssistant() {
 			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	);
-}

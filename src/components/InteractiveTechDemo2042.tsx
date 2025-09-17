@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react';
-
-const InteractiveTechDemo2042: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -79,10 +76,6 @@ const InteractiveTechDemo2042: React.FC = () => {
   const startDemo = () => {
     setIsRunning(true);
     setProgress(0);
-  };
-
-  const stopDemo = () => {
-    setIsRunning(false);
     setProgress(0);
   };
 
@@ -124,11 +117,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                 }`}
               >
                 {demo.icon} {demo.title.split(' ')[0]}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Active Demo Display */}
         <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 mb-8">
           <div className="grid md:grid-cols-2 gap-8">
@@ -146,10 +134,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                   <div key={index} className="flex items-center text-sm">
                     <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
                     {feature}
-                  </div>
-                ))}
-              </div>
-
               <div className="flex space-x-4">
                 <button
                   onClick={startDemo}
@@ -201,10 +185,6 @@ const InteractiveTechDemo2042: React.FC = () => {
                   </div>
                 </div>
               )}
-            </div>
-          </div>
-        </div>
-
         {/* Navigation Controls */}
         <div className="flex justify-center space-x-4">
           <button
@@ -238,10 +218,3 @@ const InteractiveTechDemo2042: React.FC = () => {
               {demo.icon} {demo.title.split(' ')[0]}
             </button>
           ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default InteractiveTechDemo2042;

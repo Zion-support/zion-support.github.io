@@ -1,83 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react';
 const EnhancedContentShowcase2028: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % 3);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const showcaseItems = [
-    {
-      id: 1,
-      title: "🌟 Ultimate Tech Breakthrough 2028",
-      subtitle: "The Most Revolutionary Technologies",
-      description: "Experience conscious AI, quantum consciousness, and interdimensional computing that will reshape our world",
-      icon: "🌟",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      link: "/pages/UltimateTechBreakthrough2028",
-      features: [
-        "Conscious AI Systems",
-        "Quantum Consciousness", 
-        "Interdimensional Computing",
-        "Neural Reality Engine",
-        "Synthetic Intelligence",
-        "Cosmic AI Consciousness"
-      ],
-      stats: { breakthrough: "∞", innovation: "100%", impact: "Revolutionary" }
-    },
-    {
-      id: 2,
-      title: "⚡ Revolutionary Tech Showcase 2028",
-      subtitle: "Interactive Technology Experience",
-      description: "Explore cutting-edge technologies through interactive demonstrations and real-time processing",
-      icon: "⚡",
-      gradient: "from-indigo-600 via-purple-600 to-pink-600",
-      link: "/pages/RevolutionaryTechShowcase2028",
-      features: [
-        "Interactive Demos",
-        "Real-time Processing",
-        "Multi-dimensional Tech",
-        "Conscious AI Simulation",
-        "Quantum Processing Demo",
-        "Neural Interface Experience"
-      ],
-      stats: { interactivity: "∞", speed: "Real-time", engagement: "100%" }
-    },
-    {
-      id: 3,
-      title: "🧠 Next-Gen Innovation Hub 2028",
-      subtitle: "Discover Revolutionary Technologies",
-      description: "Explore 50+ active innovations with 99.9% success rate in our comprehensive technology hub",
-      icon: "🧠",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      link: "/pages/NextGenInnovationHub2028",
-      features: [
-        "50+ Active Innovations",
-        "99.9% Success Rate",
-        "Infinite Possibilities",
-        "100% Innovation",
-        "Community Driven",
-        "Future Shaping"
-      ],
-      stats: { innovations: "50+", success: "99.9%", possibilities: "∞" }
-    }
-  ];
-
   return (
     <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -91,7 +20,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
             Discover the most advanced technology content featuring conscious AI, quantum computing, and interdimensional technology that will define the future
           </p>
         </div>
-
         {/* Main Showcase Carousel */}
         <div className="relative mb-16">
           <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/20">
@@ -117,7 +45,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
                           <p className="text-2xl mb-6 opacity-90">{item.subtitle}</p>
                           <p className="text-lg mb-8 opacity-75">{item.description}</p>
                         </div>
-                        
                         {/* Features Grid */}
                         <div className="grid grid-cols-2 gap-4">
                           {item.features.map((feature, featureIndex) => (
@@ -127,7 +54,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         {/* Stats */}
                         <div className="grid grid-cols-3 gap-6">
                           {Object.entries(item.stats).map(([key, value], statIndex) => (
@@ -137,7 +63,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         <Link
                           to={item.link}
                           className="inline-block bg-white text-gray-900 px-12 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105"
@@ -145,7 +70,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
                           Explore {item.title.split(' ')[0]} →
                         </Link>
                       </div>
-
                       {/* Visual Element */}
                       <div className="flex justify-center items-center">
                         <div className="relative">
@@ -161,7 +85,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Navigation Arrows */}
             <button
               onClick={() => setActiveIndex((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length)}
@@ -180,7 +103,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Dots Navigation */}
           <div className="flex justify-center space-x-3 mt-8">
             {showcaseItems.map((_, index) => (
@@ -194,7 +116,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mb-16">
           <h3 className="text-4xl font-bold text-center mb-12">🌟 Quick Access to All Revolutionary Content</h3>
@@ -220,7 +141,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-16">
           <h3 className="text-5xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -244,7 +164,6 @@ const EnhancedContentShowcase2028: React.FC = () => {
           </div>
         </div>
       </div>
-
       <style jsx>{`
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
@@ -256,6 +175,8 @@ const EnhancedContentShowcase2028: React.FC = () => {
       `}</style>
     </div>
   );
+
 };
 
 export default EnhancedContentShowcase2028;
+</p></p>

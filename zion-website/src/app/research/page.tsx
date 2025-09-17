@@ -1,31 +1,17 @@
-import React from 'react'
 
-export default function ResearchPage() {
-	return (
-		<div className="bg-black min-h-screen">
-			<div className="relative isolate px-6 pt-14 lg:px-8">
-				<div className="mx-auto max-w-2xl py-24 sm:py-36 lg:py-40">
-					<h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-						Research &<span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent"> Innovation</span>
-					</h1>
-					<p className="mt-6 text-lg leading-8 text-gray-300">Explore our latest research focus areas, publications, and collaborations.</p>
-				</div>
-			</div>
-			<div className="mx-auto max-w-7xl px-6 pb-16">
-				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-					<a href="/updates" className="rounded-2xl bg-white/5 p-6 text-white hover:bg-white/10 transition-colors duration-200">
-						<div className="text-sm text-blue-300">New</div>
-						<div className="mt-1 text-lg font-semibold">Recent research updates</div>
-						<div className="mt-1 text-gray-300 text-sm">Guides, releases, and reports from our lab.</div>
-					</a>
-					<a href="/reports" className="rounded-2xl bg-white/5 p-6 text-white hover:bg-white/10 transition-colors duration-200">
-						<div className="text-sm text-blue-300">Reports</div>
-						<div className="mt-1 text-lg font-semibold">AI Lab Reports</div>
-						<div className="mt-1 text-gray-300 text-sm">Benchmarks, architectures, and checklists.</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	)
-}
+const page: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
+export default page;
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

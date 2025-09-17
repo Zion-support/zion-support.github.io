@@ -1,6 +1,8 @@
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
+};
+
 
 export default function AITalentMatchingPage() {
     {
@@ -14,7 +16,6 @@ export default function AITalentMatchingPage() {
       icon: <TrendingUp className="h-8 w-8" />,
     },
   ];
-
   const testimonials = [
     {
       name: "Emily Stone",
@@ -23,7 +24,6 @@ export default function AITalentMatchingPage() {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
-
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -36,4 +36,3 @@ export default function AITalentMatchingPage() {
       ctaLink="/request-quote"
     />
   );
-}

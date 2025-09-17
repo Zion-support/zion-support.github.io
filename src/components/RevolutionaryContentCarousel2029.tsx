@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const RevolutionaryContentCarousel2029: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
   const slides = [
     {
       id: 1,
@@ -45,26 +43,21 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
       gradient: "from-indigo-600 to-purple-600"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16 mb-12 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 backdrop-blur-sm"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -77,7 +70,6 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
             Discover groundbreaking innovations that will reshape our world in 2029
           </p>
         </div>
-
         <div className="relative max-w-6xl mx-auto">
           <div className="overflow-hidden rounded-2xl">
             <div 
@@ -101,7 +93,6 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
@@ -111,7 +102,6 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
@@ -120,7 +110,6 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
@@ -134,7 +123,6 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Stats Section */}
         <div className="mt-16 grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div className="text-center">
@@ -157,6 +145,8 @@ const RevolutionaryContentCarousel2029: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryContentCarousel2029;
+</p></p>

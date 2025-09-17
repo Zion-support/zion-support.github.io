@@ -2180,34 +2180,14 @@
     "h1": "Agent Observability Blueprint (2026)"
   },
   {
-    "route": "/blog/ai-2026-agent-observability-scorecards",
-    "title": "Agent Observability Scorecards (2026) | Zion Tech Group",
-    "h1": "Agent Observability Scorecards (2026)"
-  },
-  {
     "route": "/blog/ai-2026-agent-platform-slos-best-practices",
     "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
     "h1": "AI 2026: Agent Platform SLOs — Best Practices"
   },
   {
-    "route": "/blog/ai-2026-agent-safety-playbook",
-    "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
-    "h1": "AI 2026: Agent Safety Playbook"
-  },
-  {
-    "route": "/blog/ai-2026-agent-slo-blueprint",
-    "title": "Agent Platform SLO Blueprint (2026) | Zion Tech Group",
-    "h1": "Agent Platform SLO Blueprint (2026)"
-  },
-  {
     "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
     "title": "",
     "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
-  },
-  {
-    "route": "/blog/ai-2026-cost-aware-routing-in-practice",
-    "title": "Cost-Aware Routing in Practice (2026) | Zion Tech Group",
-    "h1": "Cost-Aware Routing in Practice (2026)"
   },
   {
     "route": "/blog/ai-2026-cost-optimization-blueprint",
@@ -2230,11 +2210,6 @@
     "h1": "Foundation Model Quality Engineering (2026)"
   },
   {
-    "route": "/blog/ai-2026-governed-tool-use-case-studies",
-    "title": "Governed Tool Use — Case Studies (2026) | Zion Tech Group",
-    "h1": "Governed Tool Use — Case Studies (2026)"
-  },
-  {
     "route": "/blog/ai-2026-operational-evals-blueprint",
     "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Operational Evals — Blueprint"
@@ -2248,16 +2223,6 @@
     "route": "/blog/ai-2026-operationalizing-agentic-workflows",
     "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
     "h1": "Operationalizing Agentic Workflows in 2026"
-  },
-  {
-    "route": "/blog/ai-2026-production-evidence-hub-blueprint",
-    "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
-    "h1": "AI 2026: Production Evidence Hub Blueprint"
-  },
-  {
-    "route": "/blog/ai-2026-real-time-evals-inference-guardrails",
-    "title": "AI 2026: Real-Time Evals & Inference Guardrails | Zion Tech Group",
-    "h1": "AI 2026: Real-Time Evals & Inference Guardrails"
   },
   {
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
@@ -2275,24 +2240,9 @@
     "h1": "AI 2026: Safety Evals Operational Checklist"
   },
   {
-    "route": "/blog/ai-2026-secure-multi-agent-ops-blueprint",
-    "title": "AI 2026: Secure Multi-Agent Operations Blueprint | Zion Tech Group",
-    "h1": "AI 2026: Secure Multi-Agent Operations Blueprint"
-  },
-  {
     "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
     "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
-  },
-  {
-    "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
-    "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
-    "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
-  },
-  {
-    "route": "/blog/ai-2026-trustworthy-model-routing-starter",
-    "title": "AI 2026: Trustworthy Model Routing — Starter Kit | Zion Tech Group",
-    "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
   },
   {
     "route": "/blog/ai-automation-trends-2025",

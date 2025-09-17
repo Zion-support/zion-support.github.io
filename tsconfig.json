@@ -37,8 +37,6 @@
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
-    "coverage",
-    "zion-website",
-    "zion-os"
+    "coverage"
   ]
 }

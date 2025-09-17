@@ -51,7 +51,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/20 via-transparent to-purple-600/20"></div>
       </div>
 
@@ -59,16 +59,16 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <divdiv
+            <div
               className="space-y-8"
             >
               {/* Badge */}
-              <divdiv
+              <div
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
                 <Brain className="w-4 h-4" />
                 NEW: COMPREHENSIVE AI SOLUTIONS 2026
-              </divdiv>
+              </div>
 
               {/* Main Heading */}
               <divh2
@@ -91,7 +91,7 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
               </divp>
 
               {/* Solutions Grid */}
-              <divdiv
+              <div
                 className="grid grid-cols-2 gap-4"
               >
                 {solutions.map((solutionindex) => (
@@ -102,10 +102,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                     <span className="text-white font-semibold">{solution.title}</span>
                   </div>
                 ))}
-              </divdiv>
+              </div>
 
               {/* Benefits */}
-              <divdiv
+              <div
                 className="space-y-3"
               >
                 {benefits.map((benefitindex) => (
@@ -114,10 +114,10 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                     <span className="text-gray-300">{benefit.text}</span>
                   </div>
                 ))}
-              </divdiv>
+              </div>
 
               {/* CTA Buttons */}
-              <divdiv
+              <div
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2">
@@ -131,28 +131,28 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                   View Case Studies
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
 
             {/* Right Content - Stats & Visual */}
-            <divdiv
+            <div
               className="space-y-8"
             >
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:border-blue-400/50 transition-all duration-300"
                   >
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                     <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
               {/* Visual Element */}
-              <divdiv
+              <div
                 className="relative"
               >
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl p-8 border border-blue-400/30">
@@ -181,8 +181,8 @@ const ComprehensiveAISolutions2026PromotionBanner = () => {
                 <div className="absolute top-1/2 -right-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
                   <Rocket className="w-2 h-2 text-white" />
                 </div>
-              </divdiv>
-            </divdiv>
+              </div>
+            </div>
           </div>
         </div>
       </div>

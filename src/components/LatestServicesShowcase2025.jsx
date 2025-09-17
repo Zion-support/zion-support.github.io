@@ -14,11 +14,9 @@ import {
   Users,
   Target
 } from 'lucide-react';
-
 const LatestServicesShowcase2025 = () => {
   const [activeService, setActiveService] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-
   const latestServices = [
     {
       id: 1,
@@ -111,17 +109,13 @@ const LatestServicesShowcase2025 = () => {
       deliveryTime: "10-14 weeks"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveService((prev) => (prev + 1) % latestServices.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
-
   const currentService = latestServices[activeService];
-
   return (
     <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
@@ -139,7 +133,6 @@ const LatestServicesShowcase2025 = () => {
             </span>
             <Sparkles className="w-6 h-6 text-yellow-500" />
           </motion.div>
-          
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Revolutionary AI Solutions
           </h2>
@@ -147,7 +140,6 @@ const LatestServicesShowcase2025 = () => {
             Discover our cutting-edge AI services that are transforming industries and reshaping the future of business
           </p>
         </div>
-
         {/* Main Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Service Cards Grid */}
@@ -188,7 +180,6 @@ const LatestServicesShowcase2025 = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className={`text-xs ${
                   activeService === index ? 'text-white opacity-90' : 'text-gray-500'
                 }`}>
@@ -197,7 +188,6 @@ const LatestServicesShowcase2025 = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Active Service Details */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -238,12 +228,10 @@ const LatestServicesShowcase2025 = () => {
                     <div className="text-sm opacity-75">{currentService.deliveryTime}</div>
                   </div>
                 </div>
-
                 {/* Description */}
                 <p className="text-lg mb-6 opacity-90">
                   {currentService.description}
                 </p>
-
                 {/* Features & Benefits */}
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
@@ -275,7 +263,6 @@ const LatestServicesShowcase2025 = () => {
                     </ul>
                   </div>
                 </div>
-
                 {/* CTA Buttons */}
                 <div className="flex space-x-4">
                   <motion.button
@@ -294,7 +281,6 @@ const LatestServicesShowcase2025 = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-
         {/* Bottom Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -317,6 +303,7 @@ const LatestServicesShowcase2025 = () => {
       </div>
     </div>
   );
+
 };
 
 export default LatestServicesShowcase2025;

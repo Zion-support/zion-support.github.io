@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 interface ContentItem {
   id: string;
   title: string;
@@ -8,14 +7,11 @@ interface ContentItem {
   lastModified: string;
   views: number;
   category: string;
-}
-
 const ContentManagementSystem: React.FC = () => {
   const [contentItems, setContentItems] = useState<ContentItem[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Simulate content data
     const mockContent: ContentItem[] = [
@@ -25,26 +21,21 @@ const ContentManagementSystem: React.FC = () => {
       { id: '3', title: 'Quantum Reality Engine 2035', type: 'page', status: 'published', lastModified: '2024-01-13', views: 11200, category: 'quantum-computing' },
       { id: '4', title: 'Neural Interface Revolution 2025', type: 'page', status: 'published', lastModified: '2024-01-12', views: 9800, category: 'neural-interfaces' },
       { id: '5', title: 'Consciousness Computing Revolution 2026', type: 'page', status: 'published', lastModified: '2024-01-11', views: 8750, category: 'consciousness-computing' },
-      
       // AI Services
       { id: '6', title: 'AI Autonomous Business Manager', type: 'service', status: 'published', lastModified: '2024-01-10', views: 15600, category: 'ai-services' },
       { id: '7', title: 'AI Healthcare Platform', type: 'service', status: 'published', lastModified: '2024-01-09', views: 13200, category: 'ai-services' },
       { id: '8', title: 'AI Cybersecurity Solutions', type: 'service', status: 'published', lastModified: '2024-01-08', views: 11800, category: 'ai-services' },
-      
       // Components
       { id: '9', title: 'Interactive Tech Showcase 2025', type: 'component', status: 'published', lastModified: '2024-01-07', views: 8900, category: 'interactive-components' },
       { id: '10', title: 'Revolutionary Content Banner 2025', type: 'component', status: 'published', lastModified: '2024-01-06', views: 7200, category: 'content-banners' },
       { id: '11', title: 'Ultimate Content Carousel 2030', type: 'component', status: 'published', lastModified: '2024-01-05', views: 6800, category: 'content-carousels' },
-      
       // Blog Posts
       { id: '12', title: 'Revolutionary Tech Blog 2027', type: 'blog', status: 'published', lastModified: '2024-01-04', views: 5600, category: 'tech-blogs' },
       { id: '13', title: 'Future AI Consciousness Predictions', type: 'blog', status: 'draft', lastModified: '2024-01-03', views: 0, category: 'tech-blogs' },
       { id: '14', title: 'Quantum Computing Breakthroughs 2035', type: 'blog', status: 'published', lastModified: '2024-01-02', views: 4200, category: 'tech-blogs' }
     ];
-
     setContentItems(mockContent);
   }, []);
-
   const categories = [
     { id: 'all', name: 'All Content', count: contentItems.length },
     { id: 'revolutionary-tech', name: 'Revolutionary Tech', count: contentItems.filter(item => item.category === 'revolutionary-tech').length },
@@ -58,13 +49,11 @@ const ContentManagementSystem: React.FC = () => {
     { id: 'content-carousels', name: 'Content Carousels', count: contentItems.filter(item => item.category === 'content-carousels').length },
     { id: 'tech-blogs', name: 'Tech Blogs', count: contentItems.filter(item => item.category === 'tech-blogs').length }
   ];
-
   const filteredContent = contentItems.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'published': return 'bg-green-100 text-green-800';
@@ -73,7 +62,6 @@ const ContentManagementSystem: React.FC = () => {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'page': return '📄';
@@ -83,12 +71,10 @@ const ContentManagementSystem: React.FC = () => {
       default: return '📄';
     }
   };
-
   const formatNumber = (num: number) => {
     if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
     return num.toString();
   };
-
   return (
     <div className="fixed top-4 right-4 z-50">
       <button
@@ -101,7 +87,6 @@ const ContentManagementSystem: React.FC = () => {
         <span>Content Manager</span>
         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
       </button>
-
       {isVisible && (
         <div className="absolute top-12 right-0 w-96 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 p-6 max-h-[80vh] overflow-y-auto">
           <div className="flex items-center justify-between mb-4">
@@ -115,7 +100,6 @@ const ContentManagementSystem: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Search */}
           <div className="mb-4">
             <input
@@ -126,7 +110,6 @@ const ContentManagementSystem: React.FC = () => {
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
-
           {/* Categories */}
           <div className="mb-4">
             <div className="flex flex-wrap gap-2">
@@ -145,7 +128,6 @@ const ContentManagementSystem: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Content List */}
           <div className="space-y-3">
             {filteredContent.map((item) => (
@@ -189,7 +171,6 @@ const ContentManagementSystem: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Stats */}
           <div className="mt-4 pt-4 border-t border-gray-200">
             <div className="grid grid-cols-2 gap-4 text-sm">
@@ -221,6 +202,8 @@ const ContentManagementSystem: React.FC = () => {
       )}
     </div>
   );
+
 };
 
 export default ContentManagementSystem;
+</p></p></p></p>

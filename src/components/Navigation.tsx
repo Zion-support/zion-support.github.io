@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 import { 
@@ -15,10 +14,8 @@ import {
   Linkedin, 
 import React, { useState } from "react";
 import Link from "next/link";
-
 import React, { useState } from './react';
 import Link from './next / link';
-
 import {
   Menu,
   X,
@@ -30,7 +27,6 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-
   Instagram,
   Github,
   ArrowRight,
@@ -40,32 +36,23 @@ import {
   Shield,
   Zap,
   Globe,
-
 ursor/integrate-build-improve-and-re-verify-8f7d
-
   BarChart3,
   Search,;
-
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-
   BarChart3,
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
   BarChart3
 } from 'lucide-react;
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-
-
 import React, { useState } from "react";
 import Link from "next/link";
 import {
 origin/automation-improvements-final
-
-
   Menu
   X
   ChevronDown
@@ -89,28 +76,21 @@ origin/automation-improvements-final
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-
 origin/main
+};
+
+
 export default function Navigation() {
-
-
-
-
-
-
-
-
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
 } from './lucide-react';
 import SearchModal from "./SearchModal";
-;
+
+
 export default /**
  * Navigation - Function description
  */
@@ -121,7 +101,6 @@ function Navigation() {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState (false);
   const [isResourcesOpen, setIsResourcesOpen] = useState (false);
   const [isSearchOpen, setIsSearchOpen] = useState (false);
-;
   const services = [;
     {
       name: "AI Services"
@@ -141,7 +120,6 @@ function Navigation() {
       description: "Custom SaaS Solutions",
       icon: Zap,
     },
-
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -161,8 +139,6 @@ function Navigation() {
       icon: Shield
     }
   ];
-
-;
   const solutions = [;
     {
       name: "Enterprise Solutions",
@@ -170,7 +146,6 @@ function Navigation() {
       description: "Large - scale business solutions",
       icon: Building,
     },
-
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -178,7 +153,6 @@ function Navigation() {
       icon: Zap
     }
     {
-
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -257,7 +231,6 @@ function Navigation() {
       href: "/tutorials",
       description: "Step - by - step guides",
     },
-
     {
       name: "Training"
       href: "/training"
@@ -270,8 +243,6 @@ function Navigation() {
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
-
-
   const services = [;
     {;
       name: "AI Services",;
@@ -421,12 +392,8 @@ function Navigation() {
     { name: "Contact", href: "/contact" },;
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
-
   ];
-
-
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-
   return (
     <>;
       {/* Top Bar */}
@@ -443,7 +410,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
-
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -464,7 +430,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
                   <Instagram className="w-4 h-4" />;
-;
   const quick_links = [;
     { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/team" },
@@ -473,7 +438,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
     { name: "Support", href: "/support" },
     { name: "Status", href: "/status" },
   ];
-;
   return (
     <>;
       {/* Top Bar */}
@@ -511,14 +475,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
-
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-
             <a href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -542,17 +504,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - gray - 500">;
-
                   Technology Solutions;
                 </div>;
               </div>;
             </a>;
-
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </a>;
-
-
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -565,7 +523,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isServicesOpen && (;
-                    <motion&& divdiv
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
@@ -593,7 +551,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isServicesOpen && (
-                    <divdiv;
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsServicesOpen (true)}
                       onMouseLeave={() => setIsServicesOpen (false)}
@@ -604,11 +562,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           return (
                             <a;
                               key={index}
-
                 </div>;
               </div>;
-
-
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -621,7 +576,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isSolutionsOpen && (;
-                    <motion&& divdiv
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsSolutionsOpen(true)}
                       onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -653,7 +608,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </a>;
                       </div>;
-                    </divdiv>)}
+                    </div>)}
                 </div>;
               </div>;
               {/* Solutions Dropdown */}
@@ -668,7 +623,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isSolutionsOpen && (
-                    <divdiv;
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 96 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsSolutionsOpen (true)}
                       onMouseLeave={() => setIsSolutionsOpen (false)}
@@ -679,11 +634,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           return (
                             <a;
                               key={index}
-
                 </div>;
               </div>;
-
-
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -696,7 +648,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isIndustriesOpen && (;
-                    <motion&& divdiv
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsIndustriesOpen(true)}
                       onMouseLeave={() => setIsIndustriesOpen(false)}
@@ -716,13 +668,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           </a>;
                         ))}
                       </div>;
-                    </motion && divdiv>;
+                    </motion && div>;
                   )}
-
                 </div>;
               </div>;
-
-
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -735,7 +684,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </button>;
                 <div>;
                   {isResourcesOpen && (;
-                    <motion&& divdiv
+                    <motion&& div
                       className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4"
                       onMouseEnter={() => setIsResourcesOpen(true)}
                       onMouseLeave={() => setIsResourcesOpen(false)}
@@ -755,23 +704,15 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                           </a>;
                         ))}
                       </div>;
-                    </motion && divdiv>;
+                    </motion && div>;
                   )}
-
-                </div>
-              </div>
               <a
                 href="/pricing"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Pricing
-              </a>
-            </div>
                 </div>;
               </div>;
-
-
-
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -784,7 +725,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <a
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <a
@@ -793,17 +733,13 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-
               >
                 Get Started
-              </a>
               <a
                 href="tel:+13024640950"
                 className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-2 rounded-lg font-medium transition-colors"
               >
                 Call Now
-              </a>
-            </div>
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">;
                 Get Started;
               </a>;
@@ -813,7 +749,6 @@ origin/automation-improvements-final
                 Call Now;
               </a>;
             </div>;
-
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"
@@ -824,27 +759,21 @@ origin/automation-improvements-final
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
-
             </button>;
           </div>;
-
-
           {/* Mobile Menu */}
           <div>;
             {isMenuOpen && (;
-              <motion&& divdiv
+              <motion&& div
                 className="lg:hidden border-t border-gray-200">;
                 <div className="py-4 space-y-2">;
                   <a
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-
                   >;
                     Home;
                   </a>;
-
-
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -861,11 +790,8 @@ origin/automation-improvements-final
                           {service && service.name}
                         </a>;
                       ))}
-
                     </div>;
                   </div>;
-
-
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -882,11 +808,8 @@ origin/automation-improvements-final
                           {solution && solution.name}
                         </a>;
                       ))}
-
                     </div>;
                   </div>;
-
-
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -903,11 +826,8 @@ origin/automation-improvements-final
                           {industry && industry.name}
                         </a>;
                       ))}
-
                     </div>;
                   </div>;
-
-
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -924,21 +844,16 @@ origin/automation-improvements-final
                           {resource && resource.name}
                         </a>;
                       ))}
-
                     </div>;
                   </div>;
-
-
                   <a
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-
                   >;
                     Pricing;
                   </a>;
                   <div className="px-4 py-2 space-y-2">;
-
                     <a
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -974,7 +889,7 @@ origin/automation-improvements-final
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;
                         </a>;
                       </div>;
-                    </divdiv>)}
+                    </div>)}
                 </div>;
               </div>;
               {/* Industries Dropdown */}
@@ -989,7 +904,7 @@ origin/automation-improvements-final
                 </button>;
                 <div>;
                   {isIndustriesOpen && (
-                    <divdiv;
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsIndustriesOpen (true)}
                       onMouseLeave={() => setIsIndustriesOpen (false)}
@@ -1009,7 +924,7 @@ origin/automation-improvements-final
                             </div>;
                           </a>))}
                       </div>;
-                    </divdiv>)}
+                    </div>)}
                 </div>;
               </div>;
               {/* Resources Dropdown */}
@@ -1024,7 +939,7 @@ origin/automation-improvements-final
                 </button>;
                 <div>;
                   {isResourcesOpen && (
-                    <divdiv;
+                    <div;
                       className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4";
                       onMouseEnter={() => setIsResourcesOpen (true)}
                       onMouseLeave={() => setIsResourcesOpen (false)}
@@ -1044,7 +959,7 @@ origin/automation-improvements-final
                             </div>;
                           </a>))}
                       </div>;
-                    </divdiv>)}
+                    </div>)}
                 </div>;
               </div>;
               <a;
@@ -1089,7 +1004,7 @@ origin/automation-improvements-final
           {/* Mobile Menu */}
           <div>;
             {isMenuOpen && (
-              <divdiv;
+              <div;
                 className="lg:hidden border - t border - gray - 200";
               >;
                 <div className="py - 4 space - y-2">;
@@ -1192,12 +1107,9 @@ origin/automation-improvements-final
                     </a>;
                   </div>;
                 </div>;
-
           </div>;
         </div>;
       </nav>;
-
-
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}
@@ -1205,7 +1117,7 @@ origin/automation-improvements-final
       />;
     </>;
   );
-              </divdiv>)}
+              </div>)}
           </div>;
         </div>;
       </nav>;
@@ -1215,4 +1127,3 @@ origin/automation-improvements-final
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
-}

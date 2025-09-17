@@ -1,24 +1,19 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-const AI2025UltimateContentRevolution50000ROIBanner = () => {
+const AI2025UltimateContentRevolution50000ROIBanner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       {/* Animated Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
       <div className="absolute top-32 right-20 w-16 h-16 bg-blue-500 rounded-full opacity-30 animate-bounce"></div>
       <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-500 rounded-full opacity-25 animate-ping"></div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 NEW BREAKTHROUGH: 50,000% ROI ACHIEVED
           </div>
-          
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             AI 2025 Ultimate Content
@@ -26,13 +21,11 @@ const AI2025UltimateContentRevolution50000ROIBanner = () => {
               Revolution
             </span>
           </h1>
-          
           {/* Subheadline */}
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
             The breakthrough 'that', 's delivering <span className="font-bold text-yellow-400">50,000% ROI</span> and transforming 
             businesses across every industry with revolutionary content automation and intelligence.
           </p>
-          
           {/* Key Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
@@ -52,7 +45,6 @@ const AI2025UltimateContentRevolution50000ROIBanner = () => {
               <div className="text-sm opacity-90">Lead Generation</div>
             </div>
           </div>
-          
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
@@ -74,7 +66,6 @@ const AI2025UltimateContentRevolution50000ROIBanner = () => {
               Get Your Demo
             </a>
           </div>
-          
           {/* Trust Indicators */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm opacity-80">
             <div className="flex items-center gap-2">
@@ -92,7 +83,6 @@ const AI2025UltimateContentRevolution50000ROIBanner = () => {
           </div>
         </div>
       </div>
-      
       {/* Bottom Wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg className="w-full h-20 text-white" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -103,6 +93,8 @@ const AI2025UltimateContentRevolution50000ROIBanner = () => {
       </div>
     </section>
   );
+
 };
 
 export default AI2025UltimateContentRevolution50000ROIBanner;
+</p></p></p>

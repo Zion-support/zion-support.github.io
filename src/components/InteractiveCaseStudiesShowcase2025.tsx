@@ -181,7 +181,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -199,10 +199,10 @@ const InteractiveCaseStudiesShowcase2025 = () => {
             Discover how leading companies are achieving remarkable results with our AI solutions. 
             See the measurable impact on their business.
           </p>
-        </divdiv>
+        </div>
 
         {/* Industry Filter */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
@@ -225,12 +225,12 @@ const InteractiveCaseStudiesShowcase2025 = () => {
               </span>
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Case Study Details */}
-          <divdiv
+          <div
             key={currentStudy?.id}
             className="space-y-8"
           >
@@ -323,10 +323,10 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 {currentStudy?.teamSize} team members
               </div>
             </div>
-          </divdiv>
+          </div>
 
           {/* Visual Content */}
-          <divdiv
+          <div
             key={`visual-${currentStudy?.id}`}
             className="space-y-6"
           >
@@ -372,11 +372,11 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 </div>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Navigation */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="flex items-center justify-center mt-12 space-x-4"
         >
@@ -407,10 +407,10 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           >
             <ArrowRight className="w-5 h-5 text-gray-600" />
           </button>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
         >
@@ -432,7 +432,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

@@ -119,7 +119,7 @@ export default function AIToolsShowcase2025() {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -136,10 +136,10 @@ export default function AIToolsShowcase2025() {
             Discover cutting-edge AI tools that are revolutionizing how we workcreateand innovate. 
             From development to analyticsecurity to content creation.
           </p>
-        </divdiv>
+        </div>
 
         {/* Category Filter */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -155,15 +155,15 @@ export default function AIToolsShowcase2025() {
               {category}
             </button>
           ))}
-        </divdiv>
+        </div>
 
         {/* Tools Grid */}
-        <divdiv
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div>
             {filteredTools.map((toolindex) => (
-              <divdiv
+              <div
                 key={tool.id}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
                 onMouseEnter={() => setHoveredTool(tool.id)}
@@ -233,18 +233,18 @@ export default function AIToolsShowcase2025() {
                 </div>
 
                 {/* Hover Effect */}
-                <divdiv
+                <div
                   className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     opacity: hoveredTool === tool.id ? 1 : 0
                   }}
                 />
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* CTA Section */}
-        <divdiv
+        <div
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -264,7 +264,7 @@ export default function AIToolsShowcase2025() {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

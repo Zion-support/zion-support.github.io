@@ -1,86 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Star, Zap, Brain, Rocket, TrendingUp, Users, Award, Clock } from 'lucide-react';
-
+import React from 'react';
 const RevolutionaryAdvertisingBanner2026: React.FC = () => {
-  const [currentAd, setCurrentAd] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const advertisingContent = [
-    {
-      id: 1,
-      title: "🚀 AI Consciousness Platform - Limited Time!",
-      subtitle: "Create truly intelligent AI systems with self-awareness",
-      description: "Revolutionary AI consciousness technology that enables machines to develop genuine self-awareness and emotional intelligence.",
-      price: "$50,000",
-      originalPrice: "$62,500",
-      discount: "20% OFF",
-      urgency: "Only 5 spots left!",
-      features: ["Consciousness algorithms", "Emotional recognition", "Self-learning capabilities"],
-      cta: "Get Early Access",
-      link: "/pages/AIConsciousness2026",
-      color: "from-purple-600 to-pink-600",
-      icon: Brain
-    },
-    {
-      id: 2,
-      title: "⚛️ Quantum AI Processing - Breakthrough!",
-      subtitle: "1000x faster processing with quantum computing",
-      description: "Solve impossible problems in seconds with our revolutionary quantum AI processing engine.",
-      price: "$75,000",
-      originalPrice: "$88,000",
-      discount: "15% OFF",
-      urgency: "Early adopter special",
-      features: ["Quantum algorithms", "Superposition processing", "Entanglement computing"],
-      cta: "Start Quantum Journey",
-      link: "/pages/QuantumAI2026",
-      color: "from-cyan-600 to-blue-600",
-      icon: Zap
-    },
-    {
-      id: 3,
-      title: "🧠 Neural Interface AI - Revolutionary!",
-      subtitle: "Direct brain-computer communication",
-      description: "Control computers with your thoughts and enable direct neural communication with AI systems.",
-      price: "$100,000",
-      originalPrice: "$125,000",
-      discount: "25% OFF",
-      urgency: "Revolutionary technology",
-      features: ["Neural signal processing", "Thought recognition", "AI response generation"],
-      cta: "Experience the Future",
-      link: "/pages/NeuralInterface2026",
-      color: "from-green-600 to-teal-600",
-      icon: Rocket
-    },
-    {
-      id: 4,
-      title: "🤖 Autonomous AI Manager - Transform!",
-      subtitle: "Fully autonomous business management",
-      description: "Let AI manage your entire business operations with complete autonomy and intelligence.",
-      price: "$60,000",
-      originalPrice: "$85,000",
-      discount: "30% OFF",
-      urgency: "Transform your business",
-      features: ["Strategic planning", "Resource allocation", "Performance monitoring"],
-      cta: "Automate Everything",
-      link: "/pages/AutonomousAI2026",
-      color: "from-orange-600 to-red-600",
-      icon: TrendingUp
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentAd((prev) => (prev + 1) % advertisingContent.length);
-    }, 8000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const currentContent = advertisingContent[currentAd];
-  const IconComponent = currentContent.icon;
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -94,9 +13,8 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
           <div className={`bg-gradient-to-r ${currentContent.color} text-white py-8 px-4 relative`}>
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+                <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
             </div>
-
             <div className="container mx-auto relative z-10">
               <div className="flex flex-col lg:flex-row items-center justify-between">
                 {/* Content */}
@@ -123,7 +41,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
                       </div>
                       <p className="text-lg mb-2 text-white/90">{currentContent.subtitle}</p>
                       <p className="text-sm mb-4 text-white/80 max-w-2xl">{currentContent.description}</p>
-                      
                       {/* Features */}
                       <div className="flex flex-wrap gap-2 mb-4">
                         {currentContent.features.map((feature, index) => (
@@ -132,7 +49,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
                           </span>
                         ))}
                       </div>
-
                       {/* Price and Urgency */}
                       <div className="flex items-center space-x-4 mb-4">
                         <div className="flex items-center space-x-2">
@@ -146,7 +62,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
                     </div>
                   </motion.div>
                 </div>
-
                 {/* CTA Button */}
                 <div className="flex-shrink-0">
                   <Link
@@ -159,7 +74,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Close Button */}
             <button
               onClick={() => setIsVisible(false)}
@@ -170,7 +84,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {/* Progress Indicators */}
           <div className="bg-gray-100 py-2">
             <div className="container mx-auto px-4">
@@ -191,6 +104,7 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {
       )}
     </AnimatePresence>
   );
+
 };
 
 export default RevolutionaryAdvertisingBanner2026;

@@ -136,7 +136,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
@@ -145,12 +145,12 @@ const RevolutionaryAIServices2025: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the future of artificial intelligence with our breakthrough services that transcend traditional boundaries and achieve unprecedented capabilities.
           </p>
-        </divdiv>
+        </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((serviceindex) => (
-            <divdiv
+            <div
               key={service.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105"
             >
@@ -211,12 +211,12 @@ const RevolutionaryAIServices2025: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </a>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <divdiv
+        <div
           className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-600/10 backdrop-blur-lg rounded-2xl p-12 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -238,7 +238,7 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </button>
             </a>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );

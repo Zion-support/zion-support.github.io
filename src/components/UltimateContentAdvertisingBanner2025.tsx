@@ -88,17 +88,17 @@ const UltimateContentAdvertisingBanner2025 = () => {
       <div className="absolute bottom-20 left-32 w-12 h-12 bg-pink-500/30 rounded-full animate-bounce delay-2000" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <divdiv
+          <div
             key={currentSlide}
             className="text-center"
           >
             {/* Main Content */}
             <div className="mb-8">
-              <divdiv
+              <div
                 className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full mb-6"
               >
                 {currentContent.icon}
-              </divdiv>
+              </div>
               
               <divh2
                 className="text-4xl md:text-6xl font-bold text-white mb-4"
@@ -120,7 +120,7 @@ const UltimateContentAdvertisingBanner2025 = () => {
             </div>
 
             {/* Stats and CTA */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8"
             >
               <div className="flex items-center gap-2 text-yellow-400">
@@ -142,10 +142,10 @@ const UltimateContentAdvertisingBanner2025 = () => {
                   Watch Demo
                 </button>
               </div>
-            </divdiv>
+            </div>
 
             {/* Additional CTAs */}
-            <divdiv
+            <div
               className="flex flex-wrap justify-center gap-4"
             >
               <a
@@ -171,8 +171,8 @@ const UltimateContentAdvertisingBanner2025 = () => {
                 <Users className="w-4 h-4" />
                 Join Webinar
               </a>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
 
         {/* Slide Indicators */}

@@ -90,7 +90,7 @@ export default function MarketPricing2026() {
         {/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <divdiv
+            <div
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -125,7 +125,7 @@ export default function MarketPricing2026() {
                   <div className="text-gray-400 text-sm">Total Customers</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
 
@@ -186,7 +186,7 @@ export default function MarketPricing2026() {
         {/* Market Analysis Section */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -196,11 +196,11 @@ export default function MarketPricing2026() {
                 Our services are strategically positioned to provide maximum value while maintaining competitive pricing 
                 in the rapidly evolving technology landscape
               </p>
-            </divdiv>
+            </div>
 
             {/* Market Insights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <divdiv
+              <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
@@ -215,9 +215,9 @@ export default function MarketPricing2026() {
                   <TrendingUp className="w-4 h-4 mr-2" />
                   <span>20-40% cost savings</span>
                 </div>
-              </divdiv>
+              </div>
 
-              <divdiv
+              <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
@@ -232,9 +232,9 @@ export default function MarketPricing2026() {
                   <Award className="w-4 h-4 mr-2" />
                   <span>1000% ROI guarantee</span>
                 </div>
-              </divdiv>
+              </div>
 
-              <divdiv
+              <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
@@ -249,7 +249,7 @@ export default function MarketPricing2026() {
                   <Zap className="w-4 h-4 mr-2" />
                   <span>Future-proof solutions</span>
                 </div>
-              </divdiv>
+              </div>
             </div>
           </div>
         </section>
@@ -257,7 +257,7 @@ export default function MarketPricing2026() {
         {/* Services Pricing Grid */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -266,11 +266,11 @@ export default function MarketPricing2026() {
               <p className="text-xl text-gray-300">
                 {filteredServices.length} services found matching your criteria
               </p>
-            </divdiv>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
-                <divdiv
+                <div
                   key={service.id}
                   className="group"
                 >
@@ -368,19 +368,19 @@ export default function MarketPricing2026() {
                       View Details
                     </a>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* No Results */}
             {filteredServices.length === 0 && (
-              <divdiv
+              <div
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your category or price range filters</p>
-              </divdiv>
+              </div>
             )}
           </div>
         </section>
@@ -388,7 +388,7 @@ export default function MarketPricing2026() {
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
@@ -428,7 +428,7 @@ export default function MarketPricing2026() {
                   View All Services
                 </a>
               </div>
-            </divdiv>
+            </div>
           </div>
         </section>
       </div>

@@ -1,14 +1,22 @@
-import React from 'react',
-import SEO from '../components/SEO',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AISustainabilityPlatformPage() {
+const ai-sustainability-platform: React.FC = () => {
   return (
-    <div className="min-h-[60vh] px-6 py-24">
-      <SEO title="AI Sustainability Platform | Zion Tech Group" description="Sustainability analytics and optimization" />
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-4">AI Sustainability Platform</h1>
-        <p className="text-gray-300">Measure and optimize sustainability metrics with AI. Details coming soon.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-sustainability-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-sustainability-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-sustainability-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
-  ),
-}
+  );
+};
+
+export default ai-sustainability-platform;

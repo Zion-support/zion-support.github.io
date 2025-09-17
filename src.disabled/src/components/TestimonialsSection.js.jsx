@@ -1,3 +1,12 @@
-module.exports = const TestimonialsSection = () => { const testimonials = [ { id: "1",name: "Sarah Johnson",comp: "TechCorp Solutions",role: "CTO",content: "Zion Tech Group transformed our AI infrastructure completely.Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.",rating: "5",avatar: "https:}}'"'"
-export const TestimonialsSection = () => { const testimonials = [ { \"id\": \'1\',\"name\": \"Sarah Johnson\",\"comp\": \"TechCorp Solutions\",\"role\": \"CTO\",\"content\": \"Zion Tech Group transformed our AI infrastructure completely.Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.\",\"rating\": \'5\',\"avatar\": \"https:}}
-module.exports = const TestimonialsSection = () => { const testimonials = [ { id: "1",name: "Sarah Johnson",comp: "TechCorp Solutions",role: "CTO",content: "Zion Tech Group transformed our AI infrastructure completely.Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.",rating: "5",avatar: "https:}}'"'"
+import React from 'react';
+
+const TestimonialsSection.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TestimonialsSection.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default TestimonialsSection.js;

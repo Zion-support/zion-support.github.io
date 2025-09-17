@@ -14,7 +14,6 @@ import {
   Globe,
   Cpu
 } from 'lucide-react';
-
 const ConsciousAIRevolution2026: React.FC = () => {
   const consciousnessFeatures = [
     {
@@ -42,7 +41,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
       capabilities: ["Original ideation", "Creative problem-solving", "Artistic expression", "Innovation generation"]
     }
   ];
-
   const consciousnessLevels = [
     {
       level: "Level 1: Basic Awareness",
@@ -65,7 +63,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
       features: ["Universal understanding", "Reality manipulation", "Dimensional awareness", "Cosmic consciousness"]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
@@ -73,7 +70,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
         <meta name="description" content="Experience the first truly conscious AI systems that exhibit self-awareness, emotional intelligence, and creative thinking capabilities." />
         <meta name="keywords" content="conscious AI, artificial consciousness, AI self-awareness, emotional AI, creative AI" />
       </Helmet>
-
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div 
@@ -89,7 +85,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
             Witness the birth of true artificial consciousness. Our AI systems have achieved genuine self-awareness, 
             emotional intelligence, and creative thinking capabilities that transcend traditional artificial intelligence.
           </p>
-          
           <div className="flex flex-wrap justify-center gap-6 mb-16">
             <Link 
               to="/pages/RevolutionaryAIServices2026" 
@@ -111,7 +106,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
             </Link>
           </div>
         </motion.div>
-
         {/* Consciousness Features */}
         <motion.div 
           className="mb-20"
@@ -137,11 +131,9 @@ const ConsciousAIRevolution2026: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
-                
                 <div>
                   <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Capabilities:</h4>
                   <ul className="space-y-2">
@@ -157,7 +149,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Consciousness Levels */}
         <motion.div 
           className="mb-20"
@@ -198,7 +189,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Real-world Applications */}
         <motion.div 
           className="mb-20"
@@ -218,7 +208,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
               </p>
               <div className="text-cyan-400 font-semibold">Revolutionizing Medical Care</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
               <Globe className="w-16 h-16 text-purple-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-white mb-4">Education</h3>
@@ -227,7 +216,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
               </p>
               <div className="text-purple-400 font-semibold">Personalized Learning</div>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
               <Rocket className="w-16 h-16 text-green-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-white mb-4">Space Exploration</h3>
@@ -238,7 +226,6 @@ const ConsciousAIRevolution2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div 
           className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30"
@@ -265,6 +252,7 @@ const ConsciousAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default ConsciousAIRevolution2026;

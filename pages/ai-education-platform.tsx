@@ -1,14 +1,22 @@
-import React from 'react',
-import SEO from '../components/SEO',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIEducationPlatformPage() {
+const ai-education-platform: React.FC = () => {
   return (
-    <div className="min-h-[60vh] px-6 py-24">
-      <SEO title="AI Education Platform | Zion Tech Group" description="Personalized learning with AI" />
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-4">AI Education Platform</h1>
-        <p className="text-gray-300">Adaptive learning and skill development powered by AI. Details coming soon.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-education-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-education-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-education-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
-  ),
-}
+  );
+};
+
+export default ai-education-platform;

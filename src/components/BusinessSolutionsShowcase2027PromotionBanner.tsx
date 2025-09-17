@@ -73,23 +73,23 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-400/30"
             >
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span className="text-blue-300 font-medium">Business Solutions 2027</span>
-            </divdiv>
+            </div>
 
             {/* Main Heading */}
             <divh1
@@ -107,7 +107,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
             </divp>
 
             {/* Features Grid */}
-            <divdiv
+            <div
               className="grid grid-cols-2 gap-3"
             >
               {features.map((featureindex) => (
@@ -116,10 +116,10 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                   <span className="text-gray-300 text-sm">{feature}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:transform hover:scale-105">
@@ -131,17 +131,17 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 <Award className="w-5 h-5" />
                 View Case Studies
               </button>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
 
           {/* Right Content */}
-          <divdiv
+          <div
             className="space-y-8"
           >
             {/* Solutions Cards */}
             <div className="space-y-4">
               {solutions.map((solutionindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
                 >
@@ -154,7 +154,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                       <p className="text-gray-300 text-sm">{solution.description}</p>
                     </div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
 
@@ -163,7 +163,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               <h3 className="text-xl font-bold text-white mb-6 text-center">Proven Results</h3>
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className={`text-center p-4 rounded-2xl bg-gradient-to-r ${stat.color} ${
                       currentStat === index ? 'ring-2 ring-white/30' : ''
@@ -172,13 +172,13 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                     <stat.icon className="w-6 h-6 text-white mx-auto mb-2" />
                     <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-white/80 text-sm">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
 
             {/* Trust Indicators */}
-            <divdiv
+            <div
               className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -189,8 +189,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                 Trusted by Fortune 500 companiestartupsand SMBs worldwide. 
                 Recognized for excellence in technology innovation and client success.
               </p>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
       </div>
     </div>

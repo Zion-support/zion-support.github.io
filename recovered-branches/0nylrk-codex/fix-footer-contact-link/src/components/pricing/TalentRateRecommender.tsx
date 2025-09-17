@@ -1,88 +1,12 @@
+import React from 'react';
 
-  PricingSuggestion,
-  TalentRateParams,
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService";
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from "lucide-react";
-
-interface TalentRateRecommenderProps {
-  skills: string[];
-  yearsExperience: number;
-  location?: string;
-  onSuggestionApplied: (value: number) => void;
-  rateType: "hourly" | "fixed";
-}
-
-export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-  skills,
-  yearsExperience,
-  location,
-  onSuggestionApplied,
-  const { user } = useAuth();
-
-  const generateSuggestion = async () => {
-    if (skills.length === 0 || yearsExperience <= 0) {
-      return;
-    }
-
-    setIsLoading(true);
-    try {
-      const params: TalentRateParams = {
-        skills,
-        yearsExperience,
-
-      const result = await getTalentRateSuggestion(params);
-      setSuggestion(result);
-    } catch (error) {
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
-      onSuggestionApplied(suggestedRate);
-      
-      // Track this suggestion application
-      if (user) {
-        trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: 'talent',
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-          actualValue: suggestedRate,
-          accepted: true
-        });
-      }
-    }
-  };
-
+const TalentRateRecommender: React.FC = () => {
   return (
-    <div className="space-y-4">
-      <div>
-        {!suggestion && !isLoading ? (
-          <Button
-            type="button"
-            variant="outline"
-            onClick={generateSuggestion}
-            disabled={skills.length === 0 || yearsExperience <= 0}
-            className="w-full"
-          >
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
-          </Button>
-        ) : (
-          <PricingSuggestionBox
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType={rateType}
-          />
-        )}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TalentRateRecommender</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
+
+export default TalentRateRecommender;

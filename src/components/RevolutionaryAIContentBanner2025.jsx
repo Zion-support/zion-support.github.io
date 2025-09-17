@@ -1,12 +1,10 @@
 import React from 'react';
-
-const RevolutionaryAIContentBanner2025 = () => {
+const RevolutionaryAIContentBanner2025= () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25239C92AC%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -19,7 +17,6 @@ const RevolutionaryAIContentBanner2025 = () => {
             Discover conscious AI systems, quantum processing, and neural interfaces that are reshaping industries worldwide
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🧠</div>
@@ -31,7 +28,6 @@ const RevolutionaryAIContentBanner2025 = () => {
               Explore →
             </a>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">⚡</div>
             <h3 className="text-xl font-bold mb-3 text-center">Quantum AI</h3>
@@ -42,7 +38,6 @@ const RevolutionaryAIContentBanner2025 = () => {
               Discover →
             </a>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4 text-center">🌐</div>
             <h3 className="text-xl font-bold mb-3 text-center">Neural AI</h3>
@@ -54,7 +49,6 @@ const RevolutionaryAIContentBanner2025 = () => {
             </a>
           </div>
         </div>
-
         <div className="text-center">
           <a href="/pages/RevolutionaryAIContent2025" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             🚀 Explore Revolutionary AI Content 2025
@@ -63,6 +57,7 @@ const RevolutionaryAIContentBanner2025 = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryAIContentBanner2025;

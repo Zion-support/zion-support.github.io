@@ -1,12 +1,10 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-
 const AIEnterpriseCopilot2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <Header />
-      
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -29,7 +27,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* AI Copilot Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -45,7 +42,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
               <li>• Quality assurance</li>
             </ul>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold text-white mb-4">Predictive Analytics</h3>
@@ -59,7 +55,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
               <li>• Performance optimization</li>
             </ul>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🎯</div>
             <h3 className="text-2xl font-bold text-white mb-4">Contextual Assistance</h3>
@@ -74,33 +69,28 @@ const AIEnterpriseCopilot2025: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Enterprise Solutions */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Enterprise AI Solutions</h2>
             <p className="text-xl text-purple-100">Comprehensive AI copilot solutions for every business function</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-3xl mb-3">💰</div>
               <h4 className="text-lg font-semibold text-white mb-2">Finance Copilot</h4>
               <p className="text-purple-100 text-sm">Automated financial analysis, budgeting, and forecasting</p>
             </div>
-            
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-3xl mb-3">👥</div>
               <h4 className="text-lg font-semibold text-white mb-2">HR Copilot</h4>
               <p className="text-purple-100 text-sm">Intelligent recruitment, performance management, and employee engagement</p>
             </div>
-            
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-3xl mb-3">📊</div>
               <h4 className="text-lg font-semibold text-white mb-2">Sales Copilot</h4>
               <p className="text-purple-100 text-sm">Lead scoring, pipeline management, and customer insights</p>
             </div>
-            
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center">
               <div className="text-3xl mb-3">🛠️</div>
               <h4 className="text-lg font-semibold text-white mb-2">Operations Copilot</h4>
@@ -108,14 +98,12 @@ const AIEnterpriseCopilot2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Implementation Process */}
         <div className="bg-white rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">AI Copilot Implementation</h2>
             <p className="text-xl text-gray-600">Our proven process for deploying AI copilots in your organization</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
@@ -124,7 +112,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Assessment</h3>
               <p className="text-gray-600">Analyze your current processes and identify automation opportunities</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
                 2
@@ -132,7 +119,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Design</h3>
               <p className="text-gray-600">Create custom AI copilot solutions tailored to your business needs</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
                 3
@@ -140,7 +126,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Deploy</h3>
               <p className="text-gray-600">Implement and integrate AI copilots into your existing systems</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
                 4
@@ -150,14 +135,12 @@ const AIEnterpriseCopilot2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Proven Results</h2>
             <p className="text-xl text-indigo-100">Real impact from AI copilot implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-white mb-2">75%</div>
@@ -177,14 +160,12 @@ const AIEnterpriseCopilot2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Industry Applications */}
         <div className="bg-white rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Industry Applications</h2>
             <p className="text-xl text-gray-600">AI copilots transforming businesses across industries</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -196,7 +177,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
                   <p className="text-gray-600">Predictive maintenance, quality control, and supply chain optimization with AI copilots.</p>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
                   🏥
@@ -206,7 +186,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
                   <p className="text-gray-600">Patient care coordination, medical record analysis, and treatment optimization.</p>
                 </div>
               </div>
-              
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
                   🏦
@@ -217,7 +196,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Ready to Deploy AI Copilots?</h3>
               <p className="text-gray-600 mb-6">
@@ -235,7 +213,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -255,7 +232,6 @@ const AIEnterpriseCopilot2025: React.FC = () => {
             <div className="text-gray-300">AI Copilot Availability</div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Transform Your Business with AI Copilots</h2>
@@ -273,10 +249,10 @@ const AIEnterpriseCopilot2025: React.FC = () => {
           </div>
         </div>
       </main>
-      
       <Footer />
     </div>
   );
+
 };
 
 export default AIEnterpriseCopilot2025;

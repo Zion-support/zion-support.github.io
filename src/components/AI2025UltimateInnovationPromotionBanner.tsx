@@ -31,17 +31,17 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
   ];
 
   return (
-    <divdiv
+    <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
-            <divdiv
+            <div
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -55,10 +55,10 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 Discover revolutionary AI breakthroughs that are transforming industries worldwide. 
                 Experience the future of artificial intelligence today.
               </p>
-            </divdiv>
+            </div>
 
             {/* Features List */}
-            <divdiv
+            <div
               className="grid grid-cols-2 gap-2 mb-6"
             >
               {features.map((featureindex) => (
@@ -67,10 +67,10 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -86,18 +86,18 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
               >
                 Get Started
               </a>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Stats */}
-          <divdiv
+          <div
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Proven Results</h3>
               
               {/* Animated Stat */}
-              <divdiv
+              <div
                 key={currentStat}
                 className="text-center mb-6"
               >
@@ -106,7 +106,7 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
                 </div>
                 <div className="text-4xl font-bold text-white mb-2">{stats[currentStat].value}</div>
                 <div className="text-gray-400 text-sm">{stats[currentStat].label}</div>
-              </divdiv>
+              </div>
 
               {/* Static Stats */}
               <div className="space-y-4">
@@ -125,17 +125,17 @@ const AI2025UltimateInnovationPromotionBanner: React.FC = () => {
               </div>
 
               {/* Urgency Indicator */}
-              <divdiv
+              <div
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
               >
                 <Clock className="w-4 h-4" />
                 <span>Limited time offer - Act now!</span>
-              </divdiv>
+              </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

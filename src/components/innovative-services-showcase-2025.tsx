@@ -172,7 +172,7 @@ export default function InnovativeServicesShowcase2025() {
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <divdiv
+          <div
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
@@ -189,10 +189,10 @@ export default function InnovativeServicesShowcase2025() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
             </p>
-          </divdiv>
+          </div>
 
           {/* Stats */}
-          <divdiv
+          <div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
@@ -219,7 +219,7 @@ export default function InnovativeServicesShowcase2025() {
               </div>
               <div className="text-gray-400">Uptime</div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </section>
 
@@ -278,7 +278,7 @@ export default function InnovativeServicesShowcase2025() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
-              <divdiv
+              <div
                 key={service.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -349,17 +349,17 @@ export default function InnovativeServicesShowcase2025() {
                     <Mail className="w-5 h-5" />
                   </a>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
 
           {sortedServices.length === 0 && (
-            <divdiv
+            <div
               className="text-center py-20"
             >
               <div className="text-gray-400 text-xl mb-4">No services found</div>
               <div className="text-gray-500">Try adjusting your search or filter criteria</div>
-            </divdiv>
+            </div>
           )}
         </div>
       </section>
@@ -367,7 +367,7 @@ export default function InnovativeServicesShowcase2025() {
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -378,10 +378,10 @@ export default function InnovativeServicesShowcase2025() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center"
@@ -391,9 +391,9 @@ export default function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center"
@@ -403,9 +403,9 @@ export default function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center"
@@ -415,7 +415,7 @@ export default function InnovativeServicesShowcase2025() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
-            </divdiv>
+            </div>
           </div>
         </div>
       </section>

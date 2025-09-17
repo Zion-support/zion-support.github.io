@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Star, Clock, User, ArrowRight, Sparkles, Zap, Brain, Rocket } from 'lucide-react';
-
 const RevolutionaryContentCarousel2026 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const revolutionaryContent = [
     {
       id: 1,
@@ -116,7 +114,6 @@ const RevolutionaryContentCarousel2026 = () => {
       type: "Service"
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -125,23 +122,18 @@ const RevolutionaryContentCarousel2026 = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, revolutionaryContent.length]);
-
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % revolutionaryContent.length);
   };
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);
   };
-
   const currentItem = revolutionaryContent[currentIndex];
-
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%25239C92AC%22%20fill-opacity%3D%220.1%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -161,7 +153,6 @@ const RevolutionaryContentCarousel2026 = () => {
             From synthetic intelligence to transcendent technology, discover what was once impossible.
           </p>
         </div>
-
         {/* Main Carousel */}
         <div className="relative">
           {/* Navigation Buttons */}
@@ -181,7 +172,6 @@ const RevolutionaryContentCarousel2026 = () => {
           >
             <ChevronRight className="w-6 h-6" />
           </button>
-
           {/* Carousel Content */}
           <div className="relative overflow-hidden rounded-3xl">
             <div 
@@ -206,15 +196,12 @@ const RevolutionaryContentCarousel2026 = () => {
                               <span className="text-cyan-400 font-semibold">{item.category}</span>
                             </div>
                           </div>
-                          
                           <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                             {item.title}
                           </h3>
-                          
                           <p className="text-gray-300 text-lg leading-relaxed">
                             {item.excerpt}
                           </p>
-
                           {/* Author Info */}
                           <div className="flex items-center gap-4 text-sm text-gray-400">
                             <div className="flex items-center gap-2">
@@ -230,7 +217,6 @@ const RevolutionaryContentCarousel2026 = () => {
                               <span>5.0</span>
                             </div>
                           </div>
-
                           {/* Tags */}
                           <div className="flex flex-wrap gap-2">
                             {item.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -242,7 +228,6 @@ const RevolutionaryContentCarousel2026 = () => {
                               </span>
                             ))}
                           </div>
-
                           {/* Price and CTA */}
                           <div className="flex items-center justify-between pt-4">
                             <div className="text-3xl font-bold text-white">
@@ -257,7 +242,6 @@ const RevolutionaryContentCarousel2026 = () => {
                             </Link>
                           </div>
                         </div>
-
                         {/* Image */}
                         <div className="relative">
                           <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden shadow-2xl">
@@ -279,7 +263,6 @@ const RevolutionaryContentCarousel2026 = () => {
               ))}
             </div>
           </div>
-
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {revolutionaryContent.map((_, index) => (
@@ -295,7 +278,6 @@ const RevolutionaryContentCarousel2026 = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {revolutionaryContent.slice(0, 6).map((item, index) => (
@@ -326,6 +308,7 @@ const RevolutionaryContentCarousel2026 = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryContentCarousel2026;

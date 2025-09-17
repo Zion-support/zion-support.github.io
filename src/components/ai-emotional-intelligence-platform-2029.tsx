@@ -188,16 +188,16 @@ const AIEmotionalIntelligencePlatform2029 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
             className="mb-16"
           >
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8"
             >
               <Brain className="w-4 h-4 mr-2" />
               🚀 2029 Revolutionary AI Technology
-            </divdiv>
+            </div>
 
             {/* Main Heading */}
             <divh1
@@ -218,7 +218,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             </divp>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
             >
               <a
@@ -241,10 +241,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
               </a>
-            </divdiv>
+            </div>
 
             {/* Key Stats */}
-            <divdiv
+            <div
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               <div className="text-center">
@@ -263,15 +263,15 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 <div className="text-3xl font-bold text-blue-400 mb-2">$8.2B</div>
                 <div className="text-sm text-gray-400">Market Size by 2029</div>
               </div>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -282,11 +282,11 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Emotional Intelligence Platform combines cutting-edge technology with human understanding to create truly empathetic AI systems.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <divdiv
+              <div
                 key={feature.title}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -299,7 +299,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{feature.title}</h3>
                 <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -308,7 +308,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       {/* Benefits Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -319,11 +319,11 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience unprecedented improvements in customer satisfaction, team collaboration, and business outcomes.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <divdiv
+              <div
                 key={benefit}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -331,7 +331,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               >
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-white text-lg">{benefit}</span>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -340,7 +340,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -351,11 +351,11 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From customer service to healthcare, our platform transforms industries with emotional intelligence.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
-              <divdiv
+              <div
                 key={useCase.title}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -368,7 +368,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase.title}</h3>
                 <p className="text-gray-300 text-center leading-relaxed">{useCase.description}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -377,7 +377,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -388,11 +388,11 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your business needs.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {Object.entries(pricing).map(([key, plan], index) => (
-              <divdiv
+              <div
                 key={key}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -438,7 +438,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 >
                   Get Started
                 </a>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
@@ -447,7 +447,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -458,10 +458,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact us today to learn how our AI Emotional Intelligence Platform can revolutionize your customer experience and business outcomes.
             </p>
-          </divdiv>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10"
@@ -469,9 +469,9 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10"
@@ -479,9 +479,9 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
-            </divdiv>
+            </div>
 
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10"
@@ -489,10 +489,10 @@ const AIEmotionalIntelligencePlatform2029 = () => {
               <MapPin className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
-            </divdiv>
+            </div>
           </div>
 
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center"
@@ -506,7 +506,7 @@ const AIEmotionalIntelligencePlatform2029 = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </a>
-          </divdiv>
+          </div>
         </div>
       </section>
 

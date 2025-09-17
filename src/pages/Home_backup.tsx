@@ -1,8 +1,7 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
-
   useEffect(() => {
     // Welcome notification
     addNotification({
@@ -12,27 +11,18 @@ const Home: React.FC = () => {
       duration: 5000
     });
   }, [addNotification]);
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
-        <title>Zion Tech Group - Revolutionary Technology Solutions</title>
-        <meta name="description" content="Leading provider of revolutionary technology solutions including AI, quantum computing, neural interfaces, and advanced biotechnology for 2026." />
-        <meta name="keywords" content="AI Technology, Quantum Computing, Neural Interfaces, Biotechnology, Tech Solutions, Innovation" />
-        <meta property="og:title" content="Zion Tech Group - Revolutionary Technology Solutions" />
-        <meta property="og:description" content="Leading provider of revolutionary technology solutions for 2026." />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group" />
-        <meta name="twitter:description" content="Revolutionary technology solutions for 2026" />
+        <title>Home_backup | Zion Tech Group</title>
+        <meta name="description" content="Home_backup - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <divdiv
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -53,10 +43,9 @@ const Home: React.FC = () => {
                   Contact Us
                 </button>
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -67,9 +56,8 @@ const Home: React.FC = () => {
               From machine learning to autonomous systems.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <divdiv
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -83,9 +71,8 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </divdiv>
-
-            <divdiv
+            </div>
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -99,9 +86,8 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </divdiv>
-
-            <divdiv
+            </div>
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -115,9 +101,8 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </divdiv>
-
-            <divdiv
+            </div>
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -131,9 +116,8 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </divdiv>
-
-            <divdiv
+            </div>
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -147,9 +131,8 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </divdiv>
-
-            <divdiv
+            </div>
+            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
             >
@@ -163,9 +146,8 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-            </divdiv>
+            </div>
           </div>
-          
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
             <div className="text-4xl mb-4">🔒</div>
             <h3 className="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
@@ -224,6 +206,7 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default Home;
