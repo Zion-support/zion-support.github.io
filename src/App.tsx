@@ -25,6 +25,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const AdvancedDashboard = React.lazy(() => import('./pages/AdvancedDashboard'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -172,6 +173,8 @@ function App() {
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/dashboard" element={<AdvancedDashboard />} />
+                    <Route path="/advanced-dashboard" element={<AdvancedDashboard />} />
                     
                     {/* Catch all route */};
                     <Route path="*" element={<Home />} />
