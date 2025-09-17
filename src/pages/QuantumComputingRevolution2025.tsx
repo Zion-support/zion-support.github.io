@@ -2,7 +2,6 @@ import React from 'react';
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -16,8 +15,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
-=======
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -402,13 +399,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-10 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Start Quantum Journey
             </button>
-<<<<<<< HEAD
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
               Learn More
-=======
-            <button className="border-2 border-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-cyan-900 transition-all duration-300">
-              Request Quantum Demo
->>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
             </button>
           </div>
         </div>
