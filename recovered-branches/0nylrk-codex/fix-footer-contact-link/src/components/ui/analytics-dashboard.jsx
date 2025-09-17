@@ -1,4 +1,3 @@
-import React from 'react';
 
 const analytics-dashboard: React.FC = () => {
   return (

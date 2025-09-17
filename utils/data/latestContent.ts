@@ -1,99 +1,3 @@
-export type ContentItem = {
-  id: string;
-  title: string;
-  summary: string;
-  href: string;
-  tag: string;
-  date: string;
-};
-
-export const latestContent: ContentItem[] = [
-  {
-    id: "ai-2026-autonomous-change-approvals-blueprint",
-    title: "AI 2026: Autonomous Change Approvals — Blueprint",
-    summary: "Policy‑as‑code approvals with eval gates and signed evidence bundles.",
-    href: "/blog/ai-2026-autonomous-change-approvals-blueprint",
-    tag: "Blueprint",
-    date: "2025-09-16",
-  },
-  {
-    id: "ai-2026-real-time-agent-benchmark-suite-1-0",
-    title: "AI 2026: Real‑Time Agent Benchmark Suite v1.0 — Launch",
-    summary: "Scenario benchmarks for quality, safety, latency, and cost with CI/CD gates.",
-    href: "/blog/ai-2026-real-time-agent-benchmark-suite-1-0",
-    tag: "Launch",
-    date: "2025-09-16",
-  },
-  {
-    id: "agentic-product-playbooks",
-    title: "Agentic Product Playbooks",
-    summary: "Blueprints to ship agentic workflows with eval gates and observability.",
-    href: "/blog/agentic-product-playbooks",
-    tag: "Playbook",
-    date: "2025-09-16",
-  },
-  {
-    id: "ai-2026-safe-agent-actions-blueprint",
-    title: "AI 2026: Safe Agent Actions — Blueprint",
-    summary: "Risk‑tiered adapters, approvals, budgets, and policy‑as‑code for safe actions.",
-    href: "/blog/ai-2026-safe-agent-actions-blueprint",
-    tag: "Security",
-    date: "2025-09-16",
-  },
-  {
-    id: "evals-and-guardrails",
-    title: "Evals, Guardrails, and Safety",
-    summary: "Stand up eval suites and policy guardrails for production agents.",
-    href: "/blog/evals-and-guardrails",
-    tag: "Safety",
-    date: "2025-09-16",
-  },
-  {
-    id: "ai-2026-trusted-genai-patterns-regulated-enterprises",
-    title: "AI 2026: Trusted GenAI Patterns for Regulated Enterprises",
-    summary: "Compliant, observable, and cost-aware GenAI architectures that scale safely.",
-    href: "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
-    tag: "Governance",
-    date: "2025-09-15",
-  },
-  {
-    id: "agentic-crm-autonomous-revenue-workflows-2026",
-    title: "Agentic CRM: Autonomous Revenue Workflows (2026)",
-    summary: "Lead routing, outreach, and pipeline hygiene with evaluation-gated agents.",
-    href: "/blog/agentic-crm-autonomous-revenue-workflows-2026",
-    tag: "Revenue",
-    date: "2025-09-15",
-  },
-  {
-    id: "real-time-agent-observability-2026",
-    title: "Real-Time Agent Observability (2026)",
-    summary: "Traces, metrics, and evals for production agent workflows.",
-    href: "/blog/real-time-agent-observability-2026",
-    tag: "Observability",
-    date: "2025-09-15",
-  },
-  {
-    id: "hyperautomation-blueprint-2026",
-    title: "Hyperautomation Blueprint 2026",
-    summary: "Platform patterns, policy-as-code, and ROI tracking to scale automation.",
-    href: "/content/hyperautomation-blueprint-2026",
-    tag: "Blueprint",
-    date: "2025-09-15",
-  },
-  {
-    id: "production-safety-checklist-2026",
-    title: "AI 2026: Production Safety Checklist",
-    summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
-    href: "/blog/ai-2026-production-safety-checklist",
-    tag: "Guide",
-    date: "2025-09-15",
-  },
-  {
-    id: "autonomous-support-agents-2026",
-    title: "AI 2026: Autonomous Customer Support Agents",
-    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
-    href: "/blog/ai-2026-autonomous-customer-support-agents",
-    tag: "Guide",
     date: "2025-09-15",
   },
   {
@@ -125,6 +29,7 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
+=======
     id: "production-safety-checklist-2026",
     title: "AI 2026: Production Safety Checklist",
     summary: "Eval gates, policy bundles, and incident playbooks for safe operations.",
@@ -161,3 +66,4 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-14",
   }
 ];
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const InteractiveServiceShowcase.js: React.FC = () => {
   return (

@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const ai-powered-customer-churn-predictor: React.FC = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const accessibility-menu.js: React.FC = () => {
   return (

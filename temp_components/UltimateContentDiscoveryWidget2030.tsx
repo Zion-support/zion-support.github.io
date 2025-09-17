@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltimateContentDiscoveryWidget2030: React.FC = () => {
   return (

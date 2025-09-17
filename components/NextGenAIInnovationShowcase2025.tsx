@@ -1,4 +1,3 @@
-import React from 'react';
 
 const NextGenAIInnovationShowcase2025: React.FC = () => {
   return (

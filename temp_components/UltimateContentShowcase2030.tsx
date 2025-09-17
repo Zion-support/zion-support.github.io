@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltimateContentShowcase2030: React.FC = () => {
   return (

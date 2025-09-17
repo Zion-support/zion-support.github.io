@@ -1,4 +1,3 @@
-import React from 'react';
 
 const InteractiveAILearningHub2025: React.FC = () => {
   return (

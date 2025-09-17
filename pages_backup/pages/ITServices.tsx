@@ -19,4 +19,3 @@ const ITServices: React.FC = () => {
   );
 };
 
-export default ITServices;

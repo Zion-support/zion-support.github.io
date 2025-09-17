@@ -9,4 +9,3 @@ const EnhancedFuturisticNavigation: React.FC = () => {
   );
 };
 
-export default EnhancedFuturisticNavigation;

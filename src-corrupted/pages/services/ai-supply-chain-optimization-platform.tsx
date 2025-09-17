@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const ai-supply-chain-optimization-platform: React.FC = () => {
   return (

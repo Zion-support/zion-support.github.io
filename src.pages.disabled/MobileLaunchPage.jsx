@@ -1,3 +1,4 @@
+=======
 import React from 'react';
 
 const MobileLaunchPage: React.FC = () => {
@@ -11,6 +12,7 @@ const MobileLaunchPage: React.FC = () => {
 
 export default MobileLaunchPage;
 
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 
 
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
@@ -22,8 +24,11 @@ export default MobileLaunchPage;
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
 :src.pages.disabled/MobileLaunchPage.jsx
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
 :src.pages.disabled/MobileLaunchPage.jsx
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/MobileLaunchPage.jsx
@@ -39,6 +44,11 @@ ursor/add-new-services-and-deploy-updates-0462
 
 :src.pages.disabled/MobileLaunchPage.jsx
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
+>>>>>>> origin/merged-prs
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}

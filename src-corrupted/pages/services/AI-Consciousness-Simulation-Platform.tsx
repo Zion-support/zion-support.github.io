@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const AI-Consciousness-Simulation-Platform: React.FC = () => {
   return (

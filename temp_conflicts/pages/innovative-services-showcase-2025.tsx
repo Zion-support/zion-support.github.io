@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const innovative-services-showcase-2025: React.FC = () => {
   return (

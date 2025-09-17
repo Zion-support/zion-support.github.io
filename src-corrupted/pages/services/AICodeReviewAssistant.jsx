@@ -1,9 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AICodeReviewAssistant: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
         <title>AICodeReviewAssistant | Zion Tech Group</title>
         <meta name="description" content="AICodeReviewAssistant - Revolutionary technology solutions" />

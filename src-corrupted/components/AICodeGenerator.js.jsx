@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AICodeGenerator.js: React.FC = () => {
   return (

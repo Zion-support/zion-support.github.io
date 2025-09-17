@@ -1,4 +1,3 @@
-import React from 'react';
 
 const MultimodalAI2025RevolutionBanner: React.FC = () => {
   return (

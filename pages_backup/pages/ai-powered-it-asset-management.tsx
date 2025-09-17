@@ -19,4 +19,3 @@ const ai-powered-it-asset-management: React.FC = () => {
   );
 };
 
-export default ai-powered-it-asset-management;

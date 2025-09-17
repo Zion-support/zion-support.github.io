@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ultimate-2026-services-showcase: React.FC = () => {
   return (

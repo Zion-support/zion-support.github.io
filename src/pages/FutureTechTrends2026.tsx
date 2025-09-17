@@ -1,7 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 const FutureTechTrends2026: React.FC = () => {
   const [activeTrend, setActiveTrend] = useState('ai');
   const techTrends = {
@@ -161,142 +157,11 @@ const FutureTechTrends2026: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
         <div className="container mx-auto relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-const FutureTechTrends2026: React.FC = () => {
-  const [currentTrend, setCurrentTrend] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const trends = [
-    {
-      title: "Consciousness Computing",
-      description: "The next frontier where AI achieves true consciousness and self-awareness",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-600/20 to-pink-600/20",
-      features: [
-        "Self-aware AI systems",
-        "Emotional intelligence",
-        "Creative problem solving",
-        "Ethical decision making",
-        "Consciousness transfer"
-      ],
-      impact: "Revolutionizing human-AI interaction"
-    },
-    {
-      title: "Quantum Internet",
-      description: "Ultra-secure, instant global communication network powered by quantum entanglement",
-      icon: "🌐",
-      color: "from-cyan-600 to-blue-600",
-      bgColor: "from-cyan-600/20 to-blue-600/20",
-      features: [
-        "Quantum entanglement communication",
-        "Unbreakable encryption",
-        "Instant global connectivity",
-        "Quantum teleportation",
-        "Zero-latency data transfer"
-      ],
-      impact: "Transforming global communication"
-    },
-    {
-      title: "Neural Enhancement",
-      description: "Direct brain augmentation and cognitive enhancement technologies",
-      icon: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-600/20 to-teal-600/20",
-      features: [
-        "Memory augmentation",
-        "Cognitive enhancement",
-        "Neural implants",
-        "Brain-computer interfaces",
-        "Consciousness backup"
-      ],
-      impact: "Augmenting human capabilities"
-    },
-    {
-      title: "Synthetic Biology",
-      description: "Engineering life itself with programmable biological systems",
-      icon: "🧪",
-      color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-600/20 to-emerald-600/20",
-      features: [
-        "Programmable organisms",
-        "Synthetic DNA",
-        "Bio-computing",
-        "Living materials",
-        "Biological factories"
-      ],
-      impact: "Redefining life and manufacturing"
-    },
-    {
-      title: "Space Colonization",
-      description: "Making humanity a multi-planetary species with advanced space technology",
-      icon: "🚀",
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-600/20 to-purple-600/20",
-      features: [
-        "Mars colonization",
-        "Space habitats",
-        "Asteroid mining",
-        "Terraforming",
-        "Interstellar travel"
-      ],
-      impact: "Expanding human civilization"
-    },
-    {
-      title: "Reality Simulation",
-      description: "Creating indistinguishable virtual realities and digital worlds",
-      icon: "🌌",
-      color: "from-violet-600 to-purple-600",
-      bgColor: "from-violet-600/20 to-purple-600/20",
-      features: [
-        "Perfect virtual reality",
-        "Digital consciousness",
-        "Simulated universes",
-        "Reality manipulation",
-        "Digital immortality"
-      ],
-      impact: "Blurring reality boundaries"
-    }
-  ];
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentTrend((prev) => (prev + 1) % trends.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, trends.length]);
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-        <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white rounded-full opacity-30 animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-              }}
-            />
-          ))}
-        </div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🔮 FUTURE TECH TRENDS • JANUARY 2026
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white text-sm font-bold mb-6">
-              🔮 FUTURE TECH TRENDS • 2026
             </div>
             <h1 className="text-6xl font-bold text-gray-900 mb-6">
               Future Technology Trends 2026
@@ -308,22 +173,6 @@ const FutureTechTrends2026: React.FC = () => {
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Explore Trends →
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🔮 FUTURE TECH TRENDS • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold text-white mb-6">
-              Future Technology Trends 2026
-            </h1>
-            <p className="text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">
-              Discover the revolutionary technologies that will shape our future. 
-              From consciousness computing to space colonization, explore what's coming next.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Explore Trends
-              </button>
-              <button className="border border-purple-400 text-purple-200 px-8 py-4 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors text-lg">
               <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
                 Download Report
               </button>
@@ -331,17 +180,6 @@ const FutureTechTrends2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-      {/* Top Trends Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">🌟 Top Technology Trends 2026</h2>
-          <p className="text-xl opacity-90">The most impactful trends shaping our digital future</p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Trend 1: Synthetic Intelligence */}
-      {/* Tech Trends Showcase */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -722,32 +560,6 @@ const FutureTechTrends2026: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-4">Stay Ahead of the Trends</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Get exclusive insights into the latest technology trends and be the first to know about emerging innovations
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
-              Subscribe to Updates
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
-              Download Full Report
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-12 border border-purple-400/30">
-          <h2 className="text-5xl font-bold text-white mb-6">Ready to Shape the Future?</h2>
-          <p className="text-xl text-purple-200 mb-8 max-w-4xl mx-auto">
-            Be part of the technological revolution. Our cutting-edge solutions are already 
-            transforming industries and creating new possibilities for the future.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Your Future Today
-            </button>
-            <button className="border border-purple-400 text-purple-200 px-8 py-4 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors text-lg">
-              Get Future Report
             </button>
           </div>
       {/* CTA Section */}

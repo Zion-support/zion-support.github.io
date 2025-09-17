@@ -8,5 +8,3 @@ const ContactFormEnhanced: React.FC = () => {
     </div>
   );
 };
-
-export default ContactFormEnhanced;

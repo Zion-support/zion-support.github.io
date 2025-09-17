@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnhancedScrollToTop.js: React.FC = () => {
   return (

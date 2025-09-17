@@ -1,8 +1,38 @@
 import React from 'react';
+=======
 import { Helmet } from 'react-helmet-async';
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 
 const SpaceTechInnovation2026: React.FC = () => {
   return (
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12 text-white"
+          >
+            <h2 className="text-4xl font-bold mb-6">Ready to Reach for the Stars?</h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+              Join us in pioneering the future of space exploration and becoming a multi-planetary species
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                Join Space Mission →
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold">
+                Download Space Report
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       <Helmet>
         <title>Space Tech Innovation 2026 | Zion Tech Group</title>
@@ -176,6 +206,7 @@ const SpaceTechInnovation2026: React.FC = () => {
           </div>
         </div>
       </div>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     </div>
   );
 };

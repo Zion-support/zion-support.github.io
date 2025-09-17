@@ -1,4 +1,3 @@
-import React from 'react';
 
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
   return (

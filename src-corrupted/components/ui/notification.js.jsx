@@ -1,4 +1,3 @@
-import React from 'react';
 
 const notification.js: React.FC = () => {
   return (

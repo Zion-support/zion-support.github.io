@@ -30,6 +30,18 @@
 @keyframes zoomIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+<<<<<<< HEAD
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fadeIn {
@@ -44,6 +56,22 @@
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+=======
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 .animate-slideInLeft {
   animation: slideInLeft 0.8s ease-out;
 }
@@ -56,6 +84,13 @@
   animation: zoomIn 0.6s ease-out;
 }
 
+<<<<<<< HEAD
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 /* Hover effects */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -81,6 +116,14 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+<<<<<<< HEAD
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 /* Neon glow effect */
 .neon-glow {
   box-shadow: 0 0 20px rgba(147, 51, 234, 0.5), 0 0 40px rgba(147, 51, 234, 0.3);
@@ -103,7 +146,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #7c3aed, #db2777);
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 /* Accessibility Enhancements */
 .high-contrast {
   filter: contrast(150%) brightness(120%);
@@ -115,6 +161,16 @@
   border-color: #fff !important;
 }
 
+<<<<<<< HEAD
+.high-contrast button,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  border: 2px solid currentColor;
+}
+
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 .large-text {
   font-size: 1.2em;
 }
@@ -165,8 +221,8 @@
 
 /* Custom CSS Variables */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -270,12 +326,15 @@
 .lazy-load.loaded {
   opacity: 1;
 }
+<<<<<<< HEAD
+=======
 
 /* Focus management */
 .focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 
 /* High contrast mode */
 @media (prefers-contrast: high) {
@@ -312,6 +371,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
 }
 
 #root {
@@ -329,6 +390,8 @@ body {
   padding-right: 1rem;
 }
 
+<<<<<<< HEAD
+=======
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -345,6 +408,7 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 /* Responsive design */
 @media (max-width: 768px) {
   .container {

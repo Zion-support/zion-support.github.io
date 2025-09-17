@@ -1,4 +1,3 @@
-import React from 'react';
 
 const NewsletterSignup2026: React.FC = () => {
   return (

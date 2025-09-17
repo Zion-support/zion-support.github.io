@@ -8,5 +8,3 @@ const AIChatbotSystem: React.FC = () => {
     </div>
   );
 };
-
-export default AIChatbotSystem;

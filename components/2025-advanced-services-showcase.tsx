@@ -1,4 +1,3 @@
-import React from 'react';
 
 const 2025-advanced-services-showcase: React.FC = () => {
   return (

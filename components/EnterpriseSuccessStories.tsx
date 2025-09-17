@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnterpriseSuccessStories: React.FC = () => {
   return (

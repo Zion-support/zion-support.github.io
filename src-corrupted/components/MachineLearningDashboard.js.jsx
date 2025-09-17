@@ -1,4 +1,3 @@
-import React from 'react';
 
 const MachineLearningDashboard.js: React.FC = () => {
   return (

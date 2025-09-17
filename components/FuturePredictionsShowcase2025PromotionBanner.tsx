@@ -1,4 +1,3 @@
-import React from 'react';
 
 const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
   return (

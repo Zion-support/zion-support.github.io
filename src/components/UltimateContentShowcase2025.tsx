@@ -45,8 +45,3 @@ const COMPONENT: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default UltimateContentShowcase2025;
-=======
-export default COMPONENT;
->>>>>>> origin/merged-prs

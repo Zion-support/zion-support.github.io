@@ -36,6 +36,11 @@ const EnhancedContentShowcase: React.FC = () => {
       borderColor: "border-purple-400/30",
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"]
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+  const showcaseItems = [
+    {
+      id: 1,
+=======
   const showcaseItems = [
     {
       id: 1,
@@ -76,6 +81,7 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Experience the next evolution of artificial intelligence with autonomous reasoning, quantum-enhanced processing, and self-evolving neural architectures.",
       icon: "🧠",
       image: "🧠",
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       gradient: "from-purple-600 to-pink-600",
       link: "/pages/AdvancedAITransformation2026",
       features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
@@ -86,8 +92,6 @@ const EnhancedContentShowcase: React.FC = () => {
       id: 2,
       title: "Quantum-Neural Fusion 2026",
       description: "Revolutionary fusion of quantum computing and neural networks, creating unprecedented processing power for complex problem solving.",
-      icon: "⚛️",
-      image: "⚛️",
       gradient: "from-cyan-600 to-blue-600",
       link: "/pages/QuantumNeuralFusion2026",
       features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"],
@@ -98,8 +102,6 @@ const EnhancedContentShowcase: React.FC = () => {
       id: 3,
       title: "Next-Gen Tech Showcase 2026",
       description: "Discover the most advanced technologies of 2026, featuring revolutionary innovations in AI, quantum computing, and neural interfaces.",
-      icon: "🌟",
-      image: "🌟",
       gradient: "from-violet-600 to-fuchsia-600",
       link: "/pages/NextGenTechShowcase2026",
       features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"],
@@ -110,8 +112,6 @@ const EnhancedContentShowcase: React.FC = () => {
       id: 4,
       title: "Synthetic Intelligence 2026",
       description: "Create and deploy AI agents with synthetic consciousness and autonomous capabilities that think, create, and evolve independently.",
-      icon: "🤖",
-      image: "🤖",
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/SyntheticIntelligence2026",
       features: ["Synthetic Consciousness", "Autonomous Agents", "Creative AI", "Collective Intelligence"],
@@ -120,28 +120,16 @@ const EnhancedContentShowcase: React.FC = () => {
     },
     {
       id: 5,
-      title: "Neural Interface Revolution 2026",
-      description: "Bridge mind and machine with direct brain-computer communication and thought control technology.",
-      icon: "🧬",
-      title: "Advanced Quantum Computing 2026",
-      description: "Experience exponential processing power with 1000+ qubit quantum processors and quantum supremacy capabilities.",
-      image: "⚡",
-      gradient: "from-indigo-600 to-purple-600",
-      link: "/pages/AdvancedQuantumComputing2026",
-      features: ["1000+ Qubits", "Quantum Supremacy", "Molecular Simulation", "Quantum AI"],
-      category: "Quantum Computing",
-      year: "2026"
-    },
-    {
-      id: 6,
-      title: "Neural Interface Revolution 2026",
-      description: "Bridge mind and machine with direct brain-computer communication and thought control technology.",
-      image: "🧬",
       gradient: "from-rose-600 to-pink-600",
       link: "/pages/NeuralInterfaceRevolution2026",
       features: ["Non-invasive BCI", "Thought Control", "Neural Feedback", "Medical Applications"],
       category: "Neural Interfaces",
       year: "2026"
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   const contentSlides = [
     {
       id: 1,
@@ -175,6 +163,12 @@ const EnhancedContentShowcase: React.FC = () => {
       borderColor: "border-purple-400/30",
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"]
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     }
   ];
   useEffect(() => {
@@ -190,9 +184,13 @@ const EnhancedContentShowcase: React.FC = () => {
   };
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+        setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
+=======
         setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
       }, 5000);
       }, 6000);
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, showcaseItems.length]);
@@ -201,6 +199,8 @@ const EnhancedContentShowcase: React.FC = () => {
   };
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
+=======
+=======
   };
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
@@ -235,6 +235,7 @@ const EnhancedContentShowcase: React.FC = () => {
         <div className="relative max-w-7xl mx-auto">
           {/* Main Showcase Display */}
           <div className="relative h-96 rounded-2xl overflow-hidden mb-8">
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
         setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
       }, 5000);
       return () => clearInterval(interval);
@@ -245,6 +246,12 @@ const EnhancedContentShowcase: React.FC = () => {
   };
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   };
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
@@ -267,6 +274,12 @@ const EnhancedContentShowcase: React.FC = () => {
         {/* Main Showcase Carousel */}
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Showcase Container */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 p-8">
@@ -328,9 +341,6 @@ const EnhancedContentShowcase: React.FC = () => {
                 initial={{ opacity: 0, x: 300 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.5 }}
-                className={`absolute inset-0 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 flex items-center justify-between`}
-              >
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
               >
@@ -349,9 +359,13 @@ const EnhancedContentShowcase: React.FC = () => {
                           <div key={index} className="flex items-center space-x-2">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                             <span className="text-sm text-gray-200">{feature}</span>
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+                transition={{ duration: 0.5 }}
+=======
                 transition={{ duration: 0.5 }}
                 className={`absolute inset-0 bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 flex items-center justify-between`}
               >
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 <div className="flex-1 text-white">
                   <div className="text-8xl mb-6">{showcaseItems[currentSlide].icon}</div>
                   <h3 className="text-5xl font-bold mb-4">{showcaseItems[currentSlide].title}</h3>
@@ -376,6 +390,8 @@ const EnhancedContentShowcase: React.FC = () => {
                 <div className="flex-1 flex justify-center">
                   <div className="w-80 h-80 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
+=======
+=======
                 className="relative"
               >
                 <div className={`bg-gradient-to-br ${showcaseItems[currentSlide].gradient} p-12 rounded-2xl`}>
@@ -396,6 +412,7 @@ const EnhancedContentShowcase: React.FC = () => {
                         {showcaseItems[currentSlide].features.map((feature, index) => (
                           <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">
                             <span className="text-sm font-semibold">{feature}</span>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex items-center"
               >
@@ -414,9 +431,19 @@ const EnhancedContentShowcase: React.FC = () => {
                           <div key={index} className="flex items-center space-x-2">
                             <span className="w-2 h-2 bg-white rounded-full"></span>
                             <span className="text-sm text-gray-200">{feature}</span>
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
                           </div>
                         ))}
                       </div>
+                      
+=======
+                          </div>
+                        ))}
+                      </div>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                       <a
                         href={contentSlides[currentSlide].link}
                         className={`inline-block bg-gradient-to-r ${contentSlides[currentSlide].gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
@@ -430,6 +457,9 @@ const EnhancedContentShowcase: React.FC = () => {
                         {contentSlides[currentSlide].image}
                       </div>
                     </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                       <div className="flex gap-4">
                         <a
                           href={showcaseItems[currentSlide].link}
@@ -465,6 +495,11 @@ const EnhancedContentShowcase: React.FC = () => {
                         </ul>
                       </div>
                     </div>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                       <a
                         href={contentSlides[currentSlide].link}
                         className={`inline-block bg-gradient-to-r ${contentSlides[currentSlide].gradient} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
@@ -478,12 +513,21 @@ const EnhancedContentShowcase: React.FC = () => {
                         {contentSlides[currentSlide].image}
                       </div>
                     </div>
+>>>>>>> cursor/create-and-deploy-new-content-2def
+>>>>>>> origin/cursor/create-and-deploy-new-content-42b7
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
           {/* Navigation Controls */}
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
           <div className="flex justify-center items-center space-x-4 mb-8">
             <button
               onClick={prevSlide}
@@ -497,6 +541,7 @@ const EnhancedContentShowcase: React.FC = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
           <div className="flex justify-center items-center mt-6 space-x-4">
             <button
               onClick={prevSlide}
@@ -513,6 +558,13 @@ const EnhancedContentShowcase: React.FC = () => {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
           <div className="flex justify-center items-center space-x-4 mb-8">
             <button
               onClick={prevSlide}
@@ -539,6 +591,7 @@ const EnhancedContentShowcase: React.FC = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
@@ -565,6 +618,10 @@ const EnhancedContentShowcase: React.FC = () => {
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
             <button
               onClick={nextSlide}
               className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
@@ -668,32 +725,6 @@ const EnhancedContentShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-        {/* Quick Access Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {showcaseItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setCurrentSlide(index)}
-            >
-              <div className="text-4xl mb-3 text-center">{item.icon}</div>
-              <h3 className="text-lg font-bold mb-2 text-center text-white">{item.title}</h3>
-              <p className="text-white/80 mb-4 text-sm text-center">
-                {item.description.substring(0, 80)}...
-              </p>
-              <a 
-                href={item.link}
-                className="block w-full bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center text-sm"
-              >
-                Explore →
-              </a>
-            </motion.div>
-          ))}
-        </div>
-      </div>
       {/* Features Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -721,6 +752,10 @@ const EnhancedContentShowcase: React.FC = () => {
             <p className="text-purple-200 text-center">
               Experience stunning visual design with gradient backgrounds and smooth transitions
             </p>
+=======
+            
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
             <button
               onClick={nextSlide}
               className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
@@ -742,9 +777,19 @@ const EnhancedContentShowcase: React.FC = () => {
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
           </div>
         </div>
       </div>
+
+=======
+          </div>
+        </div>
+      </div>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       {/* Quick Access Grid */}
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {contentSlides.map((slide, index) => (
@@ -767,6 +812,9 @@ const EnhancedContentShowcase: React.FC = () => {
             </a>
           </motion.div>
         ))}
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore the Future?</h2>
@@ -780,6 +828,10 @@ const EnhancedContentShowcase: React.FC = () => {
           <a href="/pages/InnovationLanding2025" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-colors">
             View All Innovations
           </a>
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+=======
         </div>
         {/* Quick Access Grid */}
         <div className="mt-16">
@@ -815,6 +867,7 @@ const EnhancedContentShowcase: React.FC = () => {
             ))}
           </div>
         </div>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       {/* Quick Access Grid */}
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {contentSlides.map((slide, index) => (
@@ -837,6 +890,12 @@ const EnhancedContentShowcase: React.FC = () => {
             </a>
           </motion.div>
         ))}
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
       </div>
     </div>
   );

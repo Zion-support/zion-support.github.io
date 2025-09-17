@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ITServiceRequestHero: React.FC = () => {
   return (

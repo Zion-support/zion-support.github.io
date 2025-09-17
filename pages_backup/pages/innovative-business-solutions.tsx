@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const innovative-business-solutions: React.FC = () => {
   return (
@@ -19,4 +18,3 @@ const innovative-business-solutions: React.FC = () => {
   );
 };
 
-export default innovative-business-solutions;

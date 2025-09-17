@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const 2028-services-showcase: React.FC = () => {
   return (
@@ -19,4 +17,3 @@ const 2028-services-showcase: React.FC = () => {
   );
 };
 
-export default 2028-services-showcase;

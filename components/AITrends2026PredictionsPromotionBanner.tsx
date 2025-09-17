@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AITrends2026PredictionsPromotionBanner: React.FC = () => {
   return (

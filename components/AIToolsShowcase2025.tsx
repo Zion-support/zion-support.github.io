@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AIToolsShowcase2025: React.FC = () => {
   return (

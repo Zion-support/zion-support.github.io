@@ -1,4 +1,3 @@
-import React from 'react';
 
 const BusinessTransformation2025Showcase: React.FC = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const 3d-card-gallery: React.FC = () => {
   return (

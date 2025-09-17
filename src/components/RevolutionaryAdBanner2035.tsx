@@ -45,8 +45,3 @@ const COMPONENT: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default RevolutionaryAdBanner2035;
-=======
-export default COMPONENT;
->>>>>>> origin/merged-prs

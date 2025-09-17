@@ -1,44 +1,8 @@
-<<<<<<< HEAD
-import React from 'react'
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
@@ -62,78 +26,25 @@ const navigation = {
 		{ name: 'Terms', href: '/terms' },
 	],
 }
-<<<<<<< HEAD
-
-export default function Footer() {
-	return (
-		<footer className="bg-gray-900 border-t border-white/10">
-			<div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-				<div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-					{navigation.main.map((item) => (
-						<a key={item.name} href={item.href} className="text-base text-gray-300 hover:text-white transition-colors duration-200">
-							{item.name}
-						</a>
-					))}
-				</div>
-				<div className="mt-12 border-t border-gray-800 pt-8">
-					<p className="text-base text-gray-400 text-center">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
-				</div>
-			</div>
-		</footer>
-	)
-}
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-dc9e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-2def
 =======
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-634d
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 
-<<<<<<< HEAD
-=======
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 =======
-<<<<<<< HEAD
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 =======
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-81d0
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-2def
 =======
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======

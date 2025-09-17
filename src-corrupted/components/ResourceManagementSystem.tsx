@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ResourceManagementSystem: React.FC = () => {
   return (

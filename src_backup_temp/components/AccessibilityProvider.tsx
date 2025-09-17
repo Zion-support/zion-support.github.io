@@ -9,4 +9,3 @@ const AccessibilityProvider: React.FC = () => {
   );
 };
 
-export default AccessibilityProvider;

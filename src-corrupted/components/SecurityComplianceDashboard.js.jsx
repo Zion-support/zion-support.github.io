@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SecurityComplianceDashboard.js: React.FC = () => {
   return (

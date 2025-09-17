@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AdvancedDataTable.js: React.FC = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ai-search.js: React.FC = () => {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const portfolio: React.FC = () => {
   return (
@@ -14,7 +13,6 @@ const portfolio: React.FC = () => {
           <h1 className="text-4xl font-bold mb-6">portfolio</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </div>
     </div>
   );
 };

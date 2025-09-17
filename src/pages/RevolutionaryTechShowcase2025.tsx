@@ -24,9 +24,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             </button>
           </div>
         </div>
-      </motion.div>
-      </div>
-    </>
   );
 };
 

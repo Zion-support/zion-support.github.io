@@ -1,4 +1,3 @@
-import React from 'react';
 
 const QuantumComputingBreakthroughs2030Showcase: React.FC = () => {
   return (

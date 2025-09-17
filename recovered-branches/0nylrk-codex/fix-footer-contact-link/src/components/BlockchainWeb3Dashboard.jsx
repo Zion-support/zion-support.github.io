@@ -1,4 +1,3 @@
-import React from 'react';
 
 const BlockchainWeb3Dashboard: React.FC = () => {
   return (

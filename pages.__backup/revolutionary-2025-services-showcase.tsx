@@ -1,4 +1,3 @@
-import React from 'react';
 
 const revolutionary-2025-services-showcase: React.FC = () => {
   return (
@@ -9,4 +8,3 @@ const revolutionary-2025-services-showcase: React.FC = () => {
   );
 };
 
-export default revolutionary-2025-services-showcase;

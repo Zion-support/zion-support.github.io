@@ -1,4 +1,3 @@
-import React from 'react';
 
 const revolutionary-2025-pricing: React.FC = () => {
   return (

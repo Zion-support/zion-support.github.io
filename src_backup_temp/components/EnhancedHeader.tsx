@@ -9,4 +9,3 @@ const EnhancedHeader: React.FC = () => {
   );
 };
 
-export default EnhancedHeader;

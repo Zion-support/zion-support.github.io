@@ -1,4 +1,3 @@
-import React from 'react';
 
 const revolutionary-2027-services-showcase: React.FC = () => {
   return (

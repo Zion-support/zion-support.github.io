@@ -1,3 +1,4 @@
+=======
 // @ts-nocheck
 import React from 'react';
 
@@ -450,3 +451,4 @@ export default FeatureShowcase;
 		</section>
 	);
 }
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ModernServicesShowcase: React.FC = () => {
   return (

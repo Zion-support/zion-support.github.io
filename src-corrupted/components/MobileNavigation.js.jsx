@@ -1,4 +1,3 @@
-import React from 'react';
 
 const MobileNavigation.js: React.FC = () => {
   return (

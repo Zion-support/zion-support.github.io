@@ -9,4 +9,3 @@ const ai-consciousness-evolution-platform: React.FC = () => {
   );
 };
 
-export default ai-consciousness-evolution-platform;

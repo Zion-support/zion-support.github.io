@@ -1,4 +1,3 @@
-import React from 'react';
 
 const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
   return (

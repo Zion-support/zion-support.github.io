@@ -45,9 +45,3 @@ const COMPONENT: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default RevolutionaryContentCarousel2026;
-</div></div>
-=======
-export default COMPONENT;
->>>>>>> origin/merged-prs

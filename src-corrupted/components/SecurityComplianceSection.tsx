@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SecurityComplianceSection: React.FC = () => {
   return (

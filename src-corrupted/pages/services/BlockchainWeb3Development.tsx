@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const BlockchainWeb3Development: React.FC = () => {
   return (

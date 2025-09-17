@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AdvancedNeuralNetworks2025Banner: React.FC = () => {
   return (

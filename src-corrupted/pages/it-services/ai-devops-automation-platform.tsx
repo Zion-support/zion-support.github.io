@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const ai-devops-automation-platform: React.FC = () => {
   return (

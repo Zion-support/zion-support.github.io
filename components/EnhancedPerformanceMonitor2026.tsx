@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnhancedPerformanceMonitor2026: React.FC = () => {
   return (

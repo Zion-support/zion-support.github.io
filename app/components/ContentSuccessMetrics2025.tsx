@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ContentSuccessMetrics2025: React.FC = () => {
   return (

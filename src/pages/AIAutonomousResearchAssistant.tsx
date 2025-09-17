@@ -1,8 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
-
-const AIAutonomousResearchAssistant: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
       <Helmet>

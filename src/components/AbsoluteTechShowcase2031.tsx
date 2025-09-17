@@ -101,11 +101,6 @@ const AbsoluteTechShowcase2031: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="relative overflow-hidden min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
-=======
-    <div className="relative overflow-hidden min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
->>>>>>> origin/merged-prs
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
@@ -245,44 +240,6 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                   ⚡ Interdimensional Tech →
                 </a>
               </div>
-<<<<<<< HEAD
-=======
-            </div>
-          </div>
-
-          {/* Navigation Dots */}
-          <div className="flex justify-center space-x-6 mt-16">
-            {absoluteTechs.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentTech(index)}
-                className={`w-6 h-6 rounded-full transition-all duration-300 ${
-                  index === currentTech
-                    ? 'bg-gradient-to-r from-purple-400 to-violet-400 scale-150'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          <div
-            className="text-center mt-16"
-          >
-            <div className="inline-flex space-x-6">
-              <a
-                href="/pages/TranscendentAI2026"
-                className="px-10 py-5 bg-gradient-to-r from-purple-600 to-violet-600 text-white rounded-full font-bold text-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
-              >
-                🔮 Explore Absolute AI →
-              </a>
-              <a
-                href="/pages/InterdimensionalTech2027"
-                className="px-10 py-5 bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-full font-bold text-lg hover:shadow-lg hover:shadow-violet-500/25 transition-all duration-300 transform hover:scale-105"
-              >
-                ⚡ Interdimensional Tech →
-              </a>
->>>>>>> origin/merged-prs
             </div>
           </div>
         </div>

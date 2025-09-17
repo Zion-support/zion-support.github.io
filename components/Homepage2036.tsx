@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Homepage2036: React.FC = () => {
   return (

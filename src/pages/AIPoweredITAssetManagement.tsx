@@ -1,19 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, Code, BarChart3, Zap, Target, Rocket } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-import { Helmet } from 'react-helmet-async';
-  Settings,
-  Workflow,
-  BarChart,
-  PieChart,
-  Monitor,
-  HardDrive,
-  Server
-} from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-import { Cpu, Shield, TrendingUp, Database, ArrowRight, Zap, Target, BarChart3 } from 'lucide-react';
 
 const AIPoweredITAssetManagement = () => {
   const features = [

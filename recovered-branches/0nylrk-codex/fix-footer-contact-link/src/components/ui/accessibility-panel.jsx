@@ -1,4 +1,3 @@
-import React from 'react';
 
 const accessibility-panel: React.FC = () => {
   return (

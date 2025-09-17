@@ -45,9 +45,3 @@ const COMPONENT: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default FutureTechTrends2025;
-</div></div></div></div></div>
-=======
-export default COMPONENT;
->>>>>>> origin/merged-prs

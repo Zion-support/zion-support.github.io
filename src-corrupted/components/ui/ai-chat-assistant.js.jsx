@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ai-chat-assistant.js: React.FC = () => {
   return (

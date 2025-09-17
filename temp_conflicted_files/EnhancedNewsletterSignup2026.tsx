@@ -19,92 +19,19 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
 
   if (isSubscribed) {
     return (
-      <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 mb-12 text-white text-center">
-        <div className="text-6xl mb-6">🎉</div>
-        <h3 className="text-3xl font-bold mb-4">Welcome to the Future!</h3>
         <p className="text-xl opacity-90 mb-6">
           You're now part of our exclusive community of innovators and early adopters. 
           Get ready for exclusive updates on the latest technological breakthroughs.
         </p>
-        <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto">
-          <h4 className="text-xl font-bold mb-4">What's Next?</h4>
-          <ul className="text-left space-y-2">
-            <li>• Weekly updates on AI consciousness developments</li>
-            <li>• Exclusive access to quantum computing demos</li>
-            <li>• Early access to neural interface prototypes</li>
-            <li>• Invitations to virtual reality showcases</li>
-            <li>• Direct communication with our research team</li>
-          </ul>
-        </div>
-      </div>
     );
   }
 
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-4xl animate-pulse">🚀</span>
-            <h3 className="text-4xl font-bold">Join the Revolution</h3>
-            <span className="text-4xl animate-pulse">🚀</span>
           </div>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Be the first to experience the most advanced technologies in human history. 
             Get exclusive access to AI consciousness, quantum reality, and neural interfaces.
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 className="text-2xl font-bold mb-4 text-cyan-400">Exclusive Benefits</h4>
-              <ul className="space-y-3">
-                <li className="flex items-center space-x-3">
-                  <span className="text-2xl">🧠</span>
-                  <span>Early access to AI consciousness demos</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-2xl">⚡</span>
-                  <span>Quantum computing virtual experiences</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-2xl">🧬</span>
-                  <span>Neural interface prototype testing</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-2xl">🌟</span>
-                  <span>Direct communication with our AI systems</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 className="text-2xl font-bold mb-4 text-purple-400">What You'll Receive</h4>
-              <ul className="space-y-3">
-                <li className="flex items-center space-x-3">
-                  <span className="text-2xl">📧</span>
-                  <span>Weekly technology updates and insights</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-2xl">🎥</span>
-                  <span>Exclusive video demonstrations</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-2xl">🎯</span>
-                  <span>Priority access to new features</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <span className="text-2xl">🤝</span>
-                  <span>Invitation to our exclusive community</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h4 className="text-2xl font-bold mb-6 text-center text-white">Get Started Today</h4>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-lg font-semibold mb-2">
@@ -192,9 +119,3 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
             </a>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default EnhancedNewsletterSignup2026;

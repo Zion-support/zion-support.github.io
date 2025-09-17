@@ -182,6 +182,51 @@ export const blogPosts = [
     slug: "trusted-rag-2026-freshness-citation-kit"
   },
   {
+    id: 9903,
+    title: "AI 2026: Real-Time Evals — Ship With Confidence",
+    excerpt: "Add live eval gates, freshness windows, and rollback recipes to every release.",
+    content: "Production AI demands objective, automated checks. This post ships a minimal live eval pipeline with freshness windows, semantic drift monitors, and budget-aware routing. Copy the JSON contracts, wire thresholds into CI, and make every rollout reversible by design.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Live Evals", "Rollback", "Freshness"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-evals-ship-with-confidence-2026.jpg",
+    slug: "ai-2026-real-time-evals-ship-with-confidence"
+  },
+  {
+    id: 9902,
+    title: "Executive Brief: Grounded Answers At Scale",
+    excerpt: "A concise blueprint to achieve groundedness with trace-linked evidence hubs.",
+    content: "Executives need guarantees, not guesses. We outline a practical approach to grounded answers: freshness windows, citation coverage, semantic drift checks, and evidence hubs that attach verifiable artifacts to traces. Includes a one-page rollout plan and success metrics.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "RAG",
+    tags: ["Groundedness", "Evidence Hubs", "Citations"],
+    featured: true,
+    imageUrl: "/images/blog/executive-brief-grounded-answers-2026.jpg",
+    slug: "executive-brief-grounded-answers-at-scale"
+  },
+  {
+    id: 9901,
+    title: "FinOps 2026: Cost-Aware Model Routing Starter",
+    excerpt: "Cut spend 30–40% with policy-guarded routing and objective scorecards.",
+    content: "Start cost-aware routing in hours, not weeks. This starter kit includes a minimal routing policy JSON, budget bands, latency SLOs, and groundedness thresholds. We show dashboards, CI gates, and rollback ladders that make every decision auditable and reversible.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "SLOs"],
+    featured: true,
+    imageUrl: "/images/blog/finops-cost-aware-routing-starter-2026.jpg",
+    slug: "finops-2026-cost-aware-model-routing-starter"
+  },
+  {
     id: 9804,
     title: "AI Innovation Hub 2026: The Future of Artificial Intelligence",
     excerpt: "Explore the revolutionary AI innovations that are reshaping technology and transforming industries worldwide.",
@@ -2587,14 +2632,6 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
-<<<<<<< HEAD
-
-// New content added for enhanced engagement
-export const newContent2026 = [
-=======
-// Additional content for enhanced engagement
-export const additionalContent2026 = [
->>>>>>> origin/merged-prs
   {
     id: 9501,
     title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
@@ -3523,87 +3560,6 @@ export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
 
-<<<<<<< HEAD
-=======
-// Add new blog posts to the existing array
-const newBlogPosts = [
-  {
-    id: 20001,
-    title: "AI-Powered Content Marketing Revolution 2026: 500% Engagement Boost",
-    excerpt: "Discover how AI-driven content marketing strategies are delivering unprecedented engagement rates and ROI for businesses worldwide.",
-    content: "The content marketing landscape has been completely transformed by AI in 2026. Our latest research shows that businesses using AI-powered content strategies are seeing 500% increases in engagement, 300% higher conversion rates, and 400% improvement in content ROI. The key lies in AI's ability to understand audience psychology, predict content performance, and create personalized experiences at scale. Our advanced AI content engine analyzes over 10,000 data points per user to create hyper-personalized content that resonates with each individual. This includes dynamic content adaptation, real-time optimization, and predictive content creation that anticipates user needs before they even express them. Companies implementing our AI content marketing platform report 500% increase in engagement rates, 300% higher conversion rates, 400% improvement in content ROI, and 600% faster content production cycles.",
-    author: "Jennifer Martinez",
-    authorRole: "AI Content Marketing Director",
-    publishDate: "2025-01-21",
-    readTime: "7 min read",
-    category: "AI Marketing",
-    tags: ["AI Marketing", "Content Strategy", "Engagement", "ROI", "Personalization"],
-    featured: true,
-    imageUrl: "/images/blog/ai-content-marketing-revolution-2026.jpg",
-    slug: "ai-powered-content-marketing-revolution-2026-500-percent-engagement"
-  },
-  {
-    id: 20002,
-    title: "Quantum Cybersecurity 2026: Unbreakable Digital Fortresses",
-    excerpt: "Revolutionary quantum cybersecurity solutions that provide unbreakable protection against even the most sophisticated cyber threats.",
-    content: "As cyber threats become increasingly sophisticated, traditional security measures are no longer sufficient. Our quantum cybersecurity platform represents a paradigm shift in digital protection, using quantum encryption and AI-powered threat detection to create unbreakable digital fortresses. The system employs quantum key distribution, post-quantum cryptography, and AI-driven threat intelligence to provide 99.99% security effectiveness. Our quantum security protocols are mathematically unbreakable, even by quantum computers, ensuring that your data remains protected against future threats. The platform includes real-time threat detection, automated response systems, and predictive security analytics that identify and neutralize threats before they can cause damage. Organizations implementing quantum cybersecurity report 99.99% security effectiveness, 95% reduction in security incidents, 80% faster threat response times, and 100% compliance with international security standards.",
-    author: "Dr. Michael Thompson",
-    authorRole: "Quantum Security Architect",
-    publishDate: "2025-01-21",
-    readTime: "9 min read",
-    category: "Cybersecurity",
-    tags: ["Quantum Security", "Cybersecurity", "Encryption", "AI Security", "Digital Protection"],
-    featured: true,
-    imageUrl: "/images/blog/quantum-cybersecurity-2026.jpg",
-    slug: "quantum-cybersecurity-2026-unbreakable-digital-fortresses"
-  },
-  {
-    id: 20003,
-    title: "Autonomous Business Intelligence 2026: Self-Optimizing Analytics",
-    excerpt: "Next-generation business intelligence systems that automatically analyze, predict, and optimize business performance without human intervention.",
-    content: "The future of business intelligence is autonomous. Our revolutionary AI-powered analytics platform continuously monitors, analyzes, and optimizes every aspect of your business operations. Unlike traditional BI tools that require constant human oversight, our autonomous system learns from data patterns, predicts future trends, and automatically implements optimizations. The platform uses advanced machine learning algorithms to identify opportunities for improvement, predict market changes, and recommend strategic actions. It integrates with all business systems to provide a unified view of performance and automatically adjusts strategies based on real-time data. Key features include predictive analytics, automated reporting, intelligent insights, and self-optimizing recommendations. Businesses using autonomous BI report 400% improvement in decision-making speed, 300% increase in predictive accuracy, 500% reduction in manual analysis time, and 600% improvement in strategic outcomes.",
-    author: "Dr. Lisa Wang",
-    authorRole: "Autonomous Analytics Lead",
-    publishDate: "2025-01-21",
-    readTime: "8 min read",
-    category: "Business Intelligence",
-    tags: ["Autonomous BI", "Analytics", "AI Intelligence", "Business Optimization", "Predictive Analytics"],
-    featured: true,
-    imageUrl: "/images/blog/autonomous-business-intelligence-2026.jpg",
-    slug: "autonomous-business-intelligence-2026-self-optimizing-analytics"
-  },
-  {
-    id: 20004,
-    title: "Synthetic Intelligence 2026: Beyond Human Cognitive Limits",
-    excerpt: "Breakthrough synthetic intelligence systems that surpass human cognitive capabilities in every measurable dimension.",
-    content: "Synthetic intelligence represents the pinnacle of artificial cognitive development, creating systems that not only match but exceed human intelligence across all domains. Our latest synthetic intelligence platform demonstrates capabilities that surpass human performance in reasoning, creativity, problem-solving, and emotional intelligence. The system combines quantum computing, advanced neural architectures, and consciousness engineering to create truly superhuman intelligence. Unlike traditional AI that mimics human thought processes, synthetic intelligence develops entirely new cognitive paradigms that are optimized for maximum effectiveness. Applications include scientific research, where synthetic intelligence has made breakthrough discoveries in physics and medicine, creative industries where it produces art and literature that rivals human masters, and business strategy where it develops innovative solutions to complex problems. Organizations implementing synthetic intelligence report 1000% improvement in problem-solving capabilities, 500% increase in innovation velocity, 800% improvement in strategic planning accuracy, and 300% enhancement in creative output quality.",
-    author: "Dr. Alexander Chen",
-    authorRole: "Synthetic Intelligence Researcher",
-    publishDate: "2025-01-21",
-    readTime: "11 min read",
-    category: "Synthetic Intelligence",
-    tags: ["Synthetic Intelligence", "Superhuman AI", "Cognitive Enhancement", "Breakthrough Technology", "Future AI"],
-    featured: true,
-    imageUrl: "/images/blog/synthetic-intelligence-2026.jpg",
-    slug: "synthetic-intelligence-2026-beyond-human-cognitive-limits"
-  },
-  {
-    id: 20005,
-    title: "Metaverse Business Operations 2026: Virtual Reality Enterprise",
-    excerpt: "Revolutionary metaverse business platforms that enable complete virtual enterprise operations with unprecedented efficiency and collaboration.",
-    content: "The metaverse is no longer just a concept—it's the future of business operations. Our comprehensive metaverse business platform enables organizations to conduct all operations in immersive virtual environments, from meetings and collaboration to product development and customer service. The platform provides photorealistic virtual offices, AI-powered virtual assistants, and seamless integration with real-world business systems. Teams can collaborate in shared virtual spaces, conduct product demonstrations in virtual showrooms, and provide customer support through immersive experiences. The metaverse business environment offers advantages including 500% improvement in collaboration effectiveness, 300% increase in meeting productivity, 400% reduction in travel costs, and 600% enhancement in creative problem-solving. Our platform includes virtual reality meeting rooms, AI-powered virtual assistants, immersive product demonstrations, and virtual customer service centers. Companies implementing metaverse business operations report 500% improvement in team collaboration, 300% increase in meeting productivity, 400% reduction in operational costs, and 600% improvement in customer engagement.",
-    author: "Sarah Johnson",
-    authorRole: "Metaverse Business Strategist",
-    publishDate: "2025-01-21",
-    readTime: "6 min read",
-    category: "Metaverse Business",
-    tags: ["Metaverse", "Virtual Reality", "Business Operations", "Collaboration", "Digital Transformation"],
-    featured: true,
-    imageUrl: "/images/blog/metaverse-business-operations-2026.jpg",
-    slug: "metaverse-business-operations-2026-virtual-reality-enterprise"
-  }
-];
-
->>>>>>> origin/merged-prs
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)

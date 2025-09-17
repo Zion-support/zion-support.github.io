@@ -1,4 +1,3 @@
-import React from 'react';
 
 const performance-monitor.js: React.FC = () => {
   return (

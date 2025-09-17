@@ -1,4 +1,3 @@
-import React from 'react';
 
 const InteractiveContentDiscoveryWidget2025_2026: React.FC = () => {
   return (

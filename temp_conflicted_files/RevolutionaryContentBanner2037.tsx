@@ -65,10 +65,3 @@ const RevolutionaryContentBanner2037: React.FC = () => {
               Enter New Reality →
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default RevolutionaryContentBanner2037;

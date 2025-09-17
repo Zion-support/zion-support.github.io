@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ComprehensivePricingGuide2030: React.FC = () => {
   return (

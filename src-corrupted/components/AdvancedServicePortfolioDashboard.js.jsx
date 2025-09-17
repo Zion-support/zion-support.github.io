@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AdvancedServicePortfolioDashboard.js: React.FC = () => {
   return (

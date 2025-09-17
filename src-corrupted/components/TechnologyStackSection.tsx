@@ -1,4 +1,3 @@
-import React from 'react';
 
 const TechnologyStackSection: React.FC = () => {
   return (

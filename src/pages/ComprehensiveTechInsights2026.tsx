@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const ComprehensiveTechInsights2026: React.FC = () => {
+=======
   const insights = [
     {
       category: "Synthetic Intelligence",
@@ -81,6 +82,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
       impact: "Enabling universal communication"
     }
   ];
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   return (
     <>
       <Helmet>
@@ -313,6 +315,10 @@ const ComprehensiveTechInsights2026: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
     </div>
     </>
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -606,6 +612,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
         </motion.div>
       </div>
     </div>
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
   );
 
 };

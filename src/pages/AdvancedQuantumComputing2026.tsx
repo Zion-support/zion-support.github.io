@@ -1,9 +1,21 @@
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+import { motion } from 'framer-motion';
+=======
 import React from 'react';
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
 
 const AdvancedQuantumComputing2026: React.FC = () => {
   return (
@@ -53,17 +65,7 @@ const AdvancedQuantumComputing2026: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
-            <p className="text-gray-300 mb-4">
-              Cutting-edge solutions that push the boundaries of what's possible
-=======
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-bold mb-4 text-blue-400">Quantum Algorithms</h3>
-            <p className="text-gray-300 mb-4">
-              Advanced quantum algorithms for optimization, cryptography, and machine learning.
->>>>>>> origin/merged-prs
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Shor's algorithm implementation</li>
@@ -71,55 +73,8 @@ const AdvancedQuantumComputing2026: React.FC = () => {
               <li>• Quantum machine learning</li>
             </ul>
           </div>
-<<<<<<< HEAD
-          
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
-            <p className="text-gray-300 mb-4">
-              Discover the latest developments in technology and innovation
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research and development</li>
-              <li>• Industry partnerships</li>
-              <li>• Future technology trends</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive technology solutions for modern challenges
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Enterprise solutions</li>
-              <li>• Custom development</li>
-              <li>• Technology consulting</li>
-            </ul>
-          </div>
 =======
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-bold mb-4 text-purple-400">Quantum Hardware</h3>
-            <p className="text-gray-300 mb-4">
-              State-of-the-art quantum processors and error correction systems.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Superconducting qubits</li>
-              <li>• Ion trap systems</li>
-              <li>• Topological qubits</li>
-            </ul>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-bold mb-4 text-cyan-400">Quantum Applications</h3>
-            <p className="text-gray-300 mb-4">
-              Real-world applications of quantum computing across industries.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Drug discovery</li>
-              <li>• Financial modeling</li>
-              <li>• Climate simulation</li>
-            </ul>
           </div>
         </div>
 
@@ -131,8 +86,27 @@ const AdvancedQuantumComputing2026: React.FC = () => {
 >>>>>>> origin/merged-prs
         </div>
       </div>
+=======
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-2def
+=======
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+=======
+=======
+>>>>>>> 989864ad5ef118804be96b17356deb0745379eba
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
     </div>
   );
 };
 
+=======
 export default AdvancedQuantumComputing2026;
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

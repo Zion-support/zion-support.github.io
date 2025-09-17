@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SEOEnhancer.js: React.FC = () => {
   return (

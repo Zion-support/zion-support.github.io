@@ -1,4 +1,3 @@
-import React from 'react';
 
 const services-2024: React.FC = () => {
   return (

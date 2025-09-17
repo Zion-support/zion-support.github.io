@@ -1,4 +1,3 @@
-import React from 'react';
 
 const pricing-2033: React.FC = () => {
   return (

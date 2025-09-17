@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const quantum-neural-network-platform: React.FC = () => {
   return (

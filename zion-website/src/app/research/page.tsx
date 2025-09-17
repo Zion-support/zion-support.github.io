@@ -1,4 +1,3 @@
-import React from 'react';
 
 const page: React.FC = () => {
   return (
@@ -10,3 +9,9 @@ const page: React.FC = () => {
 };
 
 export default page;
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+=======
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

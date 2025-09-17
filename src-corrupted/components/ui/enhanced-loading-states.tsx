@@ -1,4 +1,3 @@
-import React from 'react';
 
 const enhanced-loading-states: React.FC = () => {
   return (

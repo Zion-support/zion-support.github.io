@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AdvancedTechShowcase2029: React.FC = () => {
   return (
