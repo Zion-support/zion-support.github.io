@@ -14,8 +14,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "incremental": true,
     "baseUrl": ".",
     "paths": {
@@ -38,20 +36,8 @@
   "include": [
     "src/**/*",
     "src/types/offline-shims.d.ts",
-=======
-    "baseUrl": "."
-  },
-  "include": [
     "**/*.ts",
     "**/*.tsx",
->>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
-=======
-    "baseUrl": "."
-  },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
->>>>>>> origin/cursor/create-and-deploy-new-content-2ba0
     "tailwind.config.js",
     "postcss.config.js"
   ],
@@ -59,18 +45,10 @@
     "node_modules",
     "dist",
     "build",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx"
-=======
-    "coverage"
->>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
-=======
-    "coverage"
->>>>>>> origin/cursor/create-and-deploy-new-content-2ba0
   ]
 }
