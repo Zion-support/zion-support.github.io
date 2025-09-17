@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from "./components/Navigation";
 import { Footer } from "./components/Footer";
@@ -6,6 +6,10 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import PerformanceMonitor from "./components/PerformanceMonitor";
 import ErrorBoundary from "./components/ErrorBoundary";
+import SEOHead from "./components/SEOHead";
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import { PerformanceMonitor as PerfMonitor } from "./utils/performance";
+import { SecurityManager, defaultSecurityConfig } from "./utils/security";
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -37,17 +41,41 @@ const LoadingSpinner = () => (
 );
 
 function App() {
+  useEffect(() => {
+    // Initialize performance monitoring
+    const perfMonitor = new PerfMonitor();
+    
+    // Initialize security
+    const securityManager = new SecurityManager(defaultSecurityConfig);
+    
+    // Report performance metrics after page load
+    const handleLoad = () => {
+      setTimeout(() => {
+        perfMonitor.reportMetrics();
+      }, 2000);
+    };
+    
+    window.addEventListener('load', handleLoad);
+    
+    return () => {
+      perfMonitor.cleanup();
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <ErrorBoundary fallback={<ErrorFallback error={new Error('Unknown error')} resetErrorBoundary={() => window.location.reload()} />}>
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
             <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+              <SEOHead />
+              <AccessibilityEnhancer />
               <PerformanceMonitor />
               <Navigation />
               
               {/* Main Content with enhanced Suspense and Error Boundary */}
-              <main className="pt-20 min-h-screen">
+              <main id="main-content" className="pt-20 min-h-screen" role="main">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
