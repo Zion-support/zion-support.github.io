@@ -91,12 +91,13 @@ export default [
       'coverage/**',
 
       // Large/legacy sources and disabled dirs
-      'src/**',
+      'src-corrupted/**',
       'src.corrupted/**',
       'src.disabled/**',
       'src.broken/**',
       'src.pages.disabled/**',
       'src_backup_temp/**',
+      'src_backup/**',
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
@@ -177,6 +178,15 @@ export default [
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
+      'start-all-automations.js',
+      'start-dev.js',
+      'test-build.js',
+      'syntax-fixer.js',
+      'workbox-config.js',
+      'vite.config-backup.ts',
+      'talent/**',
+      'test-utils.jsx',
+      'store/**',
 
       // Misc root configs that were being linted
       '.eslintrc.js',
