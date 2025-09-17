@@ -1,29 +1,15 @@
 import React from 'react'
 
 const posts = [
-  {
-    slug: 'ai-platform-2-0',
-    title: 'Announcing Zion AI Platform 2.0',
-    date: '2025-09-15',
-    summary: 'Major upgrades to inference performance, observability, and enterprise security.',
-  },
-  {
-    slug: 'customer-win-retail',
-    title: 'Global retail autonomous fulfillment rollout',
-    date: '2025-09-15',
-    summary: 'Autonomous agents improved OTIF by 11% across 14 DCs with dynamic routing.',
-  },
-  {
-    slug: 'customer-win-finance',
-    title: 'Fortune 100 finance deployment',
-    date: '2025-09-10',
-    summary: 'Rolled out autonomous operations across 12 business units in 8 weeks.',
-  },
-  {
-    slug: 'research-breakthrough',
-    title: 'New research on quantum neural search',
-    date: '2025-09-02',
-    summary: 'Peer-reviewed paper on hybrid classical-quantum retrieval achieves SOTA.',
+  { slug: 'ai-platform-2-0', title: 'Announcing Zion AI Platform 2.0', date: '2025-09-15', summary: 'Major upgrades to inference performance, observability, and enterprise security.' },
+  { slug: 'customer-win-retail', title: 'Global retail autonomous fulfillment rollout', date: '2025-09-15', summary: 'Autonomous agents improved OTIF by 11% across 14 DCs with dynamic routing.' },
+  { slug: 'customer-win-finance', title: 'Fortune 100 finance deployment', date: '2025-09-10', summary: 'Rolled out autonomous operations across 12 business units in 8 weeks.' },
+  { slug: 'research-breakthrough', title: 'New research on quantum neural search', date: '2025-09-02', summary: 'Peer-reviewed paper on hybrid classical-quantum retrieval achieves SOTA.' },
+]
+
+export default function NewsPage() {
+  return (
+    <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">News & Updates</h1>
@@ -39,3 +25,10 @@ const posts = [
                 <p className="mt-2 text-sm text-gray-300 line-clamp-3">{post.summary}</p>
                 <span className="mt-4 inline-block text-sm font-semibold text-blue-400 group-hover:text-blue-300">Read more →</span>
               </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -1,9 +1,9 @@
 # Netlify build configuration for Vite app
 # noop: retrigger netlify build (2025-09-17 20:45 UTC) - post-massive-merge: all PRs merged, build verified
 [build]
-  # Build the root Vite app and publish static assets
-  command = "npm run build:netlify"
-  publish = "dist"
+  # Build Next.js app in zion-website and serve from Next output
+  command = "cd zion-website && npm ci --ignore-scripts --no-audit && npm run build"
+  publish = "zion-website/.next"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -105,7 +105,7 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Removed Next.js plugin since this is a Vite project (no-op)
+# Using Next.js static export; no Netlify Next plugin required
 
 # Redirects for SEO/legacy URLs
 [[redirects]]
