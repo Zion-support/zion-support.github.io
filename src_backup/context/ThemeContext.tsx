@@ -1,63 +1,12 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React from 'react';
 
-export type ThemeMode = "light" | "dark";
-
-interface ThemeContextState {
-  mode: ThemeMode;
-  toggleTheme: () => void;
-}
-
-const ThemeContext = createContext<ThemeContextState | undefined>(undefined);
-
-export function ThemeProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const [mode, setMode] = useState<ThemeMode>("light");
-
-  const applyMode = (next: ThemeMode) => {
-    const root = document.documentElement;
-    if (next === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  };
-
-  useEffect(() => {
-    const stored = localStorage.getItem("theme") as ThemeMode | null;
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    const initial: ThemeMode = stored || (prefersDark ? "dark" : "light");
-    setMode(initial);
-    applyMode(initial);
-  }, []);
-
-  const toggleTheme = () => {
-    const next: ThemeMode = mode === "light" ? "dark" : "light";
-    setMode(next);
-    localStorage.setItem("theme", next);
-    applyMode(next);
-  };
-
+const ThemeContext: React.FC = () => {
   return (
-    <ThemeContext.Provider value={{ mode, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ThemeContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
-
-export const useTheme = (): ThemeContextState => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
 };
+
+export default ThemeContext;

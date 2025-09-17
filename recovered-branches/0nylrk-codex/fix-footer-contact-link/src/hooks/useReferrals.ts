@@ -15,12 +15,6 @@ export function useReferrals() {
     totalReferrals: 0,
     pendingReferrals: 0,
     completedReferrals: 0,
-<<<<<<< HEAD
-    totalRewards: 0});
-=======
-    totalRewards: 0,
-  });
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     if (user) {
@@ -136,12 +130,6 @@ export function useReferrals() {
         toast({
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
-<<<<<<< HEAD
-          variant: "destructive"});
-=======
-          variant: "destructive",
-        });
->>>>>>> origin/auto/autonomy-17186719616
         return;
       }
 
@@ -154,12 +142,6 @@ export function useReferrals() {
       toast({
         title: "Success!",
         description: "Your referral code has been generated",
-<<<<<<< HEAD
-        variant: "success"});
-=======
-        variant: "success",
-      });
->>>>>>> origin/auto/autonomy-17186719616
 
       // Refresh the code
       fetchReferralCode();
@@ -170,12 +152,6 @@ export function useReferrals() {
       toast({
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
-        variant: "destructive",
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
 
@@ -195,22 +171,10 @@ export function useReferrals() {
       toast({
         title: "Copied!",
         description: "Referral link copied to clipboard",
-<<<<<<< HEAD
-        variant: "success"});
-=======
-        variant: "success",
-      });
->>>>>>> origin/auto/autonomy-17186719616
     } else {
       toast({
         title: "Cannot copy link",
         description: "Please generate a referral code first",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
-        variant: "destructive",
-      });
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
 
@@ -223,12 +187,6 @@ export function useReferrals() {
       toast({
         title: "Cannot share",
         description: "Please generate a referral code first",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
-        variant: "destructive",
-      });
->>>>>>> origin/auto/autonomy-17186719616
       return;
     }
     

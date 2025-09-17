@@ -9,12 +9,6 @@ import {
   Tabs,
   TabsContent,
   TabsList,
-<<<<<<< HEAD
-  TabsTrigger} from "@/components/ui/tabs";
-=======
-  TabsTrigger,
-} from "@/components/ui/tabs";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function BillingDashboard() {
   return (

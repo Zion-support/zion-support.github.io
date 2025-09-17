@@ -1,29 +1,12 @@
-
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
-interface NotificationHeaderProps {
-  unreadCount: number;
-  onMarkAllAsRead: () => Promise<void>;
-}
-
-export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
-  unreadCount,
-  onMarkAllAsRead
-}) => {
+const NotificationHeader: React.FC = () => {
   return (
-    <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">
-      <h3 className="font-medium text-white">Notifications</h3>
-      {unreadCount > 0 && (
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          onClick={onMarkAllAsRead}
-          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark"
-        >
-          Mark all as read
-        </Button>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NotificationHeader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
+
+export default NotificationHeader;

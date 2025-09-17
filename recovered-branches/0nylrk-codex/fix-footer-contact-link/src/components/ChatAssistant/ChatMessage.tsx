@@ -1,27 +1,9 @@
 import { cn } from "@/lib/utils";
-<<<<<<< HEAD
-import { AvatarFallbackAvatarImage } from "@/components/ui/avatar";
-=======
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
->>>>>>> origin/auto/autonomy-17186719616
 
 interface ChatMessageProps {
   role: 'user' | 'assistant';
   message: string;
   timestamp?: Date;
-<<<<<<< HEAD
-
-
-  key?: string | number;
-}
-
-export function ChatMessage({ rolemessagetimestamp }: ChatMessageProps) {
-=======
-  key?: string | number;
-}
-
-export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
->>>>>>> origin/auto/autonomy-17186719616
   const isUser = role === 'user';
   
   return (
@@ -53,11 +35,6 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         <div className="whitespace-pre-wrap">{message}</div>
         {timestamp && (
           <div className="text-xs text-zion-slate mt-1 text-right">
-<<<<<<< HEAD
-            {timestamp.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' })}
-=======
-            {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
->>>>>>> origin/auto/autonomy-17186719616
           </div>
         )}
       </div>

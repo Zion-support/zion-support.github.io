@@ -11,7 +11,6 @@ export default function WhitepaperGeneratorRedirect() {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -69,7 +68,6 @@ router.replace ('/tokenomics');
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

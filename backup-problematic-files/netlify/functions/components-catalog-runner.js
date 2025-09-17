@@ -29,5 +29,4 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

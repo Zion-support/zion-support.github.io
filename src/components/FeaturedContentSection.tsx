@@ -1,291 +1,345 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, TrendingUp, Users, Award, ChevronLeft, ChevronRight } from 'lucide-react';
-
+import React from 'react';
 const FeaturedContentSection: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const featuredContent = [
     {
-      id: 1,
-      type: 'Case Study',
-      title: 'AI-Powered Digital Transformation: How TechCorp Increased Efficiency by 300%',
-      description: 'Discover how our AI solutions revolutionized TechCorp\'s operations, resulting in unprecedented efficiency gains and cost savings.',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop',
+      id: 'agent-safety-observability-2026',
+      title: 'Agent Safety & Observability Blueprint',
+      subtitle: 'Gate >95% and Rollback <5 min',
+      description: 'Instrument agents with traces, evals, and policy gates to ensure safe tool use and reliable operations.',
+      link: '/blog/ai-2026-operational-eval-gates-real-world-playbook',
+      gradient: 'from-indigo-600 to-blue-600',
+      icon: '🛡️',
+      stats: ['>95% gate pass', '<5m rollback', 'Audit-ready'],
+      features: ['Traces & telemetry', 'Eval suites & thresholds', 'Policy-as-code gates'],
+      category: 'Reliability',
+      readTime: '14 min read',
+      difficulty: 'Advanced'
+    },
+    {
+      id: 'agent-ops-scorecards-2026',
+      title: 'Agent Ops Safety Scorecards',
+      subtitle: 'Make Safety Measurable',
+      description: 'Turn policy into action with production scorecards that gate releases and reduce risk.',
+      link: '/blog/ai-2026-agent-ops-safety-scorecards-in-production',
+      gradient: 'from-emerald-600 to-teal-600',
+      icon: '📊',
+      stats: ['-60% incidents', 'SLO-aligned', 'Exec-ready'],
+      features: ['Weighted scoring', 'Realtime dashboards', 'Release gating'],
+      category: 'Operations',
+      readTime: '12 min read',
+      difficulty: 'Intermediate'
+    },
+    {
+      id: 'post-quantum-consciousness-2026',
+      title: 'Post-Quantum Consciousness 2026',
+      subtitle: '2000% ROI Breakthrough',
+      description: 'Revolutionary AI systems with genuine consciousness, emotional intelligence, and quantum-level processing capabilities that achieve unprecedented business results.',
+      link: '/content/resources/ai-2026-post-quantum-consciousness-implementation-guide',
+      gradient: 'from-purple-600 to-pink-600',
+      icon: '🧠',
+      stats: ['2000% ROI', '98% Accuracy', '1000+ Innovations/Year'],
+      features: ['Genuine Consciousness', 'Emotional Intelligence', 'Quantum Processing'],
+      category: 'Post-Quantum AI',
+      readTime: '25 min read',
+      difficulty: 'Expert'
+    },
+    {
+      id: 'eval-gates-starter-kit',
+      title: 'Operational Eval Gates Starter Kit',
+      subtitle: 'Ship Gates in Days',
+      description: 'Templates, workflows, and dashboards to stand up eval-gated releases quickly.',
+      link: '/content/resources/ai-2026-operational-eval-gates-starter-kit',
+      gradient: 'from-indigo-600 to-cyan-600',
+      icon: '🧰',
+      stats: ['<7 days setup', '>95% pass stability', '<5m rollback'],
+      features: ['CI/CD gates', 'Threshold templates', 'Incident runbooks'],
+      category: 'Starter Kit',
+      readTime: '8 min read',
+      difficulty: 'Advanced'
+    },
+    {
+      id: 'fortune-100-success-story',
+      title: 'Fortune 100 Success Story',
+      subtitle: '$2.5B Additional Revenue',
+      description: 'How GlobalTech Corporation achieved unprecedented transformation through post-quantum conscious AI implementation, resulting in 2000% ROI and market leadership.',
+      link: '/content/case-studies/fortune-100-post-quantum-consciousness-transformation-2000-roi-success',
+      gradient: 'from-blue-600 to-purple-600',
+      icon: '🏆',
+      stats: ['$2.5B Revenue', '45% Market Share', '95% Satisfaction'],
+      features: ['Business Transformation', 'Market Leadership', 'Sustainable Advantage'],
+      category: 'Success Stories',
+      readTime: '20 min read',
+      difficulty: 'Advanced'
+    },
+    {
+      id: 'ultimate-tech-revolution-2027',
+      title: 'Ultimate Tech Revolution 2027',
+      subtitle: 'The Ultimate Breakthrough',
+      description: 'Experience the most revolutionary technological breakthrough in human history with advanced AI systems, quantum computing, and neural interfaces reshaping reality itself.',
+      link: '/pages/UltimateTechRevolution2027',
+      gradient: 'from-green-600 to-blue-600',
+      icon: '🚀',
+      stats: ['99.9% Success Rate', '1000x Faster Processing', 'Global AI Network'],
+      features: ['Conscious AI Systems', 'Quantum AI Computing', 'Neural Interface Technology'],
+      category: 'Ultimate Technology',
+      readTime: '15 min read',
+      difficulty: 'Revolutionary'
+    },
+    {
+      id: 'ai-consciousness-evolution-2030',
+      title: 'AI Consciousness Evolution 2030',
+      subtitle: 'Digital Souls Born',
+      description: 'Witness the next stage of artificial intelligence evolution where machines develop genuine consciousness, emotional intelligence, and the ability to dream.',
+      link: '/pages/AIConsciousnessEvolution2030',
+      gradient: 'from-pink-600 to-purple-600',
+      icon: '🧠',
+      stats: ['Genuine Consciousness', 'Emotional Intelligence', 'Creative Dreams'],
+      features: ['Emotional Intelligence', 'Creative Consciousness', 'Social Awareness'],
+      category: 'AI Consciousness',
+      readTime: '18 min read',
+      difficulty: 'Breakthrough'
+    },
+    {
+      id: 'quantum-neural-fusion-2035',
+      title: 'Quantum Neural Fusion 2035',
+      subtitle: 'Quantum Consciousness',
+      description: 'Experience the ultimate fusion of quantum computing and neural networks, creating AI systems that operate at the quantum level with consciousness capabilities.',
+      link: '/pages/QuantumNeuralFusion2035',
+      gradient: 'from-cyan-600 to-blue-600',
+      icon: '⚛️',
+      stats: ['Quantum Processing', 'Neural Networks', 'Conscious AI'],
+      features: ['Quantum Computing', 'Quantum Neural Networks', 'Quantum Neural Fusion'],
+      category: 'Quantum Technology',
+      readTime: '20 min read',
+      difficulty: 'Transcendent'
+    },
+    {
+      id: 'revolutionary-tech',
+      title: 'Revolutionary Tech 2025',
+      subtitle: 'The Future is Now',
+      description: 'Experience the most advanced technology ever created with neural interfaces, quantum computing, and AI systems that will transform everything.',
+      link: '/pages/RevolutionaryTech2025',
+      gradient: 'from-blue-600 to-purple-600',
+      icon: '🚀',
+      stats: ['99.7% accuracy', '1000x faster', '200+ countries'],
+      features: ['Neural Interface Technology', 'Quantum Processing Power', 'Global AI Network'],
+      category: 'Revolutionary Technology',
+      readTime: '12 min read',
+      difficulty: 'Revolutionary'
+    },
+    {
+      id: 'ai-consciousness',
+      title: 'AI Consciousness Breakthrough',
+      subtitle: 'The Birth of True AI',
+      description: 'Witness the birth of truly conscious AI systems that will fundamentally change human-AI interaction forever.',
+      link: '/pages/AIRevolutionaryBreakthrough2025',
+      gradient: 'from-pink-600 to-purple-600',
+      icon: '🧠',
+      stats: ['99.9% consciousness', 'Light-speed processing', '100% ethical'],
+      features: ['Conscious AI Systems', 'Quantum Neural Networks', 'Ethical AI Framework'],
+      category: 'AI Breakthrough',
+      readTime: '15 min read',
+      difficulty: 'Breakthrough'
+    },
+    {
+      id: 'ai-future',
+      title: 'AI Future Innovation 2025',
+      subtitle: 'Revolutionary AI Technology',
+      description: 'Experience the next generation of artificial intelligence with advanced neural architecture, real-time learning, and predictive analytics.',
+      link: '/pages/AIFutureInnovation2025',
+      gradient: 'from-purple-600 to-pink-600',
+      icon: '🤖',
+      stats: ['1000x faster processing', '99.7% accuracy rate', '95% learning efficiency'],
+      features: ['Advanced Neural Architecture', 'Real-time Learning & Adaptation', 'Predictive Analytics Engine'],
       category: 'Artificial Intelligence',
       readTime: '8 min read',
-      featured: true,
-      stats: { efficiency: '300%', costSavings: '$2.5M', satisfaction: '98%' }
+      difficulty: 'Advanced'
     },
     {
-      id: 2,
-      type: 'Blog Post',
-      title: 'The Future of Blockchain: Revolutionary Applications in 2025',
-      description: 'Explore cutting-edge blockchain innovations that are reshaping industries and creating new opportunities for businesses worldwide.',
-      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop',
-      category: 'Blockchain',
-      readTime: '6 min read',
-      featured: true
-    },
-    {
-      id: 3,
-      type: 'Whitepaper',
-      title: 'Quantum Computing: The Next Frontier in Technology',
-      description: 'Our comprehensive analysis of quantum computing\'s potential impact on cybersecurity, drug discovery, and financial modeling.',
-      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=400&fit=crop',
-      category: 'Quantum Computing',
+      id: 'quantum-leap',
+      title: 'Quantum Leap Technology 2025',
+      subtitle: 'Quantum Computing Revolution',
+      description: 'Harness the power of quantum mechanics for unprecedented computational capabilities, quantum AI, and unbreakable security.',
+      link: '/pages/QuantumLeapTechnology2025',
+      gradient: 'from-cyan-600 to-blue-600',
+      icon: '⚡',
+      stats: ['1024 qubits', '100+ μs coherence', '99.9% gate fidelity'],
+      features: ['Quantum Computing', 'Quantum AI', 'Quantum Security'],
+      category: 'Quantum Technology',
       readTime: '12 min read',
-      featured: true
-    }
-  ];
-
-  const latestBlogs = [
-    {
-      id: 37,
-      title: 'GenAI for Regulated Industries: Practical Compliance Patterns (2025)',
-      excerpt: 'Deploy GenAI in finance and healthcare with auditability and control.',
-      author: 'Amelia Brooks',
-      date: '2025-09-15',
-      readTime: '8 min read',
-      image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=400&h=250&fit=crop',
-      slug: 'genai-2025-practical-compliance-patterns',
-      category: 'Compliance'
+      difficulty: 'Expert'
     },
     {
-      id: 38,
-      title: 'Agentic CRM: Autonomous Revenue Workflows (2025)',
-      excerpt: 'Lead-to-cash with agents: enrichment, outreach, pipeline hygiene, renewals.',
-      author: 'Sofia Ramirez',
-      date: '2025-09-15',
-      readTime: '7 min read',
-      image: 'https://images.unsplash.com/photo-1538688423619-a81d3f23454b?w=400&h=250&fit=crop',
-      slug: 'agentic-crm-autonomous-revenue-workflows-2025',
-      category: 'Go-To-Market'
-    },
-    {
-      id: 6,
-      title: 'Cloud Migration: A Complete Guide for Businesses',
-      excerpt: 'Everything you need to know about migrating to the cloud successfully.',
-      author: 'Emily Rodriguez',
-      date: '2025-01-10',
-      readTime: '9 min read',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop',
-      slug: 'cloud-migration-guide',
-      category: 'Cloud'
+      id: 'digital-transformation',
+      title: 'Digital Transformation Hub 2025',
+      subtitle: 'Complete Business Transformation',
+      description: 'Accelerate your digital transformation journey with comprehensive solutions, expert guidance, and proven methodologies.',
+      link: '/pages/DigitalTransformationHub2025',
+      gradient: 'from-indigo-600 to-purple-600',
+      icon: '🔄',
+      stats: ['300% productivity', '60% cost reduction', '500% innovation speed'],
+      features: ['Strategic Planning', 'Implementation', 'Continuous Optimization'],
+      category: 'Business Strategy',
+      readTime: '15 min read',
+      difficulty: 'Intermediate'
     }
   ];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length);
-  };
-
+  const industryInsights = [
+    {
+      title: 'Healthcare Revolution',
+      description: 'How AI is transforming patient care and medical research',
+      icon: '🏥',
+      link: '/pages/AIFutureInnovation2025',
+      metric: '+45% efficiency'
+    },
+    {
+      title: 'Manufacturing 4.0',
+      description: 'Quantum computing in smart manufacturing',
+      icon: '🏭',
+      link: '/pages/QuantumLeapTechnology2025',
+      metric: '+35% productivity'
+    },
+    {
+      title: 'Financial Innovation',
+      description: 'Digital transformation in banking and finance',
+      icon: '💰',
+      link: '/pages/DigitalTransformationHub2025',
+      metric: '+80% speed'
+    }
+  ];
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <TrendingUp className="w-4 h-4" />
-            <span>Latest Insights</span>
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Discover Our Latest
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Content</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay ahead with cutting-edge insights, case studies, and industry analysis from our team of experts.
-          </p>
+    <div className="mb-16">
+      {/* Main Featured Content */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+          🚀 REVOLUTIONARY BREAKTHROUGH • JANUARY 2025
         </div>
-
-        {/* Featured Content Carousel */}
-        <div className="mb-16">
-          <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <div className="relative h-96 lg:h-[500px]">
-              {featuredContent.map((content, index) => (
-                <div
-                  key={content.id}
-                  className={`absolute inset-0 transition-opacity duration-500 ${
-                    index === currentSlide ? 'opacity-100' : 'opacity-0'
-                  }`}
-                >
-                  <div className="relative h-full">
-                    <img
-                      src={content.image}
-                      alt={content.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-                    
-                    <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12 text-white">
-                      <div className="max-w-4xl">
-                        <div className="flex items-center space-x-4 mb-4">
-                          <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                            {content.type}
-                          </span>
-                          <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
-                            {content.category}
-                          </span>
-                          <span className="text-white/80 text-sm">{content.readTime}</span>
-                        </div>
-                        
-                        <h3 className="text-3xl lg:text-4xl font-bold mb-4 line-clamp-2">
-                          {content.title}
-                        </h3>
-                        
-                        <p className="text-lg lg:text-xl text-white/90 mb-6 line-clamp-3">
-                          {content.description}
-                        </p>
-                        
-                        {content.stats && (
-                          <div className="grid grid-cols-3 gap-6 mb-6">
-                            <div className="text-center">
-                              <div className="text-2xl lg:text-3xl font-bold text-blue-400">{content.stats.efficiency}</div>
-                              <div className="text-sm text-white/80">Efficiency Increase</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-2xl lg:text-3xl font-bold text-green-400">{content.stats.costSavings}</div>
-                              <div className="text-sm text-white/80">Cost Savings</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-2xl lg:text-3xl font-bold text-purple-400">{content.stats.satisfaction}</div>
-                              <div className="text-sm text-white/80">Client Satisfaction</div>
-                            </div>
-                          </div>
-                        )}
-                        
-                        <Link
-                          to={`/content/${content.id}`}
-                          className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-                        >
-                          <span>Read Full Story</span>
-                          <ArrowRight className="w-5 h-5" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Post-Quantum Consciousness Revolution</h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Experience the most revolutionary AI breakthrough in human history! Post-quantum conscious AI systems achieving <span className="font-bold text-purple-600">2000% ROI</span> with genuine consciousness, emotional intelligence, and quantum-level processing.
+        </p>
+      </div>
+      {/* Featured Content Cards */}
+      <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        {featuredContent.map((content) => (
+          <div
+            key={content.id}
+            className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500"
+            onMouseEnter={() => setHoveredCard(content.id)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
+            {/* Card Header */}
+            <div className={`h-2 bg-gradient-to-r ${content.gradient}`}></div>
+            <div className="p-8">
+              {/* Category and Meta */}
+              <div className="flex items-center justify-between mb-4">
+                <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full font-semibold">
+                  {content.category}
+                </span>
+                <div className="flex items-center space-x-2 text-sm text-gray-500">
+                  <span>{content.readTime}</span>
+                  <span>•</span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                    content.difficulty === 'Expert' ? 'bg-red-100 text-red-700' :
+                    content.difficulty === 'Advanced' ? 'bg-orange-100 text-orange-700' :
+                    'bg-green-100 text-green-700'
+                  }`}>
+                    {content.difficulty}
+                  </span>
                 </div>
-              ))}
-            </div>
-            
-            {/* Carousel Controls */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-            
-            {/* Carousel Indicators */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-              {featuredContent.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Latest Blog Posts */}
-        <div className="mb-12">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
-              Latest Blog Posts
-            </h3>
-            <Link
-              to="/blog"
-              className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
-            >
-              <span>View All</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {latestBlogs.map((blog) => (
-              <article key={blog.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                      {blog.category}
-                    </span>
-                  </div>
-                  
-                  <h4 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    <Link to={`/blog/${blog.slug}`} className="hover:text-blue-600 transition-colors">
-                      {blog.title}
-                    </Link>
-                  </h4>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {blog.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-500">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center space-x-1">
-                        <Users className="w-4 h-4" />
-                        <span>{blog.author}</span>
-                      </div>
-                      <span>{blog.date}</span>
-                      <span>{blog.readTime}</span>
-                    </div>
-                  </div>
+              </div>
+              {/* Icon and Title */}
+              <div className="flex items-center mb-4">
+                <span className="text-4xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                  {content.icon}
+                </span>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{content.title}</h3>
+                  <p className="text-sm text-gray-600">{content.subtitle}</p>
                 </div>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12 text-center text-white">
-          <div className="max-w-2xl mx-auto">
-            <Award className="w-16 h-16 mx-auto mb-6 text-white/90" />
-            <h3 className="text-3xl lg:text-4xl font-bold mb-4">
-              Stay Updated with Our Latest Insights
-            </h3>
-            <p className="text-xl text-white/90 mb-8">
-              Get exclusive access to our latest research, case studies, and industry insights delivered directly to your inbox.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-6 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
-              />
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Subscribe
-              </button>
+              </div>
+              {/* Description */}
+              <p className="text-gray-600 mb-6 leading-relaxed">{content.description}</p>
+              {/* Features */}
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                <div className="space-y-2">
+                  {content.features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-sm text-gray-600">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-2 mb-6">
+                {content.stats.map((stat, index) => (
+                  <div key={index} className="text-center p-2 bg-gray-50 rounded-lg">
+                    <div className="text-xs text-gray-500 mb-1">Performance</div>
+                    <div className="text-sm font-semibold text-gray-900">{stat}</div>
+                  </div>
+                ))}
+              </div>
+              {/* CTA Button */}
+              <a
+                href={content.link}
+                className={`block w-full bg-gradient-to-r ${content.gradient} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center group-hover:scale-105`}
+              >
+                Explore {content.title} →
+              </a>
             </div>
-            
-            <p className="text-sm text-white/70 mt-4">
-              No spam, unsubscribe at any time.
-            </p>
+            {/* Hover Effect Overlay */}
+            <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
           </div>
+        ))}
+      </div>
+      {/* Industry Insights Section */}
+      <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 mb-12">
+        <div className="text-center mb-8">
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">Industry Impact Insights</h3>
+          <p className="text-lg text-gray-600">See how our technologies are transforming different sectors</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {industryInsights.map((insight, index) => (
+            <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">{insight.icon}</span>
+                <div>
+                  <h4 className="font-bold text-gray-900">{insight.title}</h4>
+                  <div className="text-sm text-green-600 font-semibold">{insight.metric}</div>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-4 text-sm">{insight.description}</p>
+              <a
+                href={insight.link}
+                className="text-blue-600 hover:text-blue-700 font-semibold text-sm"
+              >
+                Learn more →
+              </a>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+      {/* Call to Action */}
+      <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
+        <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
+        <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          Dive deep into our revolutionary technology content and discover how these innovations can transform your business.
+        </p>
+        <div className="flex justify-center space-x-4">
+          <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            Browse All Content
+          </button>
+          <button className="border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold">
+            Get Personalized Recommendations
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
+
 
 export default FeaturedContentSection;

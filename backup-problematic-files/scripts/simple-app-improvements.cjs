@@ -1,10 +1,13 @@
 
 
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+=======
+>>>>>>> origin/merge-pr-12271:scripts/simple-app-improvements.cjs
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');

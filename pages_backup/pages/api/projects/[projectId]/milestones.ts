@@ -179,11 +179,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }
     res.status (404).json ({ error: "Project not found" });
@@ -237,9 +234,7 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

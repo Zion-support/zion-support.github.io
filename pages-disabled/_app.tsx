@@ -1,37 +1,12 @@
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import '../src/index.css'
-import EnhancedNavigation2025 from '../components/layout/EnhancedNavigation2025'
-import EnhancedFooter from '../components/layout/EnhancedFooter'
+import React from 'react';
 
-export default function App({ Component, pageProps }: AppProps) {
-	const router = useRouter()
-	const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'
-	const path = router.asPath || '/'
-	// Ensure absolute canonical with trailing slash behavior consistent with next.config.js
-	const canonicalUrl = `${siteUrl}${path.endsWith('/') ? path : `${path}/`}`
+const _app: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">_app</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-	return (
-		<>
-			<Head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<link rel="icon" href="/favicon.ico" />
-				<link rel="manifest" href="/manifest.json" />
-				<meta name="theme-color" content="#111827" />
-				<link rel="canonical" href={canonicalUrl} />
-				<meta name="robots" content="index,follow" />
-				<meta property="og:site_name" content="Zion Tech Group" />
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:site" content="@ZionTechGroup" />
-			</Head>
-			<div className="min-h-screen flex flex-col bg-black text-white">
-				<EnhancedNavigation2025 />
-				<main className="flex-1">
-					<Component {...pageProps} />
-				</main>
-				<EnhancedFooter />
-			</div>
-		</>
-	)
-}
+export default _app;

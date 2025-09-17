@@ -9,11 +9,6 @@ export function NewsletterSection() {
         <div className="max-w-4xl mx-auto text-center">
           <GradientHeading>Stay Informed</GradientHeading>
           <p className="mt-4 text-zion-slate-light text-xl mb-8">
-<<<<<<< HEAD
-            Subscribe to our newsletter for the latest updates on Zion's servicesGoogle trending tech newsand marketplace opportunities.
-=======
-            Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities.
->>>>>>> origin/auto/autonomy-17186719616
           </p>
           <div className="max-w-md mx-auto">
             <EnhancedNewsletterForm />

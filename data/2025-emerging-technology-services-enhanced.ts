@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface EmergingTechnologyService {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface EmergingTechnologyService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [
   // Quantum Computing as a Service
   {
@@ -100,10 +92,6 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.9,
     reviews: 18
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Blockchain Infrastructure Platform
   {
     id: 'blockchain-infrastructure-platform',
@@ -156,10 +144,6 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.8,
     reviews: 67
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -212,10 +196,6 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.7,
     reviews: 98
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Metaverse Development Platform
   {
     id: 'metaverse-development-platform',
@@ -268,10 +248,6 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.8,
     reviews: 45
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Space Technology Platform
   {
     id: 'space-technology-platform',

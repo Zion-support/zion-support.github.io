@@ -1,5 +1,30 @@
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+const ComprehensiveServicesShowcase2030: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ComprehensiveServicesShowcase2030 | Zion Tech Group</title>
+        <meta name="description" content="ComprehensiveServicesShowcase2030 - Revolutionary technology solutions" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ComprehensiveServicesShowcase2030</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+=======
+
+const function ComprehensiveServicesShowcase2030() {: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2030() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -239,12 +264,8 @@ export default function ComprehensiveServicesShowcase2030() {
   };
 
   const getServiceCard = (service: any, index: number) => (
-    <motion.div
+    <div
       key={service.id}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
       className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-blue-500 shadow-xl hover:shadow-2xl"
     >
       {/* Service Header */}
@@ -345,7 +366,7 @@ export default function ComprehensiveServicesShowcase2030() {
           <Mail className="w-4 h-4 ml-2" />
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 
   return (
@@ -359,10 +380,7 @@ export default function ComprehensiveServicesShowcase2030() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8">
@@ -412,7 +430,7 @@ export default function ComprehensiveServicesShowcase2030() {
                 <div className="text-gray-300">Client Satisfaction</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -454,10 +472,7 @@ export default function ComprehensiveServicesShowcase2030() {
 
       {/* Services Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -469,7 +484,7 @@ export default function ComprehensiveServicesShowcase2030() {
             Our cutting-edge services span across AI, blockchain, quantum computing, and sustainable technology. 
             Each solution is designed to deliver measurable business value and competitive advantage in the digital age.
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
         <div className="mb-16">
@@ -536,20 +551,16 @@ export default function ComprehensiveServicesShowcase2030() {
         {/* Services Grid/List */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
+            <div>
               {sortedServices.map((service, index) => getServiceCard(service, index))}
-            </AnimatePresence>
+            </div>
           </div>
         ) : (
           <div className="space-y-6">
-            <AnimatePresence>
+            <div>
               {sortedServices.map((service, index) => (
-                <motion.div
+                <div
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 hover:from-gray-700 hover:to-gray-800 transition-all duration-300 border border-gray-700 shadow-xl"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -638,17 +649,14 @@ export default function ComprehensiveServicesShowcase2030() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </AnimatePresence>
+            </div>
           </div>
         )}
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-3xl p-16">
@@ -676,7 +684,7 @@ export default function ComprehensiveServicesShowcase2030() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Footer Contact Section */}
@@ -761,8 +769,19 @@ export default function ComprehensiveServicesShowcase2030() {
               </div>
             </div>
           </div>
+>>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>
   );
-}
+<<<<<<< HEAD
+
+};
+
+
+export default ComprehensiveServicesShowcase2030;
+=======
+};
+
+export default function ComprehensiveServicesShowcase2030() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

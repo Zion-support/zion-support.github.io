@@ -1,14 +1,24 @@
-// Simple production logger utility
-export const logErrorToProduction = (message, error) => {
-  // In production, you might want to send this to a logging service
-  // For now, we'll just log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.error(message, error);
-  }
-
-  // You can add production logging here:
-  // - Sentry
-  // - LogRocket
-  // - Custom logging service
-  // - Analytics service
+<<<<<<< HEAD
+    }
+  },
+  error: (...args) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.error(...args);
+    }
+  },
+  warn: (...args) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(...args);
+    }
+  },
+  info: (...args) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.info(...args);
+    }
+    }
+  };
 };
+
+export default productionLogger;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

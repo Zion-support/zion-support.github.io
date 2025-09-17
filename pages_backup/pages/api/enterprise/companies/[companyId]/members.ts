@@ -73,7 +73,6 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -170,11 +169,9 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
