@@ -1,54 +1,31 @@
-import React from 'react';
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900">
-      <Header />
-      <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full text-sm font-semibold mb-6">
-            ⚡ QUANTUM BREAKTHROUGH 2026
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
+            <p className="text-gray-300 mb-4">
+              Cutting-edge solutions that push the boundaries of what's possible
           </div>
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Advanced Quantum Computing Revolution
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Experience the next generation of quantum computing with exponential processing power, 
-            quantum supremacy, and revolutionary applications that will transform every industry.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-              Explore Quantum Solutions
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-cyan-900 transition-colors">
-              Quantum Demo
-            </button>
-          </div>
-        </div>
-        {/* Quantum Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Quantum Supremacy</h3>
-            <p className="text-gray-300 mb-6">
-              Achieve computational advantages that are impossible with classical computers, 
-              solving problems in seconds that would take millennia.
+          
+          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
+            <p className="text-gray-300 mb-4">
+              Discover the latest developments in technology and innovation
             </p>
-            <ul className="text-gray-300 space-y-2">
-              <li>• 10^18x faster processing</li>
-              <li>• Quantum error correction</li>
-              <li>• Fault-tolerant operations</li>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Research and development</li>
+              <li>• Industry partnerships</li>
+              <li>• Future technology trends</li>
             </ul>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <div className="text-4xl mb-4">🔐</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Quantum Cryptography</h3>
-            <p className="text-gray-300 mb-6">
-              Unbreakable encryption using quantum key distribution and quantum-resistant algorithms 
-              for ultimate security.
+          
+          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
+            <p className="text-gray-300 mb-4">
+              Comprehensive technology solutions for modern challenges
             </p>
-            <ul className="text-gray-300 space-y-2">
-              <li>• Quantum key distribution</li>
-              <li>• Post-quantum cryptography</li>
-              <li>• Quantum random number generation</li>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Enterprise solutions</li>
+              <li>• Custom development</li>
+              <li>• Technology consulting</li>
             </ul>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">

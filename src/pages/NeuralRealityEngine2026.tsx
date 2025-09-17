@@ -298,7 +298,6 @@ const NeuralRealityEngine2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

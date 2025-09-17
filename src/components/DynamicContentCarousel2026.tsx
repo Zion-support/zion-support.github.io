@@ -29,6 +29,7 @@ interface ContentItem {
   tags?: string[];
   ctaText?: string;
   ctaUrl?: string;
+}
 const DynamicContentCarousel2026: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -413,7 +414,6 @@ const DynamicContentCarousel2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -331,3 +331,4 @@ export default function AIContentGeneratorPage() {
               Watch Demo
     </>
   );
+}

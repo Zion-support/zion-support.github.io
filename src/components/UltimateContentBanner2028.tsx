@@ -139,7 +139,6 @@ const UltimateContentBanner2028: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

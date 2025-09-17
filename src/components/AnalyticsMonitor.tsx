@@ -1,5 +1,6 @@
 "use client";
 import React{ useEffectuseState } from 'react';
+/**
  * Analytics and Monitoring Component
  * 
  * Provides comprehensive analytics and monitoring including:
@@ -14,6 +15,7 @@ interface AnalyticsConfig {
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;
+}
 interface PerformanceMetrics {
   pageLoadTime: number;
   firstContentfulPaint: number;
@@ -21,12 +23,14 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
+}
 interface UserBehavior {
   sessionId: string;
   pageViews: number;
   timeOnSite: number;
   bounceRate: number;
   conversionEvents: number;
+}
 export const AnalyticsMonitor: React.FC<AnalyticsConfig> = ({
   ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID,
   enablePerformanceMonitoring = true,
@@ -302,6 +306,8 @@ export default function AnalyticsMonitor() {
     useConversion,
     trackEvent
   };
+};
+/**
  * Real-time Analytics Dashboard Component
  */
 export const AnalyticsDashboard: React.FC = () => {
@@ -316,7 +322,7 @@ export const AnalyticsDashboard: React.FC = () => {
       >
         📊
     );
-  };
+  }
   return (
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-sm">
       <div className="flex justify-between items-center mb-4">
@@ -471,3 +477,4 @@ export default AnalyticsMonitor;
     };
   }[]);
   return null;
+}

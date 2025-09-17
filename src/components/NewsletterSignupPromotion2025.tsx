@@ -58,8 +58,7 @@ const NewsletterSignupPromotion2025 = () => {
         </div>
       </div>
     );
-};
-  };
+  }
 const NewsletterSignupPromotion2025: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">

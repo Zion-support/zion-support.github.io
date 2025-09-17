@@ -203,7 +203,6 @@ const InteractiveTechShowcase2039: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -150,7 +150,6 @@ const NewContentShowcase2034: React.FC = () => {
       <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
     </div>
   );
-
 };
 
 

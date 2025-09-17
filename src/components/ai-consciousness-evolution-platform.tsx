@@ -232,7 +232,6 @@ const ai-consciousness-evolution-platform: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

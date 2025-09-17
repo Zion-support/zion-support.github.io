@@ -218,7 +218,6 @@ import {
             </div>
           </div>
         );
-};
         {/* Technology Stats */}
         <div className="mt-16 bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-8">
           <h3 className="text-3xl font-bold text-center mb-8">Real-Time Technology Metrics</h3>

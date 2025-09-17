@@ -123,7 +123,6 @@ const RevolutionaryInnovationBanner2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

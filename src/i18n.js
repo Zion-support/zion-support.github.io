@@ -8,7 +8,8 @@ const resources = {
     translation: {
       welcome: 'Welcome',
     }
-  };
+  }
+};
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -17,4 +18,8 @@ i18n
     fallbackLng: 'en',
     debug: false,
     interpolation: {
+      escapeValue: false
+    }
   });
+
+export default i18n;

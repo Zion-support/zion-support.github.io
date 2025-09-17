@@ -42,7 +42,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
                 <div className="text-sm text-gray-600">{metric.label}</div>
               </div>
             );
-};
           })}
         </div>
         {/* Story Navigation */}

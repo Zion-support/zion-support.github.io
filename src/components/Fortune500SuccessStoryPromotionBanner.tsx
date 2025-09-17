@@ -132,7 +132,6 @@ const Fortune500SuccessStoryPromotionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

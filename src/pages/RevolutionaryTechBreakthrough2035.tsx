@@ -136,7 +136,6 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
       <Footer />
     </div>
   );
-
 };
 
 

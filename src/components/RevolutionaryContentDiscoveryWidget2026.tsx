@@ -3,7 +3,7 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10" />
+      <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -249,7 +249,6 @@ const RevolutionaryContentDiscoveryWidget2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

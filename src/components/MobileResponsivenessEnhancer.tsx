@@ -49,3 +49,4 @@ export default function MobileResponsivenessEnhancer() {
     };
   }[isMobile]);
   return null;
+}

@@ -178,7 +178,6 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

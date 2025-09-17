@@ -115,7 +115,6 @@ const SuccessStoriesShowcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

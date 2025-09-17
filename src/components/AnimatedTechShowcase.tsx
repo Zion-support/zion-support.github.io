@@ -104,7 +104,6 @@ const AnimatedTechShowcase: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -204,7 +204,6 @@ const UltimateContentBanner2034: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

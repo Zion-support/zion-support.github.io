@@ -188,7 +188,6 @@ const RevolutionaryContentBanner2028: React.FC = () => {
                 </p>
               </div>
             );
-};
           })}
         </div>
         {/* Urgency Banner */}

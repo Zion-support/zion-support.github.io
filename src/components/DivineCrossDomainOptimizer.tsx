@@ -19,6 +19,7 @@ interface DivineCrossDomainOptimization {
   divineOptimizationStrategies: string[];
   crossDomainBenefits: string[];
   transcendentCapabilities: string[];
+}
 interface DivineCrossDomainMetrics {
   totalOptimizations: number;
   activeOptimizations: number;
@@ -30,6 +31,7 @@ interface DivineCrossDomainMetrics {
   divineCoherenceProgress: number;
   universalScopeLevel: number;
   consciousnessLevel: number;
+}
 interface DivineCrossDomainOptimizerProps {
   showMetrics?: boolean;
   maxOptimizations?: number;
@@ -300,7 +302,7 @@ export default function DivineCrossDomainOptimizer({
               <div className="h-3 bg-slate-700 rounded w-2/3"></div>
           ))}
     );
-  };
+  }
   return (
     <div className={className}>
       <div className="mb-6">

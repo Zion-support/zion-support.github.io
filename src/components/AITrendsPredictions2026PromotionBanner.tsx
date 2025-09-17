@@ -101,7 +101,6 @@ const AITrendsPredictions2026PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

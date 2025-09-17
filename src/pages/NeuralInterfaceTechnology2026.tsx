@@ -119,7 +119,6 @@ const NeuralInterfaceTechnology2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

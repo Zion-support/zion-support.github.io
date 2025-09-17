@@ -110,7 +110,6 @@ const ServiceWorkerRegistration: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

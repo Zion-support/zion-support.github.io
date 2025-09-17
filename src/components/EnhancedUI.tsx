@@ -29,6 +29,7 @@ interface CardProps {
   children: React.ReactNode;
   hover?: boolean;
   className?: string;
+}
 export const EnhancedCard: React.FC<CardProps> = ({
   children,
   hover = true,
@@ -41,9 +42,11 @@ export const EnhancedCard: React.FC<CardProps> = ({
       {children}
     </div>
   );
+};
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: string;
+}
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'blue'
@@ -64,11 +67,13 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       style={{ borderTopColor: 'transparent' }}
     />
   );
+};
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
   children: React.ReactNode;
+}
 export const EnhancedModal: React.FC<ModalProps> = ({
   isOpen,
   onClose,
@@ -116,9 +121,11 @@ export const EnhancedModal: React.FC<ModalProps> = ({
       )}
     </div>
   );
+};
 interface ProgressBarProps {
   progress: number;
   className?: string;
+}
 export const EnhancedProgressBar: React.FC<ProgressBarProps> = ({
   progress,
   className = ', '
@@ -130,10 +137,12 @@ export const EnhancedProgressBar: React.FC<ProgressBarProps> = ({
       />
     </div>
   );
+};
 interface TooltipProps {
   children: React.ReactNode;
   content: string;
   position?: 'top' | 'bottom' | 'left' | 'right';
+}
 export const EnhancedTooltip: React.FC<TooltipProps> = ({
   children,
   content,
@@ -180,3 +189,4 @@ export default {
   EnhancedModal,
   EnhancedProgressBar,
   EnhancedTooltip
+};

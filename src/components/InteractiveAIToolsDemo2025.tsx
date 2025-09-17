@@ -21,7 +21,6 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -9,6 +9,7 @@ interface ContentItem {
   url: string;
   featured: boolean;
   tags: string[];
+}
 const contentItems: ContentItem[] = [
   {
     id: 'ai-2025-2026-breakthrough',

@@ -63,7 +63,6 @@ const RevolutionaryAdBanner2037: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

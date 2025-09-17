@@ -119,7 +119,6 @@ const RevolutionarySuccessStories2026Banner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

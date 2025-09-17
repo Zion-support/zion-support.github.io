@@ -38,7 +38,6 @@ const UltimateTechPromotionBanner2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

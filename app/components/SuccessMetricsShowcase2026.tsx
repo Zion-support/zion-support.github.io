@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-import { 
-  TrendingUp, 
-  DollarSign, 
-  Clock, 
-  Target,
-  Users,
-  Award,
-  CheckCircle,
-  Zap,
-  BarChart3,
-  PieChart
-} from 'lucide-react';
-
-interface Metric {
-  icon: React.ComponentType<any>;
-  value: string;
-  label: string;
-  description: string;
-  color: string;
-  bgColor: string;
-  trend?: {
-    direction: 'up' | 'down' | 'stable';
-    value: string;
-  };
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const SuccessMetricsShowcase2026: React.FC = () => {
   return (

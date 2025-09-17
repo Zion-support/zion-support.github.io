@@ -9,7 +9,6 @@ const capabilities.page: React.FC = () => {
             {c}
         ))}
   );
-
 };
 
 

@@ -136,7 +136,6 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
       </div>
     </div>
   );
-};
   const ProgressBar = ({ value, max, label, color = 'blue' }: {
     value: number;
     max: number;
@@ -178,7 +177,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
         </div>
       </div>
     );
-  };
+  }
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">AdvancedAnalyticsDashboard</h3>

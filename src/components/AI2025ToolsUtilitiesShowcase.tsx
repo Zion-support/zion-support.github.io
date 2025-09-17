@@ -147,7 +147,6 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

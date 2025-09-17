@@ -38,7 +38,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                   {category.title}
                 </button>
               );
-};
             })}
           </div>
         </div>

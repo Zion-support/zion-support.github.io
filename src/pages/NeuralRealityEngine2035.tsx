@@ -267,7 +267,6 @@ const NeuralRealityEngine2035: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -36,12 +36,12 @@ export default function RevolutionaryServicesPage() {
   // Category filter
   if (selectedCategory !== 'All') {
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
-  };
+  }
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
-  };
+  }
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -50,7 +50,7 @@ export default function RevolutionaryServicesPage() {
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
-  };
+  }
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {

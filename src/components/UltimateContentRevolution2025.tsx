@@ -183,7 +183,6 @@ const UltimateContentRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

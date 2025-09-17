@@ -362,7 +362,6 @@ const QuantumRealityEngine2028: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

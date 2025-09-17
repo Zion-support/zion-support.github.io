@@ -287,3 +287,4 @@ export default function AIContentGenerator() {
               <Link to="/contact">
                 Contact Sales
   );
+}

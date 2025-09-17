@@ -431,7 +431,6 @@ const ai-code-review-security-scanner: React.FC = () => {
       </div>
     </>
   );
-
 };
 
 

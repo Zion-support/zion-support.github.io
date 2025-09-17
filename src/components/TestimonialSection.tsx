@@ -93,7 +93,6 @@ const TestimonialSection: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

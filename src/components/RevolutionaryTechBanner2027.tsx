@@ -153,7 +153,6 @@ const RevolutionaryTechBanner2027 = () => {
       </div>
     </div>
   );
-
 };
 
 

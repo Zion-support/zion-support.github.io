@@ -145,7 +145,6 @@ const RevolutionaryContentBanner2040: React.FC = () => {
       </div>
     </motion.div>
   );
-
 };
 
 

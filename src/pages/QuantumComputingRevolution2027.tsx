@@ -289,7 +289,6 @@ const QuantumComputingRevolution2027 = () => {
       </section>
     </div>
   );
-
 };
 
 

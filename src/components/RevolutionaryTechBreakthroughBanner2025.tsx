@@ -32,7 +32,6 @@ const RevolutionaryTechBreakthroughBanner2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

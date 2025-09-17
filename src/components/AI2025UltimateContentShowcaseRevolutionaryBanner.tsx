@@ -152,7 +152,6 @@ const AI2025UltimateContentShowcaseRevolutionaryBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 

@@ -219,7 +219,6 @@ const RevolutionaryAIInnovations2025: React.FC = () => {
       </div>
     </divsection>
   );
-
 };
 
 

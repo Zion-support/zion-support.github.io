@@ -82,4 +82,4 @@ const ai-services: React.FC = () => {
                   View Case Studies
     </>
   );
-};
+}

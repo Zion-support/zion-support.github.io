@@ -112,7 +112,6 @@ const NextGenAIInnovationPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

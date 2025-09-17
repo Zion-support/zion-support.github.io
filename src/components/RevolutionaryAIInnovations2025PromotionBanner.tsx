@@ -219,7 +219,6 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
       </button>
     </div>
   );
-
 };
 
 

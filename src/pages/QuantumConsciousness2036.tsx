@@ -210,7 +210,6 @@ const QuantumConsciousness2036: React.FC = () => {
       </div>
     </>
   );
-
 };
 
 

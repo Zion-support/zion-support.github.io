@@ -1,61 +1,47 @@
-<<<<<<< HEAD
 import React from 'react';
 
-const page: React.FC = () => {
+export default function GroundedGenerationBlueprintPage() {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-4xl px-6 pt-24">
+        <div className="prose prose-invert max-w-none">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8">
+            AI 2026: Grounded Generation Blueprint
+          </h1>
+          
+          <div className="text-lg text-gray-300 mb-8">
+            Reduce hallucinations with retrieval, constraints, and eval gates for reliable AI generation.
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
+            <p className="text-gray-300 leading-relaxed">
+              This comprehensive blueprint covers the latest techniques for grounded generation in AI systems. 
+              Learn how to implement retrieval-augmented generation with constraints and evaluation gates 
+              to reduce hallucinations and improve reliability in production AI applications.
+            </p>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Key Techniques</h2>
+            <ul className="text-gray-300 space-y-2">
+              <li>• Retrieval-augmented generation (RAG) patterns</li>
+              <li>• Constraint-based generation controls</li>
+              <li>• Evaluation gates and quality checks</li>
+              <li>• Hallucination detection and mitigation</li>
+              <li>• Production deployment strategies</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
+            <h2 className="text-2xl font-semibold text-white mb-4">Implementation Guide</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Follow our step-by-step implementation guide to deploy grounded generation in your AI systems. 
+              Includes code examples, configuration templates, and best practices for production deployment.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-=======
-import React from 'react'
-import Link from 'next/link'
-
-export const metadata = {
-  title: 'AI 2026: Grounded Generation — Blueprint',
-  description:
-    'Ensure factual, traceable outputs with retrieval, constraints, and evaluation gates for production AI systems.',
 }
-
-export default function Page() {
-  return (
-    <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-white">AI 2026: Grounded Generation — Blueprint</h1>
-      <p className="text-gray-300 mt-3">
-        Techniques to ensure factual, traceable outputs using retrieval augmentation, structured constraints, and
-        evaluation gates. Reduce hallucinations and improve trust in production.
-      </p>
-
-      <div className="prose prose-invert mt-8">
-        <h2>Core techniques</h2>
-        <ul>
-          <li>Retrieval with provenance and snippet attributions</li>
-          <li>Schema constraints with JSON Schema and tool envelopes</li>
-          <li>Guardrail policies with automated policy-as-code checks</li>
-          <li>Offline and runtime evaluations with rollback gates</li>
-        </ul>
-        <h3>Rollout path</h3>
-        <ol>
-          <li>Instrument retrieval with citations and source scoring</li>
-          <li>Add JSON schema validation and fail-safe fallbacks</li>
-          <li>Introduce runtime checks; block unsafe actions</li>
-          <li>Track groundedness SLIs and violations</li>
-        </ol>
-      </div>
-
-      <div className="mt-10 flex gap-3">
-        <Link href="/blog/ai-2026-operational-evals-blueprint" className="inline-block bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700">
-          Operational Evals
-        </Link>
-        <Link href="/blog/ai-2026-enterprise-retrieval-observability" className="inline-block border border-blue-600 text-blue-300 px-5 py-3 rounded-lg font-semibold hover:bg-blue-50/10">
-          Retrieval Observability
-        </Link>
-      </div>
-    </main>
-  )
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-
-export default page;

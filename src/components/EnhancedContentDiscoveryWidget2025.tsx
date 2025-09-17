@@ -172,7 +172,6 @@ const EnhancedContentDiscoveryWidget2025: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>

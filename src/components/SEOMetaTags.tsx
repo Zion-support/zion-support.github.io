@@ -7,6 +7,7 @@ interface SEOMetaTagsProps {
   image?: string;
   url?: string;
   type?: string;
+}
 const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
   title,
   description,
@@ -66,7 +67,6 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
       </script>
     </Helmet>
   );
-
 };
 
 

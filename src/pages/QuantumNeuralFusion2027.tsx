@@ -205,7 +205,6 @@ const QuantumNeuralFusion2027: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -153,7 +153,6 @@ const RevolutionaryAdBanner2035: React.FC = () => {
       </div>
     </motion.div>
   );
-
 };
 
 

@@ -151,7 +151,6 @@ const InteractiveAICalculator: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

@@ -85,7 +85,7 @@ export default function DynamicServicePage() {
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>
     );
-  };
+  }
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
   return (
     <UltraAdvancedFuturisticBackground>
@@ -119,6 +119,7 @@ export default function DynamicServicePage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
   );
+}
 // Static export support: generate root-level pages for service slugs
 type Svc = typeof enhancedRealMicroSaasServices[number];
 function collectAllServices(): Svc[] {
@@ -139,8 +140,10 @@ function collectAllServices(): Svc[] {
       realMarketServices as Svc[],
       realVerifiedServices as unknown as Svc[]
     );
+}
 function normalizeSlug(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
 function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
   try {
@@ -151,7 +154,8 @@ function extractRootSlugFromLink(link?: string): string | null {
     return null;
   } catch {
     return null;
-  };
+  }
+}
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices();
   const candidateSlugs = new Set<string>();
@@ -175,13 +179,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
     if (!slugCandidate) continue;
     if (reservedTopLevelSlugs.has(slugCandidate)) continue; // skip conflicts
     candidateSlugs.add(slugCandidate);
-  };
+  }
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
     fallback: true
   };
+};
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };
+};

@@ -230,7 +230,6 @@ const InteractiveContentDiscoveryWidget2025_2026: React.FC = () => {
                 )}
               </div>
             );
-};
           })}
         </div>
       </div>

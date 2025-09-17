@@ -77,7 +77,6 @@ const RevolutionaryFeatures2025: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

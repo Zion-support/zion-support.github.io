@@ -39,12 +39,12 @@ export default function InnovativeServicesPage() {
   // Category filter
   if (selectedCategory !== 'All') {
     filteredServices = getInnovativeServicesByCategory(selectedCategory);
-  };
+  }
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getInnovativeServicesByPriceRange(min, max);
-  };
+  }
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -53,7 +53,7 @@ export default function InnovativeServicesPage() {
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
-  };
+  }
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {

@@ -137,7 +137,6 @@ const InteractiveTechDemo2026: React.FC = () => {
       </div>
     </div>
   );
-};
   const renderNeuralDemo = () => (
     <div className="space-y-6">
       <div className="bg-white/10 rounded-lg p-6">

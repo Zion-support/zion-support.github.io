@@ -36,6 +36,7 @@ interface CaseStudy {
   image: string;
   tags: string[];
   isFeatured?: boolean;
+}
 const caseStudies: CaseStudy[] = [
   {
     id: '1',
@@ -126,7 +127,8 @@ const caseStudies: CaseStudy[] = [
     role: 'Chief Medical Officer',
     image: '/api/placeholder/400/300',
     tags: [', 'AI', 'Healthcare', 'Diagnostics', 'Life-Saving']
-  };
+  }
+];
 const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Services', 'Healthcare'];
 };
 

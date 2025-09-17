@@ -93,7 +93,6 @@ const AI2025QuantumBreakthroughPromotionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

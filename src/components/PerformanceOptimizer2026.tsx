@@ -64,3 +64,4 @@ export default function PerformanceOptimizer2026() {
     };
   }[]);
   return null;
+}

@@ -165,7 +165,6 @@ const quantum-ai-neural-network-platform: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

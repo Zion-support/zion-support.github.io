@@ -183,7 +183,6 @@ const AdvancedContentManagementSystem: React.FC = () => {
                       </td>
                     </tr>
                   );
-};
                 })}
               </tbody>
             </table>

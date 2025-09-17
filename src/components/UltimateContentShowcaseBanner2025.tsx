@@ -1,5 +1,12 @@
-import React from 'react';
-const UltimateContentShowcaseBanner2025 = () => {
+"use client";
+'use client'
+import { useState, useEffect } from 'react'
+export default function UltimateContentShowcaseBanner2025() {
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+  if (!isVisible) return null
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-20">

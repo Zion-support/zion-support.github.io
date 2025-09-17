@@ -202,7 +202,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

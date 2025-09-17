@@ -33,3 +33,4 @@ export default function ApiPerformanceTestingPage() {
 							<ExternalLink className="w-4 h-4" /> Gatling OSS
 		</>
 	);
+}

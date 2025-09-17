@@ -28,3 +28,4 @@ export default function SitemapPage() {
 						<li key={l.href} className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"><a className="text-cyan-300" href={l.href}>{l.name}</a></li>
 					))}
 	);
+}

@@ -131,7 +131,6 @@ const AI2025TrendsInnovationPromotionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 

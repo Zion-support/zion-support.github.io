@@ -272,7 +272,6 @@ const OmniversalConsciousness2036: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

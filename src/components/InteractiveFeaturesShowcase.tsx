@@ -191,7 +191,6 @@ const InteractiveFeaturesShowcase: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

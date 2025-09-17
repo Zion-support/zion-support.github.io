@@ -14,7 +14,6 @@ const UltimateTechShowcase2029: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

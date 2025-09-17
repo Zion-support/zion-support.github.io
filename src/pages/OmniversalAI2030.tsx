@@ -14,7 +14,6 @@ const OmniversalAI2030: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

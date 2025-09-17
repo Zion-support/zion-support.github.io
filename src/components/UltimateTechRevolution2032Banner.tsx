@@ -96,7 +96,6 @@ const UltimateTechRevolution2032Banner: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
     </divsection>
   );
-
 };
 
 

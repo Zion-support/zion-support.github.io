@@ -180,7 +180,6 @@ const RevolutionaryTechShowcase2039: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

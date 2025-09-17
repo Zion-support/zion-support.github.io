@@ -183,7 +183,6 @@ const AdvancedHolographicReality2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

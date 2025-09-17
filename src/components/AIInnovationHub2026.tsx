@@ -95,7 +95,6 @@ const AIInnovationHub2026: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>

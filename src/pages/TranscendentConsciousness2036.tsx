@@ -281,7 +281,6 @@ const TranscendentConsciousness2036: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

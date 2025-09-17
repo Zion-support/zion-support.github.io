@@ -14,7 +14,6 @@ const ConsciousnessTransfer2030: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

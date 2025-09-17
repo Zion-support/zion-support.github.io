@@ -28,6 +28,7 @@ interface AITool {
   rating: number;
   isNew?: boolean;
   isPopular?: boolean;
+}
 const aiTools: AITool[] = [
   {
     id: '1',
@@ -93,7 +94,8 @@ const aiTools: AITool[] = [
     pricing: '$25/month',
     rating: 4.8,
     isPopular: true
-  };
+  }
+];
 const categories = [', 'All', 'Development', 'Analytics', 'Security', 'Content', 'Search'Communication'];
 };
 

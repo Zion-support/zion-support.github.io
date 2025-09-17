@@ -10,6 +10,7 @@ interface ContentItem {
   icon: string;
   featured: boolean;
   tags: string[];
+}
 const contentItems: ContentItem[] = [
   {
     id: 'ai-trends-2025-2030',

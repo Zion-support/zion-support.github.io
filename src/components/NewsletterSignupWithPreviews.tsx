@@ -9,6 +9,7 @@ interface ContentPreview {
   badgeColor: string;
   icon: string;
   roi?: string;
+}
 const contentPreviews: ContentPreview[] = [
   {
     title: "AI 2025 Ultimate Breakthrough Revolution",
@@ -78,7 +79,7 @@ export default function NewsletterSignupWithPreviews() {
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 <span>Revolutionary case studies</span>
     );
-  };
+  }
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

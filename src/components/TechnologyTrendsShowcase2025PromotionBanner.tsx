@@ -76,7 +76,6 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
                     <div className="text-lg font-bold">{trend.adoption}</div>
                   </div>
                 );
-};
               })}
             </div>
             {/* Right Content - CTA Buttons */}

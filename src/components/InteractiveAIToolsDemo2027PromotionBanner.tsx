@@ -130,7 +130,6 @@ const InteractiveAIToolsDemo2027PromotionBanner: React.FC = () => {
       </button>
     </div>
   );
-
 };
 
 

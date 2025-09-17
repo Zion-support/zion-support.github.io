@@ -50,7 +50,6 @@ const PerformanceOptimizations: React.FC = () => {
       />
     </>
   );
-
 };
 
 

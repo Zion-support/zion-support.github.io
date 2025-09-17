@@ -191,7 +191,6 @@ const RevolutionaryAIConsciousness2026 = () => {
       </section>
     </div>
   );
-
 };
 
 

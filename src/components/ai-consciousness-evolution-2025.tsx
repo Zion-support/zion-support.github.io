@@ -18,6 +18,7 @@ const features = [
   'Creative consciousness exploration',
   'Spiritual growth pathways',
   'Personal transformation tracking'
+];
 const useCases = [
   'Personal development and growth',
   'Professional leadership training',
@@ -29,6 +30,7 @@ const useCases = [
   'Creative arts enhancement',
   'Relationship improvement',
   'Stress management and resilience'
+];
 const technology = [
   'Advanced AI algorithms',
   'Machine learning models',
@@ -40,6 +42,7 @@ const technology = [
   'Brain-computer interfaces',
   'Quantum computing integration',
   'Blockchain security'
+];
 const integrations = [
   'Wearable devices',
   'Mobile applications',
@@ -51,6 +54,7 @@ const integrations = [
   'Social media networks',
   'Fitness trackers',
   'Meditation apps'
+];
 const testimonials = [
   {
     name: 'Dr. Sarah Chen',
@@ -456,3 +460,4 @@ export default function AIConsciousnessEvolution2025() {
                   <div className="text-white font-medium">{contact.value}</div>
               ))}
   );
+}

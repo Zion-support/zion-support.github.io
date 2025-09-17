@@ -315,7 +315,6 @@ const InteractiveAILearningHub2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 

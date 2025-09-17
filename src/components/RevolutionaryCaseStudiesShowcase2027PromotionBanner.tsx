@@ -133,7 +133,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
       </button>
     </div>
   );
-
 };
 
 

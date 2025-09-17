@@ -32,7 +32,6 @@ const AdvancedTestimonials: React.FC = () => {
                   "{testimonial.content}"
           ))}
   );
-
 };
 
 

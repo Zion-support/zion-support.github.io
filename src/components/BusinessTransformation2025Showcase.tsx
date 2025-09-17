@@ -34,7 +34,6 @@ const BusinessTransformation2025Showcase: React.FC = () => {
                 {section.title}
               </button>
             );
-};
           })}
         </div>
         {/* Metrics Display */}

@@ -42,7 +42,6 @@ const BusinessTransformationShowcase2025: React.FC = () => {
                 <div className="text-sm opacity-90">{metric.description}</div>
               </div>
             );
-};
           })}
         </div>
         {/* Active Metric Details */}

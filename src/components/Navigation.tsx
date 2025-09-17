@@ -103,6 +103,7 @@ function Navigation() {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState (false);
   const [isResourcesOpen, setIsResourcesOpen] = useState (false);
   const [isSearchOpen, setIsSearchOpen] = useState (false);
+;
   const services = [;
     {
       name: "AI Services"
@@ -141,6 +142,7 @@ function Navigation() {
       icon: Shield
     }
   ];
+;
   const solutions = [;
     {
       name: "Enterprise Solutions",
@@ -432,6 +434,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
                   <Instagram className="w-4 h-4" />;
+;
   const quick_links = [;
     { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/team" },
@@ -440,6 +443,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
     { name: "Support", href: "/support" },
     { name: "Status", href: "/status" },
   ];
+;
   return (
     <>;
       {/* Top Bar */}
@@ -1129,3 +1133,4 @@ origin/automation-improvements-final
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
+}

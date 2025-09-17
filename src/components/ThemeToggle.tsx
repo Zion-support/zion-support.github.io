@@ -28,7 +28,6 @@ const ThemeToggle: React.FC = () => {
                 )}
               </divbutton>
             );
-};
           })}
         </div>
       </div>

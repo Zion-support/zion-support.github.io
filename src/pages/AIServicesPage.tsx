@@ -85,7 +85,6 @@ const AIServicesPage: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 

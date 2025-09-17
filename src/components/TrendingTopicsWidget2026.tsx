@@ -209,7 +209,6 @@ const TrendingTopicsWidget2026 = () => {
       </div>
     </div>
   );
-
 };
 
 
