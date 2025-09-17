@@ -5,7 +5,7 @@ const RevolutionaryContentBanner2035: React.FC = () => {
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 opacity-30" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>
+      {/* Pattern overlay intentionally removed for build safety (unescaped quotes in data URI caused TSX parse error) */}
       
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
