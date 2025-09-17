@@ -2175,19 +2175,9 @@
     "h1": "Enterprise Automation Strategy 2025: Practical AI Patterns"
   },
   {
-    "route": "/blog/ai-2026-agent-observability-blueprint",
-    "title": "AI 2026: Agent Observability Blueprint | Zion Tech Group",
-    "h1": "Agent Observability Blueprint (2026)"
-  },
-  {
     "route": "/blog/ai-2026-agent-platform-slos-best-practices",
     "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
     "h1": "AI 2026: Agent Platform SLOs — Best Practices"
-  },
-  {
-    "route": "/blog/ai-2026-agent-safety-playbook",
-    "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
-    "h1": "AI 2026: Agent Safety Playbook"
   },
   {
     "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
@@ -2206,7 +2196,7 @@
   },
   {
     "route": "/blog/ai-2026-evaluation-cookbook",
-    "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
+    "title": "",
     "h1": "AI 2026: Evaluation Cookbook"
   },
   {
@@ -2220,19 +2210,9 @@
     "h1": "AI 2026: Operational Evals — Blueprint"
   },
   {
-    "route": "/blog/ai-2026-operational-risk-metrics-for-agents",
-    "title": "AI 2026: Operational Risk Metrics for Agents | Zion Tech Group",
-    "h1": "AI 2026: Operational Risk Metrics for Agents"
-  },
-  {
     "route": "/blog/ai-2026-operationalizing-agentic-workflows",
     "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
     "h1": "Operationalizing Agentic Workflows in 2026"
-  },
-  {
-    "route": "/blog/ai-2026-production-evidence-hub-blueprint",
-    "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
-    "h1": "AI 2026: Production Evidence Hub Blueprint"
   },
   {
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
@@ -2241,7 +2221,7 @@
   },
   {
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
-    "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
+    "title": "",
     "h1": "AI 2026: Runtime Guardrails Blueprint"
   },
   {
@@ -2250,24 +2230,9 @@
     "h1": "AI 2026: Safety Evals Operational Checklist"
   },
   {
-    "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
-    "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
-    "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
-  },
-  {
-    "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
-    "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
-    "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
-  },
-  {
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
-  },
-  {
-    "route": "/blog/ai-roadmap-2026",
-    "title": "AI Roadmap 2026: Practical Enterprise Adoption Guide | Zion Tech Group",
-    "h1": "AI Roadmap 2026: Practical Enterprise Adoption Guide"
   },
   {
     "route": "/blog/autonomous-evaluation-playbooks-2025",
@@ -2288,11 +2253,6 @@
     "route": "/blog/cybersecurity-autonomous-systems",
     "title": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation | Zion Tech Group",
     "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
-  },
-  {
-    "route": "/blog/genai-2025-evidence-driven-ai-governance",
-    "title": "GenAI 2025: Evidence‑Driven AI Governance | Zion Tech Group",
-    "h1": "Evidence‑Driven AI Governance (2025)"
   },
   {
     "route": "/blog/genai-2025-practical-compliance-patterns",
