@@ -1,25 +1,12 @@
-export default function ArticleEnterpriseAI2025() {
-	return (
-		<article className="bg-black min-h-screen">
-			<div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
-				<h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">The State of Enterprise AI in 2025</h1>
-				<p className="mt-6 text-lg leading-8 text-gray-300">
-					Key trends, adoption patterns, and ROI benchmarks for AI at scale.
-				</p>
-				<div className="prose prose-invert mt-10 max-w-none">
-					<p>
-						Enterprises continue scaling AI from isolated pilots to platform-led capabilities. Winning organizations invest in data quality, model governance, and strong MLOps to accelerate value delivery.
-					</p>
-					<ul>
-						<li>Model governance and security top C-suite priorities</li>
-						<li>Foundation model fine-tuning drives faster time-to-value</li>
-						<li>Autonomous workflows reduce latency across core operations</li>
-					</ul>
-					<p>
-						Leaders measure ROI with business KPIs, not model metrics alone, aligning initiatives to revenue growth, cost efficiencies, and risk reduction.
-					</p>
-				</div>
-			</div>
-		</article>
-	)
-}
+import React from 'react';
+
+const page: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default page;

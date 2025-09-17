@@ -1,90 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousEcosystemManager() {
-	return (
-		<ServiceLanding
+import { Helmet } from 'react-helmet-async';
 
-
-			title="AI Autonomous Ecosystem Manager"
-			slug="ai-autonomous-ecosystem-manager"
-			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
-			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
-
-			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Average ROI 4–9x within 6 months"
-			features={[
-				"Agent registry, roles, and capabilities graph"
-				"Policy engine with human-in-the-loop controls"
-				"Observability: traces, metrics, red-teaming"
-				"Sandboxing and E2E approvals for sensitive actions"
-				"Cost and performance optimization"
-
-				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
-			]}
-			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-
-			pricePerMonthUSD={2999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Average ROI 4–9x within 6 months"
-			features={[
-				"Agent registry, roles, and capabilities graph"
-				"Policy engine with human-in-the-loop controls"
-				"Observability: traces, metrics, red-teaming"
-				"Sandboxing and E2E approvals for sensitive actions"
-				"Cost and performance optimization"
-
-				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
-
-			]}
-			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	)
+const ai-autonomous-ecosystem-manager: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-autonomous-ecosystem-manager | Zion Tech Group</title>
+        <meta name="description" content="ai-autonomous-ecosystem-manager - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-autonomous-ecosystem-manager</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["Platform Teams", "R&D", "Operations", "Security"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
+export default ai-autonomous-ecosystem-manager;

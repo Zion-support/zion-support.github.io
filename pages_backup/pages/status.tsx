@@ -1,92 +1,22 @@
-
-import React from "react";
-import Layout from "../components/Layout";
-import React from "react";
-import Layout from "../components/Layout";
 import React from 'react';
-import Layout from '../components/Layout';
-origin/automation-improvements-final
+import { Helmet } from 'react-helmet-async';
 
-
-export default function Status() {
+const status: React.FC = () => {
   return (
-    <Layout
-      title="System Status - Zion Tech Group"
-      description="Check the current status of Zion Tech Group services and systems."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              System Status
-            </h1>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              System Status
-            </h1>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">System Status</h1>
-origin/automation-improvements-final
-
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              All systems are operational.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">Status page is under construction.</p>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>status | Zion Tech Group</title>
+        <meta name="description" content="status - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">status</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </Layout>
-
-export default function Status() {;
-  return (
-    <Layout
-      title="System Status - Zion Tech Group"
-      description="Check the current status of Zion Tech Group services and systems.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              System Status;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              All systems are operational.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">Status page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>;
+    </div>
   );
-import React from './react';
-import Layout from "../components / Layout";
-;
-export default /**
- * Status - Function description
- */
-function Status() {
-  return (
-    <Layout;
-      title="System Status - Zion Tech Group";
-      description="Check the current status of Zion Tech Group services and systems.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
-              System Status;
-            </h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              All systems are operational.;
-            </p>;
-          </div>;
-          <div className="text - center">;
-            <p className="text - gray - 600">Status page is under construction.</p>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>);
+};
 
-}
+export default status;

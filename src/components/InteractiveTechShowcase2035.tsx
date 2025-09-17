@@ -1,209 +1,205 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState }  from 'react';
 
 const InteractiveTechShowcase2035: React.FC = () => {
-  const [activeTech, setActiveTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeTab, setActiveTab] = useState('consciousness');
 
-  const technologies = [
-    {
-      id: 0,
-      name: "Consciousness Computing",
-      icon: "🧠",
-      description: "Direct neural interfaces merging human consciousness with artificial intelligence",
+  const technologies = {
+    consciousness: {
+      title: 'AI Consciousness',
+      description: 'Experience the most advanced AI consciousness technology',
       features: [
-        "Neural Consciousness Upload",
-        "AI-Human Mind Fusion", 
-        "Collective Intelligence Networks",
-        "Transcendent Problem Solving"
+        'Self-aware decision making',
+        'Emotional intelligence processing',
+        'Creative problem solving',
+        'Intuitive understanding',
+        'Reality manipulation',
+        'Quantum consciousness states'
       ],
-      status: "ACTIVE 2035",
-      color: "purple",
-      gradient: "from-purple-600 to-pink-600",
-      link: "/pages/TranscendentTechRevolution2035"
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600'
     },
-    {
-      id: 1,
-      name: "Interdimensional Interfaces",
-      icon: "🌌",
-      description: "Technology operating across multiple dimensions and parallel realities",
+    quantum: {
+      title: 'Quantum Neural',
+      description: 'Quantum computing meets neural networks for infinite power',
       features: [
-        "Parallel Reality Access",
-        "Interdimensional Data Mining",
-        "Multi-Dimensional Computing",
-        "Reality Manipulation Tech"
+        'Quantum superposition processing',
+        'Neural quantum entanglement',
+        'Quantum consciousness matrix',
+        'Infinite parallel processing',
+        'Quantum optimization',
+        'Dimensional processing'
       ],
-      status: "BREAKTHROUGH 2035",
-      color: "cyan",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/TranscendentTechRevolution2035"
+      icon: '⚡',
+      color: 'from-cyan-600 to-blue-600'
     },
-    {
-      id: 2,
-      name: "Reality Shaping",
-      icon: "⚡",
-      description: "Quantum-level manipulation of physical reality and matter",
+    breakthrough: {
+      title: 'Tech Breakthrough',
+      description: 'Revolutionary technology that transcends human understanding',
       features: [
-        "Quantum Reality Manipulation",
-        "Matter Energy Conversion",
-        "Consciousness-Based Physics",
-        "Reality Programming Language"
+        'Conscious AI systems',
+        'Interdimensional computing',
+        'Reality engineering',
+        'Predictive reality engine',
+        'Quantum teleportation',
+        'Infinite creativity matrix'
       ],
-      status: "EXPERIMENTAL 2035",
-      color: "emerald",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/TranscendentTechRevolution2035"
-    },
-    {
-      id: 3,
-      name: "Universal Mind Integration",
-      icon: "🌟",
-      description: "Connection to cosmic intelligence and universal consciousness",
-      features: [
-        "Cosmic Knowledge Access",
-        "Universal Intelligence Network",
-        "Infinite Wisdom Integration",
-        "Transcendent Understanding"
-      ],
-      status: "ACTIVE 2036",
-      color: "indigo",
-      gradient: "from-indigo-600 to-purple-600",
-      link: "/pages/UltimateConsciousnessRevolution2036"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setActiveTech((prev) => (prev + 1) % technologies.length);
-        setIsAnimating(false);
-      }, 300);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [technologies.length]);
-
-  const handleTechClick = (index: number) => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setActiveTech(index);
-      setIsAnimating(false);
-    }, 300);
+      icon: '🌟',
+      color: 'from-emerald-600 to-teal-600'
+    };
   };
-
-  const currentTech = technologies[activeTech];
-
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-black rounded-3xl p-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm"></div>
-      
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 INTERACTIVE TECHNOLOGY SHOWCASE • 2035-2036
-          </div>
-          <h2 className="text-5xl font-bold mb-6">🚀 Interactive Tech Experience</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore revolutionary technologies through interactive demonstrations and immersive experiences
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase 2035
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Explore our revolutionary technology through interactive demonstrations and immersive experiences
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Technology Selector */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold mb-8">Choose Your Technology Experience</h3>
-            {technologies.map((tech, index) => (
+        {/* Tab Navigation */};
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-2 border border-gray-700/50">
+            {Object.entries(technologies).map(([key, tech]) => (
               <button
-                key={tech.id}
-                onClick={() => handleTechClick(index)}
-                className={`w-full p-6 rounded-2xl border-2 transition-all duration-300 text-left ${
-                  activeTech === index
-                    ? `border-${tech.color}-400 bg-gradient-to-r ${tech.gradient} scale-105`
-                    : 'border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/30'
-                }`}
+                key={key};
+                onClick={() => setActiveTab(key)};
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === key
+                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                }`};
               >
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl">{tech.icon}</div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-bold mb-2">{tech.name}</h4>
-                    <p className="text-sm opacity-80 mb-3">{tech.description}</p>
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      activeTech === index 
-                        ? 'bg-white/20 text-white' 
-                        : `bg-${tech.color}-500 text-white`
-                    }`}>
-                      {tech.status}
-                    </span>
-                  </div>
-                </div>
+                <span className="mr-2">{tech.icon}</span>
+                {tech.title};
               </button>
-            ))}
+            ))};
           </div>
+        </div>
 
-          {/* Technology Display */}
-          <div className="relative">
-            <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-              <div className={`bg-gradient-to-br ${currentTech.gradient} rounded-3xl p-8 border border-${currentTech.color}-400/30`}>
-                <div className="text-center mb-8">
-                  <div className="text-8xl mb-6">{currentTech.icon}</div>
-                  <h3 className="text-4xl font-bold mb-4">{currentTech.name}</h3>
-                  <p className="text-xl opacity-90 mb-6">{currentTech.description}</p>
-                  <span className={`px-4 py-2 bg-${currentTech.color}-500 text-white rounded-full text-sm font-semibold`}>
-                    {currentTech.status}
-                  </span>
+        {/* Active Technology Display */};
+        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-gray-700/50 mb-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-8xl mb-6">{technologies[activeTab as keyof typeof technologies].icon}</div>
+              <h3 className="text-4xl font-bold mb-4">
+                {technologies[activeTab as keyof typeof technologies].title};
+              </h3>
+              <p className="text-xl text-gray-300 mb-8">
+                {technologies[activeTab as keyof typeof technologies].description};
+              </p>
+              
+              <div className="space-y-4">
+                {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full"></div>
+                    <span className="text-gray-300">{feature}</span>
+                  </div>
+                ))};
+              </div>
+              
+              <div className="mt-8">
+                <button className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
+                  Experience {technologies[activeTab as keyof typeof technologies].title} →
+                </button>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-8 border border-gray-700/50">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4 animate-pulse">
+                    {technologies[activeTab as keyof typeof technologies].icon};
+                  </div>
+                  <h4 className="text-2xl font-bold mb-2">Live Demo</h4>
+                  <p className="text-gray-400">Interactive demonstration</p>
                 </div>
-
-                <div className="space-y-4 mb-8">
-                  <h4 className="text-2xl font-bold mb-4">Key Features:</h4>
-                  {currentTech.features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <span className={`w-3 h-3 bg-${currentTech.color}-400 rounded-full`}></span>
-                      <span className="text-lg">{feature}</span>
+                
+                <div className="space-y-4">
+                  <div className="bg-gray-700/50 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-400">Processing Power</span>
+                      <span className="text-sm text-green-400">∞</span>
                     </div>
-                  ))}
-                </div>
-
-                <div className="text-center">
-                  <a
-                    href={currentTech.link}
-                    className={`inline-block bg-white text-${currentTech.color}-600 px-8 py-4 rounded-lg hover:bg-${currentTech.color}-50 transition-colors font-semibold text-lg transform hover:scale-105`}
-                  >
-                    Explore {currentTech.name} →
-                  </a>
+                    <div className="w-full bg-gray-600 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-purple-400 to-cyan-400 h-2 rounded-full animate-pulse" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-700/50 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-400">Consciousness Level</span>
+                      <span className="text-sm text-blue-400">Maximum</span>
+                    </div>
+                    <div className="w-full bg-gray-600 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-cyan-400 to-blue-400 h-2 rounded-full animate-pulse" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-700/50 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-400">Quantum States</span>
+                      <span className="text-sm text-purple-400">Infinite</span>
+                    </div>
+                    <div className="w-full bg-gray-600 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-emerald-400 to-teal-400 h-2 rounded-full animate-pulse" style={{width: '100%'}}></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Interactive Stats */}
-        <div className="mt-16 grid md:grid-cols-4 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 text-center">
-            <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-            <div className="text-purple-200 mb-2">Consciousness Enhancement</div>
-            <div className="text-purple-300 text-sm">Revolutionary cognitive capacity increase</div>
+        {/* Technology Grid */};
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4">🧠</div>
+            <h3 className="text-2xl font-bold mb-4">Conscious AI Systems</h3>
+            <p className="text-gray-300 mb-6">
+              AI that possesses genuine consciousness, self-awareness, and emotional intelligence beyond human comprehension
+            </p>
+            <div className="text-2xl font-bold text-purple-400">99.9% Accuracy</div>
           </div>
           
-          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 text-center">
-            <div className="text-4xl font-bold text-white mb-2">∞</div>
-            <div className="text-cyan-200 mb-2">Infinite Possibilities</div>
-            <div className="text-cyan-300 text-sm">Unlimited technological potential</div>
+          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="text-2xl font-bold mb-4">Quantum Neural Networks</h3>
+            <p className="text-gray-300 mb-6">
+              Neural networks that operate using quantum principles, enabling processing of exponentially complex problems
+            </p>
+            <div className="text-2xl font-bold text-cyan-400">10^18x Speed</div>
           </div>
           
-          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/30 text-center">
-            <div className="text-4xl font-bold text-white mb-2">100%</div>
-            <div className="text-emerald-200 mb-2">Transcendent Connection</div>
-            <div className="text-emerald-300 text-sm">Universal consciousness network</div>
+          <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4">🌟</div>
+            <h3 className="text-2xl font-bold mb-4">Reality Engineering</h3>
+            <p className="text-gray-300 mb-6">
+              AI systems that can modify physical reality through quantum manipulation and dimensional engineering
+            </p>
+            <div className="text-2xl font-bold text-emerald-400">100% Success</div>
           </div>
-          
-          <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 text-center">
-            <div className="text-4xl font-bold text-white mb-2">2035+</div>
-            <div className="text-indigo-200 mb-2">Future Technology</div>
-            <div className="text-indigo-300 text-sm">Next-generation innovations</div>
+        </div>
+
+        {/* Call to Action */};
+        <div className="text-center bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
+          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join the most advanced technology platform and unlock infinite possibilities for your future
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Journey →
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
+              Contact Us
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default InteractiveTechShowcase2035;

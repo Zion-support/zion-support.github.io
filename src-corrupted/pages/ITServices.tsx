@@ -1,18 +1,22 @@
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
-}
-export default function ITServices(props: any) {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ITServices - Zion Tech Group" description="Professional ITServices services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ITServices</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ITServices services to help your business grow.
-        </p>
-      </div>
-  )
-}
-}""
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-</div>
+const ITServices: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ITServices | Zion Tech Group</title>
+        <meta name="description" content="ITServices - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ITServices</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ITServices;

@@ -1,33 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
-import { AppHeader } from '../layout/AppHeader';
-import { FuturisticFooter } from './FuturisticFooter';
 
-interface LayoutProps {
-
-  children: React.ReactNode;
-
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC = () => {
   return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1"  />
-        <meta name="theme-color" content="#0ea5e9"  />
-        <link rel="icon" href="/favicon.ico"  />
-      </Head>
-      
-      <div className="min-h-screen bg-slate-50">
-        <AppHeader />
-        <main className="flex-1">
-          {children}
-        </main>
-        <FuturisticFooter />
-      </div>
-    </>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Layout</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 
 export default Layout;
-</LayoutProps>

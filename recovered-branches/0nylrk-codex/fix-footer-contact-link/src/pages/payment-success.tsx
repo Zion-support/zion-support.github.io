@@ -1,18 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+const payment-success: React.FC = () => {
   return (
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
-        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
-          <CheckCircle2 className="h-6 w-6 text-green-600" />
-        </div>
-            onClick={() => navigate('/dashboard')}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            Go to Dashboard
-          </Button>
-          >
-            Return to Home
-          </Button>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>payment-success | Zion Tech Group</title>
+        <meta name="description" content="payment-success - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">payment-success</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
+  );
+};
+
+export default payment-success;

@@ -1,5 +1,5 @@
+<<<<<<< HEAD
 import React from 'react';
-
 import { SEO } from '@/components/SEO';
 import { 
   Rocket, 
@@ -97,28 +97,22 @@ export default function About() {
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           
           <div className="relative max-w-7xl mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <divh1
               className="text-5xl md:text-6xl font-bold text-white mb-6"
             >
               Pioneering the Future of
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Technology
               </span>
-            </motion.h1>
+            </divh1>
             
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <divp
               className="text-xl text-slate-300 max-w-4xl mx-auto mb-8"
             >
               At Zion Tech Group, we're not just building technology – we're building the future. 
               Our mission is to democratize AI and cutting-edge technology, making it accessible 
               to businesses of all sizes.
-            </motion.p>
+            </divp>
           </div>
         </section>
 
@@ -127,11 +121,8 @@ export default function About() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div
+                <divdiv
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center`}>
@@ -139,7 +130,7 @@ export default function About() {
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-slate-300">{stat.label}</div>
-                </div>
+                </divdiv>
               ))}
             </div>
           </div>
@@ -149,10 +140,7 @@ export default function About() {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+              <divdiv
               >
                 <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-lg text-slate-300 mb-6">
@@ -173,12 +161,9 @@ export default function About() {
                     <p className="text-slate-300">Every solution we build is designed to deliver measurable business outcomes.</p>
                   </div>
                 </div>
-              </div>
+              </divdiv>
 
-              <div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <divdiv
                 className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-lg rounded-2xl border border-white/10 p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Our Vision</h3>
@@ -200,7 +185,7 @@ export default function About() {
                     <span className="text-slate-300">Creating sustainable technology</span>
                   </div>
                 </div>
-              </div>
+              </divdiv>
             </div>
           </div>
         </section>
@@ -208,25 +193,19 @@ export default function About() {
         {/* Values Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <divdiv
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 These principles guide everything we do, from developing solutions to serving our clients.
               </p>
-            </div>
+            </divdiv>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
-                <div
+                <divdiv
                   key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${value.color} rounded-xl flex items-center justify-center`}>
@@ -234,7 +213,7 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-slate-300">{value.description}</p>
-                </div>
+                </divdiv>
               ))}
             </div>
           </div>
@@ -243,28 +222,22 @@ export default function About() {
         {/* Timeline Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <divdiv
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Our Journey</h2>
               <p className="text-xl text-slate-300">
                 From humble beginnings to industry leadership, here's how we've grown and evolved.
               </p>
-            </div>
+            </divdiv>
 
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
               
               {timeline.map((item, index) => (
-                <div
+                <divdiv
                   key={item.year}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative flex items-center mb-12 ${
                     index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                   }`}
@@ -280,7 +253,7 @@ export default function About() {
                       <p className="text-slate-300">{item.description}</p>
                     </div>
                   </div>
-                </div>
+                </divdiv>
               ))}
             </div>
           </div>
@@ -289,10 +262,7 @@ export default function About() {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <divdiv
               className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 backdrop-blur-lg rounded-2xl border border.white/10 p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -310,10 +280,139 @@ export default function About() {
                   View Careers
                 </button>
               </div>
-            </div>
+            </divdiv>
           </div>
         </section>
       </div>
+=======
+
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+
+export default function About() {
+  return (
+    <>
+      <SEO 
+        title="About Zion - The Future of AI & Tech Marketplace" 
+        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
+        keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
+        url="https://ziontechgroup.com/about"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>About Zion</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              The world's first free marketplace dedicated to high-tech and artificial intelligence
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-zion-slate-light text-lg mb-6">
+                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions. 
+                We believe that innovation thrives when barriers are removed and connections are made.
+              </p>
+              <p className="text-zion-slate-light text-lg mb-6">
+                Our platform brings together talented AI specialists, innovative companies, and the latest 
+                technological solutions in one seamless ecosystem.
+              </p>
+              <p className="text-zion-slate-light text-lg">
+                By connecting talent with opportunity and innovation with implementation, we're creating 
+                a global community where the future of technology is being built today.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600" 
+                alt="Team collaboration" 
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
+              <p className="text-zion-slate-light text-lg mb-6">
+                We envision a world where AI and technology are accessible to all, regardless of geographical 
+                or financial constraints. A world where the best minds can collaborate to solve the most 
+                challenging problems.
+              </p>
+              <p className="text-zion-slate-light text-lg mb-6">
+                Zion is building that world by creating a transparent, ethical, and inclusive platform 
+                that puts people at the center of technological advancement.
+              </p>
+              <p className="text-zion-slate-light text-lg">
+                Our goal is to become the premier destination for AI and tech innovation, fostering 
+                a community that shapes the future of how we live, work, and interact with technology.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden lg:order-first">
+              <img 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600" 
+                alt="Tech innovation" 
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Innovation</h3>
+                <p className="text-zion-slate-light">
+                  We constantly push the boundaries of what's possible, embracing new technologies and approaches.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Excellence</h3>
+                <p className="text-zion-slate-light">
+                  We maintain the highest standards in everything we do, from platform quality to user experience.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Community</h3>
+                <p className="text-zion-slate-light">
+                  We believe in the power of collaboration and building strong, supportive networks.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Join Our Mission</h2>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+              Whether you're a talented professional looking to showcase your skills, 
+              a company seeking innovative solutions, or simply passionate about the future of technology, 
+              Zion is your platform.
+            </p>
+            <button className="bg-zion-cyan text-zion-blue-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </main>
+>>>>>>> origin/website-improvements-v2
     </>
   );
 }
