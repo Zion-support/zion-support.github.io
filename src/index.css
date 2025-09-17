@@ -3,8 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
-=======
 /* Custom animations for enhanced content */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -225,7 +223,6 @@
   }
 }
 
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
 /* Custom CSS Variables */
 :root {
   --zion-purple: #8b5cf6;
@@ -238,7 +235,6 @@
   --zion-slate-light: #94a3b8;
 }
 
-<<<<<<< HEAD
 /* Base Styles */
 * {
   box-sizing: border-box;
@@ -315,10 +311,6 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-=======
-/* New Animations for 2027 Components */
-@keyframes fade-in {
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -329,8 +321,18 @@ body {
   }
 }
 
-<<<<<<< HEAD
-=======
+/* New Animations for 2027 Components */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -367,14 +369,21 @@ body {
   }
 }
 
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out;
 }
 
-<<<<<<< HEAD
 @keyframes slideIn {
-=======
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -622,7 +631,6 @@ body {
 
 /* Animations */
 @keyframes fadeInUp {
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
   from {
     opacity: 0;
     transform: translateX(-20px);
@@ -632,7 +640,6 @@ body {
     transform: translateX(0);
   }
 }
-<<<<<<< HEAD
 
 .animate-slide-in {
   animation: slideIn 0.6s ease-out;
@@ -667,9 +674,7 @@ body {
 }
 
 /* Responsive Design */
-=======
 /* Responsive design */
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
 @media (max-width: 768px) {
   .container {
     padding-left: 1rem;
@@ -677,7 +682,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   body {
@@ -689,11 +693,9 @@ body {
     @apply bg-slate-800 border-slate-700;
   }
 }
-=======
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005
