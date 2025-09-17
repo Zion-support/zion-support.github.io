@@ -110,34 +110,3 @@ export const safeStorage = {
     }
   }
 };
-
-// Helper functions for common operations
-export const safeGetItem = (key: string, storage: 'local' | 'session' = 'local'): string | null => {
-  if (storage === 'local') {
-    return safeStorage.localStorage.getItem(key);
-  }
-  return safeStorage.sessionStorage.getItem(key);
-};
-
-export const safeSetItem = (key: string, value: string, storage: 'local' | 'session' = 'local'): boolean => {
-  if (storage === 'local') {
-    return safeStorage.localStorage.setItem(key, value);
-  }
-  return safeStorage.sessionStorage.setItem(key, value);
-};
-
-export const safeRemoveItem = (key: string, storage: 'local' | 'session' = 'local'): boolean => {
-  if (storage === 'local') {
-    return safeStorage.localStorage.removeItem(key);
-  }
-  return safeStorage.sessionStorage.removeItem(key);
-};
-
-export const safeClear = (storage: 'local' | 'session' = 'local'): boolean => {
-  if (storage === 'local') {
-    return safeStorage.localStorage.clear();
-  }
-  return safeStorage.sessionStorage.clear();
-};
-
-export default safeStorage;

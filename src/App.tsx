@@ -7,16 +7,10 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost2025'));
-const PartnersPage = React.lazy(() => import('../Partners.tsx'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('../Careers'));
-const Privacy = React.lazy(() => import('../Privacy'));
-const Terms = React.lazy(() => import('../Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
-const ServicesPage = React.lazy(() => import('./pages/services/AIServices'));
 const AdvancedDashboard = React.lazy(() => import('./pages/AdvancedDashboard'));
 
 // Error Fallback Component
@@ -64,14 +58,113 @@ const Home = () => (
   </div>
 );
 
-const App = () => {
+function App() {
+  const { prefetchResource, cacheResource, measurePerformance } = usePerformanceOptimization({
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCodeSplitting: true,
+    enablePrefetching: true,
+    enableCaching: true
+  });
+
+  useEffect(() => {
+    // Prefetch critical resources
+    measurePerformance('App initialization', () => {
+      prefetchResource('/assets/vendor-DgTrhVr3.js', 'script');
+      prefetchResource('/assets/index-CWbMb2zs.js', 'script');
+    });
+
+    // Cache app configuration
+    cacheResource('app-config', {
+      version: '1.0.0',
+      features: ['performance-monitoring', 'accessibility', 'error-boundary']
+    }, 300000); // 5 minutes
+
+    // Initialize performance monitoring
+    const perfMonitor = new PerformanceMonitor();
+    
+    // Report performance metrics after page load
+    const handleLoad = () => {
+      setTimeout(() => {
+        if (perfMonitor.reportMetrics) {
+          perfMonitor.reportMetrics();
+        };
+      }, 2000);
+    };
+    window.addEventListener('load', handleLoad);
+    
+    return () => {
+      if (perfMonitor.cleanup) {
+        perfMonitor.cleanup();
+      };
+      window.removeEventListener('load', handleLoad);
+    };
+  }, [prefetchResource, cacheResource, measurePerformance]);
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </Router>
+    <EnhancedErrorBoundary
+      onError={(error, errorInfo) => {
+        console.error('App Error:', error, errorInfo);
+        // Here you would send error to monitoring service
+      }}
+    >
+      <ThemeProvider>
+        <WhitelabelProvider>
+          <Router>
+            <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+              <SEOHead />
+              <AccessibilityEnhancer 
+                enableKeyboardNavigation={true}
+                enableScreenReader={true}
+                enableHighContrast={true}
+                enableFocusManagement={true}
+                enableAriaLabels={true}
+              />
+              <PerformanceMonitor 
+                enableReporting={true}
+                reportInterval={30000}
+                onMetricsUpdate={(metrics) => {
+                  console.log('Performance metrics updated:', metrics);
+                }}
+              />
+              {/* Skip Links for Accessibility */}
+              <div className="sr-only focus-within:not-sr-only">
+                <a href="#main-content" className="skip-link">
+                  Skip to main content
+                </a>
+                <a href="#navigation" className="skip-link">
+                  Skip to navigation
+                </a>
+              </div>
+              <Navigation />
+              
+              {/* Main Content with enhanced Suspense and Error Boundary */};
+              <main id="main-content" className="pt-20 min-h-screen" role="main">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+                    <Route path="/green-it" element={<GreenIT />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/dashboard" element={<AdvancedDashboard />} />
+                    <Route path="/advanced-dashboard" element={<AdvancedDashboard />} />
+                    
+                    {/* Catch all route */}
+                    <Route path="*" element={<Home />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              
+              <Footer />
+            </div>
+          </Router>
+        </WhitelabelProvider>
+      </ThemeProvider>
+    </EnhancedErrorBoundary>
   );
 };
 

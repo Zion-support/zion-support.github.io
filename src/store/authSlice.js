@@ -32,6 +32,7 @@ export const loginUser = createAsyncThunk(
     }
   }
 );
+
 // Async thunk for signup
 export const signupUser = createAsyncThunk(
   'auth/signupUser',
@@ -64,6 +65,7 @@ export const signupUser = createAsyncThunk(
     }
   }
 );
+
 // Async thunk for logout
 export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
@@ -78,6 +80,7 @@ export const logoutUser = createAsyncThunk(
     }
   }
 );
+
 // Async thunk for checking auth status
 export const checkAuthStatus = createAsyncThunk(
   'auth/checkAuthStatus',
@@ -98,6 +101,7 @@ export const checkAuthStatus = createAsyncThunk(
     }
   }
 );
+
 const initialState = {
   user: null,
   token: localStorage.getItem('token'),
@@ -192,6 +196,7 @@ const authSlice = createSlice({
       });
   }
 });
+
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
 
 // Selectors
