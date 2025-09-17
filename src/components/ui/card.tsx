@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import * as React from "react"
-import { cn } from "@/lib/utils"
-=======
-import React from "react";
-import { cn } from "@/lib/utils";
->>>>>>> origin/website-improvements-v2
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -80,8 +73,3 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
-<<<<<<< HEAD
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-=======
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> origin/website-improvements-v2
