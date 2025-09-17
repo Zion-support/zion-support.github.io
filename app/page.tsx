@@ -59,6 +59,7 @@ import AI2026UltimateBreakthroughBanner from './components/AI2026UltimateBreakth
 import AIInnovationShowcase2026 from './components/AIInnovationShowcase2026';
 import NeuralInterface2026Banner from './components/NeuralInterface2026Banner';
 import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
+import NewContent2026DiscoveryWidget from './components/NewContent2026DiscoveryWidget';
 import NewContent2026PromotionBanner from './components/NewContent2026PromotionBanner';
 import RevolutionaryAI2026Banner from './components/RevolutionaryAI2026Banner';
 import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
@@ -156,15 +157,86 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Promos: Newly published on Sept 16, 2025 */}
+      <section className="py-6 bg-gradient-to-r from-emerald-50 to-emerald-100/30">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-eval-gated-safety-scorecards" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Eval‑Gated Safety Scorecards (2026)</h3>
+              <p className="text-gray-600">Objective safety gates wired into CI/CD and runtime policy.</p>
+            </Link>
+            <Link href="/blog/ai-2026-zero-downtime-agent-rollouts" className="bg-white rounded-xl shadow p-6 border border-emerald-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Zero‑Downtime Agent Rollouts</h3>
+              <p className="text-gray-600">Eval‑gated releases, rollback contracts, and guardrails to ship without outages.</p>
+            </Link>
+            <Link href="/blog/ai-2026-agentic-cost-controls-deep-dive" className="bg-white rounded-xl shadow p-6 border border-green-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-green-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Agentic Cost Controls — Deep Dive</h3>
+              <p className="text-gray-600">Policy‑aware budgets, approvals, and cost scorecards for predictable spend.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* New Promos: Operational Reliability (Sept 16, 2025) */}
+      <section className="py-6 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-operational-reliability-blueprint" className="bg-white rounded-xl shadow p-6 border border-indigo-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-indigo-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Operational Reliability Blueprint (2026)</h3>
+              <p className="text-gray-600">Eval‑gated releases, rollback contracts, error budgets, and observability.</p>
+            </Link>
+            <Link href="/content/ai-2026-reliability-operations-guide" className="bg-white rounded-xl shadow p-6 border border-indigo-100 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-indigo-700 mb-2">Guide</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026 Reliability Operations Guide</h3>
+              <p className="text-gray-600">Scorecards, runbooks, rollback patterns, and evidence‑driven SLOs.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* New Promos: Sept 16, 2025 */}
       {/* Quick spotlight for newly added articles */}
       <section className="py-6 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Link href="/blog/ai-2026-production-de-risking-checklist" className="bg-amber-50 rounded-xl shadow p-6 hover:shadow-md transition border border-amber-100">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Production De‑Risking Checklist</h3>
+              <p className="text-gray-600">High‑leverage preflight, canary, and post‑release checks to avoid incidents.</p>
+            </Link>
+            <Link href="/blog/ai-2026-evidence-first-release-engineering" className="bg-amber-50 rounded-xl shadow p-6 hover:shadow-md transition border border-amber-100">
+              <div className="text-sm font-semibold text-amber-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026: Evidence‑First Release Engineering</h3>
+              <p className="text-gray-600">Make every release auditable with scorecards, traces, and policy events.</p>
+            </Link>
+            <Link href="/blog/ai-2026-safe-tool-envelopes-blueprint" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Safe Tool Envelopes — Production Blueprint</h3>
+              <p className="text-gray-600">Policy‑bound tool use with approvals, budgets, and eval‑gated runtime guardrails.</p>
+            </Link>
+            <Link href="/blog/ai-2026-responsible-autonomy-release-engineering" className="bg-emerald-50 rounded-xl shadow p-6 hover:shadow-md transition border border-emerald-100">
+              <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Responsible Autonomy — Release Engineering</h3>
+              <p className="text-gray-600">Evaluation gates, policy‑as‑code, and runtime guardrails wired into CI/CD.</p>
+            </Link>
             <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
               <div className="text-sm font-semibold text-indigo-700 mb-2">New</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Runtime Guardrails Blueprint</h3>
               <p className="text-gray-600">Policy‑as‑code, safe tool envelopes, and approvals to ship compliant autonomy.</p>
+            </Link>
+            <Link href="/blog/ai-2026-realtime-agent-routing-best-practices" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-indigo-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Real‑Time Agent Routing — Best Practices</h3>
+              <p className="text-gray-600">Latency‑aware, eval‑gated, policy‑driven routing across models and regions.</p>
+            </Link>
+            <Link href="/blog/ai-2026-causal-evals-for-autonomous-agents" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
+              <div className="text-sm font-semibold text-fuchsia-700 mb-2">New</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Causal Evals for Autonomous Agents</h3>
+              <p className="text-gray-600">Interventions, counterfactuals, and do‑calculus to validate safety.</p>
             </Link>
             <Link href="/blog/ai-2026-governed-evidence-hub-overview" className="bg-gray-50 rounded-xl shadow p-6 hover:shadow-md transition">
               <div className="text-sm font-semibold text-emerald-700 mb-2">New</div>
@@ -184,6 +256,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Discovery widget to surface new content */}
+      <NewContent2026DiscoveryWidget />
       {/* Promo: Governed Evidence Hub — Executive Overview (new) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,18 +275,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Promo: New — Billing Controls Deep Dive + Observability Overview */}
+      {/* Promo: New — Executive AI Security Playbook */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-pink-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-100">
             <div>
               <p className="text-sm font-semibold text-emerald-700">New on the blog</p>
-              <h2 className="text-2xl font-bold text-gray-900 mt-1">Predictable Costs + Executive Observability</h2>
-              <p className="text-gray-600 mt-2">Budgets and approvals for agents, plus what to measure to keep autonomy safe.</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Executive AI Security Playbook</h2>
+              <p className="text-gray-600 mt-2">Board-ready controls: policy‑as‑code, eval gates, and audit evidence to ship safely.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ai-2026-agentic-billing-controls-deep-dive" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Billing Controls</Link>
-              <Link href="/blog/ai-2026-agentic-observability-overview" className="inline-block border border-pink-600 text-pink-700 px-5 py-3 rounded-lg font-semibold hover:bg-pink-50">Observability Overview</Link>
+              <Link href="/blog/ai-2026-executive-ai-security-playbook" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Playbook</Link>
+              <Link href="/blog/ai-2026-policy-as-code-blueprint" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Policy‑as‑Code</Link>
             </div>
           </div>
         </div>
@@ -407,6 +482,22 @@ export default function HomePage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link href="/blog/ai-2026-agentic-experimentation-scorecards" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Article</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* New Promo: Post‑Incident Learning Loops (Sept 16, 2025) */}
+      <section className="py-8 bg-gradient-to-r from-fuchsia-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-fuchsia-100">
+            <div>
+              <p className="text-sm font-semibold text-fuchsia-700">New article</p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Post‑Incident Learning Loops — Operational Excellence</h2>
+              <p className="text-gray-600 mt-2">Turn incidents into durable improvements with evidence‑led loops, scorecards, and release gates.</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ai-2026-post-incident-learning-loops" className="inline-block bg-fuchsia-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-700">Read Article</Link>
+              <Link href="/blog" className="inline-block border border-fuchsia-600 text-fuchsia-700 px-5 py-3 rounded-lg font-semibold hover:bg-fuchsia-50">More on the Blog</Link>
             </div>
           </div>
         </div>
@@ -755,6 +846,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+      </div>
       {/* New Promo: Agentic Sandbox Patterns (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-violet-50 to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

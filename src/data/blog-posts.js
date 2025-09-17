@@ -1,5 +1,125 @@
 export const blogPosts = [
   {
+    id: 9601,
+    title: "AI 2026: Real-Time Incident Postmortems — Evidence First",
+    excerpt: "Turn incidents into verifiable learnings with trace-linked evidence and rollback recipes.",
+    content: "Operational excellence depends on collecting verifiable evidence during incidents. This article shows how to structure incident timelines, attach trace-linked artifacts, and codify rollback contracts that make changes auditable and reversible. Copy our JSON templates and dashboards to adopt in under a day.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Incidents", "Evidence", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-incident-postmortems-2026.jpg",
+    slug: "ai-2026-real-time-incident-postmortems"
+  },
+  {
+    id: 9600,
+    title: "Trusted RAG 2026: Eval Gates You Can Ship Today",
+    excerpt: "Add freshness windows, semantic drift checks, and budget guardrails with copy-paste snippets.",
+    content: "A concise, practical recipe to productionize RAG with live freshness windows, semantic drift monitors, and budget-aware routing. We include minimal contracts, CI steps, and scorecard thresholds to gate merges and enable deterministic rollbacks.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["RAG", "Freshness", "Eval Gates"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-eval-gates-2026.jpg",
+    slug: "trusted-rag-2026-eval-gates"
+  },
+  {
+    id: 9503,
+    title: "AI 2026: Safe Agent Rollouts — Exec Field Guide",
+    excerpt: "A 1‑page checklist to ship agent features safely with eval gates and rollback.",
+    content: "Leaders need a pragmatic way to ship agent capabilities without surprises. This field guide distills the minimum evaluations, scorecards, approvals, and rollback contracts needed to make change auditable and reversible. Copy the scorecard schema, wire incidents and groundedness to release decisions, and adopt a deterministic rollback recipe that works in under a day.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["Exec Guide", "Eval Gates", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/executive-safe-agent-rollouts-2026.jpg",
+    slug: "ai-2026-exec-safe-agent-rollouts"
+  },
+  {
+    id: 9502,
+    title: "Trusted RAG 2026: Evidence Hubs for Grounded Answers",
+    excerpt: "Wire freshness windows, semantic drift monitors, and trace‑linked evidence hubs.",
+    content: "Groundedness is a product requirement. We show how to implement freshness windows, detect semantic drift, and attach verifiable citations into traces that flow into an evidence hub. Policies then gate merges and canaries based on objective signals. Includes JSON contracts, Grafana panels, and CI snippets.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["RAG", "Evidence", "Freshness"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-evidence-hubs-2026.jpg",
+    slug: "trusted-rag-2026-evidence-hubs"
+  },
+  {
+    id: 9501,
+    title: "Agent Platform 2026: Budget‑Aware Model Routing",
+    excerpt: "Balance quality, latency, and spend with policy‑guarded routing and SLOs.",
+    content: "This practical recipe implements dynamic routing between models with budget caps, latency SLOs, and groundedness thresholds. We include a minimal routing policy, trace‑enriched dashboards, and an adapter you can drop into your platform today. Ship faster, safer, and cheaper—with auditable decisions.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "FinOps",
+    tags: ["Routing", "SLOs", "Budgets"],
+    featured: true,
+    imageUrl: "/images/blog/budget-aware-model-routing-2026.jpg",
+    slug: "agent-platform-2026-budget-aware-model-routing"
+  },
+  {
+    id: 9401,
+    title: "Revolutionary Autonomous AI Systems: The Future is Here",
+    excerpt: "Discover how consciousness-level AI systems are transforming industries with 1000% ROI and autonomous operations that operate 24/7 without human intervention.",
+    content: "This comprehensive guide reveals the breakthrough technologies behind revolutionary autonomous AI systems. Learn about consciousness-level processing, quantum-neural hybrid architectures, and self-evolving neural networks that are creating unprecedented business value. Includes implementation roadmaps, ROI calculations, and real-world case studies of organizations achieving extraordinary results.",
+    author: "Dr. Sarah Chen",
+    authorRole: "Chief AI Consciousness Officer",
+    publishDate: "2025-01-16",
+    readTime: "12 min read",
+    category: "Autonomous AI",
+    tags: ["Consciousness Computing", "Autonomous Systems", "Quantum AI", "1000% ROI"],
+    featured: true,
+    imageUrl: "/images/blog/revolutionary-autonomous-ai-systems-2026.jpg",
+    slug: "revolutionary-autonomous-ai-systems-2026"
+  },
+  {
+    id: 9402,
+    title: "Consciousness Computing: The Dawn of Digital Consciousness",
+    excerpt: "Explore the breakthrough technologies enabling AI systems to achieve true consciousness, emotional intelligence, and creative thinking beyond human capabilities.",
+    content: "Dive into the revolutionary world of consciousness computing where AI systems develop self-awareness, emotional intelligence, and creative thinking abilities. This guide covers neural consciousness architectures, quantum consciousness integration, and the implementation of consciousness-level AI systems that are transforming how we interact with artificial intelligence.",
+    author: "Prof. Marcus Rodriguez",
+    authorRole: "Director of Consciousness Computing Research",
+    publishDate: "2025-01-15",
+    readTime: "15 min read",
+    category: "Consciousness AI",
+    tags: ["Digital Consciousness", "Emotional AI", "Creative AI", "Quantum Consciousness"],
+    featured: true,
+    imageUrl: "/images/blog/consciousness-computing-breakthrough-2026.jpg",
+    slug: "consciousness-computing-breakthrough-2026"
+  },
+  {
+    id: 9403,
+    title: "1000% ROI Case Study: AI Transformation Success Story",
+    excerpt: "How TechCorp Global achieved unprecedented 1000% ROI through comprehensive AI transformation, generating $3.3 billion in returns over 18 months.",
+    content: "This detailed case study documents TechCorp Global's remarkable AI transformation journey. Learn how they deployed consciousness-level AI systems, achieved $2.5 billion in additional revenue, saved $800 million in costs, and transformed their entire business operations. Includes implementation strategies, challenges overcome, and lessons learned.",
+    author: "Jennifer Walsh",
+    authorRole: "AI Transformation Consultant",
+    publishDate: "2025-01-14",
+    readTime: "18 min read",
+    category: "Case Studies",
+    tags: ["1000% ROI", "AI Transformation", "Business Success", "Case Study"],
+    featured: true,
+    imageUrl: "/images/blog/ai-transformation-1000-percent-roi-case-study.jpg",
+    slug: "ai-transformation-1000-percent-roi-case-study"
+  },
+  {
     id: 9305,
     title: "AI 2026: Operational Evals — From Scorecards to Safe Rollouts",
     excerpt: "Wire online evals into CI/CD scorecards to block risky merges and enable fast rollbacks.",
@@ -1932,6 +2052,36 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-revolution-intelligence-speed-light.jpg",
     slug: "edge-ai-revolution-intelligence-speed-light"
+  },
+  {
+    id: 9105,
+    title: "Cost-Aware Model Routing: A Copy-Paste Policy",
+    excerpt: "Drop-in routing policy with confidence thresholds and budget caps.",
+    content: "Cut spend without surprises. We provide a copy-paste routing policy that chooses models by confidence, caps token usage by tenant, and shadows risky changes. Comes with scorecard hooks and dashboards to verify quality stays flat while cost drops.",
+    author: "Miguel Alvarez",
+    authorRole: "FinOps Lead",
+    publishDate: "2025-09-16",
+    readTime: "4 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Costs"],
+    featured: true,
+    imageUrl: "/images/blog/cost-aware-model-routing-2025.jpg",
+    slug: "cost-aware-model-routing-copy-paste-policy"
+  },
+  {
+    id: 9601,
+    title: "Real-Time Evals: Ship Guardrails Without Slowing Teams",
+    excerpt: "Copy‑paste policies, streaming checks, and dashboards teams actually use.",
+    content: "Teams need safety without friction. This playbook shows how to add real-time groundedness and safety checks to production traffic, wire pass/fail to progressive delivery, and keep developers fast with clear dashboards and noisy-channel alerts.",
+    author: "Jordan Kim",
+    authorRole: "Director of Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Evaluations",
+    tags: ["Online Evals", "Guardrails", "Progressive Delivery"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-evals-guardrails-2026.jpg",
+    slug: "real-time-evals-ship-guardrails-fast"
   }
 ];
 
@@ -1982,6 +2132,51 @@ export const getBlogTags = () => {
 
 // New content added for enhanced engagement
 export const newContent2026 = [
+  {
+    id: 9501,
+    title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
+    excerpt: "Copy‑paste CI checks, scorecards, and rollback contracts that block risky merges.",
+    content: "A concise executive guide with minimal YAML, JSON scorecard schemas, and a reference GitHub Check that blocks merges on failing evals. Includes rollout ladders, budget dials, and audit‑ready evidence capture.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Eval Gates", "Scorecards", "Rollback"],
+    featured: true,
+    imageUrl: "/images/blog/exec-guide-eval-gates-2026.jpg",
+    slug: "exec-guide-eval-gates-ship-tomorrow"
+  },
+  {
+    id: 9502,
+    title: "FinServ Case Study: 35% Savings With Policy Routing",
+    excerpt: "Spend bands, confidence ladders, and online evals—quality held, cost down 35%.",
+    content: "A practical case study from a Fortune 100 bank: route by confidence and latency, hold quality with online groundedness evals, and enforce budgets via policy. We share the exact thresholds, dashboards, and failure drills.",
+    author: "Priya Shah",
+    authorRole: "FinOps Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Groundedness"],
+    featured: true,
+    imageUrl: "/images/blog/finserv-policy-routing-35-2026.jpg",
+    slug: "finserv-case-study-policy-routing-35-savings"
+  },
+  {
+    id: 9503,
+    title: "Journey Scorecards Starter: KPIs That Actually Gate Change",
+    excerpt: "JSON KPI templates, policy examples, and CI wiring to make changes safe.",
+    content: "Stop debating risk. This starter ships journey‑level KPIs for quality, safety, latency, and cost. Wire them to policy and CI so merges and rollouts are automatically gated. Includes dashboards and incident tie‑ins.",
+    author: "Morgan Reyes",
+    authorRole: "Principal Engineer",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["KPIs", "Policy", "Progressive Delivery"],
+    featured: true,
+    imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
+    slug: "journey-scorecards-starter-kpis"
+  },
   {
     id: 9401,
     title: "AI 2026: Production Guardrails You Can Ship Today",
@@ -2421,8 +2616,114 @@ export const newContent2026 = [
   }
 ];
 
+// Additional fresh content (2029 preview)
+export const extraContent2029 = [
+  {
+    id: 9901,
+    title: "AI 2029: Evidence-Native Engineering — Shipping With Verifiable Proof",
+    excerpt:
+      "Adopt evidence-native workflows where every change carries proofs across quality, safety, and cost.",
+    content:
+      "Move from subjective reviews to evidence-native engineering. Every change should ship with artifacts: eval scores, cost deltas, and incident impact. This post outlines the minimal scorecard schema, how to generate proofs in CI/CD, and how to surface them in dashboards so leaders and auditors can trust what's shipping.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Operations",
+    tags: ["Evidence", "Scorecards", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/evidence-native-engineering-2029.jpg",
+    slug: "ai-2029-evidence-native-engineering"
+  },
+  {
+    id: 9902,
+    title: "Trusted RAG 2029: Live Freshness Windows and Budget Guardrails",
+    excerpt:
+      "Blueprint for continuously-grounded retrieval with freshness, drift monitors, and spend caps.",
+    content:
+      "Ground answers in sources you can verify. This blueprint shows how to implement freshness windows, detect semantic drift, and enforce budget guardrails for retrieval-heavy systems. Includes copy-paste checks, example policies, and dashboards to track grounding quality over time.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "RAG",
+    tags: ["RAG", "Freshness", "FinOps"],
+    featured: true,
+    imageUrl: "/images/blog/trusted-rag-guardrails-2029.jpg",
+    slug: "trusted-rag-2029-guardrails"
+  },
+  {
+    id: 9903,
+    title: "Agent SLOs 2029: Minimal Set That Scales Across Teams",
+    excerpt:
+      "A pragmatic SLO set for safety, groundedness, reliability, and budget with ready-to-ship templates.",
+    content:
+      "Cut through noise with four SLOs that matter. We provide targets, templates, and wiring guidance so drift blocks risky changes automatically. Works across agent teams without bespoke dashboards for each.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["SLOs", "Reliability", "Budgets"],
+    featured: true,
+    imageUrl: "/images/blog/agent-slos-2029.jpg",
+    slug: "agent-slos-2029-minimal-set"
+  },
+  {
+    id: 9904,
+    title: "Exec Guide: Evals + Guardrails You Can Ship Tomorrow",
+    excerpt:
+      "Leaders’ playbook to gate changes with evals, policy, and reversible rollouts.",
+    content:
+      "A concise executive guide to ship safely now. We cover the minimum evals to run, the policy gates to enforce, and a deterministic rollback recipe—all in a copy-paste friendly format.",
+    author: "Avery Scott",
+    authorRole: "Platform Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "6 min read",
+    category: "Governance",
+    tags: ["Policy", "Evals", "Rollbacks"],
+    featured: true,
+    imageUrl: "/images/blog/exec-guide-evals-guardrails-2026.jpg",
+    slug: "exec-guide-eval-gates-ship-tomorrow"
+  },
+  {
+    id: 9905,
+    title: "FinServ Case Study: Policy Routing Cuts Spend by 35%",
+    excerpt:
+      "How routing bands, budgets, and scorecards preserved quality while saving millions.",
+    content:
+      "A real-world FinServ case study implementing banded routing with budget caps. We include the policy, dashboards, and before/after metrics so you can replicate the savings without compromising quality.",
+    author: "Nina Patel",
+    authorRole: "Applied AI Architect",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "FinOps",
+    tags: ["Routing", "Budgets", "Scorecards"],
+    featured: true,
+    imageUrl: "/images/blog/finserv-policy-routing-savings-2026.jpg",
+    slug: "finserv-case-study-policy-routing-35-savings"
+  },
+  {
+    id: 9906,
+    title: "Journey Scorecards Starter: KPIs You Can Adopt Today",
+    excerpt:
+      "Ready-to-use KPI JSON, thresholds, and dashboards for safe, cost-aware AI.",
+    content:
+      "Kickstart journey scorecards with copy-paste KPI JSON, example thresholds, and Grafana panels. Shows how to connect signals to rollout gates so you don't ship blind.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
+    publishDate: "2025-09-16",
+    readTime: "5 min read",
+    category: "Operations",
+    tags: ["KPIs", "Scorecards", "Policy"],
+    featured: true,
+    imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
+    slug: "journey-scorecards-starter-kpis"
+  }
+];
+
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026];
+export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components

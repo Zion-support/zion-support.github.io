@@ -46,6 +46,10 @@ const posts = [
 
 // Newly added posts (Sept 2025)
 posts.unshift(
+  { slug: 'ai-2026-governed-agent-operations-checklist', title: 'Governed Agent Operations Checklist (2026)', excerpt: 'A pragmatic, audit-ready checklist for safe, observable agent ops.' },
+  { slug: 'ai-2026-low-latency-agent-observability', title: 'Low‑Latency Agent Observability (2026)', excerpt: 'Telemetry patterns that preserve sub‑200ms perceived latency.' },
+  { slug: 'ai-2026-agent-safety-evidence-integration', title: 'Agent Safety Evidence Integration (2026)', excerpt: 'Unify evals, incidents, and policy events for audits.' },
+  { slug: 'ai-2026-cost-aware-real-time-routing', title: 'Cost‑Aware Real‑Time Routing (2026)', excerpt: 'Balance latency, quality, and spend with policy‑driven routing.' },
   { slug: 'ai-2026-safe-autonomy-in-production', title: 'AI 2026: Safe Autonomy in Production', excerpt: 'Deploy autonomous agents with guardrails, SLOs, and audit-ready evidence.' },
   { slug: 'ai-2026-evidence-hub-in-practice', title: 'AI 2026: Evidence Hub in Practice', excerpt: 'Centralize evals, traces, policy events, and incidents to ship faster, safer.' },
   { slug: 'ai-2026-agent-safety-playbook', title: 'AI 2026: Agent Safety Playbook', excerpt: 'Actionable patterns to ship safe, governed, and trustworthy agentic systems.' },
@@ -66,8 +70,31 @@ posts.unshift(
 
 // New content (Sept 16, 2025) — Added in this change
 posts.unshift(
+  { slug: 'ai-2026-cost-aware-observability-blueprint', title: 'AI 2026: Cost‑Aware Observability Blueprint', excerpt: 'Unify traces, evals, and spend to keep systems fast and on budget.' },
+  { slug: 'ai-2026-enterprise-architecture-modernization', title: 'Enterprise Architecture Modernization (2026)', excerpt: 'Evolve to AI-ready, event-driven platforms with SLOs and guardrails.' },
+  { slug: 'ai-2026-zero-trust-agents', title: 'Zero‑Trust Agents (2026)', excerpt: 'Risk‑tiered tools, scoped creds, and JIT approvals for safe autonomy.' },
   { slug: 'ai-2026-exec-guide-to-agent-slo-scorecards', title: 'AI 2026: Executive Guide to Agent SLO Scorecards', excerpt: 'Translate traces and evals into executive dashboards that drive decisions.' },
   { slug: 'ai-2026-agent-platform-readiness-checklist', title: 'AI 2026: Agent Platform Readiness Checklist', excerpt: 'A pragmatic checklist to ship safe, observable, and cost‑aware agent platforms.' }
+)
+
+// New articles (Sept 2025) — Real-time Evals, Edge Agents, Trustworthy Routing
+posts.unshift(
+  { slug: 'ai-2026-real-time-evals-inference-guardrails', title: 'Real-Time Evals & Inference Guardrails (2026)', excerpt: 'Enforce quality, safety, and budget at inference time with runtime signals.' },
+  { slug: 'ai-2026-edge-agents-production-guide', title: 'Edge Agents in Production — 2026 Guide', excerpt: 'Design, secure, and observe low-latency agents at the edge.' },
+  { slug: 'ai-2026-trustworthy-model-routing-starter', title: 'Trustworthy Model Routing — Starter Kit (2026)', excerpt: 'Budget-, latency-, and quality-aware routing with safety gates.' }
+)
+
+// New articles (Sept 16, 2025) — Additional
+posts.unshift(
+  { slug: 'ai-2026-real-time-retrieval-architectures', title: 'AI 2026: Real-Time Retrieval Architectures', excerpt: 'Low-latency retrieval with hybrid indexes, caches, and routing.' },
+  { slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
+)
+
+// New content (Sept 16, 2025) — Additional (Autonomous Change Mgmt, Red Teaming, Compliance Evidence)
+posts.unshift(
+  { slug: 'ai-2026-autonomous-change-management-blueprint', title: 'Autonomous Change Management — Blueprint (2026)', excerpt: 'Design safe, auditable, and low‑risk change pipelines for agentic systems.' },
+  { slug: 'ai-2026-agent-red-teaming-playbook', title: 'Agent Red Teaming — Practical Playbook (2026)', excerpt: 'Continuously probe agents for jailbreaks, unsafe tool use, and policy gaps.' },
+  { slug: 'ai-2026-compliance-evidence-automation', title: 'Compliance Evidence Automation (2026)', excerpt: 'Automate policy checks and evidence capture to accelerate audits and approvals.' }
 )
 
 export default function BlogIndexPage() {

@@ -62,6 +62,41 @@ const Home = () => {
             <div className="mt-20 text-left">
               <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Link href="/blog/ai-2026-autonomous-change-management-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Autonomous Change Management</h3>
+                  <p className="text-white/80">Blueprint for safe, auditable change pipelines for agentic systems.</p>
+                </Link>
+                <Link href="/blog/ai-2026-agent-red-teaming-playbook" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Safety • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Agent Red Teaming</h3>
+                  <p className="text-white/80">Continuously probe for jailbreaks, unsafe tool use, and policy gaps.</p>
+                </Link>
+                <Link href="/blog/ai-2026-compliance-evidence-automation" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Governance • 5 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Compliance Evidence Automation</h3>
+                  <p className="text-white/80">Automate policy checks and evidence capture to accelerate audits.</p>
+                </Link>
+                <Link href="/blog/ai-2026-governed-agent-operations-checklist" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Governed Agent Operations Checklist</h3>
+                  <p className="text-white/80">A pragmatic, audit‑ready checklist for safe, observable agent operations.</p>
+                </Link>
+                <Link href="/blog/ai-2026-cost-aware-observability-blueprint" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Observability • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Cost‑Aware Observability Blueprint</h3>
+                  <p className="text-white/80">Unify traces, evals, and spend to stay fast, safe, and on budget.</p>
+                </Link>
+                <Link href="/blog/ai-2026-enterprise-architecture-modernization" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Architecture • 8 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Enterprise Architecture Modernization</h3>
+                  <p className="text-white/80">Evolve to AI‑ready, event‑driven platforms with SLOs and guardrails.</p>
+                </Link>
+                <Link href="/blog/ai-2026-zero-trust-agents" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Security • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Zero‑Trust Agents</h3>
+                  <p className="text-white/80">Risk‑tiered tools, scoped credentials, and JIT approvals for safety.</p>
+                </Link>
                 <Link href="/blog/ai-2026-exec-guide-to-agent-slo-scorecards" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
                   <div className="text-sm text-blue-200 mb-2">Leadership • 5 min read</div>
                   <h3 className="text-2xl font-semibold mb-2">Executive Guide to Agent SLOs</h3>

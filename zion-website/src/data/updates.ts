@@ -3032,7 +3032,170 @@ export interface UpdateItem {
 
 // Consolidated, deduplicated updates list (most recent first)
 export const updates: UpdateItem[] = [
+    // New blog (2025-09-16)
+    {
+        title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
+        summary: 'Tiered permissions, runtime checks, and signed evidence for safer operations.',
+        href: '/blog/ai-2026-runtime-policy-enforcement-blueprint',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    // New content (2025-09-16 - additional batch)
+    {
+        title: 'Guide: Agent Safety Governance Checklist (2026)',
+        summary: 'Operational checklist covering policies, eval gates, incident runbooks, and evidence.',
+        href: '/updates/agent-safety-governance-checklist-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Launch: Autonomous Rollback Controller v1.0',
+        summary: 'Automated policy-gated rollbacks with signed evidence and objective thresholds.',
+        href: '/updates/autonomous-rollback-controller-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    // AI Lab fresh articles (2025-09-17)
+    {
+        title: 'Blueprint: Runtime Policy Enforcement for Production Agents',
+        summary: 'Tiered permissions, runtime checks, and signed evidence for safer operations.',
+        href: '/reports/ai-lab/articles/new-agent-runtime-policy-enforcement-1758138000000.md',
+        date: '2025-09-17',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Field Guide: Eval Gates and Scorecards',
+        summary: 'Operationalize quality, latency, and cost with enforceable gates and live scorecards.',
+        href: '/reports/ai-lab/articles/new-eval-gates-scorecards-1758136200000.md',
+        date: '2025-09-17',
+        tag: 'Field Guide',
+    },
+    // New content (2025-09-16 - batch 3)
+    {
+        title: 'Launch: Agentic Evidence Hub v1.0',
+        summary: 'Central place to browse, search, and share signed evidence bundles and scorecards.',
+        href: '/updates/agentic-evidence-hub-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Report: State of Enterprise Agent Safety (2026 Preview)',
+        summary: 'Key risks, posture trends, and control patterns from early enterprise deployments.',
+        href: '/updates/state-of-enterprise-agent-safety-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
+    // Newly added updates (2025-09-16 - batch 2)
+    {
+        title: 'Launch: Real‑Time Guardrail Metrics Widgets v1.0',
+        summary: 'Drop-in UI widgets for live safety, latency and quality guardrails with alerts.',
+        href: '/updates/real-time-agent-metrics-widgets-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Incident Simulation Toolkit v1.1',
+        summary: 'Run realistic failure drills with eval gates, evidence capture, and rollback practice.',
+        href: '/updates/incident-simulation-toolkit-1-1',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    // Fresh content (2025-09-16 - new additions)
+    {
+        title: 'Launch: Autonomous Change Approvals v1.0',
+        summary: 'Policy-gated approvals with eval signals and signed evidence for AI changes.',
+        href: '/updates/autonomous-change-approvals-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Agent Safety Red‑Team Playbooks (2026)',
+        summary: 'Reusable red‑team scenarios, risk tiers, and remediation patterns for agents.',
+        href: '/updates/agent-safety-redteam-playbooks-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Blueprint: Real‑Time Guardrail Metrics v1.1',
+        summary: 'Expanded live metrics for tool‑use violations, remediation speed, and risk posture.',
+        href: '/updates/real-time-guardrail-metrics-1-1',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    // Newly added updates (2025-09-16 - set 2)
+    {
+        title: 'Blueprint: Production Agent Safety Runbooks (2026)',
+        summary: 'Incident-ready runbooks with eval gates, rollback plans, and signed evidence.',
+        href: '/updates/production-agent-safety-runbooks-2026',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Report: State of Multimodal RAG (2026 Preview)',
+        summary: 'Benchmarks for groundedness, sync, and latency across image, audio, and text.',
+        href: '/updates/state-of-multimodal-rag-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
+    // Newly added updates (2025-09-16 - additional)
+    {
+        title: 'Launch: Real‑Time Agent Benchmark Suite v1.0',
+        summary: 'Unified latency, quality, and cost benchmarking with shareable scorecards.',
+        href: '/updates/real-time-agent-benchmark-suite-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Production Agent Postmortems — Evidence‑First Templates',
+        summary: 'Step-by-step templates for reproducible agent incident analysis with signed evidence.',
+        href: '/updates/production-agent-postmortems-evidence-first',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    // Fresh content (2025-09-16)
+    {
+        title: 'Blueprint: Agent Posture Management — Continuous Controls',
+        summary: 'Live posture checks, policy gates, and evidence logs for production agents.',
+        href: '/updates/agent-posture-management-2026',
+        date: '2025-09-16',
+        tag: 'Blueprint',
+    },
+    {
+        title: 'Guide: Real‑Time Guardrail Metrics',
+        summary: 'Operational metrics to monitor tool‑use safety, violations, and remediation speed.',
+        href: '/updates/real-time-guardrail-metrics-2026',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
+    {
+        title: 'Report: Evidence‑First Incident Postmortems',
+        summary: 'Trace diffs, lineage, and policy exception trails for reproducible analysis.',
+        href: '/updates/evidence-first-incident-postmortems-2026',
+        date: '2025-09-16',
+        tag: 'Report',
+    },
+    {
+        title: 'Launch: Agent Billing Controls v1.0',
+        summary: 'Budgets, quotas, and safe degradation with policy‑aware cost routing.',
+        href: '/updates/agent-billing-controls-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
     // Newly added updates (2025-09-16)
+    {
+        title: 'Launch: Real‑Time Agent FinOps Dashboard v1.0',
+        summary: 'Live spend, latency, and quality scorecards with budget alerts and routing controls.',
+        href: '/updates/real-time-agent-finops-dashboard-1-0',
+        date: '2025-09-16',
+        tag: 'Launch',
+    },
+    {
+        title: 'Guide: Zero‑Downtime Agent Releases',
+        summary: 'Canary and shadow releases with eval gates, rollback plans, and signed evidence.',
+        href: '/updates/zero-downtime-agent-releases-1758081600000',
+        date: '2025-09-16',
+        tag: 'Guide',
+    },
     {
         title: 'Launch: Zero‑Trust Agent Controllers v1.0',
         summary: 'Scoped permissions, runtime enforcement, and evidence capture for tool use.',

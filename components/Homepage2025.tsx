@@ -17,6 +17,7 @@ import {
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 // Data imports temporarily disabled due to module resolution conflicts
+import dynamic from 'next/dynamic';
 import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
@@ -51,6 +52,61 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
   const latestInsights = [
     {
+      title: 'Governed Real‑Time Observability (2026)',
+      href: '/blog/ai-2026-governed-real-time-observability',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-600'
+    },
+    {
+      title: 'Agent Release Scorecards — Evidence‑First (2026)',
+      href: '/blog/ai-2026-agent-release-scorecards',
+      tag: 'New',
+      gradient: 'from-amber-500 to-orange-600'
+    },
+    {
+      title: 'Safe Tooling Permissions — Playbook (2026)',
+      href: '/blog/ai-2026-safe-tooling-permissions-playbook',
+      tag: 'New',
+      gradient: 'from-fuchsia-500 to-pink-600'
+    },
+    {
+      title: 'Reliable Real‑Time Agents (2026)',
+      href: '/blog/ai-2026-reliable-real-time-agents',
+      tag: 'New',
+      gradient: 'from-cyan-500 to-blue-600'
+    },
+    {
+      title: 'Zero‑Trust Agents (2026)',
+      href: '/blog/ai-2026-zero-trust-agents',
+      tag: 'New',
+      gradient: 'from-violet-500 to-indigo-500'
+    },
+    // Newly added content (Sept 16, 2025)
+    {
+      title: 'Low‑Latency Agent Observability (2026)',
+      href: '/blog/ai-2026-low-latency-agent-observability',
+      tag: 'New',
+      gradient: 'from-sky-500 to-blue-600'
+    },
+    {
+      title: 'Agent Safety Evidence Integration (2026)',
+      href: '/blog/ai-2026-agent-safety-evidence-integration',
+      tag: 'New',
+      gradient: 'from-rose-500 to-orange-500'
+    },
+    {
+      title: 'Cost‑Aware Real‑Time Routing (2026)',
+      href: '/blog/ai-2026-cost-aware-real-time-routing',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'Production Agent Postmortems — Playbook (2026)',
+      href: '/blog/ai-2026-production-agent-postmortems-playbook',
+      tag: 'New',
+      gradient: 'from-amber-500 to-rose-500'
+    },
+    {
       title: 'Exec Guide — Agent SLO Scorecards (2026)',
       href: '/blog/ai-2026-exec-guide-to-agent-slo-scorecards',
       tag: 'New',
@@ -61,6 +117,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-agent-platform-readiness-checklist',
       tag: 'New',
       gradient: 'from-indigo-500 to-fuchsia-600'
+    },
+    {
+      title: 'Trusted GenAI Patterns for Regulated Enterprises (2026)',
+      href: '/blog/ai-2026-trusted-genai-patterns-regulated-enterprises',
+      tag: 'New',
+      gradient: 'from-rose-500 to-orange-500'
+    },
+    {
+      title: 'Real-Time Retrieval Architectures (2026)',
+      href: '/blog/ai-2026-real-time-retrieval-architectures',
+      tag: 'New',
+      gradient: 'from-cyan-500 to-blue-600'
     },
     {
       title: 'Guide — Agent SLO Blueprints for Reliable Autonomy',
@@ -139,6 +207,18 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       href: '/blog/ai-2026-autonomous-incident-response-blueprint',
       tag: 'New',
       gradient: 'from-rose-500 to-red-500'
+    },
+    {
+      title: 'Real-Time Evals & Inference Guardrails (2026)',
+      href: '/blog/ai-2026-real-time-evals-inference-guardrails',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'Edge Agents in Production — 2026 Guide',
+      href: '/blog/ai-2026-edge-agents-production-guide',
+      tag: 'New',
+      gradient: 'from-indigo-500 to-cyan-500'
     },
     {
       title: 'Enterprise Agent Risk Mitigation (2026)',
@@ -288,6 +368,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       icon: Zap
     }
   ];
+
+  const NewContentAdBanner = dynamic(() => import('../src/components/NewContentAdBanner'), { ssr: false });
+  const ContentSpotlight = dynamic(() => import('../src/components/ContentSpotlight'), { ssr: false });
 
   const itemVariants = {
     initial: { opacity: 0, y: 20 },
@@ -503,15 +586,30 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       {/* Latest Insights */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
+          {/* Automated new content banners */}
+          <NewContentAdBanner />
+          <ContentSpotlight />
           {/* New Content Promo */}
           <div className="mb-8 rounded-2xl p-6 bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
                 <div className="uppercase tracking-wider text-xs font-bold opacity-90 mb-1">New</div>
                 <h3 className="text-2xl font-extrabold">Fresh Articles: September 2025</h3>
-                <p className="opacity-90">Operational evals, observability, and customer agents now live.</p>
+                <p className="opacity-90">Real-time evals, edge agents, and trustworthy routing now live.</p>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 w-full md:w-auto">
+                <a href="/blog/ai-2026-production-agent-postmortems-playbook" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Production Agent Postmortems — Playbook (2026)</div>
+                  <div className="text-xs opacity-90">6 min • Reliability</div>
+                </a>
+                <a href="/blog/ai-2026-real-time-evals-inference-guardrails" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Real-Time Evals & Inference Guardrails (2026)</div>
+                  <div className="text-xs opacity-90">7 min • Safety</div>
+                </a>
+                <a href="/blog/ai-2026-edge-agents-production-guide" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
+                  <div className="text-sm font-semibold mb-1 line-clamp-2">Edge Agents in Production — 2026 Guide</div>
+                  <div className="text-xs opacity-90">8 min • Edge</div>
+                </a>
                 <a href="/blog/ai-2026-operational-evals-blueprint" className="group block bg-white/10 rounded-xl p-4 hover:bg-white/15 transition">
                   <div className="text-sm font-semibold mb-1 line-clamp-2">Operational Evals — Blueprint (2026)</div>
                   <div className="text-xs opacity-90">8 min • Evals</div>
