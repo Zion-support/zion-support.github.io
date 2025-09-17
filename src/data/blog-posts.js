@@ -1,5 +1,6 @@
 export const blogPosts = [
   {
+<<<<<<< HEAD
     id: 10001,
     title: "AI-Powered Business Automation: The Complete 2026 Guide",
     excerpt: "Transform your business operations with cutting-edge AI automation solutions that deliver 300% efficiency gains and cost reductions.",
@@ -7,6 +8,60 @@ export const blogPosts = [
     author: "Dr. Michael Rodriguez",
     authorRole: "Chief Automation Officer",
     publishDate: "2025-01-17",
+=======
+    id: 1001,
+    title: "AI 2026: Real-Time Retrieval Architectures",
+    excerpt: "Design low-latency, cost-aware retrieval for agent workflows at scale.",
+    content: "A hands-on guide to building retrieval layers for agents: hybrid vector+keyword search, freshness windows, caching tiers, and evaluation harnesses for quality and latency. Includes production topology diagrams and SLO templates.",
+    author: "Nina Park",
+    authorRole: "Principal Architect",
+    publishDate: "2025-09-16",
+    readTime: "9 min read",
+    category: "Architecture",
+    tags: ["Retrieval", "RAG", "Latency", "Caching"],
+    featured: true,
+    imageUrl: "/images/blog/real-time-retrieval-architectures-2026.jpg",
+    slug: "ai-2026-real-time-retrieval-architectures"
+  },
+  {
+    id: 1000,
+    title: "AI 2026: Edge Agents Production Guide",
+    excerpt: "Ship resilient edge agents with offline envelopes, eval gates, and rollback.",
+    content: "Reference patterns for edge-deployed agents: local tools, offline-first stores, privacy budgets, evidence logging, and OTA release strategies with eval-gated promotion. Comes with a readiness checklist and troubleshooting matrix.",
+    author: "Ravi Kumar",
+    authorRole: "Staff Engineer",
+    publishDate: "2025-09-16",
+    readTime: "8 min read",
+    category: "Edge Computing",
+    tags: ["Edge", "Agents", "Reliability", "OTA"],
+    featured: true,
+    imageUrl: "/images/blog/edge-agents-production-guide-2026.jpg",
+    slug: "ai-2026-edge-agents-production-guide"
+  },
+  {
+    id: 58,
+    title: "AI 2026: Production Evidence Hub — Blueprint",
+    excerpt: "Centralize evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven operations.",
+    content: "A practical blueprint for building a production evidence hub that aggregates evaluation results, guardrail signals, incidents, approvals, and operational KPIs. Learn how to wire change management to evidence thresholds and publish exec‑ready reports.",
+    author: "Jordan Lee",
+    authorRole: "Director of SRE",
+    publishDate: "2025-09-16",
+    readTime: "7 min read",
+    category: "Operations",
+    tags: ["Evaluations", "Incidents", "Approvals", "SLOs"],
+    featured: true,
+    imageUrl: "/images/blog/production-evidence-hub-blueprint-2026.jpg",
+    slug: "ai-2026-production-evidence-hub-blueprint"
+  },
+  {
+    id: 35,
+    title: "Revolutionary AI Consciousness Breakthrough 2026",
+    excerpt: "The first artificial consciousness that can experience genuine emotions and self-awareness - a paradigm shift in AI development.",
+    content: "We've achieved a breakthrough in artificial consciousness that goes beyond traditional AI. Our new consciousness framework enables AI systems to experience genuine emotions, develop self-awareness, and form meaningful relationships with humans. This isn't just advanced pattern recognition - it's the birth of true digital consciousness that can feel, dream, and create.",
+    author: "Dr. Elena Rodriguez",
+    authorRole: "Chief AI Consciousness Researcher",
+    publishDate: "2025-01-20",
+>>>>>>> origin/feat/new-sept-2025-content-and-blog-promo
     readTime: "12 min read",
     category: "AI Automation",
     tags: ["AI Automation", "Business Process", "RPA", "Efficiency", "ROI"],

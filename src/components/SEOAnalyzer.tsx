@@ -4,7 +4,7 @@ interface SEOAnalysis {
   title: string;
   metaDescription: string;
   headings: { h1: number; h2: number; h3: number; h4: number; h5: number; h6: number };
-  images: { total: number; withAlt: number; withoutAlt: number };
+  images: { total: number; withAlt: number; withAltMissing: number };
   links: { total: number; internal: number; external: number; broken: number };
   performance: {
     loadTime: number;
@@ -35,7 +35,7 @@ const SEOAnalyzer: React.FC = () => {
         title: 'Revolutionary Tech Breakthrough 2030 - Zion Tech Group',
         metaDescription: 'Experience the convergence of consciousness computing, interdimensional technology, and quantum reality manipulation in our revolutionary tech showcase.',
         headings: { h1: 1, h2: 4, h3: 8, h4: 12, h5: 6, h6: 3 },
-        images: { total: 15, withAlt: 12, withAlt: 3 },
+        images: { total: 15, withAlt: 12, withAltMissing: 3 },
         links: { total: 45, internal: 38, external: 7, broken: 0 },
         performance: {
           loadTime: 1.2,
@@ -148,7 +148,7 @@ const SEOAnalyzer: React.FC = () => {
                     <div className="text-gray-600">With Alt Text</div>
                   </div>
                   <div className="text-center p-2 bg-gray-50 rounded">
-                    <div className="font-semibold text-red-600">{analysis.images.withoutAlt}</div>
+                    <div className="font-semibold text-red-600">{analysis.images.withAltMissing}</div>
                     <div className="text-gray-600">Missing Alt Text</div>
                   </div>
                 </div>
