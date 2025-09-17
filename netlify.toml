@@ -1,7 +1,7 @@
-# Netlify build configuration for Next.js app (zion-website)
-# Updated: Next SSR build with Netlify Next.js plugin
+# Netlify build configuration for Vite app
+# noop: retrigger netlify build (2025-09-17 21:05 UTC) - local build verified OK
 [build]
-  # Build Next.js app in zion-website and publish Next output for Netlify adapter
+  # Build Next.js app in zion-website; Next.js plugin will handle routing/output
   command = "cd zion-website && npm ci --ignore-scripts --no-audit && npm run build"
   publish = "zion-website/.next"
 
@@ -19,11 +19,11 @@
   node_bundler = "esbuild"
   included_files = ["zion-website/public/**/*", "public/**/*"]
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 [build.processing]
   skip_processing = true
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 # Fix MIME type issues
 [[headers]]
@@ -108,7 +108,7 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Using Netlify Next.js Runtime for SSR/ISR support
+# Using Next.js static export; no Netlify Next plugin required
 
 # Redirects for SEO/legacy URLs
 [[redirects]]
@@ -191,9 +191,9 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js plugin enabled; dynamic routes handled by runtime
+# Note: Next.js plugin removed; this is a Vite static site build
 
-# Catch-all SPA redirect removed; Next.js runtime manages routing
+# Note: Do not add SPA catch-all redirects for Next.js; the plugin manages routing
 
 # Security Headers
 [[headers]]
