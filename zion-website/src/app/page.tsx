@@ -1,6 +1,6 @@
 import React from 'react'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 import { getLatestUpdates } from '@/data/updates'
+import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
@@ -35,21 +35,24 @@ const latest = getLatestUpdates(3)
 
 export default function HomePage() {
   return (
-    <div className="bg-black">
-      {/* Promo banner */}
-      <div className="relative isolate px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
-            <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: Real-Time Agent Cost Optimizer v1.0 —
-              <a href="/updates/real-time-agent-cost-optimizer-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost optimizer</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              Production RAG Latency Budgets —
-              <a href="/updates/production-rag-latency-budgets" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">latency guide</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
-            </p>
-          </div>
+    <div className="bg-black min-h-screen">
+      {/* Promo banner for fresh content */}
+      <div className="mx-auto max-w-7xl px-6 pt-6">
+        <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
+          <p className="text-sm sm:text-base font-semibold text-blue-200">
+            New: Evidence Vault v1.1 —
+            <a href="/updates/agent-evidence-vault-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what's new</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Also: Agent Risk Dashboard v1.1 —
+            <a href="/updates/agent-risk-dashboard-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch details</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Guide: Multimodal Agents Guardrails (2026) —
+            <a href="/updates/production-guardrails-multimodal-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
+          </p>
+        </div>
+      </div>
         </div>
       </div>
 
