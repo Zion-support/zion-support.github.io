@@ -15,7 +15,7 @@
   # Keep functions path relative to repo root
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["public/**/*"]
+  included_files = ["zion-website/public/**/*", "public/**/*"]
 
 [build.processing]
   skip_processing = true
