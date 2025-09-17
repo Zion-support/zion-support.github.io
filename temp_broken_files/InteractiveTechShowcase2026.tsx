@@ -5,12 +5,17 @@ const InteractiveTechShowcase2026: React.FC = () => {
   const [activeShowcase, setActiveShowcase] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const showcases = [
   const [activeDemo, setActiveDemo] = useState(0);
-
-  const techDemos = [
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
+  const showcases = [
+    // Add showcase items here
+  ];
+
+  const techDemos = [
+    // Add tech demo items here
+  ];
 
   useEffect(() => {
     setIsVisible(true);

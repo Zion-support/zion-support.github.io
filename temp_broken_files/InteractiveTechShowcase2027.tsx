@@ -33,6 +33,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
       borderColor: 'border-emerald-400',
       bgColor: 'from-emerald-600/30 to-teal-600/30',
       link: '/pages/NeuralInterfaceRevolution2027'
+    },
+    {
       id: 0,
       title: "Conscious AI Systems",
       icon: "🧠",

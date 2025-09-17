@@ -24,6 +24,9 @@ const RevolutionaryContentBanner: React.FC = () => {
       link: "/pages/NextGenInnovationHub2026",
       gradient: "from-green-600 to-teal-600",
       textColor: "text-white"
+    }
+  ];
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const featuredContent = [
