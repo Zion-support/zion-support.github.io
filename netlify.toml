@@ -4,12 +4,7 @@
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
-<<<<<<< HEAD
-  # ci: no-op edit to retrigger Netlify deployment (2025-09-17)
-=======
-  # no-op change to retrigger Netlify build from main
-  # ci: retrigger deploy (no functional change)
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-39c7
+  # ci: retrigger Netlify deploy (no functional change) 2025-09-17
 
 [build.environment]
   NODE_VERSION = "20"
