@@ -39,7 +39,19 @@ export default function BlogPage() {
       readTime: '10 min read',
       image: '/blog/autonomous-ai.jpg',
       featured: true
-    }
+    },
+    // New featured content
+    {
+      id: 'agent-safety-playbooks',
+      title: 'Agent Safety Playbooks for Enterprise AI',
+      excerpt: 'Practical guardrails, red-teaming, and evaluation patterns to deploy autonomous agents responsibly at scale.',
+      category: 'AI Safety',
+      author: 'Dr. James Wilson',
+      date: '2025-09-10',
+      readTime: '9 min read',
+      image: '/blog/agent-safety.jpg',
+      featured: true,
+    },
   ];
 
   const recentPosts = [
@@ -102,25 +114,37 @@ export default function BlogPage() {
       date: '2023-12-15',
       readTime: '6 min read',
       image: '/blog/ai-marketing.jpg'
-    }
+    },
+    // New recent post
+    {
+      id: 'quantum-ai-workflows',
+      title: 'Quantum-AI Workflows: From Simulation to Production',
+      excerpt: 'How to combine quantum-inspired methods with robust MLOps pipelines for real-world outcomes.',
+      category: 'Quantum Computing',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-08',
+      readTime: '11 min read',
+      image: '/blog/quantum-ai-workflows.jpg',
+    },
   ];
 
   const categories = [
-    { name: 'All Posts', count: 12, active: true },
+    { name: 'All Posts', count: featuredPosts.length + recentPosts.length, active: true },
     { name: 'Research & Development', count: 3, active: false },
     { name: 'AI Solutions', count: 2, active: false },
-    { name: 'Quantum Computing', count: 2, active: false },
+    { name: 'Quantum Computing', count: 3, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
     { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
-    { name: 'Content Marketing', count: 1, active: false }
+    { name: 'Content Marketing', count: 1, active: false },
+    { name: 'AI Safety', count: 1, active: false },
   ];
 
   const tags = [
     'AI Consciousness', 'Quantum Computing', 'Machine Learning', 'Cybersecurity',
     'Data Science', 'Autonomous Systems', 'Business Intelligence', 'Cloud Computing',
-    'AI Ethics', 'Research', 'Innovation', 'Technology Trends'
+    'AI Ethics', 'Research', 'Innovation', 'Technology Trends', 'AI Safety',
   ];
 
   return (
