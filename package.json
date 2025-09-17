@@ -5,24 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
     "build:netlify": "vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-=======
-    "lint": "eslint .",
     "lint:changed": "eslint src/data/blog-posts.js src/App.tsx --max-warnings 0",
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56
-=======
-    "build:netlify": "vite build",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -72,10 +57,7 @@
     "cmdk": "^0.2.1",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "^8.0.0-rc19",
-<<<<<<< HEAD
     "framer-motion": "^10.16.4",
-=======
->>>>>>> origin/merge-new-content-1757989975
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^7.2.0",
     "input-otp": "^1.1.0",
@@ -102,11 +84,7 @@
     "tailwindcss": "^3.3.0",
     "typescript": "^5.0.2",
     "vaul": "^0.9.0",
-<<<<<<< HEAD
     "vite": "^7.1.5",
-=======
-    "vite": "^4.4.5",
->>>>>>> origin/merge-new-content-1757989975
     "vite-plugin-pwa": "^1.0.3",
     "zod": "^3.22.4"
   },
