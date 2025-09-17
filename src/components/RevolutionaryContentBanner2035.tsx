@@ -50,6 +50,7 @@ const RevolutionaryContentBanner2035: React.FC = () => {
             🚀 LIMITED TIME: Early Access to Revolutionary Technology
           </div>
         </div>
+<<<<<<< HEAD
       </div>
       {/* Floating Elements */}
       <div className="absolute top-4 right-4 text-white/20 text-6xl animate-bounce delay-1000">
@@ -124,6 +125,8 @@ const RevolutionaryContentBanner2035 = () => {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
 =======
 >>>>>>> origin/new-content-2036-integration
+=======
+>>>>>>> origin/new-content-merge-1757995743
       </div>
     </div>
   );
