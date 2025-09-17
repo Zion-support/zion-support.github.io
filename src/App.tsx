@@ -103,7 +103,11 @@ const PartnersPage = React.lazy(() => import('./pages/Partners'));
 const AdvancedTechShowcase2025 = React.lazy(() => import('./pages/AdvancedTechShowcase2025'));
 const FutureInnovationLab2025 = React.lazy(() => import('./pages/FutureInnovationLab2025'));
 
-const App = () => {
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+];
+
+export default function App(): React.JSX.Element {
   return (
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
@@ -135,6 +139,4 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
   );
-};
-
-export default App;
+}
