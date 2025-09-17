@@ -10,6 +10,8 @@
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
+  # Prevent Netlify from attempting to checkout Git submodules (none are required)
+  GIT_SUBMODULE_STRATEGY = "none"
 
 [functions]
   # Keep functions path relative to repo root
