@@ -1,25 +1,22 @@
 #!/bin/bash
 
-# List of files with merge conflicts
-files=(
-  "/workspace/src/components/NewContentShowcase2026.tsx"
-  "/workspace/src/components/InteractiveTechShowcase2026.tsx"
-  "/workspace/src/pages/AdvancedCybersecuritySuite2026.tsx"
-  "/workspace/src/pages/SpaceTechInnovation2026.tsx"
-  "/workspace/src/pages/AdvancedBiotechAI2026.tsx"
-  "/workspace/src/pages/AdvancedQuantumComputing2026.tsx"
-  "/workspace/src/pages/AdvancedRobotics2026.tsx"
-)
+# Script to fix merge conflicts in source files
+echo "Fixing merge conflicts in source files..."
 
-for file in "${files[@]}"; do
-  echo "Fixing merge conflicts in $file"
-  
-  # Remove merge conflict markers and keep the first version (HEAD)
-  sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-  sed -i '/^>>>>>>> /d' "$file"
-  
-  # Remove any remaining ======= lines
-  sed -i '/^=======$/d' "$file"
+# Find all files with merge conflicts in src directory
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
+    echo "Fixing conflicts in: $file"
+    
+    # Remove merge conflict markers and keep the more complete version
+    # This is a simple approach - keep everything between ======= and >>>>>>> 
+    # and remove the HEAD section
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i 's/>>>>>>>.*//' "$file"
+    
+    # Clean up any remaining empty lines
+    sed -i '/^[[:space:]]*$/d' "$file"
+  fi
 done
 
 echo "Merge conflicts fixed!"

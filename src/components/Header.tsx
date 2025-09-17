@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
   X, 
@@ -41,17 +44,17 @@ import {
   Lock
 } from 'lucide-react';
 
+>>>>>>> origin/merge-new-content-1757989975
 function Header() {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState('');
 	const location = useLocation();
-
 	const quickActions = [
 		{
-			name: 'Latest Insights',
-			href: '/blog/latest',
+			name: 'New: Edge Agents Guide',
+			href: '/blog/ai-2026-edge-agents-production-guide',
 			icon: Sparkles,
-			description: 'Read our newest research',
+			description: 'Fresh: production blueprint',
 			featured: true,
 			color: 'from-amber-500 to-orange-600'
 		},
@@ -101,7 +104,6 @@ function Header() {
 			color: 'from-blue-500 to-purple-500'
 		}
 	];
-
 	const handleSearch = (e: React.FormEvent) => {
 		e.preventDefault();
 		if (searchQuery.trim()) {
@@ -109,7 +111,6 @@ function Header() {
 			window.location.href = `/services?search=${encodeURIComponent(searchQuery)}`;
 		}
 	};
-
 	return (
 		<header className="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg lg:left-80">
 			<nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,7 +130,6 @@ function Header() {
 							<p className="text-xs text-slate-400">Innovation & Technology</p>
 						</div>
 					</Link>
-
 					{/* Search Bar */}
 					<div className="flex-1 max-w-md mx-4 hidden md:block">
 						<form onSubmit={handleSearch} className="relative">
@@ -145,7 +145,6 @@ function Header() {
 							</div>
 						</form>
 					</div>
-
 					{/* Quick Actions */}
 					<div className="hidden lg:flex items-center space-x-4">
 						<Link
@@ -169,13 +168,11 @@ function Header() {
 							Get Started
 						</Link>
 					</div>
-
 					{/* Mobile Menu Button */}
 					<button className="lg:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">
 						<Menu className="w-6 h-6" />
 					</button>
 				</div>
-
 				{/* Search Bar for Mobile */}
 				<div className="md:hidden pb-4">
 					<form onSubmit={handleSearch} className="relative">
@@ -192,7 +189,6 @@ function Header() {
 					</form>
 				</div>
 			</nav>
-
 			{/* Quick Actions Bar */}
 			<div className="hidden lg:block border-t border-slate-700/30 bg-slate-900/50">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +214,26 @@ function Header() {
 		</header>
 	);
 }
-
 export { Header };
-export default Header;
+};
 
+
+
+=======
+import React from "react";
+
+const Header = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">Header</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+export default Header;

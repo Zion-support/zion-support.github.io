@@ -14,7 +14,6 @@ interface FraudDetectionContextType {;
     userEmail?: string;
   ) => Promise<{;
     isSafe: boolean,;
-=======
 import React, { useCallback } from 'react';
 import { checkMessage, monitorContent } from '@/services/fraud';
 import { toast } from '@/hooks/use-toast';
@@ -34,7 +33,6 @@ interface FraudDetectionContextType {
     userEmail?: string
   ) => Promise<{
     isSafe: boolean;
->>>>>>> origin/auto/autonomy-17186719616
     explanation?: string;
   }>;
 }
@@ -65,9 +63,7 @@ export const useFraudDetection = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
 
@@ -76,8 +72,6 @@ export const useFraudDetection = () => {
 export const useFraudDetection = () => {;
   const context = React && React.useContext(FraudDetectionContext);
   if (context === undefined) {;
-=======
->>>>>>> origin/auto/autonomy-17186719616
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;

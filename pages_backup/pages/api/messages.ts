@@ -7,9 +7,7 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -194,15 +192,11 @@ export default function handler(req, res) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       return;
     }
@@ -247,7 +241,6 @@ export default function handler(req, res) {
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }
 
 
@@ -275,7 +268,6 @@ res.setHeader("AllowGET, POST");
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -288,13 +280,9 @@ res.setHeader("AllowGET, POST");
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

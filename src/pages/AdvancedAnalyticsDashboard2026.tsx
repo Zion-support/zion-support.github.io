@@ -1,424 +1,377 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { BarChart3, TrendingUp, Users, DollarSign, Activity, Target, Zap, Globe } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> origin/merge-new-content-1757989975
 
 const AdvancedAnalyticsDashboard2026: React.FC = () => {
-  const [selectedMetric, setSelectedMetric] = useState('revenue');
-  const [timeRange, setTimeRange] = useState('30d');
+  const [selectedTimeframe, setSelectedTimeframe] = useState('7d');
 
-  const metrics = {
-    revenue: { value: '$2.4M', change: '+23.5%', trend: 'up' },
-    users: { value: '45.2K', change: '+18.2%', trend: 'up' },
-    conversion: { value: '12.8%', change: '+5.3%', trend: 'up' },
-    retention: { value: '89.4%', change: '+2.1%', trend: 'up' }
+  const timeframes = [
+    { value: '24h', label: '24H' },
+    { value: '7d', label: '7D' },
+    { value: '30d', label: '30D' },
+    { value: '90d', label: '90D' }
+  ];
+
+  const analyticsData = [
+    {
+      id: 1,
+      title: 'Total Revenue',
+      value: '$2.4M',
+      change: 12.5,
+      trend: 'up',
+      color: 'from-green-500 to-emerald-500',
+      icon: DollarSign
+    },
+    {
+      id: 2,
+      title: 'Active Users',
+      value: '45.2K',
+      change: 8.3,
+      trend: 'up',
+      color: 'from-blue-500 to-cyan-500',
+      icon: Users
+    },
+    {
+      id: 3,
+      title: 'Conversion Rate',
+      value: '3.2%',
+      change: -2.1,
+      trend: 'down',
+      color: 'from-purple-500 to-pink-500',
+      icon: Target
+    },
+    {
+      id: 4,
+      title: 'Performance Score',
+      value: '94.7',
+      change: 5.8,
+      trend: 'up',
+      color: 'from-orange-500 to-red-500',
+      icon: Activity
+    }
+  ];
+
+  const getTrendIcon = (trend: string) => {
+    return trend === 'up' ? (
+      <TrendingUp className="w-4 h-4 text-green-400" />
+    ) : (
+      <TrendingUp className="w-4 h-4 text-red-400 rotate-180" />
+    );
+  };
+
+  const getChangeColor = (change: number) => {
+    return change > 0 ? 'text-green-400' : 'text-red-400';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📊 ADVANCED ANALYTICS 2026 • DATA-DRIVEN INSIGHTS
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="p-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl">
+                <BarChart3 className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-3xl font-bold text-white">Advanced Analytics Dashboard 2026</h1>
+                <p className="text-gray-400">Comprehensive business intelligence and insights</p>
+              </div>
             </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Advanced Analytics Dashboard 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Transform your data into actionable insights with our revolutionary analytics platform. 
-              Experience real-time intelligence, predictive analytics, and AI-powered recommendations.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Analytics
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                View Live Demo
-              </button>
+            
+            <div className="flex items-center gap-2">
+              {timeframes.map((timeframe) => (
+                <button
+                  key={timeframe.value}
+                  onClick={() => setSelectedTimeframe(timeframe.value)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    selectedTimeframe === timeframe.value
+                      ? 'bg-purple-500 text-white'
+                      : 'bg-white/10 text-gray-400 hover:bg-white/20 hover:text-white'
+                  }`}
+                >
+                  {timeframe.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Analytics Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {analyticsData.map((item) => (
+              <motion.div
+                key={item.id}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`p-2 rounded-lg bg-gradient-to-r ${item.color}`}>
+                    <item.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="flex items-center gap-1">
+                    {getTrendIcon(item.trend)}
+                    <span className={`text-sm font-medium ${getChangeColor(item.change)}`}>
+                      {item.change > 0 ? '+' : ''}{item.change.toFixed(1)}%
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-1">{item.value}</h3>
+                <p className="text-gray-400 text-sm">{item.title}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Charts Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Header */}
+        <div
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            📊 ADVANCED ANALYTICS DASHBOARD • 2026
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Advanced Analytics Dashboard
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Real-time insights and analytics for AI systems, quantum computing, neural interfaces, 
+            and advanced technologies. Monitor performance, track trends, and optimize operations.
+          </p>
+        </div>
+
+        {/* Key Metrics */}
+        <div
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        >
+          {metrics.map((metric, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30"
+>>>>>>> origin/merge-new-content-1757989975
+            >
+              <h3 className="text-xl font-bold text-white mb-4">Revenue Trends</h3>
+              <div className="h-64 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center">
+                <p className="text-gray-400">Chart visualization would go here</p>
+              </div>
+<<<<<<< HEAD
+            </motion.div>
+
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+=======
+              <div className="text-3xl font-bold mb-2">{metric.value}</div>
+              <div className="text-blue-200 text-sm">{metric.title}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Performance Charts */}
+        <div
+          className="grid md:grid-cols-2 gap-8 mb-16"
+        >
+          {/* AI Performance Chart */}
+          <div className="bg-gradient-to-br from-slate-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30">
+            <h3 className="text-2xl font-bold mb-6">AI Performance Trends</h3>
+            <div className="space-y-4">
+              {chartData.map((data, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  <div className="w-16 text-sm text-gray-400">{data.month}</div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-1">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      <span className="text-sm text-blue-300">AI Systems</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full"
+                        style={{ width: `${data.ai}%` }}
+                      ></div>
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1">{data.ai}%</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Quantum Processing Chart */}
+          <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30">
+            <h3 className="text-2xl font-bold mb-6">Quantum Processing Capacity</h3>
+            <div className="space-y-4">
+              {chartData.map((data, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  <div className="w-16 text-sm text-gray-400">{data.month}</div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-1">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <span className="text-sm text-purple-300">Quantum Systems</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div 
+                        className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
+                        style={{ width: `${data.quantum}%` }}
+                      ></div>
+                    </div>
+                    <div className="text-xs text-gray-400 mt-1">{data.quantum}%</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* System Status and Activities */}
+        <div
+          className="grid md:grid-cols-2 gap-8 mb-16"
+        >
+          {/* System Status */}
+          <div className="bg-gradient-to-br from-slate-800/50 to-green-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30">
+            <h3 className="text-2xl font-bold mb-6">System Status</h3>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-green-300">AI Core Systems</span>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-green-400 font-semibold">Online</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-green-300">Quantum Processors</span>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-green-400 font-semibold">Online</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-green-300">Neural Interfaces</span>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-green-400 font-semibold">Online</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-green-300">Data Analytics</span>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-green-400 font-semibold">Online</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Recent Activities */}
+          <div className="bg-gradient-to-br from-slate-800/50 to-orange-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30">
+            <h3 className="text-2xl font-bold mb-6">Recent Activities</h3>
+            <div className="space-y-4">
+              {recentActivities.map((activity) => (
+                <div key={activity.id} className="flex items-start space-x-3">
+                  <div className={`w-2 h-2 rounded-full mt-2 ${
+                    activity.status === 'completed' ? 'bg-green-400' : 'bg-yellow-400'
+                  }`}></div>
+                  <div className="flex-1">
+                    <div className="text-sm font-semibold text-orange-300">{activity.type}</div>
+                    <div className="text-sm text-gray-300">{activity.description}</div>
+                    <div className="text-xs text-gray-400">{activity.timestamp}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Advanced Analytics Features */}
+        <div
+          className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16"
+        >
+          <h2 className="text-4xl font-bold text-center mb-12">Advanced Analytics Features</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold mb-4">Real-time Monitoring</h3>
+              <p className="text-blue-200">Monitor all systems in real-time with advanced analytics and predictive insights.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">📈</div>
+              <h3 className="text-xl font-bold mb-4">Performance Analytics</h3>
+              <p className="text-blue-200">Track performance metrics and optimize system efficiency with detailed analytics.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold mb-4">Predictive Insights</h3>
+              <p className="text-blue-200">Get predictive insights and recommendations for system optimization and improvement.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">Access Advanced Analytics</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Get comprehensive insights into your AI systems, quantum computing performance, 
+            and neural interface operations with our advanced analytics platform.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+>>>>>>> origin/merge-new-content-1757989975
+            >
+              <h3 className="text-xl font-bold text-white mb-4">User Engagement</h3>
+              <div className="h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
+                <p className="text-gray-400">Chart visualization would go here</p>
+              </div>
+            </motion.div>
+          </div>
+<<<<<<< HEAD
+
+          {/* Key Insights */}
+          <motion.div
+            className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <Zap className="w-5 h-5 text-yellow-400" />
+              Key Insights
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-white/5 rounded-lg p-4">
+                <h4 className="font-semibold text-white mb-2">Peak Performance</h4>
+                <p className="text-gray-300 text-sm">System operating at 94.7% efficiency during peak hours</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4">
+                <h4 className="font-semibold text-white mb-2">Growth Trend</h4>
+                <p className="text-gray-300 text-sm">Revenue increased by 12.5% compared to last period</p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4">
+                <h4 className="font-semibold text-white mb-2">Global Reach</h4>
+                <p className="text-gray-300 text-sm">Active users across 45+ countries worldwide</p>
+              </div>
             </div>
           </motion.div>
+=======
+>>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
-
-      {/* Interactive Dashboard */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">📊 Interactive Analytics Dashboard</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Experience real-time analytics with interactive visualizations and AI-powered insights
-            </p>
-          </motion.div>
-
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-400/30">
-              {/* Dashboard Controls */}
-              <div className="flex flex-wrap justify-between items-center mb-8">
-                <div className="flex space-x-4">
-                  {Object.keys(metrics).map((metric) => (
-                    <button
-                      key={metric}
-                      onClick={() => setSelectedMetric(metric)}
-                      className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-                        selectedMetric === metric
-                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                      }`}
-                    >
-                      {metric.charAt(0).toUpperCase() + metric.slice(1)}
-                    </button>
-                  ))}
-                </div>
-                <div className="flex space-x-2">
-                  {['7d', '30d', '90d', '1y'].map((range) => (
-                    <button
-                      key={range}
-                      onClick={() => setTimeRange(range)}
-                      className={`px-3 py-1 rounded text-sm font-medium transition-all duration-300 ${
-                        timeRange === range
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                      }`}
-                    >
-                      {range}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Key Metrics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                {Object.entries(metrics).map(([key, metric]) => (
-                  <motion.div
-                    key={key}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className={`p-6 rounded-lg ${
-                      selectedMetric === key
-                        ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-2 border-blue-400'
-                        : 'bg-slate-700/50 border border-slate-600'
-                    }`}
-                  >
-                    <div className="text-sm text-slate-400 mb-1">
-                      {key.charAt(0).toUpperCase() + key.slice(1)}
-                    </div>
-                    <div className="text-3xl font-bold mb-2">{metric.value}</div>
-                    <div className={`flex items-center text-sm ${
-                      metric.trend === 'up' ? 'text-green-400' : 'text-red-400'
-                    }`}>
-                      <span className="mr-1">{metric.trend === 'up' ? '↗' : '↘'}</span>
-                      {metric.change}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Chart Visualization */}
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4">Performance Trends</h3>
-                  <div className="h-64 flex items-end space-x-1">
-                    {Array.from({ length: 30 }, (_, i) => (
-                      <div
-                        key={i}
-                        className="bg-gradient-to-t from-blue-500 to-purple-500 rounded-sm flex-1"
-                        style={{
-                          height: `${Math.random() * 80 + 20}%`,
-                          animationDelay: `${i * 0.1}s`
-                        }}
-                      />
-                    ))}
-                  </div>
-                  <div className="text-center mt-4 text-slate-400 text-sm">
-                    {timeRange} performance data
-                  </div>
-                </div>
-
-                <div className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4">AI Insights</h3>
-                  <div className="space-y-4">
-                    <div className="p-4 bg-green-600/20 border border-green-400/30 rounded-lg">
-                      <div className="text-green-400 font-semibold mb-1">🎯 Optimization Opportunity</div>
-                      <div className="text-sm text-green-200">
-                        Your conversion rate could increase by 15% with targeted A/B testing
-                      </div>
-                    </div>
-                    <div className="p-4 bg-blue-600/20 border border-blue-400/30 rounded-lg">
-                      <div className="text-blue-400 font-semibold mb-1">📈 Growth Trend</div>
-                      <div className="text-sm text-blue-200">
-                        Revenue is trending 23% higher than last month
-                      </div>
-                    </div>
-                    <div className="p-4 bg-purple-600/20 border border-purple-400/30 rounded-lg">
-                      <div className="text-purple-400 font-semibold mb-1">⚠️ Alert</div>
-                      <div className="text-sm text-purple-200">
-                        User engagement dropped 5% in the last 3 days
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Advanced Analytics Features */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/30 to-gray-800/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">🔬 Advanced Analytics Features</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Discover the powerful features that make our analytics platform the most advanced in the industry
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "🤖",
-                title: "AI-Powered Insights",
-                description: "Machine learning algorithms that automatically identify patterns and provide actionable recommendations",
-                features: ["Pattern Recognition", "Predictive Analytics", "Anomaly Detection", "Smart Alerts"]
-              },
-              {
-                icon: "📊",
-                title: "Real-time Visualization",
-                description: "Interactive charts and graphs that update in real-time with your data",
-                features: ["Live Dashboards", "Interactive Charts", "Custom Visualizations", "Real-time Updates"]
-              },
-              {
-                icon: "🔮",
-                title: "Predictive Modeling",
-                description: "Advanced forecasting models that predict future trends and outcomes",
-                features: ["Trend Forecasting", "Scenario Planning", "Risk Analysis", "Growth Projections"]
-              },
-              {
-                icon: "🎯",
-                title: "Custom Metrics",
-                description: "Create and track custom KPIs that matter most to your business",
-                features: ["Custom KPIs", "Goal Tracking", "Performance Metrics", "ROI Analysis"]
-              },
-              {
-                icon: "📱",
-                title: "Mobile Analytics",
-                description: "Access your analytics anywhere with our mobile-optimized dashboard",
-                features: ["Mobile Dashboard", "Push Notifications", "Offline Access", "Touch Optimization"]
-              },
-              {
-                icon: "🔒",
-                title: "Enterprise Security",
-                description: "Bank-level security with role-based access control and data encryption",
-                features: ["Role-based Access", "Data Encryption", "Audit Logs", "Compliance"]
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-700/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-8 border border-slate-500/30 hover:scale-105 transition-all duration-300"
-              >
-                <div className="text-6xl mb-4 text-center">{feature.icon}</div>
-                <h3 className="text-2xl font-bold mb-4 text-center">{feature.title}</h3>
-                <p className="text-slate-200 mb-6 text-center">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.features.map((item, featureIndex) => (
-                    <li key={featureIndex} className="text-slate-300 text-sm flex items-center">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Analytics Applications */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">🚀 Analytics Applications</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Powerful analytics solutions for every industry and use case
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            {[
-              {
-                title: "E-commerce Analytics",
-                description: "Comprehensive analytics for online retailers to optimize sales and customer experience",
-                benefits: [
-                  "Sales performance tracking",
-                  "Customer behavior analysis",
-                  "Inventory optimization",
-                  "Conversion rate optimization"
-                ],
-                icon: "🛒"
-              },
-              {
-                title: "Marketing Analytics",
-                description: "Advanced marketing analytics to measure ROI and optimize campaigns",
-                benefits: [
-                  "Campaign performance",
-                  "Attribution modeling",
-                  "Customer journey analysis",
-                  "Marketing ROI tracking"
-                ],
-                icon: "📈"
-              },
-              {
-                title: "Financial Analytics",
-                description: "Real-time financial analytics for better decision making and risk management",
-                benefits: [
-                  "Revenue forecasting",
-                  "Expense tracking",
-                  "Risk analysis",
-                  "Profitability analysis"
-                ],
-                icon: "💰"
-              },
-              {
-                title: "Operations Analytics",
-                description: "Operational analytics to improve efficiency and reduce costs",
-                benefits: [
-                  "Process optimization",
-                  "Resource utilization",
-                  "Performance monitoring",
-                  "Cost reduction analysis"
-                ],
-                icon: "⚙️"
-              }
-            ].map((app, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-700/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-8 border border-slate-500/30 hover:scale-105 transition-all duration-300"
-              >
-                <div className="text-6xl mb-4 text-center">{app.icon}</div>
-                <h3 className="text-2xl font-bold mb-4 text-center">{app.title}</h3>
-                <p className="text-slate-200 mb-6 text-center">{app.description}</p>
-                <ul className="space-y-3">
-                  {app.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="text-slate-300 text-sm flex items-center">
-                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/30 to-gray-800/30">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">🏆 Analytics Success Stories</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              See how our analytics platform is transforming businesses and driving growth
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                company: "TechStart Inc",
-                result: "300% Revenue Growth",
-                description: "Used our analytics to identify high-value customers and optimize pricing, resulting in 300% revenue growth",
-                icon: "📈"
-              },
-              {
-                company: "RetailMax Corp",
-                result: "50% Cost Reduction",
-                description: "Implemented operational analytics to optimize inventory and reduce costs by 50% while improving efficiency",
-                icon: "💰"
-              },
-              {
-                company: "MarketingPro LLC",
-                result: "400% ROI Improvement",
-                description: "Leveraged marketing analytics to optimize campaigns and achieve 400% improvement in marketing ROI",
-                icon: "🎯"
-              }
-            ].map((story, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-700/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-8 border border-slate-500/30 hover:scale-105 transition-all duration-300"
-              >
-                <div className="text-6xl mb-4 text-center">{story.icon}</div>
-                <h3 className="text-2xl font-bold mb-2 text-center">{story.company}</h3>
-                <div className="text-center mb-4">
-                  <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold">
-                    {story.result}
-                  </span>
-                </div>
-                <p className="text-slate-200 text-center">{story.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Data?</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-              Start making data-driven decisions with our advanced analytics platform
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Start Analytics Journey
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };

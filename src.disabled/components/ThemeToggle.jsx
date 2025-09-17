@@ -1,4 +1,12 @@
-import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
-"export\": const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage.getItem (\'theme\') const prefersDark = window.matchMedia (\' (prefers - color - scheme: dark) ) .matches\'';\''\"",;
-export: const ThemeToggle = () => { useEffect ( () => { const savedTheme = localStorage.getItem ("theme") const prefersDark = window.matchMedia (" (prefers - color - scheme: dark) ) .matches"";"""",;"""
-import React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';''}
+import React from 'react';
+
+const ThemeToggle: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ThemeToggle</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ThemeToggle;

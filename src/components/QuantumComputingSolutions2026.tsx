@@ -1,8 +1,11 @@
+<<<<<<< HEAD
+import React from 'react';
+const QuantumComputingSolutions2026: React.FC = () => {
+=======
 "use client";
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Atom
   Zap
@@ -151,6 +154,7 @@ const QuantumComputingSolutions2026 = () => {
     { name: ''Research', 'icon: '🔬'applications: ['Scientific 'Computing', 'Climate 'Modeling', 'Materials Science'] }
   ];
 
+>>>>>>> origin/merge-new-content-1757989975
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
       {/* Animated Background */}
@@ -159,19 +163,17 @@ const QuantumComputingSolutions2026 = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-cyan-900/40" />
         <div className="absolute inset-0">
           {[...Array(40)].map((_i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0-100],
                 x: [0Math.random() * 20 - 10],
                 opacity: [0.30.80.3],
               }}
-              transition={{
                 duration: 5 + Math.random() * 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -180,75 +182,67 @@ const QuantumComputingSolutions2026 = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={isVisible ? { scale: 1 } : {}}
-            transition={{ duration: 0.6delay: 0.2 }}
+          <div
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full text-white text-sm font-medium mb-6"
           >
             <Atom className="w-4 h-4 mr-2" />
             Quantum Computing Solutions 2026
-          </motion.div>
+          </div>
+<<<<<<< HEAD
+=======
           
+>>>>>>> origin/merge-new-content-1757989975
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Quantum
             <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               {' '}Revolution
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Harness the power of quantum computing to solve the 'world', 's most complex problems. 
             From optimization to encryptiondiscover quantum solutions that will transform your industry.
           </p>
-        </motion.div>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Benefits Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {benefits.map((benefitindex) => (
-            <motion.div
+            <div
               key={index}
-              whileHover={{ scale: 1.05 }}
               className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
             >
               <benefit.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
               <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
               <div className="text-lg font-semibold text-white mb-2">{benefit.title}</div>
               <div className="text-gray-300 text-sm">{benefit.description}</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Solutions Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Quantum Solutions
           </h2>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {solutions.map((solutionindex) => (
-              <motion.div
+              <div
                 key={solution.id}
-                whileHover={{ scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 cursor-pointer"
                 onClick={() => setActiveSolution(index)}
               >
@@ -263,11 +257,9 @@ const QuantumComputingSolutions2026 = () => {
                     </div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {solution.description}
                 </p>
-                
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-white/5 rounded-lg">
                     <div className="text-lg font-bold text-white">{solution.performance.speed}</div>
@@ -278,7 +270,6 @@ const QuantumComputingSolutions2026 = () => {
                     <div className="text-gray-400 text-sm">Accuracy</div>
                   </div>
                 </div>
-                
                 <div className="space-y-2">
                   {solution.features.slice(03).map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300 text-sm">
@@ -287,19 +278,17 @@ const QuantumComputingSolutions2026 = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Detailed Solution View */}
-        <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={activeSolution}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
           >
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -313,11 +302,9 @@ const QuantumComputingSolutions2026 = () => {
                     <p className="text-cyan-400 text-lg">{solutions[activeSolution].subtitle}</p>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {solutions[activeSolution].description}
                 </p>
-                
                 <div className="space-y-3 mb-6">
                   {solutions[activeSolution].features.map((featureindex) => (
                     <div key={index} className="flex items-center text-gray-300">
@@ -326,7 +313,6 @@ const QuantumComputingSolutions2026 = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-white/5 rounded-lg">
                     <div className="text-2xl font-bold text-white">{solutions[activeSolution].performance.speed}</div>
@@ -338,7 +324,6 @@ const QuantumComputingSolutions2026 = () => {
                   </div>
                 </div>
               </div>
-              
               <div className="relative">
                 <div className={`w-full h-80 bg-gradient-to-br ${solutions[activeSolution].color} rounded-2xl flex items-center justify-center`}>
                   <solutions[activeSolution].icon className="w-32 h-32 text-white opacity-80" />
@@ -348,25 +333,23 @@ const QuantumComputingSolutions2026 = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* Industry Applications */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
+        <div
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Industry Applications
           </h2>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industryindex) => (
-              <motion.div
+              <div
                 key={index}
-                whileHover={{ scale: 1.05 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
                 <div className="text-4xl mb-4">{industry.icon}</div>
@@ -379,16 +362,16 @@ const QuantumComputingSolutions2026 = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/merge-new-content-1757989975
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 1.0 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12">
@@ -409,10 +392,12 @@ const QuantumComputingSolutions2026 = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 };
 
+
 export default QuantumComputingSolutions2026;
+</div></div>

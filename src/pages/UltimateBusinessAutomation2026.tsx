@@ -1,5 +1,18 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+const UltimateBusinessAutomation2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>UltimateBusinessAutomation2026 | Zion Tech Group</title>
+        <meta name="description" content="UltimateBusinessAutomation2026 - Revolutionary technology solutions" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">UltimateBusinessAutomation2026</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+=======
 
 const UltimateBusinessAutomation2026: React.FC = () => {
   return (
@@ -8,10 +21,7 @@ const UltimateBusinessAutomation2026: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -31,7 +41,7 @@ const UltimateBusinessAutomation2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -43,10 +53,8 @@ const UltimateBusinessAutomation2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🤖</div>
@@ -68,12 +76,10 @@ const UltimateBusinessAutomation2026: React.FC = () => {
                 <span>Self-healing processes</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">⚡</div>
@@ -95,12 +101,10 @@ const UltimateBusinessAutomation2026: React.FC = () => {
                 <span>Zero latency processing</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
           >
             <div className="text-5xl mb-4 text-center">🔒</div>
@@ -122,7 +126,7 @@ const UltimateBusinessAutomation2026: React.FC = () => {
                 <span>Zero-trust architecture</span>
               </li>
             </ul>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -172,10 +176,13 @@ const UltimateBusinessAutomation2026: React.FC = () => {
           <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
             Schedule Demo
           </button>
+>>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>
   );
+
 };
+
 
 export default UltimateBusinessAutomation2026;

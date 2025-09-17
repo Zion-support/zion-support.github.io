@@ -71,7 +71,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
 }
 },
 
-=======
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -104,7 +103,6 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     icon: "Megaphone"
   }
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
@@ -269,7 +267,6 @@ const iconMap = {
 }
 ;
 
-=======
         
         <div className="mb-6">
           <div className="relative">
@@ -307,4 +304,3 @@ const iconMap = {
     </AppLayout>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

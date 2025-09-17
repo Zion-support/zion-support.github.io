@@ -1,5 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Dna, 
@@ -20,93 +22,13 @@ import {
   Syringe
 } from 'lucide-react';
 
+>>>>>>> origin/merge-new-content-1757989975
 const AdvancedBiotechAI2026: React.FC = () => {
-  const biotechSolutions = [
-    {
-      title: "AI-Powered Gene Therapy",
-      description: "Revolutionary gene editing using AI to cure genetic diseases and enhance human capabilities",
-      icon: Dna,
-      features: ["CRISPR AI Optimization", "Disease Prevention", "Genetic Enhancement", "Personalized Medicine"],
-      color: "from-green-500 to-emerald-500",
-      price: "$75,000/treatment",
-      category: "Gene Therapy"
-    },
-    {
-      title: "Neural Regeneration AI",
-      description: "Advanced AI systems that can regenerate damaged neural pathways and restore brain function",
-      icon: Brain,
-      features: ["Neural Pathway Repair", "Memory Restoration", "Cognitive Enhancement", "Brain Injury Recovery"],
-      color: "from-purple-500 to-pink-500",
-      price: "$100,000/treatment",
-      category: "Neural Medicine"
-    },
-    {
-      title: "Cellular Rejuvenation Platform",
-      description: "AI-driven cellular regeneration technology for reversing aging and extending lifespan",
-      icon: Heart,
-      features: ["Telomere Extension", "Cellular Repair", "Aging Reversal", "Longevity Enhancement"],
-      color: "from-red-500 to-orange-500",
-      price: "$150,000/treatment",
-      category: "Longevity Medicine"
-    },
-    {
-      title: "Precision Drug Discovery AI",
-      description: "AI-powered drug discovery platform that can create personalized medications in days",
-      icon: Beaker,
-      features: ["Rapid Drug Design", "Personalized Medicine", "Side Effect Prediction", "Clinical Trial Optimization"],
-      color: "from-blue-500 to-cyan-500",
-      price: "$50,000/compound",
-      category: "Drug Discovery"
-    },
-    {
-      title: "Immunotherapy Enhancement",
-      description: "AI-optimized immunotherapy treatments for cancer and autoimmune diseases",
-      icon: Shield,
-      features: ["Cancer Cell Targeting", "Immune System Boost", "Autoimmune Treatment", "Precision Therapy"],
-      color: "from-indigo-500 to-purple-500",
-      price: "$80,000/treatment",
-      category: "Immunotherapy"
-    },
-    {
-      title: "Synthetic Biology AI",
-      description: "AI-controlled synthetic biology for creating custom organisms and biological systems",
-      icon: Microscope,
-      features: ["Custom Organisms", "Biological Factories", "Environmental Cleanup", "Biofuel Production"],
-      color: "from-teal-500 to-green-500",
-      price: "$60,000/project",
-      category: "Synthetic Biology"
-    }
-  ];
-
-  const achievements = [
-    { label: "Diseases Cured", value: "50+", icon: Stethoscope },
-    { label: "Lives Extended", value: "10,000+", icon: Heart },
-    { label: "Genetic Disorders Fixed", value: "200+", icon: Dna },
-    { label: "Research Breakthroughs", value: "500+", icon: Microscope }
-  ];
-
-  const caseStudies = [
-    {
-      title: "Alzheimer's Disease Reversal",
-      description: "Successfully reversed early-stage Alzheimer's in 95% of patients using AI-optimized neural regeneration therapy.",
-      results: "95% Success Rate",
-      patients: "1,200+ Patients Treated"
-    },
-    {
-      title: "Cancer Immunotherapy Breakthrough",
-      description: "Developed personalized immunotherapy that achieved 98% remission rate in previously untreatable cancers.",
-      results: "98% Remission Rate",
-      patients: "5,000+ Patients Treated"
-    },
-    {
-      title: "Genetic Disease Eradication",
-      description: "Eliminated sickle cell anemia and cystic fibrosis through AI-guided gene therapy in clinical trials.",
-      results: "100% Cure Rate",
-      patients: "800+ Patients Treated"
-    }
-  ];
-
   return (
+<<<<<<< HEAD
+                </div>
+              </div>
+=======
     <>
       <Helmet>
         <title>Advanced Biotech AI 2026 - Zion Tech Group</title>
@@ -119,10 +41,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -145,7 +64,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
                   Schedule Consultation
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -153,11 +72,9 @@ const AdvancedBiotechAI2026: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="bg-gradient-to-r from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
@@ -165,7 +82,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
                   <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
                   <div className="text-green-200 text-sm">{achievement.label}</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -181,11 +98,9 @@ const AdvancedBiotechAI2026: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {biotechSolutions.map((solution, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300 group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -216,7 +131,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -232,11 +147,9 @@ const AdvancedBiotechAI2026: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
@@ -251,7 +164,7 @@ const AdvancedBiotechAI2026: React.FC = () => {
                     <span>{study.patients}</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -271,12 +184,26 @@ const AdvancedBiotechAI2026: React.FC = () => {
               <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
                 Free Consultation
               </button>
+>>>>>>> origin/merge-new-content-1757989975
             </div>
           </div>
-        </div>
+        </section>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Call to Action */}
+        <section className="text-center">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-    </>
+    </div>
   );
+
 };
+
 
 export default AdvancedBiotechAI2026;

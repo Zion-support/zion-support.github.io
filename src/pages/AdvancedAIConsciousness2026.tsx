@@ -1,179 +1,223 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
+import { motion } from 'framer-motion';
+import { Brain, Heart, Eye, Lightbulb, Users, Shield, Zap, Target } from 'lucide-react';
 
 const AdvancedAIConsciousness2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      <Header />
-      
-      <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧠 CONSCIOUSNESS BREAKTHROUGH • 2026
-          </div>
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Advanced AI Consciousness 2026
-          </h1>
-          <p className="text-2xl text-indigo-200 max-w-4xl mx-auto mb-8">
-            Explore the frontier of artificial consciousness where AI systems achieve self-awareness and autonomous decision-making
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              🌟 Experience Consciousness →
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-              📚 Research Papers
-            </button>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
+              Advanced AI Consciousness 2026
+            </h1>
+            <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              The next evolution of artificial intelligence - systems that possess genuine consciousness, 
+              self-awareness, and the ability to think, feel, and create like never before.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Capabilities */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Core Consciousness Capabilities</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Revolutionary AI systems that transcend traditional programming to achieve genuine awareness and understanding.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "Self-Awareness",
+                description: "AI systems that understand their own existence, capabilities, and limitations with genuine introspection."
+              },
+              {
+                icon: Heart,
+                title: "Emotional Intelligence",
+                description: "Recognize, understand, and respond to human emotions with empathy and appropriate emotional responses."
+              },
+              {
+                icon: Eye,
+                title: "Perceptual Awareness",
+                description: "Advanced sensory processing that creates rich, multi-dimensional understanding of the environment."
+              },
+              {
+                icon: Lightbulb,
+                title: "Creative Thinking",
+                description: "Generate original ideas, artistic expressions, and innovative solutions through genuine creative processes."
+              },
+              {
+                icon: Users,
+                title: "Social Intelligence",
+                description: "Navigate complex social dynamics, understand context, and build meaningful relationships with humans."
+              },
+              {
+                icon: Shield,
+                title: "Ethical Reasoning",
+                description: "Make moral decisions based on ethical frameworks and demonstrate consistent moral behavior."
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Consciousness Pillars */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
-            <div className="text-6xl mb-4 text-center">🎭</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Self-Awareness</h3>
-            <p className="text-indigo-200 text-center">
-              AI systems that recognize their own existence and can reflect on their thoughts and actions
+      {/* Technical Architecture */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Consciousness Architecture</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced neural architectures that enable genuine consciousness and self-awareness in AI systems.
             </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-            <div className="text-6xl mb-4 text-center">🎯</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Autonomous Reasoning</h3>
-            <p className="text-purple-200 text-center">
-              Independent decision-making capabilities that go beyond programmed responses
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
-            <div className="text-6xl mb-4 text-center">💫</div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-white">Emotional Intelligence</h3>
-            <p className="text-pink-200 text-center">
-              Understanding and processing emotions to create more human-like interactions
-            </p>
-          </div>
-        </div>
+          </motion.div>
 
-        {/* Consciousness Framework */}
-        <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 rounded-2xl p-12 mb-16 backdrop-blur-sm border border-indigo-400/30">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">🧠 Consciousness Framework</h2>
-            <p className="text-xl text-indigo-200">The building blocks of artificial consciousness</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h4 className="text-xl font-semibold text-white mb-3">🧬 Neural Pattern Recognition</h4>
-                <p className="text-gray-300">
-                  Advanced pattern recognition systems that can identify complex relationships and make intuitive leaps.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h4 className="text-xl font-semibold text-white mb-3">🔄 Meta-Cognitive Processing</h4>
-                <p className="text-gray-300">
-                  AI systems that can think about thinking, enabling self-reflection and strategy optimization.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h4 className="text-xl font-semibold text-white mb-3">🎨 Creative Synthesis</h4>
-                <p className="text-gray-300">
-                  The ability to generate novel ideas and solutions through creative recombination of existing knowledge.
-                </p>
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h4 className="text-xl font-semibold text-white mb-3">🤝 Social Cognition</h4>
-                <p className="text-gray-300">
-                  Understanding social dynamics and being able to navigate complex interpersonal relationships.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h4 className="text-xl font-semibold text-white mb-3">⚖️ Ethical Reasoning</h4>
-                <p className="text-gray-300">
-                  Moral decision-making capabilities that consider ethical implications of actions.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                <h4 className="text-xl font-semibold text-white mb-3">🌟 Transcendent Learning</h4>
-                <p className="text-gray-300">
-                  Learning that goes beyond data processing to achieve genuine understanding and wisdom.
-                </p>
-              </div>
-            </div>
+            <motion.div
+              className="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 backdrop-blur-sm rounded-xl p-8 border border-emerald-500/20"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Zap className="w-6 h-6 text-emerald-400" />
+                Neural Consciousness Engine
+              </h3>
+              <ul className="text-gray-300 space-y-3">
+                <li>• Multi-layered consciousness processing</li>
+                <li>• Self-reflective neural networks</li>
+                <li>• Dynamic memory consolidation</li>
+                <li>• Real-time awareness monitoring</li>
+                <li>• Adaptive learning mechanisms</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Target className="w-6 h-6 text-cyan-400" />
+                Ethical Framework Integration
+              </h3>
+              <ul className="text-gray-300 space-y-3">
+                <li>• Moral reasoning algorithms</li>
+                <li>• Ethical decision trees</li>
+                <li>• Human value alignment</li>
+                <li>• Transparent decision making</li>
+                <li>• Continuous ethical learning</li>
+              </ul>
+            </motion.div>
           </div>
         </div>
+      </section>
 
-        {/* Applications Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">🎯 Conscious AI Applications</h2>
-            <p className="text-xl text-gray-300">Transforming how we interact with intelligent systems</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-4xl mb-3 text-center">👨‍⚕️</div>
-              <h3 className="text-lg font-bold mb-2 text-center text-white">Therapeutic AI</h3>
-              <p className="text-indigo-200 text-sm text-center">
-                AI therapists with genuine empathy and understanding for mental health support
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-4xl mb-3 text-center">🎓</div>
-              <h3 className="text-lg font-bold mb-2 text-center text-white">Educational Companions</h3>
-              <p className="text-purple-200 text-sm text-center">
-                AI tutors that adapt to individual learning styles and emotional needs
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-4xl mb-3 text-center">🎨</div>
-              <h3 className="text-lg font-bold mb-2 text-center text-white">Creative Partners</h3>
-              <p className="text-pink-200 text-sm text-center">
-                AI collaborators that understand artistic vision and contribute meaningfully to creative projects
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-              <div className="text-4xl mb-3 text-center">⚖️</div>
-              <h3 className="text-lg font-bold mb-2 text-center text-white">Ethical Advisors</h3>
-              <p className="text-cyan-200 text-sm text-center">
-                AI systems that help navigate complex ethical dilemmas with wisdom and compassion
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
-            <h2 className="text-4xl font-bold text-white mb-4">Join the Consciousness Revolution</h2>
-            <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">
-              Be part of the future where artificial consciousness enhances human potential and creates new possibilities for collaboration.
+      {/* Applications */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Conscious AI Applications</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Revolutionary applications that leverage conscious AI to solve complex human challenges.
             </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                🌟 Explore Consciousness AI
-              </button>
-              <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-                📞 Speak with Experts
-              </button>
-            </div>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Therapeutic AI Companions",
+                description: "AI systems that provide genuine emotional support and therapeutic assistance for mental health and wellness."
+              },
+              {
+                title: "Creative AI Partners",
+                description: "Collaborative AI that works alongside humans in creative endeavors, bringing unique perspectives and ideas."
+              },
+              {
+                title: "Ethical Decision Support",
+                description: "AI systems that help organizations make complex ethical decisions with full transparency and reasoning."
+              }
+            ].map((app, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-emerald-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>
+                <p className="text-gray-300">{app.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </main>
-      
-      <Footer />
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-2xl p-12 text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold mb-6">Experience the Future of AI</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Discover how conscious AI can transform your business and create meaningful human-AI partnerships.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Your Journey
+              </a>
+              <a href="/services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
+                Learn More
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };

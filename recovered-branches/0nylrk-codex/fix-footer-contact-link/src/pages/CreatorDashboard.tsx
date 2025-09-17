@@ -2,12 +2,10 @@
 
 
 
-=======
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/creator/CreatorSidebar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function CreatorDashboard() {
   return (
@@ -51,15 +49,12 @@ export default function CreatorDashboard() {
               </p>
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
               {/* Placeholder for more creator-specific content */}
             </div>
           </main>
@@ -70,4 +65,3 @@ export default function CreatorDashboard() {
     </SidebarProvider>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

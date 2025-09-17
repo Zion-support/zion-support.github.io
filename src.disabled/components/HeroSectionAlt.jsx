@@ -1,4 +1,12 @@
-' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
-' \' \"export\": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.,2,\"delayChildren\": \'0.1\'} const itemVariants = { \"hidden\": { y: 3,0,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.,8,\' \"ease\": \'easeOut\'} const floatingVariants = { \''\';\'"\";
-" " export: const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},visible: { opacity: 1,transition: { staggerChildren: 0.,2,delayChildren: "0.1"} const itemVariants = { hidden: { y: 3,0,opacity: "0"},visible: { y: 0,opacity: "1",transition: { duration: 0.,8," ease: "easeOut"} const floatingVariants = { """;""";"""
-' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
+import React from 'react';
+
+const HeroSectionAlt: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">HeroSectionAlt</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default HeroSectionAlt;

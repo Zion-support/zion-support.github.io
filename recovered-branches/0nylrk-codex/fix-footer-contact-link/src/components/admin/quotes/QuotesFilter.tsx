@@ -95,11 +95,9 @@
 ;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
                 />
               </PopoverContent>
             </Popover>
@@ -119,4 +117,3 @@
     </Card>
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

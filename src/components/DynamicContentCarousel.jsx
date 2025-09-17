@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const DynamicContentCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,19 +14,19 @@ const DynamicContentCarousel = () => {
     },
     {
       id: 2,
-      title: "Quantum Computing Solutions",
-      description: "Revolutionary quantum computing solutions for complex problems",
+      title: "Quantum Computing Revolution",
+      description: "Discover the power of quantum computing and its applications",
       image: "⚛️",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumComputingSolutions2026"
+      gradient: "from-blue-600 to-cyan-600",
+      link: "/pages/QuantumComputingRevolution2026"
     },
     {
       id: 3,
       title: "Neural Interface Technology",
-      description: "Direct brain-computer interfaces for seamless interaction",
+      description: "Experience the future of brain-computer interfaces",
       image: "🧬",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceTechnology2026"
+      gradient: "from-green-600 to-teal-600",
+      link: "/pages/NeuralInterfaceRevolution2026"
     },
     {
       id: 4,
@@ -36,27 +35,6 @@ const DynamicContentCarousel = () => {
       image: "📚",
       gradient: "from-indigo-600 to-purple-600",
       link: "/pages/AITransformationGuide2026"
-    }
-  ];
-
-  const slides = [
-    {
-      title: 'AI Revolution 2025',
-      description: 'Discover how artificial intelligence is reshaping industries',
-      image: '/api/placeholder/600/400',
-      link: '/pages/AIRevolution2025'
-    },
-    {
-      title: 'Quantum Computing',
-      description: 'Experience exponential processing power with quantum technology',
-      image: '/api/placeholder/600/400',
-      link: '/pages/AdvancedQuantumComputing2026'
-    },
-    {
-      title: 'Neural Interfaces',
-      description: 'Bridge mind and machine with direct neural communication',
-      image: '/api/placeholder/600/400',
-      link: '/pages/AdvancedNeuralInterface2026'
     }
   ];
 
@@ -77,22 +55,26 @@ const DynamicContentCarousel = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
             transition={{ duration: 0.5 }}
-            className={`bg-gradient-to-br ${carouselItems[currentSlide].gradient} p-12 text-white`}
+            className="relative"
           >
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="text-6xl mb-6">{carouselItems[currentSlide].image}</div>
-                <h2 className="text-4xl font-bold mb-4">{carouselItems[currentSlide].title}</h2>
-                <p className="text-xl opacity-90 mb-8">{carouselItems[currentSlide].description}</p>
-                <a
-                  href={carouselItems[currentSlide].link}
-                  className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Explore Now →
-                </a>
-              </div>
-              <div className="text-center">
-                <div className="text-9xl opacity-20">{carouselItems[currentSlide].image}</div>
+            <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
+              <div className="flex items-center justify-between">
+                <div className="flex-1">
+                  <div className="text-6xl mb-4">{carouselItems[currentSlide].image}</div>
+                  <h3 className="text-4xl font-bold mb-4">{carouselItems[currentSlide].title}</h3>
+                  <p className="text-xl mb-6 max-w-2xl">{carouselItems[currentSlide].description}</p>
+                  <a
+                    href={carouselItems[currentSlide].link}
+                    className="inline-block bg-white text-gray-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                  >
+                    Explore Now →
+                  </a>
+                </div>
+                <div className="hidden md:block">
+                  <div className="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center">
+                    <span className="text-8xl">{carouselItems[currentSlide].image}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -100,13 +82,13 @@ const DynamicContentCarousel = () => {
       </div>
 
       {/* Navigation Dots */}
-      <div className="flex justify-center space-x-3 mt-8">
+      <div className="flex justify-center mt-6 space-x-2">
         {carouselItems.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+              currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
             }`}
           />
         ))}

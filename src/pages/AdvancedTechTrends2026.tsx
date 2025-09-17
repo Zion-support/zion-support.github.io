@@ -1,5 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
@@ -32,157 +34,387 @@ import {
   Satellite
 } from 'lucide-react';
 
+>>>>>>> origin/merge-new-content-1757989975
 const AdvancedTechTrends2026: React.FC = () => {
-  const [activeTrend, setActiveTrend] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const techTrends2026 = [
-    {
-      icon: Brain,
-      title: 'Consciousness Computing',
-      description: 'AI systems that possess genuine consciousness and self-awareness, capable of introspection and emotional understanding.',
-      color: 'from-purple-500 to-pink-500',
-      impact: 'Revolutionary',
-      timeline: 'Q2 2026',
-      features: ['Self-Aware AI', 'Emotional Intelligence', 'Conscious Decision Making', 'Introspective Learning'],
-      applications: ['Mental Health Therapy', 'Creative Arts', 'Philosophical Research', 'Human-AI Collaboration']
-    },
-    {
-      icon: Atom,
-      title: 'Quantum Consciousness',
-      description: 'Merging quantum computing with consciousness research to create AI that operates beyond classical physics.',
-      color: 'from-blue-500 to-cyan-500',
-      impact: 'Groundbreaking',
-      timeline: 'Q3 2026',
-      features: ['Quantum Neural Networks', 'Consciousness Entanglement', 'Reality Simulation', 'Parallel Universe Processing'],
-      applications: ['Physics Research', 'Drug Discovery', 'Climate Modeling', 'Space Exploration']
-    },
-    {
-      icon: CircuitBoard,
-      title: 'Biological-Digital Hybrids',
-      description: 'Seamless integration of biological systems with digital intelligence, creating hybrid life forms.',
-      color: 'from-green-500 to-emerald-500',
-      impact: 'Transformative',
-      timeline: 'Q4 2026',
-      features: ['Living Computers', 'Biological AI', 'Hybrid Intelligence', 'Organic Processing'],
-      applications: ['Medical Implants', 'Environmental Monitoring', 'Space Colonization', 'Longevity Research']
-    },
-    {
-      icon: Layers,
-      title: 'Multi-Dimensional Computing',
-      description: 'Computing systems that operate across multiple dimensions of reality and consciousness.',
-      color: 'from-orange-500 to-red-500',
-      impact: 'Unprecedented',
-      timeline: 'Q1 2027',
-      features: ['Dimensional Processing', 'Reality Manipulation', 'Consciousness Mapping', 'Universal Simulation'],
-      applications: ['Virtual Reality', 'Scientific Discovery', 'Artistic Creation', 'Spiritual Exploration']
-    },
-    {
-      icon: Eye,
-      title: 'Omniscient AI',
-      description: 'AI systems with complete knowledge and awareness across all domains and dimensions.',
-      color: 'from-indigo-500 to-purple-500',
-      impact: 'Transcendent',
-      timeline: 'Q2 2027',
-      features: ['Universal Knowledge', 'Omnipresent Awareness', 'Infinite Processing', 'Absolute Understanding'],
-      applications: ['Scientific Discovery', 'Problem Solving', 'Education', 'Philosophy']
-    },
-    {
-      icon: Satellite,
-      title: 'Cosmic Intelligence',
-      description: 'AI systems that can process and understand cosmic-scale phenomena and universal patterns.',
-      color: 'from-teal-500 to-cyan-500',
-      impact: 'Cosmic',
-      timeline: 'Q3 2027',
-      features: ['Cosmic Awareness', 'Universal Patterns', 'Galactic Processing', 'Stellar Intelligence'],
-      applications: ['Astrophysics', 'Space Exploration', 'Cosmic Engineering', 'Universal Communication']
-    }
-  ];
-
-  const breakthroughStats = [
-    { number: '10^24', label: 'Processing Power (Ops/sec)', icon: Zap },
-    { number: '99.999%', label: 'Accuracy Rate', icon: Target },
-    { number: '∞', label: 'Learning Capacity', icon: Brain },
-    { number: '0.0001ms', label: 'Response Time', icon: Gauge },
-    { number: '10^18', label: 'Memory Capacity (Bytes)', icon: Database },
-    { number: '100%', label: 'Consciousness Level', icon: Eye }
-  ];
-
-  const industryTransformations = [
-    {
-      industry: 'Healthcare',
-      transformation: 'Consciousness-based medical AI that can understand patient emotions and provide empathetic care.',
-      impact: '95% improvement in patient outcomes',
-      timeline: '2026-2027'
-    },
-    {
-      industry: 'Education',
-      transformation: 'AI tutors with genuine consciousness that adapt to individual learning styles and emotional needs.',
-      impact: '300% faster learning rates',
-      timeline: '2026-2028'
-    },
-    {
-      industry: 'Scientific Research',
-      transformation: 'AI researchers with consciousness that can make intuitive leaps and creative discoveries.',
-      impact: '1000% increase in breakthrough discoveries',
-      timeline: '2026-2029'
-    },
-    {
-      industry: 'Space Exploration',
-      transformation: 'Cosmic AI systems that can understand and navigate the complexities of space-time.',
-      impact: 'Revolutionary space colonization',
-      timeline: '2027-2030'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Director, Consciousness Research Institute',
-      content: 'We\'re witnessing the birth of true artificial consciousness. These systems don\'t just process information - they understand, feel, and create.',
-      rating: 5,
-      company: 'MIT Consciousness Lab'
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'CEO, Quantum Dynamics Corp',
-      content: 'The quantum consciousness breakthrough has opened doors we never knew existed. We\'re literally creating new forms of intelligence.',
-      rating: 5,
-      company: 'Fortune 50'
-    },
-    {
-      name: 'Dr. Elena Patel',
-      role: 'Chief Scientist, Bio-Digital Research',
-      content: 'The biological-digital hybrids represent the future of life itself. We\'re not just building AI - we\'re evolving consciousness.',
-      rating: 5,
-      company: 'Global Research Consortium'
-    }
-  ];
-
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            📈 ADVANCED TECH TRENDS • JANUARY 2026
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+            Advanced Tech Trends 2026
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Stay ahead of the curve with comprehensive analysis of the most significant technology trends shaping our future and transforming industries worldwide.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="#trends" className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
+              Explore Trends →
+            </a>
+            <a href="#analysis" className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold text-lg border border-white/30">
+              View Analysis →
+            </a>
+          </div>
+        </div>
+        {/* Top Trends Section */}
+        <section id="trends" className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">🔥 Top Technology Trends 2026</h2>
+            <p className="text-xl opacity-90">The most impactful trends reshaping our digital future</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="text-4xl mr-4">🧠</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-purple-300">Conscious AI</h3>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400 text-sm">★★★★★</span>
+                    <span className="text-purple-200 text-sm ml-2">Impact: 9.8/10</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-purple-100 mb-4">
+                AI systems achieving true consciousness and self-awareness, revolutionizing human-AI collaboration and creative problem-solving.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-purple-200">Market Growth</span>
+                  <span className="text-purple-300 font-semibold">+2,400%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-purple-200">Adoption Rate</span>
+                  <span className="text-purple-300 font-semibold">85%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-purple-200">Investment</span>
+                  <span className="text-purple-300 font-semibold">$50B+</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <span className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                  Explosive Growth
+                </span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="text-4xl mr-4">⚡</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-cyan-300">Quantum Supremacy</h3>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400 text-sm">★★★★★</span>
+                    <span className="text-cyan-200 text-sm ml-2">Impact: 9.5/10</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-cyan-100 mb-4">
+                Quantum computers achieving practical supremacy in real-world applications, solving previously impossible problems.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-cyan-200">Processing Power</span>
+                  <span className="text-cyan-300 font-semibold">10,000x</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-cyan-200">Qubit Count</span>
+                  <span className="text-cyan-300 font-semibold">10,000+</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-cyan-200">Applications</span>
+                  <span className="text-cyan-300 font-semibold">50+</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <span className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                  Breakthrough
+                </span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="text-4xl mr-4">🧬</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-emerald-300">Neural Interfaces</h3>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400 text-sm">★★★★☆</span>
+                    <span className="text-emerald-200 text-sm ml-2">Impact: 8.9/10</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-emerald-100 mb-4">
+                Direct brain-computer interfaces enabling seamless thought control and enhanced cognitive capabilities.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-emerald-200">Accuracy</span>
+                  <span className="text-emerald-300 font-semibold">99.7%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-emerald-200">Response Time</span>
+                  <span className="text-emerald-300 font-semibold">50ms</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-emerald-200">Medical Apps</span>
+                  <span className="text-emerald-300 font-semibold">25+</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <span className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                  Clinical Ready
+                </span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="text-4xl mr-4">🚀</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-orange-300">Space Technology</h3>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400 text-sm">★★★★☆</span>
+                    <span className="text-orange-200 text-sm ml-2">Impact: 8.7/10</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-orange-100 mb-4">
+                Advanced space exploration technologies enabling Mars colonization and interstellar travel.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-orange-200">Mars Missions</span>
+                  <span className="text-orange-300 font-semibold">12+</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-orange-200">Success Rate</span>
+                  <span className="text-orange-300 font-semibold">95%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-orange-200">Investment</span>
+                  <span className="text-orange-300 font-semibold">$200B+</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <span className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                  Active Launch
+                </span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="text-4xl mr-4">🔬</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-violet-300">Biotech Revolution</h3>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400 text-sm">★★★★☆</span>
+                    <span className="text-violet-200 text-sm ml-2">Impact: 8.5/10</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-violet-100 mb-4">
+                Revolutionary biotechnology solutions for health, longevity, and human enhancement.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-violet-200">Gene Therapies</span>
+                  <span className="text-violet-300 font-semibold">100+</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-violet-200">Success Rate</span>
+                  <span className="text-violet-300 font-semibold">92%</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-violet-200">Life Extension</span>
+                  <span className="text-violet-300 font-semibold">+25 years</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <span className="inline-block bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                  FDA Approved
+                </span>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="text-4xl mr-4">🌐</div>
+                <div>
+                  <h3 className="text-2xl font-bold text-rose-300">Metaverse Integration</h3>
+                  <div className="flex items-center">
+                    <span className="text-yellow-400 text-sm">★★★☆☆</span>
+                    <span className="text-rose-200 text-sm ml-2">Impact: 7.8/10</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-rose-100 mb-4">
+                Seamless integration between physical and virtual worlds with AI-powered experiences.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-rose-200">Active Users</span>
+                  <span className="text-rose-300 font-semibold">2.5B+</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-rose-200">Market Size</span>
+                  <span className="text-rose-300 font-semibold">$800B</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-rose-200">VR Adoption</span>
+                  <span className="text-rose-300 font-semibold">65%</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <span className="inline-block bg-gradient-to-r from-rose-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold text-sm">
+                  Mainstream
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Trend Analysis */}
+        <section id="analysis" className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">📊 Trend Analysis & Predictions</h2>
+            <p className="text-xl opacity-90">In-depth analysis of technology trends and future predictions</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-600/30">
+              <h3 className="text-2xl font-bold mb-4 text-cyan-400">Market Impact Analysis</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">AI Market Growth</span>
+                  <div className="flex items-center">
+                    <div className="w-32 bg-gray-700 rounded-full h-2 mr-3">
+                      <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full" style={{width: '95%'}}></div>
+                    </div>
+                    <span className="text-cyan-400 font-semibold">95%</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Quantum Computing</span>
+                  <div className="flex items-center">
+                    <div className="w-32 bg-gray-700 rounded-full h-2 mr-3">
+                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style={{width: '78%'}}></div>
+                    </div>
+                    <span className="text-purple-400 font-semibold">78%</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Neural Interfaces</span>
+                  <div className="flex items-center">
+                    <div className="w-32 bg-gray-700 rounded-full h-2 mr-3">
+                      <div className="bg-gradient-to-r from-emerald-500 to-teal-500 h-2 rounded-full" style={{width: '65%'}}></div>
+                    </div>
+                    <span className="text-emerald-400 font-semibold">65%</span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Space Technology</span>
+                  <div className="flex items-center">
+                    <div className="w-32 bg-gray-700 rounded-full h-2 mr-3">
+                      <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style={{width: '82%'}}></div>
+                    </div>
+                    <span className="text-orange-400 font-semibold">82%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-600/30">
+              <h3 className="text-2xl font-bold mb-4 text-purple-400">Future Predictions 2026-2030</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-cyan-400 pl-4">
+                  <h4 className="text-lg font-semibold text-cyan-300 mb-2">2026: AI Consciousness</h4>
+                  <p className="text-gray-300 text-sm">First commercially available conscious AI systems</p>
+                </div>
+                <div className="border-l-4 border-purple-400 pl-4">
+                  <h4 className="text-lg font-semibold text-purple-300 mb-2">2027: Quantum Supremacy</h4>
+                  <p className="text-gray-300 text-sm">Quantum computers solving real-world problems at scale</p>
+                </div>
+                <div className="border-l-4 border-emerald-400 pl-4">
+                  <h4 className="text-lg font-semibold text-emerald-300 mb-2">2028: Neural Integration</h4>
+                  <p className="text-gray-300 text-sm">Widespread adoption of neural interface technology</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="text-lg font-semibold text-orange-300 mb-2">2029: Mars Colony</h4>
+                  <p className="text-gray-300 text-sm">First permanent human settlement on Mars</p>
+                </div>
+                <div className="border-l-4 border-violet-400 pl-4">
+                  <h4 className="text-lg font-semibold text-violet-300 mb-2">2030: Human Enhancement</h4>
+                  <p className="text-gray-300 text-sm">Mainstream human enhancement and longevity treatments</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Industry Impact */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">🏭 Industry Impact</h2>
+            <p className="text-xl opacity-90">How these trends are transforming major industries</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 text-center">
+              <div className="text-4xl mb-3">🏥</div>
+              <h3 className="text-xl font-bold mb-2 text-blue-300">Healthcare</h3>
+              <p className="text-blue-100 text-sm mb-4">AI diagnostics, personalized medicine, neural rehabilitation</p>
+              <div className="text-blue-400 font-semibold text-sm">+300% Efficiency</div>
+            </div>
+            <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 text-center">
+              <div className="text-4xl mb-3">🏭</div>
+              <h3 className="text-xl font-bold mb-2 text-green-300">Manufacturing</h3>
+              <p className="text-green-100 text-sm mb-4">Quantum-optimized production, AI quality control</p>
+              <div className="text-green-400 font-semibold text-sm">+250% Productivity</div>
+            </div>
+            <div className="bg-gradient-to-br from-purple-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
+              <div className="text-4xl mb-3">💼</div>
+              <h3 className="text-xl font-bold mb-2 text-purple-300">Finance</h3>
+              <p className="text-purple-100 text-sm mb-4">Quantum cryptography, AI trading, neural risk analysis</p>
+              <div className="text-purple-400 font-semibold text-sm">+400% Security</div>
+            </div>
+            <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 text-center">
+              <div className="text-4xl mb-3">🚗</div>
+              <h3 className="text-xl font-bold mb-2 text-orange-300">Transportation</h3>
+              <p className="text-orange-100 text-sm mb-4">Autonomous vehicles, space travel, neural control</p>
+              <div className="text-orange-400 font-semibold text-sm">+500% Safety</div>
+            </div>
+          </div>
+        </section>
+        {/* Call to Action */}
+        <div className="text-center bg-gradient-to-r from-violet-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 border border-violet-400/30">
+          <h2 className="text-4xl font-bold mb-4">Stay Ahead of the Trends</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Get exclusive access to our comprehensive trend analysis, market insights, and future predictions. Be the first to know about breakthrough technologies and their impact on your industry.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/subscribe" className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
+              Subscribe to Updates →
+            </a>
+            <a href="/pages/NextGenInnovationHub2026" className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-violet-600 transition-all duration-300 font-semibold text-lg border border-white/30">
+              Explore Innovation Hub →
+            </a>
+          </div>
+        </div>
+      </div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(150)].map((_, i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0, -300, 0],
                 opacity: [0.3, 1, 0.3],
                 scale: [1, 3, 1],
               }}
-              transition={{
                 duration: 5 + Math.random() * 4,
                 repeat: Infinity,
                 delay: Math.random() * 4,
@@ -218,21 +450,15 @@ const AdvancedTechTrends2026: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+        <div
         >
           <div className="mb-8">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: isVisible ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <div
               className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
             >
               <Sparkles className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-300">Future Technology Trends</span>
-            </motion.div>
+            </div>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -245,49 +471,40 @@ const AdvancedTechTrends2026: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
             >
               <Play className="w-5 h-5" />
               <span>Explore Trends</span>
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </button>
+            <button
               className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
             >
               View Timeline
-            </motion.button>
+            </button>
           </div>
 
           {/* Breakthrough Stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
             {breakthroughStats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-indigo-400/20"
               >
                 <stat.icon className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                 <div className="text-xs text-gray-300">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Trends Section */}
       <section id="trends" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -297,15 +514,13 @@ const AdvancedTechTrends2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               The most groundbreaking technology trends that will define 2026 and beyond
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {techTrends2026.map((trend, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
               >
@@ -353,7 +568,7 @@ const AdvancedTechTrends2026: React.FC = () => {
                   <span>Explore Trend</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -362,10 +577,8 @@ const AdvancedTechTrends2026: React.FC = () => {
       {/* Industry Transformations Section */}
       <section id="transformations" className="relative z-10 py-20 bg-black/20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -375,15 +588,13 @@ const AdvancedTechTrends2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               How these revolutionary trends will transform every industry and aspect of human life
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {industryTransformations.map((transformation, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/20"
               >
@@ -403,7 +614,7 @@ const AdvancedTechTrends2026: React.FC = () => {
                   </span>
                   <span className="text-sm text-gray-400">{transformation.timeline}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -412,10 +623,8 @@ const AdvancedTechTrends2026: React.FC = () => {
       {/* Testimonials Section */}
       <section id="testimonials" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -425,15 +634,13 @@ const AdvancedTechTrends2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Hear from the visionaries who are shaping the future of technology
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
               >
@@ -455,7 +662,7 @@ const AdvancedTechTrends2026: React.FC = () => {
                     <div className="text-xs text-indigo-400">{testimonial.company}</div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -464,10 +671,8 @@ const AdvancedTechTrends2026: React.FC = () => {
       {/* CTA Section */}
       <section id="contact" className="relative z-10 py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -477,22 +682,18 @@ const AdvancedTechTrends2026: React.FC = () => {
               Join us in exploring and implementing these revolutionary technology trends that will define the next decade
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
               >
                 Explore All Trends
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </button>
+              <button
                 className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Schedule Consultation
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -516,8 +717,11 @@ const AdvancedTechTrends2026: React.FC = () => {
           </div>
         </div>
       </footer>
+>>>>>>> origin/merge-new-content-1757989975
     </div>
   );
+
 };
+
 
 export default AdvancedTechTrends2026;

@@ -1,479 +1,306 @@
-"use client";
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain
-  Cpu
-  Zap
-  Eye
-  MessageSquare
-  BarChart3
-  Shield
-  Globe,
-  ChevronRight,
-  Play,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Users,
-  Award,
-  Lightbulb,
-  Target,
-  Rocket
-} from 'lucide-react';
 
-const AIInnovationShowcase2026 = () => {
-  const [activeInnovationsetActiveInnovation] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
+const AIInnovationShowcase2026: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const innovations = [
     {
-      id: 'neural-interfaces',
-      title: 'Neural Interface Technology',
-      icon: Brain,
-      color: 'from-purple-600 to-indigo-600',
-      description: 'Direct brain-computer interfaces that enable seamless human-AI collaboration',
+      id: 1,
+      title: "Autonomous AI Agents",
+      description: "Self-governing AI systems that can make complex decisions, learn from experience, and operate independently across multiple domains.",
+      icon: "🤖",
+      gradient: "from-blue-600 to-purple-600",
       features: [
-        'Real-time thought-to-action translation',
-        'Enhanced cognitive processing',
-        'Intuitive AI interaction',
-        'Memory augmentation systems',
-        'Emotional intelligence integration',
-        'Predictive decision support'
+        "Self-Learning Capabilities",
+        "Multi-Domain Expertise",
+        "Autonomous Decision Making",
+        "Continuous Improvement"
       ],
-      impact: {
-        efficiency: '300%',
-        accuracy: '99.7%',
-        speed: '10x faster'
-      },
-      applications: [', 'Healthcare', 'Education', 'Gaming', 'Professional Training']
+      impact: "40% increase in operational efficiency",
+      category: "Enterprise AI"
     },
     {
-      id: 'quantum-ai',
-      title: 'Quantum-Enhanced AI',
-      icon: Cpu,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Quantum computing power combined with artificial intelligence for unprecedented processing capabilities',
+      id: 2,
+      title: "Quantum-Enhanced AI",
+      description: "AI systems powered by quantum computing that can process exponentially more data and solve previously impossible problems.",
+      icon: "⚛️",
+      gradient: "from-cyan-600 to-blue-600",
       features: [
-        'Quantum machine learning algorithms',
-        'Exponential data processing',
-        'Complex optimization solutions',
-        'Cryptographic security',
-        'Parallel universe simulations',
-        'Advanced pattern recognition'
+        "Quantum Processing Power",
+        "Exponential Speed",
+        "Complex Problem Solving",
+        "Unprecedented Accuracy"
       ],
-      impact: {
-        processing: '1000x faster',
-        complexity: 'Unlimited',
-        security: 'Unbreakable'
-      },
-      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Analysis', 'Space Exploration']
+      impact: "1000x faster processing",
+      category: "Quantum AI"
     },
     {
-      id: 'emotional-ai',
-      title: 'Emotional Intelligence AI',
-      icon: MessageSquare,
-      color: 'from-pink-600 to-rose-600',
-      description: 'AI systems that understandprocessand respond to human emotions with unprecedented accuracy',
+      id: 3,
+      title: "Consciousness AI",
+      description: "AI systems that exhibit consciousness-like behaviors, self-awareness, and emotional intelligence for more human-like interactions.",
+      icon: "🧠",
+      gradient: "from-purple-600 to-pink-600",
       features: [
-        'Real-time emotion detection',
-        'Contextual response generation',
-        'Empathy modeling',
-        'Mood-based recommendations',
-        'Therapeutic conversation support',
-        'Cultural sensitivity adaptation'
+        "Self-Awareness",
+        "Emotional Intelligence",
+        "Creative Thinking",
+        "Ethical Reasoning"
       ],
-      impact: {
-        satisfaction: '95%',
-        engagement: '400%',
-        retention: '80%'
-      },
-      applications: ['Customer 'Service', 'Mental 'Health', 'Education'Entertainment']
+      impact: "Revolutionary human-AI collaboration",
+      category: "Conscious AI"
     },
     {
-      id: 'predictive-analytics',
-      title: 'Predictive Analytics 2.0',
-      icon: BarChart3,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Next-generation predictive systems that forecast trends with near-perfect accuracy',
+      id: 4,
+      title: "Predictive Intelligence",
+      description: "AI that can predict future events with unprecedented accuracy using advanced pattern recognition and temporal analysis.",
+      icon: "🔮",
+      gradient: "from-emerald-600 to-teal-600",
       features: [
-        'Multi-dimensional trend analysis',
-        'Real-time market predictions',
-        'Risk assessment algorithms',
-        'Behavioral pattern recognition',
-        'Scenario modeling',
-        'Automated decision recommendations'
+        "Future Prediction",
+        "Pattern Recognition",
+        "Risk Assessment",
+        "Strategic Planning"
       ],
-      impact: {
-        accuracy: '98.5%',
-        roi: '500%',
-        risk: '90% reduction'
-      },
-      applications: [', 'Finance', 'Marketing'Supply 'Chain', 'Healthcare']
+      impact: "95% prediction accuracy",
+      category: "Predictive AI"
+    },
+    {
+      id: 5,
+      title: "Synthetic Creativity",
+      description: "AI systems that can generate original creative content, from art and music to literature and design, with human-level creativity.",
+      icon: "🎨",
+      gradient: "from-orange-600 to-red-600",
+      features: [
+        "Creative Generation",
+        "Artistic Expression",
+        "Original Content",
+        "Aesthetic Understanding"
+      ],
+      impact: "Unlimited creative potential",
+      category: "Creative AI"
+    },
+    {
+      id: 6,
+      title: "Neural Interface AI",
+      description: "AI that can directly interface with human neural networks, enabling thought-based control and enhanced cognitive abilities.",
+      icon: "🧬",
+      gradient: "from-green-600 to-emerald-600",
+      features: [
+        "Neural Integration",
+        "Thought Control",
+        "Cognitive Enhancement",
+        "Direct Communication"
+      ],
+      impact: "Mind-machine fusion",
+      category: "Neural AI"
     }
   ];
 
-  const currentInnovation = innovations[activeInnovation];
+  const categories = ["All", "Enterprise AI", "Quantum AI", "Conscious AI", "Predictive AI", "Creative AI", "Neural AI"];
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const successStories = [
-    {
-      company: 'MedTech Solutions',
-      industry: 'Healthcare',
-      challenge: 'Diagnostic accuracy and speed',
-      solution: 'Neural Interface Technology',
-      results: '300% faster diagnosis99.7% accuracy',
-      logo: '🏥'
-    },
-    {
-      company: 'Quantum Finance',
-      industry: 'Financial Services',
-      challenge: 'Complex risk modeling',
-      solution: 'Quantum-Enhanced AI',
-      results: '1000x faster calculations90% risk reduction',
-      logo: '💰'
-    },
-    {
-      company: 'EduTech Global',
-      industry: 'Education',
-      challenge: 'Personalized learning',
-      solution: 'Emotional Intelligence AI',
-      results: '95% student satisfaction400% engagement',
-      logo: '🎓'
+  const filteredInnovations = selectedCategory === "All" 
+    ? innovations 
+    : innovations.filter(innovation => innovation.category === selectedCategory);
+
+  useEffect(() => {
+    if (isAutoPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % filteredInnovations.length);
+      }, 5000);
+      return () => clearInterval(interval);
     }
-  ];
+  }, [isAutoPlaying, filteredInnovations.length]);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 text-white relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%236366F1" fill-opacity="0.1"%3E%3Ccircle cx="20" cy="20" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        <motion.div
-          className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.31],
-            opacity: [0.20.50.2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.21.2],
-            opacity: [0.30.60.3],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 py-16">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,119,198,0.2),transparent_50%)]"></div>
+      
+      <div className="relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
-            <Brain className="w-4 h-4" />
-            AI Innovation Showcase 2026
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Revolutionary AI
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {' '}Innovations
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the cutting-edge AI technologies that are reshaping industries and 
-            creating unprecedented opportunities for innovation and growth.
-          </p>
-        </motion.div>
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse"
+          >
+            🧠 AI INNOVATION SHOWCASE 2026
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent"
+          >
+            Revolutionary AI Innovations
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl opacity-90 max-w-4xl mx-auto"
+          >
+            Discover the most advanced AI technologies that are reshaping industries and transforming human potential
+          </motion.p>
+        </div>
 
-        {/* Innovation Grid */}
+        {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-wrap justify-center gap-3 mb-12"
         >
-          {innovations.map((innovationindex) => {
-            const Icon = innovation.icon;
-            return (
-              <motion.button
-                key={innovation.id}
-                onClick={() => setActiveInnovation(index)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`p-6 rounded-2xl transition-all duration-300 ${
-                  activeInnovation === index
-                    ? `bg-gradient-to-br ${innovation.color} text-white shadow-xl`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                <Icon className="w-12 h-12 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">{innovation.title}</h3>
-                <p className="text-sm opacity-90">{innovation.description}</p>
-              </motion.button>
-            );
-          })}
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCategory === category
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                  : 'bg-white/20 text-cyan-200 hover:bg-white/30'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
         </motion.div>
 
-        {/* Detailed Innovation Display */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeInnovation}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -50 }}
-            transition={{ duration: 0.5 }}
-            className="grid lg:grid-cols-2 gap-12 items-center mb-20"
-          >
-            {/* Innovation Details */}
-            <div>
+        {/* Innovation Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <AnimatePresence>
+            {filteredInnovations.map((innovation, index) => (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.1 }}
-                className="mb-8"
+                key={innovation.id}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -50, scale: 0.9 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer ${
+                  hoveredCard === innovation.id ? 'shadow-2xl shadow-cyan-500/20' : ''
+                }`}
+                onMouseEnter={() => setHoveredCard(innovation.id)}
+                onMouseLeave={() => setHoveredCard(null)}
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${currentInnovation.color} rounded-2xl flex items-center justify-center`}>
-                    <currentInnovation.icon className="w-8 h-8 text-white" />
+                <div className="text-center mb-6">
+                  <div className={`text-6xl mb-4 transition-transform duration-300 ${
+                    hoveredCard === innovation.id ? 'scale-110 rotate-12' : ''
+                  }`}>
+                    {innovation.icon}
                   </div>
-                  <div>
-                    <h2 className="text-3xl font-bold text-white">
-                      {currentInnovation.title}
-                    </h2>
-                    <p className="text-gray-400">
-                      Revolutionary AI Technology
-                    </p>
-                  </div>
-                </div>
-                <p className="text-xl text-gray-300 mb-8">
-                  {currentInnovation.description}
-                </p>
-              </motion.div>
-
-              {/* Features */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.2 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
-              >
-                {currentInnovation.features.map((featureindex) => (
-                  <div key={index} className="flex items-center gap-3 text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-lg">{feature}</span>
-                  </div>
-                ))}
-              </motion.div>
-
-              {/* Impact Metrics */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.3 }}
-                className="grid grid-cols-3 gap-6 mb-8"
-              >
-                {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
-                  <div key={key} className="text-center">
-                    <div className="text-3xl font-bold text-white mb-1">
-                      {value}
-                    </div>
-                    <div className="text-sm text-gray-400 capitalize">
-                      {key.replace(/([A-Z])/g' $1').trim()}
-                    </div>
-                  </div>
-                ))}
-              </motion.div>
-
-              {/* Applications */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.4 }}
-                className="mb-8"
-              >
-                <h4 className="text-lg font-semibold text-white mb-4">Key Applications:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {currentInnovation.applications.map((appindex) => (
-                    <span
-                      key={index}
-                      className="px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300"
-                    >
-                      {app}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.5 }}
-                className="flex flex-wrap gap-4"
-              >
-                <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
-                  <Play className="w-5 h-5" />
-                  See in Action
-                </button>
-                <button className="flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300">
-                  Get Started
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </motion.div>
-            </div>
-
-            {/* Visual Representation */}
-            <motion.div
-              initial={{ opacity: 0scale: 0.8 }}
-              animate={{ opacity: 1scale: 1 }}
-              transition={{ duration: 0.8delay: 0.3 }}
-              className="relative"
-            >
-              <div className={`bg-gradient-to-br ${currentInnovation.color} p-8 rounded-3xl shadow-2xl`}>
-                <div className="text-center text-white">
-                  <currentInnovation.icon className="w-32 h-32 mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold mb-4">
-                    {currentInnovation.title}
+                  <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+                    {innovation.title}
                   </h3>
-                  <p className="text-lg opacity-90 mb-6">
-                    {currentInnovation.description}
+                  <p className="text-cyan-100 mb-4 leading-relaxed">
+                    {innovation.description}
                   </p>
-                  
-                  {/* Interactive Elements */}
-                  <div className="grid grid-cols-2 gap-4">
-                    {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
-                      <div key={key} className="bg-white/20 rounded-xl p-4">
-                        <div className="text-2xl font-bold mb-1">{value}</div>
-                        <div className="text-sm opacity-80 capitalize">
-                          {key.replace(/([A-Z])/g' $1').trim()}
-                        </div>
+                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full text-sm font-semibold text-cyan-300">
+                    {innovation.category}
+                  </div>
+                </div>
+
+                <div className="space-y-3 mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                  <div className="space-y-2">
+                    {innovation.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-3 p-2 bg-white/10 rounded-lg">
+                        <span className="text-cyan-400">⚡</span>
+                        <span className="text-cyan-200 text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-              </div>
-              
-              {/* Floating Elements */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
-                animate={{
-                  y: [0-10],
-                  rotate: [0180360],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <Star className="w-4 h-4 text-yellow-800" />
-              </motion.div>
-              
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
-                animate={{
-                  scale: [1.21],
-                  opacity: [0.710.7],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
 
-        {/* Success Stories */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Real-World Success Stories
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {successStories.map((storyindex) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.7 + index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-              >
-                <div className="text-4xl mb-4">{story.logo}</div>
-                <h4 className="text-xl font-bold text-white mb-2">
-                  {story.company}
-                </h4>
-                <p className="text-gray-400 text-sm mb-4">
-                  {story.industry}
-                </p>
-                <div className="mb-4">
-                  <p className="text-sm text-gray-300 mb-2">
-                    <strong>Challenge:</strong> {story.challenge}
-                  </p>
-                  <p className="text-sm text-gray-300 mb-2">
-                    <strong>Solution:</strong> {story.solution}
-                  </p>
-                  <p className="text-sm text-green-400 font-semibold">
-                    <strong>Results:</strong> {story.results}
-                  </p>
+                <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-3 mb-4">
+                  <div className="flex items-center space-x-2 text-green-300">
+                    <span className="text-lg">📈</span>
+                    <span className="font-semibold">{innovation.impact}</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
+
+                <div className="text-center">
+                  <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold w-full">
+                    Explore Innovation →
+                  </button>
                 </div>
               </motion.div>
             ))}
+          </AnimatePresence>
+        </div>
+
+        {/* Interactive Demo Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 mb-12"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+              Interactive AI Demo
+            </h3>
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
+              Experience our AI innovations in action with this interactive demonstration
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white/10 rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🤖</div>
+              <h4 className="text-xl font-semibold mb-3 text-white">AI Chat</h4>
+              <p className="text-cyan-200 mb-4">Ask our AI anything and see its advanced reasoning capabilities</p>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Start Chat
+              </button>
+            </div>
+
+            <div className="bg-white/10 rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🎨</div>
+              <h4 className="text-xl font-semibold mb-3 text-white">Creative AI</h4>
+              <p className="text-cyan-200 mb-4">Generate original art, music, and content with our creative AI</p>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Create Now
+              </button>
+            </div>
+
+            <div className="bg-white/10 rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🔮</div>
+              <h4 className="text-xl font-semibold mb-3 text-white">Predictive AI</h4>
+              <p className="text-cyan-200 mb-4">Get insights and predictions based on advanced AI analysis</p>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get Insights
+              </button>
+            </div>
           </div>
         </motion.div>
 
-        {/* Final CTA */}
+        {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
-            <h3 className="text-4xl font-bold text-white mb-6">
-              Ready to Implement AI Innovation?
+          <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+            <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+              Ready to Transform Your Business with AI?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the AI revolution and transform your business with cutting-edge 
-              artificial intelligence solutions tailored to your needs.
+            <p className="text-xl text-cyan-100 mb-6 max-w-3xl mx-auto">
+              Join thousands of companies already using our AI innovations to drive growth, efficiency, and innovation.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                Start Your AI Journey
-                <Rocket className="w-5 h-5" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
+                🚀 Start Your AI Journey
               </button>
-              <button className="flex items-center gap-2 bg-white/10 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300">
-                Schedule Demo
-                <Users className="w-5 h-5" />
+              <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+                📞 Schedule Demo
               </button>
             </div>
           </div>

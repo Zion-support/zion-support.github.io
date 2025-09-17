@@ -1,29 +1,22 @@
 import React from 'react';
-const AutomatedFollowUps: Reac t.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const automated-follow-ups: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <h1 className="text-4xl font-bold mb-4">Automated Email Follow-Ups</h1>
-      <p className="text-gray-300 mb-6">
-        Close more deals with sequenced, AI-personalized follow-ups across email and CRM tasks. Maintain consistent outreach without manual effort.
-      </p>
-      <ul className="list-disc pl-6 space-y-2 text-gray-300">
-        <li>Multi-channel sequences and A/B testing</li>
-        <li>Lead scoring and intent-based branching</li>
-        <li>CRM integrations: HubSpo t, Salesforce, Pipedrive</li>
-        <li>Compliance-friendly opt-out and throttling</li>
-      </ul>
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-2">Pricing</h2>
-        <p className="text-gray-300">Starter $99/mo, Growth $299/mo, Scale $899/mo.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>automated-follow-ups | Zion Tech Group</title>
+        <meta name="description" content="automated-follow-ups - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">automated-follow-ups</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-      <div className="mt-6 text-blue-400">
-        <a href="https: //www.hubspot.com/" target="_blank" rel="noopener noreferrer">HubSpot</a>
-        {" • "}
-        <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer">Salesforce</a>
-        {" • "}
-        <a href="https: //www.pipedrive.com/" target="_blank" rel="noopener noreferrer">Pipedrive</a>
-      </div>
-    </div>';
-  )};';';
-export default AutomatedFollowUps;';';';
-"';';';';
+    </div>
+  );
+};
+
+export default automated-follow-ups;

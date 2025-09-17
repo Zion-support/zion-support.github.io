@@ -1,4 +1,3 @@
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 import React from 'react';
 
 interface 5gsolutionsProps {
@@ -13,4 +12,3 @@ export default function 5gsolutions({ }: 5gsolutionsProps) {
     </div>
   );
 }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23

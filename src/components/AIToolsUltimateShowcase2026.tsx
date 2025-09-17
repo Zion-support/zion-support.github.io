@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Zap
@@ -349,14 +348,11 @@ const AIToolsUltimateShowcase2026 = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
@@ -376,13 +372,10 @@ const AIToolsUltimateShowcase2026 = () => {
             revolutionize productivitydevelopmentanalyticsand more. 
             Choose from 50+ cutting-edge solutions.
           </p>
-        </motion.div>
+        </div>
 
         {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => {
@@ -402,13 +395,10 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Category Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(categories).map(([keycategory]) => {
@@ -429,14 +419,11 @@ const AIToolsUltimateShowcase2026 = () => {
               </button>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Category Header */}
-        <motion.div
+        <div
           key={activeCategory}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
           {(() => {
@@ -459,25 +446,19 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             );
           })()}
-        </motion.div>
+        </div>
 
         {/* Tools Grid */}
-        <motion.div
+        <div
           key={activeCategory}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5delay: 0.2 }}
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
           {tools[activeCategory].map((toolindex) => {
             const ToolIcon = tool.icon;
             
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: index * 0.1 }}
                 onHoverStart={() => setHoveredTool(index)}
                 onHoverEnd={() => setHoveredTool(null)}
                 className="group relative"
@@ -540,28 +521,23 @@ const AIToolsUltimateShowcase2026 = () => {
 
                 {/* Hover Effect */}
                 {hoveredTool === index && (
-                  <motion.div
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={{ opacity: 1scale: 1 }}
+                  <div
                     className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg"
                   >
                     Popular
-                  </motion.div>
+                  </div>
                 )}
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
             
             <div className="relative z-10">
               <h3 className="text-4xl font-bold text-white mb-6">
@@ -587,7 +563,7 @@ const AIToolsUltimateShowcase2026 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -19,7 +18,6 @@
           console && console.warn("User not authenticated.");
           return;
         }
-=======
 import { useState, useEffect } from "react";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
@@ -46,7 +44,6 @@ export default function SavedTalentsPage() {
           return;
         }
 
->>>>>>> origin/auto/autonomy-17186719616
         const { data, error } = await supabase
           .from("saved_talents")
           .select(
@@ -63,7 +60,6 @@ export default function SavedTalentsPage() {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
       } catch (error) {
@@ -166,7 +162,6 @@ export default function SavedTalentsPage() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -234,7 +229,6 @@ export default function SavedTalentsPage() {
           description: "Failed to load saved talents. Please try again later.",;
           variant: "destructive"});
       } finally {;
-=======
           );
           setSavedTalents(talentProfiles);
         }
@@ -246,7 +240,6 @@ export default function SavedTalentsPage() {
           variant: "destructive",
         });
       } finally {
->>>>>>> origin/auto/autonomy-17186719616
         setIsLoading(false);
       }
     };
@@ -272,15 +265,11 @@ export default function SavedTalentsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
->>>>>>> origin/auto/autonomy-17186719616
+
+
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}

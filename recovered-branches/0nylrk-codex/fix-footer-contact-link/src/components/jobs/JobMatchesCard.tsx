@@ -1,94 +1,12 @@
+import React from 'react';
 
-import { useState } from "react";
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-
-interface JobMatchCardProps {
-  match: JobMatch;
-  onDecline: (matchId: string) => void;
-  showApplied?: boolean;
-}
-
-  const job = match.job;
-  
-  if (!job) return null;
-  
+const JobMatchesCard: React.FC = () => {
   return (
-    <Card className="overflow-hidden border-l-4 border-l-blue-500">
-      <CardHeader className="p-4 pb-2">
-        <div className="flex justify-between items-start">
-          <div>
-            <CardTitle className="text-lg">{job.title}</CardTitle>
-            <CardDescription>
-                </span>
-              )}
-            </CardDescription>
-          </div>
-          <Badge variant="outline" className="flex items-center">
-            {match.match_score}% Match
-          </Badge>
-        </div>
-      </CardHeader>
-      <CardContent className="p-4 pt-0">
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-          {job.description}
-        </p>
-        
-        {match.matched_skills?.length > 0 && (
-          <div className="mb-3">
-            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>
-            <div className="flex flex-wrap gap-1">
-                <Badge key={i} variant="secondary" className="text-xs">
-                  {skill}
-                </Badge>
-              ))}
-              {match.matched_skills.length > 5 && (
-                <Badge variant="secondary" className="text-xs">
-                  +{match.matched_skills.length - 5}
-                </Badge>
-              )}
-            </div>
-          </div>
-        )}
-        
-        <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
-          <div className="flex items-center text-sm">
-            <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
-            ${job.budget.min} - ${job.budget.max}
-          </div>
-          <div className="flex items-center text-sm">
-            <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
-          </div>
-        </div>
-      </CardContent>
-      <CardFooter className="p-4 pt-0">
-        {match.status === 'applied' || showApplied ? (
-          <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
-            <CheckCircle className="h-4 w-4 mr-2" />
-            Applied
-          </div>
-        ) : match.status === 'declined' ? (
-          <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
-            <XCircle className="h-4 w-4 mr-2" />
-            Declined
-          </div>
-        ) : (
-          <div className="flex gap-2 w-full">
-            <Button 
-              className="flex-1" 
-            >
-              Apply Now
-            </Button>
-            <Button 
-              variant="outline" 
-              className="flex-1"
-              onClick={() => onDecline(match.id)}
-            >
-              Decline
-            </Button>
-          </div>
-        )}
-      </CardFooter>
-    </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">JobMatchesCard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default JobMatchesCard;

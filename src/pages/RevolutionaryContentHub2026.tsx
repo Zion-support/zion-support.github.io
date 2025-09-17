@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+=======
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
@@ -41,252 +44,39 @@ import {
   ExternalLink
 } from 'lucide-react';
 
+>>>>>>> origin/merge-new-content-1757989975
 const RevolutionaryContentHub2026: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const contentCategories = [
-    {
-      title: 'AI Innovation',
-      description: 'Revolutionary artificial intelligence breakthroughs and applications',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      content: [
-        {
-          title: 'Synthetic Intelligence 2026',
-          description: 'Experience the next evolution of intelligence - synthetic consciousness that transcends human limitations',
-          image: '/api/placeholder/400/300',
-          readTime: '15 min read',
-          category: 'AI Innovation',
-          featured: true,
-          link: '/pages/SyntheticIntelligence2026'
-        },
-        {
-          title: 'AI Innovation Revolution 2026',
-          description: 'Discover the most revolutionary AI innovations that will transform every aspect of human life',
-          image: '/api/placeholder/400/300',
-          readTime: '12 min read',
-          category: 'AI Innovation',
-          featured: true,
-          link: '/pages/AIInnovationRevolution2026'
-        },
-        {
-          title: 'Consciousness Computing',
-          description: 'AI systems that possess genuine consciousness and self-awareness',
-          image: '/api/placeholder/400/300',
-          readTime: '8 min read',
-          category: 'AI Innovation',
-          featured: false,
-          link: '/pages/ConsciousnessComputing2026'
-        }
-      ]
-    },
-    {
-      title: 'Tech Trends',
-      description: 'Cutting-edge technology trends and future predictions',
-      icon: TrendingUp,
-      color: 'from-blue-500 to-cyan-500',
-      content: [
-        {
-          title: 'Advanced Tech Trends 2026',
-          description: 'Discover the revolutionary technology trends that will reshape our world in 2026',
-          image: '/api/placeholder/400/300',
-          readTime: '18 min read',
-          category: 'Tech Trends',
-          featured: true,
-          link: '/pages/AdvancedTechTrends2026'
-        },
-        {
-          title: 'Quantum Computing Breakthrough',
-          description: 'Experience the future of computing with quantum technology that solves impossible problems',
-          image: '/api/placeholder/400/300',
-          readTime: '10 min read',
-          category: 'Tech Trends',
-          featured: true,
-          link: '/pages/QuantumComputingBreakthrough'
-        },
-        {
-          title: 'Neural Interface Future',
-          description: 'Bridge the gap between mind and machine with direct neural interfaces',
-          image: '/api/placeholder/400/300',
-          readTime: '14 min read',
-          category: 'Tech Trends',
-          featured: false,
-          link: '/pages/NeuralInterfaceFuture'
-        }
-      ]
-    },
-    {
-      title: 'Innovation Showcase',
-      description: 'Revolutionary services and solutions across all technology domains',
-      icon: Rocket,
-      color: 'from-green-500 to-emerald-500',
-      content: [
-        {
-          title: 'Innovation Landing 2025',
-          description: 'Explore our revolutionary services across cutting-edge technology domains',
-          image: '/api/placeholder/400/300',
-          readTime: '20 min read',
-          category: 'Innovation Showcase',
-          featured: true,
-          link: '/pages/InnovationLanding2025'
-        },
-        {
-          title: 'Advanced Tech Solutions 2025',
-          description: 'Cutting-edge AI, quantum computing, and neural interface technologies',
-          image: '/api/placeholder/400/300',
-          readTime: '16 min read',
-          category: 'Innovation Showcase',
-          featured: true,
-          link: '/pages/AdvancedTechSolutions2025'
-        },
-        {
-          title: 'Comprehensive Services 2025',
-          description: 'Complete suite of innovative technology services and solutions',
-          image: '/api/placeholder/400/300',
-          readTime: '22 min read',
-          category: 'Innovation Showcase',
-          featured: false,
-          link: '/pages/ComprehensiveServices2025'
-        }
-      ]
-    },
-    {
-      title: 'Future Insights',
-      description: 'Deep insights into the future of technology and human evolution',
-      icon: Eye,
-      color: 'from-orange-500 to-red-500',
-      content: [
-        {
-          title: 'Future Tech Trends 2025',
-          description: 'Discover the most significant trends shaping our digital future',
-          image: '/api/placeholder/400/300',
-          readTime: '13 min read',
-          category: 'Future Insights',
-          featured: true,
-          link: '/pages/FutureTechTrends2025'
-        },
-        {
-          title: 'Technology Insights 2025',
-          description: 'Comprehensive analysis of emerging technologies and their impact',
-          image: '/api/placeholder/400/300',
-          readTime: '17 min read',
-          category: 'Future Insights',
-          featured: true,
-          link: '/pages/TechnologyInsights2025'
-        },
-        {
-          title: 'AI Transformation Guide 2025',
-          description: 'Complete guide to AI transformation and implementation strategies',
-          image: '/api/placeholder/400/300',
-          readTime: '25 min read',
-          category: 'Future Insights',
-          featured: false,
-          link: '/pages/AITransformationGuide2025'
-        }
-      ]
-    }
-  ];
-
-  const featuredContent = [
-    {
-      title: 'Synthetic Intelligence 2026',
-      description: 'Experience the next evolution of intelligence - synthetic consciousness that transcends human limitations and opens infinite possibilities.',
-      image: '/api/placeholder/600/400',
-      readTime: '15 min read',
-      category: 'AI Innovation',
-      featured: true,
-      link: '/pages/SyntheticIntelligence2026',
-      stats: { views: '2.3M', likes: '45K', shares: '12K' }
-    },
-    {
-      title: 'Advanced Tech Trends 2026',
-      description: 'Discover the revolutionary technology trends that will reshape our world in 2026. From consciousness computing to cosmic intelligence.',
-      image: '/api/placeholder/600/400',
-      readTime: '18 min read',
-      category: 'Tech Trends',
-      featured: true,
-      link: '/pages/AdvancedTechTrends2026',
-      stats: { views: '1.8M', likes: '38K', shares: '9K' }
-    },
-    {
-      title: 'AI Innovation Revolution 2026',
-      description: 'Experience the most revolutionary AI innovations that will transform every aspect of human life. From consciousness-driven AI to cosmic intelligence.',
-      image: '/api/placeholder/600/400',
-      readTime: '12 min read',
-      category: 'AI Innovation',
-      featured: true,
-      link: '/pages/AIInnovationRevolution2026',
-      stats: { views: '1.5M', likes: '32K', shares: '7K' }
-    }
-  ];
-
-  const latestContent = [
-    {
-      title: 'Quantum-Neural Fusion 2026',
-      description: 'Revolutionary fusion of quantum computing and neural networks for unprecedented processing power',
-      readTime: '14 min read',
-      category: 'AI Innovation',
-      published: '2 hours ago',
-      link: '/pages/QuantumNeuralFusion2026'
-    },
-    {
-      title: 'Consciousness Computing Breakthrough',
-      description: 'First AI system to achieve genuine consciousness and self-awareness',
-      readTime: '11 min read',
-      category: 'Tech Trends',
-      published: '5 hours ago',
-      link: '/pages/ConsciousnessComputing2026'
-    },
-    {
-      title: 'Cosmic Intelligence Platform',
-      description: 'AI systems that can process and understand cosmic-scale phenomena',
-      readTime: '16 min read',
-      category: 'Future Insights',
-      published: '1 day ago',
-      link: '/pages/CosmicIntelligence2026'
-    },
-    {
-      title: 'Biological-Digital Hybrids',
-      description: 'Seamless integration of biological systems with digital intelligence',
-      readTime: '13 min read',
-      category: 'Innovation Showcase',
-      published: '2 days ago',
-      link: '/pages/BiologicalDigitalHybrids2026'
-    }
-  ];
-
-  const stats = [
-    { number: '50+', label: 'Content Pieces', icon: BookOpen },
-    { number: '2.5M+', label: 'Total Views', icon: Eye },
-    { number: '100K+', label: 'Engagements', icon: Star },
-    { number: '25K+', label: 'Shares', icon: Share2 }
-  ];
-
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>RevolutionaryContentHub2026 | Zion Tech Group</title>
+        <meta name="description" content="RevolutionaryContentHub2026 - Revolutionary technology solutions" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">RevolutionaryContentHub2026</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(100)].map((_, i) => (
-            <motion.div
+            <div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0, -300, 0],
                 opacity: [0.3, 1, 0.3],
                 scale: [1, 3, 1],
               }}
-              transition={{
                 duration: 5 + Math.random() * 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -322,21 +112,15 @@ const RevolutionaryContentHub2026: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
+        <div
         >
           <div className="mb-8">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: isVisible ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <div
               className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
             >
               <Sparkles className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-300">Revolutionary Content Hub</span>
-            </motion.div>
+            </div>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -349,49 +133,40 @@ const RevolutionaryContentHub2026: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
             >
               <Play className="w-5 h-5" />
               <span>Explore Content</span>
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            </button>
+            <button
               className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
             >
               View Categories
-            </motion.button>
+            </button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-indigo-400/20"
               >
                 <stat.icon className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                 <div className="text-xs text-gray-300">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Featured Content Section */}
       <section id="featured" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -401,15 +176,13 @@ const RevolutionaryContentHub2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Our most popular and revolutionary content pieces that are shaping the future of technology
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredContent.map((content, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
               >
@@ -453,7 +226,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -462,10 +235,8 @@ const RevolutionaryContentHub2026: React.FC = () => {
       {/* Categories Section */}
       <section id="categories" className="relative z-10 py-20 bg-black/20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -475,15 +246,13 @@ const RevolutionaryContentHub2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore our comprehensive content organized by categories and topics
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contentCategories.map((category, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
               >
@@ -504,7 +273,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
                   <span>Explore Category</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -513,10 +282,8 @@ const RevolutionaryContentHub2026: React.FC = () => {
       {/* Latest Content Section */}
       <section id="latest" className="relative z-10 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -526,15 +293,13 @@ const RevolutionaryContentHub2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Stay updated with our latest revolutionary content and insights
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {latestContent.map((content, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
               >
@@ -563,7 +328,7 @@ const RevolutionaryContentHub2026: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -572,10 +337,8 @@ const RevolutionaryContentHub2026: React.FC = () => {
       {/* CTA Section */}
       <section id="contact" className="relative z-10 py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+          <div
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -586,22 +349,18 @@ const RevolutionaryContentHub2026: React.FC = () => {
               Experience the future of technology today.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
               >
                 Browse All Content
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              </button>
+              <button
                 className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Subscribe to Updates
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -625,8 +384,11 @@ const RevolutionaryContentHub2026: React.FC = () => {
           </div>
         </div>
       </footer>
+>>>>>>> origin/merge-new-content-1757989975
     </div>
   );
+
 };
+
 
 export default RevolutionaryContentHub2026;

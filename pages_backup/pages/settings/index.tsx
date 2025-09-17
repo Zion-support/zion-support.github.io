@@ -1,18 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function SettingsPage() {
+const index: React.FC = () => {
   return (
-    <div>;
-      <h2 className=&quot;text-xl font-semibold mb-2&quot;>Settings</h2>
-      <p className=&quot;opacity-80&quot;>Manage your account preferences.</p>
-export default function SettingsPage() {_return (
-    <div>
-      <h2 className="text-xl font-semibold mb-2">Settings</h2>
-      <p className="opacity-80">Manage your account preferences.</p>
-
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+  );
+};
 
+export default index;

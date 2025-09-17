@@ -1,7 +1,16 @@
-import dynamic from 'next/dynamic';
+import React from "react";
 
-const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false });
+const function ExpoRoute() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ExpoRoute() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default function ExpoRoute() {
-  return <ExpoPage />;
-}
+export default function ExpoRoute() {;

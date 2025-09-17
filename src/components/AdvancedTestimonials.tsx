@@ -1,69 +1,19 @@
+<<<<<<< HEAD
+import React from "react";
+=======
 import React from 'react';
-import { motion } from 'framer-motion';
 StarQuote
+>>>>>>> origin/merge-new-content-1757989975
 
-interface Testimonial {
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  rating: number;
-  avatar?: string;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    name: "Sarah Chen",
-    role: "CTO",
-    company: "TechCorp Global",
-    content: "The AI solutions from Zion Tech Group have transformed our operations. 'We', 've seen a 300% increase in efficiency and our team productivity has never been higher.",
-    rating: 5,
-    avatar: "👩‍💼"
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "CEO",
-    company: "InnovateLabs",
-    content: "Working with Zion Tech Group has been a game-changer. Their AI technology is not just 'advancedit', 's revolutionary. Our business has grown exponentially.",
-    rating: 5,
-    avatar: "👨‍💼"
-  },
-  {
-    name: "Dr. Emily Watson",
-    role: "Research Director",
-    company: "Quantum Dynamics",
-    content: "The quantum computing integration is phenomenal. 'We', 're solving problems that were previously impossibleand the results speak for themselves.",
-    rating: 5,
-    avatar: "👩‍🔬"
-  },
-  {
-    name: "James Thompson",
-    role: "VP of Engineering",
-    company: "CloudScale Inc",
-    content: "Zion Tech 'Group', 's AI solutions have revolutionized our cloud infrastructure. The performance improvements and cost savings are remarkable.",
-    rating: 5,
-    avatar: "👨‍🔧"
-  },
-  {
-    name: "Lisa Park",
-    role: "Head of Data Science",
-    company: "DataFlow Systems",
-    content: "The data intelligence capabilities are outstanding. 'We', 're getting insights we never thought possibleand the predictive analytics are incredibly accurate.",
-    rating: 5,
-    avatar: "👩‍💻"
-  },
-  {
-    name: "Robert Kim",
-    role: "Founder",
-    company: "StartupX",
-    content: "As a startupwe needed cutting-edge technology without the complexity. Zion Tech Group delivered exactly what we needed with incredible support.",
-    rating: 5,
-    avatar: "👨‍🚀"
-  }
-];
-
-export default function AdvancedTestimonials() {
+const function AdvancedTestimonials() { = () => {
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function AdvancedTestimonials() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+=======
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -77,11 +27,9 @@ export default function AdvancedTestimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonialindex) => (
-            <motion.div
+            <div
               key={testimonial.name}
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               <div className="flex items-center mb-4">
@@ -108,10 +56,13 @@ export default function AdvancedTestimonials() {
                   "{testimonial.content}"
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
+>>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default function AdvancedTestimonials() {;

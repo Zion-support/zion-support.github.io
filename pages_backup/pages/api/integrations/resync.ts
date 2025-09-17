@@ -2,7 +2,6 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
@@ -105,8 +104,6 @@ if (target.lastSyncAt = now) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

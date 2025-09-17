@@ -1,71 +1,28 @@
 #!/bin/bash
 
-# Script to automatically resolve merge conflicts
-# This will resolve conflicts by keeping the most recent changes
+# Script to resolve merge conflicts by choosing HEAD version
+echo "Resolving merge conflicts..."
 
-echo "🔧 Starting automatic merge conflict resolution..."
+# Find all files with merge conflicts
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" --include="*.json" --include="*.toml" --include="*.md" | cut -d: -f1 | sort -u)
 
-# Remove build artifacts and cache files that are causing conflicts
-echo "🧹 Removing build artifacts and cache files..."
-rm -rf zion-os/.next/
-rm -rf .next/
-rm -rf node_modules/.cache/
+echo "Found files with merge conflicts:"
+echo "$files_with_conflicts"
 
-# Add all changes
-echo "📝 Adding all changes..."
-git add .
-
-# Check for remaining conflicts
-CONFLICTS=$(git diff --name-only --diff-filter=U)
-
-if [ -z "$CONFLICTS" ]; then
-    echo "✅ No conflicts remaining!"
-else
-    echo "⚠️  Remaining conflicts to resolve manually:"
-    echo "$CONFLICTS"
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
     
-    # Try to resolve common conflicts automatically
-    for FILE in $CONFLICTS; do
-        echo "🔧 Attempting to resolve conflicts in $FILE..."
-        
-        # For TypeScript/JavaScript files, try to merge both versions
-        if [[ "$FILE" == *.tsx || "$FILE" == *.ts || "$FILE" == *.js ]]; then
-            # Use git checkout to take both versions and merge manually
-            git checkout --theirs "$FILE"
-            git add "$FILE"
-            echo "  ✅ Resolved $FILE by taking remote version"
-        # For JSON files, take remote version
-        elif [[ "$FILE" == *.json ]]; then
-            git checkout --theirs "$FILE"
-            git add "$FILE"
-            echo "  ✅ Resolved $FILE by taking remote version"
-        # For YAML files, take remote version
-        elif [[ "$FILE" == *.yaml || "$FILE" == *.yml ]]; then
-            git checkout --theirs "$FILE"
-            git add "$FILE"
-            echo "  ✅ Resolved $FILE by taking remote version"
-        # For markdown files, take remote version
-        elif [[ "$FILE" == *.md ]]; then
-            git checkout --theirs "$FILE"
-            git add "$FILE"
-            echo "  ✅ Resolved $FILE by taking remote version"
-        # For other files, take remote version
-        else
-            git checkout --theirs "$FILE"
-            git add "$FILE"
-            echo "  ✅ Resolved $FILE by taking remote version"
-        fi
-    done
-fi
+    # Create a backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Use sed to resolve conflicts by choosing HEAD version
+    # Remove conflict markers and keep only the HEAD content
+    sed -i '/<<<<<<< HEAD/,/=======/!d; /=======/d; />>>>>>>/d' "$file"
+    
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$file"
+    
+    echo "Resolved conflicts in: $file"
+done
 
-# Commit the resolved conflicts
-echo "💾 Committing resolved conflicts..."
-git commit -m "Resolve merge conflicts automatically
-
-- Resolved conflicts in App.tsx, components, and pages
-- Removed build artifacts and cache files
-- Integrated all new content and improvements
-- Maintained backward compatibility
-- Added comprehensive 2026 technology showcase content"
-
-echo "🎉 Merge conflicts resolved successfully!"
+echo "Merge conflicts resolved!"
