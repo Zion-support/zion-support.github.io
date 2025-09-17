@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateTechAdvertisingBanner2027: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
@@ -15,7 +14,6 @@ const UltimateTechAdvertisingBanner2027: React.FC = () => {
             Witness the most revolutionary technological advancement in human history as we unveil breakthrough technologies that will reshape civilization forever.
           </p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-3xl p-10 border border-purple-400/30 hover:scale-105 transition-all duration-500 text-center">
             <div className="text-8xl mb-6">🧠</div>
@@ -27,7 +25,6 @@ const UltimateTechAdvertisingBanner2027: React.FC = () => {
               Explore Breakthrough →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-3xl p-10 border border-cyan-400/30 hover:scale-105 transition-all duration-500 text-center">
             <div className="text-8xl mb-6">🌌</div>
             <h3 className="text-3xl font-bold mb-6 text-white">Interdimensional Tech</h3>
@@ -38,7 +35,6 @@ const UltimateTechAdvertisingBanner2027: React.FC = () => {
               Discover Revolution →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-3xl p-10 border border-emerald-400/30 hover:scale-105 transition-all duration-500 text-center">
             <div className="text-8xl mb-6">⚛️</div>
             <h3 className="text-3xl font-bold mb-6 text-white">Quantum Consciousness</h3>
@@ -50,7 +46,6 @@ const UltimateTechAdvertisingBanner2027: React.FC = () => {
             </a>
           </div>
         </div>
-        
         <div className="text-center mt-12">
           <div className="inline-flex items-center space-x-4 mb-6">
             <span className="text-4xl animate-bounce">🚀</span>
@@ -64,6 +59,7 @@ const UltimateTechAdvertisingBanner2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateTechAdvertisingBanner2027;

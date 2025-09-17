@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-
-
 const UltimateTechTrends2026: React.FC = () => {
   const [expandedTrend, setExpandedTrend] = useState<string | null>(null);
-
   const trends = [
     {
       id: 'quantum-ai',
@@ -72,7 +69,6 @@ const UltimateTechTrends2026: React.FC = () => {
       companies: ['Dimensional Computing Corp', 'Reality Labs', 'Quantum Dimensions']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -105,7 +101,6 @@ const UltimateTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Trends Grid */}
       <div className="container mx-auto px-4 py-16">
         <div
@@ -117,7 +112,6 @@ const UltimateTechTrends2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary Technology Trends</h2>
           <p className="text-xl opacity-80">Click on any trend to explore its impact and timeline</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trends.map((trend, index) => (
             <div
@@ -131,7 +125,6 @@ const UltimateTechTrends2026: React.FC = () => {
               <div className="text-6xl mb-4 text-center">{trend.icon}</div>
               <h3 className="text-2xl font-bold mb-4 text-center">{trend.title}</h3>
               <p className="text-lg opacity-80 mb-6 text-center">{trend.description}</p>
-              
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-sm opacity-60">Impact:</span>
@@ -142,11 +135,9 @@ const UltimateTechTrends2026: React.FC = () => {
                   <span className="text-sm font-semibold">{trend.timeline}</span>
                 </div>
               </div>
-
               <button className={`w-full bg-gradient-to-r ${trend.color} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                 {expandedTrend === trend.id ? 'Show Less' : 'Learn More'}
               </button>
-
               {expandedTrend === trend.id && (
                 <div
                   initial={{ opacity: 0, height: 0 }}
@@ -157,7 +148,6 @@ const UltimateTechTrends2026: React.FC = () => {
                 >
                   <h4 className="text-lg font-bold mb-3">Detailed Overview</h4>
                   <p className="text-sm opacity-80 mb-4">{trend.details}</p>
-                  
                   <h4 className="text-lg font-bold mb-3">Leading Companies</h4>
                   <div className="flex flex-wrap gap-2">
                     {trend.companies.map((company, idx) => (
@@ -172,7 +162,6 @@ const UltimateTechTrends2026: React.FC = () => {
           ))}
         </div>
       </div>
-
       {/* Market Impact Section */}
       <div className="container mx-auto px-4 py-16">
         <div
@@ -184,7 +173,6 @@ const UltimateTechTrends2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">📊 Market Impact Analysis</h2>
           <p className="text-xl opacity-80">How these trends are transforming industries worldwide</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div
             initial={{ opacity: 0, y: 30 }}
@@ -197,7 +185,6 @@ const UltimateTechTrends2026: React.FC = () => {
             <div className="text-4xl font-bold text-green-400 mb-2">$15.2T</div>
             <p className="text-sm opacity-60">Projected by 2030</p>
           </div>
-
           <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -209,7 +196,6 @@ const UltimateTechTrends2026: React.FC = () => {
             <div className="text-4xl font-bold text-blue-400 mb-2">2,500+</div>
             <p className="text-sm opacity-60">Active in these fields</p>
           </div>
-
           <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -221,7 +207,6 @@ const UltimateTechTrends2026: React.FC = () => {
             <div className="text-4xl font-bold text-purple-400 mb-2">5M+</div>
             <p className="text-sm opacity-60">New positions by 2028</p>
           </div>
-
           <div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -235,7 +220,6 @@ const UltimateTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Future Predictions */}
       <div className="container mx-auto px-4 py-16">
         <div
@@ -247,7 +231,6 @@ const UltimateTechTrends2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">🔮 Future Predictions</h2>
           <p className="text-xl opacity-80">What to expect in the coming years</p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           <div
             initial={{ opacity: 0, x: -30 }}
@@ -271,7 +254,6 @@ const UltimateTechTrends2026: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -296,7 +278,6 @@ const UltimateTechTrends2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div
@@ -324,6 +305,7 @@ const UltimateTechTrends2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default UltimateTechTrends2026;

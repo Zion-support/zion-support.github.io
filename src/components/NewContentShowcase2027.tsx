@@ -11,7 +11,6 @@ import {
   Lightbulb,
   TrendingUp
 } from 'lucide-react';
-
 const NewContentShowcase2027 = () => {
   const newContent = [
     {
@@ -45,14 +44,12 @@ const NewContentShowcase2027 = () => {
       link: "/neural-interface-breakthrough-2027"
     }
   ];
-
   const stats = [
     { number: "1000%", label: "ROI Increase", icon: TrendingUp },
     { number: "99.9%", label: "System Uptime", icon: CheckCircle },
     { number: "500%", label: "Productivity Boost", icon: Zap },
     { number: "95%", label: "Cost Reduction", icon: Lightbulb }
   ];
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -75,7 +72,6 @@ const NewContentShowcase2027 = () => {
             that are shaping the future of AI and business in 2027
           </p>
         </motion.div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -97,7 +93,6 @@ const NewContentShowcase2027 = () => {
             </div>
           ))}
         </motion.div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newContent.map((content, index) => (
@@ -126,15 +121,12 @@ const NewContentShowcase2027 = () => {
                   </div>
                 )}
               </div>
-              
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
                 {content.title}
               </h3>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {content.description}
               </p>
-              
               <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group">
                 Explore Content
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -142,7 +134,6 @@ const NewContentShowcase2027 = () => {
             </motion.div>
           ))}
         </div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -172,6 +163,7 @@ const NewContentShowcase2027 = () => {
       </div>
     </div>
   );
+
 };
 
 export default NewContentShowcase2027;

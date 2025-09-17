@@ -1,14 +1,12 @@
-import { FeaturedListingsSection } from \'@/components/FeaturedListingsSection\';\''\'; import { GradientHeading } from \'@/components/GradientHeading\'; export {}; return null} return(); <> <div className=\"min-h-screen bg-zion-blue\"> <div className=\"container mx-auto px-4 py-12\"> <div className=\"text-center mb-12\">\"; <div>Broken JSX</div> className=\"text-4xl \"md\": text-5xl font-bold mb-4\"> Featured Listings\"; </GradientHeading> <p className=\"text-zion-slate-light text-lg max-w-3xl mx-auto\"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };
-const { FeaturedListingsSection } from "@/components/FeaturedListingsSection";"""; import { GradientHeading } from "@/components/GradientHeading"; export {}; return null} return(); <> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-12"> <div className="text-center mb-12">"; <div>Broken JSX</div> className="text-4xl md: text-5xl font-bold mb-4"> Featured Listings"; </GradientHeading> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Discover our handpicked selection of premium AI products and; services. These featured listings represent the best that the Zion; Marketplace has to offer.; ></div> ></div> {} <FeaturedListingsSection showTitle={false} /> ></div> ></div> </>)} ; export { Featured }; export { Featured }; export { Featured }; export { Featured }; export { Featured };"""
 import React from 'react';
-interface CategoriesProps {
-  // Add props here as needed
-}
-export default function Categories({ }: CategoriesProps) {
+
+const Categories: React.FC = () => {
   return (
-    <div>
-      <h1>Categories</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Categories</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default Categories;

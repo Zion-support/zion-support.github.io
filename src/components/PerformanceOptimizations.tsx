@@ -1,25 +1,20 @@
 import React from 'react';
-
-export default function PerformanceOptimizations() {
+const PerformanceOptimizations: React.FC = () => {
   return (
     <>
       {/* Preload critical resources */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <link rel="preload" href="/images/hero-bg.webp" as="image" />
-      
       {/* DNS prefetch for external domains */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-      
       {/* Preconnect to critical origins */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
       {/* Resource hints for better performance */}
       <link rel="prefetch" href="/api/health" />
       <link rel="prefetch" href="/services" />
-      
       {/* Performance monitoring script */}
       <script
         dangerouslySetInnerHTML={{
@@ -34,7 +29,6 @@ export default function PerformanceOptimizations() {
                 }
               });
             }
-            
             // Lazy loading for images
             if ('IntersectionObserver' in window) {
               const imageObserver = new IntersectionObserver((entriesobserver) => {
@@ -47,7 +41,6 @@ export default function PerformanceOptimizations() {
                   }
                 });
               });
-              
               document.querySelectorAll('img[data-src]').forEach(img => {
                 imageObserver.observe(img);
               });
@@ -57,4 +50,7 @@ export default function PerformanceOptimizations() {
       />
     </>
   );
-}
+
+};
+
+export default PerformanceOptimizations;

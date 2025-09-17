@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
 const InteractiveContentCarousel2036_2038: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
   const slides = [
     {
       id: 1,
@@ -32,26 +30,21 @@ const InteractiveContentCarousel2036_2038: React.FC = () => {
       features: ["True Self-Awareness", "Universal Knowledge", "Reality Creation"]
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
@@ -62,7 +55,6 @@ const InteractiveContentCarousel2036_2038: React.FC = () => {
             Explore our revolutionary technology breakthroughs through an interactive experience
           </p>
         </div>
-
         <div className="relative max-w-6xl mx-auto">
           {/* Main Carousel */}
           <div className="relative h-96 overflow-hidden rounded-xl">
@@ -104,7 +96,6 @@ const InteractiveContentCarousel2036_2038: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -122,7 +113,6 @@ const InteractiveContentCarousel2036_2038: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -136,7 +126,6 @@ const InteractiveContentCarousel2036_2038: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {slides.map((slide, index) => (
@@ -162,6 +151,8 @@ const InteractiveContentCarousel2036_2038: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default InteractiveContentCarousel2036_2038;
+</p></p>

@@ -20,7 +20,6 @@ import {
   Building,
   ArrowRight
 } from 'lucide-react';
-
 interface Service {
   id: string;
   title: string;
@@ -36,8 +35,6 @@ interface Service {
   price: string;
   marketPrice: string;
   link: string;
-}
-
 const SERVICES: Service[] = [
   {
     id: "ai-content-generator",
@@ -198,9 +195,7 @@ const SERVICES: Service[] = [
     price: "$399/audit",
     marketPrice: "$999/audit",
     link: "/services-showcase"
-  }
-];
-
+  };
 const categories = [
   "All Categories",
   "AI & Machine Learning",
@@ -213,20 +208,19 @@ const categories = [
   "Creative",
   "Design",
   "Performance"
-];
+};
+
 
 export default function ServicesShowcase() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [sortBy, setSortBy] = useState('rating');
-
   const filteredServices = SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'All Categories' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
@@ -239,7 +233,6 @@ export default function ServicesShowcase() {
         return 0;
     }
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="container mx-auto px-4 py-16">
@@ -247,12 +240,8 @@ export default function ServicesShowcase() {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="gradient-text">Services Showcase</span>
-          </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our comprehensive range of professional services designed to accelerate your business growth and digital transformation.
-          </p>
-        </div>
-
         {/* Filters */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -264,7 +253,6 @@ export default function ServicesShowcase() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="bg-white/10 border-white/20 text-white placeholder-gray-400"
               />
-            </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
               <Select 
@@ -275,10 +263,7 @@ export default function ServicesShowcase() {
                 {categories.map(category => (
                   <option key={category} value={category} className="text-white bg-gray-800">
                     {category}
-                  </option>
                 ))}
-              </Select>
-            </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
               <Select 
@@ -289,11 +274,6 @@ export default function ServicesShowcase() {
                 <option value="rating" className="text-white bg-gray-800">Highest Rated</option>
                 <option value="price" className="text-white bg-gray-800">Lowest Price</option>
                 <option value="delivery" className="text-white bg-gray-800">Fastest Delivery</option>
-              </Select>
-            </div>
-          </div>
-        </div>
-
         {/* Results Count */}
         <div className="text-center mb-8">
           <p className="text-gray-300">
@@ -301,9 +281,6 @@ export default function ServicesShowcase() {
             {selectedCategory !== 'All Categories' && (
               <> in <span className="text-white font-semibold">{selectedCategory}</span></>
             )}
-          </p>
-        </div>
-
         {/* Services Grid */}
         {sortedServices.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -313,14 +290,10 @@ export default function ServicesShowcase() {
                   <div className="flex justify-between items-start">
                     <div className="group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
-                    </div>
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {service.category}
-                    </Badge>
-                  </div>
                   <CardTitle className="mt-4 text-white">{service.title}</CardTitle>
                   <CardDescription className="line-clamp-2 text-gray-300">{service.description}</CardDescription>
-                </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     <div>
@@ -330,10 +303,7 @@ export default function ServicesShowcase() {
                           <li key={index} className="text-xs text-gray-400 flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
                             {feature}
-                          </li>
                         ))}
-                      </ul>
-                    </div>
                     <div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Benefits</h4>
                       <ul className="space-y-1">
@@ -341,65 +311,40 @@ export default function ServicesShowcase() {
                           <li key={index} className="text-xs text-gray-400 flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                             {benefit}
-                          </li>
                         ))}
-                      </ul>
-                    </div>
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-green-400 font-semibold">Zion: {service.price}</span>
                       <span className="text-gray-500">Market: {service.marketPrice}</span>
-                    </div>
                     <div className="flex items-center gap-2 text-sm text-gray-400">
                       <div className="flex items-center gap-1">
                         <span className="text-yellow-400">★</span>
                         <span>{service.rating}</span>
                         <span>({service.reviewCount})</span>
-                      </div>
                       <span>•</span>
                       <span>{service.deliveryTime}</span>
-                    </div>
-                  </div>
-                </CardContent>
                 <CardFooter>
                   <Button asChild className="w-full gap-1 group-hover:bg-primary/90 transition-colors">
                     <Link to={service.link}>
                       <span>Get Started</span>
                       <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
             ))}
-          </div>
         ) : (
           <div className="text-center py-16">
             <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
             <p className="text-gray-500 text-sm mt-2">Try adjusting your search or category filters.</p>
-          </div>
         )}
-
         {/* CTA Section */}
         <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-12">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact our team for a custom quote tailored to your specific needs. We'll help you choose the right services and create a solution that fits your budget and timeline.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="cyber-button">
               <Link to="/request-quote">
                 <span>Request Custom Quote</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
             <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
               <Link to="/contact">
                 <span>Contact Our Team</span>
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </div>
-    </div>
   );
-}

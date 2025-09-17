@@ -1,7 +1,20 @@
-import React from 'react';
 
 const COMPONENT: React.FC = () => {
   return (
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                  </div>
+                </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+          </div>
+        </motion.div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -40,6 +53,7 @@ const COMPONENT: React.FC = () => {
             Explore Now
           </button>
         </div>
+>>>>>>> origin/merged-prs
       </div>
     </div>
   );

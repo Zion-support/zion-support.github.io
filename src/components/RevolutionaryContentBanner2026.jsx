@@ -13,11 +13,9 @@ import {
   Users,
   Award
 } from 'lucide-react';
-
 const RevolutionaryContentBanner2026 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const revolutionaryContent = [
     {
       id: 1,
@@ -75,7 +73,6 @@ const RevolutionaryContentBanner2026 = () => {
       stats: "19 min read • 11.3K views"
     }
   ];
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -83,9 +80,7 @@ const RevolutionaryContentBanner2026 = () => {
     }, 6000);
     return () => clearInterval(interval);
   }, []);
-
   const currentContent = revolutionaryContent[currentSlide];
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -103,7 +98,6 @@ const RevolutionaryContentBanner2026 = () => {
               <div className="absolute top-4 right-4 w-32 h-32 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-xl"></div>
               <div className="absolute bottom-4 left-4 w-24 h-24 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-lg"></div>
             </div>
-
             {/* Content */}
             <div className="relative z-10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -120,7 +114,6 @@ const RevolutionaryContentBanner2026 = () => {
                     NEW REVOLUTIONARY CONTENT 2026
                     <TrendingUp className="w-4 h-4" />
                   </motion.div>
-
                   {/* Title */}
                   <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -130,7 +123,6 @@ const RevolutionaryContentBanner2026 = () => {
                   >
                     {currentContent.title}
                   </motion.h2>
-
                   {/* Subtitle */}
                   <motion.h3
                     initial={{ opacity: 0, y: 20 }}
@@ -140,7 +132,6 @@ const RevolutionaryContentBanner2026 = () => {
                   >
                     {currentContent.subtitle}
                   </motion.h3>
-
                   {/* Description */}
                   <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -150,7 +141,6 @@ const RevolutionaryContentBanner2026 = () => {
                   >
                     {currentContent.description}
                   </motion.p>
-
                   {/* Stats */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -167,7 +157,6 @@ const RevolutionaryContentBanner2026 = () => {
                       <span className="text-sm font-semibold">FEATURED</span>
                     </div>
                   </motion.div>
-
                   {/* CTA Button */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -190,7 +179,6 @@ const RevolutionaryContentBanner2026 = () => {
                     </Link>
                   </motion.div>
                 </div>
-
                 {/* Right Side - Icon */}
                 <div className="flex-shrink-0">
                   <motion.div
@@ -209,7 +197,6 @@ const RevolutionaryContentBanner2026 = () => {
                 </div>
               </div>
             </div>
-
             {/* Navigation Dots */}
             <div className="flex justify-center mt-8 gap-2">
               {revolutionaryContent.map((_, index) => (
@@ -225,7 +212,6 @@ const RevolutionaryContentBanner2026 = () => {
               ))}
             </div>
           </div>
-
           {/* Quick Access Grid */}
           <div className="px-4 mb-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">More Revolutionary Content</h3>
@@ -261,6 +247,7 @@ const RevolutionaryContentBanner2026 = () => {
       )}
     </AnimatePresence>
   );
+
 };
 
 export default RevolutionaryContentBanner2026;

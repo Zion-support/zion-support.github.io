@@ -1,17 +1,5 @@
 import React from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
-
-interface ThemeToggleProps {
-  currentTheme: 'dark' | 'light';
-  onThemeChange: (theme: 'dark' | 'light') => void;
-}
-
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }) => {
-  const themes = [
-    { id: 'dark', icon: Moon, label: 'Dark Mode', color: 'from-gray-800 to-gray-900' },
-    { id: 'light', icon: Sun, label: 'Light Mode', color: 'from-yellow-400 to-orange-500' },
-  ] as const;
-
+const ThemeToggle: React.FC = () => {
   return (
     <div className="fixed top-32 right-6 z-50">
       <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl">
@@ -19,7 +7,6 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
           {themes.map((theme) => {
             const Icon = theme.icon;
             const isActive = currentTheme === theme.id;
-            
             return (
               <divbutton
                 key={theme.id}
@@ -33,7 +20,6 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
                 aria-label={`Switch to ${theme.label}`}
               >
                 <Icon className="w-5 h-5" />
-                
                 {/* Active indicator */}
                 {isActive && (
                   <div
@@ -42,10 +28,10 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
                 )}
               </divbutton>
             );
+};
           })}
         </div>
       </div>
-      
       {/* Theme indicator */}
       <div
         className="mt-3 text-center"
@@ -56,6 +42,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
       </div>
     </div>
   );
-};
+
 
 export default ThemeToggle;
+</div></div>

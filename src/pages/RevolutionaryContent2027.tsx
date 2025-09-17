@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { REVOLUTIONARY_BLOG_POSTS_2027, REVOLUTIONARY_CASE_STUDIES_2027, REVOLUTIONARY_SERVICES_2027 } from '../data/revolutionaryContent2026';
-
 const RevolutionaryContent2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -31,7 +30,6 @@ const RevolutionaryContent2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Featured Blog Posts */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +41,6 @@ const RevolutionaryContent2027: React.FC = () => {
               Dive deep into the latest breakthroughs in AI, quantum computing, and emerging technologies
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {REVOLUTIONARY_BLOG_POSTS_2027.map((post) => (
               <div key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -57,20 +54,16 @@ const RevolutionaryContent2027: React.FC = () => {
                     {post.urgency}
                   </span>
                 </div>
-                
                 <h3 className="text-2xl font-bold mb-4 text-white hover:text-purple-300 transition-colors">
                   {post.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 line-clamp-3">
                   {post.excerpt}
                 </p>
-                
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
                   <span>{post.author}</span>
                   <span>{post.readTime}</span>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4 text-sm text-gray-400">
                     <span>👁️ {post.views.toLocaleString()}</span>
@@ -88,7 +81,6 @@ const RevolutionaryContent2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Featured Case Studies */}
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,7 +92,6 @@ const RevolutionaryContent2027: React.FC = () => {
               See how leading companies are transforming their businesses with our cutting-edge technology
             </p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {REVOLUTIONARY_CASE_STUDIES_2027.map((caseStudy) => (
               <div key={caseStudy.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -114,23 +105,18 @@ const RevolutionaryContent2027: React.FC = () => {
                     Featured
                   </span>
                 </div>
-                
                 <h3 className="text-2xl font-bold mb-2 text-white">
                   {caseStudy.title}
                 </h3>
-                
                 <p className="text-lg text-blue-300 mb-4">
                   {caseStudy.company} • {caseStudy.industry}
                 </p>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-2">Challenge:</h4>
                   <p className="text-gray-300 text-sm mb-4">{caseStudy.challenge}</p>
-                  
                   <h4 className="text-lg font-semibold text-white mb-2">Solution:</h4>
                   <p className="text-gray-300 text-sm mb-4">{caseStudy.solution}</p>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-2">Results:</h4>
                   <ul className="text-gray-300 text-sm space-y-1">
@@ -142,7 +128,6 @@ const RevolutionaryContent2027: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="flex flex-wrap gap-2 mb-6">
                   {caseStudy.technologies.map((tech, index) => (
                     <span key={index} className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs border border-indigo-500/30">
@@ -150,7 +135,6 @@ const RevolutionaryContent2027: React.FC = () => {
                     </span>
                   ))}
                 </div>
-                
                 <div className="text-sm text-gray-400">
                   Duration: {caseStudy.duration}
                 </div>
@@ -159,7 +143,6 @@ const RevolutionaryContent2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Revolutionary Services */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +154,6 @@ const RevolutionaryContent2027: React.FC = () => {
               Transform your business with our cutting-edge AI and technology solutions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {REVOLUTIONARY_SERVICES_2027.map((service) => (
               <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -185,15 +167,12 @@ const RevolutionaryContent2027: React.FC = () => {
                     {service.urgency}
                   </span>
                 </div>
-                
                 <h3 className="text-2xl font-bold mb-4 text-white">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6">
                   {service.description}
                 </p>
-                
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -205,7 +184,6 @@ const RevolutionaryContent2027: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <div className="text-lg font-semibold text-indigo-300">
                     {service.pricing}
@@ -219,7 +197,6 @@ const RevolutionaryContent2027: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -247,6 +224,7 @@ const RevolutionaryContent2027: React.FC = () => {
       </section>
     </div>
   );
+
 };
 
 export default RevolutionaryContent2027;

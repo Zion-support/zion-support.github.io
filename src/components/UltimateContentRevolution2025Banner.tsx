@@ -1,42 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  Sparkles
-  ArrowRight
-  Star
-  Zap
-  Brain
-  Rocket,
-  TrendingUp,
-  Users,
-  Award,
-  ChevronRight,
-  X
-} from 'lucide-react';
-
-const UltimateContentRevolution2025Banner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  const features = [
-    { icon: Braintext: "Revolutionary AI Breakthroughs"color: "text-purple-400" },
-    { icon: Zaptext: "2,500% Average ROI"color: "text-blue-400" },
-    { icon: Rocketext: "Future Technology Predictions"color: "text-green-400" },
-    { icon: Userstext: "500+ Enterprise Clients"color: "text-yellow-400" }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
+import React from 'react';
+const UltimateContentRevolution2025Banner: React.FC = () => {
   return (
     <div>
       <div
@@ -47,12 +10,10 @@ const UltimateContentRevolution2025Banner = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10 animate-pulse" />
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-blue-500/5 to-transparent" />
         </div>
-
         {/* Floating Elements */}
         <div className="absolute top-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-ping" />
         <div className="absolute top-8 right-8 w-1 h-1 bg-purple-400 rounded-full animate-pulse" />
         <div className="absolute bottom-4 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" />
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             {/* Left Content */}
@@ -72,11 +33,9 @@ const UltimateContentRevolution2025Banner = () => {
                   ))}
                 </div>
               </div>
-
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                 Ultimate Content Revolution 2025
               </h2>
-              
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-3">
                   <div
                     key={currentFeature}
@@ -89,13 +48,11 @@ const UltimateContentRevolution2025Banner = () => {
                   </div>
                 </div>
               </div>
-
               <p className="text-gray-300 text-sm md:text-base max-w-2xl">
                 Discover revolutionary AI breakthroughsenterprise solutionsand future technology predictions 
                 that are transforming industries worldwide. Join 500+ companies already experiencing the AI revolution.
               </p>
             </div>
-
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 items-center">
               <a
@@ -106,7 +63,6 @@ const UltimateContentRevolution2025Banner = () => {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </a>
-
               <a
                 href="/ai-2025-ultimate-breakthrough"
                 className="group inline-flex items-center px-6 py-3 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white/30 transition-all duration-300"
@@ -116,7 +72,6 @@ const UltimateContentRevolution2025Banner = () => {
                 <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </div>
-
             {/* Close Button */}
             <button
               onClick={() => setIsVisible(false)}
@@ -125,14 +80,12 @@ const UltimateContentRevolution2025Banner = () => {
               <X className="h-5 w-5" />
             </button>
           </div>
-
           {/* Progress Bar */}
           <div className="mt-4 w-full bg-white/10 rounded-full h-1">
             <div
               className="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full"
             />
           </div>
-
           {/* Stats Row */}
           <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div className="flex items-center justify-center gap-2">
@@ -153,12 +106,13 @@ const UltimateContentRevolution2025Banner = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />
       </div>
     </div>
   );
+
 };
 
 export default UltimateContentRevolution2025Banner;
+</div></div></div></div></div></div></div>

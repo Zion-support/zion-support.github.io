@@ -14,7 +14,6 @@ import {
   Target
 } from 'lucide-react';
 import { newContent2027, newServices2027 } from '../data/newContent2027';
-
 const RevolutionaryContentShowcase2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -26,7 +25,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-1000"></div>
           <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-2000"></div>
         </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-medium mb-6">
@@ -56,7 +54,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,7 +77,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Featured Content */}
       <div className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,7 +88,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
               Explore the most advanced AI innovations and technological breakthroughs that are reshaping our world.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {newContent2027.map((content, index) => (
               <div key={content.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
@@ -108,7 +103,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                     <p className="text-white/90 text-sm">{content.description}</p>
                   </div>
                 </div>
-                
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-2">
@@ -127,7 +121,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                       <p className="text-sm text-gray-500">{content.publishDate}</p>
                     </div>
                   </div>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {content.tags.slice(0, 3).map((tag) => (
                       <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
@@ -135,7 +128,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
                   <button className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                     <div className="flex items-center justify-center">
                       <span>Read More</span>
@@ -148,7 +140,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Services Section */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,7 +151,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
               Transform your business with our cutting-edge AI solutions and interdimensional technologies.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {newServices2027.map((service, index) => (
               <div key={service.id} className="group relative bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-200">
@@ -172,7 +162,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     {index === 0 && <Globe className="w-8 h-8 text-white" />}
@@ -183,7 +172,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="text-3xl font-bold text-purple-600 mb-4">{service.price}</div>
                 </div>
-
                 <div className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
@@ -192,7 +180,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 <button className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-center">
                     <span>Get Started</span>
@@ -204,7 +191,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -214,7 +200,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of forward-thinking companies already using our revolutionary AI solutions to reshape their industries and unlock infinite possibilities.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-white font-bold text-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
               <div className="flex items-center justify-center">
@@ -229,7 +214,6 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
               </div>
             </button>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-purple-300 mb-2">10,000+</div>
@@ -252,6 +236,7 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryContentShowcase2027;

@@ -17,10 +17,8 @@ import {
   Star,
   Sparkles
 } from 'lucide-react';
-
 const AITrendsInsights2026 = () => {
   const [activeTab, setActiveTab] = useState('trends');
-
   const trends = [
     {
       title: "Conscious AI Systems",
@@ -59,7 +57,6 @@ const AITrendsInsights2026 = () => {
       stats: "200+ countries participating"
     }
   ];
-
   const insights = [
     {
       category: "Market Analysis",
@@ -92,7 +89,6 @@ const AITrendsInsights2026 = () => {
       ]
     }
   ];
-
   const predictions = [
     {
       year: "2026",
@@ -119,7 +115,6 @@ const AITrendsInsights2026 = () => {
       impact: "Paradigm-shifting"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
@@ -148,7 +143,6 @@ const AITrendsInsights2026 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Navigation Tabs */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -174,7 +168,6 @@ const AITrendsInsights2026 = () => {
           </div>
         </div>
       </section>
-
       {/* Trends Tab */}
       {activeTab === 'trends' && (
         <section className="py-12 px-4 sm:px-6 lg:px-8">
@@ -207,10 +200,8 @@ const AITrendsInsights2026 = () => {
                       </span>
                     </div>
                   </div>
-                  
                   <h3 className="text-xl font-bold text-white mb-3">{trend.title}</h3>
                   <p className="text-gray-300 mb-4">{trend.description}</p>
-                  
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-2 text-gray-400">
                       <Calendar className="w-4 h-4" />
@@ -226,7 +217,6 @@ const AITrendsInsights2026 = () => {
           </div>
         </section>
       )}
-
       {/* Insights Tab */}
       {activeTab === 'insights' && (
         <section className="py-12 px-4 sm:px-6 lg:px-8">
@@ -253,10 +243,8 @@ const AITrendsInsights2026 = () => {
                       {insight.category}
                     </span>
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">{insight.title}</h3>
                   <p className="text-gray-300 mb-6 text-lg">{insight.content}</p>
-                  
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {insight.metrics.map((metric, idx) => (
                       <div key={idx} className="bg-white/5 rounded-lg p-4 text-center">
@@ -272,7 +260,6 @@ const AITrendsInsights2026 = () => {
           </div>
         </section>
       )}
-
       {/* Predictions Tab */}
       {activeTab === 'predictions' && (
         <section className="py-12 px-4 sm:px-6 lg:px-8">
@@ -306,9 +293,7 @@ const AITrendsInsights2026 = () => {
                       <div className="text-gray-300 text-sm">Probability</div>
                     </div>
                   </div>
-                  
                   <h3 className="text-lg font-semibold text-white mb-3">{prediction.prediction}</h3>
-                  
                   <div className="flex items-center gap-2">
                     <span className="text-sm text-gray-300">Impact Level:</span>
                     <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
@@ -326,7 +311,6 @@ const AITrendsInsights2026 = () => {
           </div>
         </section>
       )}
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -366,6 +350,7 @@ const AITrendsInsights2026 = () => {
       </section>
     </div>
   );
+
 };
 
 export default AITrendsInsights2026;

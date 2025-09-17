@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryTechBanner2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20">
@@ -9,7 +8,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M50 50c0-27.614-22.386-50-50-50v50h50z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center">
           {/* Badge */}
@@ -17,7 +15,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
             <span className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></span>
             REVOLUTIONARY TECHNOLOGY 2026
           </div>
-
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             The Future is
@@ -25,13 +22,11 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               Here Today
             </span>
           </h1>
-
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Experience breakthrough technologies that are transforming industries and reshaping the digital landscape. 
             From AI automation to quantum computing, discover solutions that deliver unprecedented results.
           </p>
-
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             <div className="text-center">
@@ -51,7 +46,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               <div className="text-gray-300 text-sm">Uptime</div>
             </div>
           </div>
-
           {/* Feature Highlights */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -72,7 +66,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
                 </svg>
               </Link>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,7 +84,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
                 </svg>
               </Link>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +103,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link 
@@ -127,7 +118,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {
               Explore All Technologies
             </Link>
           </div>
-
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-white/20">
             <p className="text-gray-400 text-sm mb-6">Trusted by leading organizations worldwide</p>
@@ -142,6 +132,8 @@ const RevolutionaryTechBanner2026: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default RevolutionaryTechBanner2026;
+</p></p></p></p></p></p>

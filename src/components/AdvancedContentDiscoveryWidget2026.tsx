@@ -1,210 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Search
-  Filter
-  TrendingUp
-  Clock
-  Star
-  BookOpen
-  Play
-  Download,
-  Share2,
-  Heart,
-  Eye,
-  ChevronDown,
-  Sparkles,
-  Zap,
-  Brain,
-  Rocket,
-  Target,
-  Users,
-  Award,
-  Globe,
-  Shield
-} from 'lucide-react';
-
-const AdvancedContentDiscoveryWidget2026 = () => {
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [sortBysetSortBy] = useState('trending');
-  const [showFiltersetShowFilters] = useState(false);
-  const [favoritesetFavorites] = useState(new Set());
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Globecolor: 'from-blue-500 to-cyan-500' },
-    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-cyan-500 to-teal-500' },
-    { id: ''automation', 'name: ''Automation', 'icon: Rocketcolor: 'from-orange-500 to-red-500' },
-    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Targetcolor: 'from-green-500 to-emerald-500' },
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BookOpencolor: 'from-indigo-500 to-purple-500' },
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: Playcolor: 'from-yellow-500 to-orange-500' }
-  ];
-
-  const contentItems = [
-    {
-      id: 1,
-      title: 'Neural Architecture Revolution 2026',
-      description: 'Breakthrough neural networks that mimic human consciousness with unprecedented accuracy and efficiency.',
-      category: 'ai-innovations',
-      type: 'article',
-      readTime: '12 min',
-      views: 15420,
-      likes: 892,
-      rating: 4.9,
-      featured: true,
-      trending: true,
-      tags: [', 'AI', 'Neural 'Networks', 'Consciousness'Machine Learning'],
-      author: 'Dr. Sarah Chen',
-      publishedAt: '2026-01-15',
-      thumbnail: '/api/placeholder/400/250'
-    },
-    {
-      id: 2,
-      title: 'Quantum AI Fusion: The Next Frontier',
-      description: 'Exploring the convergence of quantum computing and artificial intelligence for exponential computational power.',
-      category: 'quantum-computing',
-      type: 'video',
-      readTime: '25 min',
-      views: 22350,
-      likes: 1245,
-      rating: 4.8,
-      featured: true,
-      trending: true,
-      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Computational Power'],
-      author: 'Prof. Michael Rodriguez',
-      publishedAt: '2026-01-12',
-      thumbnail: '/api/placeholder/400/250'
-    },
-    {
-      id: 3,
-      title: 'Autonomous Business Operations Guide',
-      description: 'Complete implementation guide for autonomous business processes with real-world case studies.',
-      category: 'automation',
-      type: 'guide',
-      readTime: '18 min',
-      views: 18750,
-      likes: 967,
-      rating: 4.7,
-      featured: false,
-      trending: true,
-      tags: [', 'Automation', 'Business', 'Operations', 'Implementation'],
-      author: 'Alex Thompson',
-      publishedAt: '2026-01-10',
-      thumbnail: '/api/placeholder/400/250'
-    },
-    {
-      id: 4,
-      title: 'Future Predictions: AI Consciousness by 2027',
-      description: 'Comprehensive analysis of AI consciousness emergence and its implications for society.',
-      category: 'predictions',
-      type: 'report',
-      readTime: '30 min',
-      views: 31200,
-      likes: 1856,
-      rating: 4.9,
-      featured: true,
-      trending: false,
-      tags: [', 'Predictions', 'AI 'Consciousness', 'Future'Society'],
-      author: 'Dr. Elena Volkov',
-      publishedAt: '2026-01-08',
-      thumbnail: '/api/placeholder/400/250'
-    },
-    {
-      id: 5,
-      title: 'Case Study: Enterprise AI Transformation',
-      description: 'How Fortune 500 companies achieved 500% ROI through AI implementation strategies.',
-      category: 'case-studies',
-      type: 'case-study',
-      readTime: '15 min',
-      views: 12890,
-      likes: 743,
-      rating: 4.6,
-      featured: false,
-      trending: true,
-      tags: ['Case 'Study', 'Enterprise', 'ROI', 'Transformation'],
-      author: 'Jennifer Walsh',
-      publishedAt: '2026-01-05',
-      thumbnail: '/api/placeholder/400/250'
-    },
-    {
-      id: 6,
-      title: 'Interactive AI Tutorial: Building Neural Networks',
-      description: 'Step-by-step tutorial for building advanced neural networks with hands-on exercises.',
-      category: 'tutorials',
-      type: 'tutorial',
-      readTime: '45 min',
-      views: 25670,
-      likes: 1345,
-      rating: 4.8,
-      featured: false,
-      trending: false,
-      tags: [', 'Tutorial', 'Neural 'Networks', 'Hands-'on', 'Learning'],
-      author: 'David Kim',
-      publishedAt: '2026-01-03',
-      thumbnail: '/api/placeholder/400/250'
-    }
-  ];
-
-  const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const sortedContent = [...filteredContent].sort((ab) => {
-    switch (sortBy) {
-      case 'trending':
-        return b.views - a.views;
-      case 'rating':
-        return b.rating - a.rating;
-      case 'newest':
-        return new Date(b.publishedAt) - new Date(a.publishedAt);
-      case 'popular':
-        return b.likes - a.likes;
-      default:
-        return 0;
-    }
-  });
-
-  const toggleFavorite = (id) => {
-    const newFavorites = new Set(favorites);
-    if (newFavorites.has(id)) {
-      newFavorites.delete(id);
-    } else {
-      newFavorites.add(id);
-    }
-    setFavorites(newFavorites);
-  };
-
-  const getTypeIcon = (type) => {
-    switch (type) {
-      case 'video': return Play;
-      case 'article': return BookOpen;
-      case 'guide': return Target;
-      case 'report': return TrendingUp;
-      case 'case-study': return Users;
-      case 'tutorial': return Play;
-      default: return BookOpen;
-    }
-  };
-
-  const getTypeColor = (type) => {
-    switch (type) {
-      case 'video': return 'from-red-500 to-pink-500';
-      case 'article': return 'from-blue-500 to-cyan-500';
-      case 'guide': return 'from-green-500 to-emerald-500';
-      case 'report': return 'from-purple-500 to-indigo-500';
-      case 'case-study': return 'from-orange-500 to-yellow-500';
-      case 'tutorial': return 'from-teal-500 to-cyan-500';
-      default: return 'from-gray-500 to-slate-500';
-    }
-  };
-
+import React from 'react';
+const AdvancedContentDiscoveryWidget2026: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 shadow-2xl">
@@ -224,7 +19,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
             Explore cutting-edge innovationspredictionsand solutions with our intelligent content discovery system.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
@@ -239,7 +33,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Sort Dropdown */}
             <div className="relative">
               <select
@@ -254,7 +47,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
               </select>
               <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
             </div>
-
             {/* Filter Toggle */}
             <button
               onClick={() => setShowFilters(!showFilters)}
@@ -264,7 +56,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
               Filters
             </button>
           </div>
-
           {/* Category Filters */}
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => {
@@ -283,10 +74,10 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                   {category.name}
                 </button>
               );
+};
             })}
           </div>
         </div>
-
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div>
@@ -309,7 +100,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                         </div>
                       </div>
                     )}
-
                     {/* Trending Badge */}
                     {item.trending && (
                       <div className="absolute top-4 right-4 z-10">
@@ -319,7 +109,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                         </div>
                       </div>
                     )}
-
                     {/* Thumbnail */}
                     <div className="relative h-48 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-cyan-600/30"></div>
@@ -329,7 +118,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* Content */}
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-3">
@@ -350,15 +138,12 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                           <Heart className={`w-4 h-4 ${favorites.has(item.id) ? 'fill-current' : ''}`} />
                         </button>
                       </div>
-
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">
                         {item.title}
                       </h3>
-
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">
                         {item.description}
                       </p>
-
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-4">
                         {item.tags.slice(03).map((tagIndex) => (
@@ -370,7 +155,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                           </span>
                         ))}
                       </div>
-
                       {/* Stats */}
                       <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                         <div className="flex items-center gap-4">
@@ -392,7 +176,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                           {item.readTime}
                         </div>
                       </div>
-
                       {/* Author */}
                       <div className="flex items-center justify-between">
                         <div className="text-sm text-gray-400">
@@ -414,7 +197,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
             })}
           </div>
         </div>
-
         {/* Load More */}
         <div className="text-center mt-12">
           <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300">
@@ -424,6 +206,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       </div>
     </div>
   );
-};
+
 
 export default AdvancedContentDiscoveryWidget2026;

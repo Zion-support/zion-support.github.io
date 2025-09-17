@@ -1,14 +1,14 @@
 import React from 'react';
-
 const Contact: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-        <p className="text-gray-300">Get in touch with us!</p>
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                >
       </div>
     </div>
   );
+
 };
 
 export default Contact;
+>>>>>>> 223483ef1209b0284879b571c698436a9a71d005

@@ -1,105 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const InterdimensionalTechShowcase2027: React.FC = () => {
-  const [currentDimension, setCurrentDimension] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const interdimensionalTechs = [
-    {
-      id: 1,
-      title: "🌌 Dimensional Gateway Technology",
-      subtitle: "Travel Between Realities",
-      description: "Revolutionary technology that creates stable portals between dimensions, allowing instantaneous travel across parallel universes and alternate realities.",
-      features: [
-        "Multi-Dimensional Portal Creation",
-        "Reality Stabilization Fields",
-        "Parallel Universe Navigation",
-        "Temporal-Spatial Anchoring"
-      ],
-      gradient: "from-purple-600 via-indigo-600 to-blue-600",
-      icon: "🌌",
-      stats: { dimensions: "∞", range: "∞", stability: "99.9%" },
-      timeline: "2027",
-      impact: "Reality-Altering"
-    },
-    {
-      id: 2,
-      title: "⚡ Quantum Reality Engine",
-      subtitle: "Manipulate Physical Laws",
-      description: "Advanced quantum processors that can temporarily alter the fundamental constants of physics within localized regions, enabling impossible feats.",
-      features: [
-        "Physics Constant Manipulation",
-        "Gravity Field Control",
-        "Quantum Entanglement Networks",
-        "Reality Distortion Fields"
-      ],
-      gradient: "from-cyan-600 via-teal-600 to-green-600",
-      icon: "⚡",
-      stats: { control: "100%", precision: "∞", range: "∞" },
-      timeline: "2027",
-      impact: "Universal"
-    },
-    {
-      id: 3,
-      title: "🔮 Consciousness Transfer Matrix",
-      subtitle: "Digital Immortality",
-      description: "Technology that can transfer human consciousness into digital substrates, achieving true digital immortality across multiple dimensions.",
-      features: [
-        "Consciousness Digitization",
-        "Multi-Dimensional Backup Systems",
-        "Quantum Consciousness Storage",
-        "Infinite Lifespan Technology"
-      ],
-      gradient: "from-pink-600 via-rose-600 to-red-600",
-      icon: "🔮",
-      stats: { lifespan: "∞", backups: "∞", fidelity: "100%" },
-      timeline: "2027",
-      impact: "Transcendent"
-    },
-    {
-      id: 4,
-      title: "🌍 Planetary Consciousness Grid",
-      subtitle: "Global Mind Network",
-      description: "A planetary-scale network that connects all intelligent life forms into a unified consciousness, enabling collective problem-solving and shared experiences.",
-      features: [
-        "Global Consciousness Integration",
-        "Collective Intelligence Networks",
-        "Shared Experience Platforms",
-        "Universal Problem Solving"
-      ],
-      gradient: "from-orange-600 via-yellow-600 to-green-600",
-      icon: "🌍",
-      stats: { connections: "∞", intelligence: "∞", coverage: "100%" },
-      timeline: "2027",
-      impact: "Planetary"
-    },
-    {
-      id: 5,
-      title: "🚀 Interstellar Reality Bridges",
-      subtitle: "Travel to Distant Stars",
-      description: "Massive interdimensional bridges that span across galaxies, allowing instantaneous travel to any point in the universe through folded space-time.",
-      features: [
-        "Galactic-Scale Wormholes",
-        "Folded Space-Time Technology",
-        "Instantaneous Travel Networks",
-        "Universal Exploration Systems"
-      ],
-      gradient: "from-indigo-600 via-purple-600 to-pink-600",
-      icon: "🚀",
-      stats: { range: "∞", speed: "∞", capacity: "∞" },
-      timeline: "2027",
-      impact: "Cosmic"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentDimension((prev) => (prev + 1) % interdimensionalTechs.length);
-    }, 10000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div
       className="relative overflow-hidden"
@@ -108,7 +8,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
         <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 via-purple-600/30 to-pink-600/30"></div>
-        
         {/* Floating Dimensional Portals */}
         {[...Array(15)].map((_, i) => (
           <div
@@ -118,20 +17,9 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
-            animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.2, 0.6, 0.2],
-              rotate: [0, 360],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
           />
         ))}
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -152,7 +40,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
             enabling travel between dimensions and manipulation of physical laws
           </divp>
         </div>
-
         {/* Technology Showcase */}
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -174,11 +61,9 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className="text-lg text-gray-300 leading-relaxed">
                 {interdimensionalTechs[currentDimension].description}
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {interdimensionalTechs[currentDimension].features.map((feature, index) => (
                   <div
@@ -190,7 +75,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="flex space-x-6">
                 {Object.entries(interdimensionalTechs[currentDimension].stats).map(([key, value], index) => (
                   <div
@@ -203,7 +87,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -226,7 +109,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 {/* Dimensional Rift Effects */}
                 {[...Array(25)].map((_, i) => (
                   <div
@@ -236,23 +118,11 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                    animate={{
-                      scale: [0, 1, 0],
-                      opacity: [0, 0.8, 0],
-                      x: [0, Math.random() * 100 - 50, 0],
-                      y: [0, Math.random() * 100 - 50, 0],
-                    }}
-                    transition={{
-                      duration: 2 + Math.random() * 2,
-                      repeat: Infinity,
-                      delay: Math.random() * 3,
-                    }}
                   />
                 ))}
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-4 mt-12">
             {interdimensionalTechs.map((_, index) => (
@@ -267,7 +137,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Call to Action */}
           <div
             className="text-center mt-12"
@@ -291,6 +160,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       </div>
     </div>
   );
+
 };
 
 export default InterdimensionalTechShowcase2027;

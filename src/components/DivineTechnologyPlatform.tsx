@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface DivineTechnology {
   id: string;
   name: string;
@@ -19,8 +18,6 @@ interface DivineTechnology {
   divineCapabilities: string[];
   universalFeatures: string[];
   transcendentCapabilities: string[];
-}
-
 interface DivineTechnologyMetrics {
   totalDivineTechnologies: number;
   activeDivineTechnologies: number;
@@ -32,13 +29,12 @@ interface DivineTechnologyMetrics {
   universalIntegrationProgress: number;
   divineCoherenceLevel: number;
   consciousnessLevel: number;
-}
-
 interface DivineTechnologyPlatformProps {
   showMetrics?: boolean;
   maxTechnologies?: number;
   className?: string;
-}
+};
+
 
 export default function DivineTechnologyPlatform({ 
   showMetrics = true, 
@@ -56,12 +52,10 @@ export default function DivineTechnologyPlatform({
     complexity: 'divine_basic' as const,
     description: ''
   });
-
   useEffect(() => {
     const generateDivineTechnologyData = async () => {
       try {
         await new Promise(resolve => setTimeout(resolve, 2900));
-        
         const mockDivineTechnologies: DivineTechnology[] = [
           {
             id: 'divine-universal-v1',
@@ -159,7 +153,6 @@ export default function DivineTechnologyPlatform({
             transcendentCapabilities: ['Divine Advancement', 'Eternal Consciousness', 'Advanced Wisdom', 'Eternal Understanding']
           }
         ];
-
         const mockMetrics: DivineTechnologyMetrics = {
           totalDivineTechnologies: 5,
           activeDivineTechnologies: 5,
@@ -172,7 +165,6 @@ export default function DivineTechnologyPlatform({
           divineCoherenceLevel: 99.1,
           consciousnessLevel: 98.3
         };
-
         setDivineTechnologies(mockDivineTechnologies);
         setMetrics(mockMetrics);
       } catch (error) {
@@ -181,10 +173,8 @@ export default function DivineTechnologyPlatform({
         setLoading(false);
       }
     };
-
     generateDivineTechnologyData();
   }, [maxTechnologies]);
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'divine_universal': return 'bg-pink-500/20 text-pink-400 border-pink-500/30';
@@ -196,7 +186,6 @@ export default function DivineTechnologyPlatform({
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   };
-
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'divine_universal': return '🌟🌌';
@@ -208,7 +197,6 @@ export default function DivineTechnologyPlatform({
       default: return '🌟';
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'divine_initialization': return 'bg-gray-500/20 text-gray-400';
@@ -220,7 +208,6 @@ export default function DivineTechnologyPlatform({
       default: return 'bg-gray-500/20 text-gray-400';
     }
   };
-
   const getComplexityColor = (complexity: string) => {
     switch (complexity) {
       case 'divine_basic': return 'bg-green-500/20 text-green-400';
@@ -232,13 +219,11 @@ export default function DivineTechnologyPlatform({
       default: return 'bg-gray-500/20 text-gray-400';
     }
   };
-
   const handleDivineAwakening = async (technologyId: string) => {
     setDivineAwakening(technologyId);
     try {
       // Simulate divine awakening process
       await new Promise(resolve => setTimeout(resolve, 14000));
-      
       // Update the divine technology
       setDivineTechnologies(prev => prev.map(tech => 
         tech.id === technologyId 
@@ -255,7 +240,6 @@ export default function DivineTechnologyPlatform({
             }
           : tech
       ));
-      
       console.log(`Awakened divine technology ${technologyId}`);
     } catch (error) {
       console.error('Error during divine awakening:', error);
@@ -263,10 +247,8 @@ export default function DivineTechnologyPlatform({
       setDivineAwakening(null);
     }
   };
-
   const handleCreateTechnology = async () => {
     if (!newTechnology.name || !newTechnology.description) return;
-    
     const technology: DivineTechnology = {
       id: Date.now().toString(),
       name: newTechnology.name,
@@ -288,7 +270,6 @@ export default function DivineTechnologyPlatform({
       universalFeatures: ['Universal Foundation', 'Basic Technology', 'Integration'],
       transcendentCapabilities: ['Basic Consciousness', 'Foundation', 'Initiation']
     };
-    
     setDivineTechnologies(prev => [technology, ...prev]);
     setNewTechnology({
       name: '',
@@ -298,7 +279,6 @@ export default function DivineTechnologyPlatform({
     });
     setShowTechnologyCreator(false);
   };
-
   if (loading) {
     return (
       <div className={`animate-pulse ${className}`}>
@@ -308,22 +288,15 @@ export default function DivineTechnologyPlatform({
               <div className="h-4 bg-slate-700 rounded mb-2"></div>
               <div className="h-3 bg-slate-700 rounded mb-2"></div>
               <div className="h-3 bg-slate-700 rounded w-2/3"></div>
-            </div>
           ))}
-        </div>
-      </div>
     );
-  }
-
+  };
   return (
     <div className={className}>
       <div className="mb-6">
         <h3 className="text-xl font-semibold text-white mb-2">🌟🌌 Divine Technology Platform</h3>
         <p className="text-white/70 text-sm">
           Divine-powered universal technology integration with transcendent divine capabilities
-        </p>
-      </div>
-
       {/* Create New Divine Technology Button */}
       <div className="mb-6">
         <button
@@ -331,14 +304,10 @@ export default function DivineTechnologyPlatform({
           className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white px-4 py-2 rounded-lg font-medium transition-all"
         >
           {showTechnologyCreator ? 'Cancel' : '➕ Create New Divine Technology'}
-        </button>
-      </div>
-
       {/* New Technology Form */}
       {showTechnologyCreator && (
         <div className="bg-slate-800/30 border border-white/10 rounded-lg p-4 mb-6">
           <h4 className="font-medium text-cyan-400 mb-3">Create New Divine Technology</h4>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-sm text-white/70 mb-1">Technology Name</label>
@@ -349,8 +318,6 @@ export default function DivineTechnologyPlatform({
                 className="w-full bg-slate-700 border border-white/10 rounded px-3 py-2 text-white text-sm"
                 placeholder="Enter divine technology name..."
               />
-            </div>
-            
             <div>
               <label className="block text-sm text-white/70 mb-1">Technology Type</label>
               <select
@@ -364,9 +331,6 @@ export default function DivineTechnologyPlatform({
                 <option value="divine_omnipotent">Divine Omnipotent</option>
                 <option value="divine_eternal">Divine Eternal</option>
                 <option value="divine_absolute">Divine Absolute</option>
-              </select>
-            </div>
-            
             <div>
               <label className="block text-sm text-white/70 mb-1">Complexity Level</label>
               <select
@@ -380,10 +344,6 @@ export default function DivineTechnologyPlatform({
                 <option value="divine_master">Divine Master</option>
                 <option value="divine_transcendent">Divine Transcendent</option>
                 <option value="divine_absolute">Divine Absolute</option>
-              </select>
-            </div>
-          </div>
-          
           <div className="mb-4">
             <label className="block text-sm text-white/70 mb-1">Description</label>
             <textarea
@@ -393,80 +353,56 @@ export default function DivineTechnologyPlatform({
               rows={3}
               placeholder="Describe the divine technology..."
             />
-          </div>
-          
           <div className="flex gap-3">
             <button
               onClick={handleCreateTechnology}
               className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
             >
               Create Technology
-            </button>
             <button
               onClick={() => setShowTechnologyCreator(false)}
               className="bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
             >
               Cancel
-            </button>
-          </div>
-        </div>
       )}
-
       {/* Divine Technology Metrics Overview */}
       {showMetrics && metrics && (
         <div className="bg-slate-800/30 border border-white/10 rounded-lg p-4 mb-6">
           <h4 className="font-medium text-cyan-400 mb-3">📊 Divine Technology Overview</h4>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
             <div className="text-center">
               <div className="text-2xl font-bold text-white mb-1">{metrics.totalDivineTechnologies}</div>
               <div className="text-xs text-white/60">Total Divine Technologies</div>
-            </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-white mb-1">{metrics.activeDivineTechnologies}</div>
               <div className="text-xs text-white/60">Active Divine Technologies</div>
-            </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-white mb-1">{metrics.averageDivineCapability.toFixed(1)}%</div>
               <div className="text-xs text-white/60">Avg Divine Capability</div>
-            </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-white mb-1">{metrics.totalUniversalScope.toFixed(1)}</div>
               <div className="text-xs text-white/60">Total Universal Scope</div>
-            </div>
-          </div>
-          
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Divine Efficiency:</span>
               <span className="text-green-400">{metrics.divineEfficiency}%</span>
-            </div>
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Transcendent Power Score:</span>
               <span className="text-cyan-400">{metrics.transcendentPowerScore}/100</span>
-            </div>
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Universal Integration Progress:</span>
               <span className="text-purple-400">{metrics.universalIntegrationProgress}%</span>
-            </div>
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Divine Coherence Level:</span>
               <span className="text-indigo-400">{metrics.divineCoherenceLevel}/100</span>
-            </div>
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Consciousness Level:</span>
               <span className="text-pink-400">{metrics.consciousnessLevel}/100</span>
-            </div>
             <div className="flex justify-between text-sm">
               <span className="text-white/60">Last Update:</span>
               <span className="text-white text-xs">
                 {new Date(metrics.lastDivineUpdate).toLocaleString()}
-              </span>
-            </div>
-          </div>
-        </div>
       )}
-
       {/* Divine Technologies */}
       <div className="space-y-4">
         {divineTechnologies.slice(0, maxTechnologies).map((technology) => (
@@ -479,28 +415,15 @@ export default function DivineTechnologyPlatform({
                   <div className="flex items-center gap-2 text-sm text-white/70">
                     <span className={`px-2 py-1 rounded text-xs ${getStatusColor(technology.status)}`}>
                       {technology.status.replace('divine_', '')}
-                    </span>
                     <span className={`px-2 py-1 rounded text-xs ${getComplexityColor(technology.complexity)}`}>
                       {technology.complexity.replace('divine_', '')}
-                    </span>
-                  </div>
-                </div>
-              </div>
-              
               <div className="text-right">
                 <span className={`px-2 py-1 rounded text-xs font-medium border ${getTypeColor(technology.type)}`}>
                   {technology.type.replace('divine_', '').toUpperCase()}
-                </span>
                 <div className="text-sm text-white/60 mt-1">
                   {technology.divineEfficiency.toFixed(1)}% efficiency
-                </div>
-              </div>
-            </div>
-
             <div className="mb-3">
               <p className="text-white/80 text-sm">{technology.description}</p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <div className="space-y-2 text-sm">
@@ -508,45 +431,29 @@ export default function DivineTechnologyPlatform({
                     <span className="text-white/60">Status:</span>
                     <span className={`px-2 py-1 rounded text-xs ${getStatusColor(technology.status)}`}>
                       {technology.status.replace('divine_', '').toUpperCase()}
-                    </span>
-                  </div>
                   <div className="flex items-center justify-between">
                     <span className="text-white/60">Divine Capability:</span>
                     <span className="text-pink-400">{technology.divineCapability.toFixed(1)}%</span>
-                  </div>
                   <div className="flex items-center justify-between">
                     <span className="text-white/60">Universal Integration:</span>
                     <span className="text-indigo-400">{technology.universalIntegration.toFixed(1)}%</span>
-                  </div>
                   <div className="flex items-center justify-between">
                     <span className="text-white/60">Transcendent Power:</span>
                     <span className="text-emerald-400">{technology.transcendentPower.toFixed(1)}%</span>
-                  </div>
-                </div>
-              </div>
-              
               <div>
                 <div className="space-y-2 text-sm">
                   <div className="flex items-center justify-between">
                     <span className="text-white/60">Performance:</span>
                     <span className="text-white">{technology.performance}/100</span>
-                  </div>
                   <div className="flex items-center justify-between">
                     <span className="text-white/60">Divine Efficiency:</span>
                     <span className="text-cyan-400">{technology.divineEfficiency.toFixed(1)}%</span>
-                  </div>
                   <div className="flex items-center justify-between">
                     <span className="text-white/60">Universal Scope:</span>
                     <span className="text-amber-400">{technology.universalScope.toFixed(1)}%</span>
-                  </div>
                   <div className="flex items-center justify-between">
                     <span className="text-white/60">Consciousness:</span>
                     <span className="text-purple-400">{technology.consciousness.toFixed(1)}%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Divine Capabilities */}
             <div className="mb-4">
               <div className="text-sm text-white/60 mb-2">Divine Capabilities:</div>
@@ -554,11 +461,7 @@ export default function DivineTechnologyPlatform({
                 {technology.divineCapabilities.map((capability, index) => (
                   <span key={index} className="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded border border-pink-500/30">
                     {capability}
-                  </span>
                 ))}
-              </div>
-            </div>
-
             {/* Universal Features */}
             <div className="mb-4">
               <div className="text-sm text-white/60 mb-2">Universal Features:</div>
@@ -566,11 +469,7 @@ export default function DivineTechnologyPlatform({
                 {technology.universalFeatures.map((feature, index) => (
                   <span key={index} className="px-2 py-1 bg-indigo-500/20 text-indigo-400 text-xs rounded border border-indigo-500/30">
                     {feature}
-                  </span>
                 ))}
-              </div>
-            </div>
-
             {/* Transcendent Capabilities */}
             <div className="mb-4">
               <div className="text-sm text-white/60 mb-2">Transcendent Capabilities:</div>
@@ -578,25 +477,17 @@ export default function DivineTechnologyPlatform({
                 {technology.transcendentCapabilities.map((capability, index) => (
                   <span key={index} className="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded border border-emerald-500/30">
                     {capability}
-                  </span>
                 ))}
-              </div>
-            </div>
-
             {/* Divine Technology Progress Visualization */}
             <div className="space-y-2 mb-4">
               <div className="flex justify-between text-xs text-white/60">
                 <span>Overall Divine Technology Performance</span>
                 <span>{Math.round((technology.divineCapability + technology.universalIntegration + technology.transcendentPower + technology.performance + technology.divineEfficiency + technology.universalScope + technology.consciousness) / 7)}/100</span>
-              </div>
               <div className="w-full bg-slate-700 rounded-full h-2">
                 <div 
                   className="bg-gradient-to-r from-pink-500 to-purple-500 h-2 rounded-full transition-all duration-300"
                   style={{ width: `${(technology.divineCapability + technology.universalIntegration + technology.transcendentPower + technology.performance + technology.divineEfficiency + technology.universalScope + technology.consciousness) / 7}%` }}
                 ></div>
-              </div>
-            </div>
-
             <div className="flex items-center justify-between">
               <div className="text-sm text-white/60">
                 {technology.status === 'divine_absolution' && 'Divine technology has achieved absolute divine capabilities'}
@@ -605,8 +496,6 @@ export default function DivineTechnologyPlatform({
                 {technology.status === 'divine_integration' && 'Divine technology has achieved divine integration'}
                 {technology.status === 'divine_awakening' && 'Divine technology is awakening divine capabilities'}
                 {technology.status === 'divine_initialization' && 'Divine technology is initializing divine capabilities'}
-              </div>
-              
               {technology.status !== 'divine_absolution' && (
                 <button
                   onClick={() => handleDivineAwakening(technology.id)}
@@ -614,13 +503,8 @@ export default function DivineTechnologyPlatform({
                   className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 disabled:opacity-50 text-white px-4 py-2 rounded-lg font-medium transition-all"
                 >
                   {divineAwakening === technology.id ? 'Awakening...' : '🌟🌌 Awaken Divine Technology'}
-                </button>
               )}
-            </div>
-          </div>
         ))}
-      </div>
-
       {/* Divine Technology Type Distribution */}
       <div className="mt-6 bg-slate-800/30 border border-white/10 rounded-lg p-4">
         <h4 className="font-medium text-cyan-400 mb-3">🌟🌌 Divine Technology Type Distribution</h4>
@@ -629,29 +513,22 @@ export default function DivineTechnologyPlatform({
             const count = divineTechnologies.filter(tech => tech.type === type).length;
             const total = divineTechnologies.length;
             const percentage = total > 0 ? (count / total) * 100 : 0;
-            
             return (
               <div key={type} className="text-center">
                 <div className="text-2xl mb-1">{getTypeIcon(type)}</div>
                 <div className="text-white font-medium capitalize">
                   {type.replace('divine_', '')}
-                </div>
                 <div className="text-cyan-400">{count}/{total}</div>
                 <div className="text-xs text-white/60">{percentage.toFixed(1)}%</div>
-              </div>
             );
           })}
-        </div>
-      </div>
-
       <div className="mt-6 text-center">
         <a 
           href="/analytics-dashboard"
           className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
         >
           View Full Divine Technology Analytics →
-        </a>
-      </div>
-    </div>
   );
-}
+
+
+export default DivineTechnologyPlatform;

@@ -1,35 +1,11 @@
-
-import React from "react";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { MobileAppHero } from "@/components/mobile-app/MobileAppHero";
-import { AppFeatures } from "@/components/mobile-app/AppFeatures";
-import { AppScreenshots } from "@/components/mobile-app/AppScreenshots";
-import { AppTestimonials } from "@/components/mobile-app/AppTestimonials";
-import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";
-import { DownloadSection } from "@/components/mobile-app/DownloadSection";
+import React from 'react';
 
 const MobileAppPage: React.FC = () => {
   return (
-    <AppLayout>
-      <SEO 
-        title="Zion AI Marketplace App"
-        description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."
-        keywords="AI freelancer apphire techfind IT jobstech marketplace appmobile AI jobs"
-      />
-      
-      <MobileAppHero />
-      
-      <AppFeatures />
-      
-      <AppScreenshots />
-      
-      <AppTestimonials />
-      
-      <DownloadSection />
-      
-      <AppStoreBanner />
-    </AppLayout>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MobileAppPage</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 const ComprehensiveServices2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('ai-solutions');
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
-
   const serviceCategories = [
     {
       id: 'ai-solutions',
@@ -47,7 +44,6 @@ const ComprehensiveServices2026: React.FC = () => {
       description: 'Scalable cloud infrastructure'
     }
   ];
-
   const services = {
     'ai-solutions': [
       {
@@ -188,7 +184,6 @@ const ComprehensiveServices2026: React.FC = () => {
       }
     ]
   };
-
   const caseStudies = [
     {
       company: 'TechCorp Inc.',
@@ -215,7 +210,6 @@ const ComprehensiveServices2026: React.FC = () => {
       logo: '🧠'
     }
   ];
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 flex items-center justify-center">
@@ -226,8 +220,8 @@ const ComprehensiveServices2026: React.FC = () => {
         </div>
       </div>
     );
-  }
-
+};
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
       {/* Hero Section */}
@@ -252,14 +246,12 @@ const ComprehensiveServices2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Service Categories */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Our Service Categories</h2>
           <p className="text-xl text-purple-200">Choose from our comprehensive range of technology services</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
           {serviceCategories.map((category, index) => (
             <motion.button
@@ -280,7 +272,6 @@ const ComprehensiveServices2026: React.FC = () => {
             </motion.button>
           ))}
         </div>
-
         {/* Selected Category Services */}
         <motion.div
           key={selectedCategory}
@@ -292,7 +283,6 @@ const ComprehensiveServices2026: React.FC = () => {
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
             {serviceCategories.find(cat => cat.id === selectedCategory)?.name} Services
           </h3>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services[selectedCategory as keyof typeof services].map((service, index) => (
               <motion.div
@@ -305,7 +295,6 @@ const ComprehensiveServices2026: React.FC = () => {
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h4 className="text-2xl font-bold mb-4">{service.name}</h4>
                 <p className="text-purple-200 mb-6">{service.description}</p>
-                
                 <div className="mb-6">
                   <h5 className="text-lg font-semibold mb-3">Key Features:</h5>
                   <ul className="space-y-2">
@@ -317,7 +306,6 @@ const ComprehensiveServices2026: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="flex justify-between items-center mb-6">
                   <div>
                     <p className="text-sm text-purple-300">Starting from</p>
@@ -328,7 +316,6 @@ const ComprehensiveServices2026: React.FC = () => {
                     <p className="text-sm font-semibold">{service.duration}</p>
                   </div>
                 </div>
-                
                 <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                   Get Quote
                 </button>
@@ -336,7 +323,6 @@ const ComprehensiveServices2026: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Case Studies */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Success Stories</h2>
@@ -352,22 +338,18 @@ const ComprehensiveServices2026: React.FC = () => {
                 <div className="text-4xl mb-4">{study.logo}</div>
                 <h3 className="text-xl font-bold mb-2">{study.company}</h3>
                 <p className="text-purple-300 mb-4">{study.industry}</p>
-                
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Challenge:</h4>
                   <p className="text-purple-200 text-sm">{study.challenge}</p>
                 </div>
-                
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Solution:</h4>
                   <p className="text-purple-200 text-sm">{study.solution}</p>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="font-semibold mb-2">Results:</h4>
                   <p className="text-green-300 text-sm font-semibold">{study.results}</p>
                 </div>
-                
                 <button className="w-full bg-white/20 hover:bg-white/30 py-2 rounded-lg transition-colors font-semibold">
                   Read Full Case Study
                 </button>
@@ -375,7 +357,6 @@ const ComprehensiveServices2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Pricing Tiers */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Pricing Tiers</h2>
@@ -405,7 +386,6 @@ const ComprehensiveServices2026: React.FC = () => {
                 Get Started
               </button>
             </div>
-            
             <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-8 text-white relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">POPULAR</span>
@@ -438,7 +418,6 @@ const ComprehensiveServices2026: React.FC = () => {
                 Choose Plan
               </button>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Enterprise</h3>
               <div className="text-4xl font-bold mb-6">Custom<span className="text-lg text-purple-300">/quote</span></div>
@@ -470,7 +449,6 @@ const ComprehensiveServices2026: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
@@ -491,6 +469,6 @@ const ComprehensiveServices2026: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default ComprehensiveServices2026;

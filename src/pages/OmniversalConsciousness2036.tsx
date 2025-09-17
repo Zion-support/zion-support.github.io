@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 const OmniversalConsciousness2036: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
@@ -7,9 +7,8 @@ const OmniversalConsciousness2036: React.FC = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <divdiv
+          <div
             className="text-center"
           >
             <div className="flex items-center justify-center space-x-4 mb-8">
@@ -33,13 +32,12 @@ const OmniversalConsciousness2036: React.FC = () => {
                 🌌 Transcendent Awareness
               </span>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-
       {/* Consciousness Levels */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -49,8 +47,7 @@ const OmniversalConsciousness2036: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Journey through the infinite levels of consciousness evolution
           </p>
-        </divdiv>
-
+        </div>
         <div className="space-y-8">
           {[
             {
@@ -102,7 +99,7 @@ const OmniversalConsciousness2036: React.FC = () => {
               borderColor: "border-fuchsia-500/30"
             }
           ].map((level, index) => (
-            <divdiv
+            <div
               key={index}
               whileInView={{ opacity: 1, x: 0 }}
               className={`bg-gradient-to-r ${level.color} rounded-2xl p-8 border ${level.borderColor} hover:bg-opacity-30 transition-all duration-300`}
@@ -122,15 +119,14 @@ const OmniversalConsciousness2036: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="bg-white/5 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
@@ -140,8 +136,7 @@ const OmniversalConsciousness2036: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the infinite benefits of unified consciousness
             </p>
-          </divdiv>
-
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -175,7 +170,7 @@ const OmniversalConsciousness2036: React.FC = () => {
                 description: "Complete inner peace through understanding of universal unity"
               }
             ].map((benefit, index) => (
-              <divdiv
+              <div
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20"
@@ -183,15 +178,14 @@ const OmniversalConsciousness2036: React.FC = () => {
                 <div className="text-6xl mb-4 text-center">{benefit.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-center">{benefit.title}</h3>
                 <p className="text-gray-300 text-center">{benefit.description}</p>
-              </divdiv>
+              </div>
             ))}
           </div>
         </div>
       </div>
-
       {/* Integration Process */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -201,10 +195,9 @@ const OmniversalConsciousness2036: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             The journey to omniversal consciousness through guided evolution
           </p>
-        </divdiv>
-
+        </div>
         <div className="grid md:grid-cols-2 gap-8">
-          <divdiv
+          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="space-y-6"
           >
@@ -224,9 +217,8 @@ const OmniversalConsciousness2036: React.FC = () => {
                 <span className="text-gray-300">{step}</span>
               </div>
             ))}
-          </divdiv>
-
-          <divdiv
+          </div>
+          <div
             whileInView={{ opacity: 1, x: 0 }}
             className="bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-2xl p-8 border border-violet-500/30"
           >
@@ -253,13 +245,12 @@ const OmniversalConsciousness2036: React.FC = () => {
                 <span className="text-violet-400">∞ (Transcendent)</span>
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
-        <divdiv
+        <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-3xl p-12 border border-violet-500/30"
         >
@@ -277,10 +268,11 @@ const OmniversalConsciousness2036: React.FC = () => {
               Learn More
             </button>
           </div>
-        </divdiv>
+        </div>
       </div>
     </div>
   );
+
 };
 
 export default OmniversalConsciousness2036;

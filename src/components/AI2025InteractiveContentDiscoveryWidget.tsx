@@ -1,11 +1,12 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function AI2025InteractiveContentDiscoveryWidget() {
   const [selectedCategorysetSelectedCategory] = useState('all');
   const [selectedROIsetSelectedROI] = useState('all');
-
   const contentItems = [
     {
       id: 1,
@@ -74,13 +75,11 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
       tags: ["RETAIL"]
     }
   ];
-
   const filteredContent = contentItems.filter(item => {
     const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
     const roiMatch = selectedROI === 'all' || item.roi.includes(selectedROI.replace('%', '));
     return categoryMatch && roiMatch;
   });
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'breakthrough': return 'from-red-500 to-pink-500';
@@ -90,14 +89,12 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
       default: return 'from-gray-500 to-slate-500';
     }
   };
-
   const getROIColor = (roi: string) => {
     if (roi.includes('10000')) return 'text-green-600 bg-green-50 border-green-200';
     if (roi.includes('5000')) return 'text-blue-600 bg-blue-50 border-blue-200';
     if (roi.includes('2500')) return 'text-purple-600 bg-purple-50 border-purple-200';
     return 'text-gray-600 bg-gray-50 border-gray-200';
   };
-
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,16 +102,11 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-semibold mb-6 animate-pulse">
             🔍 AI-POWERED CONTENT DISCOVERY
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Discover Your Perfect AI Content
-          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Use our intelligent content discovery system to find the most relevant AI insights
             case studiesand implementation guides for your specific needs and ROI goals.
-          </p>
-        </div>
-
         {/* Filters */}
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
           <div className="flex flex-wrap gap-6 items-center">
@@ -130,8 +122,6 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
                 <option value="success-story">Success Stories</option>
                 <option value="guide">Implementation Guides</option>
                 <option value="insights">Insights & Trends</option>
-              </select>
-            </div>
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">Expected ROI</label>
               <select 
@@ -145,19 +135,12 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
                 <option value="2500%">2500%+ ROI</option>
                 <option value="5000%">5000%+ ROI</option>
                 <option value="10000%">10000%+ ROI</option>
-              </select>
-            </div>
             <div className="ml-auto">
               <button 
                 onClick={() => { setSelectedCategory('all'); setSelectedROI('all'); }}
                 className="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors"
               >
                 Clear Filters
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item) => (
@@ -166,51 +149,33 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
               {item.featured && (
                 <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 text-center">
                   ⭐ FEATURED CONTENT
-                </div>
               )}
-              
               <div className="p-6">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.map((tagindex) => (
                     <span key={index} className="text-xs font-semibold px-2 py-1 bg-gray-100 text-gray-700 rounded-full">
                       {tag}
-                    </span>
                   ))}
-                </div>
-
                 {/* Category Badge */}
                 <div className={`inline-flex items-center px-3 py-1 bg-gradient-to-r ${getCategoryColor(item.category)} text-white text-xs font-semibold rounded-full mb-4`}>
                   {item.type === 'blog' ? '📝 Blog' : item.type === 'case-study' ? '📊 Case Study' : '📚 Resource'}
-                </div>
-
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                   {item.title}
-                </h3>
-
                 {/* Description */}
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {item.description}
-                </p>
-
                 {/* ROI Badge */}
                 <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold mb-4 border ${getROIColor(item.roi)}`}>
                   💰 {item.roi} ROI
-                </div>
-
                 {/* CTA Button */}
                 <a 
                   href={item.url}
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   {item.type === 'blog' ? 'Read Article' : item.type === 'case-study' ? 'View Case Study' : 'Access Guide'}
-                </a>
-              </div>
-            </div>
           ))}
-        </div>
-
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div className="text-center py-12">
@@ -222,34 +187,25 @@ export default function AI2025InteractiveContentDiscoveryWidget() {
               className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Show All Content
-            </button>
-          </div>
         )}
-
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-purple-800 mb-4">'Can', 't Find What 'You', 're Looking For?</h3>
             <p className="text-purple-700 mb-6">
               Our AI experts can help you find the perfect content for your specific needs and goals.
-            </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
                 href="/contact"
                 className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Get Personalized Recommendations
-              </a>
               <a 
                 href="/blog"
                 className="bg-white border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Browse All Content
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   );
-}
+
+
+export default AI2025InteractiveContentDiscoveryWidget;

@@ -1,39 +1,11 @@
-import React, { createContext, useContext, useState } from 'react';
-
-const NotificationContext = createContext();
-
-export const useNotifications = () => {
-  const context = useContext(NotificationContext);
-  if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
-  }
-  return context;
+import React from 'react';
+const NotificationContext= () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NotificationContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
 
-export const NotificationProvider = ({ children }) => {
-  const [notifications, setNotifications] = useState([]);
-
-  const addNotification = (notification) => {
-    const id = Date.now();
-    setNotifications(prev => [...prev, { id, ...notification }]);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-      removeNotification(id);
-    }, 5000);
-  };
-
-  const removeNotification = (id) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
-  };
-
-  const value = {
-    notifications,
-    addNotification,
-  };
-
-  return (
-    <NotificationContext.Provider value={value}>
-      {children}
-    </NotificationContext.Provider>
-  );
+export default NotificationContext;
