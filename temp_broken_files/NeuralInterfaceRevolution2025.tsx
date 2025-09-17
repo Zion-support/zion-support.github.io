@@ -147,6 +147,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         </div>
@@ -202,6 +203,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </motion.div>
 
         {/* Neural Features */}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -258,6 +261,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <p className="text-purple-200 mb-6 text-center">
               Bidirectional interfaces that provide sensory feedback directly to the brain.
             </p>
+<<<<<<< HEAD
             <ul className="text-purple-200 space-y-2 text-sm">
               <li>• Sensory stimulation</li>
               <li>• Haptic feedback</li>
@@ -283,6 +287,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🌟 Neural Interface Applications</h2>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Advanced technical capabilities and performance metrics of neural interface systems
             </p>
@@ -409,12 +415,16 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
             </motion.div>
             </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold text-white mb-4 text-center">Invasive Neural Implants</h3>
@@ -489,6 +499,10 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+=======
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Non-Invasive BCI</h3>
             <p className="text-emerald-200 mb-6 text-center">
@@ -520,6 +534,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             <p className="text-purple-200 mb-6 text-center">
               Bidirectional interfaces that provide sensory feedback directly to the brain.
             </p>
+<<<<<<< HEAD
             <ul className="text-purple-200 space-y-2 text-sm">
               <li>• Sensory stimulation</li>
               <li>• Haptic feedback</li>
@@ -542,6 +557,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">🌟 Neural Interface Applications</h2>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Revolutionary applications of neural interface technology across healthcare, communication, and human augmentation
             </p>
@@ -565,6 +582,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-xl p-6 border border-emerald-400/30">
@@ -922,6 +940,8 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
         {/* Call to Action */}
         <div

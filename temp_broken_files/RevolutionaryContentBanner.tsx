@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
+<<<<<<< HEAD
   const [currentBanner, setCurrentBanner] = useState(0);
   
   const banners = [
@@ -53,11 +54,14 @@ const RevolutionaryContentBanner: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600",
       icon: "🎯",
       badge: "FEATURED"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
+<<<<<<< HEAD
       setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -148,12 +152,15 @@ const RevolutionaryContentBanner: React.FC = () => {
                         <a
                           href={content.link}
                           className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
                         >
                           Explore Now →
                         </a>
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                 ))}
               </div>
             </div>
@@ -222,6 +229,8 @@ const RevolutionaryContentBanner: React.FC = () => {
               </div>
             </a>
           ))}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         </div>
       </div>
     </div>

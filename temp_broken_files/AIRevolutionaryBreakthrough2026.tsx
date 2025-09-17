@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -7,6 +8,11 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../Header';
 import Footer from '../Footer';
 import { Helmet } from 'react-helmet-async';
+=======
+import Header from '../Header';
+import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
@@ -260,16 +266,22 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
       </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       </main>
       
       <Footer />
       </div>
+<<<<<<< HEAD
       </main>
       
       <Footer />
       </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     </div>
   );
 };

@@ -242,7 +242,10 @@ const UltimateAIConsciousness2026: React.FC = () => {
 
 export default UltimateAIConsciousness2026;
 export default UltimateAIConsciousness2026;
+<<<<<<< HEAD
 export default UltimateAIConsciousness2026;
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2026
@@ -350,5 +353,8 @@ export default UltimateAIConsciousness2026;
 export default UltimateAIConsciousness2026;
 export default UltimateAIConsciousness2026;
 export default UltimateAIConsciousness2026;
+<<<<<<< HEAD
 export default UltimateAIConsciousness2026;
 export default UltimateAIConsciousness2026;
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068

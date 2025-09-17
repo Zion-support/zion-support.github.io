@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const InteractiveTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
   const [activeTab, setActiveTab] = useState('ai');
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('ai');
   const [activeTab, setActiveTab] = useState('ai');
   const [activeTab, setActiveTab] = useState(0);
@@ -69,6 +70,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
         }
       ]
   const [activeTab, setActiveTab] = useState('ai');
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     }
   };
 
@@ -251,6 +254,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <p className="text-lg opacity-90">
               Discover the latest breakthroughs in {techCategories[activeTab as keyof typeof techCategories].title.toLowerCase()}
             </p>
+<<<<<<< HEAD
     <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -416,11 +420,19 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 </div>
               </div>
             ))}
+=======
+          </div>
+
+            ))}
+          </div>
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
         </div>
 
               Schedule Demo
             </button>
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white rounded-2xl p-8 mb-12">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Interactive Technology Showcase 2025</h2>
@@ -429,6 +441,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
         <p className="text-xl text-purple-200">Explore our revolutionary technologies with interactive features</p>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       </div>
 
       {/* Tab Navigation */}
@@ -443,8 +457,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
                 : 'bg-white/20 text-white hover:bg-white/30'
             }`}
           >
+<<<<<<< HEAD
             <span className="text-2xl mr-3">{tech.icon}</span>
             {tech.title}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold text-white mb-4">🌟 Interactive Technology Showcase 2025</h2>
@@ -471,6 +488,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
         ))}
       </div>
 
+<<<<<<< HEAD
       {/* Active Technology Display */}
       <div className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].bgGradient} backdrop-blur-sm rounded-2xl p-8 mb-12`}>
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -597,16 +615,24 @@ const InteractiveTechShowcase2025: React.FC = () => {
       {/* Technology Cards */}
       <div className="grid md:grid-cols-2 gap-6">
         {techCategories[activeTab].technologies.map((tech, index) => (
+=======
+          </div>
+        </div>
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           <div
             key={index}
             className={`bg-gradient-to-br ${techCategories[activeTab].color}/20 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
           >
+<<<<<<< HEAD
             <div className="text-4xl mb-4">{feature.icon}</div>
             <div className="text-3xl font-bold mb-2 text-cyan-400">{feature.metric}</div>
             <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
             <p className="text-sm text-gray-300">{feature.description}</p>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Technology Cards */}
       <div className="grid md:grid-cols-2 gap-6">
         {techCategories[activeTab].technologies.map((tech, index) => (
@@ -665,6 +691,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
         ))}
       </div>
 
+<<<<<<< HEAD
       {/* Interactive Demo Section */}
       <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 mb-12">
         <div className="text-center mb-8">
@@ -698,6 +725,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
               Connect Mind
             </button>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Statistics Section */}
       <div className="mt-12 bg-gradient-to-r from-white/10 to-transparent rounded-xl p-8">
         <h3 className="text-2xl font-bold text-white text-center mb-6">Revolutionary Impact</h3>
@@ -744,6 +773,7 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
               Schedule Demo
             </button>
+<<<<<<< HEAD
       {/* Statistics Section */}
       <div className="mt-12 bg-gradient-to-r from-white/10 to-transparent rounded-xl p-8">
         <h3 className="text-2xl font-bold text-white text-center mb-6">Revolutionary Impact</h3>
@@ -763,6 +793,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-300 mb-2">24/7</div>
             <div className="text-yellow-200">Autonomous Operation</div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </div>
         </div>
       </div>

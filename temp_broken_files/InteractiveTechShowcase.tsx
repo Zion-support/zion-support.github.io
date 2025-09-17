@@ -89,6 +89,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center"
               >
                 {technologies[activeTech].demo}
+<<<<<<< HEAD
               </button>
             </div>
           </div>
@@ -207,6 +208,8 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase: React.FC = () => {
@@ -249,6 +252,7 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["Hybrid intelligence", "Biological integration", "Adaptive learning", "Consciousness transfer"],
       gradient: "from-cyan-600 to-blue-600",
       stats: { accuracy: 97.5, speed: 0.01, efficiency: 96 }
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -321,6 +325,8 @@ const InteractiveTechShowcase: React.FC = () => {
         { label: "Learning Speed", value: "1000x", icon: "📈" }
       ]
     },
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     }
   ];
 
@@ -339,6 +345,7 @@ const InteractiveTechShowcase: React.FC = () => {
   const currentTech = technologies[activeTech];
 
   const currentTech = technologies[activeTech];
+<<<<<<< HEAD
 
   const currentTech = technologies[activeTech];
       ]
@@ -348,6 +355,12 @@ const InteractiveTechShowcase: React.FC = () => {
 
   const currentTech = technologies[activeTech];
 
+=======
+
+
+  const currentTech = technologies[activeTech];
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     quantum: {
       title: "Quantum Computing",
       subtitle: "Exponential Computational Power",
@@ -410,6 +423,7 @@ const InteractiveTechShowcase: React.FC = () => {
     }
   };
 
+<<<<<<< HEAD
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -421,6 +435,8 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
       link: "/pages/AdvancedAnalyticsDashboard2026"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     }
   ];
 
@@ -445,6 +461,7 @@ const InteractiveTechShowcase: React.FC = () => {
               >
                 {isAnimating ? '⏸️ Pause Animation' : '▶️ Start Animation'}
               </button>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -476,6 +493,8 @@ const InteractiveTechShowcase: React.FC = () => {
                   ))}
                 </div>
               </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
               {/* Demo Button */}
               <div className="text-center">
@@ -492,6 +511,7 @@ const InteractiveTechShowcase: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -510,6 +530,8 @@ const InteractiveTechShowcase: React.FC = () => {
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
               Download Brochure
             </button>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           {/* Technology Visual */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="relative h-full min-h-[400px]">
@@ -639,12 +661,16 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Learning Capacity</div>
           </div>
         </div>
+<<<<<<< HEAD
             </motion.div>
           ))}
         </div>
             </motion.div>
           ))}
         </div>
+=======
+        </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Technology Grid */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         {technologies.map((tech, index) => (
@@ -666,7 +692,10 @@ const InteractiveTechShowcase: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default InteractiveTechShowcase;
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>

@@ -4,11 +4,14 @@ import React from 'react';
 import React from 'react';
 import React from 'react';
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react';
 import React from 'react';
 import React from 'react';
 import React from 'react';
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 
@@ -293,6 +296,7 @@ const RevolutionaryTech2026: React.FC = () => {
               className="border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-lg font-semibold text-xl hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               Contact Our Experts
+<<<<<<< HEAD
             </motion.button>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/AdvancedAISolutions2026" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -304,6 +308,8 @@ const RevolutionaryTech2026: React.FC = () => {
             <a href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Contact Us
             </a>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </button>
           </div>
         </div>
@@ -313,5 +319,8 @@ const RevolutionaryTech2026: React.FC = () => {
 };
 
 export default RevolutionaryTech2026;
+<<<<<<< HEAD
 export default RevolutionaryTech2026;
 export default RevolutionaryTech2026;
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068

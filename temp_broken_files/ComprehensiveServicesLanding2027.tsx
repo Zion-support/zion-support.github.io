@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react';
 import React from 'react';
 import React from 'react';
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
@@ -95,6 +98,7 @@ import {
   Award as AwardIcon,
   Star as StarIcon,
   Heart as HeartIcon,
+<<<<<<< HEAD
   Zap as ZapIconDup,
   Shield as ShieldIconDup,
   Cloud as CloudIconDup,
@@ -131,6 +135,8 @@ import {
   Phone as PhoneIcon2,
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';

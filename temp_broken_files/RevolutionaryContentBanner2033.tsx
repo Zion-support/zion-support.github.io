@@ -39,7 +39,10 @@ const RevolutionaryContentBanner2033: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default RevolutionaryContentBanner2033;
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 export default RevolutionaryContentBanner2033;
               The fusion of quantum mechanics and human consciousness
             </p>

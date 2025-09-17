@@ -1,8 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
 const NextGenInnovationHub2026: React.FC = () => {
   return (
@@ -150,6 +153,7 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Success Stories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🏆 Success Stories</h2>
@@ -262,6 +266,8 @@ const NextGenInnovationHub2026: React.FC = () => {
         {/* Interactive Demos Section */}
         <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Interactive Technology Demos</h2>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
               <h3 className="text-2xl font-bold mb-4">Live AI Demo</h3>
@@ -272,6 +278,7 @@ const NextGenInnovationHub2026: React.FC = () => {
                 Try Demo
               </button>
             </div>
+<<<<<<< HEAD
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🚀 Join Our Mission</h3>
@@ -290,6 +297,8 @@ const NextGenInnovationHub2026: React.FC = () => {
               <button className="bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Enter VR Lab
               </button>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         {/* Success Stories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🏆 Success Stories</h2>
@@ -354,6 +363,7 @@ const NextGenInnovationHub2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
             Be part of the future. Explore our innovations and transform your business today.
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
             Be part of the future. Explore our innovations and transform your business today.
@@ -364,6 +374,8 @@ const NextGenInnovationHub2026: React.FC = () => {
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
             Be part of the future. Explore our innovations and transform your business today.
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -375,6 +387,7 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       </main>
       
       <EnhancedFooter />
@@ -389,6 +402,8 @@ const NextGenInnovationHub2026: React.FC = () => {
         </div>
       </div>
       </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
     </div>
   );
 };

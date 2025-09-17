@@ -306,6 +306,7 @@ const Contact: React.FC = () => {
             <p className="text-gray-300 mb-6">
               Need immediate assistance? Our 24/7 emergency support team is here to help.
             </p>
+<<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• AI-powered automation</li>
               <li>• Quantum computing breakthroughs</li>
@@ -335,6 +336,8 @@ const Contact: React.FC = () => {
               <li>• Custom development</li>
               <li>• Technology consulting</li>
             </ul>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -355,6 +358,7 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
               <div className="grid grid-cols-1 gap-6">
@@ -397,6 +401,8 @@ const Contact: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <motion.div
           <div
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -407,8 +413,11 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
+<<<<<<< HEAD
           </motion.div>
           </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[

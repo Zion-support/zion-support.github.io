@@ -165,7 +165,6 @@
   to = "/browser-automation-cloud"
   status = 301
 
-# Additional redirects from the other branch
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"

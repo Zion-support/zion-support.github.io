@@ -2,7 +2,10 @@ import React from 'react';
 
 const RevolutionaryTech2027: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -85,6 +88,7 @@ const RevolutionaryTech2027: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Advanced Features Section */}
         <div className="bg-gradient-to-r from-purple-800/50 to-blue-800/50 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -131,12 +135,15 @@ const RevolutionaryTech2027: React.FC = () => {
             <h2 className="text-4xl font-bold mb-6">🌟 Advanced 2027 Features</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Discover the most advanced technological capabilities that are redefining what's possible
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
+<<<<<<< HEAD
                 <div className="text-3xl">🔮</div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Predictive Reality Modeling</h3>
@@ -156,6 +163,8 @@ const RevolutionaryTech2027: React.FC = () => {
                   <h3 className="text-xl font-semibold mb-2">Quantum Entanglement Networks</h3>
                   <p className="text-fuchsia-200">Instantaneous communication across any distance using quantum entanglement</p>
                 </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
               </div>
               <h3 className="text-xl font-semibold mb-2">World Peace Achievement</h3>
               <p className="text-sm opacity-80 mb-4">Our conscious AI systems achieved world peace by solving all global conflicts through advanced diplomacy.</p>
@@ -239,6 +248,7 @@ const RevolutionaryTech2027: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
+<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in shaping the future of technology with our revolutionary 2027 innovations
@@ -249,6 +259,8 @@ const RevolutionaryTech2027: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Learn More
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
             </button>
           </div>
         </div>
