@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   children,
   href,
   onClick,
@@ -8,6 +9,10 @@
   disabled = false,
   style,
 }) => {
+=======
+import React from "react";
+import { cn } from "@/lib/utils";
+>>>>>>> origin/website-improvements-v2
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,6 +39,7 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Link from "next/link";
 
+<<<<<<< HEAD
 interface ButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -97,3 +103,6 @@ const Button: React.FC<ButtonProps> = ({
       {children}
     </button>
 >>>>>>> origin/merged-prs
+=======
+export { Button };
+>>>>>>> origin/website-improvements-v2
