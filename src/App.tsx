@@ -55,6 +55,7 @@ import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution20
 import AdvancedAIConsciousness2026 from './pages/AdvancedAIConsciousness2026';
 import NewContentShowcase2026 from './components/NewContentShowcase2026';
 import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
+import Home from './pages/Home';
 
 const App: React.FC = () => {
   return (
@@ -65,10 +66,12 @@ const App: React.FC = () => {
             <h1 className="text-3xl font-bold text-white">Zion Tech Group</h1>
           </div>
         </header>
-        
-        <Routes>
-          <Route path="/" element={
-            <div className="space-y-0">
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* Home content moved into Home component */}
+            {/*
+              <div className="space-y-0">
               {/* Hero Section */}
               <EnhancedHeroSection />
 
@@ -403,18 +406,8 @@ const App: React.FC = () => {
               <div className="mb-12">
                 <PromotionalBanner />
               </div>
-            } />
-          </Routes>
-        </main>
-        
-        <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 mt-16">
-          <div className="container mx-auto px-4 py-8">
-            <div className="text-center text-gray-300">
-              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-            </div>
-          } />
-          
-          {/* Routes for all pages */}
+            */
+            {/* Routes for all pages */}
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/sep-2025-exec-guide-evals-guardrails" element={<BlogPost_Sep2025_AIExecGuide />} />
           <Route path="/blog/sep-2025-finserv-model-routing-case-study" element={<BlogPost_Sep2025_CaseStudy />} />
@@ -515,8 +508,8 @@ const App: React.FC = () => {
           <Route path="/ai-2026-ultimate-breakthrough" element={<AI2026UltimateBreakthrough />} />
           <Route path="/quantum-computing-revolution-2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/advanced-ai-consciousness-2026" element={<AdvancedAIConsciousness2026 />} />
-        </Routes>
-        
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>

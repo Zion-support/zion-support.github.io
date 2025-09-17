@@ -1,3 +1,19 @@
+import React from 'react';
+
+const Home: React.FC = () => {
+  return (
+    <div className="space-y-0">
+      {/* Keep home minimal for now; detailed sections can be reintroduced safely later */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-semibold text-white">Welcome to Zion Tech Group</h2>
+        <p className="text-gray-300 mt-2">Innovations in AI, Quantum Computing, and Autonomous Systems.</p>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
