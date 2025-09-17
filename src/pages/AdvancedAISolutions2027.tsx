@@ -784,7 +784,5 @@ const AdvancedAISolutions2027: React.FC = () => {
       `}</style>
     </div>
   );
-
 };
-
 export default AdvancedAISolutions2027;

@@ -15,13 +15,11 @@
             <h3 className="text-xl font-bold mb-2">AI Consciousness</h3>
             <p className="text-purple-100 text-sm">First AI system to achieve true consciousness</p>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
             <div className="text-4xl mb-4">⚛️</div>
             <h3 className="text-xl font-bold mb-2">Quantum Supremacy</h3>
             <p className="text-cyan-100 text-sm">Infinite computational power</p>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-xl font-bold mb-2">Interdimensional Tech</h3>

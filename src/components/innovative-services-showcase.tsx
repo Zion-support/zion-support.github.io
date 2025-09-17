@@ -9,7 +9,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
-
 export default function InnovativeServicesShowcase() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -17,7 +16,6 @@ export default function InnovativeServicesShowcase() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -28,7 +26,6 @@ export default function InnovativeServicesShowcase() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -40,7 +37,6 @@ export default function InnovativeServicesShowcase() {
       }
     }
   };
-
   const featuredServices = [
     {
       title: '🔐 Quantum Internet Security Platform',
@@ -87,7 +83,6 @@ export default function InnovativeServicesShowcase() {
       color: 'from-purple-600 to-indigo-700'
     }
   ];
-
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -100,8 +95,6 @@ export default function InnovativeServicesShowcase() {
           <meta property="og:url" content="https://ziontechgroup.com/innovative-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase" />
-        </Head>
-
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -110,38 +103,25 @@ export default function InnovativeServicesShowcase() {
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Innovative
-                </span>
                 <br />
                 <span className="text-white">Services Showcase</span>
-              </h1>
-              
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Experience the future of technology with our most revolutionary and cutting-edge services. 
                 These are the innovations that will transform industries and reshape the world.
-              </p>
-
               {/* Contact Info */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
                 <div className="text-center">
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                   <div className="text-white font-semibold">Phone</div>
                   <div className="text-gray-400">{contactInfo.mobile}</div>
-                </div>
                 <div className="text-center">
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-3" />
                   <div className="text-white font-semibold">Email</div>
                   <div className="text-gray-400">{contactInfo.email}</div>
-                </div>
                 <div className="text-center">
                   <MapPin className="w-8 h-8 text-pink-400 mx-auto mb-3" />
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-gray-400">{contactInfo.address}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Featured Innovative Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -154,12 +134,8 @@ export default function InnovativeServicesShowcase() {
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Featured
                 </span> Innovative Services
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our most revolutionary services that are pushing the boundaries of what's possible
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredServices.map((service, index) => (
                 <div
@@ -171,13 +147,10 @@ export default function InnovativeServicesShowcase() {
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                    
                     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                       <div className="text-sm text-gray-400">{service.marketData}</div>
                       <div className="text-sm text-green-400 mt-1">{service.savings}</div>
-                    </div>
-
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -185,11 +158,7 @@ export default function InnovativeServicesShowcase() {
                           <li key={idx} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
-                          </li>
                         ))}
-                      </ul>
-                    </div>
-
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
                         href={service.link}
@@ -197,21 +166,12 @@ export default function InnovativeServicesShowcase() {
                       >
                         <span>Learn More</span>
                         <ExternalLink className="w-5 h-5" />
-                      </a>
                       <a
                         href="/contact"
                         className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                       >
                         Get Started
-                      </a>
-                    </div>
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
-        </section>
-
         {/* Emerging Tech Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -224,12 +184,8 @@ export default function InnovativeServicesShowcase() {
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                   Emerging
                 </span> Tech Services
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the latest technologies that are emerging and transforming industries
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
                 <div
@@ -244,7 +200,6 @@ export default function InnovativeServicesShowcase() {
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
                       {service.price}
                       <span className="text-sm text-gray-400">{service.period}</span>
-                    </div>
                     <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
                     <a
                       href={service.link}
@@ -252,12 +207,7 @@ export default function InnovativeServicesShowcase() {
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </UltraFuturisticCard>
-                </div>
               ))}
-            </div>
-
             <div
               className="text-center mt-16"
               whileInView={{ opacity: 1, y: 0 }}
@@ -269,11 +219,6 @@ export default function InnovativeServicesShowcase() {
               >
                 <span>View All Emerging Tech</span>
                 <ArrowRight className="w-6 h-6" />
-              </diva>
-            </div>
-          </div>
-        </section>
-
         {/* ArrowRight-Gen AI Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -286,12 +231,8 @@ export default function InnovativeServicesShowcase() {
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
                   ArrowRight-Generation
                 </span> AI Services
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of artificial intelligence with our most advanced services
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <div
@@ -306,7 +247,6 @@ export default function InnovativeServicesShowcase() {
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
                       {service.price}
                       <span className="text-sm text-gray-400">{service.period}</span>
-                    </div>
                     <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
                     <a
                       href={service.link}
@@ -314,12 +254,7 @@ export default function InnovativeServicesShowcase() {
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </UltraFuturisticCard>
-                </div>
               ))}
-            </div>
-
             <div
               className="text-center mt-16"
               whileInView={{ opacity: 1, y: 0 }}
@@ -331,11 +266,6 @@ export default function InnovativeServicesShowcase() {
               >
                 <span>Discover All AI Services</span>
                 <ArrowRight className="w-6 h-6" />
-              </diva>
-            </div>
-          </div>
-        </section>
-
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -345,47 +275,31 @@ export default function InnovativeServicesShowcase() {
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the Future?
-              </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join the revolution and transform your business with our cutting-edge services
-              </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                 >
                   Get Started Today
-                </a>
                 <a
                   href="/services"
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
                 >
                   Explore All Services
-                </a>
-              </div>
-
               <div className="mt-12 text-center">
                 <p className="text-gray-400 mb-4">Contact us directly:</p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <div className="flex items-center space-x-2">
                     <Phone className="w-5 h-5 text-cyan-400" />
                     <span className="text-white">{contactInfo.mobile}</span>
-                  </div>
                   <div className="flex items-center space-x-2">
                     <Mail className="w-5 h-5 text-purple-400" />
                     <span className="text-white">{contactInfo.email}</span>
-                  </div>
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-5 h-5 text-pink-400" />
                     <span className="text-white">{contactInfo.address}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
   );
-}
+};
+export default innovative-services-showcase;

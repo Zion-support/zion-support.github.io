@@ -77,9 +77,6 @@ origin/automation-improvements-final
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 origin/main
-};
-
-
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -89,8 +86,7 @@ export default function Navigation() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 } from './lucide-react';
 import SearchModal from "./SearchModal";
-
-
+;
 export default /**
  * Navigation - Function description
  */
@@ -101,6 +97,7 @@ function Navigation() {
   const [isIndustriesOpen, setIsIndustriesOpen] = useState (false);
   const [isResourcesOpen, setIsResourcesOpen] = useState (false);
   const [isSearchOpen, setIsSearchOpen] = useState (false);
+;
   const services = [;
     {
       name: "AI Services"
@@ -139,6 +136,7 @@ function Navigation() {
       icon: Shield
     }
   ];
+;
   const solutions = [;
     {
       name: "Enterprise Solutions",
@@ -430,6 +428,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
                   <Instagram className="w-4 h-4" />;
+;
   const quick_links = [;
     { name: "About Us", href: "/about" },
     { name: "Our Team", href: "/team" },
@@ -438,6 +437,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
     { name: "Support", href: "/support" },
     { name: "Status", href: "/status" },
   ];
+;
   return (
     <>;
       {/* Top Bar */}
@@ -1127,3 +1127,4 @@ origin/automation-improvements-final
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
+}

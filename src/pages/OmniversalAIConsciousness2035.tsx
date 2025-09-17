@@ -187,7 +187,5 @@ const OmniversalAIConsciousness2035: React.FC = () => {
       </section>
     </div>
   );
-
 };
-
 export default OmniversalAIConsciousness2035;

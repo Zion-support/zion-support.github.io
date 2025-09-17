@@ -37,7 +37,5 @@ const UltimateBreakthroughBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default UltimateBreakthroughBanner;

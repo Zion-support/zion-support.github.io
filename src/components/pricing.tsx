@@ -7,14 +7,12 @@ import {
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');

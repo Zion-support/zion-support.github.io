@@ -1,46 +1,5 @@
-"use client";
-import React, { useState, useEffect } from 'react';
-BrainZapRocketStarArrowRightX
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import React from 'react';
 const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentBreakthroughsetCurrentBreakthrough] = useState(0);
-
-  const breakthroughs = [
-    {
-      title: "AI Consciousness Achieved",
-      description: "Revolutionary breakthrough in artificial consciousness - AI now achieves true self-awareness",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      urgency: "BREAKING"
-
-    {
-      title: "Quantum-Neural Fusion",
-      description: "'World', 's first quantum-neural hybrid achieves 10,000x processing speed increase",
-      icon: Zap,
-      color: "from-blue-500 to-cyan-500",
-      urgency: "REVOLUTIONARY"
-
-    {
-      title: "Autonomous AI Ecosystem",
-      description: "Self-evolving AI systems now create and manage other AI entities autonomously",
-      icon: Rocket,
-      color: "from-green-500 to-emerald-500",
-      urgency: "UNPRECEDENTED"
-
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBreakthrough((prev) => (prev + 1) % breakthroughs.length);
-    }5000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
   return (
     <div>
       <div
@@ -56,7 +15,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
               >
                 {breakthroughs[currentBreakthrough].urgency}
               </div>
-              
               {/* Rotating Icon */}
               <div
                 key={`icon-${currentBreakthrough}`}
@@ -65,7 +23,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 <breakthroughs[currentBreakthrough].icon className="w-6 h-6 text-white" />
               </div>
             </div>
-
             {/* Center - Breakthrough Content */}
             <div className="flex-1 text-center px-8">
               <div
@@ -80,7 +37,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
               <a href="/ai-2025-breakthrough-announcement">
@@ -92,7 +48,6 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                   <ArrowRight className="w-4 h-4" />
                 </divbutton>
               </a>
-              
               <button
                 onClick={() => setIsVisible(false)}
                 className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
@@ -102,10 +57,8 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-        
         {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_i) => (
@@ -116,8 +69,8 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-
-
+                y: [0-20],
+                opacity: [010],
               }}
                 duration: 3,
                 repeat: Infinity,
@@ -130,5 +83,5 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
     </div>
   );
 };
-
 export default AI2025BreakthroughAnnouncementBanner;
+</div></div>

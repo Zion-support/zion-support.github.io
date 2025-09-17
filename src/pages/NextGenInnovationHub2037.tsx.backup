@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-9c82
 
@@ -78,11 +76,9 @@ const NextGenInnovationHub2037: React.FC = () => {
     : innovations.filter(innovation => innovation.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
@@ -91,9 +87,7 @@ const NextGenInnovationHub2037: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2037
           </div>
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6">🚀 Next-Gen Innovation Hub 2037</h1>
-=======
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2037
           </h1>
@@ -103,7 +97,6 @@ const NextGenInnovationHub2037: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
@@ -237,7 +230,6 @@ const NextGenInnovationHub2037: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-gray-300">Innovation Lab</div>
-=======
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
@@ -361,7 +353,6 @@ const NextGenInnovationHub2037: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">Be part of the most advanced research and development community</p>
           <div className="flex justify-center space-x-4">
@@ -370,7 +361,6 @@ const NextGenInnovationHub2037: React.FC = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               View All Projects
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
           <p className="text-xl mb-8 opacity-90">
             Join our innovation hub and be part of the technological revolution
@@ -390,4 +380,3 @@ const NextGenInnovationHub2037: React.FC = () => {
   );
 };
 
-export default NextGenInnovationHub2037;

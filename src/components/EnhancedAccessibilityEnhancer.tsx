@@ -180,7 +180,5 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default EnhancedAccessibilityEnhancer;

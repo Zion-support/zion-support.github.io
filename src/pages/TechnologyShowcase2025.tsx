@@ -242,7 +242,5 @@ const TechnologyShowcase2025: React.FC = () => {
       </section>
     </div>
   );
-
 };
-
 export default TechnologyShowcase2025;

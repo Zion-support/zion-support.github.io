@@ -10,6 +10,7 @@ interface ContentItem {
   icon: string;
   featured: boolean;
   tags: string[];
+}
 const contentItems: ContentItem[] = [
   {
     id: 'ai-trends-2025-2030',
@@ -70,10 +71,8 @@ const contentItems: ContentItem[] = [
     icon: '🔬',
     featured: false,
     tags: ['artificial 'consciousness', 'synthetic 'minds', 'AI creativity']
-  };
-};
-
-
+  }
+];
 export default function InteractiveContentDiscoveryWidget2030() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
   const [searchTermsetSearchTerm] = useState<string>(', ');
@@ -214,6 +213,5 @@ export default function InteractiveContentDiscoveryWidget2030() {
               >
                 Our Services
   );
-
-
+};
 export default InteractiveContentDiscoveryWidget2030;

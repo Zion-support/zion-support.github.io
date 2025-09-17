@@ -261,7 +261,5 @@ const UltimateTechRevolution2036: React.FC = () => {
       <Footer />
     </div>
   );
-
 };
-
 export default UltimateTechRevolution2036;

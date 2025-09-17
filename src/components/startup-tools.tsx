@@ -21,9 +21,6 @@ import {
   Lightbulb,
   BookOpen
 } from 'lucide-react';
-};
-
-
 export default function StartupToolsPage() {
   const startupTools = [
     {
@@ -457,6 +454,5 @@ export default function StartupToolsPage() {
               Explore More Tools
     </>
   );
-
-
+};
 export default startup-tools;

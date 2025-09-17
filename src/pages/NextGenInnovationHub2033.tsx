@@ -167,7 +167,5 @@ const NextGenInnovationHub2033: React.FC = () => {
       </main>
     </>
   );
-
 };
-
 export default NextGenInnovationHub2033;

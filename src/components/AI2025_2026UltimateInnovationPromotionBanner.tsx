@@ -79,6 +79,5 @@ const AI2025_2026UltimateInnovationPromotionBanner: React.FC = () => {
   );
 
 };
-
 export default AI2025_2026UltimateInnovationPromotionBanner;
 </div></div></div></div></div></div>

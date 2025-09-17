@@ -1,64 +1,11 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-ArrowRightZapBrainRocketTargetTrendingUpUsersGlobeShieldCpu
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
+import React from 'react';
 const AI2025UltimateInnovationShowcase: React.FC = () => {
-  const [activeTabsetActiveTab] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const innovations = [
-    {
-      title: "Quantum-AI Fusion Technology",
-      description: "Revolutionary fusion of quantum computing and artificial intelligence delivering unprecedented processing power",
-      icon: Cpu,
-      metrics: "10,000x faster processing",
-      color: "from-purple-600 to-blue-600"
-    },
-    {
-      title: "Autonomous Business Operations",
-      description: "Self-managing business systems that adapt and optimize without human intervention",
-      icon: Brain,
-      metrics: "99.9% automation accuracy",
-      color: "from-green-600 to-emerald-600"
-    },
-    {
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces enabling seamless human-AI collaboration",
-      icon: Zap,
-      metrics: "Real-time consciousness sync",
-      color: "from-orange-600 to-red-600"
-    },
-    {
-      title: "Transcendent Intelligence",
-      description: "AI systems that transcend traditional limitationsachieving superhuman cognitive abilities",
-      icon: Rocket,
-      metrics: "Beyond human comprehension",
-      color: "from-indigo-600 to-purple-600"
-    }
-  ];
-
-  const benefits = [
-    { icon: TrendingUptext: "2,500-5,000% ROI Increase"color: "text-green-500" },
-    { icon: Targetext: "99.9% Accuracy Rate"color: "text-blue-500" },
-    { icon: Userstext: "10M+ Users Impacted"color: "text-purple-500" },
-    { icon: Globetext: "Global Implementation"color: "text-orange-500" },
-    { icon: Shieldtext: "Enterprise Security"color: "text-red-500" }
-  ];
-
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 py-20"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div
@@ -75,7 +22,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             Experience the future of artificial intelligence with our groundbreaking innovations that are reshaping industries and transforming the world.
           </p>
         </div>
-
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {innovations.map((innovationindex) => (
@@ -96,7 +42,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Benefits Section */}
         <div
           className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 mb-12"
@@ -116,7 +61,6 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -144,5 +88,4 @@ const AI2025UltimateInnovationShowcase: React.FC = () => {
     </div>
   );
 };
-
 export default AI2025UltimateInnovationShowcase;

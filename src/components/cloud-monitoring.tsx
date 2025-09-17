@@ -3,9 +3,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
-};
-
-
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -379,6 +376,5 @@ export default function CloudMonitoringPage() {
               Watch Demo
     </>
   );
-
-
+};
 export default cloud-monitoring;

@@ -86,7 +86,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {
                   </a>
                 </div>
               );
-};
             })}
           </div>
         </div>
@@ -150,6 +149,5 @@ const RevolutionaryTechTrends2025: React.FC = () => {
       </section>
     </div>
   );
-
-
+};
 export default RevolutionaryTechTrends2025;

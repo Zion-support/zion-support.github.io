@@ -1,7 +1,4 @@
 import React from 'react';
-};
-
-
 export default function ApiPerformanceTestingPage() {
 	const features = [
 		'k6/Gatling-compatible test runner',
@@ -32,3 +29,4 @@ export default function ApiPerformanceTestingPage() {
 							<ExternalLink className="w-4 h-4" /> Gatling OSS
 		</>
 	);
+}

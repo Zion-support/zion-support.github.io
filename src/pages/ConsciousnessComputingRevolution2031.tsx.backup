@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -262,7 +261,6 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
                   </div>
                 </div>
               </div>
-=======
 import React, { useState } from 'react';
 
 const ConsciousnessComputingRevolution2031: React.FC = () => {
@@ -511,7 +509,6 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Consciousness Applications */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -646,7 +643,6 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
             </motion.button>
           </div>
         </motion.div>
-=======
       {/* Future Applications */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -702,4 +698,3 @@ const ConsciousnessComputingRevolution2031: React.FC = () => {
   );
 };
 
-export default ConsciousnessComputingRevolution2031;

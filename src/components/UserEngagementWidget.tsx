@@ -11,9 +11,7 @@ interface EngagementMetrics {
   likes: number;
   bookmarks: number;
   downloads: number;
-};
-
-
+}
 export default function UserEngagementWidget() {
   const [metricsetMetrics] = useState<EngagementMetrics>({
     activeUsers: 0,
@@ -142,6 +140,5 @@ export default function UserEngagementWidget() {
                 Live
       )}
   );
-
-
+};
 export default UserEngagementWidget;

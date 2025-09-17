@@ -51,9 +51,6 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-=======
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
@@ -118,4 +115,3 @@ export default function Blog() {
   );
 };
 
-export default Blog;

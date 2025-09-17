@@ -41,7 +41,5 @@ const NeuralRealityBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default NeuralRealityBanner;

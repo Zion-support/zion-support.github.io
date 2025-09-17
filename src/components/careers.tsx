@@ -4,7 +4,6 @@ import {
   Users, Rocket, Brain, Globe, Award, Zap, 
   Heart, Star, ArrowRight, CheckCircle, Briefcase
 } from 'lucide-react';
-
 export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
 

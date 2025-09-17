@@ -14,7 +14,5 @@ const OmniversalAI2030: React.FC = () => {
       </section>
     </div>
   );
-
 };
-
 export default OmniversalAI2030;

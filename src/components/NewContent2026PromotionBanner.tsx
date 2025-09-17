@@ -13,11 +13,9 @@ import {
 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 const NewContent2026PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentFeature, setCurrentFeature] = useState(0);
-
   const features = [
     {
       icon: Brain,
@@ -56,17 +54,13 @@ const NewContent2026PromotionBanner = () => {
       color: "from-pink-500 to-rose-500"
 
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, [features.length]);
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -81,7 +75,6 @@ const NewContent2026PromotionBanner = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         </div>
-
         <div className="relative z-10">
           <div className="container mx-auto px-4 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
@@ -96,15 +89,12 @@ const NewContent2026PromotionBanner = () => {
                   </div>
                   <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
                 </div>
-                
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                   Revolutionary Content Solutions Now Available
                 </h2>
-                
                 <p className="text-purple-100 text-lg mb-4">
                   Discover cutting-edge AI, quantum security, and autonomous business solutions
                 </p>
-
                 {/* Rotating Feature Display */}
                 <div className="flex items-center justify-center lg:justify-start gap-4 mb-4">
                   <AnimatePresence mode="wait">
@@ -126,7 +116,6 @@ const NewContent2026PromotionBanner = () => {
                     </motion.div>
                   </AnimatePresence>
                 </div>
-
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link
                     to="/ultimate-content-showcase-2026"
@@ -144,7 +133,6 @@ const NewContent2026PromotionBanner = () => {
                   </Link>
                 </div>
               </div>
-
               {/* Right Content - Metrics */}
               <div className="flex flex-col sm:flex-row lg:flex-col gap-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 text-center">
@@ -163,7 +151,6 @@ const NewContent2026PromotionBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Close Button */}
         <button
           onClick={() => setIsVisible(false)}
@@ -171,7 +158,6 @@ const NewContent2026PromotionBanner = () => {
         >
           <X className="h-5 w-5" />
         </button>
-
         {/* Animated Elements */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
           <motion.div
@@ -215,5 +201,4 @@ const NewContent2026PromotionBanner = () => {
     </AnimatePresence>
   );
 };
-
 export default NewContent2026PromotionBanner;

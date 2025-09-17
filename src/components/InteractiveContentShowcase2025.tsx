@@ -56,7 +56,19 @@
             Click on different categories to discover the future of innovation.
           </p>
         </div>
-
+  const [activeTab, setActiveTab] = useState('breakthrough');
+    }
+  };
+  const activeContent = contentTabs[activeTab as keyof typeof contentTabs];
+  return (
+            </div>
+          ))}
+        </div>
+        </div>
+      </div>
+    </div>
+  );
+};
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">
@@ -76,7 +88,6 @@
             ))}
           </div>
         </div>
-
         {/* Content Display */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">

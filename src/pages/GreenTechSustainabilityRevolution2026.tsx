@@ -253,7 +253,5 @@ const GreenTechSustainabilityRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default GreenTechSustainabilityRevolution2026;

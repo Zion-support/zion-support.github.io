@@ -28,7 +28,6 @@ const ThemeToggle: React.FC = () => {
                 )}
               </divbutton>
             );
-};
           })}
         </div>
       </div>
@@ -42,7 +41,6 @@ const ThemeToggle: React.FC = () => {
       </div>
     </div>
   );
-
-
+};
 export default ThemeToggle;
 </div></div>

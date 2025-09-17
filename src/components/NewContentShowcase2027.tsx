@@ -163,7 +163,5 @@ const NewContentShowcase2027 = () => {
       </div>
     </div>
   );
-
 };
-
 export default NewContentShowcase2027;

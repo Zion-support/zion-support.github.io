@@ -2,9 +2,6 @@
 'use client';
 import React{ useState } from 'react';
 MailSendCheckCircleStarTrendingUpUsersZapArrowRight
-};
-
-
 export default function AI2025NewsletterSignup() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -55,7 +52,7 @@ export default function AI2025NewsletterSignup() {
         >
           Subscribe Another Email
     );
-  };
+  }
   return (
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl border border-white/10 overflow-hidden">
       {/* Header */}
@@ -160,6 +157,5 @@ export default function AI2025NewsletterSignup() {
             ))}
             <span className="text-gray-400 text-sm ml-2">4.9/5 rating</span>
   );
-
-
+};
 export default AI2025NewsletterSignup;

@@ -18,6 +18,7 @@ interface DivineTechnology {
   divineCapabilities: string[];
   universalFeatures: string[];
   transcendentCapabilities: string[];
+}
 interface DivineTechnologyMetrics {
   totalDivineTechnologies: number;
   activeDivineTechnologies: number;
@@ -29,13 +30,12 @@ interface DivineTechnologyMetrics {
   universalIntegrationProgress: number;
   divineCoherenceLevel: number;
   consciousnessLevel: number;
+}
 interface DivineTechnologyPlatformProps {
   showMetrics?: boolean;
   maxTechnologies?: number;
   className?: string;
-};
-
-
+}
 export default function DivineTechnologyPlatform({ 
   showMetrics = true, 
   maxTechnologies = 5,
@@ -290,7 +290,7 @@ export default function DivineTechnologyPlatform({
               <div className="h-3 bg-slate-700 rounded w-2/3"></div>
           ))}
     );
-  };
+  }
   return (
     <div className={className}>
       <div className="mb-6">
@@ -529,6 +529,5 @@ export default function DivineTechnologyPlatform({
         >
           View Full Divine Technology Analytics →
   );
-
-
+};
 export default DivineTechnologyPlatform;

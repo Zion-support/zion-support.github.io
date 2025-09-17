@@ -17,7 +17,5 @@ const NeuralInterfaceEvolution2026: React.FC = () => {
       <Footer />
     </div>
   );
-
 };
-
 export default NeuralInterfaceEvolution2026;

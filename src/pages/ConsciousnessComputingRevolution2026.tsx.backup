@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 
-=======
 import { motion } from 'framer-motion';
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 
@@ -34,7 +32,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -279,7 +276,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Learn More
             </button>
           </div>
-=======
           </motion.div>
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
         </div>
@@ -288,4 +284,3 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
   );
 };
 
-export default ConsciousnessComputingRevolution2026;

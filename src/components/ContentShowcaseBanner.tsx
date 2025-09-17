@@ -2,9 +2,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-};
-
-
 export default function ContentShowcaseBanner() {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -108,6 +105,5 @@ export default function ContentShowcaseBanner() {
       <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce"></div>
       <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-gradient-to-r from-green-400 to-blue-500 rounded-full animate-pulse"></div>
   );
-
-
+};
 export default ContentShowcaseBanner;

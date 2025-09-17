@@ -282,7 +282,5 @@ const ComprehensiveTechBlog2027: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default ComprehensiveTechBlog2027;

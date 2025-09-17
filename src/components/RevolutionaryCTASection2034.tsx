@@ -170,7 +170,5 @@ const RevolutionaryCTASection2034: React.FC = () => {
       <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
     </div>
   );
-
 };
-
 export default RevolutionaryCTASection2034;

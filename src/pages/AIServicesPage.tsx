@@ -85,7 +85,5 @@ const AIServicesPage: React.FC = () => {
       </section>
     </div>
   );
-
 };
-
 export default AIServicesPage;

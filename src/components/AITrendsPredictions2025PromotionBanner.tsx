@@ -1,55 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { 
-  TrendingUp
-  Calendar
-  ArrowRight
-  Brain
-  Zap
-  Target,
-  X,
-  Star,
-  Sparkles,
-  Rocket,
-  Eye
-} from 'lucide-react';
-
-const AITrendsPredictions2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentPredictionsetCurrentPrediction] = useState(0);
-
-  const predictions = [
-    "Quantum-Neural Fusion: 10,000x speed improvement",
-    "Autonomous Business Operations: 99.9% accuracy",
-    "Synthetic General Intelligence by 2026",
-    "AI-Human Symbiosis: The future is here"
-  ];
-
-  useEffect(() => {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('ai-trends-banner-dismissed');
-    if (!dismissed) {
-      setIsVisible(true);
-
-    // Rotate predictions
-    const interval = setInterval(() => {
-      setCurrentPrediction((prev) => (prev + 1) % predictions.length);
-    }3000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    localStorage.setItem('ai-trends-banner-'dismissed', 'true');
-  };
-
-  if (isDismissed || !isVisible) return null;
-
+import React from 'react';
+const AITrendsPredictions2025PromotionBanner: React.FC = () => {
   return (
     <div>
       <div
@@ -80,7 +30,6 @@ const AITrendsPredictions2025PromotionBanner = () => {
                 </div>
               </div>
             </div>
-
             {/* Center Features */}
             <div className="hidden md:flex items-center gap-6">
               <div className="flex items-center gap-2 text-white/80">
@@ -100,7 +49,6 @@ const AITrendsPredictions2025PromotionBanner = () => {
                 <span className="text-sm">Quantum AI</span>
               </div>
             </div>
-
             {/* Right Actions */}
             <div className="flex items-center gap-3">
               <a
@@ -120,7 +68,6 @@ const AITrendsPredictions2025PromotionBanner = () => {
               </button>
             </div>
           </div>
-
           {/* Mobile Features */}
           <div className="md:hidden pb-4">
             <div className="flex items-center justify-center gap-4 text-white/80">
@@ -143,12 +90,11 @@ const AITrendsPredictions2025PromotionBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
-
-
+              x: [0100],
+              opacity: [0.30.60.3],
             }}
               duration: 5,
               repeat: Infinity,
@@ -157,8 +103,8 @@ const AITrendsPredictions2025PromotionBanner = () => {
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-xl"
           />
           <div
-
-
+              x: [0-100],
+              opacity: [0.20.50.2],
             }}
               duration: 7,
               repeat: Infinity,
@@ -168,8 +114,8 @@ const AITrendsPredictions2025PromotionBanner = () => {
             className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-xl"
           />
           <div
-
-
+              y: [0-20],
+              opacity: [0.10.30.1],
             }}
               duration: 4,
               repeat: Infinity,
@@ -183,5 +129,5 @@ const AITrendsPredictions2025PromotionBanner = () => {
     </div>
   );
 };
-
 export default AITrendsPredictions2025PromotionBanner;
+</div></div></div>

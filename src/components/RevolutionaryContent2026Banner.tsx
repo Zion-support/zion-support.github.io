@@ -15,10 +15,8 @@ import {
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryContent2026Banner = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
   const testimonials = [
     {
       quote: "The AI content marketing solution increased our engagement by 500% in just 3 months!",
@@ -39,7 +37,6 @@ const RevolutionaryContent2026Banner = () => {
       metric: "400% Speed"
 
   ];
-
   const features = [
     { icon: Brain, title: "AI Content Marketing", metric: "500% Engagement" },
     { icon: Shield, title: "Quantum Security", metric: "99.99% Protection" },
@@ -48,14 +45,12 @@ const RevolutionaryContent2026Banner = () => {
     { icon: Globe, title: "Metaverse Business", metric: "500% Collaboration" },
     { icon: RocketIcon, title: "Revolutionary Tech", metric: "600% Innovation" }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [testimonials.length]);
-
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -63,7 +58,6 @@ const RevolutionaryContent2026Banner = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M50%2050c0-27.614-22.386-50-50-50v100c27.614%200%2050-22.386%2050-50z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
       </div>
-
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -83,18 +77,15 @@ const RevolutionaryContent2026Banner = () => {
                 </div>
                 <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
                 Transform Your Business with
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   {" "}Revolutionary Content
                 </span>
               </h1>
-
               <p className="text-xl text-gray-300 leading-relaxed">
                 Discover the most advanced AI, quantum, and autonomous technology solutions that are delivering unprecedented results for businesses worldwide.
               </p>
-
               {/* Feature Grid */}
               <div className="grid grid-cols-2 gap-4">
                 {features.slice(0, 4).map((feature, index) => (
@@ -117,7 +108,6 @@ const RevolutionaryContent2026Banner = () => {
                   </motion.div>
                 ))}
               </div>
-
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/ultimate-content-showcase-2026"
@@ -135,7 +125,6 @@ const RevolutionaryContent2026Banner = () => {
                 </Link>
               </div>
             </motion.div>
-
             {/* Right Content - Testimonials & Metrics */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -171,7 +160,6 @@ const RevolutionaryContent2026Banner = () => {
                   </div>
                 </motion.div>
               </div>
-
               {/* Metrics Grid */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-500/20">
@@ -191,7 +179,6 @@ const RevolutionaryContent2026Banner = () => {
                   <div className="text-orange-200 text-sm">ROI Improvement</div>
                 </div>
               </div>
-
               {/* Call to Action */}
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-6 border border-purple-500/30">
                 <div className="flex items-center gap-3 mb-4">
@@ -213,7 +200,6 @@ const RevolutionaryContent2026Banner = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -256,5 +242,4 @@ const RevolutionaryContent2026Banner = () => {
     </div>
   );
 };
-
 export default RevolutionaryContent2026Banner;

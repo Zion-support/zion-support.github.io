@@ -142,7 +142,5 @@ const UltimateContentShowcase2026Banner = () => {
       </div>
     </div>
   );
-
 };
-
 export default UltimateContentShowcase2026Banner;

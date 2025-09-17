@@ -2,12 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServices2036: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
   const [activeCategory, setActiveCategory] = useState(0);
 
@@ -237,7 +232,6 @@ const ComprehensiveServices2036: React.FC = () => {
                   View Results →
                 </button>
               </div>
-<<<<<<< HEAD
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center space-x-2">
                   <span className="text-green-400">✓</span>
@@ -262,15 +256,12 @@ const ComprehensiveServices2036: React.FC = () => {
               </ul>
               <button className="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors font-semibold">
                 Contact Sales
-=======
 >>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
               </button>
-=======
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
             </div>
           </div>
 
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -283,9 +274,7 @@ const ComprehensiveServices2036: React.FC = () => {
             <a href="/pages/RevolutionaryTechShowcase2036" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg">
               View Showcase
             </a>
-=======
 >>>>>>> e34c76b4e994f744925acb496260e4c8cbd2d73d
-=======
           {/* Pricing Plans */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 mb-16">
             <div className="text-center mb-12">
@@ -387,9 +376,7 @@ const ComprehensiveServices2036: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-<<<<<<< HEAD
 >>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
 >>>>>>> cursor/create-and-deploy-new-content-99e3
           </div>
         </div>
@@ -398,4 +385,3 @@ const ComprehensiveServices2036: React.FC = () => {
   );
 };
 
-export default ComprehensiveServices2036;

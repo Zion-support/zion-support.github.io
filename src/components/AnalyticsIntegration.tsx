@@ -9,8 +9,7 @@ const AnalyticsIntegration: React.FC = () => {
 };
 interface AnalyticsIntegrationProps {
   children: React.ReactNode;
-
-
+}
 export default function AnalyticsIntegration({ children }: AnalyticsIntegrationProps) {
   const router = useRouter();
   useEffect(() => {
@@ -156,9 +155,11 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
     };
   }[]);
   return <>{children}</>;
+}
 // Global type declarations
 declare global {
   interface Window {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
-  };
+  }
+}

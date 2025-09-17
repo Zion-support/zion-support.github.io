@@ -11,9 +11,7 @@ interface ContentItem {
   roi?: string;
   badge?: string;
   icon: string;
-};
-
-
+}
 export default function ContentDiscoveryWidget() {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentItemsetCurrentItem] = useState(0);
@@ -149,6 +147,5 @@ export default function ContentDiscoveryWidget() {
             />
           ))}
   );
-
-
+};
 export default ContentDiscoveryWidget;

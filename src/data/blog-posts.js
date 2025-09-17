@@ -2803,6 +2803,8 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
+
+const extraContent2029 = [
   {
     id: 9501,
     title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
@@ -3730,7 +3732,9 @@ export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent202
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
+<<<<<<< HEAD
 
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)

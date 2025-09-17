@@ -56,7 +56,5 @@ const RevolutionaryTechAdvertisingBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default RevolutionaryTechAdvertisingBanner;

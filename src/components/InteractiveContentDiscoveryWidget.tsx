@@ -74,7 +74,6 @@ const InteractiveContentDiscoveryWidget: React.FC = () => {
                             </span>
                           </button>
                         );
-};
                       })}
                     </div>
                   </div>
@@ -234,6 +233,5 @@ const InteractiveContentDiscoveryWidget: React.FC = () => {
       </div>
     </>
   );
-
-
+};
 export default InteractiveContentDiscoveryWidget;

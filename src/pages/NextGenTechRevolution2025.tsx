@@ -14,7 +14,5 @@ const NextGenTechRevolution2025: React.FC = () => {
       </section>
     </div>
   );
-
 };
-
 export default NextGenTechRevolution2025;

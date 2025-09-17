@@ -63,7 +63,5 @@ const UltimateTechBanner2036: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default UltimateTechBanner2036;

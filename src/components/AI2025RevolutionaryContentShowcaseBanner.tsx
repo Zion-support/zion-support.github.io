@@ -81,7 +81,5 @@ const AI2025RevolutionaryContentShowcaseBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
-
 export default AI2025RevolutionaryContentShowcaseBanner;

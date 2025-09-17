@@ -3,9 +3,6 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-};
-
-
 export default function HolographicAICommunicationPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -48,3 +45,4 @@ export default function HolographicAICommunicationPage() {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
   );
+}

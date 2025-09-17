@@ -568,7 +568,5 @@ const UltimateTechShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default UltimateTechShowcase2025;

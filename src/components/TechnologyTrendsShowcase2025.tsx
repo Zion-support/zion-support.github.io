@@ -1,149 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  Globe
-  Shield
-  ArrowRight,
-  Play,
-  Star,
-  CheckCircle,
-  TrendingUp,
-  Lightbulb,
-  Rocket,
-  Target,
-  Users,
-  BarChart3
-} from 'lucide-react';
-
-const TechnologyTrendsShowcase2025 = () => {
-  const [activeTrendsetActiveTrend] = useState(0);
-  const [isPlayingsetIsPlaying] = useState(false);
-
-  const trends = [
-    {
-      id: 1,
-      title: "AI-Powered Automation Revolution",
-      description: "The next generation of intelligent automation that learnsadaptsand evolves with your business needs.",
-      icon: Brain,
-      color: "from-blue-500 to-purple-600",
-      stats: {
-        adoption: "85%",
-        efficiency: "300%",
-        costReduction: "60%"
-      },
-      features: [
-        "Self-learning algorithms",
-        "Predictive maintenance",
-        "Intelligent decision making",
-        "Seamless integration"
-      ],
-      impact: "High",
-      timeline: "2025-2026"
-    },
-    {
-      id: 2,
-      title: "Edge Computing & Real-time Processing",
-      description: "Bringing computation closer to data sources for ultra-fast processing and reduced latency.",
-      icon: Zap,
-      color: "from-green-500 to-teal-600",
-      stats: {
-        adoption: "70%",
-        efficiency: "250%",
-        costReduction: "45%"
-      },
-      features: [
-        "Ultra-low latency",
-        "Local data processing",
-        "Enhanced security",
-        "Scalable infrastructure"
-      ],
-      impact: "Very High",
-      timeline: "2025-2027"
-    },
-    {
-      id: 3,
-      title: "Quantum-Enhanced Security",
-      description: "Next-generation security protocols powered by quantum computing principles for unbreakable protection.",
-      icon: Shield,
-      color: "from-red-500 to-pink-600",
-      stats: {
-        adoption: "60%",
-        efficiency: "400%",
-        costReduction: "35%"
-      },
-      features: [
-        "Quantum encryption",
-        "Advanced threat detection",
-        "Zero-trust architecture",
-        "Automated compliance"
-      ],
-      impact: "Critical",
-      timeline: "2025-2028"
-    },
-    {
-      id: 4,
-      title: "Sustainable Technology Solutions",
-      description: "Green computing and eco-friendly technology solutions that reduce environmental impact while boosting performance.",
-      icon: Globe,
-      color: "from-emerald-500 to-green-600",
-      stats: {
-        adoption: "90%",
-        efficiency: "200%",
-        costReduction: "50%"
-      },
-      features: [
-        "Carbon-neutral operations",
-        "Energy-efficient algorithms",
-        "Sustainable infrastructure",
-        "Green data centers"
-      ],
-      impact: "Essential",
-      timeline: "2025-2030"
-    }
-  ];
-
-  const predictions = [
-    {
-      year: "2025",
-      prediction: "AI becomes mainstream in 85% of businesses",
-      confidence: 95,
-      impact: "Transformational"
-    },
-    {
-      year: "2026",
-      prediction: "Edge computing adoption reaches 70%",
-      confidence: 88,
-      impact: "High"
-    },
-    {
-      year: "2027",
-      prediction: "Quantum security becomes standard",
-      confidence: 75,
-      impact: "Critical"
-    },
-    {
-      year: "2028",
-      prediction: "Sustainable tech is mandatory",
-      confidence: 92,
-      impact: "Essential"
-    }
-  ];
-
-  useEffect(() => {
-    if (isPlaying) {
-      const interval = setInterval(() => {
-        setActiveTrend((prev) => (prev + 1) % trends.length);
-      }4000);
-      return () => clearInterval(interval);
-    }
-  }[isPlaying]);
-
-  const currentTrend = trends[activeTrend];
-
+import React from 'react';
+const TechnologyTrendsShowcase2025: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,7 +12,6 @@ const TechnologyTrendsShowcase2025 = () => {
             <TrendingUp className="w-4 h-4 mr-2" />
             Technology Trends Showcase 2025
           </div>
-          
           <divh2
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
@@ -164,7 +19,6 @@ const TechnologyTrendsShowcase2025 = () => {
             The Future of Technology is
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Here Today</span>
           </divh2>
-          
           <divp
             whileInView={{ opacity: 1, y: 0 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -172,7 +26,6 @@ const TechnologyTrendsShowcase2025 = () => {
             Discover the cutting-edge technologies that will shape the next decade and learn how to prepare your business for the future.
           </divp>
         </div>
-
         {/* Trend Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {trends.map((trendindex) => {
@@ -196,14 +49,12 @@ const TechnologyTrendsShowcase2025 = () => {
             );
           })}
         </div>
-
         {/* Main Trend Display */}
           <div
             key={activeTrend}
             className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12"
           >
             <div className={`h-2 bg-gradient-to-r ${currentTrend.color}`} />
-            
             <div className="p-8 md:p-12">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Side - Trend Details */}
@@ -231,11 +82,9 @@ const TechnologyTrendsShowcase2025 = () => {
                       </div>
                     </div>
                   </div>
-
                   <p className="text-lg text-gray-600 mb-8">
                     {currentTrend.description}
                   </p>
-
                   {/* Stats Grid */}
                   <div className="grid grid-cols-3 gap-4 mb-8">
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
@@ -257,7 +106,6 @@ const TechnologyTrendsShowcase2025 = () => {
                       <div className="text-sm text-gray-600">Cost Reduction</div>
                     </div>
                   </div>
-
                   {/* Features */}
                   <div className="space-y-3">
                     {currentTrend.features.map((featureindex) => (
@@ -271,7 +119,6 @@ const TechnologyTrendsShowcase2025 = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Right Side - Visual */}
                 <div className="relative">
                   <div
@@ -300,7 +147,6 @@ const TechnologyTrendsShowcase2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Auto-play Controls */}
         <div className="flex items-center justify-center gap-4 mb-12">
           <button
@@ -315,7 +161,6 @@ const TechnologyTrendsShowcase2025 = () => {
             {isPlaying ? 'Auto-playing' : 'Paused'}
           </button>
         </div>
-
         {/* Future Predictions */}
         <div className="mb-16">
           <div
@@ -329,7 +174,6 @@ const TechnologyTrendsShowcase2025 = () => {
               Based on current trends and expert analysis
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {predictions.map((predictionindex) => (
               <div
@@ -364,7 +208,6 @@ const TechnologyTrendsShowcase2025 = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -395,5 +238,5 @@ const TechnologyTrendsShowcase2025 = () => {
     </div>
   );
 };
-
 export default TechnologyTrendsShowcase2025;
+</div></div></div></div></div></div></div>

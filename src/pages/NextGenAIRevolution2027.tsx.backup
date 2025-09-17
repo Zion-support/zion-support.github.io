@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 const NextGenAIRevolution2027: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -32,9 +31,7 @@ const NextGenAIRevolution2027: React.FC = () => {
                 Try AI Demo
               </button>
             </div>
-<<<<<<< HEAD
           </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -49,13 +46,11 @@ const NextGenAIRevolution2027: React.FC = () => {
             Experience the most advanced artificial intelligence systems that will transform every aspect of human life
           </p>
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
           </motion.div>
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Revolutionary AI Technologies */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -212,7 +207,6 @@ const NextGenAIRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Contact Our AI Experts
-=======
         {/* AI Capabilities Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
@@ -421,4 +415,3 @@ const NextGenAIRevolution2027: React.FC = () => {
   );
 };
 
-export default NextGenAIRevolution2027;

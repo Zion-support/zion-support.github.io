@@ -153,7 +153,5 @@ const RevolutionaryTechBanner2027 = () => {
       </div>
     </div>
   );
-
 };
-
 export default RevolutionaryTechBanner2027;

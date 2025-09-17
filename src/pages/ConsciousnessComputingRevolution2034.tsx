@@ -489,7 +489,5 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
       <Footer />
     </div>
   );
-
 };
-
 export default ConsciousnessComputingRevolution2034;

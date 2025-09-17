@@ -136,7 +136,5 @@ const RevolutionaryTechBreakthrough2035: React.FC = () => {
       <Footer />
     </div>
   );
-
 };
-
 export default RevolutionaryTechBreakthrough2035;

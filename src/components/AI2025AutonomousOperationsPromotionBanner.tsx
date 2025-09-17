@@ -100,7 +100,5 @@ const AI2025AutonomousOperationsPromotionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
-
 export default AI2025AutonomousOperationsPromotionBanner;

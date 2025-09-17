@@ -184,7 +184,5 @@ const QuantumRealityEngine2025: React.FC = () => {
       <EnhancedFooter />
     </div>
   );
-
 };
-
 export default QuantumRealityEngine2025;

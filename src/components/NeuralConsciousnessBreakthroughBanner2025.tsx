@@ -125,7 +125,5 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
       </div>
     </section>
   );
-
 };
-
 export default NeuralConsciousnessBreakthroughBanner2025;
