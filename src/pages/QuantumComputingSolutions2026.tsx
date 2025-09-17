@@ -1,5 +1,4 @@
 import React from 'react';
-
 const QuantumComputingSolutions2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -12,7 +11,6 @@ const QuantumComputingSolutions2026: React.FC = () => {
             Revolutionary quantum computing solutions that will transform your business in 2026
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-4">Quantum Processing</h3>
@@ -31,5 +29,4 @@ const QuantumComputingSolutions2026: React.FC = () => {
     </div>
   );
 };
-
 export default QuantumComputingSolutions2026;

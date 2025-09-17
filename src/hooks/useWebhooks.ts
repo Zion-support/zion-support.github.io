@@ -21,6 +21,9 @@ export interface UseWebhooksOptions {
   autoRefresh?: boolean;
   refreshInterval?: number;
 };
+interface UseWebhooksOptions {
+  autoRefresh?: boolean;
+  refreshInterval?: number;
 export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   const { autoRefresh = true, refreshInterval = 30000 } = options;
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
@@ -37,6 +40,8 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
         throw new Error('Failed to fetch webhooks');
       };
 const data = await response.json();
+      }
+      const data = await response.json();
       setWebhooks(data.webhooks || []);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch webhooks');
@@ -55,6 +60,8 @@ const data = await response.json();
         throw new Error('Failed to fetch webhook events');
       };
 const data = await response.json();
+      }
+      const data = await response.json();
       setEvents(data.events || []);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch webhook events');
@@ -70,12 +77,16 @@ const data = await response.json();
       const response = await fetch('/api/webhooks', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(webhookData)});
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(webhookData),
+      });
       if (!response.ok) {
         throw new Error('Failed to create webhook');
       };
 const newWebhook = await response.json();
+      }
+      const newWebhook = await response.json();
       setWebhooks(prev => [...prev, newWebhook]);
       return newWebhook;
     } catch (err) {
@@ -86,19 +97,23 @@ const newWebhook = await response.json();
     };
   }, []);
   // Update webhook
-  const updateWebhook = useCallback(async (id: "string", updates: Partial<Webhook>) => {
+  const updateWebhook = useCallback(async (id: string, updates: Partial<Webhook>) => {
     try {
       setLoading(true);
       setError(null);
       const response = await fetch(`/api/webhooks/${id}`, {
         method: 'PUT',
         headers: {
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(updates)});
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updates),
+      });
       if (!response.ok) {
         throw new Error('Failed to update webhook');
       };
 const updatedWebhook = await response.json();
+      }
+      const updatedWebhook = await response.json();
       setWebhooks(prev => prev.map(webhook => 
         webhook.id === id ? updatedWebhook : webhook
       ));
@@ -116,11 +131,14 @@ const updatedWebhook = await response.json();
       setLoading(true);
       setError(null);
       const response = await fetch(`/api/webhooks/${id}`, {
-        method: 'DELETE'});
+        method: 'DELETE',
+      });
       if (!response.ok) {
         throw new Error('Failed to delete webhook');
       };
 setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
+      }
+      setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to delete webhook');
       throw err;
@@ -134,11 +152,14 @@ setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
       setLoading(true);
       setError(null);
       const response = await fetch(`/api/webhooks/${id}/test`, {
-        method: 'POST'});
+        method: 'POST',
+      });
       if (!response.ok) {
         throw new Error('Failed to test webhook');
       };
 const result = await response.json();
+      }
+      const result = await response.json();
       return result;
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to test webhook');
@@ -153,11 +174,14 @@ const result = await response.json();
       setLoading(true);
       setError(null);
       const response = await fetch(`/api/webhook-events/${eventId}/retry`, {
-        method: 'POST'});
+        method: 'POST',
+      });
       if (!response.ok) {
         throw new Error('Failed to retry webhook event');
       };
 const result = await response.json();
+      }
+      const result = await response.json();
       return result;
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to retry webhook event');
@@ -193,4 +217,6 @@ const result = await response.json();
     deleteWebhook,
     testWebhook,
     retryEvent};
+  };
+    retryEvent,
   };

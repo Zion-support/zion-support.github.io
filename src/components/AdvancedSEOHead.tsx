@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -13,7 +12,6 @@ interface SEOHeadProps {
   noIndex?: boolean;
   noFollow?: boolean;
 }
-
 const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Leading AI, Quantum Computing & Cybersecurity Solutions",
   description = "Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Interactive AI calculator, enterprise case studies, and personalized recommendations.",
@@ -39,7 +37,6 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
   const fullDescription = description.length > 160 ? description.substring(0, 157) + "..." : description;
-  
   // Default structured data for organization
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -64,9 +61,7 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
       "https://twitter.com/ziontechgroup"
     ]
   };
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -74,10 +69,8 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords.join(", ")} />
       <link rel="canonical" href={canonicalUrl} />
-      
       {/* Robots Meta */}
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
-      
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
@@ -88,7 +81,6 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -96,7 +88,6 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="publisher" content="Zion Tech Group" />
@@ -105,7 +96,6 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="revisit-after" content="7 days" />
       <meta name="rating" content="general" />
       <meta name="distribution" content="global" />
-      
       {/* Mobile Optimization */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       <meta name="theme-color" content="#1e40af" />
@@ -113,24 +103,20 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
       {/* Performance Hints */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="dns-prefetch" href="https://api.ziontechgroup.com" />
-      
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/manifest.json" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
       {/* Additional Performance Optimizations */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <link rel="preload" href="/assets/vendor-DgTrhVr3.js" as="script" />
@@ -138,5 +124,4 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>
   );
 };
-
 export default AdvancedSEOHead;
