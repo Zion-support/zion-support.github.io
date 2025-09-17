@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
 import { Star, MessageSquare, Brain, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
