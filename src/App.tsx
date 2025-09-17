@@ -1,10 +1,11 @@
-import React, { Suspense, lazy, ErrorBoundary } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import PerformanceMonitor from "./components/PerformanceMonitor";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -37,7 +38,7 @@ const LoadingSpinner = () => (
 
 function App() {
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
+    <ErrorBoundary fallback={<ErrorFallback error={new Error('Unknown error')} resetErrorBoundary={() => window.location.reload()} />}>
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
