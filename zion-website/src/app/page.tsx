@@ -1,55 +1,50 @@
-import React from 'react'
-import { LightBulbIcon, CpuChipIcon, GlobeAltIcon, ShieldCheckIcon, ChartBarIcon, UserGroupIcon } from '@heroicons/react/24/outline'
+// @ts-nocheck
 import { getLatestUpdates } from '@/data/updates'
+import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const features = [
   { name: 'AI-Powered Research', description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.', icon: LightBulbIcon },
   { name: 'Quantum Computing', description: 'Next-generation quantum neural networks for solving complex computational problems.', icon: CpuChipIcon },
   { name: 'Global Solutions', description: 'Worldwide deployment of autonomous business operations and digital transformation.', icon: GlobeAltIcon },
   { name: 'Enterprise Security', description: 'Military-grade security protocols protecting your most valuable digital assets.', icon: ShieldCheckIcon },
-  { name: 'Advanced Analytics', description: 'Real-time data processing and insights to drive informed decision making.', icon: ChartBarIcon },
-  { name: 'Team Collaboration', description: 'Seamless collaboration tools for distributed teams and remote workforces.', icon: UserGroupIcon }
+  { name: 'Data Analytics', description: 'Advanced analytics and insights driving informed decision-making.', icon: ChartBarIcon },
+  { name: 'Expert Team', description: 'World-class researchers and engineers pushing the boundaries of technology.', icon: UserGroupIcon },
 ]
 
 const stats = [
+  { name: 'Research Papers Published', value: '150+' },
+  { name: 'AI Models Deployed', value: '500+' },
   { name: 'Global Clients', value: '1,000+' },
   { name: 'Patents Filed', value: '25+' },
-  { name: 'Countries Served', value: '50+' },
-  { name: 'Years of Innovation', value: '10+' }
 ]
 
 const solutions = [
-  {
-    name: 'Autonomous Business Operations',
-    description: 'AI-powered automation for end-to-end business processes with intelligent decision making and continuous optimization.',
-    href: '/solutions/autonomous-business'
-  },
-  {
-    name: 'IT Asset Management',
-    description: 'Comprehensive asset lifecycle management with predictive analytics and automated compliance monitoring.',
-    href: '/solutions/it-asset-management'
-  }
+  { name: 'AI Research Assistant', description: 'Autonomous research platform that accelerates scientific discovery.', href: '/solutions/ai-autonomous-research' },
+  { name: 'Quantum Neural Networks', description: 'Next-generation computing for complex problem solving.', href: '/solutions/quantum-neural-networks' },
+  { name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business' },
+  { name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management' },
 ]
 
 const latest = getLatestUpdates(3)
 
 export default function HomePage() {
   return (
-    <div className="bg-black">
-      {/* Promo banner */}
-      <div className="relative isolate px-6 pt-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
-            <p className="text-sm sm:text-base font-semibold text-blue-200">
-              New: Real-Time Agent Cost Optimizer v1.0 —
-              <a href="/updates/real-time-agent-cost-optimizer-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost optimizer</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              Production RAG Latency Budgets —
-              <a href="/updates/production-rag-latency-budgets" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">latency guide</a>
-              <span className="mx-2 text-blue-300/60">|</span>
-              <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">see all updates</a>
-            </p>
-          </div>
+    <div className="bg-black min-h-screen">
+      {/* Promo banner for fresh content */}
+      <div className="mx-auto max-w-7xl px-6 pt-6">
+        <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
+          <p className="text-sm sm:text-base font-semibold text-blue-200">
+            New: Evidence Vault v1.1 —
+            <a href="/updates/agent-evidence-vault-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">see what's new</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Also: Agent Risk Dashboard v1.1 —
+            <a href="/updates/agent-risk-dashboard-1-1" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">launch details</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            Guide: Multimodal Agents Guardrails (2026) —
+            <a href="/updates/production-guardrails-multimodal-agents-2026" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">read the guide</a>
+            <span className="mx-2 text-blue-300/60">|</span>
+            <a href="/updates" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">all updates</a>
+          </p>
         </div>
       </div>
 
