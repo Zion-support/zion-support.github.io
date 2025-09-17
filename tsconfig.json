@@ -36,37 +36,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "**/*.spec.tsx"
   ]
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
-=======
-    "**/*.spec.tsx",
-    "coverage"
-  ]
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56
-=======
-    "**/*.spec.tsx"
-  ]
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
-=======
->>>>>>> origin/feat/new-sept-2025-content-and-blog-promo
-=======
->>>>>>> origin/feat/realtime-rag-content
-=======
->>>>>>> origin/feature/enhanced-content-showcase-2025
-=======
->>>>>>> origin/merge-new-content-1757989975
