@@ -665,7 +665,6 @@ const AdvancedAISystems2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-      </div>
     </div>
   );
 };

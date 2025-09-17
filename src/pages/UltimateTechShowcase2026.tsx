@@ -206,71 +206,9 @@ const UltimateTechShowcase2026: React.FC = () => {
             >
               <span className="text-2xl mr-3">{category.icon}</span>
               {category.title}
-      description: "Direct brain-computer communication and enhancement",
-      features: [
-        "Non-invasive brain-computer interfaces",
-        "Thought-to-action conversion",
-        "Memory enhancement and augmentation",
-        "Telepathic communication networks",
-        "Consciousness transfer capabilities"
-      ],
-      color: "from-emerald-600 to-teal-600",
-      bgColor: "from-emerald-600/20 to-teal-600/20",
-      borderColor: "border-emerald-400/30"
-    },
-    synthetic: {
-      title: "Synthetic Intelligence",
-      icon: "🤖",
-      description: "Artificially created consciousness and intelligence",
-      features: [
-        "Artificial consciousness and self-awareness",
-        "Creative synthesis and innovation",
-        "Collective intelligence networks",
-        "Emotional and social intelligence",
-        "Autonomous learning and evolution"
-      ],
-      color: "from-orange-600 to-red-600",
-      bgColor: "from-orange-600/20 to-red-600/20",
-      borderColor: "border-orange-400/30"
-    },
-    space: {
-      title: "Space Technology Innovation",
-      icon: "🚀",
-      description: "Revolutionary space exploration and colonization",
-      features: [
-        "Faster-than-light propulsion systems",
-        "Self-sustaining space habitats",
-        "Asteroid mining and resource extraction",
-        "Interplanetary communication networks",
-        "Terraforming and planet engineering"
-      ],
-      color: "from-indigo-600 to-purple-600",
-      bgColor: "from-indigo-600/20 to-purple-600/20",
-      borderColor: "border-indigo-400/30"
-    },
-    biotech: {
-      title: "Biotechnology Revolution",
-      icon: "🧬",
-      description: "Advanced biotechnology and genetic engineering",
-      features: [
-        "Precision gene editing and therapy",
-        "Synthetic biology and organisms",
-        "Neural-biotech interfaces",
-        "Longevity and life extension",
-        "Quantum bioimaging and diagnostics"
-      ],
-      color: "from-green-600 to-emerald-600",
-      bgColor: "from-green-600/20 to-emerald-600/20",
-      borderColor: "border-green-400/30"
-    }
-  };
-  const handleTabChange = (tab: string) => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setActiveTab(tab);
-      setIsAnimating(false);
-    }, 150);
-  };
+            </button>
+          ))}
+        </div>
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -588,3 +526,8 @@ const UltimateTechShowcase2026: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+export default UltimateTechShowcase2026;
