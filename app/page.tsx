@@ -1,7 +1,32 @@
 import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
 import Link from 'next/link';
-import Link from 'next/link';
-import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
+import SEO from '../components/SEO';
+import ErrorBoundary from '../components/ErrorBoundary';
+import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import ContentShowcase, { featuredContent, trendingContent, latestContent } from '../components/ContentShowcase';
+import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
+import NewContentBanner from '../components/NewContentBanner';
+import NewContentShowcase from '../components/NewContentShowcase';
+import NewContentPromotionBanner from '../components/NewContentPromotionBanner';
+import NewContentPromoBanner from '../components/NewContentPromoBanner';
+import UltraContentPromotionBanner from '../components/UltraContentPromotionBanner';
+import RevolutionaryContentBanner from '../components/RevolutionaryContentBanner';
+import FeaturedNewContentShowcase from '../components/FeaturedNewContentShowcase';
+import FeaturedContentShowcase from '../components/FeaturedContentShowcase';
+import DynamicContentCarousel from '../components/DynamicContentCarousel';
+import ContentDiscoverySection from '../components/ContentDiscoverySection';
+import NewContentDiscovery from '../components/NewContentDiscovery';
+import EnhancedNewsletter from '../components/EnhancedNewsletter';
+import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup';
+import SuccessMetrics, { defaultMetrics, contentMetrics } from '../components/SuccessMetrics';
+import Card from '../components/ui/Card';
+import FeatureCard from '../components/FeatureCard';
+import TestimonialCard from '../components/TestimonialCard';
+import PerformanceMetrics from '../components/PerformanceMetrics';
+import TechnologyStack from '../components/TechnologyStack';
 
 // Import new 2026 content promotional components
 import NewContent2026NeuralInterfaceBanner from './components/NewContent2026NeuralInterfaceBanner';
@@ -672,8 +697,17 @@ export default function HomePage() {
       <WhatsNew highlightOnly limit={8} />
       
       <div className='min-h-screen bg-white'>
-        {/* Mega Content Drop Banner */}
-        <section className="py-8 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+        {/* REVOLUTIONARY CONTENT BANNER */}
+        <RevolutionaryContentBanner />
+        
+        {/* ULTRA CONTENT PROMOTION BANNER */}
+        <UltraContentPromotionBanner />
+        
+        {/* Content Promotion Banner */}
+        <NewContentPromotionBanner />
+        
+        {/* NEW CONTENT LAUNCH BANNER */}
+        <section className="py-12 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
