@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-export default function Page(props: any) {
-,
-        visible: {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const TestimonialsSection: React.FC = () => {
   return (

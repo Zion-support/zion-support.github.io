@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea = _React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = 'Textarea'; export { Textarea };";
 import React from \'react\'; import { cn } from \"../../lib/utils\"; const Textarea = React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; \'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background \"placeholder\": text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\',; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = \'Textarea\'; export { Textarea };\";
 const React from "react"; import { cn } from "././lib/utils"; const Textarea = React.forwardRef(({ className,.props },ref) => {; return(; <textarea; className = {; cn(; "flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",; className; )}; ref={ref}; {.props}; />; )}); Textarea.displayName = "Textarea"; export { Textarea };";'"'"
 import _React from 'react'; import { cn } from "../../lib/utils"; const Textarea = _React.forwardRef(({ className,...props },ref) => {; return(; <textarea; className = {; cn(; 'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "placeholder": text-muted-foreground focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50,; className; )}; ref={ref}; {...props}; />; )}); Textarea.displayName = 'Textarea'; export { Textarea };";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useState } from 'react';
-
-import { 
-  Check, 
-  Star, 
-  DollarSign, 
-  Clock, 
-  Users, 
-  Shield, 
-  Zap, 
-  TrendingUp,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Download,
-  Play,
-  Search,
-  Filter,
-  ArrowRight,
-  Award,
-  Globe,
-  Cpu,
-  Brain,
-  Cloud,
-  Lock,
-  Code
-} from 'lucide-react';
-import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
-import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ComprehensivePricing2025: React.FC = () => {
   return (

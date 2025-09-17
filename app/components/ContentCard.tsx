@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ContentCard: React.FC = () => {
-=======
-import Link from 'next/link';
-
-export interface ContentCardProps {
-  title: string;
-  description: string;
-  href: string;
-  category: string;
-  date?: string;
-  featured?: boolean;
-  image?: string;
-  tags?: string[];
-}
-
-const ContentCard = ({
-  title,
-  description,
-  href,
-  category,
-  date,
-  featured = false,
-  image,
-  tags = []
-}: ContentCardProps): JSX.Element => {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">ContentCard</h3>

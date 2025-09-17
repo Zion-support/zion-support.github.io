@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import { Link  } from 'react-router-dom';
-export default function Page(props: any) {
-</motion.div>}
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const PerformanceOptimizedHero: React.FC = () => {
   return (

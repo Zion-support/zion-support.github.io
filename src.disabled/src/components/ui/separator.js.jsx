@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Separator = _React.forwardRef((_a,ref) => {} '; ''; '''; var { className,orientation = 'horizontal' } = _a,'''; props = __rest(_a,['className',orientation']);'''; return _jsx(''''; 'div',; Object.assign() {} "ref": 'ref','; "className": cn(''; 'shrink-0 bg-border','; orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',; className; )},; props; ); );});'; Separator.displayName = 'Separator'; export { Separator }; export { Separator }; export { Separator }; export { Separator }; export { Separator }; export { Separator };
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Separator = React.forwardRef((_a,ref) => {} \'; \''; \''\'; var { className,orientation = \'horizontal\' } = _a,\''\'; props = __rest(_a,[\'className\',orientation\']);\''\'; return _jsx(\''\''; \'div\',; Object.assign() {} \"ref\": \'ref\',\'; \"className\": cn(\''; \'shrink-0 bg-border\',\'; orientation === \'horizontal\' ? \'h-[1px] w-full\' : \'h-full w-[1px]\',; className; )},; props; ); );});\'; Separator.displayName = \'Separator\'; export { Separator }; export { Separator }; export { Separator }; export { Separator }; export { Separator }; export { Separator };
 var __rest =; (this && this.__rest) |; function (s,e) {} var t = {}; for (var p in s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Separator = React.forwardRef((_a,ref) => {} "; ""; """; var { className,orientation = "horizontal" } = _a,"""; props = __rest(_a,["className",orientation"]);"""; return _jsx(""""; "div",; Object.assign() { return; } ref: "ref","; className: cn(""; "shrink-0 bg-border","; orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",; className; )},; props; ); );});"; Separator.displayName = "Separator"; export { Separator }; export { Separator }; export { Separator }; export { Separator }; export { Separator }; export { Separator };'"'"
 var __rest =; (this && this.__rest) ||; function (s,e) {} var t = {}; for (var p in, s); if (Object.prototype.hasOwnProperty.call(s,p) && e.indexOf(p) <div>Broken JSX</div> const Separator = _React.forwardRef((_a,ref) => {} '; ''; '''; var { className,orientation = 'horizontal' } = _a,'''; props = __rest(_a,['className',orientation']);'''; return _jsx(''''; 'div',; Object.assign() {} "ref": 'ref','; "className": cn(''; 'shrink-0 bg-border','; orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',; className; )},; props; ); );});'; Separator.displayName = 'Separator'; export { Separator }; export { Separator }; export { Separator }; export { Separator }; export { Separator }; export { Separator };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

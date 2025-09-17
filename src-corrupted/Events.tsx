@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useState } from 'react';
-
-import { 
-  Calendar, MapPin, Clock, Users, ExternalLink, 
-  Filter, Search, Tag, ArrowRight 
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Events: React.FC = () => {
   return (

@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link, useLocation  } from 'react-router-dom';
- from 'react';
-export const EnhancedMobileNavigation: Reac t.FC = () => {
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const EnhancedMobileNavigation: React.FC = () => {
   return (

@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 import _React from 'react';'''; import { EnterpriseHero } from '@/components/enterprise/EnterpriseHero';'''; import { EnterprisePricingTable } from '@/components/enterprise/EnterprisePricingTable';'''; import { EnterpriseFeatures } from '@/components/enterprise/EnterpriseFeatures';'''; import { EnterpriseCTA } from '@/components/enterprise/EnterpriseCTA';'''; import { EnterpriseTrustBadges } from '@/components/enterprise/EnterpriseTrustBadges';'''; import { EnterpriseTestimonials } from '@/components/enterprise/EnterpriseTestimonials';'''; import { SEO } from '@/components/SEO'; export {}; return null} return(); <> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };
 import React from \'react\';\''\'; import { EnterpriseHero } from \'@/components/enterprise/EnterpriseHero\';\''\'; import { EnterprisePricingTable } from \'@/components/enterprise/EnterprisePricingTable\';\''\'; import { EnterpriseFeatures } from \'@/components/enterprise/EnterpriseFeatures\';\''\'; import { EnterpriseCTA } from \'@/components/enterprise/EnterpriseCTA\';\''\'; import { EnterpriseTrustBadges } from \'@/components/enterprise/EnterpriseTrustBadges\';\''\'; import { EnterpriseTestimonials } from \'@/components/enterprise/EnterpriseTestimonials\';\''\'; import { SEO } from \'@/components/SEO\'; export {}; return null} return(); <> <div>Broken JSX</div> />\"; <main className=\"min-h-screen bg-background\"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };
 const React from "react";"""; import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero";"""; import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable";"""; import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";"""; import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";"""; import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";"""; import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";"""; import { SEO } from "@/components/SEO"; export {}; return null} return(); <> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };"""
 import _React from 'react';'''; import { EnterpriseHero } from '@/components/enterprise/EnterpriseHero';'''; import { EnterprisePricingTable } from '@/components/enterprise/EnterprisePricingTable';'''; import { EnterpriseFeatures } from '@/components/enterprise/EnterpriseFeatures';'''; import { EnterpriseCTA } from '@/components/enterprise/EnterpriseCTA';'''; import { EnterpriseTrustBadges } from '@/components/enterprise/EnterpriseTrustBadges';'''; import { EnterpriseTestimonials } from '@/components/enterprise/EnterpriseTestimonials';'''; import { SEO } from '@/components/SEO'; export {}; return null} return(); <> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

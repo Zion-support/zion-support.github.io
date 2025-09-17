@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 import _React from 'react';'''; import { AdminDashboard } from '@/components/enterprise/admin/AdminDashboard';'''; import { useAuth } from '@/hooks/useAuth';'''; import { Navigate } from 'react-router-dom';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} const { user } = useAuth();'; const isEnterpriseAdmin = user?.role === 'enterprise_admin'; if (!isEnterpriseAdmin) {} return <Navigate to="/unauthorized" />;} return(); <ProtectedRoute>"; <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <AdminDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin };
 import React from \'react\';\''\'; import { AdminDashboard } from \'@/components/enterprise/admin/AdminDashboard\';\''\'; import { useAuth } from \'@/hooks/useAuth\';\''\'; import { Navigate } from \'react-router-dom\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\'; export {}; return null} const { user } = useAuth();\'; const isEnterpriseAdmin = user?.role === \'enterprise_admin\'; if (!isEnterpriseAdmin) {} return <Navigate to=\"/unauthorized\" />;} return(); <ProtectedRoute>\"; <div>Broken JSX</div> />\"; <main className=\"min-h-screen bg-background\"> <AdminDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin };
 const React from "react";"""; import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";"""; import { useAuth } from "@/hooks/useAuth";"""; import { Navigate } from "react-router-dom";"""; import SEO from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute"; export {}; return null} const { user } = useAuth();"; const isEnterpriseAdmin = user?.role === "enterprise_admin"; if (!isEnterpriseAdmin) {} return <Navigate to="/unauthorized" />;} return(); <ProtectedRoute>"; <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <AdminDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin };'"'"
 import _React from 'react';'''; import { AdminDashboard } from '@/components/enterprise/admin/AdminDashboard';'''; import { useAuth } from '@/hooks/useAuth';'''; import { Navigate } from 'react-router-dom';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} const { user } = useAuth();'; const isEnterpriseAdmin = user?.role === 'enterprise_admin'; if (!isEnterpriseAdmin) {} return <Navigate to="/unauthorized" />;} return(); <ProtectedRoute>"; <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <AdminDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin }; export { EnterpriseAdmin };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

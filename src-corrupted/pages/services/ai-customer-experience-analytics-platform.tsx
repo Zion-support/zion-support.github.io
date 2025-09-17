@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-" <Helmet> <title>AI Customer Experience Analytics Platform - Zion Tech Group</title>" <meta name="description" content="Transform customer experiences with AI-powered analytics.Increase satisfaction by 45%, reduce churn by 35%, and boost customer lifetime value by 60%."    />" <meta name="keywords" content="customer experience analytics, AI analytics, customer journey mapping, sentiment analysis, predictive analytics"    />" <link rel="canonical" href="https:
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-customer-experience-analytics-platform: React.FC = () => {
   return (

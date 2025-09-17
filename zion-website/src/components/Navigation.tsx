@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const Navigation: React.FC = () => {
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 'use client'
 import { Dialog } from '@headlessui/react'
@@ -20,27 +8,6 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research', tag: 'New' },
-  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
@@ -49,10 +16,6 @@ const navigation = [
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
 >>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-23cd
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 =======
 =======
@@ -61,8 +24,6 @@ const navigation = [
   { name: 'Updates', href: '/updates' },
   { name: 'Contact', href: '/contact' },
 >>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 >>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 ]
@@ -76,9 +37,6 @@ const navigation = [
 >>>>>>> cursor/create-and-deploy-new-content-2def
 ]
 
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -96,12 +54,6 @@ export default Navigation;
 "use client"
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const navigation = [
-=======
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 const navLinks = [
 	{ name: 'About', href: '/about' },
 	{ name: 'Services', href: '/services' },
@@ -110,8 +62,6 @@ const navLinks = [
 	{ name: 'Updates', href: '/updates', badge: 'New' },
 ]
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
 =======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 export default function Navigation() {

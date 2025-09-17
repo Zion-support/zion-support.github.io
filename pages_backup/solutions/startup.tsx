@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';';
-
-import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
-import Layout from "../../components/Layout";";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const startup: React.FC = () => {
   return (

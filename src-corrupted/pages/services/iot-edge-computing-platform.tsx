@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-" and enable real-time decision making without cloud dependency. </p>" <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <a" href="https:
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const iot-edge-computing-platform: React.FC = () => {
   return (

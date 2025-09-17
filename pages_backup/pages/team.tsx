@@ -1,26 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github,
-  Award,
-  Users,
-  Globe,
-  Code,
-  Shield
-} from 'lucide-react';
-import Layout from '../components/Layout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const team: React.FC = () => {
   return (

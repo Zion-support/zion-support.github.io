@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-import { X, ChevronRight, Star, TrendingUp, Zap } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const MultimodalIntelligence2025PromotionBanner: React.FC = () => {
   return (

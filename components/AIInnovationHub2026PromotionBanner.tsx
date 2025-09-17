@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-import { 
-  Brain
-  ArrowRight
-  Star
-  Users
-  TrendingUp
-  Zap,
-  Cpu,
-  Target,
-  Globe,
-  ChevronRight,
-  Play,
-  BookOpen,
-  Code,
-  Lightbulb,
-  Award,
-  X,
-  Sparkles,
-  Rocket,
-  Shield,
-  Database,
-  Network,
-  Microscope,
-  Atom,
-  Layers,
-  Search
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AIInnovationHub2026PromotionBanner: React.FC = () => {
   return (

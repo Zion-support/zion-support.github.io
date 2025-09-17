@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React from 'react'
-import { LightBulbIcon, CpuChipIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 
 const page: React.FC = () => {
   return (
@@ -29,51 +22,11 @@ export default function ResearchPage() {
 					</h1>
 					<p className="mt-6 text-lg leading-8 text-gray-300">Explore our latest research focus areas, publications, and collaborations.</p>
 				</div>
-<<<<<<< HEAD
-			</div>
-			<div className="mx-auto max-w-7xl px-6 pb-16">
-				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-					<a href="/updates" className="rounded-2xl bg-white/5 p-6 text-white hover:bg-white/10 transition-colors duration-200">
-						<div className="text-sm text-blue-300">New</div>
-						<div className="mt-1 text-lg font-semibold">Recent research updates</div>
-						<div className="mt-1 text-gray-300 text-sm">Guides, releases, and reports from our lab.</div>
-					</a>
-					<a href="/reports" className="rounded-2xl bg-white/5 p-6 text-white hover:bg-white/10 transition-colors duration-200">
-						<div className="text-sm text-blue-300">Reports</div>
-						<div className="mt-1 text-lg font-semibold">AI Lab Reports</div>
-						<div className="mt-1 text-gray-300 text-sm">Benchmarks, architectures, and checklists.</div>
-					</a>
-=======
-				<div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
-					<dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-						{areas.map((area) => (
-							<div key={area.name} className="flex flex-col">
-								<dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-									<area.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-									{area.name}
-								</dt>
-								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-									<p className="flex-auto">{area.description}</p>
-								</dd>
-							</div>
-						))}
-					</dl>
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 				</div>
 			</div>
 		</div>
 	)
-<<<<<<< HEAD
-}
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 }
 =======
 import { LightBulbIcon, CpuChipIcon, AcademicCapIcon, GlobeAltIcon, ChartBarIcon, UserGroupIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline'
@@ -234,10 +187,6 @@ export default function ResearchPage() {
 }
 
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/create-and-deploy-new-content-f175
 =======
 >>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
 >>>>>>> origin/cursor/create-and-deploy-new-content-24fa

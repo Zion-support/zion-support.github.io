@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 import _React from 'react';'''; import { BillingDashboard } from '@/components/enterprise/billing/BillingDashboard';'''; import { useAuth } from '@/hooks/useAuth';'''; import { useNavigate } from 'react-router-dom';'''; import { SEO } from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} const { user } = useAuth(); const router = useNavigate(); const hasBillingAccess =''; user?.role === 'enterprise_admin' ||''; (user?.permissions && user.permissions.includes('billing_access')); if (!hasBillingAccess) {} '; if (typeof window !== 'null') {} '; ''; '''; router('/unauthorized');} return null;} return(); <ProtectedRoute> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <BillingDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling };
 import React from \'react\';\''\'; import { BillingDashboard } from \'@/components/enterprise/billing/BillingDashboard\';\''\'; import { useAuth } from \'@/hooks/useAuth\';\''\'; import { useNavigate } from \'react-router-dom\';\''\'; import { SEO } from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\'; export {}; return null} const { user } = useAuth(); const router = useNavigate(); const hasBillingAccess =\''; user?.role === \'enterprise_admin\' ||\''; (user?.permissions && user.permissions.includes(\'billing_access\')); if (!hasBillingAccess) {} \'; if (typeof window !== \'null\') {} \'; \''; \''\'; router(\'/unauthorized\');} return null;} return(); <ProtectedRoute> <div>Broken JSX</div> />\"; <main className=\"min-h-screen bg-background\"> <BillingDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling };
 const React from "react";"""; import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";"""; import { useAuth } from "@/hooks/useAuth";"""; import { useNavigate } from "react-router-dom";"""; import { SEO } from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute"; export {}; return null} const { user } = useAuth(); const router = useNavigate(); const hasBillingAccess =""; user?.role === "enterprise_admin" |""; (user?.permissions && user.permissions.includes("billing_access")); if (!hasBillingAccess) {} "; if (typeof window !== "null") {} "; ""; """; router("/unauthorized");} return null;} return(); <ProtectedRoute> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <BillingDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling };'"'"
 import _React from 'react';'''; import { BillingDashboard } from '@/components/enterprise/billing/BillingDashboard';'''; import { useAuth } from '@/hooks/useAuth';'''; import { useNavigate } from 'react-router-dom';'''; import { SEO } from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute'; export {}; return null} const { user } = useAuth(); const router = useNavigate(); const hasBillingAccess =''; user?.role === 'enterprise_admin' ||''; (user?.permissions && user.permissions.includes('billing_access')); if (!hasBillingAccess) {} '; if (typeof window !== 'null') {} '; ''; '''; router('/unauthorized');} return null;} return(); <ProtectedRoute> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <BillingDashboard /> ></div> </ProtectedRoute>)} ; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling }; export { EnterpriseBilling };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

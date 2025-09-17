@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React{ useState } from 'react';
-import Head from 'next/head';
-
-import { 
-  CheckStarZapShieldUsersGlobeArrowRightExternalLinkTrendingUpClockTargetBuildingRocketAwardDollarSignChartBarLockCpuDatabaseCloudSmartphonePaletteSearchMessageSquareFileTextCalendarCreditCardBarChart3SettingsCodeBookOpenActivityCrownGemInfinityBrainAtomMicroscopePhoneMailMapPin
-} from 'lucide-react';
-import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
-import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const pricing-2033: React.FC = () => {
   return (

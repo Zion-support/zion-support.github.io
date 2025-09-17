@@ -1,19 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircleArrowRightStarTrendingUp
-  PhoneZapDollarSignShieldMail
-  MapPinRocketBrainSparklesAtom
-  DnaUsersGlobeCpuLockDatabase,
-  BarChart3TargetMicroscopeCloud
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovative2025NewServices } from '../data/innovative-2025-new-services';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const innovative-2025-services-showcase: React.FC = () => {
   return (

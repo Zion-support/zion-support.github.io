@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useState } from 'react';
-
-import { 
-  Brain, Rocket, Target, Cpu, Globe, Eye, 
-  ChevronRight, Star, TrendingUp, Zap, Shield,
-  ArrowRight, Search, Filter, Grid, List,
-  Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
-import { innovativeMicroSaasServices2029V2 } from '../../data/2029-innovative-micro-saas-v2';
-import { aiBreakthroughServices2029 } from '../../data/2029-ai-breakthrough-services';
-import { spaceTechBreakthroughServices2029 } from '../../data/2029-space-tech-breakthroughs';
-import { enterpriseITBreakthroughServices2029 } from '../../data/2029-enterprise-it-breakthroughs';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ComprehensiveServicesShowcase2029: React.FC = () => {
   return (

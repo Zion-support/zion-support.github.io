@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React, { useState, useMemo } from 'react';
-
-import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
-import { 
-  Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
-  ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const InnovativeServicesShowcase2025: React.FC = () => {
   return (

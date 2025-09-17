@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-" </div> </div>" <div className="mt-8">" <p className="text-gray-400">" Visit our website: <a href="https:
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-powered-supply-chain-optimization-platform: React.FC = () => {
   return (

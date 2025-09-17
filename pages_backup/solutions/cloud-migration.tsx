@@ -1,24 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';';
-
-import { Cloud, 
-  Shield, 
-  Zap, 
-  CheckCircle,
-  ArrowRight,
-  BarChart3,
-  Users,
-  Settings,
-  Database,
-  Globe,
-  Lock,
-  Smartphone,
-  Brain;
-} from 'lucide-react';
-import Layout from "../../components/Layout";";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const cloud-migration: React.FC = () => {
   return (

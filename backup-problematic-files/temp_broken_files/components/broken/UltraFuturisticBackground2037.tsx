@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useEffect, useRef } from 'react';
-
-interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'high';
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
-  children?: React.ReactNode;
-}
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const UltraFuturisticBackground2037: React.FC = () => {
   return (

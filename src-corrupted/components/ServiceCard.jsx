@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-export default ServiceCard;
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ServiceCard: React.FC = () => {
   return (

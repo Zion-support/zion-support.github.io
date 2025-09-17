@@ -1,28 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import {Link} from 'react-router-dom';
-import {Helmet} from 'react-helmet-async';
-
-import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = (props: any) => {
-    const features = [
-        {
-            title: "AI-Powered Threat Detection",
-            description: "Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives",
-            icon: <Eye className="w-6 h-6" />
-        },
-        {title: "Automated Response Workflows",
-            description: "Intelligent automation handles routine incidents while escalating critical threats to human analysts",
-            icon: <Zap className="w-6 h-6" />},
-        {title: "Real-time Alerting & Notifications",
-            description: "Instant notifications across multiple channels with customizable escalation paths and response teams",
-            icon: <AlertTriangle className="w-6 h-6" />},
-        {
-            title: "Incident Timeline Tracking",
-            description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",
-            icon: <Clock className="w-6 h-6" />
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const IncidentResponsePlatform: React.FC = () => {
   return (

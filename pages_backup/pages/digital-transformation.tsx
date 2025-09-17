@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import Link from 'next/link';
-import MainLayout from '../components/layout/MainLayout';
-
-import { BarChart3,Globe,RefreshCw,Shield,Target,Users,Zap,CheckCircle,ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const digital-transformation: React.FC = () => {
   return (

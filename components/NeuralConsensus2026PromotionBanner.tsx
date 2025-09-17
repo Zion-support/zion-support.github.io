@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-BrainZapTrendingUpUsersArrowRightXCheckCircleStar
-import Link from 'next/link';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
   return (

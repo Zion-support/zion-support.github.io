@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 import React from \'react\';\''\'; import { cn } from \'../../lib/utils\'; const Progress = React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); \'; Progress.displayName = \'Progress\'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
 const React from "react";"""; import { cn } from "././lib/utils"; const Progress = React.forwardRef(); ({ className,value,max = 100,.props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); "; Progress.displayName = "Progress"; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };''"
 import _React from 'react';'''; import { cn } from '../../lib/utils'; const Progress = _React.forwardRef(); ({ className,value,max = 100,...props },ref) => {} const percentage = Math.min(Math.max((value / max) * 100,0),100); return(); <div>Broken JSX</div> > <div>Broken JSX</div> /> ></div> );} ); '; Progress.displayName = 'Progress'; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress }; export { Progress };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

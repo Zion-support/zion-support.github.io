@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import { SEO   } from '../../components/SEO';
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-iot-edge-computing-platform: React.FC = () => {
   return (

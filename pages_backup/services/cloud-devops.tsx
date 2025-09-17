@@ -1,21 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Layout from '../../components/Layout';';
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
-const features = [;
-  {}
-    icon: Cloud,
-    title: 'Cloud Migration,',
-    description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
-import Layout from '../../components/Layout';
-import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const cloud-devops: React.FC = () => {
   return (

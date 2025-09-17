@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-ArrowRightTrendingUpUsersDollarSignZapAwardTarget
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const RevolutionaryCaseStudiesShowcase: React.FC = () => {
   return (

@@ -91,11 +91,6 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
 
 =======
 =======
-=======
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3fd6
-=======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 >>>>>>> cursor/create-and-deploy-new-content-6f93
   // Fresh content added 2025-09-15
@@ -255,6 +250,181 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
 =======
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> feat/clean-updates-content
+=======
+=======
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1912
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+  // Fresh content added 2025-09-15
+  {
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+  // Fresh content added 2025-09-15
+  {
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+>>>>>>> feat/clean-updates-content
+    title: 'Guide: Agent Platform Operations (2026)',
+=======
+    title: 'Launch: Autonomous Ops and SRE for Agents',
+=======
+    title: 'Blueprint: Policy‑as‑Code in Production (2026)',
+=======
+    title: 'Report: State of AI Automation (2026 Preview)',
+=======
+    title: 'Launch: Autonomous Ops Control Center 2.0',
+=======
+=======
+  // Fresh content added 2025-01-16
+  {
+    title: 'Launch: AI Content Studio v3.0',
+    summary: 'Revolutionary content creation platform with advanced AI writing, video generation, and multi-modal publishing capabilities.',
+    href: '/updates/ai-content-studio-3-0',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Quantum AI Platform v2.0',
+    summary: 'Breakthrough quantum computing platform with neural network acceleration and real-time optimization for enterprise workloads.',
+    href: '/updates/quantum-ai-platform-2-0',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Business Suite 2026',
+    summary: 'Complete autonomous business operations platform with AI agents for finance, HR, operations, and customer service.',
+    href: '/updates/autonomous-business-suite-2026',
+    date: '2025-01-16',
+    tag: 'Launch'
+  },
+  {
+>>>>>>> cursor/create-and-deploy-new-content-9c82
+    title: 'Launch: Agentic Ops Dashboard (v1.0)',
+    summary: 'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
+    href: '/updates/agentic-ops-dashboard-1-0',
+    date: '2025-01-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Benchmarking Multimodal RAG (2026 Preview)',
+    summary:
+      'How to evaluate retrieval quality, synchronization, and latency across text, image, and video pipelines.',
+    href: '/updates/multimodal-rag-benchmarking-2026',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Case Study: 50% MTTR Reduction with Evals-in-Prod',
+    summary:
+      'Incident-driven improvements using live evals, guardrails, and cost-aware routing to halve MTTR.',
+    href: '/updates/mttr-reduction-evals-in-prod',
+    date: '2025-09-14',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Launch: Autonomous Sales Copilot (v1.0)',
+>>>>>>> origin/feat/new-updates-and-homepage-promo
+    summary:
+      'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
+    href: '/updates/autonomous-ops-control-center-2-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Compliance Auditor v1.0',
+    summary:
+      'Automated compliance checks for AI systems with policy-as-code and evidence collection.',
+    href: '/updates/compliance-auditor-1-0',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: Autonomous Support Copilot v1.1',
+    summary:
+      'Upgraded support copilot with retrieval observability, safe tool use, and faster resolutions.',
+    href: '/updates/autonomous-support-copilot-1-1',
+    date: '2025-09-15',
+    tag: 'Product'
+  },
+  {
+    title: 'Guide: Real-Time Evals Starter Kit',
+>>>>>>> origin/feat/new-updates-and-home-ad
+    summary:
+      'Trends, metrics, and enterprise adoption patterns shaping the next wave of AI-led automation.',
+    href: '/insights/state-of-ai-automation-2025',
+    date: '2025-09-15',
+    tag: 'Report'
+  },
+  {
+    title: 'Case Study: Autonomous Retail Fulfillment at Scale',
+    summary:
+      'How autonomous agents improved OTIF by 11% and reduced costs across a global retailer.',
+    href: '/updates/autonomous-retail-fulfillment',
+    date: '2025-09-15',
+    tag: 'Case Study'
+  },
+  {
+    title: 'Launch: Autonomous Ops Playbook (2026 Preview)',
+>>>>>>> origin/feat/content-sept15-1757928952
+    summary:
+      'Practical architecture to enforce executable policies across CI/CD and runtime with eval gates and evidence.',
+    href: '/blog/ai-2026-policy-as-code-production-blueprint',
+    date: '2025-09-15',
+    tag: 'Blueprint'
+  },
+  {
+    title: 'Launch: Autonomous Sales Copilot v1.0',
+>>>>>>> origin/feat/content-policy-as-code
+    summary:
+      'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
+    href: '/updates/autonomous-ops-sre-for-agents',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Launch: AI Agent Safety Certification (Beta)',
+>>>>>>> origin/feature/autonomous-ops-sre-content
+    summary:
+      'SLOs, incident response, and eval-driven change management to run agent platforms at scale.',
+    href: '/updates/agent-platform-operations',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: Production Guardrails Playbook',
+    summary:
+      'Operational guardrails, policy-as-code, and runtime protections for safe AI scale in production.',
+    href: '/updates/production-guardrails-playbook',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
+    title: 'Guide: Enterprise Agent Observability',
+    summary:
+      'Traces, evals, and safety telemetry to operate autonomous agents in production environments.',
+    href: '/updates/enterprise-agent-observability',
+    date: '2025-09-15',
+    tag: 'Guide'
+  },
+  {
+    title: 'Launch: AI Governance Toolkit (v2)',
+>>>>>>> origin/feature/content-updates-2025-09-15
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> feat/clean-updates-content
+=======
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
+=======
+>>>>>>> cursor/create-and-deploy-new-content-f995
 =======
   // Fresh content added 2025-09-15
   {
@@ -388,6 +558,8 @@ export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
+=======
+>>>>>>> feat/clean-updates-content
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120

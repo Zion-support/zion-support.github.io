@@ -1,34 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-
-import { 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Zap, 
-  Brain, 
-  Mail, 
-  MessageSquare,
-  Calendar,
-  Analytics,
-  Eye,
-  MousePointer,
-  Smartphone,
-  Globe,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Shield,
-  Clock,
-  DollarSign
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AIMarketingAutomation: React.FC = () => {
   return (

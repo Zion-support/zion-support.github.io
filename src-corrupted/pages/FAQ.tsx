@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React, { useState } from 'react';
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import { Helmet } from 'react-helmet-async';
 
 const FAQ: React.FC = () => {

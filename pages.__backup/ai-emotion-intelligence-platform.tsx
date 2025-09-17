@@ -1,19 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  CheckCircleArrowRightStarTrendingUpPhone
-  ZapDollarSignShieldMailMapPinBrain,
-  SparklesUsersClockAwardEyeHeart,
-  MessageCircleBarChart3GlobeSmartphone
-} from 'lucide-react';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ai-emotion-intelligence-platform: React.FC = () => {
   return (

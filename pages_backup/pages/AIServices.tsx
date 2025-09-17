@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-
-import Head from 'next/head';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-import { 
-  Brain, 
-  Bot, 
-  Eye, 
-  MessageSquare, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Clock,
-  Users,
-  Award,
-  TrendingUp,
-  Database,
-  Cpu,
-  Network,
-  Target,
-  Rocket
-} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const AIServices: React.FC = () => {
   return (

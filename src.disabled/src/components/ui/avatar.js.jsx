@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 import _React from 'react';'''; import { cn } from '@/lib/utils'; const Avatar = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; Avatar.displayName = 'Avatar';'; const AvatarImage = _React.forwardRef(''; ({ className,src,alt = ',...props },ref) => (; <div>Broken JSX</div> />'; )''; );'''; AvatarImage.displayName = 'AvatarImage'; const AvatarFallback = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; AvatarFallback.displayName = 'AvatarFallback'; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };
 import React from \'react\';\''\'; import { cn } from \'@/lib/utils\'; const Avatar = React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));\'; Avatar.displayName = \'Avatar\';\'; const AvatarImage = React.forwardRef(\''; ({ className,src,alt = \'',...props },ref) => (; <div>Broken JSX</div> />\'; )\''; );\''\'; AvatarImage.displayName = \'AvatarImage\'; const AvatarFallback = React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));\'; AvatarFallback.displayName = \'AvatarFallback\'; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };
 const React from "react";"""; import { cn } from "@/lib/utils"; const Avatar = React.forwardRef(({ className,.props },ref) => (; <div>Broken JSX</div> /> ));"; Avatar.displayName = "Avatar";"; const AvatarImage = React.forwardRef(""; ({ className,src,alt = "",.props },ref) => (; <div>Broken JSX</div> />"; )""; );"""; AvatarImage.displayName = "AvatarImage"; const AvatarFallback = React.forwardRef(({ className,.props },ref) => (; <div>Broken JSX</div> /> ));"; AvatarFallback.displayName = "AvatarFallback"; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };''"
 import _React from 'react';'''; import { cn } from '@/lib/utils'; const Avatar = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; Avatar.displayName = 'Avatar';'; const AvatarImage = _React.forwardRef(''; ({ className,src,alt = ',...props },ref) => (; <div>Broken JSX</div> />'; )''; );'''; AvatarImage.displayName = 'AvatarImage'; const AvatarFallback = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; AvatarFallback.displayName = 'AvatarFallback'; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

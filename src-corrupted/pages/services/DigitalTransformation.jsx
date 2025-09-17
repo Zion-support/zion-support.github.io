@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import {Link} from 'react-router-dom';
-import {SEO} from '@/components/SEO';
-
-import {ArrowRight} from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const DigitalTransformation: React.FC = () => {
   return (

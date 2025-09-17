@@ -1,39 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const ThemeContext: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">ThemeContext</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default ThemeContext;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 import _React from "react"; import * as _React from "react" const ThemeProvider = ({ children }) => { const [theme,setTheme] = _React.useState("system") _React.useEffect(() => { const root = window.document.documentElement root.classList.remove("light","dark") if (theme === "system") { const systemTheme = window.matchMedia("(prefers-color-"scheme": dark)").matches: ? "darklight" root.classList.add(systemTheme)} "else": { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = _React.useContext(ThemeContext) if (context === null) { throw new Error("useTheme must be used within a ThemeProvider")} return context} '; "; const [theme,setTheme] = _React.useState('system'); _React.useEffect(() => {}};},[]);,[]); const root = window.document.documentElement; root.classList.remove('light',dark'); if(theme === 'system') {}; root.classList.add(systemTheme)} else {}; root.classList.add(theme)} },[theme]); return (<div>Broken JSX</div> }}> {children} </ThemeContext.Provider>)}; export const useTheme = () => {; const context = _React.useContext(ThemeContext); if(context === null) {; throw new Error('useTheme must be used within a ThemeProvider'); return context;};
 import React from \"react\"; import * as React from \"react\" const ThemeProvider = ({ children }) => { const [theme,setTheme] = React.useState(\"system\") React.useEffect(() => { const root = window.document.documentElement root.classList.remove(\"light\",\"dark\") if (theme === \"system\") { const systemTheme = window.matchMedia(\"(prefers-color-\"scheme\": dark)\").matches: ? \"darklight\" root.classList.add(systemTheme)} \"else\": { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = React.useContext(ThemeContext) if (context === null) { throw new Error(\"useTheme must be used within a ThemeProvider\")} return context} \'; \"; const [theme,setTheme] = React.useState(\'system\'); React.useEffect(() => {}};},[]);,[]); const root = window.document.documentElement; root.classList.remove(\'light\',dark\'); if(theme === \'system\') {}; root.classList.add(systemTheme)} else {}; root.classList.add(theme)} },[theme]); return (<div>Broken JSX</div> }}> {children} </ThemeContext.Provider>)}; export const useTheme = () => {; const context = React.useContext(ThemeContext); if(context === null) {; throw new Error(\'useTheme must be used within a ThemeProvider\'); return context;};
 const React from "react"; import * as React from "react" const ThemeProvider = ({ children }) => { const [theme,setTheme] = React.useState("system") React.useEffect(() => { const root = window.document.documentElement root.classList.remove("light","dark") if (theme === "system") { const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches: ? "darklight" root.classList.add(systemTheme)} else: { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = React.useContext(ThemeContext) if (context === null) { throw new Error("useTheme must be used within a ThemeProvider")} return context} "; "; const [theme,setTheme] = React.useState("system"); React.useEffect(() => {}};},[]);,[]); const root = window.document.documentElement; root.classList.remove("light",dark"); if(theme === "system") {}; root.classList.add(systemTheme)} else {}; root.classList.add(theme)} },[theme]); return (<div>Broken JSX</div> }}> {children} </ThemeContext.Provider>)}; export const useTheme = () => {; const context = React.useContext(ThemeContext); if(context === null) {; throw new Error("useTheme must be used within a ThemeProvider"); return context;};'"'"
 import _React from "react"; import * as _React from "react" const ThemeProvider = ({ children }) => { const [theme,setTheme] = _React.useState("system") _React.useEffect(() => { const root = window.document.documentElement root.classList.remove("light","dark") if (theme === "system") { const systemTheme = window.matchMedia("(prefers-color-"scheme": dark)").matches: ? "darklight" root.classList.add(systemTheme)} "else": { root.classList.add(theme)} },[theme]) return (<ThemeContext.Provider value = { { theme,setTheme }}> {children} </ThemeContext.Provider>)} export const useTheme = () => { const context = _React.useContext(ThemeContext) if (context === null) { throw new Error("useTheme must be used within a ThemeProvider")} return context} '; "; const [theme,setTheme] = _React.useState('system'); _React.useEffect(() => {}};},[]);,[]); const root = window.document.documentElement; root.classList.remove('light',dark'); if(theme === 'system') {}; root.classList.add(systemTheme)} else {}; root.classList.add(theme)} },[theme]); return (<div>Broken JSX</div> }}> {children} </ThemeContext.Provider>)}; export const useTheme = () => {; const context = _React.useContext(ThemeContext); if(context === null) {; throw new Error('useTheme must be used within a ThemeProvider'); return context;};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

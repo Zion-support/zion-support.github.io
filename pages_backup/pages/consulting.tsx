@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import * as React from 'react';
-import Link from 'next/link';
-import MainLayout from '../components/layout/MainLayout';
-
-import { Target, BarChart3, Shield, Server, Database, Zap, Users, Building2, Rocket, Factory, Brain, Cloud, Network, Settings, ArrowRight, CheckCircle, Star, TrendingUp, Award, Clock, Globe, Lock, Cpu, Workflow, MessageCircle, ArrowUp, Sparkles, Home, Truck, BookOpen, Leaf, Satellite, HelpCircle, Menu, X, Building, DollarSign, ShoppingCart, Heart, Eye, FileText, AlertCircle, Scale, Phone, Mail, MapPin, Instagram, Linkedin, Twitter, Facebook, ExternalLink, Calendar, User, Download, Play, Tag, Smartphone } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const consulting: React.FC = () => {
   return (

@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase } from \'@/components/services/EnhancedInnovativeServicesShowcase\';\''\'; import EnhancedSEO from \'@/components/EnhancedSEO\'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"
 import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======

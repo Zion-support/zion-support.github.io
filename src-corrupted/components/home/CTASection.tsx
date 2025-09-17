@@ -1,33 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { Link  } from 'react-router-dom';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
-
-const CTASection: Reac t.FC = (): JSX.Element => {
-  const features = [
-    {
-      icon: Rocke t,
-      title: "Fast Implementation",
-      description: "Get started in weeks, not months"
-    },
-    {
-      icon: MessageCircl e,
-      title: "24/7 Support",
-      description: "Expert assistance whenever you need it"
-    },
-    {
-      icon: Calenda r,
-      title: "Flexible Plans",
-      description: "Scale up or down as your business grows";
-    }, {;
-      icon: Sta r,;
-      title: "Proven Results",;
-      description: "Trusted by industry leaders worldwide";
-    };
-  ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const CTASection: React.FC = () => {
   return (
