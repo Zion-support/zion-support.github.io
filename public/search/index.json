@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
   {
     "route": "/2025-advanced-services-showcase",
@@ -56,16 +55,6 @@
     "h1": "2036-innovative-services-showcase"
   },
   {
-    "route": "/403",
-    "title": "403 - Zion App",
-    "h1": "403"
-  },
-  {
-    "route": "/404",
-    "title": "404 - Page Not Found | Zion Tech Group",
-    "h1": "404"
-  },
-  {
     "route": "/500",
     "title": "500 | Zion Tech Group",
     "h1": "500"
@@ -101,16 +90,6 @@
     "h1": "[slug]"
   },
   {
-    "route": "/_app",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/_document",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/_error",
     "title": "_error | Zion Tech Group",
     "h1": "_error"
@@ -134,11 +113,6 @@
     "route": "/accessibility",
     "title": "accessibility | Zion Tech Group",
     "h1": "accessibility"
-  },
-  {
-    "route": "/account",
-    "title": "Account - Zion Tech Group",
-    "h1": "Account"
   },
   {
     "route": "/advanced-ai-automation-services",
@@ -211,19 +185,9 @@
     "h1": "ai-business-intelligence"
   },
   {
-    "route": "/ai-consciousness-evolution-2025",
-    "title": "AI Consciousness Evolution 2025 | Zion Tech Group",
-    "h1": "AI Consciousness Evolution 2025"
-  },
-  {
     "route": "/ai-consciousness-evolution-2026",
     "title": "AI Consciousness Evolution 2026 | Zion Tech Group",
     "h1": "AI Consciousness Evolution 2026"
-  },
-  {
-    "route": "/ai-consciousness-evolution-2029",
-    "title": "Ai Consciousness Evolution 2029 - Zion Tech Group",
-    "h1": "Ai Consciousness Evolution 2029"
   },
   {
     "route": "/ai-content-intelligence-platform",
@@ -466,11 +430,6 @@
     "h1": "blockchain-solutions"
   },
   {
-    "route": "/blockchain",
-    "title": "Blockchain Services - Zion Tech Group",
-    "h1": "Blockchain Services"
-  },
-  {
     "route": "/blog",
     "title": "blog | Zion Tech Group",
     "h1": "blog"
@@ -501,11 +460,6 @@
     "h1": "case-studies"
   },
   {
-    "route": "/categories",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/ci-cd-security-hardening",
     "title": "ci-cd-security-hardening | Zion Tech Group",
     "h1": "ci-cd-security-hardening"
@@ -529,11 +483,6 @@
     "route": "/cloudflare-workers-edge-config",
     "title": "cloudflare-workers-edge-config | Zion Tech Group",
     "h1": "cloudflare-workers-edge-config"
-  },
-  {
-    "route": "/community",
-    "title": "Community | Zion Tech Group",
-    "h1": "Community"
   },
   {
     "route": "/compliance",
@@ -604,11 +553,6 @@
     "route": "/comprehensive-services-showcase",
     "title": "comprehensive-services-showcase | Zion Tech Group",
     "h1": "comprehensive-services-showcase"
-  },
-  {
-    "route": "/contact",
-    "title": "",
-    "h1": "Contact Us"
   },
   {
     "route": "/contact",
@@ -886,11 +830,6 @@
     "h1": "innovative-services-2025"
   },
   {
-    "route": "/innovative-services-showcase-2025",
-    "title": "Innovative Services Showcase 2025 - Zion Tech Group",
-    "h1": "Innovative Services Showcase 2025"
-  },
-  {
     "route": "/iot-platforms",
     "title": "iot-platforms | Zion Tech Group",
     "h1": "iot-platforms"
@@ -1056,11 +995,6 @@
     "h1": "prompt-policy-registry"
   },
   {
-    "route": "/quantum-bio-computing-platform",
-    "title": "Quantum Bio-Computing Platform | Zion Tech Group",
-    "h1": "Quantum Bio-Computing Platform"
-  },
-  {
     "route": "/quantum-cloud-infrastructure-platform",
     "title": "quantum-cloud-infrastructure-platform | Zion Tech Group",
     "h1": "quantum-cloud-infrastructure-platform"
@@ -1079,11 +1013,6 @@
     "route": "/quantum-cybersecurity-services",
     "title": "quantum-cybersecurity-services | Zion Tech Group",
     "h1": "quantum-cybersecurity-services"
-  },
-  {
-    "route": "/quantum-cybersecurity",
-    "title": "Quantum Cybersecurity - Zion Tech Group",
-    "h1": "Quantum Cybersecurity"
   },
   {
     "route": "/quantum-financial-trading-platform",
@@ -1186,11 +1115,6 @@
     "h1": "revolutionary-2027-services-showcase"
   },
   {
-    "route": "/revolutionary-home",
-    "title": "Revolutionary Home - Zion Tech Group",
-    "h1": "Revolutionary Home"
-  },
-  {
     "route": "/roadmap",
     "title": "roadmap | Zion Tech Group",
     "h1": "roadmap"
@@ -1232,11 +1156,6 @@
   },
   {
     "route": "/services",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/services",
     "title": "services | Zion Tech Group",
     "h1": "services"
   },
@@ -1244,11 +1163,6 @@
     "route": "/signup",
     "title": "signup | Zion Tech Group",
     "h1": "signup"
-  },
-  {
-    "route": "/site-health",
-    "title": "Site Health — Broken Images",
-    "h1": "Site Health"
   },
   {
     "route": "/sitemap",
@@ -1329,11 +1243,6 @@
     "route": "/terms",
     "title": "terms | Zion Tech Group",
     "h1": "terms"
-  },
-  {
-    "route": "/test-simple",
-    "title": "",
-    "h1": "Test Simple"
   },
   {
     "route": "/test",
@@ -1426,24 +1335,9 @@
     "h1": "zero-trust-security-platform"
   },
   {
-    "route": "/zion-global-2025",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/zion-tech-group",
     "title": "zion-tech-group | Zion Tech Group",
     "h1": "zion-tech-group"
-  },
-  {
-    "route": "/zl",
-    "title": "",
-    "h1": "Zion"
-  },
-  {
-    "route": "/zion-stack/api",
-    "title": "",
-    "h1": ""
   },
   {
     "route": "/zion/init",
@@ -1469,11 +1363,6 @@
     "route": "/talent/resume-builder",
     "title": "resume-builder | Zion Tech Group",
     "h1": "resume-builder"
-  },
-  {
-    "route": "/support",
-    "title": "",
-    "h1": ""
   },
   {
     "route": "/solutions/enterprise",
@@ -1546,24 +1435,9 @@
     "h1": "[slug]"
   },
   {
-    "route": "/services/ai-data-pipeline-optimizer",
-    "title": "AI Data Pipeline Optimizer — Services — Zion",
-    "h1": "AI Data Pipeline Optimizer"
-  },
-  {
     "route": "/services/ai-ml",
     "title": "ai-ml | Zion Tech Group",
     "h1": "ai-ml"
-  },
-  {
-    "route": "/services/ai-sales-assistant",
-    "title": "AI Sales Assistant — Services — Zion",
-    "h1": "AI Sales Assistant"
-  },
-  {
-    "route": "/services/ai-seo-auditor",
-    "title": "AI SEO Auditor — Services — Zion",
-    "h1": "AI SEO Auditor"
   },
   {
     "route": "/services/analytics",
@@ -1576,11 +1450,6 @@
     "h1": "cloud"
   },
   {
-    "route": "/services/customer-support-chatbot",
-    "title": "Customer Support Chatbot — Services — Zion",
-    "h1": "Customer Support Chatbot"
-  },
-  {
     "route": "/services/cybersecurity",
     "title": "cybersecurity | Zion Tech Group",
     "h1": "cybersecurity"
@@ -1589,11 +1458,6 @@
     "route": "/services/description-generator",
     "title": "description-generator | Zion Tech Group",
     "h1": "description-generator"
-  },
-  {
-    "route": "/services/developer-productivity-copilot",
-    "title": "Developer Productivity Copilot — Services — Zion",
-    "h1": "Developer Productivity Copilot"
   },
   {
     "route": "/services",
@@ -1606,24 +1470,9 @@
     "h1": "instagram-content-scheduler"
   },
   {
-    "route": "/services/landing-page-generator",
-    "title": "Landing Page Generator — Services — Zion",
-    "h1": "Landing Page Generator"
-  },
-  {
-    "route": "/services/price-intelligence-service",
-    "title": "Price Intelligence — Services — Zion",
-    "h1": "Price Intelligence"
-  },
-  {
     "route": "/services/quantum",
     "title": "quantum | Zion Tech Group",
     "h1": "quantum"
-  },
-  {
-    "route": "/services/security-posture-guardian",
-    "title": "Security Posture Guardian — Services — Zion",
-    "h1": "Security Posture Guardian"
   },
   {
     "route": "/services/transformation",
@@ -1676,11 +1525,6 @@
     "h1": "[id]"
   },
   {
-    "route": "/resources/case-studies/ai-automation-manufacturing",
-    "title": "{caseStudy.title} - Resource | Zion Tech Group",
-    "h1": "{caseStudy.title}"
-  },
-  {
     "route": "/requests",
     "title": "index | Zion Tech Group",
     "h1": "index"
@@ -1699,36 +1543,6 @@
     "route": "/reports/performance",
     "title": "performance | Zion Tech Group",
     "h1": "performance"
-  },
-  {
-    "route": "/reports/updates/update-2025-08-15-0111",
-    "title": "Autonomous Update — 2025: 08: 15: 0111 | Zion Tech Group",
-    "h1": "Autonomous Update — 2025: 08: 15: 0111"
-  },
-  {
-    "route": "/reports/updates/update-2025-08-15-0402",
-    "title": "Autonomous Update — 2025: 08: 15: 0402 | Zion Tech Group",
-    "h1": "Autonomous Update — 2025: 08: 15: 0402"
-  },
-  {
-    "route": "/reports/updates/update-2025-08-15-0403",
-    "title": "Autonomous Update — 2025: 08: 15: 0403 | Zion Tech Group",
-    "h1": "Autonomous Update — 2025: 08: 15: 0403"
-  },
-  {
-    "route": "/reports/updates/update-2025-08-15-0404",
-    "title": "Autonomous Update — 2025: 08: 15: 0404 | Zion Tech Group",
-    "h1": "Autonomous Update — 2025: 08: 15: 0404"
-  },
-  {
-    "route": "/reports/updates/update-2025-08-15-0405",
-    "title": "Autonomous Update — 2025: 08: 15: 0405 | Zion Tech Group",
-    "h1": "Autonomous Update — 2025: 08: 15: 0405"
-  },
-  {
-    "route": "/reports/updates/update-2025-08-15-0406",
-    "title": "Autonomous Update — 2025: 08: 15: 0406 | Zion Tech Group",
-    "h1": "Autonomous Update — 2025: 08: 15: 0406"
   },
   {
     "route": "/reports/blueprints/blueprint-2025-08-18-122901",
@@ -1806,16 +1620,6 @@
     "h1": "enterprise"
   },
   {
-    "route": "/partners/brand-kit",
-    "title": "",
-    "h1": "Influencer Brand Kit"
-  },
-  {
-    "route": "/messages/[id]",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/messages/compose",
     "title": "compose | Zion Tech Group",
     "h1": "compose"
@@ -1829,11 +1633,6 @@
     "route": "/media/kit",
     "title": "kit | Zion Tech Group",
     "h1": "kit"
-  },
-  {
-    "route": "/marketplace",
-    "title": "",
-    "h1": ""
   },
   {
     "route": "/marketplace/listing/[slug]",
@@ -1854,16 +1653,6 @@
     "route": "/learn",
     "title": "index | Zion Tech Group",
     "h1": "index"
-  },
-  {
-    "route": "/learn/[courseId]/certificate",
-    "title": "",
-    "h1": "Certificate"
-  },
-  {
-    "route": "/la",
-    "title": "",
-    "h1": "Zion"
   },
   {
     "route": "/jobs/[slug]",
@@ -1906,34 +1695,14 @@
     "h1": "index"
   },
   {
-    "route": "/governance/global-outreach",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/governance/trust",
     "title": "trust | Zion Tech Group",
     "h1": "trust"
   },
   {
-    "route": "/founder/journal",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/favorites",
     "title": "index | Zion Tech Group",
     "h1": "index"
-  },
-  {
-    "route": "/eo",
-    "title": "",
-    "h1": "Zion"
-  },
-  {
-    "route": "/enterprise/request-quote",
-    "title": "",
-    "h1": "Request a Quote"
   },
   {
     "route": "/enterprise/admin",
@@ -1944,36 +1713,6 @@
     "route": "/docs/api",
     "title": "api | Zion Tech Group",
     "h1": "api"
-  },
-  {
-    "route": "/docs/comprehensive-redundancy",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/docs/performance",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/docs/pm2-redundancy",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/docs/security",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/docs/testing",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/docs/ultimate-redundancy",
-    "title": "",
-    "h1": ""
   },
   {
     "route": "/docs/gitbook",
@@ -1996,19 +1735,9 @@
     "h1": "new"
   },
   {
-    "route": "/developers/docs",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/dev/tree",
     "title": "tree | Zion Tech Group",
     "h1": "tree"
-  },
-  {
-    "route": "/deploy/genesis",
-    "title": "",
-    "h1": ""
   },
   {
     "route": "/dashboard/client",
@@ -2054,31 +1783,6 @@
     "route": "/dao",
     "title": "index | Zion Tech Group",
     "h1": "index"
-  },
-  {
-    "route": "/content/ai-2026-autonomous-ops-playbook",
-    "title": "",
-    "h1": "AI 2026: Autonomous Ops Playbook"
-  },
-  {
-    "route": "/content/ai-2026-safety-evals-blueprint",
-    "title": "",
-    "h1": "AI 2026: Safety Evals Blueprint"
-  },
-  {
-    "route": "/components/Footer",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/components/Header",
-    "title": "",
-    "h1": ""
-  },
-  {
-    "route": "/components/Layout",
-    "title": "",
-    "h1": ""
   },
   {
     "route": "/components/Navigation",
@@ -2336,11 +2040,6 @@
     "h1": "AI 2026: Cost Optimization Blueprint"
   },
   {
-    "route": "/blog/ai-2026-edge-agents-production-guide",
-    "title": "",
-    "h1": "AI 2026: Edge Agents in Production"
-  },
-  {
     "route": "/blog/ai-2026-enterprise-agent-risk-mitigation",
     "title": "AI 2026: Enterprise Agent Risk Mitigation",
     "h1": "AI 2026: Enterprise Agent Risk Mitigation"
@@ -2359,6 +2058,11 @@
     "route": "/blog/ai-2026-evaluation-cookbook",
     "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
     "h1": "AI 2026: Evaluation Cookbook"
+  },
+  {
+    "route": "/blog/ai-2026-evidence-driven-routing-case-studies",
+    "title": "AI 2026: Evidence‑Driven Routing — Case Studies",
+    "h1": "AI 2026: Evidence‑Driven Routing — Case Studies"
   },
   {
     "route": "/blog/ai-2026-evidence-hub-architecture",
@@ -2424,6 +2128,11 @@
     "route": "/blog/ai-2026-governed-tooling-approvals-in-practice",
     "title": "Governed Tooling in Practice (2026) | Zion Tech Group",
     "h1": "Governed Tooling in Practice (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-grounded-generation-guardrails",
+    "title": "AI 2026: Grounded Generation Guardrails — Blueprint",
+    "h1": "AI 2026: Grounded Generation Guardrails — Blueprint"
   },
   {
     "route": "/blog/ai-2026-low-latency-agent-observability",
@@ -2574,11 +2283,6 @@
     "route": "/blog/cloud-native-automation",
     "title": "cloud-native-automation | Zion Tech Group",
     "h1": "cloud-native-automation"
-  },
-  {
-    "route": "/blog/cybersecurity-autonomous-systems",
-    "title": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation | Zion Tech Group",
-    "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
   },
   {
     "route": "/blog/genai-2025-evidence-driven-ai-governance",
@@ -2886,11 +2590,6 @@
     "h1": "reviews"
   },
   {
-    "route": "/admin/source-map",
-    "title": "",
-    "h1": ""
-  },
-  {
     "route": "/admin/support-requests",
     "title": "support-requests | Zion Tech Group",
     "h1": "support-requests"
@@ -2919,18 +2618,5 @@
     "route": "/admin/learn",
     "title": "index | Zion Tech Group",
     "h1": "index"
-  },
-  {
-    "route": "/academy/futurescape",
-    "title": "Futurescape Academy - Zion Tech Group",
-    "h1": "Futurescape Academy"
-  },
-  {
-    "route": "/academy/storybook",
-    "title": "Storybook Academy - Zion Tech Group",
-    "h1": "Storybook Academy"
   }
 ]
-=======
-[]
->>>>>>> origin/feature/enhanced-content-showcase-2025
