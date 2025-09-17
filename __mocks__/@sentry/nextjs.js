@@ -31,23 +31,5 @@ const Sentry = {
   wrapErrorGetInitialPropsWithSentry: jest.fn((handler) => handler),
   // If you use any specific Sentry integrations or features, mock them as needed
 };
-// Export individual functions for compatibility
-export const init = Sentry.init;
-export const captureException = Sentry.captureException;
-export const captureMessage = Sentry.captureMessage;
-export const addBreadcrumb = Sentry.addBreadcrumb;
-export const setContext = Sentry.setContext;
-export const setUser = Sentry.setUser;
-export const setTag = Sentry.setTag;
-export const setExtra = Sentry.setExtra;
-export const withScope = Sentry.withScope;
-export const withSentryConfig = Sentry.withSentryConfig;
-export const wrapApiHandlerWithSentry = Sentry.wrapApiHandlerWithSentry;
-export const wrapGetServerSidePropsWithSentry =
-  Sentry.wrapGetServerSidePropsWithSentry;
-export const wrapGetStaticPropsWithSentry = Sentry.wrapGetStaticPropsWithSentry;
-export const wrapAppGetInitialPropsWithSentry =
-  Sentry.wrapAppGetInitialPropsWithSentry;
-export const wrapErrorGetInitialPropsWithSentry =
-  Sentry.wrapErrorGetInitialPropsWithSentry;
+
 export default Sentry;
