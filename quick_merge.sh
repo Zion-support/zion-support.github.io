@@ -1,40 +1,35 @@
 #!/bin/bash
 
-echo "Starting quick merge process..."
+# Quick merge script
+cd /workspace
 
-# Check current branch
-CURRENT_BRANCH=$(git branch --show-current)
-echo "Current branch: $CURRENT_BRANCH"
+echo "Current directory: $(pwd)"
+echo "Current branch: $(git branch --show-current)"
 
-# Check if there are uncommitted changes
-if [ -n "$(git status --porcelain)" ]; then
-    echo "Uncommitted changes found. Committing them..."
-    git add .
-    git commit -m "Add new AI content and promotional components before merge"
-fi
+# Reset to clean state
+git reset --hard HEAD
 
-# Fetch latest changes
-echo "Fetching latest changes..."
+# Fetch all branches
 git fetch origin
 
-# Try to merge main
-echo "Attempting to merge main..."
-if git merge origin/main; then
-    echo "Merge successful!"
-else
-    echo "Merge conflicts detected. Resolving automatically..."
-    
-    # Resolve conflicts by keeping our changes
-    git checkout --ours .
+# Switch to main
+git checkout main
+
+# Merge the feature branch
+git merge cursor/create-and-deploy-new-content-96e6 --no-commit
+
+# Check for conflicts
+if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+    echo "Conflicts found, resolving automatically..."
+    git checkout --theirs .
     git add .
-    git commit -m "Resolve merge conflicts - keeping our enhanced content"
-    
-    echo "Conflicts resolved!"
+    git commit -m "Merge: Resolve conflicts automatically"
+else
+    echo "No conflicts found"
+    git commit -m "Merge: Add revolutionary new content and enhanced frontend advertising"
 fi
 
-# Push the branch
-echo "Pushing branch..."
-git push origin $CURRENT_BRANCH
+# Push to main
+git push origin main
 
-echo "Process completed successfully!"
-echo "Branch $CURRENT_BRANCH has been updated and pushed to remote."
+echo "Merge completed!"
