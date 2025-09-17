@@ -235,6 +235,7 @@ export default [
       'vite.config-backup.ts',
       'talent/**',
       'test-utils.jsx',
+      'store/**',
       '*-*.js',
       '*-*.jsx',
       '*-*.ts',
@@ -276,13 +277,24 @@ export default [
       'check_*.js',
       'apps.backup/**',
       'automation.tsx',
-      'store/**',
       '.scripts/**',
       'AIContentGenerator.js.jsx',
       'AIMatcher.jsx',
       'AIMatcher.tsx',
       'AdvancedServicesPage.jsx',
       'App.tsx',
+<<<<<<< HEAD
+=======
+      'start-all-automations.js',
+      'start-dev.js',
+      'test-build.js',
+      'syntax-fixer.js',
+      'workbox-config.js',
+      'vite.config-backup.ts',
+      'talent/**',
+      'test-utils.jsx',
+      'store/**',
+>>>>>>> f3a644d9ec3948c06f78621299557c84f26ee31b
 
       // Misc root configs that were being linted
       '.eslintrc.js',
