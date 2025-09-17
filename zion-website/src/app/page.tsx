@@ -51,93 +51,34 @@ export default function HomePage() {
 
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" />
+        </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+              Announcing our next wave of AI innovations.{' '}
+              <a href="/updates" className="font-semibold text-blue-400"><span className="absolute inset-0" aria-hidden="true" />Read more <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Leading the Future of{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                AI & Technology
-              </span>
+              Next-Generation AI Research Platform
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. Join the revolution that's reshaping industries worldwide.
+              Pioneering the future of artificial intelligence with autonomous research systems, quantum computing, and enterprise-grade solutions that transform how businesses operate.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a href="/contact" className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105">Get Started</a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
-=======
-import {
-  ChartBarIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline'
-
-const features = [
-  {
-    name: 'AI-Powered Solutions',
-    description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-    icon: CpuChipIcon,
-  },
-  {
-    name: 'Cloud Infrastructure',
-    description: 'Scalable and secure cloud infrastructure designed for modern applications.',
-    icon: GlobeAltIcon,
-  },
-  {
-    name: 'Micro SaaS Development',
-    description: 'Custom micro SaaS solutions that drive revenue and efficiency.',
-    icon: LightBulbIcon,
-  },
-  {
-    name: 'Enterprise Security',
-    description: 'Comprehensive security solutions to protect your digital assets.',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Data Analytics',
-    description: 'Advanced analytics and business intelligence to drive informed decisions.',
-    icon: ChartBarIcon,
-  },
-  {
-    name: 'Team Collaboration',
-    description: 'Tools and platforms that enhance team productivity and collaboration.',
-    icon: UserGroupIcon,
-  },
-]
-
-export default async function HomePage() {
-  const updates = await getLatestUpdates()
-
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Transforming businesses with cutting-edge AI, cloud infrastructure, and micro SaaS solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Learn More
-              </button>
->>>>>>> origin/resolve-conflicts-and-improvements
             </div>
           </div>
         </div>
+        <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+          <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" />
+        </div>
       </div>
 
-<<<<<<< HEAD
       {/* What's New section */}
       <div className="mx-auto mt-24 max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -147,60 +88,21 @@ export default async function HomePage() {
             Fresh content, announcements, and courses from Zion Academy. Visit the Updates page for more.
           </p>
         </div>
-        <div className="mx-auto mt-12 max-w-2xl lg:mt-16 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-            {latest.map((item) => (
-              <article key={item.title} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center gap-2 text-xs text-blue-300">
-                  <span className="inline-flex items-center rounded-full bg-blue-500/10 px-2 py-0.5 ring-1 ring-inset ring-blue-500/20">{item.tag}</span>
-                  <time dateTime={item.date} className="text-gray-400">{item.date ? new Date(item.date).toLocaleDateString() : 'Recent'}</time>
-                </div>
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                  <a href={item.href} className="hover:text-blue-400 transition-colors duration-200">
-                    <span className="absolute inset-0" />
-                    {item.title}
-                  </a>
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-gray-300">{item.summary}</p>
-                <a href={item.href} className="mt-6 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300">
-                  Read more <span aria-hidden="true">→</span>
-                </a>
-              </article>
-            ))}
-          </div>
-          <div className="mt-8 flex justify-center">
-            <a href="/updates" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View all updates <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Features section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Everything you need to accelerate innovation
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
-            and maintain competitive advantage in the digital age.
-          </p>
-        </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col group">
+            {latest.map((update) => (
+              <div key={update.id} className="flex flex-col">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <feature.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {feature.name}
+                  <div className="h-5 w-5 flex-none rounded-full bg-blue-500" aria-hidden="true" />
+                  <a href={update.href} className="hover:text-blue-400 transition-colors duration-200">
+                    {update.title}
+                  </a>
                 </dt>
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{feature.description}</p>
+                  <p className="flex-auto">{update.excerpt}</p>
                   <p className="mt-6">
-                    <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
-                      Learn more <span aria-hidden="true">→</span>
+                    <a href={update.href} className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                      Read more <span aria-hidden="true">→</span>
                     </a>
                   </p>
                 </dd>
@@ -210,144 +112,90 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Stats section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:max-w-none">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by leading organizations worldwide</h2>
-            <p className="mt-4 text-lg leading-8 text-gray-300">Our track record speaks for itself</p>
+      {/* Features section */}
+      <div className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h2 className="text-base font-semibold leading-7 text-blue-400">Advanced Technology</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Cutting-Edge Solutions</p>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Our platform combines the latest in AI research, quantum computing, and enterprise automation to deliver unprecedented results.
+            </p>
           </div>
-          <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
-                <dt className="text-sm font-semibold leading-6 text-gray-300">{stat.name}</dt>
-                <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
+          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+              {features.map((feature) => (
+                <div key={feature.name} className="flex flex-col">
+                  <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                    <feature.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                    {feature.name}
+                  </dt>
+                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                    <p className="flex-auto">{feature.description}</p>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats section */}
+      <div className="bg-white/5 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-4">
+            {stats.map((stat, statIdx) => (
+              <div key={statIdx} className="mx-auto flex max-w-xs flex-col gap-y-4">
+                <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>
+                <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+                  {stat.value}
+                </dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
 
-      {/* Solutions showcase */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Flagship AI and Technology Platforms</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">Discover how our innovative solutions are transforming industries and driving unprecedented growth.</p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {solutions.map((solution) => (
-              <article key={solution.name} className="flex flex-col items-start group bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center gap-x-4 text-xs">
-                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">AI Platform</span>
-                </div>
-                <div className="group relative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
-                    <a href={solution.href}><span className="absolute inset-0" />{solution.name}</a>
-                  </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
-                </div>
-                <div className="relative mt-8 flex items-center gap-x-4">
-                  <div className="text-sm leading-6">
-                    <p className="font-semibold text-white"><a href={solution.href} className="hover:text-blue-400 transition-colors duration-200"><span className="absolute inset-0" />Learn more</a></p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to transform your business?</h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Join the AI revolution and discover how our cutting-edge technology can accelerate your growth and innovation.</p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 transition-all duration-200 hover:scale-105">Get Started</a>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">View Solutions <span aria-hidden="true">→</span></a>
-=======
-      {/* Features Section */}
-      <div className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Solutions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth
+      {/* Solutions section */}
+      <div className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h2 className="text-base font-semibold leading-7 text-blue-400">Solutions</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Explore Our Platform</p>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Discover how our AI-powered solutions can transform your business operations and accelerate innovation.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature) => (
-              <div key={feature.name} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex items-center mb-4">
-                  <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                  <h3 className="text-xl font-semibold text-gray-900">{feature.name}</h3>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+            {solutions.map((solution) => (
+              <div key={solution.name} className="flex flex-col justify-between rounded-2xl bg-white/5 p-8 ring-1 ring-white/10 xl:p-10">
+                <div>
+                  <h3 className="text-xl font-semibold leading-8 text-white">{solution.name}</h3>
+                  <p className="mt-4 text-base leading-7 text-gray-300">{solution.description}</p>
                 </div>
-                <p className="text-gray-600">{feature.description}</p>
+                <a href={solution.href} className="mt-6 inline-flex items-center gap-x-2 text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Latest Updates Section */}
-      {updates && updates.length > 0 && (
-        <div className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Latest Updates
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Stay informed with our latest insights and developments
-              </p>
+      {/* CTA section */}
+      <div className="bg-blue-600">
+        <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+              Join thousands of enterprises already using our AI platform to accelerate innovation and drive growth.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <a href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105">Get Started</a>
+              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors duration-200">Learn More <span aria-hidden="true">→</span></a>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {updates.slice(0, 6).map((update) => (
-                <div key={update.id} className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
-                  <div className="flex items-center mb-3">
-                    <span className="text-sm font-medium text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
-                      {update.category}
-                    </span>
-                    <span className="text-sm text-gray-500 ml-auto">
-                      {update.date}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {update.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    {update.excerpt}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our solutions can accelerate your digital transformation
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Schedule Consultation
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              View Portfolio
-            </button>
->>>>>>> origin/resolve-conflicts-and-improvements
           </div>
         </div>
       </div>
