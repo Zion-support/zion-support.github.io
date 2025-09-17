@@ -1,74 +1,76 @@
-import { useState } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card } from '@/components/ui/card';
-import { useToast } from '@/components/ui/use-toast';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-// Tooltip components temporarily removed due to missing module path
-import z from 'zod';
-import { ChatAssistant } from '@/components/ChatAssistant';
-import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link';
+import React from 'react';
 
-export default function Contact() {
-  const { showToast: toast } = useToast();
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Contact Us
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <motion.div
-            className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-              <motion.div
-          <motion.div
-            className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call Emergency Support
-            </a>
-          </motion.div>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• AI-powered automation</li>
-              <li>• Quantum computing breakthroughs</li>
-              <li>• Neural interface technology</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
-            <p className="text-gray-300 mb-4">
-              Discover the latest developments in technology and innovation
+const Contact: React.FC = () => {
+  return (
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
+            <p className="text-gray-300 mb-6">
+              Ready to transform your business with our technology solutions? 
+              Contact us today to learn more about how we can help.
             </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research and development</li>
-              <li>• Industry partnerships</li>
-              <li>• Future technology trends</li>
-            </ul>
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-lg font-semibold text-white">Email</h3>
+                <p className="text-gray-300">contact@ziontechgroup.com</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Phone</h3>
+                <p className="text-gray-300">+1 (555) 123-4567</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Address</h3>
+                <p className="text-gray-300">
+                  123 Tech Street<br />
+                  Innovation City, IC 12345
+                </p>
+              </div>
+            </div>
           </div>
-          
-          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive technology solutions for modern challenges
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Enterprise solutions</li>
-              <li>• Custom development</li>
-              <li>• Technology consulting</li>
-            </ul>
-          </motion.div>
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
+          <div>
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-white mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-white mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-white mb-2">
+                  Message
+                </label>
+                <textarea
+                  rows={4}
+                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

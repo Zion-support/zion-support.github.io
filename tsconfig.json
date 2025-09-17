@@ -14,10 +14,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
     "incremental": true,
-=======
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
@@ -26,11 +23,8 @@
   },
   "include": [
     "src/**/*",
-    "src/types/offline-shims.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "tailwind.config.js",
-    "postcss.config.js"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules",
