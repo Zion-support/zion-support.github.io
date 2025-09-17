@@ -95,4 +95,4 @@ zion-os/.next
 
 # Ignore Next.js build output
 zion-os/.next
-.worktrees/
+tsconfig.tsbuildinfo
