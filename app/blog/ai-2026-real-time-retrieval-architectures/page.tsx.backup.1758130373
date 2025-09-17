@@ -1,0 +1,99 @@
+import React from 'react';
+<<<<<<< HEAD
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI 2026: Real-Time Retrieval Architectures',
+  description: 'Low-latency retrieval patterns for production RAG systems: caches, streaming, and evals.',
+};
+
+export default function Page() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <header className="mb-8">
+        <p className="text-sm font-semibold text-purple-700">Blog • Architecture</p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">AI 2026: Real-Time Retrieval Architectures</h1>
+        <p className="text-gray-600 mt-3">Engineering patterns to hit sub‑second P95 with robust safety and observability.</p>
+      </header>
+
+      <article className="prose prose-purple max-w-none">
+        <h2>Why real-time retrieval?</h2>
+        <p>Interactive agents and copilots demand streaming answers and strict SLOs. Traditional batch pipelines are not enough: we need online refresh, warm caches, and fallbacks.</p>
+
+        <h2>Latency budget</h2>
+        <ul>
+          <li>Gateway + policy checks: 20‑50ms</li>
+          <li>Retriever + filters: 50‑150ms</li>
+          <li>Context compose + safety: 30‑80ms</li>
+          <li>LLM first token: 120‑300ms (router dependent)</li>
+        </ul>
+
+        <h2>Operational guidance</h2>
+        <p>Adopt eval‑gated rollouts and on‑call runbooks. Track cost/latency/quality with traces and automated canaries.</p>
+      </article>
+
+      <footer className="mt-10 flex gap-3">
+        <Link href="/content/ai-2026-real-time-rag-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Blueprint</Link>
+        <Link href="/content/ai-2026-autonomous-ops-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Autonomous Ops</Link>
+      </footer>
+    </main>
+  );
+}
+
+import React from 'react';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'AI 2026: Real-Time Retrieval Architectures',
+  description: 'Low-latency retrieval patterns for production RAG systems: caches, streaming, and evals.',
+};
+
+export default function Page() {
+  return (
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <header className="mb-8">
+        <p className="text-sm font-semibold text-purple-700">Blog • Architecture</p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">AI 2026: Real-Time Retrieval Architectures</h1>
+        <p className="text-gray-600 mt-3">Engineering patterns to hit sub‑second P95 with robust safety and observability.</p>
+      </header>
+
+      <article className="prose prose-purple max-w-none">
+        <h2>Why real-time retrieval?</h2>
+        <p>Interactive agents and copilots demand streaming answers and strict SLOs. Traditional batch pipelines are not enough: we need online refresh, warm caches, and fallbacks.</p>
+
+        <h2>Latency budget</h2>
+        <ul>
+          <li>Gateway + policy checks: 20‑50ms</li>
+          <li>Retriever + filters: 50‑150ms</li>
+          <li>Context compose + safety: 30‑80ms</li>
+          <li>LLM first token: 120‑300ms (router dependent)</li>
+        </ul>
+
+        <h2>Operational guidance</h2>
+        <p>Adopt eval‑gated rollouts and on‑call runbooks. Track cost/latency/quality with traces and automated canaries.</p>
+      </article>
+
+      <footer className="mt-10 flex gap-3">
+        <Link href="/content/ai-2026-real-time-rag-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Blueprint</Link>
+        <Link href="/content/ai-2026-autonomous-ops-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Autonomous Ops</Link>
+      </footer>
+    </main>
+  );
+}
+
+import React from 'react';
+import Link from 'next/link';
+import SEO from '../../components/SEO';
+=======
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+
+const page: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default page;
