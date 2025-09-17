@@ -446,8 +446,13 @@
   },
   {
     "route": "/ci-cd-security-hardening",
+<<<<<<< HEAD
+    "title": "{service.name} - Zion Tech Group",
+    "h1": ""
+=======
     "title": "ci-cd-security-hardening | Zion Tech Group",
     "h1": "ci-cd-security-hardening"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-fa31
   },
   {
     "route": "/cloud-backup-compliance",
@@ -541,6 +546,14 @@
   },
   {
     "route": "/contact",
+<<<<<<< HEAD
+    "title": "contact | Zion Tech Group",
+    "h1": "contact"
+  },
+  {
+    "route": "/contact",
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-fa31
     "title": "contact | Zion Tech Group",
     "h1": "contact"
   },
@@ -1331,8 +1344,13 @@
   },
   {
     "route": "/solutions/enterprise",
+<<<<<<< HEAD
+    "title": "",
+    "h1": ""
+=======
     "title": "enterprise | Zion Tech Group",
     "h1": "enterprise"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-fa31
   },
   {
     "route": "/solutions/healthcare",
@@ -1706,6 +1724,30 @@
   },
   {
     "route": "/dashboard/client",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Welcome back"
+  },
+  {
+    "route": "/dashboard/content-review",
+    "title": "",
+    "h1": "Admin Content Review"
+  },
+  {
+    "route": "/dashboard",
+    "title": "Dashboard - Zion",
+    "h1": "Dashboard"
+  },
+  {
+    "route": "/dashboard/talent",
+    "title": "",
+    "h1": "Welcome back"
+  },
+  {
+    "route": "/dashboard/wallet",
+    "title": "",
+    "h1": ""
+=======
     "title": "client | Zion Tech Group",
     "h1": "client"
   },
@@ -1728,6 +1770,7 @@
     "route": "/dashboard/wallet",
     "title": "wallet | Zion Tech Group",
     "h1": "wallet"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-fa31
   },
   {
     "route": "/dashboard/talent/portfolio",
@@ -2416,8 +2459,13 @@
   },
   {
     "route": "/admin/reviews",
+<<<<<<< HEAD
+    "title": "",
+    "h1": "Review Moderation"
+=======
     "title": "reviews | Zion Tech Group",
     "h1": "reviews"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-fa31
   },
   {
     "route": "/admin/support-requests",
