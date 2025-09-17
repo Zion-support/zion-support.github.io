@@ -1,41 +1,10 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
 
 const TestimonialSection: React.FC = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Dr. Sarah Chen",
-      role: "CTO, QuantumTech Solutions",
-      company: "QuantumTech Solutions",
-      content: "Zion Tech Group's quantum computing platform has revolutionized our research capabilities. The performance improvements are beyond anything we've seen before.",
-      rating: 5,
-      avatar: "/avatars/sarah-chen.jpg"
-    },
-    {
-      id: 2,
-      name: "Marcus Rodriguez",
-      role: "VP of Engineering",
-      company: "InnovateCorp",
-      content: "The AI-powered automation suite has reduced our deployment time by 80%. Zion Tech Group truly understands enterprise needs.",
-      rating: 5,
-      avatar: "/avatars/marcus-rodriguez.jpg"
-    },
-    {
-      id: 3,
-      name: "Dr. Emily Watson",
-      role: "Head of AI Research",
-      company: "NeuroTech Industries",
-      content: "Their consciousness AI platform is groundbreaking. We've achieved breakthroughs in neural network optimization that seemed impossible.",
-      rating: 5,
-      avatar: "/avatars/emily-watson.jpg"
-    }
-  ];
-
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4">
-        <divdiv 
+        <div 
           className="text-center mb-16"
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -48,11 +17,11 @@ const TestimonialSection: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover why leading companies trust Zion Tech Group with their most critical technology challenges
           </p>
-        </divdiv>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <divdiv
+            <div
               key={testimonial.id}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
               whileInView={{ opacity: 1, y: 0 }}
@@ -92,12 +61,12 @@ const TestimonialSection: React.FC = () => {
                   <div className="text-xs text-cyan-400">{testimonial.company}</div>
                 </div>
               </div>
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* CTA Section */}
-        <divdiv 
+        <div 
           className="text-center mt-16"
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -126,7 +95,7 @@ const TestimonialSection: React.FC = () => {
               </button>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );

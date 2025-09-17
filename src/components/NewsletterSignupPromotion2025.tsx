@@ -41,7 +41,7 @@ const NewsletterSignupPromotion2025 = () => {
     return (
       <div className="py-16 bg-gradient-to-r from-green-500 to-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <divdiv
+          <div
             className="bg-white rounded-2xl p-12 shadow-2xl"
           >
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -61,12 +61,13 @@ const NewsletterSignupPromotion2025 = () => {
                 Follow Us on Social
               </button>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
     );
   }
 
+const NewsletterSignupPromotion2025: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -80,7 +81,7 @@ const NewsletterSignupPromotion2025 = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
-          <divdiv
+          <div
             className="text-white"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-white text-sm font-semibold mb-6">
@@ -102,20 +103,20 @@ const NewsletterSignupPromotion2025 = () => {
             {/* Benefits List */}
             <div className="space-y-4 mb-8">
               {benefits.map((benefitindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="flex items-center gap-3"
                 >
                   <CheckCircle className="w-5 h-5 text-green-300" />
                   <span className="text-lg">{benefit}</span>
-                </divdiv>
+                </div>
               ))}
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((statindex) => (
-                <divdiv
+                <div
                   key={index}
                   className="text-center"
                 >
@@ -124,13 +125,13 @@ const NewsletterSignupPromotion2025 = () => {
                   </div>
                   <div className="text-2xl font-bold">{stat.value}</div>
                   <div className="text-sm opacity-80">{stat.label}</div>
-                </divdiv>
+                </div>
               ))}
             </div>
-          </divdiv>
+          </div>
 
           {/* Right Column - Signup Form */}
-          <divdiv
+          <div
             className="bg-white rounded-2xl p-8 shadow-2xl"
           >
             <div className="text-center mb-8">
@@ -187,7 +188,7 @@ const NewsletterSignupPromotion2025 = () => {
                 ))}
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
       </div>
     </div>

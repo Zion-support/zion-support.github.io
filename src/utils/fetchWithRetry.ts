@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Fetch utility with retry logic and error handling
  */
@@ -167,5 +168,16 @@ export const fetchWithRetryPut = <T = any>(url: string, data?: any, options?: Om
 
 export const fetchWithRetryDelete = <T = any>(url: string, options?: Omit<FetchOptions, 'method'>) => 
   fetchWithRetry.delete<T>(url, options);
+=======
+export const fetchWithRetry = async (
+  url: string,
+  options: RequestInit & FetchWithRetryOptions = {}
+): Promise<Response> => {
+      return response;
+    } catch (error) {
+      lastError = error as Error;
+      
+};
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 
 export default fetchWithRetry;

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { useState, useEffect, useCallback } from 'react';
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 
 export interface Webhook {
   id: string;
@@ -5,6 +9,12 @@ export interface Webhook {
   url: string;
   events: string[];
   secret?: string;
+<<<<<<< HEAD
+=======
+  isActive: boolean;
+  createdAt: string;
+  lastTriggered?: string;
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   failureCount: number;
 }
 
@@ -32,6 +42,11 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   const [events, setEvents] = useState<WebhookEvent[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+  // Fetch webhooks
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   const fetchWebhooks = useCallback(async () => {
     try {
       setLoading(true);

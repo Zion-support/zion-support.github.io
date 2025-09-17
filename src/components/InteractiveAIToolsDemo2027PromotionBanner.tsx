@@ -1,54 +1,8 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Play
-  Zap
-  Brain
-  Code
-  BarChart3
-  Image,
-  ArrowRight,
-  Star,
-  X,
-  Sparkles
-} from 'lucide-react';
-
-const InteractiveAIToolsDemo2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentToolsetCurrentTool] = useState(0);
-
-  const tools = [
-    { icon: Codename: 'Code 'Generator', 'color: 'from-blue-500 to-cyan-500' },
-    { icon: BarChart3name: 'Data 'Analyzer', 'color: 'from-green-500 to-emerald-500' },
-    { icon: Imagename: 'Image 'Generator', 'color: 'from-purple-500 to-pink-500' },
-    { icon: Brainame: 'AI 'Assistant', 'color: 'from-orange-500 to-red-500' }
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1500);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    if (isVisible) {
-      const interval = setInterval(() => {
-        setCurrentTool(prev => (prev + 1) % tools.length);
-      }2000);
-      return () => clearInterval(interval);
-    }
-  }[isVisibletools.length]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
+const InteractiveAIToolsDemo2027PromotionBanner: React.FC = () => {
   return (
-    <divdiv
+    <div
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden"
     >
       {/* Background Pattern */}
@@ -61,7 +15,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
         <div className="flex items-center justify-between">
           {/* Left Content */}
           <div className="flex-1">
-            <divdiv
+            <div
               className="flex items-center gap-3 mb-3"
             >
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
@@ -73,7 +27,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                   <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             <divh2
               className="text-xl md:text-3xl font-bold mb-2"
@@ -87,7 +41,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
               Experience the power of AI tools with live demonstrations. Generate codeanalyze datacreate imagesand more in real-time.
             </divp>
 
-            <divdiv
+            <div
               className="flex flex-wrap items-center gap-3"
             >
               <button className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 group">
@@ -99,16 +53,16 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                 <Zap className="w-4 h-4" />
                 View All Tools
               </button>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Content - Rotating Tool Icons */}
-          <divdiv
+          <div
             className="hidden lg:flex items-center gap-6"
           >
             <div className="relative w-20 h-20">
               {tools.map((toolindex) => (
-                <divdiv
+                <div
                   key={tool.name}
                     opacity: currentTool === index ? 1 : 0,
                     scale: currentTool === index ? 1 : 0.8
@@ -119,7 +73,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                     <tool.icon className="w-8 h-8 text-white" />
                   </div>
                   <span className="text-xs font-medium mt-1 text-center">{tool.name}</span>
-                </divdiv>
+                </div>
               ))}
             </div>
             
@@ -131,11 +85,11 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
                 AI Tools
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Progress Indicator */}
-        <divdiv
+        <div
           className="mt-4"
         >
           <div className="flex items-center justify-between text-sm text-white/80 mb-2">
@@ -143,14 +97,14 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
             <span>Ready to Use</span>
           </div>
           <div className="w-full bg-white/20 rounded-full h-1.5">
-            <divdiv
+            <div
               className="h-1.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"
             />
           </div>
-        </divdiv>
+        </div>
 
         {/* Floating Elements */}
-        <divdiv
+        <div
             y: [0-80],
             rotate: [030]
           }}
@@ -161,9 +115,9 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
           className="absolute top-3 right-3 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
         >
           <Sparkles className="w-3 h-3 text-white" />
-        </divdiv>
+        </div>
 
-        <divdiv
+        <div
             y: [080],
             rotate: [0-30]
           }}
@@ -175,7 +129,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
           className="absolute bottom-3 left-3 w-4 h-4 bg-white/20 rounded-full flex items-center justify-center"
         >
           <Zap className="w-2 h-2 text-white" />
-        </divdiv>
+        </div>
       </div>
 
       {/* Dismiss Button */}
@@ -185,8 +139,9 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {
       >
         <X className="w-3 h-3 text-white" />
       </button>
-    </divdiv>
+    </div>
   );
 };
 
 export default InteractiveAIToolsDemo2027PromotionBanner;
+</div></div></div>

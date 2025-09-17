@@ -1,7 +1,6 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-const AI2025AutonomousOperationsPromotionBanner = () => {
+const AI2025AutonomousOperationsPromotionBanner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-green-900 via-teal-900 to-blue-900 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}

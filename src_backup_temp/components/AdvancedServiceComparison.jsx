@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const AdvancedServiceComparison: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdvancedServiceComparison</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default AdvancedServiceComparison;
+=======
 import React, {useState, useMemo} from 'react';
 
 import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react';
@@ -526,3 +540,4 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+''']
           <divclassName="flex flex-col "sm": flex-row gap-4 justify-center"""
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light"""
             <Button variant="outline" className="border-white text-white "hover": bg-white hover:text-zion-purple""]"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

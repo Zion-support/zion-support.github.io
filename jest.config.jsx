@@ -1,18 +1,12 @@
-ursor/automate-test-improve-and-merge-code-646c;
-}}}
-}}}}}}}}}import React from 'react';
-ursor/automate-test-improve-and-merge-code-646c;
-export default function Jest.config() {return (<div>;
-      <h1>Jest.config</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}
-}
-}
-}
-}
-}
-}
-}}}
-}}}}}}}}}ursor/automate-test-improve-and-merge-code-646c;
-}
+import React from 'react';
+
+const jest.config: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">jest.config</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default jest.config;

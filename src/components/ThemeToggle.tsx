@@ -1,17 +1,6 @@
 import React from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
 
-interface ThemeToggleProps {
-  currentTheme: 'dark' | 'light';
-  onThemeChange: (theme: 'dark' | 'light') => void;
-}
-
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }) => {
-  const themes = [
-    { id: 'dark', icon: Moon, label: 'Dark Mode', color: 'from-gray-800 to-gray-900' },
-    { id: 'light', icon: Sun, label: 'Light Mode', color: 'from-yellow-400 to-orange-500' },
-  ] as const;
-
+const ThemeToggle: React.FC = () => {
   return (
     <div className="fixed top-32 right-6 z-50">
       <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl">
@@ -36,7 +25,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
                 
                 {/* Active indicator */}
                 {isActive && (
-                  <divdiv
+                  <div
                     className="absolute inset-0 rounded-xl border-2 border-white/30"
                   />
                 )}
@@ -47,15 +36,16 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
       </div>
       
       {/* Theme indicator */}
-      <divdiv
+      <div
         className="mt-3 text-center"
       >
         <span className="text-xs text-gray-400 font-medium">
           {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode
         </span>
-      </divdiv>
+      </div>
     </div>
   );
 };
 
 export default ThemeToggle;
+</div></div>

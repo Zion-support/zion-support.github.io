@@ -178,18 +178,8 @@ const AISolutionsComprehensive2025: React.FC = () => {
         className="container mx-auto px-4 py-16"
       >
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-            Schedule a consultation with our AI experts and discover how our solutions can revolutionize your operations
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-              Schedule Consultation
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              View Case Studies
-            </button>
-          </div>
+          <h1 className="text-4xl font-bold mb-6">AISolutionsComprehensive2025</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>

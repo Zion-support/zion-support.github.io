@@ -1,8 +1,6 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { ArrowRightIcon, SparklesIcon, LightBulbIcon, HeartIcon, BrainIcon } from '@heroicons/react/24/outline';
 
-const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
+const AI2026SyntheticIntelligenceBreakthroughBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900 text-white overflow-hidden">
       {/* Background Pattern */}

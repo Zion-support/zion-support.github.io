@@ -1,26 +1,8 @@
-"use client";
-import React, { useState, useCallback } from 'react';
-import { ArrowRight, Brain } from 'lucide-react';
+import React from 'react';
 
-interface ServiceCardProps {
-  service: {
-    id: string;
-    name: string;
-    description: string;
-    type: string;
-    pricing: {
-      starter: string;
-    };
-    slug: string;
-  };
-  index: number;
-  isCurrent: boolean;
-  onClick: (service: { slug: string }) => void;
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) => {
+const ServiceCard: React.FC = () => {
   return (
-    <divdiv
+    <div
       className={`relative group cursor-pointer ${
         isCurrent ? 'scale-105' : 'scale-100'
       } transition-transform duration-500`}
@@ -176,12 +158,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
             </div>
           )}
           
-          <divdiv
+          <div
             className="flex items-center space-x-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
           >
             <span className="text-sm font-medium">Learn More</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </divdiv>
+          </div>
         </div>
 
         {/* Hover Overlay */}
@@ -193,8 +175,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
 
       {/* Enhanced Border Glow */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/0 via-cyan-500/20 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-    </divdiv>
+    </div>
   );
 };
 
 export default ServiceCard;
+</div></div></div></div>

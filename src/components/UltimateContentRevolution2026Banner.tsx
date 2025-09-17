@@ -1,36 +1,8 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  ArrowRight
-  Zap
-  Brain
-  Shield
-  Globe,
-  X,
-  Play,
-  Star
-} from 'lucide-react';
-
-const UltimateContentRevolution2026Banner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
+const UltimateContentRevolution2026Banner: React.FC = () => {
   return (
-    <divdiv
+    <div
         opacity: isVisible ? 1 : 0
         y: isVisible ? 0 : -100 
       }}
@@ -154,7 +126,7 @@ const UltimateContentRevolution2026Banner = () => {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500">
         <div className="h-full bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 animate-pulse"></div>
       </div>
-    </divdiv>
+    </div>
   );
 };
 

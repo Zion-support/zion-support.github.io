@@ -1,7 +1,6 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-const Fortune500SuccessStoryPromotionBanner = () => {
+const Fortune500SuccessStoryPromotionBanner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white py-16 relative overflow-hidden">
       {/* Background Pattern */}

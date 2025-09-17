@@ -1,8 +1,22 @@
-import { ; Atom,; Cpu,; Zap,; Brain,; Users,; Globe, Database,; Network,; Lock,; Eye,; Target,; Award,; Star,; CheckCircle,; ArrowRight,; Phone,; Mail,; MapPin,; ExternalLink,; Rocket,; Microscope,; TestTube  } from 'lucide-react'; ; const QuantumComputingElite: Reac t.FC = (): JSX.Element => {; return () <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";" {}";" <section className="relative py-20 px-4 sm: p x-6 lg: p x-8">";" <div className="max-w-7xl mx-auto text-center">; <motion.div; initial={{ opacity: 0, y: 2 0 }}; animate={{ opacity: 1, y: 0 }};" transition={{ duration: 0.8   }}";" >";" <div className="flex justify-center mb-6">";" <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">";" <Atom className="h-12 w-12 text-white"  /> </div>";" </div>";" <h1 className="text-5xl md: tex t-6xl font-bold text-white mb-6">;" Quantum Computing Elite";" </h1>";" <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">; Access the future of computing with our cutting-edge quantum; computing platform.Solve previously impossible problems with;" quantum advantage and AI-quantum hybrid systems.";" </p>";" <div className="flex flex-col sm: fle x-row gap-4 justify-center">";" <a";" href="https:
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-</a>
-</div>
-</motion>
-</div>
-</section>
-</div>
+const QuantumComputingElite: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>QuantumComputingElite | Zion Tech Group</title>
+        <meta name="description" content="QuantumComputingElite - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">QuantumComputingElite</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default QuantumComputingElite;

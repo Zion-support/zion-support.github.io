@@ -1,10 +1,108 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+
+const Navigation: React.FC = () => {
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+'use client'
+import { Dialog } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useState } from 'react'
+
+const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+<<<<<<< HEAD
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Research', href: '/research', tag: 'New' },
+  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+  { name: 'Contact', href: '/contact' },
+=======
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+>>>>>>> cursor/create-and-deploy-new-content-8472
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-23cd
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+=======
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+  { name: 'Contact', href: '/contact' },
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+]
+
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+  { name: 'Blog', href: '/blog' },
+  { name: 'Updates', href: '/updates' },
+  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
+>>>>>>> cursor/create-and-deploy-new-content-2def
+]
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+export default function Navigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Navigation</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default Navigation;
+=======
 "use client"
 
 import React from 'react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const navigation = [
 =======
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 const navLinks = [
 	{ name: 'About', href: '/about' },
 	{ name: 'Services', href: '/services' },
@@ -13,7 +111,10 @@ const navLinks = [
 	{ name: 'Updates', href: '/updates', badge: 'New' },
 ]
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+=======
+>>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
 export default function Navigation() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -36,3 +137,4 @@ export default function Navigation() {
 		</header>
 	)
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

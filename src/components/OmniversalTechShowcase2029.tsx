@@ -118,7 +118,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
   }, []);
 
   return (
-    <div
+                  <div
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -147,11 +147,11 @@ const OmniversalTechShowcase2029: React.FC = () => {
           >
             🌌 OMNIVERSAL TECH 2029
           </div>
-          <divh2
+          <h2
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
             Beyond All Existence
-          </divh2>
+          </h2>
           <divp
             className="text-2xl text-gray-300 max-w-5xl mx-auto"
           >

@@ -1,6 +1,13 @@
 import React from 'react';
-import Link from 'next/link';
 
+<<<<<<< HEAD
+const QuantumAI2026RevolutionBanner: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">QuantumAI2026RevolutionBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+=======
 export default function QuantumAI2026RevolutionBanner() {
   return (
     <section className="py-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
@@ -66,5 +73,6 @@ export default function QuantumAI2026RevolutionBanner() {
         </div>
       </div>
     </section>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 }

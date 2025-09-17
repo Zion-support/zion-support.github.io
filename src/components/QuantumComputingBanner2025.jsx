@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QuantumComputingBanner2025 = () => {
+const QuantumComputingBanner2025= () => {
   return (
     <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}

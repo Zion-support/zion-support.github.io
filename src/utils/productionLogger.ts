@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Production-safe logging utility
  * Provides different logging levels and formats for production environments
@@ -161,3 +162,20 @@ export const log = {
 };
 
 export default ProductionLogger;
+=======
+interface LogLevel {
+  ERROR: 'error';
+  WARN: 'warn';
+  INFO: 'info';
+  DEBUG: 'debug';
+}
+
+const LOG_LEVELS: LogLevel = {
+  ERROR: 'error',
+  WARN: 'warn',
+  INFO: 'info',
+    }
+  }
+}
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5

@@ -1,1 +1,22 @@
-import React from 'react'; import { SEO } from '../../components/SEO'; ; export default function AIFitnessCoachingPlatform(props: any) {; return (; <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center"> <SEO " title="AI Fitness Coaching Platform - Zion Tech Group" description="Personalized AI fitness coaching platform that creates custom workout plans, tracks progress, and provides real-time feedback."  />" <div className="text-center text-white">" <h1 className="text-4xl font-bold mb-4">AI Fitness Coaching Platform</h1>" <p className="text-xl text-gray-300">Coming Soon</p>;" </div>;";" </div>;";" ) }"
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ai-fitness-coaching-platform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-fitness-coaching-platform | Zion Tech Group</title>
+        <meta name="description" content="ai-fitness-coaching-platform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-fitness-coaching-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-fitness-coaching-platform;

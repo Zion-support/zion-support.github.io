@@ -1,5 +1,17 @@
 import React from 'react';
 
+<<<<<<< HEAD
+const LoadingSkeleton: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LoadingSkeleton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default LoadingSkeleton;
+=======
 " return (
         <div className = {}";" """;" """;" cn("p-6 border border-zion-blue-light/20 rounded-xl bg-zion-blue-dark/50",; className);" ";" """;" }>""";" <div className="flex items-center space-x-4 mb-4">""";" <LoadingSkeleton className="w-12 h-12 rounded-full" />""";" <div className="space-y-2 flex-1">""";" <LoadingSkeleton height="h-4" width="w-3/4" />""";" <LoadingSkeleton height="h-3" width="w-1/2" />";" </div>""";" </div>""";" <div className="space-y-2">""";" <LoadingSkeleton height="h-3" width="w-full" />""";" <LoadingSkeleton height="h-3" width="w-5/6" />""";" <LoadingSkeleton height="h-3" width="w-4/6" />; </div>; </div>)}; export function GridSkeleton(props: any) {};" return (
         <div className = {}";" """;" """;" cn("grid gap-6", columns === 1 && "grid-cols-1", columns === 2 && "grid-cols-1 sm:grid-cols-2", columns === 3 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3", columns === 4 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",; className); }>; {Array.from({ length: columns }).map((_, index) => (<CardSkeleton key={index} />))}; </div>)}; export function HeroSkeleton(props: any) {};" return (
@@ -7,3 +19,4 @@ import React from 'react';
 
 const React from "react"; '"'"
 
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

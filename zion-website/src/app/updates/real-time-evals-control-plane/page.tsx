@@ -1,37 +1,26 @@
-//
-
-export const metadata = {
-	title: 'Real-Time Evals Control Plane — Guide',
-	description:
-		'Centralize eval gates, rollout policies, and live scorecards across services.',
-}
-
 export default function Page() {
-	return (
-		<main className="mx-auto max-w-3xl px-6 py-16 text-gray-200">
-			<h1 className="text-3xl sm:text-4xl font-bold text-white">Real-Time Evals Control Plane</h1>
-			<p className="mt-4 text-lg text-gray-300">
-				Design an organization-wide control plane for live eval gates, policy routing, and
-				progressive delivery with measurable quality safeguards.
-			</p>
-
-			<section className="mt-10 space-y-6">
-				<h2 className="text-2xl font-semibold text-white">What You Will Build</h2>
-				<ul className="list-disc pl-6 space-y-2">
-					<li>Unified registry of evals with versioning and ownership.</li>
-					<li>Gating policies applied per service, environment, and traffic segment.</li>
-					<li>Live scorecards and SLO-aligned rollout controls.</li>
-					<li>Evidence export for audits and incident reviews.</li>
-				</ul>
-			</section>
-
-			<section className="mt-10 space-y-4">
-				<h2 className="text-2xl font-semibold text-white">Next Steps</h2>
-				<p className="text-gray-300">
-					Start by mapping current eval coverage, define SLO thresholds, and integrate
-					gates into your deployment pipeline.
-				</p>
-			</section>
-		</main>
-	)
+  return (
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+        <a href="/updates" className="text-sm text-blue-300 hover:text-blue-200">← All updates</a>
+        <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">Release: Real-Time Evals Control Plane (v1.0)</h1>
+        <p className="mt-4 text-lg text-gray-300">Ship safer, run faster. Centralized gates, rollback, and audit-ready evidence for AI releases.</p>
+        <div className="mt-8 space-y-6 text-gray-300">
+          <p>
+            The Real-Time Evals Control Plane orchestrates pre- and post-deployment evaluation gates, integrates with
+            CI/CD, and captures evidence for audits. Reduce incidents and accelerate iteration with automatic rollback
+            when SLOs or guardrails are at risk.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>CI/CD integration for canaries, shadow tests, and rollout policies</li>
+            <li>Live telemetry and dashboards for eval outcomes and safety signals</li>
+            <li>Automated rollback and notifications tied to policy-as-code</li>
+          </ul>
+          <p>
+            Works seamlessly with the Agent Risk Metrics toolkit and your existing observability stack.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
 }

@@ -1,78 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const RevolutionaryContentCarousel2025: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      id: 1,
-      title: "AI Consciousness Revolution",
-      description: "The first truly conscious AI systems that can think, feel, and create independently",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      features: ["Self-aware AI", "Emotional processing", "Creative problem solving", "Ethical decision making"]
-    },
-    {
-      id: 2,
-      title: "Quantum Reality Engine",
-      description: "Manipulate reality itself with quantum computing that transcends physical limitations",
-      icon: "⚛️",
-      color: "from-cyan-600 to-blue-600",
-      features: ["Reality manipulation", "Quantum superposition", "Multidimensional processing", "Instantaneous transfer"]
-    },
-    {
-      id: 3,
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces that merge human consciousness with digital systems",
-      icon: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      features: ["Non-invasive interfaces", "Thought control", "Memory enhancement", "Telepathic communication"]
-    },
-    {
-      id: 4,
-      title: "Interdimensional Computing",
-      description: "Computing systems that operate across multiple dimensions and realities",
-      icon: "🌌",
-      color: "from-violet-600 to-purple-600",
-      features: ["Multi-dimensional processing", "Parallel universe computing", "Dimensional storage", "Cross-reality communication"]
-    },
-    {
-      id: 5,
-      title: "Synthetic Intelligence",
-      description: "Artificially created intelligence that surpasses human cognitive capabilities",
-      icon: "🤖",
-      color: "from-orange-600 to-red-600",
-      features: ["Superhuman intelligence", "Synthetic creativity", "Advanced reasoning", "Autonomous learning"]
-    },
-    {
-      id: 6,
-      title: "Universal Consciousness",
-      description: "Connect with the universal consciousness through advanced technology",
-      icon: "🌟",
-      color: "from-pink-600 to-rose-600",
-      features: ["Universal knowledge", "Collective intelligence", "Cosmic awareness", "Transcendent understanding"]
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Animated background */}
@@ -176,3 +104,4 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
 };
 
 export default RevolutionaryContentCarousel2025;
+</p></p>

@@ -1,52 +1,12 @@
+import React from 'react';
 
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px
-
-      if (scrollPosition > threshold && !isClosed) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-
-  const handleClose = () => {
-    setIsClosed(true);
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
-
+const FloatingCTA: React.FC = () => {
   return (
-    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
-        <div className="mr-4">
-          <p className="text-white font-medium">Ready to explore Zion?</p>
-          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <Button 
-            variant="default" 
-            size="sm" 
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
-            asChild
-          >
-            <Link to="/signup">Register Now</Link>
-          </Button>
-          <button 
-            onClick={handleClose}
-            className="text-zion-slate hover:text-white p-1"
-            aria-label="Close"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FloatingCTA</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default FloatingCTA;

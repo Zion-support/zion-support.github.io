@@ -1,162 +1,11 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  Code
-  BarChart3
-  MessageSquare
-  Image
-  Video
-  FileText,
-  Sparkles,
-  ArrowRight,
-  Play,
-  CheckCircle,
-  Star,
-  Users,
-  TrendingUp,
-  Shield,
-  Clock,
-  Target
-} from 'lucide-react';
-
-interface AITool {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  icon: React.ReactNode;
-  features: string[];
-  demoUrl?: string;
-  pricing: string;
-  rating: number;
-  users: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-}
+import React from 'react';
 
 const AIToolsInteractiveDemo2025: React.FC = () => {
-  const [selectedToolsetSelectedTool] = useState<string | null>(null);
-  const [activeCategorysetActiveCategory] = useState<string>('all');
-  const [searchQuerysetSearchQuery] = useState('');
-  const [isDemoRunningsetIsDemoRunning] = useState(false);
-  const [demoProgressetDemoProgress] = useState(0);
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Tools', 'count: 24 },
-    { id: ''content', 'name: 'Content 'Creation', 'count: 8 },
-    { id: ''coding', 'name: 'Code 'Generation', 'count: 6 },
-    { id: ''analytics', 'name: 'Analytics & 'Insights', 'count: 4 },
-    { id: ''communication', 'name: ''Communication', 'count: 3 },
-    { id: ''multimedia', 'name: ''Multimedia', 'count: 3 }
-  ];
-
-  const aiTools: AITool[] = [
-    {
-      id: 'gpt-5-ultra',
-      name: 'GPT-5 Ultra',
-      description: 'Next-generation language model with advanced reasoning capabilities',
-      category: 'content',
-      icon: <Brain className="w-6 h-6" />,
-      features: ['Advanced 'reasoning', 'Code 'generation', 'Creative 'writing', 'Data analysis'],
-      pricing: '$20/month',
-      rating: 4.9,
-      users: '2M+',
-      isPopular: true,
-      isNew: true
-    },
-    {
-      id: 'code-gen-pro',
-      name: 'CodeGen Pro',
-      description: 'AI-powered code generation and debugging assistant',
-      category: 'coding',
-      icon: <Code className="w-6 h-6" />,
-      features: ['Multi-language 'support', 'Bug 'detection', 'Code 'optimization', 'Documentation'],
-      pricing: '$15/month',
-      rating: 4.8,
-      users: '500K+'
-    },
-    {
-      id: 'analytics-ai',
-      name: 'Analytics AI',
-      description: 'Intelligent data analysis and business insights platform',
-      category: 'analytics',
-      icon: <BarChart3 className="w-6 h-6" />,
-      features: ['Predictive 'analytics', 'Real-time 'insights', 'Custom 'dashboards', 'Automated reports'],
-      pricing: '$25/month',
-      rating: 4.7,
-      users: '300K+'
-    },
-    {
-      id: 'chat-assistant',
-      name: 'Smart Chat Assistant',
-      description: 'Advanced conversational AI for customer support and engagement',
-      category: 'communication',
-      icon: <MessageSquare className="w-6 h-6" />,
-      features: ['Multi-'language', 'Sentiment 'analysis', 'Integration 'APIs', 'Custom training'],
-      pricing: '$10/month',
-      rating: 4.6,
-      users: '1M+'
-    },
-    {
-      id: 'image-creator',
-      name: 'Image Creator Pro',
-      description: 'AI-powered image generation and editing tool',
-      category: 'multimedia',
-      icon: <Image className="w-6 h-6" />,
-      features: ['Text-to-'image', 'Style 'transfer', 'Upscaling'Batch processing'],
-      pricing: '$18/month',
-      rating: 4.8,
-      users: '800K+'
-    },
-    {
-      id: 'video-editor',
-      name: 'Video Editor AI',
-      description: 'Automated video editing and production platform',
-      category: 'multimedia',
-      icon: <Video className="w-6 h-6" />,
-      features: ['Auto-'editing', 'Voice 'synthesis', 'Background 'removal', 'Motion graphics'],
-      pricing: '$30/month',
-      rating: 4.5,
-      users: '200K+'
-    }
-  ];
-
-  const filteredTools = aiTools.filter(tool => {
-    const matchesCategory = activeCategory === 'all' || tool.category === activeCategory;
-    const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         tool.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const handleToolSelect = (toolId: string) => {
-    setSelectedTool(toolId);
-    setIsDemoRunning(true);
-    setDemoProgress(0);
-    
-    // Simulate demo progress
-    const interval = setInterval(() => {
-      setDemoProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setIsDemoRunning(false);
-          return 100;
-        }
-        return prev + 10;
-      });
-    }200);
-  };
-
-  const selectedToolData = aiTools.find(tool => tool.id === selectedTool);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -183,10 +32,10 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               <Sparkles className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-blue-400" />
             </div>
           </div>
-        </divdiv>
+        </div>
 
         {/* Category Filter */}
-        <divdiv
+        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -202,16 +51,16 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               {category.name} ({category.count})
             </button>
           ))}
-        </divdiv>
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Tools Grid */}
           <div className="lg:col-span-2">
-            <divdiv
+            <div
               className="grid md:grid-cols-2 gap-6"
             >
               {filteredTools.map((toolindex) => (
-                <divdiv
+                <div
                   key={tool.id}
                   className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group ${
                     selectedTool === tool.id ? 'ring-2 ring-blue-500' : ''
@@ -292,20 +141,20 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                       <span>Demo</span>
                     </button>
                   </div>
-                </divdiv>
+                </div>
               ))}
-            </divdiv>
+            </div>
           </div>
 
           {/* Demo Panel */}
           <div className="lg:col-span-1">
-            <divdiv
+            <div
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
               
                 {selectedToolData ? (
-                  <divdiv
+                  <div
                     key={selectedToolData.id}
                   >
                     <div className="text-center mb-6">
@@ -385,9 +234,9 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                         </button>
                       </div>
                     )}
-                  </divdiv>
+                  </div>
                 ) : (
-                  <divdiv
+                  <div
                     className="text-center py-12"
                   >
                     <Sparkles className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -397,15 +246,15 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                     <p className="text-gray-400">
                       Choose any AI tool from the grid to see it in action
                     </p>
-                  </divdiv>
+                  </div>
                 )}
               </div>
-            </divdiv>
+            </div>
           </div>
         </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
@@ -422,7 +271,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
       </div>
     </div>
   );

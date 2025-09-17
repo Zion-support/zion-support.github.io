@@ -1,119 +1,6 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  TrendingUp
-  Users
-  Target
-  CheckCircle
-  ArrowRight
-  Play,
-  BarChart3,
-  Clock,
-  Shield,
-  Lightbulb,
-  Globe,
-  Award,
-  Star
-} from 'lucide-react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import React from 'react';
 
 const NeuralConsensus2026Showcase: React.FC = () => {
-  const [activeFeaturesetActiveFeature] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  const features = [
-    {
-      icon: Brain,
-      title: "Collective Intelligence",
-      description: "Multiple AI systems collaborate to reach consensus on complex decisions",
-      metrics: "99.9% Accuracy",
-      color: "from-blue-500 to-purple-600"
-    },
-    {
-      icon: Zap,
-      title: "Lightning Fast Decisions",
-      description: "Consensus-driven decisions made 80% faster than traditional methods",
-      metrics: "80% Faster",
-      color: "from-yellow-500 to-orange-600"
-    },
-    {
-      icon: TrendingUp,
-      title: "Proven ROI Results",
-      description: "Average 400% ROI achieved by implementing neural consensus systems",
-      metrics: "400% ROI",
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      icon: Users,
-      title: "Enterprise Scale",
-      description: "Trusted by Fortune 100 companies with 500,000+ employees globally",
-      metrics: "Fortune 100",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      icon: Shield,
-      title: "Risk Mitigation",
-      description: "Advanced validation agents ensure 99.7% reduction in decision errors",
-      metrics: "99.7% Error Reduction",
-      color: "from-red-500 to-rose-600"
-    },
-    {
-      icon: Globe,
-      title: "Global Implementation",
-      description: "Deployed across 150 countries with seamless cross-cultural adaptation",
-      metrics: "150 Countries",
-      color: "from-indigo-500 to-blue-600"
-    }
-  ];
-
-  const stats = [
-    { label: "Decision Accuracy"value: "99.9%"icon: Target },
-    { label: "Cost Reduction"value: "40%"icon: TrendingUp },
-    { label: "Time Savings"value: "80%"icon: Clock },
-    { label: "ROI Achieved"value: "$15.2B"icon: Award }
-  ];
-
-  const caseStudies = [
-    {
-      title: "Fortune 100 Manufacturing",
-      roi: "$15.2B",
-      accuracy: "99.9%",
-      timeframe: "12 months",
-      industry: "Manufacturing"
-    },
-    {
-      title: "Global Financial Services",
-      roi: "$8.7B",
-      accuracy: "99.8%",
-      timeframe: "10 months",
-      industry: "Finance"
-    },
-    {
-      title: "Healthcare Network",
-      roi: "$3.4B",
-      accuracy: "99.9%",
-      timeframe: "8 months",
-      industry: "Healthcare"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % features.length);
-    }3000);
-
-    const visibilityTimer = setTimeout(() => setIsVisible(true)500);
-
-    return () => {
-      clearInterval(timer);
-      clearTimeout(visibilityTimer);
-    };
-  }[features.length]);
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}
@@ -125,7 +12,7 @@ const NeuralConsensus2026Showcase: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <divdiv
+        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 mb-6">
@@ -142,12 +29,12 @@ const NeuralConsensus2026Showcase: React.FC = () => {
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Discover how collective AI intelligence is transforming business operations and achieving unprecedented results across industries.
           </p>
-        </divdiv>
+        </div>
 
         {/* Interactive Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((featureindex) => (
-            <divdiv
+            <div
               key={index}
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} cursor-pointer transition-all duration-300 ${
                 activeFeature === index ? 'ring-4 ring-white/30 shadow-2xl' : 'hover:shadow-xl'
@@ -163,18 +50,18 @@ const NeuralConsensus2026Showcase: React.FC = () => {
               <p className="text-white/90 text-sm leading-relaxed">{feature.description}</p>
               
               {activeFeature === index && (
-                <divdiv
+                <div
                   className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded-full flex items-center justify-center"
                 >
                   <CheckCircle className="w-4 h-4 text-green-600" />
-                </divdiv>
+                </div>
               )}
-            </divdiv>
+            </div>
           ))}
         </div>
 
         {/* Stats Section */}
-        <divdiv
+        <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {stats.map((statindex) => (
@@ -186,10 +73,10 @@ const NeuralConsensus2026Showcase: React.FC = () => {
               <div className="text-blue-200 text-sm">{stat.label}</div>
             </div>
           ))}
-        </divdiv>
+        </div>
 
         {/* Case Studies */}
-        <divdiv
+        <div
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -198,7 +85,7 @@ const NeuralConsensus2026Showcase: React.FC = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((studyindex) => (
-              <divdiv
+              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
               >
@@ -223,13 +110,13 @@ const NeuralConsensus2026Showcase: React.FC = () => {
                     <span className="font-bold text-purple-400">{study.timeframe}</span>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Call to Action */}
-        <divdiv
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-8 border border-blue-400/30">
@@ -263,10 +150,11 @@ const NeuralConsensus2026Showcase: React.FC = () => {
               </a>
             </div>
           </div>
-        </divdiv>
+        </div>
       </div>
     </section>
   );
 };
 
 export default NeuralConsensus2026Showcase;
+</div></div>

@@ -1,21 +1,4 @@
 import React from 'react';
-import { 
-  ArrowRight, 
-  Star, 
-  Sparkles, 
-  Rocket, 
-  Brain, 
-  Atom, 
-  Zap,
-  Globe,
-  Shield,
-  Target,
-  Users,
-  CheckCircle,
-  TrendingUp,
-  Award,
-  Clock
-} from 'lucide-react';
 
 const EnhancedContentAdvertising: React.FC = () => {
   const featuredContent = [

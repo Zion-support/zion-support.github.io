@@ -19,18 +19,36 @@ interface LazyComponentProps {
   className?: string;
 }
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  children, 
-  fallback = <LoadingSpinner />,
-  className = ""
-}) => {
+export default function LazyComponent({ 
+  component
+  fallback = <LoadingSpinner size="md" text="Loading..." />,
+  ...props 
+}: LazyComponentProps) {
+  const LazyLoadedComponent = lazy(component);
   return (
-    <div className={className}>
-      <Suspense fallback={fallback}>
-        {children}
-      </Suspense>
-    </div>
+    <Suspense fallback={fallback}>
+      <LazyLoadedComponent {...props} />
   );
-};
-
-export default LazyComponent;
+}
+// Pre-configured lazy components for common use cases
+export const LazyROICalculator = (props: any) => (
+  <LazyComponent 
+    component={() => import('./ROICalculator')} 
+    fallback={<LoadingSpinner size="lg" text="Loading ROI Calculator..." />}
+    {...props}
+  />
+);
+export const LazyStructuredData = (props: any) => (
+  <LazyComponent 
+    component={() => import('./StructuredData')} 
+    fallback={null}
+    {...props}
+  />
+);
+export const LazyInteractiveWidget = (props: any) => (
+  <LazyComponent 
+    component={() => import('./InteractiveContentDiscoveryWidget')} 
+    fallback={<LoadingSpinner size="lg" text="Loading Interactive Widget..." />}
+    {...props}
+  />
+);

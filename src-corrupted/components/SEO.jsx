@@ -1,12 +1,12 @@
-import {Helmet} from 'react-helmet-async';
+import React from 'react';
 
-export function SEO(props: any) {
+const SEO: React.FC = () => {
   return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name='description' content={description}   />
-      <meta name='keywords' content={keywords}   />
-      <link rel='canonical' href={canonical}   />
-    </Helmet>
-  )}
-export default SEO
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SEO</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default SEO;

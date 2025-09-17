@@ -1,41 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const InterdimensionalTechRevolution2026 = () => {
   return (
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌌 INTERDIMENSIONAL TECH 2026
-          </div>
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-8 animate-pulse">
-              🌌 INTERDIMENSIONAL BREAKTHROUGH • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Interdimensional Technology Revolution
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-12">
-              Break through the barriers of our dimension and access technologies from parallel universes
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
-                Cross Dimensions →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
-                Explore Parallel Worlds
-              </button>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">InterdimensionalTechRevolution2026</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
         </div>
       </div>
 

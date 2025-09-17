@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   csp: {
     directives: {
 
@@ -16,10 +13,7 @@
       objectSrc: ["'none'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       upgradeInsecureRequests: [],
     },
   },
@@ -40,7 +34,4 @@
 };
 
 export default securityConfig;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

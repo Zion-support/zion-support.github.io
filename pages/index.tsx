@@ -1,3 +1,4 @@
+import Homepage2025 from '../components/Homepage2025';
 import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap, BarChart3, Star, TrendingUp, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
@@ -255,10 +256,4 @@ export default function Index() {
 			</section>
 		</>
 	)
-}
-import React from 'react';
-import Homepage2025 from '../components/Homepage2025';
-
-export default function HomePage() {
-  return <Homepage2025 />;
 }

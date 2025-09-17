@@ -1,53 +1,8 @@
-"use client";
-'use client';
+import React from 'react';
 
-import React, { useState, useEffect } from 'react';
-import { 
-  Award
-  TrendingUp
-  Users
-  DollarSign,
-  ArrowRight,
-  Star,
-  X,
-  CheckCircle,
-  BarChart3
-} from 'lucide-react';
-
-const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
-
-  const stats = [
-    { value: '500+'label: ''Projects', 'icon: CheckCircle },
-    { value: '99.2%'label: ''Satisfaction', 'icon: Star },
-    { value: '340%'label: 'Average 'ROI', 'icon: TrendingUp },
-    { value: '15+'label: 'Years 'Experience', 'icon: Award }
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
-
-  useEffect(() => {
-    if (isVisible) {
-      const interval = setInterval(() => {
-        setCurrentStat(prev => (prev + 1) % stats.length);
-      }1500);
-      return () => clearInterval(interval);
-    }
-  }[isVisiblestats.length]);
-
-  const handleDismiss = () => {
-    setIsDismissed(true);
-  };
-
-  if (isDismissed) return null;
-
+const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
   return (
-    <divdiv
+    <div
       className="relative bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-gray-900 overflow-hidden"
     >
       {/* Background Pattern */}
@@ -60,7 +15,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
         <div className="flex items-center justify-between">
           {/* Left Content */}
           <div className="flex-1">
-            <divdiv
+            <div
               className="flex items-center gap-3 mb-3"
             >
               <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
@@ -72,7 +27,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                   <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />
                 ))}
               </div>
-            </divdiv>
+            </div>
 
             <divh2
               className="text-xl md:text-3xl font-bold mb-2"
@@ -86,7 +41,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
               Discover how leading companies achieved extraordinary results with our AI solutions. Real projectsreal resultsreal transformation.
             </divp>
 
-            <divdiv
+            <div
               className="flex flex-wrap items-center gap-3"
             >
               <button className="bg-gray-900 text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 flex items-center gap-2 group">
@@ -98,16 +53,16 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                 <Award className="w-4 h-4" />
                 Success Stories
               </button>
-            </divdiv>
+            </div>
           </div>
 
           {/* Right Content - Rotating Stats */}
-          <divdiv
+          <div
             className="hidden lg:flex items-center gap-8"
           >
             <div className="relative w-24 h-24">
               {stats.map((statindex) => (
-                <divdiv
+                <div
                   key={stat.label}
                     opacity: currentStat === index ? 1 : 0,
                     scale: currentStat === index ? 1 : 0.8
@@ -121,7 +76,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                     <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                     <div className="text-xs text-gray-700">{stat.label}</div>
                   </div>
-                </divdiv>
+                </div>
               ))}
             </div>
             
@@ -133,11 +88,11 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
                 Results
               </div>
             </div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Progress Indicator */}
-        <divdiv
+        <div
           className="mt-4"
         >
           <div className="flex items-center justify-between text-sm text-gray-800 mb-2">
@@ -145,14 +100,14 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
             <span>Ready to Explore</span>
           </div>
           <div className="w-full bg-black/20 rounded-full h-1.5">
-            <divdiv
+            <div
               className="h-1.5 bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full"
             />
           </div>
-        </divdiv>
+        </div>
 
         {/* Floating Elements */}
-        <divdiv
+        <div
             y: [0-60],
             rotate: [020]
           }}
@@ -163,9 +118,9 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
           className="absolute top-3 right-3 w-5 h-5 bg-black/20 rounded-full flex items-center justify-center"
         >
           <TrendingUp className="w-3 h-3 text-gray-900" />
-        </divdiv>
+        </div>
 
-        <divdiv
+        <div
             y: [060],
             rotate: [0-20]
           }}
@@ -177,7 +132,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
           className="absolute bottom-3 left-3 w-4 h-4 bg-black/20 rounded-full flex items-center justify-center"
         >
           <Award className="w-2 h-2 text-gray-900" />
-        </divdiv>
+        </div>
       </div>
 
       {/* Dismiss Button */}
@@ -187,8 +142,9 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {
       >
         <X className="w-3 h-3 text-gray-900" />
       </button>
-    </divdiv>
+    </div>
   );
 };
 
 export default RevolutionaryCaseStudiesShowcase2027PromotionBanner;
+</div></div></div>

@@ -5,8 +5,8 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
-        <title>Revolutionary Tech Showcase 2029 - Zion Tech Group</title>
-        <meta name="description" content="Interactive showcase of cutting-edge technologies that will define the future in 2029" />
+        <title>RevolutionaryTechShowcase2029 | Zion Tech Group</title>
+        <meta name="description" content="RevolutionaryTechShowcase2029 - Revolutionary technology solutions" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
