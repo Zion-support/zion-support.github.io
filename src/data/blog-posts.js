@@ -1257,6 +1257,10 @@ export const blogPosts = [
     featured: false,
     imageUrl: "/images/blog/edge-ai-iot-fusion-2026.jpg",
     slug: "edge-ai-iot-perfect-fusion-smart-everything"
+=======
+    imageUrl: "/images/blog/consciousness-transfer-technology-2026.jpg",
+    slug: "consciousness-transfer-technology-digital-immortality"
+>>>>>>> origin/resolve-conflicts-and-improvements
   },
   {
     id: 55,
