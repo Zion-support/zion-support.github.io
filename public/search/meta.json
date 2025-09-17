@@ -2390,6 +2390,16 @@
     "h1": "Production Eval Gates (2026)"
   },
   {
+    "route": "/blog/ai-2026-production-agent-postmortems-playbook",
+    "title": "",
+    "h1": "AI 2026: Production Agentic Incident Postmortems — Playbook"
+  },
+  {
+    "route": "/blog/ai-2026-production-eval-gates-live-ops",
+    "title": "Production Eval Gates (2026) | Zion Tech Group",
+    "h1": "Production Eval Gates (2026)"
+  },
+  {
     "route": "/blog/ai-2026-production-evidence-hub-blueprint",
     "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
     "h1": "AI 2026: Production Evidence Hub Blueprint"
