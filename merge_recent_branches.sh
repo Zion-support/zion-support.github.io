@@ -1,48 +1,104 @@
 #!/bin/bash
 
-# Script to merge recent branches systematically
-echo "🚀 Starting systematic branch merge process..."
+# Script to merge recent branches efficiently
+echo "Starting batch merge of recent branches..."
 
 # List of recent branches to merge (most recent first)
-RECENT_BRANCHES=(
-    "origin/cursor/create-and-deploy-new-content-7e3a"
-    "origin/cursor/create-and-deploy-new-content-d4ee"
-    "origin/cursor/create-and-deploy-new-content-9ed1"
-    "origin/cursor/create-and-deploy-new-content-c963"
-    "origin/cursor/create-and-deploy-new-content-3cc5"
-    "origin/feature/revolutionary-2027-improvements"
-    "origin/feature/revolutionary-content-2025"
-    "origin/resolved-merge-conflicts-2026"
-    "origin/cursor/create-and-deploy-new-content-1275"
-    "origin/cursor/create-and-deploy-new-content-dc0c"
+BRANCHES=(
+    "origin/cursor/fix-netlify-build-and-merge-to-main-1bb8"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-beb4"
+    "origin/chore/netlify-cache-headers"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-270f"
+    "origin/cursor/fix-netlify-build-and-merge-to-main-02ea"
+    "origin/chore/netlify-retrigger-2025-09-17-1845"
 )
 
-# Ensure we're on main branch
-git checkout main
-
-# Merge each branch
-for branch in "${RECENT_BRANCHES[@]}"; do
-    echo "📦 Attempting to merge $branch..."
+# Function to resolve conflicts automatically
+resolve_conflicts() {
+    echo "Resolving conflicts automatically..."
     
-    # Try to merge the branch
-    if git merge "$branch" --no-edit; then
-        echo "✅ Successfully merged $branch"
-    else
-        echo "⚠️  Merge conflict in $branch, resolving..."
-        
-        # Resolve conflicts by accepting our changes
-        git checkout --ours .
-        git add .
-        git commit -m "Resolve merge conflicts in $branch - accept our changes"
-        
-        echo "✅ Resolved conflicts and merged $branch"
+    # For CSS files, prefer the version with custom properties
+    if [ -f "src/index.css" ] && grep -q "<<<<<<< HEAD" src/index.css; then
+        echo "Resolving CSS conflicts..."
+        # Keep the version with custom properties (from incoming branch)
+        git checkout --theirs src/index.css
+        git add src/index.css
     fi
+    
+    # For HTML files, prefer the more complete version
+    if [ -f "index.html" ] && grep -q "<<<<<<< HEAD" index.html; then
+        echo "Resolving HTML conflicts..."
+        # Keep the version with more features (from HEAD)
+        git checkout --ours index.html
+        git add index.html
+    fi
+    
+    # For package files, prefer the incoming version (usually has dependency updates)
+    if [ -f "package-lock.json" ] && grep -q "<<<<<<< HEAD" package-lock.json; then
+        echo "Resolving package-lock conflicts..."
+        git checkout --theirs package-lock.json
+        git add package-lock.json
+    fi
+    
+    # For any other files, prefer incoming version
+    for file in $(git diff --name-only --diff-filter=U); do
+        if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
+            echo "Resolving conflicts in $file..."
+            git checkout --theirs "$file"
+            git add "$file"
+        fi
+    done
+}
+
+# Function to merge a single branch
+merge_branch() {
+    local branch=$1
+    echo "Attempting to merge $branch..."
+    
+    if git merge "$branch" --no-edit 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        return 0
+    else
+        echo "⚠️  Conflicts detected in $branch, resolving..."
+        resolve_conflicts
+        
+        if git commit -m "Merge $branch - auto-resolved conflicts" 2>/dev/null; then
+            echo "✅ Successfully resolved conflicts for $branch"
+            return 0
+        else
+            echo "❌ Failed to resolve conflicts for $branch, aborting..."
+            git merge --abort
+            return 1
+        fi
+    fi
+}
+
+# Main merge loop
+SUCCESS_COUNT=0
+TOTAL_COUNT=${#BRANCHES[@]}
+
+for branch in "${BRANCHES[@]}"; do
+    echo "Processing branch: $branch"
+    
+    if merge_branch "$branch"; then
+        ((SUCCESS_COUNT++))
+    fi
+    
+    echo "Progress: $SUCCESS_COUNT/$TOTAL_COUNT branches merged"
+    echo "---"
 done
 
-echo "🎉 All recent branches merged successfully!"
-echo "📤 Pushing changes to main..."
+echo "Merge process completed!"
+echo "Successfully merged: $SUCCESS_COUNT/$TOTAL_COUNT branches"
 
-# Push the merged changes
-git push origin main --force
+# Final status check
+echo "Current git status:"
+git status --porcelain
 
-echo "✅ All done! Recent branches merged and pushed to main."
+# Build test
+echo "Testing build after merges..."
+if npm run build:netlify; then
+    echo "✅ Build successful after all merges!"
+else
+    echo "❌ Build failed after merges"
+fi
