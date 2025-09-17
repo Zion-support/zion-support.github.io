@@ -179,3 +179,5 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# build trigger: chore(netlify): retrigger Netlify deploy with no functional changes
