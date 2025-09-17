@@ -9,11 +9,7 @@
   functions = "netlify/functions"
   command_timeout = "30m"
 
-[[plugins]]
-  package = "netlify-plugin-compress"
-  [plugins.inputs]
-    gzip = true
-    brotli = true
+# Netlify has built-in compression support, no plugin needed
 
 [context.production.environment]
   NODE_ENV = "production"
