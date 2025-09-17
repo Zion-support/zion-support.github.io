@@ -219,7 +219,19 @@ export default [
       '**/api/**',
       '**/app-disabled/**',
       '**/app-minimal/**',
-      '**/app-optimizer.js'
+      '**/app-optimizer.js',
+      '**/*.js',
+      '**/*.cjs',
+      '**/*.mjs',
+      '**/src-clean/**',
+      '**/zion_academy/**',
+      '**/token/**',
+      '**/hardhat.config.js',
+      '**/next-i18next.config.js',
+      '**/next-sitemap.config.js',
+      '**/sentry.*.config.js',
+      '**/server.mjs',
+      '**/script.js'
     ]
   },
   js.configs.recommended,
