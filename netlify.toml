@@ -4,8 +4,6 @@
   # Build the root Vite app and publish static assets
   command = "npm run build:netlify"
   publish = "dist"
-  # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
-  base = "."
 
 [build.environment]
   NODE_VERSION = "20"
