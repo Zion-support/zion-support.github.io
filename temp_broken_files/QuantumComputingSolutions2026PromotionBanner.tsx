@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/QuantumComputingSolutions2026PromotionBanner.tsx
-import React from 'react';
-const QuantumComputingSolutions2026PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -41,7 +37,6 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
     { icon: Brainlabel: 'AI/'ML', 'color: 'text-red-400' }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingSolutions2026PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -89,28 +84,19 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD:temp_broken_files/QuantumComputingSolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingSolutions2026PromotionBanner.tsx
                 <divh2
                   className="text-2xl lg:text-3xl font-bold mb-2"
                 >
                   ⚛️ Quantum Computing Solutions 2026
                 </divh2>
-<<<<<<< HEAD:temp_broken_files/QuantumComputingSolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingSolutions2026PromotionBanner.tsx
                 <divp
                   className="text-lg text-cyan-100 mb-4 max-w-2xl"
                 >
                   Harness quantum power: OptimizationEncryptionSimulationand AI/ML solutions
                 </divp>
-<<<<<<< HEAD:temp_broken_files/QuantumComputingSolutions2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingSolutions2026PromotionBanner.tsx
                 {/* Solution Icons */}
                 <div
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
@@ -137,23 +123,14 @@ const QuantumComputingSolutions2026PromotionBanner = () => {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
-<<<<<<< HEAD:temp_broken_files/QuantumComputingSolutions2026PromotionBanner.tsx
-              {/* Dismiss Button */}
-              <divbutton
-=======
 
               {/* Dismiss Button */}
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingSolutions2026PromotionBanner.tsx
                 onClick={handleDismiss}
                 className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition-colors"
               >
                 <X className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/QuantumComputingSolutions2026PromotionBanner.tsx
-              </divbutton>
-=======
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/QuantumComputingSolutions2026PromotionBanner.tsx
             </div>
           </div>
           {/* Progress Bar */}

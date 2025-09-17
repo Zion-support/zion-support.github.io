@@ -1,24 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/SimpleLayout.tsx
-import React from 'react';
-import Head from 'next/head';
-interface SimpleLayoutProps {
-  title: string;
-  description?: string;
-  children: React.ReactNode;
-};
-
-
-
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-        {description && <meta name="description" content={description} />}
-      {children}
-    </>
-  );
-=======
 import React from "react";
 
 const function SimpleLayout({ title, description, children }: SimpleLayoutProps) { = () => {
@@ -35,4 +14,3 @@ const function SimpleLayout({ title, description, children }: SimpleLayoutProps)
 };
 
 export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/SimpleLayout.tsx

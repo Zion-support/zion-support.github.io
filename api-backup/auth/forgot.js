@@ -1,6 +1,4 @@
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +30,3 @@ export default /**
 function ForgotPassword() {
   return (
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5

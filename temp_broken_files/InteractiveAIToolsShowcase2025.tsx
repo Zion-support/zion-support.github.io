@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-import React from 'react';
-const InteractiveAIToolsShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -147,7 +143,6 @@ const InteractiveAIToolsShowcase2025 = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-20 overflow-hidden">
       {/* Background Elements */}
@@ -166,20 +161,13 @@ const InteractiveAIToolsShowcase2025 = () => {
             Experience the power of artificial intelligence with our comprehensive suite of interactive tools designed to transform your business operations.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* AI Tools Grid */}
         <div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
         >
           {Object.entries(aiTools).map(([keytool]) => (
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-            <divbutton
-=======
             <button
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
               key={key}
               onClick={() => setActiveTool(key)}
               onMouseEnter={() => setHoveredTool(key)}
@@ -204,16 +192,10 @@ const InteractiveAIToolsShowcase2025 = () => {
                   />
                 )}
               </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-            </divbutton>
-          ))}
-        </div>
-=======
             </button>
           ))}
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* Active Tool Details */}
           <div
             key={activeTool}
@@ -278,10 +260,7 @@ const InteractiveAIToolsShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* Use Cases */}
         <div
           className="mb-16"
@@ -312,10 +291,7 @@ const InteractiveAIToolsShowcase2025 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* Testimonials */}
         <div
           className="mb-16"
@@ -348,10 +324,7 @@ const InteractiveAIToolsShowcase2025 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025.tsx
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-white"

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/SuccessStoriesShowcase.tsx
-const SuccessStoriesShowcase: React.FC = () => {
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const SuccessStoriesShowcase = () => {
@@ -64,7 +61,6 @@ const SuccessStoriesShowcase = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/SuccessStoriesShowcase.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
@@ -78,10 +74,7 @@ const SuccessStoriesShowcase = () => {
             Real businesses achieving extraordinary results with our revolutionary AI solutions. See how companies are transforming their operations and achieving unprecedented ROI.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/SuccessStoriesShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/SuccessStoriesShowcase.tsx
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {stories.map((storyindex) => (
             <div
@@ -156,10 +149,7 @@ const SuccessStoriesShowcase = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/SuccessStoriesShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/SuccessStoriesShowcase.tsx
         {/* Call to Action */}
         <div
           className="text-center"

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025ToolsUtilitiesShowcase.tsx
-import React from 'react';
-const AI2025ToolsUtilitiesShowcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -155,7 +151,6 @@ const AI2025ToolsUtilitiesShowcase = () => {
     activeCategory === 0 || tool.category === categories[activeCategory - 1]?.name
   );
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ToolsUtilitiesShowcase.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
@@ -178,10 +173,7 @@ const AI2025ToolsUtilitiesShowcase = () => {
             boost productivityand drive innovation across all aspects of your business.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025ToolsUtilitiesShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ToolsUtilitiesShowcase.tsx
         {/* Category Navigation */}
         <div className="mb-12">
           <div className="flex flex-wrap justify-center gap-4">

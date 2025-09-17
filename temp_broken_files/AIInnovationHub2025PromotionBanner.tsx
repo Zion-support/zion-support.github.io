@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
-import React from 'react';
-const AIInnovationHub2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -108,7 +104,6 @@ const AIInnovationHub2025PromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -146,10 +141,7 @@ const AIInnovationHub2025PromotionBanner = () => {
                       find everything you need to build the future.
                     </p>
                   </div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                   {/* Rotating Innovation Showcase */}
                   <div
                     key={currentInnovation}
@@ -173,10 +165,7 @@ const AIInnovationHub2025PromotionBanner = () => {
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                   {/* Categories */}
                   <div
                     className="mb-8"
@@ -193,10 +182,7 @@ const AIInnovationHub2025PromotionBanner = () => {
                       ))}
                     </div>
                   </div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                   {/* Stats */}
                   <div
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
@@ -208,10 +194,7 @@ const AIInnovationHub2025PromotionBanner = () => {
                       </div>
                     ))}
                   </div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                   {/* Action Buttons */}
                   <div
                     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
@@ -280,10 +263,7 @@ const AIInnovationHub2025PromotionBanner = () => {
                     >
                       <Award className="w-8 h-8 text-white" />
                     </div>
-<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
-=======
                     
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                     <div
                       className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center"
                     >

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NewsletterSignup2026.tsx
-import React from 'react';
-const NewsletterSignup2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -87,7 +83,6 @@ const NewsletterSignup2026 = () => {
 
   if (!isVisible || isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewsletterSignup2026.tsx
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20"
@@ -176,10 +171,7 @@ const NewsletterSignup2026 = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/NewsletterSignup2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewsletterSignup2026.tsx
           {/* Right Content - Newsletter Form */}
           <div
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"

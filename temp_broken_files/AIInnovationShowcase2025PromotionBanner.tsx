@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIInnovationShowcase2025PromotionBanner.tsx
-import React from 'react';
-const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -38,7 +34,6 @@ const AIInnovationShowcase2025PromotionBanner = () => {
 
   if (isDismissed || !isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationShowcase2025PromotionBanner.tsx
   return (
     <div>
       <div

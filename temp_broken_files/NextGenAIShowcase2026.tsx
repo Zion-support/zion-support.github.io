@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-import React from 'react';
-const NextGenAIShowcase2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -137,7 +133,6 @@ const NextGenAIShowcase2026 = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -163,17 +158,11 @@ const NextGenAIShowcase2026 = () => {
               Next-Gen AI Showcase 2026
             </h2>
           </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-            Experience the future of artificial intelligence with our cutting-edge AI demonstrations. 
-            Witness revolutionary capabilities that will transform how we interact with technology.
-          </divp>
-=======
           
             Experience the future of artificial intelligence with our cutting-edge AI demonstrations. 
             Witness revolutionary capabilities that will transform how we interact with technology.
           </divp>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-full transition-all duration-300 shadow-lg"
@@ -187,10 +176,7 @@ const NextGenAIShowcase2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
         {/* Main Demo Area */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Demo Showcase */}
@@ -257,18 +243,11 @@ const NextGenAIShowcase2026 = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-            {/* Demo Navigation */}
-            <div className="flex justify-center mt-6 space-x-4">
-              {demos.map((demoindex) => (
-                <divbutton
-=======
 
             {/* Demo Navigation */}
             <div className="flex justify-center mt-6 space-x-4">
               {demos.map((demoindex) => (
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
                   key={index}
                   onClick={() => {
                     setActiveDemo(index);
@@ -281,11 +260,7 @@ const NextGenAIShowcase2026 = () => {
                   }`}
                 >
                   {demo.icon}
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                </divbutton>
-=======
                 </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
               ))}
             </div>
           </div>
@@ -319,42 +294,24 @@ const NextGenAIShowcase2026 = () => {
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
               <h4 className="text-xl font-bold text-white mb-4">Interactive Controls</h4>
               <div className="space-y-3">
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                <divbutton
-=======
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
                   className="w-full p-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                 >
                   <Volume2 className="w-4 h-4 mr-2" />
                   Voice Demo
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                </divbutton>
-                <divbutton
-=======
                 </button>
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
                   className="w-full p-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                 >
                   <Camera className="w-4 h-4 mr-2" />
                   Vision Demo
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                </divbutton>
-                <divbutton
-=======
                 </button>
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
                   className="w-full p-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                 >
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Chat Demo
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-                </divbutton>
-=======
                 </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
               </div>
             </div>
           </div>
@@ -371,20 +328,12 @@ const NextGenAIShowcase2026 = () => {
               Join thousands of businesses already leveraging next-generation AI technology. 
               Get early access to our revolutionary AI platform.
             </p>
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-            <divbutton
-=======
             <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
               className="px-12 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300 flex items-center mx-auto"
             >
               Get Early Access
               <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD:temp_broken_files/NextGenAIShowcase2026.tsx
-            </divbutton>
-=======
             </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NextGenAIShowcase2026.tsx
           </div>
         </div>
       </div>

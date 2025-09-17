@@ -1,5 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 import React from 'react';
 import {
   FileText,
@@ -30,7 +28,6 @@ const Terms: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Terms of Service - Zion Tech Group"
@@ -72,10 +69,7 @@ const Terms: React.FC = () => {
               relationship between you and Zion Tech Group.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {termsSections.map((section, index) => (
               <div
@@ -108,10 +102,7 @@ const Terms: React.FC = () => {
               that help ensure a secure and productive environment.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {userObligations.map((obligation, index) => (
               <div
@@ -152,10 +143,7 @@ const Terms: React.FC = () => {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -200,10 +188,7 @@ const Terms: React.FC = () => {
               and ensure optimal service delivery.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceLevels.map((level, index) => (
@@ -257,10 +242,7 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -304,10 +286,7 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -348,10 +327,7 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -385,10 +361,7 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -423,10 +396,7 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -460,10 +430,7 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -497,10 +464,7 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -528,10 +492,7 @@ const Terms: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -577,10 +538,7 @@ const Terms: React.FC = () => {
               the scope of our liability and your responsibilities.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -638,10 +596,7 @@ const Terms: React.FC = () => {
               helps ensure a smooth transition for all parties.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
@@ -697,10 +652,7 @@ const Terms: React.FC = () => {
               please contact our legal team.
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/Terms.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Terms.tsx
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">

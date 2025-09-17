@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationShowcase.tsx
-import React from 'react';
-const AI2025_2026UltimateInnovationShowcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -130,7 +126,6 @@ const AI2025_2026UltimateInnovationShowcase = () => {
     return () => clearInterval(interval);
   }[]);
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationShowcase.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -152,30 +147,17 @@ const AI2025_2026UltimateInnovationShowcase = () => {
               Experience the future of artificial intelligence today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationShowcase.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationShowcase.tsx
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
               >
                 Explore Innovations
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationShowcase.tsx
-              </divbutton>
-              <divbutton
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-400/10 transition-all duration-300"
-              >
-                Watch Demo
-              </divbutton>
-=======
               </button>
               <button
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-400/10 transition-all duration-300"
               >
                 Watch Demo
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationShowcase.tsx
             </div>
           </div>
         </div>
@@ -193,10 +175,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
             Experience the most advanced AI innovations that will define the next decade
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationShowcase.tsx
         {/* Innovation Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {innovations.map((innovationindex) => (
@@ -247,10 +226,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationShowcase.tsx
         {/* Use Cases Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -284,10 +260,7 @@ const AI2025_2026UltimateInnovationShowcase = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationShowcase.tsx
         {/* Call to Action */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -300,30 +273,17 @@ const AI2025_2026UltimateInnovationShowcase = () => {
             Join thousands of innovators who are already transforming their industries with our AI solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationShowcase.tsx
-            <divbutton
-=======
             <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationShowcase.tsx
               className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
             >
               Start Your Innovation Journey
               <Rocket className="w-5 h-5 ml-2 inline" />
-<<<<<<< HEAD:temp_broken_files/AI2025_2026UltimateInnovationShowcase.tsx
-            </divbutton>
-            <divbutton
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-            >
-              Schedule Demo
-            </divbutton>
-=======
             </button>
             <button
               className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
             >
               Schedule Demo
             </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025_2026UltimateInnovationShowcase.tsx
           </div>
         </div>
       </div>

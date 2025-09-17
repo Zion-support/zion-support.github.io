@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AIToolsPromotionBanner2026.tsx
-import React from 'react';
-const AIToolsPromotionBanner2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -94,7 +90,6 @@ const AIToolsPromotionBanner2026 = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsPromotionBanner2026.tsx
   return (
     <div>
       <div

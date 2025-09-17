@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AdvancedPerformanceOptimizer.tsx
-import React from 'react';
-=======
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -25,7 +22,6 @@ interface OptimizationRecommendations {
   cdn: boolean;
 }
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedPerformanceOptimizer.tsx
 const AdvancedPerformanceOptimizer: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025PromotionBanner.tsx
-import React from 'react';
-const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -61,7 +57,6 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025PromotionBanner.tsx
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-8 md:p-12 my-8"
@@ -83,10 +78,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
               FUTURE PREDICTIONS
               <Sparkles className="w-4 h-4" />
             </div>
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025PromotionBanner.tsx
             {/* Main Heading */}
             <divh2
               className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -96,10 +88,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                 Showcase 2025-2030
               </span>
             </divh2>
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025PromotionBanner.tsx
             {/* Description */}
             <divp
               className="text-xl text-gray-300 mb-8 max-w-2xl"
@@ -107,10 +96,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
               Explore our expert predictions for the future of AItechnologyand human civilization 
               from 2025 to 2030 and beyond.
             </divp>
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025PromotionBanner.tsx
             {/* Features */}
             <div
               className="flex flex-wrap gap-4 mb-8"
@@ -126,10 +112,7 @@ const FuturePredictionsShowcase2025PromotionBanner = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"

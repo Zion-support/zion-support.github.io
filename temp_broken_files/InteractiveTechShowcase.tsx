@@ -89,10 +89,6 @@ const InteractiveTechShowcase: React.FC = () => {
               </a>
               <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors">
                 {technologies[activeTech].demo}
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
               </button>
             </div>
           </div>
@@ -125,23 +121,13 @@ const InteractiveTechShowcase: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-        </motion.div>
-=======
         </divdiv>
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
 
         {/* Technology Cards Grid */}
         <div className="grid grid-cols-2 gap-6">
           {technologies.map((tech, index) => (
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-            <motion.div
-              key={tech.id}
-              whileHover={{ scale: 1.05, y: -5 }}
-=======
             <divdiv
               key={tech.id}
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
               className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
@@ -154,13 +140,7 @@ const InteractiveTechShowcase: React.FC = () => {
               <p className="text-sm text-gray-600 mb-4">{tech.description}</p>
               
               {hoveredCard === index && (
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-=======
                 <divdiv
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
                   className="space-y-2"
                 >
                   {tech.features.slice(0, 2).map((feature, featureIndex) => (
@@ -169,24 +149,14 @@ const InteractiveTechShowcase: React.FC = () => {
                       {feature}
                     </div>
                   ))}
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-                </motion.div>
-              )}
-            </motion.div>
-=======
                 </divdiv>
               )}
             </divdiv>
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
           ))}
         </div>
       </div>
 
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
       {/* Technology Comparison */}
       <div className="mt-16">
         <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h3>
@@ -234,9 +204,6 @@ const InteractiveTechShowcase: React.FC = () => {
                   </tr>
                 ))}
               </tbody>
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-            </table>cursor/fix-netlify-build-and-merge-to-main-a068
-=======
             </table>
 
 const InteractiveTechShowcase: React.FC = () => {
@@ -246,43 +213,6 @@ const InteractiveTechShowcase: React.FC = () => {
   const technologies = [
     {
       id: 1,
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-      name: "AI Consciousness",
-      icon: "🧠",
-      description: "Self-aware AI systems with emotional intelligence and conscious decision-making",
-      features: ["Self-awareness", "Emotional intelligence", "Ethical reasoning", "Autonomous learning"],
-      gradient: "from-purple-600 to-pink-600",
-      stats: { accuracy: 98, speed: 0.001, efficiency: 95 }
-    },
-    {
-      id: 2,
-      name: "Quantum Reality",
-      icon: "⚛️",
-      description: "Quantum-powered virtual reality with physics manipulation and consciousness integration",
-      features: ["Quantum simulation", "Reality manipulation", "Neural interface", "Dimensional exploration"],
-      gradient: "from-indigo-600 to-purple-600",
-      stats: { accuracy: 99.7, speed: 0.0001, efficiency: 98 }
-    },
-    {
-      id: 3,
-      name: "Neural Interface",
-      icon: "🧬",
-      description: "Direct brain-computer communication with thought control and cognitive enhancement",
-      features: ["Thought control", "Neural enhancement", "Mind communication", "Cognitive augmentation"],
-      gradient: "from-emerald-600 to-teal-600",
-      stats: { accuracy: 99.2, speed: 0.05, efficiency: 97 }
-    },
-    {
-      id: 4,
-      name: "Synthetic Intelligence",
-      icon: "🤖",
-      description: "Hybrid biological-digital intelligence with unprecedented capabilities",
-      features: ["Hybrid intelligence", "Biological integration", "Adaptive learning", "Consciousness transfer"],
-      gradient: "from-cyan-600 to-blue-600",
-      stats: { accuracy: 97.5, speed: 0.01, efficiency: 96 }
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
     }
   ];
 
@@ -299,27 +229,11 @@ const InteractiveTechShowcase: React.FC = () => {
   }, [technologies.length]);
 
   const currentTech = technologies[activeTech];
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-
-  const currentTech = technologies[activeTech];
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-
-  const currentTech = technologies[activeTech];
-      ]
-    }
-  };
 
 
   const currentTech = technologies[activeTech];
-cursor/fix-netlify-build-and-merge-to-main-a068
+
 =======
-
-
-  const currentTech = technologies[activeTech];
-
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
     quantum: {
       title: "Quantum Computing",
       subtitle: "Exponential Computational Power",
@@ -382,10 +296,6 @@ cursor/fix-netlify-build-and-merge-to-main-a068
     }
   };
 
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -396,9 +306,6 @@ cursor/fix-netlify-build-and-merge-to-main-a068
       color: "from-slate-600 to-gray-600",
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-      link: "/pages/AdvancedAnalyticsDashboard2026"cursor/fix-netlify-build-and-merge-to-main-a068
-=======
 =======
       link: "/pages/AdvancedAnalyticsDashboard2026"
     }
@@ -563,7 +470,6 @@ const InteractiveTechShowcase: React.FC = () => {
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
       link: "/pages/AdvancedAnalyticsDashboard2026"
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
     }
   ];
 
@@ -599,7 +505,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 <span className="text-2xl mr-3">{tech.icon}</span>
                 {tech.name}
               </button>
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
 
               {/* Demo Button */}
               <div className="text-center">
@@ -618,26 +523,6 @@ const InteractiveTechShowcase: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mt-16"
-        >
-          <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Schedule a personalized demo and discover how these revolutionary technologies can accelerate your growth
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-              Schedule Demo
-            </button>
-            <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              Download Brochure
-            </button>cursor/fix-netlify-build-and-merge-to-main-a068
-=======
           {/* Technology Visual */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
             <div className="relative h-full min-h-[400px]">
@@ -854,36 +739,11 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Learning Capacity</div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-        </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
-      {/* Technology Grid */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {technologies.map((tech, index) => (
-          <div
-            key={tech.id}
-            className={`bg-gradient-to-br ${tech.color} text-white p-6 rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer`}
-            onClick={() => setActiveTech(index)}
-          >
-            <div className="text-4xl mb-4">{tech.icon}</div>
-            <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
-            <p className="text-sm opacity-90 mb-4">{tech.description}</p>
-            <div className="flex items-center text-sm font-medium">
-              Explore → <span className="ml-2">🚀</span>
-            </div>
-          </div>
-        ))}
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-export default InteractiveTechShowcase;
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -954,36 +814,8 @@ export default InteractiveTechShowcase;
               <button className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 View Analytics
               </button>
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-            </motion.div>
-export default InteractiveTechShowcase;
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
-
-              {/* Demo Button */}
-              <div className="text-center">
-                <motion.a
-                  href={currentTech.link}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentTech.color} text-white rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300`}
-                >
-                  <span className="mr-2">{currentTech.demo}</span>
-                  <span>→</span>
-                </motion.a>
-              </div>
-            </div>
-          </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-export default InteractiveTechShowcase;
-=======
 export default InteractiveTechShowcase;
 export default InteractiveTechShowcase;
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveTechShowcase.tsx
 =======
             </divdiv>
 export default InteractiveTechShowcase;
@@ -1008,4 +840,3 @@ export default InteractiveTechShowcase;
           </div>
         </div>
 
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveTechShowcase.tsx

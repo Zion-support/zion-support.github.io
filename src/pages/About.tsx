@@ -2,10 +2,25 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">About Us</h1>
-        <p className="text-gray-300">Coming soon...</p>
+    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-white mb-8">About Zion Tech Group</h1>
+        <div className="prose prose-lg text-gray-300">
+          <p className="mb-6">
+            Zion Tech Group is a leading technology company specializing in cutting-edge AI, 
+            quantum computing, and cybersecurity solutions. We help businesses transform 
+            their operations through innovative technology.
+          </p>
+          <p className="mb-6">
+            Our team of experts is dedicated to delivering world-class solutions that drive 
+            business growth and technological advancement.
+          </p>
+          <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
+          <p className="mb-6">
+            To empower businesses with transformative technology solutions that drive 
+            innovation and growth in the digital age.
+          </p>
+        </div>
       </div>
     </div>
   );

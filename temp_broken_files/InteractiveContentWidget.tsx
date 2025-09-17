@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveContentWidget.tsx
-import React from 'react';
-const InteractiveContentWidget: React.FC = () => {
-=======
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -53,7 +49,6 @@ const InteractiveContentWidget = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentWidget.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4">
@@ -67,10 +62,7 @@ const InteractiveContentWidget = () => {
             Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentWidget.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentWidget.tsx
         {/* Category Selector */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -90,10 +82,7 @@ const InteractiveContentWidget = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentWidget.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentWidget.tsx
         {/* Content Grid */}
           <div
             key={selectedCategory}
@@ -142,10 +131,7 @@ const InteractiveContentWidget = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveContentWidget.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentWidget.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-16"

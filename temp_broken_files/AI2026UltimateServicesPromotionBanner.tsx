@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2026UltimateServicesPromotionBanner.tsx
-import React from 'react';
-const AI2026UltimateServicesPromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -31,7 +27,6 @@ const AI2026UltimateServicesPromotionBanner = () => {
     "Advanced Security AI"
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2026UltimateServicesPromotionBanner.tsx
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 px-4"
@@ -79,30 +74,17 @@ const AI2026UltimateServicesPromotionBanner = () => {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-<<<<<<< HEAD:temp_broken_files/AI2026UltimateServicesPromotionBanner.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2026UltimateServicesPromotionBanner.tsx
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-3 group"
               >
                 Explore Services
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-<<<<<<< HEAD:temp_broken_files/AI2026UltimateServicesPromotionBanner.tsx
-              </divbutton>
-              <divbutton
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Watch Demo
-              </divbutton>
-=======
               </button>
               <button
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               >
                 Watch Demo
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2026UltimateServicesPromotionBanner.tsx
             </div>
             <div className="flex items-center gap-8 text-gray-300">
               <div className="flex items-center gap-2">
@@ -115,10 +97,7 @@ const AI2026UltimateServicesPromotionBanner = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/AI2026UltimateServicesPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2026UltimateServicesPromotionBanner.tsx
           {/* Right Content - Visual Elements */}
           <div
             className="relative"
@@ -135,10 +114,7 @@ const AI2026UltimateServicesPromotionBanner = () => {
                   <h3 className="text-white font-semibold mb-2">Neural Interface</h3>
                   <p className="text-gray-300 text-sm">Direct brain-computer communication</p>
                 </div>
-<<<<<<< HEAD:temp_broken_files/AI2026UltimateServicesPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2026UltimateServicesPromotionBanner.tsx
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
                 >
@@ -148,10 +124,7 @@ const AI2026UltimateServicesPromotionBanner = () => {
                   <h3 className="text-white font-semibold mb-2">Quantum AI</h3>
                   <p className="text-gray-300 text-sm">10,000x processing speed</p>
                 </div>
-<<<<<<< HEAD:temp_broken_files/AI2026UltimateServicesPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2026UltimateServicesPromotionBanner.tsx
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
                 >
@@ -161,10 +134,7 @@ const AI2026UltimateServicesPromotionBanner = () => {
                   <h3 className="text-white font-semibold mb-2">Autonomous Ops</h3>
                   <p className="text-gray-300 text-sm">95% efficiency gain</p>
                 </div>
-<<<<<<< HEAD:temp_broken_files/AI2026UltimateServicesPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2026UltimateServicesPromotionBanner.tsx
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
                 >

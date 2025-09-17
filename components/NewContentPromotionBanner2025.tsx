@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -42,15 +39,9 @@ const NewContentPromotionBanner2025 = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
->>>>>>> origin/feature/enhanced-content-showcase-2025
 
 const NewContentPromotionBanner2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NewContentPromotionBanner2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
     <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900"></div>
@@ -184,7 +175,6 @@ const NewContentPromotionBanner2025: React.FC = () => {
       <div className="absolute top-4 left-4 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
       <div className="absolute top-8 right-8 w-6 h-6 bg-pink-400 rounded-full animate-pulse"></div>
       <div className="absolute bottom-8 left-1/4 w-3 h-3 bg-purple-400 rounded-full animate-bounce"></div>
->>>>>>> origin/feature/enhanced-content-showcase-2025
     </div>
   );
 };

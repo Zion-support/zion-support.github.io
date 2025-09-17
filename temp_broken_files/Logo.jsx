@@ -1,10 +1,4 @@
-<<<<<<< HEAD:temp_broken_files/Logo.jsx
-
 export function Logo({ className = '' }) {
-    return (<div className={`flex items-center space-x-2 ${className}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-=======
-export function Logo({ className = '' }) {
->>>>>>> origin/merge-new-content-1757989975:src/components.disabled/Logo.jsx
       <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/50">
         Z
       </div>

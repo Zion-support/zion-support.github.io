@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025.tsx
-import React from 'react';
-=======
 "use client";
 'use client';
 
@@ -69,7 +66,6 @@ interface AutomationSolution {
   isNew?: boolean;
 }
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025.tsx
 const EnterpriseAutomationSolutions2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
@@ -89,10 +85,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             Streamline processesreduce costsand accelerate growth.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025.tsx
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -111,10 +104,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025.tsx
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Solutions Grid */}
           <div className="lg:col-span-2">
@@ -219,10 +209,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025.tsx
-=======
               
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025.tsx
                 {selectedSolutionData ? (
                   <div
                     key={selectedSolutionData.id}

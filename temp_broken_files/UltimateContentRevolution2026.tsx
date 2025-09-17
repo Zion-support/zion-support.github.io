@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentRevolution2026.tsx
-import React from 'react';
-const UltimateContentRevolution2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -133,7 +129,6 @@ const UltimateContentRevolution2026 = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentRevolution2026.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -153,10 +148,7 @@ const UltimateContentRevolution2026 = () => {
             that are reshaping the future of business and technology.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentRevolution2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentRevolution2026.tsx
         {/* Content Tabs */}
         <div
           className="mb-12"
@@ -215,10 +207,7 @@ const UltimateContentRevolution2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentRevolution2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentRevolution2026.tsx
         {/* Testimonials */}
         <div
           className="mb-16"
@@ -253,10 +242,7 @@ const UltimateContentRevolution2026 = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentRevolution2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentRevolution2026.tsx
         {/* CTA Section */}
         <div
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystemPromotionBanner.tsx
-import React from 'react';
-const AdvancedContentManagementSystemPromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -69,7 +65,6 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
     { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystemPromotionBanner.tsx
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
       {/* Background Pattern */}
@@ -112,10 +107,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystemPromotionBanner.tsx
         {/* Stats Grid */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
@@ -130,10 +122,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystemPromotionBanner.tsx
         {/* Features Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
@@ -152,10 +141,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystemPromotionBanner.tsx
         {/* Content Types Showcase */}
         <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
@@ -176,10 +162,7 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedContentManagementSystemPromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedContentManagementSystemPromotionBanner.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-12"

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-const ai-code-review-security-scanner: React.FC = () => {
-=======
 import SEO from '../components/SEO';
 import { 
   Brain, Shield, Code, CheckCircle, Zap, 
@@ -10,7 +7,6 @@ import {
 } from 'lucide-react';
 
 const AICodeReviewSecurityScanner = () => {
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
   return (
     <>
       <SEO 
@@ -41,23 +37,11 @@ const AICodeReviewSecurityScanner = () => {
                 suggests improvements, and ensures code quality across multiple programming languages.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-                <divbutton
-=======
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-                </divbutton>
-                <divbutton
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
-                >
-                  Schedule Demo
-                </divbutton>
-=======
                 </button>
                 
                 <button
@@ -65,7 +49,6 @@ const AICodeReviewSecurityScanner = () => {
                 >
                   Schedule Demo
                 </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
               </div>
               <div className="flex flex-wrap justify-center gap-8 text-gray-400">
                 <div className="flex items-center">
@@ -99,10 +82,7 @@ const AICodeReviewSecurityScanner = () => {
                 to protect your applications and improve development efficiency.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -166,10 +146,7 @@ const AICodeReviewSecurityScanner = () => {
                 All plans include our core AI-powered security scanning capabilities.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -255,12 +232,8 @@ const AICodeReviewSecurityScanner = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-                  <divbutton
-=======
                   
                   <button
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
                     className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
@@ -268,11 +241,7 @@ const AICodeReviewSecurityScanner = () => {
                     }`}
                   >
                     Get Started
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-                  </divbutton>
-=======
                   </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
                 </div>
               ))}
             </div>
@@ -293,10 +262,7 @@ const AICodeReviewSecurityScanner = () => {
                 development efficiency, and code quality while reducing costs and risks.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-8">
                 {[
@@ -382,10 +348,7 @@ const AICodeReviewSecurityScanner = () => {
                 to protect their applications and improve code quality.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 "Software Development Teams",
@@ -425,23 +388,11 @@ const AICodeReviewSecurityScanner = () => {
                 and improve code quality. Start your free trial today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-                <divbutton
-=======
                 <button
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/ai-code-review-security-scanner.tsx
-                </divbutton>
-                <divbutton
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
-                >
-                  Contact Sales
-                </divbutton>
-=======
                 </button>
                 
                 <button
@@ -449,7 +400,6 @@ const AICodeReviewSecurityScanner = () => {
                 >
                   Contact Sales
                 </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/ai-code-review-security-scanner.tsx
               </div>
               <div className="mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>

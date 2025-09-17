@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnterpriseSuccessStories.tsx
-import React from 'react';
-const EnterpriseSuccessStories: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -140,7 +136,6 @@ const EnterpriseSuccessStories = () => {
     "24/7 autonomous operations"
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseSuccessStories.tsx
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4">
@@ -162,10 +157,7 @@ const EnterpriseSuccessStories = () => {
             See how leading enterprises have transformed their operations and achieved unprecedented growth with our AI solutions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseSuccessStories.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseSuccessStories.tsx
         {/* Key Metrics */}
         <div
           className="grid md:grid-cols-4 gap-6 mb-16"
@@ -184,10 +176,7 @@ const EnterpriseSuccessStories = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseSuccessStories.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseSuccessStories.tsx
         {/* Story Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -206,10 +195,7 @@ const EnterpriseSuccessStories = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseSuccessStories.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseSuccessStories.tsx
         {/* Active Story Display */}
         <div
           key={activeStory}
@@ -275,10 +261,7 @@ const EnterpriseSuccessStories = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseSuccessStories.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseSuccessStories.tsx
         {/* Benefits Section */}
         <div
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"
@@ -295,10 +278,7 @@ const EnterpriseSuccessStories = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseSuccessStories.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseSuccessStories.tsx
         {/* CTA Section */}
         <div
           className="text-center"

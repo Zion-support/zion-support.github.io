@@ -1,9 +1,5 @@
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-import React from 'react';
-=======
 import React, { useState } from 'react';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
 const InteractiveRevolutionaryShowcase: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -20,10 +16,7 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
             Explore the most advanced technologies of 2026 with interactive demonstrations and real-time experiences
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
         {/* Tab Navigation */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,10 +39,7 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
         {/* Content Area */}
         <div className="relative">
             <div
@@ -63,28 +53,19 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                 >
                   {technologies[activeTab as keyof typeof technologies].icon}
                 </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-=======
                 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
                 <divh3
                   className="text-4xl font-bold mb-4"
                 >
                   {technologies[activeTab as keyof typeof technologies].title}
                 </divh3>
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-=======
                 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
                 <divp
                   className="text-xl opacity-80 mb-8"
                 >
                   {technologies[activeTab as keyof typeof technologies].description}
                 </divp>
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
                 <divul
                   className="space-y-3 mb-8"
                 >
@@ -98,21 +79,6 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                     </divli>
                   ))}
                 </divul>
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-                <div
-                  className="flex space-x-4"
-                >
-                  <divbutton
-                    className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300`}
-                  >
-                    Experience Demo →
-                  </divbutton>
-                  <divbutton
-                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                  >
-                    Learn More
-                  </divbutton>
-=======
 
                 <div
                   className="flex space-x-4"
@@ -127,7 +93,6 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                   >
                     Learn More
                   </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
                 </div>
               </div>
               {/* Right Side - Interactive Demo */}
@@ -149,20 +114,12 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
                       Interactive demonstration will load here
                     </div>
                   </div>
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-                  <divbutton
-                    className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
-                  >
-                    Launch Interactive Demo
-                  </divbutton>
-=======
 
                   <button
                     className={`bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
                   >
                     Launch Interactive Demo
                   </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
                 </div>
               </div>
             </div>
@@ -177,19 +134,11 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
           <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
             Join the revolutionary technology movement and be part of the most significant breakthrough in human history
           </p>
-<<<<<<< HEAD:temp_broken_files/InteractiveRevolutionaryShowcase.tsx
-          <divbutton
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
-          >
-            Start Your Journey →
-          </divbutton>
-=======
           <button
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-12 py-4 rounded-lg font-bold text-xl hover:shadow-2xl transition-all duration-300"
           >
             Start Your Journey →
           </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveRevolutionaryShowcase.tsx
         </div>
       </div>
     </div>

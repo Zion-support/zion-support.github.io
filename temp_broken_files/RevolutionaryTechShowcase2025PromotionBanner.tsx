@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2025PromotionBanner.tsx
-import React from 'react';
-const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -46,7 +42,6 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
     { label: 'ROI 'Improvement', 'value: '300%' }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2025PromotionBanner.tsx
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 overflow-hidden">
       {/* Background Effects */}
@@ -68,10 +63,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
               <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-300 font-medium">Revolutionary Technology 2025</span>
             </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2025PromotionBanner.tsx
             {/* Main Heading */}
             <divh1
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
@@ -81,20 +73,14 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
                 Future of Technology
               </span>
             </divh1>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2025PromotionBanner.tsx
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
               Discover cutting-edge AIquantum computingblockchainand IoT solutions that are transforming industries and creating unprecedented opportunities for growth.
             </divp>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2025PromotionBanner.tsx
             {/* Rotating Features */}
             <div
               className="mb-8"
@@ -110,10 +96,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2025PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -128,10 +111,7 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechShowcase2025PromotionBanner.tsx
           {/* Right Content - Stats & Visual */}
           <div
             className="relative"

@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
   useEffect(() => {
@@ -47,8 +43,6 @@ const Home: React.FC = () => {
                   Contact Us
                 </button>
               </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
             </div>
           </div>
         </div>
@@ -76,7 +70,6 @@ const Home: React.FC = () => {
               <a href="/pages/NextGenSpaceTech2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold border border-white/30">
                 🛸 Next-Gen Space Tech →
               </a>
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             </div>
           </div>
         </div>
@@ -106,10 +99,7 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
@@ -125,10 +115,7 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
@@ -144,10 +131,7 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -163,10 +147,7 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
@@ -182,10 +163,7 @@ const Home: React.FC = () => {
                 </a>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
@@ -200,8 +178,6 @@ const Home: React.FC = () => {
                   Learn More →
                 </a>
               </div>
-<<<<<<< HEAD:temp_broken_files/Home_backup.tsx
-=======
             </div>
           </div>
         </div>
@@ -232,7 +208,6 @@ const Home: React.FC = () => {
               <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                 Schedule Consultation
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/pages/Home_backup.tsx
             </div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">

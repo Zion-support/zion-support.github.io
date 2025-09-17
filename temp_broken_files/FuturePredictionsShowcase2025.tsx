@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025.tsx
-import React from 'react';
-const FuturePredictionsShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -128,7 +124,6 @@ const FuturePredictionsShowcase2025 = () => {
 
   const years = Object.keys(predictions);
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025.tsx
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -150,10 +145,7 @@ const FuturePredictionsShowcase2025 = () => {
             from 2025 to 2030 and beyond.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025.tsx
         {/* Year Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -178,10 +170,7 @@ const FuturePredictionsShowcase2025 = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025.tsx
         {/* Predictions Display */}
           <div
             key={activeYear}
@@ -229,10 +218,7 @@ const FuturePredictionsShowcase2025 = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025.tsx
         {/* Timeline Visualization */}
         <div
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
@@ -261,10 +247,7 @@ const FuturePredictionsShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/FuturePredictionsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FuturePredictionsShowcase2025.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-16"

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcase.tsx
-import React from 'react';
-const AI2025UltimateTechnologyShowcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -133,7 +129,6 @@ const AI2025UltimateTechnologyShowcase = () => {
 
   const currentTech = technologies.find(tech => tech.id === activeTab) || technologies[0];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcase.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen py-20">
       {/* Background Effects */}
@@ -170,10 +165,7 @@ const AI2025UltimateTechnologyShowcase = () => {
             </span>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcase.tsx
         {/* Technology Tabs */}
         <div
           className="mb-12"
@@ -198,10 +190,7 @@ const AI2025UltimateTechnologyShowcase = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcase.tsx
         {/* Active Technology Display */}
         <div
           key={activeTab}
@@ -249,10 +238,7 @@ const AI2025UltimateTechnologyShowcase = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcase.tsx
         {/* Success Stories */}
         <div
           className="mb-16"
@@ -272,10 +258,7 @@ const AI2025UltimateTechnologyShowcase = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcase.tsx
         {/* Call to Action */}
         <div
           className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-white/10"

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025ContentRecommendationEngine.tsx
-import React from 'react';
-const AI2025ContentRecommendationEngine: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -224,7 +220,6 @@ const AI2025ContentRecommendationEngine = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ContentRecommendationEngine.tsx
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
       {/* Header */}

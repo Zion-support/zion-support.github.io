@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/AIServicesPage.tsx
-import { Helmet } from 'react-helmet-async';
-const AIServicesPage: React.FC = () => {
-=======
 import { Brain, ArrowRight } from 'lucide-react';
 
 const AIServicesPage = () => {
@@ -39,7 +35,6 @@ const AIServicesPage = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/AIServicesPage.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}

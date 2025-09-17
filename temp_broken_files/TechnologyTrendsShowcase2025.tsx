@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-import React from 'react';
-const TechnologyTrendsShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -148,7 +144,6 @@ const TechnologyTrendsShowcase2025 = () => {
 
   const currentTrend = trends[activeTrend];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,10 +156,7 @@ const TechnologyTrendsShowcase2025 = () => {
             <TrendingUp className="w-4 h-4 mr-2" />
             Technology Trends Showcase 2025
           </div>
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
           <divh2
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
@@ -172,10 +164,7 @@ const TechnologyTrendsShowcase2025 = () => {
             The Future of Technology is
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Here Today</span>
           </divh2>
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
           <divp
             whileInView={{ opacity: 1, y: 0 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -188,11 +177,7 @@ const TechnologyTrendsShowcase2025 = () => {
           {trends.map((trendindex) => {
             const Icon = trend.icon;
             return (
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-              <divbutton
-=======
               <button
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
                 key={trend.id}
                 onClick={() => {
                   setActiveTrend(index);
@@ -206,11 +191,7 @@ const TechnologyTrendsShowcase2025 = () => {
               >
                 <Icon className="w-5 h-5 mr-2" />
                 {trend.title.split(' ')[0]}
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-              </divbutton>
-=======
               </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
             );
           })}
         </div>
@@ -312,10 +293,7 @@ const TechnologyTrendsShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
         {/* Auto-play Controls */}
         <div className="flex items-center justify-center gap-4 mb-12">
           <button
@@ -343,10 +321,7 @@ const TechnologyTrendsShowcase2025 = () => {
               Based on current trends and expert analysis
             </p>
           </div>
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {predictions.map((predictionindex) => (
               <div
@@ -393,31 +368,18 @@ const TechnologyTrendsShowcase2025 = () => {
             Stay ahead of the curve with our cutting-edge technology solutions and expert guidance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-            <divbutton
-=======
             <button
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
               className="px-8 py-4 bg-white text-purple-600 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center"
             >
               <Rocket className="w-5 h-5 mr-2" />
               Explore Solutions
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-            </divbutton>
-            <divbutton
-=======
             </button>
             <button
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
               className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
             >
               <Lightbulb className="w-5 h-5 mr-2" />
               Get Expert Consultation
-<<<<<<< HEAD:temp_broken_files/TechnologyTrendsShowcase2025.tsx
-            </divbutton>
-=======
             </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/TechnologyTrendsShowcase2025.tsx
           </div>
         </div>
       </div>
