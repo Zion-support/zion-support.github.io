@@ -13,7 +13,7 @@
   base = "."
 
 [build.environment]
-  NODE_VERSION = "22.18.0"
+  NODE_VERSION = "22"
   NODE_OPTIONS = "--max_old_space_size=6144"
   # Use npm for dependency management
   NPM_FLAGS = "--ignore-scripts --no-optional"
