@@ -283,8 +283,6 @@ export default [
       'AIMatcher.tsx',
       'AdvancedServicesPage.jsx',
       'App.tsx',
-<<<<<<< HEAD
-=======
       'start-all-automations.js',
       'start-dev.js',
       'test-build.js',
@@ -294,7 +292,6 @@ export default [
       'talent/**',
       'test-utils.jsx',
       'store/**',
->>>>>>> f3a644d9ec3948c06f78621299557c84f26ee31b
 
       // Misc root configs that were being linted
       '.eslintrc.js',
