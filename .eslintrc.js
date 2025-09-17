@@ -21,6 +21,7 @@ module.exports = {
     '*.config.ts',
     'scripts/',
     'automation/',
+    'automation/**/*',
     'netlify/',
     'apps/',
     'src-corrupted/',
@@ -62,6 +63,8 @@ module.exports = {
     'syntax-fixer.js',
     'workbox-config.js',
     'vite.config-backup.ts',
-    'talent/[id].js.jsx'
+    'talent/[id].js.jsx',
+    'ultimate-conflict-resolver.cjs',
+    'ultimate-redundancy-master.cjs'
   ]
 };
