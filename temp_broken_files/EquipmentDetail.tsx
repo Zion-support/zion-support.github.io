@@ -215,6 +215,14 @@ export default function EquipmentDetail() {
                   className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
                 >
                   Browse Equipment
+<<<<<<< HEAD:temp_broken_files/EquipmentDetail.tsx
+=======
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+>>>>>>> origin/merge-new-content-1757989975:src/pages/EquipmentDetail.tsx
       </>
     );
   }
@@ -242,6 +250,11 @@ export default function EquipmentDetail() {
               Equipment
             <span className="mx-2 text-zion-slate-light">/</span>
             <span className="text-zion-slate-light">{equipment.name}</span>
+<<<<<<< HEAD:temp_broken_files/EquipmentDetail.tsx
+=======
+          </divnav>
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/EquipmentDetail.tsx
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Images */}
             <div 
@@ -272,6 +285,11 @@ export default function EquipmentDetail() {
                       />
                   ))}
               )}
+<<<<<<< HEAD:temp_broken_files/EquipmentDetail.tsx
+=======
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/EquipmentDetail.tsx
             {/* Product Details */}
             <div 
               className="space-y-6"
@@ -377,6 +395,14 @@ export default function EquipmentDetail() {
                       <p className="text-white text-sm font-medium">Returns</p>
                       <p className="text-xs">{equipment.returnPolicy}</p>
                 )}
+<<<<<<< HEAD:temp_broken_files/EquipmentDetail.tsx
+=======
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> origin/merge-new-content-1757989975:src/pages/EquipmentDetail.tsx
     </>
   );
 

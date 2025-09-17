@@ -303,6 +303,12 @@ export default function MarketPricing() {
                 <li>WorkOS pricing: <a className="text-cyan-400 underline" href={`https://workos.com/pricing`} target="_blank" rel="noopener noreferrer">workos.com/pricing</a></li>
                 <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</a></li>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+            </div>
+          </div>
+          
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
           <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -310,6 +316,14 @@ export default function MarketPricing() {
           >
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               {currentMarket.description}
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+            </p>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
       {/* Competitive Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -319,6 +333,11 @@ export default function MarketPricing() {
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Competitive Analysis
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+          </divh2>
+          
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
           <div className="space-y-8">
             {currentMarket.competitors.map((competitor, index) => (
               <div
@@ -365,6 +384,11 @@ export default function MarketPricing() {
                         <p className="text-sm font-semibold text-cyan-400">Our Position</p>
                         <p className="text-xs text-gray-300 mt-1">Competitive advantage in AI consciousness and pricing</p>
                   )}
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+                </div>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
             ))}
           <div className="space-y-6">
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
@@ -550,6 +574,11 @@ export default function MarketPricing() {
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Pricing Analysis
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+          </divh2>
+          
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
           <div className="grid lg:grid-cols-4 gap-6 mb-12">
             {[
               { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' },
@@ -567,7 +596,14 @@ export default function MarketPricing() {
                   <BarChart3 className="w-10 h-10 text-white" />
                 <h3 className="text-lg font-bold mb-2">{tier.label}</h3>
                 <p className="text-2xl font-bold text-cyan-400">{tier.price}</p>
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
             ))}
+=======
+              </div>
+            ))}
+          </div>
+          
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
           <div
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -593,6 +629,14 @@ export default function MarketPricing() {
                   <h4 className="font-semibold text-cyan-400 mb-2">{advantage.title}</h4>
                   <p className="text-sm text-gray-300">{advantage.description}</p>
               ))}
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
       {/* Market Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -602,6 +646,11 @@ export default function MarketPricing() {
             className="text-4xl md:text-5xl font-bold text-center mb-16"
           >
             Market Trends & Opportunities
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+          </divh2>
+          
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
           <div className="grid md:grid-cols-2 gap-8">
             <div
               whileInView={{ opacity: 1, x: 0 }}
@@ -621,6 +670,12 @@ export default function MarketPricing() {
                     <TrendingUp className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-300">{driver}</span>
                 ))}
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+              </ul>
+            </div>
+            
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
             <div
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -639,6 +694,15 @@ export default function MarketPricing() {
                     <Target className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-300">{opportunity}</span>
                 ))}
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
+=======
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -663,8 +727,19 @@ export default function MarketPricing() {
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
               >
                 Get Custom Quote
+<<<<<<< HEAD:temp_broken_files/market-pricing.tsx
 =======
 import React from "react";
+=======
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing.tsx
 
 const function MarketPricing() { = () => {
   return (

@@ -1,15 +1,42 @@
+<<<<<<< HEAD:temp_broken_files/EnhancedAccessibilityEnhancer.tsx
 import React from 'react';
+=======
+"use client";
+import React, { useState, useEffect, useCallback } from 'react';
+import { 
+  RotateCcw, Accessibility, CheckCircle, AlertCircle
+} from 'lucide-react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  highSaturation: boolean;
+  focusIndicator: boolean;
+  screenReader: boolean;
+}
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedAccessibilityEnhancer.tsx
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       {/* Accessibility Toggle Button */}
+<<<<<<< HEAD:temp_broken_files/EnhancedAccessibilityEnhancer.tsx
       <divbutton
+=======
+      <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedAccessibilityEnhancer.tsx
         onClick={() => setIsOpen(!isOpen)}
         className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
         aria-label="Accessibility Settings"
       >
         <Accessibility className="w-6 h-6" />
+<<<<<<< HEAD:temp_broken_files/EnhancedAccessibilityEnhancer.tsx
       </divbutton>
+=======
+      </button>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedAccessibilityEnhancer.tsx
       {/* Accessibility Panel */}
       <div>
         {isOpen && (

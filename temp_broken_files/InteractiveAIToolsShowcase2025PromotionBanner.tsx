@@ -1,5 +1,40 @@
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025PromotionBanner.tsx
 import React from 'react';
 const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  ArrowRight
+  Star
+  Brain
+  Zap
+  TrendingUp
+  Sparkles,
+  X,
+  Play,
+  ExternalLink,
+  CheckCircle
+} from 'lucide-react';
+
+const InteractiveAIToolsShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -43,11 +78,19 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                   </div>
                 </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025PromotionBanner.tsx
                 <divh2
                   className="text-2xl lg:text-3xl font-bold text-white mb-2"
                 >
                   🤖 Interactive AI Tools Suite 2025
                 </divh2>
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025PromotionBanner.tsx
                 <divp
                   className="text-indigo-100 text-lg mb-4 max-w-2xl"
                 >
@@ -56,6 +99,10 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
                   <span className="font-semibold text-white"> 10x faster processing</span>and 
                   <span className="font-semibold text-white"> 24/7 availability</span>.
                 </divp>
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025PromotionBanner.tsx
                 <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4"
                 >
@@ -76,6 +123,10 @@ const InteractiveAIToolsShowcase2025PromotionBanner: React.FC = () => {
                     <span>Security Guard</span>
                   </div>
                 </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsShowcase2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsShowcase2025PromotionBanner.tsx
                 <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
                 >

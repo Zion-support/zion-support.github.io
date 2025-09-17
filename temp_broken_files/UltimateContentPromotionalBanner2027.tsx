@@ -1,4 +1,9 @@
+<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionalBanner2027.tsx
 import React from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionalBanner2027.tsx
 const UltimateContentPromotionalBanner2027: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
@@ -52,6 +57,10 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             quantum mechanics, and synthetic reality converge to create the impossible.
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionalBanner2027.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionalBanner2027.tsx
         {/* Main Carousel */}
         <div className="relative max-w-8xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">

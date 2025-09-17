@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
 const RevolutionaryTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const techCategories = [
@@ -135,6 +139,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 via-gray-900 to-zinc-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
+<<<<<<< HEAD
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -181,6 +186,48 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30"
+=======
+        <div className="text-center mb-16">
+          <div
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌟 REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
+            </div>
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Revolutionary Technology Showcase 2026
+            </h2>
+            <p className="text-xl opacity-90 max-w-4xl mx-auto">
+              Experience the most groundbreaking technologies that will define the future of humanity
+            </p>
+          </div>
+        </div>
+
+        {/* Interactive Tech Selector */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
+            {revolutionaryTechs.map((tech, index) => (
+              <button
+                key={tech.id}
+                onClick={() => setActiveTech(index)}
+                className={`px-6 py-3 rounded-xl transition-all duration-300 ${
+                  activeTech === index
+                    ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg`
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="text-2xl mr-3">{tech.icon}</span>
+                <span className="font-semibold">{tech.title.split(' ')[0]}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Active Tech Display */}
+          <div
+            key={activeTech}
+            className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20"
+>>>>>>> origin/merge-new-content-1757989975
           >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content Info */}
@@ -267,6 +314,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
               </motion.div>
             </div>
           </motion.div>
@@ -348,6 +396,46 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <a href="/pages/NeuralInterfaceRevolution2026" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Connect Mind & Machine →
             </a>
+=======
+                
+                {/* Floating Elements */}
+                <div
+                  className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-60"
+                ></div>
+                <div
+                  className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full opacity-60"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Technology Grid */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4">🌟 All Revolutionary Technologies</h3>
+            <p className="text-lg opacity-80">Explore our complete collection of breakthrough technologies</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {revolutionaryTechs.map((tech, index) => (
+              <div
+                key={tech.id}
+                whileInView={{ opacity: 1, y: 0 }}
+                className={`bg-gradient-to-br ${tech.gradient} rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer`}
+                onClick={() => setActiveTech(index)}
+              >
+                <div className="text-6xl mb-4 text-center">{tech.icon}</div>
+                <h4 className="text-2xl font-bold mb-4 text-center">{tech.title}</h4>
+                <p className="text-center opacity-90 mb-6">{tech.description}</p>
+                <div className="text-center">
+                  <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                    Explore →
+                  </span>
+                </div>
+              </div>
+            ))}
+>>>>>>> origin/merge-new-content-1757989975
           </div>
         </div>
         {/* Additional Revolutionary Technologies */}

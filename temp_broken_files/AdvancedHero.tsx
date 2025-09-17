@@ -1,4 +1,9 @@
+<<<<<<< HEAD:temp_broken_files/AdvancedHero.tsx
 import React from "react";
+=======
+import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+>>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedHero.tsx
 
 <<<<<<< HEAD:temp_broken_files/AdvancedHero.tsx
 interface AdvancedHeroProps {

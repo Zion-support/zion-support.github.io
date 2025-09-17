@@ -1,4 +1,58 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Cpu
+  Zap
+  Target
+  TrendingUp
+  Users
+  Globe,
+  ArrowRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Star,
+  Award,
+  ChevronRight,
+  ExternalLink,
+  Sparkles,
+  Rocket,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
+  Layers
+} from 'lucide-react';
+
+interface InnovationItem {
+  id: string;
+  title: string;
+  description: string;
+  category: 'ai-core' | 'quantum' | 'neural' | 'automation' | 'robotics' | 'biotech';
+  impact: 'low' | 'medium' | 'high' | 'revolutionary';
+  timeline: string;
+  status: 'research' | 'development' | 'testing' | 'deployed';
+  tags: string[];
+  image: string;
+  url: string;
+  featured: boolean;
+  metrics: {
+    efficiency?: string;
+    accuracy?: string;
+    speed?: string;
+    cost?: string;
+  };
+}
+
+>>>>>>> origin/merge-new-content-1757989975
 const AIInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -98,6 +152,10 @@ const AIInnovationHub2026: React.FC = () => {
             })}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Category Filter */}
         <div
           className="mb-12"
@@ -126,6 +184,10 @@ const AIInnovationHub2026: React.FC = () => {
             })}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Innovation Grid */}
         <div
         >

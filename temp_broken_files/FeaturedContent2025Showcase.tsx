@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/FeaturedContent2025Showcase.tsx
+=======
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/FeaturedContent2025Showcase.tsx
 const FeaturedContent2025Showcase: React.FC = () => {
   return (
     <section className="py-20 bg-white">
@@ -17,6 +22,10 @@ const FeaturedContent2025Showcase: React.FC = () => {
             Expert guidance to accelerate your AI transformation journey.
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/FeaturedContent2025Showcase.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/FeaturedContent2025Showcase.tsx
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
             <div
@@ -103,6 +112,10 @@ const FeaturedContent2025Showcase: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/FeaturedContent2025Showcase.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/FeaturedContent2025Showcase.tsx
         {/* Newsletter Signup */}
         <div
           className="mt-12 text-center"

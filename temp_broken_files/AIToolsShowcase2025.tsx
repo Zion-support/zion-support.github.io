@@ -129,6 +129,12 @@ export default function AIToolsShowcase2025() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover cutting-edge AI tools that are revolutionizing how we workcreateand innovate. 
             From development to analyticsecurity to content creation.
+<<<<<<< HEAD:temp_broken_files/AIToolsShowcase2025.tsx
+=======
+          </p>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsShowcase2025.tsx
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -145,6 +151,11 @@ export default function AIToolsShowcase2025() {
             >
               {category}
           ))}
+<<<<<<< HEAD:temp_broken_files/AIToolsShowcase2025.tsx
+=======
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsShowcase2025.tsx
         {/* Tools Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -208,7 +219,15 @@ export default function AIToolsShowcase2025() {
                     opacity: hoveredTool === tool.id ? 1 : 0
                   }}
                 />
+<<<<<<< HEAD:temp_broken_files/AIToolsShowcase2025.tsx
             ))}
+=======
+              </div>
+            ))}
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsShowcase2025.tsx
         {/* CTA Section */}
         <div
           className="text-center mt-16"
@@ -224,6 +243,7 @@ export default function AIToolsShowcase2025() {
                 Start Free Trial
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                 View All Tools
+<<<<<<< HEAD:temp_broken_files/AIToolsShowcase2025.tsx
   );
 
 
@@ -239,6 +259,11 @@ const function AIToolsShowcase2025() { = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">function AIToolsShowcase2025() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+=======
+              </button>
+            </div>
+          </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsShowcase2025.tsx
         </div>
       </div>
     </div>

@@ -176,6 +176,15 @@ export default function EnhancedServicesShowcase() {
                 <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full px-6 py-3 border border-pink-500/30">
                   <Zap className="w-5 h-5 text-pink-400" />
                   <span className="text-pink-300 font-semibold">24/7 Support</span>
+<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
         {/* Featured Service Categories */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -188,6 +197,12 @@ export default function EnhancedServicesShowcase() {
                 Featured Service Categories
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our most innovative and high-impact service categories
+<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredServices.map((category, index) => (
                 <div
@@ -216,6 +231,13 @@ export default function EnhancedServicesShowcase() {
                         className="mt-6 w-full"
                       >
                         View All {category.title.split(' ')[0" Services
+<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
+=======
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
               ))}
         {/* Filters and Search */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -375,7 +397,14 @@ export default function EnhancedServicesShowcase() {
                           >
                             Get Started
                   )}
+<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
               ))}
+=======
+                </div>
+              ))}
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
@@ -429,6 +458,16 @@ export default function EnhancedServicesShowcase() {
                 >
                   View Pricing
                   <DollarSign className="ml-2 w-6 h-6" />
+<<<<<<< HEAD:temp_broken_files/enhanced-services-showcase.tsx
+=======
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticMatrixBackground>
+>>>>>>> origin/merge-new-content-1757989975:src/components/enhanced-services-showcase.tsx
   );
 }
 // Button component (if not imported)

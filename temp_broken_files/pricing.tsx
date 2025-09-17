@@ -8,6 +8,10 @@ import {
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+<<<<<<< HEAD:temp_broken_files/pricing.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/pricing.tsx
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';

@@ -204,6 +204,10 @@ export default function ComprehensiveServicesShowcase2025() {
                     {stat.icon}
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-cyan-300">{stat.label}</div>
+<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
               ))}
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
@@ -216,6 +220,15 @@ export default function ComprehensiveServicesShowcase2025() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
                 />
+<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
+=======
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
       {/* Filters and Controls */}
       <div className="bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -342,6 +355,11 @@ export default function ComprehensiveServicesShowcase2025() {
                 {/* CTA Button */}
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                   Learn More
+<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
+=======
+                </button>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
             ))}
         ) : (
           <div className="space-y-6">
@@ -403,6 +421,14 @@ export default function ComprehensiveServicesShowcase2025() {
                         Learn More
                       <div className="text-xs text-gray-500">
                         Launched: {new Date(service.launchDate).toLocaleDateString()}
+<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
+=======
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
             ))}
         )}
         {/* No Results */}
@@ -446,6 +472,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 className="border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"
               >
                 View Pricing Plans
+<<<<<<< HEAD:temp_broken_files/comprehensive-services-showcase-2025.tsx
 =======
 import React from "react";
 
@@ -456,6 +483,11 @@ const function ComprehensiveServicesShowcase2025() { = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2025() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+=======
+              </a>
+            </div>
+          </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/comprehensive-services-showcase-2025.tsx
         </div>
       </div>
     </div>

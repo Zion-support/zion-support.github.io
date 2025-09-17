@@ -105,6 +105,14 @@ export default function ComprehensiveServicesShowcase() {
               <div>
                 <div className="text-3xl font-bold text-orange-400">500%+</div>
                 <div className="text-white/60">Average ROI</div>
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
+=======
+              </div>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -148,6 +156,15 @@ export default function ComprehensiveServicesShowcase() {
                   }`}
                 >
                   <List className="w-5 h-5" />
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
+=======
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         {/* Category Filter */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -169,6 +186,12 @@ export default function ComprehensiveServicesShowcase() {
                 {category.name}
                 <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
             ))}
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
+=======
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -220,7 +243,16 @@ export default function ComprehensiveServicesShowcase() {
                     >
                       Learn More
                       <ExternalLink className="w-4 h-4" />
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
               ))}
+=======
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         ) : (
           <div className="space-y-6">
             <div>
@@ -280,7 +312,17 @@ export default function ComprehensiveServicesShowcase() {
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4" />
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
               ))}
+=======
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         )}
         {/* No Results */}
         {filteredServices.length === 0 && (
@@ -290,6 +332,10 @@ export default function ComprehensiveServicesShowcase() {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-white/60">Try adjusting your search or filter criteria</p>
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
+=======
+          </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         )}
         {/* Contact CTA */}
         <div
@@ -314,6 +360,15 @@ export default function ComprehensiveServicesShowcase() {
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Call +1 302 464 0950
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
+=======
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
   );
 
 

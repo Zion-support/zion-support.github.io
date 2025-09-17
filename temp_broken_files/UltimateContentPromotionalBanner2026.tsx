@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionalBanner2026.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionalBanner2026.tsx
 const UltimateContentPromotionalBanner2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
@@ -22,6 +26,10 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
             Discover conscious AI, quantum reality manipulation, and breakthrough technologies beyond imagination.
           </divp>
         </div>
+<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionalBanner2026.tsx
+=======
+        
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionalBanner2026.tsx
         <div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -74,6 +82,10 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
             </a>
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionalBanner2026.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionalBanner2026.tsx
         <div
           className="text-center mt-12"
         >
@@ -101,6 +113,10 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionalBanner2026.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionalBanner2026.tsx
         <div
           className="text-center mt-8"
         >

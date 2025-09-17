@@ -1,5 +1,135 @@
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
 import React from 'react';
 const BusinessTransformationRevolution2025: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Target
+  TrendingUp
+  Users
+  Briefcase
+  Lightbulb,
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+  BarChart3,
+  Clock
+} from 'lucide-react';
+
+const BusinessTransformationRevolution2025 = () => {
+  const [activeTabsetActiveTab] = useState(0);
+  const [countersetCounters] = useState({
+    businesses: 0,
+    revenue: 0,
+    efficiency: 0,
+    satisfaction: 0
+  });
+
+  const tabs = [
+    {
+      id: 0,
+      title: "Digital Revolution",
+      icon: <Sparkles className="w-6 h-6" />,
+      content: {
+        title: "Complete Digital Transformation",
+        description: "Transform your entire business ecosystem with cutting-edge AI and automation technologies.",
+        benefits: [
+          "500% increase in operational efficiency",
+          "Real-time data-driven decision making",
+          "Automated workflow optimization",
+          "Predictive analytics and forecasting"
+        ],
+        image: "🚀"
+      }
+    },
+    {
+      id: 1,
+      title: "AI Integration",
+      icon: <Target className="w-6 h-6" />,
+      content: {
+        title: "Intelligent AI Integration",
+        description: "Seamlessly integrate AI across all business operations for unprecedented growth and efficiency.",
+        benefits: [
+          "Custom AI models for your industry",
+          "24/7 automated customer support",
+          "Intelligent resource allocation",
+          "Advanced pattern recognition"
+        ],
+        image: "🧠"
+      }
+    },
+    {
+      id: 2,
+      title: "Growth Strategy",
+      icon: <TrendingUp className="w-6 h-6" />,
+      content: {
+        title: "Exponential Growth Strategy",
+        description: "Unlock explosive business growth with our proven transformation methodologies.",
+        benefits: [
+          "Market expansion strategies",
+          "Revenue optimization systems",
+          "Competitive advantage frameworks",
+          "Scalable business models"
+        ],
+        image: "📈"
+      }
+    }
+  ];
+
+  useEffect(() => {
+    // Animate counters
+    const animateCounters = () => {
+      const targets = {
+        businesses: 50000,
+        revenue: 2500,
+        efficiency: 400,
+        satisfaction: 98
+      };
+
+      Object.keys(targets).forEach(key => {
+        let start = 0;
+        const target = targets[key as keyof typeof targets];
+        const increment = target / 100;
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            start = target;
+            clearInterval(timer);
+          }
+          setCounters(prev => ({ ...prev[key]: Math.floor(start) }));
+        }20);
+      });
+    };
+
+    const timer = setTimeout(animateCounters500);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -18,13 +148,25 @@ const BusinessTransformationRevolution2025: React.FC = () => {
               Business Revolution 2025
             </h2>
           </div>
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
             Revolutionary business transformation solutions that deliver unprecedented results. 
             Join thousands of companies already experiencing exponential growth.
           </divp>
+=======
+          
+            Revolutionary business transformation solutions that deliver unprecedented results. 
+            Join thousands of companies already experiencing exponential growth.
+          </divp>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
             <Clock className="w-5 h-5 mr-2" />
             Limited Time: 50% Off Implementation
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
         {/* Stats Section */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -47,6 +189,10 @@ const BusinessTransformationRevolution2025: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
         {/* Tabs Section */}
         <div className="mb-16">
           {/* Tab Navigation */}
@@ -55,7 +201,11 @@ const BusinessTransformationRevolution2025: React.FC = () => {
           >
             <div className="flex bg-white/10 backdrop-blur-lg rounded-full p-2">
               {tabs.map((tabindex) => (
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
                 <divbutton
+=======
+                <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
                   key={tab.id}
                   onClick={() => setActiveTab(index)}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center ${
@@ -66,10 +216,18 @@ const BusinessTransformationRevolution2025: React.FC = () => {
                 >
                   {tab.icon}
                   <span className="ml-2">{tab.title}</span>
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
                 </divbutton>
               ))}
             </div>
           </div>
+=======
+                </button>
+              ))}
+            </div>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
           {/* Tab Content */}
           <div
             key={activeTab}
@@ -112,12 +270,21 @@ const BusinessTransformationRevolution2025: React.FC = () => {
                     90-day money-back guarantee
                   </div>
                 </div>
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
                 <divbutton
+=======
+
+                <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
                   className="w-full px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold text-lg rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center"
                 >
                   Start Your Transformation
                   <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
                 </divbutton>
+=======
+                </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-white/5 rounded-lg text-center">
@@ -146,11 +313,19 @@ const BusinessTransformationRevolution2025: React.FC = () => {
               'Don', 't get left behind. Transform your business with our proven methodologies 
               and join thousands of successful companies already experiencing exponential growth.
             </p>
+<<<<<<< HEAD:temp_broken_files/BusinessTransformationRevolution2025.tsx
             <divbutton
               className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300"
             >
               Get Started Now - 50% Off
             </divbutton>
+=======
+            <button
+              className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300"
+            >
+              Get Started Now - 50% Off
+            </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformationRevolution2025.tsx
           </div>
         </div>
       </div>

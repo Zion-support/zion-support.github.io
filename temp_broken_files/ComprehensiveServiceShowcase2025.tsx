@@ -252,6 +252,13 @@ export default function ComprehensiveServiceShowcase2025() {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
               <div className="text-2xl font-bold text-white">100%</div>
               <div className="text-sm text-gray-400">Success Rate</div>
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServiceShowcase2025.tsx
+=======
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServiceShowcase2025.tsx
         {/* Filters and Search */}
         <div
           className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/10"
@@ -302,6 +309,15 @@ export default function ComprehensiveServiceShowcase2025() {
                   className={`p-2 rounded ${viewMode === 'list' ? 'bg-white/20' : ''}`}
                 >
                   <List className="h-4 w-4 text-white" />
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServiceShowcase2025.tsx
+=======
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServiceShowcase2025.tsx
         {/* Services Grid/List */}
         <div
           className={viewMode === 'grid' 
@@ -385,7 +401,16 @@ export default function ComprehensiveServiceShowcase2025() {
                         <div className="text-white font-bold">
                           ${service.pricing.price.toLocaleString()}/{service.pricing.period}
                 )}
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServiceShowcase2025.tsx
             ))}
+=======
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServiceShowcase2025.tsx
       {/* Service Detail Modal */}
       <div>
         {selectedService && (
@@ -474,6 +499,7 @@ export default function ComprehensiveServiceShowcase2025() {
                       Get Started Now
                     <button className="w-full bg-white/10 text-white px-6 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300">
                       Contact Sales
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServiceShowcase2025.tsx
         )}
   );
 
@@ -491,6 +517,15 @@ const function ComprehensiveServiceShowcase2025() { = () => {
           <h1 className="text-5xl font-bold mb-6">function ComprehensiveServiceShowcase2025() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
+=======
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+>>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServiceShowcase2025.tsx
       </div>
     </div>
   );

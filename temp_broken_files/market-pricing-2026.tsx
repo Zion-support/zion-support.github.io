@@ -109,6 +109,15 @@ export default function MarketPricing2026() {
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
                   <div className="text-3xl font-bold text-yellow-400 mb-2">{pricingStats.totalCustomers.toLocaleString()}+</div>
                   <div className="text-gray-400 text-sm">Total Customers</div>
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
         {/* Filters Section */}
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -162,6 +171,12 @@ export default function MarketPricing2026() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our services are strategically positioned to provide maximum value while maintaining competitive pricing 
                 in the rapidly evolving technology landscape
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
             {/* Market Insights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <div
@@ -177,6 +192,12 @@ export default function MarketPricing2026() {
                 <div className="flex items-center text-cyan-400 text-sm">
                   <TrendingUp className="w-4 h-4 mr-2" />
                   <span>20-40% cost savings</span>
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+                </div>
+              </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
               <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -190,6 +211,12 @@ export default function MarketPricing2026() {
                 <div className="flex items-center text-green-400 text-sm">
                   <Award className="w-4 h-4 mr-2" />
                   <span>1000% ROI guarantee</span>
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+                </div>
+              </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
               <div
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -203,6 +230,15 @@ export default function MarketPricing2026() {
                 <div className="flex items-center text-purple-400 text-sm">
                   <Zap className="w-4 h-4 mr-2" />
                   <span>Future-proof solutions</span>
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
         {/* Services Pricing Grid */}
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -214,6 +250,12 @@ export default function MarketPricing2026() {
               <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>
               <p className="text-xl text-gray-300">
                 {filteredServices.length} services found matching your criteria
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index) => (
                 <div
@@ -283,6 +325,12 @@ export default function MarketPricing2026() {
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
                     >
                       View Details
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+                    </a>
+                  </div>
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
               ))}
             {/* No Results */}
             {filteredServices.length === 0 && (
@@ -292,6 +340,10 @@ export default function MarketPricing2026() {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your category or price range filters</p>
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
             )}
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -326,6 +378,16 @@ export default function MarketPricing2026() {
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   View All Services
+<<<<<<< HEAD:temp_broken_files/market-pricing-2026.tsx
+=======
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+>>>>>>> origin/merge-new-content-1757989975:src/components/market-pricing-2026.tsx
   );
 
 

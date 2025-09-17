@@ -1,5 +1,6 @@
 <<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
 const ai-consciousness-evolution-2025: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -7,6 +8,21 @@ const ai-consciousness-evolution-2025: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+=======
+import Head from 'next/head';
+import { 
+  Brain, Star, Users, TrendingUp, Zap, Shield, 
+  CheckCircle, Clock, Award, Target, Globe, Sparkles,
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb,
+  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
 };
 const features = [
   'Emotional intelligence training modules',
@@ -126,6 +142,11 @@ export default function AIConsciousnessEvolution2025() {
             >
               <Sparkles className="w-4 h-4 mr-2" />
               Revolutionary AI Technology
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
                 AI Consciousness
@@ -150,9 +171,14 @@ export default function AIConsciousnessEvolution2025() {
                     {stat.icon}
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-purple-300">{stat.label}</div>
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
               ))}
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
               <divbutton
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105"
               >
@@ -161,6 +187,23 @@ export default function AIConsciousnessEvolution2025() {
                 className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200"
               >
                 Watch Demo
+=======
+              <button
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105"
+              >
+                Start Free Trial
+              </button>
+              <button
+                className="border-2 border-purple-500/50 text-purple-300 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200"
+              >
+                Watch Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,6 +218,12 @@ export default function AIConsciousnessEvolution2025() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered platform combines cutting-edge technology with ancient wisdom to create 
               the most advanced consciousness development experience ever created.
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -189,6 +238,11 @@ export default function AIConsciousnessEvolution2025() {
                   {feature}
                 <p className="text-gray-400">
                   Advanced AI algorithms guide you through personalized consciousness development exercises.
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+                </p>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
             ))}
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -204,6 +258,12 @@ export default function AIConsciousnessEvolution2025() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our revolutionary platform uses advanced AI to create personalized consciousness development 
               experiences that adapt to your unique journey.
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -239,6 +299,10 @@ export default function AIConsciousnessEvolution2025() {
                   {step.icon}
                 <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{step.description}</p>
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
             ))}
       {/* Use Cases Section */}
       <section className="py-20 bg-black">
@@ -254,6 +318,12 @@ export default function AIConsciousnessEvolution2025() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From personal development to professional growth, our platform serves diverse needs 
               across multiple domains.
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div
@@ -268,6 +338,11 @@ export default function AIConsciousnessEvolution2025() {
                   {useCase}
                 <p className="text-gray-400">
                   Leverage AI-powered consciousness development for enhanced personal and professional growth.
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+                </p>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
             ))}
       {/* Technology Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -283,6 +358,12 @@ export default function AIConsciousnessEvolution2025() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our platform leverages the latest advancements in AI, machine learning, and consciousness research 
               to deliver unprecedented results.
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {technology.map((tech, index) => (
               <div
@@ -294,6 +375,10 @@ export default function AIConsciousnessEvolution2025() {
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <Cpu className="w-10 h-10 text-purple-400" />
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
             ))}
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
@@ -308,6 +393,12 @@ export default function AIConsciousnessEvolution2025() {
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Say</span>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join thousands of satisfied users who have transformed their lives with our AI consciousness platform.
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -327,6 +418,10 @@ export default function AIConsciousnessEvolution2025() {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
             ))}
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -341,6 +436,12 @@ export default function AIConsciousnessEvolution2025() {
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Evolution Path</span>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options designed to make consciousness evolution accessible to everyone.
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -423,6 +524,11 @@ export default function AIConsciousnessEvolution2025() {
                     : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
                 }`}>
                   Get Started
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
+=======
+                </button>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
             ))}
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
@@ -459,7 +565,17 @@ export default function AIConsciousnessEvolution2025() {
                     {contact.icon}
                   <div className="text-sm text-purple-300 mb-1">{contact.label}</div>
                   <div className="text-white font-medium">{contact.value}</div>
+<<<<<<< HEAD:temp_broken_files/ai-consciousness-evolution-2025.tsx
               ))}
+=======
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-consciousness-evolution-2025.tsx
   );
 }
 =======

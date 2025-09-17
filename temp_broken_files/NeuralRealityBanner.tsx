@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/NeuralRealityBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralRealityBanner.tsx
 const NeuralRealityBanner: React.FC = () => {
   return (
     <div

@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD:temp_broken_files/UltimateBreakthrough2026Banner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateBreakthrough2026Banner.tsx
 const UltimateBreakthrough2026Banner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16">
@@ -11,39 +15,42 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div
+<<<<<<< HEAD:temp_broken_files/UltimateBreakthrough2026Banner.tsx
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateBreakthrough2026Banner.tsx
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-6 animate-pulse"
           >
             🌟 ULTIMATE BREAKTHROUGH CONTENT 2026 • EXCLUSIVE LAUNCH
           </div>
+<<<<<<< HEAD:temp_broken_files/UltimateBreakthrough2026Banner.tsx
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+=======
+          <divh2
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateBreakthrough2026Banner.tsx
             className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
           >
             Revolutionary Technology Showcase
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          </divh2>
+          <divp
             className="text-2xl opacity-90 max-w-4xl mx-auto"
           >
             Discover the most advanced technologies that are reshaping the future of human civilization
-          </motion.p>
+          </divp>
         </div>
         {/* Content Carousel */}
         <div className="relative max-w-6xl mx-auto">
+<<<<<<< HEAD:temp_broken_files/UltimateBreakthrough2026Banner.tsx
           <AnimatePresence mode="wait">
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateBreakthrough2026Banner.tsx
             <div
               key={currentSlide}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
               className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
             >
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -84,6 +91,11 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD:temp_broken_files/UltimateBreakthrough2026Banner.tsx
+=======
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateBreakthrough2026Banner.tsx
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 mt-8">
             {breakthroughContent.map((_, index) => (
@@ -101,9 +113,12 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
         </div>
         {/* Quick Access Links */}
         <div
+<<<<<<< HEAD:temp_broken_files/UltimateBreakthrough2026Banner.tsx
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateBreakthrough2026Banner.tsx
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
         >
           {breakthroughContent.map((content, index) => (
@@ -116,11 +131,17 @@ const UltimateBreakthrough2026Banner: React.FC = () => {
             </a>
           ))}
         </div>
+<<<<<<< HEAD:temp_broken_files/UltimateBreakthrough2026Banner.tsx
         {/* Statistics */}
         <div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
+=======
+
+        {/* Statistics */}
+        <div
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateBreakthrough2026Banner.tsx
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
           <div>

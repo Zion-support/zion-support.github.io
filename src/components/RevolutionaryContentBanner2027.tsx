@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
 const RevolutionaryContentBanner2027: React.FC = () => {
 <<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -46,6 +50,7 @@ const RevolutionaryContentBanner2027: React.FC = () => {
     return () => clearInterval(timer);
   }, [content.length]);
   return (
+<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-purple-600/10"></div>
       {/* Animated Background */}
@@ -107,8 +112,46 @@ const RevolutionaryContentBanner2027: React.FC = () => {
                   </div>
                 </div>
               ))}
+=======
+    <div className="relative overflow-hidden">
+      <div
+        key={currentSlide}
+        className={`bg-gradient-to-r ${bannerContent[currentSlide].bgColor} backdrop-blur-sm`}
+      >
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-2xl animate-pulse">
+                {bannerContent[currentSlide].title.split(' ')[0]}
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white">
+                  {bannerContent[currentSlide].title}
+                </h3>
+                <p className="text-sm text-white/90">
+                  {bannerContent[currentSlide].subtitle}
+                </p>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <a
+                href={bannerContent[currentSlide].link}
+                className={`bg-gradient-to-r ${bannerContent[currentSlide].color} text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
+              >
+                {bannerContent[currentSlide].cta} →
+              </a>
+              
+              <button
+                onClick={handleClose}
+                className="text-white/70 hover:text-white transition-colors"
+              >
+                ✕
+              </button>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Navigation Dots */}
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
@@ -181,6 +224,10 @@ const RevolutionaryContentBanner2027: React.FC = () => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000);
+=======
+        </div>
+      </div>
+>>>>>>> origin/merge-new-content-1757989975
 
     return () => clearInterval(interval);
   }, [features.length]);

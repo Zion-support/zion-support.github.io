@@ -1,5 +1,10 @@
+<<<<<<< HEAD:temp_broken_files/AdvancedAIIntelligence2025.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React, { useState } from 'react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIIntelligence2025.tsx
 const AdvancedAIIntelligence2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">

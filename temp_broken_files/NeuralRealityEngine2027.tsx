@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
 const NeuralRealityEngine2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
@@ -7,9 +11,12 @@ const NeuralRealityEngine2027: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full text-sm font-bold mb-8 animate-pulse">
@@ -35,9 +42,11 @@ const NeuralRealityEngine2027: React.FC = () => {
       {/* Neural Interface Technologies */}
       <div className="container mx-auto px-4 py-20">
         <div
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
           initial={{ opacity: 0, y: 50 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">🧬 Neural Interface Technologies</h2>
@@ -45,11 +54,16 @@ const NeuralRealityEngine2027: React.FC = () => {
             Discover the most advanced brain-computer interfaces that enable direct communication between mind and machine
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
             initial={{ opacity: 0, scale: 0.9 }}
+=======
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🔮</div>
@@ -67,10 +81,14 @@ const NeuralRealityEngine2027: React.FC = () => {
               Try BCI Interface →
             </button>
           </div>
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
           <div
             initial={{ opacity: 0, scale: 0.9 }}
+=======
+
+          <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🎮</div>
@@ -88,10 +106,14 @@ const NeuralRealityEngine2027: React.FC = () => {
               Enter VR World →
             </button>
           </div>
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
           <div
             initial={{ opacity: 0, scale: 0.9 }}
+=======
+
+          <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-fuchsia-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-fuchsia-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🤖</div>
@@ -115,9 +137,11 @@ const NeuralRealityEngine2027: React.FC = () => {
       <div className="bg-gradient-to-r from-violet-800/50 to-fuchsia-800/50 py-20">
         <div className="container mx-auto px-4">
           <div
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
             initial={{ opacity: 0, y: 50 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold mb-6">🚀 Neural Applications</h2>
@@ -125,11 +149,16 @@ const NeuralRealityEngine2027: React.FC = () => {
               Explore how neural interfaces are transforming healthcare, education, and human-computer interaction
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
           <div className="grid md:grid-cols-2 gap-8">
             <div
               initial={{ opacity: 0, x: -50 }}
+=======
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
             >
               <h3 className="text-2xl font-bold mb-4">🏥 Medical Rehabilitation</h3>
@@ -143,10 +172,14 @@ const NeuralRealityEngine2027: React.FC = () => {
                 <li>• Pain management</li>
               </ul>
             </div>
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
             <div
               initial={{ opacity: 0, x: 50 }}
+=======
+
+            <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
             >
               <h3 className="text-2xl font-bold mb-4">🎓 Enhanced Learning</h3>
@@ -166,9 +199,11 @@ const NeuralRealityEngine2027: React.FC = () => {
       {/* Future Vision */}
       <div className="container mx-auto px-4 py-20">
         <div
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
           initial={{ opacity: 0, y: 50 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6">🔮 The Neural Future</h2>
@@ -176,11 +211,16 @@ const NeuralRealityEngine2027: React.FC = () => {
             Imagine a world where the boundaries between human consciousness and artificial intelligence have completely dissolved
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
         <div className="grid md:grid-cols-3 gap-8">
           <div
             initial={{ opacity: 0, y: 50 }}
+=======
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="text-center"
           >
             <div className="text-6xl mb-4">🌐</div>
@@ -189,10 +229,14 @@ const NeuralRealityEngine2027: React.FC = () => {
               A global network where minds can connect and share experiences directly
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
           <div
             initial={{ opacity: 0, y: 50 }}
+=======
+
+          <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center"
           >
             <div className="text-6xl mb-4">🧠</div>
@@ -201,10 +245,14 @@ const NeuralRealityEngine2027: React.FC = () => {
               The ability to backup and transfer human consciousness to digital platforms
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
           <div
             initial={{ opacity: 0, y: 50 }}
+=======
+
+          <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center"
           >
             <div className="text-6xl mb-4">🚀</div>
@@ -218,9 +266,11 @@ const NeuralRealityEngine2027: React.FC = () => {
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
+<<<<<<< HEAD:temp_broken_files/NeuralRealityEngine2027.tsx
           initial={{ opacity: 0, y: 50 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NeuralRealityEngine2027.tsx
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center"
         >
           <h2 className="text-4xl font-bold mb-6">Ready to Expand Your Mind?</h2>

@@ -1,10 +1,167 @@
+<<<<<<< HEAD
 import React from 'react';
 const AIInnovationShowcase2026: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Cpu
+  Zap
+  Eye
+  MessageSquare
+  BarChart3
+  Shield
+  Globe,
+  ChevronRight,
+  Play,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Lightbulb,
+  Target,
+  Rocket
+} from 'lucide-react';
+
+const AIInnovationShowcase2026 = () => {
+  const [activeInnovationsetActiveInnovation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const innovations = [
+    {
+      id: 'neural-interfaces',
+      title: 'Neural Interface Technology',
+      icon: Brain,
+      color: 'from-purple-600 to-indigo-600',
+      description: 'Direct brain-computer interfaces that enable seamless human-AI collaboration',
+      features: [
+        'Real-time thought-to-action translation',
+        'Enhanced cognitive processing',
+        'Intuitive AI interaction',
+        'Memory augmentation systems',
+        'Emotional intelligence integration',
+        'Predictive decision support'
+      ],
+      impact: {
+        efficiency: '300%',
+        accuracy: '99.7%',
+        speed: '10x faster'
+      },
+      applications: [', 'Healthcare', 'Education', 'Gaming', 'Professional Training']
+    },
+    {
+      id: 'quantum-ai',
+      title: 'Quantum-Enhanced AI',
+      icon: Cpu,
+      color: 'from-blue-600 to-cyan-600',
+      description: 'Quantum computing power combined with artificial intelligence for unprecedented processing capabilities',
+      features: [
+        'Quantum machine learning algorithms',
+        'Exponential data processing',
+        'Complex optimization solutions',
+        'Cryptographic security',
+        'Parallel universe simulations',
+        'Advanced pattern recognition'
+      ],
+      impact: {
+        processing: '1000x faster',
+        complexity: 'Unlimited',
+        security: 'Unbreakable'
+      },
+      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Analysis', 'Space Exploration']
+    },
+    {
+      id: 'emotional-ai',
+      title: 'Emotional Intelligence AI',
+      icon: MessageSquare,
+      color: 'from-pink-600 to-rose-600',
+      description: 'AI systems that understandprocessand respond to human emotions with unprecedented accuracy',
+      features: [
+        'Real-time emotion detection',
+        'Contextual response generation',
+        'Empathy modeling',
+        'Mood-based recommendations',
+        'Therapeutic conversation support',
+        'Cultural sensitivity adaptation'
+      ],
+      impact: {
+        satisfaction: '95%',
+        engagement: '400%',
+        retention: '80%'
+      },
+      applications: ['Customer 'Service', 'Mental 'Health', 'Education'Entertainment']
+    },
+    {
+      id: 'predictive-analytics',
+      title: 'Predictive Analytics 2.0',
+      icon: BarChart3,
+      color: 'from-green-600 to-emerald-600',
+      description: 'Next-generation predictive systems that forecast trends with near-perfect accuracy',
+      features: [
+        'Multi-dimensional trend analysis',
+        'Real-time market predictions',
+        'Risk assessment algorithms',
+        'Behavioral pattern recognition',
+        'Scenario modeling',
+        'Automated decision recommendations'
+      ],
+      impact: {
+        accuracy: '98.5%',
+        roi: '500%',
+        risk: '90% reduction'
+      },
+      applications: [', 'Finance', 'Marketing'Supply 'Chain', 'Healthcare']
+    }
+  ];
+
+  const currentInnovation = innovations[activeInnovation];
+
+  const successStories = [
+    {
+      company: 'MedTech Solutions',
+      industry: 'Healthcare',
+      challenge: 'Diagnostic accuracy and speed',
+      solution: 'Neural Interface Technology',
+      results: '300% faster diagnosis99.7% accuracy',
+      logo: '🏥'
+    },
+    {
+      company: 'Quantum Finance',
+      industry: 'Financial Services',
+      challenge: 'Complex risk modeling',
+      solution: 'Quantum-Enhanced AI',
+      results: '1000x faster calculations90% risk reduction',
+      logo: '💰'
+    },
+    {
+      company: 'EduTech Global',
+      industry: 'Education',
+      challenge: 'Personalized learning',
+      solution: 'Emotional Intelligence AI',
+      results: '95% student satisfaction400% engagement',
+      logo: '🎓'
+    }
+  ];
+
+>>>>>>> origin/merge-new-content-1757989975
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
+<<<<<<< HEAD
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%25236366F1%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%221.5%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
+=======
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%236366F1" fill-opacity%3D%220.1%22%3E%3Ccircle cx="20" cy="20" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+>>>>>>> origin/merge-new-content-1757989975
         <div
           className="absolute top-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
             scale: [1.31],
@@ -46,6 +203,10 @@ const AIInnovationShowcase2026: React.FC = () => {
             creating unprecedented opportunities for innovation and growth.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Innovation Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
@@ -53,7 +214,11 @@ const AIInnovationShowcase2026: React.FC = () => {
           {innovations.map((innovationindex) => {
             const Icon = innovation.icon;
             return (
+<<<<<<< HEAD
               <divbutton
+=======
+              <button
+>>>>>>> origin/merge-new-content-1757989975
                 key={innovation.id}
                 onClick={() => setActiveInnovation(index)}
                 className={`p-6 rounded-2xl transition-all duration-300 ${
@@ -65,10 +230,18 @@ const AIInnovationShowcase2026: React.FC = () => {
                 <Icon className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-2">{innovation.title}</h3>
                 <p className="text-sm opacity-90">{innovation.description}</p>
+<<<<<<< HEAD
               </divbutton>
             );
           })}
         </div>
+=======
+              </button>
+            );
+          })}
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Detailed Innovation Display */}
           <div
             key={activeInnovation}
@@ -96,6 +269,10 @@ const AIInnovationShowcase2026: React.FC = () => {
                   {currentInnovation.description}
                 </p>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
@@ -107,6 +284,10 @@ const AIInnovationShowcase2026: React.FC = () => {
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
               {/* Impact Metrics */}
               <div
                 className="grid grid-cols-3 gap-6 mb-8"
@@ -122,6 +303,10 @@ const AIInnovationShowcase2026: React.FC = () => {
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
               {/* Applications */}
               <div
                 className="mb-8"
@@ -138,6 +323,10 @@ const AIInnovationShowcase2026: React.FC = () => {
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
               {/* CTA Buttons */}
               <div
                 className="flex flex-wrap gap-4"
@@ -191,6 +380,10 @@ const AIInnovationShowcase2026: React.FC = () => {
               >
                 <Star className="w-4 h-4 text-yellow-800" />
               </div>
+<<<<<<< HEAD
+=======
+              
+>>>>>>> origin/merge-new-content-1757989975
               <div
                 className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
                   scale: [1.21],
@@ -204,6 +397,10 @@ const AIInnovationShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Success Stories */}
         <div
           className="mb-20"
@@ -244,6 +441,10 @@ const AIInnovationShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Final CTA */}
         <div
           className="text-center"

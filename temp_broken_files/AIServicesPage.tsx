@@ -1,6 +1,45 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/AIServicesPage.tsx
 import { Helmet } from 'react-helmet-async';
 const AIServicesPage: React.FC = () => {
+=======
+import { Brain, ArrowRight } from 'lucide-react';
+
+const AIServicesPage = () => {
+  const aiServices = [
+    {
+      title: 'AI Business Intelligence',
+      description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
+      price: 'Starting at $2,999/month'
+    },
+    {
+      title: 'Machine Learning Automation',
+      description: 'Automate complex processes and decision-making with custom machine learning models.',
+      price: 'Starting at $4,999/month'
+    },
+    {
+      title: 'AI Customer Support',
+      description: 'Enhance customer experience with intelligent chatbots and automated support systems.',
+      price: 'Starting at $1,999/month'
+    },
+    {
+      title: 'Predictive Analytics',
+      description: 'Forecast trends and make data-driven decisions with our predictive modeling services.',
+      price: 'Starting at $3,499/month'
+    },
+    {
+      title: 'AI Content Generation',
+      description: 'Create high-quality content at scale with our AI-powered content generation tools.',
+      price: 'Starting at $999/month'
+    },
+    {
+      title: 'Computer Vision Solutions',
+      description: 'Implement image recognition and visual analysis for your business applications.',
+      price: 'Starting at $5,999/month'
+    }
+  ];
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/AIServicesPage.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}

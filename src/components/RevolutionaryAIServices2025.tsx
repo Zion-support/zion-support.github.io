@@ -1,4 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+ArrowRightBrainZapShieldGlobeTargetTrendingUp
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+>>>>>>> origin/merge-new-content-1757989975
 const RevolutionaryAIServices2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -14,6 +20,10 @@ const RevolutionaryAIServices2025: React.FC = () => {
             Experience the future of artificial intelligence with our breakthrough services that transcend traditional boundaries and achieve unprecedented capabilities.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((serviceindex) => (

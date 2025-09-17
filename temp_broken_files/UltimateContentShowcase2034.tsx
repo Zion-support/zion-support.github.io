@@ -1,4 +1,9 @@
+<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2034.tsx
 import React from 'react';
+=======
+import React, { useState } from 'react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2034.tsx
 const UltimateContentShowcase2034: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -19,6 +24,10 @@ const UltimateContentShowcase2034: React.FC = () => {
             Experience the most revolutionary technology content ever created - featuring technologies that transcend reality itself
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2034.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2034.tsx
         {/* Tab Navigation */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,6 +49,10 @@ const UltimateContentShowcase2034: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2034.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2034.tsx
         {/* Content Display */}
         <div
           key={activeTab}
@@ -120,6 +133,10 @@ const UltimateContentShowcase2034: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2034.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2034.tsx
         {/* Bottom CTA */}
         <div
           whileInView={{ opacity: 1, y: 0 }}

@@ -1,4 +1,50 @@
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025.tsx
 import React from 'react';
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Play
+  Pause
+  RotateCcw
+  Download
+  Share2
+  Settings
+  Zap
+  Brain
+  Cpu
+  Database,
+  BarChart3,
+  Image,
+  FileText,
+  Code,
+  Video,
+  Music,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Star,
+  ArrowRight,
+  Sparkles
+} from 'lucide-react';
+
+interface AITool {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  icon: React.ReactNode;
+  status: 'ready' | 'processing' | 'completed' | 'error';
+  input: string;
+  output: string;
+  processingTime: number;
+  accuracy: number;
+  features: string[];
+}
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025.tsx
 const InteractiveAIToolsDemo2025: React.FC = () => {
   return (
     <div className="p-6 space-y-6">
@@ -105,6 +151,12 @@ Recommendations:
             Experience the Power of AI
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Try our cutting-edge AI tools in real-time. Generate contentcreate visualswrite codeand much more with just a few clicks.
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025.tsx
+=======
+          </p>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025.tsx
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Tools Sidebar */}
           <div className="lg:col-span-1">
@@ -112,7 +164,11 @@ Recommendations:
               <h3 className="text-2xl font-bold text-white mb-6">AI Tools</h3>
               <div className="space-y-3">
                 {aiTools.map((tool) => (
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025.tsx
                   <divbutton
+=======
+                  <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025.tsx
                     key={tool.id}
                     onClick={() => {
                       setSelectedTool(tool.id);
@@ -134,6 +190,11 @@ Recommendations:
                         <div className="text-sm opacity-75">{tool.category}</div>
                     <div className="text-sm opacity-75 line-clamp-2">
                       {tool.description}
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025.tsx
+=======
+                    </div>
+                  </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025.tsx
                 ))}
           {/* Main Demo Area */}
           <div className="lg:col-span-2">
@@ -207,6 +268,11 @@ Recommendations:
                     <div
                       className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
                     />
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025.tsx
+=======
+                  </div>
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025.tsx
               )}
               {/* Output Section */}
               <div>
@@ -218,6 +284,10 @@ Recommendations:
                       className="text-gray-300 whitespace-pre-wrap"
                     >
                       {results[selectedTool]}
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025.tsx
+=======
+                    </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025.tsx
                   ) : (
                     <div className="text-gray-500 italic">
                       {isProcessing ? 'Processing your request...' : 'Click "Process" to see the AI output'}
@@ -246,6 +316,14 @@ Recommendations:
             <button className="bg-white/10 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
               <Settings className="w-5 h-5 mr-2" />
               View API Docs
+<<<<<<< HEAD:temp_broken_files/InteractiveAIToolsDemo2025.tsx
+=======
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveAIToolsDemo2025.tsx
   );
 
 

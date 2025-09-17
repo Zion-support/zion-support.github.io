@@ -1,5 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/merge-new-content-1757989975
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
@@ -7,10 +15,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-cyan-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-16"
         >
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -23,12 +28,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
             Experience the future of computing with quantum technology that solves impossible problems, 
             breaks encryption, and revolutionizes industries across the globe.
           </p>
+<<<<<<< HEAD
         </motion.div>
+=======
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Quantum Capabilities Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -70,12 +77,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
               <li>• Protein folding simulation</li>
             </ul>
           </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Quantum Applications */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div
           className="bg-gradient-to-r from-slate-800/50 to-cyan-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-cyan-400/30"
         >
           <div className="text-center mb-12">
@@ -134,12 +143,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Quantum Hardware Showcase */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <div
           className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30"
         >
           <div className="text-center mb-12">
@@ -183,12 +194,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </ul>
             </div>
           </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Quantum Software Stack */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+        <div
           className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30"
         >
           <div className="text-center mb-12">
@@ -251,12 +264,14 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
+        <div
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12 text-white">
@@ -273,7 +288,7 @@ const QuantumComputingRevolution2025: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 =======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">

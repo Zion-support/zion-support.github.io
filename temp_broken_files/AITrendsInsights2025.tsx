@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/AITrendsInsights2025.tsx
 import { Helmet } from 'react-helmet-async';
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/AITrendsInsights2025.tsx
 const AITrendsInsights2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -43,6 +47,10 @@ const AITrendsInsights2025: React.FC = () => {
               Explore the most significant AI trends that will define the next decade of technological innovation.
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/AITrendsInsights2025.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/AITrendsInsights2025.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {trends.map((trend, index) => (
               <div
@@ -93,6 +101,10 @@ const AITrendsInsights2025: React.FC = () => {
               Real-world implementations of AI technologies delivering measurable business value.
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/AITrendsInsights2025.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/AITrendsInsights2025.tsx
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <div
@@ -142,6 +154,10 @@ const AITrendsInsights2025: React.FC = () => {
               Data-driven insights into the AI market, technology adoption, and industry impact.
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/AITrendsInsights2025.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/AITrendsInsights2025.tsx
           <div className="grid md:grid-cols-3 gap-8">
             {insights.map((insight, index) => (
               <div

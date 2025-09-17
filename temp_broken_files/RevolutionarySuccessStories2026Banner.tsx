@@ -1,5 +1,39 @@
+<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStories2026Banner.tsx
 import React from 'react';
 const RevolutionarySuccessStories2026Banner: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Award
+  ArrowRight
+  TrendingUp
+  Users
+  Star,
+  X,
+  Play,
+  CheckCircle,
+  BarChart3
+} from 'lucide-react';
+
+const RevolutionarySuccessStories2026Banner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)2000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStories2026Banner.tsx
   return (
     <div
         opacity: isVisible ? 1 : 0

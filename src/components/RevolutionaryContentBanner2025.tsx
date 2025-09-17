@@ -10,7 +10,10 @@
             ⚡ REVOLUTIONARY CONTENT • JANUARY 2025
 =======
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/merge-new-content-1757989975
 import { 
   Star, 
   ArrowRight, 
@@ -152,16 +155,14 @@ const RevolutionaryContentBanner2025: React.FC = () => {
 >>>>>>> origin/feat/realtime-rag-content
       
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <div
           className="text-center mb-12"
         >
           <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
             <Sparkles className="w-6 h-6" />
             <span>REVOLUTIONARY NEW CONTENT 2025</span>
             <Star className="w-6 h-6" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 =======
 import React, { useState, useEffect } from 'react';
@@ -292,6 +293,24 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+=======
+          </div>
+          
+          <h2 className="text-6xl font-bold mb-6">
+            🌟 Revolutionary Technology Showcase
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+            Experience the most advanced technological breakthroughs that are reshaping 
+            reality itself. From conscious AI to quantum supremacy, discover the future today.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {newContent.map((content, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group border border-white/20"
+>>>>>>> origin/merge-new-content-1757989975
             >
               {slides.map((slide, index) => (
                 <div key={index} className="w-full flex-shrink-0">
@@ -308,6 +327,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -384,6 +404,27 @@ const RevolutionaryContentBanner2025 = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+=======
+                <h3 className="text-2xl font-bold text-white">{content.title}</h3>
+              </div>
+              
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                {content.description}
+              </p>
+              
+              <a 
+                href={content.link}
+                className={`inline-flex items-center space-x-2 bg-gradient-to-r ${content.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+              >
+                <span>Explore Now</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <div
+>>>>>>> origin/merge-new-content-1757989975
           className="text-center mt-12"
         >
           <div className="inline-flex items-center space-x-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-6">
@@ -411,7 +452,12 @@ const RevolutionaryContentBanner2025 = () => {
               ⚛️ Enter Quantum Reality →
             </a>
           </div>
+<<<<<<< HEAD
         </motion.div>
+=======
+        </div>
+=======
+>>>>>>> origin/merge-new-content-1757989975
 import React, { useState, useEffect } from 'react';
 const RevolutionaryContentBanner2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -103,6 +103,10 @@ export default function InteractiveCaseStudies2025PromotionBanner() {
               <ArrowRight className="w-4 h-4" />
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 animate-pulse" />
+<<<<<<< HEAD:temp_broken_files/InteractiveCaseStudies2025PromotionBanner.tsx
+=======
+    </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveCaseStudies2025PromotionBanner.tsx
   );
 
 

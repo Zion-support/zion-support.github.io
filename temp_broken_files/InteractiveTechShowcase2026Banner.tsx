@@ -1,5 +1,42 @@
+<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase2026Banner.tsx
 import React from 'react';
 const InteractiveTechShowcase2026Banner: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Play
+  ArrowRight
+  Code
+  Brain
+  Zap
+  Shield,
+  X,
+  Star,
+  CheckCircle,
+  Monitor,
+  Smartphone,
+  Laptop
+} from 'lucide-react';
+
+const InteractiveTechShowcase2026Banner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)3000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveTechShowcase2026Banner.tsx
   return (
     <div
         opacity: isVisible ? 1 : 0

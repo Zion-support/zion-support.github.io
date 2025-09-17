@@ -1,5 +1,79 @@
+<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
 import React from 'react';
 const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Building2
+  TrendingUp
+  Users
+  Shield
+  ArrowRight
+  CheckCircle,
+  Star,
+  Award,
+  Zap,
+  Target,
+  BarChart3,
+  Globe,
+  Rocket,
+  Brain,
+  Sparkles
+} from 'lucide-react';
+
+const BusinessSolutionsShowcase2027PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentStatsetCurrentStat] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % 4);
+    }2000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const stats = [
+    { number: "500+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-500 to-emerald-500" },
+    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-500 to-orange-500" },
+    { number: "300%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-500 to-cyan-500" },
+    { number: "24/7"label: "Support Available"icon: Shieldcolor: "from-purple-500 to-pink-500" }
+  ];
+
+  const solutions = [
+    {
+      title: "Enterprise Solutions",
+      description: "Comprehensive enterprise-grade solutions",
+      icon: Building2,
+      color: "from-blue-600 to-indigo-600"
+    },
+    {
+      title: "Startup Solutions"
+      description: "Rapid deployment for growing startups",
+      icon: Rocket,
+      color: "from-green-600 to-emerald-600"
+    },
+    {
+      title: "SMB Solutions",
+      description: "Affordable yet powerful for SMBs",
+      icon: Users,
+      color: "from-purple-600 to-pink-600"
+    }
+  ];
+
+  const features = [
+    "AI-Powered Business Intelligence",
+    "Advanced Security Solutions",
+    "Cloud Infrastructure Management",
+    "Rapid MVP Development",
+    "Growth Analytics Platform",
+    "Digital Transformation"
+  ];
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -20,12 +94,20 @@ const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span className="text-blue-300 font-medium">Business Solutions 2027</span>
             </div>
+<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
             {/* Main Heading */}
             <divh1
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent"
             >
               Business Solutions Showcase 2027
             </divh1>
+<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
             {/* Subtitle */}
             <divp
               className="text-xl text-gray-300 leading-relaxed"
@@ -33,6 +115,10 @@ const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
               Comprehensive technology solutions designed to accelerate your business growth
               enhance efficiencyand drive innovation across all industries and company sizes.
             </divp>
+<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
             {/* Features Grid */}
             <div
               className="grid grid-cols-2 gap-3"
@@ -44,6 +130,10 @@ const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -59,6 +149,10 @@ const BusinessSolutionsShowcase2027PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD:temp_broken_files/BusinessSolutionsShowcase2027PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSolutionsShowcase2027PromotionBanner.tsx
           {/* Right Content */}
           <div
             className="space-y-8"

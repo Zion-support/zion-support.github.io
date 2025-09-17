@@ -1,5 +1,148 @@
+<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
 import React from 'react';
 const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  ArrowRight
+  CheckCircle
+  TrendingUp
+  Users
+  DollarSign,
+  Clock,
+  Target,
+  Award,
+  Star,
+  ExternalLink,
+  Play,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe
+} from 'lucide-react';
+
+const RevolutionaryCaseStudiesShowcase2026 = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [activeCasetActiveCase] = useState(0);
+  const [isVideoPlayingsetIsVideoPlaying] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)300);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const caseStudies = [
+    {
+      id: 'fintech-transformation',
+      title: 'FinTech Revolution: 500% ROI in 6 Months',
+      company: 'PayFlow Solutions',
+      industry: 'Financial Technology',
+      icon: DollarSign,
+      color: 'from-green-500 to-emerald-600',
+      challenge: 'Legacy payment processing system causing 40% transaction failures and customer churn',
+      solution: 'Implemented AI-powered fraud detectionreal-time processingand automated compliance',
+      results: {
+        roi: '500%',
+        efficiency: '300%',
+        costReduction: '60%',
+        customerSatisfaction: '95%'
+      },
+      timeline: '6 months',
+      team: '15 experts',
+      technologies: ['AI/'ML', 'Blockchain'Cloud 'Infrastructure', 'Real-time Analytics'],
+      testimonial: {
+        name: 'Sarah Chen',
+        role: 'CTO',
+        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.'
+      }
+    },
+    {
+      id: 'healthcare-ai',
+      title: 'Healthcare AI: Diagnosing 10x Faster',
+      company: 'MediTech Innovations',
+      industry: 'Healthcare Technology',
+      icon: Shield,
+      color: 'from-blue-500 to-cyan-600',
+      challenge: 'Manual diagnosis processes taking 2-3 dayscausing delayed treatments and patient dissatisfaction',
+      solution: 'Deployed AI diagnostic toolsautomated patient triageand predictive health analytics',
+      results: {
+        roi: '400%',
+        efficiency: '1000%',
+        costReduction: '45%',
+        customerSatisfaction: '98%'
+      },
+      timeline: '8 months',
+      team: '20 experts',
+      technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT Integration'],
+      testimonial: {
+        name: 'Dr. Michael Rodriguez',
+        role: 'Chief Medical Officer',
+        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.'
+      }
+    },
+    {
+      id: 'ecommerce-automation',
+      title: 'E-commerce Automation: $50M Revenue Boost',
+      company: 'ShopGlobal',
+      industry: 'E-commerce',
+      icon: Globe,
+      color: 'from-purple-500 to-pink-600',
+      challenge: 'Manual inventory management and customer service causing 30% lost sales opportunities',
+      solution: 'Implemented AI-driven inventory optimizationautomated customer serviceand dynamic pricing',
+      results: {
+        roi: '600%',
+        efficiency: '400%',
+        costReduction: '50%',
+        customerSatisfaction: '92%'
+      },
+      timeline: '10 months',
+      team: '25 experts',
+      technologies: ['Machine 'Learning', 'NLP'Computer 'Vision', 'Cloud Computing'],
+      testimonial: {
+        name: 'Jennifer Walsh',
+        role: 'CEO',
+        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.'
+      }
+    },
+    {
+      id: 'manufacturing-iot',
+      title: 'Smart Manufacturing: Zero Downtime Achievement',
+      company: 'AutoParts Pro',
+      industry: 'Manufacturing',
+      icon: Zap,
+      color: 'from-orange-500 to-red-600',
+      challenge: 'Unplanned downtime costing $2M monthly and 15% production efficiency loss',
+      solution: 'Deployed IoT sensorspredictive maintenance AIand real-time production optimization',
+      results: {
+        roi: '350%',
+        efficiency: '250%',
+        costReduction: '40%',
+        customerSatisfaction: '97%'
+      },
+      timeline: '12 months',
+      team: '18 experts',
+      technologies: [', 'IoT', 'Edge 'Computing', 'Predictive 'Analytics', 'Digital Twins'],
+      testimonial: {
+        name: 'Robert Kim',
+        role: 'Operations Director',
+        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.'
+      }
+    }
+  ];
+
+  const overallStats = [
+    { label: 'Projects 'Completed', 'value: '200+'icon: CheckCircle },
+    { label: 'Average 'ROI', 'value: '450%'icon: TrendingUp },
+    { label: 'Client 'Satisfaction', 'value: '96%'icon: Star },
+    { label: 'Years 'Experience', 'value: '8+'icon: Award }
+  ];
+
+  if (!isVisible) return null;
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,6 +157,10 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
             Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -28,6 +175,10 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
         {/* Case Study Selector */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -51,6 +202,10 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
             </button>
           ))}
         </div>
+<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
         {/* Active Case Study Details */}
           <div
             key={activeCase}
@@ -135,6 +290,10 @@ const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
         {/* CTA Section */}
         <div
           className="text-center"

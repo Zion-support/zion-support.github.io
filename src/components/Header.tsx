@@ -1,5 +1,50 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Heart, 
+  Rocket, 
+  Sparkles,
+  BarChart3,
+  Network,
+  Globe,
+  Users,
+  FileText,
+  Phone,
+  Mail,
+  MapPin,
+  Search,
+  Bell,
+  User,
+  Settings,
+  Star,
+  Zap,
+  Briefcase,
+  Target,
+  Atom,
+  Palette,
+  Code,
+  Leaf,
+  Gamepad2,
+  GraduationCap,
+  Microscope,
+  Satellite,
+  Wrench,
+  Lightbulb,
+  Server,
+  Lock
+} from 'lucide-react';
+
+>>>>>>> origin/merge-new-content-1757989975
 function Header() {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchQuery, setSearchQuery] = useState('');

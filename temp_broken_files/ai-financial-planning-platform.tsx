@@ -97,6 +97,7 @@ export default function AIFinancialPlanningPlatform() {
                 Intelligent financial planning and wealth management with AI. Get personalized plans, 
                 portfolio optimization, and risk management that drives financial success.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD:temp_broken_files/ai-financial-planning-platform.tsx
                 <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
                 >
@@ -105,6 +106,23 @@ export default function AIFinancialPlanningPlatform() {
                   className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   Watch Demo
+=======
+                <button
+                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
+                >
+                  Start Free Trial
+                </button>
+                <button
+                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
+                >
+                  Watch Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-financial-planning-platform.tsx
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,6 +135,12 @@ export default function AIFinancialPlanningPlatform() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Our AI platform combines advanced financial modeling with machine learning to deliver 
                 comprehensive financial planning and wealth management solutions.
+<<<<<<< HEAD:temp_broken_files/ai-financial-planning-platform.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-financial-planning-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -129,6 +153,10 @@ export default function AIFinancialPlanningPlatform() {
                       {feature.icon}
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+<<<<<<< HEAD:temp_broken_files/ai-financial-planning-platform.tsx
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-financial-planning-platform.tsx
               ))}
         {/* Benefits Section */}
         <section className="py-20 bg-black">
@@ -142,6 +170,12 @@ export default function AIFinancialPlanningPlatform() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Experience dramatic improvements in financial planning efficiency, investment returns, and 
                 goal achievement with our AI-powered financial planning platform.
+<<<<<<< HEAD:temp_broken_files/ai-financial-planning-platform.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-financial-planning-platform.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div
@@ -152,6 +186,11 @@ export default function AIFinancialPlanningPlatform() {
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-yellow-400" />
                     <span className="text-white font-medium text-sm">{benefit}</span>
+<<<<<<< HEAD:temp_broken_files/ai-financial-planning-platform.tsx
+=======
+                  </div>
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-financial-planning-platform.tsx
               ))}
         {/* Use Cases Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -165,6 +204,12 @@ export default function AIFinancialPlanningPlatform() {
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 From retirement planning to investment management, our platform provides AI-powered 
                 solutions for every aspect of your financial life.
+<<<<<<< HEAD:temp_broken_files/ai-financial-planning-platform.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-financial-planning-platform.tsx
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {useCases.map((useCase, index) => (
                 <div
@@ -175,6 +220,10 @@ export default function AIFinancialPlanningPlatform() {
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Calculator className="w-6 h-6 text-yellow-400" />
                   <span className="text-white font-medium text-sm">{useCase}</span>
+<<<<<<< HEAD:temp_broken_files/ai-financial-planning-platform.tsx
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-financial-planning-platform.tsx
               ))}
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
@@ -188,6 +237,7 @@ export default function AIFinancialPlanningPlatform() {
                 Join thousands of individuals that have already revolutionized their financial planning 
                 with AI automation. Start your free trial today.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD:temp_broken_files/ai-financial-planning-platform.tsx
                 <divbutton
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
                 >
@@ -196,6 +246,23 @@ export default function AIFinancialPlanningPlatform() {
                   className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   Contact Sales
+=======
+                <button
+                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
+                >
+                  Get Started Now
+                </button>
+                <button
+                  className="px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200"
+                >
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-financial-planning-platform.tsx
     </>
   );
 

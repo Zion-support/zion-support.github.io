@@ -1,6 +1,85 @@
 <<<<<<< HEAD:temp_broken_files/AdvancedPricing.tsx
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/AdvancedPricing.tsx
 const AdvancedPricing: React.FC = () => {
+=======
+CheckStarZapCrownInfinity
+
+interface PricingTier {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  icon: React.ComponentType<any>;
+  ctaText: string;
+  ctaLink: string;
+}
+
+const pricingTiers: PricingTier[] = [
+  {
+    name: "Starter",
+    price: "$49",
+    period: "month",
+    description: "Perfect for small businesses getting started with AI",
+    features: [
+      "Basic AI Integration",
+      "Email Support",
+      "5 AI Agents",
+      "Standard Analytics",
+      "Basic Security",
+      "1TB Storage"
+    ],
+    icon: Zap,
+    ctaText: "Get Started",
+    ctaLink: "/contact"
+  },
+  {
+    name: "Professional",
+    price: "$149",
+    period: "month",
+    description: "Advanced features for growing businesses",
+    features: [
+      "Advanced AI Integration",
+      "Priority Support",
+      "25 AI Agents",
+      "Advanced Analytics",
+      "Enhanced Security",
+      "10TB Storage",
+      "Custom Integrations",
+      "API Access"
+    ],
+    popular: true,
+    icon: Star,
+    ctaText: "Start Free Trial",
+    ctaLink: "/contact"
+  },
+  {
+    name: "Enterprise",
+    price: "$499",
+    period: "month",
+    description: "Complete solution for large organizations",
+    features: [
+      "Full AI Suite",
+      "24/7 Dedicated Support",
+      "Unlimited AI Agents",
+      "Enterprise Analytics",
+      "Maximum Security",
+      "Unlimited Storage",
+      "Custom Development",
+      "Full API Access",
+      "SLA Guarantee",
+      "On-premise Options"
+    ],
+    icon: Crown,
+    ctaText: "Contact Sales",
+    ctaLink: "/contact"
+  }
+];
+
+export default function AdvancedPricing() {
+>>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedPricing.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +125,13 @@ const AdvancedPricing: React.FC = () => {
                     <Check className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                     <span className="text-white/80">{feature}</span>
                 ))}
+<<<<<<< HEAD:temp_broken_files/AdvancedPricing.tsx
               <diva
+=======
+              </ul>
+
+              <a
+>>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedPricing.tsx
                 href={tier.ctaLink}
                 className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                   tier.popular
@@ -55,6 +140,11 @@ const AdvancedPricing: React.FC = () => {
                 }`}
               >
                 {tier.ctaText}
+<<<<<<< HEAD:temp_broken_files/AdvancedPricing.tsx
+=======
+              </a>
+            </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedPricing.tsx
           ))}
         <div className="text-center mt-12">
           <p className="text-white/70 mb-4">

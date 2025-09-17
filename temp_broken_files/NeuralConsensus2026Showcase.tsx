@@ -1,4 +1,30 @@
+<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026Showcase.tsx
 import React from 'react';
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Zap
+  TrendingUp
+  Users
+  Target
+  CheckCircle
+  ArrowRight
+  Play,
+  BarChart3,
+  Clock,
+  Shield,
+  Lightbulb,
+  Globe,
+  Award,
+  Star
+} from 'lucide-react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026Showcase.tsx
 const NeuralConsensus2026Showcase: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
@@ -26,6 +52,10 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             Discover how collective AI intelligence is transforming business operations and achieving unprecedented results across industries.
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026Showcase.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026Showcase.tsx
         {/* Interactive Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((featureindex) => (
@@ -66,6 +96,10 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026Showcase.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026Showcase.tsx
         {/* Case Studies */}
         <div
           className="mb-16"
@@ -103,6 +137,10 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026Showcase.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026Showcase.tsx
         {/* Call to Action */}
         <div
           className="text-center"
@@ -117,22 +155,38 @@ const NeuralConsensus2026Showcase: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/src/pages/blog/ai-2026-neural-consensus-revolution">
+<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026Showcase.tsx
                 <divbutton
+=======
+                <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026Showcase.tsx
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Read Full Analysis
                   <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026Showcase.tsx
                 </divbutton>
+=======
+                </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026Showcase.tsx
               </a>
               <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi">
+<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026Showcase.tsx
                 <divbutton
+=======
+                <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026Showcase.tsx
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   <BarChart3 className="w-5 h-5 mr-2" />
                   View Case Studies
                   <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026Showcase.tsx
                 </divbutton>
+=======
+                </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026Showcase.tsx
               </a>
             </div>
           </div>

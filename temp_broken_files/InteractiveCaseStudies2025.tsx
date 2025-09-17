@@ -162,6 +162,12 @@ export default function InteractiveCaseStudies2025() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover how leading companies are transforming their operations with cutting-edge AI solutions. 
             Real case studiesreal resultsreal impact.
+<<<<<<< HEAD:temp_broken_files/InteractiveCaseStudies2025.tsx
+=======
+          </p>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveCaseStudies2025.tsx
         {/* Industry Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -178,6 +184,11 @@ export default function InteractiveCaseStudies2025() {
             >
               {industry}
           ))}
+<<<<<<< HEAD:temp_broken_files/InteractiveCaseStudies2025.tsx
+=======
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveCaseStudies2025.tsx
         {/* Case Studies Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -239,7 +250,17 @@ export default function InteractiveCaseStudies2025() {
                   <button className="text-blue-400 hover:text-blue-300 transition-colors duration-300 flex items-center gap-1">
                     <span className="text-sm font-medium">Read More</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+<<<<<<< HEAD:temp_broken_files/InteractiveCaseStudies2025.tsx
             ))}
+=======
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveCaseStudies2025.tsx
         {/* CTA Section */}
         <div
           className="text-center mt-16"
@@ -257,6 +278,15 @@ export default function InteractiveCaseStudies2025() {
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2">
                 <Target className="w-5 h-5" />
                 Start Your Project
+<<<<<<< HEAD:temp_broken_files/InteractiveCaseStudies2025.tsx
+=======
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveCaseStudies2025.tsx
       {/* Case Study Modal */}
       <div>
         {selectedCase && (
@@ -319,6 +349,7 @@ export default function InteractiveCaseStudies2025() {
                     Download Full Case Study
                   <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                     Schedule Consultation
+<<<<<<< HEAD:temp_broken_files/InteractiveCaseStudies2025.tsx
         )}
   );
 
@@ -336,6 +367,14 @@ const function InteractiveCaseStudies2025() { = () => {
           <h1 className="text-5xl font-bold mb-6">function InteractiveCaseStudies2025() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
+=======
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveCaseStudies2025.tsx
       </div>
     </div>
   );

@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/UltimateBreakthroughBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateBreakthroughBanner.tsx
 const UltimateBreakthroughBanner: React.FC = () => {
   return (
     <div

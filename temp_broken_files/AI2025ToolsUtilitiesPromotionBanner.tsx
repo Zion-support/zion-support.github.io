@@ -1,5 +1,73 @@
+<<<<<<< HEAD:temp_broken_files/AI2025ToolsUtilitiesPromotionBanner.tsx
 import React from 'react';
 const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Wrench
+  Zap
+  Star,
+  ArrowRight,
+  Play,
+  Download,
+  ExternalLink,
+  CheckCircle,
+  Cpu,
+  Shield,
+  Globe,
+  Target
+} from 'lucide-react';
+
+const AI2025ToolsUtilitiesPromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentToolsetCurrentTool] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentTool((prev) => (prev + 1) % featuredTools.length);
+    }2500);
+    return () => clearInterval(interval);
+  }[]);
+
+  const featuredTools = [
+    {
+      name: "AI Code Assistant",
+      description: "Intelligent code completion and debugging",
+      rating: 4.9,
+      users: "50K+",
+      icon: Cpu,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Smart Analytics Dashboard",
+      description: "Real-time data visualization and insights",
+      rating: 4.8,
+      users: "25K+",
+      icon: Target,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      name: "AI Security Scanner",
+      description: "Automated vulnerability detection",
+      rating: 4.9,
+      users: "15K+",
+      icon: Shield,
+      color: "from-red-500 to-pink-500"
+    }
+  ];
+
+  const stats = [
+    { icon: Zapvalue: "100+"label: "AI Tools Available" },
+    { icon: Starvalue: "4.8"label: "Average Rating" },
+    { icon: Globevalue: "200K+"label: "Active Users" },
+    { icon: CheckCirclevalue: "99.9%"label: "Uptime" }
+  ];
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ToolsUtilitiesPromotionBanner.tsx
   return (
     <section className="py-16 bg-gradient-to-r from-slate-900 via-indigo-900 to-blue-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -51,20 +119,37 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
+<<<<<<< HEAD:temp_broken_files/AI2025ToolsUtilitiesPromotionBanner.tsx
               <divbutton
+=======
+              <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ToolsUtilitiesPromotionBanner.tsx
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold rounded-xl hover:from-indigo-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 Explore All Tools
                 <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD:temp_broken_files/AI2025ToolsUtilitiesPromotionBanner.tsx
               </divbutton>
               <divbutton
+=======
+              </button>
+              
+              <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ToolsUtilitiesPromotionBanner.tsx
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo
+<<<<<<< HEAD:temp_broken_files/AI2025ToolsUtilitiesPromotionBanner.tsx
               </divbutton>
             </div>
           </div>
+=======
+              </button>
+            </div>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ToolsUtilitiesPromotionBanner.tsx
           {/* Right Content - Featured Tools */}
           <div
             className="space-y-6"
@@ -75,6 +160,10 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-2">Featured Tool</h3>
                 <p className="text-gray-300">Most popular this week</p>
               </div>
+<<<<<<< HEAD:temp_broken_files/AI2025ToolsUtilitiesPromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ToolsUtilitiesPromotionBanner.tsx
               <div
                 key={currentTool}
                 className="text-center"
@@ -103,6 +192,10 @@ const AI2025ToolsUtilitiesPromotionBanner: React.FC = () => {
                   </button>
                 </div>
               </div>
+<<<<<<< HEAD:temp_broken_files/AI2025ToolsUtilitiesPromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AI2025ToolsUtilitiesPromotionBanner.tsx
               {/* Tool Indicators */}
               <div className="flex justify-center space-x-2 mt-6">
                 {featuredTools.map((_index) => (

@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2028.tsx
 import { Helmet } from 'react-helmet-async';
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2028.tsx
 const QuantumRealityManipulation2028: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">
@@ -48,6 +52,10 @@ const QuantumRealityManipulation2028: React.FC = () => {
             Harness the power of quantum mechanics to manipulate matter, energy, space, and time at the most fundamental level
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2028.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2028.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
             {
@@ -118,6 +126,10 @@ const QuantumRealityManipulation2028: React.FC = () => {
               Revolutionary Applications
             </h2>
           </div>
+<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2028.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2028.tsx
           <div className="grid md:grid-cols-2 gap-12">
             <div
               whileInView={{ opacity: 1, x: 0 }}
@@ -160,6 +172,10 @@ const QuantumRealityManipulation2028: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2028.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2028.tsx
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-8"
@@ -214,6 +230,10 @@ const QuantumRealityManipulation2028: React.FC = () => {
             Quantum Performance Metrics
           </h2>
         </div>
+<<<<<<< HEAD:temp_broken_files/QuantumRealityManipulation2028.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/QuantumRealityManipulation2028.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { label: "Matter Creation Rate", value: "10^24 atoms/sec", icon: "⚛️", color: "from-cyan-400 to-blue-400" },

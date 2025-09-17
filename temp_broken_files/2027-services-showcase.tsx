@@ -139,6 +139,15 @@ export default function ServicesShowcase2027() {
               >
                 <DollarSign className="w-5 h-5" />
                 <span>View Pricing</span>
+<<<<<<< HEAD:temp_broken_files/2027-services-showcase.tsx
+=======
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/2027-services-showcase.tsx
       {/* Search and Filters */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
@@ -247,7 +256,18 @@ export default function ServicesShowcase2027() {
                     <div className="mt-4">
                       <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">
                         {service.category}
+<<<<<<< HEAD:temp_broken_files/2027-services-showcase.tsx
               ))}
+=======
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/2027-services-showcase.tsx
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div
@@ -265,6 +285,11 @@ export default function ServicesShowcase2027() {
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Clear Filters
+<<<<<<< HEAD:temp_broken_files/2027-services-showcase.tsx
+=======
+              </button>
+            </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2027-services-showcase.tsx
           )}
       {/* Contact Section */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">

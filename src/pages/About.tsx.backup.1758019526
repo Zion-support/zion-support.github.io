@@ -126,7 +126,11 @@ export default function About() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
                 <divdiv
+=======
+                <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
                   key={stat.label}
                   className="text-center"
                 >
@@ -135,7 +139,11 @@ export default function About() {
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-slate-300">{stat.label}</div>
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
                 </divdiv>
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
               ))}
             </div>
           </div>
@@ -145,7 +153,11 @@ export default function About() {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
               <divdiv
+=======
+              <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
               >
                 <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-lg text-slate-300 mb-6">
@@ -166,9 +178,15 @@ export default function About() {
                     <p className="text-slate-300">Every solution we build is designed to deliver measurable business outcomes.</p>
                   </div>
                 </div>
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
               </divdiv>
 
               <divdiv
+=======
+              </div>
+
+              <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
                 className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-lg rounded-2xl border border-white/10 p-8"
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Our Vision</h3>
@@ -190,7 +208,11 @@ export default function About() {
                     <span className="text-slate-300">Creating sustainable technology</span>
                   </div>
                 </div>
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
               </divdiv>
+=======
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
             </div>
           </div>
         </section>
@@ -198,18 +220,30 @@ export default function About() {
         {/* Values Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
             <divdiv
+=======
+            <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 These principles guide everything we do, from developing solutions to serving our clients.
               </p>
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
             </divdiv>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <divdiv
+=======
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
                   key={value.title}
                   className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
@@ -218,7 +252,11 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-slate-300">{value.description}</p>
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
                 </divdiv>
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
               ))}
             </div>
           </div>
@@ -227,21 +265,33 @@ export default function About() {
         {/* Timeline Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
             <divdiv
+=======
+            <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">Our Journey</h2>
               <p className="text-xl text-slate-300">
                 From humble beginnings to industry leadership, here's how we've grown and evolved.
               </p>
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
             </divdiv>
+=======
+            </div>
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
 
             <div className="relative">
               {/* Timeline Line */}
               <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500"></div>
               
               {timeline.map((item, index) => (
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
                 <divdiv
+=======
+                <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
                   key={item.year}
                   className={`relative flex items-center mb-12 ${
                     index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
@@ -258,7 +308,11 @@ export default function About() {
                       <p className="text-slate-300">{item.description}</p>
                     </div>
                   </div>
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
                 </divdiv>
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
               ))}
             </div>
           </div>
@@ -267,7 +321,11 @@ export default function About() {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
             <divdiv
+=======
+            <div
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
               className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 backdrop-blur-lg rounded-2xl border border.white/10 p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -285,7 +343,11 @@ export default function About() {
                   View Careers
                 </button>
               </div>
+<<<<<<< HEAD:src/pages/About.tsx.backup.1758019526
             </divdiv>
+=======
+            </div>
+>>>>>>> origin/merge-new-content-1757989975:src/pages/About.tsx
           </div>
         </section>
       </div>

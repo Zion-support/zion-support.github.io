@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
 const InteractiveContentShowcase2034_2036: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const contentItems = [
@@ -55,9 +59,11 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12">
       <div
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
         initial={{ opacity: 0, y: 20 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
         className="text-center mb-12"
       >
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -67,6 +73,10 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
           Explore the most revolutionary technologies that will reshape the future of human consciousness and reality itself
         </p>
       </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
       {/* Tab Navigation */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">
         {contentItems.map((item, index) => (
@@ -78,8 +88,6 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
                 ? 'bg-white text-purple-600 shadow-lg'
                 : 'bg-white/20 text-white hover:bg-white/30'
             }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             <span className="mr-2">{item.icon}</span>
             {item.title.split(' ')[0]} {item.title.split(' ')[1]}
@@ -88,13 +96,12 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
       </div>
       {/* Content Display */}
       <div className="relative min-h-[500px]">
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
         <AnimatePresence mode="wait">
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
           <div
             key={activeTab}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
             className="grid md:grid-cols-2 gap-12 items-center"
           >
             {/* Content Info */}
@@ -117,9 +124,6 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
                 {contentItems[activeTab].features.map((feature, idx) => (
                   <div
                     key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
                     className="flex items-center space-x-2 text-sm text-gray-300"
                   >
                     <div className={`w-2 h-2 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}></div>
@@ -127,14 +131,17 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
               <motion.a
+=======
+
+              <a
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
                 href={contentItems[activeTab].link}
                 className={`inline-block bg-gradient-to-r ${contentItems[activeTab].color} text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 Explore {contentItems[activeTab].title.split(' ')[0]} Technology →
-              </motion.a>
+              </a>
             </div>
             {/* Interactive Visualization */}
             <div className="relative">
@@ -176,13 +183,19 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
         </AnimatePresence>
+=======
+        </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
       </div>
       {/* Additional Features */}
       <div
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2034-2036.tsx
         initial={{ opacity: 0, y: 20 }}
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentShowcase2034-2036.tsx
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
         className="mt-12 grid md:grid-cols-3 gap-6"
       >
         <div className="text-center">

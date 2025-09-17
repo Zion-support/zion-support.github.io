@@ -141,6 +141,12 @@ export default function UltimateServicesShowcase2025() {
               >
                 {category}
             ))}
+<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
+=======
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateServicesShowcase2025.tsx
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((serviceindex) => (
@@ -184,6 +190,12 @@ export default function UltimateServicesShowcase2025() {
                 >
                   Get Started Now
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
+=======
+                </a>
+              </div>
+            </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateServicesShowcase2025.tsx
           ))}
         {/* Stats Section */}
         <div
@@ -207,6 +219,13 @@ export default function UltimateServicesShowcase2025() {
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-600 mb-2">50+</div>
               <div className="text-sm text-gray-600">Countries Served</div>
+<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
+=======
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateServicesShowcase2025.tsx
         {/* CTA Section */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -231,6 +250,14 @@ export default function UltimateServicesShowcase2025() {
             >
               <TrendingUp className="w-5 h-5 mr-2" />
               View Success Stories
+<<<<<<< HEAD:temp_broken_files/UltimateServicesShowcase2025.tsx
+=======
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateServicesShowcase2025.tsx
   );
 
 

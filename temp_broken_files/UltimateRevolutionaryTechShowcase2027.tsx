@@ -1,4 +1,9 @@
+<<<<<<< HEAD:temp_broken_files/UltimateRevolutionaryTechShowcase2027.tsx
 import React from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateRevolutionaryTechShowcase2027.tsx
 const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
   return (
     <div
@@ -77,6 +82,10 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD:temp_broken_files/UltimateRevolutionaryTechShowcase2027.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateRevolutionaryTechShowcase2027.tsx
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -108,11 +117,9 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                    animate={{
                       y: [0, -20, 0],
                       opacity: [0.3, 0.8, 0.3],
                     }}
-                    transition={{
                       duration: 3 + Math.random() * 2,
                       repeat: Infinity,
                       delay: Math.random() * 2,

@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/TranscendentConsciousness2036.tsx
 import { Helmet } from 'react-helmet-async';
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/TranscendentConsciousness2036.tsx
 const TranscendentConsciousness2036: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-900 via-purple-900 to-indigo-900 text-white">
@@ -51,6 +55,10 @@ const TranscendentConsciousness2036: React.FC = () => {
             Progress through the stages of consciousness evolution to achieve transcendent awareness
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/TranscendentConsciousness2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/TranscendentConsciousness2036.tsx
         <div className="space-y-8">
           {[
             {
@@ -127,6 +135,10 @@ const TranscendentConsciousness2036: React.FC = () => {
               Guided programs to accelerate your consciousness evolution journey
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/TranscendentConsciousness2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/TranscendentConsciousness2036.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -215,6 +227,10 @@ const TranscendentConsciousness2036: React.FC = () => {
             Track your progress through advanced consciousness monitoring and analysis
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/TranscendentConsciousness2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/TranscendentConsciousness2036.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {

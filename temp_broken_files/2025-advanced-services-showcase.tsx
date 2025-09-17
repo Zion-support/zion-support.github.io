@@ -182,6 +182,13 @@ export default function AdvancedServicesShowcase() {
             className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
           >
             Contact
+<<<<<<< HEAD:temp_broken_files/2025-advanced-services-showcase.tsx
+=======
+          </a>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-advanced-services-showcase.tsx
   );
   const ServiceList = ({ service }: { service: any }) => (
     <div
@@ -250,6 +257,15 @@ export default function AdvancedServicesShowcase() {
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
               >
                 Contact Sales
+<<<<<<< HEAD:temp_broken_files/2025-advanced-services-showcase.tsx
+=======
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-advanced-services-showcase.tsx
   );
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
@@ -267,11 +283,19 @@ export default function AdvancedServicesShowcase() {
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
               2025 Advanced Services Showcase
+<<<<<<< HEAD:temp_broken_files/2025-advanced-services-showcase.tsx
+=======
+            </divh1>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-advanced-services-showcase.tsx
             <divp 
               className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             >
               Discover our comprehensive portfolio of real, innovative, and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
+<<<<<<< HEAD:temp_broken_files/2025-advanced-services-showcase.tsx
+=======
+            </divp>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-advanced-services-showcase.tsx
             <div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
@@ -284,6 +308,15 @@ export default function AdvancedServicesShowcase() {
               <div className="flex items-center gap-2 text-white">
                 <CheckCircle className="w-5 h-5 text-green-300" />
                 <span>Market Validated</span>
+<<<<<<< HEAD:temp_broken_files/2025-advanced-services-showcase.tsx
+=======
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-advanced-services-showcase.tsx
       {/* Contact Information Banner */}
       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -402,6 +435,10 @@ export default function AdvancedServicesShowcase() {
                     <ServiceList key={service.id} service={service} />
                   ))}
               )}
+<<<<<<< HEAD:temp_broken_files/2025-advanced-services-showcase.tsx
+=======
+            </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-advanced-services-showcase.tsx
           )}
         {/* Call to Action */}
         <div className="mt-16 text-center">

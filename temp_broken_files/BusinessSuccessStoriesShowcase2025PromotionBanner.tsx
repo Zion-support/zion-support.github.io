@@ -1,5 +1,41 @@
+<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
 import React from 'react';
 const BusinessSuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  ArrowRight
+  Star
+  TrendingUp
+  Users
+  DollarSign
+  Sparkles,
+  X,
+  Play,
+  ExternalLink,
+  CheckCircle,
+  Award
+} from 'lucide-react';
+
+const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1500);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -43,11 +79,19 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                     <Star className="w-4 h-4 text-yellow-300 fill-current" />
                   </div>
                 </div>
+<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
                 <divh2
                   className="text-2xl lg:text-3xl font-bold text-white mb-2"
                 >
                   🏆 Business Success Stories 2025
                 </divh2>
+<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
                 <divp
                   className="text-green-100 text-lg mb-4 max-w-2xl"
                 >
@@ -56,6 +100,10 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                   <span className="font-semibold text-white"> 2.5M+ hours saved</span>and 
                   <span className="font-semibold text-white"> $50M+ in cost savings</span> with our solutions.
                 </divp>
+<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
                 <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-4"
                 >
@@ -72,6 +120,10 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner: React.FC = () => {
                     <span>HealthcarePlus: +280% ROI</span>
                   </div>
                 </div>
+<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025PromotionBanner.tsx
                 <div
                   className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
                 >

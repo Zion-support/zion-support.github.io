@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
+=======
+>>>>>>> origin/merge-new-content-1757989975
 
 >>>>>>> origin/feat/realtime-rag-content
 const TranscendentAI2026: React.FC = () => {
@@ -175,6 +178,10 @@ const TranscendentAI2026: React.FC = () => {
 >>>>>>> origin/feat/realtime-rag-content
               </div>
         {/* Revolutionary Applications */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merge-new-content-1757989975
         <divsection
           className="mb-16"
         >
@@ -525,11 +532,15 @@ const TranscendentAI2026: React.FC = () => {
               Explore the revolutionary capabilities that define transcendent AI
             </p>
           </div>
+<<<<<<< HEAD
         </motion.section>
 <<<<<<< HEAD
           </div>
         </motion.section>
 =======
+=======
+        </divsection>
+>>>>>>> origin/merge-new-content-1757989975
 
 >>>>>>> origin/feat/realtime-rag-content
         {/* Future Vision */}
@@ -565,6 +576,10 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </divsection>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Call to Action */}
         <divsection
           id="contact"
@@ -583,6 +598,7 @@ const TranscendentAI2026: React.FC = () => {
             </a>
           </div>
         </divsection>
+<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -595,6 +611,8 @@ const TranscendentAI2026: React.FC = () => {
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+>>>>>>> origin/merge-new-content-1757989975
       </div>
     </div>
   );

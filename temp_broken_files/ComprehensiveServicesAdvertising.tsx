@@ -232,6 +232,15 @@ export default function ComprehensiveServicesAdvertising() {
               >
                 <DollarSign className="w-5 h-5 mr-2" />
                 View Pricing
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesAdvertising.tsx
+=======
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesAdvertising.tsx
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-900 to-purple-900 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -263,6 +272,12 @@ export default function ComprehensiveServicesAdvertising() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our cutting-edge services span across AI, blockchain, quantum computing, and sustainable technology. 
             Each solution is designed to deliver measurable business value and competitive advantage.
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesAdvertising.tsx
+=======
+          </p>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesAdvertising.tsx
         {/* Category Filter */}
         <div className="mb-12">
           <div className="flex flex-wrap justify-center gap-4">
@@ -366,7 +381,17 @@ export default function ComprehensiveServicesAdvertising() {
                   >
                     <span>Visit Service Page</span>
                     <Globe className="w-4 h-4 ml-2" />
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesAdvertising.tsx
             ))}
+=======
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesAdvertising.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-16"
@@ -390,6 +415,15 @@ export default function ComprehensiveServicesAdvertising() {
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Get Quote
+<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesAdvertising.tsx
+=======
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/ComprehensiveServicesAdvertising.tsx
       {/* Footer Contact Section */}
       <div className="bg-gray-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

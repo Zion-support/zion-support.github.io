@@ -1,6 +1,22 @@
 <<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
 const ThemeToggle: React.FC = () => {
+=======
+import { Sun, Moon, Monitor } from 'lucide-react';
+
+interface ThemeToggleProps {
+  currentTheme: 'dark' | 'light';
+  onThemeChange: (theme: 'dark' | 'light') => void;
+}
+
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }) => {
+  const themes = [
+    { id: 'dark', icon: Moon, label: 'Dark Mode', color: 'from-gray-800 to-gray-900' },
+    { id: 'light', icon: Sun, label: 'Light Mode', color: 'from-yellow-400 to-orange-500' },
+  ] as const;
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ThemeToggle.tsx
   return (
     <div className="fixed top-32 right-6 z-50">
       <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl">
@@ -9,7 +25,11 @@ const ThemeToggle: React.FC = () => {
             const Icon = theme.icon;
             const isActive = currentTheme === theme.id;
             return (
+<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
               <divbutton
+=======
+              <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/ThemeToggle.tsx
                 key={theme.id}
                 onClick={() => onThemeChange(theme.id)}
                 className={`relative p-3 rounded-xl transition-all duration-300 ${
@@ -27,7 +47,11 @@ const ThemeToggle: React.FC = () => {
                     className="absolute inset-0 rounded-xl border-2 border-white/30"
                   />
                 )}
+<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
               </divbutton>
+=======
+              </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ThemeToggle.tsx
             );
           })}
         </div>
@@ -40,6 +64,7 @@ const ThemeToggle: React.FC = () => {
           {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode
         </span>
       </div>
+<<<<<<< HEAD:temp_broken_files/ThemeToggle.tsx
 =======
 import React from "react";
 
@@ -53,6 +78,8 @@ const ThemeToggle = () => {
         </div>
       </div>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ThemeToggle.tsx
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/components/ThemeToggle.tsx
     </div>
   );
 

@@ -1,4 +1,9 @@
+<<<<<<< HEAD:temp_broken_files/InteractiveFeaturesShowcase.tsx
 import React from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveFeaturesShowcase.tsx
 const InteractiveFeaturesShowcase: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white py-20 relative overflow-hidden">
@@ -64,6 +69,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                       ))}
                     </div>
                     <div className="flex gap-4">
+<<<<<<< HEAD:temp_broken_files/InteractiveFeaturesShowcase.tsx
                       <divbutton
                         className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
                       >
@@ -74,6 +80,18 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                       >
                         Learn More
                       </divbutton>
+=======
+                      <button
+                        className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                      >
+                        Try Interactive Demo →
+                      </button>
+                      <button
+                        className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold"
+                      >
+                        Learn More
+                      </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveFeaturesShowcase.tsx
                     </div>
                   </div>
                   <div className="relative">
@@ -168,11 +186,20 @@ const InteractiveFeaturesShowcase: React.FC = () => {
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveFeaturesShowcase.tsx
               <divbutton
                 className="w-full bg-white/20 text-white py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm"
               >
                 Try Demo
               </divbutton>
+=======
+              
+              <button
+                className="w-full bg-white/20 text-white py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm"
+              >
+                Try Demo
+              </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveFeaturesShowcase.tsx
             </div>
           ))}
         </div>

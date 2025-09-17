@@ -174,6 +174,16 @@ export default function AIInnovationShowcase2025() {
                 <div className="flex items-center text-white">
                   <Users className="h-5 w-5 mr-2" />
                   <span className="font-semibold">67% Global Adoption</span>
+<<<<<<< HEAD:temp_broken_files/AIInnovationShowcase2025.tsx
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationShowcase2025.tsx
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div
@@ -191,6 +201,11 @@ export default function AIInnovationShowcase2025() {
             >
               {category}
           ))}
+<<<<<<< HEAD:temp_broken_files/AIInnovationShowcase2025.tsx
+=======
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationShowcase2025.tsx
         {/* Innovations Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -237,7 +252,18 @@ export default function AIInnovationShowcase2025() {
                   <div className="mt-4 flex items-center text-purple-300 group-hover:text-purple-200 transition-colors">
                     <span className="text-sm font-medium">Learn More</span>
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+<<<<<<< HEAD:temp_broken_files/AIInnovationShowcase2025.tsx
             ))}
+=======
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationShowcase2025.tsx
       {/* Innovation Detail Modal */}
       <div>
         {selectedInnovation && (
@@ -285,7 +311,17 @@ export default function AIInnovationShowcase2025() {
                   Get Started
                 <button className="flex-1 bg-white/10 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/20 transition-all duration-300">
                   Learn More
+<<<<<<< HEAD:temp_broken_files/AIInnovationShowcase2025.tsx
         )}
+=======
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationShowcase2025.tsx
       {/* Loading Overlay */}
       <div>
         {isLoading && (
@@ -296,6 +332,7 @@ export default function AIInnovationShowcase2025() {
               <div className="flex items-center space-x-3">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-500"></div>
                 <span className="text-white text-lg">Loading innovation details...</span>
+<<<<<<< HEAD:temp_broken_files/AIInnovationShowcase2025.tsx
         )}
   );
 
@@ -313,6 +350,12 @@ const function AIInnovationShowcase2025() { = () => {
           <h1 className="text-5xl font-bold mb-6">function AIInnovationShowcase2025() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
+=======
+              </div>
+            </div>
+          </div>
+        )}
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationShowcase2025.tsx
       </div>
     </div>
   );

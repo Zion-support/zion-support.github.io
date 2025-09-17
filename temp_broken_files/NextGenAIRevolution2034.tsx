@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/NextGenAIRevolution2034.tsx
 import { Helmet } from 'react-helmet-async';
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenAIRevolution2034.tsx
 const NextGenAIRevolution2034: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
@@ -51,6 +55,10 @@ const NextGenAIRevolution2034: React.FC = () => {
             Discover the breakthrough technologies that are reshaping the future of artificial intelligence
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/NextGenAIRevolution2034.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenAIRevolution2034.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
@@ -124,6 +132,10 @@ const NextGenAIRevolution2034: React.FC = () => {
               Seamlessly integrated technologies working in perfect harmony to create the ultimate AI experience
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/NextGenAIRevolution2034.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenAIRevolution2034.tsx
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               whileInView={{ opacity: 1, x: 0 }}
@@ -148,6 +160,10 @@ const NextGenAIRevolution2034: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD:temp_broken_files/NextGenAIRevolution2034.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/NextGenAIRevolution2034.tsx
             <div
               whileInView={{ opacity: 1, x: 0 }}
               className="relative"

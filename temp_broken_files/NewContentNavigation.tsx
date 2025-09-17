@@ -1,5 +1,145 @@
+<<<<<<< HEAD:temp_broken_files/NewContentNavigation.tsx
 import React from 'react';
 const NewContentNavigation: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  ArrowRight
+  Star
+  Zap
+  Sparkles,
+  TrendingUp,
+  Users,
+  Globe,
+  X,
+  Play,
+  Download,
+  ExternalLink,
+  Brain,
+  Cpu,
+  Database,
+  Cloud,
+  Shield
+} from 'lucide-react';
+
+const NewContentNavigation = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isExpandedsetIsExpanded] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const contentCategories = [
+    {
+      title: "AI Solutions",
+      description: "Revolutionary AI technologies",
+      icon: Brain,
+      color: "from-purple-600 to-pink-600",
+      href: "/ai-solutions",
+      items: [
+        "Machine Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "AI Automation"
+      ]
+    },
+    {
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions",
+      icon: Cpu,
+      color: "from-blue-600 to-cyan-600",
+      href: "/quantum-computing",
+      items: [
+        "Quantum Algorithms",
+        "Quantum Machine Learning",
+        "Quantum Security",
+        "Quantum Optimization"
+      ]
+    },
+    {
+      title: "Neural Interfaces",
+      description: "Brain-computer interface tech",
+      icon: Database,
+      color: "from-green-600 to-emerald-600",
+      href: "/neural-interfaces",
+      items: [
+        "BCI Development",
+        "Cognitive Enhancement",
+        "Medical Applications",
+        "Neural Signal Processing"
+      ]
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions",
+      icon: Cloud,
+      color: "from-orange-600 to-red-600",
+      href: "/cloud-infrastructure",
+      items: [
+        "Multi-Cloud Architecture",
+        "Container Orchestration",
+        "Serverless Computing",
+        "Edge Computing"
+      ]
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security measures",
+      icon: Shield,
+      color: "from-indigo-600 to-purple-600",
+      href: "/security-solutions",
+      items: [
+        "Threat Detection",
+        "Data Encryption",
+        "Access Control",
+        "Compliance Monitoring"
+      ]
+    },
+    {
+      title: "Ultimate Showcase",
+      description: "Complete technology showcase",
+      icon: Sparkles,
+      color: "from-pink-600 to-rose-600",
+      href: "/showcase/ultimate-2025",
+      items: [
+        "All Technologies",
+        "Interactive Demos",
+        "Case Studies",
+        "Success Stories"
+      ]
+    }
+  ];
+
+  const featuredContent = [
+    {
+      title: "AI 2025 Breakthrough",
+      description: "Latest AI innovations transforming industries",
+      href: "/ai-solutions",
+      badge: "HOT",
+      icon: TrendingUp
+    },
+    {
+      title: "Quantum Revolution",
+      description: "Quantum computing solutions for complex problems",
+      href: "/quantum-computing",
+      badge: "NEW",
+      icon: Zap
+    },
+    {
+      title: "Neural Interface Demo",
+      description: "Experience brain-computer interfaces",
+      href: "/neural-interfaces",
+      badge: "DEMO",
+      icon: Play
+    }
+  ];
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/NewContentNavigation.tsx
   return (
     <div
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white"
@@ -107,6 +247,10 @@ const NewContentNavigation: React.FC = () => {
             </div>
           )}
         </div>
+<<<<<<< HEAD:temp_broken_files/NewContentNavigation.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/NewContentNavigation.tsx
         {/* Call to Action */}
         <div
           className="text-center mt-12"

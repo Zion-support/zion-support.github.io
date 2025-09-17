@@ -1,4 +1,10 @@
+<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscovery2033.tsx
 import React from 'react';
+=======
+import React, { useState } from 'react';
+import { ArrowRight, Search, Filter, TrendingUp, Star, Eye, Zap, Brain, Globe, Rocket } from 'lucide-react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscovery2033.tsx
 const InteractiveContentDiscovery2033: React.FC = () => {
   return (
     <divsection
@@ -24,6 +30,10 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             Discover groundbreaking innovations and cutting-edge technologies through our intelligent content recommendation system
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscovery2033.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscovery2033.tsx
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +53,11 @@ const InteractiveContentDiscovery2033: React.FC = () => {
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             {filters.map((filter) => (
+<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscovery2033.tsx
               <divbutton
+=======
+              <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscovery2033.tsx
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
@@ -54,10 +68,18 @@ const InteractiveContentDiscovery2033: React.FC = () => {
               >
                 {filter.icon}
                 {filter.label}
+<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscovery2033.tsx
               </divbutton>
             ))}
           </div>
         </div>
+=======
+              </button>
+            ))}
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscovery2033.tsx
         {/* Content Grid */}
           <div
             key={`${activeFilter}-${searchTerm}`}
@@ -110,12 +132,20 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     <Eye className="w-4 h-4" />
                     <span className="text-sm">{item.views} views</span>
                   </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscovery2033.tsx
                   <divbutton
+=======
+                  <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscovery2033.tsx
                     className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <span className="text-sm font-semibold">Explore</span>
                     <ArrowRight className="w-4 h-4" />
+<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscovery2033.tsx
                   </divbutton>
+=======
+                  </button>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscovery2033.tsx
                 </div>
                 {/* Hover Effect */}
                 <div>
@@ -129,6 +159,10 @@ const InteractiveContentDiscovery2033: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/InteractiveContentDiscovery2033.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveContentDiscovery2033.tsx
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div

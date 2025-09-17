@@ -1,4 +1,9 @@
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentPromo.tsx
 import React from 'react';
+=======
+import React, { useState } from 'react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryContentPromo.tsx
 const RevolutionaryContentPromo: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -18,6 +23,10 @@ const RevolutionaryContentPromo: React.FC = () => {
             Neural Interfaces, and Next-Generation Technologies that will transform our world
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentPromo.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryContentPromo.tsx
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contentItems.map((item, index) => (
@@ -88,6 +97,10 @@ const RevolutionaryContentPromo: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD:temp_broken_files/RevolutionaryContentPromo.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryContentPromo.tsx
         {/* Call to Action */}
         <div
           className="text-center"

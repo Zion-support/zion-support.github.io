@@ -313,6 +313,7 @@ const function Careers() { = () => {
               </a>
             </div>
           </div>
+<<<<<<< HEAD:temp_broken_files/careers.tsx
 =======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">
@@ -320,6 +321,8 @@ const function Careers() { = () => {
           <h1 className="text-5xl font-bold mb-6">function Careers() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/careers.tsx
+=======
+>>>>>>> origin/merge-new-content-1757989975:src/components/careers.tsx
         </div>
       </div>
     </div>

@@ -1,5 +1,114 @@
+<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
 import React from 'react';
 const AIInnovationHub2025PromotionBanner: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  Zap
+  Rocket
+  Target
+  ArrowRight
+  Star
+  TrendingUp,
+  Users,
+  Shield,
+  Globe,
+  X,
+  Play,
+  Download,
+  Search,
+  Grid,
+  List,
+  Crown,
+  Gem,
+  Sparkles,
+  CheckCircle,
+  Award,
+  Code,
+  Settings,
+  Wrench,
+  Eye,
+  BarChart3,
+  MessageCircle,
+  Building
+} from 'lucide-react';
+
+const AIInnovationHub2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentInnovationsetCurrentInnovation] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Auto-rotate innovations
+    const interval = setInterval(() => {
+      setCurrentInnovation((prev) => (prev + 1) % innovations.length);
+    }4000);
+
+    return () => clearInterval(interval);
+  }[]);
+
+  const innovations = [
+    {
+      icon: Brain,
+      title: 'Neural Architecture Search',
+      description: 'Automated discovery of optimal neural networks',
+      category: 'AI Core',
+      color: 'from-purple-500 to-pink-500',
+      rating: 4.9,
+      downloads: '50K+'
+    },
+    {
+      icon: Zap,
+      title: 'Quantum Neural Networks',
+      description: 'Hybrid quantum-classical neural networks',
+      category: 'Quantum AI',
+      color: 'from-blue-500 to-cyan-500',
+      rating: 4.8,
+      downloads: '25K+'
+    },
+    {
+      icon: Shield,
+      title: 'Federated Learning',
+      description: 'Privacy-preserving distributed ML',
+      category: 'Privacy AI',
+      color: 'from-green-500 to-emerald-500',
+      rating: 4.7,
+      downloads: '75K+'
+    },
+    {
+      icon: Rocket,
+      title: 'Edge AI Computing',
+      description: 'Ultra-low latency distributed processing',
+      category: 'Future Tech',
+      color: 'from-orange-500 to-red-500',
+      rating: 4.7,
+      downloads: '35K+'
+    }
+  ];
+
+  const categories = [
+    { name: 'AI Core 'Technologies', 'count: '150+'icon: Brain },
+    { name: 'Business AI 'Solutions', 'count: '80+'icon: Target },
+    { name: 'Future 'Technologies', 'count: '45+'icon: Rocket },
+    { name: 'Tools & 'Utilities', 'count: '120+'icon: Wrench }
+  ];
+
+  const stats = [
+    { number: '400+'label: 'AI 'Innovations', 'icon: Brain },
+    { number: '1M+'label: ''Downloads', 'icon: Download },
+    { number: '4.8'label: 'Average 'Rating', 'icon: Star },
+    { number: '50+'label: ''Categories', 'icon: Grid }
+  ];
+
+  if (isDismissed) return null;
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
   return (
     <div>
       {isVisible && (
@@ -37,6 +146,10 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                       find everything you need to build the future.
                     </p>
                   </div>
+<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                   {/* Rotating Innovation Showcase */}
                   <div
                     key={currentInnovation}
@@ -60,6 +173,10 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                   {/* Categories */}
                   <div
                     className="mb-8"
@@ -76,6 +193,10 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                       ))}
                     </div>
                   </div>
+<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                   {/* Stats */}
                   <div
                     className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
@@ -87,6 +208,10 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                       </div>
                     ))}
                   </div>
+<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                   {/* Action Buttons */}
                   <div
                     className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
@@ -155,6 +280,10 @@ const AIInnovationHub2025PromotionBanner: React.FC = () => {
                     >
                       <Award className="w-8 h-8 text-white" />
                     </div>
+<<<<<<< HEAD:temp_broken_files/AIInnovationHub2025PromotionBanner.tsx
+=======
+                    
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIInnovationHub2025PromotionBanner.tsx
                     <div
                       className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center"
                     >

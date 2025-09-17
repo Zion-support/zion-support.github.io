@@ -1,4 +1,29 @@
+<<<<<<< HEAD:temp_broken_files/AIToolsInteractiveDemo2025PromotionBanner.tsx
 import React from 'react';
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Play
+  Sparkles
+  ArrowRight
+  Star
+  Users
+  Zap,
+  Brain,
+  Code,
+  BarChart3,
+  MessageSquare,
+  Image,
+  Video,
+  CheckCircle,
+  TrendingUp,
+  Shield
+} from 'lucide-react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsInteractiveDemo2025PromotionBanner.tsx
 const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
   return (
     <div
@@ -27,6 +52,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 See how AI can transform your workflow in real-time.
               </p>
             </div>
+<<<<<<< HEAD:temp_broken_files/AIToolsInteractiveDemo2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsInteractiveDemo2025PromotionBanner.tsx
             {/* Features List */}
             <div
               className="space-y-4"
@@ -43,6 +72,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD:temp_broken_files/AIToolsInteractiveDemo2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsInteractiveDemo2025PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -56,6 +89,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
                 View All Tools
               </button>
             </div>
+<<<<<<< HEAD:temp_broken_files/AIToolsInteractiveDemo2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsInteractiveDemo2025PromotionBanner.tsx
             {/* Stats */}
             <div
               className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
@@ -149,6 +186,10 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
             >
               <Zap className="w-8 h-8 text-white" />
             </div>
+<<<<<<< HEAD:temp_broken_files/AIToolsInteractiveDemo2025PromotionBanner.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/AIToolsInteractiveDemo2025PromotionBanner.tsx
             <div
                 y: [010],
                 rotate: [0-50]

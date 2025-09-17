@@ -72,12 +72,21 @@ export default function InteractiveDemoRequest() {
   return (
     <>
       {/* Floating Demo Button */}
+<<<<<<< HEAD:temp_broken_files/InteractiveDemoRequest.tsx
       <divbutton
+=======
+      <button
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveDemoRequest.tsx
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center z-50"
       >
         <Calendar className="w-5 h-5 mr-2" />
         Request Demo
+<<<<<<< HEAD:temp_broken_files/InteractiveDemoRequest.tsx
+=======
+      </button>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveDemoRequest.tsx
       {/* Modal */}
       <div>
         {isOpen && (
@@ -131,6 +140,11 @@ export default function InteractiveDemoRequest() {
                       className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                     >
                       Close
+<<<<<<< HEAD:temp_broken_files/InteractiveDemoRequest.tsx
+=======
+                    </button>
+                  </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveDemoRequest.tsx
                 ) : (
                   <form onSubmit={handleSubmit}>
                       {/* Step 1: Personal Information */}
@@ -181,6 +195,12 @@ export default function InteractiveDemoRequest() {
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 placeholder="CTOCEOetc."
                               />
+<<<<<<< HEAD:temp_broken_files/InteractiveDemoRequest.tsx
+=======
+                            </div>
+                          </div>
+                        </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveDemoRequest.tsx
                       )}
                       {/* Step 2: Business Details */}
                       {currentStep === 2 && (
@@ -240,6 +260,12 @@ export default function InteractiveDemoRequest() {
                                 >
                                   {interest}
                               ))}
+<<<<<<< HEAD:temp_broken_files/InteractiveDemoRequest.tsx
+=======
+                            </div>
+                          </div>
+                        </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveDemoRequest.tsx
                       )}
                       {/* Step 3: Schedule */}
                       {currentStep === 3 && (
@@ -280,7 +306,15 @@ export default function InteractiveDemoRequest() {
                               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                               placeholder="Tell us about your specific needs or questions..."
                             />
+<<<<<<< HEAD:temp_broken_files/InteractiveDemoRequest.tsx
                       )}
+=======
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </form>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveDemoRequest.tsx
                 )}
               {/* Footer */}
               {!isSubmitted && (
@@ -309,7 +343,14 @@ export default function InteractiveDemoRequest() {
                       Schedule Demo
                   )}
               )}
+<<<<<<< HEAD:temp_broken_files/InteractiveDemoRequest.tsx
         )}
+=======
+            </div>
+          </div>
+        )}
+      </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/InteractiveDemoRequest.tsx
     </>
   );
 

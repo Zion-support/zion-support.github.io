@@ -59,18 +59,31 @@ const function ServicesShowcase2026V3() { = () => {
                 Transform your business with services designed for tomorrow's challenges.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase-v3.tsx
                 <diva
+=======
+                <a
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase-v3.tsx
                   href="#services"
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
                 >
                   Explore Services
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase-v3.tsx
                 </diva>
                 <diva
+=======
+                </a>
+                <a
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase-v3.tsx
                   href={`tel:${contactInfo.mobile}`}
                   className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
                 >
                   Get Started
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase-v3.tsx
                 </diva>
+=======
+                </a>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase-v3.tsx
               </div>
             </div>
           </div>
@@ -98,19 +111,33 @@ const function ServicesShowcase2026V3() { = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase-v3.tsx
                 <diva
+=======
+                <a
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase-v3.tsx
                   href={`tel:${contactInfo.mobile}`}
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
                 >
                   <span>Call {contactInfo.mobile}</span>
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase-v3.tsx
                 </diva>
                 
                 <diva
+=======
+                </a>
+                
+                <a
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase-v3.tsx
                   href={`mailto:${contactInfo.email}`}
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
                 >
                   <span>Email Us</span>
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase-v3.tsx
                 </diva>
+=======
+                </a>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase-v3.tsx
               </div>
 
               <div className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20">

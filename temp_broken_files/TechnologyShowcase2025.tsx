@@ -1,5 +1,10 @@
+<<<<<<< HEAD:temp_broken_files/TechnologyShowcase2025.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React, { useState } from 'react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/TechnologyShowcase2025.tsx
 const TechnologyShowcase2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
@@ -61,6 +66,10 @@ const TechnologyShowcase2025: React.FC = () => {
               Dive deep into the technologies that are defining the future of business and society.
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/TechnologyShowcase2025.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/TechnologyShowcase2025.tsx
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
             <div className="bg-gray-100 rounded-lg p-2">
@@ -141,6 +150,10 @@ const TechnologyShowcase2025: React.FC = () => {
               Experience our technologies in action through interactive demonstrations and real-world applications.
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/TechnologyShowcase2025.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/TechnologyShowcase2025.tsx
           <div className="grid md:grid-cols-3 gap-8">
             {demos.map((demo, index) => (
               <div
@@ -187,6 +200,10 @@ const TechnologyShowcase2025: React.FC = () => {
               Track the evolution of breakthrough technologies and their impact on society.
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/TechnologyShowcase2025.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/TechnologyShowcase2025.tsx
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500"></div>
             {[

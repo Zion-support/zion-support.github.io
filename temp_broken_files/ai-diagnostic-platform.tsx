@@ -1,5 +1,6 @@
 <<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
 const ai-diagnostic-platform: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
@@ -7,6 +8,20 @@ const ai-diagnostic-platform: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+=======
+import Head from 'next/head';
+import { 
+  Brain, Shield, Zap, Target, Stethoscope, 
+  BarChart3, Cpu, Globe, Users, Award,
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
 };
 const features = [
   'AI-powered medical image analysis',
@@ -75,6 +90,12 @@ export default function AIDiagnosticPlatform() {
               <span className="text-white">Pro Platform</span>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
           {/* CTA Buttons */}
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -91,6 +112,14 @@ export default function AIDiagnosticPlatform() {
             >
               <Phone className="w-5 h-5 mr-2" />
               Contact Sales
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+            </a>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,6 +132,12 @@ export default function AIDiagnosticPlatform() {
               Revolutionary Medical Technology
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of medical diagnostics with AI-powered analysis and comprehensive healthcare solutions.
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -114,6 +149,10 @@ export default function AIDiagnosticPlatform() {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
             ))}
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
@@ -127,6 +166,12 @@ export default function AIDiagnosticPlatform() {
               Choose Your Plan
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options designed for healthcare providers of all sizes, from clinics to large hospital systems.
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -157,6 +202,11 @@ export default function AIDiagnosticPlatform() {
                   ))}
                 <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">
                   Get Started
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+                </button>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
             ))}
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -170,6 +220,12 @@ export default function AIDiagnosticPlatform() {
               Ready to Transform Healthcare?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+            </p>
+          </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -180,6 +236,11 @@ export default function AIDiagnosticPlatform() {
                 <Phone className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -189,6 +250,11 @@ export default function AIDiagnosticPlatform() {
                 <Mail className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -198,6 +264,14 @@ export default function AIDiagnosticPlatform() {
                 <MapPin className="w-8 h-8 text-white" />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">{contactInfo.address}</p>
+<<<<<<< HEAD:temp_broken_files/ai-diagnostic-platform.tsx
+=======
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+>>>>>>> origin/merge-new-content-1757989975:src/components/ai-diagnostic-platform.tsx
   );
 }
 =======

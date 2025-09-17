@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/TestimonialSection.tsx
+=======
+import { Star, Quote } from 'lucide-react';
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/TestimonialSection.tsx
 const TestimonialSection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">
@@ -17,6 +22,10 @@ const TestimonialSection: React.FC = () => {
             Discover why leading companies trust Zion Tech Group with their most critical technology challenges
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/TestimonialSection.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/TestimonialSection.tsx
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div

@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+CpuZapAtomShieldTargetTrendingUpGlobeLock
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+>>>>>>> origin/merge-new-content-1757989975
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
     <div
@@ -26,6 +36,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
             Experience the dawn of the quantum era with our revolutionary quantum computing breakthroughs that are reshaping the boundaries of computational possibility.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Active Feature Showcase */}
         <div
           key={activeFeature}
@@ -45,6 +59,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Quantum Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {quantumFeatures.map((featureindex) => (
@@ -88,6 +106,10 @@ const QuantumComputingRevolution2025: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Call to Action */}
         <div
           className="text-center"

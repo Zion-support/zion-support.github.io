@@ -104,6 +104,15 @@ export default function ServicesShowcase2026() {
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
                   <div className="text-3xl font-bold text-green-400 mb-2">{allServices.filter(s => s.category.includes('Emerging')).length}</div>
                   <div className="text-gray-400 text-sm">Emerging Tech</div>
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase.tsx
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase.tsx
         {/* Search and Filter Section */}
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -199,6 +208,12 @@ export default function ServicesShowcase2026() {
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
                     >
                       Learn More
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase.tsx
+=======
+                    </a>
+                  </div>
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase.tsx
               ))}
             {/* No Results */}
             {filteredServices.length === 0 && (
@@ -208,6 +223,10 @@ export default function ServicesShowcase2026() {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search terms or filters</p>
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase.tsx
+=======
+              </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase.tsx
             )}
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -241,6 +260,16 @@ export default function ServicesShowcase2026() {
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
                 >
                   View Pricing
+<<<<<<< HEAD:temp_broken_files/2026-services-showcase.tsx
+=======
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2026-services-showcase.tsx
   );
 
 

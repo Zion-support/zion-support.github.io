@@ -1,14 +1,34 @@
+<<<<<<< HEAD:temp_broken_files/RevolutionaryAIContentPromotionBanner.tsx
 import React from "react";
 
 <<<<<<< HEAD:temp_broken_files/RevolutionaryAIContentPromotionBanner.tsx
+=======
+import React from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+ArrowRightSparklesZapTrendingUpStar
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIContentPromotionBanner.tsx
 
 export default function RevolutionaryAIContentPromotionBanner() {
 =======
 const function RevolutionaryAIContentPromotionBanner() { = () => {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryAIContentPromotionBanner.tsx
   return (
+<<<<<<< HEAD:temp_broken_files/RevolutionaryAIContentPromotionBanner.tsx
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">
+=======
+    <divsection
+      className="py-12 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden"
+    >
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIContentPromotionBanner.tsx
         <div className="text-center">
 <<<<<<< HEAD:temp_broken_files/RevolutionaryAIContentPromotionBanner.tsx
           {/* Badge */}
@@ -96,6 +116,7 @@ const function RevolutionaryAIContentPromotionBanner() { = () => {
               <div className="text-lg font-semibold">Finance</div>
             </div>
           </div>
+<<<<<<< HEAD:temp_broken_files/RevolutionaryAIContentPromotionBanner.tsx
 =======
           <h1 className="text-5xl font-bold mb-6">function RevolutionaryAIContentPromotionBanner() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
@@ -103,6 +124,11 @@ const function RevolutionaryAIContentPromotionBanner() { = () => {
         </div>
       </div>
     </div>
+=======
+        </div>
+      </div>
+    </divsection>
+>>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryAIContentPromotionBanner.tsx
   );
 };
 

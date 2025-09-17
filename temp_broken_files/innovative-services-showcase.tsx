@@ -127,6 +127,15 @@ export default function InnovativeServicesShowcase() {
                   <MapPin className="w-8 h-8 text-pink-400 mx-auto mb-3" />
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-gray-400">{contactInfo.address}</div>
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
         {/* Featured Innovative Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -141,6 +150,12 @@ export default function InnovativeServicesShowcase() {
                 </span> Innovative Services
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our most revolutionary services that are pushing the boundaries of what's possible
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredServices.map((service, index) => (
                 <div
@@ -176,6 +191,13 @@ export default function InnovativeServicesShowcase() {
                         className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                       >
                         Get Started
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
+=======
+                      </a>
+                    </div>
+                  </div>
+                </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
               ))}
         {/* Emerging Tech Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -191,6 +213,12 @@ export default function InnovativeServicesShowcase() {
                 </span> Tech Services
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the latest technologies that are emerging and transforming industries
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
                 <div
@@ -212,18 +240,39 @@ export default function InnovativeServicesShowcase() {
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
               ))}
+=======
+                    </a>
+                  </UltraFuturisticCard>
+                </div>
+              ))}
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
             <div
               className="text-center mt-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
               <diva
+=======
+              <a
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
                 href="/services"
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
               >
                 <span>View All Emerging Tech</span>
                 <ArrowRight className="w-6 h-6" />
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
+=======
+              </a>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
         {/* ArrowRight-Gen AI Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -238,6 +287,12 @@ export default function InnovativeServicesShowcase() {
                 </span> AI Services
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of artificial intelligence with our most advanced services
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <div
@@ -259,18 +314,39 @@ export default function InnovativeServicesShowcase() {
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
               ))}
+=======
+                    </a>
+                  </UltraFuturisticCard>
+                </div>
+              ))}
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
             <div
               className="text-center mt-16"
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
               <diva
+=======
+              <a
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
                 href="/services"
                 className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
               >
                 <span>Discover All AI Services</span>
                 <ArrowRight className="w-6 h-6" />
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
+=======
+              </a>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -305,6 +381,17 @@ export default function InnovativeServicesShowcase() {
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-5 h-5 text-pink-400" />
                     <span className="text-white">{contactInfo.address}</span>
+<<<<<<< HEAD:temp_broken_files/innovative-services-showcase.tsx
+=======
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+>>>>>>> origin/merge-new-content-1757989975:src/components/innovative-services-showcase.tsx
   );
 
 

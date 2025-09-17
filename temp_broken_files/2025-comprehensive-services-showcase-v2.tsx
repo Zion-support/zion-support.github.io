@@ -98,11 +98,19 @@ export default function ComprehensiveServicesShowcase2025V2() {
             2025 V2 Comprehensive
             <br />
             Services Showcase
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+          </divh1>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
           <divp 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+          </divp>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
           <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
@@ -116,6 +124,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
               Get Started
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+            </a>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
       {/* Contact Information */}
       <section id="contact" className="py-16 px-4 bg-black/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -125,6 +141,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
           >
             Ready to Transform Your Business?
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+          </divh2>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
           <div 
             className="grid md:grid-cols-3 gap-8"
             whileInView={{ opacity: 1, y: 0 }}
@@ -142,6 +162,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
       {/* Services by Category */}
       <section id="services" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -151,6 +179,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
           >
             Our Comprehensive Service Portfolio
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+          </divh2>
+          
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
           <div 
             className="space-y-20"
             whileInView="animate"
@@ -194,8 +227,21 @@ export default function ComprehensiveServicesShowcase2025V2() {
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
                       >
                         Learn More <ArrowRight className="w-4 h-4 ml-2" />
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
                   ))}
             ))}
+=======
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
       {/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -205,6 +251,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
           >
             Market Impact & Growth
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+          </divh2>
+          
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
           <div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             whileInView={{ opacity: 1, y: 0 }}
@@ -222,6 +273,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">5</div>
               <div className="text-white text-lg">Service Categories</div>
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
       {/* Call to Action */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -231,12 +290,20 @@ export default function ComprehensiveServicesShowcase2025V2() {
             viewport={{ once: true }}
           >
             Ready to Lead the Future?
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+          </divh2>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
           <divp 
             className="text-xl text-gray-300 mb-8"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             Join thousands of businesses already transforming their operations with our cutting-edge solutions.
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
+=======
+          </divp>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
           <div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
             whileInView={{ opacity: 1, y: 0 }}
@@ -252,6 +319,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
               Visit Website
+<<<<<<< HEAD:temp_broken_files/2025-comprehensive-services-showcase-v2.tsx
   );
 
 
@@ -267,6 +335,10 @@ const function ComprehensiveServicesShowcase2025V2() { = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2025V2() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+=======
+            </a>
+          </div>
+>>>>>>> origin/merge-new-content-1757989975:src/components/2025-comprehensive-services-showcase-v2.tsx
         </div>
       </div>
     </div>

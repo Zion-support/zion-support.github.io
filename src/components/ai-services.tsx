@@ -1,6 +1,58 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 const ai-services: React.FC = () => {
+=======
+import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
+import SEO from '../components/SEO';
+
+const aiServices = [
+  {
+    title: 'AI Consciousness Evolution',
+    description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
+    icon: <Brain className="w-8 h-8 text-cyan-400" />,
+    href: '/ai-consciousness-evolution-2029',
+    features: ['Emotional Intelligence', 'Consciousness Development', 'Ethical AI Framework']
+  },
+  {
+    title: 'AI Autonomous Research',
+    description: 'Self-directed AI research assistants for breakthrough discoveries',
+    icon: <Target className="w-8 h-8 text-purple-400" />,
+    href: '/ai-autonomous-research-assistant',
+    features: ['Independent Research', 'Data Analysis', 'Hypothesis Generation']
+  },
+  {
+    title: 'AI Predictive Maintenance',
+    description: 'Predictive analytics for industrial equipment and systems',
+    icon: <Zap className="w-8 h-8 text-yellow-400" />,
+    href: '/ai-predictive-maintenance-platform',
+    features: ['Equipment Monitoring', 'Failure Prediction', 'Cost Optimization']
+  },
+  {
+    title: 'AI Content Personalization',
+    description: 'Dynamic content adaptation based on user behavior and preferences',
+    icon: <Users className="w-8 h-8 text-green-400" />,
+    href: '/ai-content-personalization-engine',
+    features: ['User Profiling', 'Dynamic Content', 'Engagement Optimization']
+  },
+  {
+    title: 'AI Autonomous Business Operations',
+    description: 'End-to-end automation of business processes and decision-making',
+    icon: <Rocket className="w-8 h-8 text-blue-400" />,
+    href: '/autonomous-business-operations-platform',
+    features: ['Process Automation', 'Decision Intelligence', 'Operational Efficiency']
+  },
+  {
+    title: 'AI Ethics & Governance',
+    description: 'Framework for responsible AI development and deployment',
+    icon: <Shield className="w-8 h-8 text-red-400" />,
+    href: '/ai-ethics-governance-framework',
+    features: ['Ethical Guidelines', 'Governance Framework', 'Compliance Monitoring']
+  }
+];
+
+export default function AIServices() {
+>>>>>>> origin/merge-new-content-1757989975
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
@@ -29,6 +81,15 @@ const ai-services: React.FC = () => {
                   {p.items.map((i) => (
                     <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 mt-0.5 text-emerald-400" /> <span>{i}</span></li>
                   ))}
+<<<<<<< HEAD
+=======
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -39,6 +100,12 @@ const ai-services: React.FC = () => {
                 Our AI Service Portfolio
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Comprehensive AI solutions designed to transform your business and accelerate innovation
+<<<<<<< HEAD
+=======
+              </p>
+            </div>
+
+>>>>>>> origin/merge-new-content-1757989975
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
                 <div
@@ -57,11 +124,21 @@ const ai-services: React.FC = () => {
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
                     ))}
+<<<<<<< HEAD
                   <diva
+=======
+                  </ul>
+                  <a
+>>>>>>> origin/merge-new-content-1757989975
                     href={service.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+<<<<<<< HEAD
+=======
+                  </a>
+                </div>
+>>>>>>> origin/merge-new-content-1757989975
               ))}
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -73,6 +150,7 @@ const ai-services: React.FC = () => {
               <p className="text-xl text-gray-400 mb-8">
                 Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <divbutton
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
                 >
@@ -81,6 +159,23 @@ const ai-services: React.FC = () => {
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
                 >
                   View Case Studies
+=======
+                <button
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300"
+                >
+                  Schedule Consultation
+                </button>
+                <button
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                >
+                  View Case Studies
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+>>>>>>> origin/merge-new-content-1757989975
     </>
 =======
 import React from "react";

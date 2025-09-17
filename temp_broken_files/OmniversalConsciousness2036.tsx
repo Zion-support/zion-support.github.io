@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_files/OmniversalConsciousness2036.tsx
 import { Helmet } from 'react-helmet-async';
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalConsciousness2036.tsx
 const OmniversalConsciousness2036: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
@@ -48,6 +52,10 @@ const OmniversalConsciousness2036: React.FC = () => {
             Journey through the infinite levels of consciousness evolution
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/OmniversalConsciousness2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalConsciousness2036.tsx
         <div className="space-y-8">
           {[
             {
@@ -137,6 +145,10 @@ const OmniversalConsciousness2036: React.FC = () => {
               Experience the infinite benefits of unified consciousness
             </p>
           </div>
+<<<<<<< HEAD:temp_broken_files/OmniversalConsciousness2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalConsciousness2036.tsx
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -196,6 +208,10 @@ const OmniversalConsciousness2036: React.FC = () => {
             The journey to omniversal consciousness through guided evolution
           </p>
         </div>
+<<<<<<< HEAD:temp_broken_files/OmniversalConsciousness2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalConsciousness2036.tsx
         <div className="grid md:grid-cols-2 gap-8">
           <div
             whileInView={{ opacity: 1, x: 0 }}
@@ -218,6 +234,10 @@ const OmniversalConsciousness2036: React.FC = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD:temp_broken_files/OmniversalConsciousness2036.tsx
+=======
+
+>>>>>>> origin/merge-new-content-1757989975:src/pages/OmniversalConsciousness2036.tsx
           <div
             whileInView={{ opacity: 1, x: 0 }}
             className="bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-2xl p-8 border border-violet-500/30"
