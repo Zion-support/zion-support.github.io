@@ -16,6 +16,7 @@ import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 };
 
 
+
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');

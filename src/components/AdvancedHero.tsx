@@ -10,6 +10,7 @@ interface AdvancedHeroProps {
 };
 
 
+
 export default function AdvancedHero({
   title,
   subtitle,

@@ -32,4 +32,5 @@ const MobileOptimizer2025 = () => {
 
 };
 
+
 export default MobileOptimizer2025;

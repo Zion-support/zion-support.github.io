@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const NewContent2026PromotionBanner: React.FC = () => {
@@ -92,5 +93,6 @@ const NewContent2026PromotionBanner: React.FC = () => {
   );
 
 };
+
 
 export default NewContent2026PromotionBanner;

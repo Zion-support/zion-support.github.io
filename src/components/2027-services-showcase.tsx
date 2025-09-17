@@ -13,6 +13,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 };
 
 
+
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -311,6 +312,7 @@ export default function ServicesShowcase2027() {
               {' • '}
               <a href="/contact" className="hover:text-cyan-400 transition-colors duration-300">Contact Us</a>
   );
+
 
 
 export default 2027-services-showcase;

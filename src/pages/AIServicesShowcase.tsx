@@ -31,6 +31,7 @@ import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
 };
 
 
+
 export default function AIServicesShowcase() {
   const aiServices = COMPREHENSIVE_SERVICES.filter(service => 
     service.category.includes('AI') || 
@@ -324,6 +325,7 @@ export default function AIServicesShowcase() {
       <Footer />
     </>
   );
+
 
 
 export default AIServicesShowcase;

@@ -113,4 +113,5 @@ const ServiceWorkerRegistration: React.FC = () => {
 
 };
 
+
 export default ServiceWorkerRegistration;

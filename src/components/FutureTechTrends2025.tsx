@@ -323,5 +323,6 @@ const FutureTechTrends2025 = () => {
 
 };
 
+
 export default FutureTechTrends2025;
 </div></div></div></div></div>

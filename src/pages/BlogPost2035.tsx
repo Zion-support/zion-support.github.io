@@ -18,4 +18,5 @@ const BlogPost2035: React.FC = () => {
 
 };
 
+
 export default BlogPost2035;

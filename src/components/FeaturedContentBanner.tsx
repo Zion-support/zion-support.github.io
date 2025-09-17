@@ -60,6 +60,7 @@ const featuredContent: FeaturedContent[] = [
 };
 
 
+
 export default function FeaturedContentBanner() {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
@@ -133,6 +134,7 @@ export default function FeaturedContentBanner() {
                   {content.roi}
             ))}
   );
+
 
 
 export default FeaturedContentBanner;

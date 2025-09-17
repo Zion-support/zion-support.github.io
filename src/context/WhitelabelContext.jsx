@@ -8,6 +8,7 @@ const WhitelabelContext= () => {
   );
 };
 
+
 export default WhitelabelContext;
 import React, { createContext, useContext, useState } from 'react';
 const WhitelabelContext = createContext();

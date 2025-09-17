@@ -9,4 +9,5 @@ const SystemMonitoring: React.FC = () => {
 
 };
 
+
 export default SystemMonitoring;

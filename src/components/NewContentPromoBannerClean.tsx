@@ -24,4 +24,5 @@ const NewContentPromoBannerClean: React.FC = () => {
 
 };
 
+
 export default NewContentPromoBannerClean;

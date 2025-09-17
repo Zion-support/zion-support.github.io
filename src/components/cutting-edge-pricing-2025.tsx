@@ -107,6 +107,7 @@ const stats = [
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
 
 
+
 export default function CuttingEdgePricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [

@@ -188,4 +188,5 @@ const SyntheticIntelligenceRevolution2025: React.FC = () => {
 
 };
 
+
 export default SyntheticIntelligenceRevolution2025;

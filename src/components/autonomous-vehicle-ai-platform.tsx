@@ -7,6 +7,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 };
 
 
+
 export default function AutonomousVehicleAIPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform'));
   if (!service) return null;

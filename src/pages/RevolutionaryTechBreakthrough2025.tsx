@@ -130,4 +130,5 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
 
 };
 
+
 export default RevolutionaryTechBreakthrough2025;

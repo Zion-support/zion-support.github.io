@@ -9,4 +9,5 @@ const RevolutionaryTechBlog2027Banner: React.FC = () => {
 
 };
 
+
 export default RevolutionaryTechBlog2027Banner;

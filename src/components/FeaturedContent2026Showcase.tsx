@@ -23,6 +23,7 @@ interface FeaturedContent2026ShowcaseProps {
 };
 
 
+
 export default function FeaturedContent2026Showcase({
   title = "🚀 Revolutionary AI Content 2026",
   subtitle = "Discover the latest AI breakthroughsuccess storiesand implementation guides that are transforming industries worldwide",

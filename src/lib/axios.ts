@@ -175,4 +175,6 @@ const customAxios: CustomAxiosStatic = {
   post: defaultInstance.post,
   patch: defaultInstance.patch,
   delete: defaultInstance.delete,
+};
+
 export default customAxios;

@@ -13,4 +13,5 @@ const NeuralInterfaceRevolution2025 = () => {
 
 };
 
+
 export default NeuralInterfaceRevolution2025;

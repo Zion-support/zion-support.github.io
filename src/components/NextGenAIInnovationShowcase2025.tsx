@@ -229,5 +229,6 @@ const NextGenAIInnovationShowcase2025: React.FC = () => {
 
 };
 
+
 export default NextGenAIInnovationShowcase2025;
 </div></div></div>

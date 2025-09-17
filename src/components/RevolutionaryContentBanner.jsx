@@ -32,4 +32,5 @@ const RevolutionaryContentBanner = () => {
 
 };
 
+
 export default RevolutionaryContentBanner;

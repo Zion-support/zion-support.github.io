@@ -68,4 +68,5 @@ const AdvancedPricing: React.FC = () => {
 
 };
 
+
 export default AdvancedPricing;

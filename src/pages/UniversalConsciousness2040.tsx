@@ -18,4 +18,5 @@ const UniversalConsciousness2040: React.FC = () => {
 
 };
 
+
 export default UniversalConsciousness2040;

@@ -7,6 +7,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 };
 
 
+
 export default function IncidentAutomationSuitePage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
   if (!service) return null;

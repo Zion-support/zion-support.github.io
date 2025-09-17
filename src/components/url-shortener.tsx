@@ -6,6 +6,7 @@ import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink
 };
 
 
+
 export default function URLShortenerPage() {
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
@@ -365,6 +366,7 @@ export default function URLShortenerPage() {
               View Pricing
     </>
   );
+
 
 
 export default url-shortener;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
-import AppOptimized from './AppOptimized.tsx';
+import AppOptimizedLazy from './AppOptimizedLazy.tsx';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -18,13 +18,23 @@ const queryClient = new QueryClient({
 
 const rootElement = document.getElementById('root');
 
+function displayFatalError(message) {
+    if (rootElement) {
+        rootElement.innerHTML = `
+            <div style="padding:20px;text-align:center;font-family:sans-serif;">
+                <h1>Application Error</h1>
+                <p>${message}</p>
+            </div>`;
+    }
+}
+
 function renderApp() {
     const app = (
         <React.StrictMode>
             <HelmetProvider>
                 <QueryClientProvider client={queryClient}>
                     <Router>
-                        <AppOptimized />
+                        <AppOptimizedLazy />
                     </Router>
                 </QueryClientProvider>
             </HelmetProvider>
@@ -35,16 +45,6 @@ function renderApp() {
         hydrateRoot(rootElement, app);
     } else if (rootElement) {
         createRoot(rootElement).render(app);
-    }
-}
-
-function displayFatalError(message) {
-    if (rootElement) {
-        rootElement.innerHTML = `
-            <div style="padding:20px;text-align:center;font-family:sans-serif;">
-                <h1>Application Error</h1>
-                <p>${message}</p>
-            </div>`;
     }
 }
 

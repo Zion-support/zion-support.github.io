@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function QuantumComputingSolutions2025Banner() {
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-blue-900 py-16 px-4">

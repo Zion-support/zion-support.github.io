@@ -4,6 +4,7 @@ CogBarChart3TargetArrowRightCheckCircle
 };
 
 
+
 export default function EnterpriseAutomation2026Banner() {
   return (
     <section className="bg-gradient-to-r from-green-800 via-blue-800 to-purple-800 text-white py-16">

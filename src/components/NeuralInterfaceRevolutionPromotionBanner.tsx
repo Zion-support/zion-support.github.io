@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NeuralInterfaceRevolutionPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900">

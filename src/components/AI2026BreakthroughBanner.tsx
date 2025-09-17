@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2026BreakthroughBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 py-16">

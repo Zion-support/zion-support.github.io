@@ -6,6 +6,7 @@ import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Moni
 };
 
 
+
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -361,6 +362,7 @@ export default function WebsitePerformanceMonitorPage() {
               Schedule Demo
     </>
   );
+
 
 
 export default website-performance-monitor;

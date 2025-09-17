@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function QuantumComputing2026PromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 py-12 px-4">

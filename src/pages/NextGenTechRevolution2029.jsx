@@ -18,4 +18,5 @@ const NextGenTechRevolution2029= () => {
 
 };
 
+
 export default NextGenTechRevolution2029;

@@ -136,4 +136,5 @@ const FuturePredictionsShowcase2025: React.FC = () => {
   );
 
 
+
 export default FuturePredictionsShowcase2025;

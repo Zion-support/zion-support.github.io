@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NewBlogPosts2025Banner() {
   return (
     <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-20">

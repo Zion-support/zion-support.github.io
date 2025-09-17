@@ -3,6 +3,7 @@ import Link from 'next/link';
 };
 
 
+
 export default function AI2026UltimateBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">

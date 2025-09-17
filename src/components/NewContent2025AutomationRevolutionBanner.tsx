@@ -140,5 +140,6 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
 
 };
 
+
 export default NewContent2025AutomationRevolutionBanner;
 </div></div></div>

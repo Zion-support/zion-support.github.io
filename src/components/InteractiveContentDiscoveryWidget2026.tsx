@@ -67,6 +67,7 @@ const contentItems: ContentItem[] = [
 };
 
 
+
 export default function InteractiveContentDiscoveryWidget2026() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All');
   const [searchTermsetSearchTerm] = useState<string>(', ');
@@ -179,6 +180,7 @@ export default function InteractiveContentDiscoveryWidget2026() {
             <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
   );
+
 
 
 export default InteractiveContentDiscoveryWidget2026;

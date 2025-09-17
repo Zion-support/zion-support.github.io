@@ -6,6 +6,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 };
 
 
+
 export default function ManagedPostgresHAPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/managed-postgres-ha'));
   if (!service) return null;

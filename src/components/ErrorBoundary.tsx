@@ -9,4 +9,5 @@ const ErrorBoundary: React.FC = () => {
 
 };
 
+
 export default ErrorBoundary;

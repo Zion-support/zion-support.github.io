@@ -7,6 +7,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 };
 
 
+
 export default function QuantumAICognitivePage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
   if (!service) {

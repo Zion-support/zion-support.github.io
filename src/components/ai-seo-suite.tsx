@@ -6,6 +6,7 @@ import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, 
 };
 
 
+
 export default function AISeosuitePage() {
   const features = [
     {
@@ -404,6 +405,7 @@ export default function AISeosuitePage() {
               Watch Demo
     </>
   );
+
 
 
 export default ai-seo-suite;

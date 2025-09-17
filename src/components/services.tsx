@@ -173,6 +173,7 @@ const serviceCategories: Array<{
 import { realVerifiedServices } from '../data/real-verified-services';
 
 
+
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');

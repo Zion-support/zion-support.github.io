@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain }
 };
 
 
+
 export default function AboutPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -73,6 +74,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+
 
 
 export default function AboutPage() {

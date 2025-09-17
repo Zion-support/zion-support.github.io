@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function SyntheticIntelligence2026Banner() {
   return (
     <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 py-16 px-4">

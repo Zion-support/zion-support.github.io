@@ -18,4 +18,5 @@ const QuantumLeapTechnology2025: React.FC = () => {
 
 };
 
+
 export default QuantumLeapTechnology2025;

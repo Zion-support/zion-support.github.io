@@ -18,4 +18,5 @@ const MetaverseAI2026: React.FC = () => {
 
 };
 
+
 export default MetaverseAI2026;

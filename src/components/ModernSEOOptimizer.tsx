@@ -9,4 +9,5 @@ const ModernSEOOptimizer: React.FC = () => {
 
 };
 
+
 export default ModernSEOOptimizer;

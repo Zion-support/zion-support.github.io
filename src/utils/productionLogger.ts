@@ -129,6 +129,8 @@ export const log = {
   setLogLevel: (level: LogLevel) => logger.setLogLevel(level),
   getLogs: () => logger.getLogs(),
   clearLogs: () => logger.clearLogs()
+};
+
 export default ProductionLogger;
 interface LogLevel {
   ERROR: 'error';

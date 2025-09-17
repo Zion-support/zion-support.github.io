@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2027FuturePredictionsPromotionBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-r from-rose-900 via-pink-900 to-rose-900 overflow-hidden">

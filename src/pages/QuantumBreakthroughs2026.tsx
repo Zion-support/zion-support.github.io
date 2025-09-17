@@ -18,4 +18,5 @@ const QuantumBreakthroughs2026: React.FC = () => {
 
 };
 
+
 export default QuantumBreakthroughs2026;

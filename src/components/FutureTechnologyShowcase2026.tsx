@@ -180,4 +180,5 @@ const FutureTechnologyShowcase2026: React.FC = () => {
 
 };
 
+
 export default FutureTechnologyShowcase2026;

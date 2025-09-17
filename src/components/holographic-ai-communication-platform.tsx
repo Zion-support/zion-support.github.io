@@ -6,6 +6,7 @@ import Button from '../components/ui/Button';
 };
 
 
+
 export default function HolographicAICommunicationPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

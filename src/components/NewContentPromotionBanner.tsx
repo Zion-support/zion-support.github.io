@@ -9,4 +9,5 @@ const NewContentPromotionBanner: React.FC = () => {
 
 };
 
+
 export default NewContentPromotionBanner;

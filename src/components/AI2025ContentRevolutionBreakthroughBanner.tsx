@@ -4,6 +4,7 @@ ArrowRightBrainZapTargetTrendingUpUsersGlobeLightbulb
 };
 
 
+
 export default function AI2025ContentRevolutionBreakthroughBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 rounded-3xl p-8 md:p-12 mb-16 border border-purple-500/20">

@@ -22,4 +22,5 @@ const RevolutionaryTechBanner2025 = () => {
 
 };
 
+
 export default RevolutionaryTechBanner2025;

@@ -13,4 +13,5 @@ const TechnologyInsights2025 = () => {
 
 };
 
+
 export default TechnologyInsights2025;

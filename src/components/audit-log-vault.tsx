@@ -7,6 +7,7 @@ import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 
 };
 
 
+
 export default function AuditLogVaultPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

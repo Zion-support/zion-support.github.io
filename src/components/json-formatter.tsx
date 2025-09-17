@@ -6,6 +6,7 @@ import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Uplo
 };
 
 
+
 export default function JSONFormatterPage() {
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
@@ -401,6 +402,7 @@ export default function JSONFormatterPage() {
               View Pricing
     </>
   );
+
 
 
 export default json-formatter;

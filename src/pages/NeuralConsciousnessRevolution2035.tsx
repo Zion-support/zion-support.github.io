@@ -18,4 +18,5 @@ const NeuralConsciousnessRevolution2035: React.FC = () => {
 
 };
 
+
 export default NeuralConsciousnessRevolution2035;

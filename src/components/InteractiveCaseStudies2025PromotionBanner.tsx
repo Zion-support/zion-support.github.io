@@ -15,6 +15,7 @@ import {
 };
 
 
+
 export default function InteractiveCaseStudies2025PromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
@@ -102,6 +103,7 @@ export default function InteractiveCaseStudies2025PromotionBanner() {
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 animate-pulse" />
   );
+
 
 
 export default InteractiveCaseStudies2025PromotionBanner;

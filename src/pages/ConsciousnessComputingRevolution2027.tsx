@@ -18,4 +18,5 @@ const ConsciousnessComputingRevolution2027: React.FC = () => {
 
 };
 
+
 export default ConsciousnessComputingRevolution2027;

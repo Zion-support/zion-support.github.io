@@ -4,6 +4,7 @@ import React{ useState } from 'react';
 };
 
 
+
 export default function RevolutionaryContentDiscoveryWidget2025() {
   const [activeCategorysetActiveCategory] = useState('all');
   const contentItems = [
@@ -185,6 +186,7 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
   );
+
 
 
 export default RevolutionaryContentDiscoveryWidget2025;

@@ -6,6 +6,7 @@ import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, 
 };
 
 
+
 export default function MarketResearchPage() {
   const marketSegments = [
     {
@@ -584,6 +585,7 @@ export default function MarketResearchPage() {
               View Our Services
     </>
   );
+
 
 
 export default market-research;

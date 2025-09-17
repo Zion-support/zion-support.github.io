@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function QuantumAI2026BreakthroughPromotionBanner() {
   return (
     <section className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 overflow-hidden">

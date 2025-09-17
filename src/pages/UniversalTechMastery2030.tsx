@@ -18,4 +18,5 @@ const UniversalTechMastery2030: React.FC = () => {
 
 };
 
+
 export default UniversalTechMastery2030;

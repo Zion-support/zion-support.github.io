@@ -18,4 +18,5 @@ function withAuth(Component) {
     return Wrapped;
 };
 
+
 export default withAuth;

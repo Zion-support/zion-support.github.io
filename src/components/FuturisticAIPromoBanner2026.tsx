@@ -143,4 +143,5 @@ const FuturisticAIPromoBanner2026 = () => {
 
 };
 
+
 export default FuturisticAIPromoBanner2026;

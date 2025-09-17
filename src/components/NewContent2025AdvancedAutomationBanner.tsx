@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NewContent2025AdvancedAutomationBanner() {
   return (
     <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 py-16 px-4">

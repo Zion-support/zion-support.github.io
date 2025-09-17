@@ -9,4 +9,5 @@ const QuickNavigation2026: React.FC = () => {
 
 };
 
+
 export default QuickNavigation2026;

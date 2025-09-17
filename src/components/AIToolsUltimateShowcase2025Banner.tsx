@@ -4,6 +4,7 @@ ArrowRightBrainZapTargetCodeDatabaseTrendingUp
 };
 
 
+
 export default function AIToolsUltimateShowcase2025Banner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">

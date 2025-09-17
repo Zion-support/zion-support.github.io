@@ -13,4 +13,5 @@ const UltimateTechBanner2030 = () => {
 
 };
 
+
 export default UltimateTechBanner2030;

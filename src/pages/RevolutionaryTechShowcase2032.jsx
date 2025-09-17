@@ -18,4 +18,5 @@ const RevolutionaryTechShowcase2032= () => {
 
 };
 
+
 export default RevolutionaryTechShowcase2032;

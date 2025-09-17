@@ -15,4 +15,6 @@ const MobileJobPost: React.FC = () => {
       </div>
     </div>
   );
+};
+
 export default MobileJobPost;

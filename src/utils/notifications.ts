@@ -219,6 +219,8 @@ class NotificationManager {
     });
   };
 export const notificationManager = new NotificationManager();
+};
+
 export default notificationManager;
       requireInteraction: true
     });
@@ -245,6 +247,7 @@ export default notificationManager;
       tag: 'warning'
     });
   };
+
 export default notifications;
       requireInteraction: true,
     });
@@ -266,4 +269,5 @@ export default notifications;
     });
   };
 export const notificationManager = new NotificationManager();
+
 export default notificationManager;

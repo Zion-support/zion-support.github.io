@@ -9,4 +9,5 @@ const LazyLoader: React.FC = () => {
 
 };
 
+
 export default LazyLoader;

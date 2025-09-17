@@ -32,4 +32,5 @@ const InteractiveTechShowcase = () => {
 
 };
 
+
 export default InteractiveTechShowcase;

@@ -60,6 +60,7 @@ const featuredContent = [
 };
 
 
+
 export default function FeaturedContentCarousel() {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [isAutoPlayingsetIsAutoPlaying] = useState(true);
@@ -192,6 +193,7 @@ export default function FeaturedContentCarousel() {
                   ))}
             ))}
   );
+
 
 
 export default FeaturedContentCarousel;

@@ -18,4 +18,5 @@ const UltimateTechBreakthrough2032= () => {
 
 };
 
+
 export default UltimateTechBreakthrough2032;

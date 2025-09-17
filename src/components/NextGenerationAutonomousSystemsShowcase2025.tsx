@@ -9,4 +9,5 @@ const NextGenerationAutonomousSystemsShowcase2025: React.FC = () => {
 
 };
 
+
 export default NextGenerationAutonomousSystemsShowcase2025;

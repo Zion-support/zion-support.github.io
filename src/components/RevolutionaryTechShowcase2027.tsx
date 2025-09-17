@@ -227,4 +227,5 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
 
 };
 
+
 export default RevolutionaryTechShowcase2027;

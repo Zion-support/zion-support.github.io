@@ -12,4 +12,5 @@ const CommunityRoutes = () => {
   );
 };
 
+
 export default CommunityRoutes;

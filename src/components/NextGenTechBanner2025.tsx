@@ -9,4 +9,5 @@ const NextGenTechBanner2025: React.FC = () => {
 
 };
 
+
 export default NextGenTechBanner2025;

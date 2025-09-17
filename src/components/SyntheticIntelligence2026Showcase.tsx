@@ -242,4 +242,5 @@ const SyntheticIntelligence2026Showcase: React.FC = () => {
 
 };
 
+
 export default SyntheticIntelligence2026Showcase;

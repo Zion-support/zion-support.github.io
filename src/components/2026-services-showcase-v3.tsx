@@ -5,6 +5,7 @@ import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolo
 };
 
 
+
 export default function ServicesShowcase2026V3() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

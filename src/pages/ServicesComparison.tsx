@@ -230,6 +230,7 @@ const SERVICE_COMPARISONS: ServiceComparison[] = [
 };
 
 
+
 export default function ServicesComparison() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const getComplexityColor = (complexity: string) => {

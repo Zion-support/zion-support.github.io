@@ -12,4 +12,5 @@ const TalentRoutes = () => {
   );
 };
 
+
 export default TalentRoutes;

@@ -18,4 +18,5 @@ const FutureTechBreakthroughs2028: React.FC = () => {
 
 };
 
+
 export default FutureTechBreakthroughs2028;

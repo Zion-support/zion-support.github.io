@@ -18,4 +18,5 @@ const RevolutionaryAI2027: React.FC = () => {
 
 };
 
+
 export default RevolutionaryAI2027;

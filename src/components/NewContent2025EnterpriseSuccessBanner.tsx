@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NewContent2025EnterpriseSuccessBanner() {
   return (
     <div className="bg-gradient-to-r from-green-500 via-emerald-600 to-teal-700 text-white py-8 px-4">

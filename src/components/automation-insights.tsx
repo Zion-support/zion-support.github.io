@@ -4,6 +4,7 @@ import Head from 'next/head';
 };
 
 
+
 export default function AutomationInsightsPage() {
   const automationTrends = [
     {
@@ -150,6 +151,7 @@ export default function AutomationInsightsPage() {
                   View Case Studies
     </>
   );
+
 
 
 export default automation-insights;

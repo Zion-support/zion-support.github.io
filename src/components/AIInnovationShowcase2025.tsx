@@ -111,6 +111,7 @@ const categories = [', 'All', 'AI 'Architecture', 'Quantum 'Computing', 'Automat
 };
 
 
+
 export default function AIInnovationShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
   const [selectedInnovationsetSelectedInnovation] = useState<Innovation | null>(null);
@@ -294,6 +295,7 @@ export default function AIInnovationShowcase2025() {
                 <span className="text-white text-lg">Loading innovation details...</span>
         )}
   );
+
 
 
 export default AIInnovationShowcase2025;

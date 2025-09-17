@@ -18,4 +18,5 @@ const InterdimensionalTechRevolution2030= () => {
 
 };
 
+
 export default InterdimensionalTechRevolution2030;

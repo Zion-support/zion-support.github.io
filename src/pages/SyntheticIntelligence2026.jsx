@@ -13,4 +13,5 @@ const SyntheticIntelligence2026 = () => {
 
 };
 
+
 export default SyntheticIntelligence2026;

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 };
 
 
+
 export default function RevolutionaryContentPromotionBanner() {
   const [isVisiblesetIsVisible] = useState(true);
   const [currentPromotionsetCurrentPromotion] = useState(0);
@@ -85,6 +86,7 @@ export default function RevolutionaryContentPromotionBanner() {
         }
       `}</style>
   );
+
 
 
 export default RevolutionaryContentPromotionBanner;

@@ -8,6 +8,7 @@ import {
 };
 
 
+
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
   const markets = [
@@ -662,6 +663,7 @@ export default function MarketPricing() {
               >
                 Get Custom Quote
   );
+
 
 
 export default MarketPricing;

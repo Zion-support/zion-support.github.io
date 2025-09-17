@@ -73,4 +73,5 @@ const AI2026FutureTrendsPredictionsPromotionBanner: React.FC = () => {
 
 };
 
+
 export default AI2026FutureTrendsPredictionsPromotionBanner;

@@ -6,6 +6,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 };
 
 
+
 export default function QuantumFinancialTradingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'));
   if (!service) return null;

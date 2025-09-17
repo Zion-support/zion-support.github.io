@@ -8,6 +8,7 @@ import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevo
 };
 
 
+
 export default function RevolutionaryServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -605,6 +606,7 @@ export default function RevolutionaryServicesPage() {
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
   );
+
 
 
 export default revolutionary-services;

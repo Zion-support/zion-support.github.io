@@ -144,4 +144,6 @@ export const fetchWithRetry = async (
       return response;
     } catch (error) {
       lastError = error as Error;
+};
+
 export default fetchWithRetry;

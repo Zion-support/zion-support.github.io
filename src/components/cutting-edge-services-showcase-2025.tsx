@@ -51,6 +51,7 @@ const serviceCategories = [
   };
 
 
+
 export default function CuttingEdgeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');

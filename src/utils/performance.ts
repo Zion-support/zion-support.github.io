@@ -30,8 +30,8 @@ export class PerformanceMonitor {
   // Clear metrics
   clearMetrics(): void {
     this.metrics.clear();
-  }
-}
+  };
+};
 
 // Performance hook for React components
 export const usePerformanceMonitor = (componentName: string) => {
@@ -40,7 +40,6 @@ export const usePerformanceMonitor = (componentName: string) => {
     const monitor = PerformanceMonitor.getInstance();
     monitor.measureRender(componentName, startTime.current);
   }, [componentName]);
-};
 
 // Web Vitals monitoring
 export const measureWebVitals = () => {
@@ -48,12 +47,10 @@ export const measureWebVitals = () => {
   if ('web-vital' in window) {
     // This would integrate with web-vitals library
     console.log('Web Vitals monitoring enabled');
-  }
-};
+  };
 
 // Bundle analyzer integration
 export const analyzeBundle = () => {
   if (process.env.NODE_ENV === 'development') {
     console.log('Bundle analysis available in development mode');
-  }
-};
+  };

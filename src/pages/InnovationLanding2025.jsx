@@ -13,4 +13,5 @@ const InnovationLanding2025 = () => {
 
 };
 
+
 export default InnovationLanding2025;

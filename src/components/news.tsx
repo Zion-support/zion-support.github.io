@@ -74,6 +74,7 @@ const news: React.FC = () => {
 };
 
 
+
 export default function News() {
   const featuredNews = [
     {
@@ -87,6 +88,7 @@ export default function News() {
       image: '/api/placeholder/600/400',
       tags: ['AI', 'Quantum Computing', 'Innovation'],
 import Head from 'next/head';
+
 
 
 export default function NewsPage() {
@@ -262,6 +264,7 @@ import {
   BookOpen, Globe, Video
 } from 'lucide-react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
 
 
 export default function News() {

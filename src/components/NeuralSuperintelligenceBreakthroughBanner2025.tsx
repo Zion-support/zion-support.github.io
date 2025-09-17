@@ -9,4 +9,5 @@ const NeuralSuperintelligenceBreakthroughBanner2025: React.FC = () => {
 
 };
 
+
 export default NeuralSuperintelligenceBreakthroughBanner2025;

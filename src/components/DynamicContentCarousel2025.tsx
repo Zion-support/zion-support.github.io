@@ -211,4 +211,5 @@ const DynamicContentCarousel2025: React.FC = () => {
 
 };
 
+
 export default DynamicContentCarousel2025;

@@ -9,4 +9,5 @@ const AdvancedSecurity: React.FC = () => {
 
 };
 
+
 export default AdvancedSecurity;

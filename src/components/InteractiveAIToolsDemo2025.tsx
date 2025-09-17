@@ -24,6 +24,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
 
 };
 
+
 export default UserDashboard;`,
     'data-analyzer': `📊 Data Analysis Results
 Dataset: Sales Performance Q1-Q3 2025
@@ -247,6 +248,7 @@ Recommendations:
               <Settings className="w-5 h-5 mr-2" />
               View API Docs
   );
+
 
 
 export default InteractiveAIToolsDemo2025;

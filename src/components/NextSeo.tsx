@@ -8,4 +8,5 @@ export { NextSeo };
 };
 
 
+
 export default NextSeo;

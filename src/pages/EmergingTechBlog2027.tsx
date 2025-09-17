@@ -18,4 +18,5 @@ const EmergingTechBlog2027: React.FC = () => {
 
 };
 
+
 export default EmergingTechBlog2027;

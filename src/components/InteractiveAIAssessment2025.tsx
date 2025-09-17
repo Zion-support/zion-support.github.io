@@ -9,4 +9,5 @@ const InteractiveAIAssessment2025: React.FC = () => {
 
 };
 
+
 export default InteractiveAIAssessment2025;

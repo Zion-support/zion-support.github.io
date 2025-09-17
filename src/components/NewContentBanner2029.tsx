@@ -71,4 +71,5 @@ const NewContentBanner2029: React.FC = () => {
 
 };
 
+
 export default NewContentBanner2029;

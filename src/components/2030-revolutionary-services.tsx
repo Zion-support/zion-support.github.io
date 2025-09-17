@@ -6,6 +6,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
 };
 
 
+
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

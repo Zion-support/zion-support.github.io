@@ -562,4 +562,5 @@ const SyntheticIntelligence2026: React.FC = () => {
 
 };
 
+
 export default SyntheticIntelligence2026;

@@ -18,4 +18,5 @@ const NextGenInnovationHub2030: React.FC = () => {
 
 };
 
+
 export default NextGenInnovationHub2030;

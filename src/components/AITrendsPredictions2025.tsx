@@ -142,4 +142,5 @@ const AITrendsPredictions2025: React.FC = () => {
   );
 
 
+
 export default AITrendsPredictions2025;

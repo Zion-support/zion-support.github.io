@@ -6,6 +6,7 @@ import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lo
 };
 
 
+
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -395,6 +396,7 @@ export default function BusinessToolsPage() {
               Get Business Consultation
     </>
   );
+
 
 
 export default business-tools;

@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function UltimateContentShowcaseBanner() {
   return (
     <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-8 mb-8 rounded-2xl shadow-2xl">

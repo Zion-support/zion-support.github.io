@@ -92,4 +92,5 @@ const UltimateTechBanner2040: React.FC = () => {
 
 };
 
+
 export default UltimateTechBanner2040;

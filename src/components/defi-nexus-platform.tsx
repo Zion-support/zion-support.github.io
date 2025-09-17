@@ -40,6 +40,7 @@ const pricingPlans = [
   };
 
 
+
 export default function DeFiNexusPlatform() {
   return (
     <Layout>

@@ -9,4 +9,5 @@ const OptimizedApp: React.FC = () => {
 
 };
 
+
 export default OptimizedApp;

@@ -29,6 +29,7 @@ import {
 };
 
 
+
 export default function AdvancedContentDiscoveryWidget2025() {
   const [searchQuerysetSearchQuery] = useState('');
   const [selectedCategorysetSelectedCategory] = useState('all');
@@ -301,6 +302,7 @@ export default function AdvancedContentDiscoveryWidget2025() {
             Load More Content
             <ArrowRight className="w-4 h-4" />
   );
+
 
 
 export default AdvancedContentDiscoveryWidget2025;

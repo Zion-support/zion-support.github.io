@@ -9,4 +9,5 @@ const MobileExperienceOptimizer: React.FC = () => {
 
 };
 
+
 export default MobileExperienceOptimizer;

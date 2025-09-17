@@ -14,6 +14,7 @@ type InsightResponse = {
 };
 
 
+
 export default function SalaryInsightsPage() {
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -220,6 +221,7 @@ export default function SalaryInsightsPage() {
                 ))}
           )}
   );
+
 
 
 export default salary-insights;

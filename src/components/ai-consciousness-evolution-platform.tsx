@@ -235,6 +235,7 @@ const ai-consciousness-evolution-platform: React.FC = () => {
 
 };
 
+
 export default AIConsciousnessEvolutionPlatform;
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -472,6 +473,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 Explore All Services
       <UltraFuturisticFooter2029 />
   );
+
 
 
 export default AIConsciousnessEvolutionPlatform;

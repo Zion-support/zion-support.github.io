@@ -442,4 +442,5 @@ const FutureTechRevolution2026: React.FC = () => {
 
 };
 
+
 export default FutureTechRevolution2026;

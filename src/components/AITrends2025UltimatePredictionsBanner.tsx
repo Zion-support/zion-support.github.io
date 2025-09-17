@@ -4,6 +4,7 @@ ArrowRightBrainZapClockTrendingUpCheckCircle
 };
 
 
+
 export default function AITrends2025UltimatePredictionsBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl mx-4 my-8 border border-purple-500/20">

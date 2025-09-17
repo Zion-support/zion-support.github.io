@@ -4,6 +4,7 @@ import React{ useState } from 'react';
 };
 
 
+
 export default function RevolutionaryContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough');
   const contentCategories = {
@@ -161,6 +162,7 @@ export default function RevolutionaryContentDiscoveryWidget() {
               >
                 View Implementation Guide
   );
+
 
 
 export default RevolutionaryContentDiscoveryWidget;

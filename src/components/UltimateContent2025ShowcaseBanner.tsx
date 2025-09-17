@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function UltimateContent2025ShowcaseBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">

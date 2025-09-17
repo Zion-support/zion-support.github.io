@@ -17,4 +17,5 @@ const AccessibilityProvider: React.FC = () => {
     </AccessibilityContext.Provider>)
 
 
+
 export default AccessibilityProvider,

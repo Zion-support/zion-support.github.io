@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function EnterpriseTransformationSuccessBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 text-white">

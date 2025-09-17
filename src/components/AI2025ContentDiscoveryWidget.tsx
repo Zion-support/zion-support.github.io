@@ -5,6 +5,7 @@ import React{ useState } from 'react';
 };
 
 
+
 export default function AI2025ContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough');
   const contentCategories = {
@@ -137,6 +138,7 @@ export default function AI2025ContentDiscoveryWidget() {
           >
             Get Started
   );
+
 
 
 export default AI2025ContentDiscoveryWidget;

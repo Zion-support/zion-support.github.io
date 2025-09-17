@@ -143,5 +143,6 @@ const NeuralConsensus2026Showcase: React.FC = () => {
 
 };
 
+
 export default NeuralConsensus2026Showcase;
 </div></div>

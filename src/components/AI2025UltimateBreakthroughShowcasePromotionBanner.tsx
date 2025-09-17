@@ -4,6 +4,7 @@ ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3
 };
 
 
+
 export default function AI2025UltimateBreakthroughShowcasePromotionBanner() {
   return (
     <section className="relative py-16 px-4 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white overflow-hidden">

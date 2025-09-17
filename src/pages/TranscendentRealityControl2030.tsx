@@ -18,4 +18,5 @@ const TranscendentRealityControl2030: React.FC = () => {
 
 };
 
+
 export default TranscendentRealityControl2030;

@@ -9,4 +9,5 @@ const QuantumConsciousnessBanner: React.FC = () => {
 
 };
 
+
 export default QuantumConsciousnessBanner;

@@ -4,6 +4,8 @@ interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
+};
+
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -119,7 +121,6 @@ const PerformanceOptimizer: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 export default PerformanceOptimizer;

@@ -9,4 +9,5 @@ const AdvancedSEOStructuredData: React.FC = () => {
 
 };
 
+
 export default AdvancedSEOStructuredData;

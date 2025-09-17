@@ -9,4 +9,5 @@ const NeuralInterfaceRevolution2035: React.FC = () => {
 
 };
 
+
 export default NeuralInterfaceRevolution2035;

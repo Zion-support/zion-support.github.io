@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 };
 
 
+
 export default function AI2035SingularityBreakthrough() {
   const [currentPhasetCurrentPhase] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
@@ -182,6 +183,7 @@ export default function AI2035SingularityBreakthrough() {
             >
               View Transcendent AI
   );
+
 
 
 export default AI2035SingularityBreakthrough;

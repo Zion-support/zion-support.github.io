@@ -9,4 +9,5 @@ const AccessibilityFeatures: React.FC = () => {
 
 };
 
+
 export default AccessibilityFeatures;

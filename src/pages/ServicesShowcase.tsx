@@ -211,6 +211,7 @@ const categories = [
 };
 
 
+
 export default function ServicesShowcase() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Categories');

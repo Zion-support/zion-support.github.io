@@ -13,4 +13,5 @@ const TechnologyInsights2025: React.FC = () => {
 
 };
 
+
 export default TechnologyInsights2025;

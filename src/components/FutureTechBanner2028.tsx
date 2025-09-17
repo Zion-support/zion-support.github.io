@@ -9,4 +9,5 @@ const FutureTechBanner2028: React.FC = () => {
 
 };
 
+
 export default FutureTechBanner2028;

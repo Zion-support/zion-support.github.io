@@ -9,4 +9,5 @@ const ContentCategorizer: React.FC = () => {
 
 };
 
+
 export default ContentCategorizer;

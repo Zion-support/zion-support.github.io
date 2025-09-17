@@ -3,6 +3,7 @@ import React{ useState } from 'react';
 };
 
 
+
 export default function RevolutionaryNewsletterSignup2026() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -149,6 +150,7 @@ export default function RevolutionaryNewsletterSignup2026() {
             >
               Exclusive Content
   );
+
 
 
 export default RevolutionaryNewsletterSignup2026;

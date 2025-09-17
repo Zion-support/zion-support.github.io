@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AdvancedAutomationSolutions2026PromotionBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-r from-emerald-900 via-teal-900 to-emerald-900 overflow-hidden">

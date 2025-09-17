@@ -23,6 +23,7 @@ const testimonials = [
 };
 
 
+
 export default function NewsletterSignupForm() {
   const [emailsetEmail] = useState('');
   const [isSubscribedsetIsSubscribed] = useState(false);
@@ -135,6 +136,7 @@ export default function NewsletterSignupForm() {
                   <Star className="w-4 h-4" />
                   <span>4.9/5 rating</span>
   );
+
 
 
 export default NewsletterSignupForm;

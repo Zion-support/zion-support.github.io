@@ -18,4 +18,5 @@ const CaseStudyGalacticCorp2035: React.FC = () => {
 
 };
 
+
 export default CaseStudyGalacticCorp2035;

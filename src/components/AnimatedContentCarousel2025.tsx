@@ -9,5 +9,6 @@ const AnimatedContentCarousel2025: React.FC = () => {
 
 };
 
+
 export default AnimatedContentCarousel2025;
 </p></p>

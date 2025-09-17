@@ -28,6 +28,7 @@ import { realVerifiedServices } from '../data/real-verified-services';
 };
 
 
+
 export default function DynamicServicePage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };

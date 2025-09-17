@@ -24,6 +24,7 @@ const categories = [
   { name: 'Edge Computing', icon: <Zap className="w-6 h-6" />, count: 70, color: 'from-yellow-500 to-orange-600' }
 
 
+
 export default function Homepage2036() {
   const [activeCategory, setActiveCategory] = useState('all');
   const containerVariants = {

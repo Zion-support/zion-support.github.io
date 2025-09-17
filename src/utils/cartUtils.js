@@ -53,4 +53,6 @@ export const cartUtils = {
   getItem: (cart, itemId) => {
     return cart.find(item => item.id === itemId);
   };
+};
+
 export default cartUtils;

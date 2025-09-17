@@ -18,4 +18,5 @@ const AITechnologyInsights2025: React.FC = () => {
 
 };
 
+
 export default AITechnologyInsights2025;

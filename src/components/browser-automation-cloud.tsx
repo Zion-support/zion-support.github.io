@@ -2,6 +2,7 @@ import React from 'react';
 };
 
 
+
 export default function BrowserAutomationCloudPage() {
 	const features = [
 		'Parallel Playwright/Puppeteer execution',

@@ -232,6 +232,8 @@ export const cartUtils = {
   validateCart: () => cartManager.validateCart(),
   exportCart: () => cartManager.exportCart(),
   importCart: (cartData: string) => cartManager.importCart(cartData)
+};
+
 export default cartManager;
   total: number;
   itemCount: number;
@@ -272,4 +274,5 @@ export const cartUtils = {
     return cart.items.some(item => item.id === itemId);
   },
   // Get cart summary
+
 export default cartUtils;

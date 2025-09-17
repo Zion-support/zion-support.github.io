@@ -18,4 +18,5 @@ const CosmicIntelligenceRevolution2037: React.FC = () => {
 
 };
 
+
 export default CosmicIntelligenceRevolution2037;

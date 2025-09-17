@@ -22,4 +22,6 @@ export const fetchWithRetry = async (url, options = {}, maxRetries = 3, delay = 
       await new Promise(resolve => setTimeout(resolve, delay * attempt));
     }
   };
+};
+
 export default fetchWithRetry;

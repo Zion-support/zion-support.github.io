@@ -6,6 +6,7 @@ import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, Bar
 };
 
 
+
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -443,6 +444,7 @@ export default function SEOAnalyzerToolPage() {
               Schedule Demo
     </>
   );
+
 
 
 export default seo-analyzer-tool;

@@ -184,4 +184,5 @@ const AdvancedBiotech2026: React.FC = () => {
 
 };
 
+
 export default AdvancedBiotech2026;

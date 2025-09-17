@@ -21,6 +21,7 @@ interface LazyImageProps {;
 };
 
 
+
 export default function LazyImage({
   src
   alt
@@ -108,6 +109,7 @@ export default function LazyImage({
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
+
 
 
 export default /**

@@ -148,4 +148,5 @@ const EnhancedTechShowcase2026: React.FC = () => {
 
 };
 
+
 export default EnhancedTechShowcase2026;

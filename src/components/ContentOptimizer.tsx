@@ -15,4 +15,5 @@ const ContentOptimizer: React.FC = () => {
 
 };
 
+
 export default ContentOptimizer;

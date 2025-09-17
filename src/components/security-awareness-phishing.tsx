@@ -7,6 +7,7 @@ import { extraServices } from '../data/extra-services';
 };
 
 
+
 export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
   if (!service) return null;

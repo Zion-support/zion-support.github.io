@@ -53,4 +53,5 @@ const PerformanceOptimizations: React.FC = () => {
 
 };
 
+
 export default PerformanceOptimizations;

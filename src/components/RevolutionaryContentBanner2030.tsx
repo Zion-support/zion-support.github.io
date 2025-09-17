@@ -13,4 +13,5 @@ const RevolutionaryContentBanner2030 = () => {
 
 };
 
+
 export default RevolutionaryContentBanner2030;

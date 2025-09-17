@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function UltimateContentRevolutionBanner2026() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16">

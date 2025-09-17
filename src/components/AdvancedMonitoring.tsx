@@ -32,6 +32,7 @@ interface UserSession {
 };
 
 
+
 export default function AdvancedMonitoring() {
   const [errorsetErrors] = useState<ErrorLog[]>([]);
   const [performancesetPerformance] = useState<PerformanceMetrics | null>(null);
@@ -341,6 +342,7 @@ export default function AdvancedMonitoring() {
               ))}
       )}
   );
+
 
 
 export default AdvancedMonitoring;

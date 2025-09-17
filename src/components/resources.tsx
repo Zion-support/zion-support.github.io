@@ -26,4 +26,5 @@ const resources: React.FC = () => {
 
 };
 
+
 export default ResourcesPage;

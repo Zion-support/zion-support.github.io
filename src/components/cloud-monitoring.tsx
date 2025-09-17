@@ -6,6 +6,7 @@ import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shiel
 };
 
 
+
 export default function CloudMonitoringPage() {
   const features = [
     {
@@ -379,6 +380,7 @@ export default function CloudMonitoringPage() {
               Watch Demo
     </>
   );
+
 
 
 export default cloud-monitoring;

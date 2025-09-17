@@ -128,4 +128,5 @@ const BusinessIntelligenceRevolutionBanner2025: React.FC = () => {
 
 };
 
+
 export default BusinessIntelligenceRevolutionBanner2025;

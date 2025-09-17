@@ -8,4 +8,5 @@ const ContentRoutes: React.FC = () => {
   );
 };
 
+
 export default ContentRoutes;

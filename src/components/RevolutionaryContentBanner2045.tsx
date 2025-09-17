@@ -9,4 +9,5 @@ const RevolutionaryContentBanner2045: React.FC = () => {
 
 };
 
+
 export default RevolutionaryContentBanner2045;

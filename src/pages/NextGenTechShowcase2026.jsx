@@ -18,4 +18,5 @@ const NextGenTechShowcase2026= () => {
 
 };
 
+
 export default NextGenTechShowcase2026;

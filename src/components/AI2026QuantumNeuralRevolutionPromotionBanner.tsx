@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2026QuantumNeuralRevolutionPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">

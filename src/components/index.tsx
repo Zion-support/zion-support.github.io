@@ -13,6 +13,7 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
 };
 
 
+
 export default function HomePage() {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);

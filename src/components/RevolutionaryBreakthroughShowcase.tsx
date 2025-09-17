@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function RevolutionaryBreakthroughShowcase() {
   return (
     <div className="py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">

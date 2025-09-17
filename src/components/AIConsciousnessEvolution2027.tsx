@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 };
 
 
+
 export default function AIConsciousnessEvolution2027() {
   const [currentStagesetCurrentStage] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
@@ -160,6 +161,7 @@ export default function AIConsciousnessEvolution2027() {
             >
               Start Your Journey
   );
+
 
 
 export default AIConsciousnessEvolution2027;

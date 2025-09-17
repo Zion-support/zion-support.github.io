@@ -107,4 +107,5 @@ const AnimatedTechShowcase: React.FC = () => {
 
 };
 
+
 export default AnimatedTechShowcase;

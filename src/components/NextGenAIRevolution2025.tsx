@@ -144,4 +144,5 @@ const NextGenAIRevolution2025: React.FC = () => {
 
 };
 
+
 export default NextGenAIRevolution2025;

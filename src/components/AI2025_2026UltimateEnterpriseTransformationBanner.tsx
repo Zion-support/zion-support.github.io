@@ -4,6 +4,7 @@ import { ArrowRightIconSparklesIconChartBarIconCpuChipIcon } from '@heroicons/re
 };
 
 
+
 export default function AI2025_2026UltimateEnterpriseTransformationBanner() {
   return (
     <section className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 overflow-hidden">

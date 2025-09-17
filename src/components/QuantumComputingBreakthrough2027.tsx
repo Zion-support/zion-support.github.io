@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 };
 
 
+
 export default function QuantumComputingBreakthrough2027() {
   const [activeBreakthroughsetActiveBreakthrough] = useState(0);
   const [isAnimatingsetIsAnimating] = useState(false);
@@ -185,6 +186,7 @@ export default function QuantumComputingBreakthrough2027() {
             >
               View Future Predictions
   );
+
 
 
 export default QuantumComputingBreakthrough2027;

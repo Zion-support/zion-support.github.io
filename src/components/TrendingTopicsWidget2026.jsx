@@ -32,4 +32,5 @@ const TrendingTopicsWidget2026 = () => {
 
 };
 
+
 export default TrendingTopicsWidget2026;

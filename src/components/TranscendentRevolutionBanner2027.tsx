@@ -169,4 +169,5 @@ const TranscendentRevolutionBanner2027: React.FC = () => {
 
 };
 
+
 export default TranscendentRevolutionBanner2027;

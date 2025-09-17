@@ -4,7 +4,9 @@ import { X, Cookie, Settings } from "lucide-react";
 };
 
 
+
 export default function CookieConsent() {
+
 
 
 export default function CookieConsent() {;
@@ -83,6 +85,7 @@ export default function CookieConsent() {;
                 <p className="text-sm text-gray-600">;
 import React, { useState, useEffect } from './react';
 import { X, Cookie, Settings  } from './lucide-react';
+
 
 
 export default /**
@@ -275,6 +278,7 @@ if ( {) {
       </div>;
     </div>;
   );
+
 
 
 export default CookieConsent;

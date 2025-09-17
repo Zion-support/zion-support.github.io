@@ -18,4 +18,5 @@ const OmniversalAI2027: React.FC = () => {
 
 };
 
+
 export default OmniversalAI2027;

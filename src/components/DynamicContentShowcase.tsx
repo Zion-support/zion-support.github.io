@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 };
 
 
+
 export default function DynamicContentShowcase() {
   const [currentSlidesetCurrentSlide] = useState(0);
   const [isAutoPlayingsetIsAutoPlaying] = useState(true);
@@ -226,6 +227,7 @@ export default function DynamicContentShowcase() {
             >
               View Success Stories
   );
+
 
 
 export default DynamicContentShowcase;

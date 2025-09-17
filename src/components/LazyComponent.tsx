@@ -17,6 +17,7 @@ interface LazyComponentProps {
 };
 
 
+
 export default function LazyComponent({ 
   component
   fallback = <LoadingSpinner size="md" text="Loading..." />,

@@ -131,6 +131,7 @@ const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Service
 };
 
 
+
 export default function InteractiveCaseStudies2025() {
   const [selectedIndustrysetSelectedIndustry] = useState('All');
   const [selectedCasetSelectedCase] = useState<CaseStudy | null>(null);
@@ -317,6 +318,7 @@ export default function InteractiveCaseStudies2025() {
                     Schedule Consultation
         )}
   );
+
 
 
 export default InteractiveCaseStudies2025;

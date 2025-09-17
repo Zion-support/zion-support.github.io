@@ -6,6 +6,7 @@ import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle,
 };
 
 
+
 export default function APIRateLimiterPage() {
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
@@ -404,6 +405,7 @@ print('Rate Limit Info:', {
               View Pricing
     </>
   );
+
 
 
 export default api-rate-limiter;

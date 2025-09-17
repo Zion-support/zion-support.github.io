@@ -80,4 +80,5 @@ const RevolutionaryFeatures2025: React.FC = () => {
 
 };
 
+
 export default RevolutionaryFeatures2025;

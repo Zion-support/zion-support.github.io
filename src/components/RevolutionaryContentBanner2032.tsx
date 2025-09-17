@@ -232,4 +232,5 @@ const RevolutionaryContentBanner2032: React.FC = () => {
 
 };
 
+
 export default RevolutionaryContentBanner2032;

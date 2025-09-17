@@ -9,4 +9,5 @@ const AI2025SingularityBreakthroughPromotionBanner: React.FC = () => {
 
 };
 
+
 export default AI2025SingularityBreakthroughPromotionBanner;

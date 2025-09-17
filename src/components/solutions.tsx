@@ -206,5 +206,6 @@ const solutions: React.FC = () => {
 
 };
 
+
 export default Solutions;
 </div></div>

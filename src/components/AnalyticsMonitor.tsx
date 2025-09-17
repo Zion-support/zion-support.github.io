@@ -154,6 +154,7 @@ interface AnalyticsEvent {
 };
 
 
+
 export default function AnalyticsMonitor() {
   useEffect(() => {
     // Initialize analytics tracking
@@ -352,6 +353,7 @@ export const AnalyticsDashboard: React.FC = () => {
             ))}
       )}
   );
+
 
 
 export default AnalyticsMonitor;

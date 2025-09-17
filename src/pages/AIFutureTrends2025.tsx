@@ -218,4 +218,5 @@ const AIFutureTrends2025: React.FC = () => {
 
 };
 
+
 export default AIFutureTrends2025;

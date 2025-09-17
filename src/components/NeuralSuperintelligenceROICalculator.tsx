@@ -9,4 +9,5 @@ const NeuralSuperintelligenceROICalculator: React.FC = () => {
 
 };
 
+
 export default NeuralSuperintelligenceROICalculator;

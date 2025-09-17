@@ -6,6 +6,7 @@ import RiskIndicator from '../components/ui/RiskIndicator';
 };
 
 
+
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
@@ -86,6 +87,7 @@ export default function TrustPage() {
               )}
         )}
   );
+
 
 
 export default trust;

@@ -18,4 +18,5 @@ const AIMetaVerseIntegration2025: React.FC = () => {
 
 };
 
+
 export default AIMetaVerseIntegration2025;

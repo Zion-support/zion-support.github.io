@@ -7,6 +7,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 };
 
 
+
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/metaverse-ai-development-platform'));
   if (!service) return null;

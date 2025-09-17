@@ -346,4 +346,5 @@ const SyntheticReality2027: React.FC = () => {
 
 };
 
+
 export default SyntheticReality2027;

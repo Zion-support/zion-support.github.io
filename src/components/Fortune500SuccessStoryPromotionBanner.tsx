@@ -135,4 +135,5 @@ const Fortune500SuccessStoryPromotionBanner: React.FC = () => {
 
 };
 
+
 export default Fortune500SuccessStoryPromotionBanner;

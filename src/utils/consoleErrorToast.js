@@ -11,4 +11,6 @@ console.error = function(...args) {
   if (errorMessage && !errorMessage.includes('Warning:')) {
     toast.error('An error occurred: ' + errorMessage);
   };
+};
+
 export default console.error;

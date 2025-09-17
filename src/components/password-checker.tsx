@@ -6,6 +6,7 @@ import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, Alert
 };
 
 
+
 export default function PasswordCheckerPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -390,6 +391,7 @@ export default function PasswordCheckerPage() {
               View Pricing
     </>
   );
+
 
 
 export default password-checker;

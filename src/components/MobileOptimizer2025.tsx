@@ -9,4 +9,5 @@ const MobileOptimizer2025: React.FC = () => {
 
 };
 
+
 export default MobileOptimizer2025;

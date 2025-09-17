@@ -162,6 +162,8 @@ export const safeStorage = {
       console.warn('localStorage not available:', error);
     }
   };
+};
+
 export default safeStorage;
     try {
     } catch (error) {

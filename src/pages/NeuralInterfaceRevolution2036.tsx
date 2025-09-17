@@ -18,4 +18,5 @@ const NeuralInterfaceRevolution2036: React.FC = () => {
 
 };
 
+
 export default NeuralInterfaceRevolution2036;

@@ -18,4 +18,5 @@ const RevolutionaryTechInsights2037: React.FC = () => {
 
 };
 
+
 export default RevolutionaryTechInsights2037;

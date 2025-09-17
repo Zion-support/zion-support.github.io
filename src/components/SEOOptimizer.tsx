@@ -9,4 +9,5 @@ const SEOOptimizer: React.FC = () => {
 
 };
 
+
 export default SEOOptimizer;

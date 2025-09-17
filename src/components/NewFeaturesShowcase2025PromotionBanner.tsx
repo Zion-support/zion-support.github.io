@@ -4,6 +4,7 @@ ArrowRightSparklesZapStarCheckCircle
 };
 
 
+
 export default function NewFeaturesShowcase2025PromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl">

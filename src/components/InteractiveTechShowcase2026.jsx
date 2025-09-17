@@ -32,4 +32,5 @@ const InteractiveTechShowcase2026 = () => {
 
 };
 
+
 export default InteractiveTechShowcase2026;

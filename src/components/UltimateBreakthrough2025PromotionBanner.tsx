@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function UltimateBreakthrough2025PromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 px-4">

@@ -62,4 +62,5 @@ const FutureTechTrends2025= () => {
 
 };
 
+
 export default FutureTechTrends2025;

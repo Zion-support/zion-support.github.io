@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function NewContent2025BreakthroughPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900">

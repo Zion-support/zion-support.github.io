@@ -9,5 +9,6 @@ const ContentCard: React.FC = () => {
 
 };
 
+
 export default ContentCard;
 </div></div>

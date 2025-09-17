@@ -15,6 +15,7 @@ import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 };
 
 
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',

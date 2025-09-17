@@ -401,4 +401,5 @@ const NextGenTechTrends2026: React.FC = () => {
 
 };
 
+
 export default NextGenTechTrends2026;

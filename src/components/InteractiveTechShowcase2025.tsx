@@ -681,4 +681,5 @@ const InteractiveTechShowcase2025: React.FC = () => {
 
 };
 
+
 export default InteractiveTechShowcase2025;

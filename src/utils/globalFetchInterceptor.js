@@ -12,4 +12,6 @@ window.fetch = async function(...args) {
     console.error('Fetch error:', error);
     throw error;
   };
+};
+
 export default window.fetch;

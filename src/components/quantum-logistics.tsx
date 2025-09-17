@@ -6,6 +6,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 };
 
 
+
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'));
   if (!service) return null;

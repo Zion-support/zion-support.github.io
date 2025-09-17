@@ -9,4 +9,5 @@ const NextGenContentShowcase2027: React.FC = () => {
 
 };
 
+
 export default NextGenContentShowcase2027;

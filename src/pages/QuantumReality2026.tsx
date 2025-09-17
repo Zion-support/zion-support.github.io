@@ -20,4 +20,5 @@ const QuantumReality2026: React.FC = () => {
 
 };
 
+
 export default QuantumReality2026;

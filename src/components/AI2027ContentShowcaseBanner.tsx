@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2027ContentShowcaseBanner() {
   return (
     <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white py-20 relative overflow-hidden">

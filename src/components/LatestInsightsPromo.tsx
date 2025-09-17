@@ -55,4 +55,5 @@ const LatestInsightsPromo: React.FC = () => {
 
 };
 
+
 export default LatestInsightsPromo;

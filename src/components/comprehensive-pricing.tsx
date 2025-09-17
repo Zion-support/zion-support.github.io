@@ -9,6 +9,7 @@ import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services'
 };
 
 
+
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
@@ -514,6 +515,7 @@ export default function ComprehensivePricingPage() {
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
   );
+
 
 
 export default comprehensive-pricing;

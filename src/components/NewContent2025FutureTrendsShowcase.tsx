@@ -9,4 +9,5 @@ const NewContent2025FutureTrendsShowcase: React.FC = () => {
 
 };
 
+
 export default NewContent2025FutureTrendsShowcase;

@@ -18,4 +18,5 @@ const NextGenAI2026: React.FC = () => {
 
 };
 
+
 export default NextGenAI2026;

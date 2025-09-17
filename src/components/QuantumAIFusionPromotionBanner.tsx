@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function QuantumAIFusionPromotionBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-teal-900 to-emerald-900">

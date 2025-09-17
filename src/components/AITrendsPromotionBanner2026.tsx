@@ -157,4 +157,5 @@ const AITrendsPromotionBanner2026 = () => {
 
 };
 
+
 export default AITrendsPromotionBanner2026;

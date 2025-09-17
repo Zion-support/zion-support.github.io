@@ -4,6 +4,7 @@ import Head from 'next/head';
 };
 
 
+
 export default function TechnologyInsightsPage() {
   const technologyTrends = [
     {
@@ -179,6 +180,7 @@ export default function TechnologyInsightsPage() {
                   Read Our Blog
     </>
   );
+
 
 
 export default technology-insights;

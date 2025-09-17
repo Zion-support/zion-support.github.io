@@ -45,6 +45,7 @@ import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution20
 import SpaceTimeComputing2027 from './pages/SpaceTimeComputing2027';
 };
 
+
 export default function App(): JSX.Element {
   return (
     <Router>

@@ -5,6 +5,7 @@ import React{ useState } from 'react';
 };
 
 
+
 export default function RevolutionaryPromoSection() {
   const [hoveredCardsetHoveredCard] = useState<number | null>(null);
   const promoItems = [
@@ -136,6 +137,7 @@ export default function RevolutionaryPromoSection() {
               >
                 🔥 Watch Webinar
   );
+
 
 
 export default RevolutionaryPromoSection;

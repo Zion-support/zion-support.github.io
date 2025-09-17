@@ -236,4 +236,6 @@ export const register = (userData) => authService.register(userData);
 export const logout = () => authService.logout();
 export const getCurrentUser = () => authService.getCurrentUser();
 export const isAuthenticated = () => authService.isAuthenticated();
+};
+
 export default authService;

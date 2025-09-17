@@ -1030,4 +1030,5 @@ const NextGenTechShowcase2026: React.FC = () => {
 
 };
 
+
 export default NextGenTechShowcase2026;

@@ -18,4 +18,5 @@ const NeuralInterfaceFuture2026: React.FC = () => {
 
 };
 
+
 export default NeuralInterfaceFuture2026;

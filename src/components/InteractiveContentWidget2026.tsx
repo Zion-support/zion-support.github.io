@@ -9,4 +9,5 @@ const InteractiveContentWidget2026: React.FC = () => {
 
 };
 
+
 export default InteractiveContentWidget2026;

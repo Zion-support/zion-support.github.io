@@ -21,6 +21,7 @@ import {
 };
 
 
+
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -425,6 +426,7 @@ export default function ToolComparisonPage() {
               Explore All Tools
     </>
   );
+
 
 
 export default tool-comparison;

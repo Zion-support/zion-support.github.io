@@ -18,4 +18,5 @@ const FutureTechBlog2036: React.FC = () => {
 
 };
 
+
 export default FutureTechBlog2036;

@@ -6,6 +6,7 @@ import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw,
 };
 
 
+
 export default function EmailValidatorPage() {
   const [emails, setEmails] = useState('');
   const [validationResults, setValidationResults] = useState<any[]>([]);
@@ -424,6 +425,7 @@ export default function EmailValidatorPage() {
               View Pricing
     </>
   );
+
 
 
 export default email-validator;

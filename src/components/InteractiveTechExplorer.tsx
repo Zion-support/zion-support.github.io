@@ -9,4 +9,5 @@ const InteractiveTechExplorer: React.FC = () => {
 
 };
 
+
 export default InteractiveTechExplorer;

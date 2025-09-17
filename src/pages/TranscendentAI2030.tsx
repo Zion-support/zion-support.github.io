@@ -154,4 +154,5 @@ const TranscendentAI2030: React.FC = () => {
 
 };
 
+
 export default TranscendentAI2030;

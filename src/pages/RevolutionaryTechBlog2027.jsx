@@ -18,4 +18,5 @@ const RevolutionaryTechBlog2027= () => {
 
 };
 
+
 export default RevolutionaryTechBlog2027;

@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2026NeuralConsciousnessBreakthroughPromotionBanner() {
   return (
     <section className="relative py-16 px-4 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 overflow-hidden">

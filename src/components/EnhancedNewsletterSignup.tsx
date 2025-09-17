@@ -87,4 +87,5 @@ const EnhancedNewsletterSignup: React.FC = () => {
 
 };
 
+
 export default EnhancedNewsletterSignup;

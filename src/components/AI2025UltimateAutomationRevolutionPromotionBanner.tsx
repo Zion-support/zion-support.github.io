@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2025UltimateAutomationRevolutionPromotionBanner() {
   return (
     <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-12 px-4">

@@ -85,6 +85,7 @@ const stats = [
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
 
 
+
 export default function UltimateFuturisticServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -19,6 +19,7 @@ import {
 };
 
 
+
 export default function AI2030ContentShowcaseBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden relative">

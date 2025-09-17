@@ -405,4 +405,6 @@ export const optimizeBundle = (): void => {
   if (typeof window !== 'undefined') {
     (window as any).__CODE_SPLITTING__ = true;
   };
+};
+
 export default PerformanceOptimizer;

@@ -98,6 +98,7 @@ const categories = [', 'All', 'Development', 'Analytics', 'Security', 'Content',
 };
 
 
+
 export default function AIToolsShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('All');
   const [hoveredToolsetHoveredTool] = useState<string | null>(null);
@@ -221,6 +222,7 @@ export default function AIToolsShowcase2025() {
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                 View All Tools
   );
+
 
 
 export default AIToolsShowcase2025;

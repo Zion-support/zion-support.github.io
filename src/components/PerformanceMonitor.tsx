@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { PerformanceMonitor, measureWebVitals } from '../utils/performance';
 interface PerformanceMonitorProps {
   enabled?: boolean;
-}
+};
 
 const PerformanceMonitorComponent: React.FC<PerformanceMonitorProps> = ({ 
   enabled = process.env.NODE_ENV === 'development' 
@@ -24,7 +24,7 @@ const PerformanceMonitorComponent: React.FC<PerformanceMonitorProps> = ({
   }, [enabled]);
   // This component doesn't render anything
   return null;
-};
+
 
 
 export default PerformanceMonitorComponent;

@@ -128,6 +128,7 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
 
 };
 
+
 export default FuturePredictionsShowcase2025PromotionBanner;
 </div></div>
 </p></p>

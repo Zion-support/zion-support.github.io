@@ -9,4 +9,5 @@ const TechnologyStack: React.FC = () => {
 
 };
 
+
 export default TechnologyStack;

@@ -4,6 +4,7 @@ import Head from 'next/head';
 };
 
 
+
 export default function AISolutionsPage() {
   const aiSolutions = [
     {
@@ -192,6 +193,7 @@ export default function AISolutionsPage() {
                   Explore Insights
     </>
   );
+
 
 
 export default ai-solutions;

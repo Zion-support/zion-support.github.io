@@ -3,6 +3,7 @@ import React from 'react';
 };
 
 
+
 export default function AI2026BreakthroughRevolutionBanner() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">

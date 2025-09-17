@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 };
 
 
+
 export default function UltimateBreakthroughPromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentSlidesetCurrentSlide] = useState(0);
@@ -98,6 +99,7 @@ export default function UltimateBreakthroughPromotionBanner() {
           />
         ))}
   );
+
 
 
 export default UltimateBreakthroughPromotionBanner;

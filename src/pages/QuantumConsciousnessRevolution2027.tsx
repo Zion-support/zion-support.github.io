@@ -298,4 +298,5 @@ const QuantumConsciousnessRevolution2027: React.FC = () => {
 
 };
 
+
 export default QuantumConsciousnessRevolution2027;
