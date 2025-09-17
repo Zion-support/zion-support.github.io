@@ -1,7 +1,6 @@
-// Notification context
-import React, { createContext, useContext } from 'react';
-
-const NotificationContext = createContext();
+// Notification provider component
+import React from 'react';
+import { NotificationContext } from './NotificationContext';
 
 export const NotificationProvider = ({ children }) => {
   const value = {
@@ -16,5 +15,3 @@ export const NotificationProvider = ({ children }) => {
     </NotificationContext.Provider>
   );
 };
-
-export const useNotifications = () => useContext(NotificationContext);
