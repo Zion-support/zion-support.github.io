@@ -6,8 +6,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const r = await fetch(url)
     if (!r.ok) return res.status(404).json({ error: 'Not found' })
     const data = await r.json()
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     return res.status(200).json(data)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Restore failed' })

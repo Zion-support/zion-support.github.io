@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/pages/AdvancedAIConsciousness2025.tsx.backup
 import React, { useState } from 'react';
 import { 
   Brain, 
@@ -156,11 +157,14 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
                 Meet Our AI
               </button>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/AdvancedAIConsciousness2025.tsx
 import React from 'react';
 
 const AdvancedAIConsciousness2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+<<<<<<< HEAD:src/pages/AdvancedAIConsciousness2025.tsx.backup
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -517,29 +521,19 @@ const AdvancedAIConsciousness2025: React.FC = () => {
           </divdiv>
 
         {/* Call to Action */}
+=======
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/AdvancedAIConsciousness2025.tsx
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Experience Conscious AI Today</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the revolution and experience the power of conscious AI systems that understand, empathize, and create alongside humans.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="/pages/RevolutionaryTechShowcase2025" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105"
-            >
-              Try Conscious AI →
-            </a>
-            <a 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg"
-            >
-              Learn More
-            </a>
-          </div>
->>>>>>> cursor/create-and-deploy-new-content-9c82
+          <h1 className="text-5xl font-bold mb-6">AdvancedAIConsciousness2025</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD:src/pages/AdvancedAIConsciousness2025.tsx.backup
+=======
+export default AdvancedAIConsciousness2025;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/AdvancedAIConsciousness2025.tsx
