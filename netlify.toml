@@ -1,30 +1,4 @@
-[build]
-  command = "npm run build:netlify"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "20"
-  NPM_FLAGS = "--no-audit --no-fund"
-
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  # Safe to include; it runs post-build if available. Netlify will skip if not installed.
-
-[functions]
-  node_bundler = "esbuild"
-
-[headers]
-  for = "/assets/*"
-  [headers.values]
-    cache-control = "public, max-age=31536000, immutable"
-
-# Netlify build configuration for Vite static app
-# Build: install and build
-<<<<<<< HEAD
-# noop: retrigger netlify build (2025-09-17 18:32 UTC) - local build verified OK
-=======
-# noop: retrigger netlify build (2025-09-17 20:15 UTC) - local build verified OK
->>>>>>> a47655aeeadc4d8e5ffbc9829d353192fced814c
+[# Unified Netlify configuration for Vite static app]
 [build]
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
@@ -41,6 +15,9 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
 
 [functions]
   directory = "netlify/functions"
@@ -249,9 +226,9 @@
 [context.deploy-preview]
   command = "npm run build"
   [context.deploy-preview.environment]
-  NODE_VERSION = "20"
+    NODE_VERSION = "20"
 
 [context.branch-deploy]
   command = "npm run build"
   [context.branch-deploy.environment]
-  NODE_VERSION = "20"
+    NODE_VERSION = "20"
