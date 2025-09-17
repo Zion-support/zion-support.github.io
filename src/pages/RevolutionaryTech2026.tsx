@@ -1,6 +1,7 @@
 import React from 'react';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
@@ -17,6 +18,11 @@ import React from 'react';
 
 
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
+=======
+import { motion } from 'framer-motion';
+
+
+>>>>>>> origin/feat/realtime-rag-content
 const RevolutionaryTech2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -210,7 +216,11 @@ const RevolutionaryTech2026: React.FC = () => {
             </a>
             </divbutton>
           </div>
+<<<<<<< HEAD
         </div>
+=======
+        </divdiv>
+>>>>>>> origin/feat/realtime-rag-content
           </div>
         </motion.div>
       </div>
@@ -220,8 +230,12 @@ const RevolutionaryTech2026: React.FC = () => {
 
 
 export default RevolutionaryTech2026;
+<<<<<<< HEAD
 
 
 
 export default RevolutionaryTech2026;
 export default RevolutionaryTech2026;
+=======
+export default RevolutionaryTech2026;
+>>>>>>> origin/feat/realtime-rag-content

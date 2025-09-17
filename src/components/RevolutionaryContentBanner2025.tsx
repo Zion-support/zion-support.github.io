@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -19,6 +20,11 @@ import {
   Rocket,
   Infinity
 } from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Sparkles, Zap, Brain, Rocket, Star } from 'lucide-react';
+>>>>>>> origin/feat/realtime-rag-content
 
 const RevolutionaryContentBanner2025: React.FC = () => {
   const newContent = [
@@ -49,9 +55,100 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 to-purple-600/10 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+=======
+    <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+      <div className="relative max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+            <Star className="w-4 h-4" />
+            Revolutionary Technology 2025
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            The Future is
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Now</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience the most advanced AI and technology solutions that are reshaping industries and transforming the way we work, live, and innovate.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="flex items-center gap-4 mb-6">
+              <div className={`p-4 rounded-2xl bg-gradient-to-r ${currentContent.gradient} text-white`}>
+                <currentContent.icon className="w-8 h-8" />
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold text-white">{currentContent.title}</h3>
+                <p className="text-purple-300 text-lg">{currentContent.subtitle}</p>
+              </div>
+            </div>
+            
+            <p className="text-gray-300 text-lg leading-relaxed">
+              {currentContent.description}
+            </p>
+
+            <div className="grid grid-cols-2 gap-4">
+              {currentContent.features.map((feature, index) => (
+                <div key={feature} className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+                  <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full" />
+                  <span className="text-white font-medium">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <button className="group inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300">
+              Explore Technology
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+
+          <div className="relative">
+            <div className={`relative w-full h-96 bg-gradient-to-br ${currentContent.gradient} rounded-3xl p-8 flex items-center justify-center`}>
+              <div className="absolute inset-0 bg-black/20 rounded-3xl" />
+              <div className="relative z-10 text-center text-white">
+                <currentContent.icon className="w-24 h-24 mx-auto mb-6 opacity-80" />
+                <div className="space-y-2">
+                  <div className="w-32 h-2 bg-white/30 rounded-full mx-auto" />
+                  <div className="w-24 h-2 bg-white/20 rounded-full mx-auto" />
+                  <div className="w-28 h-2 bg-white/25 rounded-full mx-auto" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center gap-3 mt-12">
+          {revolutionaryContent.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? 'bg-gradient-to-r from-purple-400 to-pink-400 scale-125'
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const RevolutionaryContentBanner2025: React.FC = () => {
+  return (
+<<<<<<< HEAD
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+>>>>>>> origin/feat/realtime-rag-content
       
       <div className="relative z-10">
         <motion.div
@@ -298,6 +395,10 @@ const RevolutionaryContentBanner2025: React.FC = () => {
         <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-ping delay-3000"></div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-4067
+>>>>>>> origin/feat/realtime-rag-content
   );
 
 };

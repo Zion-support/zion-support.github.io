@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -13,6 +14,12 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
+=======
+import React from 'react';
+
+const RevolutionaryTechBreakthrough2026: React.FC = () => {
+  return (
+>>>>>>> origin/feat/realtime-rag-content
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -367,7 +374,10 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-6">Revolutionary Technology Showcase</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Experience the future of technology with our groundbreaking innovations that are transforming every aspect of human life
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-cyan-900 text-white">
+=======
+>>>>>>> origin/feat/realtime-rag-content
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -519,12 +529,17 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
               </div>
             </div>
           </div>
         </div>
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-xl">
               Schedule Demo
+<<<<<<< HEAD
         {/* Impact Statistics */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
@@ -582,6 +597,8 @@ const RevolutionaryTechBreakthrough2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-2xl">
               📞 Contact Us
+=======
+>>>>>>> origin/feat/realtime-rag-content
             </button>
           </div>
 =======

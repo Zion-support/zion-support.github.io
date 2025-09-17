@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -40,6 +41,11 @@ import {
   Database as Data,
   Globe as World
 } from 'lucide-react';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+>>>>>>> origin/feat/realtime-rag-content
 const RevolutionaryTechInsights2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
@@ -71,6 +77,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
                 <Sparkles className="w-5 h-5 text-indigo-400" />
                 <span className="text-indigo-300">Revolutionary Insights</span>
             </div>
@@ -286,12 +293,20 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </div>
         </footer>
       </div>
+=======
+      </div>
+
+>>>>>>> origin/feat/realtime-rag-content
       {/* Featured Insights */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">Featured Tech Insights</h2>
           <p className="text-xl text-gray-300">The most groundbreaking discoveries and innovations of 2026</p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Insight 1 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
@@ -308,6 +323,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Learn More →
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
           {/* Insight 2 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-purple-400 text-4xl mb-4">⚛️</div>
@@ -323,6 +342,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Explore Quantum AI →
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
           {/* Insight 3 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-green-400 text-4xl mb-4">🌐</div>
@@ -338,6 +361,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Enter the Metaverse →
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
           {/* Insight 4 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-yellow-400 text-4xl mb-4">🔬</div>
@@ -353,6 +380,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Discover Biotech →
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
           {/* Insight 5 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-red-400 text-4xl mb-4">🛡️</div>
@@ -368,6 +399,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
               Secure Your Future →
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
           {/* Insight 6 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
             <div className="text-pink-400 text-4xl mb-4">🚀</div>
@@ -385,6 +420,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl p-12 text-center">
@@ -411,6 +450,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -424,10 +464,13 @@ const RevolutionaryTechInsights2026: React.FC = () => {
         </div>
       </div>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+>>>>>>> origin/feat/realtime-rag-content
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default RevolutionaryTechInsights2026;
@@ -462,3 +505,6 @@ export default RevolutionaryTechInsights2026;
 =======
 export default RevolutionaryTechInsights2026;
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+export default RevolutionaryTechInsights2026;
+>>>>>>> origin/feat/realtime-rag-content

@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { motion } from 'framer-motion';
 =======
@@ -280,6 +281,10 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
               Explore Applications
+=======
+import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+>>>>>>> origin/feat/realtime-rag-content
 
 
 
@@ -293,8 +298,21 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
+<<<<<<< HEAD
           <h1 className="text-4xl font-bold mb-6">AdvancedBiotechRevolution2026</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+=======
+          <h2 className="text-4xl font-bold mb-4">Join the Biotech Revolution</h2>
+          <p className="text-xl opacity-80 mb-8">Be part of the future of medicine and human enhancement</p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-green-600 to-emerald-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Treatment
+            </button>
+            <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400/10 transition-colors font-semibold text-lg">
+              Research Partnership
+            </button>
+          </div>
+>>>>>>> origin/feat/realtime-rag-content
         </div>
       </div>
     </div>

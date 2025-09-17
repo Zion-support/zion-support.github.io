@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
 const InterdimensionalTechRevolution2030: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -16,6 +20,10 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
             <div className="text-center">
               <div className="text-6xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold mb-4">Dimensional Processing</h3>
@@ -24,6 +32,10 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
       {/* Interdimensional Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -54,6 +66,10 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Open Gateway →
               </button>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
             {/* Reality Engine */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -76,6 +92,10 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
                 Engine Reality →
               </button>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
             {/* Consciousness Transfer */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -101,6 +121,10 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
       {/* Advanced Applications */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-800/50 to-purple-800/50">
         <div className="container mx-auto">
@@ -196,6 +220,10 @@ const InterdimensionalTechRevolution2030: React.FC = () => {
             </motion.div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
       {/* Advanced Applications */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-800/50 to-purple-800/50">
         <div className="container mx-auto">

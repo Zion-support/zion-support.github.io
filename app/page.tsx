@@ -130,6 +130,7 @@ export default function HomePage() {
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
         url="/"
       />
+<<<<<<< HEAD
       
       {/* NEW REVOLUTIONARY 2030+ BREAKTHROUGH CONTENT BANNERS - FEATURED */}
       <AI2030FutureInnovationBanner />
@@ -668,11 +669,15 @@ export default function HomePage() {
         </div>
       </section>
       {/* New Promo: Reliable Upgrades + Release Scorecards (Sept 16, 2025) */}
+=======
+      {/* Promo: Real-Time RAG + Autonomous Ops (New) */}
+>>>>>>> origin/feat/realtime-rag-content
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-100">
             <div>
               <p className="text-sm font-semibold text-purple-700">New content</p>
+<<<<<<< HEAD
               <h2 className="text-2xl font-bold text-gray-900 mt-1">Reliable Agent Upgrades + Release Scorecards</h2>
               <p className="text-gray-600 mt-2">Gate‑driven releases with canary scorecards, rollback contracts, and audit‑ready evidence.</p>
             </div>
@@ -712,10 +717,27 @@ export default function HomePage() {
             <div className="flex gap-3">
               <Link href="/blog/ai-2026-runtime-guardrails-blueprint" className="inline-block bg-cyan-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-cyan-700">Guardrails Blueprint</Link>
               <Link href="/resources/ai-2026-evaluation-runbook-starter" className="inline-block border border-cyan-600 text-cyan-700 px-5 py-3 rounded-lg font-semibold hover:bg-cyan-50">Eval Runbook</Link>
+=======
+              <h2 className="text-2xl font-bold text-gray-900 mt-1">Just published: Real‑Time RAG + Autonomous Ops</h2>
+              <p className="text-gray-600 mt-2">Low‑latency retrieval architectures and an ops playbook for safe autonomy.</p>
+            </div>
+            <div className="flex gap-3">
+              <Link href="/blog/ai-2026-real-time-retrieval-architectures" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Real‑Time RAG</Link>
+              <Link href="/content/ai-2026-real-time-rag-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">RAG Blueprint</Link>
+>>>>>>> origin/feat/realtime-rag-content
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/realtime-rag-content
       {/* New Promo: Agent Platform SLOs (Sept 2025) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

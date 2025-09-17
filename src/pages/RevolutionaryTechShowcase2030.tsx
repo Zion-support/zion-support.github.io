@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 const RevolutionaryTechShowcase2030: React.FC = () => {
@@ -136,6 +137,16 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
           <h1 className="text-5xl font-bold mb-6">RevolutionaryTechShowcase2030</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+        </div>
+      </div>
+
+          </div>
+        </div>
+      </div>
+
+          </div>
+>>>>>>> origin/feat/realtime-rag-content
         </div>
       </div>
     </div>

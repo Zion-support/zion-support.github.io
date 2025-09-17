@@ -69,11 +69,14 @@ const UltimateTechBreakthrough2026: React.FC = () => {
         <div className="text-center mb-20">
           <div className="inline-block px-8 py-4 bg-gradient-to-r from-pink-500 to-violet-500 text-white rounded-full text-xl font-bold mb-8 animate-pulse">
             🌟 ULTIMATE BREAKTHROUGH 2026
+<<<<<<< HEAD
 =======
 
 const UltimateTechBreakthrough2026: React.FC = () => {
   return (
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
+=======
+>>>>>>> origin/feat/realtime-rag-content
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <Helmet>
         <title>Ultimate Tech Breakthrough 2026 | Zion Tech Group</title>
@@ -194,6 +197,10 @@ const UltimateTechBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
@@ -202,6 +209,7 @@ const UltimateTechBreakthrough2026: React.FC = () => {
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-xl">
               Contact Our Experts
             </button>
+<<<<<<< HEAD
 =======
 
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
@@ -239,6 +247,8 @@ const UltimateTechBreakthrough2026: React.FC = () => {
               📞 Schedule Private Demo
             </a>
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
+=======
+>>>>>>> origin/feat/realtime-rag-content
           </div>
       </div>
     </div>

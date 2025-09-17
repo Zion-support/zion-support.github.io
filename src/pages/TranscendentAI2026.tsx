@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import React, { useState } from 'react';
+
+>>>>>>> origin/feat/realtime-rag-content
 const TranscendentAI2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -29,6 +34,10 @@ const TranscendentAI2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
       {/* Transcendent Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -151,11 +160,19 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
               </div>
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
               </div>
         {/* Revolutionary Applications */}
         <divsection
@@ -335,6 +352,10 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -505,8 +526,12 @@ const TranscendentAI2026: React.FC = () => {
             </p>
           </div>
         </motion.section>
+<<<<<<< HEAD
           </div>
         </motion.section>
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
         {/* Future Vision */}
         <divsection
           className="text-center mb-16"
