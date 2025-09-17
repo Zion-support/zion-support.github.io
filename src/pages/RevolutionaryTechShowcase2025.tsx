@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect }  from 'react';
+import { motion }  from 'framer-motion';
+import { Helmet }  from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -12,7 +12,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 
   const technologies = [
     {
-      id: 1,
+      id: "1",
       title: "Conscious AI Systems",
       description: "Revolutionary AI that exhibits self-awareness and emotional intelligence, capable of understanding context and making autonomous decisions.",
       features: [
@@ -25,7 +25,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       gradient: "from-purple-600 to-pink-600"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Neural Networks",
       description: "Breakthrough technology combining quantum computing with neural networks for unprecedented processing power and speed.",
       features: [
@@ -38,7 +38,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600"
     },
     {
-      id: 3,
+      id: "3",
       title: "Interdimensional Computing",
       description: "Access computing resources across multiple dimensions, enabling infinite scalability and processing power.",
       features: [
@@ -51,7 +51,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600"
     },
     {
-      id: 4,
+      id: "4",
       title: "Neural Interface Revolution",
       description: "Direct brain-computer interfaces that enable thought-based control and seamless human-AI integration.",
       features: [
@@ -125,7 +125,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: "0", y: 50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
         transition={{ duration: 0.8 }}
         className="relative overflow-hidden"
@@ -154,7 +154,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             {technologies.map((tech, index) => (
               <motion.div
                 key={tech.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: "0", y: 50 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -181,7 +181,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 
           {/* Interactive Demo Section */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: "0", scale: 0.9 }}
             animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 mb-20 border border-purple-400/30"
@@ -215,7 +215,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 
           {/* Case Studies */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: "0", y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-20"
@@ -229,7 +229,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               {caseStudies.map((study, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: "0", y: 30 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
                   transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -245,7 +245,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
 
           {/* CTA Section */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: "0", y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-center"
@@ -270,6 +270,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       </div>
     </>
   );
-};
-
+  }
+];
 export default RevolutionaryTechShowcase2025;

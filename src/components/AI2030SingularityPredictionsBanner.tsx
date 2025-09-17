@@ -11,6 +11,6 @@ const AI2030SingularityPredictionsBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2030SingularityPredictionsBanner;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const InteractiveTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -40,7 +40,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
 
   const technologies = [
     {
-      id: 0,
+      id: "0",
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -54,7 +54,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
       link: "/pages/RevolutionaryTechTrends2027"
     },
     {
-      id: 1,
+      id: "1",
       title: "Quantum Neural Networks",
       icon: "⚡",
       description: "Quantum-enhanced AI that processes information at the speed of light",
@@ -68,7 +68,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
       link: "/pages/QuantumNeuralNetworks2027"
     },
     {
-      id: 2,
+      id: "2",
       title: "Holographic Interfaces",
       icon: "🌟",
       description: "Three-dimensional interfaces that revolutionize human-computer interaction",
@@ -82,7 +82,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
       link: "/pages/UltimateTechShowcase2027"
     },
     {
-      id: 3,
+      id: "3",
       title: "Molecular Manufacturing",
       icon: "⚗️",
       description: "Building the future atom by atom with perfect precision",
@@ -113,8 +113,8 @@ const InteractiveTechShowcase2027: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }
-  };
-
+  }
+];
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -205,6 +205,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveTechShowcase2027;

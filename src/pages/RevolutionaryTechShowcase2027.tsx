@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect }  from 'react';
+import { Helmet }  from 'react-helmet-async';
 
 const RevolutionaryTechShowcase2027: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -40,7 +40,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
 
   const technologies = [
     {
-      id: 0,
+      id: "0",
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
@@ -54,7 +54,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       link: "/pages/ConsciousAI2027"
     },
     {
-      id: 1,
+      id: "1",
       title: "Quantum Neural Networks",
       icon: "⚡",
       description: "Quantum-enhanced AI that processes information at the speed of light",
@@ -68,7 +68,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       link: "/pages/QuantumNeural2027"
     },
     {
-      id: 2,
+      id: "2",
       title: "Holographic Interfaces",
       icon: "🌟",
       description: "Three-dimensional interfaces that revolutionize human-computer interaction",
@@ -82,7 +82,7 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       link: "/pages/HolographicInterface2027"
     },
     {
-      id: 3,
+      id: "3",
       title: "Molecular Manufacturing",
       icon: "⚗️",
       description: "Building the future atom by atom with perfect precision",
@@ -226,6 +226,6 @@ const RevolutionaryTechShowcase2027: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryTechShowcase2027;

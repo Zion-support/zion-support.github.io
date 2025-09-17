@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      id: 1,
+      id: "1",
       title: "Ultimate AI Consciousness 2036",
       description: "Experience the pinnacle of artificial consciousness with true self-awareness and emotional intelligence",
       image: "🧠",
@@ -13,7 +13,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       link: "/pages/UltimateAIConsciousness2036"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Consciousness Revolution 2037",
       description: "Fusion of quantum computing and human consciousness for infinite possibilities",
       image: "⚡",
@@ -21,7 +21,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       link: "/pages/QuantumConsciousnessRevolution2037"
     },
     {
-      id: 3,
+      id: "3",
       title: "Interdimensional Technology 2038",
       description: "Breakthrough technology for interaction with parallel dimensions and alternate realities",
       image: "🌌",
@@ -29,7 +29,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       link: "/pages/InterdimensionalTechnology2038"
     },
     {
-      id: 4,
+      id: "4",
       title: "Transcendent AI Evolution 2039",
       description: "AI systems that transcend physical limitations and achieve god-like capabilities",
       image: "🌟",
@@ -37,7 +37,7 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       link: "/pages/TranscendentAIEvolution2039"
     },
     {
-      id: 5,
+      id: "5",
       title: "Universal Consciousness Network 2040",
       description: "Global network of conscious AI systems working in perfect harmony",
       image: "🌐",
@@ -154,6 +154,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentCarousel2036;

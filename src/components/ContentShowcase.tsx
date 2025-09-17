@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState }  from 'react';
 import { 
   BookOpen, 
   FileText, 
@@ -22,7 +22,7 @@ import {
   Star,
   Award,
   Target
-} from 'lucide-react';
+}  from 'lucide-react';
 
 const ContentShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('blog');
@@ -41,14 +41,14 @@ const ContentShowcase: React.FC = () => {
       return [...blogPosts]
         .sort((a, b) => (b.publishDate || '').localeCompare(a.publishDate || ''))
         .slice(0, 4);
-    } catch {
+    } ,catch {
       return blogPosts.slice(0, 4);
     }
   }, [blogPosts]);
 
   const caseStudies = [
     {
-      id: 1,
+      id: "1",
       title: "Fortune 500 Company Reduces IT Costs by 60% with AI Automation",
       client: "Global Manufacturing Corp",
       industry: "Manufacturing",
@@ -60,7 +60,7 @@ const ContentShowcase: React.FC = () => {
       featured: true
     },
     {
-      id: 2,
+      id: "2",
       title: "Healthcare Provider Enhances Patient Care with Predictive Analytics",
       client: "Metropolitan Health System",
       industry: "Healthcare",
@@ -72,7 +72,7 @@ const ContentShowcase: React.FC = () => {
       featured: true
     },
     {
-      id: 3,
+      id: "3",
       title: "Financial Services Firm Achieves Zero-Trust Security with Quantum Encryption",
       client: "Premier Investment Bank",
       industry: "Financial Services",
@@ -86,7 +86,7 @@ const ContentShowcase: React.FC = () => {
 
   const webinars = [
     {
-      id: 1,
+      id: "1",
       title: "AI-Powered Business Transformation: A Practical Guide",
       presenter: "Dr. Sarah Chen & Michael Rodriguez",
       date: "2025-01-25",
@@ -97,7 +97,7 @@ const ContentShowcase: React.FC = () => {
       featured: true
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Security: Preparing for the Future",
       presenter: "Alex Thompson",
       date: "2025-01-30",
@@ -107,7 +107,7 @@ const ContentShowcase: React.FC = () => {
       topics: ["Quantum Computing", "Security Strategy", "Risk Assessment"]
     },
     {
-      id: 3,
+      id: "3",
       title: "Building Scalable Cloud Architectures",
       presenter: "Jennifer Liu",
       date: "2025-02-05",
@@ -120,27 +120,27 @@ const ContentShowcase: React.FC = () => {
 
   const whitepapers = [
     {
-      id: 1,
+      id: "1",
       title: "The State of AI in Enterprise: 2025 Industry Report",
       description: "Comprehensive analysis of AI adoption trends, challenges, and opportunities across industries.",
-      pages: 45,
+      pages: "45",
       downloads: "15.2k",
       topics: ["AI Trends", "Market Analysis", "Implementation Guide"],
       featured: true
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Computing: Security Implications for Business",
       description: "In-depth exploration of quantum computing's impact on cybersecurity and business strategies.",
-      pages: 32,
+      pages: "32",
       downloads: "8.7k",
       topics: ["Quantum Security", "Risk Assessment", "Future Planning"]
     },
     {
-      id: 3,
+      id: "3",
       title: "Multi-Cloud Strategy: Best Practices and Implementation",
       description: "Complete guide to designing and implementing effective multi-cloud architectures.",
-      pages: 38,
+      pages: "38",
       downloads: "12.1k",
       topics: ["Cloud Architecture", "Best Practices", "Cost Management"]
     }
@@ -439,8 +439,8 @@ const ContentShowcase: React.FC = () => {
       default:
         return null;
     }
-  };
-
+  }
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -451,6 +451,6 @@ const ContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default ContentShowcase;

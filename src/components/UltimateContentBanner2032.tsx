@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link }  from 'react-router-dom';
 
 const UltimateContentBanner2032: React.FC = () => {
   return (
@@ -67,6 +67,6 @@ const UltimateContentBanner2032: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateContentBanner2032;

@@ -3,6 +3,6 @@ const App.minimal = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default App.minimal;

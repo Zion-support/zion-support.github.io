@@ -11,6 +11,6 @@ const InteractiveContentHub2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveContentHub2025;

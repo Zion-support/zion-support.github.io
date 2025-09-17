@@ -5,9 +5,10 @@ import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import PerformanceMonitor from "./components/PerformanceMonitor";
-import ErrorBoundary from "./components/ErrorBoundary";
+import EnhancedErrorBoundary from "./components/EnhancedErrorBoundary";
 import SEOHead from "./components/SEOHead";
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -39,7 +40,27 @@ const LoadingSpinner = () => (
 );
 
 function App() {
+  const { prefetchResource, cacheResource, measurePerformance } = usePerformanceOptimization({
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCodeSplitting: true,
+    enablePrefetching: true,
+    enableCaching: true
+  });
+
   useEffect(() => {
+    // Prefetch critical resources
+    measurePerformance('App initialization', () => {
+      prefetchResource('/assets/vendor-DgTrhVr3.js', 'script');
+      prefetchResource('/assets/index-CWbMb2zs.js', 'script');
+    });
+
+    // Cache app configuration
+    cacheResource('app-config', {
+      version: '1.0.0',
+      features: ['performance-monitoring', 'accessibility', 'error-boundary']
+    }, 300000); // 5 minutes
+
     // Initialize performance monitoring
     const perfMonitor = new PerformanceMonitor();
     
@@ -50,7 +71,7 @@ function App() {
           perfMonitor.reportMetrics();
         }
       }, 2000);
-    };
+    }
     
     window.addEventListener('load', handleLoad);
     
@@ -60,17 +81,34 @@ function App() {
       }
       window.removeEventListener('load', handleLoad);
     };
-  }, []);
+  }, [prefetchResource, cacheResource, measurePerformance]);
 
   return (
-    <ErrorBoundary fallback={<ErrorFallback error={new Error('Unknown error')} resetErrorBoundary={() => window.location.reload()} />}>
+    <EnhancedErrorBoundary
+      onError={(error, errorInfo) => {
+        console.error('App Error:', error, errorInfo);
+        // Here you would send error to monitoring service
+      }}
+    >
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
             <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
               <SEOHead />
-              <AccessibilityEnhancer />
-              <PerformanceMonitor />
+              <AccessibilityEnhancer 
+                enableKeyboardNavigation={true}
+                enableScreenReader={true}
+                enableHighContrast={true}
+                enableFocusManagement={true}
+                enableAriaLabels={true}
+              />
+              <PerformanceMonitor 
+                enableReporting={true}
+                reportInterval={30000}
+                onMetricsUpdate={(metrics) => {
+                  console.log('Performance metrics updated:', metrics);
+                }}
+              />
               {/* Skip Links for Accessibility */}
               <div className="sr-only focus-within:not-sr-only">
                 <a href="#main-content" className="skip-link">
@@ -99,7 +137,7 @@ function App() {
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }
 

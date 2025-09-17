@@ -11,6 +11,6 @@ const AI2025ContentRevolution5000ROIBanner: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2025ContentRevolution5000ROIBanner;

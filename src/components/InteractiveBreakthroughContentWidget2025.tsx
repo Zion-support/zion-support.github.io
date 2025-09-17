@@ -11,6 +11,6 @@ const InteractiveBreakthroughContentWidget2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default InteractiveBreakthroughContentWidget2025;

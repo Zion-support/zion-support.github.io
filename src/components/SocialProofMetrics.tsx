@@ -11,6 +11,6 @@ const SocialProofMetrics: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default SocialProofMetrics;

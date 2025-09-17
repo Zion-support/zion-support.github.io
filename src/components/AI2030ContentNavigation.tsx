@@ -11,6 +11,6 @@ const AI2030ContentNavigation: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AI2030ContentNavigation;

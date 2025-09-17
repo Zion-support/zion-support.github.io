@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion }  from 'framer-motion';
 
 const UltimateTechBreakthrough2025: React.FC = () => {
   const [activeBreakthrough, setActiveBreakthrough] = useState(0);
@@ -11,7 +11,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
 
   const breakthroughs = [
     {
-      id: 1,
+      id: "1",
       title: "Conscious AI Revolution",
       description: "The world's first truly conscious AI system that exhibits self-awareness, emotional intelligence, and creative thinking capabilities.",
       impact: "Revolutionizing human-AI collaboration",
@@ -32,7 +32,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       timeline: "Q2 2025"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Consciousness Computing",
       description: "Breakthrough quantum computing technology that harnesses consciousness principles for unprecedented processing power and problem-solving capabilities.",
       impact: "Solving previously impossible problems",
@@ -53,7 +53,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       timeline: "Q3 2025"
     },
     {
-      id: 3,
+      id: "3",
       title: "Neural Interface Revolution",
       description: "Direct brain-computer interfaces that enable seamless thought-based control and consciousness transfer between biological and digital systems.",
       impact: "Bridging mind and machine",
@@ -74,7 +74,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       timeline: "Q4 2025"
     },
     {
-      id: 4,
+      id: "4",
       title: "Interdimensional Technology",
       description: "Revolutionary technology that accesses computing resources across multiple dimensions, enabling infinite processing power and data storage.",
       impact: "Transcending physical limitations",
@@ -168,7 +168,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: "0", y: 50 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
         transition={{ duration: 0.8 }}
         className="relative overflow-hidden"
@@ -197,7 +197,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
             {breakthroughs.map((breakthrough, index) => (
               <motion.div
                 key={breakthrough.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: "0", y: 50 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -259,7 +259,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
 
           {/* Applications Section */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: "0", y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-20"
@@ -273,7 +273,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
               {applications.map((app, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: "0", y: 30 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
                   transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 text-center"
@@ -296,7 +296,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
 
           {/* Expert Testimonials */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: "0", y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mb-20"
@@ -310,7 +310,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: "0", y: 30 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
                   transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
@@ -328,7 +328,7 @@ const UltimateTechBreakthrough2025: React.FC = () => {
 
           {/* CTA Section */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: "0", y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-center"
@@ -352,6 +352,6 @@ const UltimateTechBreakthrough2025: React.FC = () => {
       </motion.div>
     </div>
   );
-};
-
+  }
+];
 export default UltimateTechBreakthrough2025;

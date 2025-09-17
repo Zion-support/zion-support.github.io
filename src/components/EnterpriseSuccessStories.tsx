@@ -11,6 +11,6 @@ const EnterpriseSuccessStories: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default EnterpriseSuccessStories;

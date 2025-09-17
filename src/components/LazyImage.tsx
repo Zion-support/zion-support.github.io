@@ -11,6 +11,6 @@ const LazyImage: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default LazyImage;

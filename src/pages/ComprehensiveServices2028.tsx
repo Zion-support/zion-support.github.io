@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion }  from 'framer-motion';
 import {
   ArrowRight,
   Brain,
@@ -8,12 +8,12 @@ import {
   Shield,
   Smartphone,
   Star
-} from 'lucide-react';
+}  from 'lucide-react';
 
 const ComprehensiveServices2028: React.FC = () => {
   const serviceCategories = [
     {
-      icon: Brain,
+      icon: "Brain",
       title: "AI & Machine Learning",
       description: "Advanced artificial intelligence solutions including quantum consciousness AI, neural networks, and autonomous systems.",
       services: [
@@ -27,7 +27,7 @@ const ComprehensiveServices2028: React.FC = () => {
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: Cloud,
+      icon: "Cloud",
       title: "Cloud & Infrastructure",
       description: "Scalable cloud solutions with quantum computing capabilities and infinite scalability.",
       services: [
@@ -41,7 +41,7 @@ const ComprehensiveServices2028: React.FC = () => {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Shield,
+      icon: "Shield",
       title: "Cybersecurity",
       description: "Quantum-enhanced security solutions with self-evolving threat detection and prevention.",
       services: [
@@ -55,7 +55,7 @@ const ComprehensiveServices2028: React.FC = () => {
       gradient: "from-red-500 to-orange-500"
     },
     {
-      icon: Smartphone,
+      icon: "Smartphone",
       title: "Mobile Development",
       description: "Next-generation mobile applications with AI integration and neural interface support.",
       services: [
@@ -69,7 +69,7 @@ const ComprehensiveServices2028: React.FC = () => {
       gradient: "from-green-500 to-emerald-500"
     },
     {
-      icon: Code,
+      icon: "Code",
       title: "Software Development",
       description: "Custom software solutions built with cutting-edge technologies and quantum computing.",
       services: [
@@ -83,7 +83,7 @@ const ComprehensiveServices2028: React.FC = () => {
       gradient: "from-indigo-500 to-purple-500"
     },
     {
-      icon: Code,
+      icon: "Code",
       title: "UI/UX Design",
       description: "Revolutionary user experience design with neural interface optimization and AI-driven personalization.",
       services: [
@@ -119,8 +119,8 @@ const ComprehensiveServices2028: React.FC = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -170,8 +170,8 @@ const ComprehensiveServices2028: React.FC = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: "0", y: 20 }}
+                animate={{ opacity: "1", y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -190,8 +190,8 @@ const ComprehensiveServices2028: React.FC = () => {
       <div className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -207,8 +207,8 @@ const ComprehensiveServices2028: React.FC = () => {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: "0", y: 20 }}
+                animate={{ opacity: "1", y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20"
               >
@@ -239,8 +239,8 @@ const ComprehensiveServices2028: React.FC = () => {
       <div className="py-24 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -256,8 +256,8 @@ const ComprehensiveServices2028: React.FC = () => {
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: "0", scale: 0.8 }}
+                animate={{ opacity: "1", scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-4 text-center border border-blue-500/20"
               >
@@ -272,8 +272,8 @@ const ComprehensiveServices2028: React.FC = () => {
       <div className="py-24 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: "0", y: 20 }}
+            animate={{ opacity: "1", y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -295,6 +295,6 @@ const ComprehensiveServices2028: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default ComprehensiveServices2028;

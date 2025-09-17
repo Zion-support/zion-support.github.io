@@ -11,6 +11,6 @@ const DynamicContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default DynamicContentShowcase;

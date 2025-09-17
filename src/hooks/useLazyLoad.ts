@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback }  from 'react';
 interface UseLazyLoadOptions {
   threshold?: number;
   rootMargin?: string;
@@ -19,7 +19,7 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}) => {
       if (triggerOnce) {
         setHasTriggered(true);
       }
-    } else if (!triggerOnce) {
+    } ,else if (!triggerOnce) {
       setIsVisible(false);
     }
   }, [triggerOnce]);
@@ -33,12 +33,14 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}) => {
     observer.observe(element);
     return () => {
       observer.unobserve(element);
-    };
+  }
+];
   }, [handleIntersection, threshold, rootMargin, triggerOnce, hasTriggered]);
   return {
     elementRef,
     isVisible: triggerOnce ? (isVisible || hasTriggered) : isVisible
-  };
-};
-
+  }
+];
+  }
+];
 export default useLazyLoad;

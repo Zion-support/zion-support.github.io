@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const InterdimensionalTechShowcase2027: React.FC = () => {
   const [currentDimension, setCurrentDimension] = useState(0);
@@ -6,7 +6,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
 
   const interdimensionalTechs = [
     {
-      id: 1,
+      id: "1",
       title: "🌌 Dimensional Gateway Technology",
       subtitle: "Travel Between Realities",
       description: "Revolutionary technology that creates stable portals between dimensions, allowing instantaneous travel across parallel universes and alternate realities.",
@@ -23,7 +23,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       impact: "Reality-Altering"
     },
     {
-      id: 2,
+      id: "2",
       title: "⚡ Quantum Reality Engine",
       subtitle: "Manipulate Physical Laws",
       description: "Advanced quantum processors that can temporarily alter the fundamental constants of physics within localized regions, enabling impossible feats.",
@@ -40,7 +40,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       impact: "Universal"
     },
     {
-      id: 3,
+      id: "3",
       title: "🔮 Consciousness Transfer Matrix",
       subtitle: "Digital Immortality",
       description: "Technology that can transfer human consciousness into digital substrates, achieving true digital immortality across multiple dimensions.",
@@ -57,7 +57,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       impact: "Transcendent"
     },
     {
-      id: 4,
+      id: "4",
       title: "🌍 Planetary Consciousness Grid",
       subtitle: "Global Mind Network",
       description: "A planetary-scale network that connects all intelligent life forms into a unified consciousness, enabling collective problem-solving and shared experiences.",
@@ -74,7 +74,7 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       impact: "Planetary"
     },
     {
-      id: 5,
+      id: "5",
       title: "🚀 Interstellar Reality Bridges",
       subtitle: "Travel to Distant Stars",
       description: "Massive interdimensional bridges that span across galaxies, allowing instantaneous travel to any point in the universe through folded space-time.",
@@ -116,16 +116,13 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
             className="absolute w-4 h-4 border-2 border-purple-400 rounded-full opacity-20"
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              top: `${Math.random() * 100}%`}}
               scale: [1, 1.5, 1],
               opacity: [0.2, 0.6, 0.2],
-              rotate: [0, 360],
-            }}
+              rotate: [0, 360]}}
               duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
+              repeat: "Infinity",
+              delay: Math.random() * 2}}
           />
         ))}
       </div>
@@ -232,17 +229,14 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
                     className="absolute w-1 h-1 bg-white rounded-full opacity-40"
                     style={{
                       left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                    }}
+                      top: `${Math.random() * 100}%`}}
                       scale: [0, 1, 0],
                       opacity: [0, 0.8, 0],
                       x: [0, Math.random() * 100 - 50, 0],
-                      y: [0, Math.random() * 100 - 50, 0],
-                    }}
+                      y: [0, Math.random() * 100 - 50, 0]}}
                       duration: 2 + Math.random() * 2,
-                      repeat: Infinity,
-                      delay: Math.random() * 3,
-                    }}
+                      repeat: "Infinity",
+                      delay: Math.random() * 3}}
                   />
                 ))}
               </div>
@@ -287,6 +281,6 @@ const InterdimensionalTechShowcase2027: React.FC = () => {
       </div>
                     </div>
   );
-};
-
+  }
+];
 export default InterdimensionalTechShowcase2027;

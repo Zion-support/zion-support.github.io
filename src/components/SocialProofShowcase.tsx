@@ -11,6 +11,6 @@ const SocialProofShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default SocialProofShowcase;

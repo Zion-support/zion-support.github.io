@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet }  from 'react-helmet-async';
 
 const RevolutionaryTechBreakthrough2025: React.FC = () => {
   return (
@@ -45,6 +45,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryTechBreakthrough2025;

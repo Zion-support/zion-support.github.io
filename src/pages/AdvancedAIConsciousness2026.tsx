@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const AdvancedAIConsciousness2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -69,8 +69,8 @@ const AdvancedAIConsciousness2026: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -102,8 +102,8 @@ const AdvancedAIConsciousness2026: React.FC = () => {
           {consciousnessFeatures.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: "0", y: 20 }}
+              animate={{ opacity: "1", y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className={`bg-gradient-to-br ${feature.gradient} p-8 rounded-2xl text-white shadow-2xl transform hover:scale-105 transition-all duration-300`}
             >
@@ -127,8 +127,8 @@ const AdvancedAIConsciousness2026: React.FC = () => {
 
         {/* Interactive Demo Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
         >
@@ -174,8 +174,8 @@ const AdvancedAIConsciousness2026: React.FC = () => {
 
         {/* Testimonials Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
         >
@@ -185,9 +185,9 @@ const AdvancedAIConsciousness2026: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimonial}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: "0", x: 20 }}
+              animate={{ opacity: "1", x: 0 }}
+              exit={{ opacity: "0", x: -20 }}
               transition={{ duration: 0.5 }}
               className="text-center"
             >
@@ -211,8 +211,8 @@ const AdvancedAIConsciousness2026: React.FC = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: "0", y: 20 }}
+          animate={{ opacity: "1", y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
           className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white"
         >
@@ -234,6 +234,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AdvancedAIConsciousness2026;

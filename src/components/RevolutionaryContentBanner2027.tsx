@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect }  from 'react';
+import { Link }  from 'react-router-dom';
 
 const RevolutionaryContentBanner2027: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -138,6 +138,6 @@ const RevolutionaryContentBanner2027: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default RevolutionaryContentBanner2027;

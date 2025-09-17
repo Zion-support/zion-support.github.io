@@ -11,6 +11,6 @@ const AISuccessStoriesShowcase: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AISuccessStoriesShowcase;

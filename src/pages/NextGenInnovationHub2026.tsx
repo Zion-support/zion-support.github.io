@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet }  from 'react-helmet-async';
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
 
@@ -115,6 +115,6 @@ const NextGenInnovationHub2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default NextGenInnovationHub2026;

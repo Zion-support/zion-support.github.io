@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet }  from 'react-helmet-async';
 
 const QuantumComputingRevolution2026: React.FC = () => {
   return (
@@ -317,6 +317,6 @@ const QuantumComputingRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default QuantumComputingRevolution2026;

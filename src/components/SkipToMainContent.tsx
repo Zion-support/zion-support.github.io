@@ -17,6 +17,6 @@ export const SkipToMainContent: React.FC = () => {
       Skip to main content
     </a>
   );
-};
-
+  }
+];
 export default SkipToMainContent;

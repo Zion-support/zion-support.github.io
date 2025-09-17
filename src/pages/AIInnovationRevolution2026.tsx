@@ -11,6 +11,6 @@ const AIInnovationRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  }
+];
 export default AIInnovationRevolution2026;
