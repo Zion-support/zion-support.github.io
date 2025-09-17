@@ -80,6 +80,9 @@ import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
 import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
 import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+import UltimatePromotionalBanner from './src/components/UltimatePromotionalBanner';
+import RevolutionaryAdCarousel from './src/components/RevolutionaryAdCarousel';
+import FeaturedNewContent from './src/components/FeaturedNewContent';
 import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
@@ -290,6 +293,17 @@ export default function App(): JSX.Element {
                 
                 {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
                 <UltimateContentBanner2025 />
+
+                {/* Ultimate Promotional Banner */}
+                <UltimatePromotionalBanner />
+
+                {/* Revolutionary Ad Carousel */}
+                <div className="mb-12">
+                  <RevolutionaryAdCarousel />
+                </div>
+
+                {/* Featured New Content */}
+                <FeaturedNewContent />
                 
                 {/* NEW: Ultimate Tech Revolution Banner 2025 */}
                 <UltimateTechRevolutionBanner2025 />
