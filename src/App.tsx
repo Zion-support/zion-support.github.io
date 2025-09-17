@@ -72,6 +72,15 @@ function App() {
               <SEOHead />
               <AccessibilityEnhancer />
               <PerformanceMonitor />
+              {/* Skip Links for Accessibility */}
+              <div className="sr-only focus-within:not-sr-only">
+                <a href="#main-content" className="skip-link">
+                  Skip to main content
+                </a>
+                <a href="#navigation" className="skip-link">
+                  Skip to navigation
+                </a>
+              </div>
               <Navigation />
               
               {/* Main Content with enhanced Suspense and Error Boundary */}
