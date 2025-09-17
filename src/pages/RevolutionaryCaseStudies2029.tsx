@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 
 const RevolutionaryCaseStudies2029: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(0);
 
   const caseStudies = [
     {
-      id: 1,
+      id: "1",
       title: "Conscious AI Implementation at Fortune 500",
       company: "GlobalTech Industries",
       industry: "Manufacturing",
@@ -23,7 +23,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Sarah Chen, CTO, GlobalTech Industries"
     },
     {
-      id: 2,
+      id: "2",
       title: "Quantum Computing Breakthrough in Healthcare",
       company: "MediQuantum Solutions",
       industry: "Healthcare",
@@ -41,7 +41,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Dr. Michael Rodriguez, Chief Medical Officer, MediQuantum Solutions"
     },
     {
-      id: 3,
+      id: "3",
       title: "Neural Interface Revolution in Education",
       company: "EduNeural Academy",
       industry: "Education",
@@ -59,7 +59,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Dr. Emily Watson, Director of Innovation, EduNeural Academy"
     },
     {
-      id: 4,
+      id: "4",
       title: "Interdimensional Portal for Space Exploration",
       company: "Cosmic Ventures",
       industry: "Space Technology",
@@ -77,7 +77,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Commander Alex Thompson, Mission Director, Cosmic Ventures"
     },
     {
-      id: 5,
+      id: "5",
       title: "Reality Manipulation for Entertainment",
       company: "MetaReality Studios",
       industry: "Entertainment",
@@ -95,7 +95,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       author: "Jessica Park, Creative Director, MetaReality Studios"
     },
     {
-      id: 6,
+      id: "6",
       title: "Cosmic Intelligence Network for Global Communication",
       company: "UniComm Corporation",
       industry: "Telecommunications",
@@ -111,20 +111,17 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       technologies: ["Cosmic Intelligence", "Universal Communication", "Interstellar Networking", "Galactic Connectivity"],
       testimonial: "The cosmic intelligence network has enabled communication with intelligent life forms across the galaxy. This is humanity's greatest achievement.",
       author: "Dr. Robert Kim, Chief Scientist, UniComm Corporation"
-    }
-  ];
-
+    };
   const getResultColor = (value: string) => {
     if (value.includes('∞') || value.includes('100%')) return 'text-green-400';
     if (value.includes('+')) return 'text-cyan-400';
     if (value.includes('$')) return 'text-emerald-400';
     return 'text-purple-400';
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🏆 REVOLUTIONARY CASE STUDIES • JANUARY 2029
@@ -137,18 +134,18 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
           </p>
         </div>
 
-        {/* Case Study Navigation */}
+        {/* Case Study Navigation */};
         <div className="mb-12">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {caseStudies.map((caseStudy, index) => (
               <button
-                key={caseStudy.id}
-                onClick={() => setSelectedCase(index)}
+                key={caseStudy.id};
+                onClick={() => setSelectedCase(index)};
                 className={`p-4 rounded-lg transition-all duration-300 ${
                   selectedCase === index
                     ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white scale-105'
                     : 'bg-white/10 hover:bg-white/20 text-white/80 hover:text-white'
-                }`}
+                }`};
               >
                 <div className="text-2xl mb-2">{caseStudy.industry === 'Manufacturing' ? '🏭' : 
                   caseStudy.industry === 'Healthcare' ? '🏥' :
@@ -157,11 +154,11 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                   caseStudy.industry === 'Entertainment' ? '🎬' : '🌐'}</div>
                 <div className="text-sm font-semibold">{caseStudy.company}</div>
               </button>
-            ))}
+            ))};
           </div>
         </div>
 
-        {/* Selected Case Study */}
+        {/* Selected Case Study */};
         <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30 mb-16">
           <div className="grid lg:grid-cols-2 gap-8">
             <div>
@@ -171,7 +168,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                    caseStudies[selectedCase].industry === 'Healthcare' ? '🏥' :
                    caseStudies[selectedCase].industry === 'Education' ? '🎓' :
                    caseStudies[selectedCase].industry === 'Space Technology' ? '🚀' :
-                   caseStudies[selectedCase].industry === 'Entertainment' ? '🎬' : '🌐'}
+                   caseStudies[selectedCase].industry === 'Entertainment' ? '🎬' : '🌐'};
                 </div>
                 <div>
                   <h2 className="text-3xl font-bold mb-2">{caseStudies[selectedCase].title}</h2>
@@ -201,9 +198,9 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                   <div className="flex flex-wrap gap-2">
                     {caseStudies[selectedCase].technologies.map((tech, index) => (
                       <span key={index} className="px-3 py-1 bg-purple-600/30 rounded-full text-sm">
-                        {tech}
+                        {tech};
                       </span>
-                    ))}
+                    ))};
                   </div>
                 </div>
               </div>
@@ -214,25 +211,25 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${getResultColor(caseStudies[selectedCase].results.efficiency)}`}>
-                    {caseStudies[selectedCase].results.efficiency}
+                    {caseStudies[selectedCase].results.efficiency};
                   </div>
                   <div className="text-sm opacity-90">Efficiency Gain</div>
                 </div>
                 <div className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${getResultColor(caseStudies[selectedCase].results.costSavings)}`}>
-                    {caseStudies[selectedCase].results.costSavings}
+                    {caseStudies[selectedCase].results.costSavings};
                   </div>
                   <div className="text-sm opacity-90">Cost Savings</div>
                 </div>
                 <div className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${getResultColor(caseStudies[selectedCase].results.timeline)}`}>
-                    {caseStudies[selectedCase].results.timeline}
+                    {caseStudies[selectedCase].results.timeline};
                   </div>
                   <div className="text-sm opacity-90">Implementation</div>
                 </div>
                 <div className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${getResultColor(caseStudies[selectedCase].results.satisfaction)}`}>
-                    {caseStudies[selectedCase].results.satisfaction}
+                    {caseStudies[selectedCase].results.satisfaction};
                   </div>
                   <div className="text-sm opacity-90">Satisfaction</div>
                 </div>
@@ -242,14 +239,14 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                 <h4 className="text-lg font-semibold mb-3 text-orange-400">Client Testimonial</h4>
                 <p className="italic mb-4 opacity-90">"{caseStudies[selectedCase].testimonial}"</p>
                 <div className="text-sm font-semibold text-orange-300">
-                  — {caseStudies[selectedCase].author}
+                  — {caseStudies[selectedCase].author};
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Success Metrics */}
+        {/* Success Metrics */};
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">📊 Overall Success Metrics</h2>
@@ -280,7 +277,7 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -298,6 +295,5 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default RevolutionaryCaseStudies2029;

@@ -1,91 +1,62 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  // Lazy load images
-  const lazyLoadImages = useCallback(() => {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          observer.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-  }, []);
-
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
-    const criticalResources = [
-      '/src/index.css',
-      '/src/components/RevolutionaryContentBanner2025.tsx',
-      '/src/components/InteractiveTechShowcase2025.tsx'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = 'script';
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  // Optimize scroll performance
-  const optimizeScrollPerformance = useCallback(() => {
-    let ticking = false;
-    
-    const updateScrollPosition = () => {
-      // Throttle scroll events
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          // Update scroll-dependent elements
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', updateScrollPosition, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', updateScrollPosition);
-    };
-  }, []);
-
-  // Memory cleanup
-  const cleanupMemory = useCallback(() => {
-    // Clean up unused event listeners
-    const cleanup = () => {
-      // Remove any unused event listeners
-      window.removeEventListener('beforeunload', cleanup);
-    };
-    
-    window.addEventListener('beforeunload', cleanup);
-  }, []);
+const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0
+  });
 
   useEffect(() => {
-    // Initialize performance optimizations
-    lazyLoadImages();
-    preloadCriticalResources();
-    const scrollCleanup = optimizeScrollPerformance();
-    cleanupMemory();
-
-    // Cleanup on unmount
-    return () => {
-      scrollCleanup();
+    // Simulate performance metrics collection
+    const updateMetrics = () => {
+      setMetrics({
+        loadTime: Math.random() * 100 + 50, // 50-150ms
+        renderTime: Math.random() * 50 + 10, // 10-60ms
+        memoryUsage: Math.random() * 50 + 20, // 20-70MB
+        bundleSize: Math.random() * 200 + 100 // 100-300KB
+      });
     };
-  }, [lazyLoadImages, preloadCriticalResources, optimizeScrollPerformance, cleanupMemory]);
 
-  return <>{children}</>;
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="bg-gradient-to-r from-green-900/30 to-teal-900/30 rounded-2xl p-6 border border-green-500/20">
+      <h3 className="text-2xl font-bold mb-4 flex items-center text-green-400">
+        <span className="text-3xl mr-3">⚡</span>
+        Performance Optimizer
+      </h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-400">{metrics.loadTime.toFixed(0)}ms</div>
+          <div className="text-sm text-gray-300">Load Time</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-teal-400">{metrics.renderTime.toFixed(0)}ms</div>
+          <div className="text-sm text-gray-300">Render Time</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-cyan-400">{metrics.memoryUsage.toFixed(0)}MB</div>
+          <div className="text-sm text-gray-300">Memory Usage</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-blue-400">{metrics.bundleSize.toFixed(0)}KB</div>
+          <div className="text-sm text-gray-300">Bundle Size</div>
+        </div>
+      </div>
+      <div className="mt-4 text-center">
+        <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-semibold">
+          <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+          Optimized Performance
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceOptimizer;

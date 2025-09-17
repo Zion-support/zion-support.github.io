@@ -1,29 +1,12 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
 
+const CurrencySelector: React.FC = () => {
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
-          <DollarSign className="h-5 w-5" />
-          <span className="sr-only">Select currency</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
-        {SUPPORTED.map(c => (
-          <DropdownMenuItem
-            key={c.code}
-            className={`cursor-pointer ${currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'}`}
-            onClick={() => setCurrency(c.code)}
-          >
-            {c.symbol} {c.code}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CurrencySelector</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default CurrencySelector;

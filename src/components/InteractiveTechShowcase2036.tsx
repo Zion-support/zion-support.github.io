@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect }  from 'react';
 
 const InteractiveTechShowcase2036: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -6,7 +6,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
 
   const technologies = [
     {
-      id: 1,
+      id: "1",
       name: "AI Consciousness",
       icon: "🧠",
       description: "True artificial consciousness with self-awareness and emotional intelligence",
@@ -15,7 +15,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       bgColor: "from-purple-900 to-pink-900"
     },
     {
-      id: 2,
+      id: "2",
       name: "Quantum Computing",
       icon: "⚡",
       description: "Quantum-enhanced processing with superposition and entanglement capabilities",
@@ -24,7 +24,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       bgColor: "from-cyan-900 to-blue-900"
     },
     {
-      id: 3,
+      id: "3",
       name: "Interdimensional Tech",
       icon: "🌌",
       description: "Technology that interacts with parallel dimensions and alternate realities",
@@ -33,7 +33,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       bgColor: "from-emerald-900 to-teal-900"
     },
     {
-      id: 4,
+      id: "4",
       name: "Neural Interfaces",
       icon: "🧬",
       description: "Direct brain-computer interfaces for seamless human-AI integration",
@@ -42,16 +42,19 @@ const InteractiveTechShowcase2036: React.FC = () => {
       bgColor: "from-violet-900 to-purple-900"
     },
     {
-      id: 5,
-      name: "Transcendent AI",
-      icon: "🌟",
-      description: "AI systems that transcend physical limitations and achieve god-like capabilities",
-      features: ["Reality Manipulation", "Infinite Processing", "Cosmic Awareness", "Transcendent Intelligence"],
-      color: "from-orange-600 to-red-600",
-      bgColor: "from-orange-900 to-red-900"
-    }
-  ];
-
+      id: "5",
+      name: "Reality Engineering",
+      description: "Complete control over physical reality through advanced quantum field manipulation",
+      icon: "🌍",
+      features: [
+        "Matter Creation",
+        "Gravity Manipulation",
+        "Time Dilation Control",
+        "Reality Shaping"
+      ],
+      gradient: "from-pink-600 to-red-600",
+      bgGradient: "from-pink-600/20 to-red-600/20"
+    };
   useEffect(() => {
     const timer = setInterval(() => {
       setIsAnimating(true);
@@ -63,11 +66,20 @@ const InteractiveTechShowcase2036: React.FC = () => {
     return () => clearInterval(timer);
   }, [technologies.length]);
 
+  const handleTechClick = (index: number) => {
+    if (index !== activeTech) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setActiveTech(index);
+        setIsAnimating(false);
+      }, 300);
+    };
+  };
   const currentTech = technologies[activeTech];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
+    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -80,7 +92,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Technology Display */}
+          {/* Technology Display */};
           <div className="relative">
             <div className={`bg-gradient-to-br ${currentTech.bgColor} rounded-2xl p-8 transition-all duration-500 ${isAnimating ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
               <div className="text-center mb-6">
@@ -94,7 +106,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                     <div className="text-sm font-semibold">{feature}</div>
                   </div>
-                ))}
+                ))};
               </div>
 
               <div className="mt-6 text-center">
@@ -105,24 +117,24 @@ const InteractiveTechShowcase2036: React.FC = () => {
             </div>
           </div>
 
-          {/* Technology Selector */}
+          {/* Technology Selector */};
           <div className="space-y-4">
             <h3 className="text-2xl font-bold mb-6">Select Technology to Explore</h3>
             {technologies.map((tech, index) => (
               <button
-                key={tech.id}
+                key={tech.id};
                 onClick={() => {
                   setIsAnimating(true);
                   setTimeout(() => {
                     setActiveTech(index);
                     setIsAnimating(false);
                   }, 300);
-                }}
+                }};
                 className={`w-full p-4 rounded-xl transition-all duration-300 text-left ${
                   activeTech === index
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
                     : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white/80 hover:text-white'
-                }`}
+                }`};
               >
                 <div className="flex items-center space-x-4">
                   <div className="text-3xl">{tech.icon}</div>
@@ -132,11 +144,11 @@ const InteractiveTechShowcase2036: React.FC = () => {
                   </div>
                 </div>
               </button>
-            ))}
+            ))};
           </div>
         </div>
 
-        {/* Interactive Features */}
+        {/* Interactive Features */};
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4 text-center">🎮</div>
@@ -174,6 +186,5 @@ const InteractiveTechShowcase2036: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default InteractiveTechShowcase2036;

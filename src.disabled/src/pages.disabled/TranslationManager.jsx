@@ -37,6 +37,8 @@ export default function TranslationManager({ }: TranslationManagerProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/TranslationManager.jsx
 }
 }

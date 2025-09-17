@@ -4,7 +4,7 @@ const UltimateTechRevolution2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE TECH REVOLUTION • 2035
@@ -18,7 +18,7 @@ const UltimateTechRevolution2035: React.FC = () => {
           </p>
         </div>
 
-        {/* Revolutionary Technologies Grid */}
+        {/* Revolutionary Technologies Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -129,7 +129,7 @@ const UltimateTechRevolution2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Revolutionary Applications */}
+        {/* Revolutionary Applications */};
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -164,7 +164,7 @@ const UltimateTechRevolution2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Ultimate Revolution?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -186,6 +186,5 @@ const UltimateTechRevolution2035: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default UltimateTechRevolution2035;

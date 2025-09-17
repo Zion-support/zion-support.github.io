@@ -1,44 +1,14 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 const InteractiveContentShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
-  const contentData = {
-    ai: {
-    }
-  };
-
-  const currentContent = contentData[activeTab as keyof typeof contentData];
-
   return (
-          </p>
-        </div>
-
-        {/* Tab Navigation */}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Content Display */}
-              </div>
-              <div className="text-center">
-                <div className="text-8xl mb-4 opacity-50">
-                  {contentTabs[activeTab as keyof typeof contentTabs].icon}
-                </div>
-                <div className="text-sm opacity-75">
-                  Interactive Experience
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">InteractiveContentShowcase2025</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default InteractiveContentShowcase2025;

@@ -11,6 +11,5 @@
   }
 
   return {
-    flagged: reasons.length > 0,
-    reasons,
+    flagged: reasons.length > 0reasons,
 }

@@ -1,100 +1,43 @@
 #!/bin/bash
 
-echo "🔧 Starting comprehensive merge conflict resolution..."
+# Script to automatically resolve merge conflicts
+# Takes the version from the incoming branch (origin/revolutionary-content-merge-1758084568) for most files
 
-# Function to resolve conflicts by accepting our version
-resolve_conflict() {
-    local file="$1"
-    echo "Resolving conflicts in: $file"
-    
-    if [ -f "$file" ]; then
-        # Check if file has conflict markers
-        if grep -q "<<<<<<< HEAD" "$file"; then
-            echo "  → Resolving conflicts by accepting our version"
-            git checkout --ours "$file"
-            git add "$file"
-        else
-            echo "  → No conflicts found, adding file"
-            git add "$file"
-        fi
-    else
-        echo "  → File not found, skipping"
-    fi
-}
+echo "Resolving merge conflicts automatically..."
 
-# List of all conflicted files
-conflicted_files=(
-    "App.tsx"
-    "src/components/InteractiveTechDemo2042.tsx"
-    "src/components/NewContentPromotionBanner2025.tsx"
-    "src/components/RevolutionaryContentBanner2025.tsx"
-    "src/components/RevolutionaryContentBanner2035.tsx"
-    "src/components/RevolutionaryContentBanner2036.tsx"
-    "src/components/RevolutionaryContentCarousel2039.tsx"
-    "src/components/UltimateContentBanner2025.tsx"
-    "src/components/UltimateContentBanner2034.tsx"
-    "src/components/UltimateContentBanner2037.tsx"
-    "src/components/UltimateContentShowcase2025.tsx"
-    "src/pages/AISolutionsComprehensive2025.tsx"
-    "src/pages/ComprehensiveServices2034.tsx"
-    "src/pages/NextGenInnovationHub2025.tsx"
-    "src/pages/NextGenInnovationHub2039.tsx"
-    "src/pages/RevolutionaryTechBreakthrough2025.tsx"
-    "src/pages/RevolutionaryTechBreakthrough2036.tsx"
-    "src/pages/RevolutionaryTechShowcase2034.tsx"
-    "src/pages/UltimateTechBreakthrough2034.tsx"
-    "src/pages/UltimateTechRevolution2025.tsx"
-    "src/pages/UltimateTechRevolution2042.tsx"
+# List of files with conflicts
+conflict_files=(
+    "src/Footer.tsx"
+    "src/components/InteractiveTechShowcase.tsx"
+    "src/components/InteractiveTechShowcase2026.tsx"
+    "src/components/NewContentShowcase.tsx"
+    "src/components/RevolutionaryContentShowcase2026.tsx"
+    "src/components/UltimateContentShowcase2026.tsx"
+    "src/hooks/useWebhooks.ts"
+    "src/pages/AIInnovationHub2026.tsx"
+    "src/pages/FutureTechTrends2026.tsx"
+    "src/pages/QuantumAIRevolution2026.tsx"
+    "src/pages/QuantumNeuralFusion2026.tsx"
+    "src/pages/UltimateTechShowcase2026.tsx"
+    "src/utils/notifications.ts"
+    "src/utils/safeStorage.ts"
 )
 
-# Resolve conflicts for each file
-for file in "${conflicted_files[@]}"; do
-    resolve_conflict "$file"
+# For each conflicted file, take the version from the incoming branch
+for file in "${conflict_files[@]}"; do
+    if [ -f "$file" ]; then
+        echo "Resolving conflicts in $file..."
+        # Use git checkout to take the version from the incoming branch
+        git checkout --theirs "$file"
+        git add "$file"
+    fi
 done
 
-# Handle the modify/delete conflict for InteractiveTechShowcase2028.tsx
-echo "Handling modify/delete conflict for InteractiveTechShowcase2028.tsx"
-if [ -f "src/components/InteractiveTechShowcase2028.tsx" ]; then
-    echo "  → Keeping the modified version"
-    git add "src/components/InteractiveTechShowcase2028.tsx"
-else
-    echo "  → File was deleted, keeping deletion"
-    git rm "src/components/InteractiveTechShowcase2028.tsx" 2>/dev/null || true
-fi
+# Handle backup files and dist files by removing them (they're not needed)
+echo "Removing unnecessary backup and dist files..."
+rm -f "dist/sw.js"
+rm -f "recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/fetchWithRetry.ts.backup.1758109657.backup.1758130384"
+rm -f "recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/productionLogger.ts"
+rm -f "src/pages/FutureTechInnovationHub2026.tsx.backup"
 
-# Add all new files from our feature branch
-echo "Adding all new files from feature branch..."
-git add src/components/NextGenInnovationBanner2030.tsx
-git add src/components/RevolutionaryBreakthroughBanner2030.tsx
-git add src/components/UltimateContentCarousel2030.tsx
-git add src/pages/UltimateTechRevolution2030.tsx
-git add src/pages/RevolutionaryTechBreakthrough2030.tsx
-git add src/pages/NextGenInnovationHub2030.tsx
-
-echo "✅ All conflicts resolved!"
-echo "📝 Committing merge..."
-
-git commit -m "Merge feature/revolutionary-2030-content into main
-
-- Resolved all merge conflicts by accepting our version
-- Added new 2030 content pages and advertising components
-- Integrated interactive showcases and carousels
-- All new content is now live and prominently advertised
-
-Conflicts resolved in:
-- App.tsx (main routing and component integration)
-- Multiple component files (banners, carousels, showcases)
-- Multiple page files (2030 content pages)
-- InteractiveTechShowcase2028.tsx (modify/delete conflict resolved)
-
-New content added:
-- UltimateTechRevolution2030.tsx
-- RevolutionaryTechBreakthrough2030.tsx  
-- NextGenInnovationHub2030.tsx
-- UltimateTechBanner2030.tsx
-- RevolutionaryBreakthroughBanner2030.tsx
-- NextGenInnovationBanner2030.tsx
-- UltimateContentCarousel2030.tsx
-- InteractiveTechShowcase2030.tsx"
-
-echo "🎉 Merge completed successfully!"
+echo "All conflicts resolved!"

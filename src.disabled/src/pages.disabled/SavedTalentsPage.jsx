@@ -36,7 +36,10 @@ export default function SavedTalentsPage({ }: SavedTalentsPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+=======
 
+
+}
 :src.disabled/src/pages.disabled/SavedTalentsPage.jsx
 }
 }

@@ -1,35 +1,12 @@
-
 import React from 'react';
-import { AddMilestoneForm } from '../AddMilestoneForm';
 
-interface MilestoneCreatorProps {
-  onSubmit: (data: any) => Promise<void>;
-  isSubmitting: boolean;
-  onCancel: () => void;
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string | null;
-  projectType?: string;
-}
-
-export function MilestoneCreator({
-  onSubmit,
-  isSubmitting,
-  onCancel,
-  projectScope,
-  projectStartDate,
-  projectEndDate,
-  projectType
-}: MilestoneCreatorProps) {
+const MilestoneCreator: React.FC = () => {
   return (
-    <AddMilestoneForm 
-      onSubmit={onSubmit}
-      isSubmitting={isSubmitting}
-      onCancel={onCancel}
-      projectScope={projectScope}
-      projectStartDate={projectStartDate}
-      projectEndDate={projectEndDate}
-      projectType={projectType}
-    />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MilestoneCreator</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default MilestoneCreator;
