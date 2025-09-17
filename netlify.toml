@@ -5,6 +5,7 @@
   # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
   # no-op change to retrigger Netlify build from main
+  # ci: retrigger deploy (no functional change)
 
 [build.environment]
   NODE_VERSION = "20"
