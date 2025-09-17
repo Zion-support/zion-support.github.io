@@ -1,7 +1,14 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
-import { visualizer } from 'rollup-plugin-visualizer'
+// Import visualizer lazily to avoid hard dependency during Netlify build
+let visualizer: any
+try {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  visualizer = require('rollup-plugin-visualizer').visualizer
+} catch (e) {
+  visualizer = null
+}
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
@@ -73,7 +80,7 @@ export default defineConfig(({ mode }) => {
           ],
         },
       }),
-      ...(isProduction ? [
+      ...(isProduction && visualizer ? [
         visualizer({
           filename: 'dist/stats.html',
           open: false,
