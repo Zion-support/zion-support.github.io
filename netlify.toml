@@ -182,9 +182,12 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Use the official Next.js plugin on Netlify for routing and functions
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# SPA fallback for Vite single-page app routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
 
-# For Next.js, plugin handles routing and publishing; do not add SPA catch-all
-# build-ok: 2025-09-17T12:56:57Z
+## Next.js plugin removed; this is a Vite SPA build
+## build-ok: 2025-09-17T12:56:57Z
