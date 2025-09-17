@@ -2245,6 +2245,8 @@
     "h1": "AI 2026: Agent Platform SLOs — Best Practices"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-agent-red-teaming-playbook",
     "title": "Agent Red Teaming — Practical Playbook (2026) | Zion Tech Group",
     "h1": "Agent Red Teaming — Practical Playbook (2026)"
@@ -2265,6 +2267,7 @@
     "h1": "Agent Rollback Patterns — Safe Recovery (2026)"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-agent-safety-playbook",
     "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
     "h1": "AI 2026: Agent Safety Playbook"
@@ -2325,6 +2328,8 @@
     "h1": "AI 2026: Enterprise Agent Risk Mitigation"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-enterprise-architecture-modernization",
     "title": "Enterprise Architecture Modernization (2026) | Zion Tech Group",
     "h1": "Enterprise Architecture Modernization (2026)"
@@ -2335,6 +2340,7 @@
     "h1": "Evaluation Scorecards in Practice (2026)"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-evaluation-cookbook",
     "title": "AI 2026: Evaluation Cookbook | Zion Tech Group",
     "h1": "AI 2026: Evaluation Cookbook"
@@ -2355,16 +2361,21 @@
     "h1": "Evidence‑Led Operations Blueprint (2026)"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-exec-guide-to-agent-slo-scorecards",
     "title": "AI 2026: Executive Guide to Agent SLO Scorecards | Zion Tech Group",
     "h1": "AI 2026: Executive Guide to Agent SLO Scorecards"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-foundation-model-quality-engineering",
     "title": "Foundation Model Quality Engineering (2026) | Zion Tech Group",
     "h1": "Foundation Model Quality Engineering (2026)"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-governed-agent-slo-dashboards",
     "title": "",
     "h1": "AI 2026: Governed Agent SLO Dashboards"
@@ -2395,6 +2406,7 @@
     "h1": "Governed Tool Approvals (2026)"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-governed-tool-use-case-studies",
     "title": "Governed Tool Use — Case Studies (2026) | Zion Tech Group",
     "h1": "Governed Tool Use — Case Studies (2026)"
@@ -2405,6 +2417,8 @@
     "h1": "Governed Tooling in Practice (2026)"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-low-latency-agent-observability",
     "title": "",
     "h1": "AI 2026: Low-Latency Agent Observability"
@@ -2415,6 +2429,7 @@
     "h1": "AI 2026: Next‑Gen Real‑Time Guardrails"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-operational-evals-blueprint",
     "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Operational Evals — Blueprint"
@@ -2430,11 +2445,14 @@
     "h1": "Operationalizing Agentic Workflows in 2026"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-production-agent-postmortems-playbook",
     "title": "Production Agent Postmortems — Playbook (2026) | Zion Tech Group",
     "h1": "Production Agent Postmortems — Playbook (2026)"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-production-eval-gates-live-ops",
     "title": "Production Eval Gates (2026) | Zion Tech Group",
     "h1": "Production Eval Gates (2026)"
@@ -2455,6 +2473,8 @@
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-release-evidence-scorecards-blueprint",
     "title": "",
     "h1": "Release Evidence Scorecards — Blueprint"
@@ -2465,6 +2485,7 @@
     "h1": "Reliable Agent Change Windows"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-reliable-autonomy-operations",
     "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
     "h1": "AI 2026: Reliable Autonomy Operations"
@@ -2475,11 +2496,14 @@
     "h1": "Reliable Real‑Time Agents (2026)"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-runtime-evidence-bundles",
     "title": "Runtime Evidence Bundles (2026) | Zion Tech Group",
     "h1": "Runtime Evidence Bundles (2026)"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-runtime-guardrails-blueprint",
     "title": "AI 2026: Runtime Guardrails Blueprint | Zion Tech Group",
     "h1": "AI 2026: Runtime Guardrails Blueprint"
@@ -2495,11 +2519,14 @@
     "h1": "AI 2026: Safe Autonomy in Production"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-safe-tooling-permissions-in-practice",
     "title": "Safe Tooling Permissions — In Practice (2026) | Zion Tech Group",
     "h1": "Safe Tooling Permissions — In Practice (2026)"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-2026-safety-evals-operational-checklist",
     "title": "",
     "h1": "AI 2026: Safety Evals Operational Checklist"
@@ -2525,11 +2552,14 @@
     "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
   },
   {
+<<<<<<< HEAD
+=======
     "route": "/blog/ai-2026-zero-trust-agents",
     "title": "Zero‑Trust Agents (2026) | Zion Tech Group",
     "h1": "Zero‑Trust Agents (2026)"
   },
   {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5a97
     "route": "/blog/ai-automation-trends-2025",
     "title": "ai-automation-trends-2025 | Zion Tech Group",
     "h1": "ai-automation-trends-2025"
