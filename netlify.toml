@@ -8,7 +8,7 @@
   command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "24"
+  NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
@@ -216,3 +216,18 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[context.production.environment]
+  NODE_ENV = "production"
+  NPM_CONFIG_PRODUCTION = "false"
+  NODE_VERSION = "20"
+
+[context.deploy-preview]
+  command = "npm run build"
+  [context.deploy-preview.environment]
+  NODE_VERSION = "20"
+
+[context.branch-deploy]
+  command = "npm run build"
+  [context.branch-deploy.environment]
+  NODE_VERSION = "20"
