@@ -1,11 +1,20 @@
-import React from 'react';
-const NotificationContext= () => {
+// Notification context
+import React, { createContext, useContext } from 'react';
+
+const NotificationContext = createContext();
+
+export const NotificationProvider = ({ children }) => {
+  const value = {
+    notifications: [],
+    addNotification: () => {},
+    removeNotification: () => {}
+  };
+  
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">NotificationContext</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
+    <NotificationContext.Provider value={value}>
+      {children}
+    </NotificationContext.Provider>
   );
 };
 
-export default NotificationContext;
+export const useNotifications = () => useContext(NotificationContext);

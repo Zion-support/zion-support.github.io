@@ -12,8 +12,4 @@ export const ViewModeProvider = ({ children }) => {
     </ViewModeContext.Provider>
   );
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7
 export const useViewMode = () => useContext(ViewModeContext);
