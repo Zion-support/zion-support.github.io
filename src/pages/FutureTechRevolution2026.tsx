@@ -281,6 +281,8 @@ const FutureTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
+    </div>
         {/* Technology Timeline */}
         <section id="timeline" className="mb-16">
           <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 border border-gray-600/30">
@@ -342,6 +344,8 @@ const FutureTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
+    </div>
         {/* Impact Areas */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -391,6 +395,8 @@ const FutureTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
+    </div>
         {/* Revolutionary Showcase */}
         <section className="mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
@@ -417,6 +423,8 @@ const FutureTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
+    </div>
         {/* Call to Action */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12">
@@ -435,6 +443,8 @@ const FutureTechRevolution2026: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
+    </div>
       </main>
       <Footer />
     </div>
