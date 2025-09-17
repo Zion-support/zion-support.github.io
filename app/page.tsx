@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import SEO from './components/SEO';
