@@ -1,10 +1,4 @@
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  # Safe to include; it runs post-build if available. Netlify will skip if not installed.
-
-# Netlify build configuration for Vite static app
-# Build: install and build
-# noop: retrigger netlify build (2025-09-17 20:15 UTC) - local build verified OK
+# Unified Netlify configuration for Vite static app
 [build]
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
