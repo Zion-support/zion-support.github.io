@@ -1,9 +1,12 @@
 import React from 'react';
 
-export default function NewContentPromotion2027(): JSX.Element {
+const NewContentPromotion2027: React.FC = () => {
   return (
-    <div className="w-full rounded-lg border border-gray-200 p-4 text-center text-gray-600">
-      New Content Promotion 2027
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NewContentPromotion2027</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default NewContentPromotion2027;
