@@ -1,12 +1,31 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-export default function useAuthGuard(isAuthenticated: boolean = true) {
-  const navigate = useNavigate?.();
+import { useAuth } from './useAuth';
+interface UseRequireAuthOptions {
+  redirectTo?: string;
+  requireRole?: string;
+export const useRequireAuth = (options: UseRequireAuthOptions = {}) => {
+  const { redirectTo = '/login', requireRole } = options;
+  const { user, loading, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
   useEffect(() => {
-    if (!isAuthenticated && navigate) {
-      navigate('/login');
+    if (!loading) {
+      if (!isAuthenticated) {
+        navigate(redirectTo);
+        return;
+      }
+      if (requireRole && user?.role !== requireRole) {
+        navigate('/unauthorized');
+        return;
+      }
     }
-  }, [isAuthenticated, navigate]);
-}
+  }, [isAuthenticated, loading, user, requireRole, navigate, redirectTo]);
+  return {
+    user,
+    loading,
+    isAuthenticated,
+    hasRequiredRole: requireRole ? user?.role === requireRole : true,
+  };
+};
 
+export default useRequireAuth;

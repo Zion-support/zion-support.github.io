@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 import { Link, useLocation } from 'react-router-dom';
@@ -458,3 +459,6 @@ const Header = () => {
 
 export default Header;
 >>>>>>> origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
+=======
+import React from 'react';
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f

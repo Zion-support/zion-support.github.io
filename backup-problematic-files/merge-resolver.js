@@ -1,6 +1,5 @@
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const fs = require('fs');
 const path = require('path');
 console && console.log('🔧 Starting Merge Conflict Resolution');
@@ -189,17 +188,14 @@ for (const file of files) {
   return files}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   for (const file of files) {
     try {
       const content = fs && fs.readFileSync(file, 'utf8');
         if (fixMergeConflicts(file)) {
           fixedCount++;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   for (const file of files) {
     try {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       const content = fs.readFileSync (file, 'utf8');
 ;
@@ -231,7 +227,6 @@ for (const file of files) {
 
 
 
->>>>>>> origin/automation-improvements-final
 
 
 
@@ -244,5 +239,4 @@ for (const file of files) {
 }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

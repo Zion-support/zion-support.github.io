@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link"; // Changed from react-router-dom
@@ -142,53 +143,51 @@ export function Footer() {
 
           <div className="space-y-4">
             <h3 className="text-foreground font-semibold mb-4 text-lg">Marketplace</h3>
-            <ul className="space-y-2">
-              <li><Link href="/marketplace" className="text-foreground/80 hover:text-primary transition-colors text-sm">Products</Link></li>
-              {/* Ensure the services link routes to the main services page */}
-              <li>
-                <Link
-                  href="/services"
-                  className="text-foreground/80 hover:text-primary transition-colors text-sm"
-                >
-                  Services
-                </Link>
-              </li>
-              <li><Link href="/talent" className="text-foreground/80 hover:text-primary transition-colors text-sm">Talent</Link></li>
-              <li>
-                <Link
-                  href="/equipment"
-                  className="text-foreground/80 hover:text-primary transition-colors text-sm"
-                  target="_self"
-                >
-                  Equipment
-                </Link>
-              </li>
-              <li><Link href="/categories" className="text-foreground/80 hover:text-primary transition-colors text-sm">Categories</Link></li>
-              <li><Link href="/green-it" className="text-foreground/80 hover:text-primary transition-colors text-sm">Green IT</Link></li>
-            </ul>
-          </div>
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-          <div className="space-y-4">
-            <h3 className="text-foreground font-semibold mb-4 text-lg">Company</h3>
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-900 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <Link to="/" className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
+            </Link>
+            <p className="text-gray-400 mb-4 max-w-md">
+              Revolutionary technology solutions and insights for the future. 
+              Leading the way in AI, quantum computing, and next-generation innovations.
+            </p>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-4">Services</h3>
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-foreground/80 hover:text-primary transition-colors text-sm">About Us</Link></li>
-              <li><Link href="/blog" className="text-foreground/80 hover:text-primary transition-colors text-sm">Blog</Link></li>
-              <li><Link href="/innovation" className="text-foreground/80 hover:text-primary transition-colors text-sm">Innovation</Link></li>
-              <li><Link href="/partners" className="text-foreground/80 hover:text-primary transition-colors text-sm">Partners</Link></li>
-              <li><Link href="/careers" className="text-foreground/80 hover:text-primary transition-colors text-sm">Careers</Link></li>
-              <li><Link href="/contact" className="text-foreground/80 hover:text-primary transition-colors text-sm">Contact</Link></li>
-              <li>
-                <Link
-                  href="/sitemap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-foreground/80 hover:text-primary transition-colors text-sm"
-                >
-                  Sitemap
-                </Link>
-              </li>
+              <li><Link to="/ai-innovation-hub-2025" className="text-gray-400 hover:text-blue-400 transition-colors">AI Innovation Hub</Link></li>
+              <li><Link to="/advanced-ai-solutions-2025" className="text-gray-400 hover:text-blue-400 transition-colors">AI Solutions</Link></li>
+              <li><Link to="/quantum-computing-revolution-2025" className="text-gray-400 hover:text-blue-400 transition-colors">Quantum Computing</Link></li>
+              <li><Link to="/neural-interface-revolution-2025" className="text-gray-400 hover:text-blue-400 transition-colors">Neural Interface</Link></li>
             </ul>
           </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-400 hover:text-blue-400 transition-colors">About</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-blue-400 transition-colors">Blog</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-blue-400 transition-colors">Contact</Link></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+<<<<<<< HEAD
 
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <h3 className="text-foreground font-semibold mb-4 text-lg">Newsletter</h3>
@@ -402,6 +401,18 @@ export function Footer() {
         <ArrowUp className="w-5 h-5" />
       </button>
 >>>>>>> origin/dependabot/npm_and_yarn/jest-environment-jsdom-30.0.5
+=======
+        </div>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2025 Zion Tech Group. All rights reserved.
+          </p>
+        </div>
+      </div>
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
     </footer>
   );
-}
+};
+
+export default Footer;

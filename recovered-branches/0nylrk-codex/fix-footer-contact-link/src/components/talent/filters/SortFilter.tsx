@@ -4,18 +4,6 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-<<<<<<< HEAD
-  SelectValue} from "@/components/ui/select";
-import { SortFilterProps } from "@/types/filters";
-
-export function SortFilter({ sortOptionsetSortOption }: SortFilterProps) {
-=======
-  SelectValue,
-} from "@/components/ui/select";
-import { SortFilterProps } from "@/types/filters";
-
-export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="mb-6">
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">

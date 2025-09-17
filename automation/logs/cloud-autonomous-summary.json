@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-08-24T00:03:28.959Z",
-=======
-  "timestamp": "2025-08-24T00:00:22.881Z",
->>>>>>> origin/auto/autonomy-17186719616
   "results": [
     {
       "name": "type-check",
@@ -75,11 +70,6 @@
     },
     {
       "name": "build",
-<<<<<<< HEAD
-      "code": 1
-=======
-      "code": 0
->>>>>>> origin/auto/autonomy-17186719616
     }
   ]
 }

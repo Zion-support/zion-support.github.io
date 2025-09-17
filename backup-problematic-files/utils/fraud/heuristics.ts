@@ -199,7 +199,6 @@ export function run_heuristics (data: any): HeuristicResult {
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
 ;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
   return {
     flagged: reasons && reasons.length > 0,
@@ -209,7 +208,6 @@ export function run_heuristics (data: any): HeuristicResult {
 // Fraud detection heuristics utilities
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 ;
@@ -220,6 +218,4 @@ export function run_heuristics (data: any): HeuristicResult {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

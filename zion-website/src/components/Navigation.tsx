@@ -8,7 +8,10 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
+<<<<<<< HEAD
   { name: 'New', href: '/updates/autonomous-it-ops-copilot-1-0' },
+=======
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
 ]
 
 export default function Navigation() {

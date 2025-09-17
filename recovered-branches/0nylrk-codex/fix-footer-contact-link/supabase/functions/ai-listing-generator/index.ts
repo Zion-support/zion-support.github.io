@@ -4,12 +4,6 @@ import { Configuration, OpenAIApi } from "npm:openai@4.28.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -32,12 +26,6 @@ serve(async (req) => {
     }
 
     const configuration = new Configuration({
-<<<<<<< HEAD
-      apiKey: Deno.env.get('OPENAI_API_KEY')});
-=======
-      apiKey: Deno.env.get('OPENAI_API_KEY'),
-    });
->>>>>>> origin/auto/autonomy-17186719616
     const openai = new OpenAIApi(configuration);
 
     const prompt = `Generate an optimized marketplace listing for the following product:
@@ -64,12 +52,6 @@ Format the response as a JSON object with the following structure:
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }],
-<<<<<<< HEAD
-      temperature: 0.7});
-=======
-      temperature: 0.7,
-    });
->>>>>>> origin/auto/autonomy-17186719616
 
     const responseText = completion.choices[0].message.content;
     

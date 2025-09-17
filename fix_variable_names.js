@@ -46,10 +46,3 @@ if (fs.existsSync(categoryDir)) {
 }
 // Fix service pages
 const servicesDir = 'pages/services';
-if (fs.existsSync(servicesDir)) {
-  const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'));
-  serviceFiles.forEach(file => {
-    fixFile(path.join(servicesDir, file));
-  });
-}
-console.log('Variable name fixing completed!');

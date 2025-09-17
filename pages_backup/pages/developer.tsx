@@ -6,12 +6,8 @@
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 export default function DeveloperPage() {
   return (
@@ -36,7 +32,6 @@ export default function DeveloperPage() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -66,7 +61,6 @@ export default function DeveloperPage() {_return (
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, _SDKs, _and quickstarts for all services. Contact us for enterprise onboarding.</p>
               <div className="space-x-4">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
         <a href="/docs" className="text-cyan-400 underline">Guides</a>
         <a href="/support" className="text-cyan-400 underline">Support</a>

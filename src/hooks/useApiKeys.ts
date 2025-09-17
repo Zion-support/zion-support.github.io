@@ -1,21 +1,20 @@
 import { useMemo } from 'react';
-
-interface ApiKeyInfo {
+export interface ApiKeyInfo {
 	id: string;
 	name: string;
 	createdAt: string;
 	redactedKey: string;
-}
-
+export interface ApiKeyScope {
+	read: boolean;
+	write: boolean;
+	admin: boolean;
 interface UseApiKeysResult {
 	apiKeys: ApiKeyInfo[];
 	isLoading: boolean;
 	error: null | Error;
 	createKey: (name: string) => Promise<ApiKeyInfo>;
 	revokeKey: (id: string) => Promise<void>;
-}
-
-export default function useApiKeys(): UseApiKeysResult {
+function useApiKeys(): UseApiKeysResult {
 	const apiKeys: ApiKeyInfo[] = [];
 	return useMemo(
 		() => ({
@@ -36,4 +35,3 @@ export default function useApiKeys(): UseApiKeysResult {
 		}),
 		[]
 	);
-}

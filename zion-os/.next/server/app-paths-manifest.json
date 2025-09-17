@@ -2,6 +2,7 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
   "/accessibility/page": "app/accessibility/page.js",
+<<<<<<< HEAD
   "/ai-autonomous-systems/page": "app/ai-autonomous-systems/page.js",
   "/ai-autonomous-research-assistant/page": "app/ai-autonomous-research-assistant/page.js",
   "/ai-solutions/page": "app/ai-solutions/page.js",
@@ -59,3 +60,5 @@
   "/admin/instances/page": "app/admin/instances/page.js",
   "/admin/os-deploy/page": "app/admin/os-deploy/page.js"
 }
+=======
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
