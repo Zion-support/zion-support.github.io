@@ -1,18 +1,17 @@
+[# Netlify build configuration for Next.js app in zion-website]
 [build]
-  # Vite static site build
-  command = "npm run build:netlify"
-  publish = "dist"
-  base = "."
+  base = "zion-website"
+  command = "npm ci && npm run build"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
-  NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
 [functions]
+  directory = "../netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
@@ -97,9 +96,11 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Note: Next.js plugin removed; this project uses Vite
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-# Redirects for SEO/legacy URLs (no-op reformat trigger)
+
+# Redirects for SEO/legacy URLs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -180,10 +181,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Handle client-side routing for SPA (no-op)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# build trigger: chore(netlify): retrigger Netlify deploy (no-op change v7)
+# For Next.js, do not force SPA catch-all to index.html; plugin handles routing
