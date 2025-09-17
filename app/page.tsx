@@ -3,6 +3,7 @@ import { Suspense, lazy } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import SEO from './components/SEO';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Import new advanced AI components
 import AdvancedAIAssistant from './components/AdvancedAIAssistant';
@@ -1161,6 +1162,7 @@ export default function HomePage() {
           />
         </Suspense>
       </div>
+      <PerformanceMonitor />
     </ErrorBoundary>
   );
 }
