@@ -97,7 +97,19 @@ export default function BlogPage() {
         'AI-driven observability, incident response, and remediation to cut MTTR and improve reliability.',
       category: 'AI Solutions',
       featured: true
-    }
+    },
+    // New featured content
+    {
+      id: 'agent-safety-playbooks',
+      title: 'Agent Safety Playbooks for Enterprise AI',
+      excerpt: 'Practical guardrails, red-teaming, and evaluation patterns to deploy autonomous agents responsibly at scale.',
+      category: 'AI Safety',
+      author: 'Dr. James Wilson',
+      date: '2025-09-10',
+      readTime: '9 min read',
+      image: '/blog/agent-safety.jpg',
+      featured: true,
+    },
   ];
 
   const recentPosts = [
