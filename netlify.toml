@@ -3,11 +3,14 @@
 [build]
   command = "npm run build:netlify"
   publish = "dist"
+  base = "."
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
+  NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
 [functions]
