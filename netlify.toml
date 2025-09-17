@@ -1,29 +1,24 @@
-# Netlify build configuration for Next.js app
+# Netlify build configuration for Vite static app
 # noop: retrigger netlify build (2025-09-17 17:05 UTC) - local build verified OK
+
 [build]
-  # Netlify installs dependencies automatically; run only the build step
-  command = "npm run build:netlify"
+  command = "npm run build"
   publish = "dist"
-  # Explicitly specify this is a Vite static site, not a framework (ci trigger comment)
   base = "."
-  # ci: retrigger deploy (no functional change)
-  # chore(netlify): no-op change to trigger Netlify deploy
+  command_timeout = "30m"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "24"
   NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
-  # Prevent Netlify from attempting to checkout Git submodules (none are required)
   GIT_SUBMODULE_STRATEGY = "none"
-  # Additional npm config for better compatibility
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
 [functions]
-  # Keep functions path relative to repo root
   directory = "netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
@@ -31,8 +26,7 @@
 [build.processing]
   skip_processing = true
 
-# No plugins needed for Vite static site
-# Fix MIME type issues
+# Headers
 [[headers]]
   for = "/js/*"
   [headers.values]
@@ -100,7 +94,6 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Security Headers
 [[headers]]
   for = "/*"
   [headers.values]
@@ -110,7 +103,11 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none';"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
 [[headers]]
   for = "/sw.js"
@@ -127,7 +124,13 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Redirects for SEO/legacy URLs
+# API proxy
+[[redirects]]
+  from = "/api/*"
+  to = "https://backend.example.com/:splat"
+  status = 200
+
+# SEO/legacy redirects
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -208,29 +211,8 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: This is a Vite static site build with SPA routing handled by _redirects
-
-# Security Headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
-
 # SPA catch-all redirect for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# For Next.js, do not force SPA catch-all to index.html; plugin handles routing
-# build-ok: 2025-09-17T12:56:57Z
