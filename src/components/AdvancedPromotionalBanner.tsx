@@ -13,7 +13,7 @@ const AdvancedPromotionalBanner: React.FC = () => {
       link: "/pages/AdvancedAIConsciousness2026",
       gradient: "from-purple-600 via-blue-600 to-cyan-600",
       animation: "animate-pulse",
-      features: ["Quantum Processing", "Self-Awareness", "Autonomous Learning", "Ethical AI"];
+      features: ["Quantum Processing", "Self-Awareness", "Autonomous Learning", "Ethical AI"]
     },
     {
       title: "🌟 INNOVATION: Next-Gen Neural Interfaces",
