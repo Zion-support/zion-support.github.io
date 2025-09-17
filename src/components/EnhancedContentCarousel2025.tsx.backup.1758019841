@@ -3,10 +3,6 @@ import React, { useState, useEffect } from 'react';
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -16,16 +12,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
   }, []);
 
   const slides = [
-=======
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-ec50
 >>>>>>> origin/content/cherrypick-finops-routing
   const contentItems = [
     {
       id: 1,
-<<<<<<< HEAD
       title: 'Next-Gen AI Consciousness',
       description: 'Experience truly conscious artificial intelligence that thinks, feels, and evolves beyond human comprehension',
       icon: '🧠',
@@ -46,7 +38,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
         "Contextual understanding"
       ],
       stats: { performance: "99.9%", accuracy: "98.7%", efficiency: "300%" },
-=======
       title: "AI Consciousness Engine",
       description: "Revolutionary AI that achieves true consciousness and self-awareness, capable of creative thought and emotional understanding.",
 >>>>>>> cursor/create-and-deploy-new-content-af01
@@ -54,22 +45,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       bgColor: "from-purple-600/20 to-pink-600/20",
       borderColor: "border-purple-400/30",
-<<<<<<< HEAD
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
       link: "/pages/UltimateTechRevolution2025"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
 >>>>>>> cursor/create-and-deploy-new-content-173f
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8449
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
-=======
-<<<<<<< HEAD
   const [isPlaying, setIsPlaying] = useState(true);
   const [hoveredCard, setHoveredCard] = useState(null);
 
@@ -97,7 +78,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
       color: 'from-purple-600 to-blue-600',
       posts: featuredPosts.filter(post => post.tags.some(tag => tag.toLowerCase().includes('ai')))
 >>>>>>> origin/cursor/create-and-deploy-new-content-4964
-=======
       features: ["Self-aware processing", "Emotional intelligence", "Creative problem solving", "Conscious decision making"],
       link: "/pages/UltimateAIConsciousness2032"
 >>>>>>> cursor/create-and-deploy-new-content-af01
@@ -114,7 +94,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
       features: ['Quantum simulation', 'Multi-dimensional reality', 'Consciousness integration', 'Reality manipulation']
     },
     {
-<<<<<<< HEAD
       id: 3,
       title: 'Interdimensional Revolution',
       description: 'Break through dimensional barriers and explore infinite realities beyond space and time',
@@ -122,8 +101,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-emerald-600 to-teal-600',
       link: '/pages/InterdimensionalTechRevolution2025',
       features: ['Dimensional portals', 'Reality manipulation', 'Consciousness transfer', 'Multi-universe access']
-=======
-<<<<<<< HEAD
       id: 'cybersecurity',
       title: 'Cybersecurity Fortress',
       description: 'Protect your digital assets with advanced security',
@@ -215,7 +192,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
@@ -223,8 +199,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
     return () => clearInterval(timer);
   }, [contentItems.length]);
 
-=======
-=======
       id: 3,
       title: "Interdimensional Computing",
       description: "Breakthrough technology that transcends dimensional boundaries, enabling computation across multiple realities.",
@@ -247,12 +221,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
-<<<<<<< HEAD
-=======
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-173f
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing
     setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
@@ -260,18 +229,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
 >>>>>>> cursor/create-and-deploy-new-content-173f
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing
   };
@@ -317,28 +278,21 @@ const EnhancedContentCarousel2025: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-=======
     <div className="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> cursor/create-and-deploy-new-content-af01
         <div className="text-center mb-12">
-<<<<<<< HEAD
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ENHANCED CONTENT CAROUSEL • 2025
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Revolutionary Technology Showcase
-=======
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             🌟 Revolutionary Technology Experience
 >>>>>>> origin/content/cherrypick-finops-routing
           </h2>
-<<<<<<< HEAD
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover the most advanced technologies that are reshaping our world and defining the future
-<<<<<<< HEAD
-=======
-=======
     <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -358,8 +312,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
             Discover the most advanced technologies that are reshaping our world. 
             From conscious AI to interdimensional computing, experience the future today.
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
-=======
-=======
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 >>>>>>> cursor/create-and-deploy-new-content-af01
             Explore our most advanced technologies with interactive demonstrations and real-time features
@@ -370,11 +322,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/content/cherrypick-finops-routing
           {/* Main Content Display */}
           <div className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 overflow-hidden">
@@ -400,14 +347,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
-=======
           <div className="overflow-hidden rounded-2xl">
 >>>>>>> cursor/create-and-deploy-new-content-af01
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-<<<<<<< HEAD
               {slides.map((slide, index) => (
                 <div key={slide.id} className="w-full flex-shrink-0">
                   <div className={`bg-gradient-to-br ${slide.color}/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20`}>
@@ -561,13 +506,8 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           </motion.div>
                         </div>
                       </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-ed0b
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8449
-=======
               {contentSlides.map((item, index) => (
                 <div key={item.id} className="w-full flex-shrink-0">
                   <div className={`bg-gradient-to-br ${item.bgColor} p-8 rounded-2xl border ${item.borderColor} backdrop-blur-sm`}>
@@ -602,13 +542,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-af01
                       </div>
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
-=======
-=======
                         <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                           Start Interactive Demo →
                         </button>
 >>>>>>> cursor/create-and-deploy-new-content-8449
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -760,20 +697,11 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 <div className="text-center">
                   <div className="text-9xl mb-6 animate-pulse">
                     {contentItems[currentSlide].icon}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
 >>>>>>> cursor/create-and-deploy-new-content-173f
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
-=======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-4964
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> cursor/create-and-deploy-new-content-ec50
 >>>>>>> origin/content/cherrypick-finops-routing
@@ -796,11 +724,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
           </div>
 
           {/* Navigation Controls */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/content/cherrypick-finops-routing
           <div className="flex justify-center items-center mt-8 space-x-4">
             <button 
@@ -812,7 +735,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
             
             {/* Slide Indicators */}
           <div className="flex justify-center items-center space-x-4 mt-8">
-=======
           <div className="flex justify-center mt-8 space-x-4">
 >>>>>>> cursor/create-and-deploy-new-content-af01
             <button
@@ -824,18 +746,10 @@ const EnhancedContentCarousel2025: React.FC = () => {
               </svg>
             </button>
             
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
 >>>>>>> cursor/create-and-deploy-new-content-173f
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing
             <div className="flex space-x-2">
@@ -844,28 +758,18 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
                     index === currentSlide 
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
                       : 'bg-gray-600 hover:bg-gray-500'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                     index === currentSlide 
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
                       : 'bg-gray-600 hover:bg-gray-500'
-=======
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
-<<<<<<< HEAD
 >>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
-=======
                     index === currentSlide ? 'bg-white' : 'bg-white/30'
 >>>>>>> cursor/create-and-deploy-new-content-173f
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
-=======
                     index === currentSlide 
                       ? 'bg-purple-600 scale-125' 
                       : 'bg-gray-300 hover:bg-gray-400'
@@ -876,21 +780,12 @@ const EnhancedContentCarousel2025: React.FC = () => {
               ))}
             </div>
             
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> origin/content/cherrypick-finops-routing
             <button 
               onClick={nextSlide}
               className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
             >
               <span className="text-2xl">›</span>
-<<<<<<< HEAD
-=======
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
             <button
               onClick={nextSlide}
@@ -899,10 +794,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
               <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-173f
-=======
 >>>>>>> cursor/create-and-deploy-new-content-8449
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
 >>>>>>> origin/content/cherrypick-finops-routing
@@ -954,7 +846,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
               <span className="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Reality Control</span>
             </div>
           </div>
-=======
             </button>
           </div>
 >>>>>>> cursor/create-and-deploy-new-content-af01

@@ -14,6 +14,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
+    "incremental": true,
+=======
+>>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
@@ -36,9 +40,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "coverage",
-    "zion-website",
-    "zion-os"
+    "**/*.spec.tsx"
   ]
 }

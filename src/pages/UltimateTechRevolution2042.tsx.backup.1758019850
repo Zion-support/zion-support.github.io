@@ -1,26 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
-=======
 >>>>>>> cursor/create-and-deploy-new-content-ec50
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
 >>>>>>> cursor/create-and-deploy-new-content-f1f3
-=======
 >>>>>>> cursor/create-and-deploy-new-content-63f0
 >>>>>>> origin/cursor/create-and-deploy-new-content-2565
 >>>>>>> origin/content/cherrypick-finops-routing
@@ -332,8 +318,5 @@ const UltimateTechRevolution2042: React.FC = () => {
 };
 
 export default UltimateTechRevolution2042;
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing

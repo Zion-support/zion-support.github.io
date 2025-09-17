@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const RevolutionaryTechBreakthrough2025: React.FC = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -35,7 +32,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </Link>
           </div>
         </div>
-
         {/* Revolutionary Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
@@ -51,7 +47,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               Learn More →
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
               <span className="text-2xl">🌌</span>
@@ -65,7 +60,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
               Explore Now →
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-pink-400/50 transition-all duration-300">
             <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-red-500 rounded-xl flex items-center justify-center mb-6">
               <span className="text-2xl">⚡</span>
@@ -80,7 +74,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Revolutionary Stats */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16">
           <h2 className="text-4xl font-bold text-center text-white mb-12">
@@ -105,8 +98,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Experience the Future?
@@ -128,11 +119,3 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             >
               Explore Services
             </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default RevolutionaryTechBreakthrough2025;

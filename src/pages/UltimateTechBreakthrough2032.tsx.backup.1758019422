@@ -13,7 +13,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-<<<<<<< HEAD
           </div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Ultimate Tech Breakthrough 2032
@@ -201,7 +200,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Contact Our Team
-=======
             🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2032
 >>>>>>> origin/add-revolutionary-2032-content
           </div>
@@ -272,7 +270,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Enter Dimensions →
             </button>
-<<<<<<< HEAD
         {/* Interdimensional Technology Section */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -356,7 +353,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
               <div className="text-lg font-semibold mb-2">Possibilities</div>
               <div className="text-sm opacity-80">Infinite potential unlocked</div>
             </div>
-=======
 >>>>>>> origin/add-revolutionary-2032-content
           </div>
         </div>
@@ -454,8 +450,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-=======
         <div className="text-center bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-12">
 >>>>>>> origin/add-revolutionary-2032-content
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -466,7 +460,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
             </button>
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready for the Ultimate Breakthrough?</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
             Join the most advanced technological revolution in human history. Transform your reality with conscious AI, quantum computing, and interdimensional technology.
@@ -476,7 +469,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
               Experience Breakthrough
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-=======
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
 >>>>>>> origin/add-revolutionary-2032-content
               Schedule Demo
@@ -488,8 +480,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default UltimateTechBreakthrough2032;
-=======
 export default UltimateTechBreakthrough2032;
 >>>>>>> origin/add-revolutionary-2032-content

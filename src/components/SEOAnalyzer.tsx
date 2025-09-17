@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
 interface SEOAnalysis {
   score: number;
   title: string;
   metaDescription: string;
   headings: { h1: number; h2: number; h3: number; h4: number; h5: number; h6: number };
-  images: { total: number; withAlt: number; withoutAlt: number };
+  images: { total: number; withAlt: number; withAltMissing: number };
   links: { total: number; internal: number; external: number; broken: number };
   performance: {
     loadTime: number;
@@ -18,22 +17,17 @@ interface SEOAnalysis {
     issues: string[];
   };
   recommendations: string[];
-}
-
 const SEOAnalyzer: React.FC = () => {
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-
   useEffect(() => {
     if (isVisible && !analysis) {
       performAnalysis();
     }
   }, [isVisible, analysis]);
-
   const performAnalysis = async () => {
     setIsAnalyzing(true);
-    
     // Simulate analysis delay
     setTimeout(() => {
       const mockAnalysis: SEOAnalysis = {
@@ -41,7 +35,7 @@ const SEOAnalyzer: React.FC = () => {
         title: 'Revolutionary Tech Breakthrough 2030 - Zion Tech Group',
         metaDescription: 'Experience the convergence of consciousness computing, interdimensional technology, and quantum reality manipulation in our revolutionary tech showcase.',
         headings: { h1: 1, h2: 4, h3: 8, h4: 12, h5: 6, h6: 3 },
-        images: { total: 15, withAlt: 12, withAlt: 3 },
+        images: { total: 15, withAlt: 12, withAltMissing: 3 },
         links: { total: 45, internal: 38, external: 7, broken: 0 },
         performance: {
           loadTime: 1.2,
@@ -62,24 +56,20 @@ const SEOAnalyzer: React.FC = () => {
           'Optimize for mobile performance'
         ]
       };
-      
       setAnalysis(mockAnalysis);
       setIsAnalyzing(false);
     }, 2000);
   };
-
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     return 'text-red-600';
   };
-
   const getScoreBg = (score: number) => {
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
     return 'bg-red-100';
   };
-
   return (
     <div className="fixed top-20 right-4 z-50">
       <button
@@ -94,7 +84,6 @@ const SEOAnalyzer: React.FC = () => {
           <div className={`w-2 h-2 rounded-full ${getScoreBg(analysis.score)}`}></div>
         )}
       </button>
-
       {isVisible && (
         <div className="absolute top-12 right-0 w-96 bg-white/95 backdrop-blur-sm rounded-xl shadow-2xl border border-white/20 p-6 max-h-[80vh] overflow-y-auto">
           <div className="flex items-center justify-between mb-4">
@@ -108,7 +97,6 @@ const SEOAnalyzer: React.FC = () => {
               </svg>
             </button>
           </div>
-
           {isAnalyzing ? (
             <div className="text-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600 mx-auto mb-4"></div>
@@ -125,7 +113,6 @@ const SEOAnalyzer: React.FC = () => {
                 </div>
                 <p className="text-sm text-gray-600">Overall SEO Score</p>
               </div>
-
               {/* Page Info */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Page Information</h4>
@@ -140,7 +127,6 @@ const SEOAnalyzer: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Headings Structure */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Headings Structure</h4>
@@ -153,7 +139,6 @@ const SEOAnalyzer: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Images */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Images</h4>
@@ -163,12 +148,11 @@ const SEOAnalyzer: React.FC = () => {
                     <div className="text-gray-600">With Alt Text</div>
                   </div>
                   <div className="text-center p-2 bg-gray-50 rounded">
-                    <div className="font-semibold text-red-600">{analysis.images.withoutAlt}</div>
+                    <div className="font-semibold text-red-600">{analysis.images.withAltMissing}</div>
                     <div className="text-gray-600">Missing Alt Text</div>
                   </div>
                 </div>
               </div>
-
               {/* Links */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Links</h4>
@@ -183,7 +167,6 @@ const SEOAnalyzer: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Performance */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Performance</h4>
@@ -202,7 +185,6 @@ const SEOAnalyzer: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Accessibility */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Accessibility</h4>
@@ -223,7 +205,6 @@ const SEOAnalyzer: React.FC = () => {
                   </div>
                 )}
               </div>
-
               {/* Recommendations */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Recommendations</h4>
@@ -242,6 +223,9 @@ const SEOAnalyzer: React.FC = () => {
       )}
     </div>
   );
+
 };
 
+
 export default SEOAnalyzer;
+</p></p>

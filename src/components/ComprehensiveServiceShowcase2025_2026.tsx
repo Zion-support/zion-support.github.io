@@ -302,7 +302,7 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
   return (
     <div className="w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Header */}
-      <divdiv
+      <div
         className="text-center py-16 px-4"
       >
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -313,17 +313,17 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
           Comprehensive AI solutions designed to transform your business and accelerate growth in the digital age.
         </p>
-      </divdiv>
+      </div>
 
       {/* Service Navigation */}
-      <divdiv
+      <div
         className="container mx-auto px-4 mb-12"
       >
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {services.map((serviceindex) => {
             const Icon = service.icon;
             return (
-              <divbutton
+              <button
                 key={service.id}
                 onClick={() => setActiveService(service.id)}
                 onMouseEnter={() => setHoveredService(service.id)}
@@ -347,14 +347,14 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
                     <div className="text-xs opacity-80">{service.subtitle}</div>
                   </div>
                 </div>
-              </divbutton>
+              </button>
             );
           })}
         </div>
-      </divdiv>
+      </div>
 
       {/* Service Details */}
-      <divdiv
+      <div
         key={activeService}
         className="container mx-auto px-4 mb-16"
       >
@@ -375,13 +375,13 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {currentService.features.map((featureindex) => (
-                  <divdiv
+                  <div
                     key={feature}
                     className="flex items-center gap-3 p-4 bg-slate-800/50 rounded-xl border border-white/20"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">{feature}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -391,13 +391,13 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us</h3>
               <div className="space-y-4">
                 {currentService.benefits.map((benefitindex) => (
-                  <divdiv
+                  <div
                     key={benefit}
                     className="flex items-center gap-3"
                   >
                     <Star className="w-5 h-5 text-yellow-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
@@ -427,7 +427,7 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
               <h3 className="text-2xl font-bold text-white mb-6">Success Stories</h3>
               <div className="space-y-6">
                 {currentService.caseStudies.map((studyindex) => (
-                  <divdiv
+                  <div
                     key={index}
                     className="p-4 bg-slate-700/50 rounded-xl"
                   >
@@ -436,16 +436,16 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
                       <span className="text-green-400 font-bold">{study.result}</span>
                     </div>
                     <p className="text-gray-300 text-sm">{study.description}</p>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-      </divdiv>
+      </div>
 
       {/* CTA Section */}
-      <divdiv
+      <div
         className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border-t border-white/20 py-16"
       >
         <div className="container mx-auto px-4 text-center">
@@ -457,21 +457,21 @@ const ComprehensiveServiceShowcase2025_2026 = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <divbutton
+            <button
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
             >
               <Rocket className="w-6 h-6" />
               Start Your AI Journey
-            </divbutton>
-            <divbutton
+            </button>
+            <button
               className="border-2 border-white text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <Users className="w-6 h-6" />
               Schedule Consultation
-            </divbutton>
+            </button>
           </div>
         </div>
-      </divdiv>
+      </div>
     </div>
   );
 };

@@ -15,10 +15,8 @@ import {
   Rocket,
   Award
 } from 'lucide-react';
-
 const NewServicesShowcase2026 = () => {
   const [hoveredService, setHoveredService] = useState(null);
-
   const newServices = [
     {
       id: 'quantum-ai-consulting',
@@ -105,7 +103,6 @@ const NewServicesShowcase2026 = () => {
       link: '/services/autonomous-business-ecosystem'
     }
   ];
-
   const formatPrice = (price) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -114,7 +111,6 @@ const NewServicesShowcase2026 = () => {
       maximumFractionDigits: 0,
     }).format(price);
   };
-
   return (
     <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
@@ -131,20 +127,17 @@ const NewServicesShowcase2026 = () => {
             NEW REVOLUTIONARY SERVICES 2026
             <TrendingUp className="w-5 h-5" />
           </div>
-          
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Transform Your Business with
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block">
               Next-Gen AI Services
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience the future of business with our revolutionary AI services that combine quantum computing, 
             neural interfaces, and autonomous systems to deliver unprecedented results.
           </p>
         </motion.div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {newServices.map((service, index) => (
@@ -164,7 +157,6 @@ const NewServicesShowcase2026 = () => {
                   <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color} rounded-full blur-2xl opacity-20`}></div>
                   <div className={`absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br ${service.color} rounded-full blur-xl opacity-15`}></div>
                 </div>
-
                 {/* New Badge */}
                 {service.isNew && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-xs font-bold flex items-center gap-1">
@@ -172,17 +164,14 @@ const NewServicesShowcase2026 = () => {
                     NEW
                   </div>
                 )}
-
                 {/* Icon */}
                 <div className={`inline-flex p-4 bg-gradient-to-br ${service.color} rounded-xl mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-
                 {/* Content */}
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-6 line-clamp-3">{service.description}</p>
-
                   {/* Features Preview */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
@@ -201,7 +190,6 @@ const NewServicesShowcase2026 = () => {
                       </li>
                     </ul>
                   </div>
-
                   {/* Pricing */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
@@ -213,7 +201,6 @@ const NewServicesShowcase2026 = () => {
                       <span className="text-sm text-gray-400 font-normal">/month</span>
                     </div>
                   </div>
-
                   {/* CTA */}
                   <Link
                     to={service.link}
@@ -227,7 +214,6 @@ const NewServicesShowcase2026 = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Bottom CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -242,12 +228,10 @@ const NewServicesShowcase2026 = () => {
               <h3 className="text-3xl font-bold text-white">Ready to Transform Your Business?</h3>
               <Globe className="w-8 h-8 text-purple-400" />
             </div>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of forward-thinking companies already using our revolutionary AI services 
               to achieve unprecedented growth and efficiency.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/services"
@@ -264,7 +248,6 @@ const NewServicesShowcase2026 = () => {
                 Schedule Consultation
               </Link>
             </div>
-
             {/* Trust Indicators */}
             <div className="flex items-center justify-center gap-8 mt-8 pt-8 border-t border-white/10">
               <div className="text-center">
@@ -285,6 +268,8 @@ const NewServicesShowcase2026 = () => {
       </div>
     </div>
   );
+
 };
+
 
 export default NewServicesShowcase2026;

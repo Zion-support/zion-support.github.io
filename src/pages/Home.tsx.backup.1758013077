@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { useNotifications } from '../components/NotificationSystem';
 import React from 'react';
-=======
 import React, { useEffect } from 'react';
 >>>>>>> origin/aggressive-merge-backup-20250916-074236
 import { Helmet } from 'react-helmet-async';
@@ -52,12 +50,10 @@ const Home: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🤖</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">Conscious AI Systems</h3>
-<<<<<<< HEAD
             <p className="text-gray-300 mb-6 text-center">
               Revolutionary AI systems that exhibit true consciousness and self-awareness, 
               capable of independent thought and creative problem-solving.
             </p>
-=======
             <p className="text-gray-300 mb-6 text-center">Revolutionary AI systems that exhibit true consciousness and self-awareness, capable of independent thought and creative problem-solving.</p>
             <div className="text-center">
               <Link to="/pages/RevolutionaryAIServices2026" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">Explore AI Services →</Link>
@@ -77,12 +73,10 @@ const Home: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🔒</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">AI Cybersecurity</h3>
-<<<<<<< HEAD
             <p className="text-gray-300 mb-6 text-center">
               Advanced AI-powered security systems that predict and prevent threats 
               before they occur, protecting across all dimensions.
             </p>
-=======
             <p className="text-gray-300 mb-6 text-center">Advanced AI-powered security systems that predict and prevent threats before they occur, protecting across all dimensions.</p>
             <div className="text-center">
               <Link to="/pages/CybersecurityFortress2025" className="text-green-400 hover:text-green-300 font-semibold text-lg">Secure Your Future →</Link>
@@ -91,7 +85,6 @@ const Home: React.FC = () => {
           </div>
         </motion.div>
 
-<<<<<<< HEAD
         {/* Call to Action Section */}
         <motion.div 
           className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30 mt-20"
@@ -106,7 +99,6 @@ const Home: React.FC = () => {
             Join the revolution and experience the future of technology. Our revolutionary solutions 
             are changing the world, one breakthrough at a time.
           </p>
-=======
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
         </div>

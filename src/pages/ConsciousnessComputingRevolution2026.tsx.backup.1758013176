@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 import { motion } from 'framer-motion';
 >>>>>>> origin/backup-main-20250916-071805
@@ -267,8 +265,6 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
               Learn More
             </button>
           </div>
-<<<<<<< HEAD
-=======
           </motion.div>
 >>>>>>> origin/backup-main-20250916-071805
         </div>

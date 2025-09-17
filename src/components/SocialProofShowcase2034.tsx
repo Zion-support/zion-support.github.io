@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const SocialProofShowcase2034: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-
   const testimonials = [
     {
       id: 1,
@@ -60,10 +56,8 @@ const SocialProofShowcase2034: React.FC = () => {
       id: 4,
     }
   ];
-
   const caseStudies = [
     {
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -84,7 +78,6 @@ const SocialProofShowcase2034: React.FC = () => {
             See real results from real clients.
           </p>
         </motion.div>
-
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
           {stats.map((stat, index) => (
@@ -101,11 +94,9 @@ const SocialProofShowcase2034: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Testimonials Carousel */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
-          
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
@@ -126,17 +117,14 @@ const SocialProofShowcase2034: React.FC = () => {
                         <p className="text-gray-400">{testimonials[activeTestimonial]?.company}</p>
                       </div>
                     </div>
-                    
                     <div className="flex items-center space-x-1 mb-6">
                       {[...Array(testimonials[activeTestimonial]?.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400 text-2xl">⭐</span>
                       ))}
                     </div>
-                    
                     <blockquote className="text-xl text-gray-300 leading-relaxed italic mb-6">
                       "{testimonials[activeTestimonial]?.quote}"
                     </blockquote>
-                    
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <span className="px-3 py-1 bg-indigo-600/30 text-indigo-300 rounded-full">
                         {testimonials[activeTestimonial]?.industry}
@@ -144,7 +132,6 @@ const SocialProofShowcase2034: React.FC = () => {
                       <span>{testimonials[activeTestimonial]?.projectDuration}</span>
                     </div>
                   </div>
-                  
                   <div>
                     <h5 className="text-xl font-semibold mb-4">Key Results:</h5>
                     <div className="grid grid-cols-2 gap-4">
@@ -159,10 +146,8 @@ const SocialProofShowcase2034: React.FC = () => {
             </div>
           </div>
         </div>
-
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-indigo-500/30 text-center">
           <h3 className="text-4xl font-bold mb-6">Join Our Success Stories</h3>
@@ -186,10 +171,4 @@ const SocialProofShowcase2034: React.FC = () => {
               View More Case Studies
             </motion.button>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
-export default SocialProofShowcase2034;

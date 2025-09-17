@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const RevolutionaryContentShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

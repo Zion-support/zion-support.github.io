@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ChevronRight, Star, Zap, Brain, Cpu } from 'lucide-react';
-=======
 import { 
   ArrowRight, 
   Star, 
@@ -23,7 +21,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
 
   const promotions = [
     {
-<<<<<<< HEAD
       id: 'ai-2026-enterprise-automation',
       title: 'AI 2026: Enterprise Automation Revolution',
       description: 'Transform your business with next-generation AI automation that learns and scales autonomously.',
@@ -49,7 +46,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
       icon: <Brain className="w-8 h-8" />,
       gradient: 'from-green-500 to-teal-500',
       link: '/pages/ConsciousAIEthics2026'
-=======
       id: 1,
       title: "AI Innovation Showcase 2026",
       subtitle: "Revolutionary AI Technologies",
@@ -90,7 +86,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-<<<<<<< HEAD
       setCurrentSlide((prev) => (prev + 1) % newContent.length);
     }, 5000);
 
@@ -100,7 +95,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
   const handleClose = () => {
     setIsVisible(false);
   };
-=======
       setCurrentSlide((prev) => (prev + 1) % promotions.length);
     }, 6000);
 
@@ -118,7 +112,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -100 }}
-<<<<<<< HEAD
         className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20"
       >
         {/* Animated background */}
@@ -143,7 +136,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`
-=======
         transition={{ duration: 0.5 }}
         className="relative overflow-hidden"
       >
@@ -178,7 +170,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -250,7 +241,6 @@ const NewContentPromotionBanner2026: React.FC = () => {
                   index === currentSlide 
                     ? 'bg-cyan-400 w-8' 
                     : 'bg-gray-600 w-2 hover:bg-gray-500'
-=======
         <div className="relative z-10 container mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
             {/* Content */}
@@ -360,4 +350,3 @@ const NewContentPromotionBanner2026: React.FC = () => {
   );
 };
 
-export default NewContentPromotionBanner2026;

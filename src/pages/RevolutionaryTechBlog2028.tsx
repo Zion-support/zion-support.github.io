@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryTechBlog2028: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

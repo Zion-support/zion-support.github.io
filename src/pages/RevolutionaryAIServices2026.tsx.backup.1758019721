@@ -389,8 +389,6 @@ const RevolutionaryAIServices2026 = () => {
       name: "Dr. Elena Kim",
       role: "Director, Space Research Institute",
       content: "The space technology solutions are making interplanetary colonization a reality. We're building the future of humanity among the stars.",
-<<<<<<< HEAD
-=======
       role: "CEO, Space Ventures",
       content: "Their space technology solutions enabled us to establish the first profitable Mars colony. Absolutely groundbreaking work.",
       rating: 5
@@ -553,10 +551,8 @@ const RevolutionaryAIServices2026 = () => {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

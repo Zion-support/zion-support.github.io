@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-
 interface ScrollAnimationProps {
   children: React.ReactNode;
   animation?: 'fadeIn' | 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight' | 'scale';
@@ -7,8 +6,6 @@ interface ScrollAnimationProps {
   duration?: number;
   threshold?: number;
   className?: string;
-}
-
 const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
   children,
   animation = 'fadeIn',
@@ -19,7 +16,6 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
 }) => {
   const elementRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -31,18 +27,16 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
       },
       { threshold }
     );
-
+};
     if (elementRef.current) {
       observer.observe(elementRef.current);
     }
-
     return () => {
       if (elementRef.current) {
         observer.unobserve(elementRef.current);
       }
     };
   }, [delay, threshold]);
-
   const getAnimationClass = () => {
     if (!isVisible) {
       switch (animation) {
@@ -62,7 +56,6 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
           return 'opacity-0';
       }
     }
-
     switch (animation) {
       case 'fadeIn':
         return 'opacity-100';
@@ -80,7 +73,6 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
         return 'opacity-100';
     }
   };
-
   return (
     <div
       ref={elementRef}
@@ -89,6 +81,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
       {children}
     </div>
   );
-};
+
+
 
 export default ScrollAnimation;

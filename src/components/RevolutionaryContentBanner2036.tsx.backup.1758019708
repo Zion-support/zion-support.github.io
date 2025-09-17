@@ -13,8 +13,6 @@ const RevolutionaryContentBanner2036: React.FC = () => {
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
             Experience the most advanced technology ever created: Transcendent AI Consciousness, 
             Interdimensional Technology, and Ultimate Tech Breakthroughs that transcend reality itself
-<<<<<<< HEAD
-=======
             🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2036
           </div>
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technology Showcase 2036</h2>
@@ -33,8 +31,6 @@ const RevolutionaryContentBanner2036: React.FC = () => {
             </p>
             <a href="/pages/TranscendentAIConsciousness2036" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Explore AI Consciousness →
-<<<<<<< HEAD
-=======
             <div className="text-4xl mb-4 text-center">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-center">Conscious AI Systems</h3>
             <p className="text-purple-100 mb-4 text-center text-sm">
@@ -77,8 +73,6 @@ const RevolutionaryContentBanner2036: React.FC = () => {
             </p>
             <ul className="text-cyan-200 space-y-1 mb-4 text-xs">
             <ul className="text-cyan-200 space-y-1 mb-4 text-xs">
-<<<<<<< HEAD
-=======
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
 >>>>>>> origin/backup-main-20250916-071805
               <li>• Quantum Neural Networks</li>
@@ -109,8 +103,6 @@ const RevolutionaryContentBanner2036: React.FC = () => {
             </p>
             <ul className="text-emerald-200 space-y-1 mb-4 text-xs">
             <ul className="text-emerald-200 space-y-1 mb-4 text-xs">
-<<<<<<< HEAD
-=======
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
 >>>>>>> origin/backup-main-20250916-071805
               <li>• Dimensional Portals</li>

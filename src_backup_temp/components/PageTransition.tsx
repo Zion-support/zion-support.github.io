@@ -1,21 +1,12 @@
 import React from 'react';
-"}
-;
-const "PageTransition": "React.FC<PageTransitionProps> = ({ children "}) => {;
-  return (;
-    <div className="min-h-screen">;
-interface PageTransitionProps {;
-  "children": React.ReactNode;
-}
-const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
+
+const PageTransition: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {children};
-    </div>;
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PageTransition</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
-"export default PageTransition;
-</PageTransitionProps>;
-"export default PageTransition;';
-</PageTransitionProps>;';';
-import React from 'react'; ; interface PageTransitionProps {; children: React.ReactNode} const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => { return ( <div className="min-h-screen bg-white"> {children}; </div>; )}; "export default PageTransition;'; </PageTransitionProps>;';';
+
+export default PageTransition;

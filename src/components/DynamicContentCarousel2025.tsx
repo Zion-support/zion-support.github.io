@@ -1,54 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Play, ExternalLink, Star } from 'lucide-react';
-
-const DynamicContentCarousel2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const contentItems = [
-    {
-      id: 1,
-      title: "AI-Powered Analytics Dashboard",
-      description: "Real-time insights and predictive analytics that transform raw data into actionable business intelligence.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      category: "Analytics",
-      rating: 4.9,
-      views: "2.3M",
-      gradient: "from-blue-500 to-purple-600"
-    },
-    {
-      id: 2,
-      title: "Quantum Computing Solutions",
-      description: "Revolutionary quantum algorithms that solve complex optimization problems in seconds instead of years.",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=600&fit=crop",
-      category: "Quantum Tech",
-      rating: 4.8,
-      views: "1.8M",
-      gradient: "from-cyan-500 to-blue-600"
-    },
-    {
-      id: 3,
-      title: "Neural Interface Platform",
-      description: "Direct brain-computer interfaces that enable seamless interaction between human thought and digital systems.",
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop",
-      category: "Neural Tech",
-      rating: 4.9,
-      views: "3.1M",
-      gradient: "from-green-500 to-emerald-600"
-    },
-    {
-      id: 4,
-      title: "Autonomous AI Systems",
-      description: "Self-managing AI that learns, adapts, and optimizes business processes without human intervention.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-      category: "AI Systems",
-      rating: 4.7,
-      views: "2.7M",
-      gradient: "from-orange-500 to-red-600"
-    },
-    {
-      id: 5,
       title: "Blockchain Integration Suite",
       description: "Secure, decentralized solutions that enhance transparency and trust in business transactions.",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
@@ -56,29 +8,13 @@ const DynamicContentCarousel2025: React.FC = () => {
       rating: 4.6,
       views: "1.9M",
       gradient: "from-purple-500 to-pink-600"
-    }
-  ];
-
-  useEffect(() => {
     if (!isAutoPlaying) return;
-    
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % contentItems.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, contentItems.length]);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % contentItems.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
-  };
-
   const currentItem = contentItems[currentIndex];
-
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
@@ -100,7 +36,6 @@ const DynamicContentCarousel2025: React.FC = () => {
             Explore our latest breakthroughs and cutting-edge solutions that are shaping the future of technology.
           </p>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl">
@@ -128,15 +63,12 @@ const DynamicContentCarousel2025: React.FC = () => {
                         {currentItem.views} views
                       </div>
                     </div>
-
                     <h3 className="text-4xl font-bold text-white mb-6">
                       {currentItem.title}
                     </h3>
-
                     <p className="text-xl text-gray-300 leading-relaxed mb-8">
                       {currentItem.description}
                     </p>
-
                     <div className="flex flex-col sm:flex-row gap-4">
                       <motion.button
                         whileHover={{ scale: 1.05 }}
@@ -156,7 +88,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                       </motion.button>
                     </div>
                   </div>
-
                   {/* Image */}
                   <div className="relative">
                     <div className="relative overflow-hidden rounded-2xl">
@@ -178,7 +109,6 @@ const DynamicContentCarousel2025: React.FC = () => {
               </motion.div>
             </AnimatePresence>
           </div>
-
           {/* Navigation */}
           <div className="flex items-center justify-between mt-8">
             <div className="flex gap-3">
@@ -194,7 +124,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                 />
               ))}
             </div>
-
             <div className="flex gap-4">
               <button
                 onClick={prevSlide}
@@ -220,10 +149,3 @@ const DynamicContentCarousel2025: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default DynamicContentCarousel2025;

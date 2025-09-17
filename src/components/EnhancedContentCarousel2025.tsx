@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const contentItems = [
     {
       id: 1,
@@ -12,7 +10,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-purple-600 to-pink-600',
       link: '/pages/NextGenAIConsciousness2025',
       features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
-
   const contentSlides = [
     {
       id: 1,
@@ -133,53 +130,41 @@ const EnhancedContentCarousel2025: React.FC = () => {
       stats: { users: "10M+", accuracy: "99.99%", speed: "Instant" }
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % contentItems.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [contentItems.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
     setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     if (!isAutoPlaying) return;
-    
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % contentItems.length);
     }, 6000);
-    
     return () => clearInterval(timer);
   }, [isAutoPlaying, contentItems.length]);
-
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % contentItems.length);
   };
   };
-
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
-
   const currentItem = contentItems[currentIndex];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Background Effects */}
@@ -188,7 +173,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
         <div className="absolute top-20 left-20 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -201,7 +185,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
             Discover the most advanced technologies that are reshaping our world and defining the future
           </p>
         </div>
-
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
           {/* Main Content Display */}
@@ -216,7 +199,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 <p className="text-xl text-gray-300 mb-6">
                   {contentItems[currentSlide].description}
                 </p>
-
                 {/* Features */}
                 <div className="space-y-3">
                   {contentItems[currentSlide].features.map((feature, index) => (
@@ -225,7 +207,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                         ✓
           </p>
         </motion.div>
-
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
             <div 
@@ -258,7 +239,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
                   <a 
@@ -272,7 +252,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Visual Demo Area */}
               <div className="bg-gradient-to-br from-gray-700/50 to-purple-700/50 rounded-xl p-8 min-h-[400px] flex items-center justify-center">
                 <div className="text-center">
@@ -280,11 +259,9 @@ const EnhancedContentCarousel2025: React.FC = () => {
                     {contentItems[currentSlide].icon}
                       </div>
                       <span className="text-lg">{feature}</span>
-
                         <p className="text-lg opacity-90 leading-relaxed">
                           {slide.description}
                         </p>
-
                         <div className="grid grid-cols-2 gap-4">
                           {Object.entries(slide.stats).map(([key, value], idx) => (
                             <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
@@ -293,7 +270,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         <div className="flex flex-col sm:flex-row gap-4">
                           <motion.a
                             href={slide.link}
@@ -312,7 +288,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           </motion.button>
                         </div>
                       </motion.div>
-
                       {/* Visual */}
                       <motion.div
                         initial={{ opacity: 0, x: 50 }}
@@ -336,7 +311,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           >
                             {slide.image}
                           </motion.div>
-
                           <motion.div
                             animate={{
                               y: [0, 20, 0],
@@ -352,7 +326,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           >
                             ⚡
                           </motion.div>
-
                           <motion.div
                             animate={{
                               y: [0, -15, 0],
@@ -368,7 +341,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                           >
                             🚀
                           </motion.div>
-
                           {/* Central Hub */}
                           <motion.div
                             animate={{
@@ -391,7 +363,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
                   <a 
@@ -405,7 +376,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                   </button>
                 </div>
               </div>
-
               {/* Visual Demo Area */}
               <div className="bg-gradient-to-br from-gray-700/50 to-purple-700/50 rounded-xl p-8 min-h-[400px] flex items-center justify-center">
                 <div className="text-center">
@@ -428,7 +398,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-center items-center mt-8 space-x-4">
             <button 
@@ -437,7 +406,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
             >
               <span className="text-2xl">‹</span>
             </button>
-            
             {/* Slide Indicators */}
           <div className="flex justify-center items-center space-x-4 mt-8">
             <button
@@ -448,7 +416,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
             <div className="flex space-x-2">
               {contentItems.map((_, index) => (
                 <button
@@ -462,7 +429,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
                 />
               ))}
             </div>
-            
             <button 
               onClick={nextSlide}
               className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
@@ -471,7 +437,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-5 gap-4 mt-12">
           {contentItems.map((item, index) => (
@@ -486,7 +451,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mt-16">
           <div className="text-center">
@@ -519,7 +483,6 @@ const EnhancedContentCarousel2025: React.FC = () => {
         </div>
           </div>
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -548,9 +511,4 @@ const EnhancedContentCarousel2025: React.FC = () => {
             </motion.button>
           </div>
         </motion.div>
-      </div>
-    </div>
-  );
-};
 
-export default EnhancedContentCarousel2025;

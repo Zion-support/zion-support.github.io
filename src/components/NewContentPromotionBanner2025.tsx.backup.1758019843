@@ -440,8 +440,5 @@ const NewContentPromotionBanner2025: React.FC = () => {
 };
 
 export default NewContentPromotionBanner2025;
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> cursor/create-and-deploy-new-content-af01
 >>>>>>> origin/content/cherrypick-finops-routing

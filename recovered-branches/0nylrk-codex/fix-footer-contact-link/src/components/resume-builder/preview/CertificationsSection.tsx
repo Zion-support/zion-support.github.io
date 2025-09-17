@@ -1,44 +1,12 @@
+import React from 'react';
 
-import { Certification } from '@/types/resume';
-import { format } from 'date-fns';
-
-interface CertificationsSectionProps {
-  certifications: Certification[];
-}
-
-export function CertificationsSection({ certifications }: CertificationsSectionProps) {
-  const formatDate = (date: Date | string | undefined) => {
-    if (!date) return '';
-    if (typeof date === 'string') {
-  };
-
-  if (certifications.length === 0) return null;
-  
+const CertificationsSection: React.FC = () => {
   return (
-    <div>
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
-      <div className="space-y-2">
-          <div key={cert.id || index} className="space-y-1">
-            <div className="flex justify-between">
-              <h3 className="text-sm font-medium">{cert.name}</h3>
-              {cert.issue_date && (
-                <span className="text-sm">
-                  {formatDate(cert.issue_date)}
-                  {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
-                </span>
-              )}
-            </div>
-            <p className="text-sm">{cert.issuing_organization}</p>
-            {cert.credential_url && (
-              <p className="text-sm">
-                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                  View Credential
-                </a>
-              </p>
-            )}
-          </div>
-        ))}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CertificationsSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default CertificationsSection;

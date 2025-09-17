@@ -47,8 +47,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   }, [slides.length]);
 
   return (
-<<<<<<< HEAD
-=======
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -113,9 +111,7 @@ const RevolutionaryContentBanner2025: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
-=======
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -193,7 +189,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Feature Highlights */}
         <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -235,7 +230,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </div>
 >>>>>>> origin/cursor/create-and-deploy-new-content-9b28
         </div>
-=======
 >>>>>>> origin/aggressive-merge-backup-20250916-080018
       </div>
     </div>

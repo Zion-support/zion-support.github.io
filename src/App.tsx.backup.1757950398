@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -13,7 +12,6 @@ import { PromotionalBanner } from './components/PromotionalBanner';
 import { NewContentPromotionalBanner } from './components/NewContentPromotionalBanner';
 // Removed direct import to avoid name collision with lazy import below
 import { ServicesHighlight } from './components/ServicesHighlight';
-=======
 import { EnhancedLoading } from "./components/ui/enhanced-loading";
 import { MainNavigation } from "./layout/MainNavigation";
 import Footer from "./components/Footer";
@@ -156,7 +154,6 @@ const Marketplace = () => (
 
 function App() {
   return (
-<<<<<<< HEAD
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-futuristic">
@@ -299,7 +296,6 @@ function App() {
         </div>
       </Router>
     </ErrorBoundary>
-=======
     <ThemeProvider>
       <WhitelabelProvider>
         <Router>
@@ -365,4 +361,3 @@ function App() {
   );
 }
 
-export default App;

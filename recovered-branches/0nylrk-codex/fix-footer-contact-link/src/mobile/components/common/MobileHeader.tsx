@@ -1,73 +1,12 @@
+import React from 'react';
 
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-
-interface MobileHeaderProps {
-  title: string;
-  showBack?: boolean;
-  showNotifications?: boolean;
-  showSettings?: boolean;
-  className?: string;
-  onNotificationsClick?: () => void;
-  onSettingsClick?: () => void;
-}
-
-export function MobileHeader({
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-  className,
-  onNotificationsClick,
-  const navigate = useNavigate();
-
+const MobileHeader: React.FC = () => {
   return (
-    <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
-      className
-    )}>
-      <div className="flex items-center justify-between h-14 px-4">
-        <div className="flex items-center">
-          {showBack && (
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="mr-2" 
-              onClick={() => navigate(-1)}
-            >
-              <ChevronLeft className="h-5 w-5" />
-              <span className="sr-only">Back</span>
-            </Button>
-          )}
-          <h1 className="text-lg font-medium leading-none truncate">
-            {title}
-          </h1>
-        </div>
-        <div className="flex items-center space-x-2">
-          {showNotifications && (
-            <Button 
-              variant="ghost" 
-              size="icon"
-              onClick={onNotificationsClick}
-            >
-              <Bell className="h-5 w-5" />
-              <span className="sr-only">Notifications</span>
-            </Button>
-          )}
-          {showSettings && (
-            <Button 
-              variant="ghost" 
-              size="icon"
-              onClick={onSettingsClick}
-            >
-              <Settings className="h-5 w-5" />
-              <span className="sr-only">Settings</span>
-            </Button>
-          )}
-        </div>
-      </div>
-    </header>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MobileHeader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default MobileHeader;

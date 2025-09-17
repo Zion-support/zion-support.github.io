@@ -1,6 +1,5 @@
 export const blogPosts = [
   {
-<<<<<<< HEAD
     id: 9201,
     title: "AI 2026: Evidence-First Agent Stack — Practical Guide",
     excerpt: "Design agents with verifiable traces, evals, and policy events wired to delivery.",
@@ -155,7 +154,6 @@ export const blogPosts = [
     title: "AI 2026: Trusted RAG — Guardrailed Retrieval That Ships",
     excerpt: "Blueprint for grounded, monitored, and budget-aware RAG with rollbacks that work.",
     content: "Trusted RAG aligns retrieval quality with safety and cost. We detail policy‑guarded retrieval, freshness windows, semantic drift monitors, and online groundedness evals wired to release scorecards. Learn how to block risky merges, canary safely, and roll back deterministically when signals breach.",
-=======
     id: 4001,
     title: "AI 2026: Edge Agents Production Guide",
     excerpt: "Blueprint to deploy low-latency edge agents with budget-aware routing.",
@@ -2343,4 +2341,3 @@ export const allBlogPosts = [...blogPosts, ...newContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
-export const BLOG_POSTS = allBlogPosts;

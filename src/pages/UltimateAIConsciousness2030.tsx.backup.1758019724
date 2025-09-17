@@ -8,8 +8,6 @@ export default function UltimateAIConsciousness2030(): JSX.Element {
     </div>
   )
 }
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const UltimateAIConsciousness2030: React.FC = () => {

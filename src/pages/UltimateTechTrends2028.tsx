@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateTechTrends2028: React.FC = () => {
   const [activeTrend, setActiveTrend] = useState(0);

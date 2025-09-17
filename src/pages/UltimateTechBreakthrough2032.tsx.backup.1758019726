@@ -200,8 +200,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Contact Our Team
-<<<<<<< HEAD
-=======
             🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2032
 >>>>>>> origin/backup-main-20250916-071805
           </div>
@@ -355,8 +353,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
               <div className="text-lg font-semibold mb-2">Possibilities</div>
               <div className="text-sm opacity-80">Infinite potential unlocked</div>
             </div>
-<<<<<<< HEAD
-=======
             Experience the most revolutionary technological advances that will reshape our world in 2032
           </p>
         </div>
@@ -550,8 +546,6 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
             </button>
-<<<<<<< HEAD
-=======
         <div className="text-center">
 >>>>>>> origin/backup-main-20250916-071805
           <h2 className="text-4xl font-bold mb-6">Ready for the Ultimate Breakthrough?</h2>
@@ -564,9 +558,7 @@ const UltimateTechBreakthrough2032: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-<<<<<<< HEAD
             </button>
-=======
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
               Schedule Demo
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">

@@ -1,2 +1,12 @@
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; import ContactForm from \'../src/components/ContactForm\'; const RequestQuotePage = () => {; return (; <> <SEOHead title=\"Request a Quote - Zion Tech Group\" description=\"Request a custom quote for your project.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Request a Quote></div> <p className=\"text-gray-600 mb-8\">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; import ContactForm from '../src/components/ContactForm'; const RequestQuotePage = () => {; return (; <> <SEOHead title="Request a Quote - Zion Tech Group" description="Request a custom quote for your project." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Request a Quote></div> <p className="text-gray-600 mb-8">Tell us about your project and our team will get back to you with a tailored proposal.></div> <ContactForm /> ></div> ></div> );}; export default RequestQuotePage;
+import React from 'react';
+
+const request-quote: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">request-quote</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default request-quote;

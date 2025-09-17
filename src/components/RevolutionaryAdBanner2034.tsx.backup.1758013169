@@ -211,8 +211,6 @@ const RevolutionaryAdBanner2034: React.FC = () => {
       <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-indigo-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
       <div className="absolute top-1/4 right-1/3 w-28 h-28 bg-cyan-500/20 rounded-full blur-2xl animate-pulse delay-1500"></div>
     </div>
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2034: React.FC = () => {

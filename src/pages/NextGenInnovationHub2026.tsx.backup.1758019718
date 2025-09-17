@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 >>>>>>> origin/backup-main-20250916-071805
 
@@ -118,8 +116,6 @@ const NextGenInnovationHub2026: React.FC = () => {
               >
                 AI Solutions
               </Link>
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -457,8 +453,6 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-6">Join the Innovation Revolution</h2>

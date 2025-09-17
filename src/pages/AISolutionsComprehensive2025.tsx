@@ -2,198 +2,206 @@ import React from 'react';
 
 const AISolutionsComprehensive2025: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="inline-flex items-center px-6 py-3 bg-white/20 rounded-full text-sm font-bold mb-6">
+  const [activeSolution, setActiveSolution] = useState(0);
+  const aiSolutions = [
+    {
+      id: 1,
+      title: "Autonomous AI Agents",
+      description: "Self-managing AI systems that operate independently, make decisions, and adapt to changing environments without human intervention.",
+      capabilities: [
+        "Autonomous decision making",
+        "Self-learning and adaptation",
+        "Multi-task execution",
+        "Real-time problem solving"
+      ],
+      benefits: [
+        "95% reduction in manual tasks",
+        "24/7 operational efficiency",
+        "Cost savings up to 60%",
+        "Error reduction by 99%"
+      ],
+      icon: "🤖",
+      gradient: "from-blue-600 to-cyan-600",
+      price: "Starting at $5,000/month"
+    },
+    {
+      id: 2,
+      title: "Predictive Analytics Engine",
+      description: "Advanced AI system that analyzes patterns and predicts future outcomes with unprecedented accuracy across all business domains.",
+      capabilities: [
+        "Pattern recognition",
+        "Future outcome prediction",
+        "Risk assessment",
+        "Trend analysis"
+      ],
+      benefits: [
+        "98% prediction accuracy",
+        "Early risk detection",
+        "Optimized decision making",
+        "Competitive advantage"
+      ],
+      icon: "📊",
+      gradient: "from-purple-600 to-pink-600",
+      price: "Starting at $3,500/month"
+    },
+    {
+      id: 3,
+      title: "Natural Language Processing Suite",
+      description: "Comprehensive NLP solution that understands, processes, and generates human language with human-level comprehension.",
+      capabilities: [
+        "Language understanding",
+        "Context analysis",
+        "Sentiment analysis",
+        "Multi-language support"
+      ],
+      benefits: [
+        "Human-level comprehension",
+        "Multi-language processing",
+        "Real-time translation",
+        "Enhanced communication"
+      ],
+      icon: "💬",
+      gradient: "from-green-600 to-emerald-600",
+      price: "Starting at $2,500/month"
+    },
+    {
+      id: 4,
+      title: "Computer Vision Platform",
+      description: "Advanced visual recognition system that can identify, analyze, and understand visual content with superhuman accuracy.",
+      capabilities: [
+        "Object recognition",
+        "Facial analysis",
+        "Scene understanding",
+        "Real-time processing"
+      ],
+      benefits: [
+        "99.9% accuracy rate",
+        "Real-time processing",
+        "Multi-object detection",
+        "Enhanced security"
+      ],
+      icon: "👁️",
+      gradient: "from-orange-600 to-red-600",
+      price: "Starting at $4,000/month"
+    },
+    {
+      id: 5,
+      title: "AI-Powered Automation",
+      description: "Intelligent automation system that streamlines workflows, eliminates repetitive tasks, and optimizes business processes.",
+      capabilities: [
+        "Workflow automation",
+        "Process optimization",
+        "Task scheduling",
+        "Resource management"
+      ],
+      benefits: [
+        "80% process efficiency",
+        "Cost reduction up to 50%",
+        "Error elimination",
+        "Scalable operations"
+      ],
+      icon: "⚙️",
+      gradient: "from-indigo-600 to-purple-600",
+      price: "Starting at $3,000/month"
+    },
+    {
+      id: 6,
+      title: "AI Consulting & Strategy",
+      description: "Expert AI consulting services to help businesses identify opportunities, develop strategies, and implement AI solutions effectively.",
+      capabilities: [
+        "AI strategy development",
+        "Implementation planning",
+        "Team training",
+        "Ongoing support"
+      ],
+      benefits: [
+        "Expert guidance",
+        "Customized solutions",
+        "Risk mitigation",
+        "ROI optimization"
+      ],
+      icon: "🎯",
+      gradient: "from-teal-600 to-cyan-600",
+      price: "Starting at $10,000/project"
+  const industries = [
+    { name: "Healthcare", icon: "🏥", description: "Medical diagnosis, drug discovery, patient care optimization" },
+    { name: "Finance", icon: "💰", description: "Fraud detection, algorithmic trading, risk management" },
+    { name: "Manufacturing", icon: "🏭", description: "Quality control, predictive maintenance, supply chain optimization" },
+    { name: "Retail", icon: "🛍️", description: "Personalized recommendations, inventory management, customer service" },
+    { name: "Education", icon: "🎓", description: "Personalized learning, automated grading, student support" },
+    { name: "Transportation", icon: "🚗", description: "Autonomous vehicles, route optimization, traffic management" }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp Global",
+      content: "The AI solutions transformed our operations completely. We saw a 300% increase in efficiency within the first month.",
+      avatar: "👩‍💼"
+    },
+    {
+      name: "Michael Chen",
+      role: "CEO, InnovateTech",
+      content: "The predictive analytics engine helped us identify market trends 6 months ahead of our competitors.",
+      avatar: "👨‍💼"
+    },
+    {
+      name: "Dr. Emily Rodriguez",
+      role: "Chief Medical Officer, HealthFirst",
+      content: "Our AI-powered diagnostic system improved patient outcomes by 40% and reduced diagnosis time by 60%.",
+      avatar: "👩‍⚕️"
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Solutions Comprehensive 2025 | Zion Tech Group - Complete AI Transformation Suite</title>
+        <meta name="description" content="Transform your business with our comprehensive AI solutions suite. Autonomous AI agents, predictive analytics, NLP, computer vision, and AI consulting services for 2025." />
+        <meta name="keywords" content="AI solutions, artificial intelligence, autonomous AI, predictive analytics, NLP, computer vision, AI consulting, 2025 AI, Zion Tech Group" />
+        <meta property="og:title" content="AI Solutions Comprehensive 2025 | Zion Tech Group" />
+        <meta property="og:description" content="Complete AI transformation suite including autonomous agents, predictive analytics, and AI consulting services for businesses in 2025." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/pages/AISolutionsComprehensive2025" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Solutions Comprehensive 2025 | Zion Tech Group" />
+        <meta name="twitter:description" content="Complete AI transformation suite for businesses in 2025." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+        transition={{ duration: 0.8 }}
         className="relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: isVisible ? 1 : 0.8 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse"
             >
               🤖 COMPREHENSIVE AI SOLUTIONS • 2025
-            </motion.div>
-            <motion.h1
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent"
-            >
-              AI Solutions Comprehensive 2025
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="text-2xl opacity-90 max-w-4xl mx-auto"
-            >
-              Transform your business with our cutting-edge AI solutions designed for the future
-            </motion.p>
-          </div>
-        </div>
-
-      {/* Category Filter */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="container mx-auto px-4 mb-12"
-      >
-        <div className="flex flex-wrap justify-center gap-4">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-            >
-              <span className="text-xl">{category.icon}</span>
-              <span>{category.name}</span>
-            </button>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Solutions Grid */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
-        className="container mx-auto px-4 pb-16"
-      >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedCategory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8"
-          >
-            {filteredSolutions.map((solution) => (
-              <motion.div
-                key={solution.id}
-                variants={itemVariants}
-                className="group relative"
-              >
-                <div className={`bg-gradient-to-br ${solution.color} rounded-2xl p-8 h-full transform transition-all duration-500 hover:scale-105 hover:shadow-2xl`}>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="text-5xl">{solution.icon}</div>
-                    <div className="text-right">
-                      <div className="text-lg font-bold">{solution.stats.efficiency}</div>
-                      <div className="text-sm opacity-80">Efficiency</div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
-                  <p className="text-lg opacity-90 mb-6">{solution.description}</p>
-                  
-                  <div className="space-y-3 mb-6">
-                    {solution.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                        <span className="text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="text-center">
-                      <div className="text-lg font-bold">{solution.stats.roi || solution.stats.autonomy || solution.stats.speed || solution.stats.integration || solution.stats.quality || solution.stats.protection}</div>
-                      <div className="text-xs opacity-80">ROI</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold">{solution.stats.satisfaction || solution.stats.uptime || solution.stats.accuracy || solution.stats.speed || solution.stats.engagement || solution.stats.response}</div>
-                      <div className="text-xs opacity-80">Satisfaction</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold">∞</div>
-                      <div className="text-xs opacity-80">Potential</div>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <div className="text-2xl font-bold text-white/90">{solution.pricing}</div>
-                  </div>
-                  
-                  <button className="w-full bg-white text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                    Get Started →
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
-      </motion.div>
-
-      {/* Stats Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm py-16"
-      >
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Trusted by Industry Leaders</h2>
-            <p className="text-xl opacity-80">Join thousands of organizations transforming with AI</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">10,000+</div>
-              <div className="text-lg opacity-80">Active Users</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">99.9%</div>
-              <div className="text-lg opacity-80">Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">500%</div>
-              <div className="text-lg opacity-80">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-5xl font-bold mb-2">24/7</div>
-              <div className="text-lg opacity-80">Support</div>
-            </div>
-          </div>
-        </div>
-
-      {/* Call to Action */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.4 }}
-        className="container mx-auto px-4 py-16"
-      >
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-            Schedule a consultation with our AI experts and discover how our solutions can revolutionize your operations
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-              Schedule Consultation
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              View Case Studies
-            </button>
-          </div>
+            <h1 className="text-5xl font-bold mb-6">AI Solutions Comprehensive 2025</h1>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+              Transform your business with our complete suite of AI-powered solutions designed for the modern enterprise
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Explore Solutions
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg">
+                Get Consultation
+              </button>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default AISolutionsComprehensive2025;

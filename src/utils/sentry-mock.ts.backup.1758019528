@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/merged-prs
 
 const noop = () => {};
 const noopReturn = () => null;
 const noopPromise = () => Promise.resolve();
 
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
 // Mock Sentry instance with all common methods
@@ -22,7 +16,6 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
-<<<<<<< HEAD
   configureScope: noop,
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   setUser: noop,
@@ -39,9 +32,6 @@ const mockSentry = {
   finishTransaction: noop,
   
   // Error boundary and React integration
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -59,13 +49,9 @@ const mockSentry = {
     errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next(),
     tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
   },
-<<<<<<< HEAD
   
   // Next.js specific
   withSentryConfig: (config: any) => config,
-=======
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs
@@ -127,7 +113,6 @@ const mockScope = {
   setFingerprint: noop,
   clear: noop,
   addEventProcessor: noop,
-<<<<<<< HEAD
 };
 
 // Mock transaction
@@ -202,7 +187,6 @@ export const Severity = mockSentry.Severity;
 export { mockSentry as Sentry };
 
 // All exports are already defined above
-=======
 }
 // Mock transaction;
 const mock_transaction = {
@@ -271,9 +255,7 @@ export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
-<<<<<<< HEAD
 // All exports are already defined above;
-=======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 >>>>>>> origin/merged-prs

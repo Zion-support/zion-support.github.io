@@ -1,28 +1,12 @@
+import React from 'react';
 
-import { Slot } from "@radix-ui/react-slot";
-import { cn } from "@/lib/utils";
+const SidebarMenuButton: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SidebarMenuButton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
-  children?: React.ReactNode;
-  asChild?: boolean;
-}
-
-    return (
-      <Comp
-        className={cn(
-          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
-          "text-muted-foreground hover:text-foreground hover:bg-accent",
-          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
-          className
-        )}
-        ref={ref as any}
-        {...props}
-      >
-        {children}
-      </Comp>
-    );
-  }
-);
-
-SidebarMenuButton.displayName = "SidebarMenuButton";
+export default SidebarMenuButton;

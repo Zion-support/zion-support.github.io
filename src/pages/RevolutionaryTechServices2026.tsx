@@ -14,15 +14,12 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-
 const RevolutionaryTechServices2026: React.FC = () => {
   const [activeService, setActiveService] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const revolutionaryServices = [
     {
       id: 'quantum-neural-fusion',
@@ -127,7 +124,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
       gradient: 'from-teal-600 to-blue-600'
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -138,7 +134,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -150,7 +145,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
       }
     }
   };
-
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
@@ -169,7 +163,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -219,7 +212,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Services Grid */}
       <motion.div
         variants={containerVariants}
@@ -236,7 +228,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
             in artificial intelligence, quantum computing, and digital consciousness.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {revolutionaryServices.map((service, index) => (
             <motion.div
@@ -258,15 +249,12 @@ const RevolutionaryTechServices2026: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
                     {service.title}
                   </h3>
-                  
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  
                   <div className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center gap-3">
@@ -275,7 +263,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <div className="border-t border-gray-700 pt-6">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-white">{service.pricing}</span>
@@ -283,7 +270,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
                         {service.category}
                       </span>
                     </div>
-                    
                     <button className={`w-full bg-gradient-to-r ${service.gradient} text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2`}>
                       Learn More
                       <ChevronRight className="w-4 h-4" />
@@ -295,7 +281,6 @@ const RevolutionaryTechServices2026: React.FC = () => {
           ))}
         </div>
       </motion.div>
-
       {/* CTA Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -327,6 +312,8 @@ const RevolutionaryTechServices2026: React.FC = () => {
       </motion.div>
     </div>
   );
+
 };
+
 
 export default RevolutionaryTechServices2026;

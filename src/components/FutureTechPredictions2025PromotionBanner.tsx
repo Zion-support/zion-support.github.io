@@ -304,15 +304,15 @@ const FutureTechPredictions2025PromotionBanner = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <divdiv
+          <div
           >
             {/* Badge */}
-            <divdiv
+            <div
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6"
             >
               <Rocket className="w-5 h-5 text-indigo-400 mr-2" />
               <span className="text-indigo-300 font-medium">Future Tech Predictions 2025-2030</span>
-            </divdiv>
+            </div>
 
             {/* Main Heading */}
             <divh1
@@ -332,7 +332,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
             </divp>
 
             {/* Rotating Predictions */}
-            <divdiv
+            <div
               className="mb-8"
             >
               <div className="flex items-center text-lg text-gray-300">
@@ -345,10 +345,10 @@ const FutureTechPredictions2025PromotionBanner = () => {
                   </divspan>
                 </div>
               </div>
-            </divdiv>
+            </div>
 
             {/* CTA Buttons */}
-            <divdiv
+            <div
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center group">
@@ -359,11 +359,11 @@ const FutureTechPredictions2025PromotionBanner = () => {
                 <Calendar className="w-5 h-5 mr-2" />
                 View Timeline
               </button>
-            </divdiv>
-          </divdiv>
+            </div>
+          </div>
 
           {/* Right Content - Stats & Visual */}
-          <divdiv
+          <div
             className="relative"
           >
             {/* Main Visual */}
@@ -383,13 +383,13 @@ const FutureTechPredictions2025PromotionBanner = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
-                  <divdiv
+                  <div
                     key={stat.label}
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
-                  </divdiv>
+                  </div>
                 ))}
               </div>
 
@@ -401,17 +401,17 @@ const FutureTechPredictions2025PromotionBanner = () => {
 
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl blur-3xl -z-10"></div>
-          </divdiv>
+          </div>
         </div>
 
         {/* Technology Progress Bars */}
-        <divdiv
+        <div
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
         >
           <h3 className="text-2xl font-bold text-white text-center mb-6">Technology Development Progress</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((techindex) => (
-              <divdiv
+              <div
                 key={tech.name}
                 className="space-y-2"
               >
@@ -420,17 +420,17 @@ const FutureTechPredictions2025PromotionBanner = () => {
                   <span className="text-gray-400">{tech.progress}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
-                  <divdiv
+                  <div
                     className={`h-2 rounded-full bg-gradient-to-r ${tech.color}`}
                   />
                 </div>
-              </divdiv>
+              </div>
             ))}
           </div>
-        </divdiv>
+        </div>
 
         {/* Bottom Stats Bar */}
-        <divdiv
+        <div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
@@ -439,7 +439,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
             { icon: Rocketlabel: ''Years', 'value: '6' },
             { icon: Starlabel: ''Technologies', 'value: '25+' }
           ].map((itemindex) => (
-            <divdiv
+            <div
               key={item.label}
               className="text-center"
             >
@@ -448,9 +448,9 @@ const FutureTechPredictions2025PromotionBanner = () => {
               </div>
               <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
               <div className="text-sm text-gray-400">{item.label}</div>
-            </divdiv>
+            </div>
           ))}
-        </divdiv>
+        </div>
       </div>
     </div>
   );
