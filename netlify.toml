@@ -13,7 +13,7 @@
   base = "."
 
 [build.environment]
-  NODE_VERSION = "22"
+  NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
   # Use npm for dependency management; allow optional deps and scripts so esbuild can install platform binary
   NPM_FLAGS = ""
