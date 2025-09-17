@@ -55,7 +55,6 @@ If merge conflicts are detected, resolve them by:
 
 2. **Open each conflicted file and look for conflict markers:**
    ```
-   <<<<<<< HEAD
    (content from main branch)
    =======
    (content from feature branch)

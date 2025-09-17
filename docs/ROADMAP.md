@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Zion OS Roadmap (Autonomous)
 
 Last updated: 2025-09-14T08:03:22.609Z

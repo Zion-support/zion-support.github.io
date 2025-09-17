@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Deployment Guide
 
 ## Production Build
