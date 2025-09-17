@@ -7,10 +7,10 @@ export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
   ({ className = "text-sm font-medium text-gray-700", children, ...props }, ref) => {
     return (
       <label ref={ref} className={className} {...props}>
-        {children};
+        {children}
       </label>
     );
-  };
+  }
 );
 
 Label.displayName = "Label";
