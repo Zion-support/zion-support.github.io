@@ -77,24 +77,21 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* Gradient text */
 .gradient-text {
-  background: linear-gradient(45deg, #8b5cf6, #ec4899, #06b6d4);
+  background: linear-gradient(45deg, #7c3aed, #db2777);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Glass morphism effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* Accessibility Enhancements */
+.high-contrast {
+  filter: contrast(150%) brightness(120%);
 }
 
 .glass-effect {
@@ -107,6 +104,41 @@
   box-shadow: 0 0 20px rgba(147, 51, 234, 0.5), 0 0 40px rgba(147, 51, 234, 0.3);
 }
 
+.high-contrast button,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+}
+
+.high-contrast a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.high-contrast a:visited {
+  color: #800080;
+}
+
+.high-contrast a:hover,
+.high-contrast a:focus {
+  background: #ffff00;
+  color: #000;
+}
+
+/* Focus management */
+.focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -117,19 +149,15 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  background: #888;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #7c3aed, #db2777);
+  background: #555;
 }
 
-/* Accessibility Enhancements */
-.high-contrast {
-  filter: contrast(150%) brightness(120%);
-}
-
+/* Additional high contrast styles */
 .high-contrast * {
   background-color: #000 !important;
   color: #fff !important;
@@ -304,10 +332,37 @@
   :root {
     --glass-bg: rgba(0, 0, 0, 0.8);
     --glass-border: rgba(255, 255, 255, 0.8);
+=======
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
 
-/* Reduced motion */
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .auto-dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}
+
+/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -315,7 +370,6 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 
@@ -356,5 +410,83 @@ body {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+=======
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .high-contrast-mode {
+    border: 2px solid;
+  }
+}
+
+/* Custom utilities */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Error states */
+.error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Success states */
+.success {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+}
+
+.success-message {
+  color: #10b981;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .desktop-hidden {
+    display: none;
   }
 }

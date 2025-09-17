@@ -42,7 +42,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* JSON-LD Structured Data */}
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
