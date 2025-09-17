@@ -34,25 +34,67 @@
     "types": ["vite/client", "node"]
   },
   "include": [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "**/*.ts",
+    "**/*.tsx",
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
     "src/**/*",
     "src/types/offline-shims.d.ts",
+<<<<<<< HEAD
+=======
+=======
+    "baseUrl": "."
+  },
+  "include": [
+>>>>>>> f0f26a01c508ce5df5e88d1b47040e0831b6ef10
+    "**/*.ts",
+    "**/*.tsx",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+>>>>>>> cursor/create-and-deploy-new-content-ee06
     "tailwind.config.js",
-    "postcss.config.js",
-    "vite.config.*",
-    "vitest.config.*"
+    "postcss.config.js"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "coverage"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> f0f26a01c508ce5df5e88d1b47040e0831b6ef10
+>>>>>>> cursor/create-and-deploy-new-content-ee06
     "coverage",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "zion-os",
-    "zion-website",
-    "zion.app",
-    "server"
+    "**/*.spec.tsx"
+<<<<<<< HEAD
+=======
+=======
+    "coverage"
+>>>>>>> 5d96654a4cae (feat: add new blog content and resolve merge conflicts)
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-634d
+=======
+>>>>>>> f0f26a01c508ce5df5e88d1b47040e0831b6ef10
+>>>>>>> cursor/create-and-deploy-new-content-ee06
   ]
 }
