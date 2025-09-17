@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-// Notification utilities for handling browser notifications and toast messages
-=======
 /**
  * Notification utility for handling browser notifications and in-app notifications
  */
->>>>>>> cursor/create-and-deploy-new-content-ee06
 
 export interface NotificationOptions {
   title: string;
