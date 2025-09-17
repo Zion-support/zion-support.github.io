@@ -1,9 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward
-};
-
-
 export default function RevolutionaryContentShowcase2025Banner() {
   const contentTypes = [
     { icon: BookOpename: "Articles"count: "150+"color: "blue" },
@@ -105,6 +102,5 @@ export default function RevolutionaryContentShowcase2025Banner() {
                 <span className="text-xs text-gray-400">Live Event</span>
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
   );
-
-
+};
 export default RevolutionaryContentShowcase2025Banner;

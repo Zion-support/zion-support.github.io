@@ -40,7 +40,6 @@
             Discover the most advanced AI systems that are redefining what's possible in artificial intelligence
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -63,7 +62,6 @@
               Explore Consciousness →
             </button>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -85,7 +83,6 @@
               Go Quantum →
             </button>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -108,8 +105,13 @@
             </button>
           </motion.div>
         </div>
+          </motion.div>
+        </div>
       </div>
-
+            </button>
+          </div>
+        </motion.div>
+      </div>
       {/* AI Applications Section */}
       <div className="bg-gradient-to-r from-emerald-800/50 to-cyan-800/50 py-20">
         <div className="container mx-auto px-4">
@@ -124,7 +126,6 @@
               See how next-generation AI is transforming industries and creating new possibilities
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -143,7 +144,6 @@
                 <li>• Drug discovery acceleration</li>
               </ul>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -164,7 +164,6 @@
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <motion.div

@@ -12,7 +12,6 @@
             Discover our newest technology showcases, AI solutions, and revolutionary content
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
@@ -26,7 +25,6 @@
               Explore AI Solutions →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
               <div className="text-3xl mr-3">⚡</div>
@@ -39,7 +37,6 @@
               View Showcase →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="flex items-center mb-4">
               <div className="text-3xl mr-3">🚀</div>
@@ -53,7 +50,6 @@
             </a>
           </div>
         </div>
-        
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
             <span className="text-sm opacity-75">Featured Technologies:</span>

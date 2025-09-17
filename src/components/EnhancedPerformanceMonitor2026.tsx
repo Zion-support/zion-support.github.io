@@ -81,7 +81,5 @@ const EnhancedPerformanceMonitor2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default EnhancedPerformanceMonitor2026;

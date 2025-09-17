@@ -1,9 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ArrowRightBrainZapShieldGlobeTrendingUpStarUsersTargetClockCheckCircle
-};
-
-
 export default function LatestAIFeaturesShowcase2025() {
   const features = [
     {
@@ -163,6 +160,5 @@ export default function LatestAIFeaturesShowcase2025() {
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
   );
-
-
+};
 export default LatestAIFeaturesShowcase2025;

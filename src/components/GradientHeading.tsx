@@ -8,6 +8,4 @@ const GradientHeading: React.FC = () => {
   );
 };
 export { GradientHeading };
-
-
 export default GradientHeading;

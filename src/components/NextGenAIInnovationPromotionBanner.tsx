@@ -1,61 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  ArrowRight
-  Star
-  Play
-  X,
-  Sparkles,
-  Rocket,
-  TrendingUp
-} from 'lucide-react';
-
-const NextGenAIInnovationPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentSlidesetCurrentSlide] = useState(0);
-
-  const announcements = [
-    {
-      title: "🚀 Quantum-AI Fusion Breakthrough",
-      subtitle: "1000x Processing Power Increase",
-      action: "Explore Now",
-      color: "from-purple-600 to-blue-600"
-
-    {
-      title: "🧠 Neural Interface Revolution",
-      subtitle: "Direct Brain-Computer Integration",
-      action: "Learn More",
-      color: "from-blue-600 to-cyan-600"
-
-    {
-      title: "🤖 Autonomous AI Systems",
-      subtitle: "Self-Managing Business Operations",
-      action: "Discover",
-      color: "from-green-600 to-emerald-600"
-
-    {
-      title: "✨ Conscious AI Framework",
-      subtitle: "Genuine Understanding & Intelligence",
-      action: "Experience",
-      color: "from-orange-600 to-red-600"
-
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % announcements.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  if (!isVisible) return null;
-
-  const currentAnnouncement = announcements[currentSlide];
-
+import React from 'react';
+const NextGenAIInnovationPromotionBanner: React.FC = () => {
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white"
@@ -63,11 +7,10 @@ const NextGenAIInnovationPromotionBanner = () => {
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-        
         {/* Floating Elements */}
         <div
-
-
+            y: [0-20],
+            rotate: [050]
           }}
             duration: 4,
             repeat: Infinity,
@@ -77,10 +20,9 @@ const NextGenAIInnovationPromotionBanner = () => {
         >
           <Brain className="w-6 h-6 text-blue-400" />
         </div>
-        
         <div
-
-
+            y: [0150],
+            rotate: [0-50]
           }}
             duration: 3,
             repeat: Infinity,
@@ -92,7 +34,6 @@ const NextGenAIInnovationPromotionBanner = () => {
           <Zap className="w-5 h-5 text-purple-400" />
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Left Content */}
@@ -104,7 +45,6 @@ const NextGenAIInnovationPromotionBanner = () => {
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
             </div>
-            
             <div className="flex-1 min-w-0">
                 <div
                   key={currentSlide}
@@ -120,7 +60,6 @@ const NextGenAIInnovationPromotionBanner = () => {
               </div>
             </div>
           </div>
-
           {/* Center Action Button */}
           <divbutton
             className={`hidden md:flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${currentAnnouncement.color} hover:shadow-lg rounded-full font-semibold transition-all duration-300`}
@@ -129,7 +68,6 @@ const NextGenAIInnovationPromotionBanner = () => {
             {currentAnnouncement.action}
             <ArrowRight className="w-4 h-4" />
           </divbutton>
-
           {/* Right Stats */}
           <div className="hidden lg:flex items-center gap-6 text-sm">
             <div className="text-center">
@@ -145,7 +83,6 @@ const NextGenAIInnovationPromotionBanner = () => {
               <div className="text-gray-400">Operation</div>
             </div>
           </div>
-
           {/* Close Button */}
           <divbutton
             onClick={() => setIsVisible(false)}
@@ -154,7 +91,6 @@ const NextGenAIInnovationPromotionBanner = () => {
             <X className="w-4 h-4" />
           </divbutton>
         </div>
-
         {/* Mobile Action Button */}
         <div
           className="md:hidden mt-4"
@@ -167,7 +103,6 @@ const NextGenAIInnovationPromotionBanner = () => {
             <ArrowRight className="w-4 h-4" />
           </divbutton>
         </div>
-
         {/* Progress Indicator */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20">
           <div
@@ -178,5 +113,5 @@ const NextGenAIInnovationPromotionBanner = () => {
     </div>
   );
 };
-
 export default NextGenAIInnovationPromotionBanner;
+</div></div></div>

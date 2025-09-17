@@ -185,7 +185,5 @@ const EnhancedContentAdvertising: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default EnhancedContentAdvertising;

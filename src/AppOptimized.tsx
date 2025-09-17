@@ -2,7 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-// Redux store removed - using React Query for state management
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import MobileOptimizer from './components/MobileOptimizer';
@@ -31,13 +32,13 @@ const queryClient = new QueryClient({
     },
   },
 });
-
 const AppOptimized: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <QueryClientProvider client={queryClient}>
-          <SecurityEnhancer>
+          <Provider store={store}>
+            <SecurityEnhancer>
               <AccessibilityEnhancer>
                 <MobileOptimizer>
                   <Router>
@@ -59,10 +60,10 @@ const AppOptimized: React.FC = () => {
                 </MobileOptimizer>
               </AccessibilityEnhancer>
             </SecurityEnhancer>
+          </Provider>
         </QueryClientProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );
 };
-
 export default AppOptimized;

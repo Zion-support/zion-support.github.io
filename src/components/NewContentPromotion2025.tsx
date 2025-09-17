@@ -93,7 +93,5 @@ const NewContentPromotion2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default NewContentPromotion2025;

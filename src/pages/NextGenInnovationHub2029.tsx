@@ -1,6 +1,5 @@
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredInnovation, setHoveredInnovation] = useState<number | null>(null);
-
   const categories = [
     { id: 'all', name: 'All Innovations', icon: '🌟' },
     { id: 'ai', name: 'AI & Consciousness', icon: '🧠' },
@@ -9,7 +8,6 @@
     { id: 'space', name: 'Space Technology', icon: '🚀' },
     { id: 'reality', name: 'Reality Engineering', icon: '🌌' }
   ];
-
   const innovations = [
     {
       id: 1,
@@ -92,11 +90,9 @@
       features: ['Reality creation', 'Physical manipulation', 'Virtual world building', 'Consciousness integration']
     }
   ];
-
   const filteredInnovations = selectedCategory === 'all' 
     ? innovations 
     : innovations.filter(innovation => innovation.category === selectedCategory);
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Available': return 'bg-green-500';
@@ -110,7 +106,6 @@
       default: return 'bg-gray-500';
     }
   };
-
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'Revolutionary': return 'text-purple-400';
@@ -120,7 +115,40 @@
       default: return 'text-gray-400';
     }
   };
-
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧠 INNOVATION HUB • JANUARY 2029
+          </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🧬</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Neural Reality</h3>
+            <p className="text-purple-100 mb-4 text-center text-sm">
+              Direct brain-computer interfaces
+            </p>
+            <div className="text-center">
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-4 text-center">🌌</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
+            <p className="text-orange-100 mb-4 text-center text-sm">
+              Computing across dimensions
+            </p>
+            <div className="text-center">
+            </div>
+          </div>
+        </div>
+        <div className="text-center">
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Join Our Team
+            </button>
+            </button>
+          </div>
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
@@ -130,7 +158,6 @@
             Discover, explore, and contribute to the most revolutionary technologies that will shape humanity's future
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="mb-12">
           <div className="flex flex-wrap justify-center gap-4">
@@ -150,7 +177,6 @@
             ))}
           </div>
         </div>
-
         {/* Innovation Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredInnovations.map((innovation) => (
@@ -170,10 +196,8 @@
                   </span>
                 </div>
               </div>
-              
               <h3 className="text-xl font-bold mb-3">{innovation.title}</h3>
               <p className="text-gray-300 mb-4 text-sm">{innovation.description}</p>
-              
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-gray-400">Impact Level:</span>
@@ -182,7 +206,6 @@
                   </span>
                 </div>
               </div>
-
               <div className="mb-4">
                 <h4 className="text-sm font-semibold mb-2 text-gray-300">Key Features:</h4>
                 <ul className="space-y-1">
@@ -199,21 +222,18 @@
                   )}
                 </ul>
               </div>
-
               <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
                 Explore Innovation
               </button>
             </div>
           ))}
         </div>
-
         {/* Innovation Stats */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">📊 Innovation Hub Statistics</h2>
             <p className="text-xl opacity-90">Real-time data on our revolutionary technology development</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-emerald-400 mb-2">{innovations.length}</div>

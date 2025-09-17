@@ -103,7 +103,5 @@ const ContactFormEnhanced: React.FC = () => {
       </form>
     </div>
   );
-
 };
-
 export default ContactFormEnhanced;

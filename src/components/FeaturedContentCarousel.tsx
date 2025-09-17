@@ -56,10 +56,8 @@ const featuredContent = [
     badge: 'FUTURE PREDICTIONS',
     badgeColor: 'from-rose-500 to-pink-500',
     features: ['99.9% AGI'1Mx 'Faster', 'True Consciousness']
-  };
-};
-
-
+  }
+];
 export default function FeaturedContentCarousel() {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [isAutoPlayingsetIsAutoPlaying] = useState(true);
@@ -192,6 +190,5 @@ export default function FeaturedContentCarousel() {
                   ))}
             ))}
   );
-
-
+};
 export default FeaturedContentCarousel;

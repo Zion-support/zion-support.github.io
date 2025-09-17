@@ -112,7 +112,5 @@ const NewContentPromotionBanner2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default NewContentPromotionBanner2025;

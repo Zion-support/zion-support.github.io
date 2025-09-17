@@ -21,7 +21,5 @@ const RelatedContentWidget: React.FC = () => {
                   {post.excerpt}
           ))}
   );
-
 };
-
 export default RelatedContentWidget;

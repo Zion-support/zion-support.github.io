@@ -198,7 +198,5 @@ const RevolutionaryTech2030: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default RevolutionaryTech2030;

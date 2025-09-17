@@ -94,7 +94,5 @@ const UltimateTechRevolutionBanner2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default UltimateTechRevolutionBanner2025;

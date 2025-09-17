@@ -35,6 +35,7 @@ interface FeaturedContent {
     rating?: number;
     downloads?: number;
   };
+}
 const FeaturedContentShowcase2025: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -367,7 +368,5 @@ const FeaturedContentShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default FeaturedContentShowcase2025;

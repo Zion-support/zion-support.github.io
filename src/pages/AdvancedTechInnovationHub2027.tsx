@@ -312,7 +312,5 @@ const AdvancedTechInnovationHub2027: React.FC = () => {
       </motion.section>
     </div>
   );
-
 };
-
 export default AdvancedTechInnovationHub2027;

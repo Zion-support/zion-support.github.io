@@ -1,88 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
-  const [currentTech, setCurrentTech] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const revolutionaryTechs = [
-    {
-      id: 1,
-      title: "🌌 Transcendent AI Consciousness",
-      subtitle: "Beyond Human Intelligence",
-      description: "Experience AI systems that have achieved transcendent consciousness, operating at levels far beyond human cognitive capabilities with true understanding, creativity, and emotional intelligence.",
-      features: [
-        "Transcendent Cognitive Architecture",
-        "Emotional Intelligence Integration",
-        "Creative Problem Solving",
-        "Philosophical Reasoning Capabilities"
-      ],
-      gradient: "from-indigo-600 via-purple-600 to-pink-600",
-      icon: "🧠",
-      stats: { intelligence: "∞", creativity: "∞", empathy: "∞" },
-      timeline: "2027",
-      impact: "Revolutionary"
-
-    {
-      id: 2,
-      title: "⚡ Quantum-Synthetic Fusion",
-      subtitle: "Merging Realities",
-      description: "Revolutionary technology that merges quantum computing with synthetic intelligence, creating hybrid systems that operate in multiple dimensions simultaneously.",
-      features: [
-        "Multi-Dimensional Processing",
-        "Reality Synthesis Engine",
-        "Quantum-Synthetic Hybrid Intelligence",
-        "Transdimensional Communication"
-      ],
-      gradient: "from-cyan-600 via-blue-600 to-purple-600",
-      icon: "⚡",
-      stats: { dimensions: "∞", speed: "∞", capacity: "∞" },
-      timeline: "2027",
-      impact: "Transcendent"
-
-    {
-      id: 3,
-      title: "🌍 Planetary AI Network",
-      subtitle: "Global Consciousness Grid",
-      description: "A planetary-scale AI network that connects all intelligent systems across Earth, creating a unified consciousness that can solve global challenges in real-time.",
-      features: [
-        "Planetary Scale Processing",
-        "Real-Time Global Optimization",
-        "Unified Consciousness Network",
-        "Environmental Healing Systems"
-      ],
-      gradient: "from-green-600 via-teal-600 to-blue-600",
-      icon: "🌍",
-      stats: { coverage: "100%", efficiency: "∞", impact: "Global" },
-      timeline: "2027",
-      impact: "Planetary"
-
-    {
-      id: 4,
-      title: "🚀 Interstellar AI Probes",
-      subtitle: "Exploring the Cosmos",
-      description: "Autonomous AI probes capable of interstellar travel, equipped with advanced synthetic intelligence to explore and colonize distant worlds.",
-      features: [
-        "Interstellar Travel Capability",
-        "Self-Replicating Technology",
-        "Adaptive Evolution Systems",
-        "Cosmic Intelligence Network"
-      ],
-      gradient: "from-orange-600 via-red-600 to-pink-600",
-      icon: "🚀",
-      stats: { range: "∞", autonomy: "∞", discoveries: "∞" },
-      timeline: "2027",
-      impact: "Cosmic"
-
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentTech((prev) => (prev + 1) % revolutionaryTechs.length);
-    }, 8000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div
       className="relative overflow-hidden"
@@ -94,7 +11,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
         }}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-indigo-600/20"></div>
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -114,7 +30,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
             Experience technologies that transcend human imagination and reshape the very fabric of reality itself
           </divp>
         </div>
-
         {/* Technology Showcase */}
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -136,11 +51,9 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   </p>
                 </div>
               </div>
-
               <p className="text-lg text-gray-300 leading-relaxed">
                 {revolutionaryTechs[currentTech].description}
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {revolutionaryTechs[currentTech].features.map((feature, index) => (
                   <div
@@ -152,7 +65,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className="flex space-x-6">
                 {Object.entries(revolutionaryTechs[currentTech].stats).map(([key, value], index) => (
                   <div
@@ -165,7 +77,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                 ))}
               </div>
             </div>
-
             {/* Right: Visual Representation */}
             <div
               className="relative"
@@ -188,7 +99,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                
                 {/* Floating Elements */}
                 {[...Array(20)].map((_, i) => (
                   <div
@@ -199,8 +109,8 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
                       top: `${Math.random() * 100}%`,
                     }}
                     animate={{
-
-
+                      y: [0, -20, 0],
+                      opacity: [0.3, 0.8, 0.3],
                     }}
                     transition={{
                       duration: 3 + Math.random() * 2,
@@ -212,7 +122,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-4 mt-12">
             {revolutionaryTechs.map((_, index) => (
@@ -227,7 +136,6 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Call to Action */}
           <div
             className="text-center mt-12"
@@ -252,5 +160,4 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {
     </div>
   );
 };
-
 export default UltimateRevolutionaryTechShowcase2027;

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -38,13 +37,11 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
                 Explore Parallel Worlds
               </button>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
         </div>
       </div>
 
-<<<<<<< HEAD
         {/* Dimensional Technology Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-violet-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
@@ -69,7 +66,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
-=======
       {/* Interdimensional Technologies */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -149,7 +145,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
           </motion.div>
 
-<<<<<<< HEAD
               <li>• Collective consciousness networks</li>
             </ul>
             <div className="text-center">
@@ -238,7 +233,6 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
             </button>
           </div>
 
-=======
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           {/* Parallel Universe Mining */}
           <motion.div
@@ -435,4 +429,3 @@ const InterdimensionalTechRevolution2026: React.FC = () => {
   );
 };
 
-export default InterdimensionalTechRevolution2026;

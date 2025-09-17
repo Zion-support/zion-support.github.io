@@ -101,7 +101,5 @@ const UltimateContentShowcase2027PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
-
 export default UltimateContentShowcase2027PromotionBanner;

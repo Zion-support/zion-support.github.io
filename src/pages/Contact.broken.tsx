@@ -1,18 +1,20 @@
-};
-
 
 export default function Contact() {
   const { showToast: toast } = useToast();
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
+
 const Contact: React.FC = () => {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import React from 'react';
+
 const Contact: React.FC = () => {
+
+>>>>>>> origin/backup-main-20250916-090016
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,12 +26,14 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -48,12 +52,14 @@ const Contact: React.FC = () => {
       });
     }, 3000);
   };
+
   const contactMethods = [
     { icon: <Phone className="h-6 w-6" />, title: "Phone", details: "+1 (302) 464-0950", description: "Available Mon-Fri, 9AM-6PM EST" },
     { icon: <Mail className="h-6 w-6" />, title: "Email", details: "kleber@ziontechgroup.com", description: "We'll respond within 24 hours" },
     { icon: <MapPin className="h-6 w-6" />, title: "Office", details: "364 E Main St STE 1008, Middletown DE 19709", description: "Visit us for a consultation" },
     { icon: <Clock className="h-6 w-6" />, title: "Business Hours", details: "Monday - Friday", description: "9:00 AM - 6:00 PM EST" }
   ];
+
   const services = [
     "AI & Machine Learning",
     "Quantum Computing",
@@ -64,15 +70,18 @@ const Contact: React.FC = () => {
     "Digital Transformation",
     "Cloud Solutions"
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group for AI-powered technology solutions, consulting, and innovative business services."
       />
+      
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
           className="max-w-4xl mx-auto text-center"
+>>>>>>> origin/backup-main-20250916-090016
         >
           <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Contact Us
@@ -82,6 +91,7 @@ const Contact: React.FC = () => {
             Get in touch with our experts and discover what's possible.
           </p>
       </section>
+
       {/* Contact Methods Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -94,6 +104,7 @@ const Contact: React.FC = () => {
                 <p className="text-gray-400 text-sm">{method.description}</p>
         </div>
       </section>
+
       {/* Contact Form Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -105,7 +116,9 @@ const Contact: React.FC = () => {
                 Tell us about your project and we'll get back to you within 24 hours
               </p>
             </div>
+
             {isSubmitted ? (
+>>>>>>> origin/backup-main-20250916-090016
                 className="text-center py-12"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -116,6 +129,7 @@ const Contact: React.FC = () => {
                 <p className="text-gray-300">
                   Thank you for reaching out. We'll get back to you soon.
                 </p>
+>>>>>>> origin/backup-main-20250916-090016
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -144,6 +158,7 @@ const Contact: React.FC = () => {
                     />
                   </div>
                 </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-white font-semibold mb-2">Company</label>
@@ -168,6 +183,7 @@ const Contact: React.FC = () => {
                     />
                   </div>
                 </div>
+
                 <div>
                   <label className="block text-white font-semibold mb-2">Service Interest</label>
                   <select
@@ -184,6 +200,7 @@ const Contact: React.FC = () => {
                     ))}
                   </select>
                 </div>
+
                 <div>
                   <label className="block text-white font-semibold mb-2">Message *</label>
                   <textarea
@@ -196,6 +213,7 @@ const Contact: React.FC = () => {
                     placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -217,6 +235,7 @@ const Contact: React.FC = () => {
             )}
         </div>
       </section>
+
       {/* Emergency Support Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -228,9 +247,11 @@ const Contact: React.FC = () => {
             </p>
         </div>
       </section>
+
           </motion.div>
         </div>
       </section>
+
       {/* Why Choose Us Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -248,6 +269,7 @@ const Contact: React.FC = () => {
             </p>
           </divdiv>
           </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -276,9 +298,9 @@ const Contact: React.FC = () => {
             ))}
           </div>
         </div>
+>>>>>>> origin/backup-main-20250916-090016
       </div>
     </div>
   );
+};
 
-
-export default Contact;

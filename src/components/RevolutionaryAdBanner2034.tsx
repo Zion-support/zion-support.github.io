@@ -1,3 +1,6 @@
+import React from 'react';
+const RevolutionaryAdBanner2034: React.FC = () => {
+  return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -11,8 +14,10 @@
         <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16 animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-white rounded-full -translate-x-8 -translate-y-8 animate-pulse delay-2000"></div>
+  );
+};
+export default RevolutionaryAdBanner2034;
       </div>
-
       <div className="relative z-10">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -46,7 +51,6 @@
               </motion.p>
             </div>
           </div>
-
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -55,7 +59,6 @@
             {currentAdData.cta} →
           </motion.button>
         </div>
-
         {/* Expanded Content */}
         <motion.div
           initial={false}
@@ -93,7 +96,6 @@
           </div>
         </motion.div>
       </div>
-
       {/* Progress Indicator */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
         <motion.div

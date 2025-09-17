@@ -3,9 +3,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-};
-
-
 export default function MarketResearchPage() {
   const marketSegments = [
     {
@@ -584,6 +581,5 @@ export default function MarketResearchPage() {
               View Our Services
     </>
   );
-
-
+};
 export default market-research;

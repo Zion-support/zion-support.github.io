@@ -1,7 +1,4 @@
 import React from 'react';
-};
-
-
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -62,3 +59,4 @@ export default function AIEvalsPage() {
 						<div className="text-center mt-6">
 							<Button href="/services" variant="outline" className="border-cyan-500 text-cyan-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" /></Button>
 	);
+}

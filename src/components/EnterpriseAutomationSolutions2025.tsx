@@ -1,293 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Building2
-  Zap
-  BarChart3
-  Users
-  Clock
-  Shield
-  TrendingUp
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Star,
-  Target,
-  DollarSign,
-  Globe,
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  Smartphone,
-  Monitor,
-  Server,
-  Workflow,
-  Brain,
-  Bot,
-  FileText,
-  MessageSquare,
-  Calendar,
-  Mail,
-  CreditCard,
-  PieChart,
-  Activity,
-  AlertTriangle,
-  RefreshCw,
-  Download,
-  Upload,
-  Eye,
-  Edit,
-  Trash2,
-  Plus,
-  Minus,
-  Maximize,
-  Minimize
-} from 'lucide-react';
-
-interface AutomationSolution {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  icon: React.ReactNode;
-  features: string[];
-  benefits: string[];
-  pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-  };
-  roi: string;
-  implementation: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-}
-
+import React from 'react';
 const EnterpriseAutomationSolutions2025: React.FC = () => {
-  const [selectedSolutionsetSelectedSolution] = useState<string | null>(null);
-  const [activeCategorysetActiveCategory] = useState<string>('all');
-  const [isDemoRunningsetIsDemoRunning] = useState(false);
-  const [demoStepsetDemoStep] = useState(0);
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Solutions', 'count: 12 },
-    { id: ''workflow', 'name: 'Workflow 'Automation', 'count: 4 },
-    { id: ''data', 'name: 'Data 'Processing', 'count: 3 },
-    { id: ''communication', 'name: ''Communication', 'count: 2 },
-    { id: ''analytics', 'name: 'Analytics & 'Reporting', 'count: 3 }
-  ];
-
-  const solutions: AutomationSolution[] = [
-    {
-      id: 'workflow-orchestrator',
-      name: 'Workflow Orchestrator Pro',
-      description: 'End-to-end business process automation with AI-powered decision making',
-      category: 'workflow',
-      icon: <Workflow className="w-8 h-8" />,
-      features: [
-        'Visual workflow designer',
-        'AI-powered decision trees',
-        'Multi-system integration',
-        'Real-time monitoring',
-        'Exception handling',
-        'Scalable architecture'
-      ],
-      benefits: [
-        'Reduce manual work by 80%',
-        'Improve process accuracy by 95%',
-        'Cut operational costs by 60%',
-        'Accelerate time-to-market by 70%'
-      ],
-      pricing: {
-        starter: '$500/month',
-        professional: '$1,500/month',
-        enterprise: 'Custom'
-      },
-      roi: '300% ROI in 6 months',
-      implementation: '4-6 weeks',
-      isPopular: true
-    },
-    {
-      id: 'data-pipeline',
-      name: 'Data Pipeline Automation',
-      description: 'Automated data collectionprocessingand analysis across all systems',
-      category: 'data',
-      icon: <Database className="w-8 h-8" />,
-      features: [
-        'Real-time data ingestion',
-        'Automated data cleaning',
-        'Machine learning integration',
-        'Data quality monitoring',
-        'Compliance reporting',
-        'Cloud-native architecture'
-      ],
-      benefits: [
-        'Process 10x more data',
-        'Reduce data errors by 90%',
-        'Enable real-time insights',
-        'Ensure compliance automatically'
-      ],
-      pricing: {
-        starter: '$800/month',
-        professional: '$2,000/month',
-        enterprise: 'Custom'
-      },
-      roi: '250% ROI in 4 months',
-      implementation: '6-8 weeks'
-    },
-    {
-      id: 'customer-service',
-      name: 'Customer Service Automation',
-      description: 'AI-powered customer support with intelligent routing and response',
-      category: 'communication',
-      icon: <MessageSquare className="w-8 h-8" />,
-      features: [
-        'Intelligent ticket routing',
-        'AI-powered responses',
-        'Multi-channel support',
-        'Sentiment analysis',
-        'Escalation management',
-        'Performance analytics'
-      ],
-      benefits: [
-        'Resolve 70% of tickets automatically',
-        'Improve response time by 85%',
-        'Increase customer satisfaction by 40%',
-        'Reduce support costs by 50%'
-      ],
-      pricing: {
-        starter: '$300/month',
-        professional: '$800/month',
-        enterprise: 'Custom'
-      },
-      roi: '400% ROI in 3 months',
-      implementation: '2-4 weeks',
-      isNew: true
-    },
-    {
-      id: 'financial-automation',
-      name: 'Financial Process Automation',
-      description: 'Automated accountinginvoicingand financial reporting',
-      category: 'workflow',
-      icon: <CreditCard className="w-8 h-8" />,
-      features: [
-        'Automated invoicing',
-        'Expense management',
-        'Financial reporting',
-        'Compliance tracking',
-        'Audit trails',
-        'Integration with ERP'
-      ],
-      benefits: [
-        'Reduce accounting errors by 95%',
-        'Speed up month-end close by 80%',
-        'Improve cash flow visibility',
-        'Ensure regulatory compliance'
-      ],
-      pricing: {
-        starter: '$400/month',
-        professional: '$1,200/month',
-        enterprise: 'Custom'
-      },
-      roi: '350% ROI in 5 months',
-      implementation: '4-6 weeks'
-    },
-    {
-      id: 'hr-automation',
-      name: 'HR Process Automation',
-      description: 'Streamlined human resources with automated workflows and AI insights',
-      category: 'workflow',
-      icon: <Users className="w-8 h-8" />,
-      features: [
-        'Automated recruitment',
-        'Employee onboarding',
-        'Performance tracking',
-        'Leave management',
-        'Payroll integration',
-        'Compliance reporting'
-      ],
-      benefits: [
-        'Reduce hiring time by 60%',
-        'Improve employee experience',
-        'Ensure policy compliance',
-        'Reduce HR administrative costs'
-      ],
-      pricing: {
-        starter: '$600/month',
-        professional: '$1,800/month',
-        enterprise: 'Custom'
-      },
-      roi: '280% ROI in 6 months',
-      implementation: '6-8 weeks'
-    },
-    {
-      id: 'analytics-dashboard',
-      name: 'Business Intelligence Automation',
-      description: 'Automated reporting and analytics with real-time insights',
-      category: 'analytics',
-      icon: <PieChart className="w-8 h-8" />,
-      features: [
-        'Automated report generation',
-        'Real-time dashboards',
-        'Predictive analytics',
-        'Custom KPI tracking',
-        'Alert systems',
-        'Data visualization'
-      ],
-      benefits: [
-        'Generate reports 10x faster',
-        'Enable data-driven decisions',
-        'Identify trends automatically',
-        'Reduce reporting errors by 90%'
-      ],
-      pricing: {
-        starter: '$500/month',
-        professional: '$1,500/month',
-        enterprise: 'Custom'
-      },
-      roi: '320% ROI in 4 months',
-      implementation: '3-5 weeks'
-    }
-  ];
-
-  const filteredSolutions = solutions.filter(solution => 
-    activeCategory === 'all' || solution.category === activeCategory
-  );
-
-  const selectedSolutionData = solutions.find(s => s.id === selectedSolution);
-
-  const runDemo = () => {
-    setIsDemoRunning(true);
-    setDemoStep(0);
-    
-    const steps = [
-      'Initializing automation engine...',
-      'Connecting to enterprise systems...',
-      'Configuring workflow rules...',
-      'Deploying AI models...',
-      'Testing automation processes...',
-      'Monitoring performance metrics...',
-      'Demo completed successfully!'
-    ];
-
-    let currentStep = 0;
-    const interval = setInterval(() => {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        setDemoStep(currentStep);
-      } else {
-        clearInterval(interval);
-        setTimeout(() => {
-          setIsDemoRunning(false);
-          setDemoStep(0);
-        }2000);
-      }
-    }1500);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -306,7 +18,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             Streamline processesreduce costsand accelerate growth.
           </p>
         </div>
-
         {/* Category Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -325,7 +36,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             </button>
           ))}
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Solutions Grid */}
           <div className="lg:col-span-2">
@@ -375,7 +85,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="text-white font-medium mb-3">Key Features</h4>
@@ -393,7 +102,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                         )}
                       </div>
                     </div>
-
                     <div>
                       <h4 className="text-white font-medium mb-3">Benefits</h4>
                       <div className="space-y-2">
@@ -406,7 +114,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="mt-6 pt-6 border-t border-white/10">
                     <div className="flex items-center justify-between">
                       <div className="flex space-x-4">
@@ -427,14 +134,12 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Demo Panel */}
           <div className="lg:col-span-1">
             <div
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
-              
                 {selectedSolutionData ? (
                   <div
                     key={selectedSolutionData.id}
@@ -450,7 +155,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                         {selectedSolutionData.description}
                       </p>
                     </div>
-
                     {isDemoRunning ? (
                       <div className="space-y-4">
                         <div className="text-center">
@@ -466,7 +170,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             {demoStep < 7 ? `Step ${demoStep + 1} of 7` : 'Complete'}
                           </p>
                         </div>
-                        
                         <div className="space-y-2">
                           {[
                             'Initializing automation engine...',
@@ -497,7 +200,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             Experience {selectedSolutionData.name} in action
                           </p>
                         </div>
-                        
                         <div className="space-y-3">
                           <h5 className="text-white font-medium">Key Benefits:</h5>
                           {selectedSolutionData.benefits.map((benefitindex) => (
@@ -507,7 +209,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         <div className="pt-4 border-t border-white/10">
                           <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                             <span>ROI</span>
@@ -518,7 +219,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             <span>{selectedSolutionData.implementation}</span>
                           </div>
                         </div>
-
                         <button 
                           onClick={runDemo}
                           className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
@@ -546,7 +246,6 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Enterprise Stats */}
         <div
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -570,5 +269,4 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
     </div>
   );
 };
-
 export default EnterpriseAutomationSolutions2025;

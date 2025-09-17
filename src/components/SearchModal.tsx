@@ -2,15 +2,18 @@ import React from 'react';
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X, ArrowRight, Clock  } from './lucide-react';
 import Link from './next / link';
+;
 interface SearchResult {
 interface SearchResult {;
   title: string;
   description: string;
   url: string;
   category: string;
+}
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
+}
 const search_data: SearchResult[] = [;
   // Services;
   {
@@ -18,19 +21,19 @@ const search_data: SearchResult[] = [;
     description: "Machine learning, computer vision, NLP, and AI solutions"
     url: "/ai-services"
     category: "Services"
-  };
+  }
   {
     title: "IT Services"
     description: "Cloud infrastructure, cybersecurity, and IT solutions"
     url: "/it-services"
     category: "Services"
-  };
+  }
   {
     title: "Micro SaaS"
     description: "Custom micro SaaS platforms and automation tools"
     url: "/micro-saas"
     category: "Services"
-  };
+  }
   {
     title: "Cloud Solutions",
     description: "AWS, Azure, GCP migration and cloud infrastructure",
@@ -42,7 +45,7 @@ const search_data: SearchResult[] = [;
     description: "Security audits, penetration testing, and compliance"
     url: "/cybersecurity"
     category: "Services"
-  };
+  }
   {
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
@@ -55,38 +58,38 @@ const search_data: SearchResult[] = [;
     description: "Complete digital transformation solutions"
     url: "/digital-transformation"
     category: "Solutions"
-  };
+  }
   {
     title: "Enterprise Solutions"
     description: "Large-scale enterprise technology solutions"
     url: "/enterprise-solutions"
     category: "Solutions"
-  };
+  }
   {
     title: "Startup Solutions"
     description: "Technology solutions for startups and SMBs"
     url: "/startup-solutions"
     category: "Solutions"
-  };
+  }
   // Industries
   {
     title: "Healthcare"
     description: "Technology solutions for healthcare industry"
     url: "/industries/healthcare"
     category: "Industries"
-  };
+  }
   {
     title: "Finance"
     description: "Financial technology and fintech solutions"
     url: "/industries/finance"
     category: "Industries"
-  };
+  }
   {
     title: "Education"
     description: "Educational technology and e-learning solutions"
     url: "/industries/education"
     category: "Industries"
-  };
+  }
   {
     title: "Manufacturing",
     description: "Industrial IoT and manufacturing automation",
@@ -99,31 +102,32 @@ const search_data: SearchResult[] = [;
     description: "Learn about Zion Tech Group and our mission"
     url: "/about"
     category: "Company"
-  };
+  }
   {
     title: "Contact"
     description: "Get in touch with our team"
     url: "/contact"
     category: "Company"
-  };
+  }
   {
     title: "Careers"
     description: "Join our team and build the future"
     url: "/careers"
     category: "Company"
-  };
+  }
   {
     title: "Blog"
     description: "Latest insights and technology trends"
     url: "/blog"
     category: "Company"
-  };
+  }
   {
     title: "Pricing"
     description: "Transparent pricing for all our services"
     url: "/pricing"
     category: "Company"
-  };
+  }
+];
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
@@ -149,12 +153,10 @@ const search_data: SearchResult[] = [;
           item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
       );
-};
       setResults(filtered);
     } else {;
       setResults([]);
-
-
+;
 export default /**
  * SearchModal - Function description
  */
@@ -164,25 +166,31 @@ function SearchModal() {
   const [recent_searches, setRecentSearches] = useState < string[]>([]);
   const [selected_index, setSelectedIndex] = useState (0);
   const input_ref = useRef < HTMLInputElement>(null);
+;
   useEffect (() => {
     // Check condition
 if ( {) {
   $2
+}
       input_ref.current.focus ();
     }
   }, [is_open]);
+;
   useEffect (() => {
     // Load recent searches from local_storage;
     const saved = local_storage.get_item ("recent - searches");
     // Check condition
 if ( {) {
   $2
+}
       setRecentSearches (JSON.parse (saved));
     }
   }, []);
+;
   useEffect (() => {
     if () {) {
   $2
+}
       const filtered = search_data.filter (
         (item) =>;
           item.title.toLowerCase ().includes (query.toLowerCase ()) ||;
@@ -221,7 +229,7 @@ if ( {) {
   };
   const handleRecentClick = (search: string) => {;
     setQuery(search);
-  };
+  }
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">;
@@ -258,27 +266,33 @@ if ( {) {
                 <div className="p-2">;
                   {results && results.map((result, index) => (;
                     <div
+;
   const handleKeyDown = (e: React.KeyboardEvent) =>: any {
     // Check condition
 if ( {) {
   $2
+}
       on_close ();
     } else // Check condition
 if ( {) {
   $2
+}
       e.prevent_default ();
       setSelectedIndex ((prev) => Math.min (prev + 1, results.length - 1));
     } else // Check condition
 if ( {) {
   $2
+}
       e.prevent_default ();
       setSelectedIndex ((prev) => Math.max (prev - 1, 0));
     } else // Check condition
 if ( {) {
   $2
+}
       handleResultClick (results[selected_index]);
     }
-  };
+  }
+;
   const handleResultClick = (result: SearchResult) =>: any {
     // Add to recent searches;
     const new_recent = [;
@@ -287,15 +301,19 @@ if ( {) {
     ].slice (0, 5);
     setRecentSearches (new_recent);
     local_storage.set_item ("recent - searches", JSON.stringify (new_recent));
+;
     // Navigate to result;
     window.location.href = result.url;
-  };
+  }
+;
   const handleRecentClick = (search: string) =>: any {
     set_query (search);
-  };
+  }
+;
   // Check condition
 if (return null) {
   $2
+}
   return (
     <div className="fixed inset - 0 z - 50 overflow - y-auto">;
       <div className="flex min - h-screen items - start justify - center p - 4 pt - 16">;
@@ -366,6 +384,5 @@ if (return null) {
       </div>;
     </div>;
   );
-
-
+};
 export default SearchModal;

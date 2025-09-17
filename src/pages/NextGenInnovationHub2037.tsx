@@ -1,4 +1,19 @@
-import React from 'react';
+const NextGenInnovationHub2037: React.FC = () => {
+  return (
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🧠 INNOVATION HUB • JANUARY 2037
+          </div>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Discover and explore the most revolutionary technologies shaping humanity's future
+          </p>
+        </div>
+          </div>
+        </div>
+        {/* Call to Action */}
+        <div className="text-center">
+            </button>
+          </div>
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -21,7 +36,6 @@ import React from 'react';
               Enter AI Lab →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Research Center</h3>
@@ -38,7 +52,6 @@ import React from 'react';
               Enter Quantum Center →
             </button>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Multiverse Research Lab</h3>
@@ -56,14 +69,12 @@ import React from 'react';
             </button>
           </div>
         </div>
-
         {/* Active Projects Section */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🔬 Active Research Projects</h2>
             <p className="text-xl opacity-90">Currently working on groundbreaking innovations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -77,7 +88,6 @@ import React from 'react';
                   <div className="bg-emerald-500 h-2 rounded-full" style={{width: '87%'}}></div>
                 </div>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">⚡ Project: Quantum Reality Engine</h3>
                 <p className="text-gray-300 mb-4">Building quantum computers that can manipulate physical reality</p>
@@ -90,7 +100,6 @@ import React from 'react';
                 </div>
               </div>
             </div>
-            
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">🌌 Project: Multiverse Gateway</h3>
@@ -103,7 +112,6 @@ import React from 'react';
                   <div className="bg-purple-500 h-2 rounded-full" style={{width: '65%'}}></div>
                 </div>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-4">🧬 Project: Neural Interface 2.0</h3>
                 <p className="text-gray-300 mb-4">Advanced brain-computer interface technology</p>
@@ -118,7 +126,6 @@ import React from 'react';
             </div>
           </div>
         </div>
-
         {/* Innovation Statistics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">

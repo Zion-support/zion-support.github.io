@@ -224,7 +224,5 @@ const QuantumReality2028: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default QuantumReality2028;

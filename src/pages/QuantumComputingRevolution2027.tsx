@@ -289,7 +289,5 @@ const QuantumComputingRevolution2027 = () => {
       </section>
     </div>
   );
-
 };
-
 export default QuantumComputingRevolution2027;

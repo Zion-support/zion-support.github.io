@@ -119,7 +119,5 @@ const RevolutionarySuccessStories2026Banner: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default RevolutionarySuccessStories2026Banner;

@@ -144,7 +144,5 @@ const AIRevolutionaryBreakthrough2027: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default AIRevolutionaryBreakthrough2027;

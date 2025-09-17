@@ -302,7 +302,5 @@ const BlockchainInnovation2025: React.FC = () => {
       </section>
     </div>
   );
-
 };
-
 export default BlockchainInnovation2025;

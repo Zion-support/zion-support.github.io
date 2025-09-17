@@ -297,7 +297,5 @@ const UltimateTechBreakthrough2034: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default UltimateTechBreakthrough2034;

@@ -1,180 +1,9 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Brain
-  Zap
-  Rocket
-  Shield
-  BarChart3
-  Users
-  Globe
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Download,
-  Star,
-  Award,
-  Lightbulb,
-  Settings
-} from 'lucide-react';
-
-const ComprehensiveAISolutions2026 = () => {
-  const [activeSolutionsetActiveSolution] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const solutions = [
-    {
-      id: 'enterprise-ai',
-      title: 'Enterprise AI Platform',
-      icon: Brain,
-      color: 'from-blue-600 to-purple-600',
-      description: 'Complete AI infrastructure for large-scale enterprise operations',
-      features: [
-        'Multi-modal AI processing',
-        'Real-time decision making',
-        'Scalable cloud architecture',
-        'Advanced security protocols'
-      ],
-      metrics: {
-        performance: '99.9% uptime',
-        speed: '10x faster processing',
-        accuracy: '98.5% precision',
-        cost: '60% cost reduction'
-      },
-      useCases: [
-        'Predictive analytics',
-        'Customer service automation',
-        'Supply chain optimization',
-        'Risk assessment'
-      ]
-    },
-    {
-      id: 'quantum-ai',
-      title: 'Quantum AI Fusion',
-      icon: Rocket,
-      color: 'from-purple-600 to-pink-600',
-      description: 'Revolutionary quantum computing integrated with AI for exponential performance',
-      features: [
-        'Quantum neural networks',
-        'Exponential speed improvements',
-        'Complex optimization solving',
-        'Unbreakable encryption'
-      ],
-      metrics: {
-        performance: '1000x faster',
-        speed: 'Quantum speedup',
-        accuracy: '99.9% precision',
-        cost: 'Revolutionary efficiency'
-      },
-      useCases: [
-        'Drug discovery',
-        'Financial modeling',
-        'Climate simulation',
-        'Cryptography'
-      ]
-    },
-    {
-      id: 'automation-suite',
-      title: 'Intelligent Automation Suite',
-      icon: Zap,
-      color: 'from-green-600 to-blue-600',
-      description: 'End-to-end business process automation with AI-powered decision making',
-      features: [
-        'Workflow orchestration',
-        'Intelligent document processing',
-        'Predictive maintenance',
-        'Dynamic resource allocation'
-      ],
-      metrics: {
-        performance: '95% automation',
-        speed: '24/7 operations',
-        accuracy: '99.2% reliability',
-        cost: '80% cost savings'
-      },
-      useCases: [
-        'Manufacturing automation',
-        'Document processing',
-        'Customer onboarding',
-        'Inventory management'
-      ]
-    },
-    {
-      id: 'security-ai',
-      title: 'AI Security Platform',
-      icon: Shield,
-      color: 'from-red-600 to-orange-600',
-      description: 'Advanced AI-powered cybersecurity and threat detection system',
-      features: [
-        'Real-time threat detection',
-        'Behavioral analysis',
-        'Automated response',
-        'Zero-trust architecture'
-      ],
-      metrics: {
-        performance: '99.8% detection',
-        speed: 'Real-time response',
-        accuracy: '99.5% precision',
-        cost: '70% faster resolution'
-      },
-      useCases: [
-        'Threat prevention',
-        'Incident response',
-        'Compliance monitoring',
-        'Risk assessment'
-      ]
-    }
-  ];
-
-  const industries = [
-    { name: ''Healthcare', 'icon: Userscount: '500+'color: 'from-blue-500 to-cyan-500' },
-    { name: ''Finance', 'icon: BarChart3count: '300+'color: 'from-green-500 to-emerald-500' },
-    { name: ''Manufacturing', 'icon: Settingscount: '400+'color: 'from-orange-500 to-red-500' },
-    { name: ''Retail', 'icon: Globecount: '600+'color: 'from-purple-500 to-pink-500' },
-    { name: ''Education', 'icon: Lightbulbcount: '200+'color: 'from-indigo-500 to-blue-500' },
-    { name: ''Government', 'icon: Shieldcount: '100+'color: 'from-gray-500 to-slate-500' }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CTOTechCorp',
-      content: 'The AI platform transformed our operations completely. We achieved 90% automation and reduced costs by 60%.',
-      rating: 5,
-      company: 'TechCorp'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CEOInnovateLabs',
-      content: 'Quantum AI fusion gave us capabilities we never thought possible. Our research speed increased 1000x.',
-      rating: 5,
-      company: 'InnovateLabs'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'VP EngineeringDataFlow',
-      content: 'The security platform prevented 99.8% of threats. Our security team can now focus on strategy.',
-      rating: 5,
-      company: 'DataFlow'
-    }
-  ];
-
+import React from 'react';
+const ComprehensiveAISolutions2026: React.FC = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div
@@ -184,7 +13,6 @@ const ComprehensiveAISolutions2026 = () => {
             <Brain className="w-4 h-4" />
             COMPREHENSIVE AI SOLUTIONS 2026
           </div>
-          
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Complete AI
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -193,13 +21,11 @@ const ComprehensiveAISolutions2026 = () => {
             <br />
             for Modern Business
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Transform your business with our comprehensive suite of AI solutions
             from enterprise platforms to quantum computing integration.
           </p>
         </div>
-
         {/* Solutions Navigation */}
         <div
           className="mb-12"
@@ -222,7 +48,6 @@ const ComprehensiveAISolutions2026 = () => {
               </button>
             ))}
           </div>
-
           {/* Solution Details */}
             <div
               key={activeSolution}
@@ -239,7 +64,6 @@ const ComprehensiveAISolutions2026 = () => {
                       {solutions[activeSolution].description}
                     </p>
                   </div>
-
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-4">Key Features</h4>
                     <div className="grid grid-cols-1 gap-3">
@@ -251,7 +75,6 @@ const ComprehensiveAISolutions2026 = () => {
                       ))}
                     </div>
                   </div>
-
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-4">Use Cases</h4>
                     <div className="flex flex-wrap gap-2">
@@ -266,7 +89,6 @@ const ComprehensiveAISolutions2026 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Right Column - Metrics & Visual */}
                 <div className="space-y-8">
                   <div>
@@ -280,7 +102,6 @@ const ComprehensiveAISolutions2026 = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/10">
                     <div className="text-center">
                       <div className={`w-20 h-20 bg-gradient-to-r ${solutions[activeSolution].color} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -303,7 +124,6 @@ const ComprehensiveAISolutions2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Industries Section */}
         <div
           className="mb-16"
@@ -326,7 +146,6 @@ const ComprehensiveAISolutions2026 = () => {
             ))}
           </div>
         </div>
-
         {/* Testimonials */}
         <div
           className="mb-16"
@@ -355,7 +174,6 @@ const ComprehensiveAISolutions2026 = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
           className="text-center"
@@ -367,14 +185,12 @@ const ComprehensiveAISolutions2026 = () => {
             <p className="text-gray-300 mb-8 text-lg">
               Join thousands of enterprises already leveraging our AI solutions
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2">
                 <Download className="w-5 h-5" />
                 Download Brochure
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              
               <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20">
                 <Award className="w-5 h-5" />
                 Schedule Demo
@@ -387,5 +203,4 @@ const ComprehensiveAISolutions2026 = () => {
     </div>
   );
 };
-
 export default ComprehensiveAISolutions2026;

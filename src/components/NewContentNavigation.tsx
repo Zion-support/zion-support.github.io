@@ -140,7 +140,5 @@ const NewContentNavigation: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default NewContentNavigation;

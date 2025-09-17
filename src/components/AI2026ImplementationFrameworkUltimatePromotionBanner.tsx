@@ -281,7 +281,5 @@ const AI2026ImplementationFrameworkUltimatePromotionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
-
 export default AI2026ImplementationFrameworkUltimatePromotionBanner;

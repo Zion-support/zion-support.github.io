@@ -398,7 +398,5 @@ const NextGenTechTrends2026: React.FC = () => {
       </section>
     </div>
   );
-
 };
-
 export default NextGenTechTrends2026;

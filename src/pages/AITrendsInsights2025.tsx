@@ -194,7 +194,5 @@ const AITrendsInsights2025: React.FC = () => {
       </section>
     </div>
   );
-
 };
-
 export default AITrendsInsights2025;

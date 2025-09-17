@@ -73,7 +73,5 @@ const SocialProofMetrics: React.FC = () => {
               >
                 View All Success Stories
   );
-
 };
-
 export default SocialProofMetrics;

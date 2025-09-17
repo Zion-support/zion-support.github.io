@@ -6,4 +6,5 @@ const SignUpForm: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
+}
 </p></p></p></p></p>

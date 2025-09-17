@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
     // Simulate API call
     setTimeout(() => {
       setIsSubscribed(true);
@@ -16,7 +13,6 @@ const NewsletterSignup: React.FC = () => {
       setEmail('');
     }, 2000);
   };
-
   if (isSubscribed) {
     return (
       <div
@@ -30,7 +26,6 @@ const NewsletterSignup: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div
       whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +34,6 @@ const NewsletterSignup: React.FC = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-bold mb-4 animate-pulse">
@@ -51,7 +45,6 @@ const NewsletterSignup: React.FC = () => {
             Join 50,000+ innovators who are shaping the future.
           </p>
         </div>
-
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col sm:flex-row gap-4">
             <input
@@ -71,13 +64,11 @@ const NewsletterSignup: React.FC = () => {
             </button>
           </div>
         </form>
-
         <div className="mt-6 text-center">
           <p className="text-sm opacity-75">
             🔒 We respect your privacy. Unsubscribe at any time.
           </p>
         </div>
-
         {/* Benefits */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -100,5 +91,4 @@ const NewsletterSignup: React.FC = () => {
     </div>
   );
 };
-
 export default NewsletterSignup;

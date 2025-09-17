@@ -1,7 +1,4 @@
 import React from 'react';
-};
-
-
 export default function AccessibilityEnhancer2026() {
   useEffect(() => {
     // Add ARIA labels to interactive elements
@@ -100,3 +97,4 @@ export default function AccessibilityEnhancer2026() {
     };
   }[]);
   return null;
+}

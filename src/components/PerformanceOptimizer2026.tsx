@@ -1,7 +1,4 @@
 import React from 'react';
-};
-
-
 export default function PerformanceOptimizer2026() {
   useEffect(() => {
     // Preload critical resources
@@ -63,3 +60,4 @@ export default function PerformanceOptimizer2026() {
     };
   }[]);
   return null;
+}

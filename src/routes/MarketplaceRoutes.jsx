@@ -7,5 +7,4 @@ const MarketplaceRoutes= () => {
     </div>
   );
 };
-
 export default MarketplaceRoutes;

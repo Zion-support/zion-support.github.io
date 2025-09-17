@@ -109,7 +109,5 @@ const QuantumAI2025RevolutionBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
-
 export default QuantumAI2025RevolutionBanner;

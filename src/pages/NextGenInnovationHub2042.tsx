@@ -1,5 +1,5 @@
   const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = [
     { id: 'all', name: 'All Innovations', icon: '🌟' },
     { id: 'ai', name: 'AI & Consciousness', icon: '🧠' },
@@ -9,6 +9,43 @@
     { id: 'bio', name: 'Biotechnology', icon: '🌱' },
     { id: 'energy', name: 'Energy Systems', icon: '⚡' },
     { id: 'matter', name: 'Matter Manipulation', icon: '🔬' }
+  ];
+  const [selectedInnovation, setSelectedInnovation] = useState(0);
+  const innovations = [
+    {
+      id: 1,
+      title: "Conscious AI Networks",
+      description: "Self-aware AI systems that collaborate and evolve together",
+      category: 'ai',
+      status: 'Deployed',
+      impact: 'Revolutionary',
+      icon: '🧠',
+      features: ['Self-awareness', 'Collaborative learning', 'Ethical decision making', 'Emotional intelligence']
+      title: "Conscious AI Development Platform",
+      description: "Build and deploy conscious AI systems with our revolutionary development platform",
+      category: "Artificial Intelligence",
+      status: "Live",
+      users: "50,000+",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      features: [
+        "Consciousness simulation engine",
+        "Ethical AI training protocols",
+        "Multi-dimensional neural networks",
+        "Real-time consciousness monitoring"
+      ]
+    },
+    {
+      id: 2,
+      title: "Quantum Reality Engine",
+      description: "Process infinite possibilities in real-time using quantum mechanics",
+      category: 'quantum',
+      status: 'Beta',
+      impact: 'Breakthrough',
+      icon: '⚛️',
+      features: ['Infinite processing', 'Parallel realities', 'Quantum entanglement', 'Zero latency']
+    },
+    {
   ];
       title: "Conscious AI Networks",
       description: "Self-aware AI systems that collaborate and evolve together",
@@ -83,9 +120,13 @@
       impact: 'Breakthrough',
       icon: '⏰',
       features: ['Time manipulation', 'Instant processing', 'Future prediction', 'Chronological analysis']
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
     }
   ];
-
   const filteredInnovations = selectedCategory === 'all' 
     ? innovations 
     : innovations.filter(innovation => innovation.category === selectedCategory);
@@ -99,8 +140,50 @@
                 <div className="text-6xl mb-4">{innovation.icon}</div>
                 <h3 className="text-2xl font-bold mb-2">{innovation.title}</h3>
                 <p className="text-emerald-100 mb-4">{innovation.description}</p>
+              </button>
+            </div>
+          ))}
+        </div>
+        {/* Statistics Section */}
+        <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4">Innovation Hub Statistics</h2>
+            <p className="text-xl opacity-90">
+              Our hub has become the epicenter of technological advancement
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-emerald-400 mb-2">500+</div>
+              <div className="text-lg font-semibold mb-1">Active Innovations</div>
+              <div className="text-sm opacity-80">Currently in development</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-teal-400 mb-2">99.9%</div>
+              <div className="text-lg font-semibold mb-1">Success Rate</div>
+              <div className="text-sm opacity-80">Innovation deployment</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
+              <div className="text-lg font-semibold mb-1">Possibilities</div>
+              <div className="text-sm opacity-80">Future innovations</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
+              <div className="text-lg font-semibold mb-1">Innovation Cycle</div>
+              <div className="text-sm opacity-80">Continuous development</div>
+        {/* Selected Innovation Details */}
+        <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="text-8xl mb-6">{innovations[selectedInnovation].icon}</div>
+              <h2 className="text-4xl font-bold mb-6">{innovations[selectedInnovation].title}</h2>
+              <p className="text-xl opacity-90 mb-8">{innovations[selectedInnovation].description}</p>
+              <div className="flex items-center space-x-4 mb-8">
+                <div className="flex items-center space-x-2">
+                  <span className={`px-3 py-1 ${getStatusColor(innovations[selectedInnovation].status)} text-white text-sm rounded-full`}>
+                    {innovations[selectedInnovation].status}
               </div>
-
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-sm opacity-80">Status:</span>
@@ -125,7 +208,6 @@
                   </span>
                 </div>
               </div>
-
               <div className="mb-6">
                 <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
                 <ul className="space-y-1">
@@ -137,7 +219,6 @@
                   ))}
                 </ul>
               </div>
-
               <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Explore Innovation
         {/* Statistics Section */}
@@ -148,7 +229,6 @@
               Our hub has become the epicenter of technological advancement
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-emerald-400 mb-2">500+</div>
@@ -166,6 +246,11 @@
               <div className="text-sm opacity-80">Future innovations</div>
             </div>
             <div className="text-center">
+            </div>
+          </div>
+        </div>
+        {/* Call to Action */}
+        <div className="text-center">
               <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
               <div className="text-lg font-semibold mb-1">Innovation Cycle</div>
               <div className="text-sm opacity-80">Continuous development</div>

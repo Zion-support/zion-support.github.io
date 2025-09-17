@@ -1,15 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import { motion } from 'framer-motion';
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 import { Helmet } from 'react-helmet-async';
-=======
 import Header from '../Header';
 import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -94,7 +88,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Advanced Tech Showcase 2027 - Zion Tech Group</title>
@@ -120,9 +113,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
                 Explore the most revolutionary technologies that will define the future. 
                 From quantum consciousness to interdimensional computing, discover what's possible.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
       <Header />
       
@@ -183,7 +173,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
               <li>• Dimensional data analysis</li>
               <li>• Cross-dimensional communication</li>
             </ul>
-=======
             </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
           </div>
@@ -249,13 +238,11 @@ const AdvancedTechShowcase2027: React.FC = () => {
               </ul>
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
             </div>
-=======
             </motion.div>
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Technologies Grid */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -328,7 +315,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
                   <p className="text-gray-300 italic">"{story.testimonial}"</p>
                 </divdiv>
               ))}
-=======
         {/* Performance Metrics */}
         <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -397,7 +383,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
         <div className="container mx-auto px-4 py-20">
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -416,7 +401,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
         </div>
       </div>
     </>
-=======
         <div className="text-center">
           <h2 className="text-5xl font-bold text-white mb-6">Ready to Experience 2027?</h2>
           <p className="text-2xl text-emerald-200 mb-8 max-w-4xl mx-auto">
@@ -443,4 +427,3 @@ const AdvancedTechShowcase2027: React.FC = () => {
   );
 };
 
-export default AdvancedTechShowcase2027;

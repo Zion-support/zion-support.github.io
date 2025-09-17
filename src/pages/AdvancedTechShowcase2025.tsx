@@ -201,7 +201,5 @@ const AdvancedTechShowcase2025: React.FC = () => {
       </motion.div>
     </>
   );
-
 };
-
 export default AdvancedTechShowcase2025;

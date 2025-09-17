@@ -191,7 +191,5 @@ const RevolutionaryAIConsciousness2026 = () => {
       </section>
     </div>
   );
-
 };
-
 export default RevolutionaryAIConsciousness2026;

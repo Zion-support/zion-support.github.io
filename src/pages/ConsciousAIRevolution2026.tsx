@@ -252,7 +252,5 @@ const ConsciousAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default ConsciousAIRevolution2026;

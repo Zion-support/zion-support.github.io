@@ -1,7 +1,3 @@
-import React from 'react';
-
-const RevolutionaryContentBanner2025: React.FC = () => {
-  return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
@@ -16,7 +12,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             Experience the most advanced technology content featuring breakthrough innovations and cutting-edge solutions
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🔮</div>

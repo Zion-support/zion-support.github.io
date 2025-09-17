@@ -1,34 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { 
-  Sparkles
-  ArrowRight
-  Star
-  Zap,
-  Brain,
-  Rocket,
-  Target,
-  CheckCircle,
-  Play,
-  ExternalLink
-} from 'lucide-react';
-
-const NewContentShowcase2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const features = [
-    'Revolutionary AI Innovations',
-    'Advanced Automation Solutions'
-    'Future Technology Predictions',
-    'Interactive Demonstrations'
-  ];
-
+import React from 'react';
+const NewContentShowcase2026PromotionBanner: React.FC = () => {
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"
@@ -47,7 +18,6 @@ const NewContentShowcase2026PromotionBanner = () => {
           }}
         />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Content */}
@@ -58,17 +28,14 @@ const NewContentShowcase2026PromotionBanner = () => {
                 NEW CONTENT 2026
               </span>
             </div>
-            
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
               Revolutionary Content
               <span className="block text-yellow-300">Showcase 2026</span>
             </h2>
-            
             <p className="text-lg text-purple-100 mb-6">
               Discover the latest breakthroughs in AIautomationand future technology predictions. 
               Explore cutting-edge innovations that will transform your business and shape the future.
             </p>
-            
             <div className="grid grid-cols-2 gap-3 mb-6">
               {features.map((featureindex) => (
                 <div key={index} className="flex items-center gap-2">
@@ -77,7 +44,6 @@ const NewContentShowcase2026PromotionBanner = () => {
                 </div>
               ))}
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="flex items-center gap-2 px-6 py-3 bg-white text-purple-600 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 shadow-lg">
                 <Play className="w-5 h-5" />
@@ -90,7 +56,6 @@ const NewContentShowcase2026PromotionBanner = () => {
               </button>
             </div>
           </div>
-          
           {/* Visual */}
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
@@ -101,7 +66,6 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <h4 className="text-white font-semibold mb-1">AI Innovations</h4>
                 <p className="text-sm text-purple-200">Neural interfaces & quantum AI</p>
               </div>
-              
               <div
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
@@ -109,7 +73,6 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <h4 className="text-white font-semibold mb-1">Automation</h4>
                 <p className="text-sm text-pink-200">Smart workflows & processes</p>
               </div>
-              
               <div
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
@@ -117,7 +80,6 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <h4 className="text-white font-semibold mb-1">Future Tech</h4>
                 <p className="text-sm text-yellow-200">2030+ predictions</p>
               </div>
-              
               <div
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
@@ -126,7 +88,6 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <p className="text-sm text-green-200">Live demonstrations</p>
               </div>
             </div>
-            
             {/* Floating elements */}
             <div
               className="absolute -top-4 -right-4 w-16 h-16 border-2 border-white/30 rounded-full"
@@ -140,5 +101,5 @@ const NewContentShowcase2026PromotionBanner = () => {
     </div>
   );
 };
-
 export default NewContentShowcase2026PromotionBanner;
+</div></div></div>

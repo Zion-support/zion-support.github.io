@@ -168,7 +168,5 @@ const AI2025NewContentBreakthroughBanner: React.FC = () => {
       </div>
     </section>
   );
-
 };
-
 export default AI2025NewContentBreakthroughBanner;

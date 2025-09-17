@@ -2,9 +2,6 @@
 'use client';
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-};
-
-
 export default function AI2025ContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough');
   const contentCategories = {
@@ -137,6 +134,5 @@ export default function AI2025ContentDiscoveryWidget() {
           >
             Get Started
   );
-
-
+};
 export default AI2025ContentDiscoveryWidget;

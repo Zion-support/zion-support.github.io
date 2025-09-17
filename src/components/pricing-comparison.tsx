@@ -3,9 +3,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
-};
-
-
 export default function PricingComparisonPage() {
   const serviceComparisons = [
     {
@@ -326,6 +323,5 @@ export default function PricingComparisonPage() {
                 Try DevOps Automation
     </>
   );
-
-
+};
 export default pricing-comparison;

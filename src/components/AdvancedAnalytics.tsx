@@ -7,6 +7,7 @@ interface AnalyticsData {
   topPages: Array<{ page: string; views: number }>;
   trafficSources: Array<{ source: string; percentage: number }>;
   deviceTypes: Array<{ device: string; percentage: number }>;
+}
 const AdvancedAnalytics: React.FC = () => {
   const [analytics, setAnalytics] = useState<AnalyticsData>({
     pageViews: 0,
@@ -77,8 +78,7 @@ const AdvancedAnalytics: React.FC = () => {
         </div>
       </div>
     );
-};
-  };
+  }
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
       <div className="flex items-center justify-between mb-8">
@@ -209,6 +209,5 @@ const AdvancedAnalytics: React.FC = () => {
       </div>
     </div>
   );
-
-
+};
 export default AdvancedAnalytics;

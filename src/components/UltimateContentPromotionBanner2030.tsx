@@ -43,7 +43,5 @@ const UltimateContentPromotionBanner2030: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default UltimateContentPromotionBanner2030;

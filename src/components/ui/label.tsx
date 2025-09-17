@@ -1,6 +1,7 @@
 import React from 'react';
 export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   htmlFor?: string;
+}
 export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
   ({ className = "text-sm font-medium text-gray-700", children, ...props }, ref) => {
     return (
@@ -8,9 +9,7 @@ export const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
         {children}
       </label>
     );
-};
-  };
+  }
+);
 Label.displayName = "Label";
-
-
 export default Label;

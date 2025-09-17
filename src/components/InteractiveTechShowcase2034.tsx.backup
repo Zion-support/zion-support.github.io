@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const InteractiveTechShowcase2034: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-<<<<<<< HEAD
   const technologies = [
     {
       id: 1,
@@ -102,7 +101,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
 
     return () => clearInterval(interval);
   }, [technologies.length]);
-=======
   const technologies = {
     ai: {
       title: 'Revolutionary AI 2034',
@@ -202,7 +200,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
               ))}
             </ul>
           </div>
-<<<<<<< HEAD
           <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Showcase 2034
           </h2>
@@ -299,7 +296,6 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     🔬 Deep Dive
                   </button>
                 </div>
-=======
           <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6">
             <h4 className="text-xl font-bold mb-4">Live Demo</h4>
             <div className="bg-black/50 rounded-lg p-4 mb-4">
@@ -320,14 +316,12 @@ const InteractiveTechShowcase2034: React.FC = () => {
             >
               Experience {technologies[activeTab as keyof typeof technologies].title} →
             </a>
-<<<<<<< HEAD
             <a href="/pages/ComprehensiveServices2034" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
               View All Services →
             </a>
             <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
               Contact Us →
             </a>
-=======
 >>>>>>> d40a2de63968dbef1437758fb9a66735771c35e1
           </div>
         </div>
@@ -336,4 +330,3 @@ const InteractiveTechShowcase2034: React.FC = () => {
   );
 };
 
-export default InteractiveTechShowcase2034;

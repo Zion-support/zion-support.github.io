@@ -35,7 +35,5 @@ const BlogPostLayout: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }}
       />
   );
-
 };
-
 export default BlogPostLayout;

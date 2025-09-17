@@ -169,7 +169,5 @@ const RevolutionaryAdBanner2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default RevolutionaryAdBanner2025;

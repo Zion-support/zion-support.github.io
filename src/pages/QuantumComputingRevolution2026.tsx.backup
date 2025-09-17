@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 
@@ -323,4 +321,3 @@ const QuantumComputingRevolution2026: React.FC = () => {
   );
 };
 
-export default QuantumComputingRevolution2026;
