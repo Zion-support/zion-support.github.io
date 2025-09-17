@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:src/components/RevolutionaryTechShowcase2036-2038.tsx
 const RevolutionaryTechShowcase2036_2038: React.FC = () => {
+=======
+
+const UltimateContentShowcase2027: React.FC = () => {
+>>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2027.tsx
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>

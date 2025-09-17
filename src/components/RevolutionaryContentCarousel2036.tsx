@@ -1,9 +1,15 @@
+<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
       id: 1,
+<<<<<<< HEAD
       title: "Next-Gen Tech Revolution 2036",
       description: "Experience the most advanced technological revolution featuring Conscious AI, Quantum Consciousness, and Interdimensional Computing",
+=======
+      title: "Ultimate Tech Breakthrough 2036",
+      description: "Experience the most revolutionary technological advances that will reshape our world in 2036",
+>>>>>>> origin/new-content-merge-1758000738
       image: "🧠",
       gradient: "from-purple-600/30 to-pink-600/30",
       border: "border-purple-400/30",
@@ -28,7 +34,12 @@
       gradient: "from-emerald-600/30 to-teal-600/30",
       border: "border-emerald-400/30",
       textColor: "text-emerald-100",
+<<<<<<< HEAD
       link: "/pages/RevolutionaryTechShowcase2036"
+=======
+      link: "/pages/InterdimensionalTechRevolution2036",
+      features: ["Dimensional Portals", "Reality Shifting", "Multiverse Communication"]
+>>>>>>> origin/new-content-merge-1758000738
     }
   ];
   useEffect(() => {
@@ -37,9 +48,24 @@
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
+<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+=======
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  return (
+    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+>>>>>>> origin/new-content-merge-1758000738
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -98,7 +124,11 @@
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold mb-4">🌟 Future Technology Showcase</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto">
+<<<<<<< HEAD
             Discover the most revolutionary technologies that will reshape humanity's future
+=======
+            Discover our latest breakthrough content featuring the most advanced technologies of 2036
+>>>>>>> origin/new-content-merge-1758000738
           </p>
         </div>
         <div className="relative">
@@ -134,6 +164,7 @@
                           </ul>
                         </div>
                       </div>
+<<<<<<< HEAD
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
@@ -146,6 +177,58 @@
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
               />
+=======
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="flex justify-center space-x-2 mt-6">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Quick Access Links */}
+        <div className="text-center mt-8">
+          <div className="flex flex-wrap justify-center gap-4">
+            {slides.map((slide) => (
+              <a
+                key={slide.id}
+                href={slide.link}
+                className="px-6 py-2 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-colors font-semibold text-sm"
+              >
+                {slide.title.split(' ')[0]} →
+              </a>
+>>>>>>> origin/new-content-merge-1758000738
             ))}
           </div>
           {/* Navigation Arrows */}
@@ -154,3 +237,21 @@
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+=======
+import React from "react";
+
+const RevolutionaryContentCarousel2036 = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryContentCarousel2036</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryContentCarousel2036;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

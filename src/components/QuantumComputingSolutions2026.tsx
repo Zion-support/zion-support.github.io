@@ -1,5 +1,160 @@
+<<<<<<< HEAD
 import React from 'react';
 const QuantumComputingSolutions2026: React.FC = () => {
+=======
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Atom
+  Zap
+  Shield
+  Globe
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Cpu,
+  Lock,
+  Brain,
+  Target,
+  BarChart3,
+  Star,
+  Sparkles
+} from 'lucide-react';
+
+const QuantumComputingSolutions2026 = () => {
+  const [activeSolutionsetActiveSolution] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const solutions = [
+    {
+      id: 'quantum-optimization',
+      title: 'Quantum Optimization',
+      subtitle: 'Solve Complex Problems Instantly',
+      icon: Target,
+      color: 'from-purple-600 to-indigo-600',
+      description: 'Leverage quantum algorithms to solve optimization problems that would take classical computers millennia to complete.',
+      features: [
+        'Logistics & Supply Chain Optimization',
+        'Financial Portfolio Optimization',
+        'Resource Allocation Problems',
+        'Route Planning & Scheduling'
+      ],
+      performance: { speed: '10,000'x', 'accuracy: '99.9%' },
+      useCases: [
+        'Global supply chain optimization',
+        'Real-time trading algorithms',
+        'Energy grid management',
+        'Transportation routing'
+      ]
+    },
+    {
+      id: 'quantum-encryption',
+      title: 'Quantum Encryption',
+      subtitle: 'Unbreakable Security',
+      icon: Lock,
+      color: 'from-green-600 to-teal-600',
+      description: 'Implement quantum key distribution and post-quantum cryptography to protect against future quantum attacks.',
+      features: [
+        'Quantum Key Distribution (QKD)',
+        'Post-Quantum Cryptography',
+        'Quantum Random Number Generation',
+        'Secure Communication Networks'
+      ],
+      performance: { speed: ''Instant', 'accuracy: '100%' },
+      useCases: [
+        'Government communications',
+        'Financial transactions',
+        'Healthcare data protection',
+        'Military communications'
+      ]
+    },
+    {
+      id: 'quantum-simulation',
+      title: 'Quantum Simulation',
+      subtitle: 'Model Complex Systems',
+      icon: Atom,
+      color: 'from-cyan-600 to-blue-600',
+      description: 'Simulate quantum systemschemical reactionsand materials at the atomic level with unprecedented accuracy.',
+      features: [
+        'Molecular Dynamics Simulation',
+        'Drug Discovery & Development',
+        'Materials Science Research',
+        'Climate Modeling'
+      ],
+      performance: { speed: '1'Mx', 'accuracy: '99.99%' },
+      useCases: [
+        'Pharmaceutical research',
+        'New material discovery',
+        'Climate change modeling',
+        'Catalyst development'
+      ]
+    },
+    {
+      id: 'quantum-machine-learning',
+      title: 'Quantum Machine Learning',
+      subtitle: 'Next-Gen AI Processing',
+      icon: Brain,
+      color: 'from-red-600 to-pink-600',
+      description: 'Accelerate machine learning algorithms using quantum computing for pattern recognition and data analysis.',
+      features: [
+        'Quantum Neural Networks',
+        'Quantum Support Vector Machines',
+        'Quantum Clustering Algorithms',
+        'Quantum Feature Selection'
+      ],
+      performance: { speed: '100'x', 'accuracy: '95%' },
+      useCases: [
+        'Image recognition',
+        'Natural language processing',
+        'Predictive analytics',
+        'Anomaly detection'
+      ]
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: 'Exponential Speed',
+      description: 'Process complex calculations millions of times faster than classical computers',
+      value: '10,000x'
+    },
+    {
+      icon: Shield,
+      title: 'Unbreakable Security',
+      description: 'Quantum encryption provides theoretically unbreakable security',
+      value: '100%'
+    },
+    {
+      icon: Globe,
+      title: 'Global Impact',
+      description: 'Transform industries from healthcare to finance with quantum solutions',
+      value: '50+'
+    },
+    {
+      icon: Rocket,
+      title: 'Future-Ready',
+      description: 'Prepare for the quantum revolution with cutting-edge technology',
+      value: '2026'
+    }
+  ];
+
+  const industries = [
+    { name: ''Healthcare', 'icon: '🏥'applications: ['Drug 'Discovery', 'Medical 'Imaging', 'Genomics'] },
+    { name: ''Finance', 'icon: '💰'applications: ['Risk 'Analysis', 'Algorithmic 'Trading', 'Fraud Detection'] },
+    { name: ''Energy', 'icon: '⚡'applications: ['Grid 'Optimization', 'Renewable 'Energy', 'Storage Solutions'] },
+    { name: ''Transportation', 'icon: '🚗'applications: ['Route 'Optimization', 'Autonomous 'Vehicles', 'Traffic Management'] },
+    { name: ''Manufacturing', 'icon: '🏭'applications: ['Supply 'Chain', 'Quality 'Control', 'Predictive Maintenance'] },
+    { name: ''Research', 'icon: '🔬'applications: ['Scientific 'Computing', 'Climate 'Modeling', 'Materials Science'] }
+  ];
+
+>>>>>>> origin/merge-new-content-1757989975
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
       {/* Animated Background */}
@@ -38,6 +193,10 @@ const QuantumComputingSolutions2026: React.FC = () => {
             <Atom className="w-4 h-4 mr-2" />
             Quantum Computing Solutions 2026
           </div>
+<<<<<<< HEAD
+=======
+          
+>>>>>>> origin/merge-new-content-1757989975
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Quantum
             <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -49,6 +208,10 @@ const QuantumComputingSolutions2026: React.FC = () => {
             From optimization to encryptiondiscover quantum solutions that will transform your industry.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Benefits Grid */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -65,6 +228,10 @@ const QuantumComputingSolutions2026: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Solutions Grid */}
         <div
           className="mb-16"
@@ -115,6 +282,10 @@ const QuantumComputingSolutions2026: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Detailed Solution View */}
           <div
             key={activeSolution}
@@ -164,6 +335,10 @@ const QuantumComputingSolutions2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Industry Applications */}
         <div
           className="mb-16"
@@ -191,6 +366,10 @@ const QuantumComputingSolutions2026: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* CTA Section */}
         <div
           className="text-center"

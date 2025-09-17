@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
 const RevolutionaryContentBanner2027: React.FC = () => {
+<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
   const content = [
     {
@@ -24,14 +29,28 @@ const RevolutionaryContentBanner2027: React.FC = () => {
       gradient: "from-indigo-500 to-cyan-600",
       textColor: "text-white"
     }
+=======
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  const features = [
+    "🧠 Conscious AI Systems",
+    "⚡ Quantum Consciousness", 
+    "🌌 Interdimensional Computing",
+    "🔮 Holographic Reality",
+    "⚗️ Molecular Manufacturing",
+    "⏰ Time Dilation Technology"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
   ];
   useEffect(() => {
+<<<<<<< HEAD
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [content.length]);
   return (
+<<<<<<< HEAD
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-purple-600/10"></div>
       {/* Animated Background */}
@@ -93,8 +112,46 @@ const RevolutionaryContentBanner2027: React.FC = () => {
                   </div>
                 </div>
               ))}
+=======
+    <div className="relative overflow-hidden">
+      <div
+        key={currentSlide}
+        className={`bg-gradient-to-r ${bannerContent[currentSlide].bgColor} backdrop-blur-sm`}
+      >
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="text-2xl animate-pulse">
+                {bannerContent[currentSlide].title.split(' ')[0]}
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white">
+                  {bannerContent[currentSlide].title}
+                </h3>
+                <p className="text-sm text-white/90">
+                  {bannerContent[currentSlide].subtitle}
+                </p>
+              </div>
+>>>>>>> origin/merge-new-content-1757989975
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <a
+                href={bannerContent[currentSlide].link}
+                className={`bg-gradient-to-r ${bannerContent[currentSlide].color} text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
+              >
+                {bannerContent[currentSlide].cta} →
+              </a>
+              
+              <button
+                onClick={handleClose}
+                className="text-white/70 hover:text-white transition-colors"
+              >
+                ✕
+              </button>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Navigation Dots */}
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
@@ -163,6 +220,67 @@ const RevolutionaryContentBanner2027: React.FC = () => {
                 View All Content
               </Link>
             </div>
+=======
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
+=======
+        </div>
+      </div>
+>>>>>>> origin/merge-new-content-1757989975
+
+    return () => clearInterval(interval);
+  }, [features.length]);
+
+  return (
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.1),transparent_50%)]"></div>
+      </div>
+      
+      <div className="relative z-10 px-8 py-16">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="space-y-6">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <span className="text-4xl">🚀</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
+                REVOLUTIONARY 2027
+              </span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary Content Banner 2027
+            </h2>
+            
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+              Experience the most advanced technology showcase featuring cutting-edge innovations
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-2 mb-8">
+              {features.map((feature, index) => (
+                <span
+                  key={index}
+                  className={`px-3 py-1 rounded-full text-xs transition-all duration-300 ${
+                    index === currentFeature
+                      ? 'bg-white text-purple-600 scale-110'
+                      : 'bg-white/20 text-white'
+                  }`}
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+            
+            <Link
+              to="/pages/RevolutionaryTechShowcase2027"
+              className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-all duration-300 font-semibold text-lg"
+            >
+              Explore Now →
+            </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
           </div>
         </div>
       </div>

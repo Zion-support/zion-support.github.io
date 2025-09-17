@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+=======
+>>>>>>> origin/merge-new-content-1757989975
+
+>>>>>>> origin/feat/realtime-rag-content
 const TranscendentAI2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -28,6 +37,10 @@ const TranscendentAI2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
       {/* Transcendent Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -150,13 +163,25 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
               </div>
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
               </div>
         {/* Revolutionary Applications */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/merge-new-content-1757989975
         <divsection
           className="mb-16"
         >
@@ -334,6 +359,10 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -503,9 +532,17 @@ const TranscendentAI2026: React.FC = () => {
               Explore the revolutionary capabilities that define transcendent AI
             </p>
           </div>
+<<<<<<< HEAD
         </motion.section>
+<<<<<<< HEAD
           </div>
         </motion.section>
+=======
+=======
+        </divsection>
+>>>>>>> origin/merge-new-content-1757989975
+
+>>>>>>> origin/feat/realtime-rag-content
         {/* Future Vision */}
         <divsection
           className="text-center mb-16"
@@ -539,6 +576,10 @@ const TranscendentAI2026: React.FC = () => {
             </div>
           </div>
         </divsection>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Call to Action */}
         <divsection
           id="contact"
@@ -557,6 +598,21 @@ const TranscendentAI2026: React.FC = () => {
             </a>
           </div>
         </divsection>
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+const TranscendentAI2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">TranscendentAI2026</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+=======
+>>>>>>> origin/merge-new-content-1757989975
       </div>
     </div>
   );

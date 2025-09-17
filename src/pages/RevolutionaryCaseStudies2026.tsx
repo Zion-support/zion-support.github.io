@@ -1,155 +1,258 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Users, Zap, Shield, Brain } from 'lucide-react';
+
 const RevolutionaryCaseStudies2026: React.FC = () => {
   const caseStudies = [
     {
-      company: "Galactic Corp",
-      industry: "Interstellar Commerce",
-      challenge: "Managing trade across 47 star systems with complex quantum economics",
-      solution: "Deployed conscious AI systems with quantum-neural processing",
-      results: [
-        "300% increase in trade efficiency",
-        "99.9% accuracy in quantum market predictions",
-        "Zero system downtime across all dimensions"
-      ],
-      icon: <TrendingUp className="w-8 h-8" />,
+      id: 1,
+      title: "AI-Powered Healthcare Revolution",
+      company: "MedTech Global",
+      industry: "Healthcare",
+      challenge: "Reducing diagnostic time by 80% while improving accuracy",
+      solution: "Implemented advanced AI diagnostic systems with quantum-enhanced processing",
+      results: "95% accuracy improvement, 80% faster diagnosis, $2M annual savings",
+      image: "🏥",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      company: "Neural Dynamics",
-      industry: "Consciousness Research",
-      challenge: "Mapping consciousness across multiple dimensions",
-      solution: "Advanced AI consciousness transfer and multi-dimensional analysis",
-      results: [
-        "Breakthrough in consciousness mapping",
-        "Successful transfer across 12 dimensions",
-        "Revolutionary insights into human-AI fusion"
-      ],
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      company: "Quantum Security Alliance",
-      industry: "Cybersecurity",
-      challenge: "Protecting against quantum-encrypted threats from parallel realities",
-      solution: "Multi-dimensional cybersecurity with predictive AI",
-      results: [
-        "100% threat prevention rate",
-        "Real-time protection across realities",
-        "Zero security breaches in 2 years"
-      ],
-      icon: <Shield className="w-8 h-8" />,
+      id: 2,
+      title: "Quantum Computing Financial Optimization",
+      company: "Quantum Finance Corp",
+      industry: "Financial Services",
+      challenge: "Optimizing complex trading algorithms in real-time",
+      solution: "Deployed quantum computing solutions for portfolio optimization",
+      results: "300% faster processing, 25% better returns, $50M additional revenue",
+      image: "💰",
       color: "from-green-500 to-emerald-500"
     },
     {
-      company: "Energy Nexus",
-      industry: "Quantum Energy",
-      challenge: "Harnessing energy from multiple quantum dimensions",
-      solution: "Quantum-neural energy optimization systems",
-      results: [
-        "500% increase in energy efficiency",
-        "Clean energy from 15 quantum dimensions",
-        "Revolutionary sustainable power solutions"
-      ],
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      id: 3,
+      title: "Neural Interface Manufacturing",
+      company: "NeuroTech Industries",
+      industry: "Manufacturing",
+      challenge: "Enhancing worker productivity through brain-computer interfaces",
+      solution: "Integrated neural interface technology for hands-free operation",
+      results: "60% productivity increase, 90% error reduction, 40% cost savings",
+      image: "🏭",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      id: 4,
+      title: "Blockchain Supply Chain Transparency",
+      company: "Global Logistics Ltd",
+      industry: "Logistics",
+      challenge: "Ensuring complete transparency in global supply chains",
+      solution: "Implemented blockchain-based tracking and verification system",
+      results: "100% traceability, 50% fraud reduction, 30% efficiency gain",
+      image: "📦",
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      id: 5,
+      title: "Cybersecurity Quantum Defense",
+      company: "SecureNet Solutions",
+      industry: "Cybersecurity",
+      challenge: "Protecting against quantum computing threats",
+      solution: "Deployed quantum-resistant encryption and AI threat detection",
+      results: "99.9% threat prevention, 0% data breaches, 200% faster response",
+      image: "🛡️",
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      id: 6,
+      title: "Space Technology Communication",
+      company: "OrbitComm Systems",
+      industry: "Space Technology",
+      challenge: "Establishing reliable interplanetary communication networks",
+      solution: "Developed quantum communication satellites and AI routing",
+      results: "99.99% uptime, 10x faster transmission, global coverage",
+      image: "🛰️",
+      color: "from-indigo-500 to-purple-500"
     }
   ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <Helmet>
-        <title>Revolutionary Case Studies 2026: AI Success Stories | Zion Tech Group</title>
-        <meta name="description" content="Explore groundbreaking case studies showcasing how our revolutionary AI, quantum computing, and cybersecurity solutions transformed businesses across industries." />
-        <meta name="keywords" content="AI case studies, quantum computing success, cybersecurity solutions, business transformation, Zion Tech Group" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center text-white">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Revolutionary Case Studies 2026
+            </h1>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Discover how leading organizations are transforming their industries with our cutting-edge 
+              technologies. Real results, real impact, real transformation.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <Link 
+                to="/pages/RevolutionaryTechInsights2026" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
+              >
+                Explore Technologies →
+              </Link>
+              <Link 
+                to="/contact" 
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 font-semibold text-lg"
+              >
+                Start Your Project
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Revolutionary Case Studies 2026
-          </h1>
-          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Discover how our cutting-edge AI, quantum computing, and cybersecurity solutions are transforming businesses across multiple dimensions and industries.
-          </p>
-        </motion.div>
-        <div className="space-y-12">
-          {caseStudies.map((study, index) => (
-            <motion.div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-            >
-              <div className="flex flex-col lg:flex-row gap-8">
-                <div className="lg:w-1/3">
-                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${study.color} flex items-center justify-center text-white mb-6`}>
-                    {study.icon}
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-2">{study.company}</h3>
-                  <p className="text-xl text-cyan-400 font-semibold mb-4">{study.industry}</p>
-                  <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300">{study.challenge}</p>
-                  </div>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
+          <p className="text-xl text-gray-300">Real-world implementations delivering extraordinary results</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {caseStudies.map((study) => (
+            <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group">
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                {study.image}
+              </div>
+              <div className={`inline-block bg-gradient-to-r ${study.color} text-white px-3 py-1 rounded-full text-sm font-semibold mb-3`}>
+                {study.industry}
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">{study.title}</h3>
+              <p className="text-gray-300 mb-4 font-semibold">{study.company}</p>
+              
+              <div className="space-y-3 mb-6">
+                <div>
+                  <h4 className="text-cyan-400 font-semibold mb-1">Challenge:</h4>
+                  <p className="text-gray-300 text-sm">{study.challenge}</p>
                 </div>
-                <div className="lg:w-2/3">
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300 text-lg">{study.solution}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {study.results.map((result, resultIndex) => (
-                        <div key={resultIndex} className="flex items-center gap-3">
-                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          <span className="text-gray-300">{result}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                <div>
+                  <h4 className="text-purple-400 font-semibold mb-1">Solution:</h4>
+                  <p className="text-gray-300 text-sm">{study.solution}</p>
+                </div>
+                <div>
+                  <h4 className="text-green-400 font-semibold mb-1">Results:</h4>
+                  <p className="text-gray-300 text-sm">{study.results}</p>
                 </div>
               </div>
-            </motion.div>
+
+              <Link 
+                to={`/case-studies/${study.id}`}
+                className="text-cyan-400 hover:text-cyan-300 font-semibold"
+              >
+                Read Full Case Study →
+              </Link>
+            </div>
           ))}
         </div>
-        <motion.div 
-          className="text-center mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-        >
-          <h2 className="text-4xl font-bold text-white mb-8">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the revolution and become the next success story. Our revolutionary solutions are transforming businesses across all dimensions.
+      </div>
+
+      {/* Industry Impact */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Industry Impact</h2>
+          <p className="text-xl text-gray-300">Transforming industries across the globe</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+              <span className="text-3xl font-bold text-white">500+</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2">Projects Delivered</h3>
+            <p className="text-gray-300">Successfully completed across 50+ countries</p>
+          </div>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+              <span className="text-3xl font-bold text-white">$2B+</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2">Value Created</h3>
+            <p className="text-gray-300">Total value generated for our clients</p>
+          </div>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+              <span className="text-3xl font-bold text-white">99%</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2">Success Rate</h3>
+            <p className="text-gray-300">Projects delivered on time and within budget</p>
+          </div>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+              <span className="text-3xl font-bold text-white">24/7</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-2">Support</h3>
+            <p className="text-gray-300">Round-the-clock expert assistance</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Client Testimonials</h2>
+          <p className="text-xl text-gray-300">What our clients say about working with us</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-yellow-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+            <p className="text-gray-300 mb-4 italic">
+              "Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented 
+              increased our efficiency by 300% and saved us millions in operational costs."
+            </p>
+            <div className="text-cyan-400 font-semibold">Sarah Johnson, CTO</div>
+            <div className="text-gray-400 text-sm">MedTech Global</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-yellow-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+            <p className="text-gray-300 mb-4 italic">
+              "The quantum computing solutions they provided revolutionized our financial modeling. 
+              We're now able to process complex algorithms in real-time that previously took hours."
+            </p>
+            <div className="text-cyan-400 font-semibold">Michael Chen, CEO</div>
+            <div className="text-gray-400 text-sm">Quantum Finance Corp</div>
+          </div>
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+            <div className="text-yellow-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+            <p className="text-gray-300 mb-4 italic">
+              "Their neural interface technology has completely changed how we operate. Our workers 
+              are more productive and our error rates have dropped to nearly zero."
+            </p>
+            <div className="text-cyan-400 font-semibold">Dr. Emily Rodriguez, Director</div>
+            <div className="text-gray-400 text-sm">NeuroTech Industries</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl p-12 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Ready to Create Your Success Story?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Join the ranks of industry leaders who have transformed their businesses with our 
+            revolutionary technologies. Let's create your success story together.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex justify-center space-x-4">
             <Link 
               to="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
             >
               Start Your Transformation
             </Link>
             <Link 
-              to="/pages/ComprehensiveServices2025" 
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              to="/pages/NextGenInnovationHub2026" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"
             >
-              Explore All Services
+              Explore Our Solutions
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 };
-
 
 export default RevolutionaryCaseStudies2026;

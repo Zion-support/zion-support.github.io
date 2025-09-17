@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 const RevolutionaryTechShowcase2042: React.FC = () => {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('ai');
+=======
+  const [activeDemo, setActiveDemo] = useState(0);
+
+>>>>>>> origin/new-content-merge-1758000738
   const demos = [
     {
       id: 0,
@@ -29,12 +35,27 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
       description: "Manipulate time for instant computation",
       icon: "⏰",
       features: ["Time-dilated processing", "Future prediction algorithms", "Temporal data analysis", "Chronological optimization"]
+<<<<<<< HEAD
+=======
+    }
+  ];
+
+  return (
+>>>>>>> origin/new-content-merge-1758000738
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             ⚡ INTERACTIVE SHOWCASE • JANUARY 2042
+<<<<<<< HEAD
+=======
+          </div>
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            Revolutionary Tech Showcase 2042
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+>>>>>>> origin/new-content-merge-1758000738
             Experience the most advanced technologies through interactive demonstrations and real-time simulations
           </p>
         </div>
@@ -42,9 +63,27 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
         <div className="mb-12">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {demos.map((demo, index) => (
+<<<<<<< HEAD
                   activeDemo === index
                     ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
                     : 'bg-white/10 text-cyan-200 hover:bg-white/20'
+=======
+              <button
+                key={demo.id}
+                onClick={() => setActiveDemo(index)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeDemo === index
+                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
+                    : 'bg-white/10 text-cyan-200 hover:bg-white/20'
+                }`}
+              >
+                <span className="text-2xl mr-2">{demo.icon}</span>
+                {demo.title}
+              </button>
+            ))}
+          </div>
+
+>>>>>>> origin/new-content-merge-1758000738
           {/* Active Demo Display */}
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
             <div className="text-center mb-8">
@@ -74,6 +113,13 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
                   </button>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/new-content-merge-1758000738
         {/* Technology Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -110,6 +156,13 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
               <span className="px-3 py-1 bg-orange-500/50 rounded-full text-xs font-semibold">
                 In Progress
               </span>
+<<<<<<< HEAD
+=======
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/new-content-merge-1758000738
         {/* Performance Metrics */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
@@ -138,6 +191,15 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
               <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
               <div className="text-lg font-semibold mb-1">Scalability</div>
               <div className="text-sm opacity-80">Unlimited expansion capacity</div>
+<<<<<<< HEAD
+=======
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+>>>>>>> origin/new-content-merge-1758000738
           <h2 className="text-4xl font-bold mb-6">Experience the Future Today</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Don't just read about the future - experience it firsthand through our interactive demonstrations
@@ -148,3 +210,26 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
               Schedule Private Demo
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+const RevolutionaryTechShowcase2042: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryTechShowcase2042</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+=======
+            </button>
+          </div>
+>>>>>>> origin/new-content-merge-1758000738
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryTechShowcase2042;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

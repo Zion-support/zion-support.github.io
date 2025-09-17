@@ -3,26 +3,16 @@ import { motion } from 'framer-motion';
 
 const NextGenTechShowcase2025: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
-            className="text-6xl font-bold text-gray-900 mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Next-Gen Technology Showcase 2025
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Discover the revolutionary technologies that are reshaping industries and transforming the future of business.
-          </motion.p>
+          </h1>
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+            Discover the revolutionary technologies that will transform your business and shape the future of innovation.
+          </p>
         </div>
       </section>
 
@@ -38,86 +28,74 @@ const NextGenTechShowcase2025: React.FC = () => {
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold mb-3">AI & Machine Learning</h3>
-              <p className="text-gray-600 mb-4">Advanced artificial intelligence solutions for automation and decision-making</p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <h3 className="text-xl font-bold mb-4">AI & Machine Learning</h3>
+              <ul className="text-gray-600 space-y-2">
                 <li>• Neural Networks</li>
                 <li>• Deep Learning</li>
-                <li>• Computer Vision</li>
+                <li>• Predictive Analytics</li>
                 <li>• Natural Language Processing</li>
               </ul>
             </motion.div>
-
             <motion.div
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-3">Quantum Computing</h3>
-              <p className="text-gray-600 mb-4">Revolutionary computing power for complex problem-solving</p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <h3 className="text-xl font-bold mb-4">Quantum Computing</h3>
+              <ul className="text-gray-600 space-y-2">
                 <li>• Quantum Algorithms</li>
                 <li>• Quantum Cryptography</li>
                 <li>• Quantum Simulation</li>
-                <li>• Quantum Optimization</li>
+                <li>• Quantum Machine Learning</li>
               </ul>
             </motion.div>
-
             <motion.div
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold mb-3">Neural Interfaces</h3>
-              <p className="text-gray-600 mb-4">Direct brain-computer interfaces for enhanced capabilities</p>
-              <ul className="text-sm text-gray-500 space-y-1">
+              <h3 className="text-xl font-bold mb-4">Cybersecurity</h3>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Zero Trust Architecture</li>
+                <li>• AI-Powered Threat Detection</li>
+                <li>• Quantum-Safe Encryption</li>
+                <li>• Behavioral Analytics</li>
+              </ul>
+            </motion.div>
+            <motion.div
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              whileHover={{ scale: 1.05 }}
+            >
+              <h3 className="text-xl font-bold mb-4">Neural Interfaces</h3>
+              <ul className="text-gray-600 space-y-2">
                 <li>• Brain-Computer Interfaces</li>
                 <li>• Neural Prosthetics</li>
                 <li>• Cognitive Enhancement</li>
                 <li>• Thought-Controlled Systems</li>
               </ul>
             </motion.div>
-
             <motion.div
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl mb-4">🌐</div>
-              <h3 className="text-xl font-bold mb-3">Blockchain & Web3</h3>
-              <p className="text-gray-600 mb-4">Decentralized technologies for secure and transparent systems</p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Smart Contracts</li>
-                <li>• DeFi Solutions</li>
-                <li>• NFT Platforms</li>
-                <li>• DAO Governance</li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-bold mb-3">Space Technology</h3>
-              <p className="text-gray-600 mb-4">Advanced space exploration and satellite technologies</p>
-              <ul className="text-sm text-gray-500 space-y-1">
-                <li>• Satellite Networks</li>
-                <li>• Space Manufacturing</li>
-                <li>• Interplanetary Communication</li>
-                <li>• Space Mining</li>
+              <h3 className="text-xl font-bold mb-4">Conscious AI Systems</h3>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Self-Aware AI</li>
+                <li>• Emotional Intelligence</li>
+                <li>• Ethical Decision Making</li>
+                <li>• Autonomous Learning</li>
               </ul>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Implementation Process */}
+      {/* Process Section */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Implementation Process</h2>
-            <p className="text-xl text-gray-600">Our proven methodology for technology integration</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Implementation Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We follow a proven methodology to ensure successful technology integration
+            </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-lg">

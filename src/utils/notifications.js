@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Notifications utility for handling browser notifications
 // Notification utilities
 export const notifications = {
@@ -22,3 +23,5 @@ export const notifications = {
 };
 
 export default notifications;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

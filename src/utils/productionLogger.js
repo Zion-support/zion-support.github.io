@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     }
   },
   error: (...args) => {
@@ -19,3 +20,5 @@
 };
 
 export default productionLogger;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

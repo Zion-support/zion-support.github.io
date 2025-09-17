@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/final-2029-content-integration
 const NewContentBanner2029: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white py-8 mb-12 relative overflow-hidden">
@@ -14,6 +18,10 @@ const NewContentBanner2029: React.FC = () => {
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             Experience the most advanced technologies that will reshape our world in 2029
           </p>
+<<<<<<< HEAD
+=======
+          
+>>>>>>> origin/final-2029-content-integration
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <a 
               href="/pages/UltimateTechBreakthrough2029" 
@@ -28,6 +36,10 @@ const NewContentBanner2029: React.FC = () => {
                 Explore Breakthrough →
               </div>
             </a>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/final-2029-content-integration
             <a 
               href="/pages/RevolutionaryTechShowcase2029" 
               className="bg-white/20 backdrop-blur-sm rounded-xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 group"
@@ -41,6 +53,10 @@ const NewContentBanner2029: React.FC = () => {
                 View Showcase →
               </div>
             </a>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/final-2029-content-integration
             <a 
               href="/pages/NextGenInnovationHub2029" 
               className="bg-white/20 backdrop-blur-sm rounded-xl p-6 hover:bg-white/30 transition-all duration-300 hover:scale-105 group"
@@ -55,6 +71,10 @@ const NewContentBanner2029: React.FC = () => {
               </div>
             </a>
           </div>
+<<<<<<< HEAD
+=======
+          
+>>>>>>> origin/final-2029-content-integration
           <div className="mt-8">
             <div className="inline-flex items-center space-x-4 text-sm opacity-80">
               <span>✨ 500+ Active Innovations</span>
@@ -70,5 +90,9 @@ const NewContentBanner2029: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 
 export default NewContentBanner2029;
+=======
+export default NewContentBanner2029;
+>>>>>>> origin/final-2029-content-integration

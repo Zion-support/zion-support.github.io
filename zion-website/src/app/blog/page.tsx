@@ -3,6 +3,46 @@ import Link from 'next/link';
 
 const blogPosts = [
   {
+    slug: 'ai-2026-grounded-generation-guardrails-2026',
+    title: 'AI 2026: Grounded Generation Guardrails — Blueprint',
+    summary: 'Reduce hallucinations with retrieval, constraints, and eval gates in production.'
+  },
+  {
+    slug: 'ai-2026-evidence-driven-routing-case-studies-2026',
+    title: 'AI 2026: Evidence‑Driven Routing — Case Studies',
+    summary: 'Real‑world wins from eval‑ and cost‑aware model routing under latency budgets.'
+  },
+  {
+    slug: 'ai-2026-reliable-autonomy-ops-blueprint',
+    title: 'AI 2026: Reliable Autonomy Ops — Blueprint',
+    summary:
+      'Run autonomous agents reliably in production with SLOs, eval gates, guardrails, and incident-ready workflows.'
+  },
+  {
+    slug: 'ai-2026-batch-vs-streaming-rag-tradeoffs',
+    title: 'AI 2026: Batch vs. Streaming RAG — Practical Trade‑offs',
+    summary:
+      'When to pick batch pipelines vs. streaming architectures for RAG under latency, cost, and quality constraints.'
+  },
+  {
+    slug: 'ai-2026-trusted-evidence-pipeline',
+    title: 'AI 2026: Trusted Evidence Pipeline',
+    summary:
+      'Blueprint for audit‑ready evals, traces, and policy evidence in production.'
+  },
+  {
+    slug: 'ai-2026-operational-evals-blueprint',
+    title: 'AI 2026: Operational Evals Blueprint',
+    summary:
+      'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
+  },
+  {
+    slug: 'ai-2026-risk-and-guardrails-operating-model',
+    title: 'AI 2026: Risk & Guardrails Operating Model',
+    summary:
+      'Policy-as-code, permissioned tools, safety telemetry, and incident-ready runbooks.'
+  },
+  {
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary: 'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.',

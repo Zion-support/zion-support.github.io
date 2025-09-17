@@ -1,3 +1,112 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+
+const InteractiveTechShowcase2028: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('consciousness');
+
+  const technologies = {
+    consciousness: {
+      title: 'Consciousness AI 2028',
+      icon: '🧠',
+      description: 'AI systems with genuine consciousness and self-awareness',
+      features: [
+        'Self-aware decision making',
+        'Emotional intelligence',
+        'Creative problem solving',
+        'Ethical reasoning'
+  const [activeDemo, setActiveDemo] = useState('ai');
+
+  const demos = {
+    ai: {
+      title: 'AI Consciousness Demo',
+      description: 'Experience AI that thinks, learns, and evolves in real-time',
+      features: [
+        'Real-time learning algorithms',
+        'Emotional intelligence simulation',
+        'Creative problem solving',
+        'Autonomous decision making'cursor/fix-netlify-build-and-merge-to-main-a068
+      ],
+      color: 'from-emerald-600 to-teal-600'
+=======
+import React, { useState } from 'react';
+
+const InteractiveTechShowcase2028: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('breakthrough');
+
+  const tabs = [
+    { id: 'breakthrough', label: 'Revolutionary Breakthrough', icon: '🌟' },
+    { id: 'innovation', label: 'Ultimate Innovation', icon: '⚡' },
+    { id: 'revolution', label: 'Next-Gen Revolution', icon: '🚀' }
+  ];
+
+  const content = {
+    breakthrough: {
+      title: 'Revolutionary Tech Breakthrough 2028',
+      description: 'Experience the most advanced technological innovations that will reshape our world in 2028',
+      features: [
+        'Conscious AI Systems',
+        'Quantum Computing Revolution',
+        'Neural Interface Technology',
+        'Metaverse Integration'
+      ],
+      color: 'from-blue-500 to-purple-500'
+    },
+    innovation: {
+      title: 'Ultimate Innovation Hub 2028',
+      description: 'Discover cutting-edge innovations that push the boundaries of what\'s possible',
+      features: [
+        'Advanced AI Consciousness',
+        'Quantum Neural Networks',
+        'Holographic Interfaces',
+        'Reality Manipulation'
+      ],
+      color: 'from-purple-500 to-pink-500'
+    },
+    revolution: {
+      title: 'Next-Gen Revolution 2028',
+      description: 'Join the revolution that will transform how we interact with technology forever',
+      features: [
+        'Synthetic Intelligence',
+        'Quantum Internet',
+        'Brain-Computer Fusion',
+        'Interdimensional Computing'
+      ],
+      color: 'from-pink-500 to-red-500'
+>>>>>>> origin/new-content-merge-1758000738
+    }
+  };
+
+  return (
+<<<<<<< HEAD
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
+      <div className="relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎮 INTERACTIVE SHOWCASE • 2028
+          </div>
+          <h2 className="text-5xl font-bold mb-6">🚀 Interactive Technology Showcase 2028</h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
+            Explore our revolutionary 2028 technologies through interactive demonstrations
+          </p>
+        </div>
+
+        {/* Interactive Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {Object.entries(technologies).map(([key, tech]) => (
+            <button
+              key={key}
+              onClick={() => setActiveTab(key)}
+              className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
+                activeTab === key
+                  ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
+                  : 'bg-white/20 text-white hover:bg-white/30'
+              }`}
+            >
+              {tech.icon} {tech.title}
+=======
 import React, { useState, useEffect } from 'react';
 const InteractiveTechShowcase2028: React.FC = () => {
       ],
@@ -126,9 +235,150 @@ const InteractiveTechShowcase2028: React.FC = () => {
             >
               <span className="text-2xl mr-2">{tech.icon}</span>
               {tech.name}
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
             </button>
           ))}
         </div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+        {/* Active Technology Display */}
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="text-8xl mb-6 text-center md:text-left">
+                {technologies[activeTab as keyof typeof technologies].icon}
+              </div>
+              <h3 className="text-3xl font-bold mb-4">
+                {technologies[activeTab as keyof typeof technologies].title}
+              </h3>
+              <p className="text-xl opacity-90 mb-6">
+                {technologies[activeTab as keyof typeof technologies].description}
+              </p>
+              <div className="space-y-3">
+                {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                    <span className="text-white/90">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-white/20 to-white/10 rounded-xl p-8 text-center">
+              <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
+              <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-lg p-6 mb-6">
+                <div className="text-4xl mb-4">🎮</div>
+                <p className="text-sm opacity-90">
+                  Experience this technology through our interactive demonstration
+                </p>
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase 2028
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience the future of technology through interactive demonstrations and hands-on exploration
+          </p>
+        </div>
+
+        {/* Demo Selector */}
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🚀 INTERACTIVE SHOWCASE • JANUARY 2028
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-slate-400 to-indigo-400 bg-clip-text text-transparent">
+              Interactive Tech Showcase 2028
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Experience the future of technology through our interactive demonstrations and revolutionary innovations
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-slate-600 to-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Start Interactive Demo →
+              </button>
+              <button className="border border-slate-400 px-8 py-4 rounded-lg hover:bg-slate-400/20 transition-colors font-semibold text-lg">
+                View All Technologies
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tab Navigation */}
+      <div className="container mx-auto px-4 py-8">
+>>>>>>> origin/new-content-merge-1758000738
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-full p-2">
+            {Object.entries(demos).map(([key, demo]) => (
+              <button
+<<<<<<< HEAD
+                key={key}
+                onClick={() => setActiveDemo(key)}
+                className={`px-6 py-3 rounded-full transition-all duration-300 ${
+                  activeDemo === key
+                    ? `bg-gradient-to-r ${demo.color} text-white shadow-lg`
+                    : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
+                }`}
+              >
+                {demo.title}
+=======
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-6 py-3 rounded-lg transition-all duration-300 font-semibold ${
+                  activeTab === tab.id
+                    ? `bg-gradient-to-r ${content[activeTab as keyof typeof content].color} text-white shadow-lg`
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="mr-2">{tab.icon}</span>
+                {tab.label}
+>>>>>>> origin/new-content-merge-1758000738
+              </button>
+            ))}
+          </div>
+        </div>
+
+<<<<<<< HEAD
+        {/* Active Demo Display */}
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-3xl font-bold mb-4">{demos[activeDemo as keyof typeof demos].title}</h3>
+                <p className="text-xl opacity-90 mb-6">{demos[activeDemo as keyof typeof demos].description}</p>
+                <ul className="space-y-3">
+                  {demos[activeDemo as keyof typeof demos].features.map((feature, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-black/50 rounded-xl p-6">
+                <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4">
+                      {activeDemo === 'ai' && '🧠'}
+                      {activeDemo === 'quantum' && '⚛️'}
+                      {activeDemo === 'neural' && '🧬'}
+                    </div>
+                    <p className="text-gray-400">Interactive Demo Area</p>
+                    <button className="mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300">
+                      Launch Demo
+                    </button>
+                  </div>
+                </div>cursor/fix-netlify-build-and-merge-to-main-a068
+=======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
         {/* Main Display */}
         <div className="max-w-6xl mx-auto">
           <div className={`bg-gradient-to-br ${currentTech.bgColor} backdrop-blur-sm rounded-3xl p-8 border ${currentTech.borderColor} transition-all duration-500 ${
@@ -149,6 +399,38 @@ const InteractiveTechShowcase2028: React.FC = () => {
                         2028
                       </span>
                     </div>
+=======
+        {/* Active Content */}
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4">{content[activeTab as keyof typeof content].title}</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              {content[activeTab as keyof typeof content].description}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold mb-4">Key Features:</h3>
+              <ul className="space-y-3">
+                {content[activeTab as keyof typeof content].features.map((feature, index) => (
+                  <li key={index} className="flex items-center space-x-3">
+                    <div className={`w-2 h-2 bg-gradient-to-r ${content[activeTab as keyof typeof content].color} rounded-full`}></div>
+                    <span className="text-white/90">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-black/30 rounded-xl p-8">
+              <h3 className="text-xl font-bold mb-4 text-center">Interactive Demo</h3>
+              <div className="space-y-4">
+                <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-lg p-4">
+                  <div className="text-blue-400 font-mono text-sm">
+                    <div>System Status: Active</div>
+                    <div>Processing: 10^15 operations/second</div>
+                    <div>Accuracy: 99.9%</div>
+>>>>>>> origin/new-content-merge-1758000738
                   </div>
                 </div>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -257,13 +539,84 @@ const InteractiveTechShowcase2028: React.FC = () => {
             <a href="/contact" className="inline-block border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-400/10 transition-all">
               🚀 Get Started Today
             </a>
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+import React from 'react';
+
+const InteractiveTechShowcase2028: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 INTERACTIVE TECH SHOWCASE • 2028
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase 2028
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Experience the future of technology with our cutting-edge AI solutions and interactive demonstrations
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 text-center">
+            <div className="text-6xl mb-4">🤖</div>
+            <h3 className="text-2xl font-bold mb-4">Advanced AI Systems</h3>
+            <p className="text-purple-100 mb-6">Next-generation AI with enhanced capabilities</p>
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Explore Demo
+            </button>
+          </div>
+
+<<<<<<< HEAD
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 text-center">
+            <div className="text-6xl mb-4">⚡</div>
+            <h3 className="text-2xl font-bold mb-4">Quantum Computing</h3>
+            <p className="text-cyan-100 mb-6">Revolutionary quantum processing power</p>
+            <button className="bg-white text-cyan-600 px-6 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Try Quantum AI
+=======
+          <div className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 text-center">
+            <div className="text-5xl mb-4">🚀</div>
+            <h3 className="text-2xl font-bold mb-4">Future Roadmap</h3>
+            <p className="text-pink-100 mb-6">
+              Explore our roadmap for upcoming innovations and breakthroughs
+            </p>
+            <button className="bg-white text-pink-600 px-6 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
+              View Roadmap
+>>>>>>> origin/new-content-merge-1758000738
+            </button>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 text-center">
+            <div className="text-6xl mb-4">🧠</div>
+            <h3 className="text-2xl font-bold mb-4">Neural Interfaces</h3>
+            <p className="text-emerald-100 mb-6">Direct brain-computer interaction</p>
+            <button className="bg-white text-emerald-600 px-6 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
+              Experience Neural AI
+            </button>
+>>>>>>> origin/integrate-new-content
           </div>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 
 };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+export default InteractiveTechShowcase2028;
+=======
+export default InteractiveTechShowcase2028;
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+=======
+};
 
 export default InteractiveTechShowcase2028;
+>>>>>>> origin/integrate-new-content

@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
 const ConsciousnessComputingRevolution2029: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">

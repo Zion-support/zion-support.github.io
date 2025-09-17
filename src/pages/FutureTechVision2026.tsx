@@ -115,6 +115,10 @@ const FutureTechVision2026: React.FC = () => {
           ))}
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
         {/* Vision Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
@@ -355,6 +359,10 @@ const FutureTechVision2026: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
       {/* Future Applications */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -449,6 +457,10 @@ const FutureTechVision2026: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/feat/realtime-rag-content
           <h2 className="text-4xl font-bold mb-6">Be Part of the Future</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in shaping the future of technology and humanity

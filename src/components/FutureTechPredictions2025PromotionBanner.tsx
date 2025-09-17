@@ -1,14 +1,306 @@
-import React from 'react';
-const FutureTechPredictions2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Rocket
+  Brain
+  Cpu
+  Globe
+  Zap
+  Heart,
+  Calendar,
+  Clock,
+  ArrowRight
+  Star
+  Sparkles,
+  TrendingUp,
+  Award,
+  Target,
+  CheckCircle,
+  Play,
+  Settings,
+  BarChart3,
+  Lightbulb,
+  Users,
+  Shield,
+  Database,
+  Cloud,
+  Activity,
+  PieChart,
+  LineChart,
+  BarChart,
+  TrendingDown,
+  RefreshCw,
+  Download,
+  Upload,
+  Share2,
+  ThumbsUp,
+  MessageCircle,
+  Bookmark,
+  Flag,
+  AlertTriangle,
+  Info,
+  HelpCircle,
+  Search,
+  Filter,
+  SortAsc,
+  SortDesc,
+  Grid,
+  List,
+  MapPin,
+  Phone,
+  Mail,
+  ExternalLink,
+  Maximize,
+  Minimize,
+  X,
+  Plus,
+  Minus,
+  Edit,
+  Trash2,
+  Copy,
+  Save,
+  Folder,
+  File,
+  FolderOpen,
+  Archive,
+  Inbox,
+  Send,
+  Receive,
+  Sync,
+  WifiOff,
+  Battery,
+  Signal,
+  Volume2,
+  VolumeX,
+  Camera,
+  Mic,
+  MicOff,
+  Headphones,
+  Speaker,
+  Monitor,
+  Tablet,
+  Watch,
+  Gamepad2,
+  Controller,
+  Joystick,
+  Mouse,
+  Keyboard,
+  Printer,
+  Scanner,
+  HardDrive,
+  Disc,
+  Usb,
+  Bluetooth,
+  Wifi2,
+  Router,
+  Modem,
+  Switch,
+  Hub,
+  Cable,
+  Plug,
+  Power,
+  BatteryCharging,
+  BatteryLow,
+  BatteryFull,
+  BatteryEmpty,
+  ZapOff,
+  Zap2,
+  Flashlight,
+  FlashlightOff,
+  Sun,
+  Moon,
+  Sunrise,
+  Sunset,
+  CloudRain,
+  CloudSnow,
+  CloudLightning,
+  CloudDrizzle,
+  CloudHail,
+  CloudFog,
+  Wind,
+  Thermometer,
+  Droplets,
+  Umbrella,
+  Snowflake,
+  Flame,
+  Snow,
+  Tornado,
+  Hurricane,
+  Earthquake,
+  Volcano,
+  Mountain,
+  Trees,
+  Leaf,
+  Flower,
+  Seedling,
+  Sprout,
+  Cherry,
+  Apple,
+  Banana,
+  Carrot,
+  Corn,
+  Grape,
+  Lemon,
+  Orange,
+  Peach,
+  Pear,
+  Pineapple,
+  Strawberry,
+  Watermelon,
+  Avocado,
+  Broccoli,
+  Cabbage,
+  Cucumber,
+  Eggplant,
+  Garlic,
+  Ginger,
+  Kiwi,
+  Mango,
+  Mushroom,
+  Onion,
+  Pepper,
+  Potato,
+  Tomato,
+  Wheat,
+  Rice,
+  Bread,
+  Croissant,
+  Bagel,
+  Pretzel,
+  Cookie,
+  Cake,
+  Cupcake,
+  Donut,
+  Lollipop,
+  Candy,
+  Chocolate,
+  IceCream,
+  Pizza,
+  Hamburger,
+  HotDog,
+  Sandwich,
+  Taco,
+  Burrito,
+  Salad,
+  Soup,
+  Steak,
+  Chicken,
+  Fish,
+  Shrimp,
+  Lobster,
+  Crab,
+  Octopus,
+  Squid,
+  Snail,
+  Bee,
+  Butterfly,
+  Bug,
+  Spider,
+  Ant,
+  Ladybug,
+  Dragonfly,
+  Firefly,
+  Mosquito,
+  Fly,
+  Beetle,
+  Grasshopper,
+  Cricket,
+  Mantis,
+  Wasp,
+  Hornet,
+  Bumblebee,
+  Honeybee,
+  Wasp2,
+  Hornet2,
+  Bumblebee2,
+  Honeybee2,
+  Wasp3,
+  Hornet3,
+  Bumblebee3,
+  Honeybee3,
+  Wasp4,
+  Hornet4,
+  Bumblebee4,
+  Honeybee4,
+  Wasp5,
+  Hornet5,
+  Bumblebee5,
+  Honeybee5,
+  Wasp6,
+  Hornet6,
+  Bumblebee6,
+  Honeybee6,
+  Wasp7,
+  Hornet7,
+  Bumblebee7,
+  Honeybee7,
+  Wasp8,
+  Hornet8,
+  Bumblebee8,
+  Honeybee8,
+  Wasp9,
+  Hornet9,
+  Bumblebee9,
+  Honeybee9,
+  Wasp10,
+  Hornet10,
+  Bumblebee10,
+  Honeybee10
+} from 'lucide-react';
+
+const FutureTechPredictions2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [currentPredictionsetCurrentPrediction] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Rotate predictions every 4 seconds
+    const interval = setInterval(() => {
+      setCurrentPrediction((prev) => (prev + 1) % predictions.length);
+    }4000);
+
+    return () => clearInterval(interval);
+  }[]);
+
+  const predictions = [
+    'AI Consciousness Breakthrough',
+    'Quantum Computing Revolution',
+    'Neural Interface Integration',
+    'Autonomous Everything',
+    'Digital Immortality',
+    'Singularity Arrival'
+  ];
+
+  const years = ['2025'2026'2027'2028'2029'2030'];
+
+  const stats = [
+    { label: ''Predictions', 'value: '50+' },
+    { label: ''Accuracy', 'value: '85%' },
+    { label: 'Years 'Covered', 'value: '6' },
+    { label: ''Technologies', 'value: '25+' }
+  ];
+
+  const technologies = [
+    { name: 'AI 'Consciousness', 'progress: 85color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum 'Computing', 'progress: 65color: 'from-blue-500 to-cyan-500' },
+    { name: 'Neural 'Interfaces', 'progress: 45color: 'from-green-500 to-emerald-500' },
+    { name: 'Digital 'Immortality', 'progress: 25color: 'from-pink-500 to-rose-500' }
+  ];
+
   return (
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
+      
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
+      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -21,6 +313,7 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
               <Rocket className="w-5 h-5 text-indigo-400 mr-2" />
               <span className="text-indigo-300 font-medium">Future Tech Predictions 2025-2030</span>
             </div>
+
             {/* Main Heading */}
             <divh1
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
@@ -30,12 +323,14 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
                 Closer Than You Think
               </span>
             </divh1>
+
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
               Explore our predictions for the next 5 years of technological advancement and prepare for the revolutionary changes that will reshape our world.
             </divp>
+
             {/* Rotating Predictions */}
             <div
               className="mb-8"
@@ -51,6 +346,7 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -65,6 +361,7 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
+
           {/* Right Content - Stats & Visual */}
           <div
             className="relative"
@@ -82,6 +379,7 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
+
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
@@ -94,15 +392,18 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Floating Elements */}
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-indigo-400/30 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-pink-400/30 rounded-full animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 -right-6 w-6 h-6 bg-purple-400/30 rounded-full animate-pulse delay-500"></div>
             </div>
+
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl blur-3xl -z-10"></div>
           </div>
         </div>
+
         {/* Technology Progress Bars */}
         <div
           className="mt-16 bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
@@ -127,6 +428,7 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* Bottom Stats Bar */}
         <div
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
@@ -154,6 +456,4 @@ const FutureTechPredictions2025PromotionBanner: React.FC = () => {
   );
 };
 
-
 export default FutureTechPredictions2025PromotionBanner;
-</div></div></div>

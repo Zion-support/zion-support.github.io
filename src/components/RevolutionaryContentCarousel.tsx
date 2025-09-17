@@ -214,6 +214,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-3xl">
+<<<<<<< HEAD
+=======
+          <div
+            key={currentSlide}
+>>>>>>> origin/merge-new-content-1757989975
             className={`relative bg-gradient-to-br ${currentContent.bgColor} text-white overflow-hidden`}
           >
             {/* Animated Background */}
@@ -221,6 +226,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
               <div className="absolute top-0 left-0 w-full h-full">
                 {[...Array(100)].map((_, i) => (
+<<<<<<< HEAD
+=======
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     key={i}
                     className="absolute w-1 h-1 bg-white rounded-full opacity-30"
                     style={{
@@ -243,6 +252,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Content */}
                 <div>
+<<<<<<< HEAD
+=======
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     className="mb-6"
                   >
                     <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4">
@@ -258,14 +271,36 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <p className="text-lg text-white/80 mb-8 leading-relaxed">
                       {currentContent.description}
                     </p>
+<<<<<<< HEAD
+=======
+                  </div>
+
+                  {/* Features */}
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     className="mb-8"
                   >
                     <ul className="space-y-3">
                       {currentContent.features.map((feature, index) => (
+<<<<<<< HEAD
+=======
+                        <divli
+                          key={index}
+>>>>>>> origin/merge-new-content-1757989975
                           className="flex items-center space-x-3"
                         >
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                           <span className="text-white/90">{feature}</span>
+<<<<<<< HEAD
+=======
+                        </divli>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* CTA Buttons */}
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     className="flex flex-col sm:flex-row gap-4"
                   >
                     <a
@@ -279,9 +314,17 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <button className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                       <span>Learn More</span>
                     </button>
+<<<<<<< HEAD
+=======
+                  </div>
+>>>>>>> origin/merge-new-content-1757989975
                 </div>
                 {/* Visual */}
                 <div className="relative">
+<<<<<<< HEAD
+=======
+                  <div
+>>>>>>> origin/merge-new-content-1757989975
                     className="relative"
                   >
                     <div className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}>
@@ -291,6 +334,16 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <div className="absolute -top-4 -right-4 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
                     <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/30 rounded-full animate-pulse delay-1000"></div>
                     <div className="absolute top-1/2 -right-8 w-4 h-4 bg-white/40 rounded-full animate-pulse delay-500"></div>
+<<<<<<< HEAD
+=======
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> origin/merge-new-content-1757989975
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
@@ -325,6 +378,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(100)].map((_, i) => (
+<<<<<<< HEAD
+=======
+            <div
+>>>>>>> origin/merge-new-content-1757989975
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
@@ -349,10 +406,23 @@ const RevolutionaryContentCarousel: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
+<<<<<<< HEAD
+=======
+            <div
+              key={currentSlide}
+              className="text-white"
+            >
+              <div className="mb-6">
+                <div
+>>>>>>> origin/merge-new-content-1757989975
                   className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span className="text-sm font-semibold">{currentContent.status}</span>
+<<<<<<< HEAD
+=======
+                </div>
+>>>>>>> origin/merge-new-content-1757989975
               </div>
               <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                 {currentContent.title}
@@ -367,26 +437,69 @@ const RevolutionaryContentCarousel: React.FC = () => {
                 <h4 className="text-lg font-semibold mb-4">Key Features:</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {currentContent.features.map((feature, index) => (
+<<<<<<< HEAD
+=======
+                    <div
+                      key={index}
+>>>>>>> origin/merge-new-content-1757989975
                       className="flex items-center space-x-2 text-sm"
                     >
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       <span className="text-gray-200">{feature}</span>
+<<<<<<< HEAD
+=======
+                    </div>
+>>>>>>> origin/merge-new-content-1757989975
                   ))}
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
+<<<<<<< HEAD
+=======
+                <a
+                  href={currentContent.link}
+>>>>>>> origin/merge-new-content-1757989975
                   className={`inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r ${currentContent.color} text-white rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg`}
                 >
                   <Play className="w-5 h-5" />
                   <span>Explore Content</span>
                   <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
+=======
+                </a>
+                <button
+                  className="px-8 py-4 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+
+            {/* Right Content - Visual */}
+            <div
+              key={`visual-${currentSlide}`}
+>>>>>>> origin/merge-new-content-1757989975
               className="relative"
             >
               <div className="relative">
                 {/* Main Icon */}
+<<<<<<< HEAD
                 {/* Floating Elements */}
                 <div className="absolute inset-0">
                   {stats.map((stat, index) => (
+=======
+                <div
+                  className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}
+                >
+                  <currentContent.icon className="w-16 h-16 text-white" />
+                </div>
+
+                {/* Floating Elements */}
+                <div className="absolute inset-0">
+                  {stats.map((stat, index) => (
+                    <div
+                      key={index}
+>>>>>>> origin/merge-new-content-1757989975
                       className="absolute bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                       style={{
                         top: `${20 + (index * 15)}%`,
@@ -397,6 +510,14 @@ const RevolutionaryContentCarousel: React.FC = () => {
                       <stat.icon className="w-6 h-6 text-white mb-2" />
                       <div className="text-2xl font-bold text-white">{stat.number}</div>
                       <div className="text-xs text-gray-300">{stat.label}</div>
+<<<<<<< HEAD
+=======
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+>>>>>>> origin/merge-new-content-1757989975
           </div>
         </div>
       </div>
@@ -437,6 +558,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
           <Play className={`w-5 h-5 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
         </button>
       {/* Main content */}
+<<<<<<< HEAD
+=======
+        <div
+          key={currentSlide}
+>>>>>>> origin/merge-new-content-1757989975
           className="absolute inset-0 flex items-center"
         >
           <div className="container mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
@@ -513,6 +639,12 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+        </div>
+      </div>
+
+>>>>>>> origin/merge-new-content-1757989975
       {/* Navigation arrows */}
       <button
         onClick={prevSlide}
@@ -546,11 +678,22 @@ const RevolutionaryContentCarousel: React.FC = () => {
       </div>
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+<<<<<<< HEAD
+=======
+        <div
+          className="h-full bg-gradient-to-r from-purple-500 to-indigo-500"
+>>>>>>> origin/merge-new-content-1757989975
           key={currentSlide}
         />
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (
+<<<<<<< HEAD
+=======
+          <button
+            key={content.id}
+            onClick={() => goToSlide(index)}
+>>>>>>> origin/merge-new-content-1757989975
             className={`p-4 rounded-xl text-left transition-all duration-300 ${
               index === currentSlide
                 ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
@@ -564,7 +707,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
             </div>
             <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
             <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </motion.button>
+          </button>
         ))}
       </div>
       {/* Dots Navigation */}
@@ -584,11 +727,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (
-          <motion.button
+          <button
             key={content.id}
             onClick={() => goToSlide(index)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
             className={`p-4 rounded-xl text-left transition-all duration-300 ${
               index === currentSlide
                 ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
@@ -602,7 +743,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
             </div>
             <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
             <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </motion.button>
+          </button>
         ))}
       </div>
             <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>

@@ -1,6 +1,87 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 const RevolutionaryContentBanner2026: React.FC = () => {
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect } from 'react';
+
+const RevolutionaryContentBanner2026: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const contentSlides = [
+    {
+      id: 1,
+      title: "🚀 Revolutionary Tech Breakthrough 2026",
+      description: "Experience the most significant technological advancement in human history",
+      link: "/pages/RevolutionaryTechBreakthrough2026",
+      gradient: "from-purple-600 via-pink-600 to-red-600",
+      icon: "🧠"
+    },
+    {
+      id: 2,
+      title: "🌟 Next-Gen Space Technology 2030",
+      description: "Revolutionary space tech enabling Mars colonization and interstellar travel",
+      link: "/pages/NextGenSpaceTech2030",
+      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
+      icon: "🚀"
+    },
+    {
+      id: 3,
+      title: "⚡ Ultimate Tech Revolution 2026",
+      description: "Witness the convergence of AI consciousness, quantum supremacy, and neural interfaces",
+      link: "/pages/UltimateTechRevolution2026",
+      gradient: "from-indigo-600 via-purple-600 to-pink-600",
+      icon: "🌟"
+    },
+    {
+      id: 4,
+      title: "🧬 Neural Interface Evolution 2026",
+      description: "Direct brain-computer communication enabling thought-controlled technology",
+      link: "/pages/NeuralInterfaceEvolution2026",
+      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
+      icon: "🧬",
+      badge: "NEURAL"
+      icon: "🧬"
+      title: "🌟 Ultimate Tech Revolution 2026",
+      subtitle: "The convergence of all breakthrough technologies",
+      description: "Experience AI consciousness, quantum supremacy, and neural interfaces working together",
+      link: "/pages/UltimateTechRevolution2026",
+      gradient: "from-indigo-600 to-purple-600",
+      icon: "🌟",
+      badge: "ULTIMATE"
+    },
+    {
+      id: 5,
+      title: "🤖 Synthetic Intelligence 2026",
+      subtitle: "Beyond artificial intelligence",
+      description: "Create AI agents with synthetic consciousness and autonomous capabilities",
+      link: "/pages/SyntheticIntelligence2026",
+      gradient: "from-violet-600 to-fuchsia-600",
+      icon: "🤖",
+      badge: "SYNTHETIC"
+    },
+    {
+      id: 6,
+      title: "💭 Consciousness Computing 2026",
+      subtitle: "AI that truly understands existence",
+      description: "The first computing system to achieve genuine consciousness and self-awareness",
+      link: "/pages/ConsciousnessComputing2026",
+      gradient: "from-rose-600 to-pink-600",
+      icon: "💭",
+      badge: "CONSCIOUSNESS"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [contentSlides.length]);
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-50e5
   return (
     <div className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 relative overflow-hidden">
       {/* Background Pattern */}
