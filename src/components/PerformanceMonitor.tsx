@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -161,6 +162,31 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
   }, [metrics, enableReporting]);
 
+=======
+import React, { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
+  errorRate: number;
+  uptime: number;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkLatency: 0,
+    errorRate: 0,
+    uptime: 0
+  });
+
+  const [isMonitoring, setIsMonitoring] = useState(false);
+
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
   useEffect(() => {
     const cleanup = startMonitoring();
     return cleanup;
@@ -206,6 +232,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return recommendations;
   }, [metrics]);
 
+<<<<<<< HEAD
   if (process.env.NODE_ENV === 'development' && metrics) {
     const recommendations = getRecommendations();
     
@@ -243,6 +270,30 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
   };
   return null;
+=======
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
+
+  if (!isMonitoring) return null;
+
+  return (
+    <div className="fixed top-4 right-4 bg-black/90 text-white p-4 rounded-lg text-sm font-mono z-50 backdrop-blur-sm border border-white/20">
+      <div className="font-bold mb-3 text-green-400">Performance Monitor</div>
+      <div className="space-y-1">
+        <div>Load Time: <span className="text-green-400">{metrics.loadTime}ms</span></div>
+        <div>Render Time: <span className="text-blue-400">{metrics.renderTime}ms</span></div>
+        <div>Memory: <span className="text-yellow-400">{metrics.memoryUsage}MB</span></div>
+        <div>Network: <span className="text-purple-400">{metrics.networkLatency}ms</span></div>
+        <div>Uptime: <span className="text-cyan-400">{Math.round(metrics.uptime / 1000)}s</span></div>
+        <div>Error Rate: <span className="text-red-400">{metrics.errorRate}%</span></div>
+      </div>
+      <div className="mt-3 text-gray-400 text-xs">
+        Press Ctrl+Shift+P to toggle
+      </div>
+    </div>
+  );
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 };
 
 export default PerformanceMonitor;
