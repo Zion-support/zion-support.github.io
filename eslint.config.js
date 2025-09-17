@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import globals from 'globals';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -8,7 +9,31 @@ export default [
   js.configs.recommended,
   {
     files: ['**/*.{ts,tsx}'],
+    ignores: [
+      'dist', 
+      'node_modules',
+      'zion-os.disabled/**',
+      'zion-os/**',
+      'zion.app/**',
+      'zion_academy/**',
+      'src_backup_temp/**',
+      'temp_exclude/**',
+      'test_build/**',
+      '**/*.backup',
+      '**/*.conflicted',
+      '**/*.broken',
+      '**/.next/**',
+      '**/build/**',
+      '**/coverage/**',
+      '**/cache/**',
+      '**/artifacts/**',
+      '**/backup*/**',
+      'automation-logs/**',
+      'automation-reports/**',
+    ],
     languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
@@ -16,6 +41,7 @@ export default [
         ecmaFeatures: {
           jsx: true,
         },
+        project: false,
       },
     },
     plugins: {
@@ -39,6 +65,28 @@ export default [
   },
   {
     files: ['**/*.{js,jsx}'],
+    ignores: [
+      'dist', 
+      'node_modules',
+      'zion-os.disabled/**',
+      'zion-os/**',
+      'zion.app/**',
+      'zion_academy/**',
+      'src_backup_temp/**',
+      'temp_exclude/**',
+      'test_build/**',
+      '**/*.backup',
+      '**/*.conflicted',
+      '**/*.broken',
+      '**/.next/**',
+      '**/build/**',
+      '**/coverage/**',
+      '**/cache/**',
+      '**/artifacts/**',
+      '**/backup*/**',
+      'automation-logs/**',
+      'automation-reports/**',
+    ],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -50,7 +98,16 @@ export default [
         React: 'readonly',
       },
     },
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+    },
     rules: {
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'error',
