@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const QuantumRealityEngine2032: React.FC = () => {
   const [isActive, setIsActive] = useState(false);

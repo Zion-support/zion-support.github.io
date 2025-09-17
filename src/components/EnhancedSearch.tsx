@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const EnhancedSearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

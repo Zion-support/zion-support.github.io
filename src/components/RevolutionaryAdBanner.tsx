@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryAdBanner: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);

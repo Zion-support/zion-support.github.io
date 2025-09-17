@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const QuantumRealityEngine2025: React.FC = () => {
   const [quantumState, setQuantumState] = useState(0);

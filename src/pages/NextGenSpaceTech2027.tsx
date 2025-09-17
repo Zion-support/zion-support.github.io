@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { ArrowRight, Rocket, Globe, Star, Zap, Shield, Cpu, Brain, Infinity } from 'lucide-react';
 
 const NextGenSpaceTech2027: React.FC = () => {

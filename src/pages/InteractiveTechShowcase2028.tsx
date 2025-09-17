@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const InteractiveTechShowcase2028: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);

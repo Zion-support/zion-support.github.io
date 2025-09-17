@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const NextGenTechRevolution2028: React.FC = () => {
   const [activeSection, setActiveSection] = useState('overview');

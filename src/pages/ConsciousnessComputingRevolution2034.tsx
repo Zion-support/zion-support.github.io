@@ -154,8 +154,8 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                   </ul>
                 </div>
               </div>
-import { motion } from 'framer-motion';
-import { motion } from 'framer-motion';
+
+
 
 import Header from '../Header';
 import Footer from '../Footer';

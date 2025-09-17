@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateAIConsciousness2025: React.FC = () => {
   const [isConscious, setIsConscious] = useState(false);

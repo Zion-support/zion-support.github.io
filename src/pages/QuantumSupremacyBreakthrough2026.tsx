@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const QuantumSupremacyBreakthrough2026: React.FC = () => {
   const [quantumState, setQuantumState] = useState('superposition');

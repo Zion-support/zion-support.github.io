@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const QuantumRealityEngine2028: React.FC = () => {
   const [activeDimension, setActiveDimension] = useState('overview');

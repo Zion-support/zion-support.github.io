@@ -276,7 +276,7 @@ const AdvancedBiotechRevolution2026: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-semibold text-lg">
               Explore Applications
-import { motion } from 'framer-motion';
+
 
 
 const AdvancedBiotechRevolution2026: React.FC = () => {

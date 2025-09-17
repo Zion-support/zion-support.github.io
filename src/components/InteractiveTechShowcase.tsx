@@ -207,7 +207,7 @@ const InteractiveTechShowcase: React.FC = () => {
                 ))}
               </tbody>
             </table>
-import { motion } from 'framer-motion';
+
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
@@ -250,7 +250,7 @@ const InteractiveTechShowcase: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600",
       stats: { accuracy: 97.5, speed: 0.01, efficiency: 96 }
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -295,7 +295,7 @@ const InteractiveTechShowcase: React.FC = () => {
         "Thought-Controlled Systems",
         "Cognitive Enhancement"
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const InteractiveTechShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');

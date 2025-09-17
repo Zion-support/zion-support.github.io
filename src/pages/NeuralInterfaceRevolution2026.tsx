@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 
 const NeuralInterfaceRevolution2026: React.FC = () => {
   const [activeInterface, setActiveInterface] = useState('non-invasive');

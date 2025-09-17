@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const NextGenContentBanner2028: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

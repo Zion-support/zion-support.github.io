@@ -9,8 +9,8 @@ import React from 'react';
 import React from 'react';
 import React from 'react';
 import React from 'react';
-import { motion } from 'framer-motion';
-import { motion } from 'framer-motion';
+
+
 
 
 const RevolutionaryTech2026: React.FC = () => {

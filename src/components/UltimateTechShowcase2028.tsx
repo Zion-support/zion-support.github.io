@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const UltimateTechShowcase2028: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);

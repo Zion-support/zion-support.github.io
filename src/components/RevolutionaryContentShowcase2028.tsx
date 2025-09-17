@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryContentShowcase2028: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('breakthrough');

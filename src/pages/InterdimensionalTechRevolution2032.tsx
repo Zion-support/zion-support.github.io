@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const InterdimensionalTechRevolution2032: React.FC = () => {
   return (

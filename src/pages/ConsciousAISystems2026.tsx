@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const ConsciousAISystems2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');

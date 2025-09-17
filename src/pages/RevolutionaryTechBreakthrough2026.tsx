@@ -2,7 +2,7 @@ import React from 'react';
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (
-import { motion } from 'framer-motion';
+
 
 const RevolutionaryTechBreakthrough2026: React.FC = () => {
   return (

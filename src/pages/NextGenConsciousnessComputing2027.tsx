@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Helmet } from 'react-helmet-async';
 
 const NextGenConsciousnessComputing2027: React.FC = () => {

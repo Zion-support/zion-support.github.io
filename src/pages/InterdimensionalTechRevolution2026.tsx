@@ -1,15 +1,15 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import React from 'react';
 import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
   return (
 import React from 'react';
 import React, { useState, useEffect } from 'react';
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import React from 'react';
 
 

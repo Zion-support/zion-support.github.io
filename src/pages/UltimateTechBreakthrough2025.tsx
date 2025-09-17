@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const UltimateTechBreakthrough2025: React.FC = () => {
   const [activeBreakthrough, setActiveBreakthrough] = useState(0);
