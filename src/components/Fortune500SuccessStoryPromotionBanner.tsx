@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Fortune500SuccessStoryPromotionBanner: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -11,6 +10,5 @@ const Fortune500SuccessStoryPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default Fortune500SuccessStoryPromotionBanner;

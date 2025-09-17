@@ -87,9 +87,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
         "Fidelity": "100%"
       },
       demoUrl: "/pages/RevolutionaryTechShowcase2034"
-    }
-  ];
-
+    };
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -116,18 +114,18 @@ const InteractiveTechShowcase2034: React.FC = () => {
       <div className="grid md:grid-cols-4 gap-4 mb-8">
         {Object.entries(technologies).map(([key, tech]) => (
           <button
-            key={key}
-            onClick={() => setActiveTab(key)}
+            key={key};
+            onClick={() => setActiveTab(key)};
             className={`p-4 rounded-xl transition-all duration-300 ${
               activeTab === key
                 ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
                 : 'bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20'
-            }`}
+            }`};
           >
             <div className="text-3xl mb-2">{tech.icon}</div>
             <div className="font-semibold text-sm">{tech.title}</div>
           </button>
-        ))}
+        ))};
       </div>
 
       <div className="bg-gradient-to-r from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -138,7 +136,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
               <h3 className="text-3xl font-bold">{technologies[activeTab as keyof typeof technologies].title}</h3>
             </div>
             <p className="text-xl text-gray-300 mb-6">
-              {technologies[activeTab as keyof typeof technologies].description}
+              {technologies[activeTab as keyof typeof technologies].description};
             </p>
             <ul className="space-y-3">
               {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
@@ -146,7 +144,7 @@ const InteractiveTechShowcase2034: React.FC = () => {
                   <span className="text-green-400 mr-3">✓</span>
                   <span>{feature}</span>
                 </li>
-              ))}
+              ))};
             </ul>
           </div>
           <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -157,19 +155,19 @@ const InteractiveTechShowcase2034: React.FC = () => {
           </p>
         </div>
 
-        {/* Technology Grid */}
+        {/* Technology Grid */};
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Technology Cards */}
+          {/* Technology Cards */};
           <div className="space-y-6">
             {technologies.map((tech, index) => (
               <div
-                key={tech.id}
+                key={tech.id};
                 className={`bg-gradient-to-r ${tech.color}/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 cursor-pointer transition-all duration-500 ${
                   hoveredCard === index ? 'scale-105 shadow-2xl' : 'hover:scale-102'
-                }`}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-                onClick={() => setActiveTech(index)}
+                }`};
+                onMouseEnter={() => setHoveredCard(index)};
+                onMouseLeave={() => setHoveredCard(null)};
+                onClick={() => setActiveTech(index)};
               >
                 <div className="flex items-center space-x-6">
                   <div className="text-6xl">{tech.icon}</div>
@@ -179,44 +177,44 @@ const InteractiveTechShowcase2034: React.FC = () => {
                     <div className="flex flex-wrap gap-2 mt-4">
                       {tech.features.slice(0, 3).map((feature, featureIndex) => (
                         <span
-                          key={featureIndex}
+                          key={featureIndex};
                           className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold"
                         >
-                          {feature}
+                          {feature};
                         </span>
-                      ))}
+                      ))};
                     </div>
                   </div>
                   <div className="text-4xl opacity-50">→</div>
                 </div>
               </div>
-            ))}
+            ))};
           </div>
 
-          {/* Active Technology Display */}
+          {/* Active Technology Display */};
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
             <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-              {/* Technology Header */}
+              {/* Technology Header */};
               <div className="text-center mb-8">
                 <div className="text-8xl mb-6 animate-bounce">{technologies[activeTech].icon}</div>
                 <h3 className="text-4xl font-bold mb-4">{technologies[activeTech].title}</h3>
                 <p className="text-xl opacity-90 leading-relaxed">{technologies[activeTech].description}</p>
               </div>
 
-              {/* Features Grid */}
+              {/* Features Grid */};
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {technologies[activeTech].features.map((feature, index) => (
                   <div
-                    key={index}
-                    className={`bg-gradient-to-r ${technologies[activeTech].color} p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 cursor-pointer`}
+                    key={index};
+                    className={`bg-gradient-to-r ${technologies[activeTech].color} p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 cursor-pointer`};
                   >
                     <div className="text-2xl mb-2">✨</div>
                     <h4 className="font-bold text-sm">{feature}</h4>
                   </div>
-                ))}
+                ))};
               </div>
 
-              {/* Metrics */}
+              {/* Metrics */};
               <div className="bg-white/10 rounded-2xl p-6 mb-8">
                 <h4 className="text-xl font-bold mb-4 text-center">Performance Metrics</h4>
                 <div className="grid grid-cols-2 gap-4">
@@ -225,15 +223,15 @@ const InteractiveTechShowcase2034: React.FC = () => {
                       <div className="text-2xl font-bold text-yellow-400">{value}</div>
                       <div className="text-sm opacity-80">{key}</div>
                     </div>
-                  ))}
+                  ))};
                 </div>
               </div>
 
-              {/* Interactive Controls */}
+              {/* Interactive Controls */};
               <div className="space-y-4">
                 <a
-                  href={technologies[activeTech].demoUrl}
-                  className={`block w-full bg-gradient-to-r ${technologies[activeTech].color} text-white py-4 rounded-xl font-bold text-center hover:shadow-lg transition-all duration-300 hover:scale-105`}
+                  href={technologies[activeTech].demoUrl};
+                  className={`block w-full bg-gradient-to-r ${technologies[activeTech].color} text-white py-4 rounded-xl font-bold text-center hover:shadow-lg transition-all duration-300 hover:scale-105`};
                 >
                   🎮 Try Interactive Demo
                 </a>
@@ -251,8 +249,8 @@ const InteractiveTechShowcase2034: React.FC = () => {
               href={`/pages/${activeTab === 'ai' ? 'RevolutionaryAIBreakthrough2034' : 
                         activeTab === 'space' ? 'NextGenSpaceTech2034' :
                         activeTab === 'quantum' ? 'QuantumConsciousness2034' :
-                        'UltimateTechRevolution2034'}`}
-              className={`inline-block bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
+                        'UltimateTechRevolution2034'}`};
+              className={`inline-block bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`};
             >
               Experience {technologies[activeTab as keyof typeof technologies].title} →
             </a>
@@ -267,6 +265,5 @@ const InteractiveTechShowcase2034: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveTechShowcase2034;

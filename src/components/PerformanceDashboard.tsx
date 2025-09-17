@@ -8,9 +8,8 @@ const PerformanceDashboard: React.FC = () => {
     // Only show in development
     if (process.env.NODE_ENV !== 'development') {
       return;
-    }
-
-    ,const measurePerformance = () => {
+    };
+const measurePerformance = () => {
       if ('performance' in window) {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -20,25 +19,22 @@ const PerformanceDashboard: React.FC = () => {
             totalTime: perfData.loadEventEnd - perfData.fetchStart,
             firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
             firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
-  }
-];
+  };
           setMetrics(performanceMetrics);
         });
-      }
-  }
-];
+      };
+  };
     measurePerformance();
   }, []);
 
   // Only show in development
   if (process.env.NODE_ENV !== 'development') {
     return null;
-  }
-
-  ,return (
+  };
+return (
     <div className="fixed top-4 right-4 z-50">
       <button
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={() => setIsVisible(!isVisible)};
         className="bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 transition-colors"
         title="Performance Dashboard"
       >
@@ -68,9 +64,8 @@ const PerformanceDashboard: React.FC = () => {
             </div>
           </div>
         </div>
-      )}
+      )};
     </div>
   );
-  }
-];
+  };
 export default PerformanceDashboard;

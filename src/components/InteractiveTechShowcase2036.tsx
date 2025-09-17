@@ -54,9 +54,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
       ],
       gradient: "from-pink-600 to-red-600",
       bgGradient: "from-pink-600/20 to-red-600/20"
-    }
-  ];
-
+    };
   useEffect(() => {
     const timer = setInterval(() => {
       setIsAnimating(true);
@@ -75,9 +73,8 @@ const InteractiveTechShowcase2036: React.FC = () => {
         setActiveTech(index);
         setIsAnimating(false);
       }, 300);
-    }
-  }
-];
+    };
+  };
   const currentTech = technologies[activeTech];
 
   return (
@@ -95,7 +92,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Technology Display */}
+          {/* Technology Display */};
           <div className="relative">
             <div className={`bg-gradient-to-br ${currentTech.bgColor} rounded-2xl p-8 transition-all duration-500 ${isAnimating ? 'scale-95 opacity-80' : 'scale-100 opacity-100'}`}>
               <div className="text-center mb-6">
@@ -109,7 +106,7 @@ const InteractiveTechShowcase2036: React.FC = () => {
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                     <div className="text-sm font-semibold">{feature}</div>
                   </div>
-                ))}
+                ))};
               </div>
 
               <div className="mt-6 text-center">
@@ -120,24 +117,24 @@ const InteractiveTechShowcase2036: React.FC = () => {
             </div>
           </div>
 
-          {/* Technology Selector */}
+          {/* Technology Selector */};
           <div className="space-y-4">
             <h3 className="text-2xl font-bold mb-6">Select Technology to Explore</h3>
             {technologies.map((tech, index) => (
               <button
-                key={tech.id}
+                key={tech.id};
                 onClick={() => {
                   setIsAnimating(true);
                   setTimeout(() => {
                     setActiveTech(index);
                     setIsAnimating(false);
                   }, 300);
-                }}
+                }};
                 className={`w-full p-4 rounded-xl transition-all duration-300 text-left ${
                   activeTech === index
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg scale-105`
                     : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white/80 hover:text-white'
-                }`}
+                }`};
               >
                 <div className="flex items-center space-x-4">
                   <div className="text-3xl">{tech.icon}</div>
@@ -147,11 +144,11 @@ const InteractiveTechShowcase2036: React.FC = () => {
                   </div>
                 </div>
               </button>
-            ))}
+            ))};
           </div>
         </div>
 
-        {/* Interactive Features */}
+        {/* Interactive Features */};
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4 text-center">🎮</div>
@@ -189,6 +186,5 @@ const InteractiveTechShowcase2036: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveTechShowcase2036;

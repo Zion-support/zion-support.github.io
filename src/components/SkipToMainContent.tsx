@@ -1,5 +1,4 @@
 import React from 'react';
-
 export const SkipToMainContent: React.FC = () => {
   return (
     <a
@@ -11,12 +10,11 @@ export const SkipToMainContent: React.FC = () => {
         if (main) {
           main.focus();
           main.scrollIntoView({ behavior: 'smooth' });
-        }
-      }}
+        };
+      }};
     >
       Skip to main content
     </a>
   );
-  }
-];
+  };
 export default SkipToMainContent;

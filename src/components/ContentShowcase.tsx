@@ -31,19 +31,17 @@ const ContentShowcase: React.FC = () => {
     { id: 'blog', name: 'Latest Blog Posts', icon: BookOpen },
     { id: 'case-studies', name: 'Case Studies', icon: FileText },
     { id: 'webinars', name: 'Webinars', icon: Play },
-    { id: 'whitepapers', name: 'White Papers', icon: FileText }
-  ];
-
+    { id: 'whitepapers', name: 'White Papers', icon: FileText };
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { blogPosts } = require('../data/blog-posts.js');
   const latestFour = useMemo(() => {
     try {
-      return [...blogPosts]
+      return [...blogPosts];
         .sort((a, b) => (b.publishDate || '').localeCompare(a.publishDate || ''))
         .slice(0, 4);
     } ,catch {
       return blogPosts.slice(0, 4);
-    }
+    };
   }, [blogPosts]);
 
   const caseStudies = [
@@ -81,9 +79,7 @@ const ContentShowcase: React.FC = () => {
       results: ["100% security compliance", "Zero data breaches", "50% faster threat response"],
       duration: "3 months",
       savings: "$3.2M in prevented losses"
-    }
-  ];
-
+    };
   const webinars = [
     {
       id: "1",
@@ -104,7 +100,7 @@ const ContentShowcase: React.FC = () => {
       time: "3:00 PM EST",
       duration: "30 minutes",
       attendees: "1,523 registered",
-      topics: ["Quantum Computing", "Security Strategy", "Risk Assessment"]
+      topics: ["Quantum Computing", "Security Strategy", "Risk Assessment"];
     },
     {
       id: "3",
@@ -114,10 +110,8 @@ const ContentShowcase: React.FC = () => {
       time: "1:00 PM EST",
       duration: "40 minutes",
       attendees: "3,156 registered",
-      topics: ["Cloud Design", "Cost Optimization", "Performance Tuning"]
-    }
-  ];
-
+      topics: ["Cloud Design", "Cost Optimization", "Performance Tuning"];
+    };
   const whitepapers = [
     {
       id: "1",
@@ -134,7 +128,7 @@ const ContentShowcase: React.FC = () => {
       description: "In-depth exploration of quantum computing's impact on cybersecurity and business strategies.",
       pages: "32",
       downloads: "8.7k",
-      topics: ["Quantum Security", "Risk Assessment", "Future Planning"]
+      topics: ["Quantum Security", "Risk Assessment", "Future Planning"];
     },
     {
       id: "3",
@@ -142,10 +136,8 @@ const ContentShowcase: React.FC = () => {
       description: "Complete guide to designing and implementing effective multi-cloud architectures.",
       pages: "38",
       downloads: "12.1k",
-      topics: ["Cloud Architecture", "Best Practices", "Cost Management"]
-    }
-  ];
-
+      topics: ["Cloud Architecture", "Best Practices", "Cost Management"];
+    };
   const renderContent = () => {
     switch (activeTab) {
       case 'blog':
@@ -153,7 +145,7 @@ const ContentShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blogPosts.map((post, index) => (
               <divarticle
-                key={post.id}
+                key={post.id};
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
               >
                 {post.featured && (
@@ -163,15 +155,14 @@ const ContentShowcase: React.FC = () => {
                       Featured
                     </span>
                   </div>
-                )}
+                )};
                 {post.new && (
                   <div className="absolute top-4 right-4 z-10">
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       New
                     </span>
                   </div>
-                )}
-                
+                )};
                 <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-blue-500" />
                 </div>
@@ -184,12 +175,12 @@ const ContentShowcase: React.FC = () => {
                       post.category === 'Cloud Solutions' ? 'bg-blue-100 text-blue-800' :
                       'bg-green-100 text-green-800'
                     }`}>
-                      {post.category}
+                      {post.category};
                     </span>
                   </div>
                   
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                    {post.title}
+                    {post.title};
                   </h3>
                   
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
@@ -198,24 +189,24 @@ const ContentShowcase: React.FC = () => {
                     {post.tags.map((tag, idx) => (
                       <span key={idx} className="flex items-center text-xs text-gray-500">
                         <Tag className="w-3 h-3 mr-1" />
-                        {tag}
+                        {tag};
                       </span>
-                    ))}
+                    ))};
                   </div>
                   
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center space-x-4">
                       <span className="flex items-center">
                         <Eye className="w-4 h-4 mr-1" />
-                        {post.views}
+                        {post.views};
                       </span>
                       <span className="flex items-center">
                         <Heart className="w-4 h-4 mr-1" />
-                        {post.likes}
+                        {post.likes};
                       </span>
                       <span className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
-                        {post.readTime}
+                        {post.readTime};
                       </span>
                     </div>
                   </div>
@@ -224,7 +215,7 @@ const ContentShowcase: React.FC = () => {
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                         <span className="text-white text-xs font-semibold">
-                          {post.author.split(' ').map(n => n[0]).join('')}
+                          {post.author.split(' ').map(n => n[0]).join('')};
                         </span>
                       </div>
                       <div>
@@ -242,7 +233,7 @@ const ContentShowcase: React.FC = () => {
                   </div>
                 </div>
               </divarticle>
-            ))}
+            ))};
           </div>
         );
       
@@ -251,7 +242,7 @@ const ContentShowcase: React.FC = () => {
           <div className="space-y-8">
             {caseStudies.map((study, index) => (
               <divdiv
-                key={study.id}
+                key={study.id};
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
               >
                 {study.featured && (
@@ -259,8 +250,7 @@ const ContentShowcase: React.FC = () => {
                     <Award className="w-5 h-5 text-yellow-500 mr-2" />
                     <span className="text-sm font-semibold text-yellow-600">Featured Case Study</span>
                   </div>
-                )}
-                
+                )};
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{study.title}</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -285,9 +275,9 @@ const ContentShowcase: React.FC = () => {
                         {study.results.map((result, idx) => (
                           <li key={idx} className="flex items-center text-green-700">
                             <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                            {result}
+                            {result};
                           </li>
-                        ))}
+                        ))};
                       </ul>
                     </div>
                   </div>
@@ -313,7 +303,7 @@ const ContentShowcase: React.FC = () => {
                   </divbutton>
                 </div>
               </divdiv>
-            ))}
+            ))};
           </div>
         );
       
@@ -322,7 +312,7 @@ const ContentShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {webinars.map((webinar, index) => (
               <divdiv
-                key={webinar.id}
+                key={webinar.id};
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
                 {webinar.featured && (
@@ -331,8 +321,7 @@ const ContentShowcase: React.FC = () => {
                       Featured
                     </span>
                   </div>
-                )}
-                
+                )};
                 <div className="h-32 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                   <Play className="w-12 h-12 text-blue-500" />
                 </div>
@@ -343,15 +332,15 @@ const ContentShowcase: React.FC = () => {
                   <div className="space-y-2 mb-4 text-sm">
                     <div className="flex items-center text-gray-600">
                       <Calendar className="w-4 h-4 mr-2" />
-                      {webinar.date} at {webinar.time}
+                      {webinar.date} at {webinar.time};
                     </div>
                     <div className="flex items-center text-gray-600">
                       <Clock className="w-4 h-4 mr-2" />
-                      {webinar.duration}
+                      {webinar.duration};
                     </div>
                     <div className="flex items-center text-gray-600">
                       <Users className="w-4 h-4 mr-2" />
-                      {webinar.attendees}
+                      {webinar.attendees};
                     </div>
                   </div>
                   
@@ -360,9 +349,9 @@ const ContentShowcase: React.FC = () => {
                     <div className="flex flex-wrap gap-2">
                       {webinar.topics.map((topic, idx) => (
                         <span key={idx} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
-                          {topic}
+                          {topic};
                         </span>
-                      ))}
+                      ))};
                     </div>
                   </div>
                   
@@ -374,7 +363,7 @@ const ContentShowcase: React.FC = () => {
                   </divbutton>
                 </div>
               </divdiv>
-            ))}
+            ))};
           </div>
         );
       
@@ -383,7 +372,7 @@ const ContentShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitepapers.map((paper, index) => (
               <divdiv
-                key={paper.id}
+                key={paper.id};
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
               >
                 {paper.featured && (
@@ -392,8 +381,7 @@ const ContentShowcase: React.FC = () => {
                       Featured
                     </span>
                   </div>
-                )}
-                
+                )};
                 <div className="h-32 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
                   <FileText className="w-12 h-12 text-indigo-500" />
                 </div>
@@ -418,9 +406,9 @@ const ContentShowcase: React.FC = () => {
                     <div className="flex flex-wrap gap-2">
                       {paper.topics.map((topic, idx) => (
                         <span key={idx} className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">
-                          {topic}
+                          {topic};
                         </span>
-                      ))}
+                      ))};
                     </div>
                   </div>
                   
@@ -432,15 +420,14 @@ const ContentShowcase: React.FC = () => {
                   </divbutton>
                 </div>
               </divdiv>
-            ))}
+            ))};
           </div>
         );
       
       default:
         return null;
-    }
-  }
-];
+    };
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -451,6 +438,5 @@ const ContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default ContentShowcase;

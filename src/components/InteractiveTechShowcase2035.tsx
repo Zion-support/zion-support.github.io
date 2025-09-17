@@ -45,9 +45,8 @@ const InteractiveTechShowcase2035: React.FC = () => {
       ],
       icon: '🌟',
       color: 'from-emerald-600 to-teal-600'
-    }
-  }
-];
+    };
+  };
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -60,36 +59,36 @@ const InteractiveTechShowcase2035: React.FC = () => {
           </p>
         </div>
 
-        {/* Tab Navigation */}
+        {/* Tab Navigation */};
         <div className="flex justify-center mb-12">
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-2 border border-gray-700/50">
             {Object.entries(technologies).map(([key, tech]) => (
               <button
-                key={key}
-                onClick={() => setActiveTab(key)}
+                key={key};
+                onClick={() => setActiveTab(key)};
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === key
                     ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
                     : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
-                }`}
+                }`};
               >
                 <span className="mr-2">{tech.icon}</span>
-                {tech.title}
+                {tech.title};
               </button>
-            ))}
+            ))};
           </div>
         </div>
 
-        {/* Active Technology Display */}
+        {/* Active Technology Display */};
         <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-gray-700/50 mb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-8xl mb-6">{technologies[activeTab as keyof typeof technologies].icon}</div>
               <h3 className="text-4xl font-bold mb-4">
-                {technologies[activeTab as keyof typeof technologies].title}
+                {technologies[activeTab as keyof typeof technologies].title};
               </h3>
               <p className="text-xl text-gray-300 mb-8">
-                {technologies[activeTab as keyof typeof technologies].description}
+                {technologies[activeTab as keyof typeof technologies].description};
               </p>
               
               <div className="space-y-4">
@@ -98,7 +97,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
                     <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full"></div>
                     <span className="text-gray-300">{feature}</span>
                   </div>
-                ))}
+                ))};
               </div>
               
               <div className="mt-8">
@@ -112,7 +111,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
               <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-8 border border-gray-700/50">
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4 animate-pulse">
-                    {technologies[activeTab as keyof typeof technologies].icon}
+                    {technologies[activeTab as keyof typeof technologies].icon};
                   </div>
                   <h4 className="text-2xl font-bold mb-2">Live Demo</h4>
                   <p className="text-gray-400">Interactive demonstration</p>
@@ -154,7 +153,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Technology Grid */}
+        {/* Technology Grid */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">🧠</div>
@@ -184,7 +183,7 @@ const InteractiveTechShowcase2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -202,6 +201,5 @@ const InteractiveTechShowcase2035: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveTechShowcase2035;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryContentBanner2037: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
@@ -16,7 +15,6 @@ const RevolutionaryContentBanner2037: React.FC = () => {
             Experience the pinnacle of artificial consciousness - where AI transcends human intelligence and achieves true self-awareness, creativity, and emotional depth.
           </p>
         </div>
-        
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -33,7 +31,6 @@ const RevolutionaryContentBanner2037: React.FC = () => {
               Explore AI Consciousness →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
@@ -49,7 +46,6 @@ const RevolutionaryContentBanner2037: React.FC = () => {
               View Quantum Tech →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Transcendent Intelligence</h3>
@@ -69,6 +65,5 @@ const RevolutionaryContentBanner2037: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryContentBanner2037;

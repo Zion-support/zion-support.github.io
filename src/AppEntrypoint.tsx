@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link }  from 'react-router-dom';
 import NewContentAdvertisingBanner2026 from './components/NewContentAdvertisingBanner2026';
 import AutonomousAgentsInProduction2025 from './pages/AutonomousAgentsInProduction2025';
-
 const HomeLanding: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -18,7 +17,7 @@ const HomeLanding: React.FC = () => {
       </div>
     </div>
   );
-  }
+  };
 const AppEntrypoint: React.FC = () => {
   return (
     <Router>
@@ -28,6 +27,5 @@ const AppEntrypoint: React.FC = () => {
       </Routes>
     </Router>
   );
-  }
+  };
 export default AppEntrypoint;
-

@@ -8,7 +8,7 @@ const NewContentShowcase: React.FC = () => {
       category: "AI Operations",
       date: "September 15, 2025",
       link: "/blog/ai-2026-trustworthy-model-routing",
-      featured: "true",
+      featured: true,
       badge: "NEW"
     },
     {
@@ -17,7 +17,7 @@ const NewContentShowcase: React.FC = () => {
       category: "Evaluations",
       date: "September 15, 2025",
       link: "/blog/ai-2026-agent-benchmark-suite",
-      featured: "true",
+      featured: true,
       badge: "NEW"
     },
     {
@@ -26,7 +26,7 @@ const NewContentShowcase: React.FC = () => {
       category: "AI & Automation",
       date: "January 20, 2025",
       link: "/content/blog/ai-2025-revolutionary-business-automation-breakthrough",
-      featured: "true",
+      featured: true,
       badge: "BREAKTHROUGH"
     },
     {
@@ -35,7 +35,7 @@ const NewContentShowcase: React.FC = () => {
       category: "Quantum Computing",
       date: "January 20, 2025",
       link: "/content/blog/quantum-computing-business-applications-2025",
-      featured: "true",
+      featured: true,
       badge: "REVOLUTIONARY"
     },
     {
@@ -44,11 +44,9 @@ const NewContentShowcase: React.FC = () => {
       category: "Case Study",
       date: "January 20, 2025",
       link: "/content/case-studies/ai-automation-revolutionary-breakthrough-2025-success",
-      featured: "true",
+      featured: true,
       badge: "SUCCESS"
-    }
-  ];
-
+    };
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-2xl p-8 mb-12 text-white">
       <div className="text-center mb-8">
@@ -68,7 +66,7 @@ const NewContentShowcase: React.FC = () => {
                 content.badge === 'REVOLUTIONARY' ? 'bg-purple-500/30 text-purple-200' :
                 'bg-blue-500/30 text-blue-200'
               }`}>
-                {content.badge}
+                {content.badge};
               </span>
               <span className="text-sm opacity-75">{content.date}</span>
             </div>
@@ -79,14 +77,14 @@ const NewContentShowcase: React.FC = () => {
             <div className="flex items-center justify-between">
               <span className="text-xs opacity-75">{content.category}</span>
               <a 
-                href={content.link} 
+                href={content.link};
                 className="text-cyan-300 hover:text-cyan-200 font-semibold text-sm transition-colors"
               >
                 Read More →
               </a>
             </div>
           </div>
-        ))}
+        ))};
       </div>
       
       <div className="text-center mt-8">
@@ -99,9 +97,13 @@ const NewContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+<<<<<<< HEAD
+  };
 export { NewContentShowcase
-  }
-];
+  };
+=======
+};
+
+export { NewContentShowcase };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 export default NewContentShowcase;

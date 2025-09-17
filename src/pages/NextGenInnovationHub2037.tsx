@@ -57,18 +57,14 @@ const NextGenInnovationHub2037: React.FC = () => {
       status: "Alpha",
       icon: "🔮",
       color: "from-violet-600 to-purple-600"
-    }
-  ];
-
+    };
   const categories = [
     { key: 'all', label: 'All Innovations', icon: '🌟' },
     { key: 'ai', label: 'AI & Consciousness', icon: '🧠' },
     { key: 'quantum', label: 'Quantum Computing', icon: '⚛️' },
     { key: 'neural', label: 'Neural Interfaces', icon: '🧬' },
     { key: 'consciousness', label: 'Consciousness Tech', icon: '🔄' },
-    { key: 'storage', label: 'Data Storage', icon: '🌌' }
-  ];
-
+    { key: 'storage', label: 'Data Storage', icon: '🌌' };
   const filteredInnovations = selectedCategory === 'all' 
     ? innovations 
     : innovations.filter(innovation => innovation.category === selectedCategory);
@@ -76,7 +72,7 @@ const NextGenInnovationHub2037: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2037
@@ -87,7 +83,7 @@ const NextGenInnovationHub2037: React.FC = () => {
           </p>
         </div>
 
-        {/* Innovation Categories */}
+        {/* Innovation Categories */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -141,7 +137,7 @@ const NextGenInnovationHub2037: React.FC = () => {
           </div>
         </div>
 
-        {/* Active Projects Section */}
+        {/* Active Projects Section */};
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🔬 Active Research Projects</h2>
@@ -203,7 +199,7 @@ const NextGenInnovationHub2037: React.FC = () => {
           </div>
         </div>
 
-        {/* Innovation Statistics */}
+        {/* Innovation Statistics */};
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-emerald-400 mb-2">500+</div>
@@ -223,7 +219,7 @@ const NextGenInnovationHub2037: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">Be part of the most advanced research and development community</p>
@@ -239,6 +235,5 @@ const NextGenInnovationHub2037: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenInnovationHub2037;

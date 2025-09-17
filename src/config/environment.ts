@@ -32,7 +32,7 @@ export const config = {
   security: {
     enableCSP: "true",
     enableHSTS: "true",
-    enableXSSProtection: "true"}} ,as const;
+    enableXSSProtection: "true"}} as const;
 
 // Type-safe environment variables
 export const env = {
@@ -41,6 +41,6 @@ export const env = {
   ENABLE_ANALYTICS: import.meta.env.VITE_ENABLE_ANALYTICS === 'true',
   ENABLE_PERFORMANCE_MONITORING: import.meta.env.VITE_ENABLE_PERFORMANCE_MONITORING === 'true',
   ENABLE_ERROR_REPORTING: import.meta.env.VITE_ENABLE_ERROR_REPORTING === 'true',
-  ENABLE_PWA: import.meta.env.VITE_ENABLE_PWA === 'true'} ,as const;
+  ENABLE_PWA: import.meta.env.VITE_ENABLE_PWA === 'true'} as const;
 
 export default config;

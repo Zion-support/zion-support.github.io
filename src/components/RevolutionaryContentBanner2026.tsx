@@ -4,7 +4,7 @@ import { Link }  from 'react-router-dom';
 const RevolutionaryContentBanner2026: React.FC = () => {
   return (
     <div className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 relative overflow-hidden">
-      {/* Background Pattern */}
+      {/* Background Pattern */};
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-cyan-400/20 to-transparent rounded-full"></div>
@@ -25,7 +25,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {/* AI Ethics */}
+          {/* AI Ethics */};
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 p-6 rounded-2xl backdrop-blur-sm border border-purple-400/20">
             <div className="text-3xl mb-4">⚖️</div>
             <h3 className="text-xl font-bold text-white mb-3">AI Ethics Framework</h3>
@@ -40,7 +40,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             </Link>
           </div>
 
-          {/* Quantum Computing */}
+          {/* Quantum Computing */};
           <div className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 p-6 rounded-2xl backdrop-blur-sm border border-cyan-400/20">
             <div className="text-3xl mb-4">⚛️</div>
             <h3 className="text-xl font-bold text-white mb-3">Quantum Breakthrough</h3>
@@ -55,7 +55,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             </Link>
           </div>
 
-          {/* Edge AI */}
+          {/* Edge AI */};
           <div className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 p-6 rounded-2xl backdrop-blur-sm border border-emerald-400/20">
             <div className="text-3xl mb-4">📱</div>
             <h3 className="text-xl font-bold text-white mb-3">Edge AI Revolution</h3>
@@ -70,7 +70,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
             </Link>
           </div>
 
-          {/* AI Services */}
+          {/* AI Services */};
           <div className="bg-gradient-to-br from-orange-800/50 to-red-800/50 p-6 rounded-2xl backdrop-blur-sm border border-orange-400/20">
             <div className="text-3xl mb-4">🤖</div>
             <h3 className="text-xl font-bold text-white mb-3">Advanced AI Services</h3>
@@ -86,7 +86,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats Section */};
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="text-center">
             <div className="text-4xl md:text-5xl font-bold text-white mb-2">50+</div>
@@ -102,7 +102,7 @@ const RevolutionaryContentBanner2026: React.FC = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -131,6 +131,5 @@ const RevolutionaryContentBanner2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryContentBanner2026;

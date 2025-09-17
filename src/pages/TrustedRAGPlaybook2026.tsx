@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet }  from 'react-helmet-async';
-
 const TrustedRAGPlaybook2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -9,7 +8,6 @@ const TrustedRAGPlaybook2026: React.FC = () => {
         <meta name="description" content="Revolutionary technology and AI solutions for the future." />
         <meta name="keywords" content="AI, technology, innovation, future, trustedragplaybook2026" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -27,7 +25,6 @@ const TrustedRAGPlaybook2026: React.FC = () => {
             </button>
           </div>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Innovation</h3>
@@ -45,6 +42,5 @@ const TrustedRAGPlaybook2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default TrustedRAGPlaybook2026;

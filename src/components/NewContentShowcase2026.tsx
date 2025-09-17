@@ -4,11 +4,11 @@ import { Link }  from 'react-router-dom';
 const NewContentShowcase2026: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 py-20">
-      {/* Background Effects */}
+      {/* Background Effects */};
       <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
+        {/* Header */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-semibold text-white mb-6">
             <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
@@ -25,9 +25,9 @@ const NewContentShowcase2026: React.FC = () => {
           </p>
         </div>
 
-        {/* Content Grid */}
+        {/* Content Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {/* AI Innovation Hub */}
+          {/* AI Innovation Hub */};
           <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-2xl font-bold text-white mb-4">AI Innovation Hub</h3>
@@ -42,7 +42,7 @@ const NewContentShowcase2026: React.FC = () => {
             </Link>
           </div>
 
-          {/* Quantum Computing */}
+          {/* Quantum Computing */};
           <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
             <div className="text-4xl mb-4">⚛️</div>
             <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
@@ -57,7 +57,7 @@ const NewContentShowcase2026: React.FC = () => {
             </Link>
           </div>
 
-          {/* Advanced Analytics */}
+          {/* Advanced Analytics */};
           <div className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
             <div className="text-4xl mb-4">📊</div>
             <h3 className="text-2xl font-bold text-white mb-4">Advanced Analytics</h3>
@@ -73,7 +73,7 @@ const NewContentShowcase2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h3 className="text-3xl font-bold text-white mb-6">
             Ready to Explore the Future?
@@ -99,6 +99,5 @@ const NewContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewContentShowcase2026;

@@ -7,5 +7,4 @@ export default function AppSafe() {
       <p>Build entry placeholder. Refer to Next.js app/ for actual site.</p>
     </div>
   );
-}
-
+};
