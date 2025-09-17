@@ -72,9 +72,7 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
                 return (
                   <div
                     key={index}
-                      scale: currentTrend === index ? 1.1 : 1,
-                      opacity: currentTrend === index ? 1 : 0.7
-                    }}
+                      opacity
                     className="text-center"
                   >
                     <Icon className="w-8 h-8 mx-auto mb-2" />

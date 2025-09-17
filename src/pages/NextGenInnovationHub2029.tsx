@@ -122,9 +122,11 @@
   };
 
 =======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
-=======
 >>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -227,7 +229,7 @@
               <div className="text-lg opacity-90 mb-2">Active Innovations</div>
               <div className="text-sm opacity-75">In development and testing</div>
 =======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
             </div>
           </div>
           
@@ -239,7 +241,10 @@
             </p>
             <div className="text-center">
 =======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-lg opacity-90 mb-2">Success Rate</div>
+              <div className="text-sm opacity-75">Proven technology reliability</div>
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
             </div>
           </div>
           
@@ -259,21 +264,26 @@
               <div className="text-lg opacity-90 mb-2">Development</div>
               <div className="text-sm opacity-75">Continuous innovation cycle</div>
 =======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
             </div>
           </div>
         </div>
 
         <div className="text-center">
 =======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+          <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join our innovation hub and be part of creating the most revolutionary technologies in human history
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Our Team
             </button>
 =======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
+              Submit Your Innovation
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
             </button>
           </div>
         </div>
@@ -283,10 +293,3 @@
 };
 
 export default NextGenInnovationHub2029;
-=======
-          <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join our innovation hub and be part of creating the most revolutionary technologies in human history
-            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
-              Submit Your Innovation
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24

@@ -15,10 +15,6 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                opacity: [010],
-                scale: [010],
-                y: [0-20],
-              }}
                 duration: 4,
                 repeat: Infinity,
                 delay: Math.random() * 4,
@@ -130,9 +126,6 @@ const UltimateContentPromotionBanner2025_2026: React.FC = () => {
                     style={{
                       left: `${20 + (i * 15)}%`,
                       top: `${30 + (i * 10)}%`,
-                    }}
-                      y: [0-20],
-                      opacity: [0.310.3],
                     }}
                       duration: 3,
                       repeat: Infinity,

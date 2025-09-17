@@ -1,18 +1,13 @@
 import React from 'react';
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 
 const SyntheticIntelligence2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <section className="py-32 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-6xl font-bold text-white mb-8">
-            SyntheticIntelligence2026
-          </h1>
-          <p className="text-2xl text-gray-300 mb-12">
-            Experience the future of technology.
-          </p>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
+=======
+      </div>
+>>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
     </div>
   );
 };

@@ -39,16 +39,9 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
         {innovations.map((innovationindex) => (
           <div
             key={index}
-              x: [0Math.random() * 100 - 50],
-              y: [0Math.random() * 100 - 50],
-              rotate: [0360],
-              opacity: [0.10.30.1]
-            }}
-              duration: 15 + index * 2
-              repeat: Infinity
-              ease: "easeInOut",
-              delay: index * 2
-            }}
+              opacity
+                                          ease: "easeInOut",
+              delay
             className="absolute top-1/4 left-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center"
             style={{
               left: `${20 + index * 15}%`,
@@ -196,15 +189,9 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
               {innovations.slice(04).map((innovationindex) => (
                 <div
                   key={index}
-                    y: [0-20],
-                    rotate: [010],
-                    opacity: [0.710.7]
-                  }}
-                    duration: 3 + index * 0.5
-                    repeat: Infinity
-                    ease: "easeInOut",
-                    delay: index * 0.5
-                  }}
+                    opacity
+                                                            ease: "easeInOut",
+                    delay
                   className={`absolute w-12 h-12 bg-gradient-to-r ${
                     index % 2 === 0 ? 'from-yellow-400 to-orange-500' : 'from-cyan-400 to-blue-500'
                   } rounded-full flex items-center justify-center`}

@@ -159,12 +159,7 @@ const QuantumComputingRevolutionBanner = () => {
                 {/* Animated Atom Icon */}
                 <motion.div
                   animate={{ 
-                    rotate: [0, 360],
-                    scale: [1, 1.1, 1]
-                  }}
                   transition={{ 
-                    duration: 8,
-                    repeat: Infinity,
                     ease: "easeInOut"
                   }}
                   className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center"
@@ -176,8 +171,6 @@ const QuantumComputingRevolutionBanner = () => {
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ 
-                    duration: 6,
-                    repeat: Infinity,
                     ease: "linear"
                   }}
                   className="absolute inset-0"
@@ -191,27 +184,16 @@ const QuantumComputingRevolutionBanner = () => {
                 {/* Quantum Field Lines */}
                 <motion.div
                   animate={{ 
-                    opacity: [0.3, 0.8, 0.3],
-                    scale: [0.8, 1.2, 0.8]
-                  }}
                   transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
                     ease: "easeInOut"
                   }}
                   className="absolute inset-0 border border-blue-400/30 rounded-full"
                 />
                 <motion.div
                   animate={{ 
-                    opacity: [0.2, 0.6, 0.2],
-                    scale: [0.6, 1.4, 0.6]
-                  }}
                   transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
                     ease: "easeInOut",
-                    delay: 1
-                  }}
+                    delay
                   className="absolute inset-0 border border-purple-400/20 rounded-full"
                 />
               </div>

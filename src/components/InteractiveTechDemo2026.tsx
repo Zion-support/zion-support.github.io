@@ -184,14 +184,8 @@ const InteractiveTechDemo2026: React.FC = () => {
               key={i}
               className="w-6 h-6 bg-purple-400 rounded-sm"
               animate={{
-                opacity: isRunning ? [0.3, 1, 0.3] : 0.3,
-                scale: isRunning ? [1, 1.2, 1] : 1
-              }}
               transition={{
-                duration: 2,
-                repeat: isRunning ? Infinity : 0,
-                delay: i * 0.02
-              }}
+                delay
             />
           ))}
         </div>
@@ -252,12 +246,8 @@ const InteractiveTechDemo2026: React.FC = () => {
             className="absolute inset-0 flex items-center justify-center"
             animate={{
               rotateY: isRunning ? 360 : 0,
-              scale: isRunning ? [1, 1.1, 1] : 1
-            }}
             transition={{
               rotateY: { duration: 4, repeat: isRunning ? Infinity : 0 },
-              scale: { duration: 2, repeat: isRunning ? Infinity : 0 }
-            }}
           >
             <div className="w-32 h-32 bg-gradient-to-br from-orange-400 to-red-400 rounded-lg shadow-2xl">
               <div className="w-full h-full bg-gradient-to-br from-transparent to-white/30 rounded-lg"></div>

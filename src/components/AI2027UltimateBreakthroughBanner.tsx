@@ -163,12 +163,7 @@ const AI2027UltimateBreakthroughBanner = () => {
                 {/* Animated Brain Icon */}
                 <motion.div
                   animate={{ 
-                    rotate: [0, 5, -5, 0],
-                    scale: [1, 1.05, 1]
-                  }}
                   transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
                     ease: "easeInOut"
                   }}
                   className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center"
@@ -180,8 +175,6 @@ const AI2027UltimateBreakthroughBanner = () => {
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ 
-                    duration: 20,
-                    repeat: Infinity,
                     ease: "linear"
                   }}
                   className="absolute inset-0"

@@ -1,45 +1,33 @@
-// Notification utilities
-interface NotificationOptions {
-// Notifications utility for handling browser notifications and toast messages
-
-interface NotificationOptions {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling
  */
 
 export interface NotificationOptions {
-// Notifications utility for handling browser notifications and toast messages
-
-interface NotificationOptions {
-// Notification utilities
-interface NotificationOptions {
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   title: string;
   body?: string;
   icon?: string;
   badge?: string;
   tag?: string;
-  data?: any;
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   requireInteraction?: boolean;
   silent?: boolean;
   timestamp?: number;
   actions?: NotificationAction[];
 }
 
-interface NotificationAction {
-  action: string;
-  title: string;
-  icon?: string;
 }
 
 class NotificationManager {
   private permission: NotificationPermission = 'default';
 
-  async requestPermission(): Promise<NotificationPermission> {
-    if ('Notification' in window) {
-      this.permission = await Notification.requestPermission();
-    }
-    return this.permission;
   }
 
   async showNotification(options: NotificationOptions): Promise<Notification | null> {
@@ -49,11 +37,14 @@ class NotificationManager {
     }
 
     if (this.permission !== 'granted') {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
       this.permission = await this.requestPermission();
       if (this.permission !== 'granted') {
         console.warn('Notification permission denied');
         return null;
       }
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   requireInteraction?: boolean;
   silent?: boolean;
   vibrate?: number[];
@@ -109,6 +100,11 @@ export const notifications = {
   actions?: NotificationAction[];
 }
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
     }
 
     try {
@@ -117,14 +113,22 @@ export const notifications = {
         icon: options.icon || '/favicon.ico',
         badge: options.badge,
         tag: options.tag,
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
         data: options.data,
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
         actions: options.actions || [],
+=======
+=======
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         vibrate: options.vibrate
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -136,6 +140,7 @@ export const notifications = {
 
       return notification;
     } catch (error) {
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
       console.error('Error showing notification:', error);
       return null;
     }
@@ -152,6 +157,7 @@ export const notifications = {
 
   showError(title: string, body?: string): Promise<Notification | null> {
     return this.showNotification({
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
       console.warn('Failed to show notification:', error);
       return null;
     }
@@ -179,10 +185,17 @@ export const notifications = {
     }
   }
 
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5
       requireInteraction: true
     });
   },
@@ -238,3 +251,8 @@ export default notifications;
 
 export const notificationManager = new NotificationManager();
 export default notificationManager;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
+>>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
+>>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+>>>>>>> origin/cursor/create-and-deploy-new-content-62f5

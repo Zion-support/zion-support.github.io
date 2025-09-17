@@ -1,22 +1,62 @@
-=======
-    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚡ REVOLUTIONARY CONTENT • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary Technology Content
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Experience the most advanced technology content featuring breakthrough innovations and cutting-edge solutions
           </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {newContent.map((content, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group border border-white/20"
+            >
+              <div className="flex items-center space-x-4 mb-6">
+                <div className={`p-4 bg-gradient-to-r ${content.color} rounded-xl group-hover:scale-110 transition-transform duration-300`}>
+                  {content.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-white">{content.title}</h3>
+              </div>
+              
+              <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                {content.description}
+              </p>
+              
+              <a 
+                href={content.link}
+                className={`inline-flex items-center space-x-2 bg-gradient-to-r ${content.color} text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold group-hover:scale-105`}
+              >
+                <span>Explore Now</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </motion.div>
+          ))}
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-5xl mb-4 text-center">🔮</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Reality Manipulation</h3>
-            <p className="text-indigo-100 mb-4 text-sm text-center">
-              Technology that can manipulate the fundamental fabric of reality itself
+            </div>
+          </div>
+        </div>
+      </div>
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            }`}
+          />
+        ))}
+      </div>
+
+      </div>
+      
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-ping"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-ping delay-1000"></div>
+        <div className="absolute bottom-10 left-20 w-12 h-12 bg-white/10 rounded-full animate-ping delay-2000"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-ping delay-3000"></div>
+      </div>
+>>>>>>> origin/cursor/create-and-deploy-new-content-8d99
+    </div>
+>>>>>>> d256e03ecdf2b9940ff43c4a7082338ad0fc85bb
+  );
+};
+
+export default RevolutionaryContentBanner2025;

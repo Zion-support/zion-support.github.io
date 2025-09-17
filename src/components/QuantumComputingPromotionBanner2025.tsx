@@ -76,10 +76,6 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0-20],
-                opacity: [010],
-                scale: [0.51.50.5],
-              }}
                 duration: 3,
                 repeat: Infinity,
                 delay: Math.random() * 2,

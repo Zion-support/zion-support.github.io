@@ -128,15 +128,9 @@ const TrendingTopicsWidget2026 = () => {
             key={topic.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ 
-              opacity: 1, 
-              x: 0,
-              scale: activeTopic === index ? 1.02 : 1
-            }}
+              scale
             transition={{ 
-              duration: 0.3, 
-              delay: index * 0.1,
-              scale: { duration: 0.2 }
-            }}
+              scale
             className={`relative p-4 rounded-xl cursor-pointer transition-all duration-300 ${
               activeTopic === index 
                 ? 'bg-gradient-to-r from-slate-800/80 to-slate-700/80 border-2 border-purple-500/50 shadow-lg shadow-purple-500/20' 

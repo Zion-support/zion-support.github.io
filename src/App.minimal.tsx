@@ -1,12 +1,9 @@
 
-const App: React.FC = () => {
+const App.minimal = () => {
   return (
-    <Router>
-        
-        <Footer />
       </div>
-    </Router>
+    </div>
   );
 };
 
-export default App;
+export default App.minimal;

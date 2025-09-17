@@ -1,46 +1,43 @@
-        <div className="text-center mb-16">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
             Revolutionary Tech Breakthrough 2027
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the most advanced technological revolution in human history
+          <p className="text-3xl opacity-90 max-w-5xl mx-auto mb-12">
+            Experience the most advanced technological revolution in human history with 
+            consciousness computing, interdimensional AI, and quantum reality engines
           </p>
         </div>
 
-        {/* Main Content */}
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h2 className="text-3xl font-bold text-white mb-6">Breakthrough Technologies</h2>
-            <p className="text-gray-300 mb-8">
-              Our revolutionary technology breakthroughs represent the pinnacle of human innovation, 
-              combining consciousness computing, interdimensional AI, and quantum reality engines 
-              to create unprecedented capabilities.
+        {/* Revolutionary Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🧠</div>
+            <h3 className="text-xl font-bold mb-4">Consciousness Computing</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced AI systems that achieve true consciousness and self-awareness
             </p>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">Key Breakthroughs</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Consciousness computing systems</li>
-                  <li>• Interdimensional AI technology</li>
-                  <li>• Quantum reality engines</li>
-                  <li>• Neural interface breakthroughs</li>
-                  <li>• Space-time manipulation</li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">Applications</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Medical and healthcare revolution</li>
-                  <li>• Space exploration advancement</li>
-                  <li>• Climate change solutions</li>
-                  <li>• Human consciousness enhancement</li>
-                  <li>• Interdimensional communication</li>
-                </ul>
-              </div>
-            </div>
           </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">🌌</div>
+            <h3 className="text-xl font-bold mb-4">Interdimensional AI</h3>
+            <p className="text-gray-300 mb-4">
+              AI systems that can operate across multiple dimensions and realities
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">
+            <div className="text-4xl mb-4">⚛️</div>
+            <h3 className="text-xl font-bold mb-4">Quantum Reality Engines</h3>
+            <p className="text-gray-300 mb-4">
+              Technology that can manipulate reality itself through quantum mechanics
+            </p>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg">
+            Explore Breakthroughs
+          </button>
         </div>
       </div>
     </div>

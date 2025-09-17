@@ -106,13 +106,8 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             {[...Array(8)].map((_, i) => (
                               <div
                                 key={i}
-                                  scale: isPlaying ? [1.21] : 1,
-                                  opacity: isPlaying ? [0.510.5] : 0.7
-                                }}
-                                  duration: 2,
-                                  repeat: isPlaying ? Infinity : 0,
-                                  delay: i * 0.1
-                                }}
+                                  opacity
+                                                                                                      delay
                                 className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"
                               />
                             ))}
@@ -124,13 +119,8 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             {[...Array(4)].map((_, i) => (
                               <div
                                 key={i}
-                                  rotate: isPlaying ? 360 : 0,
-                                  scale: isPlaying ? [1.1] : 1
-                                }}
-                                  duration: 3,
-                                  repeat: isPlaying ? Infinity : 0,
-                                  delay: i * 0.2
-                                }}
+                                  scale
+                                                                                                      delay
                                 className="absolute w-8 h-8 border-2 border-indigo-400 rounded-full"
                                 style={{
                                   left: `${Math.cos(i * Math.PI / 2) * 20}px`,
@@ -147,12 +137,8 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                               <div
                                 key={i}
                                   scaleY: isPlaying ? [121] : 1,
-                                  opacity: isPlaying ? [0.510.5] : 0.7
-                                }}
-                                  duration: 1.5,
-                                  repeat: isPlaying ? Infinity : 0,
-                                  delay: i * 0.2
-                                }}
+                                  opacity
+                                                                                                      delay
                                 className="absolute w-1 bg-gradient-to-t from-green-500 to-teal-500 rounded-full"
                                 style={{
                                   left: `${30 + i * 20}%`,
@@ -168,13 +154,8 @@ const InteractiveTechDemo2025PromotionBanner: React.FC = () => {
                             {[...Array(6)].map((_, i) => (
                               <div
                                 key={i}
-                                  scale: isPlaying ? [1.31] : 1,
-                                  opacity: isPlaying ? [0.610.6] : 0.8
-                                }}
-                                  duration: 2,
-                                  repeat: isPlaying ? Infinity : 0,
-                                  delay: i * 0.1
-                                }}
+                                  opacity
+                                                                                                      delay
                                 className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"
                               />
                             ))}

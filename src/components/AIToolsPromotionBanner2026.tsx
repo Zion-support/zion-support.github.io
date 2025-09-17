@@ -79,10 +79,6 @@ const AIToolsPromotionBanner2026: React.FC = () => {
                 left: `${10 + i * 10}%`,
                 top: '50%',
               }}
-                y: [0-150],
-                opacity: [0.30.80.3],
-                scale: [0.510.5],
-              }}
                 duration: 2 + i * 0.3,
                 repeat: Infinity,
                 delay: i * 0.4,

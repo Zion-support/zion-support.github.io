@@ -64,9 +64,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner: React.FC = () => {
               {stats.map((statindex) => (
                 <div
                   key={stat.label}
-                    opacity: currentStat === index ? 1 : 0,
-                    scale: currentStat === index ? 1 : 0.8
-                  }}
+                    scale
                   className="absolute inset-0 flex flex-col items-center justify-center"
                 >
                   <div className="w-20 h-20 bg-black/20 rounded-full flex items-center justify-center shadow-lg">

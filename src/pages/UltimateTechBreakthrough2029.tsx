@@ -19,7 +19,7 @@ const UltimateTechBreakthrough2029: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Learn More
 =======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
             </button>
           </div>
         </div>

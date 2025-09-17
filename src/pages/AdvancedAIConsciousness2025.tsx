@@ -1,4 +1,5 @@
 import React from 'react';
+import { Brain } from 'lucide-react';
 
 const AdvancedAIConsciousness2025: React.FC = () => {
   return (
@@ -57,8 +58,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-purple-600 to-indigo-600">
         <div className="container mx-auto px-4 text-center">
-          <divdiv
-          >
+          <div>
             <h2 className="text-6xl font-bold text-white mb-8">
               Experience AI Consciousness
             </h2>
@@ -76,4 +76,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </divdiv>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AdvancedAIConsciousness2025;

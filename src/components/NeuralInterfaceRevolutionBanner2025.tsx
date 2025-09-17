@@ -114,32 +114,20 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
             {/* Floating Neural Network Animation */}
             <div
               className="absolute top-10 left-10 w-20 h-20 border border-purple-400/30 rounded-full"
-                scale: [1.21],
-                opacity: [0.30.60.3],
-              }}
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
+                opacity
+                                                ease: "easeInOut"
               }}
             />
             <div
               className="absolute top-20 right-20 w-16 h-16 border border-blue-400/30 rounded-full"
-                scale: [1.21.2],
-                opacity: [0.60.30.6],
-              }}
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut"
+                opacity
+                                                ease: "easeInOut"
               }}
             />
             <div
               className="absolute bottom-20 left-1/4 w-12 h-12 border border-indigo-400/30 rounded-full"
-                scale: [1.31],
-                opacity: [0.40.70.4],
-              }}
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
+                opacity
+                                                ease: "easeInOut"
               }}
             />
           </div>

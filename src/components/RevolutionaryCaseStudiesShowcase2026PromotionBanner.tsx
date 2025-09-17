@@ -22,10 +22,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-                y: [0-250],
-                opacity: [0.40.80.4],
-                scale: [1.21],
-              }}
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,

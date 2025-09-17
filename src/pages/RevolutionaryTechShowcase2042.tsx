@@ -4,44 +4,15 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
 =======
-  const demos = [
-    {
-      id: 0,
-      title: "Quantum Consciousness Demo",
-      description: "Experience AI that truly understands and feels",
-      icon: "🧠",
-      features: ["Emotional AI responses", "Creative problem solving", "Ethical decision making", "Self-awareness indicators"]
-    },
-    {
-      id: 1,
-      title: "Interdimensional Interface",
-      description: "Navigate between realities seamlessly",
-      icon: "🌌",
-      features: ["Multi-dimensional browsing", "Parallel universe access", "Reality manipulation", "Cross-dimensional communication"]
-    },
-    {
-      id: 2,
-      title: "Neural Reality Builder",
-      description: "Create and modify reality through thought",
-      icon: "🧬",
-      features: ["Thought-to-reality conversion", "Shared virtual spaces", "Memory implantation", "Enhanced perception"]
-    },
-    {
-      id: 3,
-      title: "Temporal Processing Lab",
-      description: "Manipulate time for instant computation",
-      icon: "⏰",
-      features: ["Time-dilated processing", "Future prediction algorithms", "Temporal data analysis", "Chronological optimization"]
-=======
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
+=======
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
     }
   };
 
   return (
 =======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
+>>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
