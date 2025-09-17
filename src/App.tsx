@@ -77,37 +77,60 @@ import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
 import UltimateAIRevolution2027 from './pages/UltimateAIRevolution2027';
 import UltimateTechShowcase2026 from './pages/UltimateTechShowcase2026';
 import UltimateTechShowcase2027 from './pages/UltimateTechShowcase2027';
->>>>>>> origin/resolve-conflicts-and-improvements
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
-const Home = React.lazy(() => import('./pages/HomePage'));
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const ContactPage = React.lazy(() => import('./pages/Contact'));
+const FAQPage = React.lazy(() => import('./pages/FAQ'));
+const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
+const TermsPage = React.lazy(() => import('./pages/Terms'));
+const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
+const HelpPage = React.lazy(() => import('./pages/Help'));
+const CookiesPage = React.lazy(() => import('./pages/Cookies'));
+const ServicesPage = React.lazy(() => import('./pages/Services'));
+const BlogPage = React.lazy(() => import('./pages/Blog'));
+const CareersPage = React.lazy(() => import('./pages/Careers'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
 
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-];
-
-function App() {
+const App = () => {
   return (
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
-        <Header />
-        <main className="min-h-screen">
-          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
-            <Routes>
-              {baseRoutes.map(({ path, element }) => (
-                <Route key={path} path={path} element={element} />
-              ))}
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
+        <Router>
+          <Header />
+          <main className="min-h-screen">
+            <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/faq" element={<FAQPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/sitemap" element={<SitemapPage />} />
+                <Route path="/help" element={<HelpPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/partners" element={<PartnersPage />} />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+        </Router>
       </ThemeProvider>
     </WhitelabelProvider>
   );
-}
+};
 
 export default App;

@@ -188,7 +188,6 @@ export default function Services() {
         </motion.div>
 
         {/* CTA Section */}
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -439,4 +438,3 @@ export default function Services() {
     </>
   );
 }
->>>>>>> origin/website-improvements-v2
