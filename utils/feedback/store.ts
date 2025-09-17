@@ -11,7 +11,7 @@
 
 
 
-  metadata: Record<string, any>;
+  metadata: Record<stringany>;
   createdAt: string;
   ip: string;
 }

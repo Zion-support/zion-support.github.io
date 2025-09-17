@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Deployment Guide
 
 ## Production Build
@@ -6,19 +5,20 @@
 1. Build the application:
 
 ```bash
-npm run build
+npm run build:netlify
 ```
 
-2. The build output will be in the `dist` directory
+2. The build output will be in the `dist` directory.
 
 ## Deployment Options
 
 ### Netlify (Recommended)
 
 1. Connect your repository to Netlify
-2. Set build command: `npm run build`
+2. Set build command: `npm run build:netlify`
 3. Set publish directory: `dist`
-4. Deploy automatically on push to main branch
+4. Set Node version to 20 (via Netlify UI or `netlify.toml`)
+5. Deploy automatically on push to the `main` branch
 
 ### Vercel
 
@@ -29,7 +29,7 @@ npm run build
 
 ### Manual Deployment
 
-1. Upload the contents of `dist` directory to your web server
+1. Upload the contents of the `dist` directory to your web server
 2. Configure your server to serve `index.html` for all routes
 3. Set up proper caching headers
 
@@ -50,4 +50,4 @@ VITE_APP_ENV=production
 
 ---
 
-_Generated automatically by Smart Documentation Generator_
+This guide reflects the current Netlify setup defined in `netlify.toml` (Node 20, `npm run build:netlify`, publish `dist`).

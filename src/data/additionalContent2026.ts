@@ -2,18 +2,18 @@ export const ADDITIONAL_BLOG_POSTS_2026 = [
   {
     id: "ai-2026-next-gen-breakthrough",
     title: "AI 2026: Next-Generation Breakthrough Technologies",
-    excerpt: "Explore the revolutionary AI technologies that are reshaping industries in 2026, from quantum-enhanced machine learning to consciousness-driven automation.",
+    excerpt: "Explore the revolutionary AI technologies that are reshaping industries in 2026 from quantum-enhanced machine learning to consciousness-driven automation.",
     content: "The year 2026 marks a pivotal moment in artificial intelligence evolution. We're witnessing breakthroughs that were once considered science fiction becoming reality. From quantum-enhanced neural networks to AI systems with genuine consciousness, the landscape of artificial intelligence is transforming at an unprecedented pace. This comprehensive guide explores the cutting-edge AI technologies that are revolutionizing industries worldwide, providing insights into implementation strategies, real-world applications, and the future implications of these revolutionary systems.",
     author: "Dr. Sarah Chen",
     publishDate: "2026-01-28",
     category: "AI Technology",
     tags: ["AI 2026", "Breakthrough Technology", "Quantum AI", "Machine Learning"],
-    featured: true,
+    featured: "true",
     readTime: "12 min read",
     image: "/images/blog/ai-2026-next-gen-breakthrough.jpg",
-    views: 15600,
-    likes: 1234,
-    isNew: true,
+    views: "15600",
+    likes: "1234",
+    isNew: "true",
     urgency: "Hot Topic",
     type: "blog"
   },
@@ -26,30 +26,30 @@ export const ADDITIONAL_BLOG_POSTS_2026 = [
     publishDate: "2026-01-29",
     category: "Quantum Computing",
     tags: ["Quantum Computing", "Business Implementation", "ROI", "Enterprise Solutions"],
-    featured: true,
+    featured: "true",
     readTime: "15 min read",
     image: "/images/blog/quantum-computing-business-2026.jpg",
-    views: 18900,
-    likes: 1456,
-    isNew: true,
+    views: "18900",
+    likes: "1456",
+    isNew: "true",
     urgency: "Must Read",
     type: "blog"
   },
   {
     id: "autonomous-systems-enterprise-2026",
     title: "Autonomous Systems in Enterprise: The Complete Transformation Guide",
-    excerpt: "Discover how autonomous AI systems are revolutionizing enterprise operations, from automated decision-making to self-managing business processes.",
+    excerpt: "Discover how autonomous AI systems are revolutionizing enterprise operations from automated decision-making to self-managing business processes.",
     content: "Enterprise autonomy is the next frontier in business transformation. Organizations worldwide are implementing autonomous systems that can make complex decisions, manage operations, and drive growth without human intervention. This guide explores the practical implementation of autonomous systems in enterprise environments, covering technical architecture, change management, ROI metrics, and real-world case studies from Fortune 500 companies that have successfully transformed their operations.",
     author: "Dr. Lisa Autonomous",
     publishDate: "2026-01-30",
     category: "Autonomous Systems",
     tags: ["Autonomous Systems", "Enterprise AI", "Business Automation", "Digital Transformation"],
-    featured: true,
+    featured: "true",
     readTime: "18 min read",
     image: "/images/blog/autonomous-systems-enterprise-2026.jpg",
-    views: 22300,
-    likes: 1789,
-    isNew: true,
+    views: "22300",
+    likes: "1789",
+    isNew: "true",
     urgency: "Trending",
     type: "blog"
   };
@@ -67,13 +67,13 @@ export const ADDITIONAL_SERVICES_2026 = [
       "24/7 expert support and guidance"
     ],
     pricing: {
-      basic: 50000,
-      pro: 150000,
+      basic: "50000",
+      pro: "150000",
       enterprise: 500000
     },
     category: "AI Consulting",
-    isNew: true,
-    featured: true,
+    isNew: "true",
+    featured: "true",
     icon: "ai-consulting"
   },
   {
@@ -89,13 +89,13 @@ export const ADDITIONAL_SERVICES_2026 = [
       "Expert quantum computing consultation"
     ],
     pricing: {
-      basic: 75000,
-      pro: 200000,
+      basic: "75000",
+      pro: "200000",
       enterprise: 750000
     },
     category: "Quantum Solutions",
-    isNew: true,
-    featured: true,
+    isNew: "true",
+    featured: "true",
     icon: "quantum-solutions"
   },
   {
@@ -111,12 +111,12 @@ export const ADDITIONAL_SERVICES_2026 = [
       "Comprehensive monitoring and control"
     ],
     pricing: {
-      basic: 100000,
-      pro: 300000,
+      basic: "100000",
+      pro: "300000",
       enterprise: 1000000
     },
     category: "Autonomous Systems",
-    isNew: true,
-    featured: true,
+    isNew: "true",
+    featured: "true",
     icon: "autonomous-platform"
   };

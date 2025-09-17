@@ -1,28 +1,14 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-};
-
-
-
-export default function HealthcareAISolutions() {
-	return (
-		<ServiceLanding
-			title="Healthcare AI Solutions"
-			slug="healthcare-ai-solutions"
-			description="Deploy AI for diagnostics assistancecare managementoperational optimizationand compliance workflows. Improve outcomes while protecting patient privacy."
-			subtitle="Clinically aware AI that augments providers and reduces administrative burden."
-			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Reduce admin time 20–40% and improve throughput"
-			features={[
-				"Clinical note summarization and coding (CPT/ICD)",
-				"Diagnostic support with literature grounding",
-				"Prior auth automation and appeals drafts",
-				"Capacity forecasting and staffing optimization",
-				"HIPAA-compliant data pipelines and audit",
-				"EHR integrations: HL7/FHIREpicCerner"
-			]}
-			industries={["Hospitals"Clinics"Payers"HealthTech"]}
-			canonical="https://ziontechgroup.com/healthcare-ai-solutions"
-		/>
-	);
+const healthcareAiSolutions: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">healthcare-ai-solutions</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+  };
+export default healthcareAiSolutions;

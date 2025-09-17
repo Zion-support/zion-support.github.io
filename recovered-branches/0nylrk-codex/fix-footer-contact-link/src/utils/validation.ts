@@ -1,0 +1,2 @@
+// validation.ts
+// Utility functions

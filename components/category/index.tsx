@@ -1,8 +1,22 @@
-export default function CategoryIndexPage() {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Index: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Categories</h1>
-      <p className="mt-2 text-gray-600">Browse AI categories. Content coming soon.</p>
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index blog post" />
+      </Head>
+      
+      <main>
+        <h1>Index</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
   );
-}
+};
+
+export default Index;
