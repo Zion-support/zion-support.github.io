@@ -5,156 +5,42 @@
 
 export interface PerformanceMetrics {
   loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-  timeToInteractive: number;
+  memoryUsage: number;
 }
 
-export class PerformanceMonitor {
+class PerformanceMonitor {
   private metrics: Partial<PerformanceMetrics> = {};
-  private observers: PerformanceObserver[] = [];
-
-  constructor() {
-    this.initializeMonitoring();
-  }
-
-  private initializeMonitoring() {
-    // Monitor Core Web Vitals
-    this.observeLCP();
-    this.observeFID();
-    this.observeCLS();
-    this.observeFCP();
-    this.observeTTI();
-  }
-
-  private observeLCP() {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          this.metrics.largestContentfulPaint = lastEntry.startTime;
-        });
-        observer.observe({ type: 'largest-contentful-paint', buffered: true });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('LCP monitoring not supported');
-      }
-    }
-  }
-
-  private observeFID() {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((entryList) => {
-          for (const entry of entryList.getEntries()) {
-            this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
-          }
-        });
-        observer.observe({ type: 'first-input', buffered: true });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('FID monitoring not supported');
-      }
-    }
-  }
-
-  private observeCLS() {
-    if ('PerformanceObserver' in window) {
-      try {
-        let clsValue = 0;
-        const observer = new PerformanceObserver((entryList) => {
-          for (const entry of entryList.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
-          }
-          this.metrics.cumulativeLayoutShift = clsValue;
-        });
-        observer.observe({ type: 'layout-shift', buffered: true });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('CLS monitoring not supported');
-      }
-    }
-  }
-
-  private observeFCP() {
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((entryList) => {
-          for (const entry of entryList.getEntries()) {
-            if (entry.name === 'first-contentful-paint') {
-              this.metrics.firstContentfulPaint = entry.startTime;
-            }
-          }
-        });
-        observer.observe({ type: 'paint', buffered: true });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('FCP monitoring not supported');
-      }
-    }
-  }
-
-  private observeTTI() {
-    // Time to Interactive is calculated differently
-    // This is a simplified version
-    if ('PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((entryList) => {
-          for (const entry of entryList.getEntries()) {
-            if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming;
-              this.metrics.timeToInteractive = navEntry.domInteractive - navEntry.fetchStart;
-            }
-          }
-        });
-        observer.observe({ type: 'navigation', buffered: true });
-        this.observers.push(observer);
-      } catch (e) {
-        console.warn('TTI monitoring not supported');
-      }
-    }
-  }
-
-  public getMetrics(): Partial<PerformanceMetrics> {
-    // Add memory usage if available
-    if ('memory' in performance) {
-      this.metrics.memoryUsage = (performance as any).memory.usedJSHeapSize / 1024 / 1024;
-    }
-
-    // Add load time
-    this.metrics.loadTime = performance.now();
-
+  getMetrics(): Partial<PerformanceMetrics> {
     return { ...this.metrics };
   }
-
-  public reportMetrics() {
-    const metrics = this.getMetrics();
-    console.group('🚀 Performance Metrics');
-    console.log('Load Time:', metrics.loadTime?.toFixed(2) + 'ms');
-    console.log('First Contentful Paint:', metrics.firstContentfulPaint?.toFixed(2) + 'ms');
-    console.log('Largest Contentful Paint:', metrics.largestContentfulPaint?.toFixed(2) + 'ms');
-    console.log('Cumulative Layout Shift:', metrics.cumulativeLayoutShift?.toFixed(3));
-    console.log('First Input Delay:', metrics.firstInputDelay?.toFixed(2) + 'ms');
-    console.log('Time to Interactive:', metrics.timeToInteractive?.toFixed(2) + 'ms');
-    console.log('Memory Usage:', metrics.memoryUsage?.toFixed(2) + 'MB');
-    console.groupEnd();
-
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'performance_metrics', metrics);
-    }
-  }
-
-  public cleanup() {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+  init(): void {
+    if (typeof window === 'undefined') return;
+    try {
+      this.metrics.loadTime = performance.timing ? performance.now() : 0;
+      if ('memory' in performance) {
+        // @ts-ignore non-standard
+        this.metrics.memoryUsage = Math.round((performance as any).memory?.usedJSHeapSize / 1024 / 1024);
+      }
+      if ('PerformanceObserver' in window) {
+        const po = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'largest-contentful-paint') this.metrics.largestContentfulPaint = entry.startTime;
+            if (entry.entryType === 'paint' && (entry as any).name === 'first-contentful-paint') this.metrics.firstContentfulPaint = entry.startTime;
+            if (entry.entryType === 'layout-shift') {
+              const e: any = entry;
+              if (!e.hadRecentInput) this.metrics.cumulativeLayoutShift = (this.metrics.cumulativeLayoutShift || 0) + e.value;
+            }
+          }
+        });
+        try { po.observe({ type: 'largest-contentful-paint', buffered: true } as any); } catch {}
+        try { po.observe({ type: 'paint', buffered: true } as any); } catch {}
+        try { po.observe({ type: 'layout-shift', buffered: true } as any); } catch {}
+      }
+    } catch {}
   }
 }
 

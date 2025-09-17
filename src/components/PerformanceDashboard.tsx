@@ -6,7 +6,7 @@ interface DashboardProps {
   onToggle: () => void;
 }
 
-export const PerformanceDashboard: React.FC<DashboardProps> = ({ isVisible, onToggle }) => {
+export default function PerformanceDashboard({ isVisible, onToggle }: DashboardProps): JSX.Element | null {
   const [metrics, setMetrics] = useState<Partial<PerformanceMetrics>>({});
   const [isMonitoring, setIsMonitoring] = useState(true);
 
@@ -70,4 +70,4 @@ export const PerformanceDashboard: React.FC<DashboardProps> = ({ isVisible, onTo
       </div>
     </div>
   );
-};
+}
