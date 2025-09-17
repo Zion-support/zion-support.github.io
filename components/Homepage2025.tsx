@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 "use client";
 
 import { AnimatePresence, motion } from 'framer-motion';
@@ -320,9 +317,27 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       gradient: 'from-fuchsia-500 to-indigo-500'
     },
     {
-      title: 'Safety Evals Operational Checklist (2026)',
-      href: '/blog/ai-2026-safety-evals-operational-checklist',
-      tag: 'Safety',
+      title: 'AI Ops 2025: Autonomous Platforms',
+      href: '/blog/ai-ops-autonomous-platforms-2025',
+      tag: 'AI Ops',
+      gradient: 'from-emerald-500 to-cyan-500'
+    },
+    {
+      title: 'Foundation Model Quality Engineering (2026)',
+      href: '/blog/ai-2026-foundation-model-quality-engineering',
+      tag: 'Quality',
+      gradient: 'from-cyan-500 to-violet-500'
+    },
+    {
+      title: 'Cloud Cost Optimization 2025',
+      href: '/blog/cloud-cost-optimization-2025',
+      tag: 'FinOps',
+      gradient: 'from-emerald-500 to-teal-500'
+    },
+    {
+      title: 'GenAI for Regulated Industries (2025)',
+      href: '/blog/genai-2025-practical-compliance-patterns',
+      tag: 'Compliance',
       gradient: 'from-emerald-500 to-cyan-500'
     },
     {
@@ -413,16 +428,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       }
     }
   };
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Homepage2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Homepage2025</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-=======
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
         <>
@@ -927,7 +935,6 @@ const Homepage2025: React.FC = () => {
         </div>
       </footer>
     </UltraFuturisticBackground2026>
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
   );
 };
 

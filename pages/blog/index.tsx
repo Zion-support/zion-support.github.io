@@ -28,20 +28,7 @@ const posts = [
   { slug: 'genai-2025-evidence-driven-ai-governance', title: 'Evidence‑Driven AI Governance (2025)', excerpt: 'Policies, evals, approvals, and audit‑ready evidence across the AI lifecycle.' },
   { slug: 'agentic-crm-autonomous-revenue-workflows-2025', title: 'Agentic CRM: Autonomous Revenue Workflows (2025)', excerpt: 'Design safe, effective autonomous workflows across the revenue funnel.' },
   { slug: 'ai-2026-foundation-model-quality-engineering', title: 'Foundation Model Quality Engineering (2026)', excerpt: 'Evals, safety, and release health for production-grade foundation model apps.' },
-  { slug: 'ai-2026-operationalizing-agentic-workflows', title: 'Operationalizing Agentic Workflows (2026)', excerpt: 'Design SLIs/SLOs, guardrails, and evals to ship reliable agentic systems.' }
-  ,{ slug: 'ai-2026-operational-risk-metrics-for-agents', title: 'Operational Risk Metrics for Agents (2026)', excerpt: 'Standardize override rates, violations, groundedness, and MTTR.' }
-  ,{ slug: 'ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', excerpt: 'Centralize evals, traces, policy events, and incidents for audits.' }
-  ,{ slug: 'ai-2026-secure-tooling-permissions-blueprint', title: 'Secure Tooling Permissions — Blueprint (2026)', excerpt: 'Risk‑tiered adapters, approvals, and budgets for safe agent actions.' }
-  ,{ slug: 'ai-2026-governed-tooling-risk-tiers', title: 'Governed Tooling: Risk Tiers (2026)', excerpt: 'Risk‑tiered adapters, approvals, and budgets for safe tool actions.' }
-  ,{ slug: 'ai-2026-real-time-rag-architectures', title: 'Real-Time RAG Architectures (2026)', excerpt: 'Low-latency retrieval with hybrid indexes, caches, and routing.' }
-  ,{ slug: 'ai-2026-runtime-guardrails-blueprint', title: 'AI 2026: Runtime Guardrails Blueprint', excerpt: 'Runtime checks, policy-as-code, and safe tool envelopes.' }
-  ,{ slug: 'ai-2026-evaluation-cookbook', title: 'AI 2026: Evaluation Cookbook', excerpt: 'Scenario suites and policies to ship reliable autonomy.' }
-  ,{ slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
-  ,{ slug: 'ai-2026-secure-multi-agent-ops-blueprint', title: 'AI 2026: Secure Multi-Agent Operations Blueprint', excerpt: 'Operate multi-agent systems safely with risk tiers and telemetry.' }
-  ,{ slug: 'ai-2026-agent-observability-scorecards', title: 'Agent Observability Scorecards (2026)', excerpt: 'Scorecards for reliability, safety, quality, and efficiency.' }
-  ,{ slug: 'ai-2026-cost-aware-routing-in-practice', title: 'Cost-Aware Routing in Practice (2026)', excerpt: 'Route by budget, latency, and quality with safe fallbacks.' }
-  ,{ slug: 'ai-2026-agentic-benchmarking-field-guide', title: 'Agentic Benchmarking Field Guide (2026)', excerpt: 'Benchmark agentic systems with scenario suites and business-aligned SLIs.' }
-  ,{ slug: 'ai-2026-operationalizing-ai-safety-controls', title: 'Operationalizing AI Safety Controls (2026)', excerpt: 'Turn policies into runtime controls wired to SLOs and incidents.' }
+  { slug: 'ai-ops-autonomous-platforms-2025', title: 'AI Ops 2025: Autonomous Platforms in Production', excerpt: 'Design, ship, and run AI-driven autonomous platforms safely.' }
 ]
 
 export default function BlogIndexPage() {
