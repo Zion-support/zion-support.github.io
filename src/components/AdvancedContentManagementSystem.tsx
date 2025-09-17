@@ -11,6 +11,5 @@ const AdvancedContentManagementSystem: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedContentManagementSystem;

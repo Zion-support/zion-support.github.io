@@ -7,6 +7,5 @@ const NeuralInterfaceRevolution2036: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-  }
-];
+  };
 export default NeuralInterfaceRevolution2036;

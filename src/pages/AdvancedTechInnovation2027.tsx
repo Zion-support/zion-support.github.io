@@ -11,7 +11,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 ADVANCED INNOVATION • 2027
@@ -24,7 +24,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </p>
         </div>
 
-        {/* Innovation Categories */}
+        {/* Innovation Categories */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="group bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🧠</div>
@@ -129,7 +129,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Innovation Timeline */}
+        {/* Innovation Timeline */};
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Innovation Timeline 2027</h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -164,7 +164,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Technology Showcase */}
+        {/* Technology Showcase */};
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Advanced Technology Showcase</h2>
           <div className="grid md:grid-cols-2 gap-12">
@@ -218,7 +218,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Global Impact */}
+        {/* Global Impact */};
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Global Impact Statistics</h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -241,7 +241,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Shape the Future with Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -265,6 +265,5 @@ const AdvancedTechInnovation2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedTechInnovation2027;

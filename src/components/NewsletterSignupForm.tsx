@@ -11,6 +11,5 @@ const NewsletterSignupForm: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewsletterSignupForm;

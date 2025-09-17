@@ -11,6 +11,5 @@ const NewContentDiscoveryWidget2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewContentDiscoveryWidget2026;

@@ -20,28 +20,35 @@ const buttonVariants = cva(
         icon: 'h-10 w-10'}},
     defaultVariants: {
       variant: 'default',
-      size: 'default'}}
+      size: 'default'}};
 );
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   className?: string;
+<<<<<<< HEAD
+};
+=======
 }
 
-,const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
       <button
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
+        className={cn(buttonVariants({ variant, size, className }))};
+        ref={ref};
+        {...props};
       />
     );
-  }
+  };
 );
 Button.displayName = 'Button';
 
+<<<<<<< HEAD
 export { Button, buttonVariants
-  }
-];
+  };
+=======
+export { Button, buttonVariants };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

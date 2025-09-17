@@ -43,5 +43,4 @@ export const MainNavigation: React.FC = () => {
       </div>
     </nav>
   );
-  }
-];
+  };

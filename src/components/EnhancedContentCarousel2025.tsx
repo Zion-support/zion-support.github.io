@@ -11,6 +11,5 @@ const EnhancedContentCarousel2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EnhancedContentCarousel2025;

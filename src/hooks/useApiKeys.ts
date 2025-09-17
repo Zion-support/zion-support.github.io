@@ -26,11 +26,10 @@ function useApiKeys(): UseApiKeysResult {
 					id: Math.random().toString(36).slice(2),
 					name,
 					createdAt: new Date().toISOString(),
-					redactedKey: 'sk-****-stub'}
-];
+					redactedKey: 'sk-****-stub'};
 			},
 			async revokeKey(_id: string) {
 				return;
 			}}),
-		[]
+		[];
 	);

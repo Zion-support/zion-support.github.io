@@ -11,6 +11,5 @@ const SearchModal: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default SearchModal;

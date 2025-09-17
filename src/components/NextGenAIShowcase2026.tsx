@@ -11,6 +11,5 @@ const NextGenAIShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenAIShowcase2026;

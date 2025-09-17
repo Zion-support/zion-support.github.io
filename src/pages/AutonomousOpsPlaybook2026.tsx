@@ -45,6 +45,5 @@ const AutonomousOpsPlaybook2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AutonomousOpsPlaybook2026;

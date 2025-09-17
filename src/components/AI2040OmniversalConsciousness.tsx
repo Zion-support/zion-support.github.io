@@ -11,6 +11,5 @@ const AI2040OmniversalConsciousness: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2040OmniversalConsciousness;

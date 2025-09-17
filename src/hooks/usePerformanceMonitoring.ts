@@ -22,18 +22,15 @@ export const usePerformanceMonitoring = () => {
     if ('memory' in performance) {
       const memoryUsage = performance.memory.usedJSHeapSize / 1024 / 1024; // MB
       setMetrics(prev => ({ ...prev, memoryUsage }));
-    }
-
+    };
     // Cleanup
     return () => {
       // Cleanup logic if needed
-  }
-];
+  };
   }, []);
 
   return metrics;
-  }
-];
+  };
 export const useLazyLoading = (importFunction, deps = []) => {
   const [Component, setComponent] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -50,29 +47,25 @@ export const useLazyLoading = (importFunction, deps = []) => {
         if (isMounted) {
           setComponent(() => module.default);
           setError(null);
-        }
-      } ,catch (err) {
+        };
+      } catch (err) {
         if (isMounted) {
           setError(err);
           console.error('Failed to load component:', err);
-        }
-      } ,finally {
+        };
+      } finally {
         if (isMounted) {
           setLoading(false);
-        }
-      }
-  }
-];
+        };
+      };
+  };
     loadComponent();
 
     return () => {
       isMounted = false;
-  }
-];
+  };
   }, deps);
 
   return { Component, loading, error
-  }
-];
-  }
-];
+  };
+  };

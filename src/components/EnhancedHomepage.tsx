@@ -11,6 +11,5 @@ const EnhancedHomepage: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EnhancedHomepage;

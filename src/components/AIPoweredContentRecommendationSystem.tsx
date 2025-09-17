@@ -11,6 +11,5 @@ const AIPoweredContentRecommendationSystem: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIPoweredContentRecommendationSystem;

@@ -45,6 +45,5 @@ const BlogPost_Sep2025_AIExecGuide: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default BlogPost_Sep2025_AIExecGuide;

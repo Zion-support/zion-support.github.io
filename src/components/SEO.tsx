@@ -15,9 +15,8 @@ interface SEOProps {
   robots?: string;
   noindex?: boolean;
   nofollow?: boolean;
-}
-
-,const SEO: React.FC<SEOProps> = ({
+};
+const SEO: React.FC<SEOProps> = ({
   title = 'Zion Holdings - Advanced Financial Solutions',
   description = 'Leading provider of comprehensive financial services, investment solutions, and wealth management strategies.',
   keywords = 'financial services, investment, wealth management, banking, fintech',
@@ -45,14 +44,13 @@ interface SEOProps {
         meta = document.createElement('meta');
         if (property) {
           meta.setAttribute('property', name);
-        } ,else {
+        } else {
           meta.setAttribute('name', name);
-        }
-        ,document.head.appendChild(meta);
-      }
-      ,meta.setAttribute('content', content);
-  }
-];
+        };
+document.head.appendChild(meta);
+      };
+meta.setAttribute('content', content);
+  };
     // Basic meta tags
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords);
@@ -76,11 +74,10 @@ interface SEOProps {
     // Article specific tags
     if (publishedTime) {
       updateMetaTag('article:published_time', publishedTime, true);
-    }
-    ,if (modifiedTime) {
+    };
+if (modifiedTime) {
       updateMetaTag('article:modified_time', modifiedTime, true);
-    }
-
+    };
     // Canonical URL
     if (canonical) {
       let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -88,10 +85,9 @@ interface SEOProps {
         link = document.createElement('link');
         link.setAttribute('rel', 'canonical');
         document.head.appendChild(link);
-      }
-      ,link.setAttribute('href', canonical);
-    }
-
+      };
+link.setAttribute('href', canonical);
+    };
     // JSON-LD structured data
     const jsonLd = {
       '@context': 'https://schema.org',
@@ -108,14 +104,12 @@ interface SEOProps {
           '@type': 'Organization',
           name: "siteName"},
         ...(publishedTime && { datePublished: publishedTime }),
-        ...(modifiedTime && { dateModified: modifiedTime })})}
-];
+        ...(modifiedTime && { dateModified: modifiedTime })})};
     // Remove existing JSON-LD
     const existingJsonLd = document.querySelector('script[type="application/ld+json"]');
     if (existingJsonLd) {
       existingJsonLd.remove();
-    }
-
+    };
     // Add new JSON-LD
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -124,6 +118,5 @@ interface SEOProps {
   }, [title, description, keywords, image, url, type, siteName, author, publishedTime, modifiedTime, canonical, robots, noindex, nofollow]);
 
   return null;
-  }
-];
+  };
 export default SEO;

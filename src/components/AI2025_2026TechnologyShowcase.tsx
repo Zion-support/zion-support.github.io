@@ -11,6 +11,5 @@ const AI2025_2026TechnologyShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025_2026TechnologyShowcase;

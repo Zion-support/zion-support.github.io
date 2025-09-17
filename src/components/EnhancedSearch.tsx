@@ -43,6 +43,28 @@ const EnhancedSearch: React.FC = () => {
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+<<<<<<< HEAD
+  const searchSuggestions = [
+    { title: "Consciousness Computing", category: "AI", icon: "🧠" },
+    { title: "Quantum Neural Networks", category: "Quantum", icon: "⚡" },
+    { title: "Holographic Reality", category: "Reality", icon: "🌟" },
+    { title: "Interdimensional Tech", category: "Advanced", icon: "🌌" },
+    { title: "Neural Interface Matrix", category: "Neural", icon: "🔗" },
+    { title: "Revolutionary Breakthrough", category: "Featured", icon: "🚀" };
+  const filteredSuggestions = searchSuggestions.filter(item =>
+    item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div className="relative max-w-2xl mx-auto">
+      <motion.div
+        initial={{ opacity: "0", y: 20 }};
+        animate={{ opacity: "1", y: 0 }};
+        transition={{ duration: 0.6 }};
+        className="relative"
+      >
+=======
   // Mock search data
   const searchData: SearchResult[] = [
     {
@@ -269,6 +291,7 @@ const EnhancedSearch: React.FC = () => {
     <div ref={searchRef} className="relative max-w-4xl mx-auto">
       {/* Search Form */}
       <form onSubmit={handleSearch} className="relative">
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <Search className="h-5 w-5 text-gray-400" />
@@ -276,11 +299,20 @@ const EnhancedSearch: React.FC = () => {
           <input
             ref={inputRef}
             type="text"
+<<<<<<< HEAD
+            value={searchTerm};
+            onChange={(e) => setSearchTerm(e.target.value)};
+            onFocus={() => setIsFocused(true)};
+            onBlur={() => setTimeout(() => setIsFocused(false), 200)};
+            placeholder="Search revolutionary technologies..."
+            className="w-full px-6 py-4 pr-12 text-lg border-2 border-gray-300 rounded-full focus:border-purple-500 focus:outline-none transition-all duration-300 shadow-lg"
+=======
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setShowSuggestions(true)}
             placeholder="Search for AI solutions, quantum computing, neural interfaces..."
             className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
           />
           <div className="absolute inset-y-0 right-0 flex items-center">
             <button
@@ -307,6 +339,74 @@ const EnhancedSearch: React.FC = () => {
         </div>
       </form>
 
+<<<<<<< HEAD
+        <AnimatePresence>
+          {isFocused && searchTerm && (
+            <motion.div
+              initial={{ opacity: "0", y: -10 }};
+              animate={{ opacity: "1", y: 0 }};
+              exit={{ opacity: "0", y: -10 }};
+              transition={{ duration: 0.2 }};
+              className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 max-h-80 overflow-y-auto"
+            >
+              {filteredSuggestions.length > 0 ? (
+                <div className="p-2">
+                  {filteredSuggestions.map((suggestion, index) => (
+                    <motion.div
+                      key={index};
+                      initial={{ opacity: "0", x: -20 }};
+                      animate={{ opacity: "1", x: 0 }};
+                      transition={{ duration: 0.2, delay: index * 0.05 }};
+                      className="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors"
+                    >
+                      <span className="text-2xl mr-3">{suggestion.icon}</span>
+                      <div className="flex-1">
+                        <div className="font-semibold text-gray-900">{suggestion.title}</div>
+                        <div className="text-sm text-gray-500">{suggestion.category}</div>
+                      </div>
+                      <span className="text-gray-400">→</span>
+                    </motion.div>
+                  ))};
+                </div>
+              ) : (
+                <div className="p-4 text-center text-gray-500">
+                  No results found for "{searchTerm}"
+                </div>
+              )};
+            </motion.div>
+          )};
+        </AnimatePresence>
+      </motion.div>
+
+      {/* Quick Access Buttons */};
+      <motion.div
+        initial={{ opacity: "0", y: 20 }};
+        animate={{ opacity: "1", y: 0 }};
+        transition={{ duration: 0.6, delay: 0.2 }};
+        className="flex flex-wrap justify-center gap-3 mt-6"
+      >
+        {[
+          { label: "AI Revolution", icon: "🤖", color: "from-purple-600 to-pink-600" },
+          { label: "Quantum Computing", icon: "⚡", color: "from-cyan-600 to-blue-600" },
+          { label: "Neural Interfaces", icon: "🧠", color: "from-emerald-600 to-teal-600" },
+          { label: "Reality Tech", icon: "🌟", color: "from-orange-600 to-red-600" };
+        ].map((button, index) => (
+          <motion.button
+            key={index};
+            whileHover={{ scale: 1.05 }};
+            whileTap={{ scale: 0.95 }};
+            className={`bg-gradient-to-r ${button.color} text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg transition-all duration-300`};
+          >
+            <span className="mr-2">{button.icon}</span>
+            {button.label};
+          </motion.button>
+        ))};
+      </motion.div>
+    </div>
+  );
+  };
+export default EnhancedSearch;
+=======
       {/* Filters Panel */}
       {isOpen && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
@@ -591,3 +691,4 @@ const EnhancedSearch: React.FC = () => {
 
 
 export default EnhancedSearch;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f

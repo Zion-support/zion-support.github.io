@@ -45,6 +45,5 @@ const SpaceTechInnovation2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default SpaceTechInnovation2026;

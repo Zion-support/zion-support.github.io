@@ -13,6 +13,5 @@ const RevolutionaryContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryContentShowcase;

@@ -11,6 +11,5 @@ const AdvancedTesting: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedTesting;

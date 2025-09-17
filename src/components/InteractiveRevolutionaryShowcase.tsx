@@ -11,6 +11,5 @@ const InteractiveRevolutionaryShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveRevolutionaryShowcase;

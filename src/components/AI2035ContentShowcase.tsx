@@ -11,6 +11,5 @@ const AI2035ContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2035ContentShowcase;

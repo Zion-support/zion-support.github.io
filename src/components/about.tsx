@@ -11,6 +11,5 @@ const about: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default about;

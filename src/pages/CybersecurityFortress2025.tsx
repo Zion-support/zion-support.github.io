@@ -11,6 +11,5 @@ const CybersecurityFortress2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default CybersecurityFortress2025;

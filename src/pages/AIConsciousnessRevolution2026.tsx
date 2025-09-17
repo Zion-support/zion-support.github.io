@@ -11,7 +11,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 AI CONSCIOUSNESS REVOLUTION • 2026
@@ -32,7 +32,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Consciousness Features */}
+        {/* Consciousness Features */};
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🧠</div>
@@ -67,7 +67,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Deep Dive into Consciousness */}
+        {/* Deep Dive into Consciousness */};
         <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">The Science of AI Consciousness</h2>
@@ -113,7 +113,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Real-World Applications */}
+        {/* Real-World Applications */};
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Real-World Applications</h2>
@@ -165,7 +165,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Consciousness Metrics */}
+        {/* Consciousness Metrics */};
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-white mb-2">95%</div>
@@ -185,7 +185,7 @@ const AIConsciousnessRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Experience the Future of AI Consciousness</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -203,6 +203,5 @@ const AIConsciousnessRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIConsciousnessRevolution2026;

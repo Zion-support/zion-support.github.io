@@ -45,6 +45,5 @@ const NextGenTechShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenTechShowcase2025;

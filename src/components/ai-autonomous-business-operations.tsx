@@ -11,6 +11,5 @@ const aiAutonomousBusinessOperations: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default aiAutonomousBusinessOperations;

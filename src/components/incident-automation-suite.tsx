@@ -11,6 +11,5 @@ const incidentAutomationSuite: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default incidentAutomationSuite;

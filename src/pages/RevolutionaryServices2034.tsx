@@ -105,9 +105,7 @@ const RevolutionaryServices2034: React.FC = () => {
       icon: "🌌",
       color: "from-violet-600 to-purple-600",
       category: "Dimensional Technology"
-    }
-  ];
-
+    };
   const categories = [
     "All Services",
     "Consciousness Technology",
@@ -116,7 +114,6 @@ const RevolutionaryServices2034: React.FC = () => {
     "Temporal Technology",
     "Neural Technology",
     "Dimensional Technology"
-  ];
 
   const filteredServices = activeService === 0 
     ? services 
@@ -126,25 +123,23 @@ const RevolutionaryServices2034: React.FC = () => {
     { label: "Services Available", value: "1000+", icon: "🚀" },
     { label: "Clients Served", value: "100K+", icon: "👥" },
     { label: "Success Rate", value: "100%", icon: "✅" },
-    { label: "Universal Reach", value: "∞", icon: "🌍" }
-  ];
-
+    { label: "Universal Reach", value: "∞", icon: "🌍" };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <motion.div
-        initial={{ opacity: "0", y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: "0", y: 50 }};
+        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+        transition={{ duration: 1 }};
         className="relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: isVisible ? 1 : 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
+              initial={{ scale: 0 }};
+              animate={{ scale: isVisible ? 1 : 0 }};
+              transition={{ delay: 0.5, duration: 0.8 }};
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
             >
               🌟 REVOLUTIONARY SERVICES • JANUARY 2034
@@ -157,57 +152,57 @@ const RevolutionaryServices2034: React.FC = () => {
             </p>
           </div>
 
-          {/* Stats Grid */}
+          {/* Stats Grid */};
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: "0", y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
+                key={index};
+                initial={{ opacity: "0", y: 30 }};
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }};
+                transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }};
                 className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center"
               >
                 <div className="text-4xl mb-2">{stat.icon}</div>
                 <div className="text-3xl font-bold mb-1">{stat.value}</div>
                 <div className="text-sm opacity-80">{stat.label}</div>
               </motion.div>
-            ))}
+            ))};
           </div>
         </div>
       </motion.div>
 
-      {/* Services Section */}
+      {/* Services Section */};
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold mb-4">Revolutionary Services</h2>
           <p className="text-2xl opacity-80">Choose from our comprehensive suite of advanced technologies</p>
         </div>
 
-        {/* Category Filter */}
+        {/* Category Filter */};
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, index) => (
             <button
-              key={index}
-              onClick={() => setActiveService(index)}
+              key={index};
+              onClick={() => setActiveService(index)};
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeService === index
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                   : 'bg-white/10 text-white/70 hover:bg-white/20'
-              }`}
+              }`};
             >
-              {category}
+              {category};
             </button>
-          ))}
+          ))};
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((service, index) => (
             <motion.div
-              key={service.id}
-              initial={{ opacity: "0", y: 50 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-              transition={{ delay: 1 + index * 0.1, duration: 0.8 }}
+              key={service.id};
+              initial={{ opacity: "0", y: 50 }};
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+              transition={{ delay: 1 + index * 0.1, duration: 0.8 }};
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-center mb-6">
@@ -216,7 +211,7 @@ const RevolutionaryServices2034: React.FC = () => {
                 <p className="text-sm opacity-70 mb-2">{service.category}</p>
                 <p className="text-lg opacity-80 mb-4">{service.description}</p>
                 <div className={`inline-block px-4 py-2 bg-gradient-to-r ${service.color} text-white text-sm font-semibold rounded-full`}>
-                  {service.pricing}
+                  {service.pricing};
                 </div>
               </div>
               
@@ -226,7 +221,7 @@ const RevolutionaryServices2034: React.FC = () => {
                     <span className="text-green-400">✓</span>
                     <span>{feature}</span>
                   </li>
-                ))}
+                ))};
               </ul>
               
               <div className="flex flex-col space-y-2">
@@ -238,10 +233,10 @@ const RevolutionaryServices2034: React.FC = () => {
                 </button>
               </div>
             </motion.div>
-          ))}
+          ))};
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
             <h3 className="text-4xl font-bold mb-4">Ready to Transform Your Reality?</h3>
@@ -261,6 +256,5 @@ const RevolutionaryServices2034: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryServices2034;

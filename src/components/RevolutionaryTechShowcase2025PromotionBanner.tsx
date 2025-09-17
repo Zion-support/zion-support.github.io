@@ -11,6 +11,5 @@ const RevolutionaryTechShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryTechShowcase2025PromotionBanner;

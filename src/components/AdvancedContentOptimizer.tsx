@@ -11,6 +11,5 @@ const AdvancedContentOptimizer: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedContentOptimizer;

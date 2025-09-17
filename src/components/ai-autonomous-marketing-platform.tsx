@@ -11,6 +11,5 @@ const aiAutonomousMarketingPlatform: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default aiAutonomousMarketingPlatform;

@@ -6,13 +6,11 @@ export const NotificationProvider = ({ children }) => {
   const value = {
     notifications: [],
     addNotification: () => {},
-    removeNotification: () => {}
-  }
-];
+    removeNotification: () => {};
+  };
   return (
     <NotificationContext.Provider value={value}>
-      {children}
+      {children};
     </NotificationContext.Provider>
   );
-  }
-];
+  };

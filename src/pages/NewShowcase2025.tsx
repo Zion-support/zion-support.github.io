@@ -11,6 +11,5 @@ const NewShowcase2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewShowcase2025;

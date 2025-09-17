@@ -11,6 +11,5 @@ const AI2025ToolsUtilitiesShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025ToolsUtilitiesShowcase;
