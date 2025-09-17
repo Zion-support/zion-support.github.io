@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-=======
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> origin/website-improvements-v2
-
-export default function Contact() {
-  const { showToast: toast } = useToast();
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-
-const Contact: React.FC = () => {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Send, CheckCircle } from 'lucide-react';
-import React from 'react';
-
-const Contact: React.FC = () => {
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -76,7 +60,6 @@ const Contact: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Contact Us - Zion Tech Group"
@@ -299,7 +282,6 @@ const Contact: React.FC = () => {
                 </div>
             ))}
           </div>
-=======
     <>
       <SEO 
         title="Contact Zion - Get in Touch" 
@@ -474,7 +456,6 @@ const Contact: React.FC = () => {
               </div>
             </div>
           </div>
->>>>>>> origin/website-improvements-v2
         </div>
       </main>
     </>
