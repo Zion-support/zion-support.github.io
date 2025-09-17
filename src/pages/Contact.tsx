@@ -1,15 +1,98 @@
-import React from 'react';
-const Contact: React.FC = () => {
-  return (
-    <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h2 className="text-2xl font-bold text-white mb-4">Get in Touch</h2>
-            <p className="text-gray-300 mb-6">
-              Ready to transform your business with our technology solutions? 
-              Contact us today to learn more about how we can help.
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  MessageSquare, 
+  Globe, 
+  Building,
+  Send,
+  CheckCircle
+} from 'lucide-react';
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  // SEO structured data for the contact page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Zion Tech Group",
+    "description": "Get in touch with Zion Tech Group for AI-powered technology solutions, IT services, and business consulting. Contact us today to transform your business.",
+    "url": "https://ziontechgroup.com/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "description": "Leading provider of AI-powered technology solutions and comprehensive IT services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/ziontechgroup"
+      ]
+    }
+  };
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    setIsSubmitted(true);
+    setIsSubmitting(false);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-10 h-10 text-green-600" />
+            </div>
+            <h1 className="text-4xl font-bold text-white mb-4">Thank You!</h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Your message has been sent successfully. We'll get back to you within 24 hours.
+>>>>>>> origin/seo-improvements-clean
             </p>
             <div className="space-y-4">
               <div>
@@ -68,7 +151,12 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
+=======
+      </div>
+    </>
+>>>>>>> origin/seo-improvements-clean
   );
   };
 export default Contact;

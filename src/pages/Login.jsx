@@ -1,5 +1,15 @@
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { safeStorage } from '@/utils/safeStorage';
+import { LoginContent } from '@/components/auth/login/LoginContent';
+import { ErrorBoundary } from 'react-error-boundary';
+import { LoginErrorFallback } from '@/components/auth/login/LoginErrorFallback';
+import { useCart } from '@/context/CartContext';
+
+import { toast } from '@/hooks/use-toast';
+import { useDispatch } from 'react-redux';
+import { setLoggedIn } from '@/store/authSlice';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -8,11 +18,18 @@ export default function Login() {
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
     // It runs when component mounts or location.search changes
+<<<<<<< HEAD
     const queryString = location.search;
     const params = new URLSearchParams(queryString);
     const token = params.get('token');
     if (token) {
       // Store token in localStorage instead of safeStorage
+=======
+    const params = new URLSearchParams(location.search);
+    const token = params.get('token');
+    if (token) {
+      // Store token in localStorage for now
+>>>>>>> origin/seo-improvements-clean
       localStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
       navigate(location.pathname, { replace: true });
@@ -21,6 +38,7 @@ export default function Login() {
 
   // Simple login form for now
   return (
+<<<<<<< HEAD
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-xl">
         <div className="text-center">
@@ -69,6 +87,60 @@ export default function Login() {
           <div className="text-center">
             <a href="#" className="text-zion-cyan hover:text-zion-cyan-dark text-sm">
               Forgot your password?
+=======
+    <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center">
+      <div className="max-w-md w-full space-y-8 p-8">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white">Sign In</h2>
+          <p className="mt-2 text-zion-slate-light">
+            Welcome back to Zion Tech Group
+          </p>
+        </div>
+        
+        <div className="bg-zion-slate-light/10 p-6 rounded-lg">
+          <form className="space-y-6">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-white">
+                Email address
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                className="mt-1 block w-full px-3 py-2 bg-zion-slate-light/20 border border-zion-cyan/20 rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                placeholder="Enter your email"
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-white">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                className="mt-1 block w-full px-3 py-2 bg-zion-slate-light/20 border border-zion-cyan/20 rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                placeholder="Enter your password"
+              />
+            </div>
+            
+            <div>
+              <button
+                type="submit"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-cyan"
+              >
+                Sign in
+              </button>
+            </div>
+          </form>
+          
+          <div className="mt-6 text-center">
+            <a href="/contact" className="text-zion-cyan hover:text-zion-cyan-light text-sm">
+              Need help? Contact support
+>>>>>>> origin/seo-improvements-clean
             </a>
           </div>
         </div>
