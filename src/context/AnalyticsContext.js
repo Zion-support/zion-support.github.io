@@ -12,5 +12,4 @@ export const AnalyticsProvider = ({ children }) => {
     </AnalyticsContext.Provider>
   );
 };
-
 export const useAnalytics = () => useContext(AnalyticsContext);

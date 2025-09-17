@@ -12,5 +12,4 @@ export const WhitelabelProvider = ({ children }) => {
     </WhitelabelContext.Provider>
   );
 };
-
 export const useWhitelabel = () => useContext(WhitelabelContext);
