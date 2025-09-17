@@ -476,8 +476,8 @@
   },
   {
     "route": "/case-studies",
-    "title": "",
-    "h1": "Case Studies"
+    "title": "Case Studies | Zion Tech Solutions",
+    "h1": "Success Stories & Case Studies"
   },
   {
     "route": "/categories",
@@ -1285,6 +1285,11 @@
     "h1": "Test Page Working"
   },
   {
+    "route": "/testimonials",
+    "title": "Client Testimonials | Zion Tech Solutions",
+    "h1": "Client Testimonials"
+  },
+  {
     "route": "/thank-you",
     "title": "",
     "h1": "Thank you"
@@ -1736,8 +1741,8 @@
   },
   {
     "route": "/products",
-    "title": "Index - Zion Tech Solutions",
-    "h1": "Index"
+    "title": "Products & Solutions | Zion Tech Solutions",
+    "h1": "Technology Products & Solutions"
   },
   {
     "route": "/plans/enterprise",
@@ -2150,9 +2155,34 @@
     "h1": "{post.title}"
   },
   {
+    "route": "/blog/agentic-crm-autonomous-revenue-workflows-2025",
+    "title": "Agentic CRM (2025): Autonomous Revenue Workflows | Zion Tech Group",
+    "h1": "Agentic CRM: Autonomous Revenue Workflows (2025)"
+  },
+  {
+    "route": "/blog/agentic-product-playbooks",
+    "title": "Agentic Product Playbooks: Shipping Autonomous Workflows | Zion Tech Group",
+    "h1": "Agentic Product Playbooks: Shipping Autonomous Workflows"
+  },
+  {
+    "route": "/blog/ai-2025-enterprise-automation-strategy",
+    "title": "Enterprise Automation Strategy 2025: Practical AI Patterns | Zion Tech Group",
+    "h1": "Enterprise Automation Strategy 2025: Practical AI Patterns"
+  },
+  {
+    "route": "/blog/ai-2026-agent-platform-slos-best-practices",
+    "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
+    "h1": "AI 2026: Agent Platform SLOs — Best Practices"
+  },
+  {
     "route": "/blog/ai-2026-edge-agents-production-guide",
     "title": "",
     "h1": "AI 2026: Edge Agents in Production"
+  },
+  {
+    "route": "/blog/ai-2026-foundation-model-quality-engineering",
+    "title": "Foundation Model Quality Engineering (2026) | Zion Tech Group",
+    "h1": "Foundation Model Quality Engineering (2026)"
   },
   {
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
@@ -2165,6 +2195,11 @@
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
   },
   {
+    "route": "/blog/cloud-cost-optimization-2025",
+    "title": "Cloud Cost Optimization 2025: Modern FinOps Patterns | Zion Tech Group",
+    "h1": "Cloud Cost Optimization 2025: Modern FinOps Patterns"
+  },
+  {
     "route": "/blog/cloud-native-automation",
     "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
     "h1": "Building Cloud-Native Automation Infrastructure"
@@ -2173,6 +2208,11 @@
     "route": "/blog/cybersecurity-autonomous-systems",
     "title": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation | Zion Tech Group",
     "h1": "Cybersecurity in Autonomous Systems: Protecting the Future of Automation"
+  },
+  {
+    "route": "/blog/genai-2025-practical-compliance-patterns",
+    "title": "GenAI for Regulated Industries (2025): Practical Compliance Patterns | Zion Tech Group",
+    "h1": "GenAI for Regulated Industries (2025): Practical Compliance Patterns"
   },
   {
     "route": "/blog",
