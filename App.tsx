@@ -41,6 +41,11 @@ import RevolutionaryContentBanner2025 from './src/components/RevolutionaryConten
 import RevolutionaryContentBanner2035_2037 from './src/components/RevolutionaryContentBanner2035-2037';
 import RevolutionaryContentCarousel2025 from './src/components/RevolutionaryContentCarousel2025';
 import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
+import UltimateTechShowcase2026 from './src/components/UltimateTechShowcase2026';
+import AIInnovationShowcase2026 from './src/components/AIInnovationShowcase2026';
+import EnhancedAdvertisingBanner from './src/components/EnhancedAdvertisingBanner';
+import InteractiveContentCarousel from './src/components/InteractiveContentCarousel';
+import InteractiveFeaturesShowcase from './src/components/InteractiveFeaturesShowcase';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import SEOAnalyzer from './src/components/SEOAnalyzer';
 import SEOOptimizer from './src/components/SEOOptimizer';
@@ -232,6 +237,10 @@ export default function App(): JSX.Element {
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
+                {/* Enhanced Advertising Banner */}
+                <div className="mb-12">
+                  <EnhancedAdvertisingBanner />
+                </div>
                 {/* NEW: Latest Content Advertising Banner - prominently displays new content */}
                 <NewContentAdvertisingBanner2025 />
                 
@@ -674,6 +683,16 @@ export default function App(): JSX.Element {
                   <DynamicContentCarousel />
                 </div>
 
+                {/* Interactive Content Carousel */}
+                <div className="mb-12">
+                  <InteractiveContentCarousel />
+                </div>
+
+                {/* Interactive Features Showcase */}
+                <div className="mb-12">
+                  <InteractiveFeaturesShowcase />
+                </div>
+
                 {/* NEW: Enhanced Content Carousel 2025 */}
                 <div className="mb-12">
                   <EnhancedContentCarousel2025 />
@@ -752,6 +771,16 @@ export default function App(): JSX.Element {
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
                   <RevolutionaryContentShowcase />
+                </div>
+
+                {/* Ultimate Tech Showcase 2026 */}
+                <div className="mb-12">
+                  <UltimateTechShowcase2026 />
+                </div>
+
+                {/* AI Innovation Showcase 2026 */}
+                <div className="mb-12">
+                  <AIInnovationShowcase2026 />
                 </div>
 
                 {/* NEW: Revolutionary Content Showcase 2025 */}
