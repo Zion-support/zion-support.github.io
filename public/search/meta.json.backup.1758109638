@@ -2240,11 +2240,32 @@
     "h1": "Agent Observability Scorecards (2026)"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-agent-platform-readiness-checklist",
+    "title": "AI 2026: Agent Platform Readiness Checklist | Zion Tech Group",
+    "h1": "AI 2026: Agent Platform Readiness Checklist"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-2026-agent-platform-slos-best-practices",
     "title": "AI 2026: Agent Platform SLOs — Best Practices | Zion Tech Group",
     "h1": "AI 2026: Agent Platform SLOs — Best Practices"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-agent-red-teaming-playbook",
+    "title": "Agent Red Teaming — Practical Playbook (2026) | Zion Tech Group",
+    "h1": "Agent Red Teaming — Practical Playbook (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-agent-release-health-scorecards",
+    "title": "",
+    "h1": "Agent Release Health Scorecards"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-2026-agent-safety-playbook",
     "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
     "h1": "AI 2026: Agent Safety Playbook"
@@ -2270,6 +2291,14 @@
     "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-autonomous-change-management-blueprint",
+    "title": "Autonomous Change Management — Blueprint (2026) | Zion Tech Group",
+    "h1": "Autonomous Change Management — Blueprint (2026)"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-2026-autonomous-evidence-led-ops",
     "title": "Autonomous, Evidence‑Led Ops (2026) | Zion Tech Group",
     "h1": "Autonomous, Evidence‑Led Ops (2026)"
@@ -2280,6 +2309,19 @@
     "h1": "Autonomous Incident Response Blueprint (2026)"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-compliance-evidence-automation",
+    "title": "Compliance Evidence Automation (2026) | Zion Tech Group",
+    "h1": "Compliance Evidence Automation (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-cost-aware-observability-blueprint",
+    "title": "AI 2026: Cost‑Aware Observability Blueprint | Zion Tech Group",
+    "h1": "Cost‑Aware Observability Blueprint (2026)"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-2026-cost-aware-routing-in-practice",
     "title": "Cost-Aware Routing in Practice (2026) | Zion Tech Group",
     "h1": "Cost-Aware Routing in Practice (2026)"
@@ -2320,6 +2362,14 @@
     "h1": "Evidence‑Led Operations Blueprint (2026)"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-exec-guide-to-agent-slo-scorecards",
+    "title": "AI 2026: Executive Guide to Agent SLO Scorecards | Zion Tech Group",
+    "h1": "AI 2026: Executive Guide to Agent SLO Scorecards"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-2026-foundation-model-quality-engineering",
     "title": "Foundation Model Quality Engineering (2026) | Zion Tech Group",
     "h1": "Foundation Model Quality Engineering (2026)"
@@ -2335,6 +2385,14 @@
     "h1": "Governed Tooling in Practice (2026)"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-low-latency-agent-observability",
+    "title": "",
+    "h1": "AI 2026: Low-Latency Agent Observability"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-2026-operational-evals-blueprint",
     "title": "AI 2026: Operational Evals — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Operational Evals — Blueprint"
@@ -2345,9 +2403,20 @@
     "h1": "AI 2026: Operational Risk Metrics for Agents"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-production-eval-gates-live-ops",
+    "title": "Production Eval Gates (2026) | Zion Tech Group",
+    "h1": "Production Eval Gates (2026)"
+  },
+  {
+    "route": "/blog/ai-2026-production-agent-postmortems-playbook",
+    "title": "",
+    "h1": "AI 2026: Production Agentic Incident Postmortems — Playbook"
+=======
     "route": "/blog/ai-2026-operationalizing-agentic-workflows",
     "title": "Operationalizing Agentic Workflows in 2026 | Zion Tech Group",
     "h1": "Operationalizing Agentic Workflows in 2026"
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
   },
   {
     "route": "/blog/ai-2026-production-eval-gates-live-ops",
@@ -2370,6 +2439,14 @@
     "h1": "AI 2026: Real-Time Retrieval Architectures"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-release-evidence-scorecards-blueprint",
+    "title": "",
+    "h1": "Release Evidence Scorecards — Blueprint"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-2026-reliable-autonomy-operations",
     "title": "AI 2026: Reliable Autonomy Operations | Zion Tech Group",
     "h1": "AI 2026: Reliable Autonomy Operations"
@@ -2390,6 +2467,14 @@
     "h1": "AI 2026: Safe Autonomy in Production"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-safe-tooling-permissions-in-practice",
+    "title": "Safe Tooling Permissions — In Practice (2026) | Zion Tech Group",
+    "h1": "Safe Tooling Permissions — In Practice (2026)"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-2026-safety-evals-operational-checklist",
     "title": "",
     "h1": "AI 2026: Safety Evals Operational Checklist"
@@ -2415,6 +2500,14 @@
     "h1": "AI 2026: Trustworthy Model Routing — Starter Kit"
   },
   {
+<<<<<<< HEAD
+    "route": "/blog/ai-2026-zero-trust-agents",
+    "title": "Zero‑Trust Agents (2026) | Zion Tech Group",
+    "h1": "Zero‑Trust Agents (2026)"
+  },
+  {
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
     "route": "/blog/ai-automation-trends-2025",
     "title": "AI Automation Trends 2025: The Future of Autonomous Systems | Zion\n          Tech Group",
     "h1": "AI Automation Trends 2025: The Future of Autonomous Systems"
@@ -2423,6 +2516,8 @@
     "route": "/blog/ai-roadmap-2026",
     "title": "AI Roadmap 2026: Practical Enterprise Adoption Guide | Zion Tech Group",
     "h1": "AI Roadmap 2026: Practical Enterprise Adoption Guide"
+<<<<<<< HEAD
+=======
   },
   {
     "route": "/blog/autonomous-evaluation-playbooks-2025",
@@ -2438,6 +2533,7 @@
     "route": "/blog/cloud-native-automation",
     "title": "Building Cloud-Native Automation Infrastructure | Zion Tech Group",
     "h1": "Building Cloud-Native Automation Infrastructure"
+>>>>>>> origin/cursor/create-and-deploy-new-content-2ae6
   },
   {
     "route": "/blog/genai-2025-practical-compliance-patterns",
