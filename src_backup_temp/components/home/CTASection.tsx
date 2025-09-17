@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-import { Link  } from 'react-router-dom';
-import { ArrowRight, Rocket, MessageCircle, Calendar, Star  } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const CTASection: React.FC = () => {
   return (

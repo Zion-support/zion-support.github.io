@@ -1,140 +1,104 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const Navigation: React.FC = () => {
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-'use client'
+"use client"
+import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
+  { name: 'Solutions', href: '/solutions' },
   { name: 'Services', href: '/services' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
   { name: 'Blog', href: '/blog' },
   { name: 'Updates', href: '/updates' },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research', tag: 'New' },
-  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-  { name: 'Contact', href: '/contact' },
-=======
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
->>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-23cd
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
-=======
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'Contact', href: '/contact' },
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 ]
 
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
->>>>>>> cursor/create-and-deploy-new-content-2def
-]
-
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Navigation</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default Navigation;
-=======
-"use client"
-
-import React from 'react'
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const navigation = [
-=======
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
-const navLinks = [
-	{ name: 'About', href: '/about' },
-	{ name: 'Services', href: '/services' },
-	{ name: 'Solutions', href: '/solutions' },
-	{ name: 'Research', href: '/research' },
-	{ name: 'Updates', href: '/updates', badge: 'New' },
-]
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
-export default function Navigation() {
-	return (
-		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-			<nav className="mx-auto max-w-7xl flex items-center justify-between p-4" aria-label="Global">
-				<a href="/" className="text-white font-bold">Zion</a>
-				<div className="hidden md:flex gap-x-6">
-					{navLinks.map((item) => (
-						<a key={item.name} href={item.href} className="relative inline-flex items-center gap-1 text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">
-							<span>{item.name}</span>
-							{(item as any).badge ? (
-								<span className="ml-1 rounded bg-blue-600 px-1.5 py-0.5 text-[10px] font-bold text-white">{(item as any).badge}</span>
-							) : null}
-						</a>
-					))}
-				</div>
-				<div className="hidden md:flex">
-					<a href="/contact" className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105">Get Started</a>
-				</div>
-			</nav>
-		</header>
-	)
+    <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div className="flex lg:flex-1">
+          <a href="/" className="-m-1.5 p-1.5">
+            <span className="sr-only">Zion Tech Group</span>
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200">
+              Zion Tech Group
+            </div>
+          </a>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
+        <div className="hidden lg:flex lg:gap-x-12">
+          {navigation.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5"
+            >
+              {item.name}
+            </a>
+          ))}
+        </div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="/contact"
+            className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105"
+          >
+            Get Started
+          </a>
+        </div>
+      </nav>
+      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <div className="fixed inset-0 z-50" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black/95 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+          <div className="flex items-center justify-between">
+            <a href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Zion Tech Group</span>
+              <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Zion Tech Group
+              </div>
+            </a>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-gray-400"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-700">
+              <div className="space-y-2 py-6">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800 transition-colors duration-200"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+              <div className="py-6">
+                <a
+                  href="/contact"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+        </Dialog.Panel>
+      </Dialog>
+    </header>
+  )
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

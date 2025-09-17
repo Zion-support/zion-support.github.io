@@ -1,4 +1,3 @@
-import Homepage2025 from '../components/Homepage2025';
 import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap, BarChart3, Star, TrendingUp, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'

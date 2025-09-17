@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';';
-
-import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
-import Layout from "../../components/Layout";";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const industry: React.FC = () => {
   return (

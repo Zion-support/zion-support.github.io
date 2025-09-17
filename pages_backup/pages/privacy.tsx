@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 

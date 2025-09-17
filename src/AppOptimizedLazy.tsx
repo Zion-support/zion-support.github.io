@@ -52,7 +52,7 @@ const LoadingSpinner = () => (
   </div>
 );
 
-export default function AppOptimizedLazy(): JSX.Element {
+export default function AppOptimizedLazy(): React.JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
@@ -193,4 +193,4 @@ export default function AppOptimizedLazy(): JSX.Element {
       </div>
     </Router>
   );
-};
+}

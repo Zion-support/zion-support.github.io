@@ -1,48 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-
-
-
-
-
-
-
-import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
-import {real2036ITServices} from '../data/real-2036-it-services';
-import {real2036AIServices} from '../data/real-2036-ai-services';
-
-
-const ComprehensiveServicesShowcase2036: React.FC = () => {
-  const allServices = [
-    ...real2036InnovativeServices
-    ...real2036ITServices
-    ...real2036AIServices,  ];
-  const categories = [...new Set(allServices.map(service => service.category))]
-import React from 'react',
-import SEO from '../components/SEO',
-
-import Layout from '../components/layout/Layout',
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
-import { real2036ITServices } from '../data/real-2036-it-services',
-import { real2036AIServices } from '../data/real-2036-ai-services',
-import { motion } from 'framer-motion',
-
-
-
-
-const ComprehensiveServicesShowcase2036: React.FC = () => {
-  const allServices = [
-    ...real2036InnovativeServices;
-    ...real2036ITServices;
-    ...real2036AIServices
-  ],
-  const categories = [...new Set(allServices.map(service => service.category))],
-
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const comprehensive-services-showcase-2036: React.FC = () => {
   return (

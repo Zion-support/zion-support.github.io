@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-" and automated compliance.Build trust with consumers and meet regulatory requirements seamlessly. </p>" <div className="flex flex-col sm: fle x-row gap-4 justify-center"> <a" href="https:
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const Blockchain-Supply-Chain-Transparency: React.FC = () => {
   return (

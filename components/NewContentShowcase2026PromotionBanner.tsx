@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-import { 
-  Sparkles
-  ArrowRight
-  Star
-  Zap,
-  Brain,
-  Rocket,
-  Target,
-  CheckCircle,
-  Play,
-  ExternalLink
-} from 'lucide-react';
-
-const NewContentShowcase2026PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const features = [
-    'Revolutionary AI Innovations',
-    'Advanced Automation Solutions'
-    'Future Technology Predictions',
-    'Interactive Demonstrations'
-  ];
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const NewContentShowcase2026PromotionBanner: React.FC = () => {
   return (
