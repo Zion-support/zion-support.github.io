@@ -6,7 +6,7 @@ import {  Twitter,
   Github,
   ChevronUp,
 } from 'lucide-react';
-import Link from 'next/link'; // Changed from react-router-dom
+import { Link } from 'react-router-dom'; // Changed from react-router-dom
 import FeedbackWidget from './feedback/FeedbackWidget';
 
 function resolveUrl(envVar: string | undefined, fallback: string) {

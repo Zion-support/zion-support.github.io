@@ -29,7 +29,7 @@ export interface ButtonProps
   className?: string;
 }
 
-,const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
       <button
@@ -42,6 +42,4 @@ export interface ButtonProps
 );
 Button.displayName = 'Button';
 
-export { Button, buttonVariants
-  }
-];
+export { Button, buttonVariants };

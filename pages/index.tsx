@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Head from 'next/head';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
