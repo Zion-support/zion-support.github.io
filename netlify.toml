@@ -15,8 +15,8 @@
 [build.environment]
   NODE_VERSION = "22"
   NODE_OPTIONS = "--max_old_space_size=6144"
-  # Use npm for dependency management
-  NPM_FLAGS = "--ignore-scripts --no-optional"
+  # Use npm for dependency management; allow optional deps and scripts so esbuild can install platform binary
+  NPM_FLAGS = ""
   # Skip Netlify's Next.js plugin since this is a Vite static site
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   # Force Vite/static site detection
