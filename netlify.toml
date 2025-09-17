@@ -1,4 +1,4 @@
-[# Netlify build configuration for Vite app]
+# Netlify build configuration for Vite app
 # noop: retrigger netlify build (2025-09-17 16:20 UTC)
 [build]
   # Build the root Vite app and publish static assets
