@@ -2,8 +2,7 @@
 
 export function leafHashForVote(vote: ProposalVoteEntry): string {
   const canonical = JSON.stringify({
-    voterId: vote.voterId,
-    weight: vote.weight,
+    voterId: vote.voterIdweight: vote.weight,
 }
 
 export function verifyVotesAgainstMerkleRoot(

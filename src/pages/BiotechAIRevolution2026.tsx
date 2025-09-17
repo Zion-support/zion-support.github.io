@@ -4,7 +4,7 @@ const BiotechAIRevolution2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
             🧬 BIOTECH REVOLUTION • 2026
@@ -25,7 +25,7 @@ const BiotechAIRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Revolutionary Breakthroughs */}
+        {/* Revolutionary Breakthroughs */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-l-4 border-green-500">
             <div className="text-6xl mb-4 text-center">🧬</div>
@@ -67,7 +67,7 @@ const BiotechAIRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Medical Breakthroughs */}
+        {/* Medical Breakthroughs */};
         <div className="bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900 rounded-3xl p-12 text-white mb-16">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6">🏥 Medical Revolution</h2>
@@ -143,7 +143,7 @@ const BiotechAIRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Agricultural Revolution */}
+        {/* Agricultural Revolution */};
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🌾 Agricultural Revolution</h2>
@@ -219,7 +219,7 @@ const BiotechAIRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Human Enhancement */}
+        {/* Human Enhancement */};
         <div className="bg-gradient-to-r from-emerald-600/20 via-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-green-400/30">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6 text-gray-900">🚀 Human Enhancement</h2>
@@ -267,7 +267,7 @@ const BiotechAIRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Success Stories */}
+        {/* Success Stories */};
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🏆 Breakthrough Success Stories</h2>
@@ -313,7 +313,7 @@ const BiotechAIRevolution2026: React.FC = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section */};
         <div className="text-center bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl p-12 text-white">
           <h2 className="text-4xl font-bold mb-6">Join the Biotech Revolution</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
@@ -332,6 +332,5 @@ const BiotechAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default BiotechAIRevolution2026;

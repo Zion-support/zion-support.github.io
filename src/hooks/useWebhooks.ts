@@ -5,8 +5,7 @@ export interface Webhook {
   events: string[];
   secret?: string;
   failureCount: number;
-}
-
+};
 export interface WebhookEvent {
   id: string;
   webhookId: string;
@@ -17,13 +16,14 @@ export interface WebhookEvent {
   createdAt: string;
   lastAttempt?: string;
   error?: string;
-}
-
+};
 export interface UseWebhooksOptions {
   autoRefresh?: boolean;
   refreshInterval?: number;
-}
-
+};
+interface UseWebhooksOptions {
+  autoRefresh?: boolean;
+  refreshInterval?: number;
 export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   const { autoRefresh = true, refreshInterval = 30000 } = options;
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
@@ -38,6 +38,8 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       const response = await fetch('/api/webhooks');
       if (!response.ok) {
         throw new Error('Failed to fetch webhooks');
+      };
+const data = await response.json();
       }
       const data = await response.json();
       setWebhooks(data.webhooks || []);
@@ -45,7 +47,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setError(err instanceof Error ? err.message : 'Failed to fetch webhooks');
     } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Fetch webhook events
   const fetchEvents = useCallback(async (webhookId?: string) => {
@@ -56,6 +58,8 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error('Failed to fetch webhook events');
+      };
+const data = await response.json();
       }
       const data = await response.json();
       setEvents(data.events || []);
@@ -63,7 +67,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       setError(err instanceof Error ? err.message : 'Failed to fetch webhook events');
     } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Create webhook
   const createWebhook = useCallback(async (webhookData: Omit<Webhook, 'id' | 'createdAt' | 'failureCount'>) => {
@@ -79,6 +83,8 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       });
       if (!response.ok) {
         throw new Error('Failed to create webhook');
+      };
+const newWebhook = await response.json();
       }
       const newWebhook = await response.json();
       setWebhooks(prev => [...prev, newWebhook]);
@@ -88,7 +94,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       throw err;
     } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Update webhook
   const updateWebhook = useCallback(async (id: string, updates: Partial<Webhook>) => {
@@ -104,6 +110,8 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       });
       if (!response.ok) {
         throw new Error('Failed to update webhook');
+      };
+const updatedWebhook = await response.json();
       }
       const updatedWebhook = await response.json();
       setWebhooks(prev => prev.map(webhook => 
@@ -115,7 +123,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       throw err;
     } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Delete webhook
   const deleteWebhook = useCallback(async (id: string) => {
@@ -127,6 +135,8 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       });
       if (!response.ok) {
         throw new Error('Failed to delete webhook');
+      };
+setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
       }
       setWebhooks(prev => prev.filter(webhook => webhook.id !== id));
     } catch (err) {
@@ -134,7 +144,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       throw err;
     } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Test webhook
   const testWebhook = useCallback(async (id: string) => {
@@ -146,6 +156,8 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       });
       if (!response.ok) {
         throw new Error('Failed to test webhook');
+      };
+const result = await response.json();
       }
       const result = await response.json();
       return result;
@@ -154,7 +166,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       throw err;
     } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Retry failed event
   const retryEvent = useCallback(async (eventId: string) => {
@@ -166,6 +178,8 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       });
       if (!response.ok) {
         throw new Error('Failed to retry webhook event');
+      };
+const result = await response.json();
       }
       const result = await response.json();
       return result;
@@ -174,7 +188,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
       throw err;
     } finally {
       setLoading(false);
-    }
+    };
   }, []);
   // Auto-refresh effect
   useEffect(() => {
@@ -184,7 +198,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
         fetchEvents();
       }, refreshInterval);
       return () => clearInterval(interval);
-    }
+    };
   }, [autoRefresh, refreshInterval, fetchWebhooks, fetchEvents]);
   // Initial load
   useEffect(() => {
@@ -202,6 +216,7 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
     updateWebhook,
     deleteWebhook,
     testWebhook,
+    retryEvent};
+  };
     retryEvent,
   };
-};

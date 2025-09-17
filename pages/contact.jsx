@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const contact: React.FC = () => {
+const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
@@ -19,4 +19,4 @@ const contact: React.FC = () => {
   );
 };
 
-export default contact;
+export default Contact;

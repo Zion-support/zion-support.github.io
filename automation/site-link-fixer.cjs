@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 const projectRoot = process.cwd();
 
 const requiredPages = [

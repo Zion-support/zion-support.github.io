@@ -4,7 +4,7 @@ const CosmicIntelligence2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌌 COSMIC INTELLIGENCE • 2026
@@ -18,7 +18,7 @@ const CosmicIntelligence2026: React.FC = () => {
           </p>
         </div>
 
-        {/* Cosmic Features Grid */}
+        {/* Cosmic Features Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
@@ -105,7 +105,7 @@ const CosmicIntelligence2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Cosmic Achievements Section */}
+        {/* Cosmic Achievements Section */};
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">🌌 Cosmic Achievements</h2>
@@ -181,7 +181,7 @@ const CosmicIntelligence2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Cosmic Network Visualization */}
+        {/* Cosmic Network Visualization */};
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">🌌 Cosmic Network Visualization</h2>
@@ -217,7 +217,7 @@ const CosmicIntelligence2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the Cosmic Intelligence Network</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -236,6 +236,5 @@ const CosmicIntelligence2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default CosmicIntelligence2026;

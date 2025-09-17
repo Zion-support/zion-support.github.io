@@ -7,3 +7,5 @@ export const ToastContainer: React.FC = () => {
     </div>
   );
 };
+
+export const Toaster = ToastContainer;

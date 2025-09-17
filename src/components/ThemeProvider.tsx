@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState }  from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -7,7 +7,6 @@ interface ThemeContextType {
   setTheme: (theme: Theme) => void;
   isDark: boolean;
 }
-
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const useTheme = () => {
@@ -17,34 +16,25 @@ export const useTheme = () => {
   }
   return context;
 };
-
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('system');
-  const [isDark, setIsDark] = useState(false);
+  const [theme, setTheme] = useState<Theme>('dark');
+
+  const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
-    
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-      setIsDark(systemTheme === 'dark');
-    } else {
-      root.classList.add(theme);
-      setIsDark(theme === 'dark');
-    }
-  }, [theme]);
+    root.classList.add(isDark ? 'dark' : 'light');
+  }, [isDark]);
 
   const value = {
     theme,
     setTheme,
-    isDark,
+    isDark
   };
-
   return (
     <ThemeContext.Provider value={value}>
-      {children}
+      {children};
     </ThemeContext.Provider>
   );
 };

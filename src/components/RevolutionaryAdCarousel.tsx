@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect }  from 'react';
+import { motion, AnimatePresence }  from 'framer-motion';
 
 const RevolutionaryAdCarousel: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);
@@ -7,7 +7,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
 
   const advertisements = [
     {
-      id: 1,
+      id: "1",
       title: "🚀 ULTIMATE BREAKTHROUGH 2025",
       subtitle: "Revolutionary Quantum Consciousness AI",
       description: "Experience the world's first AI system with quantum-enhanced consciousness capabilities. 97% accuracy in ethical decision making.",
@@ -19,7 +19,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
       badge: "BREAKTHROUGH"
     },
     {
-      id: 2,
+      id: "2",
       title: "🌟 NEXT-GEN INNOVATION HUB",
       subtitle: "Pioneering Future Technologies",
       description: "Discover breakthrough technologies that will revolutionize industries and transform human potential with unlimited possibilities.",
@@ -31,7 +31,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
       badge: "INNOVATION"
     },
     {
-      id: 3,
+      id: "3",
       title: "🌌 INTERDIMENSIONAL TECH 2035",
       subtitle: "Computing from Parallel Dimensions",
       description: "Unlimited processing capacity from parallel dimensions. Experience computing power that transcends current limitations.",
@@ -43,7 +43,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
       badge: "REVOLUTIONARY"
     },
     {
-      id: 4,
+      id: "4",
       title: "🧬 NEURAL INTERFACE REVOLUTION",
       subtitle: "Direct Brain-Computer Interface",
       description: "Revolutionary neural interface technology enabling thought-controlled devices with 99.8% accuracy in thought recognition.",
@@ -53,9 +53,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
       gradient: "from-green-600 via-emerald-600 to-teal-600",
       icon: "🔗",
       badge: "BREAKTHROUGH"
-    }
-  ];
-
+    };
   useEffect(() => {
     if (!isAutoPlaying) return;
     
@@ -69,92 +67,90 @@ const RevolutionaryAdCarousel: React.FC = () => {
   const nextAd = () => {
     setCurrentAd((prev) => (prev + 1) % advertisements.length);
   };
-
   const prevAd = () => {
     setCurrentAd((prev) => (prev - 1 + advertisements.length) % advertisements.length);
   };
-
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       <div 
         className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900"
-        onMouseEnter={() => setIsAutoPlaying(false)}
-        onMouseLeave={() => setIsAutoPlaying(true)}
+        onMouseEnter={() => setIsAutoPlaying(false)};
+        onMouseLeave={() => setIsAutoPlaying(true)};
       >
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentAd}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            key={currentAd};
+            initial={{ opacity: "0", x: 300 }};
+            animate={{ opacity: "1", x: 0 }};
+            exit={{ opacity: "0", x: -300 }};
+            transition={{ duration: 0.6, ease: "easeInOut" }};
             className="relative"
           >
-            {/* Background Pattern */}
+            {/* Background Pattern */};
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
             
             <div className="relative z-10 p-12 text-white">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                {/* Content */}
+                {/* Content */};
                 <div>
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
+                    initial={{ opacity: "0", y: 20 }};
+                    animate={{ opacity: "1", y: 0 }};
+                    transition={{ delay: 0.2 }};
                     className="mb-6"
                   >
                     <span className="inline-block px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold rounded-full mb-4 animate-pulse">
-                      🔥 {advertisements[currentAd].badge}
+                      🔥 {advertisements[currentAd].badge};
                     </span>
                     <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                      {advertisements[currentAd].title}
+                      {advertisements[currentAd].title};
                     </h2>
                     <h3 className="text-2xl font-semibold mb-4 text-blue-200">
-                      {advertisements[currentAd].subtitle}
+                      {advertisements[currentAd].subtitle};
                     </h3>
                     <p className="text-xl opacity-90 mb-8 leading-relaxed">
-                      {advertisements[currentAd].description}
+                      {advertisements[currentAd].description};
                     </p>
                   </motion.div>
 
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
+                    initial={{ opacity: "0", y: 20 }};
+                    animate={{ opacity: "1", y: 0 }};
+                    transition={{ delay: 0.4 }};
                     className="space-y-3 mb-8"
                   >
                     {advertisements[currentAd].features.map((feature, index) => (
                       <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.6 + index * 0.1 }}
+                        key={index};
+                        initial={{ opacity: "0", x: -20 }};
+                        animate={{ opacity: "1", x: 0 }};
+                        transition={{ delay: 0.6 + index * 0.1 }};
                         className="flex items-center"
                       >
                         <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-4"></div>
                         <span className="text-lg">{feature}</span>
                       </motion.div>
-                    ))}
+                    ))};
                   </motion.div>
 
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8 }}
+                    initial={{ opacity: "0", y: 20 }};
+                    animate={{ opacity: "1", y: 0 }};
+                    transition={{ delay: 0.8 }};
                     className="flex flex-wrap gap-4"
                   >
                     <motion.a
-                      href={advertisements[currentAd].link}
-                      whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(147, 51, 234, 0.4)" }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`bg-gradient-to-r ${advertisements[currentAd].gradient} px-8 py-4 rounded-2xl text-lg font-bold hover:shadow-2xl transition-all duration-300 border-2 border-white/30`}
+                      href={advertisements[currentAd].link};
+                      whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(147, 51, 234, 0.4)" }};
+                      whileTap={{ scale: 0.95 }};
+                      className={`bg-gradient-to-r ${advertisements[currentAd].gradient} px-8 py-4 rounded-2xl text-lg font-bold hover:shadow-2xl transition-all duration-300 border-2 border-white/30`};
                     >
                       {advertisements[currentAd].cta} →
                     </motion.a>
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 }};
+                      whileTap={{ scale: 0.95 }};
                       className="border-2 border-white/50 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 transition-all duration-300"
                     >
                       Learn More
@@ -162,16 +158,16 @@ const RevolutionaryAdCarousel: React.FC = () => {
                   </motion.div>
                 </div>
 
-                {/* Visual */}
+                {/* Visual */};
                 <div className="flex justify-center">
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
+                    initial={{ opacity: "0", scale: 0.8 }};
+                    animate={{ opacity: "1", scale: 1 }};
+                    transition={{ delay: 0.3, type: "spring", stiffness: 100 }};
                     className="relative"
                   >
                     <div className="text-9xl mb-4 text-center animate-bounce">
-                      {advertisements[currentAd].icon}
+                      {advertisements[currentAd].icon};
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse"></div>
                   </motion.div>
@@ -181,12 +177,12 @@ const RevolutionaryAdCarousel: React.FC = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Navigation */}
+        {/* Navigation */};
         <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
           <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={prevAd}
+            whileHover={{ scale: 1.1 }};
+            whileTap={{ scale: 0.9 }};
+            onClick={prevAd};
             className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
           >
             ←
@@ -194,32 +190,31 @@ const RevolutionaryAdCarousel: React.FC = () => {
         </div>
         <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
           <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={nextAd}
+            whileHover={{ scale: 1.1 }};
+            whileTap={{ scale: 0.9 }};
+            onClick={nextAd};
             className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
           >
             →
           </motion.button>
         </div>
 
-        {/* Dots Indicator */}
+        {/* Dots Indicator */};
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
           {advertisements.map((_, index) => (
             <button
-              key={index}
-              onClick={() => setCurrentAd(index)}
+              key={index};
+              onClick={() => setCurrentAd(index)};
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentAd 
                   ? 'bg-white scale-125' 
                   : 'bg-white/50 hover:bg-white/70'
-              }`}
+              }`};
             />
-          ))}
+          ))};
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default RevolutionaryAdCarousel;

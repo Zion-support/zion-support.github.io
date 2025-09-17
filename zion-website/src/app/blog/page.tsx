@@ -109,11 +109,13 @@ export default function BlogIndexPage() {
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {blogPosts.map((post) => (
               <article key={post.slug} className="flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center gap-2 text-xs text-blue-300 mb-3">
-                  <time dateTime={post.date} className="text-gray-400">
-                    {new Date(post.date).toLocaleDateString()}
-                  </time>
-                </div>
+                {post.date && (
+                  <div className="flex items-center gap-2 text-xs text-blue-300 mb-3">
+                    <time dateTime={post.date} className="text-gray-400">
+                      {new Date(post.date).toLocaleDateString()}
+                    </time>
+                  </div>
+                )}
                 <h3 className="text-lg font-semibold leading-6 text-white">
                   <Link href={`/blog/${post.slug}`} className="hover:text-blue-400 transition-colors duration-200">
                     {post.title}

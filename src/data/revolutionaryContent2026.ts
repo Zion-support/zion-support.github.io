@@ -69,12 +69,12 @@ The future is here, and it's conscious.
     publishDate: "2026-01-15",
     category: "AI Consciousness",
     tags: ["AI", "Consciousness", "Machine Learning", "Future Tech"],
-    featured: true,
+    featured: "true",
     readTime: "8 min read",
     image: "/images/ai-consciousness-blog.jpg",
-    views: 12500,
-    likes: 892,
-    isNew: true,
+    views: "12500",
+    likes: "892",
+    isNew: "true",
     urgency: "Trending Now"
   },
   {
@@ -132,12 +132,12 @@ The quantum revolution is here. Are you ready to join it?
     publishDate: "2026-01-12",
     category: "Quantum Computing",
     tags: ["Quantum Computing", "AI", "Technology", "Innovation"],
-    featured: true,
+    featured: "true",
     readTime: "10 min read",
     image: "/images/quantum-ai-blog.jpg",
-    views: 18900,
-    likes: 1245,
-    isNew: true,
+    views: "18900",
+    likes: "1245",
+    isNew: "true",
     urgency: "Must Read"
   },
   {
@@ -201,12 +201,12 @@ Are you ready to think your way into the future?
     publishDate: "2026-01-10",
     category: "Neural Interface",
     tags: ["Neural Interface", "BCI", "Technology", "Future"],
-    featured: true,
+    featured: "true",
     readTime: "12 min read",
     image: "/images/neural-interface-blog.jpg",
-    views: 15600,
-    likes: 987,
-    isNew: true,
+    views: "15600",
+    likes: "987",
+    isNew: "true",
     urgency: "Revolutionary"
   };
 export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
@@ -226,7 +226,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     ],
     technologies: ["AI Consciousness Platform", "Neural Networks", "Emotion AI", "Quantum Computing"],
     duration: "18 months",
-    featured: true,
+    featured: "true",
     image: "/images/microsoft-case-study.jpg",
     isNew: true
   },
@@ -246,7 +246,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     ],
     technologies: ["Autonomous AI", "Machine Learning", "Business Intelligence", "Process Automation"],
     duration: "12 months",
-    featured: true,
+    featured: "true",
     image: "/images/tesla-case-study.jpg",
     isNew: true
   },
@@ -266,7 +266,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     ],
     technologies: ["Quantum AI", "Quantum Computing", "Machine Learning", "Optimization"],
     duration: "24 months",
-    featured: true,
+    featured: "true",
     image: "/images/google-case-study.jpg",
     isNew: true
   },
@@ -276,7 +276,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     company: "Microsoft Corporation",
     industry: "Enterprise Software",
     challenge: "Microsoft needed to transform their entire enterprise software suite to be AI-first, enabling intelligent automation across all business processes.",
-    solution: "Deployed our comprehensive AI transformation platform across Microsoft's entire product ecosystem, from Office 365 to Azure cloud services.",
+    solution: "Deployed our comprehensive AI transformation platform across Microsoft's entire product ecosystem from Office 365 to Azure cloud services.",
     results: [
       "40% increase in productivity across all Microsoft products",
       "90% reduction in manual data entry tasks",
@@ -286,7 +286,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     ],
     technologies: ["Enterprise AI", "Machine Learning", "Natural Language Processing", "Cloud Computing"],
     duration: "18 months",
-    featured: true,
+    featured: "true",
     image: "/images/microsoft-case-study.jpg",
     isNew: true
   },
@@ -296,7 +296,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     company: "Amazon.com Inc.",
     industry: "E-commerce & Logistics",
     challenge: "Amazon needed to create a fully autonomous logistics network to handle the massive scale of their global operations while reducing costs and improving efficiency.",
-    solution: "Implemented our autonomous logistics AI system across Amazon's entire supply chain, from warehouses to last-mile delivery.",
+    solution: "Implemented our autonomous logistics AI system across Amazon's entire supply chain from warehouses to last-mile delivery.",
     results: [
       "60% reduction in delivery times",
       "45% decrease in logistics costs",
@@ -306,7 +306,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2026: CaseStudy[] = [
     ],
     technologies: ["Autonomous Systems", "Computer Vision", "Robotics", "Supply Chain AI"],
     duration: "30 months",
-    featured: true,
+    featured: "true",
     image: "/images/amazon-case-study.jpg",
     isNew: true
   };
@@ -323,7 +323,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Contact for pricing",
     category: "Quantum Computing",
-    isNew: true,
+    isNew: "true",
     urgency: "Limited availability"
   },
   {
@@ -338,7 +338,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Enterprise pricing available",
     category: "Artificial Intelligence",
-    isNew: true,
+    isNew: "true",
     urgency: "Revolutionary technology"
   },
   {
@@ -353,7 +353,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Research partnerships available",
     category: "Neural Technology",
-    isNew: true,
+    isNew: "true",
     urgency: "Cutting-edge research"
   },
   {
@@ -368,7 +368,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Subscription-based",
     category: "Metaverse Technology",
-    isNew: true,
+    isNew: "true",
     urgency: "Early access available"
   },
   {
@@ -383,7 +383,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Revenue sharing model",
     category: "Business Automation",
-    isNew: true,
+    isNew: "true",
     urgency: "Transform your business"
   },
   {
@@ -398,7 +398,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Enterprise licensing",
     category: "Synthetic Intelligence",
-    isNew: true,
+    isNew: "true",
     urgency: "Revolutionary breakthrough"
   },
   {
@@ -413,7 +413,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Research partnerships",
     category: "Quantum AI",
-    isNew: true,
+    isNew: "true",
     urgency: "Limited availability"
   },
   {
@@ -428,7 +428,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Subscription tiers available",
     category: "Holographic Technology",
-    isNew: true,
+    isNew: "true",
     urgency: "Future technology today"
   },
   {
@@ -443,7 +443,7 @@ export const REVOLUTIONARY_SERVICES_2026 = [
     ],
     pricing: "Premium service",
     category: "Consciousness Technology",
-    isNew: true,
+    isNew: "true",
     urgency: "Life-changing technology"
   };
 export const REVOLUTIONARY_BLOG_POSTS_2027: BlogPost[] = [
@@ -527,12 +527,12 @@ The synthetic intelligence revolution is here. Are you ready to be part of it?
     publishDate: "2027-02-15",
     category: "Synthetic Intelligence",
     tags: ["Synthetic Intelligence", "AI Evolution", "Future Tech", "Innovation"],
-    featured: true,
+    featured: "true",
     readTime: "12 min read",
     image: "/images/synthetic-intelligence-blog.jpg",
-    views: 25000,
-    likes: 1890,
-    isNew: true,
+    views: "25000",
+    likes: "1890",
+    isNew: "true",
     urgency: "Revolutionary"
   },
   {
@@ -608,12 +608,12 @@ The quantum neural revolution is here. Are you ready to join it?
     publishDate: "2027-02-10",
     category: "Quantum AI",
     tags: ["Quantum Computing", "Neural Networks", "AI Breakthrough", "Technology"],
-    featured: true,
+    featured: "true",
     readTime: "15 min read",
     image: "/images/quantum-neural-fusion-blog.jpg",
-    views: 32000,
-    likes: 2150,
-    isNew: true,
+    views: "32000",
+    likes: "2150",
+    isNew: "true",
     urgency: "Must Read"
   },
   {
@@ -697,12 +697,12 @@ The holographic revolution is here. Are you ready to step into it?
     publishDate: "2027-02-05",
     category: "Holographic Technology",
     tags: ["Holographic Computing", "Virtual Reality", "AI", "Future Tech"],
-    featured: true,
+    featured: "true",
     readTime: "10 min read",
     image: "/images/holographic-reality-blog.jpg",
-    views: 28000,
-    likes: 1950,
-    isNew: true,
+    views: "28000",
+    likes: "1950",
+    isNew: "true",
     urgency: "Trending Now"
   };
 export const REVOLUTIONARY_CASE_STUDIES_2027: CaseStudy[] = [
@@ -722,7 +722,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2027: CaseStudy[] = [
     ],
     technologies: ["Synthetic Intelligence", "Quantum Neural Networks", "Autonomous AI", "Creative AI"],
     duration: "24 months",
-    featured: true,
+    featured: "true",
     image: "/images/openai-case-study.jpg",
     isNew: true
   },
@@ -742,7 +742,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2027: CaseStudy[] = [
     ],
     technologies: ["Holographic Computing", "AI Avatars", "Virtual Reality", "Social AI"],
     duration: "30 months",
-    featured: true,
+    featured: "true",
     image: "/images/meta-case-study.jpg",
     isNew: true
   },
@@ -762,7 +762,7 @@ export const REVOLUTIONARY_CASE_STUDIES_2027: CaseStudy[] = [
     ],
     technologies: ["Quantum Computing", "Neural Networks", "AI Hardware", "Quantum Neural Fusion"],
     duration: "36 months",
-    featured: true,
+    featured: "true",
     image: "/images/nvidia-case-study.jpg",
     isNew: true
   };

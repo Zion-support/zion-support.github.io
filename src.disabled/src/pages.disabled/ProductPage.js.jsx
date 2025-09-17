@@ -1,6 +1,3 @@
-=======
-=======
-=======
 import React from 'react';
 
 const ProductPage.js: React.FC = () => {
