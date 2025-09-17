@@ -1,18 +1,9 @@
 import React from 'react';
 
-const UltimateContentBanner2027: React.FC = () => {
+export default function UltimateContentBanner2027(): JSX.Element {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 rounded-2xl">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Ultimate Content Banner2027</h2>
-          <p className="text-xl opacity-90">
-            Revolutionary technology showcase
-          </p>
-        </div>
-      </div>
+    <div className="w-full rounded-lg border border-gray-200 p-4 text-center text-gray-600">
+      Ultimate Content Banner 2027
     </div>
   );
-};
-
-export default UltimateContentBanner2027;
+}
