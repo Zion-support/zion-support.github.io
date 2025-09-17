@@ -7,46 +7,13 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
   const revolutionaryContent = [
     {
       id: 1,
-<<<<<<< HEAD
       title: "AI Consciousness Revolution 2025",
       description: "The first artificial intelligence systems that demonstrate genuine consciousness and self-awareness, capable of creative thought and emotional understanding.",
       image: "🧠",
       gradient: "from-purple-600 to-pink-600",
       borderColor: "border-purple-400",
       bgColor: "from-purple-600/30 to-pink-600/30",
-      features: ["Self-aware AI agents", "Emotional intelligence", "Creative problem solving", "Ethical decision making"],
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-      title: "AI Consciousness Revolution",
-      description: "Experience the first AI system with genuine consciousness and self-awareness",
-      image: "🧠",
-      gradient: "from-purple-600 to-pink-600",
-      features: ["Self-Aware", "Creative", "Autonomous", "Emotional Intelligence"],
-      link: "/pages/RevolutionaryTechBreakthrough2025"
-    },
-    {
-      id: 2,
-<<<<<<< HEAD
-      title: "Quantum Neural Fusion",
-      description: "The convergence of quantum computing and neural networks creating unprecedented computational power and processing capabilities.",
-      image: "⚡",
-      gradient: "from-cyan-600 to-blue-600",
-      borderColor: "border-cyan-400",
-      bgColor: "from-cyan-600/30 to-blue-600/30",
-      features: ["Quantum neural networks", "Exponential processing speed", "Quantum machine learning", "Parallel universe computing"],
-      link: "/pages/QuantumComputingRevolution2025"
-    },
-    {
-      id: 3,
-      title: "Neural Reality Engine",
-      description: "Direct brain-computer interfaces that create immersive virtual realities indistinguishable from physical reality.",
-      image: "🌐",
-      gradient: "from-emerald-600 to-teal-600",
-      borderColor: "border-emerald-400",
-      bgColor: "from-emerald-600/30 to-teal-600/30",
-      features: ["Direct neural interfaces", "Photorealistic VR", "Haptic feedback systems", "Consciousness transfer"],
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+      features: ["Self-aware AI agents", "Emotional intelligence", "Creative problem solving", "Ethical decision making"],cursor/fix-netlify-build-and-merge-to-main-a068
       title: "Quantum Reality Engine",
       description: "Manipulate reality itself through quantum computing and parallel universe exploration",
       image: "⚡",
@@ -65,7 +32,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
     },
     {
       id: 4,
-<<<<<<< HEAD
       title: "Interdimensional Computing",
       description: "Computing systems that operate across multiple dimensions and parallel universes simultaneously.",
       image: "🌌",
@@ -95,82 +61,18 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
       borderColor: "border-pink-400",
       bgColor: "from-pink-600/30 to-rose-600/30",
       features: ["Digital consciousness", "Immortality technology", "Mind uploading", "Virtual existence"],
-      link: "/pages/ConsciousnessComputingRevolution2030"
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-      title: "Consciousness Transfer Technology",
-      description: "Achieve digital immortality through consciousness transfer between biological and artificial bodies",
-      image: "🌟",
-      gradient: "from-violet-600 to-fuchsia-600",
-      features: ["Digital Immortality", "Body Transfer", "Consciousness Backup", "Life Extension"],
-      link: "/pages/ConsciousnessComputing2026"
-    },
-    {
-      id: 5,
-      title: "Interdimensional Computing",
-      description: "Access computing power from parallel dimensions and alternate realities",
-      image: "🌌",
-      gradient: "from-indigo-600 to-purple-600",
-      features: ["Parallel Processing", "Dimension Access", "Reality Manipulation", "Infinite Computing"],
-      link: "/pages/InterdimensionalRealityEngine2028"
-    }
-  ];
-
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-<<<<<<< HEAD
-        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-        setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
-        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+      link: "/pages/ConsciousnessComputingRevolution2030"cursor/fix-netlify-build-and-merge-to-main-a068
       }, 5000);
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, revolutionaryContent.length]);
 
   const nextSlide = () => {
-<<<<<<< HEAD
     setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-    setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-  };
-
-  const prevSlide = () => {
-    setActiveIndex((prevIndex) => (prevIndex - 1 + revolutionaryContent.length) % revolutionaryContent.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setActiveIndex(index);
-  };
-
-  return (
-<<<<<<< HEAD
-    <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 REVOLUTIONARY CONTENT • 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Content Showcase
-          </h2>
-          <p className="text-xl opacity-90 max-w-4xl mx-auto">
-            Experience the most groundbreaking technological content that's reshaping our understanding of what's possible
-          </p>
-        </div>
-
-        {/* Main Carousel */}
-        <div className="relative max-w-6xl mx-auto">
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+    setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);cursor/fix-netlify-build-and-merge-to-main-a068
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -223,7 +125,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             >
               {revolutionaryContent.map((content, index) => (
                 <div key={content.id} className="w-full flex-shrink-0">
-<<<<<<< HEAD
                   <div className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-2xl p-12 border ${content.borderColor}/30`}>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                       <div>
@@ -240,60 +141,7 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                         </div>
                         <a 
                           href={content.link}
-                          className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-                  <div className={`bg-gradient-to-br ${content.gradient} p-12 min-h-[600px] flex items-center`}>
-                    <div className="grid md:grid-cols-2 gap-12 items-center w-full">
-                      {/* Content */}
-                      <div className="space-y-6">
-                        <div className="text-8xl mb-6">{content.image}</div>
-                        <h3 className="text-4xl font-bold text-white mb-4">{content.title}</h3>
-                        <p className="text-xl text-white/90 mb-6">{content.description}</p>
-                        
-                        {/* Features */}
-                        <div className="flex flex-wrap gap-2 mb-8">
-                          {content.features.map((feature, featureIndex) => (
-                            <span
-                              key={featureIndex}
-                              className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold"
-                            >
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                        
-                        <a
-                          href={content.link}
-                          className="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
-                        >
-                          Explore {content.title} →
-                        </a>
-                      </div>
-<<<<<<< HEAD
-                      <div className="hidden md:block">
-                        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                          <h4 className="text-2xl font-bold mb-4">Key Statistics</h4>
-                          <div className="space-y-4">
-                            <div className="flex justify-between items-center">
-                              <span className="opacity-90">Processing Power</span>
-                              <span className="font-bold text-2xl">∞</span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span className="opacity-90">Accuracy Rate</span>
-                              <span className="font-bold text-2xl">99.9%</span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span className="opacity-90">Innovation Level</span>
-                              <span className="font-bold text-2xl">Revolutionary</span>
-                            </div>
-                            <div className="flex justify-between items-center">
-                              <span className="opacity-90">Future Impact</span>
-                              <span className="font-bold text-2xl">∞</span>
-                            </div>
-                          </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+                          className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}cursor/fix-netlify-build-and-merge-to-main-a068
                       
                       {/* Visual Element */}
                       <div className="relative">
@@ -309,7 +157,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -380,8 +227,6 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                   Explore →
                 </a>
               </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-8">
             {revolutionaryContent.map((_, index) => (

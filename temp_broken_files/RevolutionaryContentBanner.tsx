@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
-<<<<<<< HEAD
   const [currentBanner, setCurrentBanner] = useState(0);
   
   const banners = [
@@ -53,114 +52,13 @@ const RevolutionaryContentBanner: React.FC = () => {
       link: "/pages/UltimateTechShowcase2026",
       gradient: "from-cyan-600 to-blue-600",
       icon: "🎯",
-      badge: "FEATURED"
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-<<<<<<< HEAD
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [banners.length]);
-
-  return (
-    <div className="relative overflow-hidden mb-12">
-      <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 text-white relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-        <div className="relative z-10">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              🌟 NEW REVOLUTIONARY CONTENT • JANUARY 2025
-            </div>
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Experience the Future of Technology
-            </h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Discover our latest revolutionary content showcasing the most advanced technological innovations 
-              that are reshaping industries and creating new possibilities for humanity.
-            </p>
-          </div>
-          
-          {/* Banner Carousel */}
-          <div className="relative">
-            <div className="overflow-hidden rounded-xl">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentBanner * 100}%)` }}
-              >
-                {banners.map((banner, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
-                    <div className={`bg-gradient-to-r ${banner.gradient} p-8 rounded-xl`}>
-                      <div className="text-center">
-                        <h3 className="text-3xl font-bold mb-4">{banner.title}</h3>
-                        <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{banner.description}</p>
-                        <a 
-                          href={banner.link}
-                          className={`inline-block bg-white ${banner.textColor} px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
-      <div className="relative z-10 p-8 md:p-12">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY CONTENT • JANUARY 2025
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Experience the Future of Technology
-          </h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Discover our latest breakthrough content showcasing the most advanced technologies of 2025-2026
-          </p>
-        </div>
-
-        {/* Featured Content Carousel */}
-        <div className="relative">
-          <div className="overflow-hidden rounded-xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {featuredContent.map((content, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                      <div className="flex-shrink-0">
-                        <div className="text-8xl mb-4">{content.icon}</div>
-                        <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold text-white">
-                          {content.badge}
-                        </div>
-                      </div>
-                      <div className="flex-1 text-center md:text-left">
-                        <h3 className="text-3xl font-bold text-white mb-4">
-                          {content.title}
-                        </h3>
-                        <p className="text-lg text-purple-100 mb-6">
-                          {content.description}
-                        </p>
-                        <a
-                          href={content.link}
-                          className={`inline-block bg-gradient-to-r ${content.gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+      badge: "FEATURED"cursor/fix-netlify-build-and-merge-to-main-a068
                         >
                           Explore Now →
                         </a>
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
                 ))}
               </div>
             </div>
@@ -229,8 +127,6 @@ const RevolutionaryContentBanner: React.FC = () => {
               </div>
             </a>
           ))}
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
         </div>
       </div>
     </div>

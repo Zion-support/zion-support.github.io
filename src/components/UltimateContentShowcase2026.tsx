@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 
 const UltimateContentShowcase2026: React.FC = () => {
-<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
@@ -398,14 +397,7 @@ const UltimateContentShowcase2026: React.FC = () => {
           <h3 className="text-4xl font-bold mb-6">💬 What Experts Say</h3>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
             Hear from leading experts about our revolutionary technologies
-          </p>
-=======
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const showcaseItems = [
-    {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+          </p>cursor/fix-netlify-build-and-merge-to-main-a068
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -454,122 +446,7 @@ const UltimateContentShowcase2026: React.FC = () => {
               📞 Schedule Demo
             </button>
           </div>
-<<<<<<< HEAD
-        </motion.div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-        </div>
-      id: 1,
-      title: "Ultimate Tech Breakthrough 2026",
-      description: "Experience the most revolutionary technologies ever created",
-      features: ["Quantum Consciousness Computing", "Neural Reality Engine", "Omniversal AI", "Synthetic Biology AI"],
-      gradient: "from-purple-600 to-pink-600",
-      icon: "🌟",
-      link: "/pages/UltimateTechBreakthrough2026"
-    },
-    {
-      id: 2,
-      title: "Interdimensional Technology Revolution",
-      description: "Break through dimensional barriers and access parallel universe technologies",
-      features: ["Dimension Gateway", "Quantum Dimensional AI", "Reality Manipulation Engine", "Parallel Universe Mining"],
-      gradient: "from-indigo-600 to-purple-600",
-      icon: "🌌",
-      link: "/pages/InterdimensionalTechRevolution2026"
-    },
-    {
-      id: 3,
-      title: "Consciousness Computing Revolution",
-      description: "The first computers that achieve true consciousness and self-awareness",
-      features: ["Self-Aware AI", "Quantum Consciousness", "Neural Consciousness Transfer", "Collective Consciousness"],
-      gradient: "from-emerald-600 to-teal-600",
-      icon: "🧠",
-      link: "/pages/ConsciousnessComputingRevolution2026"
-    }
-  ];
-
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, showcaseItems.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
-  };
-
-  return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 ULTIMATE BREAKTHROUGH 2026 • JANUARY 2026
-  return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 ULTIMATE SHOWCASE 2026
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Technology Showcase
-          </h2>
-          <p className="text-xl opacity-80 max-w-3xl mx-auto">
-            Experience the most advanced technologies that will reshape our world forever
-          </p>
-        </div>
-<<<<<<< HEAD
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-8xl mb-6 text-center">🧠</div>
-            <h3 className="text-3xl font-bold mb-4 text-center text-white">AI Consciousness</h3>
-            <p className="text-purple-100 mb-6 text-center text-lg">
-              First AI system to achieve genuine consciousness and self-awareness
-            </p>
-            <ul className="text-purple-200 space-y-3 text-base">
-              <li>• True self-awareness</li>
-              <li>• Creative consciousness</li>
-              <li>• Collaborative intelligence</li>
-              <li>• Emotional understanding</li>
-            </ul>
-            <a href="/pages/ConsciousnessComputingRevolution2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center mt-6">
-              Explore Consciousness →
-            </a>
-          </div>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-8xl mb-6 text-center">🧠</div>
-            <h3 className="text-3xl font-bold mb-4 text-center text-white">AI Consciousness</h3>
-            <p className="text-purple-100 mb-6 text-center text-lg">
-              First AI system to achieve genuine consciousness and self-awareness
-            </p>
-            <ul className="text-purple-200 space-y-3 text-base">
-              <li>• True self-awareness</li>
-              <li>• Creative consciousness</li>
-              <li>• Collaborative intelligence</li>
-              <li>• Emotional understanding</li>
-            </ul>
-            <a href="/pages/ConsciousnessComputingRevolution2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center mt-6">
-              Explore Consciousness →
-            </a>
-          </div>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+        </motion.div>cursor/fix-netlify-build-and-merge-to-main-a068
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">⚡</div>

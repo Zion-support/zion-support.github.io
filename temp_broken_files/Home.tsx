@@ -1,30 +1,6 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useNotifications } from '../components/NotificationSystem';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-import React from 'react';
-import React from 'react';
-import React from 'react';
-import { motion } from 'framer-motion';
-import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
-import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
-import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
-import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
-import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
-import NeuralRealityBanner from '../components/NeuralRealityBanner';
-import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
-import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
-<<<<<<< HEAD
-import UltimateTechShowcase2027Banner from '../components/UltimateTechShowcase2027Banner';
-import ComprehensiveServices2028Banner from '../components/ComprehensiveServices2028Banner';
-import RevolutionaryTechBlog2027Banner from '../components/RevolutionaryTechBlog2027Banner';
-import UltimateTechAdvertisingBanner from '../components/UltimateTechAdvertisingBanner';
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+import { useNotifications } from '../components/NotificationSystem';cursor/fix-netlify-build-and-merge-to-main-a068
 
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
@@ -130,118 +106,11 @@ const Home: React.FC = () => {
               Comprehensive cybersecurity solutions to protect your business 
               from evolving threats in the digital landscape.
             </p>
-<<<<<<< HEAD
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Enterprise solutions</li>
               <li>• Custom development</li>
               <li>• Technology consulting</li>
-            </ul>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
-            <Link 
-              to="/pages/ComprehensiveTechInsights2026" 
-              className="text-green-400 hover:text-green-300 font-semibold"
-            >
-              Get Insights →
-            </Link>
-          </div>
-        </div>
-
-        {/* Revolutionary Content Banner */}
-        <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
-        {/* Content Showcases */}
-        <div className="container mx-auto px-4 py-20">
-          <EnhancedContentShowcase />
-        </div>
-
-        <div className="container mx-auto px-4 py-20">
-          <RevolutionaryContentShowcase />
-        </div>
-
-        {/* Enhanced Content Advertising */}
-        <EnhancedContentAdvertising />
-
-        {/* Revolutionary Tech Advertising Banner */}
-        <RevolutionaryTechAdvertisingBanner />
-
-        {/* Interactive Tech Showcase */}
-        <InteractiveTechShowcase />
-
-        {/* Call to Action */}
-        <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Revolutionary Technology Showcase 2026
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience the future of technology with our comprehensive collection of 
-              cutting-edge innovations, AI breakthroughs, and quantum computing advancements.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">AI Innovation Hub</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Discover the latest AI technologies and their real-world applications.
-                </p>
-                <Link 
-                  to="/pages/AIInnovationHub2026" 
-                  className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  Explore Hub
-                </Link>
-              </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Tech Trends 2026</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Stay ahead with the most important technology trends of 2026.
-                </p>
-                <Link 
-                  to="/pages/TechTrends2026" 
-                  className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  View Trends
-                </Link>
-              </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Tech Insights</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Deep dive into comprehensive technology insights and analysis.
-                </p>
-                <Link 
-                  to="/pages/ComprehensiveTechInsights2026" 
-                  className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  Get Insights
-                </Link>
-              </div>
-            </div>
-<<<<<<< HEAD
-        {/* Revolutionary Content Banner */}
-        <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
-        {/* Content Showcases */}
-        <div className="container mx-auto px-4 py-20">
-          <EnhancedContentShowcase />
-        </div>
-
-        <div className="container mx-auto px-4 py-20">
-          <RevolutionaryContentShowcase />
-        </div>
-
-        {/* Enhanced Content Advertising */}
-        <EnhancedContentAdvertising />
-
-        {/* Revolutionary Tech Advertising Banner */}
-        <RevolutionaryTechAdvertisingBanner />
-
-        {/* Interactive Tech Showcase */}
-        <InteractiveTechShowcase />
-
-        {/* Call to Action */}
-        <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 py-20">
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-a068
+            </ul>cursor/fix-netlify-build-and-merge-to-main-a068
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Technology Showcase 2026
