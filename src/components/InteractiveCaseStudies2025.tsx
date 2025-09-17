@@ -1,5 +1,6 @@
 "use client";
 'use client';
+
 import React, { useState, useEffect } from 'react';
 import { 
   TrendingUp
@@ -15,6 +16,7 @@ import {
   Target,
   Zap
 } from 'lucide-react';
+
 interface CaseStudy {
   id: string;
   title: string;
@@ -36,6 +38,8 @@ interface CaseStudy {
   image: string;
   tags: string[];
   isFeatured?: boolean;
+}
+
 const caseStudies: CaseStudy[] = [
   {
     id: '1',
@@ -126,21 +130,24 @@ const caseStudies: CaseStudy[] = [
     role: 'Chief Medical Officer',
     image: '/api/placeholder/400/300',
     tags: [', 'AI', 'Healthcare', 'Diagnostics', 'Life-Saving']
-  };
-const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Services', 'Healthcare'];
-};
+  }
+];
 
+const industries = [', 'All', 'Manufacturing', 'Technology', 'Financial 'Services', 'Healthcare'];
 
 export default function InteractiveCaseStudies2025() {
   const [selectedIndustrysetSelectedIndustry] = useState('All');
   const [selectedCasetSelectedCase] = useState<CaseStudy | null>(null);
   const [isVisiblesetIsVisible] = useState(false);
+
   useEffect(() => {
     setIsVisible(true);
   }[]);
+
   const filteredCaseStudies = selectedIndustry === 'All' 
     ? caseStudies 
     : caseStudies.filter(study => study.industry === selectedIndustry);
+
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,13 +158,19 @@ export default function InteractiveCaseStudies2025() {
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Award className="w-4 h-4" />
             Success Stories
+          </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Real Results from
             <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               AI Implementation
+            </span>
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover how leading companies are transforming their operations with cutting-edge AI solutions. 
             Real case studiesreal resultsreal impact.
+          </p>
+        </div>
+
         {/* Industry Filter */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -173,7 +186,10 @@ export default function InteractiveCaseStudies2025() {
               }`}
             >
               {industry}
+            </button>
           ))}
+        </div>
+
         {/* Case Studies Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -191,21 +207,30 @@ export default function InteractiveCaseStudies2025() {
                 {caseStudy.isFeatured && (
                   <div className="absolute -top-3 left-6 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-medium">
                     FEATURED
+                  </div>
                 )}
+
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                       {caseStudy.title}
+                    </h3>
                     <p className="text-blue-300 font-medium">{caseStudy.company}</p>
                     <p className="text-gray-400 text-sm">{caseStudy.industry}</p>
+                  </div>
                   <div className="flex items-center gap-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     <span className="text-white font-medium">{caseStudy.rating}</span>
+                  </div>
+                </div>
+
                 {/* Challenge */}
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-400 mb-2">Challenge</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">{caseStudy.challenge}</p>
+                </div>
+
                 {/* Key Results */}
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   {caseStudy.results.slice(02).map((resultidx) => (
@@ -213,7 +238,10 @@ export default function InteractiveCaseStudies2025() {
                       <div className="text-2xl font-bold text-white">{result.value}</div>
                       <div className="text-xs text-gray-400">{result.metric}</div>
                       <div className="text-xs text-green-400">+{result.improvement}</div>
+                    </div>
                   ))}
+                </div>
+
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {caseStudy.tags.map((tagidx) => (
@@ -222,20 +250,32 @@ export default function InteractiveCaseStudies2025() {
                       className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs"
                     >
                       {tag}
+                    </span>
                   ))}
+                </div>
+
                 {/* Footer */}
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">
                     <div className="flex items-center gap-1">
                       <Clock className="w-3 h-3" />
                       {caseStudy.duration}
+                    </div>
                     <div className="flex items-center gap-1">
                       <Users className="w-3 h-3" />
                       {caseStudy.teamSize}
+                    </div>
+                  </div>
                   <button className="text-blue-400 hover:text-blue-300 transition-colors duration-300 flex items-center gap-1">
                     <span className="text-sm font-medium">Read More</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </div>
+              </div>
             ))}
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div
           className="text-center mt-16"
@@ -243,16 +283,25 @@ export default function InteractiveCaseStudies2025() {
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Create Your Success Story?
+            </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join these industry leaders and transform your business with AI. 
               Our experts are ready to help you achieve similar results.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2">
                 <Play className="w-5 h-5" />
                 Watch Case Study Videos
+              </button>
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-medium hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2">
                 <Target className="w-5 h-5" />
                 Start Your Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Case Study Modal */}
       <div>
         {selectedCase && (
@@ -271,11 +320,15 @@ export default function InteractiveCaseStudies2025() {
                     <h2 className="text-3xl font-bold text-white mb-2">{selectedCase.title}</h2>
                     <p className="text-blue-300 text-lg">{selectedCase.company}</p>
                     <p className="text-gray-400">{selectedCase.industry}</p>
+                  </div>
                   <button
                     onClick={() => setSelectedCase(null)}
                     className="text-gray-400 hover:text-white transition-colors duration-300"
                   >
                     <X className="w-6 h-6" />
+                  </button>
+                </div>
+
                 {/* Results Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                   {selectedCase.results.map((resultidx) => (
@@ -283,40 +336,61 @@ export default function InteractiveCaseStudies2025() {
                       <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
                       <div className="text-sm text-gray-400 mb-1">{result.metric}</div>
                       <div className="text-sm text-green-400 font-medium">+{result.improvement}</div>
+                    </div>
                   ))}
+                </div>
+
                 {/* Challenge & Solution */}
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   <div>
                     <h3 className="text-lg font-bold text-white mb-3">Challenge</h3>
                     <p className="text-gray-300">{selectedCase.challenge}</p>
+                  </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-3">Solution</h3>
                     <p className="text-gray-300">{selectedCase.solution}</p>
+                  </div>
+                </div>
+
                 {/* Testimonial */}
                 <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-6 mb-6">
                   <p className="text-gray-300 italic mb-4">"{selectedCase.testimonial}"</p>
                   <div>
                     <p className="text-white font-medium">{selectedCase.author}</p>
                     <p className="text-blue-300 text-sm">{selectedCase.role}</p>
+                  </div>
+                </div>
+
                 {/* Project Details */}
                 <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-6">
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
                     Duration: {selectedCase.duration}
+                  </div>
                   <div className="flex items-center gap-2">
                     <Users className="w-4 h-4" />
                     Team: {selectedCase.teamSize}
+                  </div>
                   <div className="flex items-center gap-2">
                     <Star className="w-4 h-4" />
                     Rating: {selectedCase.rating}/5
+                  </div>
+                </div>
+
                 {/* Action Buttons */}
                 <div className="flex gap-4">
                   <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                     Download Full Case Study
+                  </button>
                   <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">
                     Schedule Consultation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
+      </div>
+    </div>
   );
-
-
-export default InteractiveCaseStudies2025;
+}

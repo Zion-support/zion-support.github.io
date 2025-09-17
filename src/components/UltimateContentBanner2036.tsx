@@ -1,7 +1,3 @@
-import React from 'react';
-
-const UltimateContentBanner2036: React.FC = () => {
-  return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -60,18 +56,9 @@ const UltimateContentBanner2036: React.FC = () => {
                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
                 <span className="text-purple-200 text-xs">Multi-dimensional Thinking</span>
               </div>
-            </div>
-          </div>
-        </div>
         
         <div className="text-center mt-8">
           <a href="/pages/UltimateTechBreakthrough2036" className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience Ultimate Breakthrough →
           </a>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default UltimateContentBanner2036;

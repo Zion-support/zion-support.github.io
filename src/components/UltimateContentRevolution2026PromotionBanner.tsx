@@ -1,5 +1,36 @@
-import React from 'react';
-const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  ArrowRight
+  X,
+  Play,
+  Star,
+  TrendingUp,
+  Users,
+  Award
+} from 'lucide-react';
+
+const UltimateContentRevolution2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)1000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+  };
+
+  if (isDismissed) return null;
+
   return (
     <div>
       {isVisible && (
@@ -17,6 +48,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <Sparkles className="w-6 h-6 text-white" />
                   </div>
                 </div>
+                
                 <div className="hidden md:block">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-xs font-bold">
@@ -31,6 +63,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                   </h3>
                 </div>
               </div>
+
               {/* Center Content - Mobile */}
               <div className="md:hidden text-center">
                 <div className="flex items-center justify-center gap-2 mb-1">
@@ -45,6 +78,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                   Experience the Future
                 </h3>
               </div>
+
               {/* Right Content */}
               <div className="flex items-center gap-3">
                 {/* Stats */}
@@ -62,6 +96,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <span>5★ Rated</span>
                   </div>
                 </div>
+
                 {/* CTA Buttons */}
                 <div className="flex items-center gap-2">
                   <divbutton
@@ -71,6 +106,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <span className="hidden sm:inline">Explore Now</span>
                     <span className="sm:hidden">Explore</span>
                   </divbutton>
+                  
                   <divbutton
                     className="flex items-center gap-2 bg-white/10 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-white/20 transition-all duration-300"
                   >
@@ -78,6 +114,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </divbutton>
                 </div>
+
                 {/* Dismiss Button */}
                 <divbutton
                   onClick={handleDismiss}
@@ -87,6 +124,7 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
                 </divbutton>
               </div>
             </div>
+
             {/* Mobile Stats */}
             <div className="lg:hidden mt-3 pt-3 border-t border-purple-500/30">
               <div className="flex justify-center gap-6 text-xs">
@@ -105,12 +143,13 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
+
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
               className="absolute top-2 left-4 w-2 h-2 bg-yellow-400 rounded-full"
-                y: [0-10],
-                opacity: [0.510.5],
+
+
               }}
                 duration: 2,
                 repeat: Infinity,
@@ -119,8 +158,8 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
             />
             <div
               className="absolute top-3 right-8 w-1 h-1 bg-pink-400 rounded-full"
-                y: [0-80],
-                opacity: [0.30.80.3],
+
+
               }}
                 duration: 1.5,
                 repeat: Infinity,
@@ -130,8 +169,8 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
             />
             <div
               className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full"
-                y: [0-60],
-                opacity: [0.40.90.4],
+
+
               }}
                 duration: 2.5,
                 repeat: Infinity,
@@ -144,8 +183,6 @@ const UltimateContentRevolution2026PromotionBanner: React.FC = () => {
       )}
     </div>
   );
-
 };
 
 export default UltimateContentRevolution2026PromotionBanner;
-</div></div></div></div></div></div>

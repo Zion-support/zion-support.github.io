@@ -1,5 +1,79 @@
-import React from 'react';
-const 2025-comprehensive-services-showcase: React.FC = () => {
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { 
+  Brain, Building, Target, Cpu, Shield, 
+  Check, Phone, Mail, MapPin,
+  TrendingUp, Zap, Globe
+} from 'lucide-react';
+
+// Import our new service data
+import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
+import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
+import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
+import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
+import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
+
+const ComprehensiveServicesShowcase2025 = () => {
+  const [activeTab, setActiveTab] = useState('all');
+
+// Helper function to get service pricing
+const getServicePricing = (service: any) => {
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
+  if (typeof service.price === 'string') return service.price;
+  return 'Contact for pricing';
+};
+
+// Helper function to get service features
+const getServiceFeatures = (service: any) => {
+  return service.keyFeatures || service.features || [];
+};
+
+// Helper function to get service setup time
+const getServiceSetupTime = (service: any) => {
+  if (service.setupTime) return service.setupTime;
+  if (service.pricing?.setupTime) return service.pricing.setupTime;
+  if (service.price?.setupTime) return service.price.setupTime;
+  return 'N/A';
+};
+
+// Helper function to get service trial days
+const getServiceTrialDays = (service: any) => {
+  if (service.trialDays) return service.trialDays;
+  if (service.pricing?.trialDays) return service.pricing.trialDays;
+  if (service.price?.trialDays) return service.price.trialDays;
+  return 'N/A';
+};
+
+// All services combined
+const allServices = [
+  ...advancedAIMLServices,
+  ...advancedCybersecurityServices,
+      ...advancedCloudDevOpsServices2025,
+  ...industrySpecificSolutions,
+  ...emergingTechnologyServices
+];
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
+    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },
+    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },
+    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },
+    { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }
+  ];
+
+  const filteredServices = activeTab === 'all' 
+    ? allServices 
+    : allServices.filter(service => {
+        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics');
+        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation');
+        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure');
+        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS');
+        if (activeTab === 'ai-services') return service.category?.includes('AI Services');
+        return true;
+      });
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <SEO 
@@ -7,6 +81,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
         description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions."
         keywords={["micro SAAS", "IT services", "AI services", "business intelligence", "automation", "cloud infrastructure"]}
       />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -34,6 +109,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Contact Banner */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,6 +135,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Category Tabs */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,6 +157,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,11 +188,13 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
                 {/* Service Content */}
                 <div className="p-6">
                   <p className="text-gray-700 mb-4 line-clamp-3">
                     {service.description}
                   </p>
+
                   {/* Pricing */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Pricing</h4>
@@ -130,6 +210,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                       </div>
                     </div>
                   </div>
+
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>
@@ -142,6 +223,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                       ))}
                     </div>
                   </div>
+
                   {/* Market Info */}
                   <div className="mb-4 text-sm">
                     <div className="flex justify-between mb-1">
@@ -153,6 +235,9 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                       <span className="font-semibold text-gray-900">{service.targetAudience}</span>
                     </div>
                   </div>
+
+
+
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">
                     <a
@@ -174,6 +259,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
               </div>
             ))}
           </div>
+
           {/* Services Display */}
             {viewMode === 'grid' ? (
               <div 
@@ -197,6 +283,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                       </div>
                       <h3 className="text-xl font-bold mb-2">{service.name}</h3>
                       <p className="text-blue-100 text-sm">{service.tagline}</p>
+                      
                       {/* Price */}
                       <div className="mt-4">
                         <span className="text-2xl font-bold">
@@ -204,9 +291,11 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                         </span>
                       </div>
                     </div>
+
                     {/* Service Content */}
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
+                      
                       {/* Price */}
                       <div className="mb-4">
                         <span className="text-3xl font-bold text-gray-900">
@@ -216,6 +305,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                         </span>
                       </div>
+
                       {/* Features */}
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -228,6 +318,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                           ))}
                         </ul>
                       </div>
+
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -235,6 +326,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                           <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
+
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
                         <div>
@@ -244,6 +336,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days
                         </div>
                       </div>
+
                       {/* ROI and Popularity */}
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-sm">
@@ -258,6 +351,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                             <span className="text-sm font-medium">Popular</span>
                           </div>
                         </div>
+
                         {/* Price and Features */}
                         <div className="lg:w-1/3">
                           <div className="text-right mb-4">
@@ -268,6 +362,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>
                           </div>
+                          
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -279,12 +374,14 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                               ))}
                             </ul>
                           </div>
+
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                               {getCategoryIcon(service.category)}
                               <span className="ml-1">{service.category}</span>
                             </span>
+                            
                             <a
                               href={service.link}
                               target="_blank"
@@ -303,6 +400,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
               </div>
             )}
           </div>
+
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
@@ -315,6 +413,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           )}
         </div>
       </section>
+
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -326,6 +425,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -339,6 +439,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
             </div>
+
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"
@@ -351,6 +452,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
                 Bank-grade security and compliance for mission-critical business applications
               </p>
             </div>
+
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6"
@@ -366,6 +468,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -375,6 +478,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our innovative services can help you achieve your business goals
           </p>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -392,6 +496,7 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
@@ -412,7 +517,6 @@ const 2025-comprehensive-services-showcase: React.FC = () => {
       </section>
     </div>
   );
-
 };
 
 export default ComprehensiveServicesShowcase;

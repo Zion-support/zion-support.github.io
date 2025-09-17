@@ -1,5 +1,39 @@
-import React from 'react';
-const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { 
+  Sparkles
+  ArrowRight
+  Brain
+  Zap
+  TrendingUp
+  X,
+  Star,
+  Rocket,
+  Target
+} from 'lucide-react';
+
+const AIInnovationShowcase2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+
+  useEffect(() => {
+    // Check if banner was previously dismissed
+    const dismissed = localStorage.getItem('ai-innovation-banner-dismissed');
+    if (!dismissed) {
+      setIsVisible(true);
+
+  }[]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    localStorage.setItem('ai-innovation-banner-'dismissed', 'true');
+  };
+
+  if (isDismissed || !isVisible) return null;
+
   return (
     <div>
       <div
@@ -23,6 +57,7 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* Center Features */}
             <div className="hidden md:flex items-center gap-6">
               <div className="flex items-center gap-2 text-white/80">
@@ -38,6 +73,7 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
                 <span className="text-sm">99.9% Accuracy</span>
               </div>
             </div>
+
             {/* Right Actions */}
             <div className="flex items-center gap-3">
               <a
@@ -57,6 +93,7 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
               </button>
             </div>
           </div>
+
           {/* Mobile Features */}
           <div className="md:hidden pb-4">
             <div className="flex items-center justify-center gap-4 text-white/80">
@@ -75,11 +112,12 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
-              x: [0100],
-              opacity: [0.30.60.3],
+
+
             }}
               duration: 4,
               repeat: Infinity,
@@ -88,8 +126,8 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"
           />
           <div
-              x: [0-100],
-              opacity: [0.20.50.2],
+
+
             }}
               duration: 6,
               repeat: Infinity,
@@ -102,8 +140,6 @@ const AIInnovationShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 export default AIInnovationShowcase2025PromotionBanner;
-</div></div>

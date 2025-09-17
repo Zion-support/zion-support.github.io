@@ -1,5 +1,67 @@
+'use client';
+
 import React from 'react';
-const AdvancedTechTrends2026: React.FC = () => {
+import { 
+  Brain
+  Zap
+  Shield
+  Cloud
+  Database
+  Cpu
+  Network
+  Lock,
+  TrendingUp,
+  Globe,
+  Smartphone,
+  Monitor
+} from 'lucide-react';
+
+const AdvancedTechTrends2026 = () => {
+  const trends = [
+    {
+      icon: Brain,
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces enabling thought-controlled applications",
+      impact: "300% productivity increase",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Zap,
+      title: "Quantum AI Fusion",
+      description: "Quantum computing meets artificial intelligence for unprecedented processing power",
+      impact: "1000x faster computations",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Shield,
+      title: "Autonomous Security",
+      description: "Self-healing cybersecurity systems that adapt to threats in real-time",
+      impact: "99.9% threat prevention",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Cloud,
+      title: "Edge Intelligence",
+      description: "AI processing at the edge for instant decision-making and reduced latency",
+      impact: "50ms response times",
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      icon: Database,
+      title: "Synthetic Data Generation",
+      description: "AI-generated datasets that maintain privacy while enabling training",
+      impact: "Zero data privacy risks",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Cpu,
+      title: "Neuromorphic Computing",
+      description: "Brain-inspired processors that mimic neural networks in hardware",
+      impact: "100x energy efficiency",
+      color: "from-teal-500 to-blue-500"
+    }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,6 +80,7 @@ const AdvancedTechTrends2026: React.FC = () => {
             and give you a competitive edge in the next decade.
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trends.map((trendindex) => (
             <div
@@ -29,12 +92,15 @@ const AdvancedTechTrends2026: React.FC = () => {
                 <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${trend.color} mb-6`}>
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
+                
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {trend.title}
                 </h3>
+                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {trend.description}
                 </p>
+                
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-purple-300 bg-purple-900/30 px-3 py-1 rounded-full">
                     {trend.impact}
@@ -45,6 +111,7 @@ const AdvancedTechTrends2026: React.FC = () => {
             </div>
           ))}
         </div>
+
         <div
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16"
@@ -69,7 +136,6 @@ const AdvancedTechTrends2026: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 export default AdvancedTechTrends2026;

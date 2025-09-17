@@ -1,11 +1,3 @@
-import React, { useState } from 'react';
-
-const RevolutionaryTechShowcase2042: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
-=======
->>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
-=======
   const demos = [
     {
       id: 0,
@@ -34,55 +26,6 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
       description: "Manipulate time for instant computation",
       icon: "⏰",
       features: ["Time-dilated processing", "Future prediction algorithms", "Temporal data analysis", "Chronological optimization"]
-  const technologies = {
-    ai: {
-      title: "Conscious AI Systems",
-      description: "The first truly conscious artificial intelligence that can think, feel, and create independently",
-      features: [
-        "Self-aware decision making",
-        "Emotional intelligence processing", 
-        "Creative problem solving",
-        "Ethical reasoning capabilities",
-        "Multi-dimensional thinking",
-        "Consciousness transfer protocols"
-      ],
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600"
-    },
-    quantum: {
-      title: "Quantum Consciousness",
-      description: "Revolutionary quantum computing that achieves consciousness through quantum entanglement",
-      features: [
-        "Quantum neural networks",
-        "Consciousness superposition",
-        "Quantum memory systems",
-        "Multi-dimensional processing",
-        "Quantum teleportation protocols",
-        "Reality manipulation engines"
-      ],
-      icon: "⚛️",
-      color: "from-cyan-600 to-blue-600"
-    },
-    interdimensional: {
-      title: "Interdimensional Computing",
-      description: "Breakthrough technology that enables computing across multiple dimensions and realities",
-      features: [
-        "Cross-dimensional data processing",
-        "Reality simulation engines",
-        "Parallel universe computing",
-        "Dimensional interface protocols",
-        "Multi-reality synchronization",
-        "Consciousness dimension bridging"
-      ],
-      icon: "🌌",
-      color: "from-emerald-600 to-teal-600"
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-    }
-  };
-
-  return (
-=======
->>>>>>> 7fbdcf9fc0920e36652aa5b95eea64fa3cb54df6
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
@@ -97,6 +40,9 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
         <div className="mb-12">
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {demos.map((demo, index) => (
+                  activeDemo === index
+                    ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
+                    : 'bg-white/10 text-cyan-200 hover:bg-white/20'
           {/* Active Demo Display */}
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
             <div className="text-center mb-8">

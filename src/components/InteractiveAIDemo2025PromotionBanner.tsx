@@ -1,5 +1,74 @@
-import React from 'react';
-const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Bot
+  MessageCircle
+  Send
+  Sparkles
+  Zap
+  Brain
+  Rocket
+  Star,
+  Play,
+  X,
+  ChevronRight,
+  Clock,
+  Users,
+  TrendingUp
+} from 'lucide-react';
+
+const InteractiveAIDemo2025PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentDemosetCurrentDemo] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true)2000);
+    return () => clearTimeout(timer);
+  }[]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDemo((prev) => (prev + 1) % demos.length);
+    }4000);
+    return () => clearInterval(interval);
+  }[]);
+
+  const demos = [
+    {
+      icon: Brain,
+      title: 'Neural Interface Demo',
+      description: 'Experience 500% efficiency boost',
+      color: 'from-purple-500 to-pink-500',
+      users: '2.5K+ active'
+    },
+    {
+      icon: Zap,
+      title: 'Quantum AI Demo',
+      description: 'See 1000x faster processing',
+      color: 'from-blue-500 to-cyan-500',
+      users: '1.8K+ active'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Business Automation',
+      description: 'Witness 90% cost reduction',
+      color: 'from-green-500 to-emerald-500',
+      users: '3.2K+ active'
+    },
+    {
+      icon: Star,
+      title: 'Future Predictions',
+      description: 'Explore 95% accuracy rate',
+      color: 'from-orange-500 to-red-500',
+      users: '4.1K+ active'
+    }
+  ];
+
+  if (isDismissed || !isVisible) return null;
+
   return (
     <div>
       <div
@@ -10,6 +79,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-purple-600/20"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%221%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         </div>
+
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
@@ -25,6 +95,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   </div>
                 </div>
+                
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">
                     🤖 Interactive AI Demo 2025
@@ -34,6 +105,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
                   </p>
                 </div>
               </div>
+
               {/* Rotating Demo Features */}
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-blue-500/30"></div>
@@ -58,6 +130,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
                 </div>
               </div>
             </div>
+
             {/* Right Content */}
             <div className="flex items-center gap-4">
               {/* Live Stats */}
@@ -68,6 +141,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
                     {demos[currentDemo].users}
                   </span>
                 </div>
+                
                 <div className="flex items-center gap-2 px-3 py-2 bg-white/10 rounded-lg border border-white/20">
                   <Clock className="w-4 h-4 text-blue-400" />
                   <span className="text-white text-sm font-medium">
@@ -75,6 +149,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
                   </span>
                 </div>
               </div>
+
               {/* Action Buttons */}
               <div className="flex items-center gap-3">
                 <divbutton
@@ -83,6 +158,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
                   <MessageCircle className="w-4 h-4" />
                   <span className="text-sm font-medium">Chat Now</span>
                 </divbutton>
+
                 <divbutton
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-blue-500/25"
                 >
@@ -90,6 +166,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
                   <span>Try Demo</span>
                   <ChevronRight className="w-4 h-4" />
                 </divbutton>
+
                 <divbutton
                   onClick={() => setIsDismissed(true)}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
@@ -99,6 +176,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
               </div>
             </div>
           </div>
+
           {/* Mobile Demo Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
@@ -122,6 +200,7 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
         <div
@@ -130,7 +209,6 @@ const InteractiveAIDemo2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 export default InteractiveAIDemo2025PromotionBanner;

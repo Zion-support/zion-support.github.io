@@ -1,5 +1,37 @@
 import React from 'react';
+import { Star, Quote } from 'lucide-react';
+
 const TestimonialSection: React.FC = () => {
+  const testimonials = [
+    {
+      id: 1,
+      name: "Dr. Sarah Chen",
+      role: "CTO, QuantumTech Solutions",
+      company: "QuantumTech Solutions",
+      content: "Zion Tech Group's quantum computing platform has revolutionized our research capabilities. The performance improvements are beyond anything we've seen before.",
+      rating: 5,
+      avatar: "/avatars/sarah-chen.jpg"
+    },
+    {
+      id: 2,
+      name: "Marcus Rodriguez",
+      role: "VP of Engineering",
+      company: "InnovateCorp",
+      content: "The AI-powered automation suite has reduced our deployment time by 80%. Zion Tech Group truly understands enterprise needs.",
+      rating: 5,
+      avatar: "/avatars/marcus-rodriguez.jpg"
+    },
+    {
+      id: 3,
+      name: "Dr. Emily Watson",
+      role: "Head of AI Research",
+      company: "NeuroTech Industries",
+      content: "Their consciousness AI platform is groundbreaking. We've achieved breakthroughs in neural network optimization that seemed impossible.",
+      rating: 5,
+      avatar: "/avatars/emily-watson.jpg"
+    }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4">
@@ -17,6 +49,7 @@ const TestimonialSection: React.FC = () => {
             Discover why leading companies trust Zion Tech Group with their most critical technology challenges
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
@@ -29,6 +62,7 @@ const TestimonialSection: React.FC = () => {
               <div className="mb-6">
                 <Quote className="w-8 h-8 text-cyan-400/60 group-hover:text-cyan-400 transition-colors duration-300" />
               </div>
+
               {/* Rating */}
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -39,10 +73,12 @@ const TestimonialSection: React.FC = () => {
                   />
                 ))}
               </div>
+
               {/* Content */}
               <blockquote className="text-gray-300 mb-6 leading-relaxed italic">
                 "{testimonial.content}"
               </blockquote>
+
               {/* Author */}
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
@@ -59,6 +95,7 @@ const TestimonialSection: React.FC = () => {
             </div>
           ))}
         </div>
+
         {/* CTA Section */}
         <div 
           className="text-center mt-16"
@@ -93,7 +130,6 @@ const TestimonialSection: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 export default TestimonialSection;

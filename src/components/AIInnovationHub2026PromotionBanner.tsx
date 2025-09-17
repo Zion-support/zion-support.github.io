@@ -1,5 +1,95 @@
-import React from 'react';
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  ArrowRight
+  Star
+  Users
+  TrendingUp
+  Zap,
+  Cpu,
+  Target,
+  Globe,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Award,
+  X,
+  Sparkles,
+  Rocket,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
+  Layers,
+  Search
+} from 'lucide-react';
+
 const AIInnovationHub2026PromotionBanner: React.FC = () => {
+  const [isVisiblesetIsVisible] = useState(true);
+  const [currentInnovationsetCurrentInnovation] = useState(0);
+
+  const innovations = [
+    {
+      icon: Brain,
+      title: 'Consciousness-Level AI',
+      description: 'Revolutionary self-aware AI systems',
+      impact: 'Revolutionary',
+      color: 'from-purple-500 to-pink-500'
+
+    {
+      icon: Atom,
+      title: 'Quantum-Neural Fusion',
+      description: 'Quantum computing meets neural networks',
+      impact: 'Revolutionary',
+      color: 'from-cyan-500 to-blue-500'
+
+    {
+      icon: Network,
+      title: 'Neural Interface Tech',
+      description: 'Direct brain-computer communication',
+      impact: 'High',
+      color: 'from-green-500 to-emerald-500'
+
+    {
+      icon: Zap,
+      title: 'Autonomous Operations',
+      description: 'Complete business automation AI',
+      impact: 'High',
+      color: 'from-yellow-500 to-orange-500'
+
+  ];
+
+  const categories = [
+    { icon: Brainame: 'AI 'Core', 'count: '32+'color: 'purple' },
+    { icon: Atomname: 'Quantum 'AI', 'count: '18+'color: 'cyan' },
+    { icon: Networkname: 'Neural 'Networks', 'count: '24+'color: 'green' },
+    { icon: Zapname: ''Automation', 'count: '15+'color: 'yellow' },
+    { icon: Cpuname: ''Robotics', 'count: '12+'color: 'red' },
+    { icon: Microscopename: 'BioTech 'AI', 'count: '8+'color: 'pink' }
+  ];
+
+  const stats = [
+    { label: 'Active 'Innovations', 'value: '89+'icon: Lightbulb },
+    { label: 'Research 'Projects', 'value: '156+'icon: Microscope },
+    { label: 'Deployed 'Solutions', 'value: '42+'icon: Rocket },
+    { label: 'Global 'Impact', 'value: '2.5M+'icon: Users }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentInnovation((prev) => (prev + 1) % innovations.length);
+    }4000);
+    return () => clearInterval(interval);
+  }[]);
+
+  if (!isVisible) return null;
+
   return (
     <div>
       <div
@@ -13,6 +103,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-pink-400/20 rounded-full blur-xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-400/10 rounded-full blur-2xl"></div>
         </div>
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -25,14 +116,17 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                   Revolutionary AI Innovations
                 </span>
               </div>
+              
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 AI Innovation Hub
                 <span className="block text-yellow-400">2026 Edition</span>
               </h1>
+              
               <p className="text-xl text-gray-200 mb-8 leading-relaxed">
                 Explore the most groundbreaking AI innovationsbreakthrough technologiesand revolutionary 
                 developments that are reshaping the future of artificial intelligence.
               </p>
+
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {stats.map((statindex) => {
@@ -49,9 +143,9 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                       <div className="text-2xl font-bold text-white">{stat.value}</div>
                     </div>
                   );
-};
                 })}
               </div>
+
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <divbutton
@@ -68,6 +162,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 </divbutton>
               </div>
             </div>
+
             {/* Right Content - Interactive Innovation Showcase */}
             <div
               className="relative"
@@ -77,6 +172,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">
                   Innovation Categories
                 </h3>
+                
                 <div className="grid grid-cols-2 gap-4">
                   {categories.map((categoryindex) => {
                     const Icon = category.icon;
@@ -93,6 +189,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                   })}
                 </div>
               </div>
+
               {/* Rotating Innovation Highlight */}
               <div className="relative h-40 bg-gradient-to-r from-yellow-400/20 to-pink-400/20 rounded-xl overflow-hidden">
                   <div
@@ -117,6 +214,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
+                
                 {/* Innovation Indicators */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                   {innovations.map((_index) => (
@@ -130,26 +228,29 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
                   ))}
                 </div>
               </div>
+
               {/* Floating Innovation Icons */}
               <div
-                  y: [0-10],
-                  rotate: [050]
+
+
                 }}
                 className="absolute -top-4 -right-4 bg-yellow-400 text-black p-3 rounded-full shadow-lg"
               >
                 <Brain className="h-6 w-6" />
               </div>
+              
               <div
-                  y: [010],
-                  rotate: [0-50]
+
+
                 }}
                 className="absolute -bottom-4 -left-4 bg-pink-400 text-white p-3 rounded-full shadow-lg"
               >
                 <Atom className="h-6 w-6" />
               </div>
+
               <div
-                  y: [0-150],
-                  x: [050]
+
+
                 }}
                 className="absolute top-1/2 -right-8 bg-blue-400 text-white p-2 rounded-full shadow-lg"
               >
@@ -158,6 +259,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Close Button */}
         <button
           onClick={() => setIsVisible(false)}
@@ -165,11 +267,12 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {
         >
           <X className="h-5 w-5" />
         </button>
+
         {/* Bottom Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400"></div>
       </div>
     </div>
   );
-
+};
 
 export default AIInnovationHub2026PromotionBanner;

@@ -1,5 +1,156 @@
-import React from 'react';
-const BusinessSolutionsShowcase2025: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Building2
+  TrendingUp
+  Users
+  DollarSign
+  Shield
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Target,
+  BarChart3,
+  Clock,
+  Award,
+  Lightbulb,
+  Globe,
+  Smartphone
+} from 'lucide-react';
+
+const BusinessSolutionsShowcase2025 = () => {
+  const [activeCategorysetActiveCategory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const categories = [
+    {
+      id: 'automation',
+      title: 'Business Automation',
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500',
+      solutions: [
+        {
+          title: 'Workflow Automation',
+          description: 'Streamline your business processes with intelligent automation.',
+          features: ['Process 'Optimization', 'Error 'Reduction', 'Time Savings'],
+          roi: '300%',
+          timeToValue: '30 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Document Processing',
+          description: 'Automate document handling and data extraction.',
+          features: ['OCR 'Technology', 'Smart 'Classification', 'Data Validation'],
+          roi: '250%',
+          timeToValue: '14 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Customer Service AI',
+          description: 'Enhance customer support with AI-powered chatbots.',
+          features: ['24/7 'Support', 'Natural 'Language', 'Multi-language'],
+          roi: '400%',
+          timeToValue: '21 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
+    },
+    {
+      id: 'analytics',
+      title: 'Advanced Analytics',
+      icon: BarChart3,
+      color: 'from-purple-500 to-pink-500',
+      solutions: [
+        {
+          title: 'Predictive Analytics',
+          description: 'Forecast trends and make data-driven decisions.',
+          features: ['Machine 'Learning', 'Real-time 'Insights', 'Custom Dashboards'],
+          roi: '500%',
+          timeToValue: '45 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Business Intelligence',
+          description: 'Transform data into actionable business insights.',
+          features: ['Data 'Visualization', 'KPI 'Tracking', 'Automated Reports'],
+          roi: '350%',
+          timeToValue: '28 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Customer Analytics',
+          description: 'Understand customer behavior and preferences.',
+          features: [', 'Segmentation', 'Churn 'Prediction', 'Personalization'],
+          roi: '450%',
+          timeToValue: '35 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
+    },
+    {
+      id: 'security',
+      title: 'Security & Compliance',
+      icon: Shield,
+      color: 'from-green-500 to-emerald-500',
+      solutions: [
+        {
+          title: 'Cybersecurity Suite',
+          description: 'Protect your business from cyber threats.',
+          features: ['Threat 'Detection', 'Real-time 'Monitoring', 'Incident Response'],
+          roi: '200%',
+          timeToValue: '7 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Compliance Management',
+          description: 'Ensure regulatory compliance across all operations.',
+          features: ['GDPR 'Compliance', 'Audit 'Trails', 'Risk Assessment'],
+          roi: '180%',
+          timeToValue: '14 days',
+          image: '/api/placeholder/400/300'
+        },
+        {
+          title: 'Data Protection',
+          description: 'Secure sensitive data with advanced encryption.',
+          features: ['End-to-End 'Encryption', 'Access 'Control', 'Data Backup'],
+          roi: '220%',
+          timeToValue: '10 days',
+          image: '/api/placeholder/400/300'
+        }
+      ]
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  const currentCategory = categories[activeCategory];
+
   return (
     <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50"
@@ -20,6 +171,7 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
             across every aspect of your organization.
           </p>
         </div>
+
         {/* Category Navigation */}
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
             {categories.map((categoryindex) => {
@@ -38,10 +190,10 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                   {category.title}
                 </button>
               );
-};
             })}
           </div>
         </div>
+
         {/* Solutions Grid */}
           <div
             key={activeCategory}
@@ -64,6 +216,7 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                     {solution.description}
                   </p>
                 </div>
+
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Features</h4>
@@ -76,6 +229,7 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                     ))}
                   </div>
                 </div>
+
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-gray-50 rounded-lg">
@@ -87,6 +241,7 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                     <div className="text-xs text-gray-500">Time to Value</div>
                   </div>
                 </div>
+
                 {/* Action Button */}
                 <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center group">
                   <span>Learn More</span>
@@ -96,6 +251,7 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
             ))}
           </div>
         </div>
+
         {/* Success Stories */}
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
@@ -104,6 +260,7 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
                 Join thousands of businesses that have transformed their operations
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">10,000+</div>
@@ -120,6 +277,7 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Call to Action */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -143,6 +301,6 @@ const BusinessSolutionsShowcase2025: React.FC = () => {
       </div>
     </divsection>
   );
-
+};
 
 export default BusinessSolutionsShowcase2025;

@@ -1,5 +1,52 @@
-import React from 'react';
-const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
+"use client";
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { 
+  Brain
+  ArrowRight
+  Star
+  Zap
+  Rocket
+  Shield,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  BarChart3,
+  Globe,
+  Cpu
+} from 'lucide-react';
+
+const ComprehensiveAISolutions2026PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  const solutions = [
+    { icon: Braintitle: 'Enterprise 'AI', 'color: 'from-blue-500 to-purple-500' },
+    { icon: Rocketitle: 'Quantum 'AI', 'color: 'from-purple-500 to-pink-500' },
+    { icon: Zaptitle: ''Automation', 'color: 'from-green-500 to-blue-500' },
+    { icon: Shieldtitle: 'Security 'AI', 'color: 'from-red-500 to-orange-500' }
+  ];
+
+  const benefits = [
+    { icon: TrendingUptext: '99.9% Uptime' },
+    { icon: Userstext: '1000+ Enterprises' },
+    { icon: Awardtext: 'Industry Leading' },
+    { icon: BarChart3text: '60% Cost Reduction' }
+  ];
+
+  const stats = [
+    { value: '10,000+'label: 'AI Models' },
+    { value: '500+'label: 'Solutions' },
+    { value: '1,000+'label: 'Enterprises' },
+    { value: '99.9%'label: 'Uptime' }
+  ];
+
   return (
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
       {/* Animated Background */}
@@ -7,6 +54,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-600/20 via-transparent to-purple-600/20"></div>
       </div>
+
       <div className="relative z-10 py-16 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -21,6 +69,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                 <Brain className="w-4 h-4" />
                 NEW: COMPREHENSIVE AI SOLUTIONS 2026
               </div>
+
               {/* Main Heading */}
               <divh2
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
@@ -32,6 +81,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                 <br />
                 for Modern Business
               </divh2>
+
               {/* Description */}
               <divp
                 className="text-xl text-gray-300 leading-relaxed"
@@ -39,6 +89,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                 Transform your business with our comprehensive suite of AI solutions
                 from enterprise platforms to quantum computing integration.
               </divp>
+
               {/* Solutions Grid */}
               <div
                 className="grid grid-cols-2 gap-4"
@@ -52,6 +103,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Benefits */}
               <div
                 className="space-y-3"
@@ -63,6 +115,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"
@@ -72,6 +125,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                   Explore Solutions
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
+                
                 <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20">
                   <Award className="w-5 h-5" />
                   View Case Studies
@@ -79,6 +133,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                 </button>
               </div>
             </div>
+
             {/* Right Content - Stats & Visual */}
             <div
               className="space-y-8"
@@ -95,6 +150,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                   </div>
                 ))}
               </div>
+
               {/* Visual Element */}
               <div
                 className="relative"
@@ -114,6 +170,7 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
                   <Star className="w-4 h-4 text-white" />
@@ -131,8 +188,6 @@ const ComprehensiveAISolutions2026PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 export default ComprehensiveAISolutions2026PromotionBanner;
-</div></div>

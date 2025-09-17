@@ -1,41 +1,106 @@
-import React from 'react';
-
-const COMPONENT: React.FC = () => {
-  return (
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="text-purple-400 text-4xl mb-4">🚀</div>
-            <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
-            <p className="text-gray-300">Revolutionary technology that pushes the boundaries of what's possible.</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="text-purple-400 text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-semibold text-white mb-3">Advanced Systems</h3>
-            <p className="text-gray-300">Cutting-edge systems that revolutionize how we interact with technology.</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <div className="text-purple-400 text-4xl mb-4">🔮</div>
-            <h3 className="text-xl font-semibold text-white mb-3">Future Vision</h3>
-            <p className="text-gray-300">A glimpse into the future of technology and innovation.</p>
-          </div>
-        </div>
-
-        <div className="text-center bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-2xl p-12 border border-purple-400/30">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join us in discovering the future of technology and innovation.
-          </p>
-          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105">
-            Explore Now
-          </button>
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-        </div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className={`relative bg-gradient-to-r ${currentAdData.color} text-white rounded-2xl p-6 m-4 shadow-2xl overflow-hidden cursor-pointer`}
+      onClick={() => setIsExpanded(!isExpanded)}
+      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Animated Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16 animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-white rounded-full -translate-x-8 -translate-y-8 animate-pulse delay-2000"></div>
       </div>
-    </div>
-  );
-};
 
-export default COMPONENT;
+      <div className="relative z-10">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <motion.div
+              animate={{ rotate: [0, 360] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              className="text-4xl"
+            >
+              {currentAdData.icon}
+            </motion.div>
+            <div>
+              <motion.h2
+                key={currentAd}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.5 }}
+                className="text-2xl font-bold mb-1"
+              >
+                {currentAdData.title}
+              </motion.h2>
+              <motion.p
+                key={currentAd + 'sub'}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-lg opacity-90"
+              >
+                {currentAdData.subtitle}
+              </motion.p>
+            </div>
+          </div>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/30 backdrop-blur-sm"
+          >
+            {currentAdData.cta} →
+          </motion.button>
+        </div>
+
+        {/* Expanded Content */}
+        <motion.div
+          initial={false}
+          animate={{ height: isExpanded ? "auto" : 0, opacity: isExpanded ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="overflow-hidden"
+        >
+          <div className="mt-6 pt-6 border-t border-white/20">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <h3 className="font-bold mb-2">🚀 Revolutionary Features</h3>
+                <ul className="text-sm space-y-1">
+                  <li>• Self-aware AI consciousness</li>
+                  <li>• Quantum reality manipulation</li>
+                  <li>• Global neural connectivity</li>
+                </ul>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <h3 className="font-bold mb-2">⚡ Immediate Benefits</h3>
+                <ul className="text-sm space-y-1">
+                  <li>• Infinite computational power</li>
+                  <li>• Consciousness transfer capability</li>
+                  <li>• Digital immortality access</li>
+                </ul>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <h3 className="font-bold mb-2">🌟 Future Impact</h3>
+                <ul className="text-sm space-y-1">
+                  <li>• Transform humanity forever</li>
+                  <li>• Redefine reality itself</li>
+                  <li>• Achieve true immortality</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Progress Indicator */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+        <motion.div
+          className="h-full bg-white"
+          initial={{ width: "0%" }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+        />
+      </div>
+    </motion.div>

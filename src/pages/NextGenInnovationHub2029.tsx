@@ -121,68 +121,117 @@
     }
   };
 
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
-=======
-=======
->>>>>>> origin/merged-prs
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🧠 INNOVATION HUB • JANUARY 2029
-          </div>
-=======
->>>>>>> origin/merged-prs
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🧬</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Neural Reality</h3>
-            <p className="text-purple-100 mb-4 text-center text-sm">
-              Direct brain-computer interfaces
-            </p>
-            <div className="text-center">
-=======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-            </div>
-          </div>
-          
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4 text-center">🌌</div>
-            <h3 className="text-xl font-bold mb-3 text-center">Interdimensional Tech</h3>
-            <p className="text-orange-100 mb-4 text-center text-sm">
-              Computing across dimensions
-            </p>
-            <div className="text-center">
-=======
->>>>>>> origin/merged-prs
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center">
-=======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            Next-Gen Innovation Hub 2029
+          </h1>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Discover, explore, and contribute to the most revolutionary technologies that will shape humanity's future
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Join Our Team
-            </button>
-=======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-            </button>
+        </div>
+
+        {/* Category Filter */}
+        <div className="mb-12">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white scale-105'
+                    : 'bg-white/10 hover:bg-white/20 text-white/80 hover:text-white'
+                }`}
+              >
+                <span className="mr-2">{category.icon}</span>
+                {category.name}
+              </button>
+            ))}
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default NextGenInnovationHub2029;
+        {/* Innovation Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {filteredInnovations.map((innovation) => (
+            <div
+              key={innovation.id}
+              className={`bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:scale-105 transition-all duration-300 cursor-pointer ${
+                hoveredInnovation === innovation.id ? 'shadow-2xl shadow-purple-500/25' : ''
+              }`}
+              onMouseEnter={() => setHoveredInnovation(innovation.id)}
+              onMouseLeave={() => setHoveredInnovation(null)}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-4xl">{innovation.icon}</div>
+                <div className="flex items-center space-x-2">
+                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getStatusColor(innovation.status)}`}>
+                    {innovation.status}
+                  </span>
+                </div>
+              </div>
+              
+              <h3 className="text-xl font-bold mb-3">{innovation.title}</h3>
+              <p className="text-gray-300 mb-4 text-sm">{innovation.description}</p>
+              
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm text-gray-400">Impact Level:</span>
+                  <span className={`text-sm font-semibold ${getImpactColor(innovation.impact)}`}>
+                    {innovation.impact}
+                  </span>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold mb-2 text-gray-300">Key Features:</h4>
+                <ul className="space-y-1">
+                  {innovation.features.slice(0, 2).map((feature, index) => (
+                    <li key={index} className="text-xs text-gray-400 flex items-center">
+                      <span className="w-1 h-1 bg-emerald-400 rounded-full mr-2"></span>
+                      {feature}
+                    </li>
+                  ))}
+                  {innovation.features.length > 2 && (
+                    <li className="text-xs text-emerald-400">
+                      +{innovation.features.length - 2} more features
+                    </li>
+                  )}
+                </ul>
+              </div>
+
+              <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
+                Explore Innovation
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Innovation Stats */}
+        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4">📊 Innovation Hub Statistics</h2>
+            <p className="text-xl opacity-90">Real-time data on our revolutionary technology development</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-emerald-400 mb-2">{innovations.length}</div>
+              <div className="text-lg opacity-90 mb-2">Active Innovations</div>
+              <div className="text-sm opacity-75">In development and testing</div>
+              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-lg opacity-90 mb-2">Success Rate</div>
+              <div className="text-sm opacity-75">Proven technology reliability</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
+              <div className="text-lg opacity-90 mb-2">Possibilities</div>
+              <div className="text-sm opacity-75">Unlimited potential applications</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+              <div className="text-lg opacity-90 mb-2">Development</div>
+              <div className="text-sm opacity-75">Continuous innovation cycle</div>
+          <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join our innovation hub and be part of creating the most revolutionary technologies in human history
+            <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
+              Submit Your Innovation

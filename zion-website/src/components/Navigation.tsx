@@ -1,59 +1,15 @@
-'use client'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
+"use client"
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-  { name: 'Contact', href: '/contact' },
-=======
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
->>>>>>> cursor/create-and-deploy-new-content-8472
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
-=======
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'Contact', href: '/contact' },
->>>>>>> cursor/create-and-deploy-new-content-3afb
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
+import React from 'react'
+
+const navLinks = [
+	{ name: 'About', href: '/about' },
+	{ name: 'Services', href: '/services' },
+	{ name: 'Solutions', href: '/solutions' },
+	{ name: 'Research', href: '/research' },
+	{ name: 'Updates', href: '/updates', badge: 'New' },
 ]
 
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
->>>>>>> cursor/create-and-deploy-new-content-2def
-]
-
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5
-=======
-import React from 'react';
-
-const Navigation: React.FC = () => {
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Navigation</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default Navigation;
 export default function Navigation() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -76,6 +32,3 @@ export default function Navigation() {
 		</header>
 	)
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
-=======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005

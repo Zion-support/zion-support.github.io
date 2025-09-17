@@ -1,5 +1,66 @@
 import React from 'react';
-const SuccessStoriesShowcase: React.FC = () => {
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+
+const SuccessStoriesShowcase = () => {
+  const stories = [
+    {
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      challenge: 'Manual data processing taking 40+ hours weekly',
+      solution: 'Implemented AI-powered automation system',
+      results: {
+        timeSaved: '95%',
+        roi: '3,200%',
+        accuracy: '99.8%'
+      },
+      quote: 'Zion Tech Group transformed our entire operation. What used to take days now happens in minutes.',
+      author: 'Sarah JohnsonCEO',
+      logo: '🏢'
+    },
+    {
+      company: 'FinanceMax Solutions',
+      industry: 'Financial Services',
+      challenge: 'Risk assessment taking 2 weeks per client',
+      solution: 'Deployed quantum-enhanced analytics platform',
+      results: {
+        timeSaved: '90%',
+        roi: '4,500%',
+        accuracy: '99.9%'
+      },
+      quote: 'The quantum computing solutions gave us an edge that competitors simply cannot match.',
+      author: 'Michael ChenCTO',
+      logo: '💰'
+    },
+    {
+      company: 'HealthTech Innovations',
+      industry: 'Healthcare',
+      challenge: 'Patient data analysis bottleneck',
+      solution: 'Neural interface-powered diagnostic system',
+      results: {
+        timeSaved: '85%',
+        roi: '2,800%',
+        accuracy: '99.7%'
+      },
+      quote: 'Our diagnostic accuracy improved dramatically while reducing analysis time by 85%.',
+      author: 'Dr. Emily RodriguezChief Medical Officer',
+      logo: '🏥'
+    },
+    {
+      company: 'ManufacturingPlus',
+      industry: 'Manufacturing',
+      challenge: 'Production line optimization inefficiencies',
+      solution: 'Autonomous operations management system',
+      results: {
+        timeSaved: '92%',
+        roi: '5,100%',
+        accuracy: '99.9%'
+      },
+      quote: 'The autonomous systems run our production 24/7 with zero downtime. Incredible results.',
+      author: 'David ParkOperations Director',
+      logo: '🏭'
+    }
+  ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
@@ -13,6 +74,7 @@ const SuccessStoriesShowcase: React.FC = () => {
             Real businesses achieving extraordinary results with our revolutionary AI solutions. See how companies are transforming their operations and achieving unprecedented ROI.
           </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {stories.map((storyindex) => (
             <div
@@ -27,6 +89,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                   <p className="text-gray-400">{story.industry}</p>
                 </div>
               </div>
+
               {/* Challenge & Solution */}
               <div className="mb-6">
                 <div className="mb-4">
@@ -38,6 +101,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                   <p className="text-gray-300">{story.solution}</p>
                 </div>
               </div>
+
               {/* Results */}
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="text-center bg-green-500/20 rounded-lg p-3">
@@ -53,6 +117,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                   <div className="text-sm text-gray-300">Accuracy</div>
                 </div>
               </div>
+
               {/* Quote */}
               <blockquote className="border-l-4 border-cyan-400 pl-4 mb-4">
                 <p className="text-gray-300 italic">"{story.quote}"</p>
@@ -61,6 +126,7 @@ const SuccessStoriesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
+
         {/* Statistics Summary */}
         <div
           className="bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12"
@@ -68,6 +134,7 @@ const SuccessStoriesShowcase: React.FC = () => {
           <h3 className="text-3xl font-bold text-center mb-8 text-white">
             📊 Our Impact in Numbers
           </h3>
+          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-4xl font-bold text-green-400 mb-2">500+</div>
@@ -87,6 +154,7 @@ const SuccessStoriesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Call to Action */}
         <div
           className="text-center"
@@ -97,6 +165,7 @@ const SuccessStoriesShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Transform your business with our revolutionary AI solutions
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/case-studies" 
@@ -104,6 +173,7 @@ const SuccessStoriesShowcase: React.FC = () => {
             >
               📖 Read All Case Studies
             </a>
+            
             <a 
               href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-full text-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
@@ -115,7 +185,6 @@ const SuccessStoriesShowcase: React.FC = () => {
       </div>
     </section>
   );
-
 };
 
 export default SuccessStoriesShowcase;

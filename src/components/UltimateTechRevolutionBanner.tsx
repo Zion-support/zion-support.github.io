@@ -1,9 +1,11 @@
 import React from 'react';
+
 const UltimateTechRevolutionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white">
       <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-black/20"></div>
+      
       {/* Animated Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
@@ -11,6 +13,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
         <div className="absolute bottom-20 left-20 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-2000"></div>
         <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-500"></div>
       </div>
+
       <div className="relative z-10">
         <div
           className="text-center"
@@ -20,10 +23,12 @@ const UltimateTechRevolutionBanner: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold">ULTIMATE TECH REVOLUTION 2027</h2>
             <span className="text-4xl animate-bounce delay-1000">🚀</span>
           </div>
+          
           <p className="text-xl md:text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
             Experience the most advanced technology showcase featuring Quantum Consciousness Computing, 
             Interdimensional Neural Networks, and Holographic Reality Engines
           </p>
+
           {/* Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-5xl mx-auto">
             <div
@@ -33,6 +38,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <h3 className="font-bold text-lg mb-2">Quantum Consciousness</h3>
               <p className="text-sm opacity-90">Revolutionary quantum processors with consciousness integration</p>
             </div>
+
             <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
@@ -40,6 +46,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <h3 className="font-bold text-lg mb-2">Interdimensional AI</h3>
               <p className="text-sm opacity-90">AI systems operating across multiple dimensions</p>
             </div>
+
             <div
               className="bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/30"
             >
@@ -48,6 +55,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               <p className="text-sm opacity-90">Indistinguishable virtual reality experiences</p>
             </div>
           </div>
+
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <diva
@@ -56,6 +64,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
             >
               🌟 Explore Advanced Tech Showcase →
             </diva>
+            
             <diva
               href="/pages/ComprehensiveServices2027"
               className="inline-block bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-600 transition-all duration-300 font-bold text-lg border border-white/30"
@@ -63,6 +72,7 @@ const UltimateTechRevolutionBanner: React.FC = () => {
               🚀 View All Services →
             </diva>
           </div>
+
           {/* Stats */}
           <div
             className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -88,8 +98,6 @@ const UltimateTechRevolutionBanner: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 export default UltimateTechRevolutionBanner;
-</div></div>

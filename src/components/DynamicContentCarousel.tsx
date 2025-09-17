@@ -1,16 +1,8 @@
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
-  return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg">
-      <h3 className="text-2xl font-bold text-gray-900 mb-6">Dynamic Content Carousel</h3>
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-6 rounded-lg">
-          <h4 className="text-xl font-semibold mb-2">AI Innovation</h4>
-          <p>Latest AI breakthroughs and applications</p>
-        </div>
-      </div>
-    </div>
-  );
-};
+import React from 'react';
 
+const DynamicContentCarousel: React.FC = () => {
+export default DynamicContentCarousel;
+export default DynamicContentCarousel;

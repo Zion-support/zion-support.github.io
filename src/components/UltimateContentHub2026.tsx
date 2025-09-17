@@ -1,5 +1,147 @@
-import React from 'react';
-const UltimateContentHub2026: React.FC = () => {
+"use client";
+'use client';
+
+import React{ useState } from 'react';
+import { 
+  BookOpen
+  Video
+  FileText
+  Headphones
+  Download
+  ExternalLink,
+  Play,
+  Clock,
+  Users,
+  Star,
+  ChevronRight,
+  Search,
+  Filter,
+  Grid,
+  List
+} from 'lucide-react';
+
+const UltimateContentHub2026 = () => {
+  const [activeCategorysetActiveCategory] = useState('all');
+  const [viewModesetViewMode] = useState('grid');
+  const [searchQuerysetSearchQuery] = useState('');
+
+  const categories = [
+    { id: ''all', 'name: 'All 'Content', 'count: 156 },
+    { id: ''ai', 'name: 'AI & 'Automation', 'count: 45 },
+    { id: ''tech', 'name: ''Technology', 'count: 38 },
+    { id: ''business', 'name: 'Business 'Strategy', 'count: 32 },
+    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: 28 },
+    { id: ''tutorials', 'name: ''Tutorials', 'count: 13 }
+  ];
+
+  const contentItems = [
+    {
+      id: 1,
+      title: "Neural Interface Revolution: Complete Implementation Guide",
+      description: "Learn how to implement direct brain-computer interfaces in your organization",
+      type: "guide",
+      category: "ai",
+      duration: "45 min read",
+      difficulty: "Advanced",
+      rating: 4.9,
+      downloads: 1250,
+      thumbnail: "/api/placeholder/400/250",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Quantum AI Fusion: Breaking Down the Technology",
+      description: "Understanding quantum computing meets artificial intelligence",
+      type: "video",
+      category: "tech",
+      duration: "32 min",
+      difficulty: "Expert",
+      rating: 4.8,
+      downloads: 890,
+      thumbnail: "/api/placeholder/400/250",
+      featured: true
+    },
+    {
+      id: 3,
+      title: "Case Study: 300% ROI with Autonomous Security Systems",
+      description: "How TechCorp achieved unprecedented security efficiency",
+      type: "case-study",
+      category: "case-studies",
+      duration: "15 min read",
+      difficulty: "Intermediate",
+      rating: 4.7,
+      downloads: 2100,
+      thumbnail: "/api/placeholder/400/250",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Edge Intelligence: Real-time Processing at Scale",
+      description: "Master edge computing for instant decision-making",
+      type: "tutorial",
+      category: "tech",
+      duration: "28 min",
+      difficulty: "Advanced",
+      rating: 4.6,
+      downloads: 1560,
+      thumbnail: "/api/placeholder/400/250",
+      featured: true
+    },
+    {
+      id: 5,
+      title: "Synthetic Data Generation: Privacy-Preserving AI Training",
+      description: "Generate training data without compromising privacy",
+      type: "guide",
+      category: "ai",
+      duration: "38 min read",
+      difficulty: "Expert",
+      rating: 4.9,
+      downloads: 980,
+      thumbnail: "/api/placeholder/400/250",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Business Transformation: From Legacy to AI-Powered",
+      description: "Complete roadmap for enterprise AI transformation",
+      type: "guide",
+      category: "business",
+      duration: "52 min read",
+      difficulty: "Intermediate",
+      rating: 4.8,
+      downloads: 3200,
+      thumbnail: "/api/placeholder/400/250",
+      featured: true
+    }
+  ];
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'video': return Video;
+      case 'guide': return BookOpen;
+      case 'case-study': return FileText;
+      case 'tutorial': return Headphones;
+      default: return FileText;
+    }
+  };
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Beginner': return 'bg-green-100 text-green-800';
+      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'Advanced': return 'bg-orange-100 text-orange-800';
+      case 'Expert': return 'bg-red-100 text-red-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const filteredContent = contentItems.filter(item => {
+    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,6 +160,7 @@ const UltimateContentHub2026: React.FC = () => {
             to stay ahead in the AI revolution.
           </p>
         </div>
+
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,6 +179,7 @@ const UltimateContentHub2026: React.FC = () => {
                   className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
+
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
@@ -52,6 +196,7 @@ const UltimateContentHub2026: React.FC = () => {
                   </button>
                 ))}
               </div>
+
               {/* View Mode */}
               <div className="flex items-center space-x-2">
                 <button
@@ -74,6 +219,7 @@ const UltimateContentHub2026: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Content Grid */}
         <div
           whileInView={{ opacity: 1 }}
@@ -86,6 +232,7 @@ const UltimateContentHub2026: React.FC = () => {
           <div>
             {filteredContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
+              
               return (
                 <div
                   key={item.id}
@@ -98,6 +245,7 @@ const UltimateContentHub2026: React.FC = () => {
                       Featured
                     </div>
                   )}
+                  
                   <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/20" />
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -109,6 +257,7 @@ const UltimateContentHub2026: React.FC = () => {
                       </button>
                     </div>
                   </div>
+
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <div className="flex items-center justify-between mb-3">
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(item.difficulty)}`}>
@@ -119,12 +268,15 @@ const UltimateContentHub2026: React.FC = () => {
                         <span className="text-sm text-gray-600">{item.rating}</span>
                       </div>
                     </div>
+
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {item.title}
                     </h3>
+
                     <p className="text-gray-600 mb-4 line-clamp-2">
                       {item.description}
                     </p>
+
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
@@ -137,6 +289,7 @@ const UltimateContentHub2026: React.FC = () => {
                         </div>
                       </div>
                     </div>
+
                     <div className="flex items-center justify-between">
                       <button className="flex items-center space-x-2 text-blue-600 font-medium hover:text-blue-700 transition-colors">
                         <span>Read More</span>
@@ -149,10 +302,10 @@ const UltimateContentHub2026: React.FC = () => {
                   </div>
                 </div>
               );
-};
             })}
           </div>
         </div>
+
         {/* Load More */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -165,6 +318,6 @@ const UltimateContentHub2026: React.FC = () => {
       </div>
     </section>
   );
-
+};
 
 export default UltimateContentHub2026;
