@@ -2185,6 +2185,11 @@
     "h1": "AI 2026: Agent Platform SLOs — Best Practices"
   },
   {
+    "route": "/blog/ai-2026-agent-safety-playbook",
+    "title": "AI 2026: Agent Safety Playbook | Zion Tech Group",
+    "h1": "AI 2026: Agent Safety Playbook"
+  },
+  {
     "route": "/blog/ai-2026-agentic-workbench-productivity-blueprint",
     "title": "",
     "h1": "AI 2026: Agentic Workbench Productivity Blueprint"
@@ -2225,6 +2230,11 @@
     "h1": "Operationalizing Agentic Workflows in 2026"
   },
   {
+    "route": "/blog/ai-2026-production-evidence-hub-blueprint",
+    "title": "AI 2026: Production Evidence Hub Blueprint | Zion Tech Group",
+    "h1": "AI 2026: Production Evidence Hub Blueprint"
+  },
+  {
     "route": "/blog/ai-2026-real-time-retrieval-architectures",
     "title": "",
     "h1": "AI 2026: Real-Time Retrieval Architectures"
@@ -2243,6 +2253,11 @@
     "route": "/blog/ai-2026-secure-tooling-permissions-blueprint",
     "title": "AI 2026: Secure Tooling Permissions — Blueprint | Zion Tech Group",
     "h1": "AI 2026: Secure Tooling Permissions — Blueprint"
+  },
+  {
+    "route": "/blog/ai-2026-trusted-genai-patterns-regulated-enterprises",
+    "title": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group",
+    "h1": "AI 2026: Trusted GenAI Patterns for Regulated Enterprises"
   },
   {
     "route": "/blog/ai-automation-trends-2025",
