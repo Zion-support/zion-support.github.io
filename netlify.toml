@@ -1,5 +1,5 @@
 # Netlify build configuration for Vite app
-# noop: retrigger netlify build (2025-09-17 20:45 UTC) - post-massive-merge: all PRs merged, build verified
+# noop: retrigger netlify build (2025-09-17 21:05 UTC) - local build verified OK
 [build]
   # Build Next.js app in zion-website and serve from Next output
   command = "cd zion-website && npm ci --ignore-scripts --no-audit && npm run build"
