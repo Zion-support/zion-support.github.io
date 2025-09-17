@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 const OmniversalTechShowcase2029: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
@@ -119,10 +118,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-      transition={{ duration: 1.2 }}
+    <divdiv
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
@@ -132,21 +128,19 @@ const OmniversalTechShowcase2029: React.FC = () => {
         
         {/* Omniversal Particles */}
         {[...Array(40)].map((_, i) => (
-          <motion.div
+          <divdiv
             key={i}
             className="absolute w-4 h-4 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full opacity-40"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
-            animate={{
               scale: [0, 2, 0],
               opacity: [0, 1, 0],
               rotate: [0, 720],
               x: [0, Math.random() * 300 - 150, 0],
               y: [0, Math.random() * 300 - 150, 0],
             }}
-            transition={{
               duration: 8 + Math.random() * 4,
               repeat: Infinity,
               delay: Math.random() * 4,
@@ -158,43 +152,30 @@ const OmniversalTechShowcase2029: React.FC = () => {
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: isVisible ? 1 : 0 }}
-            transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
+          <divdiv
             className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white rounded-full text-lg font-bold mb-6"
           >
             🌌 OMNIVERSAL TECH 2029
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.6 }}
+          </divdiv>
+          <divh2
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
             Beyond All Existence
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.8 }}
+          </divh2>
+          <divp
             className="text-2xl text-gray-300 max-w-5xl mx-auto"
           >
             Experience technologies that transcend the very concept of existence itself, 
             enabling creation of infinite realities, manipulation of all timelines, and achievement of true eternal existence
-          </motion.p>
+          </divp>
         </div>
 
         {/* Technology Showcase */}
         <div className="max-w-8xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left: Technology Details */}
-            <motion.div
+            <divdiv
               key={currentTech}
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 50 }}
-              transition={{ duration: 1 }}
               className="space-y-10"
             >
               <div className="flex items-center space-x-6">
@@ -217,40 +198,31 @@ const OmniversalTechShowcase2029: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {omniversalTechs[currentTech].features.map((feature, index) => (
-                  <motion.div
+                  <divdiv
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1.2 + index * 0.1 }}
                     className="flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
                   >
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
                     <span className="text-white font-medium text-lg">{feature}</span>
-                  </motion.div>
+                  </divdiv>
                 ))}
               </div>
 
               <div className="flex space-x-8">
                 {Object.entries(omniversalTechs[currentTech].stats).map(([key, value], index) => (
-                  <motion.div
+                  <divdiv
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.6 + index * 0.1 }}
                     className="text-center"
                   >
                     <div className="text-4xl font-bold text-white">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key}</div>
-                  </motion.div>
+                  </divdiv>
                 ))}
               </div>
-            </motion.div>
+            </divdiv>
 
             {/* Right: Visual Representation */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.2 }}
+            <divdiv
               className="relative"
             >
               <div className={`h-[500px] rounded-3xl bg-gradient-to-br ${omniversalTechs[currentTech].gradient} p-10 relative overflow-hidden`}>
@@ -274,20 +246,18 @@ const OmniversalTechShowcase2029: React.FC = () => {
                 
                 {/* Omniversal Energy Effects */}
                 {[...Array(50)].map((_, i) => (
-                  <motion.div
+                  <divdiv
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-60"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                    animate={{
                       scale: [0, 3, 0],
                       opacity: [0, 1, 0],
                       x: [0, Math.random() * 300 - 150, 0],
                       y: [0, Math.random() * 300 - 150, 0],
                     }}
-                    transition={{
                       duration: 4 + Math.random() * 3,
                       repeat: Infinity,
                       delay: Math.random() * 5,
@@ -295,7 +265,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
                   />
                 ))}
               </div>
-            </motion.div>
+            </divdiv>
           </div>
 
           {/* Navigation Dots */}
@@ -314,10 +284,7 @@ const OmniversalTechShowcase2029: React.FC = () => {
           </div>
 
           {/* Call to Action */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 2 }}
+          <divdiv
             className="text-center mt-16"
           >
             <div className="inline-flex space-x-6">
@@ -334,10 +301,10 @@ const OmniversalTechShowcase2029: React.FC = () => {
                 ⚡ Interdimensional Tech →
               </a>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
       </div>
-    </motion.div>
+    </divdiv>
   );
 };
 

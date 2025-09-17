@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Brain
   Sparkles
@@ -319,11 +318,8 @@ const AI2025ContentRecommendationEngine = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {recommendations.map((itemindex) => (
-                <motion.div
+                <divdiv
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3delay: index * 0.1 }}
                   className="group bg-white rounded-xl border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
                 >
                   <div className="p-6">
@@ -427,7 +423,7 @@ const AI2025ContentRecommendationEngine = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </divdiv>
               ))}
             </div>
 

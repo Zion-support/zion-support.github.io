@@ -1,5 +1,7 @@
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Layout from './components/Layout';
+const ContentShowcaseBanner2026 = dynamic(() => import('../src/components/ContentShowcaseBanner2026'), { ssr: false });
 
 const Home = () => {
   return (
@@ -27,6 +29,8 @@ const Home = () => {
               </Link>
             </div>
             
+            <ContentShowcaseBanner2026 />
+
             <div className="grid md:grid-cols-3 gap-8 mt-16">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-colors">
                 <div className="text-4xl mb-4">🤖</div>
@@ -51,6 +55,66 @@ const Home = () => {
                 <Link href="/services/micro-saas" className="text-blue-200 hover:text-white mt-4 inline-block font-semibold">
                   Learn More →
                 </Link>
+              </div>
+            </div>
+
+            {/* Latest Insights Promo */}
+            <div className="mt-20 text-left">
+              <h2 className="text-3xl font-bold text-white mb-6">Latest insights</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Link href="/blog/ai-2026-exec-guide-to-agent-slo-scorecards" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Leadership • 5 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Executive Guide to Agent SLOs</h3>
+                  <p className="text-white/80">Turn evals and traces into executive scorecards that drive decisions.</p>
+                </Link>
+                <Link href="/blog/ai-2026-agent-platform-readiness-checklist" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Agent Platform Readiness</h3>
+                  <p className="text-white/80">A pragmatic checklist for safe, observable, cost‑aware agent platforms.</p>
+                </Link>
+                <Link href="/blog/ai-2026-runtime-evidence-bundles" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Runtime Evidence Bundles</h3>
+                  <p className="text-white/80">Bundle evals, traces, policy events, and incidents per release.</p>
+                </Link>
+                <Link href="/blog/ai-2026-eval-scorecards-in-practice" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">AI Quality • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Evaluation Scorecards in Practice</h3>
+                  <p className="text-white/80">Translate raw evals into executive‑friendly scorecards wired to gates.</p>
+                </Link>
+                <Link href="/blog/ai-2026-governed-tool-approvals" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Governance • 5 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Governed Tool Approvals</h3>
+                  <p className="text-white/80">Risk‑tiered adapters, budgets, and just‑in‑time approvals for safety.</p>
+                </Link>
+                <Link href="/blog/ai-2026-safe-autonomy-in-production" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Safety • 9 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Safe Autonomy in Production</h3>
+                  <p className="text-white/80">Ship autonomy with guardrails, SLOs, approvals, and audit‑ready evidence.</p>
+                </Link>
+                <Link href="/blog/ai-2026-agent-observability-scorecards" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Observability • 7 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Agent Observability Scorecards</h3>
+                  <p className="text-white/80">Turn traces, evals, and policy events into trust signals leaders can act on.</p>
+                </Link>
+                <Link href="/blog/ai-2026-evidence-hub-in-practice" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 8 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Evidence Hub in Practice</h3>
+                  <p className="text-white/80">Unify evals, traces, policy outcomes, and incidents for faster, safer iteration.</p>
+                </Link>
+                <Link href="/blog/ai-2026-reliable-real-time-agents" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Performance • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Reliable Real‑Time Agents</h3>
+                  <p className="text-white/80">Streaming UX, speculation, caching, and deterministic fallbacks.</p>
+                </Link>
+                <Link href="/blog/ai-2026-autonomous-evidence-led-ops" className="block bg-white/10 hover:bg-white/20 transition-colors rounded-lg p-6 border border-white/10">
+                  <div className="text-sm text-blue-200 mb-2">Operations • 6 min read</div>
+                  <h3 className="text-2xl font-semibold mb-2">Autonomous, Evidence‑Led Ops</h3>
+                  <p className="text-white/80">Run agents with auditable traces, eval gates, and runtime guardrails.</p>
+                </Link>
+              </div>
+              <div className="mt-6">
+                <Link href="/blog" className="text-blue-200 hover:text-white font-semibold">View all articles →</Link>
               </div>
             </div>
 

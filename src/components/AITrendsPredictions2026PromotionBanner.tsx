@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Brain
@@ -40,13 +39,9 @@ const AITrendsPredictions2026PromotionBanner = () => {
   ];
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
+        <divdiv
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white overflow-hidden"
         >
           {/* Animated Background */}
@@ -54,18 +49,16 @@ const AITrendsPredictions2026PromotionBanner = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-purple-600/20" />
             <div className="absolute inset-0">
               {[...Array(15)].map((_i) => (
-                <motion.div
+                <divdiv
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                   }}
-                  animate={{
                     y: [0-30],
                     opacity: [0.40.80.4],
                   }}
-                  transition={{
                     duration: 3 + Math.random() * 2,
                     repeat: Infinity,
                     delay: Math.random() * 2,
@@ -79,10 +72,7 @@ const AITrendsPredictions2026PromotionBanner = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
-                <motion.div
-                  initial={{ opacity: 0x: -20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.6delay: 0.2 }}
+                <divdiv
                   className="flex items-center justify-center lg:justify-start mb-3"
                 >
                   <div className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-sm font-semibold mr-4">
@@ -94,31 +84,22 @@ const AITrendsPredictions2026PromotionBanner = () => {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                </motion.div>
+                </divdiv>
 
-                <motion.h2
-                  initial={{ opacity: 0x: -20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.6delay: 0.3 }}
+                <divh2
                   className="text-2xl lg:text-3xl font-bold mb-2"
                 >
                   🔮 AI Trends & Predictions 2026
-                </motion.h2>
+                </divh2>
 
-                <motion.p
-                  initial={{ opacity: 0x: -20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.6delay: 0.4 }}
+                <divp
                   className="text-lg text-cyan-100 mb-4 max-w-2xl"
                 >
                   Discover groundbreaking AI trends: Quantum AINeural InterfacesAutonomous Systemsand AI Consciousness
-                </motion.p>
+                </divp>
 
                 {/* Prediction Icons */}
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: 0.5 }}
+                <divdiv
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-4"
                 >
                   {predictions.map((predictionindex) => (
@@ -128,14 +109,11 @@ const AITrendsPredictions2026PromotionBanner = () => {
                       <span className="text-xs text-cyan-300 ml-2">({prediction.confidence})</span>
                     </div>
                   ))}
-                </motion.div>
+                </divdiv>
               </div>
 
               {/* Right Content - CTA */}
-              <motion.div
-                initial={{ opacity: 0x: 20 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.6 }}
+              <divdiv
                 className="flex flex-col sm:flex-row items-center gap-4"
               >
                 <div className="text-center sm:text-right">
@@ -148,32 +126,26 @@ const AITrendsPredictions2026PromotionBanner = () => {
                   View Predictions
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
-              </motion.div>
+              </divdiv>
 
               {/* Dismiss Button */}
-              <motion.button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6delay: 0.8 }}
+              <divbutton
                 onClick={handleDismiss}
                 className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition-colors"
               >
                 <X className="w-5 h-5" />
-              </motion.button>
+              </divbutton>
             </div>
           </div>
 
           {/* Progress Bar */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 4ease: "easeOut" }}
+          <divdiv
             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 origin-left"
             style={{ width: '100%' }}
           />
-        </motion.div>
+        </divdiv>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

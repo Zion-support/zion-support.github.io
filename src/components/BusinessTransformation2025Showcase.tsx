@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp
   Users
@@ -137,10 +136,7 @@ const BusinessTransformation2025Showcase = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <divdiv
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent mb-6">
@@ -149,13 +145,10 @@ const BusinessTransformation2025Showcase = () => {
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Real results from real businesses. See how companies are achieving unprecedented growth with AI and automation.
           </p>
-        </motion.div>
+        </divdiv>
 
         {/* Navigation Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
+        <divdiv
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {sections.map((section) => {
@@ -175,26 +168,18 @@ const BusinessTransformation2025Showcase = () => {
               </button>
             );
           })}
-        </motion.div>
+        </divdiv>
 
         {/* Metrics Display */}
-        <motion.div
+        <divdiv
           key={activeSection}
-          initial={{ opacity: 0x: 50 }}
-          animate={{ opacity: 1x: 0 }}
-          exit={{ opacity: 0x: -50 }}
-          transition={{ duration: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {transformationData[activeSection as keyof typeof transformationData].metrics.map((metricindex) => {
             const Icon = metric.icon;
             return (
-              <motion.div
+              <divdiv
                 key={index}
-                variants={itemVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -212,16 +197,13 @@ const BusinessTransformation2025Showcase = () => {
                     {metric.label}
                   </div>
                 </div>
-              </motion.div>
+              </divdiv>
             );
           })}
-        </motion.div>
+        </divdiv>
 
         {/* Success Stories */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
+        <divdiv
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -232,12 +214,8 @@ const BusinessTransformation2025Showcase = () => {
             {successStories.map((storyindex) => {
               const Icon = story.icon;
               return (
-                <motion.div
+                <divdiv
                   key={index}
-                  variants={itemVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: index * 0.1 }}
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -278,17 +256,14 @@ const BusinessTransformation2025Showcase = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </divdiv>
               );
             })}
           </div>
-        </motion.div>
+        </divdiv>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
+        <divdiv
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-3xl p-12">
@@ -311,7 +286,7 @@ const BusinessTransformation2025Showcase = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </divdiv>
       </div>
     </div>
   );

@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
+\"HEAD\": src.pages.disabled/NewProductsPage.jsx import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title=\"New Products\" description=\"Explore our latest products priced for today&apos;s market.\" categorySlug=\"new - products\" detailBasePath=\"/product\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\" import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ \"label\": \'c\',\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title=\"New Products\" description=\"Explore our latest products priced for today & apos;s market.\" categorySlug=\"new - products\" detailBasePath=\"/product\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\""\";
+"HEAD": src.pages.disabled/NewProductsPage.jsx import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today&apos;s market." categorySlug="new - products" detailBasePath="/product" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";" import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today & apos;s market." categorySlug="new - products" detailBasePath="/product" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";""";
+ursor/add-new-services-and-deploy-updates-0462
+\"HEAD\": src.pages.disabled/NewProductsPage.jsx import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title=\"New Products\" description=\"Explore our latest products priced for today&apos;s market.\" categorySlug=\"new - products\" detailBasePath=\"/product\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\" import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ \"label\": \'c\',\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; 
+"HEAD": src.pages.disabled/NewProductsPage.jsx import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today&apos;s market." categorySlug="new - products" detailBasePath="/product" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";" import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> origin/merged-prs
+>>>>>>> origin/aggressive-merge-backup-20250915-162542

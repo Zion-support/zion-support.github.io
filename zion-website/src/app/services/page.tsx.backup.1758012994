@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+=======
+import { LightBulbIcon, CogIcon, UserGroupIcon } from '@heroicons/react/24/outline'
+
+const services = [
+  { name: 'AI Consulting', description: 'Strategy, readiness, and roadmap for AI adoption.', icon: LightBulbIcon },
+  { name: 'Managed AI Operations', description: 'Operate and optimize AI systems with SLAs.', icon: CogIcon },
+  { name: 'Enterprise Enablement', description: 'Training, governance, and change management.', icon: UserGroupIcon }
+]
+
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+export default function ServicesPage() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <div className="mx-auto max-w-3xl px-6 py-16 text-center">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Services</h1>
+        <p className="mt-4 text-lg text-gray-300">Professional AI engineering, governance, and platform services.</p>
+      </div>
+    </div>
+  )
+}
+
