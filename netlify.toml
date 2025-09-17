@@ -1,10 +1,10 @@
-[# Netlify build configuration for Vite app]
-# noop: retrigger netlify build (2025-09-17 14:55 UTC)
+[# Netlify build configuration for Next.js app]
+# noop: retrigger netlify build (2025-09-17 15:25 UTC)
 [build]
   # Build the Next.js app located in zion-website
   base = "zion-website"
   command = "npm run build"
-  publish = ".next"
+  # For Next.js on Netlify, the plugin manages output/publish
 
 [build.environment]
   NODE_VERSION = "20"
@@ -99,7 +99,9 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-## Removed Next.js plugin since this project builds a static Vite app
+## Enable Essential Next.js on Netlify plugin
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 
 # Redirects for SEO/legacy URLs
@@ -183,11 +185,5 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Catch-all for SPA routing (must be last)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# For Next.js, do not force SPA catch-all to index.html; plugin handles routing
+# Do NOT add SPA catch-all for Next.js; the plugin handles routing and SSR.
 # build-ok: 2025-09-17T12:56:57Z
