@@ -30,6 +30,8 @@ export const loginUser = createAsyncThunk(
       return rejectWithValue(error.message);
     }
   };
+};
+
 // Async thunk for signup
 export const signupUser = createAsyncThunk(
   'auth/signupUser',

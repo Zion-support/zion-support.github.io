@@ -3559,7 +3559,5 @@ export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent202
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
-
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)
