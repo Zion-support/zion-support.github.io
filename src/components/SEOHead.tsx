@@ -17,8 +17,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   return (
     <>
-      {/* Basic Meta Tags */}
+      {/* Primary Meta Tags */}
       <title>{title}</title>
+      <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       {canonical && <link rel="canonical" href={canonical} />}
@@ -42,7 +43,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* JSON-LD Structured Data */}
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
