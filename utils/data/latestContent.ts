@@ -1,5 +1,24 @@
-export const latestContent = [
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+    tag: "Guide",
+    date: "2025-09-15",
+  },
   {
+    id: "autonomous-support-agents-2026",
+    title: "AI 2026: Autonomous Customer Support Agents",
+    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
+    href: "/blog/ai-2026-autonomous-customer-support-agents",
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+    tag: "Guide",
+    date: "2025-09-15",
+  },
+=======
+export const latestContent = [
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
+  {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
@@ -8,11 +27,27 @@ export const latestContent = [
     date: "2025-09-15",
   },
   {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
     href: "/content/ai-agents-roi-playbook-2026",
     tag: "Playbook",
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+    id: "evaluation-harness-blueprint-2026",
+    title: "AI 2026: Evaluation Harness Blueprint",
+    summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
+    href: "/content/ai-2026-evaluation-harness-blueprint",
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
+    tag: "Blueprint",
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad
     date: "2025-09-15",
   },
   {
@@ -104,3 +139,5 @@ export const latestContent = [
     date: "2025-09-15",
   }
 ];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d

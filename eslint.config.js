@@ -220,6 +220,7 @@ export default [
       '**/app-disabled/**',
       '**/app-minimal/**',
       '**/app-optimizer.js',
+      '**/*.js',
       '**/*.cjs',
       '**/*.mjs',
       '**/src-clean/**',
@@ -284,7 +285,10 @@ export default [
       '**/mcp_*.js',
       '**/merge_*.js',
       '**/simple_*.js',
-      '**/.scripts/**'
+      '**/.scripts/**',
+      '**/next-i18next.config.js',
+      '**/next-sitemap.config.js',
+      '**/sentry.*.config.js'
     ]
   },
   js.configs.recommended,
