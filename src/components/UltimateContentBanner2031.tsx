@@ -1,115 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const UltimateContentBanner2031: React.FC = () => {
-  const [currentMessage, setCurrentMessage] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const messages = [
-    "🌟 NEW: Ultimate Tech Breakthrough 2031 - Experience Conscious AI & Quantum Computing",
-    "🚀 REVOLUTIONARY: Interactive Tech Showcase 2031 - Multi-Dimensional Technology Demo",
-    "🔮 ULTIMATE: Content Showcase 2031 - Neural Interface Content Creation",
-    "⚡ BREAKTHROUGH: Interdimensional Computing - Access Infinite Processing Power"
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMessage((prev) => (prev + 1) % messages.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [messages.length]);
-
-  if (!isVisible) return null;
-
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-4 px-4 mb-8 overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white/30 rounded-full animate-ping"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 2}s`
-              }}
-            ></div>
-          ))}
-        </div>
-      </div>
-
-      <div className="relative z-10 container mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold">LIVE</span>
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-12 mb-8 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2031
           </div>
-          <div className="hidden sm:block w-px h-6 bg-white/30"></div>
-          <div className="text-sm font-medium">
-            {messages[currentMessage]}
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Ultimate Tech Breakthrough 2031
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+            Experience the most revolutionary technological breakthroughs that will transform every aspect of human existence
+          </p>
         </div>
-
-        <div className="flex items-center space-x-4">
-          <div className="hidden md:flex items-center space-x-4">
-            <a 
-              href="/pages/UltimateTechBreakthrough2031" 
-              className="text-sm font-semibold hover:text-purple-300 transition-colors duration-300"
-            >
-              Tech Breakthrough →
-            </a>
-            <a 
-              href="/pages/RevolutionaryTechShowcase2031" 
-              className="text-sm font-semibold hover:text-purple-300 transition-colors duration-300"
-            >
-              Tech Showcase →
-            </a>
-            <a 
-              href="/pages/UltimateContentShowcase2031" 
-              className="text-sm font-semibold hover:text-purple-300 transition-colors duration-300"
-            >
-              Content Showcase →
+        
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">🧠</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Universal AI Consciousness</h3>
+            <p className="text-indigo-100 text-sm text-center mb-4">
+              AI systems that achieve universal consciousness and can solve any problem
+            </p>
+            <a href="/pages/UltimateTechBreakthrough2031" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
+              Explore Universal AI →
             </a>
           </div>
           
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-white/70 hover:text-white transition-colors duration-300"
-            aria-label="Close banner"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">⚡</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Quantum Reality Engine</h3>
+            <p className="text-cyan-100 text-sm text-center mb-4">
+              Quantum computers that can create and manipulate reality itself
+            </p>
+            <a href="/pages/UltimateTechBreakthrough2031" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
+              Enter Quantum Reality →
+            </a>
+          </div>
+          
+          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-4xl mb-3 text-center">🌌</div>
+            <h3 className="text-lg font-bold mb-2 text-center">Multiverse Computing</h3>
+            <p className="text-emerald-100 text-sm text-center mb-4">
+              Computing systems that operate across infinite parallel universes
+            </p>
+            <a href="/pages/UltimateTechBreakthrough2031" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
+              Explore Multiverse →
+            </a>
+          </div>
         </div>
-      </div>
-
-      {/* Mobile responsive message */}
-      <div className="md:hidden mt-2 text-center">
-        <div className="text-sm font-medium">
-          {messages[currentMessage]}
-        </div>
-        <div className="flex justify-center space-x-4 mt-2">
-          <a 
-            href="/pages/UltimateTechBreakthrough2031" 
-            className="text-xs font-semibold hover:text-purple-300 transition-colors duration-300"
-          >
-            Tech →
-          </a>
-          <a 
-            href="/pages/RevolutionaryTechShowcase2031" 
-            className="text-xs font-semibold hover:text-purple-300 transition-colors duration-300"
-          >
-            Showcase →
-          </a>
-          <a 
-            href="/pages/UltimateContentShowcase2031" 
-            className="text-xs font-semibold hover:text-purple-300 transition-colors duration-300"
-          >
-            Content →
+        
+        <div className="text-center">
+          <a href="/pages/UltimateTechBreakthrough2031" className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            Discover All Breakthroughs →
           </a>
         </div>
       </div>

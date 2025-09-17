@@ -12,17 +12,17 @@ const RevolutionaryAdBanner2028: React.FC = () => {
         </div>
         <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
           Experience the future of technology with our groundbreaking new content featuring Ultimate Tech Breakthrough 2028, 
-          Consciousness Computing Revolution 2028, and Quantum Reality 2028
+          Consciousness Computing Revolution 2028, and Quantum Consciousness 2028
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
           <a href="/pages/UltimateTechBreakthrough2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
             🚀 Ultimate Tech 2028 →
           </a>
           <a href="/pages/ConsciousnessComputingRevolution2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            🧠 Consciousness AI 2028 →
+            🧠 Consciousness Computing →
           </a>
-          <a href="/pages/QuantumReality2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
-            ⚡ Quantum Reality 2028 →
+          <a href="/pages/QuantumConsciousness2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+            ⚡ Quantum Consciousness →
           </a>
         </div>
       </div>

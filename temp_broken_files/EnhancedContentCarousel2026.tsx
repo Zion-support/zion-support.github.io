@@ -1,176 +1,367 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Clock, User, Eye, Heart, Share2, BookOpen, Sparkles } from 'lucide-react';
 
-const EnhancedContentCarousel2026: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+interface ContentItem {
+  id: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  authorRole: string;
+  publishDate: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  featured: boolean;
+  imageUrl: string;
+  slug: string;
+  views: number;
+  likes: number;
+  isNew?: boolean;
+}
 
-  const contentSlides = [
+interface EnhancedContentCarousel2026Props {
+  content?: ContentItem[];
+  autoPlay?: boolean;
+  interval?: number;
+  showControls?: boolean;
+  maxItems?: number;
+}
+
+const EnhancedContentCarousel2026: React.FC<EnhancedContentCarousel2026Props> = ({
+  content = [],
+  autoPlay = true,
+  interval = 5000,
+  showControls = true,
+  maxItems = 6
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  // Default content if none provided
+  const defaultContent: ContentItem[] = [
     {
-      id: 1,
-      title: "Ultimate Tech Revolution 2026",
-      description: "Experience the most revolutionary technological breakthroughs that will reshape our world. From quantum consciousness to synthetic intelligence.",
-      image: "🚀",
-      gradient: "from-red-600 to-pink-600",
-      link: "/pages/UltimateTechRevolution2026",
-      badge: "BREAKTHROUGH"
+      id: 'ai-consciousness',
+      title: 'The AI Consciousness Revolution: How Machines Are Developing True Self-Awareness',
+      excerpt: 'Discover the groundbreaking research that\'s leading to AI systems with genuine consciousness, emotional intelligence, and self-awareness that rivals human cognition.',
+      author: 'Dr. Elena Rodriguez',
+      authorRole: 'AI Research Director',
+      publishDate: '2025-01-25',
+      readTime: '12 min read',
+      category: 'AI Research',
+      tags: ['AI', 'Consciousness', 'Self-Awareness', 'Machine Learning'],
+      featured: true,
+      imageUrl: '/images/blog/ai-consciousness-breakthrough-2026.jpg',
+      slug: 'ai-consciousness-revolution-2026',
+      views: 125000,
+      likes: 3400,
+      isNew: true
     },
     {
-      id: 2,
-      title: "Revolutionary Innovation Hub 2026",
-      description: "The most advanced innovation hub on the planet. We're not just creating technology – we're reimagining what's possible.",
-      image: "🌟",
-      gradient: "from-emerald-600 to-teal-600",
-      link: "/pages/RevolutionaryInnovationHub2026",
-      badge: "INNOVATION"
+      id: 'quantum-computing',
+      title: 'Quantum Computing Breakthrough: Practical Applications in 2026',
+      excerpt: 'How quantum computing is moving from research labs to real-world business applications.',
+      author: 'Dr. Marcus Chen',
+      authorRole: 'Quantum Computing Research Lead',
+      publishDate: '2025-01-22',
+      readTime: '12 min read',
+      category: 'Quantum Computing',
+      tags: ['Quantum Computing', 'Innovation', 'Enterprise Solutions'],
+      featured: true,
+      imageUrl: '/images/blog/quantum-computing-breakthrough-2026.jpg',
+      slug: 'quantum-computing-breakthrough-2026',
+      views: 89000,
+      likes: 2100,
+      isNew: true
     },
     {
-      id: 3,
-      title: "Comprehensive Case Studies 2026",
-      description: "Real results, real impact. Discover how our revolutionary technologies have transformed businesses and industries worldwide.",
-      image: "📊",
-      gradient: "from-orange-600 to-red-600",
-      link: "/pages/ComprehensiveCaseStudies2026",
-      badge: "SUCCESS"
+      id: 'neural-interfaces',
+      title: 'Neural Interfaces: The Next Frontier in Human-Computer Interaction',
+      excerpt: 'Exploring brain-computer interfaces and their potential to revolutionize how we interact with technology.',
+      author: 'Dr. Sarah Kim',
+      authorRole: 'Neural Interface Research Lead',
+      publishDate: '2025-01-20',
+      readTime: '10 min read',
+      category: 'Emerging Technology',
+      tags: ['Neural Interfaces', 'BCI', 'Human-Computer Interaction'],
+      featured: true,
+      imageUrl: '/images/blog/neural-interfaces-next-frontier-2026.jpg',
+      slug: 'neural-interfaces-next-frontier-2026',
+      views: 67000,
+      likes: 1800,
+      isNew: true
     },
     {
-      id: 4,
-      title: "Advanced Quantum Computing 2026",
-      description: "Harnessing quantum mechanics to create technologies that operate beyond classical physics, opening new dimensions of possibility.",
-      image: "⚛️",
-      gradient: "from-purple-600 to-indigo-600",
-      link: "/pages/AdvancedQuantumComputing2026",
-      badge: "QUANTUM"
+      id: 'ai-teams',
+      title: 'The Future of Work: AI-Powered Autonomous Teams in 2026',
+      excerpt: 'How AI agents are forming autonomous teams that can complete complex projects without human intervention.',
+      author: 'Dr. Michael Thompson',
+      authorRole: 'Future of Work Research Director',
+      publishDate: '2025-01-18',
+      readTime: '9 min read',
+      category: 'Future of Work',
+      tags: ['AI Teams', 'Autonomous Work', 'Future of Work'],
+      featured: true,
+      imageUrl: '/images/blog/ai-autonomous-teams-2026.jpg',
+      slug: 'future-of-work-ai-powered-autonomous-teams-2026',
+      views: 95000,
+      likes: 2800,
+      isNew: true
     },
     {
-      id: 5,
-      title: "Neural Interface Revolution 2026",
-      description: "Direct brain-computer interfaces operating at quantum speeds, enabling instant thought-to-action translation.",
-      image: "🧬",
-      gradient: "from-green-600 to-emerald-600",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      badge: "REVOLUTIONARY"
+      id: 'edge-ai',
+      title: 'Edge AI Revolution: Bringing Intelligence to Every Device',
+      excerpt: 'How edge AI is transforming everyday devices into intelligent systems that can think and act independently.',
+      author: 'Marcus Thompson',
+      authorRole: 'Edge AI Technology Lead',
+      publishDate: '2025-01-15',
+      readTime: '11 min read',
+      category: 'Edge Computing',
+      tags: ['Edge AI', 'IoT', 'Real-time Processing'],
+      featured: true,
+      imageUrl: '/images/blog/edge-ai-revolution-2026.jpg',
+      slug: 'edge-ai-revolution-2026',
+      views: 78000,
+      likes: 1950,
+      isNew: true
     },
     {
-      id: 6,
-      title: "Space Tech Innovation 2026",
-      description: "Advanced technologies for space exploration, colonization, and interplanetary communication that make the cosmos accessible.",
-      image: "🌌",
-      gradient: "from-cyan-600 to-blue-600",
-      link: "/pages/SpaceTechInnovation2026",
-      badge: "SPACE"
+      id: 'synthetic-data',
+      title: 'Synthetic Data: The Secret Weapon of AI Development',
+      excerpt: 'How synthetic data is accelerating AI development while solving privacy and bias challenges.',
+      author: 'Dr. Elena Rodriguez',
+      authorRole: 'Data Science Research Director',
+      publishDate: '2025-01-12',
+      readTime: '7 min read',
+      category: 'Data Science',
+      tags: ['Synthetic Data', 'Privacy', 'AI Training'],
+      featured: true,
+      imageUrl: '/images/blog/synthetic-data-secret-weapon-2026.jpg',
+      slug: 'synthetic-data-secret-weapon-2026',
+      views: 56000,
+      likes: 1400,
+      isNew: true
     }
   ];
 
+  const displayContent = content.length > 0 ? content.slice(0, maxItems) : defaultContent.slice(0, maxItems);
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [contentSlides.length]);
+    if (isPlaying && displayContent.length > 1) {
+      const timer = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % displayContent.length);
+      }, interval);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
+      return () => clearInterval(timer);
+    }
+  }, [isPlaying, interval, displayContent.length]);
+
+  const formatNumber = (num: number) => {
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1) + 'M';
+    } else if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'K';
+    }
+    return num.toString();
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
+  const getCategoryColor = (category: string) => {
+    const colors: { [key: string]: string } = {
+      'AI Research': 'from-purple-500 to-pink-500',
+      'Quantum Computing': 'from-blue-500 to-cyan-500',
+      'Emerging Technology': 'from-green-500 to-emerald-500',
+      'Future of Work': 'from-orange-500 to-red-500',
+      'Edge Computing': 'from-indigo-500 to-purple-500',
+      'Data Science': 'from-teal-500 to-blue-500',
+      'Healthcare AI': 'from-pink-500 to-rose-500'
+    };
+    return colors[category] || 'from-gray-500 to-gray-600';
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl overflow-hidden">
-      {/* Main Carousel */}
-      <div className="relative h-96 md:h-[500px]">
-        {contentSlides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
+    <div className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 rounded-2xl border border-gray-700/50 p-8 shadow-2xl">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center gap-4">
+          <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl">
+            <BookOpen className="w-8 h-8 text-white" />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-white">Featured Content</h2>
+            <p className="text-gray-400">Discover the latest insights and breakthroughs</p>
+          </div>
+        </div>
+        
+        {showControls && (
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="p-2 bg-white/10 rounded-lg text-white hover:bg-white/20 transition-colors duration-300"
+            >
+              {isPlaying ? (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              )}
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Main Content Display */}
+      <div className="relative">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            className="grid md:grid-cols-2 gap-8 items-center"
           >
-            <div className={`h-full bg-gradient-to-br ${slide.gradient} flex items-center`}>
-              <div className="container mx-auto px-8 grid md:grid-cols-2 gap-8 items-center">
-                <div className="text-white">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <span className="text-6xl">{slide.image}</span>
-                    <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-bold">
-                      {slide.badge}
-                    </span>
-                  </div>
-                  <h3 className="text-4xl md:text-5xl font-bold mb-6">
-                    {slide.title}
-                  </h3>
-                  <p className="text-xl text-white/90 mb-8 max-w-2xl">
-                    {slide.description}
-                  </p>
-                  <a
-                    href={slide.link}
-                    className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
-                  >
-                    Explore Now →
-                  </a>
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r ${getCategoryColor(displayContent[currentIndex].category)} text-white text-sm font-medium`}>
+                  <Sparkles className="w-4 h-4" />
+                  {displayContent[currentIndex].category}
                 </div>
-                <div className="hidden md:block">
-                  <div className="w-full h-80 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                    <div className="text-8xl opacity-50">{slide.image}</div>
+                {displayContent[currentIndex].isNew && (
+                  <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium">
+                    <Sparkles className="w-3 h-3" />
+                    NEW
                   </div>
+                )}
+              </div>
+              
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                {displayContent[currentIndex].title}
+              </h3>
+              
+              <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                {displayContent[currentIndex].excerpt}
+              </p>
+              
+              <div className="flex items-center gap-6 mb-6 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  <span>{displayContent[currentIndex].author}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  <span>{displayContent[currentIndex].readTime}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Eye className="w-4 h-4" />
+                  <span>{formatNumber(displayContent[currentIndex].views)} views</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Heart className="w-4 h-4" />
+                  <span>{formatNumber(displayContent[currentIndex].likes)} likes</span>
                 </div>
               </div>
+              
+              <div className="flex flex-wrap gap-2 mb-6">
+                {displayContent[currentIndex].tags.slice(0, 4).map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+              
+              <div className="flex gap-4">
+                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Read Article
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <button className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20">
+                  <Share2 className="w-4 h-4" />
+                  Share
+                </button>
+              </div>
             </div>
+            
+            <div className="relative">
+              <div className="aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-white/10">
+                <img
+                  src={displayContent[currentIndex].imageUrl}
+                  alt={displayContent[currentIndex].title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/placeholder-tech.jpg';
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              </div>
+              
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full animate-bounce"></div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation */}
+        {displayContent.length > 1 && (
+          <div className="flex justify-center gap-2 mt-8">
+            {displayContent.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? 'bg-gradient-to-r from-purple-400 to-pink-400 scale-125'
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
-        ))}
-
-        {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+        )}
       </div>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {contentSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white/50'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* Content Preview Grid */}
-      <div className="p-8 bg-gradient-to-r from-gray-800 to-gray-900">
-        <h3 className="text-2xl font-bold text-white mb-6 text-center">Explore All Revolutionary Content</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {contentSlides.map((slide, index) => (
-            <button
-              key={slide.id}
-              onClick={() => goToSlide(index)}
-              className={`p-4 rounded-lg transition-all duration-300 ${
-                index === currentSlide
-                  ? 'bg-white text-gray-900 scale-105'
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
+      {/* Content Grid Preview */}
+      <div className="mt-12">
+        <h3 className="text-xl font-bold text-white mb-6">More Content</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {displayContent.slice(0, 3).map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-4 hover:bg-white/10 transition-all duration-300 cursor-pointer"
             >
-              <div className="text-2xl mb-2">{slide.image}</div>
-              <div className="text-sm font-semibold">{slide.title.split(' ')[0]}</div>
-            </button>
+              <div className="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-pink-500/20 mb-3">
+                <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    e.currentTarget.src = '/images/placeholder-tech.jpg';
+                  }}
+                />
+              </div>
+              <div className={`inline-flex items-center gap-1 px-2 py-1 rounded-full bg-gradient-to-r ${getCategoryColor(item.category)} text-white text-xs font-medium mb-2`}>
+                {item.category}
+              </div>
+              <h4 className="text-white font-semibold mb-2 group-hover:text-purple-300 transition-colors duration-300 line-clamp-2">
+                {item.title}
+              </h4>
+              <div className="flex items-center gap-3 text-xs text-gray-400">
+                <span>{item.readTime}</span>
+                <span>•</span>
+                <span>{formatNumber(item.views)} views</span>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

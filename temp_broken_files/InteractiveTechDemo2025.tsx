@@ -1,57 +1,95 @@
-import React, { useState } from 'react';
 
-const InteractiveTechDemo2025: React.FC = () => {
-  const [activeDemo, setActiveDemo] = useState('ai');
+import React, { useState, useEffect } from 'react';
+import { 
+  Play
+  Pause
+  RotateCcw
+  Settings
+  Zap
+  Brain
+  Cpu
+  Database,
+  Cloud,
+  Smartphone,
+  Laptop,
+  Server,
+  Network,
+  Shield,
+  Target,
+  TrendingUp,
+  Users,
+  Globe,
+  Code,
+  Atom,
+  Rocket,
+  Star,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  ArrowRight,
+  Download,
+  Share2,
+  Heart,
+  MessageCircle,
+  BookOpen,
+  Lightbulb
+} from 'lucide-react';
 
-  const demos = {
-    ai: {
-      title: 'AI Consciousness Demo',
-      description: 'Experience real-time AI consciousness processing',
-      icon: '🧠',
-      features: [
-        'Self-reflective learning algorithms',
-        'Emotional intelligence processing',
-        'Autonomous decision making',
-        'Creative problem solving'
-      ],
-      link: '/pages/NextGenAIConsciousness2025'
-    },
-    quantum: {
-      title: 'Quantum Reality Engine',
-      description: 'Manipulate reality with quantum technology',
-      icon: '⚛️',
-      features: [
-        'Parallel universe navigation',
-        'Reality manipulation technology',
-        'Quantum computing power',
-        'Interdimensional data transfer'
-      ],
-      link: '/pages/QuantumRealityEngine2025'
-    },
-    interdimensional: {
-      title: 'Interdimensional Tech',
-      description: 'Access infinite parallel realities',
-      icon: '🌌',
-      features: [
-        'Dimensional portal technology',
-        'Cross-reality communication',
-        'Consciousness transfer matrix',
-        'Reality synchronization protocols'
-      ],
-      link: '/pages/InterdimensionalTechRevolution2025'
+
+  useEffect(() => {
+    setIsVisible(true);
+  }[]);
+
+  useEffect(() => {
+    let interval;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+          }
+          return prev + 2;
+        });
+      }100);
+    }
+    return () => clearInterval(interval);
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+    if (progress >= 100) {
+      setProgress(0);
     }
   };
 
+  const handleReset = () => {
+    setIsPlaying(false);
+    setProgress(0);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const currentDemo = demos[activeDemo];
+
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 INTERACTIVE TECH DEMO • JANUARY 2025
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Interactive Technology Demo 2025
@@ -59,8 +97,10 @@ const InteractiveTechDemo2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Experience our revolutionary technologies through interactive demonstrations and real-time simulations
           </p>
-        </div>
+        </divdiv>
 
+                </button>
+              ))}
         {/* Demo Selector */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 border border-white/20">
@@ -147,8 +187,52 @@ const InteractiveTechDemo2025: React.FC = () => {
                 ✅ System Online
               </div>
             </div>
+
+          {/* Features and Metrics */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Real-Time Metrics</h3>
+              
+              <div className="space-y-4">
+                {currentDemo.features.map((featureindex) => (
+                  <divdiv
+                    key={index}
+                    className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+                    onClick={() => setSelectedFeature(feature)}
+                  >
+                    <div>
+                      <p className="text-white font-medium">{feature.name}</p>
+                      <div className="w-32 h-2 bg-white/10 rounded-full mt-2">
+                        <divdiv
+                          className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"
+                        />
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-2xl font-bold text-white">
+                        {feature.value}
+                        <span className="text-sm text-gray-400 ml-1">{feature.unit}</span>
+                      </p>
+                    </div>
+                  </divdiv>
+                ))}
+              </div>
+            </div>
+            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-6">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-white font-semibold">Consciousness Level</span>
+                <span className="text-purple-300 font-mono">{demoData.consciousnessLevel.toFixed(1)}%</span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-3">
+                <motion.div
+                  className="bg-gradient-to-r from-purple-400 to-pink-400 h-3 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${demoData.consciousnessLevel}%` }}
+                  transition={{ duration: 0.5 }}
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        );
 
         {/* Technology Stats */}
         <div className="mt-16 bg-gradient-to-r from-purple-800/50 to-pink-800/50 rounded-2xl p-8">
@@ -175,7 +259,7 @@ const InteractiveTechDemo2025: React.FC = () => {
               <div className="text-sm text-gray-300">Cross-dimensional speed</div>
             </div>
           </div>
-        </div>
+        </divdiv>
       </div>
     </div>
   );

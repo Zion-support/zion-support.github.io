@@ -4,6 +4,7 @@ import { getPostById } from '../../../data/blog';
 
 type Params = { params: { id: string } };
 
+<<<<<<< HEAD
 const POSTS: Record<string, BlogPostMeta & { content: string[] }> = {
 <<<<<<< HEAD
 =======
@@ -450,6 +451,8 @@ export function generateStaticParams() {
 
 export default function BlogDetailPage({ params }: { params: { id: string } }) {
   const post = POSTS[params.id];
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 export default function BlogPostPage({ params }: Params) {
   const post = getPostById(params.id);
 
@@ -489,6 +492,7 @@ export default function BlogPostPage({ params }: Params) {
     </article>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -506,3 +510,6 @@ export default function BlogPostPage({ params }: Params) {
 >>>>>>> origin/feat/blog-content-and-promo
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+}
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56

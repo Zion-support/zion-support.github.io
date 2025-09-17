@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 const InteractiveContentShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTab, setActiveTab] = useState('breakthrough');
 
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025.tsx
   const content = {
     ai: {
 <<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025.tsx
@@ -98,10 +99,15 @@ const InteractiveContentShowcase2025: React.FC = () => {
       link: "/pages/NeuralInterfaceRevolution2025",
       color: "from-emerald-600 to-teal-600",
       icon: "🧬"
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveContentShowcase2025.tsx
     }
   };
 
+  const activeContent = contentTabs[activeTab as keyof typeof contentTabs];
+
   return (
+<<<<<<< HEAD:temp_broken_files/InteractiveContentShowcase2025.tsx
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -305,6 +311,12 @@ const InteractiveContentShowcase2025: React.FC = () => {
             </button>
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/components/InteractiveContentShowcase2025.tsx
           </div>
+=======
+            </div>
+          ))}
+        </div>
+
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/components/InteractiveContentShowcase2025.tsx
         </div>
       </div>
     </div>

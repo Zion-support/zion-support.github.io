@@ -368,7 +368,10 @@ const NextGenTechRevolution2028: React.FC = () => {
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join the Revolution
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
+        </div>
+        
+        {/* Call to Action Section */}
+        <div className="text-center bg-gradient-to-r from-emerald-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-emerald-400/30">
           <h2 className="text-4xl font-bold mb-6">🚀 Join the Revolution</h2>
           <p className="text-xl opacity-90 max-w-4xl mx-auto mb-8">
             Be part of the most significant technological revolution in human history. 

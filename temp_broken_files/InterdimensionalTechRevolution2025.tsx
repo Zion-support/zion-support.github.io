@@ -1,17 +1,4 @@
 import React from 'react';
-
-const InterdimensionalTechRevolution2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-pink-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌌 INTERDIMENSIONAL REVOLUTION • JANUARY 2025
-          </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Interdimensional Tech Revolution 2025
-          </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Break through the barriers of our dimension and access infinite parallel realities with our revolutionary interdimensional technology
           </p>
@@ -238,9 +225,7 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
               </ul>
             </div>
           </div>
-        </div>
 
-        {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore Interdimensional Space?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
@@ -256,7 +241,9 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </main>
+
+      <EnhancedFooter />
     </div>
   );
 };

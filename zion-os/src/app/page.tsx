@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 <<<<<<< HEAD
@@ -720,6 +721,11 @@ export default function HomePage() {
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 import FeatureCard from './components/FeatureCard';
+=======
+import React from 'react'
+import Link from 'next/link'
+import FeatureCard from './components/FeatureCard'
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 
 export default function HomePage() {
   const features = [
@@ -795,7 +801,7 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen">
@@ -804,11 +810,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
@@ -840,6 +849,7 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -864,6 +874,12 @@ export default function HomePage() {
               <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
                 📰 New: Agent Safety Red Teaming 2025
               </a>
+              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift">
+                📰 New: Agentic Supply Chains 2025
+              </a>
+              <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift">
+                📰 New: Edge AI Compliance 2025
+              </a>
             </div>
           </div>
         </div>
@@ -883,14 +899,6 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                features={feature.features}
-                gradient={feature.gradient}
-              />
               <div key={index}>
                 <FeatureCard
                   icon={feature.icon}
@@ -923,6 +931,7 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
@@ -939,6 +948,8 @@ export default function HomePage() {
 >>>>>>> e5909d8836f03f51792b2f98b2871ccc046d0c25
 >>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56
             </div>
           </div>
         </div>
@@ -997,9 +1008,10 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
@@ -1035,3 +1047,5 @@ export default function HomePage() {
 >>>>>>> origin/feat/news-content
 >>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+>>>>>>> origin/cursor/create-and-deploy-new-content-fe56

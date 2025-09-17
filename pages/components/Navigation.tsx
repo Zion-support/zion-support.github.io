@@ -411,6 +411,9 @@ export default function Navigation() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
+              <Link href="/blog/ai-2026-reliable-real-time-agents" className="bg-white text-blue-700 rounded-full px-3 py-1 font-medium hover:bg-blue-50 transition-colors">
+                New: Reliable Real‑Time Agents →
+              </Link>
               <Link href="/contact" className="hover:text-blue-200 transition-colors">
                 Get Free Consultation
               </Link>
