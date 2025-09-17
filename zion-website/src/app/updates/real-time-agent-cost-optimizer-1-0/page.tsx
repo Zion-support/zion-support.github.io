@@ -36,5 +36,9 @@ export default function Page() {
   )
 }
 
+<<<<<<< HEAD
 // Removed duplicate default component to fix build error. The page component above is the intended default export.
+=======
+// Removed duplicate default export; main Page() above is the default
+>>>>>>> origin/feat/content-and-homepage-promos-20250916
 
