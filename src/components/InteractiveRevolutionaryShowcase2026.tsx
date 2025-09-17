@@ -177,7 +177,7 @@ const InteractiveRevolutionaryShowcase2026: React.FC = () => {
                         <span>{demoProgress}%</span>
                       </div>
                       <div className="w-full bg-white/20 rounded-full h-2">
-                        <motion.div
+                        <div
                           className="bg-white h-2 rounded-full"
                           style={{ width: `${demoProgress}%` }}
                           transition={{ duration: 0.1 }}
@@ -193,18 +193,18 @@ const InteractiveRevolutionaryShowcase2026: React.FC = () => {
                     </div>
                     
                     {demoProgress > 50 && (
-                      <motion.div
+                      <div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="bg-white/10 rounded-lg p-4"
                       >
                         <div className="text-sm text-white/70 mb-2">AI Response:</div>
                         <div className="text-white">{currentDemo.interactive.aiResponse}</div>
-                      </motion.div>
+                      </div>
                     )}
 
                     {demoProgress > 75 && (
-                      <motion.div
+                      <div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="bg-white/10 rounded-lg p-4"
@@ -226,7 +226,7 @@ const InteractiveRevolutionaryShowcase2026: React.FC = () => {
                             </div>
                           ))}
                         </div>
-                      </motion.div>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -240,7 +240,7 @@ const InteractiveRevolutionaryShowcase2026: React.FC = () => {
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {demos.map((demo, index) => (
-              <motion.div
+              <div
                 key={demo.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -258,7 +258,7 @@ const InteractiveRevolutionaryShowcase2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     if (existingItem) {
       return cart.map(cartItem =>
         cartItem.id === item.id
@@ -38,5 +37,3 @@
 };
 
 export default cartUtils;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
