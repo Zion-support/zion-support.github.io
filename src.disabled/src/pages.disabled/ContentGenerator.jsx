@@ -37,6 +37,8 @@ export default function ContentGenerator({ }: ContentGeneratorProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ContentGenerator.jsx
 }
 }

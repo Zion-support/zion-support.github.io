@@ -37,6 +37,8 @@ export default function EquipmentDetail({ }: EquipmentDetailProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/EquipmentDetail.jsx
 }
 }

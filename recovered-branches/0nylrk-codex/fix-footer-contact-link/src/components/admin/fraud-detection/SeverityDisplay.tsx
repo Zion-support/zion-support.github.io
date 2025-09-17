@@ -1,121 +1,12 @@
+import React from 'react';
 
-interface SeverityDisplayProps {
-  severity: string
-}
-
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
-  severity
-}) => {
+const SeverityDisplay: React.FC = () => {
   return (
-
-
-
-
-
-    <SeverityIndicator
-      severity={severity as "safe" | "suspicious" | "dangerous"}
-      showIcon={true}
-      showText={true}
-
-
-
-
-
-    />
-  );
-}
-
-
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
-  return (
-
-    />;
-);
-
-    <SeverityIndicator 
-      severity={severity as "safe" | "suspicious" | "dangerous"} 
-import React from "react",;
-import { SeverityIndicator } from "@/components/ui/severity-indicator",;
-interface SeverityDisplayProps {;
-  severity: string;
-}
-;
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
-  return (;
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"} ;
-      showIcon={true}
-      showText={true}
-    />;
-  );
-
-
-
-
-
-  return (
-
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"}
-      show_icon={true}
-      show_text={true}
-    />);
-}
-;
-
-
-
-
-
-
-import React from './react';
-import { SeverityIndicator  } from '@/components / ui / severity - indicator';
-interface SeverityDisplayProps {
-  severity: string;
-}
-export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
-  severity,
-
-}) => {
-
-  return (
-
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"}
-      show_icon={true}
-      show_text={true}
-    />);
-}
-;
-
-
-
-interface SeverityDisplayProps {
-  severity: string
-}
-
-
-
-
-
-
-
-
-};
-
-import React from "react";
-import { SeverityIndicator } from "@/components/ui/severity-indicator";
-
-interface SeverityDisplayProps {
-  severity: string;
-}
-
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
-  return (
-    <SeverityIndicator 
-      severity={severity as "safe" | "suspicious" | "dangerous"} 
-      showIcon={true}
-      showText={true}
-    />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SeverityDisplay</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
+
+export default SeverityDisplay;

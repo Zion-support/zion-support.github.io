@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 export const usePerformanceMonitoring = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -8,7 +7,6 @@ export const usePerformanceMonitoring = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
@@ -18,7 +16,6 @@ export const usePerformanceMonitoring = () => {
         }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
       // First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -33,7 +30,6 @@ export const usePerformanceMonitoring = () => {
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
-
       // Cumulative Layout Shift (CLS)
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
@@ -43,7 +39,6 @@ export const usePerformanceMonitoring = () => {
             clsValue += entry.value;
           }
         });
-        
         if (window.gtag) {
           window.gtag('event', 'web_vitals', {
             event_category: 'Performance',
@@ -53,7 +48,6 @@ export const usePerformanceMonitoring = () => {
         }
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
-
       // Cleanup observers
       return () => {
         lcpObserver.disconnect();
@@ -62,13 +56,11 @@ export const usePerformanceMonitoring = () => {
       };
     }
   }, []);
-
   // Monitor page load time
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('load', () => {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        
         if (window.gtag) {
           window.gtag('event', 'page_load_time', {
             event_category: 'Performance',

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
@@ -67,29 +65,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
   const caseStudies = [
     {
       company: "TechCorp Global",
@@ -292,8 +267,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           </motion.div>
         </div>
       </motion.div>
-      </div>
-    </>
       </div>
     </>
   );

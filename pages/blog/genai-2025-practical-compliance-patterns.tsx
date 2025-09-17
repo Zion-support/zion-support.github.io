@@ -2,16 +2,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 
-<<<<<<< HEAD
 export default function GenAIPracticalCompliance2025() {
-=======
 export default function GenAICompliance2025() {
->>>>>>> content-updates-2025-09-16
   return (
     <>
       <Head>
         <title>GenAI for Regulated Industries (2025): Practical Compliance Patterns | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name='description' content='Actionable compliance patterns for GenAI in regulated industries: data handling, audits, and controls.' />
         <meta property='og:title' content='GenAI for Regulated Industries (2025)' />
         <meta property='og:description' content='Practical controls, audits, and data patterns to deploy GenAI safely.' />
@@ -19,7 +15,6 @@ export default function GenAICompliance2025() {
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white'>
-=======
         <meta name='description' content='Practical patterns to ship GenAI features in regulated industries while meeting compliance, security, and audit requirements.' />
         <meta property='og:title' content='GenAI for Regulated Industries (2025)' />
         <meta property='og:description' content='Actionable compliance patterns for building trustworthy GenAI in production.' />
@@ -27,7 +22,6 @@ export default function GenAICompliance2025() {
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
->>>>>>> content-updates-2025-09-16
         <main className='container mx-auto px-6 py-12'>
           <div className='max-w-4xl mx-auto'>
             <nav className='mb-8'>
@@ -39,11 +33,8 @@ export default function GenAICompliance2025() {
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
-<<<<<<< HEAD
                   <span className='px-3 py-1 bg-emerald-400/20 text-emerald-400 text-sm rounded-full border border-emerald-400/30'>
-=======
                   <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
->>>>>>> content-updates-2025-09-16
                     Compliance
                   </span>
                   <span className='text-white/60 text-sm'>September 16, 2025</span>
@@ -54,37 +45,30 @@ export default function GenAICompliance2025() {
                   GenAI for Regulated Industries (2025): Practical Compliance Patterns
                 </h1>
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-<<<<<<< HEAD
                   Concrete data, model, and ops controls to meet regulatory requirements without slowing product velocity.
-=======
                   Proven, auditable patterns for deploying GenAI in healthcare, finance, and public sector without slowing delivery.
->>>>>>> content-updates-2025-09-16
                 </p>
               </header>
 
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-emerald-400'>
-<<<<<<< HEAD
                   Data Handling Controls
                 </h2>
                 <ul className='space-y-2 text-white/80'>
                   <li>• Classification + masking at ingress; block sensitive entities from prompts.</li>
                   <li>• Tenant-aware retrieval; per-tenant indexes and access tokens.</li>
                   <li>• Right-to-be-forgotten workflows for embeddings and caches.</li>
-=======
                   Data Governance by Design
                 </h2>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Tiered data classification with policy-enforced routing</li>
                   <li>• PII/PHI detection, masking, and encryption in transit and at rest</li>
                   <li>• Signed inputs/outputs with traceable provenance</li>
->>>>>>> content-updates-2025-09-16
                 </ul>
               </section>
 
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>
-<<<<<<< HEAD
                   Model Controls and Guardrails
                 </h2>
                 <ul className='space-y-2 text-white/80'>
@@ -100,7 +84,6 @@ export default function GenAICompliance2025() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   Capture structured traces for each generation, attach policy decisions, and run offline/online evaluations to validate safety and quality.
-=======
                   Guardrails and Policy Enforcement
                 </h2>
                 <p className='text-white/90 mb-4'>
@@ -114,7 +97,6 @@ export default function GenAICompliance2025() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   Maintain immutable logs, decision rationales, and evaluation artifacts to satisfy auditors without manual toil.
->>>>>>> content-updates-2025-09-16
                 </p>
               </section>
             </article>

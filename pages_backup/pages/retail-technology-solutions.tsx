@@ -1,69 +1,22 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function RetailTechnologySolutions() {
-	return (
-		<ServiceLanding
+import { Helmet } from 'react-helmet-async';
 
-			title="Retail Technology Solutions"
-			slug="retail-technology-solutions"
-			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
-			subtitle="Higher margins and better experiences powered by AI."
+const retail-technology-solutions: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>retail-technology-solutions | Zion Tech Group</title>
+        <meta name="description" content="retail-technology-solutions - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">retail-technology-solutions</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-
-
-
-
-
-
-
-
-
-
-
-			pricePerMonthUSD={1999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
-			features={[
-				"Demand forecasting and dynamic pricing",
-				"Assortment optimization and store clustering",
-				"Customer 360 and propensity modeling",
-				"Store ops: labor planning and task automation",
-				"Omni-channel journey orchestration",
-				"Integrations: POS, eCom, WMS, ESP, CDP"
-
-
-
-
-
-
-			canonical="https: //ziontechgroup.com/retail-technology-solutions"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/retail-technology-solutions";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
+export default retail-technology-solutions;

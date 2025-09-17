@@ -1,41 +1,10 @@
+import React from 'react';
 
-
-const categories: ForumCategoryInfo[] = [
-  {
-    id: "getting-hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
-    adminOnly: false,
-    icon: "Briefcase"
-  },
-
-const iconMap = {
-  Briefcase,
-  MessageSquare,
-  Code,
-  FileText,
-  Megaphone
-        return (
-          <Link key={category.id} to={`/community/category/${category.id}`}>
-            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
-              <CardHeader className="flex flex-row items-center gap-4">
-                <div className="p-2 bg-zion-purple/10 rounded-full">
-                  <Icon className="h-6 w-6 text-zion-purple" />
-                </div>
-                <CardTitle className="text-xl">{category.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">{category.description}</CardDescription>
-              </CardContent>
-            </Card>
-          </Link>
-
-
-
-export default ForumCategories;
-
-        );
-      })}
+const ForumCategories: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ForumCategories</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

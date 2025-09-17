@@ -2232,17 +2232,17 @@
     magic-string "^0.25.0"
     string.prototype.matchall "^4.0.6"
 
-"@tanstack/query-core@5.87.4":
-  version "5.87.4"
-  resolved "https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.87.4.tgz"
-  integrity sha512-uNsg6zMxraEPDVO2Bn+F3/ctHi+Zsk+MMpcN8h6P7ozqD088F6mFY5TfGM7zuyIrL7HKpDyu6QHfLWiDxh3cuw==
+"@tanstack/query-core@5.89.0":
+  version "5.89.0"
+  resolved "https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.89.0.tgz"
+  integrity sha512-joFV1MuPhSLsKfTzwjmPDrp8ENfZ9N23ymFu07nLfn3JCkSHy0CFgsyhHTJOmWaumC/WiNIKM0EJyduCF/Ih/Q==
 
 "@tanstack/react-query@^5.17.19":
-  version "5.87.4"
-  resolved "https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.87.4.tgz"
-  integrity sha512-T5GT/1ZaNsUXf5I3RhcYuT17I4CPlbZgyLxc/ZGv7ciS6esytlbjb3DgUFO6c8JWYMDpdjSWInyGZUErgzqhcA==
+  version "5.89.0"
+  resolved "https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.89.0.tgz"
+  integrity sha512-SXbtWSTSRXyBOe80mszPxpEbaN4XPRUp/i0EfQK1uyj3KCk/c8FuPJNIRwzOVe/OU3rzxrYtiNabsAmk1l714A==
   dependencies:
-    "@tanstack/query-core" "5.87.4"
+    "@tanstack/query-core" "5.89.0"
 
 "@types/babel__core@^7.1.14", "@types/babel__core@^7.20.5":
   version "7.20.5"
@@ -2387,10 +2387,10 @@
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
-"@types/node@*", "@types/node@^20.19.15":
-  version "20.19.15"
-  resolved "https://registry.npmjs.org/@types/node/-/node-20.19.15.tgz"
-  integrity sha512-W3bqcbLsRdFDVcmAM5l6oLlcl67vjevn8j1FPZ4nx+K5jNoWCh+FC/btxFoBPnvQlrHHDwfjp1kjIEDfwJ0Mog==
+"@types/node@*", "@types/node@^20.4.5":
+  version "20.19.16"
+  resolved "https://registry.npmjs.org/@types/node/-/node-20.19.16.tgz"
+  integrity sha512-VS6TTONVdgwJwtJr7U+ghEjpfmQdqehLLpg/iMYGOd1+ilaFjdBJwFuPggJ4EAYPDCzWfDUHoIxyVnu+tOWVuQ==
   dependencies:
     undici-types "~6.21.0"
 
@@ -2973,7 +2973,7 @@ base64-js@^1.3.1:
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
-baseline-browser-mapping@^2.8.2:
+baseline-browser-mapping@^2.8.3:
   version "2.8.4"
   resolved "https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.8.4.tgz"
   integrity sha512-L+YvJwGAgwJBV1p6ffpSTa2KRc69EeeYGYjRVWKs0GKrK+LON0GC0gV+rKSNtALEDvMDqkvCFq9r1r94/Gjwxw==
@@ -3023,11 +3023,11 @@ braces@^3.0.3, braces@~3.0.2:
     fill-range "^7.1.1"
 
 browserslist@^4.24.0, browserslist@^4.24.4, browserslist@^4.25.3:
-  version "4.26.0"
-  resolved "https://registry.npmjs.org/browserslist/-/browserslist-4.26.0.tgz"
-  integrity sha512-P9go2WrP9FiPwLv3zqRD/Uoxo0RSHjzFCiQz7d4vbmwNqQFo9T9WCeP/Qn5EbcKQY6DBbkxEXNcpJOmncNrb7A==
+  version "4.26.2"
+  resolved "https://registry.npmjs.org/browserslist/-/browserslist-4.26.2.tgz"
+  integrity sha512-ECFzp6uFOSB+dcZ5BK/IBaGWssbSYBHvuMeMt3MMFyhI0Z8SqGgEkBLARgpRH3hutIgPVsALcMwbDrJqPxQ65A==
   dependencies:
-    baseline-browser-mapping "^2.8.2"
+    baseline-browser-mapping "^2.8.3"
     caniuse-lite "^1.0.30001741"
     electron-to-chromium "^1.5.218"
     node-releases "^2.0.21"
@@ -3115,9 +3115,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001741:
-  version "1.0.30001741"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001741.tgz"
-  integrity sha512-QGUGitqsc8ARjLdgAfxETDhRbJ0REsP6O3I96TAth/mVjh2cYzN2u+3AzPP3aVSm2FehEItaJw1xd+IGBXWeSw==
+  version "1.0.30001743"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001743.tgz"
+  integrity sha512-e6Ojr7RV14Un7dz6ASD0aZDmQPT/A+eZU+nuTNfjqmRrmkmQlnTNWH0SKmqagx9PeW87UVqapSurtAXifmtdmw==
 
 canvg@^3.0.11:
   version "3.0.11"
@@ -4316,7 +4316,7 @@ fraction.js@^4.3.7:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
-framer-motion@^10.18.0:
+framer-motion@^10.16.4:
   version "10.18.0"
   resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-10.18.0.tgz"
   integrity sha512-oGlDh1Q1XqYPksuTD/usb0I70hq95OUzmL9+6Zd+Hs4XV0oaISBa/UUMSjYiq6m8EUF32132mOJ8xVZS+I0S6w==
@@ -5855,10 +5855,10 @@ mlly@^1.4.0, mlly@^1.7.4:
     pkg-types "^1.3.1"
     ufo "^1.6.1"
 
-motion-utils@^12.23.6:
-  version "12.23.6"
-  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-12.23.6.tgz"
-  integrity sha512-eAWoPgr4eFEOFfg2WjIsMoqJTW6Z8MTUCgn/GZ3VRpClWBdnbjryiA3ZSNLyxCTmCQx4RmYX6jX1iWHbenUPNQ==
+motion-utils@^11.18.1:
+  version "11.18.1"
+  resolved "https://registry.npmjs.org/motion-utils/-/motion-utils-11.18.1.tgz"
+  integrity sha512-49Kt+HKjtbJKLtgO/LKj9Ld+6vw9BjH5d9sc40R/kVyH8GLAXgT42M2NnuPcJNuA3s9ZfZBUcwIgpmZWGEE+hA==
 
 ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
@@ -6195,9 +6195,9 @@ postcss-import@^15.1.0:
     resolve "^1.1.7"
 
 postcss-js@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.npmjs.org/postcss-js/-/postcss-js-4.0.1.tgz"
-  integrity sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/postcss-js/-/postcss-js-4.1.0.tgz"
+  integrity sha512-oIAOTqgIo7q2EOwbhb8UalYePMvYoIeRY2YKntdpFQXNosSu3vLrniGgmH9OKs/qAkfoj5oB3le/7mINW1LCfw==
   dependencies:
     camelcase-css "^2.0.1"
 

@@ -1,32 +1,32 @@
-"use client"
-import React from 'react'
+import React from "react";
 
-export default function AgenticOpsControlCenter21() {
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8">
-        <a href="/updates" className="text-sm text-blue-400 hover:text-blue-300">← All updates</a>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Launch: Agentic Ops Control Center v2.1
-        </h1>
-        <p className="mt-3 text-gray-300">2025-09-15 · Launch</p>
-        <div className="mt-8 prose prose-invert prose-a:text-blue-400">
-          <p>
-            v2.1 introduces real-time eval alerts, new incident runbooks, improved policy-as-code checks,
-            and SOC2-ready audit trails to help teams operate agent systems with confidence.
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
+        <div className="mb-8">
+          <div className="text-xs text-blue-300">Update</div>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Page Title
+          </h1>
+          <p className="mt-4 text-gray-300">
+            Page description and summary.
           </p>
+        </div>
+        <div className="prose prose-invert prose-headings:text-white prose-a:text-blue-300">
+          <h2>Overview</h2>
+          <p>Content overview and details.</p>
+          <h2>Key features</h2>
           <ul>
-            <li>Live eval alerts with latency and safety thresholds</li>
-            <li>Prebuilt incident and rollback runbooks</li>
-            <li>Signed policy bundles and evidence capture</li>
-            <li>Expanded dashboards for MTTR and SLA compliance</li>
+            <li>Feature 1</li>
+            <li>Feature 2</li>
+            <li>Feature 3</li>
           </ul>
           <p>
-            Get started by visiting the documentation or contacting our team to enable the upgrade in your environment.
+            <a href="/contact">Contact us →</a>
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
-

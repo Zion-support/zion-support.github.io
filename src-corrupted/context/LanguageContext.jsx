@@ -1,3 +1,12 @@
-import React, {createContext, useContext, useState} from 'react' const LanguageProvider({children}) { const [language, setLanguage] = useState('en') const t = (props: any) => { return translations[language]?.[key] || key} const isRTL = language === 'ar' || language === 'he' return (<LanguageContext.Provider value = { { language, setLanguage, t, isRTL }}> {children} </LanguageContext.Provider>)} export function useLanguage(props: any) { const context = useContext(LanguageContext) if (!context) { throw new Error('useLanguage must be used within a LanguageProvider')} return context}',;',';';
-    ';';';"';';';';
-</LanguageContext>
+import React from 'react';
+
+const LanguageContext: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LanguageContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default LanguageContext;

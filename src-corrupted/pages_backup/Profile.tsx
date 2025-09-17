@@ -1,17 +1,12 @@
 import React from 'react';
-;
-const Profile = () =>: any {
+
+const Profile: React.FC = () => {
   return (
-    <div className="min - h-screen bg - gray - 50">;
-      <div className="container mx - auto px - 4 py - 8">;
-        <h1 className="text - 3xl font - bold text - gray - 900 mb - 4">;
-          Profile;
-        </h1>;
-        <p className="text - gray - 600">;
-          This is a placeholder profile page.;
-        </p>;
-      </div>;
-    </div>);
-}
-;
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Profile</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default Profile;
