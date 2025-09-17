@@ -1,32 +1,43 @@
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
-  extends: [
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
+const js = require('@eslint/js');
+const tseslint = require('@typescript-eslint/eslint-plugin');
+const tsparser = require('@typescript-eslint/parser');
+const react = require('eslint-plugin-react');
+
+module.exports = [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      globals: {
+        browser: true,
+        es2021: true,
+        node: true,
+      },
+      parser: tsparser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      'react': react,
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-img-element': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
   },
-  plugins: ['@typescript-eslint', 'react'],
-  rules: {
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-img-element': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
-    'no-unused-vars': 'warn',
-    'no-console': 'warn',
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
-};
+];

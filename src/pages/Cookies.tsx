@@ -2,6 +2,16 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 
+interface CookieType {
+  id: string;
+  name: string;
+  description: string;
+  color: string;
+  icon: React.ComponentType<any>;
+  examples: string[];
+  alwaysActive: boolean;
+}
+
 export default function Cookies() {
   return (
     <>

@@ -37,6 +37,9 @@
   "ignorePatterns": [
     "temp_*",
     "backup*",
+    "src_backup_temp*",
+    "temp-backup*",
+    "temp-problematic-pages*",
     "recovered-branches",
     "zion-website",
     "zion-os",
@@ -52,6 +55,7 @@
     "temp_exclude",
     "dist",
     "node_modules",
+<<<<<<< HEAD
     "src_backup_temp",
     "temp-backup",
     "temp-problematic-pages",
@@ -59,8 +63,18 @@
     "zion.app",
     "src/pages-disabled",
     "src/utils-disabled",
+    "src/components-disabled",
+    "src/data",
+    "src/hooks",
+    "src/integrations",
+    "src/lib",
+    "src/store",
     "src/setupTests.ts",
-    "utils",
-    "types"
+    "tests/*",
+    "src/pages-disabled/*",
+    "src/utils-disabled/*",
+    "zion.app/*",
+    "types/*",
+    "utils/*"
   ]
 }
