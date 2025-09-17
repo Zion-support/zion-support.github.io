@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './src/index.css';
 
-// Simple loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
-  </div>
-);
+// Simple loading component (currently unused but kept for future use)
+// const LoadingSpinner = () => (
+//   <div className="min-h-screen flex items-center justify-center">
+//     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
+//   </div>
+// );
 
 // Simple home component
 const Home = () => (
