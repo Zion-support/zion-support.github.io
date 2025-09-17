@@ -95,9 +95,13 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "jest": "^29.6.1",
     "rollup-plugin-visualizer": "^6.0.3",
+<<<<<<< HEAD
+    "vitest": "^0.34.1"
+=======
     "ts-jest": "^29.4.2",
     "vite-plugin-compression": "^0.5.1",
     "vitest": "^3.2.4"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b885
   },
   "resolutions": {
     "motion-utils": "^12.23.6"
