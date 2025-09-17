@@ -92,7 +92,6 @@ export default function Contact() {
             <h1 className="text-4xl font-bold text-white mb-4">Thank You!</h1>
             <p className="text-xl text-zion-slate-light mb-8">
               Your message has been sent successfully. We'll get back to you within 24 hours.
->>>>>>> origin/seo-improvements-clean
             </p>
             <div className="space-y-4">
               <div>
@@ -112,51 +111,160 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+        </div>
+      </div>
+  );
+}
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
+      <SEOHead 
+        title="Contact Zion Tech Group - AI & IT Solutions"
+        description="Get in touch with Zion Tech Group for AI-powered technology solutions, IT services, and business consulting. Contact us today to transform your business."
+        structuredData={structuredData}
+      />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
+            <p className="text-xl text-zion-slate-light">
+              Ready to transform your business with AI and technology? Let's talk.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
+              <div className="space-y-6">
+                <div className="flex items-center">
+                  <Mail className="w-6 h-6 text-zion-cyan mr-4" />
+                  <div>
+                    <p className="text-white font-medium">Email</p>
+                    <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="w-6 h-6 text-zion-cyan mr-4" />
+                  <div>
+                    <p className="text-white font-medium">Phone</p>
+                    <p className="text-zion-slate-light">+1-302-464-0950</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-6 h-6 text-zion-cyan mr-4" />
+                  <div>
+                    <p className="text-white font-medium">Address</p>
+                    <p className="text-zion-slate-light">
+                      364 E Main St STE 1008<br />
+                      Middletown, DE 19709
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-white mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={4};
-                  className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Send Message
-              </button>
-            </form>
+            </div>
+            
+            <div>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-white mb-2">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-white mb-2">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">
+                    Service Interest
+                  </label>
+                  <select
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-solutions">AI Solutions</option>
+                    <option value="it-services">IT Services</option>
+                    <option value="consulting">Business Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-white mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    required
+                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-bold py-3 px-6 rounded-lg transition-colors disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
-=======
-      </div>
-    </>
->>>>>>> origin/seo-improvements-clean
   );
-  };
-export default Contact;
+}

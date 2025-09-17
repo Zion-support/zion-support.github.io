@@ -3,7 +3,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-};
 }
 
 interface State {
@@ -15,10 +14,11 @@ class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
-  };
+  }
+  
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
-  };
+  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
     this.setState({
@@ -29,13 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
-    };
-  };
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      };
+    }
   }
 
   render() {
@@ -77,13 +71,9 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <div className="mt-6">
-              <button
-                onClick={() => window.location.reload()};
-                className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-            <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <div className="space-y-3">
+              <p className="text-gray-600 mb-4">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
@@ -111,12 +101,9 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
-    };
+    }
     return this.props.children;
-  };
-};
-export default ErrorBoundary;
   }
 }
 
-export { ErrorBoundary };
+export default ErrorBoundary;
