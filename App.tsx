@@ -28,13 +28,10 @@ import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
-=======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
-import './src/index.css';
 import BusinessAutomationGuide2025 from './src/pages/BusinessAutomationGuide2025';
 import AdvancedTechSolutions2026 from './src/pages/AdvancedTechSolutions2026';
 import InnovationShowcase2026 from './src/pages/InnovationShowcase2026';
