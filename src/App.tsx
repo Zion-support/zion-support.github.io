@@ -21,8 +21,6 @@ import FuturisticTechPromotionBanner2035 from './components/FuturisticTechPromot
 import InfiniteTechShowcase2030 from './components/InfiniteTechShowcase2030';
 import InnovationShowcaseBanner from './components/InnovationShowcaseBanner';
 import InteractiveContentDiscovery2026 from './components/InteractiveContentDiscovery2026';
-import InteractiveTechShowcase from './components/InteractiveTechShowcase';
-import InteractiveTechShowcase2027 from './components/InteractiveTechShowcase2027';
 import InterdimensionalTechShowcase2027 from './components/InterdimensionalTechShowcase2027';
 import InterdimensionalTechShowcase2037 from './components/InterdimensionalTechShowcase2037';
 import LatestInsightsPromo from './components/LatestInsightsPromo';
@@ -101,20 +99,13 @@ import InterdimensionalTech2037Page from './pages/InterdimensionalTech2037';
 import NeuralInterfaceRevolution2026 from './pages/NeuralInterfaceRevolution2026';
 import NextGenTechShowcase2025 from './pages/NextGenTechShowcase2025';
 import OperationalEvalGates2026 from './pages/OperationalEvalGates2026';
-import QuantumComputingRevolution2025 from './pages/QuantumComputingRevolution2025';
 import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
 import QuantumConsciousnessRevolution2025 from './pages/QuantumConsciousnessRevolution2025';
 import QuantumConsciousnessRevolution2026 from './pages/QuantumConsciousnessRevolution2026';
-import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
-import QuantumRealityEngine2027 from './pages/QuantumRealityEngine2027';
 import ResponsibleAutonomyGuide2026 from './pages/ResponsibleAutonomyGuide2026';
 import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub2027';
-import RevolutionaryTechBlog2026 from './pages/RevolutionaryTechBlog2026';
 import RevolutionaryTechBreakthrough2025 from './pages/RevolutionaryTechBreakthrough2025';
-import RevolutionaryTechBreakthrough2027 from './pages/RevolutionaryTechBreakthrough2027';
-import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
 import SpaceTechRevolution2026 from './pages/SpaceTechRevolution2025';
-import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
 import SyntheticIntelligenceRevolution2025 from './pages/SyntheticIntelligenceRevolution2025';
 import TrustedRAGPlaybook2026 from './pages/TrustedRAGPlaybook2026';
@@ -319,7 +310,6 @@ const App: React.FC = () => {
               {/* Dynamic Content Carousel */}
               
               {/* Interactive Tech Showcase */}
-              <InteractiveTechShowcase />
               
               {/* NEW: Enhanced Content Showcase 2026 */}
               <div className="mb-12">
@@ -370,7 +360,6 @@ const App: React.FC = () => {
 
               {/* Interactive Tech Showcase 2027 */}
               <div className="mb-12">
-                <InteractiveTechShowcase2027 />
               </div>
 
               {/* Quantum AI Breakthrough Banner */}
@@ -466,20 +455,16 @@ const App: React.FC = () => {
           <Route path="/pages/NewAIResearchBreakthrough2026" element={<NewAIResearchBreakthrough2026 />} />
           <Route path="/pages/AutonomousOpsPlaybook2026" element={<AutonomousOpsPlaybook2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
-          <Route path="/pages/QuantumComputingRevolution2025" element={<QuantumComputingRevolution2025 />} />
           <Route path="/pages/NextGenTechShowcase2025" element={<NextGenTechShowcase2025 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/AdvancedAISystems2026" element={<AdvancedAISystems2026 />} />
           <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
-          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
-          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/TrustedRAGPlaybook2026" element={<TrustedRAGPlaybook2026 />} />
           <Route path="/pages/AgentOpsControlPlane2026" element={<AgentOpsControlPlane2026 />} />
           <Route path="/pages/ResponsibleAutonomyGuide2026" element={<ResponsibleAutonomyGuide2026 />} />
           <Route path="/pages/OperationalEvalGates2026" element={<OperationalEvalGates2026 />} />
           <Route path="/pages/BiotechRevolution2026" element={<BiotechRevolution2026 />} />
-          <Route path="/pages/SpaceTechInnovation2026" element={<SpaceTechInnovation2026 />} />
           <Route path="/pages/UltimateTechShowcase2026" element={<UltimateTechShowcase2026 />} />
           <Route path="/pages/AdvancedBiotechRevolution2026" element={<AdvancedBiotechRevolution2026 />} />
           <Route path="/pages/SpaceTechRevolution2026" element={<SpaceTechRevolution2026 />} />
@@ -487,15 +472,12 @@ const App: React.FC = () => {
           <Route path="/pages/InterdimensionalTech2027" element={<InterdimensionalTech2027 />} />
           <Route path="/pages/UltimateTechShowcase2027" element={<UltimateTechShowcase2027 />} />
           <Route path="/pages/RevolutionaryInnovationHub2027" element={<RevolutionaryInnovationHub2027 />} />
-          <Route path="/pages/SyntheticBiologyRevolution2027" element={<SyntheticBiologyRevolution2027 />} />
           <Route path="/pages/AdvancedTechBreakthrough2025" element={<AdvancedTechBreakthrough2025 />} />
           <Route path="/pages/InnovationShowcase2025" element={<InnovationShowcase2025 />} />
           <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
           <Route path="/pages/QuantumConsciousnessRevolution2025" element={<QuantumConsciousnessRevolution2025 />} />
           <Route path="/pages/SyntheticIntelligenceRevolution2025" element={<SyntheticIntelligenceRevolution2025 />} />
-          <Route path="/pages/RevolutionaryTechBreakthrough2027" element={<RevolutionaryTechBreakthrough2027 />} />
           <Route path="/pages/UltimateAIRevolution2027" element={<UltimateAIRevolution2027 />} />
-          <Route path="/pages/QuantumRealityEngine2027" element={<QuantumRealityEngine2027 />} />
           <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035Page />} />
           <Route path="/pages/NeuralInterfaceRevolution2036" element={<NeuralInterfaceRevolution2036Page />} />
           <Route path="/pages/InterdimensionalTech2037" element={<InterdimensionalTech2037Page />} />
