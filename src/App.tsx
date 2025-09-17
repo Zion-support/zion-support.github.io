@@ -20,6 +20,4 @@ export default function App(): JSX.Element {
       </div>
     </Router>
   );
-};
-
-export default App;
+}
