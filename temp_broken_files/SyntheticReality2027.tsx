@@ -1,10 +1,5 @@
-<<<<<<< HEAD:temp_broken_files/SyntheticReality2027.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState } from 'react';
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/SyntheticReality2027.tsx
 const SyntheticReality2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
@@ -45,10 +40,7 @@ const SyntheticReality2027: React.FC = () => {
           <h2 className="text-4xl font-bold mb-4">Choose Your Reality</h2>
           <p className="text-xl opacity-80">Select from our collection of synthetic realities or create your own</p>
         </div>
-<<<<<<< HEAD:temp_broken_files/SyntheticReality2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/SyntheticReality2027.tsx
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {realities.map((reality, index) => (
             <div
@@ -292,10 +284,7 @@ const SyntheticReality2027: React.FC = () => {
             <h2 className="text-4xl font-bold mb-4">Revolutionary Features</h2>
             <p className="text-xl opacity-80">Experience the most advanced synthetic reality technology ever created</p>
           </div>
-<<<<<<< HEAD:temp_broken_files/SyntheticReality2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/SyntheticReality2027.tsx
           <div className="grid md:grid-cols-3 gap-8">
             <div
               whileInView={{ opacity: 1, y: 0 }}
@@ -308,10 +297,7 @@ const SyntheticReality2027: React.FC = () => {
                 visual, audio, and haptic feedback.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/SyntheticReality2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/SyntheticReality2027.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -323,10 +309,7 @@ const SyntheticReality2027: React.FC = () => {
                 transitions between worlds.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/SyntheticReality2027.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/SyntheticReality2027.tsx
             <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"

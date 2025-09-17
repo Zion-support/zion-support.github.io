@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/RevolutionaryTechAdvertisingBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryTechAdvertisingBanner.tsx
 const RevolutionaryTechAdvertisingBanner: React.FC = () => {
   return (
     <div

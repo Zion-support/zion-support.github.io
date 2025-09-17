@@ -5,6 +5,8 @@ export interface Webhook {
   events: string[];
   secret?: string;
   failureCount: number;
+}
+
 export interface WebhookEvent {
   id: string;
   webhookId: string;
@@ -15,9 +17,13 @@ export interface WebhookEvent {
   createdAt: string;
   lastAttempt?: string;
   error?: string;
-interface UseWebhooksOptions {
+}
+
+export interface UseWebhooksOptions {
   autoRefresh?: boolean;
   refreshInterval?: number;
+}
+
 export const useWebhooks = (options: UseWebhooksOptions = {}) => {
   const { autoRefresh = true, refreshInterval = 30000 } = options;
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
@@ -198,3 +204,4 @@ export const useWebhooks = (options: UseWebhooksOptions = {}) => {
     testWebhook,
     retryEvent,
   };
+};

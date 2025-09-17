@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const page: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">page</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-=======
 import Link from 'next/link';
 import UltimateContentShowcase2025 from '../../components/UltimateContentShowcase2025';
 import NewContentPromotionBanner2025 from '../../components/NewContentPromotionBanner2025';
@@ -237,13 +229,8 @@ const ContentShowcasePage = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/feature/enhanced-content-showcase-2025
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default page;
-=======
 export default ContentShowcasePage;
->>>>>>> origin/feature/enhanced-content-showcase-2025

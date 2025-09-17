@@ -1,14 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-import React from 'react';
-const Homepage2036: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Homepage2036</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-=======
 import React, { useState } from 'react';
 import UltraFuturisticServiceCard2036 from './ui/UltraFuturisticServiceCard2036';
 import { 
@@ -26,7 +15,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
 };
 const featuredServices = [
   ...real2036InnovativeServices.slice(0, 3),
@@ -102,31 +90,22 @@ export default function Homepage2036() {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full text-sm text-cyan-400 mb-6">
                 <Sparkles className="w-4 h-4" />
                 Pioneering the Future of Technology
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
               </div>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
             <divh1 
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
               Zion Tech Group
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
             </divh1>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
             <divp 
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               Experience the future of technology with our cutting-edge micro SAAS services, 
               AI platforms, and quantum solutions. Transform your business with next-generation innovation.
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
             </divp>
             
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
             <div 
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
@@ -142,12 +121,9 @@ export default function Homepage2036() {
               >
                 Get Started
                 <ChevronRight className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
               </a>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
             {/* Stats */}
             <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
@@ -159,13 +135,10 @@ export default function Homepage2036() {
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
               ))}
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
         {/* Contact Information */}
         <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-6xl mx-auto">
@@ -192,14 +165,11 @@ export default function Homepage2036() {
                 <h3 className="text-xl font-semibold mb-2 text-white">Address</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{contactInfo.address}</p>
                 <p className="text-gray-500 text-sm mt-2">Global operations</p>
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
               </div>
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
         {/* Categories Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -213,12 +183,9 @@ export default function Homepage2036() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive range of cutting-edge technology solutions 
                 across multiple domains and industries.
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
               </p>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
             <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
@@ -239,9 +206,6 @@ export default function Homepage2036() {
                     <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                       <span className="text-sm font-medium">Explore</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-              ))}
-=======
                     </div>
                   </div>
                 </div>
@@ -250,7 +214,6 @@ export default function Homepage2036() {
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
         {/* Featured Services */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-7xl mx-auto">
@@ -264,12 +227,9 @@ export default function Homepage2036() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most innovative and cutting-edge services that are 
                 transforming industries and driving the future of technology.
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
               </p>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
             <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
@@ -305,14 +265,10 @@ export default function Homepage2036() {
                       'default'
                     }
                   />
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-              ))}
-=======
                 </div>
               ))}
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
             <div 
               className="text-center mt-12"
               whileInView={{ opacity: 1 }}
@@ -324,14 +280,11 @@ export default function Homepage2036() {
               >
                 View All Services
                 <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
               </a>
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
         {/* Why Choose Us */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -345,12 +298,9 @@ export default function Homepage2036() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We combine cutting-edge technology with proven expertise to deliver 
                 solutions that drive real business transformation.
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
               </p>
             </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
             <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               whileInView="visible"
@@ -402,16 +352,12 @@ export default function Homepage2036() {
                     {feature.icon}
                   <h3 className="text-lg font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-              ))}
-=======
                 </div>
               ))}
             </div>
           </div>
         </section>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
         {/* Call to Action */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
           <div className="max-w-4xl mx-auto text-center">
@@ -437,8 +383,6 @@ export default function Homepage2036() {
                 >
                   <Phone className="w-5 h-5" />
                   Call Us Now
-<<<<<<< HEAD:temp_broken_files/Homepage2036.tsx
-=======
                 </a>
               </div>
             </div>
@@ -446,7 +390,6 @@ export default function Homepage2036() {
         </section>
       </main>
     </Layout>
->>>>>>> origin/merge-new-content-1757989975:src/components/Homepage2036.tsx
   );
 }
 =======
@@ -466,4 +409,3 @@ const function Homepage2036() { = () => {
 };
 
 export default function Homepage2036() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/Homepage2036.tsx

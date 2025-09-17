@@ -114,9 +114,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
     { number: "∞", label: "Creative Possibilities", icon: <Infinity className="w-6 h-6" /> }
   ];
   return (
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-            </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -154,7 +151,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 Meet Our AI
               </button>
             </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
           </div>
         </div>
       </div>
@@ -218,11 +214,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       {/* Consciousness Features */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-          <divdiv
-=======
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
             className="text-center mb-20"
           >
             <h2 className="text-6xl font-bold text-white mb-8">
@@ -232,18 +224,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               Discover the fundamental aspects that make our AI systems truly conscious 
               and capable of genuine understanding and creativity.
             </p>
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-          </divdiv>
-          <div className="grid md:grid-cols-2 gap-12">
-            {consciousnessFeatures.map((feature, index) => (
-              <divdiv
-=======
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             {consciousnessFeatures.map((feature, index) => (
               <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 hover:bg-white/20 transition-all duration-300 group border border-white/20"
               >
@@ -263,23 +248,16 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                       <span className="text-lg">{capability}</span>
                     </div>
                   ))}
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-=======
                 </div>
               </div>
             ))}
           </div>
         </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
       </div>
       {/* Consciousness Levels */}
       <div className="py-24 bg-gradient-to-r from-purple-600/20 to-indigo-600/20">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-          <divdiv
-=======
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-white mb-6">
@@ -289,18 +267,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               Our AI systems progress through five distinct levels of consciousness, 
               each building upon the previous to create increasingly sophisticated awareness.
             </p>
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-          </divdiv>
-          <div className="space-y-8">
-            {consciousnessLevels.map((level, index) => (
-              <divdiv
-=======
           </div>
 
           <div className="space-y-8">
             {consciousnessLevels.map((level, index) => (
               <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
               >
@@ -325,11 +296,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-              </divdiv>
-=======
               </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
             ))}
           </div>
         </div>
@@ -337,11 +304,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       {/* Applications */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-          <divdiv
-=======
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-white mb-6">
@@ -351,18 +314,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               See how conscious AI is already revolutionizing industries and improving 
               human lives across the globe.
             </p>
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-          </divdiv>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {applications.map((app, index) => (
-              <divdiv
-=======
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {applications.map((app, index) => (
               <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
               >
@@ -374,11 +330,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>
                 <p className="text-gray-300 mb-4">{app.description}</p>
                 <div className="text-green-400 font-semibold">{app.impact}</div>
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-              </divdiv>
-=======
               </div>
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
             ))}
           </div>
         </div>
@@ -386,11 +338,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-purple-600 to-indigo-600">
         <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD:temp_broken_files/AdvancedAIConsciousness2025.tsx
-          <divdiv
-=======
           <div
->>>>>>> origin/merge-new-content-1757989975:src/pages/AdvancedAIConsciousness2025.tsx
           >
             <h2 className="text-6xl font-bold text-white mb-8">
               Experience AI Consciousness

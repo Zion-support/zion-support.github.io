@@ -1,9 +1,5 @@
-<<<<<<< HEAD:temp_broken_files/NewsletterSignup.tsx
-import React from 'react';
-=======
 import React, { useState } from 'react';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewsletterSignup.tsx
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);

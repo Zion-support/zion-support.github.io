@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
-import React from 'react';
-const RevolutionaryCaseStudiesShowcase2026PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -86,7 +82,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
 
   if (!isVisible || isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
   return (
     <div>
       <div
@@ -130,29 +125,20 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                   SUCCESS STORIES
                 </span>
               </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
               <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🏆 Revolutionary Case Studies 2026
               </divh2>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
               <divp
                 className="text-lg text-purple-200 mb-6 max-w-2xl"
               >
                 Real success stories from companies that achieved incredible results with our AI and automation solutions. 
                 See how they transformed their operations and achieved massive ROI.
               </divp>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
               {/* Rotating Case Study Display */}
               <div
                 key={currentStat}
@@ -167,10 +153,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                   <div className="text-2xl font-bold text-yellow-300">{caseStudies[currentStat].roi} ROI</div>
                 </div>
               </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
               {/* Features */}
               <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
@@ -182,10 +165,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
               {/* Stats */}
               <div
                 className="flex space-x-6 mb-6"
@@ -197,10 +177,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026PromotionBanner.tsx
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"

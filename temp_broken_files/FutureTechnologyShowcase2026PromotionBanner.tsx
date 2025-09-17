@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/FutureTechnologyShowcase2026PromotionBanner.tsx
-import React from 'react';
-const FutureTechnologyShowcase2026PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -53,7 +49,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
     { value: '1M+'label: 'Global Impact' }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FutureTechnologyShowcase2026PromotionBanner.tsx
   return (
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
@@ -75,10 +70,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 <Sparkles className="w-4 h-4" />
                 NEW: FUTURE TECHNOLOGY SHOWCASE 2026
               </div>
-<<<<<<< HEAD:temp_broken_files/FutureTechnologyShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FutureTechnologyShowcase2026PromotionBanner.tsx
               {/* Main Heading */}
               <divh2
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
@@ -90,10 +82,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 <br />
                 Shaping Tomorrow
               </divh2>
-<<<<<<< HEAD:temp_broken_files/FutureTechnologyShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FutureTechnologyShowcase2026PromotionBanner.tsx
               {/* Description */}
               <divp
                 className="text-xl text-gray-300 leading-relaxed"
@@ -101,10 +90,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 Explore cutting-edge technologies that will define the future of humanity
                 from quantum computing to neural interfaces and space technology.
               </divp>
-<<<<<<< HEAD:temp_broken_files/FutureTechnologyShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FutureTechnologyShowcase2026PromotionBanner.tsx
               {/* Technologies Grid */}
               <div
                 className="grid grid-cols-2 gap-4"
@@ -118,10 +104,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/FutureTechnologyShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FutureTechnologyShowcase2026PromotionBanner.tsx
               {/* Benefits */}
               <div
                 className="space-y-3"
@@ -133,10 +116,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD:temp_broken_files/FutureTechnologyShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FutureTechnologyShowcase2026PromotionBanner.tsx
               {/* CTA Buttons */}
               <div
                 className="flex flex-col sm:flex-row gap-4"
@@ -153,10 +133,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/FutureTechnologyShowcase2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/FutureTechnologyShowcase2026PromotionBanner.tsx
             {/* Right Content - Stats & Visual */}
             <div
               className="space-y-8"

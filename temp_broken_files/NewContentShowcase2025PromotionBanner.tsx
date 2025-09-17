@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NewContentShowcase2025PromotionBanner.tsx
-import React from 'react';
-const NewContentShowcase2025PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -69,7 +65,6 @@ const NewContentShowcase2025PromotionBanner = () => {
     { label: 'ROI 'Increase', 'value: '300%'icon: TrendingUp }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentShowcase2025PromotionBanner.tsx
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -91,10 +86,7 @@ const NewContentShowcase2025PromotionBanner = () => {
               <Sparkles className="w-4 h-4 mr-2" />
               NEW CONTENT AVAILABLE
             </div>
-<<<<<<< HEAD:temp_broken_files/NewContentShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentShowcase2025PromotionBanner.tsx
             {/* Main Heading */}
             <divh2
               className="text-4xl md:text-5xl font-bold mb-6"
@@ -104,10 +96,7 @@ const NewContentShowcase2025PromotionBanner = () => {
                 Innovations
               </span>
             </divh2>
-<<<<<<< HEAD:temp_broken_files/NewContentShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentShowcase2025PromotionBanner.tsx
             {/* Subheading */}
             <divp
               className="text-xl text-gray-300 mb-8"
@@ -115,10 +104,7 @@ const NewContentShowcase2025PromotionBanner = () => {
               Explore cutting-edge AI solutionsintelligent automationand advanced cybersecurity 
               designed to revolutionize your business operations and drive unprecedented growth.
             </divp>
-<<<<<<< HEAD:temp_broken_files/NewContentShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentShowcase2025PromotionBanner.tsx
             {/* Rotating Feature */}
             <div
               key={currentFeature}
@@ -138,10 +124,7 @@ const NewContentShowcase2025PromotionBanner = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/NewContentShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentShowcase2025PromotionBanner.tsx
             {/* Stats */}
             <div
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
@@ -153,10 +136,7 @@ const NewContentShowcase2025PromotionBanner = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/NewContentShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentShowcase2025PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -178,10 +158,7 @@ const NewContentShowcase2025PromotionBanner = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD:temp_broken_files/NewContentShowcase2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NewContentShowcase2025PromotionBanner.tsx
           {/* Right Content - Visual */}
           <div
             className="relative"

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStories2026.tsx
-import React from 'react';
-const RevolutionarySuccessStories2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -143,7 +139,6 @@ const RevolutionarySuccessStories2026 = () => {
     { label: 'Cost 'Reduction', 'value: '70%'icon: DollarSign }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStories2026.tsx
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Background Pattern */}
@@ -173,10 +168,7 @@ const RevolutionarySuccessStories2026 = () => {
             These 'aren', 't just promises—'they', 're proven results.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStories2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStories2026.tsx
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -191,10 +183,7 @@ const RevolutionarySuccessStories2026 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStories2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStories2026.tsx
         {/* Success Stories Navigation */}
         <div
           className="mb-12"
@@ -310,10 +299,7 @@ const RevolutionarySuccessStories2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionarySuccessStories2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionarySuccessStories2026.tsx
         {/* Call to Action */}
         <div
           className="text-center"

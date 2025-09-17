@@ -1,20 +1,7 @@
-<<<<<<< HEAD:temp_broken_files/enhanced-home.tsx
-import React from 'react';
-};
-
-
-=======
 import React from "react";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/enhanced-home.tsx
 
 const function EnhancedHomePage() { = () => {
   return (
-<<<<<<< HEAD:temp_broken_files/enhanced-home.tsx
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold">Enhanced Home</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">Enhanced UI coming soon.</p>
-  );
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -27,4 +14,3 @@ const function EnhancedHomePage() { = () => {
 };
 
 export default function EnhancedHomePage() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/enhanced-home.tsx

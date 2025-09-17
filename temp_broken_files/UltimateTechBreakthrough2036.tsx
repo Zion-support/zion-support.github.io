@@ -1,18 +1,8 @@
-<<<<<<< HEAD:temp_broken_files/UltimateTechBreakthrough2036.tsx
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE TECH BREAKTHROUGH • JANUARY 2036
-          </div>
-=======
 import React from 'react';
 
 const UltimateTechBreakthrough2036: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">
->>>>>>> origin/new-content-merge-1758000738:src/pages/UltimateTechBreakthrough2036.tsx
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -33,30 +23,6 @@ const UltimateTechBreakthrough2036: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Learn More
-<<<<<<< HEAD:temp_broken_files/UltimateTechBreakthrough2036.tsx
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2036
-          </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-            Ultimate Tech Breakthrough 2036
-          </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Witness the most revolutionary technological breakthrough in human history - where consciousness meets quantum reality
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Experience Breakthrough →
-            </button>
-            <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 font-semibold text-lg">
-              Watch Demo
-=======
->>>>>>> origin/new-content-merge-1758000738:src/pages/UltimateTechBreakthrough2036.tsx
             </button>
           </div>
         </div>

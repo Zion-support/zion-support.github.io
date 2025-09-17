@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAIServicesShowcase2025.tsx
-import React from 'react';
-const ComprehensiveAIServicesShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -206,7 +202,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
     }
   };
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAIServicesShowcase2025.tsx
   return (
     <divsection
       className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden"
@@ -231,10 +226,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             improve efficiencyand drive innovation across every aspect of your business.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAIServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAIServicesShowcase2025.tsx
         {/* Service Navigation */}
           {services.map((serviceindex) => (
             <button
@@ -251,10 +243,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAIServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAIServicesShowcase2025.tsx
         {/* Active Service Details */}
         <div
           key={activeService}
@@ -365,10 +354,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAIServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAIServicesShowcase2025.tsx
         {/* All Services Grid */}
           {services.map((serviceindex) => (
             <div
@@ -410,10 +396,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveAIServicesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveAIServicesShowcase2025.tsx
         {/* Call to Action */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">

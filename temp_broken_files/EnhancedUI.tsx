@@ -1,10 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnhancedUI.tsx
-<<<<<<< HEAD:temp_broken_files/EnhancedUI.tsx
-import React from 'react';
-const EnhancedUI: React.FC = () => {
-  return (
-    <divbutton
-=======
 "use client";
 import React, { useState, useEffect } from 'react';
 
@@ -55,7 +48,6 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
   
   return (
     <button
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedUI.tsx
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
       onClick={onClick}
       disabled={disabled || loading}
@@ -76,11 +68,7 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
           </divspan>
         )}
       </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedUI.tsx
-    </divbutton>
-=======
     </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedUI.tsx
   );
 };
 interface CardProps {
@@ -234,8 +222,6 @@ export const EnhancedTooltip: React.FC<TooltipProps> = ({
             }`} />
           </div>
         )}
-<<<<<<< HEAD:temp_broken_files/EnhancedUI.tsx
-=======
 import React from "react";
 
 const { = () => {
@@ -246,24 +232,11 @@ const { = () => {
           <h1 className="text-5xl font-bold mb-6">{</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/EnhancedUI.tsx
 =======
->>>>>>> origin/merge-new-content-1757989975:src/components/EnhancedUI.tsx
       </div>
     </div>
   );
 
 
 
-<<<<<<< HEAD:temp_broken_files/EnhancedUI.tsx
-export default {
-  EnhancedButton,
-  EnhancedCard,
-  LoadingSpinner,
-  EnhancedModal,
-  EnhancedProgressBar,
-  EnhancedTooltip
-};
-=======
 export default {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/EnhancedUI.tsx

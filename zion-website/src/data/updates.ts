@@ -7,10 +7,6 @@ export type SiteUpdate = {
 }
 
 export const siteUpdates: SiteUpdate[] = [
-<<<<<<< HEAD
-  // Added 2025-09-15 (brand new content)
-  {
-=======
   // Added 2025-09-15 (latest content)
   {
     title: 'Launch: AI Autonomous Workflow Engine v1.0',
@@ -72,7 +68,6 @@ export const siteUpdates: SiteUpdate[] = [
   },
   // Added 2025-09-15 (brand new content)
   {
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
     title: 'Launch: Autonomous IT Operations Copilot (v1.0)',
     summary:
       'Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.',
@@ -81,19 +76,13 @@ export const siteUpdates: SiteUpdate[] = [
     tag: 'Launch'
   },
   {
-<<<<<<< HEAD
-    title: 'Launch: Autonomous Data Quality Copilot 1.0',
-=======
     title: 'Launch: Autonomous Analytics Copilot v1.0',
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
     summary:
       'Continuous data quality monitoring with policy-aware checks, eval gates, and signed evidence.',
     href: '/updates/autonomous-data-quality-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
   },
-<<<<<<< HEAD
-=======
   {
     title: 'Launch: Autonomous Innovation Hub v1.0',
     summary:
@@ -142,7 +131,6 @@ export const siteUpdates: SiteUpdate[] = [
     date: '2025-09-15',
     tag: 'Launch'
   },
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
   // Added 2025-09-15 (featured)
   {
     title: 'Launch: Autonomous Strategy Copilot v1.0',
@@ -151,8 +139,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/autonomous-strategy-copilot-1-0',
     date: '2025-09-15',
     tag: 'Launch'
-<<<<<<< HEAD
-=======
   },
   // Added 2025-09-15 (latest)
   {
@@ -162,7 +148,6 @@ export const siteUpdates: SiteUpdate[] = [
     href: '/updates/autonomous-decision-engine-1-0',
     date: '2025-09-15',
     tag: 'Launch'
->>>>>>> 69252da4b39a233944aebd46f720e5f5b61d8d0f
   },
   // Added 2025-09-15 (even later night batch - fresh content)
   {

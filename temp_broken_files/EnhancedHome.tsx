@@ -1,14 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/EnhancedHome.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { ContentShowcase } from '../components/ContentShowcase';
 import { ServicesHighlight } from '../components/ServicesHighlight';
 
->>>>>>> origin/merge-new-content-1757989975:src/pages/EnhancedHome.tsx
 const EnhancedHome: React.FC = () => {
   return (
     <div className="min-h-screen">
@@ -29,20 +25,14 @@ const EnhancedHome: React.FC = () => {
                 Cutting-Edge Technology
               </span>
             </divh1>
-<<<<<<< HEAD:temp_broken_files/EnhancedHome.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/pages/EnhancedHome.tsx
             <divp
               className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto"
             >
               Leading technology solutions in AI, cybersecurity, cloud infrastructure, and data analytics. 
               Empowering businesses to thrive in the digital age.
             </divp>
-<<<<<<< HEAD:temp_broken_files/EnhancedHome.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/pages/EnhancedHome.tsx
             <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             >
@@ -58,10 +48,7 @@ const EnhancedHome: React.FC = () => {
                 Watch Demo
               </button>
             </div>
-<<<<<<< HEAD:temp_broken_files/EnhancedHome.tsx
-=======
             
->>>>>>> origin/merge-new-content-1757989975:src/pages/EnhancedHome.tsx
             {/* Stats */}
             <div
               className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"

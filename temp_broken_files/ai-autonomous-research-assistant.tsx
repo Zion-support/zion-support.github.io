@@ -1,33 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/ai-autonomous-research-assistant.tsx
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-};
-
-
-
-export default function AIAutonomousResearchAssistant() {
-	return (
-		<ServiceLanding
-			title="AI Autonomous Research Assistant"
-			slug="ai-autonomous-research-assistant"
-			description="An AI agent that continuously tracks competitorsmarketsregulationsand technologies. It synthesizes findingsdrafts briefsand recommends actions—so your team stays ahead."
-			subtitle="Always-on competitive and market intelligence at analyst-level quality."
-			pricePerMonthUSD={1299}
-			implementationWeeks="Implementation: 1–2 weeks"
-			roiNote="Average ROI 3–6x within 60 days"
-			features={[
-				"Automated web and document monitoring with source citations",
-				"Daily/weekly executive briefs and dashboards",
-				"Regulatory watchlists and impact analysis",
-				"RFP/RFI opportunity discovery and alerts",
-				"Export to Slides/Docs/Notion",
-				"Compliance-friendly data handlingaudit logs"
-			]}
-			industries={["Consulting"Healthcare"Finance"Public Sector"]}
-			canonical="https://ziontechgroup.com/ai-autonomous-research-assistant"
-		/>
-	);
-=======
 import React from "react";
 
 const function AIAutonomousResearchAssistant() { = () => {
@@ -44,4 +14,3 @@ const function AIAutonomousResearchAssistant() { = () => {
 };
 
 export default function AIAutonomousResearchAssistant() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ai-autonomous-research-assistant.tsx

@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcaseBanner.tsx
-import React from 'react';
-const AI2025UltimateTechnologyShowcaseBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -42,7 +38,6 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
 
   const currentFeatureData = features[currentFeature];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcaseBanner.tsx
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 rounded-2xl border border-purple-500/20 shadow-2xl"
@@ -78,10 +73,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 Discover revolutionary AI technologies that will transform industries and reshape the future of human-computer interaction.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcaseBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcaseBanner.tsx
             {/* Rotating Feature Display */}
             <div
               key={currentFeature}
@@ -97,10 +89,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcaseBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcaseBanner.tsx
             {/* Stats */}
             <div
               className="flex flex-wrap gap-6 mb-8"
@@ -118,10 +107,7 @@ const AI2025UltimateTechnologyShowcaseBanner = () => {
                 <span className="text-white font-semibold">Future Ready</span>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/AI2025UltimateTechnologyShowcaseBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/AI2025UltimateTechnologyShowcaseBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"

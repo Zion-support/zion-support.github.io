@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025Showcase.tsx
-import React from 'react';
-const BusinessTransformation2025Showcase: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -136,7 +132,6 @@ const BusinessTransformation2025Showcase = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025Showcase.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,10 +146,7 @@ const BusinessTransformation2025Showcase = () => {
             Real results from real businesses. See how companies are achieving unprecedented growth with AI and automation.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025Showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025Showcase.tsx
         {/* Navigation Tabs */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -177,10 +169,7 @@ const BusinessTransformation2025Showcase = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025Showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025Showcase.tsx
         {/* Metrics Display */}
         <div
           key={activeSection}
@@ -209,10 +198,7 @@ const BusinessTransformation2025Showcase = () => {
             );
           })}
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025Showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025Showcase.tsx
         {/* Success Stories */}
         <div
           className="mb-16"
@@ -268,10 +254,7 @@ const BusinessTransformation2025Showcase = () => {
             })}
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessTransformation2025Showcase.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessTransformation2025Showcase.tsx
         {/* Call to Action */}
         <div
           className="text-center"

@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NeuralInterfaceRevolutionBanner2025.tsx
-import React from 'react';
-=======
 "use client";
 'use client';
 
@@ -23,7 +20,6 @@ interface NeuralInterfaceContent {
   featured: boolean;
 }
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralInterfaceRevolutionBanner2025.tsx
 const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
   const [currentIndexsetCurrentIndex] = useState(0);
   const [isVisiblesetIsVisible] = useState(true);
@@ -195,10 +191,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                         Featured Content
                       </span>
                     </div>
-<<<<<<< HEAD:temp_broken_files/NeuralInterfaceRevolutionBanner2025.tsx
-=======
                     
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralInterfaceRevolutionBanner2025.tsx
                       <div
                         key={currentIndex}
                       >
@@ -234,10 +227,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {
                         </a>
                       </div>
                     </div>
-<<<<<<< HEAD:temp_broken_files/NeuralInterfaceRevolutionBanner2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralInterfaceRevolutionBanner2025.tsx
                     {/* Progress Indicators */}
                     <div className="flex space-x-2 mt-4">
                       {neuralInterfaceContent.map((_index) => (

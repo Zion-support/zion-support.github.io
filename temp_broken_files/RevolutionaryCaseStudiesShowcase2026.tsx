@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
-import React from 'react';
-const RevolutionaryCaseStudiesShowcase2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -142,7 +138,6 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,10 +152,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
             Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -175,10 +167,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
         {/* Case Study Selector */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
@@ -202,10 +191,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
         {/* Active Case Study Details */}
           <div
             key={activeCase}
@@ -290,10 +276,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/RevolutionaryCaseStudiesShowcase2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryCaseStudiesShowcase2026.tsx
         {/* CTA Section */}
         <div
           className="text-center"

@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026PromotionBanner.tsx
-import React from 'react';
-=======
 "use client";
 'use client';
 
@@ -8,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 BrainZapTrendingUpUsersArrowRightXCheckCircleStar
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026PromotionBanner.tsx
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
   return (
     <div>
@@ -34,10 +30,7 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                       <Brain className="w-6 h-6 text-white" />
                     </div>
                   </div>
-<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026PromotionBanner.tsx
                   {/* Main content */}
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 mb-1">
@@ -78,36 +71,20 @@ const NeuralConsensus2026PromotionBanner: React.FC = () => {
                 {/* Action buttons */}
                 <div className="flex items-center space-x-3">
                   <a href="/src/pages/blog/ai-2026-neural-consensus-revolution" onClick={handleLearnMore}>
-<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026PromotionBanner.tsx
-                    <divbutton
-=======
                     <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026PromotionBanner.tsx
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                     >
                       Read Case Study
                       <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026PromotionBanner.tsx
-                    </divbutton>
-=======
                     </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026PromotionBanner.tsx
                   </a>
                   <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi" onClick={handleLearnMore}>
-<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026PromotionBanner.tsx
-                    <divbutton
-=======
                     <button
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026PromotionBanner.tsx
                       className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                     >
                       View ROI Results
                       <TrendingUp className="w-4 h-4 ml-2" />
-<<<<<<< HEAD:temp_broken_files/NeuralConsensus2026PromotionBanner.tsx
-                    </divbutton>
-=======
                     </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/NeuralConsensus2026PromotionBanner.tsx
                   </a>
                   <button
                     onClick={handleDismiss}

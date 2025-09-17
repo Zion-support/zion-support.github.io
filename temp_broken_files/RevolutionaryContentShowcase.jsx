@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/RevolutionaryContentShowcase.jsx
-import React from 'react';
-const RevolutionaryContentShowcase= () => {
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryContentShowcase = () => {
@@ -34,7 +30,6 @@ const RevolutionaryContentShowcase = () => {
     }
   ];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/RevolutionaryContentShowcase.jsx
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
       <div className="container mx-auto px-4">

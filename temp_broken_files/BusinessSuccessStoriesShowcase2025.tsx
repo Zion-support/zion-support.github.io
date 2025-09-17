@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025.tsx
-import React from 'react';
-const BusinessSuccessStoriesShowcase2025: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -150,7 +146,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
   if (!isVisible) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025.tsx
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-white to-green-50 py-20 overflow-hidden">
       {/* Background Elements */}
@@ -169,10 +164,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             Discover how leading companies across industries have transformed their operations and achieved unprecedented growth with our AI and technology solutions.
           </p>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025.tsx
         {/* Overall Stats */}
         <div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
@@ -187,10 +179,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025.tsx
         {/* Success Stories Navigation */}
         <div
           className="flex flex-wrap justify-center gap-4 mb-12"
@@ -209,10 +198,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             </button>
           ))}
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025.tsx
         {/* Active Success Story */}
           <div
             key={activeStory}
@@ -269,10 +255,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025.tsx
         {/* Results Summary */}
         <div
           className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white mb-16"
@@ -302,10 +285,7 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/BusinessSuccessStoriesShowcase2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/BusinessSuccessStoriesShowcase2025.tsx
         {/* CTA Section */}
         <div
           className="text-center"

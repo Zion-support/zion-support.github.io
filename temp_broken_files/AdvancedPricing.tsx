@@ -1,8 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/AdvancedPricing.tsx
-import React from 'react';
-<<<<<<< HEAD:temp_broken_files/AdvancedPricing.tsx
-const AdvancedPricing: React.FC = () => {
-=======
 CheckStarZapCrownInfinity
 
 interface PricingTier {
@@ -79,7 +74,6 @@ const pricingTiers: PricingTier[] = [
 ];
 
 export default function AdvancedPricing() {
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedPricing.tsx
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,13 +119,9 @@ export default function AdvancedPricing() {
                     <Check className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                     <span className="text-white/80">{feature}</span>
                 ))}
-<<<<<<< HEAD:temp_broken_files/AdvancedPricing.tsx
-              <diva
-=======
               </ul>
 
               <a
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedPricing.tsx
                 href={tier.ctaLink}
                 className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                   tier.popular
@@ -140,11 +130,8 @@ export default function AdvancedPricing() {
                 }`}
               >
                 {tier.ctaText}
-<<<<<<< HEAD:temp_broken_files/AdvancedPricing.tsx
-=======
               </a>
             </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/AdvancedPricing.tsx
           ))}
         <div className="text-center mt-12">
           <p className="text-white/70 mb-4">
@@ -177,4 +164,3 @@ const function AdvancedPricing() { = () => {
 };
 
 export default function AdvancedPricing() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/AdvancedPricing.tsx

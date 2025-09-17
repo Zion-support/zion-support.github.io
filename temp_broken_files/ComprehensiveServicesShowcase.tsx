@@ -1,118 +1,8 @@
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
-import React, { useState } from 'react';
-import { 
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
-  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom,
-  Search, Filter, Grid, List, ArrowRight, Award, Target
-} from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-};
-
-
-
-export default function ComprehensiveServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
-  // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length },
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length },
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s => s.category === 'Space Technology').length },
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s => s.category === 'Autonomous Systems').length },
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length },
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s => s.category === '5G/6G Networks').length },
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s => s.category === 'Biotechnology AI').length },
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Renewable Energy').length },
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length },
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
-  ];
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'popularity':
-          return b.popular ? 1 : -1;
-        case 'price':
-          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
-        case 'rating':
-          return b.rating - a.rating;
-        case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        default:
-          return 0;
-      }
-    });
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || '🚀';
-  };
-  const formatPrice = (price: string) => {
-    return price.replace('$', '').replace(',', '');
-  };
-  return (
-    <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-            Revolutionary Micro SAAS Services 2025
-          <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-            Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology
-          <div className="flex items-center justify-center gap-6 text-white/60 mb-8">
-            <div className="flex items-center gap-2">
-              <Shield className="w-5 h-5" />
-              <span>Enterprise-grade security</span>
-            <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5" />
-              <span>AI-powered optimization</span>
-            <div className="flex items-center gap-2">
-              <Globe className="w-5 h-5" />
-              <span>Global deployment</span>
-          <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
-                <div className="text-white/60">Services Available</div>
-              <div>
-                <div className="text-3xl font-bold text-green-400">99.9%</div>
-                <div className="text-white/60">Uptime Guarantee</div>
-              <div>
-                <div className="text-3xl font-bold text-purple-400">24/7</div>
-                <div className="text-white/60">Support Available</div>
-              <div>
-                <div className="text-3xl font-bold text-orange-400">500%+</div>
-                <div className="text-white/60">Average ROI</div>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
-=======
               </div>
             </div>
           </div>
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         {/* Search and Filters */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -156,15 +46,12 @@ export default function ComprehensiveServicesShowcase() {
                   }`}
                 >
                   <List className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
-=======
                 </button>
               </div>
             </div>
           </div>
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         {/* Category Filter */}
         <div
           whileInView={{ opacity: 1, y: 0 }}
@@ -186,12 +73,9 @@ export default function ComprehensiveServicesShowcase() {
                 {category.name}
                 <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
             ))}
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
-=======
           </div>
         </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -243,16 +127,12 @@ export default function ComprehensiveServicesShowcase() {
                     >
                       Learn More
                       <ExternalLink className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
-              ))}
-=======
                     </a>
                   </div>
                 </div>
               ))}
             </div>
           </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         ) : (
           <div className="space-y-6">
             <div>
@@ -312,9 +192,6 @@ export default function ComprehensiveServicesShowcase() {
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
-              ))}
-=======
                       </a>
                     </div>
                   </div>
@@ -322,7 +199,6 @@ export default function ComprehensiveServicesShowcase() {
               ))}
             </div>
           </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         )}
         {/* No Results */}
         {filteredServices.length === 0 && (
@@ -332,10 +208,7 @@ export default function ComprehensiveServicesShowcase() {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-white/60">Try adjusting your search or filter criteria</p>
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
-=======
           </div>
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
         )}
         {/* Contact CTA */}
         <div
@@ -360,15 +233,12 @@ export default function ComprehensiveServicesShowcase() {
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Call +1 302 464 0950
-<<<<<<< HEAD:temp_broken_files/ComprehensiveServicesShowcase.tsx
-=======
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
->>>>>>> origin/merge-new-content-1757989975:src/components/ComprehensiveServicesShowcase.tsx
   );
 
 
@@ -391,4 +261,3 @@ const function ComprehensiveServicesShowcase() { = () => {
 };
 
 export default function ComprehensiveServicesShowcase() {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ComprehensiveServicesShowcase.tsx

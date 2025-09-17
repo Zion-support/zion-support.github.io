@@ -1,15 +1,5 @@
-<<<<<<< HEAD:temp_broken_files/ComprehensiveTechInsights2026.tsx
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const ComprehensiveTechInsights2026: React.FC = () => {
-=======
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> cursor/create-and-deploy-new-content-4067
 
 const QuantumComputingRevolution2026: React.FC = () => {
->>>>>>> origin/feat/realtime-rag-content:src/pages/QuantumComputingRevolution2026.tsx
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <section className="py-32 px-4">

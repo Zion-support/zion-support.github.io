@@ -45,9 +45,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       color: 'from-emerald-600 to-teal-600',
       borderColor: 'border-emerald-400',
       bgColor: 'from-emerald-600/30 to-teal-600/30',
-<<<<<<< HEAD:src/components/InteractiveTechShowcase2027.tsx
-      link: '/pages/NeuralInterfaceRevolution2027',
-=======
       link: '/pages/NeuralInterfaceRevolution2027'
     },
     {
@@ -55,7 +52,6 @@ const InteractiveTechShowcase2027: React.FC = () => {
       title: "Conscious AI Systems",
       icon: "🧠",
       description: "AI that thinks, feels, and creates with human-level consciousness",
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005:temp_broken_files/InteractiveTechShowcase2027.tsx
       features: [
         '3D Visualization',
         'Gesture Control',

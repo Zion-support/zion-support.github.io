@@ -1,21 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_files/AIRevolutionaryBreakthrough2026.tsx
-<<<<<<< HEAD:temp_broken_files/AIRevolutionaryBreakthrough2026.tsx
-import { Helmet } from 'react-helmet-async';
 import Header from '../Header';
 import Footer from '../Footer';
 import { Helmet } from 'react-helmet-async';
-import { Helmet } from 'react-helmet-async';
-import Header from '../Header';
-import Footer from '../Footer';
-import { Helmet } from 'react-helmet-async';cursor/fix-netlify-build-and-merge-to-main-a068
 =======
-import Header from '../Header';
-import Footer from '../Footer';
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/AIRevolutionaryBreakthrough2026.tsx
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/pages/AIRevolutionaryBreakthrough2026.tsx
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
@@ -260,18 +247,11 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
             </button>
           </div>
         </div>
-<<<<<<< HEAD:temp_broken_files/AIRevolutionaryBreakthrough2026.tsx
-<<<<<<< HEAD:temp_broken_files/AIRevolutionaryBreakthrough2026.tsx
-      </div>
-      </div>cursor/fix-netlify-build-and-merge-to-main-a068
-=======
       </main>
       
       <Footer />
 =======
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/pages/AIRevolutionaryBreakthrough2026.tsx
       </div>
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/AIRevolutionaryBreakthrough2026.tsx
     </div>
   );
 };

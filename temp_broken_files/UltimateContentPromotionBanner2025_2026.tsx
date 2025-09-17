@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionBanner2025_2026.tsx
-import React from 'react';
-const UltimateContentPromotionBanner2025_2026: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -69,7 +65,6 @@ const UltimateContentPromotionBanner2025_2026 = () => {
 
   const currentSlideData = slides[currentSlide];
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionBanner2025_2026.tsx
   return (
     <div className="relative w-full h-[600px] overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -113,10 +108,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                     <Sparkles className="w-4 h-4 text-yellow-400" />
                     <span className="text-sm font-semibold">New Content Available</span>
                   </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionBanner2025_2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionBanner2025_2026.tsx
                   {/* Title */}
                   <h1 className="text-4xl md:text-6xl font-bold mb-4">
                     <span className={`bg-gradient-to-r ${currentSlideData.gradient} bg-clip-text text-transparent`}>
@@ -145,41 +137,25 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                   </div>
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionBanner2025_2026.tsx
-                    <divbutton
-=======
                     <button
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionBanner2025_2026.tsx
                       className={`bg-gradient-to-r ${currentSlideData.gradient} text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300`}
                     >
                       <Rocket className="w-5 h-5" />
                       {currentSlideData.cta}
                       <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionBanner2025_2026.tsx
-                    </divbutton>
-                    <divbutton
-=======
                     </button>
                     
                     <button
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionBanner2025_2026.tsx
                       className="border-2 border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:bg-white/10 transition-all duration-300"
                     >
                       <Play className="w-5 h-5" />
                       Watch Demo
-<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionBanner2025_2026.tsx
-                    </divbutton>
-=======
                     </button>
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionBanner2025_2026.tsx
                   </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionBanner2025_2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionBanner2025_2026.tsx
             {/* Visual */}
             <div
               className="relative"
@@ -204,10 +180,7 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentPromotionBanner2025_2026.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentPromotionBanner2025_2026.tsx
                 {/* Floating Elements */}
                 {[...Array(6)].map((_i) => (
                   <div

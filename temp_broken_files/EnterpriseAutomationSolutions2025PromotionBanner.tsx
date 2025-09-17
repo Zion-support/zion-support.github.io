@@ -1,6 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025PromotionBanner.tsx
-import React from 'react';
-=======
 "use client";
 'use client';
 
@@ -33,7 +30,6 @@ import {
   Brain
 } from 'lucide-react';
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025PromotionBanner.tsx
 const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
   return (
     <div
@@ -62,10 +58,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 suite of AI-powered automation solutions designed for enterprise scale.
               </p>
             </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025PromotionBanner.tsx
             {/* Features List */}
             <div
               className="space-y-4"
@@ -82,10 +75,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025PromotionBanner.tsx
             {/* CTA Buttons */}
             <div
               className="flex flex-col sm:flex-row gap-4"
@@ -99,10 +89,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025PromotionBanner.tsx
             {/* Dynamic Stats */}
             <div
               className="pt-8 border-t border-white/10"
@@ -184,10 +171,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             >
               <Zap className="w-8 h-8 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025PromotionBanner.tsx
             <div
                 y: [010],
                 rotate: [0-50]
@@ -201,10 +185,7 @@ const EnterpriseAutomationSolutions2025PromotionBanner: React.FC = () => {
             >
               <Brain className="w-6 h-6 text-white" />
             </div>
-<<<<<<< HEAD:temp_broken_files/EnterpriseAutomationSolutions2025PromotionBanner.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/EnterpriseAutomationSolutions2025PromotionBanner.tsx
             {/* Performance Indicators */}
             <div className="absolute top-0 right-0 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium">
               <div className="flex items-center space-x-1">

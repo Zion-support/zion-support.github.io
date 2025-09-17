@@ -1,7 +1,3 @@
-<<<<<<< HEAD:temp_broken_files/UltimateContentShowcase2027PromotionBanner.tsx
-import React from 'react';
-const UltimateContentShowcase2027PromotionBanner: React.FC = () => {
-=======
 "use client";
 'use client';
 
@@ -74,7 +70,6 @@ const UltimateContentShowcase2027PromotionBanner = () => {
 
   if (isDismissed) return null;
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentShowcase2027PromotionBanner.tsx
   return (
     <div>
       {isVisible && (

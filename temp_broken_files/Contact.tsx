@@ -150,165 +150,6 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-<<<<<<< HEAD:temp_broken_files/Contact.tsx
-            {isSubmitted ? (
-                className="text-center py-12"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-300">
-                  Thank you for reaching out. We'll get back to you soon.
-                </p>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white font-semibold mb-2">Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white font-semibold mb-2">Email *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
-                      placeholder="your.email@company.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white font-semibold mb-2">Company</label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white font-semibold mb-2">Phone</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-white font-semibold mb-2">Service Interest</label>
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service} className="bg-gray-800 text-white">
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-white font-semibold mb-2">Message *</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:bg-white/30 transition-all duration-300 resize-none"
-                    placeholder="Tell us about your project and how we can help..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
-        </div>
-      </section>
-
-      {/* Emergency Support Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-            className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-8 border border-red-700/50"
-          >
-            <h3 className="text-2xl font-bold text-white mb-4">🚨 Emergency Support</h3>
-            <p className="text-gray-300 mb-6">
-              Need immediate assistance? Our 24/7 emergency support team is here to help.
-            </p>
-<<<<<<< HEAD:temp_broken_files/Contact.tsx
-<<<<<<< HEAD:temp_broken_files/Contact.tsx
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• AI-powered automation</li>
-              <li>• Quantum computing breakthroughs</li>
-              <li>• Neural interface technology</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
-            <p className="text-gray-300 mb-4">
-              Discover the latest developments in technology and innovation
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research and development</li>
-              <li>• Industry partnerships</li>
-              <li>• Future technology trends</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
-            <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive technology solutions for modern challenges
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Enterprise solutions</li>
-              <li>• Custom development</li>
-              <li>• Technology consulting</li>
-            </ul>cursor/fix-netlify-build-and-merge-to-main-a068
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
@@ -329,7 +170,6 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/Contact.tsx
 =======
         </div>
       </section>
@@ -342,7 +182,6 @@ const Contact: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/pages/Contact.tsx
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -354,16 +193,9 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
-<<<<<<< HEAD:temp_broken_files/Contact.tsx
-<<<<<<< HEAD:temp_broken_files/Contact.tsx
-          </motion.div>
-          </div>
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-fd6a:src/pages/Contact.tsx
 =======
           </divdiv>
           </motion.div>
->>>>>>> origin/cursor/create-and-deploy-new-content-fe56:src/pages/Contact.tsx
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -413,7 +245,6 @@ const Contact: React.FC = () => {
                 </li>
               </ul>
             </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0dad:src/pages/Contact.tsx
           </div>
         </div>
       </div>

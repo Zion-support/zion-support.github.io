@@ -1,78 +1,6 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-    {
-      id: 1,
-      title: "Ultimate Tech Revolution 2025",
-      description: "Experience the most revolutionary technological breakthroughs that will reshape our world",
-      image: "🧠",
-      gradient: "from-purple-600/30 to-pink-600/30",
-      border: "border-purple-400/30",
-      link: "/pages/UltimateTechRevolution2025",
-      features: ["Conscious AI Systems", "Quantum Consciousness", "Interdimensional Computing"]
-    },
-    {
-      id: 2,
-      title: "Revolutionary Tech Breakthrough",
-      description: "Witness groundbreaking technological breakthroughs that will revolutionize every aspect of human life",
-      image: "⚡",
-      gradient: "from-indigo-600/30 to-purple-600/30",
-      border: "border-indigo-400/30",
-      link: "/pages/RevolutionaryTechBreakthrough2025",
-      features: ["Neural Interface Revolution", "Quantum Wave Computing", "Predictive Intelligence"]
-    },
-    {
-      id: 3,
-      title: "Next-Gen Innovation Hub",
-      description: "Discover and explore the most revolutionary technologies shaping humanity's future",
-      image: "🌟",
-      gradient: "from-emerald-600/30 to-teal-600/30",
-      border: "border-emerald-400/30",
-      link: "/pages/NextGenInnovationHub2025",
-      features: ["50+ Active Innovations", "99.9% Success Rate", "Infinite Possibilities"]
-    }
-  ];
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [contentSlides.length]);
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-  };
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
-  };
-  return (
-            </div>
-          </div>
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-          </div>
-        </div>
-      </div>
-  );
-};
-=======
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
 
 
 export default UltimateContentCarousel2025;
@@ -90,8 +18,6 @@ const UltimateContentCarousel2025 = () => {
     return () => clearInterval(interval);
   }[]);
   const slides = [
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-=======
     {
       id: 1,
       title: "AI-Powered Business Automation",
@@ -151,28 +77,19 @@ const UltimateContentCarousel2025 = () => {
   };
 
   return (
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
     <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-          <divdiv
-=======
           <div
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6"
           >
             <Star className="w-4 h-4 mr-2" />
             Ultimate Content Carousel 2025
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-          </divdiv>
-=======
           </div>
           
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
           <divh2
             className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
           >
@@ -182,10 +99,7 @@ const UltimateContentCarousel2025 = () => {
               Showcase
             </span>
           </divh2>
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-=======
           
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
           <divp
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
@@ -196,11 +110,7 @@ const UltimateContentCarousel2025 = () => {
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl shadow-2xl">
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-              <divdiv
-=======
               <div
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
                 key={currentSlide}
                 className="relative h-[600px] md:h-[700px]"
               >
@@ -214,46 +124,30 @@ const UltimateContentCarousel2025 = () => {
                 {/* Content */}
                 <div className="relative z-10 h-full flex items-center">
                   <div className="max-w-4xl px-8 md:px-12 text-white">
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-                    <divdiv
-=======
                     <div
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
                       key={`badge-${currentSlide}`}
                       className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-lg text-sm font-medium mb-6"
                     >
                       <TrendingUp className="w-4 h-4 mr-2" />
                       {slides[currentSlide].subtitle}
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-                    </divdiv>
-=======
                     </div>
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
                     <divh3
                       key={`title-${currentSlide}`}
                       className="text-4xl md:text-6xl font-bold mb-6"
                     >
                       {slides[currentSlide].title}
                     </divh3>
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-=======
 
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
                     <divp
                       key={`desc-${currentSlide}`}
                       className="text-xl text-gray-200 mb-8 max-w-2xl"
                     >
                       {slides[currentSlide].description}
                     </divp>
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-                    {/* Features */}
-                    <divdiv
-=======
 
                     {/* Features */}
                     <div
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
                       key={`features-${currentSlide}`}
                       className="flex flex-wrap gap-4 mb-8"
                     >
@@ -265,16 +159,10 @@ const UltimateContentCarousel2025 = () => {
                           {feature}
                         </span>
                       ))}
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-                    </divdiv>
-                    {/* Stats and CTA */}
-                    <divdiv
-=======
                     </div>
 
                     {/* Stats and CTA */}
                     <div
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
                       key={`cta-${currentSlide}`}
                       className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
                     >
@@ -293,14 +181,6 @@ const UltimateContentCarousel2025 = () => {
                         {slides[currentSlide].cta}
                         <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                       </a>
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-                    </divdiv>
-                  </div>
-                </div>
-              </divdiv>
-        {/* Additional Info */}
-        <divdiv
-=======
                     </div>
                   </div>
                 </div>
@@ -341,7 +221,6 @@ const UltimateContentCarousel2025 = () => {
 
         {/* Additional Info */}
         <div
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
           className="mt-16 text-center"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -357,9 +236,6 @@ const UltimateContentCarousel2025 = () => {
               <Download className="w-5 h-5" />
               <span>Free Resources & Guides</span>
             </div>
-<<<<<<< HEAD:temp_broken_files/UltimateContentCarousel2025.tsx
-    </divsection>
-=======
           </div>
         </div>
       </div>
@@ -368,4 +244,3 @@ const UltimateContentCarousel2025 = () => {
 };
 
 export default UltimateContentCarousel2025;
->>>>>>> origin/merge-new-content-1757989975:src/components/UltimateContentCarousel2025.tsx
