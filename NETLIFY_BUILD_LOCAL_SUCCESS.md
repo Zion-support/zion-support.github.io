@@ -7,3 +7,4 @@
 
 This note confirms the Netlify-configured build flow works locally. Merging to `main` to trigger Netlify deploy.
 
+Local Netlify build succeeded on 2025-09-17T08:38:39Z with vite v

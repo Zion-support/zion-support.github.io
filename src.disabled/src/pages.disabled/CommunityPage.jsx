@@ -36,7 +36,6 @@ export default function CommunityPage({ }: CommunityPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
 
 
 }
