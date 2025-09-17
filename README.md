@@ -131,6 +131,14 @@ The application is configured for seamless Netlify deployment:
 3. **Redirects**: Handled via `_redirects` file
 4. **Build Settings**: Optimized in `netlify.toml`
 
+#### Deployment Status
+
+Replace the placeholders with your Netlify site ID and site name to enable the live badge:
+
+```md
+[![Netlify Status](https://api.netlify.com/api/v1/badges/<site-id>/deploy-status)](https://app.netlify.com/sites/<site-name>/deploys)
+```
+
 ### Manual Deployment
 
 ```bash
