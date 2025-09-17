@@ -1,126 +1,43 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-echo "=== Resolving Merge Conflicts and Pushing Changes ==="
+# Script to automatically resolve merge conflicts
+# Takes the version from the incoming branch (origin/revolutionary-content-merge-1758084568) for most files
 
-# Check current status
-echo "1. Checking git status..."
-git status
+echo "Resolving merge conflicts automatically..."
 
-# Add all resolved files
-echo "2. Adding resolved files..."
-git add .
+# List of files with conflicts
+conflict_files=(
+    "src/Footer.tsx"
+    "src/components/InteractiveTechShowcase.tsx"
+    "src/components/InteractiveTechShowcase2026.tsx"
+    "src/components/NewContentShowcase.tsx"
+    "src/components/RevolutionaryContentShowcase2026.tsx"
+    "src/components/UltimateContentShowcase2026.tsx"
+    "src/hooks/useWebhooks.ts"
+    "src/pages/AIInnovationHub2026.tsx"
+    "src/pages/FutureTechTrends2026.tsx"
+    "src/pages/QuantumAIRevolution2026.tsx"
+    "src/pages/QuantumNeuralFusion2026.tsx"
+    "src/pages/UltimateTechShowcase2026.tsx"
+    "src/utils/notifications.ts"
+    "src/utils/safeStorage.ts"
+)
 
-# Commit the resolved conflicts
-echo "3. Committing resolved conflicts..."
-git commit -m "Resolve all merge conflicts and integrate new content
-
-- Cleaned up App.tsx with proper imports and routing
-- Integrated all new 2026 technology pages
-- Added interactive technology showcase
-- Enhanced frontend advertising and user experience
-- All conflicts resolved and features working"
-
-# Push to main branch
-echo "4. Pushing to main branch..."
-git push origin main
-
-echo "5. Checking for open PRs..."
-# List all branches to see if there are any feature branches
-git branch -a | grep -v main
-
-echo "=== Process Complete ==="
-=======
-<<<<<<< HEAD
-echo "Resolving merge conflicts..."
-
-# Accept our changes for the main App.tsx file
-git checkout --ours App.tsx
-
-# Accept our changes for the new content pages we created
-git checkout --ours src/pages/UltimateTechBreakthrough2026.tsx
-git checkout --ours src/pages/RevolutionaryTechBreakthrough2026.tsx
-git checkout --ours src/pages/NextGenTechRevolution2026.tsx
-git checkout --ours src/pages/RevolutionaryTechBlog2026.tsx
-
-# Accept our changes for the components we created
-git checkout --ours src/components/RevolutionaryContentBanner.tsx
-git checkout --ours src/components/InteractiveTechShowcase2026.tsx
-
-# For other files, accept the incoming changes (from remote)
-git checkout --theirs dist/index.html
-git checkout --theirs package-lock.json
-git checkout --theirs resolve_all_conflicts.sh
-
-# For other component conflicts, accept incoming changes
-git checkout --theirs src/components/AbsoluteTechShowcase2031.tsx
-git checkout --theirs src/components/DynamicContentCarousel.jsx
-git checkout --theirs src/components/DynamicContentCarousel.tsx
-git checkout --theirs src/components/EnhancedContentShowcase.tsx.backup
-git checkout --theirs src/components/InteractiveTechShowcase.tsx
-git checkout --theirs src/components/InteractiveTechShowcase2025.tsx
-git checkout --theirs src/components/InteractiveTechShowcase2027.tsx
-git checkout --theirs src/components/RevolutionaryContentBanner2033.tsx
-git checkout --theirs src/components/RevolutionaryContentCarousel.tsx
-git checkout --theirs src/components/RevolutionaryContentCarousel2027.tsx
-git checkout --theirs src/components/RevolutionaryContentShowcase2025.tsx
-git checkout --theirs src/components/RevolutionaryContentShowcase2026.tsx
-git checkout --theirs src/components/UltimateContentShowcase2026.tsx
-
-# For other page conflicts, accept incoming changes
-git checkout --theirs src/pages/ConsciousnessComputingRevolution2034.tsx
-git checkout --theirs src/pages/FutureTechVision2026.tsx
-git checkout --theirs src/pages/InterdimensionalTechRevolution2026.tsx
-git checkout --theirs src/pages/InterdimensionalTechRevolution2030.tsx
-git checkout --theirs src/pages/NeuralInterfaceRevolution2025.tsx
-git checkout --theirs src/pages/QuantumComputingRevolution2025.tsx
-git checkout --theirs src/pages/QuantumRealityEngine2026.tsx
-git checkout --theirs src/pages/QuantumRealityEngine2027.tsx
-git checkout --theirs src/pages/RevolutionaryTech2026.tsx
-git checkout --theirs src/pages/RevolutionaryTech2027.tsx
-git checkout --theirs src/pages/RevolutionaryTechBreakthrough2025.tsx
-git checkout --theirs src/pages/RevolutionaryTechInsights2026.tsx
-git checkout --theirs src/pages/SyntheticBiologyRevolution2027.tsx
-git checkout --theirs src/pages/TranscendentAI2026.tsx
-git checkout --theirs src/pages/TransdimensionalAI2026.tsx
-git checkout --theirs src/pages/UltimateAIConsciousness2026.tsx
-git checkout --theirs src/pages/UltimateTechShowcase2026.tsx
-
-# For zion-website conflicts, accept incoming changes
-git checkout --theirs zion-website/src/app/page.tsx
-git checkout --theirs zion-website/src/data/updates.ts
-
-echo "All conflicts resolved!"
-=======
-# Script to resolve merge conflicts by choosing HEAD version
-# This will remove all merge conflict markers and keep only the HEAD version
-
-echo "Resolving merge conflicts..."
-
-# Find all files with merge conflicts (excluding node_modules)
-find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | \
-grep -v node_modules | \
-while read file; do
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Resolving conflicts in: $file"
-        
-        # Create a temporary file
-        temp_file=$(mktemp)
-        
-        # Process the file to resolve conflicts
-        awk '
-        /^<<<<<<< HEAD/ { in_head = 1; next }
-        /^=======/ { in_head = 0; in_other = 1; next }
-        /^>>>>>>>/ { in_other = 0; next }
-        in_head { print; next }
-        !in_other { print }
-        ' "$file" > "$temp_file"
-        
-        # Replace the original file
-        mv "$temp_file" "$file"
+# For each conflicted file, take the version from the incoming branch
+for file in "${conflict_files[@]}"; do
+    if [ -f "$file" ]; then
+        echo "Resolving conflicts in $file..."
+        # Use git checkout to take the version from the incoming branch
+        git checkout --theirs "$file"
+        git add "$file"
     fi
 done
 
-echo "Merge conflicts resolved!"
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
->>>>>>> ea5319617482e45d747b7715915bd1796bd2078f
+# Handle backup files and dist files by removing them (they're not needed)
+echo "Removing unnecessary backup and dist files..."
+rm -f "dist/sw.js"
+rm -f "recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/fetchWithRetry.ts.backup.1758109657.backup.1758130384"
+rm -f "recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/productionLogger.ts"
+rm -f "src/pages/FutureTechInnovationHub2026.tsx.backup"
+
+echo "All conflicts resolved!"

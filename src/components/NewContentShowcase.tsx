@@ -8,7 +8,7 @@ const NewContentShowcase: React.FC = () => {
       category: "AI Operations",
       date: "September 15, 2025",
       link: "/blog/ai-2026-trustworthy-model-routing",
-      featured: "true",
+      featured: true,
       badge: "NEW"
     },
     {
@@ -17,7 +17,7 @@ const NewContentShowcase: React.FC = () => {
       category: "Evaluations",
       date: "September 15, 2025",
       link: "/blog/ai-2026-agent-benchmark-suite",
-      featured: "true",
+      featured: true,
       badge: "NEW"
     },
     {
@@ -26,7 +26,7 @@ const NewContentShowcase: React.FC = () => {
       category: "AI & Automation",
       date: "January 20, 2025",
       link: "/content/blog/ai-2025-revolutionary-business-automation-breakthrough",
-      featured: "true",
+      featured: true,
       badge: "BREAKTHROUGH"
     },
     {
@@ -35,7 +35,7 @@ const NewContentShowcase: React.FC = () => {
       category: "Quantum Computing",
       date: "January 20, 2025",
       link: "/content/blog/quantum-computing-business-applications-2025",
-      featured: "true",
+      featured: true,
       badge: "REVOLUTIONARY"
     },
     {
@@ -44,7 +44,7 @@ const NewContentShowcase: React.FC = () => {
       category: "Case Study",
       date: "January 20, 2025",
       link: "/content/case-studies/ai-automation-revolutionary-breakthrough-2025-success",
-      featured: "true",
+      featured: true,
       badge: "SUCCESS"
     };
   return (
@@ -97,7 +97,13 @@ const NewContentShowcase: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
   };
 export { NewContentShowcase
   };
+=======
+};
+
+export { NewContentShowcase };
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-395f
 export default NewContentShowcase;
