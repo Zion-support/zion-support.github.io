@@ -26,8 +26,7 @@
 [build.processing]
   skip_processing = true
 
-# [[plugins]]
-#   package = "@netlify/plugin-nextjs"
+# Note: Next.js handles routing; SPA fallback not required
 
 [[headers]]
   for = "/assets/*"
