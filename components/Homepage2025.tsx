@@ -23,6 +23,7 @@ import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackgrou
 import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
 import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
 import InteractiveFeatures from './InteractiveFeatures';
+import ContentShowcase from './ContentShowcase';
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -832,6 +833,9 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
 
       {/* Interactive Features Section */}
       <InteractiveFeatures />
+
+      {/* Content Showcase Section */}
+      <ContentShowcase />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
