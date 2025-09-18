@@ -1,0 +1,103 @@
+{
+  "count": 7,
+  "results": [
+    {
+      "number": 18479,
+      "title": "Create and deploy new content",
+      "head": "cursor/create-and-deploy-new-content-3bdf",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 18478,
+      "title": "Create and deploy new content",
+      "head": "cursor/create-and-deploy-new-content-09d5",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 18477,
+      "title": "Create and deploy new content",
+      "head": "cursor/create-and-deploy-new-content-3158",
+      "update": {
+        "updated": true,
+        "output": "Merge made by the 'ort' strategy.\n App.tsx                              |    5 +\n aggressive-merge-20250915-140554.txt |  881 ++++\n package-lock.json                    | 2485 +++--------\n src/Header.tsx                       |    4 +\n src/pages/NewShowcase2025.tsx        |   81 +\n sync-health-redundancy-report.md     |    2 +-\n yarn.lock                            | 8045 ----------------------------------\n 7 files changed, 1676 insertions(+), 9827 deletions(-)\n create mode 100644 aggressive-merge-20250915-140554.txt\n create mode 100644 src/pages/NewShowcase2025.tsx\n delete mode 100644 yarn.lock\n\nTo https://github.com/Zion-Holdings/zion.app\n   8fc8ff5cc888..74338fd835bb  pr-update-cursor/create-and-deploy-new-content-3158 -> cursor/create-and-deploy-new-content-3158\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 18476,
+      "title": "Create and deploy new content",
+      "head": "cursor/create-and-deploy-new-content-da1f",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 18472,
+      "title": "Create and deploy new content",
+      "head": "cursor/create-and-deploy-new-content-282a",
+      "update": {
+        "updated": true,
+        "output": "Auto-merging zion-website/src/data/updates.ts\nMerge made by the 'ort' strategy.\n App.tsx                                            |    5 +\n aggressive-merge-20250915-140554.txt               |  881 +++\n package-lock.json                                  | 2485 ++----\n src/Header.tsx                                     |    4 +\n src/pages/NewShowcase2025.tsx                      |   81 +\n sync-health-redundancy-report.md                   |    2 +-\n yarn.lock                                          | 8045 --------------------\n zion-website/src/app/page.tsx                      |   16 +-\n .../app/updates/agent-benchmark-suite-v2/page.tsx  |   27 +\n .../updates/agent-ops-slo-dashboards-v2/page.tsx   |   27 +\n .../updates/ai-governance-readiness-2026/page.tsx  |   27 +\n .../autonomous-marketing-copilot-1-0/page.tsx      |   29 +\n .../production-rag-latency-budgets-2026/page.tsx   |   29 +\n zion-website/src/components/Navigation.tsx         |    2 +-\n zion-website/src/data/updates.ts                   |   40 +\n 15 files changed, 1864 insertions(+), 9836 deletions(-)\n create mode 100644 aggressive-merge-20250915-140554.txt\n create mode 100644 src/pages/NewShowcase2025.tsx\n delete mode 100644 yarn.lock\n create mode 100644 zion-website/src/app/updates/agent-benchmark-suite-v2/page.tsx\n create mode 100644 zion-website/src/app/updates/agent-ops-slo-dashboards-v2/page.tsx\n create mode 100644 zion-website/src/app/updates/ai-governance-readiness-2026/page.tsx\n create mode 100644 zion-website/src/app/updates/autonomous-marketing-copilot-1-0/page.tsx\n create mode 100644 zion-website/src/app/updates/production-rag-latency-budgets-2026/page.tsx\n\nTo https://github.com/Zion-Holdings/zion.app\n   388ed499a91e..99387757b5a5  pr-update-cursor/create-and-deploy-new-content-282a -> cursor/create-and-deploy-new-content-282a\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "http_error",
+        "detail": "{\"message\":\"Pull Request is still a draft\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#merge-a-pull-request\",\"status\":\"405\"}"
+      }
+    },
+    {
+      "number": 18470,
+      "title": "Create and deploy new content",
+      "head": "cursor/create-and-deploy-new-content-55d3",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    },
+    {
+      "number": 18461,
+      "title": "Create and deploy new content",
+      "head": "cursor/create-and-deploy-new-content-0a28",
+      "update": {
+        "updated": false,
+        "output": "\n--- retry with -X ours ---\n\nMerge failed after retry: Command failed (128): git merge -X ours --no-edit origin/main\nOutput:\nerror: Merging is not possible because you have unmerged files.\nhint: Fix them up in the work tree, and then use 'git add/rm <file>'\nhint: as appropriate to mark resolution and make a commit.\nfatal: Exiting because of an unresolved conflict.\n"
+      },
+      "merge": {
+        "merged": false,
+        "reason": "not_mergeable",
+        "mergeable_state": "dirty"
+      }
+    }
+  ]
+}

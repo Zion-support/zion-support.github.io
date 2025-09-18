@@ -1,27 +1,22 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 
 interface LayoutProps {
-  children: React.ReactNode;
   title?: string;
   description?: string;
+  children: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ 
-  children, 
-  title = 'Zion Tech Solutions',
-  description = 'Leading technology solutions for modern businesses'
-}) => {
+const Layout: React.FC<LayoutProps> = ({ title = "Zion Tech Group", description = "Leading Technology Solutions Provider", children }) => {
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main>
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
         {children}
-      </main>
+      </div>
     </>
   );
 };

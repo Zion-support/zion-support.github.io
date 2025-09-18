@@ -1,0 +1,260 @@
+/* Accessibility Enhancements */
+
+/* High Contrast Mode */
+.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #ffffff;
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+  --accent: #ffff00;
+  --border: #ffffff;
+}
+
+.high-contrast * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+.high-contrast button,
+.high-contrast .btn {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border) !important;
+}
+
+.high-contrast a {
+  color: var(--accent) !important;
+  text-decoration: underline !important;
+}
+
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border) !important;
+}
+
+/* Large Text Mode */
+.large-text {
+  font-size: 1.2rem !important;
+}
+
+.large-text h1 { font-size: 2.5rem !important; }
+.large-text h2 { font-size: 2rem !important; }
+.large-text h3 { font-size: 1.75rem !important; }
+.large-text h4 { font-size: 1.5rem !important; }
+.large-text h5 { font-size: 1.25rem !important; }
+.large-text h6 { font-size: 1.125rem !important; }
+
+/* Reduced Motion */
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Screen Reader Mode */
+.screen-reader-mode {
+  /* Hide decorative elements */
+  .decoration,
+  .ornament,
+  .visual-only {
+    display: none !important;
+  }
+  
+  /* Ensure proper heading hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+  }
+  
+  /* Improve focus indicators */
+  *:focus {
+    outline: 3px solid #0066cc !important;
+    outline-offset: 2px !important;
+  }
+  
+  /* Ensure sufficient color contrast */
+  a {
+    text-decoration: underline !important;
+  }
+}
+
+/* Color Blind Mode */
+.color-blind-mode {
+  /* Use patterns and shapes instead of relying solely on color */
+  .status-success::before {
+    content: "✓ ";
+    font-weight: bold;
+  }
+  
+  .status-error::before {
+    content: "✗ ";
+    font-weight: bold;
+  }
+  
+  .status-warning::before {
+    content: "⚠ ";
+    font-weight: bold;
+  }
+  
+  /* Use different border styles */
+  .border-success {
+    border-style: solid !important;
+  }
+  
+  .border-error {
+    border-style: dashed !important;
+  }
+  
+  .border-warning {
+    border-style: dotted !important;
+  }
+}
+
+/* Focus Management */
+*:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* ARIA Live Regions */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High contrast for form elements */
+.high-contrast input[type="text"],
+.high-contrast input[type="email"],
+.high-contrast input[type="password"],
+.high-contrast textarea,
+.high-contrast select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure sufficient spacing for touch targets */
+button,
+.btn,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px 16px;
+}
+
+/* Improve readability */
+p, li, span, div {
+  line-height: 1.6;
+}
+
+/* Ensure proper contrast ratios */
+.text-muted {
+  color: #6b7280 !important;
+}
+
+.high-contrast .text-muted {
+  color: #ffffff !important;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Reduced motion version of loading animation */
+.reduced-motion .loading::after {
+  animation: none;
+  border: 2px solid #3498db;
+}
+
+/* Ensure images have proper alt text styling */
+img:not([alt]) {
+  border: 2px dashed #ff0000;
+}
+
+/* Table accessibility */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.high-contrast th {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Ensure proper heading hierarchy */
+h1 { font-size: 2rem; font-weight: bold; }
+h2 { font-size: 1.5rem; font-weight: bold; }
+h3 { font-size: 1.25rem; font-weight: bold; }
+h4 { font-size: 1.125rem; font-weight: bold; }
+h5 { font-size: 1rem; font-weight: bold; }
+h6 { font-size: 0.875rem; font-weight: bold; }

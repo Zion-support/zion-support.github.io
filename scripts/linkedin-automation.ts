@@ -4,5 +4,4 @@ export const linkedinAutomation = {
     console.log("LinkedIn automation placeholder - implement actual functionality");
   }
 };
-
 export default linkedinAutomation;
