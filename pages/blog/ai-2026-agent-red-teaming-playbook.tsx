@@ -1,31 +1,19 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
 
-export default function AgentRedTeamingPlaybook2026() {
+const Ai2026AgentRedTeamingPlaybook: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>Agent Red Teaming — Practical Playbook (2026) | Zion Tech Group</title>
-        <meta name="description" content="Continuously probe agents for jailbreaks, unsafe tool use, and policy gaps." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-agent-red-teaming-playbook" />
+        <title>Ai2026AgentRedTeamingPlaybook - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026AgentRedTeamingPlaybook blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Agent Red Teaming — Practical Playbook (2026)</h1>
-        <p>
-          Establish an offensive testing program that finds safety, reliability, and compliance issues before
-          customers do. Automate probes, scenario suites, and reporting tied to risk tiers.
-        </p>
-
-        <h2>Program Essentials</h2>
-        <ul>
-          <li>Coverage across jailbreaks, prompt injections, and unsafe tool use</li>
-          <li>Risk‑weighted scoring and regression tracking</li>
-          <li>Incident handoffs with reproducible evidence</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026AgentRedTeamingPlaybook</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 

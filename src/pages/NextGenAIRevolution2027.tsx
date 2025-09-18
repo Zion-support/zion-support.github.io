@@ -1,3 +1,8 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const NextGenAIRevolution2027: React.FC = () => {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -27,6 +32,9 @@
               </button>
             </div>
           </div>
+        </div>
+      </div>
+
       {/* Revolutionary AI Technologies */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -183,3 +191,12 @@
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Contact Our AI Experts
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default NextGenAIRevolution2027;

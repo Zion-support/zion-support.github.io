@@ -56,16 +56,16 @@ export interface MessageThread {;
 
 }
 class MessagingStorage {
-  private messages: Map<string, Message> = new Map();
-  private conversations: Map<string, Conversation> = new Map();
-  private threads: Map<string, MessageThread> = new Map();
-  private userConversations: Map<string, Set<string>> = new Map(); // userId -> conversationIds
-  private conversationMessages: Map<string, Set<string>> = new Map(); // conversationId -> messageIds
+  private messages: Map<stringMessage> = new Map();
+  private conversations: Map<stringConversation> = new Map();
+  private threads: Map<stringMessageThread> = new Map();
+  private userConversations: Map<stringSet<string>> = new Map(); // userId -> conversationIds
+  private conversationMessages: Map<stringSet<string>> = new Map(); // conversationId -> messageIds
   // Message methods
   async createMessage(message: Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'>): Promise<Message> {
 }
 
-export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+export async function searchMessages(query: stringuserId: stringlimit?: number): Promise<MessageSearchResult[]> {
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
 
 
@@ -80,16 +80,16 @@ export async function getConversation(id: string): Promise<Conversation | null> 
 
 
 
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
+export async function updateConversation(id: stringupdates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
 }
 
 
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
+export async function getMessagesByConversation(conversationId: stringlimit?: numberoffset?: number): Promise<Message[]> {;
   return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 
-export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
+export async function getConversationsByUser(userId: stringincludeArchived?: boolean): Promise<Conversation[]> {;
 
 
 
@@ -117,15 +117,15 @@ export async function createConversation(conversation: Omit<Conversation, 'id' |
 export async function getConversation(id: string): Promise<Conversation | null> {
   return messagingStorage.getConversation(id)
 }
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
+export async function updateConversation(id: stringupdates: Partial<Conversation>): Promise<Conversation | null> {
   return messagingStorage.updateConversation(id, updates);
 }
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {
+export async function getMessagesByConversation(conversationId: stringlimit?: number, offset?: number): Promise<Message[]> {
   return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
 
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
+export async function updateConversation(id: stringupdates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
 }
 
@@ -148,7 +148,7 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
   return messagingStorage.getUnreadMessageCount(userId)
 }
 
-export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+export async function searchMessages(query: stringuserId: string, limit?: number): Promise<MessageSearchResult[]> {
 
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
 

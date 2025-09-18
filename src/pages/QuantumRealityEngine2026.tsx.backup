@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,216 +10,362 @@
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const QuantumRealityEngine2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>Quantum Reality Engine 2026 | Zion Tech Group</title>
-        <meta name="description" content="Experience the revolutionary Quantum Reality Engine that can simulate entire universes and create new realities" />
-        <meta name="keywords" content="quantum computing, reality engine, universe simulation, quantum breakthrough 2026" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
-            ⚛️ QUANTUM REALITY ENGINE 2026
+    <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              ⚡ QUANTUM REALITY ENGINE • JANUARY 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+              Quantum Reality Engine 2026
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Harness the power of quantum mechanics to create, manipulate, and experience infinite realities
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+                Enter Quantum Reality
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
+                Watch Demo
+              </button>
+            </div>
           </div>
-          <h1 className="text-6xl font-bold text-white mb-6 leading-tight">
-            Simulate <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Infinite Realities</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            The world's first quantum computer capable of simulating entire universes, creating new realities, and solving problems across infinite dimensions.
+        </div>
+      </div>
+
+      {/* Quantum Capabilities */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6">Quantum Reality Capabilities</h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            Our quantum reality engine can create and manipulate realities at the quantum level, opening infinite possibilities
           </p>
         </div>
 
-        {/* Quantum Capabilities */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-cyan-800 to-blue-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🌌</div>
-            <h3 className="text-2xl font-bold mb-4">Universe Simulation</h3>
-            <p className="text-gray-300">
-              Simulate entire universes with perfect accuracy, from the Big Bang to the heat death of the universe.
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌌</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Reality Creation</h3>
+            <p className="text-cyan-100 mb-6 text-center">
+              Generate complete realities with their own physics, laws, and inhabitants
             </p>
+            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
+              <li>• Custom physics systems</li>
+              <li>• Living ecosystems</li>
+              <li>• Intelligent inhabitants</li>
+              <li>• Infinite scale</li>
+            </ul>
+            <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
+              Create Reality →
+            </button>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-800 to-pink-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🔮</div>
-            <h3 className="text-2xl font-bold mb-4">Reality Creation</h3>
-            <p className="text-gray-300">
-              Create entirely new realities with different physical laws, dimensions, and possibilities.
+          <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">⚛️</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Manipulation</h3>
+            <p className="text-blue-100 mb-6 text-center">
+              Control quantum states to alter reality at the most fundamental level
             </p>
+            <ul className="text-blue-200 space-y-2 mb-6 text-sm">
+              <li>• Quantum superposition</li>
+              <li>• Entanglement control</li>
+              <li>• Wave function collapse</li>
+              <li>• Probability manipulation</li>
+            </ul>
+            <button className="w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
+              Manipulate Quantum →
+            </button>
           </div>
 
-          <div className="bg-gradient-to-br from-green-800 to-emerald-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-4">Instant Computation</h3>
-            <p className="text-gray-300">
-              Solve problems that would take classical computers billions of years in mere seconds.
+          <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌀</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Dimension Hopping</h3>
+            <p className="text-indigo-100 mb-6 text-center">
+              Travel between parallel dimensions and alternate realities instantly
             </p>
+            <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
+              <li>• Parallel universe access</li>
+              <li>• Timeline manipulation</li>
+              <li>• Dimensional portals</li>
+              <li>• Reality merging</li>
+            </ul>
+            <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
+              Hop Dimensions →
+            </button>
           </div>
 
-          <div className="bg-gradient-to-br from-yellow-800 to-orange-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🧬</div>
-            <h3 className="text-2xl font-bold mb-4">Molecular Simulation</h3>
-            <p className="text-gray-300">
-              Perfect simulation of molecular interactions for drug discovery and material science.
+          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🔮</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Time Manipulation</h3>
+            <p className="text-purple-100 mb-6 text-center">
+              Control the flow of time within quantum realities for unique experiences
             </p>
+            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
+              <li>• Time dilation control</li>
+              <li>• Temporal loops</li>
+              <li>• Time reversal</li>
+              <li>• Chronological editing</li>
+            </ul>
+            <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+              Control Time →
+            </button>
           </div>
 
-          <div className="bg-gradient-to-br from-red-800 to-pink-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🌍</div>
-            <h3 className="text-2xl font-bold mb-4">Climate Modeling</h3>
-            <p className="text-gray-300">
-              Predict climate change with perfect accuracy and test solutions across infinite scenarios.
+          <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🌟</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Transfer</h3>
+            <p className="text-pink-100 mb-6 text-center">
+              Transfer consciousness between realities and quantum states
             </p>
+            <ul className="text-pink-200 space-y-2 mb-6 text-sm">
+              <li>• Mind uploading</li>
+              <li>• Consciousness backup</li>
+              <li>• Multi-body existence</li>
+              <li>• Quantum consciousness</li>
+            </ul>
+            <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
+              Transfer Mind →
+            </button>
           </div>
 
-          <div className="bg-gradient-to-br from-indigo-800 to-purple-800 rounded-2xl p-8 text-white transform hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-4">🚀</div>
-            <h3 className="text-2xl font-bold mb-4">Space Exploration</h3>
-            <p className="text-gray-300">
-              Simulate space missions, test propulsion systems, and explore the cosmos virtually.
+          <div className="bg-gradient-to-br from-rose-600/30 to-orange-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-6xl mb-4 text-center">🎭</div>
+            <h3 className="text-2xl font-bold mb-4 text-center">Reality Simulation</h3>
+            <p className="text-rose-100 mb-6 text-center">
+              Simulate any possible reality with perfect accuracy and detail
             </p>
+            <ul className="text-rose-200 space-y-2 mb-6 text-sm">
+              <li>• Perfect simulation</li>
+              <li>• Historical recreation</li>
+              <li>• Future prediction</li>
+              <li>• What-if scenarios</li>
+            </ul>
+            <button className="w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold">
+              Simulate Reality →
+            </button>
           </div>
         </div>
 
-        {/* Technical Specifications */}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Technical Specifications</h2>
+        {/* Quantum Engine Stats */}
+        <div className="bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6">Quantum Engine Performance</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Our quantum reality engine operates at unprecedented scales and capabilities
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-6">Quantum Processing Power</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                  <span className="text-gray-300">Qubits</span>
-                  <span className="text-white font-bold">1,000,000+</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                  <span className="text-gray-300">Coherence Time</span>
-                  <span className="text-white font-bold">10+ hours</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                  <span className="text-gray-300">Error Rate</span>
-                  <span className="text-white font-bold">0.001%</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                  <span className="text-gray-300">Processing Speed</span>
-                  <span className="text-white font-bold">10^18 ops/sec</span>
-                </div>
-              </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
+              <div className="text-lg text-cyan-200">Realities Created</div>
             </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-purple-400 mb-6">Simulation Capabilities</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                  <span className="text-gray-300">Universe Scale</span>
-                  <span className="text-white font-bold">Infinite</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                  <span className="text-gray-300">Time Resolution</span>
-                  <span className="text-white font-bold">Planck Time</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                  <span className="text-gray-300">Dimensions</span>
-                  <span className="text-white font-bold">11+</span>
-                </div>
-                <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                  <span className="text-gray-300">Parallel Universes</span>
-                  <span className="text-white font-bold">∞</span>
-                </div>
-              </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">10^100</div>
+              <div className="text-lg text-blue-200">Quantum States</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-indigo-400 mb-2">99.9%</div>
+              <div className="text-lg text-indigo-200">Reality Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">0ms</div>
+              <div className="text-lg text-purple-200">Reality Switch Time</div>
             </div>
           </div>
         </div>
 
-        {/* Applications */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Scientific Applications</h3>
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-center space-x-3">
-                <span className="text-cyan-400">✓</span>
-                <span>Fundamental physics research</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-cyan-400">✓</span>
-                <span>Drug discovery and development</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-cyan-400">✓</span>
-                <span>Climate change modeling</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-cyan-400">✓</span>
-                <span>Space exploration planning</span>
-              </li>
-            </ul>
+        {/* Quantum Reality Showcase */}
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
+            <h3 className="text-3xl font-bold mb-6 text-center">🌌 Reality Gallery</h3>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between p-4 bg-cyan-500/20 rounded-lg">
+                <span className="text-cyan-100">Medieval Fantasy World</span>
+                <button className="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 transition-colors">
+                  Enter
+                </button>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-blue-500/20 rounded-lg">
+                <span className="text-blue-100">Futuristic Cyberpunk City</span>
+                <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+                  Enter
+                </button>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-indigo-500/20 rounded-lg">
+                <span className="text-indigo-100">Underwater Atlantis</span>
+                <button className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 transition-colors">
+                  Enter
+                </button>
+              </div>
+              <div className="flex items-center justify-between p-4 bg-purple-500/20 rounded-lg">
+                <span className="text-purple-100">Space Station Alpha</span>
+                <button className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">
+                  Enter
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-900 to-pink-900 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Commercial Applications</h3>
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-center space-x-3">
-                <span className="text-pink-400">✓</span>
-                <span>Financial market prediction</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-pink-400">✓</span>
-                <span>Supply chain optimization</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-pink-400">✓</span>
-                <span>AI training acceleration</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="text-pink-400">✓</span>
-                <span>Virtual reality creation</span>
-              </li>
-            </ul>
+          <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
+            <h3 className="text-3xl font-bold mb-6 text-center">⚛️ Quantum Controls</h3>
+            <div className="space-y-6">
+              <div>
+                <label className="block text-blue-200 mb-2">Reality Stability</label>
+                <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="bg-cyan-500 h-3 rounded-full" style={{width: '85%'}}></div>
+                </div>
+              </div>
+              <div>
+                <label className="block text-blue-200 mb-2">Quantum Entanglement</label>
+                <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="bg-blue-500 h-3 rounded-full" style={{width: '92%'}}></div>
+                </div>
+              </div>
+              <div>
+                <label className="block text-blue-200 mb-2">Dimensional Coherence</label>
+                <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="bg-indigo-500 h-3 rounded-full" style={{width: '78%'}}></div>
+                </div>
+              </div>
+              <div>
+                <label className="block text-blue-200 mb-2">Temporal Sync</label>
+                <div className="w-full bg-gray-700 rounded-full h-3">
+                  <div className="bg-purple-500 h-3 rounded-full" style={{width: '95%'}}></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-400 to-purple-500 text-black px-8 py-4 rounded-full text-xl font-bold inline-block hover:scale-105 transition-transform duration-300 cursor-pointer">
-            Explore Quantum Reality →
+          <h2 className="text-4xl font-bold mb-6">Ready to Enter Quantum Reality?</h2>
+          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+            Step into infinite possibilities and experience realities beyond imagination
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-cyan-600 to-indigo-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              Enter Quantum Reality
+            </button>
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-xl">
+              Learn More
+            </button>
           </div>
+=======
+import React from 'react';
+<<<<<<< HEAD
+const QuantumRealityEngine2026 = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">QuantumRealityEngine2026</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+=======
+
+const QuantumRealityEngine2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">QuantumRealityEngine2026</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default QuantumRealityEngine2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+export default QuantumRealityEngine2026;
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 export default QuantumRealityEngine2026;
+=======
 <<<<<<< HEAD
 export default QuantumRealityEngine2026;
-export default QuantumRealityEngine2026;
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b461
 <<<<<<< HEAD
 =======
->>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default QuantumRealityEngine2026;
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+export default QuantumRealityEngine2026;
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+
+};
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default QuantumRealityEngine2026;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -244,6 +391,7 @@ export default QuantumRealityEngine2026;
             </span>
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Core Capabilities */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -419,31 +567,81 @@ export default QuantumRealityEngine2026;
             </a>
 export default QuantumRealityEngine2026;
 <<<<<<< HEAD
-export default QuantumRealityEngine2026;
-export default QuantumRealityEngine2026;
+<<<<<<< HEAD
 =======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> cursor/create-and-deploy-new-content-bec3
 =======
 <<<<<<< HEAD
 export default QuantumRealityEngine2026;
 >>>>>>> cursor/create-and-deploy-new-content-079e
 =======
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 <<<<<<< HEAD
+=======
+export default QuantumRealityEngine2026;
+>>>>>>> cursor/create-and-deploy-new-content-1912
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+>>>>>>> cursor/create-and-deploy-new-content-b461
+<<<<<<< HEAD
 export default QuantumRealityEngine2026;
 >>>>>>> cursor/create-and-deploy-new-content-1912
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+=======
+=======
+export default QuantumRealityEngine2026;
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8069
 >>>>>>> cursor/create-and-deploy-new-content-502e
 >>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
->>>>>>> cursor/create-and-deploy-new-content-4cdf
->>>>>>> cursor/create-and-deploy-new-content-39c9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
->>>>>>> cursor/create-and-deploy-new-content-6f93
+=======
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-3a26
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-b461
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> origin/feat/realtime-rag-content
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d
+export default QuantumRealityEngine2026;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

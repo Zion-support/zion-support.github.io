@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltraFuturisticFooter2036: React.FC = () => {
   return (

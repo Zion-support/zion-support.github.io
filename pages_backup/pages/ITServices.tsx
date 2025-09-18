@@ -17,5 +17,4 @@ const ITServices: React.FC = () => {
       </div>
     </div>
   );
-};
 

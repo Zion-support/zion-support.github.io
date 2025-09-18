@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const accessibility: React.FC = () => {
   return (
@@ -19,4 +18,5 @@ const accessibility: React.FC = () => {
   );
 };
 
-export default accessibility;
+
+export default NeuralRealityEngine2035;

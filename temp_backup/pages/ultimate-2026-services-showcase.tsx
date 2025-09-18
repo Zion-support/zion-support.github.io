@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const ultimate-2026-services-showcase: React.FC = () => {
   return (

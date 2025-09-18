@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route }  from 'react-router-dom';
 import Header from './Header';
 import ScrollToTop from './ScrollToTop';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
@@ -155,6 +155,5 @@ const App: React.FC = () => {
       </div>
     </Router>
   );
-};
-
+  };
 export default App;

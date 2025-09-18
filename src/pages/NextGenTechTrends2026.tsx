@@ -1,404 +1,205 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Rocket, 
-  Cpu, 
-  Database,
-  Network,
-  Cloud,
-  Smartphone,
-  Monitor,
-  ArrowRight,
-  Calendar,
-  User,
-  Star,
-  CheckCircle
-} from 'lucide-react';
+
 const NextGenTechTrends2026: React.FC = () => {
   const trends = [
     {
       id: 1,
-      title: "Autonomous AI Ecosystems",
-      category: "Artificial Intelligence",
-      description: "Self-managing AI systems that create, deploy, and optimize themselves without human intervention",
-      impact: "Revolutionary",
-      timeline: "2026-2027",
-      icon: Brain,
-      keyPoints: [
-        "Self-healing AI infrastructure",
-        "Autonomous decision-making frameworks",
-        "Dynamic resource allocation",
-        "Predictive maintenance systems"
+      title: "Synthetic Intelligence Revolution",
+      description: "The next evolution of AI that goes beyond machine learning to create truly autonomous synthetic beings capable of independent thought and creativity.",
+      icon: "🧠",
+      features: [
+        "Self-evolving neural architectures",
+        "Emotional intelligence integration",
+        "Creative problem-solving capabilities",
+        "Autonomous decision making"
       ],
-      marketSize: "$2.3T",
-      growthRate: "+340%"
+      impact: "Transform how we interact with technology and solve complex global challenges"
     },
     {
       id: 2,
-      title: "Quantum-Classical Hybrid Computing",
-      category: "Quantum Computing",
-      description: "Seamless integration of quantum and classical computing for unprecedented problem-solving capabilities",
-      impact: "Transformative",
-      timeline: "2026-2028",
-      icon: Cpu,
-      keyPoints: [
-        "Hybrid algorithm optimization",
-        "Quantum error correction",
-        "Classical-quantum interfaces",
-        "Real-world applications deployment"
+      title: "Quantum-Neural Hybrid Computing",
+      description: "Revolutionary fusion of quantum computing and neural networks, enabling unprecedented computational power and problem-solving capabilities.",
+      icon: "⚛️",
+      features: [
+        "Exponential processing speed",
+        "Quantum machine learning",
+        "Neural quantum algorithms",
+        "Breakthrough cryptography"
       ],
-      marketSize: "$850B",
-      growthRate: "+280%"
+      impact: "Solve previously impossible problems in seconds that would take classical computers millennia"
     },
     {
       id: 3,
-      title: "Consciousness-Driven AI",
-      category: "Cognitive Computing",
-      description: "AI systems with advanced self-awareness, ethical reasoning, and emotional intelligence",
-      impact: "Paradigm Shift",
-      timeline: "2026-2029",
-      icon: Shield,
-      keyPoints: [
-        "Ethical decision-making frameworks",
-        "Emotional intelligence integration",
-        "Self-awareness capabilities",
-        "Moral reasoning systems"
+      title: "Consciousness Interface Technology",
+      description: "Direct neural interfaces that enable seamless communication between human consciousness and digital systems.",
+      icon: "🧬",
+      features: [
+        "Non-invasive brain-computer interfaces",
+        "Thought-controlled devices",
+        "Memory augmentation",
+        "Consciousness backup systems"
       ],
-      marketSize: "$1.2T",
-      growthRate: "+420%"
+      impact: "Merge human intelligence with artificial systems for enhanced cognitive capabilities"
     },
     {
       id: 4,
-      title: "Interdimensional Computing",
-      category: "Advanced Computing",
-      description: "Computing systems that operate across multiple dimensions and realities simultaneously",
-      impact: "Breakthrough",
-      timeline: "2027-2030",
-      icon: Rocket,
-      keyPoints: [
-        "Multi-dimensional processing",
-        "Reality simulation engines",
-        "Cross-dimensional data transfer",
-        "Infinite computational capacity"
+      title: "Autonomous Reality Fabrication",
+      description: "AI systems that can create, modify, and maintain entire virtual and augmented reality environments autonomously.",
+      icon: "🌐",
+      features: [
+        "Self-generating virtual worlds",
+        "Dynamic reality adaptation",
+        "Immersive experience creation",
+        "Autonomous content generation"
       ],
-      marketSize: "$3.1T",
-      growthRate: "+500%"
+      impact: "Create infinite virtual experiences tailored to individual preferences and needs"
     },
     {
       id: 5,
-      title: "Neural-Quantum Interfaces",
-      category: "Brain-Computer Interface",
-      description: "Direct neural connections between human consciousness and quantum computing systems",
-      impact: "Revolutionary",
-      timeline: "2026-2028",
-      icon: Network,
-      keyPoints: [
-        "Direct brain-computer interfaces",
-        "Quantum neural networks",
-        "Consciousness transfer protocols",
-        "Enhanced cognitive capabilities"
+      title: "Molecular-Scale Manufacturing",
+      description: "Revolutionary manufacturing technology that builds products atom by atom, enabling previously impossible materials and structures.",
+      icon: "⚗️",
+      features: [
+        "Atomic precision manufacturing",
+        "Self-assembling materials",
+        "Programmable matter",
+        "Zero-waste production"
       ],
-      marketSize: "$650B",
-      growthRate: "+380%"
+      impact: "Create materials with impossible properties and eliminate manufacturing waste entirely"
     },
     {
       id: 6,
-      title: "Autonomous Digital Ecosystems",
-      category: "Digital Infrastructure",
-      description: "Self-organizing digital environments that evolve and adapt without human intervention",
-      impact: "Transformative",
-      timeline: "2026-2027",
-      icon: Globe,
-      keyPoints: [
-        "Self-evolving digital platforms",
-        "Autonomous content generation",
-        "Dynamic ecosystem optimization",
-        "Predictive user experience"
+      title: "Temporal Computing Systems",
+      description: "Computing systems that can process information across different time dimensions, enabling predictive and retroactive analysis.",
+      icon: "⏰",
+      features: [
+        "Time-based data processing",
+        "Predictive reality modeling",
+        "Temporal pattern recognition",
+        "Causality analysis"
       ],
-      marketSize: "$1.8T",
-      growthRate: "+290%"
+      impact: "Predict and prevent future problems while learning from alternative timelines"
     }
   ];
-  const insights = [
-    {
-      title: "Market Acceleration",
-      description: "The convergence of AI, quantum computing, and consciousness research is accelerating at an unprecedented pace",
-      stat: "340% faster than predicted",
-      icon: TrendingUp
-    },
-    {
-      title: "Investment Surge",
-      description: "Venture capital and corporate investment in next-gen tech has reached record levels",
-      stat: "$45B invested in 2025",
-      icon: Star
-    },
-    {
-      title: "Adoption Rate",
-      description: "Enterprise adoption of advanced AI systems is happening 5x faster than previous technology cycles",
-      stat: "78% of Fortune 500 deploying",
-      icon: CheckCircle
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
-  ];
-  const predictions = [
-    {
-      year: "2026",
-      prediction: "Autonomous AI systems become mainstream in enterprise operations",
-      confidence: "95%",
-      impact: "High"
-    },
-    {
-      year: "2027",
-      prediction: "First commercial quantum-classical hybrid systems launch",
-      confidence: "87%",
-      impact: "Revolutionary"
-    },
-    {
-      year: "2028",
-      prediction: "Consciousness-driven AI achieves human-level ethical reasoning",
-      confidence: "82%",
-      impact: "Paradigm Shift"
-    },
-    {
-      year: "2030",
-      prediction: "Interdimensional computing enables unlimited processing capacity",
-      confidence: "75%",
-      impact: "Breakthrough"
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
     }
-  ];
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <divdiv
+            className="text-center text-white"
           >
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-500/30 rounded-full px-4 py-2 mb-6">
-              <Calendar className="w-4 h-4 text-blue-400" />
-              <span className="text-blue-400 font-semibold">Tech Trends 2026</span>
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌟 BREAKTHROUGH TECHNOLOGY • 2026
             </div>
-            <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-              Next-Generation Technology Trends
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Next-Gen Tech Trends 2026
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Explore the revolutionary technologies that will define the next decade, from autonomous AI ecosystems to consciousness-driven computing systems.
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Discover the revolutionary technologies that will reshape our world in 2026 and beyond. 
+              From synthetic intelligence to consciousness interfaces, explore the future today.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg transition-all duration-300"
-              >
-                Explore Trends <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-full font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+            <div className="flex justify-center space-x-4">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Explore Trends
+              </button>
+              <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400 hover:text-white transition-colors">
                 Download Report
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </divdiv>
         </div>
-      </section>
-      {/* Key Insights */}
-      <section className="py-16 bg-black/20">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            {insights.map((insight, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center bg-gradient-to-br from-slate-800/50 to-blue-800/30 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-8"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4">
-                  <insight.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
-                <p className="text-gray-300 mb-4">{insight.description}</p>
-                <div className="text-2xl font-bold text-blue-400">{insight.stat}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
+
       {/* Trends Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+      <div className="container mx-auto px-4 py-20">
+        <divdiv
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {trends.map((trend) => (
+            <divdiv
+              key={trend.id}
+              className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105"
+            >
+              <div className="text-6xl mb-6 text-center">{trend.icon}</div>
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">{trend.title}</h3>
+              <p className="text-gray-300 mb-6 text-center">{trend.description}</p>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-purple-300 mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  {trend.features.map((feature, index) => (
+                    <li key={index} className="text-gray-300 text-sm flex items-center">
+                      <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4 mb-6">
+                <h4 className="text-sm font-semibold text-purple-300 mb-2">Impact:</h4>
+                <p className="text-gray-300 text-sm">{trend.impact}</p>
+              </div>
+              
+              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Learn More →
+              </button>
+            </divdiv>
+          ))}
+        </divdiv>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-purple-900 to-pink-900 py-20">
+        <div className="container mx-auto px-4 text-center">
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="text-white"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Revolutionary Technology Trends</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the cutting-edge technologies that will reshape our world and transform how we live, work, and interact with digital systems.
+            <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
+            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+              Join us in exploring and implementing these revolutionary technologies. 
+              Be part of the next generation of innovation.
             </p>
-          </motion.div>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {trends.map((trend, index) => (
-              <motion.div
-                key={trend.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-purple-800/30 backdrop-blur-sm border border-purple-500/20 rounded-2xl p-8 hover:border-purple-400/40 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex-shrink-0">
-                    <trend.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm font-semibold rounded-full">
-                        {trend.category}
-                      </span>
-                      <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-semibold rounded-full">
-                        {trend.impact}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">{trend.title}</h3>
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {trend.timeline}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <TrendingUp className="w-4 h-4" />
-                        {trend.growthRate}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {trend.description}
-                </p>
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
-                  <ul className="space-y-2">
-                    {trend.keyPoints.map((point, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex justify-between items-center">
-                  <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-lg p-3">
-                    <div className="text-sm text-green-400 font-semibold">Market Size</div>
-                    <div className="text-white font-bold text-lg">{trend.marketSize}</div>
-                  </div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    className="text-blue-400 hover:text-white transition-colors duration-300 flex items-center gap-2"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Predictions Timeline */}
-      <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Technology Predictions Timeline</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our expert predictions for the next five years of technological advancement and market adoption.
-            </p>
-          </motion.div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
-              {predictions.map((prediction, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="relative flex items-start gap-8 mb-12"
-                >
-                  {/* Timeline dot */}
-                  <div className="relative z-10 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg">{prediction.year}</span>
-                  </div>
-                  {/* Content */}
-                  <div className="flex-1 bg-gradient-to-br from-slate-800/50 to-blue-800/30 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-semibold rounded-full">
-                        {prediction.impact}
-                      </span>
-                      <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-semibold rounded-full">
-                        {prediction.confidence} confidence
-                      </span>
-                    </div>
-                    <p className="text-white text-lg leading-relaxed">{prediction.prediction}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="flex justify-center space-x-4">
+              <button className="bg-white text-purple-900 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Start Your Journey
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-900 transition-colors">
+                Contact Our Experts
+              </button>
             </div>
-          </div>
+          </divdiv>
         </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Ahead of the Technology Curve
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Get exclusive access to our comprehensive technology trend reports, expert insights, and early implementation strategies.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg transition-all duration-300"
-              >
-                Subscribe to Updates <ArrowRight className="w-5 h-5" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                Download Full Report
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      </div>
     </div>
   );
-
 };
 
 export default NextGenTechTrends2026;

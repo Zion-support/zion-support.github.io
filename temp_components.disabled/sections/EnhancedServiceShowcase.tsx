@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnhancedServiceShowcase: React.FC = () => {
   return (
@@ -9,4 +8,5 @@ const EnhancedServiceShowcase: React.FC = () => {
   );
 };
 
-export default EnhancedServiceShowcase;
+
+export default EnhancedContentShowcase;

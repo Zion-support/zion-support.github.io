@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
   return (
@@ -9,4 +8,5 @@ const AccessibilityEnhancer: React.FC = () => {
   );
 };
 
-export default AccessibilityEnhancer;
+
+export default RevolutionaryAdBanner;

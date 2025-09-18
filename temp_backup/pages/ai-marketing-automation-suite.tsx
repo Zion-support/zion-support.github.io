@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const ai-marketing-automation-suite: React.FC = () => {
   return (
@@ -19,4 +18,5 @@ const ai-marketing-automation-suite: React.FC = () => {
   );
 };
 
-export default ai-marketing-automation-suite;
+
+export default QuantumComputingSolutions2026;

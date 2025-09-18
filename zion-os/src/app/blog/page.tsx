@@ -1,84 +1,41 @@
-  const featuredPosts: PostListItem[] = [
-    {
-      id: 'ai-governance-2025',
-      title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
-      excerpt: 'Implement measurable, reversible, and auditable controls for production AI.',
-      category: 'AI Solutions',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '8 min read',
-      image: '/blog/ai-governance.jpg',
-      id: 'ai-governance-blueprint-2025',
-      title: 'AI Governance Blueprint 2025: Practical Controls for Autonomous Systems',
-      excerpt: 'How to deploy policy engines, observability, and reversible rollouts as autonomy grows.',
-      category: 'AI Solutions',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-14',
-      readTime: '11 min read',
-      author: 'Michael Rodriguez',
-      date: '2025-09-05',
-      readTime: '7 min read',
-      image: '/blog/autonomous-it.jpg',
-    },
-    {
-      id: 'secure-agent-marketplaces',
-      title: 'Building Secure Agent Marketplaces: Identity, Reputation, and Policy',
-      excerpt:
-        'Trust frameworks for multi-agent ecosystems with identity, reputation, and safety.',
-      category: 'Cybersecurity',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-02',
-      readTime: '8 min read',
-      image: '/blog/secure-agent-marketplaces.jpg',
-    },
-    {
-      id: 'ai-ops-cost-optimization-2025',
-      title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
-      excerpt: 'Deploy AI-driven observability and predictive autoscaling to cut spend while improving reliability.',
-      image: '/blog/ai-ops-cost.jpg',
-      id: 'ai-ops-cost-optimization-2025',
-      title: 'AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings',
-      excerpt: 'A 6-week rollout to reduce cloud and ops costs by 30–50% using AI-driven rightsizing and autoscaling.',
-      category: 'AI Solutions',
-      author: 'Michael Rodriguez',
-      date: '2025-09-15',
-      readTime: '9 min read',
-      image: '/blog/ai-ops-cost.jpg'
-    },
-    {
-      id: 'agentic-sales-playbooks',
-      title: 'Agentic Sales Playbooks: Autonomous Pipelines from Lead to Close',
-      excerpt: 'Build autonomous sales loops with RAG, orchestration, and CRM integration with human-in-the-loop.',
-      category: 'AI Solutions',
-      author: 'Dr. David Kim',
-      date: '2025-09-12',
-      readTime: '8 min read',
-      image: '/blog/agentic-sales.jpg'
-    },
-    {
-      id: 'agent-safety-tooling',
-      title: 'Agent Safety Tooling: Defense-in-Depth for Multi-Agent Systems',
-      excerpt: 'Policy guards, runtime monitors, and reputation systems for safer agents.',
-      category: 'Cybersecurity',
-      author: 'Dr. James Wilson',
-    { name: 'AI Solutions', count: 4, active: false },
-    { name: 'Accessibility', count: 1, active: false },
-    { name: 'Infrastructure', count: 1, active: false },
-            href="/blog/ai-ops-cost-optimization-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings"
+import Link from 'next/link'
+import React from 'react'
+import { getRecentPosts } from '../../data/blog'
+
+}
+
+export default function BlogIndexPage() {
+  const posts = getRecentPosts()
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <h1 className="text-4xl md:text-5xl font-bold mb-8">Blog</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {posts.map((post) => (
+          <Link
+            key={post.id}
+            href={`/blog/${post.id}`}
+            className="block w-full bg-white rounded-xl border border-gray-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label={`Read: ${post.title}`}
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
-                AO
-                AG
-                AG
-                  AI Ops Cost Optimization 2025: Practical Playbook for 30–50% Savings
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  Cut cloud and ops costs with AI-driven rightsizing and predictive autoscaling without sacrificing reliability.
-                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
-                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
-                </p>
+                {post.title.split(' ').slice(0, 2).map((w) => w[0]).join('')}
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">{post.category}</span>
+                  <span className="text-xs text-gray-500">{new Date(post.date).toLocaleDateString()}</span>
+                  <span className="text-xs text-gray-500">• {post.readTime}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900">{post.title}</h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">{post.excerpt}</p>
+              </div>
+              <div className="text-blue-600 font-medium whitespace-nowrap">Read →</div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+}

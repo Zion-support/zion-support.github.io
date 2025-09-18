@@ -1,6 +1,6 @@
-        </div>
-      </div>
-    </div>
+
+const Navigation: React.FC<NavigationProps> = ({ children }) => {
+  return (
   );
 };
 

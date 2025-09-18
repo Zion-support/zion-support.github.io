@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ServiceSearch: React.FC = () => {
   return (

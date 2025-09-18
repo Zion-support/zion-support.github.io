@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ai-supply-chain-optimization: React.FC = () => {
   return (
@@ -9,4 +8,3 @@ const ai-supply-chain-optimization: React.FC = () => {
   );
 };
 
-export default ai-supply-chain-optimization;

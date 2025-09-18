@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ai-content-marketing-suite: React.FC = () => {
   return (
@@ -9,4 +8,3 @@ const ai-content-marketing-suite: React.FC = () => {
   );
 };
 
-export default ai-content-marketing-suite;

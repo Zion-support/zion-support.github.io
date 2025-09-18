@@ -1,8 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const NextGenInnovationHub2029: React.FC = () => {
-<<<<<<< HEAD
+<<<<<<< HEAD:src/pages/NextGenInnovationHub2029.tsx.backup
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredInnovation, setHoveredInnovation] = useState<number | null>(null);
 
@@ -128,7 +127,6 @@ const NextGenInnovationHub2029: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       <Helmet>
@@ -142,7 +140,6 @@ const NextGenInnovationHub2029: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 INNOVATION HUB • JANUARY 2029
           </div>
-<<<<<<< HEAD
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2029
           </h1>
@@ -239,7 +236,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               <div className="text-4xl font-bold text-emerald-400 mb-2">{innovations.length}</div>
               <div className="text-lg opacity-90 mb-2">Active Innovations</div>
               <div className="text-sm opacity-75">In development and testing</div>
-=======
           <h1 className="text-6xl font-bold mb-6">🚀 Next-Gen Innovation Hub 2029</h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover and explore the most revolutionary technologies shaping humanity's future
@@ -281,11 +277,9 @@ const NextGenInnovationHub2029: React.FC = () => {
               Direct brain-computer interfaces
             </p>
             <div className="text-center">
-<<<<<<< HEAD
               <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
               <div className="text-lg opacity-90 mb-2">Success Rate</div>
               <div className="text-sm opacity-75">Proven technology reliability</div>
-=======
               <span className="px-2 py-1 bg-purple-500 text-white rounded-full text-xs font-semibold">
                 Infinite Possibilities
               </span>
@@ -300,7 +294,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               Computing across dimensions
             </p>
             <div className="text-center">
-<<<<<<< HEAD
               <div className="text-4xl font-bold text-purple-400 mb-2">∞</div>
               <div className="text-lg opacity-90 mb-2">Possibilities</div>
               <div className="text-sm opacity-75">Unlimited potential applications</div>
@@ -309,7 +302,6 @@ const NextGenInnovationHub2029: React.FC = () => {
               <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
               <div className="text-lg opacity-90 mb-2">Development</div>
               <div className="text-sm opacity-75">Continuous innovation cycle</div>
-=======
               <span className="px-2 py-1 bg-orange-500 text-white rounded-full text-xs font-semibold">
                 Revolutionary
               </span>
@@ -387,11 +379,9 @@ const NextGenInnovationHub2029: React.FC = () => {
         </div>
 
         <div className="text-center">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6">Ready to Innovate the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join our innovation hub and be part of creating the most revolutionary technologies in human history
-=======
           <h2 className="text-3xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl mb-8 opacity-90">
             Be part of the team that's building the future of humanity
@@ -401,19 +391,28 @@ const NextGenInnovationHub2029: React.FC = () => {
             <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Our Team
             </button>
-<<<<<<< HEAD
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Submit Your Innovation
-=======
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Explore Innovations
 >>>>>>> cursor/create-and-deploy-new-content-6f93
             </button>
           </div>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">NextGenInnovationHub2029</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/NextGenInnovationHub2029.tsx
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD:src/pages/NextGenInnovationHub2029.tsx.backup
+=======
 export default NextGenInnovationHub2029;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/pages/NextGenInnovationHub2029.tsx

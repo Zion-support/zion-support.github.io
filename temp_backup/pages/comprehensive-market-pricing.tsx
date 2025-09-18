@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const comprehensive-market-pricing: React.FC = () => {
   return (
@@ -19,4 +17,5 @@ const comprehensive-market-pricing: React.FC = () => {
   );
 };
 
-export default comprehensive-market-pricing;
+
+export default AdvancedQuantumComputing2026;

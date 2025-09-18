@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ai-autonomous-research-assistant: React.FC = () => {
   return (
@@ -9,4 +8,3 @@ const ai-autonomous-research-assistant: React.FC = () => {
   );
 };
 
-export default ai-autonomous-research-assistant;

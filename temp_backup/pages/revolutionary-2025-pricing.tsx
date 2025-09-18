@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const revolutionary-2025-pricing: React.FC = () => {
   return (

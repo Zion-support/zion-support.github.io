@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ai-workflow-orchestrator: React.FC = () => {
   return (
@@ -9,4 +8,3 @@ const ai-workflow-orchestrator: React.FC = () => {
   );
 };
 
-export default ai-workflow-orchestrator;

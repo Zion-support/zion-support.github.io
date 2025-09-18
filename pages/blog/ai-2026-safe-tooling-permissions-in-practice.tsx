@@ -1,31 +1,19 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
 
-export default function SafeToolingPermissionsInPractice2026() {
+const Ai2026SafeToolingPermissionsInPractice: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>Safe Tooling Permissions — In Practice (2026) | Zion Tech Group</title>
-        <meta name="description" content="Risk‑tiered adapters, scoped credentials, and approvals to keep agents safe." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-safe-tooling-permissions-in-practice" />
+        <title>Ai2026SafeToolingPermissionsInPractice - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026SafeToolingPermissionsInPractice blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Safe Tooling Permissions — In Practice (2026)</h1>
-        <p>
-          Implement practical controls to ensure safe tool use by agents. Scope access, monitor usage, and
-          require approvals proportionate to risk and business impact.
-        </p>
-
-        <h2>Implementation Checklist</h2>
-        <ul>
-          <li>Adapter registry with risk tiers and budgets</li>
-          <li>Short‑lived credentials and secrets hygiene</li>
-          <li>Runtime approvals with audit trails</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026SafeToolingPermissionsInPractice</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 

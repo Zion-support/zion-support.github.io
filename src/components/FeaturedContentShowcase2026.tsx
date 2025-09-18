@@ -1,10 +1,5 @@
 import React from 'react';
-
-const COMPONENT: React.FC = () => {
-  return (
-      </div>
     </div>
   );
-};
-
-export default COMPONENT;
+  };
+export default FeaturedContentShowcase2026;

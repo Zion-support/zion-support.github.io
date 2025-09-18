@@ -1,29 +1,4 @@
 ---
-title: "AI 2026: Production Safety Checklist"
-description: "A practical checklist to ship safer agent changes with eval‑gated rollouts and quick rollbacks."
-created: 2025-09-16
-tags:
-  - Safety
-  - Change Management
-  - Reliability
-  - Evals
-  - 2026
-status: published
-url: /blog/ai-2026-production-safety-checklist
-featured: true
-reading_time: "10 min read"
----
-
-This checklist operationalizes safe change for agent systems:
-
-1. Pre-merge evaluation gates pass with target thresholds
-2. Canary release with live guardrails and incident hooks
-3. Auto-rollback policy with SLO-aware triggers
-4. Audit evidence capture (traces, metrics, approvals)
-
-Use it as a baseline for your org and extend with domain-specific controls.
-
----
 title: "AI 2026: Production Safety Checklist for Autonomous Agents"
 description: "A pragmatic, eval-driven checklist to safely operate autonomous agents in production."
 date: 2025-09-15

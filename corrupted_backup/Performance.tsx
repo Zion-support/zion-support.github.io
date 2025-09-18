@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Performance: React.FC = () => {
   return (
@@ -9,4 +8,3 @@ const Performance: React.FC = () => {
   );
 };
 
-export default Performance;

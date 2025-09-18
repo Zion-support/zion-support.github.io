@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltraAdvancedQuantumMatrixBackground: React.FC = () => {
   return (

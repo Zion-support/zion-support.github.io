@@ -10,7 +10,5 @@ const SupportWidget = () => {
       </div>
     </div>
   );
-
-};
-
+  };
 export default SupportWidget;

@@ -3,7 +3,7 @@ import React from 'react';
 const NextGenInnovationHub2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
@@ -21,7 +21,7 @@ const NextGenInnovationHub2027: React.FC = () => {
         </div>
       </div>
 
-      {/* Innovation Categories */}
+      {/* Innovation Categories */};
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">Revolutionary Innovation Categories</h2>
@@ -31,7 +31,7 @@ const NextGenInnovationHub2027: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {/* AI & Consciousness */}
+          {/* AI & Consciousness */};
           <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI & Consciousness</h3>
@@ -63,7 +63,7 @@ const NextGenInnovationHub2027: React.FC = () => {
             </div>
           </div>
 
-          {/* Quantum Technologies */}
+          {/* Quantum Technologies */};
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Technologies</h3>
@@ -95,7 +95,7 @@ const NextGenInnovationHub2027: React.FC = () => {
             </div>
           </div>
 
-          {/* Neural Interfaces */}
+          {/* Neural Interfaces */};
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
@@ -127,7 +127,7 @@ const NextGenInnovationHub2027: React.FC = () => {
             </div>
           </div>
 
-          {/* Space Technology */}
+          {/* Space Technology */};
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
@@ -159,7 +159,7 @@ const NextGenInnovationHub2027: React.FC = () => {
             </div>
           </div>
 
-          {/* Biotechnology */}
+          {/* Biotechnology */};
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Biotechnology</h3>
@@ -191,7 +191,7 @@ const NextGenInnovationHub2027: React.FC = () => {
             </div>
           </div>
 
-          {/* Metaverse & VR */}
+          {/* Metaverse & VR */};
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌐</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Metaverse & VR</h3>
@@ -220,7 +220,10 @@ const NextGenInnovationHub2027: React.FC = () => {
               <span className="px-3 py-1 bg-violet-500/50 rounded-full text-xs font-semibold">
                 40+ Active Projects
               </span>
-        {/* Success Metrics */}
+            </div>
+          </div>
+        </div>
+
         <div className="bg-gradient-to-r from-indigo-600/20 to-pink-600/20 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Innovation Hub Success Metrics</h2>
@@ -249,6 +252,13 @@ const NextGenInnovationHub2027: React.FC = () => {
               <div className="text-5xl font-bold text-cyan-400 mb-2">∞</div>
               <div className="text-lg font-semibold mb-2">Possibilities</div>
               <div className="text-sm opacity-80">Infinite potential for innovation</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */};
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Join the Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Be part of the team that's building the future of technology
           </p>
@@ -265,3 +275,10 @@ const NextGenInnovationHub2027: React.FC = () => {
             >
               Partner With Us
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+  };
+export default NextGenInnovationHub2027;
