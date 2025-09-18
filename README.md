@@ -230,11 +230,8 @@ cd zion.app
 - Quantum computing platforms
 - Custom AI solutions
 - Full-stack digital transformation
->>>>>>> origin/seo-improvements-clean
 
 ## 📞 Contact Information
-
-<<<<<<< HEAD
 # Start development server
 npm run dev
 ```
@@ -455,7 +452,6 @@ For support and questions:
 ---
 
 **Built with ❤️ by the Zion Holdings team**
-=======
 - **Phone**: +1 302 464 0950
 - **Email**: kleber@ziontechgroup.com
 - **Address**: 364 E Main St STE 1008, Middletown DE 19709
@@ -649,4 +645,3 @@ using `actions/upload-artifact@v3`. Visit a workflow run and download the
 ## Notes
 - Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
 - For enterprise usage, add authentication and stronger rate limiting.
->>>>>>> origin/seo-improvements-clean
