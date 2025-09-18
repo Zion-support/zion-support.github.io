@@ -1,15 +1,15 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-19T00:15:00Z (refresh 2025-09-19T00:15:00Z-5)
 [build]
-  # Build the Next.js site located in the monorepo subdirectory from the repo root
-  base = "zion-website"
+  # Build the Vite React site from the repository root
+  base = "."
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  publish = "dist"
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-19T00:15:00Z-5
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=6144"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
@@ -17,9 +17,6 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-## Use the official Next.js plugin for routing, SSR/ISR, and functions
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [functions]
   # Functions live at the repository root
@@ -219,7 +216,12 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-## Note: Do not add SPA fallback for Next.js; plugin handles routing.
+# SPA fallback for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 ## End of Netlify configuration
 # No-op: trigger deploy 2025-09-19T00:15:00Z (refresh 2025-09-19T00:15:00Z-5)
 # trigger: 2025-09-19T00:15:00Z (refresh) re-run-6
