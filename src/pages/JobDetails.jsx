@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Briefcase } from '@/components/icons';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Calendar, Clock, DollarSign, Briefcase } from '../components/icons';
 import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
-import { useAuth } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '@/components/SEO';
-import { useWhitelabel } from '@/context/WhitelabelContext';
+import { useAuth } from '../hooks/useAuth';
+import useJobDetails from '../hooks/useJobDetails';
+import { ApplyToJobModal } from '../components/messaging/job-application';
+import SEO from '../components/SEO';
+import { useWhitelabel } from '../context/WhitelabelContext';
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { jobId } = useParams();

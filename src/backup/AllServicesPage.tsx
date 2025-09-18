@@ -1,5 +1,5 @@
 import React from 'react';
-import { MicroSaasServicesShowcase } from '@/components/services/MicroSaasServicesShowcase';
+import { MicroSaasServicesShowcase } from '../components/services/MicroSaasServicesShowcase';
 import { Sparkles, Star, Zap, Brain } from 'lucide-react';
 
 export default function AllServicesPage() {

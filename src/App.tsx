@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 // Sidebar is optional in this build; component may be disabled
 // import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
+// import { AccessibilityControls } from './components/AccessibilityControls';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
@@ -62,14 +62,14 @@ const LoadingSpinner = () => (
 );
 
 const App = () => {
-  // const [sidebarOpen, setSidebarOpen] = useState(false); // Commented out unused state
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   
   return (
     <EnhancedErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <div className="min-h-screen bg-white">
               <Header />
               <main className="flex-1">
                 <Suspense fallback={<LoadingSpinner />}>
@@ -121,7 +121,6 @@ const App = () => {
                   </Routes>
                 </Suspense>
               </main>
-              
               <Footer />
               <SonnerToaster />
             </div>

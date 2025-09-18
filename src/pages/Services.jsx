@@ -1,7 +1,7 @@
 import React from 'react';
-// import { SEO } from '@/components/SEO';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
-// import { servicesCatalog } from '@/data/servicesCatalog';
+import { servicesCatalog } from '../data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 export default function Services() {
     const contact = {
@@ -11,7 +11,7 @@ export default function Services() {
         website: 'https://ziontechgroup.com'
     };
     return (<>
-			{/* <SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/> */}
+			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/>
 
 			<main className="min-h-screen bg-zion-blue pt-24 pb-20">
 				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ export default function Services() {
 					</div>
 
 					<div className="grid grid-cols-1 gap-12">
-						{/* {servicesCatalog.map(category => (<section key={category.slug}>
+						{servicesCatalog.map(category => (<section key={category.slug}>
 								<h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">{category.name}</h2>
 								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 									{category.items.map(item => (<div key={item.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan transition-all">
@@ -51,7 +51,7 @@ export default function Services() {
 											</div>
 										</div>))}
 								</div>
-							</section>))} */}
+							</section>))}
 					</div>
 
 					<section className="mt-16">

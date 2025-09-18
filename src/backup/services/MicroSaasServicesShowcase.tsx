@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
+import { Input } from '../components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { 
   Search, 
   Filter, 
@@ -29,7 +29,7 @@ import {
   Lock,
   Settings
 } from 'lucide-react';
-import { MICRO_SAAS_SERVICES, MicroSaasService, getServiceByCategory, getFeaturedServices } from '@/data/microSaasServices';
+import { MICRO_SAAS_SERVICES, MicroSaasService, getServiceByCategory, getFeaturedServices } from '../data/microSaasServices';
 
 const categoryIcons = {
   'AI Services': Brain,

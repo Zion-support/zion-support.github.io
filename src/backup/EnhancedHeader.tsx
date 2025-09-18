@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
+import { Button } from '../components/ui/button';
 import { Phone, Mail, MapPin, Menu, X, Zap, Brain, Cloud, Code, Shield } from 'lucide-react';
 
 export function EnhancedHeader() {

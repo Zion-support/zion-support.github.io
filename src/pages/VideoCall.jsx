@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';
-import { Button } from '@/components/ui/button';
+import SEO from '../components/SEO';
+import { VideoCallRoom } from '../components/video/VideoCallRoom';
+import { Button } from '../components/ui/button';
 import { toast } from 'sonner';
 export default function VideoCall() {
     // useParams is typed as `any` in this environment due to missing type

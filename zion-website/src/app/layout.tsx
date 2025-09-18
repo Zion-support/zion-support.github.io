@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   },
   category: 'technology',
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
 
 export default function RootLayout({
   children,
@@ -98,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode
 =======
   children: React.ReactNode;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
 }) {
   return (
     <html lang="en" className={inter.className}>
@@ -135,5 +135,5 @@ export default function RootLayout({
   )
 =======
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
 }

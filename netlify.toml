@@ -1,7 +1,7 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-19T00:45:00Z (run-12)
 [build]
   base = "."
-  command = "npm install --include=optional && npm run build:netlify"
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = "dist"
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-19T00:45:00Z (run-12)
@@ -224,11 +224,7 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# SPA routing fallback - all routes go to index.html for Vite React app
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Note: Next.js routing is handled by @netlify/plugin-nextjs (touched 2025-09-19 00:45)
 
 # No-op: trigger deploy 2025-09-19 00:45 (run-12)
 

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 export type UpdateTag = 'Launch' | 'Guide' | 'Case Study' | 'Report' | 'Announcement' | 'Course' | 'Challenge' | 'Research' | 'Release' | 'Blueprint' | 'Field Guide' | 'Blog'
 
 export interface UpdateItem {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
   title: string
   summary: string
   href: string
@@ -11,31 +8,13 @@ export interface UpdateItem {
   tag: UpdateTag
 }
 
-<<<<<<< HEAD
-    href: '/updates/ai-governance-maturity-model-2026',
-    date: '2025-09-16',
-    tag: 'Framework'
-  },
-  {
-    title: 'Guide: Production RAG Latency Budgets (2026)',
-    summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
-    href: '/blog/ai-2026-production-rag-latency-budgets',
-    date: '2025-09-16',
-    tag: 'Guide'
-  },
-  {
-    title: 'Launch: Real-Time Agent Cost Optimizer v1.0',
-    summary: 'Automated routing and dynamic budgets to reduce agent inference costs by 27%.',
-    href: '/updates/real-time-agent-cost-optimizer-1-0',
-    date: '2025-09-16',
-=======
 export const updates: UpdateItem[] = [
+  // Fresh content added 2025-09-15
   {
     title: 'Launch: Agentic Ops Dashboard (v1.0)',
     summary: 'Real-time health, SLIs, and policy signals for agents and copilots. Purpose-built dashboards and alerts.',
     href: '/updates/agentic-ops-dashboard-1-0',
     date: '2025-09-15',
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
     tag: 'Launch'
   },
   {
@@ -95,23 +74,17 @@ export const updates: UpdateItem[] = [
     tag: 'Blueprint'
   },
   {
+    title: 'Launch: Autonomous Sales Copilot v1.0',
+    summary: 'Operational framework for running autonomous agents with SLOs, guardrails, and runbooks.',
+    href: '/updates/autonomous-ops-sre-for-agents',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
+  {
     title: 'Launch: AI Agent Safety Certification (Beta)',
     summary: 'Comprehensive safety framework for production AI agents with evidence-based validation.',
     href: '/updates/ai-agent-safety-certification-beta',
     date: '2025-09-15',
     tag: 'Launch'
   }
-<<<<<<< HEAD
 ]
-
-// Export aliases for compatibility
-export type SiteUpdate = UpdateItem
-
-export const getLatestUpdates = (limit = 6): UpdateItem[] => {
-  const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
-  return [...siteUpdates]
-    .sort((a, b) => safeDate(b.date) - safeDate(a.date))
-    .slice(0, limit)
-=======
-]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
