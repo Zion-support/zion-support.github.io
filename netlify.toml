@@ -1,7 +1,7 @@
 [build]
-  base = "zion-website"
+  base = "."
   command = "npm run build"
-  publish = ".next"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
@@ -18,13 +18,13 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["public/**/*", "zion-website/public/**/*"]
+  included_files = ["public/**/*", "dist/**/*"]
 
 [build.processing]
   skip_processing = true
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
 
 [[headers]]
   for = "/assets/*"
