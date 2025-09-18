@@ -30,11 +30,7 @@
 [build.processing]
   skip_processing = true
 
-# SPA fallback for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Next.js handles routing; no SPA fallback redirect
 
 [[headers]]
   for = "/assets/*"
