@@ -3,114 +3,82 @@ dist/
 build/
 .next/
 out/
+
+# Dependencies
 node_modules/
 
 # Disabled/backup directories
 zion-os.disabled/
 zion-os/
 zion-website/
+zion-ai-assistant/
 zion.app/
 zion_academy/
-zion-ai-assistant/
-token/
-dao/
-server/
-netlify/
 src-clean/
-apps/
 apps.backup/
-automation/
 backup/
 backups/
 backup-merge-conflicts/
+backup-problematic-files/
 broken_components/
 broken_files_backup/
 app-disabled/
-app-minimal/
-api-backup/
 api.disabled/
 api.disabled.temp/
+api-backup/
+automation_backup/
 recovered-branches/
 
 # Generated files
-**/*.backup.*
-**/*.old.*
-**/*.disabled.*
-**/*.broken.*
-**/*.corrupted.*
-**/*.temp.*
-**/*.test.*
-**/*.spec.*
-**/*.config.*
-**/*.log
-**/*.lock
+*.min.js
+*.bundle.js
+*.chunk.js
+*.backup
+*.backup.*
+*.conflicted
+*.temp
 
-# Public assets
+# Logs and reports
+*.log
+*.txt
+*.md
+*.json
+*.tsv
+*.cjs
+*.py
+*.sh
+
+# Static files
 public/
+static/
 
-# Reports and logs
-**/*-report*
-**/*-summary*
-**/*-logs*
-**/automation-reports/
-**/performance-reports/
-**/link-reports/
-**/monitoring/
+# Test files
+__tests__/
+__mocks__/
+*.test.*
+*.spec.*
 
-# Scripts and automation
-**/*.sh
-**/*.py
-**/*.cjs
-**/*.mjs
-**/scripts/
-**/automation/
-**/pm2-*
-**/fix-*
-**/clean-*
-**/batch-*
-**/merge-*
-**/resolve-*
-**/systematic-*
-**/ultimate-*
-**/structural-*
-**/quick-*
-**/comprehensive-*
-**/enhanced-*
-**/complete-*
-**/app-optimizer.*
-**/improve-*
-**/find-*
-**/git-ops.*
-**/pr-manager.*
-**/merge-strategy.*
-**/resolve-and-merge-*
-**/merge-all-*
-**/merge-prs.*
-**/pr-*
-**/batch_*
-**/check_*
-**/commit-*
-**/complete_*
-**/deploy-*
-**/fix_*
-**/git_*
-**/health-*
-**/quick-*
-**/run-*
-**/start-*
-**/test-*
-**/ultimate-*
+# IDE files
+.vscode/
+.idea/
 
-# Specific file patterns
-**/Dockerfile*
-**/docker-compose*
-**/ecosystem.config.*
-**/bundle-analyzer.config.*
-**/csp-config.*
-**/vite.config.*
-**/postcss.config.*
-**/playwright.config.*
-**/cypress.config.*
-**/jest.config.*
-**/jest.setup.*
-**/test-utils.*
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Coverage
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Only lint src directory
+!src/
