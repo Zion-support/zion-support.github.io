@@ -105,7 +105,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
     },
     {
       id: 4,
@@ -136,7 +135,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
         "Reality Perception AI",
         "Consciousness Amplification",
         "Universal Communication"
->>>>>>> cursor/create-and-deploy-new-content-376e
       ],
       link: "/pages/QuantumNeuralFusion2026",
       status: "Advanced",
@@ -154,7 +152,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
         "Creative Synthesis"
       ],
       link: "/pages/SyntheticIntelligence2026",
->>>>>>> cursor/create-and-deploy-new-content-376e
       status: "Live Now",
       impact: "Transformative"
     }
@@ -582,7 +579,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
           <Play className={`w-5 h-5 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
         </button>
       </div>
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
     </div>
   );
 };

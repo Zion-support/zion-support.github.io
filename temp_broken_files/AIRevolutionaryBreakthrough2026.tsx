@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 import { Helmet } from 'react-helmet-async';
-=======
 
 const AIRevolutionaryBreakthrough2026: React.FC = () => {
   return (
@@ -250,7 +249,6 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {
       </main>
       
       <Footer />
-=======
       </div>
     </div>
   );

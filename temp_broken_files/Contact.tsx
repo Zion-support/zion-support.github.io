@@ -170,7 +170,6 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-=======
         </div>
       </section>
 
@@ -193,7 +192,6 @@ const Contact: React.FC = () => {
               We combine cutting-edge technology with proven business strategies to deliver 
               exceptional results for our clients.
             </p>
-=======
           </divdiv>
           </motion.div>
 
@@ -223,7 +221,6 @@ const Contact: React.FC = () => {
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
             ))}
-=======
             <div className="bg-gray-800/50 p-8 rounded-lg border border-gray-700">
               <h3 className="text-2xl font-bold mb-4 text-pink-400">Why Choose Us?</h3>
               <ul className="space-y-3">

@@ -14,7 +14,6 @@ const InteractiveTechShowcase: React.FC = () => {
     },
     {
       id: 2,
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
       name: 'Neural Reality Engine 2030',
       icon: '🌌',
       description: 'Fully immersive consciousness-driven virtual worlds',
@@ -155,7 +154,6 @@ const InteractiveTechShowcase: React.FC = () => {
         </div>
       </div>
 
-=======
       {/* Technology Comparison */}
       <div className="mt-16">
         <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h3>
@@ -232,7 +230,6 @@ const InteractiveTechShowcase: React.FC = () => {
 
   const currentTech = technologies[activeTech];
 
-=======
     quantum: {
       title: "Quantum Computing",
       subtitle: "Exponential Computational Power",
@@ -305,7 +302,6 @@ const InteractiveTechShowcase: React.FC = () => {
       color: "from-slate-600 to-gray-600",
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
-=======
       link: "/pages/AdvancedAnalyticsDashboard2026"
     }
   ];
@@ -328,10 +324,8 @@ const InteractiveTechShowcase: React.FC = () => {
     {
       id: 2,
       name: "Quantum Reality",
-=======
       name: "Quantum Computing Breakthrough",
       description: "Revolutionary quantum processors that solve complex problems in seconds.",
->>>>>>> origin/resolve-conflicts-and-improvements:src/components/InteractiveTechShowcase.tsx
       icon: "⚛️",
       gradient: "from-blue-600 to-cyan-600"
     },
@@ -413,7 +407,6 @@ const InteractiveTechShowcase: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD:temp_broken_files/InteractiveTechShowcase.tsx
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -486,7 +479,6 @@ const InteractiveTechShowcase: React.FC = () => {
               </button>
 export default InteractiveTechShowcase;
 export default InteractiveTechShowcase;
-=======
             </divdiv>
 export default InteractiveTechShowcase;
 
@@ -510,6 +502,4 @@ export default InteractiveTechShowcase;
           </div>
         </div>
 
-=======
 export default InteractiveTechShowcase;
->>>>>>> origin/resolve-conflicts-and-improvements:src/components/InteractiveTechShowcase.tsx

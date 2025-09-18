@@ -36,7 +36,6 @@ export default function Mobile({ }: MobileProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
 
 
 }

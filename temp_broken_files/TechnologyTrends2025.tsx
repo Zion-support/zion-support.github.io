@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const TechnologyTrends2025: React.FC = () => {
@@ -257,7 +256,6 @@ const TechnologyTrends2025: React.FC = () => {
           </div>
         </motion.div>
       </div>
-=======
     </div>
   );
 

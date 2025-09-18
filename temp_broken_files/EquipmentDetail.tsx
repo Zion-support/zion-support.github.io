@@ -181,7 +181,6 @@
 
 
 export default EquipmentDetail;
-=======
 import React from 'react';
 
 const function EquipmentDetail() {: React.FC = () => {

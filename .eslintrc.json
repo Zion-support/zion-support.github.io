@@ -55,7 +55,6 @@
     "temp_exclude",
     "dist",
     "node_modules",
-<<<<<<< HEAD
     "src_backup_temp",
     "temp-backup",
     "temp-problematic-pages",

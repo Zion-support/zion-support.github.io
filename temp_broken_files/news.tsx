@@ -1159,7 +1159,6 @@ export default function News() {
     </>
   );
 }
-=======
 import React from "react";
 
 const function News() { = () => {

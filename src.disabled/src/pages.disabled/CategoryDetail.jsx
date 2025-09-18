@@ -36,7 +36,6 @@ export default function CategoryDetail({ }: CategoryDetailProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
 
 
 }

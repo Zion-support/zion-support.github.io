@@ -232,7 +232,6 @@ export default function QuantumTradingAlgorithm() {
     </Layout>
   );
 }
-=======
 import React from "react";
 
 const function QuantumTradingAlgorithm() { = () => {

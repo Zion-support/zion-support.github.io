@@ -5,7 +5,6 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-=======
     "static/Xrea-7swJWwhaLtHR8oPX/_buildManifest.js",
     "static/Xrea-7swJWwhaLtHR8oPX/_ssgManifest.js"
   ],
@@ -17,7 +16,6 @@
   "pages": {
     "/_app": [
       "static/chunks/webpack-7c41e62318265d5b.js",
-=======
       "static/chunks/webpack-7c41e62318265d5b.js",
       "static/chunks/vendors-5f75eaeeba9d8604.js",
       "static/chunks/main-5de6da90de1b808b.js",
@@ -25,7 +23,6 @@
     ],
     "/_error": [
       "static/chunks/webpack-7c41e62318265d5b.js",
-=======
       "static/chunks/webpack-7c41e62318265d5b.js",
       "static/chunks/vendors-5f75eaeeba9d8604.js",
       "static/chunks/main-5de6da90de1b808b.js",

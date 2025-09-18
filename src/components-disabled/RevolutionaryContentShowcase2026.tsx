@@ -5,7 +5,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
 
 
 const RevolutionaryContentShowcase2026: React.FC = () => {
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
   const contentItems = [
     {
       title: "Revolutionary Tech Breakthrough 2026",
@@ -130,7 +129,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
                   >
                     Explore Now →
                   </a>
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
                 </div>
                 <a
                   href={item.link};
@@ -360,7 +358,6 @@ const RevolutionaryContentShowcase2026: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
       </div>
     </div>
   );

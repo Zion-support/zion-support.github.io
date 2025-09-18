@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 const NeuralInterfaceBreakthrough2026: React.FC = () => {
   return (
@@ -12,7 +11,6 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">NeuralInterfaceBreakthrough2026</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 
 const NeuralInterfaceBreakthrough2026: React.FC = () => {
   return (
@@ -292,7 +290,6 @@ const NeuralInterfaceBreakthrough2026: React.FC = () => {
               Contact Neural Team
             </button>
           </div>
->>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>

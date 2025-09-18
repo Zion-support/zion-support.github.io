@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> cursor/create-and-deploy-new-content-6f93
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -98,7 +97,6 @@ import {
   Brain as BrainIconDup,
   Rocket as RocketIconDup,
   Leaf as LeafIconDup
->>>>>>> cursor/create-and-deploy-new-content-6f93
   Zap as ZapIcon,
   Shield as ShieldIcon,
   Cloud as CloudIcon,
@@ -129,9 +127,6 @@ import {
   Phone as PhoneIcon2,
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
->>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> cursor/create-and-deploy-new-content-79ca
->>>>>>> cursor/create-and-deploy-new-content-6f93
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
@@ -259,7 +254,6 @@ export default function ComprehensiveServicesLanding2027() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
             className="max-w-2xl mx-auto mb-8"
           >
             <div className="relative">
@@ -283,7 +277,6 @@ export default function ComprehensiveServicesLanding2027() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
             className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -308,7 +301,6 @@ export default function ComprehensiveServicesLanding2027() {
             </div>
           </divdiv>
           </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
         </div>
       </section>
 
@@ -318,7 +310,6 @@ export default function ComprehensiveServicesLanding2027() {
           <divdiv 
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
@@ -332,14 +323,12 @@ export default function ComprehensiveServicesLanding2027() {
             </p>
           </divdiv>
           </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
 
           {/* Category Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {categories.map((category, index) => (
               <divbutton
               <motion.button
->>>>>>> cursor/create-and-deploy-new-content-6f93
                 key={category.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -355,7 +344,6 @@ export default function ComprehensiveServicesLanding2027() {
                 <div className="text-cyan-400 font-medium">{category.count} Services</div>
               </divbutton>
               </motion.button>
->>>>>>> cursor/create-and-deploy-new-content-6f93
             ))}
           </div>
         </div>
@@ -367,7 +355,6 @@ export default function ComprehensiveServicesLanding2027() {
           <divdiv 
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
@@ -383,14 +370,12 @@ export default function ComprehensiveServicesLanding2027() {
             </p>
           </divdiv>
           </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
 
           {/* Services Grid */}
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
               <divdiv
               <motion.div
->>>>>>> cursor/create-and-deploy-new-content-6f93
                 key={service.id}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -481,7 +466,6 @@ export default function ComprehensiveServicesLanding2027() {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
                       className="border-t border-white/20 bg-white/5"
                     >
                       <div className="p-6">
@@ -548,7 +532,6 @@ export default function ComprehensiveServicesLanding2027() {
                   )}
                 </AnimatePresence>
               </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
             ))}
 
             {/* No Results Message */}
@@ -557,7 +540,6 @@ export default function ComprehensiveServicesLanding2027() {
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -565,7 +547,6 @@ export default function ComprehensiveServicesLanding2027() {
                 <p className="text-gray-400">Try adjusting your search or category selection</p>
               </divdiv>
               </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
             )}
           </div>
         </div>
@@ -577,7 +558,6 @@ export default function ComprehensiveServicesLanding2027() {
           <divdiv 
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
->>>>>>> cursor/create-and-deploy-new-content-6f93
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20"
@@ -632,7 +612,6 @@ export default function ComprehensiveServicesLanding2027() {
             </div>
           </divdiv>
           </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-6f93
         </div>
       </section>
     </div>

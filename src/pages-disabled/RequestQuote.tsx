@@ -1,6 +1,5 @@
 
 import React from 'react';
-<<<<<<< HEAD
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import { SEO } from "@/components/SEO";
 import Header from "@/components/Header";
@@ -96,7 +95,6 @@ export default function RequestQuote() {
       
       <Footer />
     </div>
-=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 
@@ -318,6 +316,5 @@ export default function RequestQuote() {
         </div>
       </main>
     </>
->>>>>>> origin/website-improvements-v2
   );
 }

@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Dna, 
@@ -22,13 +20,10 @@ import {
   Syringe
 } from 'lucide-react';
 
->>>>>>> origin/merge-new-content-1757989975
 const AdvancedBiotechAI2026: React.FC = () => {
   return (
-<<<<<<< HEAD
                 </div>
               </div>
-=======
     <>
       <Helmet>
         <title>Advanced Biotech AI 2026 - Zion Tech Group</title>
@@ -184,7 +179,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
               <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
                 Free Consultation
               </button>
->>>>>>> origin/merge-new-content-1757989975
             </div>
           </div>
         </section>

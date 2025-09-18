@@ -121,7 +121,6 @@ export default function PricingPage() {
     : microSaasServices.filter(service => service.category === selectedCategory);
 
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
-=======
 import React from "react";
 
 const function PricingPage() { = () => {

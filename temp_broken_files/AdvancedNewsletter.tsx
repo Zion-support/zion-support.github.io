@@ -39,7 +39,6 @@
 
 
 export default AdvancedNewsletter;
-=======
 import React from "react";
 
 const function AdvancedNewsletter() { = () => {

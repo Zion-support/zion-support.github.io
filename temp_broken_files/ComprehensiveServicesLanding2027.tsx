@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-=======
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -506,7 +505,6 @@ const ComprehensiveServicesLanding2027: React.FC = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">ComprehensiveServicesLanding2027</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
-=======
                 </div>
               </div>
             </div>
