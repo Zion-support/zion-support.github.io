@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { SEO } from "../../components/SEO";
+=======
+import { SEO } from "@/components/SEO";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
     const features = [

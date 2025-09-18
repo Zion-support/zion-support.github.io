@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, CheckCircle, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
+<<<<<<< HEAD
 import { Input } from '../components/ui/input';
+=======
+import { Input } from '@/components/ui/input';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 
 export function NewsletterSection() {
   const [email, setEmail] = useState('');

@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { SEO } from "../components/SEO";
+=======
+import { SEO } from "../components/SEO.jsx";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket } from 'lucide-react';
 const AISolutions = () => {
     const aiServices = [

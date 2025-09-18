@@ -1,8 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 import { SEO } from "../components/SEO";
 import { GradientHeading } from "../components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { Link } from "react-router-dom";
 import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, Users, Briefcase, Zap, Globe, Shield } from "lucide-react";
 export default function HowItWorks() {
