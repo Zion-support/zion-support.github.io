@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+# Build artifacts and generated files
+dist/
+.next/
+node_modules/
+*.min.js
+*.bundle.js
+=======
 # Ignore all build artifacts and disabled directories
 node_modules/
 .next/
@@ -5,6 +13,7 @@ out/
 build/
 dist/
 coverage/
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0fd2
 
 # Disabled and backup directories
 zion-os/
@@ -25,6 +34,28 @@ app-disabled/
 broken_components/
 broken_files_backup/
 
+<<<<<<< HEAD
+# Build outputs
+build/
+out/
+
+# Service worker files
+sw.js
+service-worker.js
+
+# Config files that don't need linting
+*.config.js
+postcss.config.js
+tailwind.config.js
+next.config.js
+
+# Static files
+public/
+static/
+
+# Backup files
+*.backup
+=======
 # Config files
 *.config.js
 *.config.ts
@@ -52,6 +83,7 @@ babel.config.cjs
 **/integration.js
 
 # Legacy and backup files
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0fd2
 *.backup.*
 *.backup
 *_backup.*
@@ -71,6 +103,19 @@ automation/
 __tests__/
 __mocks__/
 
+<<<<<<< HEAD
+# Test artifacts
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+=======
 # Generated files
 *.generated.*
 *.auto.*
@@ -87,3 +132,4 @@ __mocks__/
 *.tmp
 *.temp
 *~
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0fd2
