@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -389,3 +390,5 @@ const NextGenAIShowcase2026 = () => {
 };
 
 export default NextGenAIShowcase2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

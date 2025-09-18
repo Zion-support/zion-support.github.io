@@ -1,192 +1,24 @@
-
-
-
-
 import React from 'react';
-const AIPoweredITAssetManagement = () => {
-  const features = [
-import React from 'react';
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  Monitor, Brain, Cpu, Zap, Shield, Globe,
+import { Helmet } from 'react-helmet-async';
 
-
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
-  Database, Network, Server, Laptop, Smartphone
-} from 'lucide-react',
-const AIPoweredITAssetManagement = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Asset Discovery",
-      description: "Intelligent detection and cataloging of all IT assets across your network",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Monitor,
-      title: "Real-Time Monitoring",
-      description: "Continuous monitoring and health assessment of all IT assets",
-      color: "from-blue-500 to-cyan-500"
-
-    },
-    {
-      icon: Shield,
-      title: "Security Compliance",
-      description: "Automated security audits and compliance monitoring for all assets",
-
-      color: "from-emerald-500 to-teal-500"
-
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-
-
-  ],
-  const asset_types = [;
-      description: "AI-driven insights for asset lifecycle management and optimization",
-      color: "from-red-500 to-orange-500"
-    }
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-  ],
-  const assetTypes = [
-
-    "Hardware devices (servers, workstations, mobile devices)",
-    "Software licenses and applications",
-    "Network infrastructure and equipment",
-    "Cloud resources and virtual machines",
-    "Security devices and appliances",
-
-
-    "Peripheral devices and accessories",
-    "Peripheral devices and accessories"
-  ],
-
-
-
-  const benefits = [
-
-    {
-      icon: DollarSign,
-      title: "Cost Optimization",
-      value: "35%",
-
-      description: "Reduction in IT asset costs"
-    },
-    {
-      icon: Clock,
-      title: "Time Savings",
-      value: "60%",
-      description: "Faster asset management"
-    },
-    {
-      icon: Shield,
-      title: "Security Improvement",
-      value: "90%",
-      description: "Better security compliance"
-    },
-    {
-      icon: TrendingUp,
-      title: "Efficiency Boost",
-      value: "200%",
-      description: "Increased operational efficiency"
-
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-  ],
-  const capabilities = [
-    "Automated asset discovery and inventory",
-    "Real-time health monitoring and alerts",
-    "Predictive maintenance scheduling",
-    "License compliance management",
-    "Security vulnerability assessment",
-    "Asset lifecycle optimization",
-    "Cost allocation and tracking",
-    "Integration with existing IT tools"
-
-
-
-
-
+const ai-powered-it-asset-management: React.FC = () => {
   return (
-
-  ],
-  const capabilities = [
-    "Automated asset discovery and inventory",
-    "Real-time health monitoring and alerts",
-    "Predictive maintenance scheduling",
-    "License compliance management",
-    "Security vulnerability assessment",
-    "Asset lifecycle optimization",
-    "Cost allocation and tracking",
-    "Integration with existing IT tools"
-
-
-
-
-  ];
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-6 py-20">
-        <h1 className="text-4xl font-bold text-center mb-8">
-          AI-Powered IT Asset Management
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-gray-700">{feature}</p>
-            </div>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-powered-it-asset-management | Zion Tech Group</title>
+        <meta name="description" content="ai-powered-it-asset-management - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-powered-it-asset-management</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
 };
+<<<<<<< HEAD
 export default AIPoweredITAssetManagement;
   ],
 
@@ -1471,4 +1303,6 @@ export default AIPoweredITAssetManagement,
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 

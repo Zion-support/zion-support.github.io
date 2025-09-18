@@ -16,14 +16,14 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-// Data imports temporarily disabled due to module resolution conflicts
-import dynamic from 'next/dynamic';
-import AdvancedAutomationBanner2026 from './AdvancedAutomationBanner2026';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
+<<<<<<< HEAD
 import InnovativeServicesShowcase2026 from './InnovativeServicesShowcase2026';
 import RevolutionaryContentBanner2026 from './RevolutionaryContentBanner2026';
 import InteractiveFeatures from './InteractiveFeatures';
 import ContentShowcase from './ContentShowcase';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
@@ -53,6 +53,7 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+<<<<<<< HEAD
     // Featured content (Sept 18, 2025)
     {
       title: 'AI-Powered Business Transformation Guide',
@@ -116,6 +117,8 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       gradient: 'from-emerald-500 to-cyan-500'
 >>>>>>> 06262d699328 (feat: add new content, interactive features, and homepage improvements)
     },
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     // Newly added content (Sept 16, 2025)
     {
       title: 'Low‑Latency Agent Observability (2026)',
@@ -404,9 +407,6 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
     }
   ];
 
-  const NewContentAdBanner = dynamic(() => import('../src/components/NewContentAdBanner'), { ssr: false });
-  const ContentSpotlight = dynamic(() => import('../src/components/ContentSpotlight'), { ssr: false });
-
   const itemVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -621,9 +621,6 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
       {/* Latest Insights */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Automated new content banners */}
-          <NewContentAdBanner />
-          <ContentSpotlight />
           {/* New Content Promo */}
           <div className="mb-8 rounded-2xl p-6 bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -822,14 +819,7 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
         </div>
       </section>
 
-      {/* Revolutionary Content Banner 2026 */}
-      <RevolutionaryContentBanner2026 />
-
-      {/* Innovative Services Showcase 2026 */}
-      <InnovativeServicesShowcase2026 />
-
-      {/* Advanced Automation Banner 2026 */}
-      <AdvancedAutomationBanner2026 />
+      {/* Additional Content Sections - Components temporarily disabled */}
 
       {/* Interactive Features Section */}
       <InteractiveFeatures />

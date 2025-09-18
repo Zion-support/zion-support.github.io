@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -334,3 +335,5 @@ const UltimateContentHub2026 = () => {
 };
 
 export default UltimateContentHub2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

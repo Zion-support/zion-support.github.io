@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -274,3 +275,5 @@ export default function QuantumTradingAlgorithm() {
     </Layout>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

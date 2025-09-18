@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -505,3 +506,5 @@ Join the future of technology with our revolutionary services.
     </>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,32 +1,8 @@
+import React from 'react';
 
-'use client';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu,X;
-  X;
- } from 'lucide-react';
-import { useState  } from 'react';
-import { Dialog  } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon  } from '@heroicons/react/24/outline';
-const navigation = [;
-  { name: 'Home', href: '/' },{ name: 'About', href: '/about' },{ name: 'Services', href: '/services' },{ name: 'Solutions', href: '/solutions' },{ name: 'Research', href: '/research' },{ name: 'Contact', href: '/contact' }
-];
-  ];return (<nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
-import { 
-  Menu, 
-  X 
-} from 'lucide-react';
-
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  ];
-
-
+const Navigation: React.FC = () => {
   return (
+<<<<<<< HEAD
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -1418,6 +1394,12 @@ const Navigation = () => {
         </AnimatePresence>
       </div>
     </nav>
+=======
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Navigation</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
 };
 

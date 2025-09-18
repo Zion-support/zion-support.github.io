@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -175,3 +176,5 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
 };
 
 export default QuantumComputingRevolutionPromotionBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

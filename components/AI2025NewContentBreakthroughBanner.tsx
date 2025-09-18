@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 ArrowRightStarZapTrendingUpUsersAward
@@ -183,3 +184,5 @@ const AI2025NewContentBreakthroughBanner = () => {
 };
 
 export default AI2025NewContentBreakthroughBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

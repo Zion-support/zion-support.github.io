@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import {motion} from 'framer-motion';
@@ -109,191 +110,25 @@ const ComprehensivePricing2026 = (props: any) => {
               </p>
             </motion.div>
           )}
+=======
+
+const ComprehensivePricing2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ComprehensivePricing2026 | Zion Tech Group</title>
+        <meta name="description" content="ComprehensivePricing2026 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ComprehensivePricing2026</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
-      </section>
-"""
-      {/* Enterprise Plans */}""""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">""""
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}"""
-          >""""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'"""
-              Enterprise{' '}""""
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                Solutions;
-              </span>"""
-            </h2>""""
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Need custom solutions or enterprise-grade implementations? We;
-              offer tailored packages with dedicated support, custom;
-              development, and white-label options.
-            </p>"""
-""""
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">""""
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">""""
-                <div className="text-4xl mb-4">🏢</div>""""
-                <h3 className="text-xl font-bold text-white mb-2">
-                  Custom Development"""
-                </h3>""""
-                <p className="text-gray-300 text-sm mb-4">
-                  Tailored solutions built specifically for your business;
-                  requirements"""
-                </p>""""
-                <div className="text-2xl font-bold text-cyan-400 mb-2">
-                  Custom Pricing"""
-                </div>""""
-                <p className="text-xs text-gray-400">
-                  Based on scope and complexity;
-                </p>
-              </div>"""
-""""
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">""""
-                <div className="text-4xl mb-4">🤝</div>""""
-                <h3 className="text-xl font-bold text-white mb-2">
-                  White Label"""
-                </h3>""""
-                <p className="text-gray-300 text-sm mb-4">
-                  Rebrand our solutions as your own with full customization"""
-                </p>""""
-                <div className="text-2xl font-bold text-cyan-400 mb-2">
-                  From $5,000"""
-                </div>""""
-                <p className="text-xs text-gray-400">Monthly + setup fees</p>
-              </div>"""
-""""
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">""""
-                <div className="text-4xl mb-4">💎</div>""""
-                <h3 className="text-xl font-bold text-white mb-2">
-                  Premium Support"""
-                </h3>""""
-                <p className="text-gray-300 text-sm mb-4">
-                  24/7 dedicated support with dedicated account managers"""
-                </p>""""
-                <div className="text-2xl font-bold text-cyan-400 mb-2">
-                  From $2,000"""
-                </div>""""
-                <p className="text-xs text-gray-400">Monthly per service</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-"""
-      {/* CTA Section */}""""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""""
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}"""
-          >""""
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'"""
-              Ready to{' '}""""
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                Get Started;
-              </span>
-              ?"""
-            </h2>""""
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today for a personalized consultation, demo, or custom;
-              quote. Our team is ready to help you choose the perfect solution;
-              for your business."""
-            </p>""""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.div;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >"""
-                <Link""""
-                  to="/contact""""
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/60""""
-                >""""
-                  <span className="text-xl">🚀</span>"""
-                  Get Custom Quote""""
-                  <span className="text-xl">→</span>
-                </Link>
-              </motion.div>
-              <motion.div;
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >"""
-                <a""""
-                  href="tel:+13024640950""""
-                  className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 shadow-lg""""
-                >""""
-                  <span className="text-xl">📞</span>
-                  Call Now;
-                </a>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-"""
-      {/* Footer Info */}""""
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">""""
-        <div className="max-w-7xl mx-auto text-center">""""
-          <h3 className="text-2xl font-bold text-white mb-6">
-            Why Choose Our Pricing?"""
-          </h3>""""
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""""
-            <div className="text-center">""""
-              <div className="text-4xl mb-4">💰</div>""""
-              <h4 className="text-lg font-semibold text-white mb-2">
-                Transparent Pricing"""
-              </h4>""""
-              <p className="text-gray-300 text-sm">
-                No hidden fees, clear pricing structure, and flexible billing;
-                options.
-              </p>"""
-            </div>""""
-            <div className="text-center">""""
-              <div className="text-4xl mb-4">🎯</div>""""
-              <h4 className="text-lg font-semibold text-white mb-2">
-                Proven ROI"""
-              </h4>""""
-              <p className="text-gray-300 text-sm">
-                All services deliver measurable business value with documented;
-                ROI.
-              </p>"""
-            </div>""""
-            <div className="text-center">""""
-              <div className="text-4xl mb-4">💎</div>""""
-              <h4 className="text-lg font-semibold text-white mb-2">
-                Enterprise Support"""
-              </h4>""""
-              <p className="text-gray-300 text-sm">
-                24/7 support, dedicated account managers, and custom solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>);
+      </div>
+    </div>
+  );
 };
+
 export default ComprehensivePricing2026;
-
-export {ComprehensivePricing2026};
-
-export {ComprehensivePricing2026};
-
-export {ComprehensivePricing2026};
-
-export {ComprehensivePricing2026};
-
-export {ComprehensivePricing2026};
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</span>
-</motion>
-</motion>
-</motion>

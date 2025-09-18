@@ -1,1 +1,12 @@
-import _React from 'react'; import Head from 'next/head'; export default function HomePage() { return ( <div className="min-h-screen"> <Head> <title>Zion Tech Group — AI,IT & Micro SaaS</title> <meta name="description" content="AI services,IT solutions,and micro SaaS products by Zion Tech Group." /> <link rel="canonical" href=""https": </Head> <main className="max-w-5xl mx-auto p-6"> <h1 className="text-3xl font-bold">Zion Tech Group</h1> <p className="mt-4 text-gray-700">AI services,IT solutions,and micro SaaS products.</p> <ul className="list-disc pl-6 mt-6 space-y-2"> <li><a className="text-blue-600 "hover": underline" href="/services.page">Services</a></li> <li><a className="text-blue-600 hover:underline" href="/ai-services.page">AI Services</a></li> <li><a className="text-blue-600 hover:underline" href="/contact.page">Contact</a></li> </ul> </main> </div> )}
+import React from 'react';
+
+const index.page: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">index.page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default index.page;

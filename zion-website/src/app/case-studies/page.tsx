@@ -1,6 +1,10 @@
+
+import React from 'react'
+
 export default function CaseStudiesPage() {
   return (
     <div className="bg-black min-h-screen">
+<<<<<<< HEAD
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Case Studies</h1>
@@ -28,3 +32,12 @@ export default function CaseStudiesPage() {
     </div>
   )
 }
+=======
+      <div className="mx-auto max-w-3xl px-6 py-24 text-white">
+        <h1 className="text-3xl font-bold">Case Studies</h1>
+        <p className="mt-4 text-gray-300">Explore outcomes from organizations using our AI solutions.</p>
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

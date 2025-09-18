@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -532,3 +533,5 @@ export default function Events() {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 
@@ -100,97 +101,16 @@ const NeoFuturisticCard: React.FC<NeoFuturisticCardProps> = ({
   };
 
   const variantStyles = getVariantStyles();
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const NeoFuturisticCard: React.FC = () => {
   return (
-    <motion.div
-      ref={cardRef}
-      className={`relative overflow-hidden rounded-xl backdrop-blur-sm transition-all duration-300 cursor-pointer ${className}`}
-      style={{
-        background: variantStyles.background,
-        border: variantStyles.border,
-        boxShadow: variantStyles.shadow,
-        transformStyle: 'preserve-3d',
-        rotateX: springRotateX,
-        rotateY: springRotateY
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      onClick={onClick}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-    >
-      {/* Animated background pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent animate-pulse" />
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]" />
-      </div>
-
-      {/* Glowing border on hover */}
-      <motion.div
-        className="absolute inset-0 rounded-xl"
-        style={{
-          background: `linear-gradient(45deg, transparent, ${variantStyles.glow}, transparent)`,
-          opacity: 0
-        }}
-        animate={{
-          opacity: isHovered ? 0.6 : 0
-        }}
-        transition={{ duration: 0.3 }}
-      />
-
-      {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-cyan-400/50" />
-      <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-cyan-400/50" />
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-cyan-400/50" />
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-cyan-400/50" />
-
-      {/* Scanning line effect */}
-      <motion.div
-        className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-        animate={{
-          y: [0, '100%', 0]
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: 'linear'
-        }}
-      />
-
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400/60 rounded-full"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 1, 0.3]
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.2
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Radial glow overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/5 to-transparent" />
-
-      {/* Content */}
-      <div className="relative z-10 p-6">
-        {children}
-      </div>
-    </motion.div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NeoFuturisticCard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

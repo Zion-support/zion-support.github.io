@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -119,139 +120,15 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraFuturisticNeonBackground: React.FC = () => {
   return (
-    <div className={`relative min-h-screen bg-black overflow-hidden ${className}`}>
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 0 }}
-      />
-
-      {/* Gradient Overlays */}
-      <div className="fixed inset-0 bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20" style={{ zIndex: 1 }} />
-      <div className="fixed inset-0 bg-gradient-to-tl from-black via-cyan-900/20 to-pink-900/20" style={{ zIndex: 1 }} />
-
-      {/* Animated Neon Grid */}
-      <div className="fixed inset-0" style={{ zIndex: 2 }}>
-        <motion.div
-          className="absolute inset-0 opacity-20"
-          animate={{
-            backgroundPosition: ['0% 0%', '100% 100%'],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-          style={{
-            backgroundImage: `
-              linear-gradient(90deg, transparent 98%, rgba(100, 200, 255, 0.3) 100%),
-              linear-gradient(0deg, transparent 98%, rgba(100, 200, 255, 0.3) 100%)
-            `,
-            backgroundSize: '50px 50px',
-          }}
-        />
-      </div>
-
-      {/* Floating Neon Orbs */}
-      <div className="fixed inset-0" style={{ zIndex: 3 }}>
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 rounded-full"
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
-              background: `radial-gradient(circle, rgba(100, 200, 255, 0.8) 0%, rgba(100, 200, 255, 0.2) 70%, transparent 100%)`,
-              boxShadow: `0 0 20px rgba(100, 200, 255, 0.6), 0 0 40px rgba(100, 200, 255, 0.3)`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.5, 1, 0.5],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.3,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Content */}
-      <div className="relative" style={{ zIndex: 10 }}>
-        {children}
-      </div>
-
-      {/* Animated Border Glow */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 4 }}>
-        <motion.div
-          className="absolute inset-0 border border-transparent"
-          animate={{
-            boxShadow: [
-              '0 0 20px rgba(100, 200, 255, 0.3)',
-              '0 0 40px rgba(100, 200, 255, 0.6)',
-              '0 0 20px rgba(100, 200, 255, 0.3)',
-            ],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-      </div>
-
-      {/* Floating Data Streams */}
-      <div className="fixed inset-0" style={{ zIndex: 5 }}>
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-400 to-transparent"
-            style={{
-              left: `${10 + i * 12}%`,
-              top: '-32px',
-            }}
-            animate={{
-              y: [0, 1000],
-            }}
-            transition={{
-              duration: 8 + i * 2,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: i * 1.5,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Quantum Energy Field */}
-      <div className="fixed inset-0" style={{ zIndex: 6 }}>
-        <motion.div
-          className="absolute inset-0 rounded-full"
-          style={{
-            background: 'radial-gradient(circle, transparent 30%, rgba(100, 200, 255, 0.05) 70%, transparent 100%)',
-            transform: 'translate(-50%, -50%)',
-            left: '50%',
-            top: '50%',
-            width: '200%',
-            height: '200%',
-          }}
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticNeonBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

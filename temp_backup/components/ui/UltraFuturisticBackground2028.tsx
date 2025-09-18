@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -157,157 +158,17 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraFuturisticBackground2028: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-30"
-        style={{ zIndex: 0 }}
-      />
-
-      {/* Gradient Overlays */}
-      <div className="absolute inset-0 z-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-indigo-900/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-transparent to-black"></div>
-      </div>
-
-      {/* Animated Geometric Shapes */}
-      <div className="absolute inset-0 z-20 overflow-hidden">
-        {/* Floating Hexagons */}
-        <motion.div
-          className="absolute top-20 left-10 w-32 h-32 border border-purple-500/30 rotate-45"
-          animate={{
-            rotate: [45, 405],
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-20 w-24 h-24 border border-cyan-500/30 rotate-45"
-          animate={{
-            rotate: [45, -315],
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-20 left-1/4 w-40 h-40 border border-blue-500/30 rotate-45"
-          animate={{
-            rotate: [45, 405],
-            scale: [1, 1.1, 1],
-            opacity: [0.4, 0.7, 0.4]
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-
-        {/* Floating Circles */}
-        <motion.div
-          className="absolute top-1/3 left-1/3 w-16 h-16 border border-purple-500/20 rounded-full"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.2, 0.6, 0.2]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
-        <motion.div
-          className="absolute top-2/3 right-1/3 w-20 h-20 border border-cyan-500/20 rounded-full"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.7, 0.3]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
-        {/* Floating Triangles */}
-        <motion.div
-          className="absolute top-1/4 right-1/4 w-0 h-0 border-l-[20px] border-l-transparent border-b-[35px] border-b-purple-500/30 border-r-[20px] border-r-transparent"
-          animate={{
-            rotate: [0, 360],
-            y: [0, -20, 0]
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-1/3 left-1/2 w-0 h-0 border-l-[15px] border-l-transparent border-b-[25px] border-b-cyan-500/30 border-r-[15px] border-r-transparent"
-          animate={{
-            rotate: [0, -360],
-            y: [0, 15, 0]
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-      </div>
-
-      {/* Neon Grid Effect */}
-      <div className="absolute inset-0 z-30">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-cyan-500/5"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-cyan-500/5"></div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-40">
-        {children}
-      </div>
-
-      {/* Floating Particles */}
-      <div className="absolute inset-0 z-50 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
-            }}
-            animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0]
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut"
-            }}
-          />
-        ))}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2028</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default UltraFuturisticBackground2028;

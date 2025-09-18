@@ -1,5 +1,4 @@
 import React from 'react';
-
 const RevolutionaryContentShowcase2030: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 rounded-3xl p-16 mb-16 text-white relative overflow-hidden">
@@ -15,7 +14,6 @@ const RevolutionaryContentShowcase2030: React.FC = () => {
             revolutionary showcase featuring omniversal AI, reality synthesis, and interdimensional computing
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="bg-gradient-to-br from-violet-600/40 to-purple-600/40 backdrop-blur-sm rounded-2xl p-10 border border-violet-400/40 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🌌</div>
@@ -34,7 +32,10 @@ const RevolutionaryContentShowcase2030: React.FC = () => {
               Explore Revolutionary Tech →
             </a>
           </div>
+<<<<<<< HEAD
           
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-10 border border-cyan-400/40 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🧠</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Omniversal AI 2030</h3>
@@ -52,7 +53,6 @@ const RevolutionaryContentShowcase2030: React.FC = () => {
               Access Omniversal AI →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/40 to-teal-600/40 backdrop-blur-sm rounded-2xl p-10 border border-emerald-400/40 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🔮</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Reality Synthesis Engine</h3>
@@ -71,7 +71,6 @@ const RevolutionaryContentShowcase2030: React.FC = () => {
             </a>
           </div>
         </div>
-        
         <div className="text-center mt-16">
           <a href="/pages/RevolutionaryTech2030" className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-16 py-6 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl">
             🌟 Experience the Revolutionary Future →
@@ -80,6 +79,5 @@ const RevolutionaryContentShowcase2030: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default RevolutionaryContentShowcase2030;

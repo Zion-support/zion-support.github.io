@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -255,3 +256,5 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {
 };
 
 export default AIToolsInteractiveDemo2025PromotionBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

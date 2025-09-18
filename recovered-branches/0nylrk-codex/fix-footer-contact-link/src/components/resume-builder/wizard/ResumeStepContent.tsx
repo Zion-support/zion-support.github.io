@@ -1,78 +1,12 @@
+import React from 'react';
 
-import { TabsContent } from "@/components/ui/tabs";
-import { Resume } from "@/types/resume";
-import { BasicInfoForm } from '../forms/basic-info';
-import { WorkExperienceForm } from '../forms/WorkExperienceForm';
-import { EducationForm } from '../forms/EducationForm';
-import { SkillsForm } from '../forms/SkillsForm';
-import { CertificationsForm } from '../forms/CertificationsForm';
-import { PreviewResume } from '../PreviewResume';
-
-interface ResumeStepContentProps {
-  activeTab: string;
-  resume: Resume;
-  onNextStep: () => void;
-  onPrevStep: () => void;
-}
-
-export const ResumeStepContent = ({ 
-  onPrevStep 
-}: ResumeStepContentProps) => {
+const ResumeStepContent: React.FC = () => {
   return (
-    <>
-      <TabsContent value="basic-info">
-        <BasicInfoForm 
-          resumeId={resume?.id!} 
-          initialData={resume?.basic_info}
-          onSave={(data) => {
-            // Here you would typically save the data to your backend
-          }}
-          onComplete={onNextStep} 
-        />
-      </TabsContent>
-      
-      <TabsContent value="work-experience">
-        <WorkExperienceForm 
-          resumeId={resume?.id!}
-          workExperiences={resume?.work_experience || []}
-          onComplete={onNextStep}
-          onBack={onPrevStep}
-        />
-      </TabsContent>
-      
-      <TabsContent value="education">
-        <EducationForm 
-          resumeId={resume?.id!}
-          educationEntries={resume?.education || []}
-          onComplete={onNextStep}
-          onBack={onPrevStep}
-        />
-      </TabsContent>
-      
-      <TabsContent value="skills">
-        <SkillsForm
-          resumeId={resume?.id!}
-          skills={resume?.skills || []}
-          onComplete={onNextStep}
-          onBack={onPrevStep}
-        />
-      </TabsContent>
-      
-      <TabsContent value="certifications">
-        <CertificationsForm 
-          resumeId={resume?.id!}
-          certifications={resume?.certifications || []}
-          onComplete={onNextStep}
-          onBack={onPrevStep}
-        />
-      </TabsContent>
-      
-      <TabsContent value="preview">
-        <PreviewResume 
-          resume={resume as Resume} 
-          onBack={onPrevStep}
-        />
-      </TabsContent>
-    </>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ResumeStepContent</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
+
+export default ResumeStepContent;

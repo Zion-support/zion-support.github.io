@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -201,127 +202,15 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraFuturisticBackground2030: React.FC = () => {
   return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>
-      {/* Quantum Matrix Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Quantum Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }} />
-        </div>
-        
-        {/* Holographic Orbs */}
-        <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-30 blur-xl animate-pulse" />
-        <div className="absolute top-40 right-32 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-40 blur-lg animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-1/3 w-28 h-28 rounded-full bg-gradient-to-r from-green-400 to-teal-500 opacity-35 blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
-        
-        {/* Quantum Energy Waves */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute top-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-            animate={{
-              x: ['-100%', '100%'],
-              opacity: [0, 1, 0]
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          <motion.div
-            className="absolute top-3/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"
-            animate={{
-              x: ['100%', '-100%'],
-              opacity: [0, 1, 0]
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2
-            }}
-          />
-        </div>
-      </div>
-
-      {/* Interactive Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-
-      {/* Content Layer */}
-      <div className="relative z-10">
-        {children}
-      </div>
-
-      {/* Floating Tech Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Quantum Circuit Patterns */}
-        <motion.div
-          className="absolute top-1/4 right-20 w-16 h-16 border border-cyan-400 opacity-30"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        {/* Holographic Data Streams */}
-        <motion.div
-          className="absolute bottom-1/4 left-20 w-20 h-20 border border-purple-400 opacity-25 rounded-full"
-          animate={{
-            rotate: [360, 0],
-            scale: [1, 0.8, 1]
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        {/* Neural Network Nodes */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          {[...Array(6)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
-              style={{
-                left: `${Math.cos(i * Math.PI / 3) * 40}px`,
-                top: `${Math.sin(i * Math.PI / 3) * 40}px`
-              }}
-              animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.6, 1, 0.6]
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: i * 0.5
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Ambient Light Effects */}
-      <div className="absolute inset-0 bg-gradient-to-t from-transparent via-purple-900/20 to-transparent pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-900/20 to-transparent pointer-events-none" />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2030</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

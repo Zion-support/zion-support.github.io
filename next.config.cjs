@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Enable experimental features for better performance
   experimental: {
     optimizeCss: true,
@@ -174,3 +175,15 @@ module.exports = nextConfig;
 
 module.exports = nextConfig
 >>>>>>> origin/auto/autonomy-17186719616
+=======
+  // This is a Vite project, not Next.js
+  // This file is kept for compatibility but not used
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  }
+}
+
+module.exports = nextConfig
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
 import React, { useState } from 'react';
@@ -15,12 +13,10 @@ const InteractiveTechShowcase: React.FC = () => {
       name: "Revolutionary AI Consciousness",
       description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
       icon: "🧠",
-<<<<<<< HEAD
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
       link: "/pages/AIInnovationHub2026"
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
     },
@@ -36,7 +32,6 @@ const InteractiveTechShowcase: React.FC = () => {
     },
     {
       id: 3,
-<<<<<<< HEAD
       name: "Analytics Dashboard 2026",
       description: "AI-powered analytics with real-time insights and predictive modeling",
       icon: "📊",
@@ -47,7 +42,6 @@ const InteractiveTechShowcase: React.FC = () => {
     }
   ];
 
-=======
         
 import React, { useState, useEffect } from 'react';
         
@@ -152,7 +146,6 @@ const InteractiveTechShowcase: React.FC = () => {
               <div className="text-8xl mb-6 text-center animate-pulse">
                 {currentTech.icon}
               </div>
-<<<<<<< HEAD
               <h3 className="text-4xl font-bold mb-6 text-center">
                 {currentTech.name}
               </h3>
@@ -202,7 +195,6 @@ const InteractiveTechShowcase: React.FC = () => {
                 >
                   {currentTech.icon}
                 </motion.div>
-=======
         
                 </div>
                 <h3 className="text-xl font-bold mb-2">{tech.title}</h3>
@@ -247,8 +239,6 @@ const InteractiveTechShowcase: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="space-y-4">
             <h4 className="text-xl font-bold text-gray-900 mb-4">Key Features:</h4>
@@ -269,7 +259,6 @@ const InteractiveTechShowcase: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
         </div>
 
-<<<<<<< HEAD
         {/* Technology Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
@@ -289,7 +278,6 @@ const InteractiveTechShowcase: React.FC = () => {
             <div className="text-gray-300">Learning Capacity</div>
           </div>
         </div>
-=======
         
           </div>
         </div>
@@ -312,4 +300,3 @@ const InteractiveTechShowcase: React.FC = () => {
   );
 };
 
-export default InteractiveTechShowcase;

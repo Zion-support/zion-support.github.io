@@ -1,36 +1,12 @@
-import React, { Suspense } from 'react';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { PageSkeleton } from './components/LoadingSkeleton';
-import { usePerformance } from './hooks/usePerformance';
+import React from 'react';
 
-interface AppWrapperProps {
-  children: React.ReactNode;
-}
-
-export const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
-  const { isSupported, getPerformanceReport } = usePerformance();
-
-  // Log performance report in development
-  React.useEffect(() => {
-    if (import.meta.env.DEV && isSupported) {
-      const timer = setTimeout(() => {
-        const report = getPerformanceReport();
-        console.group('📊 Performance Report');
-        console.log('Overall Score:', `${report.metrics.overallScore}/100 (${report.rating})`);
-        console.log('Recommendations:', report.recommendations);
-        console.log('Timestamp:', report.timestamp);
-        console.groupEnd();
-      }, 5000); // Wait 5 seconds for metrics to stabilize
-
-      return () => clearTimeout(timer);
-    }
-  }, [isSupported, getPerformanceReport]);
-
+const AppWrapper: React.FC = () => {
   return (
-    <ErrorBoundary>
-      <Suspense fallback={<PageSkeleton />}>
-        {children}
-      </Suspense>
-    </ErrorBoundary>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AppWrapper</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
+
+export default AppWrapper;

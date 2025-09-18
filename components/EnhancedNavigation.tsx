@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -84,3 +85,5 @@ const EnhancedNavigation: React.FC = () => {
   );
 };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

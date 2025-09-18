@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -709,3 +710,5 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 };
 
 export default AIConsciousnessEvolutionPlatform;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

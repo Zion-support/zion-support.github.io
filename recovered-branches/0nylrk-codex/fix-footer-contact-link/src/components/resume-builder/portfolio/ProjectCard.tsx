@@ -1,99 +1,12 @@
+import React from 'react';
 
-import { useState } from 'react';
-import { PortfolioProject } from '@/types/resume';
-
-interface ProjectCardProps {
-  project: PortfolioProject;
-  onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void;
-}
-
-  
-  const handleDelete = () => {
-    if (project.id) {
-      onDelete(project.id);
-    }
-    setDeleteDialogOpen(false);
-  };
-  
+const ProjectCard: React.FC = () => {
   return (
-    <Card className="h-full flex flex-col">
-      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
-        {project.image_url ? (
-          <img 
-            src={project.image_url} 
-            alt={project.title} 
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-muted">
-            <FileText className="h-12 w-12 text-muted-foreground/50" />
-          </div>
-        )}
-      </div>
-      
-      <CardContent className="flex-grow pt-6">
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
-          
-          {project.description && (
-            <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
-          )}
-          
-          {project.technologies && project.technologies.length > 0 && (
-            <div className="flex flex-wrap gap-1 mt-2">
-                </Badge>
-              ))}
-            </div>
-          )}
-        </div>
-      </CardContent>
-      
-      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
-        <div className="flex gap-2">
-          {project.github_url && (
-            <a href={project.github_url} target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon">
-                <Github className="h-4 w-4" />
-              </Button>
-            </a>
-          )}
-          
-          {project.demo_url && (
-            <a href={project.demo_url} target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon">
-                <Link className="h-4 w-4" />
-              </Button>
-            </a>
-          )}
-        </div>
-        
-        <div className="flex gap-2">
-          <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
-            <Edit className="h-4 w-4" />
-          </Button>
-          <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)}>
-            <Trash2 className="h-4 w-4" />
-          </Button>
-        </div>
-      </CardFooter>
-      
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Delete Project</AlertDialogTitle>
-            <AlertDialogDescription>
-              Are you sure you want to delete this project? This action cannot be undone.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
-              Delete
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-    </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ProjectCard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default ProjectCard;

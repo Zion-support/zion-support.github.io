@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -219,223 +220,18 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   //     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   //   )
   // );
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const EnhancedSidebar2025: React.FC = () => {
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-            onClick={onClose}
-          />
-          
-          {/* Sidebar */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 to-black border-r border-gray-800 z-50 overflow-y-auto"
-          >
-            {/* Header */}
-            <div className="p-6 border-b border-gray-800">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                    <Rocket className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-lg font-bold text-white">Zion Tech</div>
-                    <div className="text-xs text-cyan-400">Tech Solutions</div>
-                  </div>
-                </div>
-                <button
-                  onClick={onClose}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors duration-200"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              
-              {/* Search */}
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search navigation..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-400 focus:outline-none focus:border-cyan-400"
-                />
-              </div>
-            </div>
-
-            {/* Main Navigation */}
-            <div className="p-6">
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Main Navigation
-                </h3>
-                <div className="space-y-2">
-                  {mainNavigation.map((item) => (
-                    <Link
-                      key={item.title}
-                      href={item.href}
-                      onClick={onClose}
-                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
-                    >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-medium">{item.title}</div>
-                        <div className="text-xs text-gray-500">{item.description}</div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Service Categories */}
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Service Categories
-                </h3>
-                <div className="space-y-2">
-                  {serviceCategories.map((category) => (
-                    <div key={category.title} className="border border-gray-800 rounded-lg overflow-hidden">
-                      <button
-                        onClick={() => toggleCategory(category.title)}
-                        className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <div className="flex items-center space-x-3">
-                          <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                            {category.icon}
-                          </div>
-                          <span className="font-medium">{category.title}</span>
-                        </div>
-                        {expandedCategories.includes(category.title) ? (
-                          <ChevronDown className="w-4 h-4 text-gray-400" />
-                        ) : (
-                          <ChevronRight className="w-4 h-4 text-gray-400" />
-                        )}
-                      </button>
-                      
-                      <AnimatePresence>
-                        {expandedCategories.includes(category.title) && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="bg-gray-800/30"
-                          >
-                            <div className="p-3 space-y-2">
-                              {category.services.map((service) => (
-                                <Link
-                                  key={service.name}
-                                  href={service.href}
-                                  onClick={onClose}
-                                  className="flex items-center justify-between p-2 text-sm text-gray-400 hover:text-white hover:bg-gray-700/50 rounded transition-colors duration-200 group"
-                                >
-                                  <span className="truncate">{service.name}</span>
-                                  {service.popular && (
-                                    <Star className="w-3 h-3 text-yellow-400" />
-                                  )}
-                                </Link>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Quick Links */}
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Quick Links
-                </h3>
-                <div className="space-y-2">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      onClick={onClose}
-                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
-                    >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                        {link.icon}
-                      </div>
-                      <span className="font-medium">{link.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Company Links */}
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                  Company
-                </h3>
-                <div className="space-y-2">
-                  {companyLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      onClick={onClose}
-                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
-                    >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                        {link.icon}
-                      </div>
-                      <span className="font-medium">{link.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Information */}
-            <div className="p-6 border-t border-gray-800 bg-gray-800/20">
-              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
-                Contact Information
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>{contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <span className="truncate">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-start space-x-3 text-sm text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-                  <span className="text-xs leading-relaxed">{contactInfo.address}</span>
-                </div>
-              </div>
-              
-              {/* CTA Button */}
-              <Link
-                href="/contact"
-                onClick={onClose}
-                className="mt-4 w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group"
-              >
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedSidebar2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 
-export default EnhancedSidebar2025;
+
+export default SuperPromotionalBanner;

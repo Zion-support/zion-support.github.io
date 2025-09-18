@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -299,3 +300,5 @@ const AI2026UltimateServicesShowcase = () => {
 };
 
 export default AI2026UltimateServicesShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

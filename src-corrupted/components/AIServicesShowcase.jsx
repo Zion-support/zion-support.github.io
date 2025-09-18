@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan import { Link } from 'react-router-dom';
@@ -317,3 +318,5 @@ export default AIServicesShowcase;
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

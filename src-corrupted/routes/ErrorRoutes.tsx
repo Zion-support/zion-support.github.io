@@ -1,20 +1,11 @@
-import React from 'react',;',';';
-    ';';';';
-import { Route, Routes  } from 'react-router-dom',;';';
-    ';';';';
-import { Suspense, lazy } from 'react',;',';';
-    ';';';';
-import LoadingSpinner from '../components/LoadingSpinner',;';';
-    ';';';
-// Lazy load error pages';';';';
-const NotFound = lazy(() => import('../pages/NotFound'));
-const ErrorRoutes: Reac t.FC = () => {
-  return (<Suspense fallback={<LoadingSpinner  />}>
-      <Routes>
-        <Route path="/404" element={<NotFound  />} />
-        <Route path="*" element={<NotFound  />} />
-      </Routes>
-    </Suspense>
+import React from 'react';
+
+const ErrorRoutes: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ErrorRoutes</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

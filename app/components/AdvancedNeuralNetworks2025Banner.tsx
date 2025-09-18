@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -95,122 +96,15 @@ const AdvancedNeuralNetworks2025Banner = () => {
   if (!isVisible) return null;
 
   const currentContent = content[currentSlide];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const AdvancedNeuralNetworks2025Banner: React.FC = () => {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        className="relative overflow-hidden"
-      >
-        <div className={`bg-gradient-to-r ${currentContent.gradient} text-white py-8 px-4 sm:px-6 lg:px-8`}>
-          <div className="max-w-7xl mx-auto">
-            {/* Dismiss Button */}
-            <button
-              onClick={handleDismiss}
-              className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
-              aria-label="Dismiss banner"
-            >
-              <X className="h-5 w-5" />
-            </button>
-
-            <div className="flex flex-col lg:flex-row items-center justify-between">
-              {/* Content */}
-              <div className="flex-1 max-w-4xl">
-                <div className="flex items-center space-x-3 mb-4">
-                  <currentContent.icon className="h-8 w-8 text-white/90" />
-                  <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
-                    NEW: Advanced Neural Networks 2025
-                  </span>
-                </div>
-
-                <h2 className="text-2xl lg:text-3xl font-bold mb-3 leading-tight">
-                  {currentContent.title}
-                </h2>
-
-                <p className="text-lg text-white/90 mb-6 leading-relaxed">
-                  {currentContent.description}
-                </p>
-
-                {/* Metrics Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                  {Object.entries(currentContent.metrics).map(([key, value]) => (
-                    <div key={key} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
-                      <div className="text-xl font-bold text-white">{value}</div>
-                      <div className="text-xs text-white/80 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href={currentContent.url}
-                    className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
-                  >
-                    Read Full {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center justify-center"
-                  >
-                    Get Implementation Strategy
-                  </Link>
-                </div>
-              </div>
-
-              {/* Visual Element */}
-              <div className="mt-8 lg:mt-0 lg:ml-8">
-                <div className="relative">
-                  <div className="w-64 h-64 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
-                    <div className="text-center">
-                      <currentContent.icon className="h-16 w-16 mx-auto mb-4 text-white/80" />
-                      <div className="text-2xl font-bold text-white mb-2">
-                        {currentContent.metrics.roi || currentContent.metrics.savings}
-                      </div>
-                      <div className="text-sm text-white/80">
-                        {currentContent.metrics.roi ? 'Average ROI' : 'Cumulative Savings'}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Floating Elements */}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full animate-pulse"></div>
-                  <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-green-400 rounded-full animate-pulse delay-1000"></div>
-                  <div className="absolute top-1/2 -right-4 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-500"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Progress Indicators */}
-            <div className="flex justify-center space-x-2 mt-6">
-              {content.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/40'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-white/5 rounded-full animate-pulse"></div>
-          <div className="absolute top-20 right-20 w-16 h-16 bg-white/5 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-white/5 rounded-full animate-pulse delay-500"></div>
-          <div className="absolute bottom-20 right-1/3 w-8 h-8 bg-white/5 rounded-full animate-pulse delay-1500"></div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdvancedNeuralNetworks2025Banner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

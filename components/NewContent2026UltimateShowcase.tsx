@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -180,3 +181,5 @@ const NewContent2026UltimateShowcase: React.FC = () => {
 };
 
 export default NewContent2026UltimateShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

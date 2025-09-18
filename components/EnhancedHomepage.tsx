@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
@@ -235,3 +236,5 @@ import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-
         </motion.section>
       </UltraFuturisticBackground>
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

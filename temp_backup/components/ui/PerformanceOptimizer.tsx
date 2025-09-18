@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useRef, useCallback, Suspense, lazy } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -345,109 +346,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const interval = setInterval(checkPerformance, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
   }, [metrics, runFullOptimization]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const PerformanceOptimizer: React.FC = () => {
   return (
-    <>
-      {/* Performance Metrics Display */}
-      <div className="fixed top-4 right-4 z-40 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 w-80">
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-            <Activity className="w-4 h-4" />
-            Performance Monitor
-          </h3>
-          <button
-            onClick={runFullOptimization}
-            disabled={isOptimizing}
-            className="text-xs bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-2 py-1 rounded transition-colors"
-          >
-            {isOptimizing ? 'Optimizing...' : 'Optimize'}
-          </button>
-        </div>
-
-        {/* Status */}
-        {optimizationStatus && (
-          <div className="mb-3 p-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded text-xs text-blue-700 dark:text-blue-300">
-            {optimizationStatus}
-          </div>
-        )}
-
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-2 gap-3 text-xs">
-          {/* Memory */}
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded">
-            <div className="flex items-center gap-1 mb-1">
-              <Memory className="w-3 h-3 text-blue-600" />
-              <span className="font-medium">Memory</span>
-            </div>
-            <div className="text-gray-600 dark:text-gray-300">
-              {metrics.memory.used}MB / {metrics.memory.total}MB
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-1 mt-1">
-              <div 
-                className={`h-1 rounded-full transition-all ${
-                  metrics.memory.percentage > 80 ? 'bg-red-500' :
-                  metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
-                }`}
-                style={{ width: `${metrics.memory.percentage}%` }}
-              />
-            </div>
-          </div>
-
-          {/* CPU */}
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded">
-            <div className="flex items-center gap-1 mb-1">
-              <Cpu className="w-3 h-3 text-green-600" />
-              <span className="font-medium">CPU</span>
-            </div>
-            <div className="text-gray-600 dark:text-gray-300">
-              {metrics.cpu.cores} cores
-            </div>
-          </div>
-
-          {/* Network */}
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded">
-            <div className="flex items-center gap-1 mb-1">
-              <Network className="w-3 h-3 text-purple-600" />
-              <span className="font-medium">Network</span>
-            </div>
-            <div className="text-gray-600 dark:text-gray-300">
-              {metrics.network.download}Mbps
-            </div>
-            <div className="text-gray-500 dark:text-gray-400">
-              {metrics.network.latency}ms
-            </div>
-          </div>
-
-          {/* Battery */}
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded">
-            <div className="flex items-center gap-1 mb-1">
-              <Battery className="w-3 h-3 text-orange-600" />
-              <span className="font-medium">Battery</span>
-            </div>
-            <div className="text-gray-600 dark:text-gray-300">
-              {metrics.battery.level}%
-            </div>
-            <div className="text-gray-500 dark:text-gray-400">
-              {metrics.battery.charging ? 'Charging' : 'Discharging'}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Lazy Loading Wrapper */}
-      {enableLazyLoading ? (
-        <Suspense fallback={
-          <div className="flex items-center justify-center p-8">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-            <span className="ml-2 text-gray-600">Loading...</span>
-          </div>
-        }>
-          {children}
-        </Suspense>
-      ) : (
-        children
-      )}
-    </>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PerformanceOptimizer</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -270,10 +271,19 @@ const ComprehensiveServices2036: React.FC = () => {
               View Showcase
             </a>
           </div>
+=======
+import React from 'react';
+const ComprehensiveServices2036: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ComprehensiveServices2036</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
       </div>
     </>
   );
-};
-
+  };
 export default ComprehensiveServices2036;

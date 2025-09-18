@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;',';';
     ';';';';
 import { motion  } from 'framer-motion'; import { Atom,; Brain,; Zap,; Shield,; Users,; CheckCircle,; ArrowRight,; Star,; Rocket,; Lightbulb,; Cpu,; Database,; Network,; Smartphone,; Lock,; Code,; Server,; Chip,; Wifi,; ShieldCheck,; Bot,; Workflow,; Eye,; Sparkles,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; MessageSquare,; BarChart,; Users2,; Settings,; Palette,; Target,; TrendingUp,; Calendar,; Clock,; FileText,; Microscope,; Cpu as QuantumCpu,; Database as QuantumDB,; Network as QuantumNetwork,; Shield as QuantumShield,; Zap as QuantumZap,; Brain as QuantumBrain} from 'lucide-react',';';
@@ -925,3 +926,5 @@ import { Atom, Brain, Zap, Shield, Users, CheckCircle, ArrowRight, Star, Rocket,
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
@@ -435,3 +436,5 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 };
 
 export default ComprehensiveServicesShowcase2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

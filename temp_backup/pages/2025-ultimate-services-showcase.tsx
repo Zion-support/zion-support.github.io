@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -212,95 +213,27 @@ const StatsSection = () => (
 );
 
 export default function UltimateServicesShowcase2025() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const 2025-ultimate-services-showcase: React.FC = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <div className="min-h-screen bg-white">
-      <SEO 
-        title="2025 Ultimate Services Showcase - Zion Tech Group"
-        description="Discover our comprehensive portfolio of innovative AI, IT, and micro SAAS services. Transform your business with cutting-edge technology solutions."
-        keywords={["AI services", "IT solutions", "micro SAAS", "quantum computing", "blockchain", "robotics", "Zion Tech Group"]}
-      />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>2025-ultimate-services-showcase | Zion Tech Group</title>
+        <meta name="description" content="2025-ultimate-services-showcase - Revolutionary technology solutions" />
+      </Helmet>
       
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-6xl font-bold mb-6"
-          >
-            2025 Ultimate Services Showcase
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl mb-8 max-w-4xl mx-auto"
-          >
-            Transform your business with our comprehensive portfolio of cutting-edge AI, IT infrastructure, 
-            and specialized micro SAAS solutions. Stay ahead of the competition with innovative technology.
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-            >
-              Explore Services <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <a
-              href={`tel:${contactInfo.mobile}`}
-              className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Get Started
-            </a>
-          </motion.div>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">2025-ultimate-services-showcase</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-
-      {/* Services Section */}
-      <div id="services" className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <ServiceCategory
-            title="Advanced AI Automation Platforms"
-            services={advancedAIAutomationPlatforms2025}
-            icon={Brain}
-            color="bg-gradient-to-r from-blue-500 to-cyan-500"
-          />
-          
-          <ServiceCategory
-            title="Innovative IT Infrastructure Solutions"
-            services={innovativeITInfrastructureSolutions2025}
-            icon={Server}
-            color="bg-gradient-to-r from-indigo-500 to-purple-500"
-          />
-          
-          <ServiceCategory
-            title="Specialized Micro SAAS Solutions"
-            services={specializedMicroSaasSolutions2025}
-            icon={Target}
-            color="bg-gradient-to-r from-orange-500 to-red-500"
-          />
-          
-          <ServiceCategory
-            title="Emerging Technology Services"
-            services={emergingTechnologyServices2025}
-            icon={Rocket}
-            color="bg-gradient-to-r from-purple-500 to-pink-500"
-          />
-        </div>
-      </div>
-
-      {/* Stats Section */}
-      <StatsSection />
-
-      {/* Contact Section */}
-      <ContactSection />
     </div>
   );
-}
+};
+
+export default 2025-ultimate-services-showcase;

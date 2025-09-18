@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -420,3 +421,5 @@ export default BrokenLinkFixer;
 }}}}}}}}}}}}'"`;
 </motion>;
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

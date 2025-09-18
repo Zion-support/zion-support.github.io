@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import React from 'react';
 import SEO from '../../components/SEO';
@@ -53,9 +54,17 @@ const EnterpriseAISecurityBlueprint2026 = () => {
           <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Assess Your AI Security Posture</Link>
         </footer>
       </article>
+=======
+import React from 'react';
+
+const page: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };
 
-export default EnterpriseAISecurityBlueprint2026;
-
+export default page;

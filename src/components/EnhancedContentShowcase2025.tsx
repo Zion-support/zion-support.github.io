@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 const EnhancedContentShowcase2025: React.FC = () => {
+<<<<<<< HEAD
   const [activeCategory, setActiveCategory] = useState('all');
 
   const contentCategories = {
@@ -98,9 +98,12 @@ const EnhancedContentShowcase2025: React.FC = () => {
     }
   };
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
+<<<<<<< HEAD
         {/* Header */}
         <divdiv
           whileInView={{ opacity: 1, y: 0 }}
@@ -244,9 +247,14 @@ const EnhancedContentShowcase2025: React.FC = () => {
             </div>
           </div>
         </divdiv>
+=======
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">EnhancedContentShowcase2025</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+        </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       </div>
     </div>
   );
-};
-
+  };
 export default EnhancedContentShowcase2025;

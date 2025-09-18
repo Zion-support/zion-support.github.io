@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -156,3 +157,5 @@ export default function InteractiveEngagementWidget() {
     </motion.div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

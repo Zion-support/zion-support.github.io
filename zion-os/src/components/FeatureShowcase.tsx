@@ -1,4 +1,5 @@
 // @ts-nocheck
+<<<<<<< HEAD
 "use client";
 
 import { useEffect, useState } from "react";
@@ -165,6 +166,11 @@ export function FeatureShowcase() {
 		setIsVisible(true);
 	}, []);
 
+=======
+      "Cross-chain bridges",
+    ],
+  },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   const getColorClasses = (color: Feature["color"]) => {
     const colorMap = {
       blue: "from-blue-500 to-blue-600",
@@ -177,6 +183,7 @@ export function FeatureShowcase() {
     return colorMap[color] || "from-blue-500 to-blue-600";
   };
 
+<<<<<<< HEAD
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
       <div className="max-w-7xl mx-auto">
@@ -200,6 +207,8 @@ export function FeatureShowcase() {
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
               >
                 <div className="flex items-start space-x-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>
@@ -231,6 +240,7 @@ export function FeatureShowcase() {
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* Interactive Demo Area */}
           <div className="relative">
             <div className="card bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8">
@@ -442,3 +452,5 @@ export default FeatureShowcase;
 		</section>
 	);
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

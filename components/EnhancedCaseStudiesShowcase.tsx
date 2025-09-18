@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -250,3 +251,5 @@ const EnhancedCaseStudiesShowcase: React.FC = () => {
 };
 
 export default EnhancedCaseStudiesShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

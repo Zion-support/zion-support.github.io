@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Search, Filter, Grid, List, Phone } from 'lucide-react';
@@ -342,3 +343,5 @@ const Revolutionary2026UltimateServicesShowcase = () => {
 };
 
 export default Revolutionary2026UltimateServicesShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from './useAuth';
 
@@ -36,7 +35,6 @@ export const useRequireAuth = (options: UseRequireAuthOptions = {}) => {
 };
 
 export default useRequireAuth;
-=======
 
 export function useAuthGuard() {
   useEffect(() => {

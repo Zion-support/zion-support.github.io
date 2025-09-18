@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;',';';
     ';';';';
 import { motion  } from 'framer-motion'; import { Link  } from 'react-router-dom',;',';';
@@ -414,12 +415,15 @@ import {SEO } from '@/components/SEO';
 export default function aidatagovernanceplatform(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="aidatagovernanceplatform - Zion Tech Group" description="Professional aidatagovernanceplatform services by Zion Tech Group"  />
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">aidatagovernanceplatform</h1>
-        <p className="text-gray-300 text-lg">
-          Professional aidatagovernanceplatform services to help your business grow.
-        </p>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-data-governance-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
+<<<<<<< HEAD
   )
       )}
     </div>';
@@ -1113,3 +1117,5 @@ import { Link  } from 'react-router-dom'; import { Database, Shield, Search, Fil
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

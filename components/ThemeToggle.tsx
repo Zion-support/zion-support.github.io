@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sun, Moon, Monitor } from 'lucide-react';
@@ -67,3 +68,5 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
 };
 
 export default ThemeToggle;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

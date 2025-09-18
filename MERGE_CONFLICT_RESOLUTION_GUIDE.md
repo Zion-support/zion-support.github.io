@@ -50,6 +50,7 @@ CURRENT_BRANCH=$(git branch --show-current)
 git merge $CURRENT_BRANCH
 ```
 
+<<<<<<< HEAD
 ### 6. Process All Open PRs
 ```bash
 # Get list of cursor branches (likely PRs)
@@ -68,6 +69,28 @@ for branch in $(git branch -r | grep "origin/cursor" | sed 's/origin\///' | head
     }
 done
 ```
+=======
+2. **Open each conflicted file and look for conflict markers:**
+   ```
+<<<<<<< HEAD
+=======
+   (content from feature branch)
+   ```
+=======
+>>>>>>> origin/backup-main-20250918-004015
+      (content from main branch)
+      (content from feature branch)
+      ```
+
+3. **Resolve conflicts by:**
+   - Keeping both changes where appropriate
+   - Choosing the feature branch changes for new content
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+   - Removing conflict markers (`<<<<<<<`, ``, `>>>>>>>`)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 ### 7. Push to Remote
 ```bash

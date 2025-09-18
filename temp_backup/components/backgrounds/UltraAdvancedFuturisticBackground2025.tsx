@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useCallback, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -261,164 +262,17 @@ export default function UltraAdvancedFuturisticBackground2025({
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [initParticles]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedFuturisticBackground2025: React.FC = () => {
   return (
-    <motion.div
-      ref={containerRef}
-      className="fixed inset-0 -z-10 overflow-hidden"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
-      transition={{ duration: 1.5, ease: "easeOut" }}
-    >
-      {/* Enhanced Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{
-          background: theme === 'matrix' 
-            ? 'linear-gradient(180deg, #000000 0%, #001100 50%, #000000 100%)'
-            : theme === 'energy'
-            ? 'linear-gradient(180deg, #000000 0%, #1a0f00 50%, #000000 100%)'
-            : 'linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%)'
-        }}
-      />
-      
-      {/* Additional Visual Effects */}
-      <div className="absolute inset-0">
-        {/* Floating geometric shapes */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-20 right-20 w-24 h-24 border border-purple-400/20 rounded-full"
-          animate={{
-            rotate: [360, 0],
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.6, 0.2]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-
-        {/* Energy waves */}
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-96 h-96 border border-emerald-400/10 rounded-full"
-          animate={{
-            scale: [1, 2, 1],
-            opacity: [0.1, 0.3, 0.1]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
-        <motion.div
-          className="absolute top-0 left-3/4 h-full w-px bg-gradient-to-b from-transparent via-pink-400 to-transparent"
-          animate={{
-            opacity: [0.3, 1, 0.3],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 3
-          }}
-        />
-
-        {/* Floating Data Points */}
-        <motion.div
-          className="absolute top-1/3 right-1/4 text-xs text-cyan-400 font-mono opacity-60"
-          animate={{
-            y: [0, -10, 0],
-            opacity: [0.6, 1, 0.6],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          01.101.010
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-1/3 left-1/4 text-xs text-purple-400 font-mono opacity-60"
-          animate={{
-            y: [0, 10, 0],
-            opacity: [0.6, 1, 0.6],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          QUANTUM_001
-        </motion.div>
-
-        {/* Holographic Elements */}
-        <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 opacity-10"
-          animate={{
-            rotate: [0, 360],
-            scale: [0.8, 1.2, 0.8],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        >
-          <div className="w-full h-full border border-cyan-400/30 rounded-full"></div>
-          <div className="absolute inset-4 border border-purple-400/30 rounded-full"></div>
-          <div className="absolute inset-8 border border-pink-400/30 rounded-full"></div>
-        </motion.div>
-
-        {/* Energy Waves */}
-        <motion.div
-          className="absolute bottom-0 left-0 w-full h-32 opacity-20"
-          animate={{
-            y: [0, -10, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          <svg className="w-full h-full" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path
-              d="M0,60 Q300,30 600,60 T1200,60 L1200,120 L0,120 Z"
-              fill="url(#energyGradient)"
-            />
-            <defs>
-              <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="rgba(100,150,255,0.3)" />
-                <stop offset="50%" stopColor="rgba(150,100,255,0.3)" />
-                <stop offset="100%" stopColor="rgba(255,100,150,0.3)" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </motion.div>
-      </div>
-
-      {children}
-    </motion.div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticBackground2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default UltraAdvancedFuturisticBackground2025;

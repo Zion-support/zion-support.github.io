@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -274,3 +275,5 @@ const NewContent2025UltimateShowcasePromotionBanner = () => {
 };
 
 export default NewContent2025UltimateShowcasePromotionBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -201,3 +202,5 @@ const SuccessStoriesShowcase = () => {
 };
 
 export default SuccessStoriesShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

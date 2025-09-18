@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -215,129 +216,17 @@ export default function UltraAdvancedFuturisticBackground2026({
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedFuturisticBackground2026: React.FC = () => {
   return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>
-      {/* Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 100%)' }}
-      />
-
-      {/* Animated Overlay Elements */}
-      <div className="relative z-10">
-        {/* Floating Quantum Orbs */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20"
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-            x: [0, 20, 0],
-            y: [0, -20, 0]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 opacity-20"
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [360, 180, 0],
-            x: [0, -30, 0],
-            y: [0, 30, 0]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-32 left-1/3 w-28 h-28 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 opacity-20"
-          animate={{
-            scale: [1, 1.4, 1],
-            rotate: [0, 360, 0],
-            x: [0, 25, 0],
-            y: [0, -25, 0]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
-        {/* Neural Network Lines */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-10">
-          <motion.path
-            d="M 100 200 Q 300 100 500 200 T 900 200"
-            stroke="url(#neural-gradient)"
-            strokeWidth="2"
-            fill="none"
-            animate={{
-              d: [
-                "M 100 200 Q 300 100 500 200 T 900 200",
-                "M 100 200 Q 300 300 500 200 T 900 200",
-                "M 100 200 Q 300 100 500 200 T 900 200"
-              ]
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          <defs>
-            <linearGradient id="neural-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#8b5cf6" />
-              <stop offset="50%" stopColor="#ec4899" />
-              <stop offset="100%" stopColor="#8b5cf6" />
-            </linearGradient>
-          </defs>
-        </svg>
-
-        {/* Holographic Grid */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }} />
-        </div>
-
-        {/* Quantum Field Waves */}
-        <motion.div
-          className="absolute inset-0 pointer-events-none"
-          animate={{
-            backgroundPosition: ['0% 0%', '100% 100%']
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          style={{
-            background: `
-              radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.1) 0%, transparent 50%)
-            `
-          }}
-        />
-
-        {/* Content */}
-        <div className="relative z-20">
-          {children}
-        </div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticBackground2026</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default UltraAdvancedFuturisticBackground2026;

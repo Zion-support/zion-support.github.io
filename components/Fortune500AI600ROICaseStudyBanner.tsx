@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, TrendingUp, DollarSign, Users, Award, Target } from 'lucide-react';
@@ -208,3 +209,5 @@ export default function Fortune500AI600ROICaseStudyBanner() {
     </section>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

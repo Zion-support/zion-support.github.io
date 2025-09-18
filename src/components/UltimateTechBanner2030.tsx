@@ -26,7 +26,6 @@ const UltimateTechBanner2030: React.FC = () => {
       icon: "🌌"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -88,6 +87,5 @@ const UltimateTechBanner2030: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default UltimateTechBanner2030;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;',';';
     ';';';';
 import { motion  } from 'framer-motion'; import { Atom, Brain, Zap, Globe, Users, BarChart3,; Lock, Cpu, Network, Eye, AlertTriangle, CheckCircle,; ArrowRight, Star, Award, Phone, Mail, MapPin, TrendingUp,; DollarSign, Shield, Target, Gauge, Clock, PieChart} from 'lucide-react',',';';
@@ -1130,3 +1131,5 @@ import { Atom, Brain, Zap, Globe, Users, BarChart3, Lock, Cpu, Network, Eye, Ale
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

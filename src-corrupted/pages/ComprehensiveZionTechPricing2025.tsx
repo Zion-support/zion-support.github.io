@@ -1,1 +1,22 @@
-import React from 'react'; "export default ComprehensiveZionTechPricing2025;}}"const ComprehensiveZionTechPricing2025: Reac t.FC = () => {; const [selectedCategory, setSelectedCategory] = useState < string> ("All") ;" const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly"> ("monthly") ;" const categories = ["All", ...getEnhancedServiceCategories () ];" const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ; selectedCategory === "All" || service.category === selectedCategory;) ;" <div className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p -6">;" <h3 className="text-xl font - bold text-white mb-3">What kind of support do you provide?</h3>;" <p className="text-gray -300">We provide 24 / 7 technical support, dedicated account managers for enterprise clients, and comprehensive documentation and training resources.</p>;" </div>;" </div>; ";"
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ComprehensiveZionTechPricing2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ComprehensiveZionTechPricing2025 | Zion Tech Group</title>
+        <meta name="description" content="ComprehensiveZionTechPricing2025 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ComprehensiveZionTechPricing2025</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ComprehensiveZionTechPricing2025;

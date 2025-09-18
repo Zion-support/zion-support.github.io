@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
@@ -650,3 +651,5 @@ showStats: tru e,;
 </Feedback>
 </Feedback>
 </CustomerFeedbackSystemProps>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,67 +1,8 @@
-export default function GreenIT() {
+import React from 'react';
 
-  const greenITSolutions = [
-    {
-      title: 'Energy-Efficient Hardware'
-      description:
-        'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.'
-      icon: Server
-    }
-    
-    return this.props.children;
-  }
-}
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Leaf, Server, Cloud } from 'lucide-react';
-import Link from 'next/link';
-
-export default function GreenIT() {;
-  const greenITSolutions = [;
-    {;
-      title: 'Energy-Efficient Hardware',;
-      description:;
-        'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.',;
-      icon: Server,;
-    },;
-    {;
-      title: 'Optimized Cooling Systems',;
-      description:;
-        'Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.',;
-      icon: Cloud,;
-    },;
-    {;
-      title: 'Renewable Energy Integration',;
-      description:;
-        'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',;
-      icon: Leaf,;
-    },;
-  ];
-
-
-      title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-      icon: Server},
-    {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
-    {
-
-      title: 'Renewable Energy Integration',
-      description:
-        'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',
-      icon: Leaf,
-    },
-  ]
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf}
-  ],
-
-
+const GreenIT: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>;
       <SEO
         title="Green IT Solutions - Sustainable Technology"
@@ -2034,73 +1975,9 @@ export default function GreenIT() {;
       </main>;
     </>;
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
-
-
-          </div>;
-        </div>;
-      </section>;
-";
-      {/* Call to Action */}"";
-
-      <section className="py - 20">"";
-        <div className="container mx - auto px - 6 text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}">"";
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Ready to Go Green?";
-            </h2>"";
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-
-              Start your sustainability journey today. Our Green IT experts will;
-              assess your current infrastructure and provide a customized plan;
-              to reduce costs and environmental impact.;
-            </p>";
-"";
-
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">"";
-              <button className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105">;
-                Schedule Green IT Assessment;
-              </button>";
-              <a"";
-                href="mailto:greenit@ziontechgroup.com"";
-                className="px - 8 py - 3 border border - green - 400 text - green - 400 font - semibold rounded - lg hover:bg - green - 400 hover:text - white transition - all duration - 200">;
-
-                Contact Green IT Team;
-              </a>;
-            </div>";
-"";
-
-            <div className="mt - 8 text - center">"";
-              <p className="text - gray - 400 text - sm">;
-
-                Get a free sustainability assessment and customized Green IT;
-                roadmap;
-              </p>;
-            </div>;
-
-
-}
-
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>);
-
-}
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT, GreenIT }
-}
-
-
-
-export { GreenIT, GreenIT };
 };
 
-
-
+export default GreenIT;

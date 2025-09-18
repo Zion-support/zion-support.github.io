@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -391,3 +392,5 @@ const InteractiveSuccessMetrics2025 = () => {
 };
 
 export default InteractiveSuccessMetrics2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

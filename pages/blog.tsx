@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
 import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react'
@@ -255,3 +256,5 @@ export default function Blog() {
     </div>
   )
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

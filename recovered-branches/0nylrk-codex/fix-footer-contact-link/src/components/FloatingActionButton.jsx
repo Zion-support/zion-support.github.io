@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlusIcon, XMarkIcon, ChatBubbleLeftRightIcon, PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
@@ -48,5 +49,16 @@ const FloatingActionButton = ({ className = '' }) => {
         </AnimatePresence>
       </motion.button>
     </div>);
+=======
+
+const FloatingActionButton: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FloatingActionButton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
+
 export default FloatingActionButton;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -138,3 +139,5 @@ const NeuralConsciousnessBreakthroughBanner2025: React.FC = () => {
 };
 
 export default NeuralConsciousnessBreakthroughBanner2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

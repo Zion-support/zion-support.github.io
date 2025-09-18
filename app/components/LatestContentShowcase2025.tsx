@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-export default function LatestContentShowcase2025() {
+const LatestContentShowcase2025: React.FC = () => {
   return (
+<<<<<<< HEAD
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -43,3 +47,12 @@ export default function LatestContentShowcase2025() {
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+=======
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LatestContentShowcase2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

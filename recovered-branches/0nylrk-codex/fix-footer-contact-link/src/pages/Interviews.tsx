@@ -1,96 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  
-  const pendingInterviews = interviews.filter(interview => 
-    interview.status === 'requested'
-  );
-        parseISO(dateA).getTime() - parseISO(dateB).getTime()
-      )
-      .map(([date, interviews]) => (
-        <div key={date} className="mb-8">
-          <h3 className="text-lg font-medium text-white mb-4 flex items-center">
-            <Calendar className="h-5 w-5 mr-2" />
-            {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {interviews.map((interview) => (
-
-
-
-
-
-                interview={interview}
-                onRefresh={async () => {;
-                  await fetchInterviews();
-                }}
-              />;
-            ))}
-          </div>
-        </div>
-      ))
-
-  }
-  },
-
-
+const Interviews: React.FC = () => {
   return (
-    <>
-      <SEO
-        title="Interviews | Zion AI Marketplace"
-        description="Manage your scheduled interviews with clients and talent"
-              <InterviewCard 
-                key={interview.id} 
-                interview={interview}
-                onRefresh={async () => {
-                  await fetchInterviews();
-                }}
-              />
-            ))}
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Interviews | Zion Tech Group</title>
+        <meta name="description" content="Interviews - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Interviews</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      ));
-  };
-
-  return (
-    <>
-      <SEO 
-        title="Interviews | Zion AI Marketplace" 
-        description="Manage your scheduled interviews with clients and talent" 
-      />
-      <AppHeader />
-      <main className="container mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-3xl font-bold">Interviews</h1>
-            <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
-          </div>
-        </div>
-        <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
-          <TabsList className="mb-6">
-            <TabsTrigger value="upcoming" className="flex items-center">
-              <Clock className="h-4 w-4 mr-2" />
-              Upcoming
-              {upcomingInterviews.length > 0 && (
-                <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
-                  {upcomingInterviews.length}
-                </span>
-          </TabsContent>
-        </Tabs>
-      </main>
-      <Footer />
-    </>
-
-
-}
+      </div>
+    </div>
   );
-}
+};
 
-export default function Interviews() {
-  return (
-    <ProtectedRoute>
-      <InterviewsContent />
-    </ProtectedRoute>
-
-
-
-  );
-}
+export default Interviews;

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {motion} from 'framer-motion';
 ;
 export default function Page("props": "any) {;
@@ -169,22 +170,9 @@ export default function Page(props: any) {
     return fallback || defaultFallback;
   }
   return children;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
-;
-export {EnhancedErrorBoundary};
-export default EnhancedErrorBoundary;'"`;
-}}}}}}}}}}}}}'"`'"`;
-export {Page};
-;
-</motion>;
-</div>;
-</div>;
-</motion>;
-</div>
-</motion>
-</div>
-</div>
-</motion>
-</div>
-import React,{Component} from 'react'; import { motion, ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from 'lucide-react'; class EnhancedErrorBoundary extends Component {; constructor(props) {; super(props); this.state = {; hasError: false,; error: null,; errorInfo: null,; errorId: null,; showStackTrace: false}}; static getDerivedStateFromError(error) {; return {; hasError: true,; error,; errorId: this.generateErrorId()}}; componentDidCatch(error,errorInfo) {; this.setState({ errorInfo }
-});'; ;';';''
+
+export default EnhancedErrorBoundary;

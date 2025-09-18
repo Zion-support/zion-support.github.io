@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -435,90 +436,16 @@ export default function AIReadinessAssessment2025() {
       </div>
     );
   }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const page: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            AI Readiness Assessment 2025
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Evaluate your organization's readiness for AI implementation
-          </p>
-          <div className="bg-white rounded-2xl shadow-lg p-6 inline-block">
-            <div className="flex items-center space-x-4">
-              <div className="text-sm text-gray-600">
-                Question {currentQuestion + 1} of {assessmentQuestions.length}
-              </div>
-              <div className="w-64 bg-gray-200 rounded-full h-2">
-                <div 
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${((currentQuestion + 1) / assessmentQuestions.length) * 100}%` }}
-                />
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentQuestion}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            className="bg-white rounded-2xl shadow-xl p-8"
-          >
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className={`p-2 rounded-lg bg-gradient-to-r ${
-                  categoryColors[assessmentQuestions[currentQuestion].category as keyof typeof categoryColors]
-                } text-white`}>
-                  {React.createElement(
-                    categoryIcons[assessmentQuestions[currentQuestion].category as keyof typeof categoryIcons],
-                    { className: "w-6 h-6" }
-                  )}
-                </div>
-                <span className="text-sm font-medium text-gray-600">
-                  {assessmentQuestions[currentQuestion].category}
-                </span>
-              </div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                {assessmentQuestions[currentQuestion].question}
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              {assessmentQuestions[currentQuestion].options.map((option, index) => (
-                <motion.button
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  onClick={() => handleAnswer(assessmentQuestions[currentQuestion].id, option.value)}
-                  className="w-full text-left p-6 border-2 border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-all duration-200 group"
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="font-semibold text-gray-900 group-hover:text-purple-700">
-                        {option.label}
-                      </div>
-                      <div className="text-sm text-gray-600 mt-1">
-                        {option.description}
-                      </div>
-                    </div>
-                    <div className="w-6 h-6 border-2 border-gray-300 rounded-full group-hover:border-purple-500 transition-colors" />
-                  </div>
-                </motion.button>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">page</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default page;

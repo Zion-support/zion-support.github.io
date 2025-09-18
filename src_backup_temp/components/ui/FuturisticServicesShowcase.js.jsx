@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle} from 'lucide-react';
@@ -259,3 +260,5 @@ export default function FuturisticServicesShowcase()() {
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

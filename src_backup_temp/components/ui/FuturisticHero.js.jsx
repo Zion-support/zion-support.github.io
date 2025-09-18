@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';
 import {motion, useScroll, useTransform} from 'framer-motion';
 import {ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe} from 'lucide-react';
@@ -211,3 +212,5 @@ export default function FuturisticHero()() {
 </motion>;
 </div>;
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Activity,
@@ -240,174 +241,16 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     );
   }
 
+=======
+
+const AdvancedAnalytics: React.FC = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, x: 300 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 300 }}
-        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[90vh] overflow-y-auto"
-      >
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-            <BarChart3 className="w-6 h-6 text-indigo-500" />
-            Analytics Dashboard
-          </h3>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-gray-600 transition-colors p-1"
-            aria-label="Close analytics dashboard"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </div>
-
-        <div className="space-y-6">
-          {/* Real-time Metrics */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Activity className="w-4 h-4 text-green-500" />
-              Real-time Metrics
-            </h4>
-            
-            <div className="grid grid-cols-2 gap-3">
-              <div className="p-3 bg-green-50 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Eye className="w-4 h-4 text-green-500" />
-                  <span className="text-xs text-green-600">Page Views</span>
-                </div>
-                <span className="text-lg font-bold text-green-700">{analyticsData.pageViews}</span>
-              </div>
-              
-              <div className="p-3 bg-blue-50 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Users className="w-4 h-4 text-blue-500" />
-                  <span className="text-xs text-blue-600">Unique Visitors</span>
-                </div>
-                <span className="text-lg font-bold text-blue-700">{analyticsData.uniqueVisitors || 1}</span>
-              </div>
-              
-              <div className="p-3 bg-purple-50 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Clock className="w-4 h-4 text-purple-500" />
-                  <span className="text-xs text-purple-600">Session Duration</span>
-                </div>
-                <span className="text-lg font-bold text-purple-700">{Math.floor(analyticsData.sessionDuration / 60)}m {analyticsData.sessionDuration % 60}s</span>
-              </div>
-              
-              <div className="p-3 bg-orange-50 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <MousePointer className="w-4 h-4 text-orange-500" />
-                  <span className="text-xs text-orange-600">Clicks</span>
-                </div>
-                <span className="text-lg font-bold text-orange-700">{analyticsData.clickEvents}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Performance Metrics */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Zap className="w-4 h-4 text-yellow-500" />
-              Performance Metrics
-            </h4>
-            
-            <div className="space-y-3">
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <span className="text-sm text-gray-700">Scroll Depth</span>
-                <span className="text-sm font-medium text-gray-800">{analyticsData.scrollDepth}%</span>
-              </div>
-              
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <span className="text-sm text-gray-700">Time on Page</span>
-                <span className="text-sm font-medium text-gray-800">{Math.floor(analyticsData.timeOnPage / 60)}m {analyticsData.timeOnPage % 60}s</span>
-              </div>
-              
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <span className="text-sm text-gray-700">Form Submissions</span>
-                <span className="text-sm font-medium text-gray-800">{analyticsData.formSubmissions}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Conversion Metrics */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Target className="w-4 h-4 text-red-500" />
-              Conversion Metrics
-            </h4>
-            
-            <div className="grid grid-cols-2 gap-3">
-              <div className="p-3 bg-red-50 rounded-lg">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-red-700">{analyticsData.bounceRate}%</div>
-                  <div className="text-xs text-red-600">Bounce Rate</div>
-                </div>
-              </div>
-              
-              <div className="p-3 bg-green-50 rounded-lg">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-green-700">{analyticsData.conversionRate}%</div>
-                  <div className="text-xs text-green-600">Conversion Rate</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Top Pages */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Award className="w-4 h-4 text-blue-500" />
-              Top Pages
-            </h4>
-            
-            <div className="space-y-2">
-              {analyticsData.topPages.slice(0, 3).map((page, index) => (
-                <div key={page.path} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium text-gray-500">#{index + 1}</span>
-                    <span className="text-sm text-gray-700">{page.path}</span>
-                  </div>
-                  <span className="text-sm font-medium text-gray-800">{page.views}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Device Distribution */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Monitor className="w-4 h-4 text-purple-500" />
-              Device Distribution
-            </h4>
-            
-            <div className="space-y-2">
-              {analyticsData.userAgents.map((device, index) => (
-                <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
-                  <div className="flex items-center gap-2">
-                    {device.device === 'Mobile' && <Smartphone className="w-4 h-4 text-blue-500" />}
-                    {device.device === 'Tablet' && <Tablet className="w-4 h-4 text-green-500" />}
-                    {device.device === 'Desktop' && <Monitor className="w-4 h-4 text-purple-500" />}
-                    <span className="text-sm text-gray-700">{device.device}</span>
-                  </div>
-                  <span className="text-sm font-medium text-gray-800">{device.count}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Session Status */}
-          <div className="pt-4 border-t border-gray-200">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-700">Session Status</span>
-              <div className="flex items-center gap-2">
-                <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                <span className="text-xs text-gray-600">{isTracking ? 'Active' : 'Paused'}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdvancedAnalytics</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default AdvancedAnalytics;

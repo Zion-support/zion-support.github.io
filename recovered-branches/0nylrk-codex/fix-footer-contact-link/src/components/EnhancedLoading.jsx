@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '' }) => {
     const sizeClasses = {
@@ -54,5 +55,9 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
           {text}
         </motion.p>)}
     </div>);
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
+
 export default EnhancedLoading;

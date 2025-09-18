@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   root: true,
   env: {
     browser: true,
@@ -165,3 +166,35 @@ module.exports = {
     'space-in-parens': ['error', 'never'],
     'spaced-comment': ['error', 'always'],
   },
+=======
+  extends: ['next/core-web-vitals'],
+  rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-empty-object-type': 'warn',
+    '@next/next/no-html-link-for-pages': 'warn'
+  },
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'build/',
+    'dist/',
+    '*.config.js',
+    '*.config.ts',
+    'scripts/',
+    'automation/',
+    'netlify/',
+    'apps/',
+    'src/components-disabled/**/*',
+    'src/utils-disabled/**/*',
+    '**/components-disabled/**/*',
+    '**/utils-disabled/**/*'
+  ]
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -37,6 +37,7 @@ const InteractiveTechShowcase = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="bg-white rounded-2xl shadow-lg p-8">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Interactive Technology Showcase</h2>
@@ -75,6 +76,11 @@ const InteractiveTechShowcase = () => {
           </div>
         ))}
       </div>
+=======
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <h3 className="text-xl font-semibold mb-4">Interactive Tech Showcase</h3>
+      <p className="text-gray-600">Interactive technology showcase coming soon...</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };

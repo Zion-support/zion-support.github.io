@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -659,3 +660,5 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
 };
 
 export default ComprehensiveServicesShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

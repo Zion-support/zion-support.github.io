@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
 import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
@@ -1138,10 +1139,10 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
           </div>
         </motion.div>
       </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };
 
 export default ComprehensiveServicesShowcase;
-    </></></></></></></></>);
-};

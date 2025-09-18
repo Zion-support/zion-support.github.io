@@ -1,41 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const SEOAudit: NextPage = () => {
+const seo-audit: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>Autonomous SEO Auditor</title>
-        <meta name="description" content="Automated SEO health reports." />
-      </Head>
-      <main className="space-y-4">
-        <h1 className="text-2xl font-bold">Autonomous SEO Auditor</h1>
-        <p>Scans pages to detect missing meta tags and basic SEO issues and commits a structured report.</p>
-        <div>
-
-          <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</a></Link>
-          <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</Link></Link>
-
-
-
-
-
-
-
-
-
-
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>seo-audit | Zion Tech Group</title>
+        <meta name="description" content="seo-audit - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">seo-audit</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </main>
+      </div>
     </div>
-  )
+  );
+};
 
-}
-export default SEOAudit;
-
-},
-export default SEOAudit,
-},
-},
-export default SEOAudit,
-},
-
+export default seo-audit;

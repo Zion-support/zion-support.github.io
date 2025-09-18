@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -325,3 +326,5 @@ const UltraFuturisticBackground2036: React.FC = () => {
 };
 
 export default UltraFuturisticBackground2036;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

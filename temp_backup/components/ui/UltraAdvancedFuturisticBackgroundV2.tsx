@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -303,96 +304,17 @@ export default function UltraAdvancedFuturisticBackgroundV2({
       window.removeEventListener('resize', handleResize);
     };
   }, [particleCount, animationSpeed, intensityMultiplier, currentScheme, enableGlitch, enableHologram, enableQuantum, enableHolographic, enableQuantumEffects]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedFuturisticBackgroundV2: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Enhanced Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          filter: `blur(${glitchIntensity}px)`,
-          transform: `scale(${1 + glitchIntensity * 0.1})`
-        }}
-      />
-
-      {/* Enhanced Overlay Effects */}
-      <div className="relative z-10">
-        {/* Quantum Field Overlay */}
-        {enableQuantum && (
-          <div 
-            className="fixed inset-0 pointer-events-none"
-            style={{
-              background: `radial-gradient(circle at 50% 50%, ${currentScheme.primary}10 0%, transparent 70%)`,
-              animation: 'quantum-pulse 4s ease-in-out infinite'
-            }}
-          />
-        )}
-
-        {/* Holographic Matrix Overlay */}
-        {enableHologram && (
-          <div 
-            className="fixed inset-0 pointer-events-none opacity-5"
-            style={{
-              backgroundImage: `
-                linear-gradient(90deg, ${currentScheme.secondary} 1px, transparent 1px),
-                linear-gradient(0deg, ${currentScheme.secondary} 1px, transparent 1px)
-              `,
-              backgroundSize: '50px 50px',
-              animation: 'matrix-scroll 20s linear infinite'
-            }}
-          />
-        )}
-
-        {/* Neural Network Overlay */}
-        <div 
-          className="fixed inset-0 pointer-events-none opacity-10"
-          style={{
-            background: `radial-gradient(circle at 30% 30%, ${currentScheme.accent}20 0%, transparent 50%),
-                        radial-gradient(circle at 70% 70%, ${currentScheme.primary}20 0%, transparent 50%)`
-          }}
-        />
-
-        {/* Enhanced Content */}
-        <AnimatePresence>
-          {isVisible && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="relative z-20"
-            >
-              {children}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
-      {/* Enhanced CSS Animations */}
-      <style jsx>{`
-        @keyframes quantum-pulse {
-          0%, 100% { opacity: 0.1; transform: scale(1); }
-          50% { opacity: 0.3; transform: scale(1.1); }
-        }
-
-        @keyframes matrix-scroll {
-          0% { transform: translateY(0); }
-          100% { transform: translateY(50px); }
-        }
-
-        @keyframes neural-pulse {
-          0%, 100% { opacity: 0.05; }
-          50% { opacity: 0.15; }
-        }
-
-        @keyframes cyberpunk-glitch {
-          0%, 100% { transform: translate(0); }
-          20% { transform: translate(-2px, 2px); }
-          40% { transform: translate(-2px, -2px); }
-          60% { transform: translate(2px, 2px); }
-          80% { transform: translate(2px, -2px); }
-        }
-      `}</style>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticBackgroundV2</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default UltraAdvancedFuturisticBackgroundV2;

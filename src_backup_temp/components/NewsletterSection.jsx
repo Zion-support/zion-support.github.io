@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion} from 'framer-motion';
 import {  import { motion  } from 'framer-motion';
@@ -265,3 +266,5 @@ const benefits = [] const stats = [] export function NewsletterSection("props": 
 </motion>;
 </motion>;
 </motion>"
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

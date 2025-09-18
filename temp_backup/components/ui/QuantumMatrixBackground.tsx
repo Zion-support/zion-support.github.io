@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -177,110 +178,15 @@ const QuantumMatrixBackground: React.FC<QuantumMatrixBackgroundProps> = ({
       window.removeEventListener('resize', handleResize);
     };
   }, [intensity, variant]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const QuantumMatrixBackground: React.FC = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Quantum Matrix Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          background: variant === 'matrix' 
-            ? 'linear-gradient(180deg, #000000 0%, #001100 50%, #000000 100%)'
-            : variant === 'cyberpunk'
-            ? 'linear-gradient(180deg, #000000 0%, #200010 50%, #000000 100%)'
-            : variant === 'holographic'
-            ? 'linear-gradient(180deg, #000000 0%, #100020 50%, #000000 100%)'
-            : variant === 'neural'
-            ? 'linear-gradient(180deg, #000000 0%, #002000 50%, #000000 100%)'
-            : 'linear-gradient(180deg, #000000 0%, #001020 50%, #000000 100%)'
-        }}
-      />
-
-      {/* Floating Geometric Shapes */}
-      <div className="absolute inset-0 pointer-events-none z-10">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            className={`absolute w-2 h-2 ${
-              variant === 'quantum' ? 'bg-cyan-400' :
-              variant === 'holographic' ? 'bg-purple-400' :
-              variant === 'cyberpunk' ? 'bg-pink-400' :
-              variant === 'neural' ? 'bg-green-400' :
-              'bg-green-400'
-            } rounded-full opacity-30`}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Quantum Field Lines */}
-      <div className="absolute inset-0 pointer-events-none z-20">
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={`line-${i}`}
-            className={`absolute h-px w-full ${
-              variant === 'quantum' ? 'bg-gradient-to-r from-transparent via-cyan-400 to-transparent' :
-              variant === 'holographic' ? 'bg-gradient-to-r from-transparent via-purple-400 to-transparent' :
-              variant === 'cyberpunk' ? 'bg-gradient-to-r from-transparent via-pink-400 to-transparent' :
-              variant === 'neural' ? 'bg-gradient-to-r from-transparent via-green-400 to-transparent' :
-              'bg-gradient-to-r from-transparent via-green-400 to-transparent'
-            }`}
-            style={{
-              top: `${20 + i * 15}%`,
-            }}
-            animate={{
-              opacity: [0, 1, 0],
-              scaleX: [0, 1, 0],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              delay: i * 0.8,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Content */}
-      <div className="relative z-30">
-        {children}
-      </div>
-
-      {/* Quantum Energy Field */}
-      <div className="absolute inset-0 pointer-events-none z-40">
-        <motion.div
-          className={`absolute inset-0 ${
-            variant === 'quantum' ? 'bg-gradient-radial from-cyan-500/5 via-transparent to-transparent' :
-            variant === 'holographic' ? 'bg-gradient-radial from-purple-500/5 via-transparent to-transparent' :
-            variant === 'cyberpunk' ? 'bg-gradient-radial from-pink-500/5 via-transparent to-transparent' :
-            variant === 'neural' ? 'bg-gradient-radial from-green-500/5 via-transparent to-transparent' :
-            'bg-gradient-radial from-green-500/5 via-transparent to-transparent'
-          }`}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.5, 0.8, 0.5],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">QuantumMatrixBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

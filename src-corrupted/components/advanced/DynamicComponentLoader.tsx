@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, {;
@@ -781,53 +782,9 @@ export default DynamicComponentLoader; export default DynamicComponentLoader
 
 
     />;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
 };
 
-// Predefined dynamic loaders for common heavy components;
-// Note: These are examples - uncomment and install types as needed;
-
-// export const DynamicChartComponent = createDynamicComponent(;
-//   (,) => import('recharts').then(module => ({ default: module && module.LineChart })),;
-//   {;
-//     loadingComponent: () => (;
-//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading chart...</span>;
-//       </div>;
-//     ),;
-//     prefetch: true;
-//   }
-// );
-
-// export const DynamicThreeComponent = createDynamicComponent(;
-//   (,) => import('three').then(module => ({ default: module && module.WebGLRenderer })),;
-//   {;
-//     loadingComponent: () => (;
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>;
-//       </div>;
-//     );
-//   }
-// );
-
-export default DynamicComponentLoader;export default DynamicComponentLoader ;
-
-
-//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
-//   {
-//     loadingComponent: () => (
-//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
-//         <span className="text-muted-foreground">Loading 3D renderer...</span>
-//       </div>
-//     )
-//   }
-
-// );
-export default DynamicComponentLoader; export default DynamicComponentLoader;
-
-
-// );
-
-
 export default DynamicComponentLoader;
-

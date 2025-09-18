@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
@@ -974,3 +975,5 @@ showProjects: tru e,;
 </Project>
 </TeamMember>
 </TeamCollaborationToolsProps>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

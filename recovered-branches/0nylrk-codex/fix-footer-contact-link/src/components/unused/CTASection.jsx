@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { RocketLaunchIcon, PhoneIcon, EnvelopeIcon, CalendarIcon } from '@heroicons/react/24/outline';
@@ -85,43 +86,16 @@ export function CTASection() {
             </Link>
           </div>
         </motion.div>
+=======
 
-        {/* Contact Options */}
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {ctaOptions.map((option, index) => (<motion.div key={index} variants={itemVariants} className="group">
-              <Link to={option.href} className="block">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105 text-center">
-                  {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <option.icon className="w-8 h-8 text-white"/>
-                  </div>
-                  
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
-                    {option.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-4">
-                    {option.description}
-                  </p>
-                  
-                  {/* Action */}
-                  <div className="text-zion-cyan font-semibold group-hover:text-zion-cyan-light transition-colors duration-300">
-                    {option.action}
-                  </div>
-                </div>
-              </Link>
-            </motion.div>))}
-        </motion.div>
+const CTASection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CTASection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-        {/* Additional Info */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
-            <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
-            <span className="text-zion-slate-light text-sm">
-              Response within 2 hours • Free initial consultation
-            </span>
-          </div>
-        </motion.div>
-      </div>
-    </section>);
-}
+export default CTASection;

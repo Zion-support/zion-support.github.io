@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true, enableScrollEffects = true }) => {
@@ -148,5 +149,16 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         </div>
       </motion.div>
     </>);
+=======
+
+const UIEnhancer: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UIEnhancer</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
+
 export default UIEnhancer;

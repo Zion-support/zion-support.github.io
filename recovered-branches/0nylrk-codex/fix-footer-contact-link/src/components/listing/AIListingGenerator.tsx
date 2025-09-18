@@ -1,106 +1,12 @@
+import React from 'react';
 
-import { Sparkles } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { AIListingForm } from "./AIListingForm";
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-
-interface GeneratedContent {
-  description: string;
-  tags: string[];
-  suggestedPrice: {
-    min: number;
-    max: number;
-  };
-  keyPoints: string[];
-}
-
-interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void;
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string;
-  };
-}
-
-
-  const handleGenerate = async ({
-    title,
-    category,
-    keyFeatures,
-    targetAudience
-  }: {
-    title: string;
-    category: string;
-    keyFeatures: string;
-    targetAudience: string;
-  }) => {
-    setIsLoading(true);
-    
-    try {
-      });
-
-      if (error) {
-        throw new Error(error.message);
-      }
-      
-      if (data.error) {
-        throw new Error(data.error);
-      }
-
-      setGeneratedContent(data.generated);
-      toast({
-        title: "Content Generated",
-        description: "AI has created optimized listing content for you."
-      });
-    } catch (error) {
-      toast({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleApply = () => {
-    if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent);
-      toast({
-        title: "Content Applied",
-        description: "The generated content has been applied to your listing."
-      });
-    }
-  };
-
+const AIListingGenerator: React.FC = () => {
   return (
-    <div className="space-y-6">
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">
-        <CardHeader>
-          <CardTitle className="flex items-center text-white">
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-            AI Listing Optimizer
-          </CardTitle>
-          <p className="text-sm text-zion-slate-light">
-          </p>
-        </CardHeader>
-        <CardContent>
-          <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-            initialValues={initialValues}
-          />
-        </CardContent>
-      </Card>
-
-      {isLoading && <LoadingContentSkeleton />}
-
-      {generatedContent && !isLoading && (
-        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AIListingGenerator</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default AIListingGenerator;

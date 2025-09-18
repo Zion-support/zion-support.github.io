@@ -1,16 +1,22 @@
 import React from 'react';
-;
-const "Solutions": "React.FC = () => {;
-  return (;
-    <div className="min-h-screen bg-gray-50">;
-      <div className="container mx-auto px-4 py-20">;
-        <h1 className="text-4xl "md":text-6xl font-bold text-gray-900 mb-6 text-center">;
-          Solutions;
-        </h1>;
-        <p className="text-xl text-gray-600 text-center">Coming soon...</p>;
-      </div>;
-    </div>;
+import { Helmet } from 'react-helmet-async';
+
+const Solutions: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Solutions | Zion Tech Group</title>
+        <meta name="description" content="Solutions - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Solutions</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-"};
-;
+};
+
 export default Solutions;

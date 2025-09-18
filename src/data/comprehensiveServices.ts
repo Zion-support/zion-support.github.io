@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Service {
   id: string;
   title: string;
@@ -194,3 +195,6 @@ export const COMPREHENSIVE_SERVICES: Service[] = [
     reviews: { rating: 5.0, count: 12 }
   }
 ];
+=======
+export const COMPREHENSIVE_SERVICES = []; export const SERVICE_CATEGORIES = ["All Services"]; export const PRICING_TIERS = [];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

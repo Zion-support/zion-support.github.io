@@ -1,4 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 import _React from 'react';'''; import { cn } from '@/lib/utils'; const Avatar = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; Avatar.displayName = 'Avatar';'; const AvatarImage = _React.forwardRef(''; ({ className,src,alt = ',...props },ref) => (; <div>Broken JSX</div> />'; )''; );'''; AvatarImage.displayName = 'AvatarImage'; const AvatarFallback = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; AvatarFallback.displayName = 'AvatarFallback'; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };
 import React from \'react\';\''\'; import { cn } from \'@/lib/utils\'; const Avatar = React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));\'; Avatar.displayName = \'Avatar\';\'; const AvatarImage = React.forwardRef(\''; ({ className,src,alt = \'',...props },ref) => (; <div>Broken JSX</div> />\'; )\''; );\''\'; AvatarImage.displayName = \'AvatarImage\'; const AvatarFallback = React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));\'; AvatarFallback.displayName = \'AvatarFallback\'; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };
 const React from "react";"""; import { cn } from "@/lib/utils"; const Avatar = React.forwardRef(({ className,.props },ref) => (; <div>Broken JSX</div> /> ));"; Avatar.displayName = "Avatar";"; const AvatarImage = React.forwardRef(""; ({ className,src,alt = "",.props },ref) => (; <div>Broken JSX</div> />"; )""; );"""; AvatarImage.displayName = "AvatarImage"; const AvatarFallback = React.forwardRef(({ className,.props },ref) => (; <div>Broken JSX</div> /> ));"; AvatarFallback.displayName = "AvatarFallback"; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };''"
 import _React from 'react';'''; import { cn } from '@/lib/utils'; const Avatar = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; Avatar.displayName = 'Avatar';'; const AvatarImage = _React.forwardRef(''; ({ className,src,alt = ',...props },ref) => (; <div>Broken JSX</div> />'; )''; );'''; AvatarImage.displayName = 'AvatarImage'; const AvatarFallback = _React.forwardRef(({ className,...props },ref) => (; <div>Broken JSX</div> /> ));'; AvatarFallback.displayName = 'AvatarFallback'; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback }; export { Avatar,AvatarImage,AvatarFallback };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

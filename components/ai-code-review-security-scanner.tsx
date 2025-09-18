@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -465,3 +466,5 @@ const AICodeReviewSecurityScanner = () => {
 };
 
 export default AICodeReviewSecurityScanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

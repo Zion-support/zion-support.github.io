@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -205,68 +206,15 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
       window.removeEventListener('resize', handleResize);
     };
   }, [intensity, variant]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedQuantumMatrixBackground: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Quantum Matrix Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
-      />
-      
-      {/* Gradient Overlay */}
-      <div 
-        className="fixed inset-0 pointer-events-none"
-        style={{ zIndex: -1 }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-        <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/5 via-indigo-500/5 to-purple-500/5" />
-      </div>
-      
-      {/* Animated Quantum Particles */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              scale: [1, 2, 1],
-              opacity: [0.3, 1, 0.3],
-              x: [0, (Math.random() - 0.5) * 100],
-              y: [0, (Math.random() - 0.5) * 100],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-      
-      {/* Holographic Grid Lines */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
-        <svg className="w-full h-full">
-          <defs>
-            <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-              <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(0, 255, 255, 0.1)" strokeWidth="1"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedQuantumMatrixBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

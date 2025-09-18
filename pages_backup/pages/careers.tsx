@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
@@ -882,14 +883,11 @@ function CareersPage() {
             </motion.div>
           </div>
         </section>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       </div>
-
-
-    </MainLayout>;
-
-
+    </div>
   );
+};
 
-
-}
-
+export default careers;

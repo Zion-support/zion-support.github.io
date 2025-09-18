@@ -16,6 +16,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   ogImage = "/og-image.jpg"
 }) => {
+<<<<<<< HEAD
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -45,10 +46,28 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   return (
     <Helmet>
+=======
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ]
+  };
+
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonical} />
+      {canonical && <link rel="canonical" href={canonical} />}
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
@@ -71,6 +90,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
+<<<<<<< HEAD
         {JSON.stringify(finalStructuredData)}
       </script>
       
@@ -88,6 +108,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "https://linkedin.com/company/ziontechgroup"
           ]
         })}
+=======
+        {JSON.stringify(structuredData)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       </script>
     </Helmet>
   );

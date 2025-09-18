@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -217,88 +218,15 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, colorScheme]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedFuturisticMatrixBackground: React.FC = () => {
   return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'transparent' }}
-      />
-      
-      {/* Holographic overlay */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-black/20" />
-        
-        {/* Scanning lines effect */}
-        <motion.div
-          className="absolute inset-0"
-          animate={{
-            background: [
-              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%)',
-              'linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 100%)',
-              'linear-gradient(90deg, transparent 0%, rgba(255, 255, 0, 0.1) 50%, transparent 100%)',
-              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%)'
-            ]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-20">
-        {children}
-      </div>
-
-      {/* Floating geometric shapes */}
-      <div className="absolute inset-0 z-5 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-              scale: [1, 1.5, 1],
-              opacity: [0.6, 1, 0.6]
-            }}
-            transition={{
-              duration: 8 + i * 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.5
-            }}
-            style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Energy field effect */}
-      <div className="absolute inset-0 z-5 pointer-events-none">
-        <motion.div
-          className="absolute inset-0"
-          animate={{
-            boxShadow: [
-              'inset 0 0 100px rgba(0, 255, 255, 0.1)',
-              'inset 0 0 200px rgba(255, 0, 255, 0.1)',
-              'inset 0 0 100px rgba(0, 255, 255, 0.1)'
-            ]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticMatrixBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

@@ -94,9 +94,7 @@ const InteractiveTechShowcase2027: React.FC = () => {
   const currentTech = technologies[activeTech];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
-=======
     <div className="space-y-8">
       <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
 >>>>>>> cursor/create-and-deploy-new-content-5ef7

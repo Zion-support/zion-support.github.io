@@ -2,67 +2,36 @@ import React from 'react';
 
 const NextGenContentBanner2025: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-12 mb-12 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-6 left-6 w-3 h-3 bg-white/30 rounded-full animate-ping"></div>
-        <div className="absolute top-12 right-12 w-4 h-4 bg-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-6 left-1/3 w-2 h-2 bg-white/40 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-12 right-1/4 w-3 h-3 bg-white/25 rounded-full animate-ping"></div>
-        <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-white/35 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-white/45 rounded-full animate-bounce"></div>
-      </div>
-      
-      <div className="relative z-10 container mx-auto px-4">
+    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-8 mb-8 rounded-2xl shadow-2xl">
+      <div className="container mx-auto px-4">
         <div className="text-center">
-          <div className="inline-flex items-center px-8 py-4 bg-white/20 rounded-full text-lg font-bold mb-6 animate-pulse">
+          <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-bold mb-4 animate-pulse">
             🚀 NEW: Next-Gen Technology 2025
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            Revolutionary Technology Showcase
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Experience the Future of Technology
           </h2>
-          <p className="text-2xl md:text-3xl opacity-90 mb-8 max-w-5xl mx-auto">
-            Experience the most advanced technologies that will reshape our world: AI Consciousness, Quantum Computing, and Neural Interfaces
+          <p className="text-lg md:text-xl opacity-90 mb-6 max-w-4xl mx-auto">
+            Discover revolutionary AI consciousness, quantum reality engines, and neural interfaces that will reshape our world
           </p>
-          
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="flex items-center space-x-3 bg-white/20 px-6 py-3 rounded-full">
-              <span className="text-3xl">🧠</span>
-              <span className="font-semibold text-lg">AI Consciousness</span>
-            </div>
-            <div className="flex items-center space-x-3 bg-white/20 px-6 py-3 rounded-full">
-              <span className="text-3xl">⚡</span>
-              <span className="font-semibold text-lg">Quantum Computing</span>
-            </div>
-            <div className="flex items-center space-x-3 bg-white/20 px-6 py-3 rounded-full">
-              <span className="text-3xl">🧬</span>
-              <span className="font-semibold text-lg">Neural Interfaces</span>
-            </div>
-            <div className="flex items-center space-x-3 bg-white/20 px-6 py-3 rounded-full">
-              <span className="text-3xl">🌐</span>
-              <span className="font-semibold text-lg">Edge Computing</span>
-            </div>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="/pages/NextGenTechRevolution2025" 
-              className="bg-white text-indigo-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl hover:scale-105 border-2 border-yellow-400"
-            >
-              🌟 Explore Next-Gen Tech →
-            </a>
-            <a 
-              href="/pages/AdvancedAIConsciousness2025" 
-              className="bg-white text-purple-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl hover:scale-105 border-2 border-yellow-400"
+              href="/pages/NextGenAIConsciousness2025" 
+              className="bg-white text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition-all duration-300 font-semibold text-center hover:scale-105 transform"
             >
               🧠 AI Consciousness →
             </a>
             <a 
-              href="/pages/QuantumComputingBreakthrough2025" 
-              className="bg-white text-pink-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl hover:scale-105 border-2 border-yellow-400"
+              href="/pages/QuantumRealityEngine2025" 
+              className="bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-all duration-300 font-semibold text-center hover:scale-105 transform"
             >
-              ⚡ Quantum Computing →
+              ⚛️ Quantum Reality →
+            </a>
+            <a 
+              href="/pages/NeuralRealityInterface2025" 
+              className="bg-white text-pink-600 px-6 py-3 rounded-lg hover:bg-pink-50 transition-all duration-300 font-semibold text-center hover:scale-105 transform"
+            >
+              🧬 Neural Interface →
             </a>
           </div>
         </div>

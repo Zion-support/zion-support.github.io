@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -188,3 +189,5 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
 };
 
 export default UltimateContentShowcasePromotionBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

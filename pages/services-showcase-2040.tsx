@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -537,3 +538,5 @@ export default function ServicesShowcase2040() {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

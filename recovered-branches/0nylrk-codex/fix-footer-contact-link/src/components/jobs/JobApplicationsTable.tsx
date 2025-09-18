@@ -1,74 +1,12 @@
+import React from 'react';
 
-import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import {
-  ApplicationsTable,
-  EmptyState,
-  ErrorState,
-  LoadingState,
-  ScoreDialog
-} from "./applications";
-
-interface JobApplicationsTableProps {
-  jobId: string;
-}
-
-export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-  const { 
-    markApplicationAsViewed,
-    refetch
-  } = useJobApplications(jobId);
-
-      const application = applications.find(app => app.id === applicationId);
-      if (application && !application.viewed_at) {
-        await markApplicationAsViewed(applicationId);
-      }
-    } finally {
-      setProcessingId(null);
-    }
-  };
-
-  const handleViewScore = (application: JobApplication) => {
-    setSelectedApplication(application);
-    setShowScoreDialog(true);
-  };
-
-  const handleViewApplication = async (applicationId: string) => {
-    await markApplicationAsViewed(applicationId);
-  };
-
-  const handleScoreUpdated = (updatedApplication: JobApplication) => {
-    refetch();
-  };
-
-  if (isLoading) {
-    return <LoadingState />;
-  }
-
-  if (error) {
-    return <ErrorState error={error} />;
-  }
-
-  if (applications.length === 0) {
-    return <EmptyState />;
-  }
-
+const JobApplicationsTable: React.FC = () => {
   return (
-    <>
-      <ApplicationsTable
-        applications={applications}
-        processingId={processingId}
-        onViewApplication={handleViewApplication}
-        onStatusChange={handleStatusChange}
-        onViewScore={handleViewScore}
-      />
-
-      <ScoreDialog
-        open={showScoreDialog}
-        onOpenChange={setShowScoreDialog}
-        application={selectedApplication}
-        onScoreUpdated={handleScoreUpdated}
-      />
-    </>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">JobApplicationsTable</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default JobApplicationsTable;

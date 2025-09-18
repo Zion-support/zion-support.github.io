@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -216,3 +217,5 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
 };
 
 export default AdvancedContentManagementSystemPromotionBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

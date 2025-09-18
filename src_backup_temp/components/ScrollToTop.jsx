@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -96,3 +97,5 @@ export default ScrollToTop;
 </motion>
 </AnimatePresence>
 import React from 'react'; export default ScrollToTop',','; ';';';';';'; ";';';'; ";';';';'; """
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

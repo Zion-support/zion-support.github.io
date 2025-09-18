@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import React from 'react';
 
@@ -275,6 +276,14 @@ export function generateStaticParams() {
 
 export default function BlogDetailPage({ params }: { params: { id: string } }) {
   const post = POSTS[params.id];
+=======
+import Link from 'next/link'
+import React from 'react'
+import { getPostById } from '../../../data/blog'
+
+export default function BlogPostPage({ params }: { params: { id: string } }) {
+  const post = getPostById(params.id)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
   if (!post) {
     return (
@@ -283,7 +292,7 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
         <p className="text-gray-600 mb-6">The article you are looking for does not exist or has been moved.</p>
         <Link href="/blog" className="text-blue-600 hover:text-blue-700">← Back to Blog</Link>
       </div>
-    );
+    )
   }
 
   return (
@@ -310,9 +319,12 @@ export default function BlogDetailPage({ params }: { params: { id: string } }) {
         </div>
       </div>
     </article>
-  );
+  )
 }
+<<<<<<< HEAD
 
 }
 
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

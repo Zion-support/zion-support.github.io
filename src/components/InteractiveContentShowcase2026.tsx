@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import React, { useState }  from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
@@ -24,8 +28,13 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Personal AI companions with genuine personality',
           'Educational tutors with emotional intelligence',
           'Therapeutic AI for mental health support'
+<<<<<<< HEAD
         ]
       }
+=======
+        ];
+      };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     },
     quantum: {
       title: 'Quantum Reality',
@@ -47,8 +56,13 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Space exploration and faster-than-light communication',
           'Financial modeling and risk analysis',
           'Cryptography and secure communications'
+<<<<<<< HEAD
         ]
       }
+=======
+        ];
+      };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     },
     neural: {
       title: 'Neural Evolution',
@@ -70,8 +84,13 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Gaming and entertainment experiences',
           'Professional training and skill development',
           'Communication for speech-impaired individuals'
+<<<<<<< HEAD
         ]
       }
+=======
+        ];
+      };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     },
     synthetic: {
       title: 'Synthetic Intelligence',
@@ -93,11 +112,16 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Scientific research and discovery',
           'Social AI companions and assistants',
           'Autonomous space and exploration missions'
+<<<<<<< HEAD
         ]
       }
     }
+=======
+        ];
+      };
+    };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
       <div className="text-center mb-12">
@@ -109,25 +133,25 @@ const InteractiveContentShowcase2026: React.FC = () => {
         </p>
       </div>
 
-      {/* Interactive Tabs */}
+      {/* Interactive Tabs */};
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {Object.entries(contentTabs).map(([key, tab]) => (
           <button
-            key={key}
-            onClick={() => setActiveTab(key)}
+            key={key};
+            onClick={() => setActiveTab(key)};
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
               activeTab === key
                 ? `bg-gradient-to-r ${tab.color} text-white shadow-lg scale-105`
                 : 'bg-white/10 text-gray-300 hover:bg-white/20'
-            }`}
+            }`};
           >
             <span className="text-2xl mr-2">{tab.icon}</span>
-            {tab.title}
+            {tab.title};
           </button>
-        ))}
+        ))};
       </div>
 
-      {/* Active Content Display */}
+      {/* Active Content Display */};
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
@@ -135,13 +159,17 @@ const InteractiveContentShowcase2026: React.FC = () => {
               <span className="text-6xl">{contentTabs[activeTab as keyof typeof contentTabs].icon}</span>
               <div>
                 <h3 className="text-3xl font-bold text-white">
-                  {contentTabs[activeTab as keyof typeof contentTabs].content.title}
+                  {contentTabs[activeTab as keyof typeof contentTabs].content.title};
                 </h3>
                 <div className={`w-16 h-1 bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} rounded-full mt-2`}></div>
               </div>
             </div>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+<<<<<<< HEAD
               {contentTabs[activeTab as keyof typeof contentTabs].content.description}
+=======
+              {contentTabs[activeTab as keyof typeof contentTabs].content.description};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </p>
             
             <div className="space-y-6">
@@ -153,7 +181,11 @@ const InteractiveContentShowcase2026: React.FC = () => {
                       <span className="text-cyan-400 mt-1">•</span>
                       <span className="text-gray-200">{feature}</span>
                     </li>
+<<<<<<< HEAD
                   ))}
+=======
+                  ))};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </ul>
               </div>
             </div>
@@ -169,7 +201,11 @@ const InteractiveContentShowcase2026: React.FC = () => {
                     <span className="text-gray-200">{application}</span>
                   </div>
                 </div>
+<<<<<<< HEAD
               ))}
+=======
+              ))};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </div>
             
             <div className="mt-8">
@@ -177,8 +213,8 @@ const InteractiveContentShowcase2026: React.FC = () => {
                 href={`/pages/${activeTab === 'consciousness' ? 'ConsciousnessComputing2026' : 
                         activeTab === 'quantum' ? 'QuantumReality2026' : 
                         activeTab === 'neural' ? 'NeuralInterfaceEvolution2026' : 
-                        'SyntheticIntelligence2026'}`}
-                className={`inline-block bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg`}
+                        'SyntheticIntelligence2026'}`};
+                className={`inline-block bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg`};
               >
                 Explore {contentTabs[activeTab as keyof typeof contentTabs].title} →
               </a>
@@ -187,7 +223,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
         </div>
       </div>
 
-      {/* Call to Action */}
+      {/* Call to Action */};
       <div className="text-center mt-12">
         <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
         <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -211,6 +247,5 @@ const InteractiveContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default InteractiveContentShowcase2026;

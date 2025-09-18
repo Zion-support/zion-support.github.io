@@ -1,16 +1,12 @@
-  };
+import React from 'react';
 
+const ElasticSearchSearch: React.FC = () => {
   return (
-    <div className="space-y-2">
-      <input
-        className="border p-2 rounded w-full"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="ElasticSearch query"
-      />
-      <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={search}>
-        Search
-      </button>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ElasticSearchSearch</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default ElasticSearchSearch;

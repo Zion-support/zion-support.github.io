@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -83,195 +84,15 @@ const HeroSection = () => {
     { icon: Shield, label: "Secure Payments", color: "zion-cyan" },
     { icon: Rocket, label: "Enterprise Security", color: "zion-purple" }
   ];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const HeroSection: React.FC = () => {
   return (
-    <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
-      {/* Enhanced background with parallax effect */}
-      <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90" 
-        style={{ y, opacity }}
-      />
-      
-      {/* Animated floating particles */}
-      <div className="absolute inset-0">
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60" 
-          variants={floatingVariants} 
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50" 
-          variants={floatingVariants} 
-          animate="animate" 
-          style={{ animationDelay: '1s' }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70" 
-          variants={floatingVariants} 
-          animate="animate" 
-          style={{ animationDelay: '2s' }}
-        />
-        <motion.div 
-          className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light" 
-          variants={pulseVariants} 
-          animate="animate" 
-          style={{ animationDelay: '0.5s' }}
-        />
-        <motion.div 
-          className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80" 
-          variants={floatingVariants} 
-          animate="animate" 
-          style={{ animationDelay: '1.5s' }}
-        />
-        <motion.div 
-          className="absolute top-1/6 right-1/6 w-4 h-4 rounded-full bg-zion-cyan opacity-40" 
-          variants={floatingVariants} 
-          animate="animate" 
-          style={{ animationDelay: '2.5s' }}
-        />
-      </div>
-
-      {/* Enhanced decorative geometric shapes */}
-      <motion.div 
-        className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" 
-        animate={{ rotate: 360 }} 
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      />
-      <motion.div 
-        className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30" 
-        animate={{ rotate: -360 }} 
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-      />
-      
-      {/* Floating elements */}
-      <motion.div 
-        className="absolute top-1/3 left-10 w-16 h-16 border border-zion-cyan/30 rounded-full opacity-20" 
-        variants={pulseVariants} 
-        animate="animate"
-      />
-      <motion.div 
-        className="absolute bottom-1/3 right-10 w-20 h-20 border border-zion-purple/30 rounded-full opacity-20" 
-        variants={pulseVariants} 
-        animate="animate" 
-        style={{ animationDelay: '1s' }}
-      />
-      
-      <motion.div 
-        className="container relative z-10 px-4 mx-auto text-center" 
-        variants={containerVariants} 
-        initial="hidden" 
-        animate="visible"
-      >
-        {/* Enhanced title */}
-        <motion.div variants={itemVariants} className="mb-8">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-            The Future of Tech & AI
-          </h1>
-        </motion.div>
-
-        {/* Enhanced subtitle */}
-        <motion.p 
-          variants={itemVariants} 
-          className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light"
-        >
-          Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform.
-        </motion.p>
-
-        {/* Enhanced feature highlights */}
-        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-16 text-zion-slate-light">
-          <motion.div 
-            className="flex items-center gap-3 group" 
-            whileHover={{ scale: 1.05 }} 
-            transition={{ type: "spring", stiffness: 400 }}
-          >
-            <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
-              <Sparkles className="w-6 h-6 text-zion-cyan"/>
-            </div>
-            <span className="font-medium">AI-Powered</span>
-          </motion.div>
-          
-          <motion.div 
-            className="flex items-center gap-3 group" 
-            whileHover={{ scale: 1.05 }} 
-            transition={{ type: "spring", stiffness: 400 }}
-          >
-            <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
-              <Shield className="w-6 h-6 text-zion-purple"/>
-            </div>
-            <span className="font-medium">Enterprise Ready</span>
-          </motion.div>
-          
-          <motion.div 
-            className="flex items-center gap-3 group" 
-            whileHover={{ scale: 1.05 }} 
-            transition={{ type: "spring", stiffness: 400 }}
-          >
-            <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
-              <Users className="w-6 h-6 text-zion-cyan"/>
-            </div>
-            <span className="font-medium">Global Network</span>
-          </motion.div>
-        </motion.div>
-
-        {/* CTA Buttons */}
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-          <Button 
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group" 
-            size="lg" 
-            asChild
-          >
-            <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
-              Get Started Today
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
-            </Link>
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 transition-all duration-300" 
-            size="lg" 
-            asChild
-          >
-            <Link to="/services" role="button" aria-label="Explore Services">
-              Explore Services
-            </Link>
-          </Button>
-        </motion.div>
-
-        {/* Trust metrics */}
-        <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
-          {trustMetrics.map((metric, index) => (
-            <motion.div 
-              key={index} 
-              className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-              whileHover={{ y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="text-zion-cyan mb-2 flex justify-center">
-                <metric.icon className="w-6 h-6"/>
-              </div>
-              <div className="text-xl font-bold text-white mb-1">{metric.label}</div>
-              <div className="text-zion-slate-light text-sm">{metric.value}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Feature badges */}
-        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4">
-          {featureBadges.map((badge, index) => (
-            <motion.div 
-              key={index} 
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-zion-blue-dark/60 border border-zion-cyan/30 text-zion-slate-light"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              <badge.icon className={`w-4 h-4 text-${badge.color}`}/>
-              <span className="text-sm font-medium">{badge.label}</span>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
-    </section>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">HeroSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

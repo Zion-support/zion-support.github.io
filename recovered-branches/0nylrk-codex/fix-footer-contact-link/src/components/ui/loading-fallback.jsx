@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Loader2 } from 'lucide-react';
 export function LoadingFallback({ message = "Loading...", size = 'md', className = "" }) {
@@ -48,3 +49,6 @@ export function InlineLoading({ message = "Loading..." }) {
       <span className="text-sm">{message}</span>
     </div>);
 }
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

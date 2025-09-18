@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 ArrowRightStarZapTrendingUpUsersShield
@@ -126,3 +127,5 @@ export default function NewContent2025UltimateTransformationBanner() {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

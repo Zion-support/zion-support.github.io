@@ -1,5 +1,6 @@
 export default function Footer() {
   return (
+<<<<<<< HEAD
     <footer className="bg-black">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
@@ -28,6 +29,12 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8">
           <p className="text-base text-gray-400 text-center">&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
+=======
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center">
+          <p>&copy; 2025 Zion Holdings. All rights reserved.</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
       </div>
     </footer>

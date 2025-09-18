@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -342,3 +343,5 @@ const UltimateContentShowcase2027 = () => {
 };
 
 export default UltimateContentShowcase2027;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,9 +1,12 @@
-import React from 'react'; "const navItems = [ {"title": "Products", "href": "/admin/products"}, {title "Services", "href": "/admin/services"}, {"title": "Users", href /admin/users"}," {"title": "Reports", href /admin/reports}';
-];export function AdminLayout("props": "any) { return (';';
-    <div className="flex min-h-screen"> <aside className="w-64" border-r p-6 space-y-2 bg-muted/50> <h2 className="font-semibold" text-lg mb-4>Back Office</h2>" <nav className="space-y-1> {navItems.map((item) => (<Link key="{item.href"}" href="{item.href}" className="block" rounded-md px-3 py-2 text-sm hover bg-accent> {item.title} </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto>{children}</main> </div>)};export {AdminLayout});';';';
-export default ComponentName";
-import React from 'react'; "const navItems = [ {title: Products, href: /admin/products}, {title "Services", href: /admin/services}, {title: Users, href /admin/users"}," {title: Reports, href /admin/reports}';
-];export function AdminLayout(props: any) { return (';';
-    <div className="flex min-h-screen"> <aside className="w-64" border-r p-6 space-y-2 bg-muted/50> <h2 className="font-semibold" text-lg mb-4>Back Office</h2>" <nav className="space-y-1> {navItems.map((item) => (<Link key="{item.href}" href="{item.href}" className="block" rounded-md px-3 py-2 text-sm hover bg-accent> {item.title} </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto>{children}</main> </div>)};export {AdminLayout}
-    );';';';
-export default ComponentName"';';';';
+import React from 'react';
+
+const AdminLayout: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdminLayout</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default AdminLayout;

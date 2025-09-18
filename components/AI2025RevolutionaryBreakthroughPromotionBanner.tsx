@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -130,3 +131,5 @@ export default function AI2025RevolutionaryBreakthroughPromotionBanner() {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

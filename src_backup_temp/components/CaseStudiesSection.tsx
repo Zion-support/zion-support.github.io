@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 ;
  params - Function parameters;
@@ -100,44 +101,16 @@ export function CaseStudiesSection("props": any) {;
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
+=======
 
-}}
-        >"
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Write Your Success Story?
-            "
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their
-              businesses with our innovative technology solutions.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-              <Link "
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200"
+const CaseStudiesSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CaseStudiesSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-                Start Your Project";
-                <TrendingUp className="ml-2 h-5 w-5"    />;
-              </Link>;
-              <Link ";
-                to="/case-studies";
-                className="inline-flex items-center px-6 py-3 border border-white text-white "hover": b g-white "hover": tex t-blue-600 rounded-lg font-medium transition-colors duration-200";
-                View All Case Studies";
-                <ArrowRight className="ml-2 h-5 w-5"    />              </Link>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) "};
-;
-export default CaseStudiesSection;";
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
 export default CaseStudiesSection;
-export default CaseStudiesSection;
-'"`;
-</motion>;
-</motion>;
-</motion>

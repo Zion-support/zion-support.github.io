@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -283,3 +284,5 @@ const UltimateContentCarousel2025 = () => {
 };
 
 export default UltimateContentCarousel2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

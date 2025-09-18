@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 ArrowRightBrainZapShieldGlobeTargetTrendingUp
@@ -255,3 +256,5 @@ const RevolutionaryAIServices2025: React.FC = () => {
 };
 
 export default RevolutionaryAIServices2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

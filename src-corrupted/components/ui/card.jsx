@@ -1,74 +1,12 @@
-import React from 'react';'
-const Card = (props: any) => {}
-  return()
-    <div;
-      className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
-    >
-      {children}
+import React from 'react';
+
+const card: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">card</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-};'
-const CardHeader = (props: any) => {}
-`
-``
-```
-  return()````
-    <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
-      {children}
-    </div>
-  );
-};'
-const CardTitle = (props: any) => {}
-  return()`
-    <h3``
-      className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
-    >
-      {children}
-    </h3>
-  );
-};'
-const CardDescription = (props: any) => {}
-`
-  return()``
-    <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
-  );
-};'
-const CardContent = (props: any) => {}
-`
-``
-  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;
-};'
-const CardFooter = (props: any) => {}
-`
-``
-```
-  return()````
-    <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
-  );
 };
-const CardDescription = (props: any) => {
-    return (<p className={`text-sm text-muted-foreground ${className}`}>
-      {children}
-    </p>);
-};
-const CardContent = (props: any) => {
-    return (<div className={`p-6 pt-0 ${className}`}>
-      {children}
-    </div>);
-};
-const CardFooter = (props: any) => {
-    return (<div className={`flex items-center p-6 pt-0 ${className}`}>
-      {children}
-    </div>);
-};
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};
+export default card;

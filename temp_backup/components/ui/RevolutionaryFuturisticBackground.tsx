@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -248,92 +249,15 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
       window.removeEventListener('resize', handleResize);
     };
   }, [variant]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const RevolutionaryFuturisticBackground: React.FC = () => {
   return (
-    <div className="relative w-full h-full overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
-      />
-      
-      {/* Floating geometric shapes */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-1/3 w-40 h-40 border border-pink-400/20 transform rotate-45"
-          animate={{
-            rotate: [45, 405],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-      </div>
-
-      {/* Quantum field effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-96 h-96 rounded-full border border-cyan-400/10"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.1, 0.3, 0.1]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-400/10"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.1, 0.2, 0.1]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">RevolutionaryFuturisticBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

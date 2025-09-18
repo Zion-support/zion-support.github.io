@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
 export default function Page(props: any) {;
@@ -470,90 +471,16 @@ export;
         ...options;
       }) }
   }
-};
-'"`;
-;,"});})";
-;
-</Notification>;
-</Notification>;
-</Notification>;
-</Notification>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</any>;
-</NotificationSettings>;
-</Notification>;
-</NotificationSystemProps>;
+=======
 
-// Utility functions for common notification types
-export 
-        priority: 'medium',;
-})};'        priority: 'medium',;
-  ;
-  ;
-  ...options;
-      }) }  },
-  warning: (title: string, message: string, options?: Partial<Notification>)  => {
-    if((window as ).addNotification) {
-      (window as ).addNotification({
-        type: 'warning',
-        title,
-        message,
-        priority: 'medium',
-        ...options
-      }) }
-  },
-  error: (title: string, message: string, options?: Partial<Notification>) => {
-    if((window as ).addNotification) {
-      (window as ).addNotification({
-        type: 'error',
-        title,
-        message,
-        priority: 'high',
-        ...options
-      }) }
-  },
-  info: (title: string, message: string, options?: Partial<Notification>) => {
-    if((window as ).addNotification) {
-      (window as ).addNotification({
-        type: 'info',
-        title,
-        message,
-        priority: 'low',
-        ...options
-      }) }
-  },
-  achievement: (title: string, message: string, options?: Partial<Notification>) => {
-    if((window as ).addNotification) {
-      (window as ).addNotification({
-        type: 'achievement',
-        title,
-        message,
-        priority: 'high',
-        ...options
-      }) }
-  }
+const NotificationSystem: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NotificationSystem</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
-'"`
-;,"}
-    );,})";
-</Notification>
-</Notification>
-</Notification>
-</Notification>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</any>
-</any>
-</any>
-</NotificationSettings>
-</Notification>
-</NotificationSystemProps>
+
+export default NotificationSystem;

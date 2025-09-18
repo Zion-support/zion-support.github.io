@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -196,287 +197,27 @@ export default function InnovativePricing2025() {
     
     return allServices;
   };
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const 2025-innovative-pricing: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
-        title="2025 Innovative Services Pricing | Zion Tech Group"
-        description="Comprehensive pricing for our 2025 innovative services including AI automation, IT infrastructure, micro SAAS solutions, and emerging technology services."
-        keywords="2025 pricing, innovative services pricing, AI automation pricing, IT infrastructure pricing, micro SAAS pricing, Zion Tech Group"
-      />
-
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6"
-            >
-              2025 Innovative
-              <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Services Pricing
-              </span>
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-            >
-              Transparent, competitive pricing for our cutting-edge portfolio of AI automation, 
-              IT infrastructure, micro SAAS solutions, and emerging technology services.
-            </motion.p>
-            
-            {/* Billing Toggle */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex items-center justify-center gap-4 mb-8"
-            >
-              <span className={`text-lg text-white`}>
-                Monthly
-              </span>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      {/* Pricing Tiers */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pricingTiers.map((tier, index) => (
-            <motion.div
-              key={tier.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 ${
-                tier.popular ? 'border-purple-500/50 ring-2 ring-purple-500/20' : ''
-              }`}
-            >
-              {tier.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-bold px-4 py-2 rounded-full">
-                    MOST POPULAR
-                  </span>
-                </div>
-              )}
-              
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
-                  <span className="text-gray-400">{tier.period}</span>
-                </div>
-                <p className="text-gray-300">{tier.description}</p>
-              </div>
-
-              <ul className="space-y-4 mb-8">
-                {tier.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-gray-300">
-                    <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-200 ${
-                tier.popular
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white'
-                  : 'bg-white/20 text-white hover:bg-white/30 border border-white/30'
-              }`}>
-                Get Started
-              </button>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Service Categories */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Service Categories & Pricing
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive portfolio of innovative services with transparent pricing
-          </p>
-        </div>
-
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
-            onClick={() => setSelectedCategory('all')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
-              selectedCategory === 'all'
-                ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-            }`}
-          >
-            All Services
-          </button>
-          {serviceCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center gap-2 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-              }`}
-            >
-              {category.icon}
-              {category.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {getFilteredServices().map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className="text-3xl">🚀</div>
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-              <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
-              
-              <div className="mb-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-purple-400">
-                    {getServicePricingDisplay(service)}
-                  </span>
-                  <span className="text-gray-400">
-                    {getServicePeriod(service)}
-                  </span>
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-white/20 text-white text-xs rounded-full border border-white/30">
-                  {service.category}
-                </span>
-              </div>
-
-              <div className="space-y-2 mb-6">
-                <div className="text-xs text-gray-400">
-                  <span className="text-gray-500">Type:</span> {service.type}
-                </div>
-                <div className="text-xs text-gray-400">
-                  <span className="text-gray-500">Market Size:</span> {service.marketSize}
-                </div>
-              </div>
-
-              <a
-                href={service.slug || `/services/${service.id}`}
-                className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 group"
-              >
-                View Details
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Enterprise Features */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl p-8 border border-white/20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise Features & Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Unlock the full potential of our innovative services with enterprise-grade features
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Shield className="w-12 h-12" />,
-                title: 'Enterprise Security',
-                description: 'SOC 2 Type II, GDPR, HIPAA compliance with advanced security features'
-              },
-              {
-                icon: <Globe className="w-12 h-12" />,
-                title: 'Global Support',
-                description: '24/7 dedicated support with SLA guarantees and custom training'
-              },
-              {
-                icon: <Zap className="w-12 h-12" />,
-                title: 'Custom Integration',
-                description: 'White-label options and custom integrations for your business needs'
-              },
-              {
-                icon: <TrendingUp className="w-12 h-12" />,
-                title: 'Scalable Solutions',
-                description: 'On-premise options and unlimited scaling for enterprise growth'
-              }
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-purple-400 mb-4 flex justify-center">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-3xl p-8 border border-white/20 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Contact us today to discuss your needs and get a personalized quote for our innovative services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href={`tel:${contact.mobile}`}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center gap-2"
-            >
-              <span>📞</span>
-              {contact.mobile}
-            </a>
-            <a
-              href={`mailto:${contact.email}`}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center gap-2"
-            >
-              <span>✉️</span>
-              {contact.email}
-            </a>
-          </div>
-          <div className="mt-6 text-gray-400 text-sm">
-            <p>{contact.address}</p>
-            <p className="mt-2">
-              Visit our website: <a href={contact.website} className="text-blue-400 hover:underline">{contact.website}</a>
-            </p>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>2025-innovative-pricing | Zion Tech Group</title>
+        <meta name="description" content="2025-innovative-pricing - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">2025-innovative-pricing</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default 2025-innovative-pricing;

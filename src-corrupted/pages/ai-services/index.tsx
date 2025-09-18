@@ -1,28 +1,22 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIServicesIndex(props: any) {
-  const services = [
-    { name: 'Custom LLM Integration', price: 'From $8,000', bullets: ['RAG and vector search', 'Guardrails and policy'] },
-    { name: 'Computer Vision Pipelines', price: 'From $6,000', bullets: ['OCR, object detection', 'Edge inference'] },
-    { name: 'MLOps Foundations', price: 'From $5,000', bullets: ['CI/CD for models', 'Monitoring and drift'] }
-  ];
+const index: React.FC = () => {
   return (
-    <main className="min-h-screen bg-white py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
-        <p className="text-gray-600 mb-8">Strategy, models, and productionization to accelerate adoption.</p>
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map(s => (
-            <div key={s.name} className="border rounded-xl p-6">
-              <h3 className="text-xl font-semibold mb-1">{s.name}</h3>
-              <div className="text-blue-600 mb-3">{s.price}</div>
-              <ul className="list-disc pl-5 text-gray-600 space-y-1">
-                {s.bullets.map(b => <li key={b}>{b}</li>)}
-              </ul>
-            </div>
-          ))}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default index;

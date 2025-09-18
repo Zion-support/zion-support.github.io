@@ -1,24 +1,6 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
 import React from 'react';
 
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -454,41 +436,14 @@ interface IndexProps {
 export default function ServicesIndex() {
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <>
-      <Head>
-        <title>Our Services - Zion Tech Group | AI, Cloud, Blockchain & IT Solutions</title>
-        <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
-        <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
-      </Head>
-
-
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>
-          <div className="flex justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get Started Today
-            </Link>
-            <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Learn More About Us
-            </Link>
-          </div>
-        </section>
-      </main>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">index</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
-export default ServicesIndex;
 
-
-
+export default index;

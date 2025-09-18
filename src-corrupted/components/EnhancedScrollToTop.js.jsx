@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''
 import {motion, AnimatePresence} from 'framer-motion';'''
 import {ChevronUpIcon} from '@heroicons/react/24/outline';
@@ -19,29 +20,16 @@ else {setIsVisible(false)}
       {isVisible && (<motion.button initial = {
   { opacity: 0, scale: 0.8,
   y: 20 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-}} animate = {
-  { opacity: 1, scale: 1,
-  y: 0 
+const EnhancedScrollToTop.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedScrollToTop.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-}} exit = {
-  { opacity: 0, scale: 0.8,
-  y: 20 
-
-}} onClick={scrollToTop} className="fixed bottom-24 right-6 z-40 p-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Scroll to top">
-          <ChevronUpIcon className="w-6 h-6" />
-        </motion.button>)}
-    </AnimatePresence>)};
-export default EnhancedScrollToTop;
-
-export {EnhancedScrollToTop};
-
-export {EnhancedScrollToTop};
-
-export {EnhancedScrollToTop};
-
-export {EnhancedScrollToTop};
-
-export {EnhancedScrollToTop};
-
-</motion>
+export default EnhancedScrollToTop.js;

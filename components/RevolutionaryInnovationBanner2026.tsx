@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -197,3 +198,5 @@ const RevolutionaryInnovationBanner2026 = () => {
 };
 
 export default RevolutionaryInnovationBanner2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

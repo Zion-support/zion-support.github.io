@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -361,3 +362,5 @@ const AIAutonomousRoboticsPlatform: React.FC = () => {
 };
 
 export default AIAutonomousRoboticsPlatform;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

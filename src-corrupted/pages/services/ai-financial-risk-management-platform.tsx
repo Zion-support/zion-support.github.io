@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;',';';
     ';';';';
 import { motion  } from 'framer-motion'; import { Helmet  } from 'react-helmet-async',;',';';
@@ -892,3 +893,5 @@ import { Helmet   } from 'react-helmet-async'; import { TrendingUp, Shield, Brai
 </div>
 </Helmet>
 </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

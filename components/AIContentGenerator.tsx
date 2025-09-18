@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -682,3 +683,5 @@ MIT License - see LICENSE file for details.`,
 };
 
 export default AIContentGenerator;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const UltimateContentBanner: React.FC = () => {
@@ -142,8 +143,15 @@ const UltimateContentBanner: React.FC = () => {
           </a>
         </div>
       </div>
+=======
+import React from 'react';
+const UltimateContentBanner: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltimateContentBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };
-
 export default UltimateContentBanner;

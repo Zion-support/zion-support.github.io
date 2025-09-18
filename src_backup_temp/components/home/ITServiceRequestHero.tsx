@@ -1,9 +1,6 @@
-;export function ITServiceRequestHero(...args[]):  {
-  const [location, setLocation] = useState<any>("");
-  const [isSubmitting, setIsSubmitting] = useState<any>(false);
-  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
-    if(location.trim()) {
+import React from 'react';
 
+<<<<<<< HEAD
       setIsSubmitting(true);
       // Simulate API call
       setTimeout(: unknown {
@@ -317,3 +314,5 @@ export function ITServiceRequestHero(props: any) {
 </motion>
 </any>
 </any>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

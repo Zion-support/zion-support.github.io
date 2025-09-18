@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -463,3 +464,5 @@ const RevolutionaryContentShowcase2026 = () => {
 };
 
 export default RevolutionaryContentShowcase2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

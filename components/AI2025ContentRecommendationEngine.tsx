@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -446,3 +447,5 @@ const AI2025ContentRecommendationEngine = () => {
 };
 
 export default AI2025ContentRecommendationEngine;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

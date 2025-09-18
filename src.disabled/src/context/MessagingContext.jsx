@@ -1,4 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 import React,{ createContext,useContext,useState } from \'react\'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} \"id\": Date.now().toString(),; content,; \"timestamp\": new Date(),; \"isRead\": \'false\',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
 const React,{ createContext,useContext,useState } from "react"; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} id: Date.now().toString(),; content,; timestamp: new Date(),; isRead: "false",; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };'"'"
 import _React,{ createContext,useContext,useState } from 'react'; const MessagingProvider({ children }) {} const [messages,setMessages] = useState([]); const sendMessage = (content) => {} const newMessage = {} "id": Date.now().toString(),; content,; "timestamp": new Date(),; "isRead": 'false',; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider }; export { MessagingProvider };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+=======
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

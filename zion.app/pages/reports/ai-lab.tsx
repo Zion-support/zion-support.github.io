@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 interface ArticleEntry {
@@ -51,5 +52,9 @@ export default function AILabPage() {
         ))}
       </ul>
     </main>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
-}
+};
+
+export default ai-lab;

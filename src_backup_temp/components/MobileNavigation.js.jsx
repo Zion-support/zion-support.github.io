@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useRef} from 'react';'''';';
 import {Link, useLocation} from 'react-router-dom';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
@@ -635,3 +636,5 @@ export {MobileNavigation};
 export {MobileNavigation};
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

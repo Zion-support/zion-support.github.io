@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -29,3 +30,5 @@ export default function TalentPage() {
     </Layout>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

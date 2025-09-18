@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feature/revolutionary-2026-content
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -34,7 +31,6 @@ const TranscendentAI2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -63,7 +59,6 @@ const TranscendentAI2026: React.FC = () => {
         </div>
       </div>
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -144,7 +139,6 @@ const TranscendentAI2026: React.FC = () => {
                   ))}
                 </div>
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
 >>>>>>> origin/feature/revolutionary-2026-content
       {/* Transcendent Features */}
       <div className="container mx-auto px-4 py-20">
@@ -206,11 +200,7 @@ const TranscendentAI2026: React.FC = () => {
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-pink-500 to-red-500 h-2 rounded-full w-full"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               </div>
-=======
       {/* AI Evolution Phases */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -281,8 +271,6 @@ const TranscendentAI2026: React.FC = () => {
           </div>
         </div>
 
-=======
-=======
               </div>
         {/* Revolutionary Applications */}
         <motion.section
@@ -403,11 +391,8 @@ const TranscendentAI2026: React.FC = () => {
               </a>
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
         {/* Revolutionary Applications */}
-=======
               </div>
-=======
               </div>
-=======
       {/* AI Evolution Phases */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -649,9 +634,6 @@ const TranscendentAI2026: React.FC = () => {
               </ul>
 >>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         {/* AI Capabilities Grid */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -661,7 +643,6 @@ const TranscendentAI2026: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore the revolutionary capabilities that define transcendent AI
             </p>
-=======
 >>>>>>> cursor/create-and-deploy-new-content-4f5e
 >>>>>>> origin/feature/revolutionary-2026-content
           </div>
@@ -732,8 +713,5 @@ const TranscendentAI2026: React.FC = () => {
 };
 
 export default TranscendentAI2026;
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
 >>>>>>> origin/feature/revolutionary-2026-content

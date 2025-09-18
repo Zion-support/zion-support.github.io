@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 ;
 ,;
@@ -103,52 +104,16 @@ export function FeatureHighlights("props": "any) {;
               key={index}
               variants={itemVariants}
               whileHover={{;
+=======
 
-                y: -5,
-                scale: 1.02,
-                transition: { duration: 0.3 }
-              }}"
-              className="group"
-"
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: borde r-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover: scal e-110 transition-transform duration-300`}>`
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
-                </div>
-"
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover: tex t-blue-400 transition-colors duration-300">
-                  {feature.title}
-"
-                <p className="text-gray-400 group-hover: tex t-gray-300 transition-colors duration-300">
-                  {feature.description}
-                </p>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover: tex t-blue-400 transition-colors duration-200">
-                {feature.title}
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {feature.description}
-              </p>;
-            </motion.div>;
-          ))}
-        </div>;
-        <motion.div          className="mt-16 text-center";
-          initial={{ "opacity": "0", "y": "2 0 "}}
-          whileInView={{ "opacity": "1", "y": "0 "}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "0.4;
-"}}
-        >";
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;
-            <span>Experience the difference</span>";
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )}
-;
-'"`;
-</motion>;
-</motion>;
-</motion>
+const FeatureHighlights: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FeatureHighlights</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+
+export default FeatureHighlights;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
@@ -269,11 +270,25 @@ PlayPauseRotateCcwCheckCircleArrowRightBrainZapTargetGlobe
           <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
             📞 Contact Sales
           </button>
+=======
+import React from 'react';
+const InteractiveTechDemo2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">InteractiveTechDemo2026</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 
+=======
+  };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 export default InteractiveTechDemo2026;

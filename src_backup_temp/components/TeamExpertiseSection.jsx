@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -396,15 +397,17 @@ const stats = [";
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 import React from 'react';
-interface TeamExpertiseSection.jsProps {
-  // Add props here as needed
-}
-export default function TeamExpertiseSection.js({ }: TeamExpertiseSection.jsProps) {
+
+const TeamExpertiseSection: React.FC = () => {
   return (
-    <div>
-      <h1>TeamExpertiseSection.js</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TeamExpertiseSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default TeamExpertiseSection;

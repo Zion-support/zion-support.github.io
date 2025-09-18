@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
  params - Function parameters;
@@ -161,45 +162,16 @@ function InteractiveTestimonials("props": "any) {export function InteractiveTest
           whileInView = {;
   { "opacity": "1",;
   "y": "0;
+=======
 
-}}
-          viewport={{ once: tru e }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >"
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Join Our Success Stories?
-            "
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Let's discuss how we can transform your business with innovative
-              technology solutions tailored to your specific needs.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Start Your Project"
-                <Award className="ml-2 h-5 w-5"   />
-              </button>"
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover: b g-white hover: tex t-blue-600 rounded-lg font-medium transition-colors duration-200">
-                Schedule Consultation"
-                <Users className="ml-2 h-5 w-5"   />              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;) "};
-;
-export default InteractiveTestimonials;";
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
+const InteractiveTestimonials: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InteractiveTestimonials</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+
 export default InteractiveTestimonials;
-export default InteractiveTestimonials;
-'"`;
-</motion>;
-</motion>;
-</button>;
-</motion>;
-</motion>;
-</any>;
-</any>

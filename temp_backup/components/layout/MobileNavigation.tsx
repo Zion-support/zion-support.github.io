@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -145,198 +146,16 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
   const toggleSection = (sectionId: string) => {
     setActiveSection(activeSection === sectionId ? null : sectionId);
   };
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const MobileNavigation: React.FC = () => {
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-            onClick={onClose}
-          />
-
-          {/* Navigation Panel */}
-          <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="mobile-nav fixed right-0 top-0 h-full w-full max-w-sm bg-gradient-to-b from-gray-900 via-gray-800 to-black border-l border-cyan-400/20 z-50 overflow-y-auto"
-          >
-            {/* Header */}
-            <div className="sticky top-0 bg-gradient-to-r from-gray-900 to-gray-800 border-b border-cyan-400/20 p-4">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h2 className="text-lg font-bold text-white">Zion Tech Group</h2>
-                    <p className="text-xs text-cyan-400">Menu</p>
-                  </div>
-                </div>
-                <button
-                  onClick={onClose}
-                  className="w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-xl flex items-center justify-center text-gray-400 hover:text-white transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-
-              {/* Search Bar */}
-              <div className="relative">
-                <form onSubmit={handleSearch} className="relative">
-                  <input
-                    ref={searchRef}
-                    type="text"
-                    placeholder="Search services, solutions..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20 transition-all"
-                  />
-                  <button
-                    type="submit"
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-cyan-500 hover:bg-cyan-600 rounded-lg flex items-center justify-center text-white transition-colors"
-                  >
-                    <Search className="w-4 h-4" />
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            {/* Navigation Content */}
-            <div className="p-4 space-y-6">
-              {/* Quick Actions */}
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Quick Actions</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {quickActions.map((action) => (
-                    <Link
-                      key={action.label}
-                      href={action.href}
-                      onClick={onClose}
-                      className="group p-3 bg-gradient-to-br from-gray-800/50 to-gray-700/30 border border-gray-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 text-center"
-                    >
-                      <div className={`w-8 h-8 mx-auto mb-2 bg-gradient-to-br ${action.color} rounded-lg p-2`}>
-                        <action.icon className="w-full h-full text-white" />
-                      </div>
-                      <span className="text-xs text-white font-medium group-hover:text-cyan-400 transition-colors">
-                        {action.label}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Navigation Sections */}
-              {navigationSections.map((section) => (
-                <div key={section.id}>
-                  <button
-                    onClick={() => toggleSection(section.id)}
-                    className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover:bg-gray-700/30 rounded-xl border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg p-2">
-                        <section.icon className="w-full h-full text-white" />
-                      </div>
-                      <span className="text-white font-medium">{section.title}</span>
-                    </div>
-                    <ChevronDown 
-                      className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
-                        activeSection === section.id ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  </button>
-
-                  <AnimatePresence>
-                    {activeSection === section.id && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="mt-2 space-y-1 overflow-hidden"
-                      >
-                        {section.items.map((item) => (
-                          <Link
-                            key={item.label}
-                            href={item.href}
-                            onClick={onClose}
-                            className="flex items-center gap-3 p-3 ml-8 bg-gray-800/20 hover:bg-gray-700/20 rounded-lg border border-gray-700/30 hover:border-cyan-400/30 transition-all duration-300 group"
-                          >
-                            <div className={`w-6 h-6 bg-gradient-to-br ${item.color} rounded-lg p-1.5`}>
-                              <item.icon className="w-full h-full text-white" />
-                            </div>
-                            <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
-                              {item.label}
-                            </span>
-                          </Link>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-
-              {/* Contact Information */}
-              <div className="pt-6 border-t border-gray-700/50">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Contact</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg">
-                    <Phone className="w-5 h-5 text-cyan-400" />
-                    <div>
-                      <p className="text-sm text-gray-400">Phone</p>
-                      <p className="text-white font-medium">+1 302 464 0950</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg">
-                    <Mail className="w-5 h-5 text-purple-400" />
-                    <div>
-                      <p className="text-sm text-gray-400">Email</p>
-                      <p className="text-white font-medium">kleber@ziontechgroup.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg">
-                    <MapPin className="w-5 h-5 text-pink-400" />
-                    <div>
-                      <p className="text-sm text-gray-400">Address</p>
-                      <p className="text-white font-medium text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div className="pt-6 border-t border-gray-700/50">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Follow Us</h3>
-                <div className="flex gap-3">
-                  {[
-                    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', color: 'from-blue-500 to-blue-600' },
-                    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-400 to-blue-500' },
-                    { icon: Github, href: 'https://github.com/zion-tech-group', color: 'from-gray-600 to-gray-700' },
-                    { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-500 to-red-600' }
-                  ].map((social) => (
-                    <a
-                      key={social.href}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-10 h-10 bg-gradient-to-br ${social.color} rounded-lg p-2.5 hover:scale-110 transition-transform duration-300`}
-                    >
-                      <social.icon className="w-full h-full text-white" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MobileNavigation</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

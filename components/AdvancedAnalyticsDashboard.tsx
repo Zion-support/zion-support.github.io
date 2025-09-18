@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -487,3 +488,5 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
 };
 
 export default AdvancedAnalyticsDashboard;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

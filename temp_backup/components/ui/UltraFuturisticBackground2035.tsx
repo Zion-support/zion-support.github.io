@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -130,188 +131,15 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
       }
     };
   }, []);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraFuturisticBackground2035: React.FC = () => {
   return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 0 }}
-      />
-      
-      {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-      
-      {/* Animated Grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
-      </div>
-      
-      {/* Floating Geometric Shapes */}
-      <motion.div
-        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 opacity-60"
-        animate={{
-          rotate: 360,
-          scale: [1, 1.2, 1],
-          opacity: [0.6, 0.8, 0.6]
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      
-      <motion.div
-        className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 opacity-60 rounded-full"
-        animate={{
-          rotate: -360,
-          scale: [1, 1.3, 1],
-          opacity: [0.6, 0.9, 0.6]
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      
-      <motion.div
-        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 opacity-60 transform rotate-45"
-        animate={{
-          rotate: 360,
-          scale: [1, 1.1, 1],
-          opacity: [0.6, 0.7, 0.6]
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      
-      {/* Neon Lines */}
-      <motion.div
-        className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60"
-        animate={{
-          opacity: [0.6, 1, 0.6]
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      
-      <motion.div
-        className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent opacity-60"
-        animate={{
-          opacity: [0.6, 1, 0.6]
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      
-      {/* Energy Orbs */}
-      <motion.div
-        className="absolute top-1/4 right-1/4 w-4 h-4 bg-cyan-400 rounded-full shadow-lg shadow-cyan-400/50"
-        animate={{
-          scale: [1, 1.5, 1],
-          opacity: [0.8, 1, 0.8],
-          boxShadow: [
-            "0 0 20px rgba(0, 255, 255, 0.5)",
-            "0 0 40px rgba(0, 255, 255, 0.8)",
-            "0 0 20px rgba(0, 255, 255, 0.5)"
-          ]
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      
-      <motion.div
-        className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-purple-400 rounded-full shadow-lg shadow-purple-400/50"
-        animate={{
-          scale: [1, 1.8, 1],
-          opacity: [0.7, 1, 0.7],
-          boxShadow: [
-            "0 0 15px rgba(255, 0, 255, 0.5)",
-            "0 0 30px rgba(255, 0, 255, 0.8)",
-            "0 0 15px rgba(255, 0, 255, 0.5)"
-          ]
-        }}
-        transition={{
-          duration: 2.5,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      
-      {/* Holographic Rings */}
-      <motion.div
-        className="absolute top-1/2 left-1/2 w-64 h-64 border border-cyan-300/20 rounded-full -translate-x-1/2 -translate-y-1/2"
-        animate={{
-          rotate: 360,
-          scale: [1, 1.1, 1],
-          opacity: [0.2, 0.4, 0.2]
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      
-      <motion.div
-        className="absolute top-1/2 left-1/2 w-96 h-96 border border-purple-300/15 rounded-full -translate-x-1/2 -translate-y-1/2"
-        animate={{
-          rotate: -360,
-          scale: [1, 1.05, 1],
-          opacity: [0.15, 0.3, 0.15]
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      
-      {/* Quantum Particles */}
-      <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
-            }}
-            animate={{
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0]
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut"
-            }}
-          />
-        ))}
-      </div>
-      
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2035</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

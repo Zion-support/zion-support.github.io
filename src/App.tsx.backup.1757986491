@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
 import ScrollToTop from './ScrollToTop';
 import Header from './Header';
 import Footer from './Footer';
@@ -69,7 +68,6 @@ import RevolutionaryInnovationHub2027 from './pages/RevolutionaryInnovationHub20
 import SyntheticBiologyRevolution2027 from './pages/SyntheticBiologyRevolution2027';
 
 const App: React.FC = () => {
-=======
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -345,7 +343,6 @@ function App() {
             </div>
           } />
           
-<<<<<<< HEAD
           {/* Routes for all pages */}
           <Route path="/pages/AdvancedTechSolutions2026" element={<AdvancedTechSolutions2026 />} />
           <Route path="/pages/InnovationShowcase2026" element={<InnovationShowcase2026 />} />
@@ -382,7 +379,6 @@ function App() {
         <Footer />
       </div>
     </Router>
-=======
           <main className="flex-1">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
@@ -514,4 +510,3 @@ function App() {
   );
 };
 
-export default App;

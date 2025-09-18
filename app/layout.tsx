@@ -8,11 +8,6 @@ import '../styles/optimizations.css';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import NewContentBanner from '../components/NewContentBanner';
 import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedSEO from '../components/EnhancedSEO';
-import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
-import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
-import PerformanceOptimizations from '../components/PerformanceOptimizations';
-import AdvancedSEOOptimizer from '../components/AdvancedSEOOptimizer';
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -31,6 +26,7 @@ function Header() {
           Zion Tech Group
         </Link>
         <div className="hidden md:flex gap-6">
+<<<<<<< HEAD
           <div className="relative group">
             <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">
               AI 2025
@@ -1084,41 +1080,25 @@ function Header() {
               NEW
             </span>
           </Link>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           <Link 
             href="/content-showcase" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus relative"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
           >
-            Content Showcase
-            <span className="absolute -top-2 -right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-              NEW
-            </span>
-          </Link>
-          <Link 
-            href="/webinars" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
-          >
-            Webinars
-          </Link>
-          <Link 
-            href="/ai-implementation-guide-2025" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative"
-          >
-            AI Guide
-            <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-              ESSENTIAL
-            </span>
-          </Link>
-          <Link 
-            href="/webinars" 
-            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
-          >
-            Webinars
+            Content Library
           </Link>
           <Link 
             href="/services" 
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
             Services
+          </Link>
+          <Link 
+            href="/case-studies" 
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Case Studies
           </Link>
           <Link 
             href="/contact" 
@@ -1146,7 +1126,7 @@ function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
             <div className="space-y-2">
@@ -1167,18 +1147,6 @@ function Footer() {
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
                 AI Services
-              </Link>
-              <Link 
-                href="/ai-services-2025" 
-                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
-              >
-                AI Services 2025
-              </Link>
-              <Link 
-                href="/quantum-computing-solutions" 
-                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
-              >
-                Quantum Computing
               </Link>
               <Link 
                 href="/services/it-services" 
@@ -1214,6 +1182,7 @@ function Footer() {
             </div>
           </div>
           <div>
+<<<<<<< HEAD
             <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
             <div className="space-y-2">
               <Link 
@@ -1243,6 +1212,8 @@ function Footer() {
             </div>
           </div>
           <div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             <h3 className="font-semibold text-gray-900 mb-3">Contact Info</h3>
             <div className="text-sm text-gray-600 space-y-1">
               <div>Mobile: +1 302 464 0950</div>
@@ -1269,10 +1240,10 @@ function Footer() {
   );
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
+export default function RootLayout({ 
+  children 
+}: { 
+  children: React.ReactNode 
 }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -1346,75 +1317,18 @@ export default function RootLayout({
         {/* Performance hints */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
-      <body className="antialiased bg-white text-gray-900">
-        <div>
-          <AccessibilityEnhancer>
-            <AdvancedPerformanceMonitor2026 />
-            <UltimateAIAssistant2026 />
-              {/* Skip to main content for accessibility */}
-              <a 
-                href="#main-content" 
-                className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-              >
-                Skip to main content
-              </a>
-              
-              {/* Enhanced Navigation */}
-              <EnhancedNavigation />
-              
-              {/* New Content Banner */}
-              <NewContentBanner />
-              
-              {/* Main Content */}
-              <main id="main-content" className="min-h-screen">
-                {children}
-              </main>
-              
-              {/* Footer */}
-              <footer className="bg-gray-900 text-white py-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div>
-                      <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-                      <p className="text-gray-400 mb-4">
-                        Leading the revolution in AI solutions and digital transformation.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="text-md font-semibold mb-4">Services</h4>
-                      <ul className="space-y-2 text-gray-400">
-                        <li><Link to="/services" className="hover:text-white transition-colors">AI Solutions</Link></li>
-                        <li><Link to="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
-                        <li><Link to="/resources" className="hover:text-white transition-colors">Resources</Link></li>
-                        <li><Link to="/tools" className="hover:text-white transition-colors">Tools</Link></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-md font-semibold mb-4">Company</h4>
-                      <ul className="space-y-2 text-gray-400">
-                        <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
-                        <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                        <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-                        <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-md font-semibold mb-4">Connect</h4>
-                      <ul className="space-y-2 text-gray-400">
-                        <li><a href="https://twitter.com/ziontechgroup" className="hover:text-white transition-colors">Twitter</a></li>
-                        <li><a href="https://linkedin.com/company/zion-tech-group" className="hover:text-white transition-colors">LinkedIn</a></li>
-                        <li><a href="https://github.com/zion-tech-group" className="hover:text-white transition-colors">GitHub</a></li>
-                        <li><Link to="/newsletter" className="hover:text-white transition-colors">Newsletter</Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                    <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
-                  </div>
-                </div>
-              </footer>
-          </AccessibilityEnhancer>
-        </div>
+      <body className="min-h-screen bg-white text-gray-900 font-sans">
+        <ErrorBoundary>
+          <NewContentBanner />
+          <EnhancedNavigation />
+          <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen" role="main">
+            {children}
+          </main>
+          
+          {/* Development Tools */}
+          <PerformanceMonitor />
+          <AccessibilityEnhancer />
+        </ErrorBoundary>
       </body>
     </html>
   );

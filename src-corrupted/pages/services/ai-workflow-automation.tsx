@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';""',';';
     ';';';
 import { SEO } from '../../components/SEO';""',';';
@@ -613,3 +614,12 @@ export default AIWorkflowAutomation;"`""';';';';
 </Bot>
 </motion>
 </SEO>
+=======
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-workflow-automation;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, ArrowUp, Star, Zap, Users } from 'lucide-react';
@@ -150,3 +151,5 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
       </AnimatePresence>
     </div>);
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

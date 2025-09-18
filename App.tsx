@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
+<<<<<<< HEAD
 import EnhancedNavigation from './src/components/EnhancedNavigation';
 import EnhancedFooter from './src/components/EnhancedFooter';
 import EnhancedSearch from './src/components/EnhancedSearch';
@@ -137,12 +138,17 @@ import RevolutionaryContentBanner2026 from './src/components/RevolutionaryConten
 import UltimateTechPromotionBanner2026 from './src/components/UltimateTechPromotionBanner2026';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 
+=======
+import './src/index.css';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 export default function App(): JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <Header />
+<<<<<<< HEAD
         
         <Routes>
           <Route path="/" element={
@@ -1106,3 +1112,23 @@ export default function App(): JSX.Element {
     </Router>
   );
 }
+=======
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={
+              <div className="container mx-auto px-4 py-8">
+                <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1>
+                <p className="text-lg text-center text-gray-600">
+                  Your trusted partner in AI and technology solutions.
+                </p>
+              </div>
+            } />
+            {/* Add more routes as needed */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

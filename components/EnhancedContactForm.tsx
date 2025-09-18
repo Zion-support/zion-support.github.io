@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
     if (!formData.email.trim()) {
@@ -37,3 +38,5 @@ import { motion } from 'framer-motion';
         </div>
 
         {/* Contact Form */}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

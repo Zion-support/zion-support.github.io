@@ -1,58 +1,12 @@
-import { useTranslation } from 'react-i18next';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
+import React from 'react';
 
-  useEffect(() => {
-    // Check if this is first visit
-    const hasVisited = localStorage.getItem('zion_has_visited');
-    if (hasVisited) return;
-
-    // Mark as visited
-    
-    // Check if browser language is supported and different from current language
-    const isSupported = supportedLanguages.some(lang => lang.code === browserLang);
-    if (isSupported && browserLang !== currentLanguage) {
-      setDetectedLanguage(browserLang);
-      setOpen(true);
-    }
-
-  if (!detectedLanguage) return null;
-
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage;
-
-  const handleAccept = async () => {
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
-  };
-
+const LanguageDetectionPopup: React.FC = () => {
   return (
-    <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
-        <AlertDialogHeader>
-          <AlertDialogTitle className="text-white">
-          </AlertDialogTitle>
-          <AlertDialogDescription className="text-zion-slate-light">
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-            {t('general.no')}
-          </AlertDialogCancel>
-          <AlertDialogAction 
-            onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-          >
-            {t('general.yes')}
-          </AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LanguageDetectionPopup</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default LanguageDetectionPopup;

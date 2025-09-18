@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket, Target, CheckCircle, Phone, Mail } from 'lucide-react';
@@ -299,3 +300,5 @@ export default function UltraFuturisticHero2029V2() {
     </section>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

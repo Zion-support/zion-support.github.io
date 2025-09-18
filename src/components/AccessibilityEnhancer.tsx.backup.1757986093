@@ -18,7 +18,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     setIsHighContrast(prefersHighContrast);
 
-<<<<<<< HEAD
     // Listen for changes in preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
@@ -33,7 +32,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       motionQuery.removeEventListener('change', handleMotionChange);
       contrastQuery.removeEventListener('change', handleContrastChange);
     };
-=======
   // Screen reader announcements
   const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
     const announcement = { message, priority, id: Date.now() } as any;
@@ -86,8 +84,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           event.preventDefault();
         }
       }
-<<<<<<< HEAD
-=======
 
       // Skip to footer
       if (event.key === 'Tab' && event.ctrlKey) {
@@ -153,7 +149,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         </a>
       </div>
 
-<<<<<<< HEAD
       {/* Accessibility controls */}
       <div className="fixed bottom-4 left-4 z-40">
         <div className="bg-white shadow-lg rounded-lg p-4 space-y-2">
@@ -192,7 +187,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               />
               <div className="text-xs text-gray-500 text-center">{fontSize}px</div>
             </div>
-=======
       {/* Screen Reader Announcements */}
       <div
         aria-live="polite"
@@ -211,9 +205,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   );
 };
 
-<<<<<<< HEAD
 export default AccessibilityEnhancer;
-=======
 // Focus Trap Hook
 export function useFocusTrap({ containerRef, onEscape, returnFocus }: FocusTrapConfig) {
   const previousFocus = useRef<HTMLElement | null>(null);

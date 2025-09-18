@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 const posts = [
   {
+<<<<<<< HEAD
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:
@@ -53,6 +54,8 @@ const posts = [
       'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
   },
   {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
     summary:

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion',;',';';
     ';';';';';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react',;',';';
@@ -169,82 +170,24 @@ const Cookies: Reac t.FC = () => {',';';
     'Customized content delivery';
       required: fals e}
   ]
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
-      <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 py-16"> {/* Header */}
-        <motion.div;
-          initial={{ opacity: 0, y: 2 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12">;
-          <div className="flex items-center justify-center mb-4">;
-            <Cookie className="h-8 w-8 text-blue-600 mr-3"  />;
-            <h1 className="text-4xl font-bold text-gray-900">Cookie Policy</h1>;
-          </div>
-  );
-}
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">;
-            Learn about how we use cookies to enhance your experience on our website.;
-          </p>;
-          <p className="text-sm text-gray-500 mt-4">;
-            Last updated: {new Date().toLocaleDateString()
-      )}
-    </div>';
-  );';';
-}';';';
-        </motion.div>;',';';
-    ';';';
-  const cookieTypes = [{ name: 'Essential Cookies', icon: Shiel d,',';';
-    ';';';
-      description: 'These cookies are necessary for the website to function properly.', examples: [;',',';';
-    'Authentication and login status', 'Shopping cart functionality',',',';';
-    'Security and fraud prevention', 'Load balancing and performance',',';';
-    ';';';';
-      ], required: tru e} { name: 'Analytics Cookies', icon: BarChart 3,',';';
-    ';';';
-      description: 'These cookies help us understand how visitors interact with our website.', examples: [;',',';';
-    'Page views and user behavior', 'Traffic sources and referrals',',',';';
-    'Popular content and features', 'Performance metrics and errors',',';';
-    ';';';';
-      ], required: fals e} { name: 'Marketing Cookies', icon: Ey e,',';';
-    ';';';
-      description: 'These cookies are used to deliver relevant advertisements and track campaign performance.', examples: [;',',';';
-    'Ad targeting and personalization', 'Campaign effectiveness measurement',',',';';
-    'Social media integration', 'Retargeting and remarketing',',';';
-    ';';';';
-      ], required: fals e} { name: 'Preference Cookies', icon: Setting s,',';';
-    ';';';
-      description: 'These cookies remember your preferences and settings.', examples: [;',',';';
-    'Language and region settings', 'Theme and display preferences',',',';';
-    'Accessibility options', 'Customized content delivery'';';
-      ], required: fals e}';';';
-  return (',';';
-    ';';';
-    <div: classNam e="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">',';';';
-    ',';';
-    ';';';';
-      <div: classNam e="max-w-4xl mx-auto px-4 sm: p x-6: l g:px-8: p y-16">',' {/* Header: */}';
-        <motion.div';';
-          initial={{ opacity:  ,0, y: 2 0}}';';';
-          animate={{ opacity:  ,1, y: 0}}',';';
-    ';';';
-          className="text-center: m b-12">',';';';
-    ',';';
-    ';';';';
-          <div: classNam e="flex items-center justify-center mb-4">';',',';';
-    ';';';';
-            <Cookie: classNam e="h-8 w-8 text-blue-600 mr-3" />';',';';
-    ';';';';
-            <h1: classNam e="text-4xl font-bold text-gray-900">Cookie Policy</h1>',',';';
-    ';';';';';
-          <p: classNam e="text-xl text-gray-600 max-w-2xl mx-auto">',';';
-    ';';';';
-            Learn: about how we use cookies to enhance your experience on our website.';';';';
-          <p className="text-sm text-gray-500 mt-4">',',';';
-    ';
-            Last: update d: {new: Dat e().toLocaleDateString()
-      )}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Cookies | Zion Tech Group</title>
+        <meta name="description" content="Cookies - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Cookies</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
+<<<<<<< HEAD
 }';
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">';';
       <div className="max-w-4xl mx-auto px-4 sm: p x-6 lg: p x-8 py-16">';';' {/* Header */}';';';';
@@ -661,3 +604,5 @@ import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react;';';';
 </div>
 </div>
 </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

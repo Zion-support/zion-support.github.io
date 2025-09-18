@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -165,264 +166,25 @@ const CaseStudies = (props: any) => {
     const serviceMatch = selectedService === 'all' || cs.service === selectedService;
     return industryMatch && serviceMatch;
   });
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const CaseStudies: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Case Studies - Zion Tech Group"
-        description="Explore real-world success stories from Zion Tech Group's AI, cloud, and technology implementations. See how we've transformed businesses across industries."
-        keywords="case studies, success stories, AI implementation, cloud migration, technology transformation, client results"
-        canonicalUrl="https://ziontechgroup.com/case-studies"
-      />
-
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
-            Success
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {' '}Stories
-            </span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-          >
-            Discover how Zion Tech Group has transformed businesses across industries with our 
-            innovative AI, cloud, and technology solutions. Real results, measurable impact.
-          </motion.p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>CaseStudies | Zion Tech Group</title>
+        <meta name="description" content="CaseStudies - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">CaseStudies</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </section>
-
-      {/* Filters */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Industry Filter */}
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-4">Filter by Industry</h3>
-                <div className="flex flex-wrap gap-3">
-                  {industries.map((industry) => (
-                    <button
-                      key={industry.id}
-                      onClick={() => setSelectedIndustry(industry.id)}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-                        selectedIndustry === industry.id
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                      }`}
-                    >
-                      <industry.icon className="w-4 h-4" />
-                      <span>{industry.name}</span>
-                      <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                        {industry.count}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Service Filter */}
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-4">Filter by Service</h3>
-                <div className="flex flex-wrap gap-3">
-                  {services.map((service) => (
-                    <button
-                      key={service.id}
-                      onClick={() => setSelectedService(service.id)}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-                        selectedService === service.id
-                          ? 'bg-purple-600 text-white'
-                          : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                      }`}
-                    >
-                      <service.icon className="w-4 h-4" />
-                      <span>{service.name}</span>
-                      <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                        {service.count}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredCaseStudies.map((caseStudy, index) => (
-              <motion.div
-                key={caseStudy.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border ${
-                  caseStudy.featured 
-                    ? 'border-blue-500 shadow-2xl shadow-blue-500/25' 
-                    : 'border-gray-700'
-                } hover:border-blue-400 transition-all duration-300`}
-              >
-                {caseStudy.featured && (
-                  <div className="mb-4">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Featured Case Study
-                    </span>
-                  </div>
-                )}
-
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{caseStudy.title}</h3>
-                  <p className="text-blue-400 font-semibold mb-1">{caseStudy.client}</p>
-                  <p className="text-gray-300">{caseStudy.description}</p>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">The Challenge</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">{caseStudy.challenge}</p>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Our Solution</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">{caseStudy.solution}</p>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
-                  <div className="grid grid-cols-2 gap-3">
-                    {caseStudy.results.map((result, resultIndex) => (
-                      <div key={resultIndex} className="text-center p-3 bg-white/5 rounded-lg">
-                        <div className={`text-2xl font-bold ${result.color} mb-1`}>
-                          {result.metric}
-                        </div>
-                        <div className="text-xs text-gray-300">{result.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {caseStudy.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-500/20"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <span>Duration: {caseStudy.duration}</span>
-                  <span>Team: {caseStudy.team}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Success Metrics */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Impact by the Numbers
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Quantified results from our successful implementations across industries.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: '500+', label: 'AI Models Deployed', icon: Brain, color: 'text-blue-400' },
-              { number: '98%', label: 'Client Satisfaction', icon: Star, color: 'text-yellow-400' },
-              { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp, color: 'text-green-400' },
-              { number: '3.2x', label: 'Average ROI', icon: ChartBar, color: 'text-purple-400' }
-            ].map((metric, index) => (
-              <motion.div
-                key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <metric.icon className={`w-8 h-8 ${metric.color}`} />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{metric.number}</div>
-                <div className="text-gray-400">{metric.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Write Your Success Story?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let Zion Tech Group help you achieve similar results. Our team of experts 
-              is ready to transform your business with cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Explore Our Services
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };
 
 export default CaseStudies;
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</SEO>
-</any>
-</any>

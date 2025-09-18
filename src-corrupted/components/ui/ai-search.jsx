@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2} from 'lucide-react';
@@ -530,3 +531,5 @@ export function AISearch(props: any) {
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

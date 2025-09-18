@@ -3,15 +3,18 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
+<<<<<<< HEAD
 import EnhancedContentAdvertising from '../components/EnhancedContentAdvertising';
 import UltimateBreakthroughBanner from '../components/UltimateBreakthroughBanner';
 import NeuralRealityBanner from '../components/NeuralRealityBanner';
 import RevolutionaryTechAdvertisingBanner from '../components/RevolutionaryTechAdvertisingBanner';
 import InteractiveTechShowcase from '../components/InteractiveTechShowcase';
 
+=======
+import { useNotifications } from '../context/notifications/NotificationContext';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 const Home: React.FC = () => {
   const { addNotification } = useNotifications();
-
   useEffect(() => {
     // Welcome notification
     addNotification({
@@ -21,10 +24,18 @@ const Home: React.FC = () => {
       duration: 5000
     });
   }, [addNotification]);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+<<<<<<< HEAD
       {/* Hero Section */}
+=======
+      <NewContentPromotionBanner2026 />
+      <Helmet>
+        <title>Zion Tech Group 2026 - Revolutionary AI, Quantum Computing & Cybersecurity Solutions</title>
+        <meta name="description" content="Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business." />
+        <meta name="keywords" content="AI solutions, quantum computing, cybersecurity, technology innovation, Zion Tech Group" />
+      </Helmet>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -34,15 +45,17 @@ const Home: React.FC = () => {
             Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. 
             Discover the next generation of technology that will transform your business.
           </p>
+<<<<<<< HEAD
           
           {/* Call to Action Buttons */}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           <div className="flex flex-wrap justify-center gap-6 mb-16">
             <Link to="/pages/RevolutionaryAIServices2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🚀 Revolutionary AI Services</Link>
             <Link to="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">⚛️ Quantum Computing Revolution</Link>
             <Link to="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🛡️ Cybersecurity Solutions</Link>
           </div>
         </motion.div>
-
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🤖</div>
@@ -52,7 +65,6 @@ const Home: React.FC = () => {
               <Link to="/pages/RevolutionaryAIServices2026" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">Explore AI Services →</Link>
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">⚛️</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">Quantum Computing</h3>
@@ -61,7 +73,6 @@ const Home: React.FC = () => {
               <Link to="/pages/QuantumComputingRevolution2026" className="text-purple-400 hover:text-purple-300 font-semibold text-lg">Discover Quantum Tech →</Link>
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🔒</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">AI Cybersecurity</h3>
@@ -71,15 +82,12 @@ const Home: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
         </div>
-
         <div className="container mx-auto px-4 py-20">
           <RevolutionaryContentShowcase />
         </div>
-
         <div className="container mx-auto px-4 py-16">
         {/* New Blog Promo — Sept 16, 2025 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
@@ -108,7 +116,6 @@ const Home: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">🔥 Latest Revolutionary Content 2026</h2>
             <p className="text-xl text-gray-300">Explore our newest groundbreaking content and technologies</p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div 
               className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-2xl p-8 text-center hover:scale-105 transition-transform"
@@ -116,6 +123,7 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
+<<<<<<< HEAD
               Explore AI Innovation Hub 2026
             </Link>
             <Link 
@@ -142,6 +150,55 @@ const Home: React.FC = () => {
               Advanced artificial intelligence solutions for modern businesses. 
               From machine learning to autonomous systems.
             </p>
+=======
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI Trends 2026 Insights</h3>
+              <p className="text-gray-300 mb-6">Discover the revolutionary AI technologies shaping the future</p>
+              <Link to="/pages/AITrends2026Insights" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Explore Trends →</Link>
+            </motion.div>
+            <motion.div 
+              className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-8 text-center hover:scale-105 transition-transform"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="text-4xl mb-4">⭐</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Revolutionary Case Studies</h3>
+              <p className="text-gray-300 mb-6">Explore groundbreaking success stories across industries</p>
+              <Link to="/pages/RevolutionaryCaseStudies2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">View Success Stories →</Link>
+            </motion.div>
+            <motion.div 
+              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-2xl p-8 text-center hover:scale-105 transition-transform"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="text-4xl mb-4">✨</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Ultimate Tech Showcase</h3>
+              <p className="text-gray-300 mb-6">Experience the pinnacle of revolutionary technologies</p>
+              <Link to="/pages/UltimateTechShowcase2026" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Explore Technologies →</Link>
+            </motion.div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/10 border border-white/20 rounded-2xl p-8 text-center">
+              <h3 className="text-3xl font-bold text-white mb-4">New: 2026 AI Executive Strategy</h3>
+              <p className="text-gray-300 mb-6">A concise guide for leaders to adopt AI responsibly and effectively.</p>
+              <Link to="/pages/AIExecutiveStrategy2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Read the Strategy →</Link>
+            </div>
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-8 text-center">
+              <h3 className="text-3xl font-bold text-white mb-4">🚀 AI 2026: Enterprise Automation</h3>
+              <p className="text-gray-300 mb-6">Transform your business with next-generation AI automation that learns and scales autonomously.</p>
+              <Link to="/pages/AI2026EnterpriseAutomation" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-lg inline-block transition-all duration-300">Explore Now →</Link>
+            </div>
+          </div>
+        </div>
+        <motion.div className="text-center bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl p-12 border border-cyan-400/30 mt-20" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Reality?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join the revolution and experience the future of technology. Our revolutionary solutions are changing the world, one breakthrough at a time.</p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link to="/pages/RevolutionaryAIServices2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Explore All Services</Link>
+            <Link to="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Get Started Today</Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
@@ -218,5 +275,8 @@ const Home: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 export default Home;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -550,3 +551,5 @@ export default function ComprehensiveServicesShowcase2025() {
     </>
   );
   };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -199,3 +200,5 @@ const QuantumComputingRevolution2025: React.FC = () => {
 };
 
 export default QuantumComputingRevolution2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

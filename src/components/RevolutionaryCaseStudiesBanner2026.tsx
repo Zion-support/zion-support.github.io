@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -181,74 +182,57 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
                   }`}
                 />
               ))}
+=======
+import React from 'react';
+
+const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-r from-orange-900 via-red-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            📊 REVOLUTIONARY CASE STUDIES 2026
+          </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+            Success Stories
+          </h2>
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+            Real-world success stories showcasing the transformative power of our revolutionary technologies
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🏭</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Manufacturing Revolution</h3>
+            <p className="text-orange-100 mb-4 text-sm text-center">
+              Fortune 500 company achieved 400% efficiency increase with our AI systems
+            </p>
+            <div className="text-center">
+              <span className="text-green-400 font-bold text-lg">+400% Efficiency</span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             </div>
           </div>
-        </div>
-
-        {/* Metrics Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid md:grid-cols-4 gap-8 mb-16"
-        >
-          {metrics.map((metric, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.8 }}
-              transition={{ duration: 0.6, delay: 0.5 + 0.1 * index }}
-              className="text-center bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30"
-            >
-              <div className={`text-4xl font-bold mb-2 ${metric.color}`}>{metric.value}</div>
-              <div className="text-white/80">{metric.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Industry Success Stories */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-16"
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">🌟 Industry Success Stories</h3>
-            <p className="text-xl opacity-90">Transforming businesses across all sectors</p>
+          
+          <div className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-red-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🏥</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Healthcare Transformation</h3>
+            <p className="text-red-100 mb-4 text-sm text-center">
+              Medical diagnosis accuracy increased to 99.8% with conscious AI systems
+            </p>
+            <div className="text-center">
+              <span className="text-green-400 font-bold text-lg">99.8% Accuracy</span>
+            </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
-                className={`bg-gradient-to-br ${study.gradient} p-8 rounded-xl text-white hover:scale-105 transition-all duration-300`}
-              >
-                <div className="text-4xl mb-4">{study.logo}</div>
-                <h4 className="text-xl font-bold mb-2">{study.company}</h4>
-                <p className="text-sm opacity-90 mb-4">{study.industry}</p>
-                <div className="text-2xl font-bold mb-2">{study.results.efficiency} Efficiency</div>
-                <div className="text-lg font-semibold">{study.results.costSavings} Saved</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12">
-            <h3 className="text-3xl font-bold mb-4">Ready to Achieve Similar Results?</h3>
-            <p className="text-xl opacity-90 mb-8">
-              Join the companies that have transformed their operations with our revolutionary technologies
+          <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 hover:scale-105 transition-all duration-300">
+            <div className="text-5xl mb-4 text-center">🎓</div>
+            <h3 className="text-xl font-bold mb-3 text-center">Education Revolution</h3>
+            <p className="text-pink-100 mb-4 text-sm text-center">
+              Student engagement increased by 300% with quantum-enhanced learning
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
                 Start Your Transformation →
@@ -259,8 +243,21 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
             </div>
           </div>
         </motion.div>
+=======
+            <div className="text-center">
+              <span className="text-green-400 font-bold text-lg">+300% Engagement</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="text-center mt-12">
+          <button className="bg-gradient-to-r from-orange-600 to-pink-600 px-8 py-4 rounded-full font-semibold text-white hover:shadow-lg hover:scale-105 transition-all duration-300">
+            View All Case Studies →
+          </button>
+        </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       </div>
-    </motion.div>
+    </div>
   );
 };
 

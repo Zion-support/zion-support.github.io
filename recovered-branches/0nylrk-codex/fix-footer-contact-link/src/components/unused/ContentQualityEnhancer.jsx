@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
@@ -581,5 +582,16 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
         }
       `}</style>
     </>);
+=======
+
+const ContentQualityEnhancer: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ContentQualityEnhancer</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
+
 export default ContentQualityEnhancer;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useRef} from 'react';'
 import {motion, useInView} from 'framer-motion';
 import {EnhancedLoading} from "./EnhancedLoading";'
@@ -24,17 +25,16 @@ export default function Page(props: any) {}
   y: 0;}} transition={{ duration: 0.6 }} className={className}>
       {children}
     </motion.div>)};
+=======
+
+const LazyWrapper: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LazyWrapper</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 export default LazyWrapper;
-}}}
-
-export {LazyWrapper};
-
-export {LazyWrapper};
-
-export {LazyWrapper};
-
-export {LazyWrapper};
-
-export {LazyWrapper, Page};
-
-</motion>

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
 export function FeaturesSection() {
@@ -76,47 +77,16 @@ export function FeaturesSection() {
             exceptional results that drive your business forward.
           </p>
         </motion.div>
+=======
 
-        {/* Features Grid */}
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (<motion.div key={index} variants={itemVariants} className="group">
-              <div className="bg-white rounded-2xl p-8 border border-zion-slate-light/20 hover:border-zion-cyan/30 transition-all duration-300 hover:shadow-xl hover:shadow-zion-cyan/10 hover:-translate-y-1">
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-zion-slate-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-zion-cyan/10 transition-colors duration-300`}>
-                  <feature.icon className={`w-8 h-8 ${feature.color}`}/>
-                </div>
-                
-                {/* Content */}
-                <h3 className="text-xl font-bold text-zion-blue-dark mb-4 group-hover:text-zion-cyan transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-zion-slate leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </motion.div>))}
-        </motion.div>
+const FeaturesSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FeaturesSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-        {/* Additional Info */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
-            <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
-              Ready to Experience the Difference?
-            </h3>
-            <p className="text-zion-slate mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have transformed their businesses 
-              with our innovative technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                Get Started Today
-              </button>
-              <button className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>);
-}
+export default FeaturesSection;

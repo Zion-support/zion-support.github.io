@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const UltimateContentBanner2027: React.FC = () => {
+<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const bannerContent = [
@@ -127,8 +127,13 @@ const UltimateContentBanner2027: React.FC = () => {
       <div className="absolute bottom-10 right-10 text-5xl opacity-20 animate-float">
         🧠
       </div>
+=======
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltimateContentBanner2027</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };
-
 export default UltimateContentBanner2027;

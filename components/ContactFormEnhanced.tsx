@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -160,3 +161,5 @@ const ContactFormEnhanced: React.FC = () => {
 };
 
 export default ContactFormEnhanced;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

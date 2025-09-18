@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -338,3 +339,5 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 };
 
 export default BusinessSuccessStoriesShowcase2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

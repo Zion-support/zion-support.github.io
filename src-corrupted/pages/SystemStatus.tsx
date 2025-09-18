@@ -1,22 +1,21 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 const SystemStatus: React.FC = () => {
   return (
-    <>
-      <SEO
-        title="System Status | Zion Tech Group"
-        description="Check system status and uptime"
-        keywords="system status, uptime, monitoring"
-        canonical="/system-status"
-      />
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-4xl font-bold mb-4">System Status</h1>
-          <p className="text-xl text-slate-300">This page is being updated with new content.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>SystemStatus | Zion Tech Group</title>
+        <meta name="description" content="SystemStatus - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">SystemStatus</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

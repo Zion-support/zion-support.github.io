@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useMemo} from 'react';'''';';
 import React, {useState, useMemo} from 'react';'''
 import {motion} from 'framer-motion';
@@ -1763,3 +1764,5 @@ export {AdvancedServicePortfolioDashboard};
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

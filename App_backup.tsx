@@ -1,18 +1,296 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './src/index.css';
 import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
+=======
 
 export default function App(): JSX.Element {
   return (
+    <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-white">
+        <ScrollToTop />
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer />
+        <SEOOptimizer />
+        <MobileOptimizer />
+        <ModernSEOOptimizer />
+        <ModernMobileOptimizer />
+        <EnhancedAccessibilityPanel />
+        <ModernPerformanceMonitor />
+        <PerformanceDashboard />
+        <AdvancedPerformanceOptimizer2025 />
+        <AdvancedSEOOptimizer2025 />
+        <AdvancedAnalyticsTracker2025 />
+        <EnhancedAccessibility2025 />
+        <MobileOptimizer2025 />
+        <Header />
+        
+        <Routes>
+        <Route path="/" element={(
+            <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+              <main className="container mx-auto px-4 py-8">
+                {/* Revolutionary New Content Banner */}
+                <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
+                <UltimateContentBanner2025 />
+                
+                {/* NEW: Ultimate Tech Revolution Banner 2025 */}
+                <UltimateTechRevolutionBanner2025 />
+                
+                {/* NEW: Revolutionary Breakthrough Banner 2026 */}
+                <RevolutionaryBreakthroughBanner2026 />
+                
+                {/* NEW: Revolutionary Case Studies Banner 2026 */}
+                <RevolutionaryCaseStudiesBanner2026 />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Ultimate Content Banner 2025 */}
+                <UltimateContentBanner2025 />
+                
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Ultimate Content Banner 2034 - Latest Revolutionary Content */}
+                <UltimateContentBanner2034 />
+                
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Enhanced Content Carousel 2025 - Revolutionary Technology Showcase */}
+                <EnhancedContentCarousel2025 />
+                
+                {/* NEW: Revolutionary Ad Banner 2025 - Breakthrough Alert */}
+                <RevolutionaryAdBanner2025 />
+                
+                {/* Revolutionary Ad Banner 2030 */}
+                <RevolutionaryAdBanner2030 />
+
+import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
+import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
+import AdvancedPerformanceOptimizer2025 from './src/components/AdvancedPerformanceOptimizer2025';
+import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
+import AdvancedAnalyticsTracker2025 from './src/components/AdvancedAnalyticsTracker2025';
+import EnhancedAccessibility2025 from './src/components/EnhancedAccessibility2025';
+import MobileOptimizer2025 from './src/components/MobileOptimizer2025';
+import ComprehensiveImprovements2025 from './src/components/ComprehensiveImprovements2025';
+import AIConsciousnessRevolution2026 from './src/pages/AIConsciousnessRevolution2026';
+import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
+import InterdimensionalAI2026 from './src/pages/InterdimensionalAI2026';
+import RevolutionaryAdBanner2026 from './src/components/RevolutionaryAdBanner2026';
+import './src/index.css';
+import './src/styles/optimizations.css';
+import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
+import NewShowcase2025 from './src/pages/NewShowcase2025';
+import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
+import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
+import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
+import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
+import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
+import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
+import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
+import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
+import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
+import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
+import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
+import RevolutionaryContentShowcase from './src/components/RevolutionaryContentShowcase';
+// import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
+import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
+import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
+import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
+import QuantumComputingSolutions2026 from './src/pages/QuantumComputingSolutions2026';
+import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
+import UltimateTechBreakthrough2025 from './src/pages/UltimateTechBreakthrough2025';
+import InnovationShowcase2025 from './src/pages/InnovationShowcase2025';
+import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
+import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
+import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
+import NextGenInnovationHub2026 from './src/pages/NextGenInnovationHub2026';
+import InterdimensionalTechRevolution2026 from './src/pages/InterdimensionalTechRevolution2026';
+import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
+import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough2029';
+import ConsciousnessComputingRevolution2030 from './src/pages/ConsciousnessComputingRevolution2030';
+import InterdimensionalTechRevolution2035 from './src/pages/InterdimensionalTechRevolution2035';
+import RevolutionaryTechShowcase2029 from './src/components/RevolutionaryTechShowcase2029';
+import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
+import RevolutionaryTechBanner2030 from './src/components/RevolutionaryTechBanner2030';
+import InteractiveTechDemo2030 from './src/components/InteractiveTechDemo2030';
+import RevolutionaryTechShowcase2030 from './src/pages/RevolutionaryTechShowcase2030';
+import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
+import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
+import RevolutionaryTechBlog2030 from './src/pages/RevolutionaryTechBlog2030';
+import RevolutionaryContentCarousel2027 from './src/components/RevolutionaryContentCarousel2027';
+import RevolutionaryTechShowcase2028 from './src/pages/RevolutionaryTechShowcase2028';
+import AIBusinessRevolution2028 from './src/pages/AIBusinessRevolution2028';
+import NewContentBanner2028 from './src/components/NewContentBanner2028';
+import InterdimensionalTechRevolution2026 from './src/pages/InterdimensionalTechRevolution2026';
+import ConsciousnessComputingRevolution2026 from './src/pages/ConsciousnessComputingRevolution2026';
+import UltimateContentShowcase2026 from './src/components/UltimateContentShowcase2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import ConsciousnessComputingRevolution2030 from './src/pages/ConsciousnessComputingRevolution2030';
+import InterdimensionalTechRevolution2035 from './src/pages/InterdimensionalTechRevolution2035';
+import UltimateTechBanner2029 from './src/components/UltimateTechBanner2029';
+import UltimateTechBreakthrough2030 from './src/pages/UltimateTechBreakthrough2030';
+import RevolutionaryTechShowcase2030 from './src/pages/RevolutionaryTechShowcase2030';
+import UltimateContentShowcase2030 from './src/pages/UltimateContentShowcase2030';
+import RevolutionaryAdBanner2030 from './src/components/RevolutionaryAdBanner2030';
+import EnhancedContentShowcase2030 from './src/components/EnhancedContentShowcase2030';
+import EnhancedContentCarousel2027 from './src/components/EnhancedContentCarousel2027';
+import RevolutionaryTechTrends2027 from './src/pages/RevolutionaryTechTrends2027';
+import NextGenAIBreakthrough2027 from './src/pages/NextGenAIBreakthrough2027';
+import RevolutionaryTechBreakthrough2028 from './src/pages/RevolutionaryTechBreakthrough2028';
+import UltimateTechInnovation2028 from './src/pages/UltimateTechInnovation2028';
+import NextGenTechRevolution2028 from './src/pages/NextGenTechRevolution2028';
+import UltimateContentBanner2028 from './src/components/UltimateContentBanner2028';
+import UltimateContentBanner2029 from './src/components/UltimateContentBanner2029';
+import UltimateTechBreakthrough2029 from './src/pages/UltimateTechBreakthrough2029';
+import RevolutionaryTechShowcase2029 from './src/pages/RevolutionaryTechShowcase2029';
+import NextGenInnovationHub2029 from './src/pages/NextGenInnovationHub2029';
+import RevolutionaryCaseStudies2029 from './src/pages/RevolutionaryCaseStudies2029';
+import UltimateContentBanner2031 from './src/components/UltimateContentBanner2031';
+import RevolutionaryAdBanner2031 from './src/components/RevolutionaryAdBanner2031';
+import UltimateTechBreakthrough2031 from './src/pages/UltimateTechBreakthrough2031';
+import RevolutionaryTechShowcase2031 from './src/pages/RevolutionaryTechShowcase2031';
+import UltimateContentShowcase2031 from './src/pages/UltimateContentShowcase2031';
+import RevolutionaryTechBanner2032 from './src/components/RevolutionaryTechBanner2032';
+import RevolutionaryTechShowcase2032 from './src/pages/RevolutionaryTechShowcase2032';
+import UltimateAIConsciousness2032 from './src/pages/UltimateAIConsciousness2032';
+import RevolutionaryCaseStudies2032 from './src/pages/RevolutionaryCaseStudies2032';
+import EnhancedContentCarousel2032 from './src/components/EnhancedContentCarousel2032';
+import RevolutionaryTechBanner2033 from './src/components/RevolutionaryTechBanner2033';
+import UltimateContentBanner2033 from './src/components/UltimateContentBanner2033';
+import UltimateTechBreakthrough2033 from './src/pages/UltimateTechBreakthrough2033';
+import RevolutionaryTechShowcase2033 from './src/pages/RevolutionaryTechShowcase2033';
+import InteractiveTechDemo2033 from './src/components/InteractiveTechDemo2033';
+import EnhancedContentCarousel2033 from './src/components/EnhancedContentCarousel2033';
+import UltimateTechRevolution2038 from './src/pages/UltimateTechRevolution2038';
+import UltimateTechRevolution2039 from './src/pages/UltimateTechRevolution2039';
+import RevolutionaryTechBreakthrough2040 from './src/pages/RevolutionaryTechBreakthrough2040';
+import NextGenInnovationHub2041 from './src/pages/NextGenInnovationHub2041';
+import UltimateTechBanner2038 from './src/components/UltimateTechBanner2038';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
+import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarousel2025';
+import RevolutionaryAdBanner2025 from './src/components/RevolutionaryAdBanner2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
+import UltimateTechBlog2025 from './src/pages/UltimateTechBlog2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import UltimateTechBanner2039 from './src/components/UltimateTechBanner2039';
+import RevolutionaryTechBanner2040 from './src/components/RevolutionaryTechBanner2040';
+import NextGenInnovationBanner2041 from './src/components/NextGenInnovationBanner2041';
+import EnhancedContentCarousel2039 from './src/components/EnhancedContentCarousel2039';
+import InteractiveTechDemo2039 from './src/components/InteractiveTechDemo2039';
+import RevolutionaryTechBanner2035 from './src/components/RevolutionaryTechBanner2035';
+import UltimateContentBanner2035 from './src/components/UltimateContentBanner2035';
+import UltimateAIConsciousness2035 from './src/pages/UltimateAIConsciousness2035';
+import QuantumRealityEngine2032 from './src/pages/QuantumRealityEngine2032';
+import InteractiveTechShowcase2035 from './src/components/InteractiveTechShowcase2035';
+import ComprehensiveServices2035 from './src/pages/ComprehensiveServices2035';
+import UltimateTechBreakthrough2036 from './src/pages/UltimateTechBreakthrough2036';
+import RevolutionaryTechShowcase2036 from './src/pages/RevolutionaryTechShowcase2036';
+import NextGenInnovationHub2036 from './src/pages/NextGenInnovationHub2036';
+import UltimateContentBanner2036 from './src/components/UltimateContentBanner2036';
+import RevolutionaryAdBanner2036 from './src/components/RevolutionaryAdBanner2036';
+import EnhancedContentCarousel2036 from './src/components/EnhancedContentCarousel2036';
+import InteractiveTechShowcase2036 from './src/components/InteractiveTechShowcase2036';
+import NextGenTechRevolution2045 from './src/pages/NextGenTechRevolution2045';
+import UltimateAIConsciousness2046 from './src/pages/UltimateAIConsciousness2046';
+import QuantumRealityEngine2047 from './src/pages/QuantumRealityEngine2047';
+import UltimateContentBanner2045 from './src/components/UltimateContentBanner2045';
+import RevolutionaryTechBanner2045 from './src/components/RevolutionaryTechBanner2045';
+import NewContentShowcase2045 from './src/components/NewContentShowcase2045';
+import UltimateTechRevolution2035 from './src/pages/UltimateTechRevolution2035';
+import RevolutionaryTechShowcase2035 from './src/pages/RevolutionaryTechShowcase2035';
+import AdvancedTechBreakthrough2035 from './src/pages/AdvancedTechBreakthrough2035';
+import UltimateTechBanner2035 from './src/components/UltimateTechBanner2035';
+import RevolutionaryContentCarousel2035 from './src/components/RevolutionaryContentCarousel2035';
+import UltimateContentBanner2035 from './src/components/UltimateContentBanner2035';
+import RevolutionaryAdBanner2035 from './src/components/RevolutionaryAdBanner2035';
+import AdvancedPerformanceMonitor2025 from './src/components/AdvancedPerformanceMonitor2025';
+import AdvancedAnalyticsDashboard2025 from './src/components/AdvancedAnalyticsDashboard2025';
+import AdvancedSEOOptimizer2025 from './src/components/AdvancedSEOOptimizer2025';
+import UserEngagementTracker2025 from './src/components/UserEngagementTracker2025';
+import UltimateTechRevolutionBanner2025 from './src/components/UltimateTechRevolutionBanner2025';
+import RevolutionaryBreakthroughBanner2026 from './src/components/RevolutionaryBreakthroughBanner2026';
+import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
+import RevolutionaryCaseStudiesBanner2026 from './src/components/RevolutionaryCaseStudiesBanner2026';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2026 from './src/pages/RevolutionaryTechBreakthrough2026';
+import RevolutionaryCaseStudies2026 from './src/pages/RevolutionaryCaseStudies2026';
+import RevolutionaryTechShowcase2025 from './src/pages/RevolutionaryTechShowcase2025';
+import AISolutionsComprehensive2025 from './src/pages/AISolutionsComprehensive2025';
+import UltimateTechRevolution2025 from './src/pages/UltimateTechRevolution2025';
+import RevolutionaryTechBreakthrough2025 from './src/pages/RevolutionaryTechBreakthrough2025';
+import NextGenInnovationHub2025 from './src/pages/NextGenInnovationHub2025';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import UltimateContentBanner2034 from './src/components/UltimateContentBanner2034';
+import UltimateTechBreakthrough2034 from './src/pages/UltimateTechBreakthrough2034';
+import RevolutionaryTechShowcase2034 from './src/pages/RevolutionaryTechShowcase2034';
+import ComprehensiveServices2034 from './src/pages/ComprehensiveServices2034';
+import InteractiveTechDemo2034 from './src/components/InteractiveTechDemo2034';
+import SocialProofShowcase2034 from './src/components/SocialProofShowcase2034';
+import RevolutionaryTechBanner2025 from './src/components/RevolutionaryTechBanner2025';
+import UltimateContentShowcase2025 from './src/components/UltimateContentShowcase2025';
+import NextGenAIConsciousness2025 from './src/pages/NextGenAIConsciousness2025';
+import QuantumRealityEngine2025 from './src/pages/QuantumRealityEngine2025';
+import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
+import QuantumComputingBreakthrough2035 from './src/pages/QuantumComputingBreakthrough2035';
+import InterdimensionalTechnology2035 from './src/pages/InterdimensionalTechnology2035';
+import RevolutionaryTechBlog2035 from './src/pages/RevolutionaryTechBlog2035';
+import RevolutionaryContentBanner2036 from './src/components/RevolutionaryContentBanner2036';
+import RevolutionaryContentCarousel2036 from './src/components/RevolutionaryContentCarousel2036';
+import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
+import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
+import AIInnovationHub2025 from './src/pages/AIInnovationHub2025';
+import RevolutionaryCaseStudies2025 from './src/pages/RevolutionaryCaseStudies2025';
+import UltimateTechBlog2025 from './src/pages/UltimateTechBlog2025';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+
+export default function App(): JSX.Element {
+  return (
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-white">
+<<<<<<< HEAD
+=======
+        <ScrollToTop />
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer />
+        <SEOOptimizer />
+        <MobileOptimizer />
+        <PerformanceDashboard />
+        <AdvancedPerformanceOptimizer2025 />
+        <AdvancedSEOOptimizer2025 />
+        <AdvancedAnalyticsTracker2025 />
+        <EnhancedAccessibility2025 />
+        <MobileOptimizer2025 />
+        <Header />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         
         <Routes>
           <Route path="/" element={
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
               <main className="container mx-auto px-4 py-8">
                 {/* Revolutionary New Content Banner */}
+<<<<<<< HEAD
                 
                 {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
                 
@@ -80,6 +358,113 @@ export default function App(): JSX.Element {
                 {/* Ultimate Content Banner 2028 */}
 
                 {/* Ultimate Content Banner 2029 */}
+=======
+                <RevolutionaryContentBanner />
+                
+                {/* NEW: Revolutionary Content Banner 2025 - Latest Content */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: New Content Banner 2025 - Latest Revolutionary Content */}
+                <NewContentBanner2025 />
+                
+                {/* NEW: Ultimate Content Banner 2025 - Latest Revolutionary Content */}
+                <UltimateContentBanner2025 />
+                
+                {/* NEW: Ultimate Tech Revolution Banner 2025 */}
+                <UltimateTechRevolutionBanner2025 />
+                
+                {/* NEW: Revolutionary Breakthrough Banner 2026 */}
+                <RevolutionaryBreakthroughBanner2026 />
+                
+                {/* NEW: Revolutionary Case Studies Banner 2026 */}
+                <RevolutionaryCaseStudiesBanner2026 />
+                
+                {/* NEW: Revolutionary Content Banner 2025 */}
+                <RevolutionaryContentBanner2025 />
+                
+                {/* NEW: Ultimate Content Banner 2025 */}
+                <UltimateContentBanner2025 />
+                
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Ultimate Content Banner 2034 - Latest Revolutionary Content */}
+                <UltimateContentBanner2034 />
+                
+                {/* NEW: Interactive Tech Showcase 2025 */}
+                <InteractiveTechShowcase2025 />
+                
+                {/* NEW: Enhanced Content Carousel 2025 - Revolutionary Technology Showcase */}
+                <EnhancedContentCarousel2025 />
+                
+                {/* NEW: Revolutionary Ad Banner 2025 - Breakthrough Alert */}
+                <RevolutionaryAdBanner2025 />
+                
+                {/* Revolutionary Ad Banner 2030 */}
+                <RevolutionaryAdBanner2030 />
+
+                {/* NEW: Ultimate Content Banner 2031 */}
+                <UltimateContentBanner2031 />
+
+                {/* NEW: Revolutionary Ad Banner 2031 */}
+                <RevolutionaryAdBanner2031 />
+
+                {/* NEW: Revolutionary Tech Banner 2032 */}
+                <RevolutionaryTechBanner2032 />
+
+                {/* NEW: Revolutionary Tech Banner 2033 */}
+                <RevolutionaryTechBanner2033 />
+
+                {/* NEW: Ultimate Content Banner 2033 */}
+                <UltimateContentBanner2033 />
+
+                {/* NEW: Ultimate Tech Banner 2038 */}
+                <UltimateTechBanner2038 />
+
+                {/* NEW: Ultimate Tech Banner 2039 */}
+                <UltimateTechBanner2039 />
+
+                {/* NEW: Revolutionary Tech Banner 2040 */}
+                <RevolutionaryTechBanner2040 />
+
+                {/* NEW: Next-Gen Innovation Banner 2041 */}
+                <NextGenInnovationBanner2041 />
+
+                {/* NEW: Ultimate Content Banner 2036 */}
+                <UltimateContentBanner2036 />
+
+                {/* NEW: Revolutionary Ad Banner 2036 */}
+                <RevolutionaryAdBanner2036 />
+
+                {/* Ultimate Tech Banner 2029 */}
+                <UltimateTechBanner2029 />
+                {/* Revolutionary Content Banner 2026 */}
+                <RevolutionaryContentBanner2026 />
+
+                {/* Revolutionary Content Banner 2027 */}
+                <RevolutionaryContentBanner2027 />
+
+                {/* Ultimate Content Banner */}
+                <UltimateContentBanner />
+
+                {/* Ultimate Content Banner 2027 */}
+                <UltimateContentBanner2027 />
+
+                {/* New Content Promotion 2027 */}
+                <NewContentPromotion2027 />
+                
+                {/* Revolutionary Content Banner 2027 */}
+                <RevolutionaryContentBanner2027 />
+
+                {/* NEW: Revolutionary Content Banner 2028 */}
+                <NewContentBanner2028 />
+
+                {/* Ultimate Content Banner 2028 */}
+                <UltimateContentBanner2028 />
+
+                {/* Ultimate Content Banner 2029 */}
+                <UltimateContentBanner2029 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
                 {/* Enhanced Search Section */}
                 <div className="text-center mb-12">
@@ -87,9 +472,57 @@ export default function App(): JSX.Element {
                   <p className="text-lg text-gray-600 mb-8">Search through our comprehensive collection of AI technologies and services</p>
                 </div>
 
+<<<<<<< HEAD
                 {/* NEW: Revolutionary Content Banner 2036 */}
 
                 {/* NEW: Revolutionary Content Carousel 2036 */}
+=======
+                
+                {/* Revolutionary Content Banner 2026 */}
+                {/* <RevolutionaryContentBanner2026 /> */}
+
+                {/* ULTIMATE BREAKTHROUGH CONTENT BANNER 2026 */}
+                <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-pink-600/50 backdrop-blur-sm"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-center space-x-3 mb-4">
+                      <span className="text-3xl animate-bounce">🚀</span>
+                      <h3 className="text-2xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2026-2035</h3>
+                      <span className="text-3xl animate-bounce">🚀</span>
+                    </div>
+                    <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
+                      Experience the future of technology with our groundbreaking new content featuring Ultimate Tech Revolution 2027, 
+                      Interdimensional Technology 2030, Omniversal AI Consciousness 2035, and Revolutionary Tech Blog 2027
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 max-w-8xl mx-auto">
+                      <a href="/pages/UltimateTechRevolution2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🚀 Ultimate Tech 2027 →
+                      </a>
+                      <a href="/pages/InterdimensionalTechRevolution2030" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌌 Interdimensional 2030 →
+                      </a>
+                      <a href="/pages/OmniversalAIConsciousness2035" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌟 Omniversal AI 2035 →
+                      </a>
+                      <a href="/pages/RevolutionaryTechBlog2027" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        📝 Tech Blog 2027 →
+                      </a>
+                      <a href="/pages/RevolutionaryTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🚀 Revolutionary Showcase →
+                      </a>
+                      <a href="/revolutionary-showcase-2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
+                        🌟 Interactive Demo →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* NEW: Revolutionary Content Banner 2036 */}
+                <RevolutionaryContentBanner2036 />
+
+                {/* NEW: Revolutionary Content Carousel 2036 */}
+                <RevolutionaryContentCarousel2036 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
                 {/* Hero Section with New Content Promotions */}
                 <div className="text-center mb-12">
@@ -196,7 +629,11 @@ export default function App(): JSX.Element {
                     <a href="/pages/RevolutionaryTechBreakthrough2028" className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
                       🚀 NEW: Revolutionary Breakthrough 2028 →
                     </a>
+<<<<<<< HEAD
                     <a href="/pages/NextGenTechRevolution2028" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+=======
+                    <a href="/pages/UltimateTechInnovation2028" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                       ⚡ NEW: Ultimate Innovation 2028 →
                     </a>
                     <a href="/pages/NextGenTechRevolution2028" className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse">
@@ -298,7 +735,10 @@ export default function App(): JSX.Element {
                     <a href="/pages/RevolutionaryTechShowcase2033" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
                       ⚡ NEW: Revolutionary Showcase 2033 →
                     </a>
+<<<<<<< HEAD
                     <a href="/pages/UltimateTechRevolution2038" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                       🚀 NEW: Ultimate Tech Revolution 2038 →
                     </a>
                     <a href="/pages/UltimateTechRevolution2039" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center animate-pulse border-2 border-yellow-400">
@@ -343,17 +783,27 @@ export default function App(): JSX.Element {
                 {/* Interactive Dynamic Content Carousel */}
                 <div className="mb-12">
                   <div className="text-center mb-8">
+<<<<<<< HEAD
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">🌟 Featured: Revolutionary Technology 2025-2027</h2>
                     <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
                   </div>
+=======
+                    <p className="text-xl text-gray-600">Discover our latest innovations that are reshaping industries</p>
+                  </div>
+                  <DynamicContentCarousel />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* NEW: Enhanced Content Carousel 2025 */}
                 <div className="mb-12">
+<<<<<<< HEAD
                 </div>
 
                 {/* Revolutionary Content Carousel 2025 */}
                 <div className="mb-12">
+=======
+                  <EnhancedContentCarousel2025 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Revolutionary Content Carousel 2027 */}
@@ -362,55 +812,103 @@ export default function App(): JSX.Element {
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 NEW: Revolutionary Technology 2027</h2>
                     <p className="text-xl text-gray-600">Experience the most advanced technology content featuring conscious AI, quantum computing, and interdimensional technology</p>
                   </div>
+<<<<<<< HEAD
+=======
+                  <RevolutionaryContentCarousel2027 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Enhanced Content Carousel 2032 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <EnhancedContentCarousel2032 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Enhanced Content Carousel 2033 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <EnhancedContentCarousel2033 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Enhanced Content Carousel 2039 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <EnhancedContentCarousel2039 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Enhanced Content Carousel 2036 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <EnhancedContentCarousel2036 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Interactive Tech Demo 2033 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <InteractiveTechDemo2033 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Interactive Tech Demo 2039 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <InteractiveTechDemo2039 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* NEW: Interactive Tech Demo 2034 - Latest Interactive Technology */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <InteractiveTechDemo2034 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* NEW: Social Proof Showcase 2034 - Client Testimonials and Case Studies */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <SocialProofShowcase2034 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology Showcase */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <RevolutionaryTechBanner2025 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* NEW: Ultimate Content Showcase 2025 - Comprehensive Technology Content */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <UltimateContentShowcase2025 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Revolutionary Content Showcase */}
                 <div className="mb-12">
+                  <RevolutionaryContentShowcase />
                 </div>
 
                 {/* Revolutionary Content Showcase 2026 */}
+<<<<<<< HEAD
                 <div className="mb-12">
                 </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
                 {/* Featured New Services */}
                 <section className="mb-12">
@@ -703,10 +1201,12 @@ export default function App(): JSX.Element {
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Interactive Technology Showcase</h2>
                     <p className="text-xl text-gray-600">Explore our cutting-edge technology solutions with interactive features</p>
                   </div>
+                  <InteractiveTechShowcase />
                 </div>
 
                 {/* NEW: Interactive Technology Showcase 2025 - Latest Interactive Features */}
                 <div className="mb-12">
+<<<<<<< HEAD
                 </div>
 
                 {/* NEW: Interactive Technology Showcase 2025 */}
@@ -719,6 +1219,15 @@ export default function App(): JSX.Element {
 
                 {/* Ultimate Tech Showcase 2027 */}
                 <div className="mb-12">
+=======
+                {/* Interactive Technology Showcase 2026 */}
+                <div className="mb-12">
+                  <InteractiveTechShowcase2026 />
+                </div>
+
+                <div className="mb-12">
+                  <RevolutionaryTechShowcase2030 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Interactive Tech Demo 2027 */}
@@ -728,29 +1237,57 @@ export default function App(): JSX.Element {
 
                 {/* Interactive Technology Showcase 2027 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <InteractiveTechShowcase2027 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Interactive Technology Showcase 2028 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <InteractiveTechShowcase2028 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* NEW: Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <InteractiveTechShowcase2026 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Interactive Technology Showcase 2035 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <InteractiveTechShowcase2035 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Interactive Technology Showcase 2036 */}
                 <div className="mb-12">
+<<<<<<< HEAD
                 </div>
                 {/* Revolutionary Tech Showcase 2029 */}
                 <div className="mb-12">
+=======
+                  <InteractiveTechShowcase2036 />
+                </div>
+                {/* Revolutionary Tech Showcase 2029 */}
+                <div className="mb-12">
+                  <RevolutionaryTechShowcase2029 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
 
                 {/* Enhanced Content Showcase 2030 */}
                 <div className="mb-12">
+<<<<<<< HEAD
+=======
+                  <EnhancedContentShowcase2030 />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                 </div>
                 {/* Enhanced Content Showcase */}
                 <div className="mb-12">
@@ -783,7 +1320,92 @@ export default function App(): JSX.Element {
                 </div>
               </main>
             </div>
+<<<<<<< HEAD
           } />
+=======
+          <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
+          <Route path="/pages/AIConsciousnessRevolution2026" element={<AIConsciousnessRevolution2026 />} />
+          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
+          <Route path="/pages/InterdimensionalAI2026" element={<InterdimensionalAI2026 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2028" element={<RevolutionaryTechBreakthrough2028 />} />
+          <Route path="/pages/UltimateAIConsciousness2030" element={<UltimateAIConsciousness2030 />} />
+          <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
+          <Route path="/pages/UltimateTechBreakthrough2029" element={<UltimateTechBreakthrough2029 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2035" element={<InterdimensionalTechRevolution2035 />} />
+          <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2030" element={<RevolutionaryTechShowcase2030 />} />
+          <Route path="/pages/UltimateAIConsciousness2035" element={<UltimateAIConsciousness2035 />} />
+          <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
+          <Route path="/pages/RevolutionaryTechBlog2030" element={<RevolutionaryTechBlog2030 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2026" element={<RevolutionaryTechBreakthrough2026 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2026" element={<RevolutionaryCaseStudies2026 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
+          <Route path="/pages/AdvancedServices2025" element={<AdvancedServices2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+          <Route path="/pages/RevolutionaryTechInsights2027" element={<RevolutionaryTechInsights2027 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2028" element={<RevolutionaryTechShowcase2028 />} />
+          <Route path="/pages/AIBusinessRevolution2028" element={<AIBusinessRevolution2028 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2026" element={<InterdimensionalTechRevolution2026 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2026" element={<ConsciousnessComputingRevolution2026 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2028" element={<RevolutionaryTechBreakthrough2028 />} />
+          <Route path="/pages/UltimateTechInnovation2028" element={<UltimateTechInnovation2028 />} />
+          <Route path="/pages/NextGenTechRevolution2028" element={<NextGenTechRevolution2028 />} />
+          <Route path="/pages/UltimateAIConsciousness2030" element={<UltimateAIConsciousness2030 />} />
+          <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
+          <Route path="/pages/UltimateTechBreakthrough2029" element={<UltimateTechBreakthrough2029 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2029" element={<RevolutionaryTechShowcase2029 />} />
+          <Route path="/pages/NextGenInnovationHub2029" element={<NextGenInnovationHub2029 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2029" element={<RevolutionaryCaseStudies2029 />} />
+          <Route path="/pages/ConsciousnessComputingRevolution2030" element={<ConsciousnessComputingRevolution2030 />} />
+          <Route path="/pages/InterdimensionalTechRevolution2035" element={<InterdimensionalTechRevolution2035 />} />
+          <Route path="/pages/UltimateTechBreakthrough2030" element={<UltimateTechBreakthrough2030 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2030" element={<RevolutionaryTechShowcase2030 />} />
+          <Route path="/pages/UltimateContentShowcase2030" element={<UltimateContentShowcase2030 />} />
+          <Route path="/pages/UltimateTechBreakthrough2031" element={<UltimateTechBreakthrough2031 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2031" element={<RevolutionaryTechShowcase2031 />} />
+          <Route path="/pages/UltimateContentShowcase2031" element={<UltimateContentShowcase2031 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2032" element={<RevolutionaryTechShowcase2032 />} />
+          <Route path="/pages/UltimateAIConsciousness2032" element={<UltimateAIConsciousness2032 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2032" element={<RevolutionaryCaseStudies2032 />} />
+          <Route path="/pages/UltimateTechBreakthrough2033" element={<UltimateTechBreakthrough2033 />} />
+          <Route path="/pages/UltimateTechRevolution2038" element={<UltimateTechRevolution2038 />} />
+          <Route path="/pages/UltimateTechRevolution2039" element={<UltimateTechRevolution2039 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2040" element={<RevolutionaryTechBreakthrough2040 />} />
+          <Route path="/pages/NextGenInnovationHub2041" element={<NextGenInnovationHub2041 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2033" element={<RevolutionaryTechShowcase2033 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2025" element={<RevolutionaryTechShowcase2025 />} />
+          <Route path="/pages/AISolutionsComprehensive2025" element={<AISolutionsComprehensive2025 />} />
+          <Route path="/pages/UltimateTechRevolution2025" element={<UltimateTechRevolution2025 />} />
+          <Route path="/pages/RevolutionaryTechBreakthrough2025" element={<RevolutionaryTechBreakthrough2025 />} />
+          <Route path="/pages/NextGenInnovationHub2025" element={<NextGenInnovationHub2025 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
+          <Route path="/pages/UltimateTechBlog2025" element={<UltimateTechBlog2025 />} />
+          <Route path="/pages/UltimateTechBreakthrough2034" element={<UltimateTechBreakthrough2034 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2034" element={<RevolutionaryTechShowcase2034 />} />
+          <Route path="/pages/ComprehensiveServices2034" element={<ComprehensiveServices2034 />} />
+          <Route path="/pages/NextGenAIConsciousness2025" element={<NextGenAIConsciousness2025 />} />
+          <Route path="/pages/QuantumRealityEngine2025" element={<QuantumRealityEngine2025 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2025" element={<NeuralInterfaceRevolution2025 />} />
+          <Route path="/pages/UltimateAIConsciousness2035" element={<UltimateAIConsciousness2035 />} />
+          <Route path="/pages/QuantumRealityEngine2032" element={<QuantumRealityEngine2032 />} />
+          <Route path="/pages/ComprehensiveServices2035" element={<ComprehensiveServices2035 />} />
+          <Route path="/pages/QuantumComputingBreakthrough2035" element={<QuantumComputingBreakthrough2035 />} />
+          <Route path="/pages/InterdimensionalTechnology2035" element={<InterdimensionalTechnology2035 />} />
+          <Route path="/pages/RevolutionaryTechBlog2035" element={<RevolutionaryTechBlog2035 />} />
+          <Route path="/pages/UltimateTechBreakthrough2036" element={<UltimateTechBreakthrough2036 />} />
+          <Route path="/pages/RevolutionaryTechShowcase2036" element={<RevolutionaryTechShowcase2036 />} />
+          <Route path="/pages/NextGenInnovationHub2036" element={<NextGenInnovationHub2036 />} />
+          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
+          <Route path="/pages/RevolutionaryCaseStudies2025" element={<RevolutionaryCaseStudies2025 />} />
+          <Route path="/pages/UltimateTechBlog2025" element={<UltimateTechBlog2025 />} />
+          <Route path="/revolutionary-showcase-2029" element={<RevolutionaryTechShowcase2029 />} />
+          <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           <Route path="/blog" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
@@ -792,7 +1414,6 @@ export default function App(): JSX.Element {
               </div>
             </main>
           } />
-          <Route path="/contact" element={
             <main className="container mx-auto px-4 py-16">
               <div className="text-center">
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
@@ -800,7 +1421,10 @@ export default function App(): JSX.Element {
               </div>
             </main>
           } />
+<<<<<<< HEAD
           <Route path="*" element={
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
             <main className="container mx-auto px-4 py-16 text-center">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
               <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
@@ -808,7 +1432,14 @@ export default function App(): JSX.Element {
           } />
         </Routes>
         
+<<<<<<< HEAD
       </div>
     </Router>
+=======
+        <Footer />
+      </div>
+    </Router>
+    </ErrorBoundary>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
 }

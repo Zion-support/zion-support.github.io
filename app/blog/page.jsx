@@ -14,15 +14,46 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
+<<<<<<< HEAD
       title: "AI 2026: Agent Risk Maturity Matrix",
       description: "Benchmark and uplift agent safety across policy, evals, telemetry, and operations.",
       slug: "ai-2026-agent-risk-maturity-matrix",
       category: "AI Governance",
+=======
+      title: "AI 2026: Production Safety Checklist",
+      description: "SLO‑driven checklist to harden agents with eval gates, guardrails, and rollback.",
+      slug: "ai-2026-production-safety-checklist",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/production-safety-checklist-2026.jpg"
+    },
+    {
+      title: "AI 2026: Safe Rollouts in Production",
+      description: "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",
+      slug: "ai-2026-safe-rollouts-in-production",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/safe-rollouts-2026.jpg"
+    },
+    {
+      title: "AI 2026: Autonomous Evidence‑Led Operations",
+      description: "Operate with auditable evaluation evidence driving safe, compliant decisions.",
+      slug: "ai-2026-autonomous-evidence-led-operations",
+      category: "Operations",
+      date: "2025-09-16",
+      featured: true,
+      image: "/images/evidence-led-ops-2026.jpg"
+    },
+    {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       title: "AI 2026: Enterprise AI Governance Blueprint",
       description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
       slug: "ai-2026-enterprise-ai-governance-blueprint",
       category: "Enterprise AI",
       date: "2025-09-15",
+<<<<<<< HEAD
       featured: true,
       image: "/images/enterprise-ai-governance-2026.jpg"
     },
@@ -169,3 +200,5 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

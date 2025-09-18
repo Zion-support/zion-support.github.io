@@ -19,11 +19,15 @@ import {
 
 const EnhancedContentCarousel2025 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
   const contentItems = [
     {
       id: 1,
+<<<<<<< HEAD
       type: 'blog',
       title: "AI-Powered Business Automation: The 2025 Revolution",
       excerpt: "Discover how AI automation is transforming business operations and creating unprecedented efficiency gains.",
@@ -37,6 +41,14 @@ const EnhancedContentCarousel2025 = () => {
       tags: ["AI Automation", "Business Process", "Efficiency"],
       icon: Zap,
       color: "from-blue-500 to-purple-600"
+=======
+      title: 'Next-Gen AI Consciousness',
+      description: 'Experience truly conscious artificial intelligence that thinks, feels, and evolves beyond human comprehension',
+      icon: '🧠',
+      gradient: 'from-purple-600 to-pink-600',
+      link: '/pages/NextGenAIConsciousness2025',
+      features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     },
     {
       id: 2,
@@ -88,6 +100,7 @@ const EnhancedContentCarousel2025 = () => {
     },
     {
       id: 5,
+<<<<<<< HEAD
       type: 'blog',
       title: "Sustainable Technology: Building a Greener Future",
       excerpt: "Learn how technology companies are leading the charge in environmental sustainability and green innovation.",
@@ -101,6 +114,14 @@ const EnhancedContentCarousel2025 = () => {
       tags: ["Sustainability", "Green Tech", "Environment"],
       icon: Award,
       color: "from-green-500 to-emerald-600"
+=======
+      title: 'Revolutionary Tech Showcase',
+      description: 'Explore cutting-edge technologies that will shape the future of humanity',
+      icon: '🚀',
+      gradient: 'from-violet-600 to-purple-600',
+      link: '/pages/RevolutionaryTechShowcase2025',
+      features: ['Emerging technologies', 'Innovation labs', 'Research partnerships', 'Future predictions']
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     }
   ];
 
@@ -124,8 +145,11 @@ const EnhancedContentCarousel2025 = () => {
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
+<<<<<<< HEAD
 
   const currentItem = contentItems[currentSlide];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
   return (
     <div className="relative bg-gradient-to-br from-gray-50 to-blue-50 py-16">
@@ -150,6 +174,7 @@ const EnhancedContentCarousel2025 = () => {
 
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
+<<<<<<< HEAD
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-3xl bg-white shadow-2xl">
             <div 
@@ -280,8 +305,82 @@ const EnhancedContentCarousel2025 = () => {
                         </div>
                       </div>
                     </div>
+=======
+          {/* Main Content Display */}
+          <div className="bg-gradient-to-br from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              {/* Content Info */}
+              <div className="space-y-6">
+                <div className="text-8xl mb-4">{contentItems[currentSlide].icon}</div>
+                <h3 className="text-4xl font-bold mb-4">
+                  {contentItems[currentSlide].title}
+                </h3>
+                <p className="text-xl text-gray-300 mb-6">
+                  {contentItems[currentSlide].description}
+                </p>
+
+                {/* Features */}
+                <div className="space-y-3">
+                  {contentItems[currentSlide].features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className={`w-6 h-6 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full flex items-center justify-center text-sm font-bold`}>
+                        ✓
+                      </div>
+                      <span className="text-lg">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                  <a 
+                    href={contentItems[currentSlide].link}
+                    className={`bg-gradient-to-r ${contentItems[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-center`}
+                  >
+                    Explore Technology →
+                  </a>
+                  <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+
+              {/* Visual Demo Area */}
+              <div className="bg-gradient-to-br from-gray-700/50 to-purple-700/50 rounded-xl p-8 min-h-[400px] flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-9xl mb-6 animate-pulse">
+                    {contentItems[currentSlide].icon}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex justify-center items-center mt-8 space-x-4">
+            <button 
+              onClick={prevSlide}
+              className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-colors border border-gray-600/50"
+            >
+              <span className="text-2xl">‹</span>
+            </button>
+            
+            {/* Slide Indicators */}
+            <div className="flex space-x-2">
+              {contentItems.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
+                      : 'bg-gray-600 hover:bg-gray-500'
+                  }`}
+                />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
               ))}
             </div>
 
@@ -332,6 +431,7 @@ const EnhancedContentCarousel2025 = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto">
@@ -358,11 +458,52 @@ const EnhancedContentCarousel2025 = () => {
                 <Award className="w-5 h-5" />
               </Link>
             </div>
+=======
+        {/* Quick Access Grid */}
+        <div className="grid md:grid-cols-5 gap-4 mt-12">
+          {contentItems.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => goToSlide(index)}
+              className={`p-4 rounded-xl transition-all duration-300 ${
+                index === currentSlide
+                  ? `bg-gradient-to-r ${item.gradient} text-white shadow-lg scale-105`
+                  : 'bg-gray-800/50 backdrop-blur-sm text-gray-300 hover:bg-gray-700/50 hover:text-white'
+              }`}
+            >
+              <div className="text-3xl mb-2">{item.icon}</div>
+              <div className="text-sm font-semibold text-center">{item.title}</div>
+            </button>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid md:grid-cols-4 gap-8 mt-16">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+            <div className="text-gray-300">Revolutionary Technologies</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-pink-400 mb-2">99.9%</div>
+            <div className="text-gray-300">Success Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+            <div className="text-gray-300">Available Demos</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
+            <div className="text-gray-300">Possibilities</div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
           </div>
         </div>
       </div>
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default EnhancedContentCarousel2025;
+=======
+export default EnhancedContentCarousel2025;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

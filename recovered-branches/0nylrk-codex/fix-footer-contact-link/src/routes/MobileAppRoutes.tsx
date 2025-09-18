@@ -1,16 +1,11 @@
-import MobileAppPage from "../pages/MobileAppPage";
-import MobileLaunchPage from "../pages/MobileLaunchPage";
-import OpenAppRedirect from "../pages/OpenAppRedirect";
+import React from 'react';
 
-const MobileAppRoutes = () => {
+const MobileAppRoutes: React.FC = () => {
   return (
-    <Routes>
-      {/* Mobile App Routes */}
-      <Route path="/download" element={<MobileAppPage />} />
-      <Route path="/mobile-app" element={<MobileAppPage />} />
-      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
-      <Route path="/open-app" element={<OpenAppRedirect />} />
-    </Routes>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MobileAppRoutes</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

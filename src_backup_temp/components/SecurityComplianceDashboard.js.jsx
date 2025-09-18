@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useCallback} from 'react';';
 import {motion, AnimatePresence} from 'framer-motion';';
 import {Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square} from 'lucide-react';
@@ -140,3 +141,5 @@ export const SecurityComplianceDashboard = (props: any) => {
 ";
 export default Component;
 </div>"
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

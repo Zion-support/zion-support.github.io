@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -555,3 +556,5 @@ function debounce<T extends (...args: any[]) => any>(
 }
 
 export default EnhancedSearch;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

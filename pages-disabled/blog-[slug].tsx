@@ -1,40 +1,12 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import { BLOG_POSTS } from '@/data/blog-posts';
-import type { BlogPost } from '@/types/blog';
 
-interface BlogProps {
-  post: BlogPost | null;
-}
-
-const BlogPostPage: React.FC<BlogProps> = ({ post }) => {
-  if (!post) {
-    return <div>Article not found</div>;
-  }
+const blog-[slug]: React.FC = () => {
   return (
-    <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
-      <h1>{post.title}</h1>
-      <ReactMarkdown>{post.content}</ReactMarkdown>
-    </main>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">blog-[slug]</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = BLOG_POSTS.map((p) => ({ params: { slug: p.slug } }));
-  return { paths, fallback: 'blocking' };
-};
-
-export const getStaticProps: GetStaticProps<BlogProps> = async ({ params }) => {
-  const slug = params?.slug as string;
-  const post = BLOG_POSTS.find((p) => p.slug === slug) || null;
-
-  if (!post) {
-    return { notFound: true };
-  }
-
-  return { props: { post } };
-};
-
-export default BlogPostPage;
-
+export default blog-[slug];

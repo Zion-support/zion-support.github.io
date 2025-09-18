@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -361,69 +362,16 @@ export default function UltraAdvancedFuturisticBackground() {
   }, [isClient]);
 
   if (!isClient) return null;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedFuturisticBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(10,10,30,0.9) 50%, rgba(20,20,50,0.8) 100%)'
-        }}
-      />
-      
-      {/* Additional futuristic overlay effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Scanning line effect */}
-        <motion.div
-          className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
-          animate={{
-            y: [0, '100vh', 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        {/* Corner accent lines */}
-        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-cyan-400 opacity-40" />
-        <div className="absolute top-0 right-0 w-20 h-20 border-r-2 border-t-2 border-purple-400 opacity-40" />
-        <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-green-400 opacity-40" />
-        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-pink-400 opacity-40" />
-        
-        {/* Floating data streams */}
-        <motion.div
-          className="absolute top-1/4 left-10 text-xs text-cyan-400 opacity-20 font-mono"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          01:01:01:01
-        </motion.div>
-        
-        <motion.div
-          className="absolute top-3/4 right-10 text-xs text-purple-400 opacity-20 font-mono"
-          animate={{
-            y: [0, 20, 0],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          QUANTUM:ACTIVE
-        </motion.div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default UltraAdvancedFuturisticBackground;

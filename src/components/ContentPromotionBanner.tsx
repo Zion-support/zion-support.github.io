@@ -1,8 +1,6 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { getFeaturedBlogPosts, getRecentBlogPosts } from '@/data/blog-posts';
-
 const ContentPromotionBanner: React.FC = () => {
+<<<<<<< HEAD
   const featured = getFeaturedBlogPosts();
   const recent = getRecentBlogPosts(3);
   const picks = (featured.length > 0 ? featured.slice(0, 3) : recent).map(p => ({
@@ -30,8 +28,13 @@ const ContentPromotionBanner: React.FC = () => {
           </a>
         ))}
       </div>
+=======
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ContentPromotionBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
-};
-
+  };
 export default ContentPromotionBanner;

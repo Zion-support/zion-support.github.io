@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -251,86 +252,15 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       window.removeEventListener('resize', handleResize);
     };
   }, [intensity, variant]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedQuantumBackground: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          background: variant === 'space' 
-            ? 'radial-gradient(ellipse at center, #0a0a2a 0%, #000000 100%)'
-            : variant === 'matrix'
-            ? 'linear-gradient(135deg, #000000 0%, #001a00 100%)'
-            : 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-        }}
-      />
-      
-      {/* Additional overlay effects */}
-      <div className="absolute inset-0 pointer-events-none z-10">
-        {variant === 'quantum' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-transparent" />
-        )}
-        {variant === 'holographic' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-pink-500/5 to-transparent" />
-        )}
-        {variant === 'neural' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-green-500/5 to-transparent" />
-        )}
-        {variant === 'cyberpunk' && (
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/5 to-transparent" />
-        )}
-      </div>
-
-      {/* Content */}
-      <div className="relative z-20">
-        {children}
-      </div>
-
-      {/* Floating geometric elements */}
-      <div className="absolute inset-0 pointer-events-none z-5">
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-full"
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-pink-400/20 transform rotate-45"
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [45, 225, 405],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 rounded-full"
-          animate={{
-            scale: [1, 1.1, 1],
-            rotate: [0, -180, -360],
-            opacity: [0.4, 0.7, 0.4]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedQuantumBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

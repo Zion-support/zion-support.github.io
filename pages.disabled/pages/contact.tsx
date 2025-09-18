@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ursor/fix-syntax-push-and-merge-to-main-40de
 
@@ -176,285 +177,28 @@ const "Contact": NextPage = () => {;
       \"email\": \'london@ziontechgroup && ziontechgroup.com\';
     }
   ];
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
   return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
-
-      {/* Hero Section */}
-      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center\">;
-            <h1 className=\"text-5xl font-bold mb-6\">Get In Touch</h1>;
-            <p className=\"text-xl max-w-3xl mx-auto\">;
-              Ready to transform your business? Let\'s discuss how our technology solutions ;
-              can help you achieve your goals.;
-            </p>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Information */}
-      <section className=\"py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16\">;
-            {contactInfo && contactInfo.map((info) => (;
-              <div key={info && info.title} className=\"text-center\">;
-                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">;
-                  <info && info.icon className=\"h-8 w-8\" />;
-                </div>;
-                <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">;
-                  {info && info.title}
-                </h3>;
-                {info && info.link ? (;
-                  <a
-                    href={info && info.link}
-                    className=\"text-blue-600 \"hover\": text-blue-700 transition-colors\">;
-                    {info && info.details}
-                  </a>;
-                ) : (;
-                  <p className=\"text-gray-600\">{info && info.details}</p>;
-                )}
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Form & Office Locations */}
-      <section className=\"py-20 bg-gray-50\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"grid grid-cols-1 lg:grid-cols-2 gap-12\">;
-            {/* Contact Form */}
-            <div>;
-              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Send Us a Message</h2>;
-              <form className=\"space-y-6\">;
-                <div className=\"grid grid-cols-1 \"md\": grid-cols-2 gap-6\">;
-                  <div>;
-                    <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                      First Name *;
-                    </label>;
-                    <input
-                      type=\"text\"
-                      id=\"firstName\"
-                      name=\"firstName\"
-                      required
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                    />;
-                  </div>;
-                  <div>;
-                    <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                      Last Name *;
-                    </label>;
-                    <input
-                      type=\"text\"
-                      id=\"lastName\"
-                      name=\"lastName\"
-                      required
-                      className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                    />;
-                  </div>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Email Address *;
-                  </label>;
-                  <input
-                    type=\"email\"
-                    id=\"email\"
-                    name=\"email\"
-                    required
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Company;
-                  </label>;
-                  <input
-                    type=\"text\"
-                    id=\"company\"
-                    name=\"company\"
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Phone Number;
-                  </label>;
-                  <input
-                    type=\"tel\"
-                    id=\"phone\"
-                    name=\"phone\"
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\"
-                  />;
-                </div>;
-                <div>;
-                  <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Service of Interest;
-                  </label>;
-                  <select
-                    id=\"service\"
-                    name=\"service\"
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent\">;
-                    <option value=\"">Select a service</option>;
-                    <option value=\"ai-development\">AI Development</option>;
-                    <option value=\"cloud-solutions\">Cloud Solutions</option>;
-                    <option value=\"web-development\">Web Development</option>;
-                    <option value=\"mobile-development\">Mobile Development</option>;
-                    <option value=\"blockchain\">Blockchain Solutions</option>;
-                    <option value=\"iot-platforms\">IoT Platforms</option>;
-                    <option value=\"data-analytics\">Data Analytics</option>;
-                    <option value=\"cybersecurity\">Cybersecurity</option>;
-                    <option value=\"consulting\">Technology Consulting</option>;
-                  </select>;
-                </div>;
-                <div>;
-                  <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
-                    Message *;
-                  </label>;
-                  <textarea
-                    id=\"message\"
-                    name=\"message\"
-                    rows={6}
-                    required
-                    className=\"w-full px-4 py-3 border border-gray-300 rounded-lg \"focus\": ring-2 focus:ring-blue-500 focus:border-transparent\"
-                    placeholder=\"Tell us about your project or how we can help you...\"></textarea>;
-                </div>;
-                <button
-                  type=\"submit\"
-                  className=\"w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center\">;
-                  <Send className=\"mr-2 h-5 w-5\" />;
-                  Send Message;
-                </button>;
-              </form>;
-            </div>;
-            {/* Office Locations */}
-            <div>;
-              <h2 className=\"text-3xl font-bold text-gray-900 mb-6\">Our Offices</h2>;
-              <div className=\"space-y-6\">;
-                {offices && offices.map((office) => (;
-                  <div key={office && office.city} className=\"bg-white rounded-lg shadow-lg p-6\">;
-                    <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">;
-                      {office && office.city}
-                    </h3>;
-                    <div className=\"space-y-2 text-gray-600\">;
-                      <div className=\"flex items-start\">;
-                        <MapPin className=\"h-5 w-5 mr-2 mt-0 && 0.5 text-blue-600\" />;
-                        <span>{office && office.address}</span>;
-                      </div>;
-                      <div className=\"flex items-center\">;
-                        <Phone className=\"h-5 w-5 mr-2 text-blue-600\" />;
-                        <a href={`\"tel\": ${office && office.phone}`} className=\""hover\": text-blue-600\">;
-                          {office && office.phone}
-                        </a>;
-                      </div>;
-                      <div className=\"flex items-center\">;
-                        <Mail className=\"h-5 w-5 mr-2 text-blue-600\" />;
-                        <a href={`\"mailto\": ${office && office.email}`} className=\""hover\": text-blue-600\">;
-                          {office && office.email}
-                        </a>;
-                      </div>;
-                    </div>;
-                  </div>;
-                ))}
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* FAQ Section */}
-      <section className=\"py-20\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Frequently Asked Questions</h2>
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
-              Get answers to common questions about our services and process
-            </p>
-          </div>
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-          <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-                What is your typical project timeline?
-              </h3>
-              <p className=\"text-gray-600\">
-                Project timelines vary depending on complexity and scope. Simple websites 
-                can take 2-4 weeks, while complex applications may take 3-6 months. 
-                We\'ll provide a detailed timeline during our initial consultation.
-              </p>
-            </div>
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-                Do you provide ongoing support?
-              </h3>
-              <p className=\"text-gray-600\">
-                Yes, we offer comprehensive support and maintenance packages to ensure 
-                your solutions continue to perform optimally. This includes updates, 
-                security patches, and technical support.
-              </p>
-            </div>
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-                What technologies do you specialize in?
-              </h3>
-              <p className=\"text-gray-600\">
-                We work with modern technologies including React, Node.js, Python, 
-                AWS, Azure, AI/ML frameworks, and blockchain platforms. We choose 
-                the best technology stack for each project\'s specific needs.
-              </p>
-            </div>
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-            <div className=\"bg-white rounded-lg shadow-lg p-6\">
-              <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-                How do you ensure project quality?
-              </h3>
-              <p className=\"text-gray-600\">
-                We follow industry best practices including code reviews, automated 
-                testing, continuous integration, and regular client feedback sessions 
-                to ensure high-quality deliverables.
-              </p>
-            </div>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>contact | Zion Tech Group</title>
+        <meta name="description" content="contact - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">contact</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </section>
-    </MainLayout>
+      </div>
+    </div>
   );
 };
+<<<<<<< HEAD
           {/* Contact Information */}
           <section className=\"py-20\">;
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -926,4 +670,6 @@ export default ContactPage;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 

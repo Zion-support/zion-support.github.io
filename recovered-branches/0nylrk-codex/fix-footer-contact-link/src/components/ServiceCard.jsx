@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {
@@ -150,5 +151,16 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>
       </div>
     </motion.div>);
+=======
+
+const ServiceCard: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ServiceCard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
+
 export default ServiceCard;

@@ -1,12 +1,8 @@
+import React from 'react';
 
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from "lucide-react";
-import { Link } from "react-router-dom";
-
-export default function GreenIT() {
+const GreenIT: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Green IT Solutions | Zion Tech Group"
@@ -805,5 +801,9 @@ export default function GreenIT() {
         </div>
       </main>
     
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
-}
+};
+
+export default GreenIT;

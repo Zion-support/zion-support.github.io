@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from '../lib/CompatLink';
@@ -306,3 +307,5 @@ const ContentHub: React.FC = () => {
 };
 
 export default ContentHub;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

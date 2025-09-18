@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -195,3 +196,5 @@ const AI2025BreakthroughShowcaseBanner = () => {
 };
 
 export default AI2025BreakthroughShowcaseBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -813,3 +814,5 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 };
 
 export default MobileOptimizer;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

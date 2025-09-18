@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Award, Target, Globe, Brain, Rocket, Shield, Zap } from 'lucide-react';
@@ -191,3 +192,5 @@ export default function Leadership() {
     </Layout>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

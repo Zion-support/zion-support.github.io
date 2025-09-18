@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -402,3 +403,5 @@ const FeaturedBlogPost2026 = () => {
 };
 
 export default FeaturedBlogPost2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,25 +1,12 @@
-<link rel=\"preconnect\" href=\""https\": //fonts.googleapis.com\" />
-        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossOrigin=\"anonymous\" />
-import React from "react"
-import { Html, Head, Main, NextScript } from "next/document"
-export default function Document() {
+import React from 'react';
+
+const _document: React.FC = () => {
   return (
-    <Html lang="en">
-      <Head>
-        <link rel="icon" href="/favicon.ico"   />
-        <meta name="theme-color" content="#0a0a1a"  />
-        <meta name="description" content="Zion Tech Group - Leading Technology Solutions"  />
-        <link rel="preconnect" href=""https": //fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap\"
-          rel=\"stylesheet\"
-        />
-      </Head>
-      <body>
-        <Main  />
-        <NextScript  />
-      </body>
-    </Html>
-  )
-}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">_document</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default _document;

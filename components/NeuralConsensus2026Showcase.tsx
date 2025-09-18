@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -296,3 +297,5 @@ const NeuralConsensus2026Showcase: React.FC = () => {
 };
 
 export default NeuralConsensus2026Showcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

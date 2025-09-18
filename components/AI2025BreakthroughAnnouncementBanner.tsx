@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -149,3 +150,5 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {
 };
 
 export default AI2025BreakthroughAnnouncementBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 ;
  params - Function parameters;
@@ -127,20 +128,16 @@ export function EnhancedAccessibilityPanel("props": any) {;
         JSON.stringify(updatedSettings);
       )},;
     [settings];
+=======
+
+const EnhancedAccessibilityPanel: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedAccessibilityPanel</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
-;
-  // Load settings from localStorage;
-  useEffect(() => {;
-// "TODO": "Add dependencies if needed;
-  return () => {;
-    // Cleanup function;
-  "};
-}, []);, []);
-;
-</any>;
-</string>;
-</any>;
-</AccessibilityIssue>;
-</AccessibilitySettings>;
-</any>;
-</any>
+};
+
+export default EnhancedAccessibilityPanel;

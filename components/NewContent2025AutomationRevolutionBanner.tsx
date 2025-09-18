@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -182,3 +183,5 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {
 };
 
 export default NewContent2025AutomationRevolutionBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

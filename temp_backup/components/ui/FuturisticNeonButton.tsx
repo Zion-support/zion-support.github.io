@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 
@@ -82,73 +83,15 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
   const selectedSize = sizes[size];
   const selectedNeonIntensity = neonIntensities[neonIntensity];
 
+=======
+
+const FuturisticNeonButton: React.FC = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <motion.button
-      onClick={onClick}
-      disabled={disabled}
-      className={`
-        relative group overflow-hidden rounded-lg font-medium transition-all duration-300
-        border-2 ${selectedVariant.border}
-        ${selectedVariant.text}
-        ${selectedVariant.bg}
-        ${selectedVariant.hoverBg}
-        ${selectedSize}
-        ${selectedNeonIntensity}
-        ${selectedVariant.glow}
-        ${selectedVariant.hoverGlow}
-        ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-        ${className}
-      `}
-      whileHover={!disabled ? { scale: 1.05 } : {}}
-      whileTap={!disabled ? { scale: 0.95 } : {}}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      {/* Neon glow effect */}
-      <div className={`
-        absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300
-        ${selectedVariant.bg}
-        blur-sm
-      `} />
-      
-      {/* Inner glow */}
-      <div className={`
-        absolute inset-0 rounded-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300
-        ${selectedVariant.bg}
-      `} />
-      
-      {/* Content */}
-      <div className="relative flex items-center justify-center gap-2">
-        {Icon && <Icon className="w-5 h-5" />}
-        {children}
-      </div>
-      
-      {/* Animated border */}
-      <motion.div
-        className="absolute inset-0 rounded-lg border-2 border-transparent"
-        animate={{
-          borderImage: [
-            `linear-gradient(45deg, ${selectedVariant.border.replace('border-', '')}, transparent) 1`,
-            `linear-gradient(45deg, transparent, ${selectedVariant.border.replace('border-', '')}) 1`,
-            `linear-gradient(45deg, ${selectedVariant.border.replace('border-', '')}, transparent) 1`
-          ]
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      
-      {/* Ripple effect on click */}
-      <motion.div
-        className="absolute inset-0 rounded-lg bg-white/20"
-        initial={{ scale: 0, opacity: 0 }}
-        whileTap={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.2 }}
-      />
-    </motion.button>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticNeonButton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

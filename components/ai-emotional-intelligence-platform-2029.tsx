@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -1613,3 +1614,5 @@ export default AIEmotionalIntelligencePlatform2029;
 };
 
 export default AIEmotionalIntelligencePlatform2029;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

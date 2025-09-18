@@ -1,9 +1,12 @@
-import React, { useState } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const ComprehensivePricingGuide2026: React.FC = () => { const [selectedPricingTier, setSelectedPricingTier] = useState<any>(all)  const [selectedIndustry, setSelectedIndustry] = useState<any>('all')  "'";
-</any>;
-</any>;
-import React, { useState } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const "ComprehensivePricingGuide2026": "React.FC = () => { const [selectedPricingTier", setSelectedPricingTier] = useState<any>(all)  const [selectedIndustry, setSelectedIndustry] = useState<any>('all')  "'";
-</any>;
-</any>;
-import React, { useState } from 'react' import { motion  } from 'framer - motionimport { ADVANCED_INNOVATIVE_SERVICES_2025  } from ../data / advancedInnovativeServices2025 import { NEXT_GEN_INNOVATIVE_SERVICES_2026 } from ../data / nextGenInnovativeServices2026const ComprehensivePricingGuide2026: React.FC = () => { const [selectedPricingTier, setSelectedPricingTier] = useState<any>(all)  const [selectedIndustry, setSelectedIndustry] = useState<any>('all')  "'"
-</any>
-</any>
+import React from 'react';
+
+const ComprehensivePricingGuide2026: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ComprehensivePricingGuide2026</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default ComprehensivePricingGuide2026;

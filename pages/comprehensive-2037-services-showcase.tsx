@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
 import Head from 'next/head';
@@ -450,3 +451,5 @@ const Comprehensive2037ServicesShowcase: React.FC = () => {
 };
 
 export default Comprehensive2037ServicesShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

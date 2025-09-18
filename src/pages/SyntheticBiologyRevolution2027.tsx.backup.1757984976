@@ -74,7 +74,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Bio-pesticides and fertilizers</li>
               <li>• Carbon capture plants</li>
             </ul>
-<<<<<<< HEAD
             <a href="/pages/BioAgriculture2027" className="block w-full bg-white text-teal-600 py-3 rounded-lg hover:bg-teal-50 transition-colors font-semibold text-center">
               Explore Agriculture →
             </a>
@@ -92,7 +91,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
               <li>• Bio-hydrogen production</li>
               <li>• Self-repairing energy infrastructure</li>
             </ul>
-=======
         
 >>>>>>> cursor/create-and-deploy-new-content-5ef7
             <a href="/pages/BioEnergy2027" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
@@ -164,11 +162,9 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-<<<<<<< HEAD
           <h2 className="text-4xl font-bold mb-6 text-white">Ready to Join the Bio Revolution?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto text-gray-300">
             Experience the future where synthetic biology transforms life itself and creates infinite possibilities
-=======
           <h2 className="text-4xl font-bold mb-6">Ready to Revolutionize Biology?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the synthetic biology revolution and create the future of life itself.

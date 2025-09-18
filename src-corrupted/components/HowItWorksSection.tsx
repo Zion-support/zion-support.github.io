@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading";
 
 import { Check, Handshake, Search, Send } from 'lucide-react'
@@ -243,8 +244,12 @@ const getSteps = (t: any) => [
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const HowItWorksSection: React.FC = () => {
   return (
+<<<<<<< HEAD
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
@@ -572,45 +577,9 @@ function HowItWorksSection() {
         </div>;
       </div>;
     </section>;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
-});
+};
 
-export default Component;
-
-
-}
-
-}
-}
-
-  );
-}
-
-                      </p>                    </div>                    </div>) : null}
-                </div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
-                      <p className="text - zion - slate - light">{step.description}</p>;
-                    </div>) : null}
-                </div>;
-                <div className="relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0">;
-                  <step.icon className="w - 6 h - 6 text - zion - cyan" />;
-                </div>;
-                <div className="md:w - 1/2 md:px - 12 text - center md:text - left">;
-                  {index % 2 !== 0 ? (
-                    <div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
-                      <p className="text - zion - slate - light">{step.description}</p>;
-                    </div>) : null}
-                </div>;
-              </div>))}
-          </div>;
-        </div>;
-      </div>;
-    </section>);
-}
-}
-}
-;
-
-
-
+export default HowItWorksSection;

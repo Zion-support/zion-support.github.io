@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
     const sizeClasses = {
@@ -104,3 +105,5 @@ export function PageSkeleton({ className = "" }) {
       </div>
     </div>);
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

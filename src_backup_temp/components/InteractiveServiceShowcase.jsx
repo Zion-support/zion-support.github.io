@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 export default InteractiveServiceShowcase;
 import {motion, AnimatePresence} from 'framer-motion';
@@ -293,3 +294,5 @@ export {InteractiveServiceShowcase};
 </motion>;
 </motion>;
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

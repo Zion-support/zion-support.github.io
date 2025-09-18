@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -142,106 +143,15 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
       }
     };
   }, [intensity]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const FuturisticAnimatedBackground: React.FC = () => {
   return (
-    <div className={`fixed inset-0 z-0 overflow-hidden ${className}`}>
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]" />
-      
-      {/* Animated grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(100,200,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(100,200,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
-      </div>
-
-      {/* Floating geometric shapes */}
-      <motion.div
-        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
-        animate={{
-          rotate: [0, 360],
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      
-      <motion.div
-        className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
-        animate={{
-          y: [0, -20, 0],
-          opacity: [0.3, 0.7, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-
-      <motion.div
-        className="absolute bottom-32 left-1/4 w-16 h-16 border border-pink-400/30 transform rotate-45"
-        animate={{
-          x: [0, 20, 0],
-          rotate: [45, 405],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-
-      {/* Neon pulse effects */}
-      <motion.div
-        className="absolute top-1/2 left-1/2 w-96 h-96 rounded-full border border-cyan-400/20"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.1, 0.3, 0.1],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-
-      <motion.div
-        className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-400/20"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.1, 0.2, 0.1],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-
-      {/* Canvas for particle system */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ filter: 'blur(0.5px)' }}
-      />
-
-      {/* Scanning line effect */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/10 to-transparent h-1"
-        animate={{
-          y: [0, '100vh'],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticAnimatedBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

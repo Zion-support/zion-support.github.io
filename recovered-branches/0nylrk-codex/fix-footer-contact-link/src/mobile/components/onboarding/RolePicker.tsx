@@ -1,72 +1,12 @@
+import React from 'react';
 
-
-type UserRole = "talent" | "client" | null;
-
-interface RolePickerProps {
-  onSelect: (role: UserRole) => void;
-}
-
-export function RolePicker({ onSelect }: RolePickerProps) {
-
-  const handleSelect = (role: UserRole) => {
-    setSelectedRole(role);
-    onSelect(role);
-  };
-
+const RolePicker: React.FC = () => {
   return (
-    <div className="space-y-4 px-4">
-      <h2 className="text-xl font-medium">What brings you to Zion?</h2>
-      <p className="text-muted-foreground">Choose how you want to use our platform</p>
-
-      <div className="space-y-3 mt-6">
-        <Card 
-          className={`cursor-pointer transition-all ${
-            selectedRole === 'talent' 
-              ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
-          }`}
-          onClick={() => handleSelect('talent')}
-        >
-          <CardContent className="p-5">
-            <div className="flex items-center">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                <Briefcase className="h-6 w-6 text-primary" />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-medium">I'm offering services</h3>
-                <p className="text-sm text-muted-foreground">Find work and showcase your skills</p>
-              </div>
-              {selectedRole === 'talent' && (
-                <Check className="h-5 w-5 text-primary" />
-              )}
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card 
-          className={`cursor-pointer transition-all ${
-            selectedRole === 'client' 
-              ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
-          }`}
-          onClick={() => handleSelect('client')}
-        >
-          <CardContent className="p-5">
-            <div className="flex items-center">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                <Users className="h-6 w-6 text-primary" />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-medium">I'm hiring</h3>
-                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
-              </div>
-              {selectedRole === 'client' && (
-                <Check className="h-5 w-5 text-primary" />
-              )}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">RolePicker</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default RolePicker;

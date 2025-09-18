@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -551,3 +552,5 @@ const InteractiveAILearningHub2025 = () => {
 };
 
 export default InteractiveAILearningHub2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

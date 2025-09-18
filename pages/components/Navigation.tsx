@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -393,8 +394,17 @@ const quickLinks = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+=======
+import React from 'react';
 
+interface NavigationProps {
+  children?: React.ReactNode;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+
+const Navigation: React.FC<NavigationProps> = ({ children }) => {
   return (
+<<<<<<< HEAD
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-blue-600 text-white py-2">
@@ -575,5 +585,12 @@ export default function Navigation() {
         )}
       </div>
     </nav>
+=======
+    <div>
+      {children}
+    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
-}
+};
+
+export default Navigation;

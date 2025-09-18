@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, User, ArrowRight, Star, BookOpen, Briefcase, Zap } from 'lucide-react';
@@ -325,3 +326,6 @@ const NewContentShowcase2026: React.FC = () => {
 };
 
 export default NewContentShowcase2026;
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -72,18 +73,29 @@ export default function RegisterPage() {;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
   return (
-    <Layout
-      title="Register - Zion Tech Group"
-      description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources."
-      keywords="register, sign up, create account, Zion Tech Group, new user">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-md w-full space-y-8">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>register | Zion Tech Group</title>
+        <meta name="description" content="register - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">register</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -697,3 +709,5 @@ if ( {) {
     </Layout>);
 
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

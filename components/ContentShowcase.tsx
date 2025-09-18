@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import { motion, useAnimation } from 'framer-motion';
@@ -218,3 +219,5 @@ const ContentShowcase = () => {
 };
 
 export default ContentShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React{ useState } from 'react';
 import Link from 'next/link';
@@ -173,3 +174,5 @@ const InteractiveContentWidget = () => {
 };
 
 export default InteractiveContentWidget;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

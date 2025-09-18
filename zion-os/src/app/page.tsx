@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
@@ -376,45 +377,54 @@ export default function HomePage() {
   );
 }
 import FeatureCard from './components/FeatureCard';
+=======
+import React from 'react'
+import Link from 'next/link'
+import FeatureCard from './components/FeatureCard'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 export default function HomePage() {
   const features = [
     {
-      icon: "🤖",
-      title: "AI-Powered Intelligence",
-      description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
+      icon: '🤖',
+      title: 'AI-Powered Intelligence',
+      description:
+        'ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.',
       features: [
-        "ZionGPT Core Integration",
-        "Resume Builder + Proposal AI",
-        "Autonomous Decision Engine",
-        "AI Moderation System"
+        'ZionGPT Core Integration',
+        'Resume Builder + Proposal AI',
+        'Autonomous Decision Engine',
+        'AI Moderation System',
       ],
-      gradient: "bg-gradient-to-r from-blue-600 to-purple-600"
+      gradient: 'bg-gradient-to-r from-blue-600 to-purple-600',
     },
     {
-      icon: "🏪",
-      title: "Complete Marketplace",
-      description: "Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.",
+      icon: '🏪',
+      title: 'Complete Marketplace',
+      description:
+        'Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.',
       features: [
-        "Job & Talent Marketplace",
-        "Token System + Rewards",
-        "On-chain Contract Builder",
-        "Multi-currency Support"
+        'Job & Talent Marketplace',
+        'Token System + Rewards',
+        'On-chain Contract Builder',
+        'Multi-currency Support',
       ],
-      gradient: "bg-gradient-to-r from-green-600 to-emerald-600"
+      gradient: 'bg-gradient-to-r from-green-600 to-emerald-600',
     },
     {
-      icon: "🗳️",
-      title: "Governance & DAO",
-      description: "Flexible governance from admin control to full DAO systems with dual governance options.",
+      icon: '🗳️',
+      title: 'Governance & DAO',
+      description:
+        'Flexible governance from admin control to full DAO systems with dual governance options.',
       features: [
-        "DAO Proposal Voting",
-        "Dual Governance (Local + Global)",
-        "Sovereign Treasury",
-        "KYC/AML + ID Verification"
+        'DAO Proposal Voting',
+        'Dual Governance (Local + Global)',
+        'Sovereign Treasury',
+        'KYC/AML + ID Verification',
       ],
-      gradient: "bg-gradient-to-r from-purple-600 to-pink-600"
+      gradient: 'bg-gradient-to-r from-purple-600 to-pink-600',
     },
+<<<<<<< HEAD
     {
       icon: "⚡",
       title: "Enterprise Infrastructure",
@@ -488,19 +498,42 @@ export default function HomePage() {
               <div className="text-purple-600 font-medium whitespace-nowrap">Read →</div>
             </div>
           </a>
+=======
+  ]
+
+  return (
+    <div className="min-h-screen">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="gradient-text">Launch Sovereign</span>
+            <br />
+            <span className="text-white">AI-Powered Digital Economies</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+            Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/multiverse/launch" className="btn-primary hover-lift">
+              🚀 Launch Your Economy
+            </Link>
+            <Link href="/admin/instances" className="btn-secondary hover-lift">
+              📊 View Instances
+            </Link>
+            <Link href="/blog" className="btn-secondary hover-lift">
+              📰 Read the Blog
+            </Link>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Everything You Need to Build the Future
-            </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Everything You Need</h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
-              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit 
-              for launching sovereign digital economies.
+              From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -517,6 +550,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -598,7 +632,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 }
-

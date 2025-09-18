@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -202,3 +203,5 @@ const FeaturedContent2025Showcase: React.FC = () => {
 };
 
 export default FeaturedContent2025Showcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

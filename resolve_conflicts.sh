@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Script to resolve merge conflicts by choosing HEAD version
+<<<<<<< HEAD
 # This will remove all merge conflict markers and keep only the HEAD version
 
 echo "Resolving merge conflicts..."
@@ -30,3 +31,28 @@ while read file; do
 done
 
 echo "Merge conflicts resolved!"
+=======
+echo "Resolving merge conflicts..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" src/ --include="*.jsx" --include="*.tsx" --include="*.js" --include="*.ts" -l)
+
+for file in $files_with_conflicts; do
+    echo "Resolving conflicts in: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Use sed to resolve conflicts by choosing HEAD version
+    # Remove conflict markers and keep only HEAD content
+    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
+    sed -i '/^=======/,/^>>>>>>>/d' "$file"
+    sed -i '/^<<<<<<< HEAD/d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>>/d' "$file"
+    
+    echo "Resolved: $file"
+done
+
+echo "All merge conflicts resolved!"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

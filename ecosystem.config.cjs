@@ -1,6 +1,5 @@
 module.exports = {
   apps: [
-<<<<<<< HEAD
     // Main application
     {
       name: 'zion-app',
@@ -33,6 +32,48 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
+      }
+    },
+
+    // 🧠 NEW: Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
+    {
+      name: 'intelligent-predictive-monitor',
+      script: './scripts/automation/intelligent-predictive-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // 🤖 NEW: AI Code Optimizer - runs every hour
+    {
+      name: 'ai-code-optimizer',
+      script: './scripts/automation/ai-code-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
+    },
+
+    // 📦 NEW: Smart Dependency Manager - runs every 6 hours
+    {
+      name: 'smart-dependency-manager',
+      script: './scripts/automation/smart-dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
     },
 
@@ -188,67 +229,118 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // NEW: AI Code Analyzer - runs every 4 hours
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // NEW: Smart Deployment Optimizer - runs every 6 hours
+    {
+      name: 'smart-deployment-optimizer',
+      script: './scripts/automation/smart-deployment-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // NEW: Adaptive Test Generator - runs every 8 hours
+    {
+      name: 'adaptive-test-generator',
+      script: './scripts/automation/adaptive-test-generator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '28800000' // 8 hours
+      }
+    },
+
+    // NEW: Intelligent Code Refactorer - runs every 12 hours
+    {
+      name: 'intelligent-code-refactorer',
+      script: './scripts/automation/intelligent-code-refactorer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '43200000' // 12 hours
+      }
+    },
+
+    // NEW: Smart Documentation Generator - runs every 24 hours
+    {
+      name: 'smart-documentation-generator',
+      script: './scripts/automation/smart-documentation-generator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours
+      }
+    },
+
+    // NEW: Predictive Maintenance Monitor - runs every 2 hours
+    {
+      name: 'predictive-maintenance-monitor',
+      script: './scripts/automation/predictive-maintenance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // PM2 Monitor - runs every 10 minutes
+    {
+      name: 'pm2-monitor',
+      script: './scripts/automation/pm2-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // Enhanced Automation Runner - runs every 15 minutes
+    {
+      name: 'enhanced-automation-runner',
+      script: './scripts/automation/enhanced-automation-runner.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
     }
   ]
 };
-=======
-    {
-      name: "zion-app",
-      script: "npm",
-      args: "start",
-      interpreter: "none",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 500,
-      env: {
-        NODE_ENV: "production",
-        PORT: process.env.PORT || 3000
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/zion-app-error.log",
-      out_file: "automation/logs/zion-app-out.log",
-      time: true
-    },
-    {
-      name: "zion-auto-sync",
-      script: "automation/pm2-auto-sync.js",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 500,
-      env: {
-        NODE_ENV: "production",
-        AUTO_SYNC_REMOTE: process.env.AUTO_SYNC_REMOTE || "origin",
-        AUTO_SYNC_BRANCH: process.env.AUTO_SYNC_BRANCH || "main",
-        AUTO_SYNC_STRATEGY: process.env.AUTO_SYNC_STRATEGY || "hardreset",
-        AUTO_SYNC_CLEAN: process.env.AUTO_SYNC_CLEAN || "1",
-        AUTO_SYNC_GC: process.env.AUTO_SYNC_GC || "0"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/zion-auto-sync-error.log",
-      out_file: "automation/logs/zion-auto-sync-out.log",
-      time: true
-    },
-    {
-      name: "zion-build-monitor",
-      script: "automation/continuous-build-monitor.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 5,
-      env: {
-        NODE_ENV: "production"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/build-monitor-error.log",
-      out_file: "automation/logs/build-monitor-out.log",
-      time: true
-    }
-  ]
-};
->>>>>>> origin/auto/autonomy-17186719616

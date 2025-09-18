@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 
 const ConsciousnessComputingRevolution2026: React.FC = () => {
@@ -260,24 +261,18 @@ const ConsciousnessComputingRevolution2026: React.FC = () => {
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-20">
+=======
+const ConsciousnessComputingRevolution2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Meet Conscious AI?</h2>
-          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-            Experience the future of AI with systems that truly understand, feel, and create. 
-            Join the consciousness revolution today.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Meet Our AI
-            </button>
-            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
-              Learn More
-            </button>
-          </div>
+          <h1 className="text-4xl font-bold mb-6">ConsciousnessComputingRevolution2026</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default ConsciousnessComputingRevolution2026;

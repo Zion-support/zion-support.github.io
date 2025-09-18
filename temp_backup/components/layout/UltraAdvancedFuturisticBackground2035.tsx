@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -247,141 +248,17 @@ export default function UltraAdvancedFuturisticBackground2035() {
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedFuturisticBackground2035: React.FC = () => {
   return (
-    <>
-      {/* Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0) 70%)' }}
-      />
-
-      {/* Overlay Effects */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/5 via-transparent to-cyan-900/5" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5" />
-        
-        {/* Radial Gradients */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-
-        {/* Animated Grid */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px',
-            animation: 'gridMove 20s linear infinite'
-          }} />
-        </div>
-
-        {/* Floating Elements */}
-        <motion.div
-          className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.3, 1, 0.3],
-            scale: [1, 1.5, 1]
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-32 w-3 h-3 bg-purple-400 rounded-full"
-          animate={{
-            y: [0, 15, 0],
-            opacity: [0.3, 1, 0.3],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-32 left-1/3 w-2 h-2 bg-pink-400 rounded-full"
-          animate={{
-            y: [0, -25, 0],
-            opacity: [0.3, 1, 0.3],
-            scale: [1, 1.8, 1]
-          }}
-          transition={{
-            duration: 3.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-
-        {/* Quantum Field Lines */}
-        <div className="absolute inset-0">
-          {[...Array(5)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-400 to-transparent"
-              style={{
-                left: `${20 + i * 20}%`,
-                top: '50%',
-                transform: 'translateY(-50%)'
-              }}
-              animate={{
-                height: [0, 128, 0],
-                opacity: [0, 0.8, 0]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: i * 0.8
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Holographic Rings */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          {[...Array(3)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute border border-purple-400/30 rounded-full"
-              style={{
-                width: `${200 + i * 100}px`,
-                height: `${200 + i * 100}px`
-              }}
-              animate={{
-                rotate: [0, 360],
-                scale: [1, 1.1, 1],
-                opacity: [0.3, 0.6, 0.3]
-              }}
-              transition={{
-                duration: 20 + i * 5,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes gridMove {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
-        }
-      `}</style>
-    </>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticBackground2035</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default UltraAdvancedFuturisticBackground2035;

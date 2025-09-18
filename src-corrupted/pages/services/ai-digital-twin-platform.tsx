@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;',';';
     ';';';';
 import { motion  } from 'framer-motion'; import { Link  } from 'react-router-dom',;',';';
@@ -795,12 +796,15 @@ import {SEO } from '@/components/SEO';
 export default function aidigitaltwinplatform(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="aidigitaltwinplatform - Zion Tech Group" description="Professional aidigitaltwinplatform services by Zion Tech Group"  />
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold text-white mb-8">aidigitaltwinplatform</h1>
-        <p className="text-gray-300 text-lg">
-          Professional aidigitaltwinplatform services to help your business grow.
-        </p>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-digital-twin-platform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
+<<<<<<< HEAD
   )
       )}
     </div>';
@@ -2147,3 +2151,5 @@ transition={{ duration: 0.8 }}>'; <h2 className="text-3xl font-bold mb-8">Get in
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

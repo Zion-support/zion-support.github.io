@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -207,3 +208,5 @@ const UltimateTechShowcase2026Banner = () => {
 };
 
 export default UltimateTechShowcase2026Banner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

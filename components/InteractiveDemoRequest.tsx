@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React{ useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -405,3 +406,5 @@ export default function InteractiveDemoRequest() {
     </>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

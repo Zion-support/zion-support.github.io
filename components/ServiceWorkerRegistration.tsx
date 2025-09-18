@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -237,3 +238,5 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
 };
 
 export default ServiceWorkerRegistration;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -373,3 +374,5 @@ const ComprehensiveServicesShowcase: React.FC = () => {
 };
 
 export default ComprehensiveServicesShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

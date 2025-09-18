@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -219,3 +220,8 @@ const AI2026UltimateBreakthroughBanner: React.FC = () => {
 };
 
 export default AI2026UltimateBreakthroughBanner;
+=======
+import React from 'react';
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

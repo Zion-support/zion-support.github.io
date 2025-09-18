@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -391,5 +392,16 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         `
         }}/>
     </>);
+=======
+
+const accessibility-panel: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">accessibility-panel</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
-export default AccessibilityPanel;
+
+export default accessibility-panel;

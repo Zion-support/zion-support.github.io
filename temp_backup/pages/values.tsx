@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -93,179 +94,26 @@ const ValuesPage: React.FC = () => {
     { number: "200+", label: "Countries Impacted", icon: Globe },
     { number: "24/7", label: "Global Support", icon: Clock }
   ];
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const values: React.FC = () => {
   return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-8"
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4 mr-2" />
-                Our Core Values
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">
-                What Drives Us
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our values are more than words on a page—they're the principles that guide every decision, 
-                every action, and every solution we create at Zion Tech Group.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Impact Metrics */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {impactMetrics.map((metric, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-4">
-                    <metric.icon className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{metric.number}</div>
-                  <div className="text-gray-400">{metric.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Core Values */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="space-y-16">
-              {coreValues.map((value, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                  }`}
-                >
-                  <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                    <div className="flex items-center mb-6">
-                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${value.color} mr-6`}>
-                        <value.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <h2 className="text-3xl md:text-4xl font-bold text-white">{value.title}</h2>
-                    </div>
-                    <p className="text-lg text-gray-300 mb-6 leading-relaxed">{value.description}</p>
-                    <p className="text-gray-400 mb-6 leading-relaxed">{value.longDescription}</p>
-                    <div className="space-y-3">
-                      {value.examples.map((example, exampleIndex) => (
-                        <div key={exampleIndex} className="flex items-center">
-                          <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                          <span className="text-gray-300">{example}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className={`bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 ${
-                    index % 2 === 1 ? 'lg:col-start-1' : ''
-                  }`}>
-                    <div className={`w-full h-64 rounded-xl bg-gradient-to-r ${value.color} opacity-20`}></div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Additional Principles */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Additional Principles</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Beyond our core values, these principles guide our daily operations and decision-making
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {additionalPrinciples.map((principle, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-                    <principle.icon className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{principle.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{principle.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Living Our Values */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Living Our Values
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Our values aren't just statements—they're lived experiences that shape our culture, 
-                guide our decisions, and inspire our team to achieve extraordinary results.
-              </p>
-              <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-4">For Our Team</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Continuous learning and development opportunities</li>
-                      <li>• Collaborative and inclusive work environment</li>
-                      <li>• Recognition and celebration of achievements</li>
-                      <li>• Work-life balance and wellness support</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-4">For Our Clients</h3>
-                    <ul className="space-y-2 text-gray-300">
-                      <li>• Transparent communication and honest feedback</li>
-                      <li>• Dedicated support and ongoing partnership</li>
-                      <li>• Innovative solutions tailored to unique needs</li>
-                      <li>• Long-term success and growth focus</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>values | Zion Tech Group</title>
+        <meta name="description" content="values - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">values</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
-export default ValuesPage;
+export default values;

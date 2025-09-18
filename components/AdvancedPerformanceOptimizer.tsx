@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -323,3 +324,5 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
 };
 
 export default AdvancedPerformanceOptimizer;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

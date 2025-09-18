@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target, Users, Eye, Heart, Code, Palette, Search, Mail, MessageCircle, Calendar, BarChart3, Lightbulb, Globe2, Satellite, Microscope, Flask, ShieldCheck, Zap as ZapIcon, Cpu as CpuIcon, Brain as BrainIcon, Rocket as RocketIcon, Star as StarIcon, TrendingUp as TrendingUpIcon } from 'lucide-react';
@@ -181,164 +182,17 @@ export default function Revolutionary2026ServicesShowcase({
       }
     }
   };
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const Revolutionary2026ServicesShowcase: React.FC = () => {
   return (
-    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.h2
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            {title}
-          </motion.h2>
-          <motion.p
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            {subtitle}
-          </motion.p>
-          
-          {/* Stats */}
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                {services.length}+
-              </div>
-              <div className="text-gray-400">Revolutionary Services</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
-                2026
-              </div>
-              <div className="text-gray-400">Future Technology</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">
-                1000%
-              </div>
-              <div className="text-gray-400">ROI Guarantee</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
-                24/7
-              </div>
-              <div className="text-gray-400">Expert Support</div>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Filters */}
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 mb-12 justify-between items-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Sort Options */}
-          <div className="flex items-center gap-2">
-            <span className="text-gray-400 text-sm">Sort by:</span>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="bg-gray-800/50 text-white px-3 py-2 rounded-lg border border-gray-600 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/25"
-            >
-              <option value="popular">Most Popular</option>
-              <option value="price">Price</option>
-              <option value="rating">Rating</option>
-              <option value="newest">Newest</option>
-            </select>
-          </div>
-        </motion.div>
-
-        {/* Services Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              variants={itemVariants}
-              className="group"
-            >
-              <UltraFuturisticServiceCard
-                service={service}
-                index={index}
-                showAdvancedFeatures={true}
-                enableHoverEffects={true}
-                enableAnimations={true}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-        >
-          <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Experience the Future?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of forward-thinking companies already leveraging our revolutionary 2026 services. 
-              Get started today and achieve unprecedented ROI with cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105">
-                Schedule Demo
-              </button>
-            </div>
-            <div className="mt-6 text-sm text-gray-400">
-              Contact us: <span className="text-cyan-400">+1 302 464 0950</span> | 
-              <span className="text-cyan-400"> kleber@ziontechgroup.com</span>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Revolutionary2026ServicesShowcase</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default Revolutionary2026ServicesShowcase;

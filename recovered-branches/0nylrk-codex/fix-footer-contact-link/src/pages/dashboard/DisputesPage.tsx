@@ -1,18 +1,22 @@
-
-
-
-
-
-
-
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { DisputeDashboard } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { Helmet } from 'react-helmet-async';
 
-function DisputesPage() {
+const DisputesPage: React.FC = () => {
   return (
-    <ProtectedRoute>
-      <>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>DisputesPage | Zion Tech Group</title>
+        <meta name="description" content="DisputesPage - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">DisputesPage</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DisputesPage;

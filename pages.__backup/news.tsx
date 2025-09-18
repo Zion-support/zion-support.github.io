@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -1165,6 +1166,13 @@ export default function NewsPage() {
       </div>
 
       <EnhancedFooter />
+=======
+
+const news: React.FC = () => {
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
-}
+};
+
+export default news;

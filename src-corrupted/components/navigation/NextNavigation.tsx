@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;',';';
     ';';';';
 import Link from 'next/link',;';';
@@ -379,3 +380,10 @@ export default NextNavigation;"';';';';
 </string>
 </any>
 </any>
+=======
+    </div>
+  );
+};
+
+export default NextNavigation;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

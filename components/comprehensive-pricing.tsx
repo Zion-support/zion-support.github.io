@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -606,3 +607,5 @@ export default function ComprehensivePricingPage() {
     </UltraFuturisticBackground>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

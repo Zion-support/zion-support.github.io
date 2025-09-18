@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 ;
 export function ErrorBoundaryFallback("props": "any) {;
 	return (;
@@ -118,6 +119,10 @@ export class ErrorBoundary extends React.Component {;
           </p>
         </div>
       </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
-    return <ErrorFallback error={error} resetError={resetError} />;
-</ErrorFallback>"
+  );
+};
+
+export default ErrorBoundary;

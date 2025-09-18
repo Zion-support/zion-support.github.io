@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export /**;
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -327,3 +328,5 @@ const stats = [;";
 </motion>;
 </motion>;
 </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';'''';';
 import React, {useState, useEffect} from 'react';
@@ -58,3 +59,5 @@ export {EnhancedScrollToTop};
 </motion>;
 ;
 </motion>;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

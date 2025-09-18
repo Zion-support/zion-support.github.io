@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feature/revolutionary-2026-content
 import { 
   ArrowRight, 
@@ -37,10 +34,7 @@ import {
   Waves,
   Hexagon
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
 >>>>>>> origin/feature/revolutionary-2026-content
 
 const RevolutionaryContentCarousel: React.FC = () => {
@@ -68,9 +62,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     },
     {
       id: 2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feature/revolutionary-2026-content
       title: "Future Tech Breakthrough 2026",
       subtitle: "Consciousness Transfer & Quantum Intelligence",
@@ -104,11 +95,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
       ],
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
-<<<<<<< HEAD
       impact: "Unprecedented"
-=======
       impact: "Unprecedented"
-=======
       title: "Neural Reality Interface",
       subtitle: "Direct brain-computer communication achieved",
       description: "Breakthrough technology enables seamless communication between human consciousness and digital systems, revolutionizing human-computer interaction.",
@@ -133,7 +121,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
       stats: { views: "3.9M", likes: "267K", shares: "54K" },
       color: "from-cyan-600 to-blue-600"
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
       impact: "Revolutionary"
 >>>>>>> origin/feature/revolutionary-2026-content
     },
@@ -157,9 +144,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
     },
     {
       id: 5,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/feature/revolutionary-2026-content
       title: "Quantum-Neural Fusion 2026",
       subtitle: "Quantum Computing Meets Neural Interfaces",
@@ -205,9 +189,7 @@ const RevolutionaryContentCarousel: React.FC = () => {
     { number: '∞', label: 'Storage Capacity', icon: Database },
     { number: '∞', label: 'Reality Simulations', icon: Globe }
   ];
-<<<<<<< HEAD
 
-=======
       title: "Consciousness Transfer Protocol",
       subtitle: "Digital immortality becomes reality",
       description: "Technology that enables the transfer of human consciousness into digital substrates, achieving true digital immortality.",
@@ -222,7 +204,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
   ];
 
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
 >>>>>>> origin/feature/revolutionary-2026-content
   useEffect(() => {
     if (isAutoPlaying) {
@@ -405,9 +386,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
           )}
         </button>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const currentContent = revolutionaryContent[currentSlide];
 
   return (
@@ -603,7 +581,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
         >
           <Play className={`w-5 h-5 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
         </button>
-=======
 
       {/* Main content */}
       <AnimatePresence mode="wait">
@@ -714,7 +691,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
 
       {/* Dots indicator */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-=======
 
       {/* Dots Navigation */}
       <div className="flex justify-center space-x-3 mt-8">
@@ -725,10 +701,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide
-<<<<<<< HEAD
                 ? 'bg-white scale-125'
                 : 'bg-white/50 hover:bg-white/75'
-=======
                 ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
                 : 'bg-gray-300 hover:bg-gray-400'
 >>>>>>> origin/feature/revolutionary-2026-content
@@ -737,7 +711,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
         <motion.div
@@ -748,7 +721,6 @@ const RevolutionaryContentCarousel: React.FC = () => {
           key={currentSlide}
         />
 >>>>>>> cursor/create-and-deploy-new-content-e4b3
-=======
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (
@@ -778,4 +750,3 @@ const RevolutionaryContentCarousel: React.FC = () => {
   );
 };
 
-export default RevolutionaryContentCarousel;

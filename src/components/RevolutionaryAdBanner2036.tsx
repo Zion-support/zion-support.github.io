@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2036: React.FC = () => {
+<<<<<<< HEAD
   const [currentAd, setCurrentAd] = useState(0);
 
   const ads = [
@@ -27,10 +28,39 @@ const RevolutionaryAdBanner2036: React.FC = () => {
       link: "/pages/NextGenInnovationHub2036",
       gradient: "from-emerald-600 to-teal-600",
       icon: "🌌"
+=======
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      title: "Quantum Consciousness AI",
+      subtitle: "AI that transcends human understanding",
+      icon: "🧠",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Interdimensional Computing",
+      subtitle: "Computing across multiple dimensions",
+      icon: "🌌",
+      color: "from-blue-500 to-purple-500"
+    },
+    {
+      title: "Time Manipulation Tech",
+      subtitle: "Control the flow of time itself",
+      icon: "⏰",
+      color: "from-green-500 to-blue-500"
+    },
+    {
+      title: "Reality Engineering",
+      subtitle: "Shape reality to your will",
+      icon: "🔮",
+      color: "from-pink-500 to-red-500"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     }
   ];
 
   useEffect(() => {
+<<<<<<< HEAD
     const interval = setInterval(() => {
       setCurrentAd((prev) => (prev + 1) % ads.length);
     }, 5000);
@@ -99,8 +129,14 @@ const RevolutionaryAdBanner2036: React.FC = () => {
             ))}
           </div>
 import React from 'react';
+=======
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-const RevolutionaryAdBanner2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -118,55 +154,23 @@ const RevolutionaryAdBanner2036: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">🧠</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Conscious AI</h3>
-            <p className="text-purple-100 text-sm text-center mb-4">
-              AI with genuine consciousness and self-awareness
-            </p>
-            <a href="/pages/UltimateTechBreakthrough2036" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
-              Explore →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">⚛️</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Quantum Consciousness</h3>
-            <p className="text-cyan-100 text-sm text-center mb-4">
-              Quantum computing merged with consciousness
-            </p>
-            <a href="/pages/RevolutionaryTechShowcase2036" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
-              View →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">🧬</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Neural Interface</h3>
-            <p className="text-emerald-100 text-sm text-center mb-4">
-              Direct neural interfaces for perfect VR
-            </p>
-            <a href="/pages/NextGenInnovationHub2036" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
-              Enter →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-6 border border-violet-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-4xl mb-3 text-center">🌌</div>
-            <h3 className="text-lg font-bold mb-2 text-center">Interdimensional</h3>
-            <p className="text-violet-100 text-sm text-center mb-4">
-              Computing across multiple dimensions
-            </p>
-            <a href="/pages/UltimateTechBreakthrough2036" className="block w-full bg-white text-violet-600 py-2 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center text-sm">
-              Explore →
-            </a>
-          </div>
+          {slides.map((tech, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-4">{tech.icon}</div>
+              <h3 className="text-xl font-bold mb-2">{tech.title}</h3>
+              <p className="text-sm opacity-90 mb-4">{tech.subtitle}</p>
+              <a href={`/pages/RevolutionaryTechShowcase2036#${tech.title.toLowerCase().replace(/\s+/g, '-')}`} className={`inline-block bg-gradient-to-r ${tech.color} text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 text-sm font-semibold`}>
+                Explore →
+              </a>
+            </div>
+          ))}
         </div>
         
         <div className="text-center mt-8">
           <a href="/pages/RevolutionaryTechShowcase2036" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience All Technologies →
           </a>
+<<<<<<< HEAD
 
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -181,6 +185,8 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               <p className="text-sm opacity-90">{ad.subtitle}</p>
             </a>
           ))}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
       </div>
     </div>

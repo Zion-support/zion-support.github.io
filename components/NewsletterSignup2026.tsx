@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -355,3 +356,5 @@ const NewsletterSignup2026 = () => {
 };
 
 export default NewsletterSignup2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

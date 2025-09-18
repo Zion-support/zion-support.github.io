@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -226,3 +227,5 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 };
 
 export default QuantumAINeuralNetworkPlatform;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

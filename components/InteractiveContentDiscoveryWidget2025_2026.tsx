@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -542,3 +543,5 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
 };
 
 export default InteractiveContentDiscoveryWidget2025_2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

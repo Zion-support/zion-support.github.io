@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -127,3 +128,5 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
 };
 
 export default AI2026RevolutionaryBreakthroughTechnologiesBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
@@ -396,3 +397,5 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default Solutions;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

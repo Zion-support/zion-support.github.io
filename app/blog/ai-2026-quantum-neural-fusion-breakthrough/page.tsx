@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -417,6 +418,10 @@ export default function AI2026QuantumNeuralFusionBreakthrough() {
           </div>
         </footer>
       </article>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
-}
+};
+
+export default page;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'high';
@@ -975,23 +976,16 @@ if (theme === 'quantum-neon' || theme === 'quantum') {
       cancelAnimationFrame(animationFrameId);
     }
 }, [])
+=======
+
+const UltraFuturisticBackground2037: React.FC = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <div ref={containerRef} className=&quot;fixed inset-0 w-full h-full pointer-events-none&quot;>
-      <canvas,
-ref={canvasRef}
-        className=&quot;w-full h-full&quot;
-        style={{
-          background: 'transparent'
-          filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
-
-
-        }}      />
-      {children}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2037</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  )
-},
+  );
+};
 
-export default UltraFuturisticBackground2037,
-
-
-
+export default UltraFuturisticBackground2037;

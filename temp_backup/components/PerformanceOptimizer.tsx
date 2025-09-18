@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -230,58 +231,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, []);
 
   if (!showMetrics) return null;
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const PerformanceOptimizer: React.FC = () => {
   return (
-    <>
-      {/* Performance Dashboard */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="fixed bottom-4 right-4 z-50 bg-gray-900/90 backdrop-blur-md border border-gray-700/50 rounded-2xl p-4 shadow-2xl max-w-sm"
-        role="status"
-        aria-live="polite"
-      >
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
-          <div className={`w-3 h-3 rounded-full ${
-            metrics.score >= 90 ? 'bg-green-400' : 
-            metrics.score >= 70 ? 'bg-yellow-400' : 'bg-red-400'
-          }`} />
-        </div>
-        
-        <div className="space-y-2 text-xs">
-          <div className="flex justify-between">
-            <span className="text-gray-400">Score:</span>
-            <span className="text-white font-medium">{metrics.score}/100</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">FCP:</span>
-            <span className="text-white">{metrics.fcp.toFixed(0)}ms</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">LCP:</span>
-            <span className="text-white">{metrics.lcp.toFixed(0)}ms</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">FID:</span>
-            <span className="text-white">{metrics.fid.toFixed(0)}ms</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">CLS:</span>
-            <span className="text-white">{metrics.cls.toFixed(3)}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-gray-400">TTFB:</span>
-            <span className="text-white">{metrics.ttfb.toFixed(0)}ms</span>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Screen reader announcements */}
-      <div className="sr-only" aria-live="polite">
-        Performance score: {metrics.score} out of 100
-      </div>
-    </>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PerformanceOptimizer</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

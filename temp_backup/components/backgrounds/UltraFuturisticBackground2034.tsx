@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -241,108 +242,15 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       }
     };
   }, [intensity, theme]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraFuturisticBackground2034: React.FC = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Animated background canvas */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ zIndex: 0 }}
-      />
-      
-      {/* Overlay gradient for better text readability */}
-      <div 
-        className="fixed inset-0 pointer-events-none z-10"
-        style={{
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.3) 100%)`,
-          zIndex: 10
-        }}
-      />
-      
-      {/* Floating geometric shapes */}
-      <div className="fixed inset-0 pointer-events-none z-20" style={{ zIndex: 20 }}>
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
-          animate={{
-            y: [0, -20, 0],
-            scale: [1, 1.1, 1],
-            opacity: [0.4, 0.7, 0.4]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-1/4 w-40 h-40 border border-green-400/30 transform rotate-45"
-          animate={{
-            rotate: [45, 405],
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-20 right-20 w-28 h-28 border border-pink-400/30 transform rotate-12"
-          animate={{
-            rotate: [12, 372],
-            y: [0, 15, 0],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-
-      {/* Quantum energy waves */}
-      <div className="fixed inset-0 pointer-events-none z-30" style={{ zIndex: 30 }}>
-        <motion.div
-          className="absolute inset-0"
-          animate={{
-            background: [
-              "radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)"
-            ]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-40" style={{ zIndex: 40 }}>
-        {children}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2034</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

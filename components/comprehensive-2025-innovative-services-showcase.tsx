@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -309,3 +310,5 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 };
 
 export default Comprehensive2025InnovativeServicesShowcase;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

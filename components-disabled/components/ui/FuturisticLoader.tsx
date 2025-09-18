@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 interface FuturisticLoaderProps {
@@ -114,25 +115,16 @@ export default function FuturisticLoader({
     }
   };
 
+=======
+
+const FuturisticLoader: React.FC = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className="relative">
-        {renderLoader()}
-        {/* Neon glow effect */}
-        <div 
-          className={`absolute inset-0 rounded-full blur-xl opacity-30 ${colorClasses[color].split(' ')[1]} bg-current`}
-          style={{ transform: 'scale(1.5)' }}
-        />
-      </div>
-      {text && (
-        <motion.p
-          className={`text-sm font-medium ${colorClasses[color]} tracking-wider`}
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 2, repeat: Infinity, ease: [0.45, 0, 0.55, 1] }}
-        >
-          {text}
-        </motion.p>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticLoader</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default FuturisticLoader;

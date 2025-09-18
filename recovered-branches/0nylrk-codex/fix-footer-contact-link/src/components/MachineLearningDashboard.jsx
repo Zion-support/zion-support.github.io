@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
@@ -586,4 +587,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         </AnimatePresence>
       </div>
     </div>);
+=======
+
+const MachineLearningDashboard: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MachineLearningDashboard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 };
+
+export default MachineLearningDashboard;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';'''
 import {motion} from 'framer-motion';
@@ -943,3 +944,5 @@ export {ContentQualityAnalyzer};
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

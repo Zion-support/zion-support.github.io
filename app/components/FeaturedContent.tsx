@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ContentCard from './ContentCard';
 
@@ -69,5 +70,9 @@ export default function FeaturedContent() {
         </div>
       </div>
     </section>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
-}
+};
+
+export default FeaturedContent;

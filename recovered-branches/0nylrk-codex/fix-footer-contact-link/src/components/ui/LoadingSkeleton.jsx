@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
@@ -50,3 +51,5 @@ export function HeroSkeleton({ className }) {
       </div>
     </div>);
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

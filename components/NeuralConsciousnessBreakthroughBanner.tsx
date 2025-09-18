@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -166,3 +167,5 @@ const NeuralConsciousnessBreakthroughBanner: React.FC = () => {
 };
 
 export default NeuralConsciousnessBreakthroughBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

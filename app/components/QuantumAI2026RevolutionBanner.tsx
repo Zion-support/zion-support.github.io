@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 
+<<<<<<< HEAD
 const QuantumAI2026RevolutionBanner = () => {
   return (
     <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-24 overflow-hidden">
@@ -130,3 +130,7 @@ const QuantumAI2026RevolutionBanner = () => {
 };
 
 export default QuantumAI2026RevolutionBanner;
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

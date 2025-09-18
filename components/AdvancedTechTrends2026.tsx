@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -146,3 +147,5 @@ const AdvancedTechTrends2026 = () => {
 };
 
 export default AdvancedTechTrends2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

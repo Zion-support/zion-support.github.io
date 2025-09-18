@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
@@ -806,3 +807,5 @@ export const FuturisticServicesShowcase = ("props": "any) => {"}
 </div>;
 </div>;
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

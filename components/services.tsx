@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 } from 'lucide-react';
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
@@ -778,3 +779,5 @@ const serviceCategories: Array<{
     </UltraFuturisticBackground2029>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

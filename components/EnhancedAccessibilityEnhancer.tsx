@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -323,3 +324,5 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 };
 
 export default EnhancedAccessibilityEnhancer;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

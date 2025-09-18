@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 export default function Page("props": "any) {;
 ",;
@@ -152,133 +153,16 @@ export default function Page("props": "any) {;
                 animate = {;
   { "opacity": "1",;
   "y": "0;
+=======
 
-}}
-                transition={{ delay: 0.4 + index * 0.1 }}"
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: borde r-blue-500/50 transition-all duration-300"
-              >"
-                <div className="flex items-center justify-between mb-4">"
-                  <div className="flex items-center gap-3">`
-                    <div className={`p-2 rounded-lg ${getStatusBgColor(metric.status)}`}>`
-                      <metric.icon className={`w-6 h-6 ${getStatusColor(metric.status)}`} />
-                    </div>"
-                    <h3 className="text-lg font-semibold text-white">{metric.name}
-                  </div>
-                  {getTrendIcon(metric.trend) }
-                </div>;
-";
-                <div className="text-center">";
-                  <div className="text-3xl font-bold text-white mb-2">;
-                    {metric.value.toFixed(metric.unit === '%' ? 1 : "0)"}";
-                    <span className="text-lg text-gray-400 ml-1">{metric.unit}</span>;
-                  </div>`;
-                  <div className={`text-sm font-medium ${getStatusColor(metric.status)}`}>;
-                    {metric.status.charAt(0).toUpperCase() + metric.status.slice(1)}
-                  </div>;
-                </div>;
-              </motion.div>) ) }
-          </motion.div>) }
-;
-        {/* Alerts and Recommendations */}
-        {performanceData && (<motion.div;
-            initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-            animate = {;
-  { "opacity": "1",;
-  "y": "0;
+const PerformanceAnalytics: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PerformanceAnalytics</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-}}
-            transition={{ delay: 0.5 }}"
-            className="grid grid-cols-1 lg: gri d-cols-2 gap-8 mb-12"
-          >
-            {/* Alerts */}"
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
-              <div className="flex items-center gap-3 mb-4">"
-                <AlertTriangle className="w-6 h-6 text-yellow-400"   />"                <h3 className="text-xl font-semibold text-white">Active Alerts
-              </div>"
-              <div className="space-y-3">
-                {performanceData.alerts.map((alert, index) => ("
-                  <div key={index} className="flex items-start gap-3 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">"
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>"
-                    <p className="text-sm text-gray-300">{alert}</p>
-                  </div>
-                ))}
-              </div>;
-            </div>;
-
-            {/* Recommendations */}"
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">"
-              <div className="flex items-center gap-3 mb-4">"
-                <CheckCircle className="w-6 h-6 text-green-400"   />"                <h3 className="text-xl font-semibold text-white">Recommendations
-              </div>"
-              <div className="space-y-3">
-                {performanceData.recommendations.map((recommendation, index) => ("
-                  <div key={index} className="flex items-start gap-3 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">"
-                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>"
-                    <p className="text-sm text-gray-300">{recommendation}</p>
-                  </div>
-                ))}
-              </div>;
-            </div>;
-          </motion.div>) }
-;
-        {/* Performance Chart Placeholder */}
-        <motion.div;
-          initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          animate = {;
-  { "opacity": "1",;
-  "y": "0;
-
-}}
-          transition={{ delay: 0.6 }}
-          className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
-        >
-          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4"  />
-          <h3 className="text-xl font - semibold text-white mb-2">Performance Trends
-          <p className="text-gray -400">
-            {isMonitoring
-              ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data'
-            }
-          </p>;
-          {isMonitoring && (";
-            <div className="mt-4 text-sm text-green-400">";
-              <Activity className="w-4 h-4 inline mr-2 animate-pulse"   />              Monitoring Active;
-            </div>) }
-        </motion.div>;
-        {/* Status Summary */}
-        {performanceData && (<motion.div;
-            initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-            animate = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-            transition={{ "delay": "0.7 "}}";
-            className="mt-8 text-center";
-          >";
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">";
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>";
-              <span className="text-sm text-gray-300">;
-                Last "updated": "{new Date(performanceData.timestamp).toLocaleTimeString()"};
-              </span>;
-            </div>;
-          </motion.div>;) };
-      </div>;
-    </div>;) ;
-</div>};
-;
-export default PerformanceAnalytics}}}}}}}}'"`;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>
+export default PerformanceAnalytics;

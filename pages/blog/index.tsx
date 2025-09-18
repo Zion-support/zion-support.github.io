@@ -1,7 +1,13 @@
 import type { NextPage } from 'next';
+<<<<<<< HEAD
 import Head from 'next/head'
 import Link from 'next/link'
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
+=======
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 const posts = [
   // Featured content (Sept 18, 2025)
@@ -49,6 +55,7 @@ const posts = [
   ,{ slug: 'ai-2026-agentic-benchmarking-field-guide', title: 'Agentic Benchmarking Field Guide (2026)', excerpt: 'Benchmark agentic systems with scenario suites and business-aligned SLIs.' }
   ,{ slug: 'ai-2026-operationalizing-ai-safety-controls', title: 'Operationalizing AI Safety Controls (2026)', excerpt: 'Turn policies into runtime controls wired to SLOs and incidents.' }
 ]
+<<<<<<< HEAD
 
 // Fresh posts (Sept 16, 2025)
 posts.unshift(
@@ -56,10 +63,11 @@ posts.unshift(
   { slug: 'ai-2026-agent-release-scorecards', title: 'Agent Release Scorecards — Evidence‑First (2026)', excerpt: 'Executive scorecards wired to SLOs, evals, incidents, and budgets.' },
   { slug: 'ai-2026-agent-rollback-patterns', title: 'Agent Rollback Patterns — Safe Recovery (2026)', excerpt: 'Staged deploys, eval gates, evidence bundles, and containment for safe recovery.' }
 )
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 // Newly added posts (Sept 2025)
 posts.unshift(
-  { slug: 'ai-2026-governed-agent-operations-checklist', title: 'Governed Agent Operations Checklist (2026)', excerpt: 'A pragmatic, audit-ready checklist for safe, observable agent ops.' },
   { slug: 'ai-2026-low-latency-agent-observability', title: 'Low‑Latency Agent Observability (2026)', excerpt: 'Telemetry patterns that preserve sub‑200ms perceived latency.' },
   { slug: 'ai-2026-agent-safety-evidence-integration', title: 'Agent Safety Evidence Integration (2026)', excerpt: 'Unify evals, incidents, and policy events for audits.' },
   { slug: 'ai-2026-cost-aware-real-time-routing', title: 'Cost‑Aware Real‑Time Routing (2026)', excerpt: 'Balance latency, quality, and spend with policy‑driven routing.' },
@@ -83,11 +91,6 @@ posts.unshift(
 
 // New content (Sept 16, 2025) — Added in this change
 posts.unshift(
-  { slug: 'ai-2026-observable-slo-driven-routing', title: 'Observable, SLO‑Driven Routing (2026)', excerpt: 'Route by latency, quality, cost, and safety with live scorecards.' },
-  { slug: 'ai-2026-governed-runtime-rollback-strategies', title: 'Governed Runtime Rollback Strategies (2026)', excerpt: 'Safe, auditable rollbacks using eval gates and evidence bundles.' },
-  { slug: 'ai-2026-cost-aware-observability-blueprint', title: 'AI 2026: Cost‑Aware Observability Blueprint', excerpt: 'Unify traces, evals, and spend to keep systems fast and on budget.' },
-  { slug: 'ai-2026-enterprise-architecture-modernization', title: 'Enterprise Architecture Modernization (2026)', excerpt: 'Evolve to AI-ready, event-driven platforms with SLOs and guardrails.' },
-  { slug: 'ai-2026-zero-trust-agents', title: 'Zero‑Trust Agents (2026)', excerpt: 'Risk‑tiered tools, scoped creds, and JIT approvals for safe autonomy.' },
   { slug: 'ai-2026-exec-guide-to-agent-slo-scorecards', title: 'AI 2026: Executive Guide to Agent SLO Scorecards', excerpt: 'Translate traces and evals into executive dashboards that drive decisions.' },
   { slug: 'ai-2026-agent-platform-readiness-checklist', title: 'AI 2026: Agent Platform Readiness Checklist', excerpt: 'A pragmatic checklist to ship safe, observable, and cost‑aware agent platforms.' }
 )
@@ -105,6 +108,7 @@ posts.unshift(
   { slug: 'ai-2026-trusted-genai-patterns-regulated-enterprises', title: 'AI 2026: Trusted GenAI Patterns for Regulated Enterprises', excerpt: 'Compliant, observable, and cost-aware GenAI architectures that scale safely.' }
 )
 
+<<<<<<< HEAD
 // New content (Sept 16, 2025) — Fresh posts
 posts.unshift(
   { slug: 'ai-2026-governed-agent-slo-dashboards', title: 'Governed Agent SLO Dashboards (2026)', excerpt: 'Executive‑ready, governed SLOs wired to evals and incidents.' },
@@ -120,14 +124,22 @@ posts.unshift(
   { slug: 'ai-2026-compliance-evidence-automation', title: 'Compliance Evidence Automation (2026)', excerpt: 'Automate policy checks and evidence capture to accelerate audits and approvals.' }
 )
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 export default function BlogIndexPage() {
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Index: NextPage = () => {
+>>>>>>> origin/backup-main-20250918-004015
   return (
-    <UltraFuturisticBackground intensity="medium">
+    <div>
       <Head>
-        <title>Blog | Zion Tech Group</title>
-        <meta name="description" content="Insights on AI, cloud, automation, and platform engineering." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index blog post" />
       </Head>
+<<<<<<< HEAD
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-10">
@@ -170,4 +182,20 @@ export default function BlogIndexPage() {
     </UltraFuturisticBackground>
   )
 }
+=======
+      
+      <main>
+        <h1>Index</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+<<<<<<< HEAD
+};
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+export default Index;
+>>>>>>> origin/backup-main-20250918-004015

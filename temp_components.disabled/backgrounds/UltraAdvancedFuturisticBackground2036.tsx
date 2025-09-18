@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -335,55 +336,17 @@ export default function UltraAdvancedFuturisticBackground2036({
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, theme, interactive, mousePosition.x, mousePosition.y, isHovered]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedFuturisticBackground2036: React.FC = () => {
   return (
-    <div ref={containerRef} className="fixed inset-0 overflow-hidden pointer-events-none">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ filter: 'blur(0.5px)' }}
-      />
-      
-      {/* Additional visual effects */}
-      <div className="absolute inset-0">
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/5 to-purple-500/5" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-cyan-500/5 to-blue-500/5" />
-        
-        {/* Animated grid lines */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(59,130,246,0.3)_100%)] bg-[length:50px_50px]" />
-          <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(147,51,234,0.3)_100%)] bg-[length:50px_50px]" />
-        </div>
-        
-        {/* Floating orbs */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.6, 0.3, 0.6],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-      
-      {children}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticBackground2036</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default UltraAdvancedFuturisticBackground2036;

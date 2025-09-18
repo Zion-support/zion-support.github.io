@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useEffect, useState, useRef} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 ;
@@ -386,3 +387,5 @@ export default ModernUIEnhancer;
 </motion>;
 </motion>;
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

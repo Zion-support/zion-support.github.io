@@ -1,142 +1,130 @@
 import React, { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { Logo } from '@/components/header/Logo';
-import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react'
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, PanelLeft } from 'lucide-react';
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { LoginModal } from '@/components/auth/LoginModal';
 import { useAuth } from '@/hooks/useAuth';
-import { UserMenu } from '@/components/header/UserMenu';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
-import { cn } from '@/lib/utils'; // Import cn utility
-import { useRouter } from 'next/router';
+import { Logo } from '@/components/header/Logo';
 
 export function AppHeader() {
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
-  const router = useRouter();
-  const showTagline = router.pathname === '/';
+  const { user, logout } = useAuth();
 
-  // Messaging context (unread message count)
-  const { unreadCount } = useMessaging();
-
-  const openLoginModal = (returnToPath?: string) => {
-    // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
-    // using router.push with shallow:true before this function is called.
-    // This function's main job is just to open the modal.
-    // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
-    setLoginOpen(true);
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+    }
   };
-  
+
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' }
+  ];
+
   return (
     <>
-      <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
-        className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen }
-        )}
-      >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          <Logo />
-          {showTagline && (
-            <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
-              {t('home.header_tagline')}
-            </span>
-          )}
-          <div className="ml-6 flex-1 hidden md:block">
-            <nav role="navigation" aria-label="Main navigation">
-              <ResponsiveNavigation openLoginModal={openLoginModal} />
-            </nav>
-          </div>
-          
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-expanded={mobileMenuOpen}
-              aria-label={t('general.toggle_mobile_menu')}
-            >
-              <span className="sr-only">{t('general.open_main_menu')}</span>
-              {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
-          </div>
+      <header className="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <Logo />
 
-          <PointsBadge />
-          {!isLoggedIn && (
-            <div className="ml-4 relative z-10 flex items-center">
-              <a
-                href="/auth/login"
-                className="text-sm font-medium text-foreground/70 hover:text-foreground"
-                aria-label={t('auth.login')}
-                data-testid="login-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // For the main login link, we might not have a specific returnTo beyond current page,
-                  // or we could default to dashboard.
-                  // For consistency with how sub-menus now set it:
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true });
-                  openLoginModal(router.asPath);
-                }}
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-700 hover:text-zion-cyan transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Right Side Actions */}
+            <div className="flex items-center space-x-4">
+              {/* Search */}
+              <form onSubmit={handleSearch} className="hidden md:flex">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent w-64"
+                  />
+                </div>
+              </form>
+
+              {/* User Actions */}
+              <div className="flex items-center space-x-2">
+                {user ? (
+                  <>
+                    <button className="p-2 text-gray-600 hover:text-zion-cyan transition-colors">
+                      <Bell className="w-5 h-5" />
+                    </button>
+                    <div className="relative">
+                      <button className="flex items-center space-x-2 p-2 text-gray-600 hover:text-zion-cyan transition-colors">
+                        <User className="w-5 h-5" />
+                        <span className="hidden sm:block">{user.name}</span>
+                      </button>
+                    </div>
+                    <button
+                      onClick={logout}
+                      className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-zion-cyan transition-colors"
+                    >
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      to="/login"
+                      className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-zion-cyan transition-colors"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      to="/signup"
+                      className="px-4 py-2 text-sm font-medium bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
+                    >
+                      Sign Up
+                    </Link>
+                  </>
+                )}
+              </div>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setMobileMenuOpen(true)}
+                className="lg:hidden p-2 text-gray-600 hover:text-zion-cyan transition-colors"
               >
-                {t('auth.login')}
-              </a>
-              <a
-                href="/signup"
-                className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
-                aria-label={t('auth.signup')}
-                data-testid="signup-nav-link"
-              >
-                {t('auth.signup')}
-              </a>
+                <Menu className="w-6 h-6" />
+              </button>
             </div>
-          )}
-          {/* User avatar menu */}
-          {isLoggedIn && (
-            <div className="ml-4">
-              <UserMenu />
-            </div>
-          )}
+          </div>
         </div>
       </header>
-      
-      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={openLoginModal}
-            />
-          </div>
-        </div>
-      )}
+
+      {/* Mobile Menu */}
+      <MobileMenu
+        isOpen={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+        navigationItems={navigationItems}
+      />
 
       {/* Mobile Bottom Navigation */}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      {isMobile && <MobileBottomNav />}
     </>
   );
 }

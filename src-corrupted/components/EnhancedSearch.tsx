@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useNavigate  } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
  from 'react';
@@ -520,3 +521,5 @@ setFilters(prev: > ({;
 </SearchResult>
 </any>
 </any>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

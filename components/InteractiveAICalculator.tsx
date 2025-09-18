@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -266,3 +267,5 @@ const InteractiveAICalculator: React.FC = () => {
 };
 
 export default InteractiveAICalculator;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

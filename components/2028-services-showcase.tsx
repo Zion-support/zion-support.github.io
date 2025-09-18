@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -650,3 +651,5 @@ export default function ServicesShowcase2028() {
     </>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   AlertTriangle,
   RefreshCw,
@@ -1656,3 +1657,5 @@ export default GlobalErrorBoundary;
 
 export const useErrorBoundary = () => {
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

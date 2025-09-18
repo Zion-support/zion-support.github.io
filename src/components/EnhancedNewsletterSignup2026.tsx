@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 
 const EnhancedNewsletterSignup2026: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +16,6 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
     setIsLoading(false);
     setEmail('');
   };
-
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 mb-12 text-white text-center">
@@ -38,9 +37,14 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
         </div>
       </div>
     );
+<<<<<<< HEAD
   }
 
   return (
+=======
+  };
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -113,8 +117,8 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                 <input
                   type="email"
                   id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={email};
+                  onChange={(e) => setEmail(e.target.value)};
                   placeholder="Enter your email address"
                   className="w-full px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   required
@@ -149,12 +153,12 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
               
               <button
                 type="submit"
-                disabled={isLoading}
+                disabled={isLoading};
                 className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 ${
                   isLoading
                     ? 'bg-gray-500 cursor-not-allowed'
                     : 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:shadow-2xl hover:scale-105'
-                }`}
+                }`};
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center space-x-2">
@@ -163,7 +167,7 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                   </div>
                 ) : (
                   '🚀 Join the Revolution'
-                )}
+                )};
               </button>
             </form>
             
@@ -195,6 +199,5 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default EnhancedNewsletterSignup2026;

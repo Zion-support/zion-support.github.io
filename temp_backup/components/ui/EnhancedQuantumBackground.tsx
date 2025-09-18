@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -223,120 +224,15 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
       }
     };
   }, [intensity, variant]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const EnhancedQuantumBackground: React.FC = () => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Enhanced Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
-      />
-      
-      {/* Gradient Overlays */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
-        {/* Radial gradients for depth */}
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            background: `radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.3) 0%, transparent 50%),
-                         radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
-                         radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.3) 0%, transparent 50%)`
-          }}
-        />
-        
-        {/* Quantum field effects */}
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            background: `radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.2) 0%, transparent 70%)`
-          }}
-        />
-        
-        {/* Holographic matrix overlay */}
-        {variant === 'holographic' && (
-          <div 
-            className="absolute inset-0 opacity-10"
-            style={{
-              background: `linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 100%),
-                           linear-gradient(0deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%)`
-            }}
-          />
-        )}
-        
-        {/* Neural network overlay */}
-        {variant === 'neural' && (
-          <div 
-            className="absolute inset-0 opacity-15"
-            style={{
-              background: `radial-gradient(circle at 30% 70%, rgba(0, 255, 128, 0.2) 0%, transparent 40%),
-                           radial-gradient(circle at 70% 30%, rgba(128, 255, 0, 0.2) 0%, transparent 40%)`
-            }}
-          />
-        )}
-        
-        {/* Cyberpunk overlay */}
-        {variant === 'cyberpunk' && (
-          <div 
-            className="absolute inset-0 opacity-20"
-            style={{
-              background: `linear-gradient(45deg, transparent 0%, rgba(255, 0, 0, 0.1) 25%, transparent 50%, rgba(255, 128, 0, 0.1) 75%, transparent 100%)`
-            }}
-          />
-        )}
-      </div>
-
-      {/* Floating geometric shapes */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: -1 }}>
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-full"
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-            opacity: [0.1, 0.3, 0.1]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 transform rotate-45"
-          animate={{
-            scale: [1, 1.5, 1],
-            rotate: [45, 225, 405],
-            opacity: [0.1, 0.4, 0.1]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 rounded-full"
-          animate={{
-            scale: [1, 0.8, 1],
-            rotate: [0, -180, -360],
-            opacity: [0.1, 0.2, 0.1]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 4
-          }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedQuantumBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

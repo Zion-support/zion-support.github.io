@@ -36,7 +36,20 @@ export default function MoreProductsPage({ }: MoreProductsPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 :src.disabled/src/pages.disabled/MoreProductsPage.jsx
 }
 }

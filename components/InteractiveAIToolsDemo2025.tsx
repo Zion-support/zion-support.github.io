@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -514,3 +515,5 @@ Recommendations:
 };
 
 export default InteractiveAIToolsDemo2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

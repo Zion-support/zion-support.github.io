@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -283,3 +284,5 @@ import {
 };
 
 export default CareersPage;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

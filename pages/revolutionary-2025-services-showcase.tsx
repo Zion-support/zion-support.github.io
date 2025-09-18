@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -599,3 +600,5 @@ export default function Revolutionary2025ServicesShowcase() {
     </>
   )
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

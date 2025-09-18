@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Zap, Shield, TrendingUp, CheckCircle, Users, Clock, Star, Award} from 'lucide-react';
@@ -313,3 +314,5 @@ export default BenefitsSection;
 </motion>;
 </div>;
 </number>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

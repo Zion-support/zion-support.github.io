@@ -1,18 +1,22 @@
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
-}
-export default function CommunityProfilePage(props: any) {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="CommunityProfilePage - Zion Tech Group" description="Professional CommunityProfilePage services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">CommunityProfilePage</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional CommunityProfilePage services to help your business grow.
-        </p>
-      </div>
-  )
-}
-}""
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-</div>
+const CommunityProfilePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>CommunityProfilePage | Zion Tech Group</title>
+        <meta name="description" content="CommunityProfilePage - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">CommunityProfilePage</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CommunityProfilePage;

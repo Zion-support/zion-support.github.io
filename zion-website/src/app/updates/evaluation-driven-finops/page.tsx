@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import React from 'react'
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 export default function Page() {
   return (
     <div className="bg-black min-h-screen">
@@ -34,4 +40,3 @@ export default function Page() {
     </div>
   )
 }
-

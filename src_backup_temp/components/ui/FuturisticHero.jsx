@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''';';
 import React, {useState, useEffect} from 'react';
 import React, {useState, useEffect} from 'react';'''
@@ -398,3 +399,5 @@ export {FuturisticHero};
 </section>;
 </motion>
 </section>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

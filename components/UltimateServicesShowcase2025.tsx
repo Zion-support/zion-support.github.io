@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 import Link from 'next/link';
@@ -287,3 +288,5 @@ export default function UltimateServicesShowcase2025() {
     </section>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

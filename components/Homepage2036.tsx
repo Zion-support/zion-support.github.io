@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2036 from './ui/UltraFuturisticServiceCard2036';
@@ -458,3 +459,5 @@ export default function Homepage2036() {
     </Layout>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

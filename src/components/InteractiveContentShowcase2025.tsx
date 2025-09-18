@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 const InteractiveContentShowcase2025: React.FC = () => {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('breakthrough');
 
   const contentData = {
@@ -146,10 +146,17 @@ const InteractiveContentShowcase2025: React.FC = () => {
             <h3 className="text-lg font-semibold mb-2">Future Predictions</h3>
             <p className="text-sm opacity-90">AI-powered predictions about technology trends and developments</p>
           </div>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">InteractiveContentShowcase2025</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
       </div>
     </div>
   );
-};
-
+  };
 export default InteractiveContentShowcase2025;

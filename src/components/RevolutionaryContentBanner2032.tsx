@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect }  from 'react';
+import { Link }  from 'react-router-dom';
 
 const RevolutionaryContentBanner2032: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -29,9 +29,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
       link: "/pages/NextGenTechRevolution2032",
       color: "from-emerald-600 to-teal-600",
       icon: "🚀"
-    }
-  ];
-
+    };
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -46,7 +44,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
     <divdiv
       className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
     >
-      {/* Animated Background */}
+      {/* Animated Background */};
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
       </div>
@@ -65,7 +63,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
           and Quantum Consciousness that push the boundaries of reality itself
         </p>
         
-        {/* New 2032 Content Links */}
+        {/* New 2032 Content Links */};
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-8xl mx-auto mb-8">
           <diva
             href="/pages/TranscendentAI2032"
@@ -95,7 +93,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
           </diva>
         </div>
         
-        {/* Feature Highlights */}
+        {/* Feature Highlights */};
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           <span className="bg-green-500/20 text-green-300 px-6 py-3 rounded-full text-lg font-bold border border-green-400/30">
             ✨ 3 NEW REVOLUTIONARY PAGES
@@ -111,7 +109,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
           </span>
         </div>
         
-        {/* Revolutionary Features List */}
+        {/* Revolutionary Features List */};
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
             <div className="text-2xl mb-2">🧠</div>
@@ -131,7 +129,7 @@ const RevolutionaryContentBanner2032: React.FC = () => {
           </div>
         </div>
         
-        {/* Call to Action */}
+        {/* Call to Action */};
         <divdiv
           className="mt-8"
         >
@@ -147,6 +145,5 @@ const RevolutionaryContentBanner2032: React.FC = () => {
       </div>
     </divdiv>
   );
-};
-
+  };
 export default RevolutionaryContentBanner2032;

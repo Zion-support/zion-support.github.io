@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useEffect, useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
@@ -475,3 +476,5 @@ const Homepage2044: React.FC = () => {
 };
 
 export default Homepage2044;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

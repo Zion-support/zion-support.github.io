@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2045Props {
@@ -116,128 +117,15 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         cancelAnimationFrame(animationRef.current);
       }
 
+=======
+import React from 'react';
+
+const UltraFuturisticBackground2045: React.FC = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      />
-
-      {/* Floating Geometric Shapes */}
-      <div className="fixed inset-0 pointer-events-none z-10">
-        {/* Animated Grid */}
-        <motion.div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `
-            `,
-            backgroundSize: '50px 50px'
-          }}
-          animate={{
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear'
-          }}
-        />
-
-        {/* Floating Neon Shapes */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
-          animate={{
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-        />
-
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
-          animate={{
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transform rotate-45"
-          animate={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-        />
-
-        {/* Additional floating elements */}
-        <motion.div
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full"
-          animate={{
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12"
-          animate={{
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: 'linear'
-          }}
-        />
-
-        {/* Energy Orbs */}
-        <motion.div
-          className="absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50"
-          animate={{
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full shadow-lg shadow-purple-400/50"
-          animate={{
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut'
-          }}
-        />
-      </div>
-
-      {/* Gradient Overlays */}
-      <div className="fixed inset-0 pointer-events-none z-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-30">
-        {children}
-      </div>
-
-      {/* Animated Border Effects */}
-      <div className="fixed inset-0 pointer-events-none z-40">
-        <motion.div
-          className="absolute inset-0 border border-transparent"
-          style={{
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: 'linear'
-          }}
-        />
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2045</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

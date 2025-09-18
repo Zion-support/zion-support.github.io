@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 export function HomepagePromotion() {
@@ -106,77 +107,16 @@ export function HomepagePromotion() {
             </div>
           </div>
         </motion.div>
+=======
 
-        {/* Featured Services Grid */}
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {featuredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:bg-white/20 transition-all duration-300 group">
-              <div className="mb-4">
-                <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
-                <h3 className="text-xl font-bold text-white mt-2 group-hover:text-zion-cyan transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-zion-slate-light text-sm mt-2">
-                  {service.description}
-                </p>
-                <div className="text-zion-cyan font-bold text-lg mt-3">
-                  {service.price}
-                </div>
-              </div>
+const HomepagePromotion: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">HomepagePromotion</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-              {/* Features */}
-              <div className="mb-4">
-                <h4 className="text-zion-cyan font-semibold text-sm mb-2">Key Features</h4>
-                <ul className="space-y-1">
-                  {service.features.map((feature, index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">
-                      <span className="text-zion-cyan mr-2">•</span>
-                      {feature}
-                    </li>))}
-                </ul>
-              </div>
-
-              {/* Benefits */}
-              <div className="mb-4">
-                <h4 className="text-zion-cyan font-semibold text-sm mb-2">Benefits</h4>
-                <ul className="space-y-1">
-                  {service.benefits.map((benefit, index) => (<li key={index} className="text-green-400 text-xs flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      {benefit}
-                    </li>))}
-                </ul>
-              </div>
-
-              <Link to={service.link} className="block w-full bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-semibold py-2 px-4 rounded-lg text-center transition-colors">
-                Learn More
-              </Link>
-            </motion.div>))}
-        </motion.div>
-
-        {/* Call to Action Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-sm">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Accelerate Your Digital Transformation?
-            </h3>
-            <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Our team of technology experts is ready to help you implement the perfect solution. 
-              Get a personalized consultation and quote today.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <a href="mailto:kleber@ziontechgroup.com?subject=Digital Transformation Consultation" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-bold py-3 px-8 rounded-lg text-lg transition-colors">
-                Get Free Consultation
-              </a>
-              <a href="tel:+13024640950" className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors border border-white/30">
-                Call +1 302 464 0950
-              </a>
-            </div>
-            
-            <div className="text-zion-slate-light text-sm">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>🌐 <a href="https://ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light">https://ziontechgroup.com</a></p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>);
-}
+export default HomepagePromotion;

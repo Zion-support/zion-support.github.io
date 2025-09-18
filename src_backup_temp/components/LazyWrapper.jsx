@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useRef} from 'react';';
 import {motion, useInView} from 'framer-motion';
 import {EnhancedLoading} from "./EnhancedLoading";';
@@ -52,3 +53,5 @@ export {LazyWrapper};
 export {LazyWrapper, Page};
 ;
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

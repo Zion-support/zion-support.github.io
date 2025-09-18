@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -267,3 +268,5 @@ const AITrends2026PredictionsPromotionBanner = () => {
 };
 
 export default AITrends2026PredictionsPromotionBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

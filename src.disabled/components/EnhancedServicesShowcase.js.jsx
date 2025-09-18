@@ -1,3 +1,12 @@
-"const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025.filter (service => {" const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |"";"""";"""
-'const EnhancedServicesShowcase = () => {\' const [selectedCategory,setSelectedCategory] = useState (\'all\') \' const [searchTerm,setSearchTerm] = useState (\') \' const categories = [\' { \"id\": \'all,\',\"name\": \'All: Services,\',\"icon\": \'},{ \"id\": \',\"micro\": \'- saas\',\',\"name\": \'Micro: SAAS,\',\"icon\": \'},\' { \"id\": \'it: - services,\',\"name\": \'IT: Services,\',\"icon\": \'},{ \"id\": \',\"ai\": \'- services\',\',\"name\": \'AI: Services,\',\"icon\": \'},\' { \"id\": \'emerging: - tech,\',\"name\": \'Emerging: Tech,\',\"icon\": \'}]\' const filteredServices = enhancedServices2025.filter (service => {\' const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||\'';\''\"";
-"const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025.filter (service => {" const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |"";"""";"""
+import React from 'react';
+
+const EnhancedServicesShowcase.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedServicesShowcase.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default EnhancedServicesShowcase.js;

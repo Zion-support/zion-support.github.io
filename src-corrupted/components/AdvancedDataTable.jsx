@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {useState, useMemo, useCallback} from 'react';'
 import {motion, AnimatePresence} from 'framer-motion';'
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
@@ -949,3 +950,5 @@ const page = i + 1;`
 </div>
 </div>
 </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -203,111 +204,25 @@ const Sitemap = (props: any) => {
       ]
     }
   ];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const Sitemap: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Site
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              {" "}Map
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Complete navigation guide to all Zion Tech Group services, solutions, and resources
-          </p>
-        </motion.div>
-
-        {/* Sitemap Sections */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {sitemapSections.map((section, sectionIndex) => (
-            <motion.div
-              key={section.title}
-              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
-            >
-              <div className="flex items-center mb-4">
-                <section.icon className="w-6 h-6 text-cyan-400 mr-3" />
-                <h2 className="text-xl font-semibold text-white">{section.title}</h2>
-              </div>
-              
-              <div className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <motion.div
-                    key={link.path}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: sectionIndex * 0.1 + linkIndex * 0.05 }}
-                  >
-                    <Link
-                      to={link.path}
-                      className="block p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group"
-                    >
-                      <div className="font-medium text-cyan-300 group-hover:text-cyan-200 transition-colors">
-                        {link.name}
-                      </div>
-                      <div className="text-sm text-gray-400 mt-1">
-                        {link.description}
-                      </div>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Sitemap | Zion Tech Group</title>
+        <meta name="description" content="Sitemap - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Sitemap</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-
-        {/* Quick Navigation */}
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">Quick Navigation</h3>
-            <p className="text-gray-300 mb-6">
-              Can't find what you're looking for? Use our search or contact us directly.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/search"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
-              >
-                <FileText className="w-5 h-5 mr-2" />
-                Search Site
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </div>
   );
 };
 
 export default Sitemap;
-
-</motion>
-</motion>
-</motion>
-</motion>
-</div>
-</div>
-</div>
-</div>

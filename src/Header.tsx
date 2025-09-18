@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import NotificationSystem from './components/NotificationSystem';
 
 const Header: React.FC = () => {
@@ -59,9 +60,16 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+
+const Header: React.FC = () => {
+  return (
+    <header className="bg-gray-800 text-white py-4">
+      <div className="container mx-auto px-4">
+        <h1 className="text-2xl font-bold">Zion Tech Group</h1>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       </div>
     </header>
   );
-};
-
+  };
 export default Header;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
 export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
@@ -43,3 +44,5 @@ export function PageLoadingFallback() {
       </div>
     </div>);
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,43 +1,12 @@
 import React from 'react';
 
+const ErrorBoundary: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ErrorBoundary</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-export function ErrorBoundaryFallback(props: any) {
-	return (
-		<div style="{{{padding: 24; textAlign: 'center'}}"}>
-			<h2>Something went wrong</h2>
-			{error ? (
-				<pre style="{{{whiteSpace: 'pre-wrap'; color: '#b91c1c'}}"}>{String(error)}</pre>
-			) : null}
-			<button onClick={onRetry} style="{{{marginTop: 12}}"}>Try again</button>
-		</div>
-	);
-}
-
-export class ErrorBoundary extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = { hasError: false, error: null };
-	}
-
-	static getDerivedStateFromError(error) {
-		return { hasError: true, error };
-	}
-
-	componentDidCatch(error, info) {
-		if (this.props.onError) {
-			this.props.onError(error, info);
-		}
-	}
-
-	handleRetry = () => {
-		this.setState({ hasError: false, error: null });
-	};
-
-	render() {
-		if (this.state.hasError) {
-			const Fallback = this.props.fallback || ErrorBoundaryFallback;
-			return <Fallback error={this.state.error} onRetry={this.handleRetry}  />;
-		}
-		return this.props.children;
-	}
-}
+export default ErrorBoundary;

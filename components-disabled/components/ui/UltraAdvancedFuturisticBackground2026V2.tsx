@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -193,90 +194,17 @@ export default function UltraAdvancedFuturisticBackground2026V2({ children }: Ul
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraAdvancedFuturisticBackground2026V2: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 0 }}
-      />
-
-      {/* Gradient Overlays */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 1 }}>
-        {/* Radial gradients for depth */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-pink-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        
-        {/* Linear gradients for atmosphere */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-blue-900/10"></div>
-      </div>
-
-      {/* Floating Elements */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 2 }}>
-        <motion.div
-          className="absolute top-20 left-20 w-2 h-2 bg-purple-400 rounded-full"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 1, 0.3],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute top-40 right-32 w-3 h-3 bg-pink-400 rounded-full"
-          animate={{
-            scale: [1, 2, 1],
-            opacity: [0.2, 0.8, 0.2],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-        <motion.div
-          className="absolute bottom-32 left-1/3 w-2 h-2 bg-blue-400 rounded-full"
-          animate={{
-            scale: [1, 1.8, 1],
-            opacity: [0.4, 1, 0.4],
-          }}
-          transition={{
-            duration: 3.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-        <motion.div
-          className="absolute top-1/2 right-20 w-1 h-1 bg-green-400 rounded-full"
-          animate={{
-            scale: [1, 2.5, 1],
-            opacity: [0.2, 0.9, 0.2],
-          }}
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.5
-          }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative" style={{ zIndex: 10 }}>
-        {children}
-      </div>
-
-      {/* Bottom Glow */}
-      <div className="fixed bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 via-transparent to-transparent pointer-events-none" style={{ zIndex: 3 }}></div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticBackground2026V2</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default UltraAdvancedFuturisticBackground2026V2;

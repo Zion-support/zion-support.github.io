@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -149,3 +150,5 @@ const RevolutionaryFeatures2025 = () => {
 };
 
 export default RevolutionaryFeatures2025;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

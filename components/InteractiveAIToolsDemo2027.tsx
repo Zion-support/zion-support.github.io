@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -396,3 +397,5 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
 };
 
 export default InteractiveAIToolsDemo2027;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

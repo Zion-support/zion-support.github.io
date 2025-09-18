@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';'''
 import {motion, useScroll, useTransform} from 'framer-motion';
 import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export { function };
@@ -159,28 +160,16 @@ export default function FuturisticHero(props: any) {}
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
                 opacity: Math.random(),
+=======
 
-export {FuturisticHero};
+const FuturisticHero: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FuturisticHero</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-export {FuturisticHero};
-
-export {FuturisticHero};
-
-export {FuturisticHero};
-
-export {FuturisticHero};
-
-</motion>
-</div>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</div>
-</motion>
-</section>
+export default FuturisticHero;

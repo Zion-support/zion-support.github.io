@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -168,3 +169,5 @@ const AI2026ImplementationMasterFrameworkBanner: React.FC = () => {
 };
 
 export default AI2026ImplementationMasterFrameworkBanner;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

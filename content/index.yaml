@@ -116,8 +116,11 @@ content_index:
         audit_coverage: "100%"
         incidents_reduction: "40%"
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     - id: "healthcare-transformation"
       type: "case-study"
       title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
@@ -202,9 +205,12 @@ content_index:
         timeline: "6-8 months"
       reading_time: "28 min read"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
 >>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     - id: "ai-2025-advanced-automation-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Automation Revolution - Ultimate Enterprise Guide"
@@ -282,6 +288,7 @@ content_index:
       created: "2025-01-17"
       tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     - id: "ai-enterprise-automation-revolution"
       type: "blog"
@@ -325,6 +332,8 @@ content_index:
       created: "2025-01-17"
       tags: ["Case Study", "Financial Services", "AI Automation", "ROI", "Digital Transformation"]
 >>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       featured: true
       is_new: true
       metrics:
@@ -449,6 +458,7 @@ content_index:
         phases: "3 phases"
         payback: "3.8 months"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   newly_added_september_2025:
 <<<<<<< HEAD
@@ -498,10 +508,16 @@ content_index:
         audit_ready: true
     - id: "ai-2026-eval-driven-release-engineering"
 >>>>>>> origin/feat/new-content-promos
+=======
+
+  newly_added_september_2025:
+    - id: "ai-2026-evidence-driven-release-checklists"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       type: "blog"
       title: "AI 2026: Evidence‑Driven Release Checklists — Gates, Rollbacks, and Audit"
       file_path: "/content/blog/ai-2026-evidence-driven-release-checklists.md"
       url: "/blog/ai-2026-evidence-driven-release-checklists"
+<<<<<<< HEAD
 =======
   new_resources:
     - id: "ai-transformation-checklist-2025"
@@ -510,6 +526,8 @@ content_index:
       file_path: "/content/resources/ai-transformation-checklist-2025.md"
       url: "/resources/ai-transformation-checklist-2025"
 >>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       status: "published"
       created: "2025-09-15"
       tags: ["Evaluations", "Reliability", "Governance", "Progressive Delivery", "2026"]
@@ -596,6 +614,7 @@ content_index:
         breaches: "reduced"
         audit_ready: true
 
+<<<<<<< HEAD
     - id: "ai-2026-cost-aware-model-routing"
       type: "blog"
       title: "AI 2026: Cost‑Aware Model Routing — Blueprint"
@@ -715,6 +734,8 @@ content_index:
         reporting: "Automated regression reports"
 >>>>>>> origin/feat/new-content-2026-evals
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
@@ -796,58 +817,6 @@ content_index:
     homepage_integration: "Complete with three new compact promos"
     new_2025_content_pieces: 3
     advanced_automation_focus: "Primary content theme with 600% ROI emphasis"
-  embodied_ai_2026_content:
-    - id: "ai-2026-embodied-ai-revolution-ultimate-guide"
-      type: "blog"
-      title: "AI 2026: The Embodied AI Revolution - Ultimate Enterprise Guide"
-      file_path: "/content/blog/ai-2026-embodied-ai-revolution-ultimate-guide.md"
-      url: "/content/blog/ai-2026-embodied-ai-revolution-ultimate-guide"
-      status: "published"
-      created: "2025-01-20"
-      tags: ["Embodied AI", "Physical AI", "Manufacturing", "ROI", "2026"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "850%"
-        savings: "$12M"
-        efficiency: "340%"
-        quality: "95%"
-      reading_time: "22 min read"
-      
-    - id: "fortune-500-embodied-ai-transformation-850-roi-success"
-      type: "case-study"
-      title: "Fortune 500 Embodied AI Transformation: $12M Annual Savings with 850% ROI"
-      file_path: "/content/case-studies/fortune-500-embodied-ai-transformation-850-roi-success.md"
-      url: "/content/case-studies/fortune-500-embodied-ai-transformation-850-roi-success"
-      status: "published"
-      created: "2025-01-20"
-      tags: ["Case Study", "Fortune 500", "Embodied AI", "Manufacturing", "ROI"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "850%"
-        savings: "$12M"
-        efficiency: "340%"
-        uptime: "99.2%"
-      reading_time: "15 min read"
-      
-    - id: "ai-2026-embodied-ai-implementation-master-guide"
-      type: "resource"
-      title: "AI 2026: Embodied AI Implementation Master Guide - From Strategy to 850% ROI"
-      file_path: "/content/resources/ai-2026-embodied-ai-implementation-master-guide.md"
-      url: "/content/resources/ai-2026-embodied-ai-implementation-master-guide"
-      status: "published"
-      created: "2025-01-20"
-      tags: ["Implementation Guide", "Embodied AI", "Strategy", "ROI", "Methodology"]
-      featured: true
-      is_new: true
-      metrics:
-        roi: "850%"
-        timeline: "12 months"
-        success: "96%"
-        payback: "3.7 months"
-      reading_time: "28 min read"
-
   new_september_2025:
     - id: "ai-2026-responsible-ai-operations-blueprint"
       type: "blog"
@@ -914,9 +883,17 @@ content_index:
 <<<<<<< HEAD
       reading_time: "18 min read"
 =======
+<<<<<<< HEAD
       reading_time: "18 min read"
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+=======
+<<<<<<< HEAD
+      reading_time: "18 min read"
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-81d0
@@ -924,4 +901,19 @@ content_index:
 =======
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f175
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e453
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-7720
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

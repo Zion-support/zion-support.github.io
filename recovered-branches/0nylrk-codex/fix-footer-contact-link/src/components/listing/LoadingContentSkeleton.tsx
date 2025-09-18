@@ -1,25 +1,12 @@
+import React from 'react';
 
-import React from "react";
-import { Skeleton } from "@/components/ui/skeleton";
-
-export function LoadingContentSkeleton() {
+const LoadingContentSkeleton: React.FC = () => {
   return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
-      <CardHeader>
-        <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <Skeleton className="h-32 w-full bg-zion-blue-light/20" />
-        <div className="flex flex-wrap gap-2">
-            <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
-          ))}
-        </div>
-        <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
-        <div className="space-y-2">
-            <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />
-          ))}
-        </div>
-      </CardContent>
-    </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LoadingContentSkeleton</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default LoadingContentSkeleton;

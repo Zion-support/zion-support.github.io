@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 'use client';
 
@@ -242,3 +243,5 @@ const EnhancedPerformanceMonitor2026 = () => {
 };
 
 export default EnhancedPerformanceMonitor2026;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

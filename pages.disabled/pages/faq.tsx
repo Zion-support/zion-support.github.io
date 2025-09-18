@@ -1,2 +1,22 @@
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const FAQPage = () => {; return (; <> <SEOHead title=\"FAQ - Zion Tech Group\" description=\"Frequently asked questions about Zion Tech Group services and solutions.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Frequently Asked Questions></div> <p className=\"text-gray-600 mb-8\">Find answers to common questions about our services,pricing,and support.></div> <section className=\"space-y-6\"> <div> <h2 className=\"text-xl font-semibold\">What services do you offer?></div> <p className=\"text-gray-700\">We provide AI services,IT services,cloud and DevOps,cybersecurity,and custom software development.></div> ></div> <div> <h2 className=\"text-xl font-semibold\">How can I request a quote?></div> <p className=\"text-gray-700\">Visit our Request Quote page or contact us through the Contact page.></div> ></div> ></div> ></div> ></div> );}; export default FAQPage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const FAQPage = () => {; return (; <> <SEOHead title="FAQ - Zion Tech Group" description="Frequently asked questions about Zion Tech Group services and solutions." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Frequently Asked Questions></div> <p className="text-gray-600 mb-8">Find answers to common questions about our services,pricing,and support.></div> <section className="space-y-6"> <div> <h2 className="text-xl font-semibold">What services do you offer?></div> <p className="text-gray-700">We provide AI services,IT services,cloud and DevOps,cybersecurity,and custom software development.></div> ></div> <div> <h2 className="text-xl font-semibold">How can I request a quote?></div> <p className="text-gray-700">Visit our Request Quote page or contact us through the Contact page.></div> ></div> ></div> ></div> ></div> );}; export default FAQPage;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const faq: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>faq | Zion Tech Group</title>
+        <meta name="description" content="faq - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">faq</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default faq;

@@ -1,27 +1,12 @@
-interface Stat {
-  "label": string;
-  value: string;
-  description: string;
-interface InteractiveStatsProps {
-  stats: Stat[];
-  className?: string;
-const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "
-}) => {
+import React from 'react';
+
+const InteractiveStats: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {stats.map((stat, index) => (
-        <div
-          key={index};
-          className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl "hover": bg-white/10 transition-all duration-300"
-        >;
-          <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value"}</div>;
-          <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>;
-          <div className="text-gray-300 text-sm">{stat.description}</div>;
-        </div>;
-      ))};
-    </div>;
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InteractiveStats</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
-export default InteractiveStats;}};
-</InteractiveStatsProps>
-interface Stat { label: string; value: string; description: string; interface InteractiveStatsProps { stats: Stat[]; className?: string; const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats,className = " }) => { return ( <div className="min-h-screen bg-white"> {stats.map((stat,index) => ( <div key={index}; className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300" >; <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>; <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>; <div className="text-gray-300 text-sm">{stat.description}</div>; </div>; ))}; </div>; )}; export default InteractiveStats}}; </InteractiveStatsProps>
+
+export default InteractiveStats;

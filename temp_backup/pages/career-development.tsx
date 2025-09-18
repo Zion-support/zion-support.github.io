@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -246,276 +247,26 @@ const CareerDevelopmentPage: React.FC = () => {
     { number: '50+', label: 'Mentorship Pairs', icon: Users },
     { number: '24/7', label: 'Learning Resources', icon: BookOpen }
   ];
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const career-development: React.FC = () => {
   return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mb-8"
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
-                <TrendingUp className="w-4 h-4 mr-2" />
-                Career Growth
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">
-                Career Development
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Your growth is our priority. We provide clear career paths, comprehensive development programs, 
-                and continuous learning opportunities to help you achieve your professional goals.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Growth Metrics */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {growthMetrics.map((metric, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-4">
-                    <metric.icon className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{metric.number}</div>
-                  <div className="text-gray-400">{metric.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Career Paths */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Career Paths</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We offer multiple career paths to match your interests, skills, and aspirations. 
-                Choose the path that best fits your career goals.
-              </p>
-            </motion.div>
-            
-            <div className="space-y-16">
-              {careerPaths.map((path, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"
-                >
-                  <div className="flex items-center mb-8">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${path.color} mr-6`}>
-                      <path.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-white">{path.title}</h3>
-                      <p className="text-lg text-gray-400 mt-2">{path.description}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {path.levels.map((level, levelIndex) => (
-                      <div key={levelIndex} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50">
-                        <div className="flex items-center justify-between mb-4">
-                          <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                            level.level === 'Junior' ? 'bg-green-500/20 text-green-400' :
-                            level.level === 'Mid' ? 'bg-blue-500/20 text-blue-400' :
-                            level.level === 'Senior' ? 'bg-purple-500/20 text-purple-400' :
-                            level.level === 'Lead' ? 'bg-orange-500/20 text-orange-400' :
-                            level.level === 'Principal' ? 'bg-red-500/20 text-red-400' :
-                            level.level === 'Distinguished' ? 'bg-yellow-500/20 text-yellow-400' :
-                            level.level === 'Manager' ? 'bg-emerald-500/20 text-emerald-400' :
-                            level.level === 'Director' ? 'bg-indigo-500/20 text-indigo-400' :
-                            level.level === 'VP' ? 'bg-pink-500/20 text-pink-400' :
-                            level.level === 'Expert' ? 'bg-cyan-500/20 text-cyan-400' :
-                            level.level === 'Architect' ? 'bg-violet-500/20 text-violet-400' :
-                            'bg-gray-500/20 text-gray-400'
-                          }`}>
-                            {level.level}
-                          </span>
-                          <span className="text-sm text-gray-400">{level.timeline}</span>
-                        </div>
-                        <h4 className="text-xl font-bold text-white mb-3">{level.title}</h4>
-                        <p className="text-gray-400 mb-4 leading-relaxed">{level.description}</p>
-                        
-                        <div className="mb-4">
-                          <h5 className="text-sm font-semibold text-white mb-2">Requirements:</h5>
-                          <div className="space-y-1">
-                            {level.requirements.map((req, reqIndex) => (
-                              <div key={reqIndex} className="flex items-center text-sm">
-                                <CheckCircle className="w-3 h-3 text-emerald-400 mr-2 flex-shrink-0" />
-                                <span className="text-gray-300">{req}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                        
-                        <div>
-                          <h5 className="text-sm font-semibold text-white mb-2">Responsibilities:</h5>
-                          <div className="space-y-1">
-                            {level.responsibilities.map((resp, respIndex) => (
-                              <div key={respIndex} className="flex items-center text-sm">
-                                <CheckCircle className="w-3 h-3 text-emerald-400 mr-2 flex-shrink-0" />
-                                <span className="text-gray-300">{resp}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Development Programs */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Development Programs</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive development programs cover technical skills, leadership, business acumen, 
-                and innovation to support your growth in all areas.
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {developmentPrograms.map((program, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mr-4">
-                      <program.icon className="w-6 h-6 text-blue-400" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white">{program.title}</h3>
-                  </div>
-                  <p className="text-gray-400 mb-6 leading-relaxed">{program.description}</p>
-                  <div className="space-y-3">
-                    {program.programs.map((prog, progIndex) => (
-                      <div key={progIndex} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-emerald-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{prog}</span>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Mentorship Programs */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Mentorship Programs</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with experienced professionals who can guide your career development, 
-                share knowledge, and help you navigate your professional journey.
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {mentorshipPrograms.map((program, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-                    <program.icon className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{program.title}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">{program.description}</p>
-                  <div className="space-y-2">
-                    {program.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center text-sm">
-                        <CheckCircle className="w-3 h-3 text-emerald-400 mr-2 flex-shrink-0" />
-                        <span className="text-gray-300">{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Grow Your Career?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join our team and take advantage of our comprehensive career development programs. 
-                We're committed to helping you achieve your professional goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/careers"
-                  className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
-                >
-                  <Target className="w-5 h-5 mr-2" />
-                  View Open Positions
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 rounded-xl border border-blue-500/50 text-blue-400 font-semibold hover:bg-blue-500/10 transition-all duration-200"
-                >
-                  <Users className="w-5 h-5 mr-2" />
-                  Contact Us
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>career-development | Zion Tech Group</title>
+        <meta name="description" content="career-development - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">career-development</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
-export default CareerDevelopmentPage;
+export default career-development;

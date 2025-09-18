@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;',';';
     ';';';';
 import { motion  } from 'framer-motion'; import { SEO } from '@/components/SEO',;',';';
@@ -440,3 +441,5 @@ import { SEO  } from '@/components/SEO';  const AIQuantumComputingPlatform: Reac
 </div>
 </section>
 </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

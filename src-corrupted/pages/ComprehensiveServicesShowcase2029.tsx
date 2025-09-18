@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
@@ -316,264 +317,25 @@ export default function ComprehensiveServicesShowcase2029(...args: unknow n[]): 
               </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-"""
-      {/* Search and Filter Section */}""""
-      <section className="py-12 px-4 sm: p x-6 lg: p x-8">""""
-        <div className="max-w-7xl mx-auto">""""
-          <div className="flex flex-col lg: fle x-row gap-6 items-center justify-between">"""
-            {/* Search */}""""
-            <div className="relative flex-1 max-w-md">""""
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"   />"""
-              <input""""
-                type="text""                placeholder="Search services..."""
-                value={searchTerm}"""
-                onChange={e => setSearchTerm(e.target.value)}""""
-                className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: borde r-cyan-400/50 focus: rin g-2 focus: rin g-cyan-400/20"""
-              />
-            </div>
-"""
-            {/* Category Filter */}""""
-            <div className="flex flex-wrap gap-2">
-              {Object.entries(categories).map(([key, category]) => (
-                <button;
-                  key={key}
-                  onClick={() => setSelectedCategory(key)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${}
-`
-                    selectedCategory === key`'`
-                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`
-                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 text-gray-300 hover: b g-white/10 hover: borde r-cyan-400/40'``
-                  }`}"""
-                >""""
-                  <div className="flex items-center space-x-2">
-                    {category.icon}
-                    <span>{category.name}</span>
-                  </div>
-                </button>) ) }
-            </div>
-          </div>
-        </div>
-      </section>
-"""
-      {/* Services Grid */}""""
-      <section className="py-20 px-4 sm: p x-6 lg: p x-8">""""
-        <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 3 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"""
-            viewport={{ once: tru e }}""""
-            className="text-center mb-16""""
-          >""""
-            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
-              Revolutionary Technology Solutions"""
-            </h2>""""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our comprehensive portfolio of cutting-edge services;
-            </p>
-          </motion.div>
+=======
 
-          <div className="grid grid-cols-1 md: unknowngri d-cols-2 lg: gri d-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
-              <motion.div                key={service.id}
-                initial={{ opacity: 0, y: 2 0 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: inde x * 0.1 }}`
-                viewport={{ once: tru e }}``
-                className={`group cursor-pointer ${}
-'`
-                  service.featured ? 'ring-2 ring-cyan-400/50' : ''``
-                }`}
-              >"""
-                <Link to={service.link}>""""
-                  <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover: b g-white/10 hover: borde r-cyan-400/40 transition-all duration-300 h-full hover-lift">"""
-                    {service.featured && (""""
-                      <div className="text-center mb-4">""""
-                        <span className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                          Featured;
-                        </span>
-                      </div>`
-                    )}``
-```
-                    <div````
-                      className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scal e-110 transition-transform duration-300`}
-                    >
-                      {service.icon}
-                    </div>"""
-""""
-                    <h3 className="text-xl font-bold text-white mb-4 group-hover: tex t-cyan-400 transition-colors duration-300">
-                      {service.title}
-                    </h3>"""
-""""
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {service.description}
-                    </p>"""
-""""
-                    <div className="mb-6">""""
-                      <span className="text-2xl font-bold text-cyan-400">
-                        {service.price}
-                      </span>
-                    </div>"""
-""""
-                    <ul className="space-y-2 mb-6">
-                      {service.features;
-                        .slice(0, 3)
-                        .map((feature, featureIndex) => (
-                          <li"""
-                            key={featureIndex}""""
-                            className="flex items-center text-sm text-gray-400""""
-                          >""""
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"   />
-                            {feature}
-                          </li>
-                        ))}
-                    </ul>"""
-""""
-                    <div className="flex items-center text-cyan-400 group-hover: tex t-cyan-300 transition-colors duration-300">""""
-                      <span className="font-semibold">Learn More</span>""""
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover: translat e-x-1 transition-transform duration-300"   />                    </div>
-                  </div>
-                </Link>
-              </motion.div>) ) }
-          </div>
-
-          {filteredServices.length === 0 && (<motion.div;
-              initial={{ opacity: 0 }}"""
-              animate={{ opacity: 1 }}""""
-              className="text-center py-20""""
-            >""""
-              <div className="w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyan-400/30">""""
-                <Search className="w-12 h-12 text-cyan-400"   />"""
-              </div>""""
-              <h3 className="text-2xl font-bold text-white mb-4">
-                No services found"""
-              </h3>""""
-              <p className="text-gray-300 mb-8">
-                Try adjusting your search or filter criteria;
-              </p>
-              <button;
-                onClick={() => {}
-'
-                  setSearchTerm('');'"""
-                  setSelectedCategory('all')}}"                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: fro m-cyan-600 hover: t o-purple-600 transition-all duration-300"""
-              >
-                Clear Filters;
-              </button>
-            </motion.div>) }
+const ComprehensiveServicesShowcase2029: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ComprehensiveServicesShowcase2029 | Zion Tech Group</title>
+        <meta name="description" content="ComprehensiveServicesShowcase2029 - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ComprehensiveServicesShowcase2029</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
-      </section>
-"""
-      {/* Contact Section */}""""
-      <section className="py-20 px-4 sm: p x-6 lg: p x-8 bg-white/5">""""
-        <div className="max-w-7xl mx-auto">
-          <motion.div;
-            initial={{ opacity: 0, y: 3 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"""
-            viewport={{ once: tru e }}""""
-            className="text-center mb-16""""
-          >""""
-            <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?"""
-            </h2>""""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact us today to learn how our innovative solutions can drive;
-              growth and efficiency;
-            </p>
-          </motion.div>"""
-""""
-          <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
-            <motion.div;
-              initial={{ opacity: 0, y: 2 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}"""
-              viewport={{ once: tru e }}""""
-              className="text-center""""
-            >""""
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">""""
-                <Phone className="w-8 h-8 text-cyan-400"   />"""
-              </div>""""
-              <h3 className="text-xl font-bold text-white mb-2">Phone</h3>"              <p className="text-gray-300 mb-4">+1 302 464 0950</p>"""
-              <a""""
-                href="tel:+13024640950""""
-                className="text-cyan-400 hover: tex t-cyan-300 transition-colors duration-300"""
-              >
-                Call Now;
-              </a>
-            </motion.div>
-
-            <motion.div;
-              initial={{ opacity: 0, y: 2 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}"""
-              viewport={{ once: tru e }}""""
-              className="text-center""""
-            >""""
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">""""
-                <Mail className="w-8 h-8 text-cyan-400"   />"""
-              </div>""""
-              <h3 className="text-xl font-bold text-white mb-2">Email</h3>"              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>"""
-              <a""""
-                href="mailto: klebe r@ziontechgroup.com""""
-                className="text-cyan-400 hover: tex t-cyan-300 transition-colors duration-300"""
-              >
-                Send Email;
-              </a>
-            </motion.div>
-
-            <motion.div;
-              initial={{ opacity: 0, y: 2 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}"""
-              viewport={{ once: tru e }}""""
-              className="text-center""""
-            >""""
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">""""
-                <MapPin className="w-8 h-8 text-cyan-400"   />"""
-              </div>""""
-              <h3 className="text-xl font-bold text-white mb-2">Address</h3>""""
-              <p className="text-gray-300 mb-4">
-                364 E Main St STE 1008, Middletown DE 19709;
-              </p>"""
-              <a""""
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"""""
-                target="_blank"""""
-                rel="noopener noreferrer""                className="text-cyan-400 hover: tex t-cyan-300 transition-colors duration-300"""
-              >
-                View on Map;
-              </a>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };
 
 export default ComprehensiveServicesShowcase2029;
-
-export { ComprehensiveServicesShowcase2029 };
-
-export { ComprehensiveServicesShowcase2029 };
-
-export { ComprehensiveServicesShowcase2029 };
-
-export { ComprehensiveServicesShowcase2029 };
-
-export { ComprehensiveServicesShowcase2029, ComprehensiveServicesShowcase2029 };
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</SEO>
-</any>
-</any>
-</any>
-</any>

@@ -1,6 +1,7 @@
 "use client";
 'use client';
 
+<<<<<<< HEAD
 import React{ useEffectuseStateuseCallback } from 'react';
 
 interface AnalyticsEvent {
@@ -430,6 +431,53 @@ export const AnalyticsDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisibl
           ))}
         </div>
       </div>
+=======
+const AdvancedAnalytics: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [animationPhase, setAnimationPhase] = useState(0);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    const animationTimer = setInterval(() => {
+      setAnimationPhase(prev => (prev + 1) % 4);
+    }, 2000);
+    
+    return () => {
+      clearTimeout(timer);
+      clearInterval(animationTimer);
+    };
+  }, []);
+
+  return (
+    <div className="enhanced-component">
+      <div className="component-header">
+        <h2>Comprehensive Analytics Dashboard</h2>
+        <div className="status-indicator">
+          <span className="status-dot active"></span>
+          <span>Enhanced & Active</span>
+        </div>
+      </div>
+      
+      <div className="component-content">
+        <div className="feature-grid">
+          <div className="feature-card">
+            <div className="feature-icon">⚡</div>
+            <h3>Performance</h3>
+            <p>Optimized for speed and efficiency</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">🎨</div>
+            <h3>Design</h3>
+            <p>Modern, responsive UI/UX</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">🔧</div>
+            <h3>Functionality</h3>
+            <p>Enhanced features and capabilities</p>
+          </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };

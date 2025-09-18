@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React { useState, useEffect } from 'react',;',';';
     ';';';';
 import { Link, useLocation  } from 'react-router-dom'; import { motion, AnimatePresence  } from 'framer-motion',;',';';
@@ -61,3 +62,5 @@ import React { useState, useEffect } from 'react' import { Link, useLocation } f
     ';';' { icon: Phon e, text: '+1 302 464 0950', href: 'tel:+13024640950' } { icon: Mai l, text: 'kleber@ziontechgroup.com', href: 'mailto: klebe r@ziontechgroup.com' } { icon: MapPi n, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: Reac t.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {'}}}';';
 "';';';
 "';';';';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

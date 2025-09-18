@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -22,3 +23,5 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	);
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

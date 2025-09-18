@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useMemo} from 'react';
 import {motion} from 'framer-motion';
 import {Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone} from 'lucide-react';
@@ -467,3 +468,5 @@ export default AdvancedServiceComparison;
 </motion>
 </motion>
 </motion>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

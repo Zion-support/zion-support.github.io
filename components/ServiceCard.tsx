@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -205,3 +206,5 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
 };
 
 export default ServiceCard;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

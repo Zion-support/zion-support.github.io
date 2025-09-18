@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 export function LoadingSpinner({ size = 'md', color = 'primary', customColor, className, text = 'Loading...', showText = false }) {
@@ -48,3 +49,5 @@ export function ButtonLoader({ size = 'sm', className }) {
       <span className="ml-2">Loading...</span>
     </div>);
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

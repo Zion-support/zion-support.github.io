@@ -1,58 +1,12 @@
+import React from 'react';
 
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import { Input } from "@/components/ui/input";
-import { TalentProfile } from "@/types/talent";
-import { FormValues } from "./useHireRequestForm";
-
-interface BudgetFieldsProps {
-  form: UseFormReturn<FormValues>;
-  talent?: TalentProfile;
-}
-
+const BudgetFields: React.FC = () => {
   return (
-    <>
-      <FormField
-        control={form.control}
-        name="budgetMin"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-white">Budget (Min)</FormLabel>
-            <FormControl>
-              <div className="relative">
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
-                <Input 
-                  type="number" 
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
-                  {...field} 
-                />
-              </div>
-            </FormControl>
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-      
-      <FormField
-        control={form.control}
-        name="budgetMax"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-white">Budget (Max)</FormLabel>
-            <FormControl>
-              <div className="relative">
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
-                <Input 
-                  type="number" 
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white" 
-                  {...field} 
-                />
-              </div>
-            </FormControl>
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-    </>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">BudgetFields</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default BudgetFields;

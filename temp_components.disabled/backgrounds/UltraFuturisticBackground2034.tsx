@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -279,127 +280,15 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraFuturisticBackground2034: React.FC = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* HTML Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ filter: `blur(${0.5 * intensity}px)` }}
-      />
-      
-      {/* Framer Motion Geometric Shapes */}
-      <div className="absolute inset-0">
-        {/* Floating geometric shapes */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-          animate={{
-            rotate: 360,
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 8,
-            repeat: -1,
-            ease: "linear"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.4, 0.8, 0.4],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{
-            duration: 6,
-            repeat: -1,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30"
-          style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
-          animate={{
-            rotate: [0, 180, 360],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{
-            duration: 12,
-            repeat: -1,
-            ease: "linear"
-          }}
-        />
-      </div>
-
-      {/* Energy waves */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
-          animate={{
-            x: ['-100%', '100%']
-          }}
-          transition={{
-            duration: 15,
-            repeat: -1,
-            ease: "linear"
-          }}
-        />
-        
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
-          animate={{
-            y: ['-100%', '100%']
-          }}
-          transition={{
-            duration: 20,
-            repeat: -1,
-            ease: "linear"
-          }}
-        />
-      </div>
-
-      {/* Holographic matrix effect */}
-      <div className="absolute inset-0">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent"
-            style={{ left: `${(i * 5) % 100}%` }}
-            animate={{
-              opacity: [0, 1, 0],
-              scaleY: [0, 1, 0]
-            }}
-            transition={{
-              duration: 3,
-              delay: i * 0.1,
-              repeat: -1,
-              ease: "easeInOut"
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Cyberpunk grid */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
-          style={{
-            backgroundSize: '50px 50px'
-          }}
-          animate={{
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 4,
-            repeat: -1,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2034</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

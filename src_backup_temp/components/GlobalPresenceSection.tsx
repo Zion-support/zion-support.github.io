@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 ;
  params - Function parameters;
@@ -79,119 +80,16 @@ function GlobalPresenceSection("props": "any) {export function GlobalPresenceSec
           transition = {;
   { "duration": "0.6",;
   "delay": "0.4;
+=======
 
-}}
-        >"
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Strategic Global Locations
-          
+const GlobalPresenceSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">GlobalPresenceSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-          <div className="grid grid - cols - 1 "md": "gri d - cols - 2 "lg": gri d - cols - 4 gap-8">;
-            {globalOffices.map((office", index) => (<motion.div;
-                key={office.city}
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center "hover": "borde r-blue - 500 / 50 transition - all duration - 300 "hover": shado w-lg "hover": shado w-blue -500 / 25 group"                initial = {;
-  { "opacity": 0",;
-  "y": "3 0;
-"}}
-                whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-                viewport={{ "once": "tru e "}}
-                transition = {;
-  { "duration": "0.6",;
-  "delay": "0.6 + index * 0.1;
-"}}
-              >";
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-"hover": "scal e-110 transition-transform duration-300">";
-                  <span className="text-2xl">{office.icon"}</span>;
-                </div>;
-                <div className="mb-2">;
-                  <span className="px-3 py-1 bg-blue - 600 / 20 text-blue - 400 text-xs font - semibold rounded-full">;
-                    {office.type}
-                  </span>;
-                </div>;
-                <h4 className="text-lg font - bold text-white mb-1">{office.city}</h4>;
-                <p className="text-gray - 400 text-sm mb-3">{office.country}</p>;
-                <p className="text-gray - 300 text-xs">{office.description}</p>;
-              </motion.div>) ) }          </div>;
-        </motion.div>;
-        {/* Global Map Visualization */}
-        <motion.div;
-          className="text-center mb-12"          initial = {;
-  { "opacity": "0",;
-  "y": "3 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "0.8;
-
-}}
-        >
-          <div className="bg-slate - 800 border border-slate - 700 rounded-2xl p -8">
-            <div className="w-24 h-24 bg-gradient - to - br from - blue - 500 to - purple - 600 rounded-full flex items - center justify - center mx - auto mb-6">
-              <span className="text-4xl">🌍</span>
-            </div>
-            <h3 className="text-2xl font - bold text-white mb-4">Worldwide Coverage
-            <p className="text-gray - 300 text-lg max - w-2xl mx -auto">
-              Our distributed team and cloud infrastructure ensure seamless service delivery              across all time zones and regions, with local expertise and global capabilities.</p>
-          </div>
-        </motion.div>
-
-        <motion.div;
-          className="text-center"          initial = {;
-  { "opacity": "0",;
-  "y": "2 0;
-"}}
-          whileInView = {;
-  { "opacity": "1",;
-  "y": "0;
-"}}
-          viewport={{ "once": "tru e "}}
-          transition = {;
-  { "duration": "0.6",;
-  "delay": "1.0;
-
-}}
-        >"
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">"
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Go Global?
-            "
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Whether you're expanding internationally or need local expertise,
-              our global presence ensures you get the support you need, when you need it.</p>"
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover: b g-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Find Your Local Team"
-                <MapPin className="ml-2 h-5 w-5"   />
-              </button>"
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover: b g-white hover: tex t-blue-600 rounded-lg font-medium transition-colors duration-200">
-                Global Services"
-                <Globe className="ml-2 h-5 w-5"   />              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;) "};
-;
-export default GlobalPresenceSection;";
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
 export default GlobalPresenceSection;
-export default GlobalPresenceSection;
-'";
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>

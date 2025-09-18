@@ -3,6 +3,7 @@ import React from 'react';
 const NeuralInterfaceRevolution2026 = () => {
   return (
     <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
       <h1 className="text-5xl font-bold text-gray-900 mb-8 text-center">Neural Interface Revolution2026</h1>
       <p className="text-xl text-gray-700 mb-8 text-center">
         Explore Neural Interface Revolution2026 and discover innovative solutions for your business needs.
@@ -45,6 +46,12 @@ const NeuralInterfaceRevolution2026 = () => {
           Contact Us →
         </a>
       </section>
+=======
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Neural Interface Revolution2026</h1>
+        <p className="text-xl text-gray-600">Coming soon - neural interface revolution2026</p>
+      </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };

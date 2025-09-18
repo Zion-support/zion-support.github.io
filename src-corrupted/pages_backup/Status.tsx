@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface ServiceStatus {
 
   name: string
@@ -391,9 +392,9 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   );
-}
+};
 
-
-
-
+export default Status;

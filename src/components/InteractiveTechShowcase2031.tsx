@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 const InteractiveTechShowcase2031: React.FC = () => {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('transcendent');
 
   const techCategories = {
@@ -128,10 +128,22 @@ const InteractiveTechShowcase2031: React.FC = () => {
               Get Started
             </button>
           </div>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">InteractiveTechShowcase2031</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
+=======
+  };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 export default InteractiveTechShowcase2031;

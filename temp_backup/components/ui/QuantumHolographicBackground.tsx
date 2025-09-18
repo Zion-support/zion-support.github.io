@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -197,82 +198,15 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
       window.removeEventListener('resize', handleResize);
     };
   }, [intensity, variant]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const QuantumHolographicBackground: React.FC = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Quantum Holographic Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          background: variant === 'quantum-entanglement' 
-            ? 'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(20,0,40,0.9) 50%, rgba(0,0,0,1) 100%)'
-            : variant === 'cyberpunk'
-            ? 'linear-gradient(135deg, #000000 0%, #1a0033 50%, #000000 100%)'
-            : variant === 'neural'
-            ? 'radial-gradient(ellipse at center, rgba(0,20,0,0.8) 0%, rgba(0,40,0,0.9) 50%, rgba(0,0,0,1) 100%)'
-            : 'radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,20,40,0.9) 50%, rgba(0,0,0,1) 100%)'
-        }}
-      />
-      
-      {/* Floating geometric shapes */}
-      <div className="fixed inset-0 pointer-events-none z-10">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              rotate: [0, 360],
-              scale: [0.8, 1.2, 0.8],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: 8 + Math.random() * 4,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
-            <div
-              className={`w-2 h-2 ${
-                variant === 'quantum-entanglement' ? 'bg-gradient-to-r from-pink-500 to-cyan-500'
-                : variant === 'cyberpunk' ? 'bg-gradient-to-r from-green-500 to-blue-500'
-                : variant === 'neural' ? 'bg-gradient-to-r from-green-500 to-purple-500'
-                : 'bg-gradient-to-r from-cyan-500 to-blue-500'
-              } rounded-full blur-sm`}
-            />
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Content */}
-      <div className="relative z-20">
-        {children}
-      </div>
-
-      {/* Quantum field lines */}
-      {variant === 'quantum' || variant === 'quantum-entanglement' && (
-        <div className="fixed inset-0 pointer-events-none z-5">
-          {[...Array(5)].map((_, i) => (
-            <motion.div
-              key={`field-${i}`}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-20"
-              style={{ top: `${20 + i * 15}%` }}
-              animate={{
-                x: ['-100%', '100%'],
-              }}
-              transition={{
-                duration: 10 + i * 2,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
-          ))}
-        </div>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">QuantumHolographicBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };

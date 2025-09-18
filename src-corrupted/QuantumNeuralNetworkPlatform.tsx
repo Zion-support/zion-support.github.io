@@ -1,82 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-      description: 'Unbreakable encryption using quantum key distribution and post-quantum cryptography.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Scaling',
-      description: 'Exponential performance improvements over classical neural networks.'
-      title: "Drug Discovery",
-      description: "Accelerate pharmaceutical research with quantum-powered molecular modeling."
-      title: "Drug Discovery",
-      description: "Accelerate pharmaceutical research with quantum molecular modeling",
-      icon: Beaker,
-      impact: "10x faster discovery"
-    },
-    {
-      title: "Financial Modeling",
-      description: "Revolutionize risk assessment and portfolio optimization",
-      icon: BarChart3,
-      impact: "95% accuracy improvement"
-    },
-    {
-      title: "Financial Modeling",
-      description: "Revolutionary risk assessment and portfolio optimization algorithms."
-      icon: BarChart3,
-      title: "Financial Modeling",
-      description: "Advanced risk assessment, portfolio optimization, and algorithmic trading with quantum precision."
-    },
-    {
-      icon: Users,
-      title: "Healthcare Analytics",
-      description: "Drug discovery, patient diagnosis, and treatment optimization using quantum-enhanced AI."
-    },
-    {
-      icon: Globe,
-      title: "Climate Prediction",
-      description: "Complex climate modeling and environmental impact assessment with unprecedented accuracy."
-    },
-    {
-      icon: Code,
-      title: "Software Development",
-      description: "AI-powered code generation, testing, and optimization for faster development cycles."
-    },
-    {
-      icon: Database,
-      title: "Big Data Analytics",
-      description: "Processing massive datasets with quantum speed for real-time business intelligence."
-    },
-    {
-      icon: Network,
-      title: "Network Optimization",
-      description: "Traffic routing, load balancing, and network security optimization using quantum algorithms."
-    }
-    "10x faster processing for complex AI tasks",
-    "Enhanced accuracy in pattern recognition",
-    "Scalable architecture for enterprise needs",
-    "Quantum-resistant security protocols"
-  ];
-
-  const benefits = [
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Atom className="w-12 h-12 text-cyan-400 mr-3" />
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Quantum Neural Network Platform
-              </h1>
-            </div>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Experience the future of computing with our revolutionary Quantum Neural Network Platform. 
-              Combine the power of quantum computing with advanced neural networks to solve 
-              previously impossible problems.
-import { Helmet } from 'react-helmet-async';
-import { Brain, Cpu, Zap, Shield, Database, Network, ArrowRight, Star, Rocket, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Quantum Neural Network Platform - Zion Tech Group</title>
@@ -2111,6 +2037,8 @@ export default function QuantumNeuralNetworkPlatform() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     </div>
   );
 };

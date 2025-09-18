@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -210,106 +211,15 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       }
     };
   }, [intensity]);
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
+const UltraQuantumHolographicBackground: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 0 }}
-      />
-      
-      {/* Overlay Gradients */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 1 }}>
-        {/* Radial gradients for depth */}
-        <div className="absolute top-0 left-0 w-full h-full bg-radial-gradient-1" />
-        <div className="absolute top-0 right-0 w-full h-full bg-radial-gradient-2" />
-        <div className="absolute bottom-0 left-0 w-full h-full bg-radial-gradient-3" />
-        
-        {/* Animated floating elements */}
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-            x: [0, 20, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.4, 0.7, 0.4],
-            x: [0, -15, 0],
-            y: [0, 15, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.5, 0.3],
-            x: [0, 25, 0],
-            y: [0, -25, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 4
-          }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
-
-      {/* Quantum energy waves */}
-      <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 2 }}>
-        <motion.div
-          className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"
-          animate={{
-            scaleX: [0, 1, 0],
-            opacity: [0, 0.5, 0],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-1/3 right-0 w-1 h-full bg-gradient-to-b from-transparent via-purple-400/30 to-transparent"
-          animate={{
-            scaleY: [0, 1, 0],
-            opacity: [0, 0.4, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraQuantumHolographicBackground</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
