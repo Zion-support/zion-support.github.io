@@ -28,7 +28,11 @@
 [build.processing]
   skip_processing = true
 
-## Next.js routing is handled by @netlify/plugin-nextjs
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/assets/*"
