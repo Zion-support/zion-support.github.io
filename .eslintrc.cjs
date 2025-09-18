@@ -1,8 +1,7 @@
 module.exports = {
-  extends: ['next/core-web-vitals'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -20,44 +19,35 @@ module.exports = {
     'out/',
     'build/',
     'dist/',
+    'coverage/',
     '*.config.js',
     '*.config.ts',
     'scripts/',
     'automation/',
     'netlify/',
-    'apps/'
-  ]
-};
-module.exports = {
-  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
->>>>>>> origin/feat/news-updates-home-teaser
-=======
->>>>>>> origin/feat/research-article-promo
-  rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
-    ],
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-empty-object-type': 'warn',
-    '@next/next/no-html-link-for-pages': 'warn'
-  },
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'build/',
-    'dist/',
-    '*.config.js',
-    '*.config.ts',
-    'scripts/',
-    'automation/',
-    'netlify/',
-    'src/',
-    'apps/'
+    'apps/',
+    'zion-os/',
+    'zion-os.disabled/',
+    'zion-website/',
+    'zion.app/',
+    'zion_academy/',
+    'backup*/',
+    '*.backup.*',
+    '*.cjs',
+    '*.js',
+    '*.jsx',
+    '**/.next/**',
+    '**/static/**',
+    '**/chunks/**',
+    '**/server/**',
+    '**/middleware-*',
+    '**/server-reference-*',
+    '**/postcss.config.js',
+    '**/tailwind.config.js',
+    '**/next.config.js',
+    '**/sw.js',
+    '**/analytics.js',
+    '**/feedback.js',
+    '**/integration.js'
   ]
 };
