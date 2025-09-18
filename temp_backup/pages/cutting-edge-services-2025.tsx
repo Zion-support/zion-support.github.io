@@ -19,4 +19,5 @@ const cutting-edge-services-2025: React.FC = () => {
   );
 };
 
-export default cutting-edge-services-2025;
+
+export default NextGenAIConsciousness2025;

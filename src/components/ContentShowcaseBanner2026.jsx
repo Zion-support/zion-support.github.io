@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, Clock, Users, TrendingUp, Zap, Shield, Globe } from 'lucide-react';
+
 const ContentShowcaseBanner2026 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
   const featuredContent = [
     {
       id: 1,
@@ -58,6 +60,7 @@ const ContentShowcaseBanner2026 = () => {
       stats: { views: "2.1M", rating: 4.9 }
     }
   ];
+
   // Append our new 2026 evidence-led ops article to featured slides
   featuredContent.push({
     id: 5,
@@ -72,6 +75,7 @@ const ContentShowcaseBanner2026 = () => {
     icon: Zap,
     stats: { views: "1.1M", rating: 4.8 }
   });
+
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -79,13 +83,16 @@ const ContentShowcaseBanner2026 = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
   const currentContent = featuredContent[currentSlide];
+
   return (
     <div className="relative w-full overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
       </div>
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
@@ -97,11 +104,18 @@ const ContentShowcaseBanner2026 = () => {
               top: `${Math.random() * 100}%`,
             }}
             animate={{
+              y: [0, -100, 0],
+              opacity: [0, 1, 0],
+            }}
             transition={{
-              delay
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
           />
         ))}
       </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -124,6 +138,7 @@ const ContentShowcaseBanner2026 = () => {
             that are shaping the future of business and technology.
           </p>
         </motion.div>
+
         {/* Main Content Carousel */}
         <div className="relative">
           <AnimatePresence mode="wait">
@@ -154,11 +169,13 @@ const ContentShowcaseBanner2026 = () => {
                       </div>
                     </div>
                   </div>
+
                   <div>
                     <h3 className="text-3xl font-bold text-white mb-2">{currentContent.title}</h3>
                     <p className="text-lg text-purple-200 mb-4">{currentContent.subtitle}</p>
                     <p className="text-gray-300 text-lg leading-relaxed">{currentContent.description}</p>
                   </div>
+
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-6 text-sm text-gray-300">
                       <div className="flex items-center space-x-1">
@@ -180,6 +197,7 @@ const ContentShowcaseBanner2026 = () => {
                     </motion.button>
                   </div>
                 </div>
+
                 {/* Content Image */}
                 <div className="relative">
                   <div className="relative rounded-2xl overflow-hidden">
@@ -200,6 +218,7 @@ const ContentShowcaseBanner2026 = () => {
               </div>
             </motion.div>
           </AnimatePresence>
+
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
             {featuredContent.map((_, index) => (
@@ -215,6 +234,7 @@ const ContentShowcaseBanner2026 = () => {
             ))}
           </div>
         </div>
+
         {/* Additional Content Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -252,7 +272,6 @@ const ContentShowcaseBanner2026 = () => {
       </div>
     </div>
   );
-
 };
 
 export default ContentShowcaseBanner2026;

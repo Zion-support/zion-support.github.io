@@ -1,0 +1,81 @@
+<<<<<<< HEAD
+import Head from 'next/head'
+import Link from 'next/link'
+
+export default function OperationalEvalsBlueprint2026() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Head>
+        <title>AI 2026: Operational Evals — Blueprint | Zion Tech Group</title>
+        <meta name="description" content="Ship faster with eval gates, rapid rollbacks, and audit‑ready evidence." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-operational-evals-blueprint" />
+      </Head>
+
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold">AI 2026: Operational Evals — Blueprint</h1>
+          <p className="mt-4 text-lg opacity-90">Ship faster with eval gates, rapid rollbacks, and audit‑ready evidence.</p>
+          <div className="mt-6">
+            <Link href="/resources/ai-2026-operational-evals-checklist" className="inline-block bg-white text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">Get the Checklist</Link>
+          </div>
+        </div>
+      </div>
+
+      <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="prose prose-lg max-w-none">
+          <h2>Why Operational Evals</h2>
+          <p>
+            Operational evaluations bring production reality into your release flow. With policy‑as‑code gates, you can
+            automatically block risky changes, enable progressive delivery, and roll back safely based on objective
+            signals.
+          </p>
+          <h2>Key Components</h2>
+          <ul>
+            <li>E2E eval suites mapped to risks and user journeys</li>
+            <li>Policy gates and scorecard thresholds for promotion</li>
+            <li>Incident workflows with auto‑mitigation and rollbacks</li>
+            <li>Evidence hub for audits: runs, incidents, approvals, KPIs</li>
+          </ul>
+          <h2>Getting Started</h2>
+          <ol>
+            <li>Define the safety, quality, and reliability metrics that matter</li>
+            <li>Stand up an evaluation harness and data pipeline</li>
+            <li>Codify promotion gates and failure policies</li>
+            <li>Instrument rollbacks and change health dashboards</li>
+          </ol>
+          <p>
+            Ready to operationalize? Use our checklist to baseline and iterate.
+          </p>
+          <p>
+            <Link href="/resources/ai-2026-operational-evals-checklist" className="text-purple-700 font-semibold">Open the checklist →</Link>
+          </p>
+        </div>
+      </main>
+    </div>
+  )
+}
+
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Ai2026OperationalEvalsBlueprint: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Ai2026OperationalEvalsBlueprint - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026OperationalEvalsBlueprint blog post" />
+      </Head>
+      
+      <main>
+        <h1>Ai2026OperationalEvalsBlueprint</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default Ai2026OperationalEvalsBlueprint;
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

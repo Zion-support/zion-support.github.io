@@ -1,36 +1,31 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function BlogPost() {
+const Ai2026AgentObservabilityScorecards: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>Agent Observability Scorecards (2026) | Zion Tech Group</title>
-        <meta name="description" content="Define, measure, and operate agent observability with practical scorecards tied to outcomes." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-agent-observability-scorecards" />
+        <title>Ai2026AgentObservabilityScorecards - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026AgentObservabilityScorecards blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Agent Observability Scorecards (2026)</h1>
-        <p>
-          Effective agent operations require visibility into outcomes, costs, and risks. This post
-          introduces a practical scorecard framework to assess reliability, safety, and ROI.
-        </p>
-
-        <h2>Core dimensions</h2>
-        <ul>
-          <li>Reliability: task success rate, escalation rate, time-to-resolution</li>
-          <li>Safety: guardrail violations, policy conformance, data exposure rate</li>
-          <li>Efficiency: latency budgets, cost per outcome, utilization</li>
-          <li>Quality: groundedness, factuality, user satisfaction</li>
-        </ul>
-
-        <h2>Implementation notes</h2>
-        <p>
-          Instrument spans for every tool call and decision. Label outcomes. Automate dashboards and
-          alerts tied to SLOs and error budgets.
-        </p>
-      </article>
+      
+      <main>
+        <h1>Ai2026AgentObservabilityScorecards</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026AgentObservabilityScorecards;
+=======
+export default Ai2026AgentObservabilityScorecards;
+>>>>>>> origin/backup-main-20250918-004015

@@ -19,4 +19,5 @@ const accessibility: React.FC = () => {
   );
 };
 
-export default accessibility;
+
+export default NeuralRealityEngine2035;

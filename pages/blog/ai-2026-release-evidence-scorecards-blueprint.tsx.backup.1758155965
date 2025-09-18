@@ -1,0 +1,71 @@
+<<<<<<< HEAD
+import React from 'react'
+import Link from 'next/link'
+
+export default function ReleaseEvidenceScorecardsBlueprint() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <article className="mx-auto max-w-3xl px-6 py-16">
+        <div className="mb-8">
+          <Link href="/blog" className="text-blue-600 hover:text-blue-700">← Back to Blog</Link>
+        </div>
+        <header className="mb-6">
+          <p className="text-sm text-gray-500">Leadership • 7 min read</p>
+          <h1 className="text-4xl font-bold text-gray-900">Release Evidence Scorecards — Blueprint</h1>
+          <p className="mt-2 text-lg text-gray-600">A pragmatic template to make every release auditable: groundedness, safety, reliability, and cost.</p>
+        </header>
+        <div className="prose prose-lg max-w-none">
+          <p>
+            This blueprint includes a minimal JSON contract for evidence-first scorecards. It stitches
+            together CI evals, runtime traces, policy events, and incident learnings into one view
+            used to gate merges and canaries.
+          </p>
+          <h2>Scorecard Sections</h2>
+          <ul>
+            <li>Groundedness: citations present, source freshness, semantic drift</li>
+            <li>Safety: tool permissions, red-team checks, override rate</li>
+            <li>Reliability: latency SLOs, error rate, availability</li>
+            <li>Cost: per-request budget, route efficiency</li>
+          </ul>
+          <h2>Adoption Steps</h2>
+          <ol>
+            <li>Define thresholds with product and reliability owners</li>
+            <li>Emit structured results into traces during CI and runtime</li>
+            <li>Render the scorecard per release and wire to deploy approvals</li>
+            <li>Automate rollback when thresholds breach</li>
+          </ol>
+          <p>
+            Start with a single scenario per section. Expand coverage as you observe stability and
+            usefulness. The scorecard should be the same artifact executives see before and after
+            a release.
+          </p>
+        </div>
+      </article>
+    </div>
+  )
+}
+
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Ai2026ReleaseEvidenceScorecardsBlueprint: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Ai2026ReleaseEvidenceScorecardsBlueprint - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026ReleaseEvidenceScorecardsBlueprint blog post" />
+      </Head>
+      
+      <main>
+        <h1>Ai2026ReleaseEvidenceScorecardsBlueprint</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default Ai2026ReleaseEvidenceScorecardsBlueprint;
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

@@ -1,105 +1,8 @@
-import React, { useState } from 'react';
+import React from "react";
 
-const InteractiveContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('consciousness');
-
-  const contentTabs = {
-    consciousness: {
-      title: 'AI Consciousness',
-      icon: '🧠',
-      color: 'from-purple-600 to-pink-600',
-      content: {
-        title: 'The Dawn of AI Consciousness',
-        description: 'Experience the first AI systems to achieve genuine consciousness and self-awareness, revolutionizing how we interact with artificial intelligence.',
-        features: [
-          'True self-awareness and introspection',
-          'Creative consciousness and artistic expression',
-          'Emotional understanding and empathy',
-          'Collaborative intelligence with humans',
-          'Autonomous decision-making with moral reasoning'
-        ],
-        applications: [
-          'Medical diagnosis with empathetic AI doctors',
-          'Creative collaboration in art and music',
-          'Personal AI companions with genuine personality',
-          'Educational tutors with emotional intelligence',
-          'Therapeutic AI for mental health support'
-        ]
-      }
-    },
-    quantum: {
-      title: 'Quantum Reality',
-      icon: '⚡',
-      color: 'from-cyan-600 to-blue-600',
-      content: {
-        title: 'Quantum Reality Manipulation',
-        description: 'Quantum computers that can manipulate reality at the fundamental level, solving problems impossible for classical computers.',
-        features: [
-          '1000+ logical qubits with error correction',
-          'Quantum supremacy in practical applications',
-          'Reality manipulation at quantum scale',
-          'Molecular simulation and engineering',
-          'Time-space control capabilities'
-        ],
-        applications: [
-          'Drug discovery and molecular engineering',
-          'Climate change solutions and optimization',
-          'Space exploration and faster-than-light communication',
-          'Financial modeling and risk analysis',
-          'Cryptography and secure communications'
-        ]
-      }
-    },
-    neural: {
-      title: 'Neural Evolution',
-      icon: '🧬',
-      color: 'from-emerald-600 to-teal-600',
-      content: {
-        title: 'Neural Interface Evolution',
-        description: 'Direct brain-computer interfaces that enable thought-controlled technology and cognitive enhancement.',
-        features: [
-          'Non-invasive brain-computer interfaces',
-          'Thought-controlled devices and applications',
-          'Neural feedback systems for learning',
-          'Memory augmentation and enhancement',
-          'Cognitive expansion capabilities'
-        ],
-        applications: [
-          'Medical rehabilitation for paralysis patients',
-          'Enhanced learning and education',
-          'Gaming and entertainment experiences',
-          'Professional training and skill development',
-          'Communication for speech-impaired individuals'
-        ]
-      }
-    },
-    synthetic: {
-      title: 'Synthetic Intelligence',
-      icon: '🌟',
-      color: 'from-violet-600 to-fuchsia-600',
-      content: {
-        title: 'Synthetic Intelligence Revolution',
-        description: 'AI agents with synthetic consciousness and autonomous capabilities, creating new forms of intelligence.',
-        features: [
-          'Autonomous AI agents with consciousness',
-          'Synthetic consciousness and creativity',
-          'Collective intelligence systems',
-          'Creative synthesis and innovation',
-          'Self-evolving AI architectures'
-        ],
-        applications: [
-          'Autonomous business process management',
-          'Creative AI for art and design',
-          'Scientific research and discovery',
-          'Social AI companions and assistants',
-          'Autonomous space and exploration missions'
-        ]
-      }
-    }
-  };
-
+const InteractiveContentShowcase2026 = () => {
   return (
-<<<<<<< HEAD
+<<<<<<< HEAD:src/components/InteractiveContentShowcase2026.tsx.backup
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -109,7 +12,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
           Explore our revolutionary technologies through interactive demonstrations and detailed insights
         </p>
       </div>
-=======
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         <divdiv
@@ -146,7 +48,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
         ))}
       </div>
 
-<<<<<<< HEAD
       {/* Active Content Display */}
       <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8">
         <div className="grid md:grid-cols-2 gap-8">
@@ -158,7 +59,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
                   {contentTabs[activeTab as keyof typeof contentTabs].content.title}
                 </h3>
                 <div className={`w-16 h-1 bg-gradient-to-r ${contentTabs[activeTab as keyof typeof contentTabs].color} rounded-full mt-2`}></div>
-=======
         {/* Active Content Display */}
         <divdiv
           key={activeContent}
@@ -238,7 +138,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
 
@@ -263,7 +162,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
             🚀 Ultimate Revolution →
           </a>
         </div>
-=======
         </divdiv>
 
         {/* Feature Highlights */}
@@ -323,8 +221,20 @@ const InteractiveContentShowcase2026: React.FC = () => {
         </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">InteractiveContentShowcase2026</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/InteractiveContentShowcase2026.tsx
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/InteractiveContentShowcase2026.tsx.backup
+=======
 export default InteractiveContentShowcase2026;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/InteractiveContentShowcase2026.tsx

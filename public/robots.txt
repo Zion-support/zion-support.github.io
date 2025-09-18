@@ -11,6 +11,9 @@ Allow: /
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
@@ -21,6 +24,7 @@ Allow: /
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -58,6 +62,9 @@ Crawl-delay: 1
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
 <<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
 =======
@@ -68,3 +75,4 @@ Crawl-delay: 1
 =======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 >>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

@@ -171,7 +171,5 @@ const AIContentGenerator: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
 export default AIContentGenerator;

@@ -1,20 +1,25 @@
-import React from 'react';
+import type { NextPage } from 'next';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-const [id]: React.FC = () => {
+const [id]: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>[id] | Zion Tech Group</title>
-        <meta name="description" content="[id] - Revolutionary technology solutions" />
-      </Helmet>
+    <div>
+      <Head>
+        <title>[id] - Zion Tech Solutions</title>
+        <meta name="description" content="[id] service" />
+      </Head>
       
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">[id]</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
+      <main>
+        <h1>[id]</h1>
+        <p>Service details coming soon...</p>
+        <Link href="/services">Back to Services</Link>
+      </main>
     </div>
   );
 };

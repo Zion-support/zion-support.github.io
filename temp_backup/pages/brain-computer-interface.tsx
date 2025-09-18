@@ -19,4 +19,5 @@ const brain-computer-interface: React.FC = () => {
   );
 };
 
-export default brain-computer-interface;
+
+export default QuantumRealityEngine2025;

@@ -19,4 +19,5 @@ const 2025-innovative-services-showcase: React.FC = () => {
   );
 };
 
-export default 2025-innovative-services-showcase;
+
+export default RevolutionaryTechBreakthrough2030;

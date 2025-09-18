@@ -1,42 +1,9 @@
-import fs from 'fs',;
-import path from 'path',;
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
-function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))
-}
-function writeJson(p: string, data: any) {
-  fs.writeFileSync(p, JSON.stringify(data, null, 2))
-}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST')
-    return res.status(405).end('Method Not Allowed')
-  }
-  const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
-  if (!courseId) return res.status(400).json({ error: 'courseId required' })
-  try {
-
-/**
- * read_json - Function description
- */
-function read_json() {
-  return JSON.parse (fs.readFileSync (p, 'utf - 8'));
+  res.status(200).json({ message: 'API endpoint working' });
+<<<<<<< HEAD
 }
-
-/**
- * write_json - Function description
- */
-function write_json() {
-  fs.writeFileSync (p, JSON.stringify (data, null, 2));
+=======
 }
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-
+>>>>>>> origin/backup-main-20250918-004015

@@ -19,4 +19,5 @@ const 2027-services-showcase: React.FC = () => {
   );
 };
 
-export default 2027-services-showcase;
+
+export default InnovationShowcase2025;

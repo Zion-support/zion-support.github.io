@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+<<<<<<< HEAD:src/components/RevolutionaryAdBanner2026.tsx.backup
 import React from 'react';
 import { motion } from 'framer-motion';
-=======
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
-=======
 >>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const RevolutionaryAdBanner2026: React.FC = () => {
@@ -48,9 +44,13 @@ const RevolutionaryAdBanner2026: React.FC = () => {
   }, []);
 
   if (!isVisible) return null;
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryAdBanner2026.tsx
 
+const RevolutionaryAdBanner2026 = () => {
   return (
-<<<<<<< HEAD
+<<<<<<< HEAD:src/components/RevolutionaryAdBanner2026.tsx.backup
     <div className="relative mb-8">
       {/* Main Banner */}
       <div className={`bg-gradient-to-r ${adContent[currentAd].gradient} rounded-2xl p-8 text-white text-center relative overflow-hidden animate-pulse`}>
@@ -60,7 +60,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
             <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
             <h3 className="text-3xl font-bold">{adContent[currentAd].title}</h3>
             <span className="text-4xl animate-bounce">{adContent[currentAd].icon}</span>
-=======
     <div className="relative overflow-hidden mb-8">
         <divdiv
           key={currentAd}
@@ -147,9 +146,7 @@ const RevolutionaryAdBanner2026: React.FC = () => {
               ✕ Dismiss
             </button>
           </div>
-<<<<<<< HEAD
         </div>
-=======
         </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
       </div>
@@ -183,9 +180,7 @@ const RevolutionaryAdBanner2026: React.FC = () => {
           </a>
         </div>
       </div>
-<<<<<<< HEAD
     </motion.div>
-=======
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryAdBanner2026: React.FC = () => {
@@ -288,7 +283,6 @@ const RevolutionaryAdBanner2026: React.FC = () => {
           </a>
         </div>
       </div>
-=======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
 
       {/* Floating Action Button */}
@@ -301,11 +295,22 @@ const RevolutionaryAdBanner2026: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
-=======
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
   );
 };
 
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">RevolutionaryAdBanner2026</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default RevolutionaryAdBanner2026;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/RevolutionaryAdBanner2026.tsx

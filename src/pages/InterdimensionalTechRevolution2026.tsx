@@ -1,3 +1,11 @@
+import React from "react";
+const InterdimensionalTechRevolution2026 = () => {
+  return (
+    <div>
+      <div>
+        <div>
+          <h1>Interdimensional Tech Revolution2026</h1>
+          <p>Content coming soon...</p>
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -52,7 +60,6 @@
               </span>
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
@@ -65,7 +72,6 @@
             </div>
           </div>
         </div>
-
         {/* Technology Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Interdimensional Applications</h2>
@@ -102,7 +108,6 @@
             </div>
           </div>
         </div>
-
         {/* Safety and Ethics */}
         <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-red-400">Safety & Ethics</h2>
@@ -127,20 +132,7 @@
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transcend Dimensions?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join the interdimensional revolution and be among the first to experience 
-            technology that transcends the boundaries of our known reality.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-pink-500 to-violet-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg">
-              Enter the Portal
-            </button>
-        </div>
               Manipulate Reality →
             </button>
           </div>
-
