@@ -1,28 +1,14 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
 
 interface GradientHeadingProps {
   children: React.ReactNode;
   className?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
-const GradientHeading: React.FC<GradientHeadingProps> = ({
-  children,
-  className,
-  as: Component = 'h1'
-}) => {
+export function GradientHeading({ children, className = "" }: GradientHeadingProps) {
   return (
-    <Component
-      className={cn(
-        'bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent font-bold',
-        className
-      )}
-    >
+    <h1 className={`text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent ${className}`}>
       {children}
-    </Component>
+    </h1>
   );
-};
-
-export { GradientHeading };
-export default GradientHeading;
+}

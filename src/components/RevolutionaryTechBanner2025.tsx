@@ -1,63 +1,92 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const RevolutionaryTechBanner2025: React.FC = () => {
-  const [currentMessage, setCurrentMessage] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const bannerMessages = [
-    "🚀 NEW: Revolutionary Tech Breakthrough 2025 - Experience AI Consciousness!",
-    "⚡ BREAKTHROUGH: Quantum Reality Engine - Manipulate Reality Itself!",
-    "🧬 REVOLUTIONARY: Neural Interface Technology - Control with Your Mind!",
-    "🌟 BREAKTHROUGH: Consciousness Transfer - Achieve Digital Immortality!",
-    "🌌 NEW: Interdimensional Computing - Access Parallel Universe Power!"
+  const slides = [
+    {
+      title: "AI-Powered Business Automation",
+      subtitle: "Transform your operations with intelligent automation",
+      icon: "🤖",
+      color: "from-blue-500 to-purple-500"
+    },
+    {
+      title: "Quantum Computing Solutions",
+      subtitle: "Unlock unprecedented computational power",
+      icon: "⚡",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Cybersecurity Excellence",
+      subtitle: "Protect your digital assets with advanced security",
+      icon: "🛡️",
+      color: "from-green-500 to-blue-500"
+    }
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentMessage((prev) => (prev + 1) % bannerMessages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [bannerMessages.length]);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white py-4 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 animate-pulse"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-      
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex items-center justify-between">
-          {/* Animated Message */}
-          <div className="flex-1 text-center">
-            <div className="text-lg font-bold animate-bounce">
-              {bannerMessages[currentMessage]}
+    <motion.div
+      className="relative overflow-hidden rounded-2xl mb-12"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white p-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
+        
+        <div className="relative z-10">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🚀 REVOLUTIONARY TECHNOLOGY • 2025
             </div>
+            <h2 className="text-4xl font-bold mb-4">Revolutionary Tech Showcase 2025</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Experience the future of technology with our cutting-edge AI solutions and innovative platforms
+            </p>
           </div>
-          
-          {/* Action Buttons */}
-          <div className="flex space-x-4 ml-8">
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {slides.map((slide, index) => (
+              <motion.div
+                key={index}
+                className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 ${
+                  index === currentSlide ? 'ring-2 ring-indigo-400' : ''
+                }`}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-4xl mb-4 text-center">{slide.icon}</div>
+                <h3 className="text-xl font-bold mb-2 text-center">{slide.title}</h3>
+                <p className="text-sm opacity-90 text-center mb-4">{slide.subtitle}</p>
+                <a
+                  href="/services"
+                  className={`block w-full bg-gradient-to-r ${slide.color} text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm`}
+                >
+                  Learn More →
+                </a>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center">
             <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold text-sm whitespace-nowrap"
+              href="/pages/RevolutionaryTechShowcase2025"
+              className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
             >
-              Explore Now →
-            </a>
-            <a
-              href="/pages/RevolutionaryTechBreakthrough2025"
-              className="bg-white text-purple-600 px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm whitespace-nowrap"
-            >
-              Watch Demo
+              Explore All Technologies →
             </a>
           </div>
         </div>
       </div>
-      
-      {/* Floating Elements */}
-      <div className="absolute top-2 left-4 text-2xl animate-bounce">🚀</div>
-      <div className="absolute top-2 right-4 text-2xl animate-bounce delay-1000">⚡</div>
-      <div className="absolute bottom-2 left-1/4 text-2xl animate-bounce delay-500">🧬</div>
-      <div className="absolute bottom-2 right-1/4 text-2xl animate-bounce delay-1500">🌟</div>
-    </div>
+    </motion.div>
   );
 };
 

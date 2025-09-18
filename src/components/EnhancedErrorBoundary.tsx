@@ -1,11 +1,9 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-  enableReporting?: boolean;
 }
 
 interface State {
@@ -15,7 +13,7 @@ interface State {
   errorId: string;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
+export default class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -40,47 +38,28 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
-    }
-
-    // Report error to external service
-    if (this.props.enableReporting !== false) {
-      this.reportError(error, errorInfo);
-    }
-
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
+    // Log error to monitoring service
+    this.logError(error, errorInfo);
   }
 
-  reportError = async (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      const errorReport = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        errorId: this.state.errorId
-      };
+  logError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorData = {
+      errorId: this.state.errorId,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    };
 
-      // Send to analytics service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
-          custom_map: {
-            error_id: this.state.errorId
-          }
-        });
-      }
-
-      // Send to error reporting service (e.g., Sentry, LogRocket, etc.)
-      console.log('Error reported:', errorReport);
-    } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
+    // Send to error tracking service
+    console.error('Error Boundary caught an error:', errorData);
+    
+    // In production, send to error tracking service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: send to Sentry, LogRocket, etc.
+      // errorTrackingService.captureException(error, { extra: errorData });
     }
   };
 
@@ -93,8 +72,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     });
   };
 
-  handleReload = () => {
-    window.location.reload();
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  handleReportBug = () => {
+    const errorData = {
+      errorId: this.state.errorId,
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      url: window.location.href,
+      timestamp: new Date().toISOString()
+    };
+
+    // Open email client with error details
+    const subject = `Bug Report - Error ID: ${this.state.errorId}`;
+    const body = `Error Details:\n\n${JSON.stringify(errorData, null, 2)}`;
+    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.open(mailtoLink);
   };
 
   render() {
@@ -104,79 +100,63 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-          <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
-            <div className="flex items-center mb-4">
-              <div className="flex-shrink-0">
-                <svg
-                  className="h-8 w-8 text-red-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-                  />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-white">
-                  Something went wrong
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  We're sorry, but something unexpected happened.
-                </p>
-              </div>
-            </div>
-
+        <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 text-center">
             <div className="mb-6">
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                Error ID: <code className="bg-gray-100 dark:bg-gray-700 px-1 rounded text-xs">{this.state.errorId}</code>
+              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                We're sorry, but something unexpected happened. Our team has been notified.
               </p>
+              <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 mb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  <strong>Error ID:</strong> {this.state.errorId}
+                </p>
+                {process.env.NODE_ENV === 'development' && this.state.error && (
+                  <details className="mt-2 text-left">
+                    <summary className="cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Technical Details
+                    </summary>
+                    <pre className="mt-2 text-xs text-gray-600 dark:text-gray-400 overflow-auto">
+                      {this.state.error.message}
+                      {this.state.error.stack && `\n\n${this.state.error.stack}`}
+                    </pre>
+                  </details>
+                )}
+              </div>
             </div>
 
-            {this.props.showDetails && this.state.error && (
-              <div className="mb-6">
-                <details className="text-sm">
-                  <summary className="cursor-pointer text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200">
-                    Show error details
-                  </summary>
-                  <div className="mt-2 p-3 bg-gray-100 dark:bg-gray-700 rounded text-xs font-mono overflow-auto max-h-32">
-                    <div className="text-red-600 dark:text-red-400">
-                      {this.state.error.message}
-                    </div>
-                    {this.state.error.stack && (
-                      <div className="mt-2 text-gray-600 dark:text-gray-400">
-                        {this.state.error.stack}
-                      </div>
-                    )}
-                  </div>
-                </details>
-              </div>
-            )}
-
-            <div className="flex space-x-3">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
+                <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
+              
               <button
-                onClick={this.handleReload}
-                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
-                Reload Page
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </button>
+              
+              <button
+                onClick={this.handleReportBug}
+                className="flex items-center justify-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+              >
+                <Bug className="w-4 h-4 mr-2" />
+                Report Bug
               </button>
             </div>
 
-            <div className="mt-4 text-center">
-              <p className="text-xs text-gray-500 dark:text-gray-400">
-                If this problem persists, please contact support with the error ID above.
-              </p>
+            <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
+              <p>If this problem persists, please contact our support team.</p>
+              <p>Error ID: {this.state.errorId}</p>
             </div>
           </div>
         </div>
@@ -186,5 +166,3 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-
-export default EnhancedErrorBoundary;

@@ -1,86 +1,22 @@
-import React, {useState} from "react";
-import {useAdminQuotes} from "@/hooks/useAdminQuotes";
-import {useAuth} from "@/hooks/useAuth";
-import {Card} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Navigate} from "react-router-dom";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {QuoteDetails} from "@/components/quotes/QuoteDetails";
-import {ExportToCSV} from "@/components/quotes/ExportToCSV";
-import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-export default function QuoteManager
-export {QuoteManager}() {
-    const { user } = useAuth();
-    const isAdmin = user?.userType === 'admin';
-    const [selectedQuote, setSelectedQuote] = useState(null);
-    const [showDetails, setShowDetails] = useState(false);
-    const {quotes, isLoading, error, statusFilter, setStatusFilter, archiveFilter, setArchiveFilter, searchQuery, setSearchQuery, dateRange, setDateRange, updateStatus, toggleArchive, deleteQuote} = useAdminQuotes();
-    // Count quotes by status
-    const statusCounts = {new: quotes.filter(q => q.status === 'new').length,
-        in_review: quotes.filter(q => q.status === 'in_review').length,
-        accepted: quotes.filter(q => q.status === 'accepted').length,
-        responded: quotes.filter(q => q.status === 'responded').length,
-  closed: quotes.filter(q => q.status === 'closed').length};
-    const handleViewDetails = (props: any) => {setSelectedQuote(quote);
-        setShowDetails(true)};
-    const handleResetFilters = (props: any) => {
-        setStatusFilter('all');
-        setArchiveFilter('all');
-        setSearchQuery('');
-        setDateRange({ from: null, to: null });
-    };
-    if (!isAdmin) {return <Navigate to="/unauthorized" replace />}
-    return (<ProtectedRoute adminOnly>
-      <div>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
-          <div className="container mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-              <div>
-                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
-                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
-              </div>
-              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
-            </div>
-
-            {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts} />
-
-            {/* Filters */}
-            <QuotesFilter searchQuery={searchQuery} setSearchQuery={setSearchQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter} archiveFilter={archiveFilter} setArchiveFilter={setArchiveFilter} dateRange={dateRange} setDateRange={setDateRange} onReset={handleResetFilters} />
-
-            {/* Tabs for Active/Archived */}
-            <Tabs defaultValue="active" className="mb-6">
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>
-                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="active">
-                {/* Quotes Table */}
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable quotes={quotes.filter(quote => !quote.is_archived)} isLoading={isLoading} updateStatus={updateStatus} toggleArchive={toggleArchive} deleteQuote={deleteQuote} onViewDetails={handleViewDetails}/>
-                </Card>
-              </TabsContent>
-
-              <TabsContent value="archived">
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable quotes={quotes.filter(quote => quote.is_archived)} isArchived={true} isLoading={isLoading} updateStatus={updateStatus} toggleArchive={toggleArchive} deleteQuote={deleteQuote} onViewDetails={handleViewDetails}/>
-                </Card>
-              </TabsContent>
-            </Tabs>
-          </div>
+const QuoteManager: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>QuoteManager | Zion Tech Group</title>
+        <meta name="description" content="QuoteManager - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">QuoteManager</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-
-        {/* Quote Details Modal */}
-        <QuoteDetails quote={selectedQuote} isOpen={showDetails} onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null)}}/>
-        
-        
       </div>
-    </ProtectedRoute>)}
+    </div>
+  );
+};
 
-</QuoteDetails>
-</QuotesTable>
-</QuotesTable>
+export default QuoteManager;

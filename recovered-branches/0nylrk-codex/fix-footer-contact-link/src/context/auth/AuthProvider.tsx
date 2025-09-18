@@ -1,82 +1,12 @@
-import { useAuthState } from "./useAuthState";
-import { useAuthEventHandlers } from "./useAuthEventHandlers";
-import { mapProfileToUser } from "./profileMapper";
+import React from 'react';
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const { 
-  } = useAuthState();
-  
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const {
-    login: loginImpl,
-    signup: signupImpl,
-    logout,
-    resetPassword,
-    updateProfile,
-    loginWithGoogle,
-    loginWithFacebook,
-    loginWithTwitter,
-    loginWithWeb3
-  };
-
-  useEffect(() => {
-    // Clean up any potential stale auth state before setting up listeners
-    cleanupAuthState();
-    
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-              setUser(mappedUser);
-              
-              // Show welcome toast when user logs in
-              if (event === 'SIGNED_IN') {
-                handleSignedIn(mappedUser);
-              }
-            } else if (error) {
-            setUser(null);
-          }
-        } else {
-          setUser(null);
-          
-          // Show logout toast when user logs out
-          if (event === 'SIGNED_OUT') {
-            handleSignedOut();
-          }
-        }
-        setIsLoading(false);
-      }
-    );
-
-    // Initial session check
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!session) {
-        setIsLoading(false);
-      }
-    });
-
-    return () => {
-      subscription.unsubscribe();
-    };
-
-  const authContextValue = {
-    user,
-    isLoading,
-    isAuthenticated: !!user,
-    login,
-    signup,
-    logout,
-    resetPassword,
-    updateProfile,
-    loginWithGoogle,
-    loginWithFacebook,
-    loginWithTwitter,
-    loginWithWeb3,
-    onboardingStep
-  };
-
+const AuthProvider: React.FC = () => {
   return (
-    <AuthContext.Provider value={authContextValue}>
-      {children}
-    </AuthContext.Provider>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AuthProvider</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
+
+export default AuthProvider;

@@ -1,36 +1,12 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-// Test wrapper with providers
-export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ children }) => {
+import React from 'react';
+
+const testUtils: React.FC = () => {
   return (
-    <BrowserRouter>
-      {children}
-    </BrowserRouter>
-  )};
-// Custom render function
-export const renderWithProviders = ("ui": React.ReactElement) => {
-  return render(ui, { "wrapper": TestWrapper })};
-// Mock data generators
-export const mockUser = {
-  "id": '1',
-  "name": 'Test User',
-  "email": 'test@example.com',
-  "role": 'user'
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">testUtils</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
 };
-export const mockMessage = {
-  "id": '1',
-  "text": 'Test message',
-  "sender": 'user' as const,
-  "timestamp": new Date()
-};
-// Common test helpers
-export const waitForElementToBeRemoved = waitFor;
-export const waitForElementToAppear = waitFor;
-export default {
-  renderWithProviders,
-  mockUser,
-  mockMessage,
-  waitForElementToBeRemoved,
-  waitForElementToAppear
-};
-import { render,screen,fireEvent,waitFor } from '@testing-library/react'; import { BrowserRouter } from 'react-router-dom'; export const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => { return ( <BrowserRouter> {children} </BrowserRouter> )};; export const renderWithProviders = (ui: React.ReactElement) => { return render(ui,{ wrapper: TestWrapper })};; export const mockUser = { id: '1',name: 'Test User',email: 'test@example.com',role: 'user' };; export const mockMessage = { id: '1',text: 'Test message',sender: 'user' as const,timestamp: new Date() };; export const waitForElementToBeRemoved = waitFor; export const waitForElementToAppear = waitFor; export default { renderWithProviders,mockUser,mockMessage,waitForElementToBeRemoved,waitForElementToAppear };
+
+export default testUtils;

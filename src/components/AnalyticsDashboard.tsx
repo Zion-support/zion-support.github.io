@@ -1,224 +1,247 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { BarChart3, TrendingUp, Users, Eye, MousePointer, Clock, Globe, Smartphone } from 'lucide-react';
 
 interface AnalyticsData {
   pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
-  topPages: Array<{ path: string; views: number }>;
+  topPages: Array<{ page: string; views: number }>;
   trafficSources: Array<{ source: string; percentage: number }>;
-  deviceTypes: Array<{ type: string; percentage: number }>;
-  performance: {
-    fcp: number;
-    lcp: number;
-    fid: number;
-    cls: number;
-  };
+  deviceTypes: Array<{ device: string; percentage: number }>;
+  realTimeUsers: number;
 }
 
 export default function AnalyticsDashboard() {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d'>('7d');
+  const [analytics, setAnalytics] = useState<AnalyticsData>({
+    pageViews: 0,
+    uniqueVisitors: 0,
+    bounceRate: 0,
+    avgSessionDuration: 0,
+    topPages: [],
+    trafficSources: [],
+    deviceTypes: [],
+    realTimeUsers: 0
+  });
+  const [isVisible, setIsVisible] = useState(false);
+  const [timeRange, setTimeRange] = useState('24h');
 
   useEffect(() => {
-    // Simulate analytics data fetching
-    const fetchAnalyticsData = async () => {
-      setIsLoading(true);
+    const generateAnalytics = () => {
+      const baseViews = Math.floor(Math.random() * 50000) + 10000;
+      const baseVisitors = Math.floor(baseViews * 0.7);
       
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Mock data - in real implementation this would come from your analytics API
-      const mockData: AnalyticsData = {
-        pageViews: Math.floor(Math.random() * 10000) + 5000,
-        uniqueVisitors: Math.floor(Math.random() * 5000) + 2500,
-        bounceRate: Math.random() * 30 + 20,
-        avgSessionDuration: Math.random() * 300 + 120,
+      setAnalytics({
+        pageViews: baseViews,
+        uniqueVisitors: baseVisitors,
+        bounceRate: Math.random() * 20 + 30,
+        avgSessionDuration: Math.floor(Math.random() * 300) + 120,
         topPages: [
-          { path: '/', views: Math.floor(Math.random() * 2000) + 1000 },
-          { path: '/ai-2026-advanced-automation-mastery', views: Math.floor(Math.random() * 1500) + 800 },
-          { path: '/ai-2026-neural-interface-revolution', views: Math.floor(Math.random() * 1200) + 600 },
-          { path: '/services', views: Math.floor(Math.random() * 1000) + 500 },
-          { path: '/about', views: Math.floor(Math.random() * 800) + 400 },
+          { page: '/', views: Math.floor(baseViews * 0.4) },
+          { page: '/services', views: Math.floor(baseViews * 0.2) },
+          { page: '/about', views: Math.floor(baseViews * 0.15) },
+          { page: '/contact', views: Math.floor(baseViews * 0.1) },
+          { page: '/blog', views: Math.floor(baseViews * 0.1) }
         ],
         trafficSources: [
-          { source: 'Direct', percentage: 35 },
-          { source: 'Google', percentage: 28 },
-          { source: 'Social Media', percentage: 20 },
-          { source: 'Referral', percentage: 12 },
-          { source: 'Email', percentage: 5 },
+          { source: 'Direct', percentage: 45 },
+          { source: 'Google', percentage: 30 },
+          { source: 'Social', percentage: 15 },
+          { source: 'Referral', percentage: 10 }
         ],
         deviceTypes: [
-          { type: 'Desktop', percentage: 45 },
-          { type: 'Mobile', percentage: 40 },
-          { type: 'Tablet', percentage: 15 },
+          { device: 'Desktop', percentage: 60 },
+          { device: 'Mobile', percentage: 35 },
+          { device: 'Tablet', percentage: 5 }
         ],
-        performance: {
-          fcp: Math.random() * 1000 + 800,
-          lcp: Math.random() * 1500 + 1200,
-          fid: Math.random() * 50 + 10,
-          cls: Math.random() * 0.1 + 0.05,
-        }
-      };
-      
-      setAnalyticsData(mockData);
-      setIsLoading(false);
+        realTimeUsers: Math.floor(Math.random() * 50) + 10
+      });
     };
 
-    fetchAnalyticsData();
+    generateAnalytics();
+    const interval = setInterval(generateAnalytics, 30000); // Update every 30 seconds
+
+    return () => clearInterval(interval);
   }, [timeRange]);
 
-  if (isLoading) {
+  const formatNumber = (num: number) => {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toString();
+  };
+
+  const formatTime = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
+
+  if (!isVisible) {
     return (
-      <div className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="animate-pulse">
-            <div className="h-8 bg-gray-300 rounded w-1/4 mb-8"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {[...Array(4)].map((_, i) => (
-                <div key={i} className="bg-white p-6 rounded-lg shadow">
-                  <div className="h-4 bg-gray-300 rounded w-1/2 mb-2"></div>
-                  <div className="h-8 bg-gray-300 rounded w-3/4"></div>
-                </div>
-              ))}
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed top-4 left-4 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors z-50"
+        title="Show Analytics Dashboard"
+      >
+        <BarChart3 className="w-5 h-5" />
+      </button>
+    );
+  }
+
+  return (
+    <div className="fixed top-4 left-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 w-96 z-50 max-h-96 overflow-y-auto">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
+          <BarChart3 className="w-5 h-5 mr-2" />
+          Analytics Dashboard
+        </h3>
+        <div className="flex items-center space-x-2">
+          <select
+            value={timeRange}
+            onChange={(e) => setTimeRange(e.target.value)}
+            className="text-xs border border-gray-300 dark:border-gray-600 rounded px-2 py-1 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          >
+            <option value="1h">1 Hour</option>
+            <option value="24h">24 Hours</option>
+            <option value="7d">7 Days</option>
+            <option value="30d">30 Days</option>
+          </select>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+
+      {/* Key Metrics */}
+      <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
+          <div className="flex items-center">
+            <Eye className="w-4 h-4 text-blue-600 dark:text-blue-400 mr-2" />
+            <div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Page Views</div>
+              <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
+                {formatNumber(analytics.pageViews)}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+          <div className="flex items-center">
+            <Users className="w-4 h-4 text-green-600 dark:text-green-400 mr-2" />
+            <div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Unique Visitors</div>
+              <div className="text-lg font-bold text-green-600 dark:text-green-400">
+                {formatNumber(analytics.uniqueVisitors)}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg">
+          <div className="flex items-center">
+            <MousePointer className="w-4 h-4 text-yellow-600 dark:text-yellow-400 mr-2" />
+            <div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Bounce Rate</div>
+              <div className="text-lg font-bold text-yellow-600 dark:text-yellow-400">
+                {analytics.bounceRate.toFixed(1)}%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
+          <div className="flex items-center">
+            <Clock className="w-4 h-4 text-purple-600 dark:text-purple-400 mr-2" />
+            <div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Avg. Session</div>
+              <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
+                {formatTime(analytics.avgSessionDuration)}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
 
-
-  return (
-    <div className="py-20 px-4 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Analytics Dashboard</h2>
-            <p className="text-gray-600">Monitor your website performance and user engagement</p>
+      {/* Real-time Users */}
+      <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg mb-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <TrendingUp className="w-4 h-4 text-red-600 dark:text-red-400 mr-2" />
+            <span className="text-sm font-medium text-red-600 dark:text-red-400">Live Users</span>
           </div>
-          <div className="mt-4 sm:mt-0">
-            <select
-              value={timeRange}
-              onChange={(e) => setTimeRange(e.target.value as '7d' | '30d' | '90d')}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="7d">Last 7 days</option>
-              <option value="30d">Last 30 days</option>
-              <option value="90d">Last 90 days</option>
-            </select>
-          </div>
+          <span className="text-2xl font-bold text-red-600 dark:text-red-400">
+            {analytics.realTimeUsers}
+          </span>
         </div>
+      </div>
 
-        {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <div className="flex items-center">
-              <div className="p-2 bg-blue-100 rounded-lg">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Page Views</p>
-                <p className="text-2xl font-bold text-gray-900">{formatNumber(analyticsData.pageViews)}</p>
-              </div>
+      {/* Top Pages */}
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Top Pages</h4>
+        <div className="space-y-2">
+          {analytics.topPages.map((page, index) => (
+            <div key={index} className="flex items-center justify-between">
+              <span className="text-xs text-gray-600 dark:text-gray-300 truncate">
+                {page.page}
+              </span>
+              <span className="text-xs font-medium text-gray-900 dark:text-white">
+                {formatNumber(page.views)}
+              </span>
             </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow">
-            <div className="flex items-center">
-              <div className="p-2 bg-green-100 rounded-lg">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
-                </svg>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Unique Visitors</p>
-                <p className="text-2xl font-bold text-gray-900">{formatNumber(analyticsData.uniqueVisitors)}</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow">
-            <div className="flex items-center">
-              <div className="p-2 bg-yellow-100 rounded-lg">
-                <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Bounce Rate</p>
-                <p className="text-2xl font-bold text-gray-900">{analyticsData.bounceRate.toFixed(1)}%</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow">
-            <div className="flex items-center">
-              <div className="p-2 bg-purple-100 rounded-lg">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm font-medium text-gray-600">Avg. Session</p>
-                <p className="text-2xl font-bold text-gray-900">{formatDuration(analyticsData.avgSessionDuration)}</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
+      </div>
 
-          {/* Top Pages */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Pages</h3>
-            <div className="space-y-3">
-              {analyticsData.topPages.map((page, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <span className="text-sm font-medium text-gray-600 w-8">#{index + 1}</span>
-                    <span className="text-sm text-gray-900 ml-2">{page.path}</span>
-                  </div>
-                  <span className="text-sm font-semibold text-gray-900">{formatNumber(page.views)}</span>
+      {/* Traffic Sources */}
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Traffic Sources</h4>
+        <div className="space-y-2">
+          {analytics.trafficSources.map((source, index) => (
+            <div key={index} className="flex items-center justify-between">
+              <span className="text-xs text-gray-600 dark:text-gray-300">{source.source}</span>
+              <div className="flex items-center">
+                <div className="w-16 bg-gray-200 dark:bg-gray-700 rounded-full h-2 mr-2">
+                  <div
+                    className="bg-blue-500 h-2 rounded-full"
+                    style={{ width: `${source.percentage}%` }}
+                  />
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Traffic Sources */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Traffic Sources</h3>
-            <div className="space-y-3">
-              {analyticsData.trafficSources.map((source, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <span className="text-sm text-gray-900">{source.source}</span>
-                  <div className="flex items-center">
-                    <div className="w-20 bg-gray-200 rounded-full h-2 mr-3">
-                      <div 
-                        className="bg-blue-600 h-2 rounded-full" 
-                        style={{ width: `${source.percentage}%` }}
-                      ></div>
-                    </div>
-                    <span className="text-sm font-semibold text-gray-900 w-12 text-right">{source.percentage}%</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Performance Metrics */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance Metrics</h3>
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-900">First Contentful Paint</span>
-                <span className="text-sm font-semibold text-gray-900">{analyticsData.performance.fcp.toFixed(0)}ms</span>
+                <span className="text-xs font-medium text-gray-900 dark:text-white">
+                  {source.percentage}%
+                </span>
               </div>
-          </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Device Types */}
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Device Types</h4>
+        <div className="space-y-2">
+          {analytics.deviceTypes.map((device, index) => (
+            <div key={index} className="flex items-center justify-between">
+              <div className="flex items-center">
+                {device.device === 'Desktop' && <Globe className="w-3 h-3 mr-1 text-gray-500" />}
+                {device.device === 'Mobile' && <Smartphone className="w-3 h-3 mr-1 text-gray-500" />}
+                {device.device === 'Tablet' && <Smartphone className="w-3 h-3 mr-1 text-gray-500" />}
+                <span className="text-xs text-gray-600 dark:text-gray-300">{device.device}</span>
+              </div>
+              <span className="text-xs font-medium text-gray-900 dark:text-white">
+                {device.percentage}%
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
+        <div className="text-xs text-gray-500 dark:text-gray-400">
+          Last updated: {new Date().toLocaleTimeString()}
         </div>
       </div>
     </div>

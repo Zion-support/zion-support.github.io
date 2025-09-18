@@ -37,6 +37,8 @@ export default function SavedTalentsPage({ }: SavedTalentsPageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/SavedTalentsPage.jsx
 }
 }

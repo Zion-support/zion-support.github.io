@@ -37,6 +37,8 @@ export default function SearchResultsPage({ }: SearchResultsPageProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/SearchResultsPage.jsx
 }
 }

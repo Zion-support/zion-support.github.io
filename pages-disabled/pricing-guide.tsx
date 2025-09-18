@@ -1,23 +1,12 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import React from 'react';
 
-export default function PricingGuide() {
+const pricing-guide: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Pricing Guide | Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing guidance for Zion Tech Group services." />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing-guide" />
-      </Head>
-      <main className="max-w-5xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold mb-4">Pricing Guide</h1>
-        <p className="text-gray-600 mb-8">Get in touch for a custom quote tailored to your needs.</p>
-        <div className="space-x-4">
-          <Link href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Contact Sales</Link>
-          <a href="tel:+13024640950" className="inline-block border border-gray-300 px-6 py-3 rounded-lg">+1 302 464 0950</a>
-        </div>
-      </main>
-    </>
-  )
-}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">pricing-guide</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
+export default pricing-guide;

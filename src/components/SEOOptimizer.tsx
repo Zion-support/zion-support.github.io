@@ -1,111 +1,183 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
+interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
-  canonicalUrl?: string;
+  canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = "Zion Tech Group - Revolutionary Technology Solutions",
-  description = "Leading the future of technology with AI, quantum computing, neural interfaces, and revolutionary solutions. Discover breakthrough technologies that are reshaping industries.",
-  keywords = "AI, artificial intelligence, quantum computing, neural interfaces, technology solutions, revolutionary tech, breakthrough technology, consciousness computing, interdimensional tech",
-  canonicalUrl = "https://ziontechgroup.com",
-  ogImage = "https://ziontechgroup.com/images/og-image.jpg",
+export default function SEOOptimizer({
+  title = "Zion Tech Group - Revolutionary AI & Technology Solutions",
+  description = "Leading provider of AI-powered solutions, cloud infrastructure, cybersecurity, and digital transformation services. 200+ Micro SaaS services with 99.99% uptime guarantee.",
+  keywords = "AI solutions, cloud infrastructure, cybersecurity, digital transformation, micro saas, technology consulting, artificial intelligence, machine learning",
+  canonical,
+  ogImage = "/images/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
   structuredData
-}) => {
+}: SEOProps) {
+  
+  useEffect(() => {
+    // Update page title
+    document.title = title;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+    
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = keywords;
+      document.head.appendChild(meta);
+    }
+    
+    // Update canonical URL
+    if (canonical) {
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', canonical);
+      } else {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        canonicalLink.setAttribute('href', canonical);
+        document.head.appendChild(canonicalLink);
+      }
+    }
+    
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+    
+    // Add Open Graph meta tags
+    const ogTags = [
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:type', content: ogType },
+      { property: 'og:image', content: ogImage },
+      { property: 'og:url', content: window.location.href },
+      { property: 'og:site_name', content: 'Zion Tech Group' }
+    ];
+    
+    ogTags.forEach(tag => {
+      let meta = document.querySelector(`meta[property="${tag.property}"]`);
+      if (meta) {
+        meta.setAttribute('content', tag.content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', tag.property);
+        meta.setAttribute('content', tag.content);
+        document.head.appendChild(meta);
+      }
+    });
+    
+    // Add Twitter Card meta tags
+    const twitterTags = [
+      { name: 'twitter:card', content: twitterCard },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: ogImage }
+    ];
+    
+    twitterTags.forEach(tag => {
+      let meta = document.querySelector(`meta[name="${tag.name}"]`);
+      if (meta) {
+        meta.setAttribute('content', tag.content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', tag.name);
+        meta.setAttribute('content', tag.content);
+        document.head.appendChild(meta);
+      }
+    });
+    
+  }, [title, description, keywords, canonical, ogImage, ogType, twitterCard, structuredData]);
+
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
+    "description": description,
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/logo.png",
-    "description": "Leading the future of technology with revolutionary AI, quantum computing, and neural interface solutions",
-    "foundingDate": "2020",
-    "founders": [
-      {
-        "@type": "Person",
-        "name": "Zion Tech Group Team"
-      }
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
     "contactPoint": {
       "@type": "ContactPoint",
+      "telephone": "+1-555-0123",
       "contactType": "customer service",
-      "url": "https://ziontechgroup.com/contact"
+      "availableLanguage": "English"
     },
     "sameAs": [
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
       "https://github.com/ziontechgroup"
     ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Tech Street",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "postalCode": "94105",
+      "addressCountry": "US"
+    },
     "offers": {
       "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Revolutionary Technology Solutions",
-        "description": "AI, quantum computing, neural interfaces, and breakthrough technology solutions"
-      }
+      "description": "AI-powered technology solutions and consulting services",
+      "priceRange": "$$"
     }
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      {canonical && <link rel="canonical" href={canonical} />}
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:url" content={window.location.href} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Meta Tags */}
+      {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#8B5CF6" />
-      <meta name="msapplication-TileColor" content="#8B5CF6" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
       
-      {/* Language and Geo Tags */}
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US" />
-      <meta name="geo.placename" content="United States" />
+      {/* Additional SEO meta tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -116,68 +188,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      
-      {/* Additional Structured Data for Technology Services */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Revolutionary Technology Solutions",
-          "description": "AI, quantum computing, neural interfaces, and breakthrough technology solutions",
-          "provider": {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "serviceType": "Technology Solutions",
-          "areaServed": "Worldwide",
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Technology Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "AI Consciousness Solutions",
-                  "description": "Self-aware artificial intelligence systems"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Quantum Computing Services",
-                  "description": "Quantum neural fusion and quantum computing solutions"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Neural Interface Technology",
-                  "description": "Direct brain-computer interfaces and neural reality systems"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Interdimensional Computing",
-                  "description": "Multi-dimensional processing and parallel universe networks"
-                }
-              }
-            ]
-          }
-        })}
-      </script>
     </Helmet>
   );
-};
-
-export default SEOOptimizer;
+}

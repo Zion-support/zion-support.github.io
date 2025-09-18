@@ -1,112 +1,12 @@
+import React from 'react';
 
-import { useState } from "react";
-import { ContractPreview } from "./components/ContractPreview";
-import { TemplateManager } from "./templates/TemplateManager";
-import { SmartContractBuilder } from "./SmartContractBuilder";
-
-interface ContractBuilderProps {
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-  onContractGenerated?: (contractContent: string) => void;
-}
-
-export function ContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
-  onContractGenerated
-}: ContractBuilderProps) {
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData);
-  };
-
-  const handleContractGenerated = (contract: string) => {
-    setGeneratedContract(contract);
-    setActiveTab("preview");
-    if (onContractGenerated) {
-      onContractGenerated(contract);
-    }
-  };
-
-  if (showSmartContractBuilder) {
-    return (
-      <SmartContractBuilder
-        isOpen={isOpen}
-        onClose={() => {
-          setShowSmartContractBuilder(false);
-          onClose();
-        }}
-        talent={talent}
-        clientName={clientName}
-        onContractGenerated={onContractGenerated}
-      />
-    );
-  }
-
+const ContractBuilder: React.FC = () => {
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
-          <div className="flex justify-between items-center">
-            <TabsList className="grid grid-cols-2">
-              <TabsTrigger value="form">Contract Details</TabsTrigger>
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
-            </TabsList>
-            
-            <div className="flex gap-2">
-              <Button 
-                variant="outline" 
-                size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
-                className="flex gap-1"
-              >
-                <Save className="h-4 w-4" />
-                Templates
-              </Button>
-              
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={() => setShowSmartContractBuilder(true)}
-              >
-                Smart Contract Builder
-              </Button>
-            </div>
-          </div>
-          
-          <TabsContent value="form" className="pt-4">
-            <ContractForm 
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleContractGenerated}
-            />
-          </TabsContent>
-          
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <ContractPreview 
-                contractContent={generatedContract}
-                talent={talent}
-                onClose={onClose}
-                status="ready"
-              />
-            )}
-          </TabsContent>
-        </Tabs>
-        
-        <TemplateManager
-          isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}
-        />
-      </DialogContent>
-    </Dialog>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ContractBuilder</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
-}
+};
+
+export default ContractBuilder;

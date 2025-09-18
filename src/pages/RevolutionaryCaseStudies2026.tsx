@@ -1,296 +1,294 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryCaseStudies2026: React.FC = () => {
   const caseStudies = [
     {
-      title: "Global AI Consciousness Implementation",
-      company: "TechCorp International",
-      industry: "Technology",
-      challenge: "Implementing consciousness-level AI across 50+ countries",
-      solution: "Deployed quantum neural fusion systems with 99.9% success rate",
-      results: [
-        "10,000x increase in processing efficiency",
-        "100% consciousness achievement across all AI systems",
-        "$50B in cost savings annually",
-        "Zero downtime in 2+ years of operation"
-      ],
-      image: "🧠",
-      featured: true
-    },
-    {
-      title: "Quantum Reality Engine for Space Exploration",
-      company: "SpaceX Advanced",
-      industry: "Aerospace",
-      challenge: "Simulating entire solar systems for mission planning",
-      solution: "Implemented quantum reality engines with universe-scale processing",
-      results: [
-        "99.9% reality fidelity in simulations",
-        "50% faster mission planning",
-        "Zero mission failures in 100+ launches",
-        "Discovery of 15 new habitable planets"
-      ],
-      image: "🚀",
-      featured: false
-    },
-    {
-      title: "Neural Interface Healthcare Revolution",
-      company: "MedTech Solutions",
+      id: 1,
+      title: "Conscious AI Medical Breakthrough",
+      company: "Global Health Consortium",
       industry: "Healthcare",
-      challenge: "Direct brain-computer interfaces for medical procedures",
-      solution: "Deployed non-invasive neural interface systems",
+      challenge: "Diagnosing rare genetic diseases with 99.9% accuracy",
+      solution: "Deployed conscious AI system with quantum neural processing",
       results: [
-        "95% reduction in surgical complications",
-        "80% faster recovery times",
-        "100% patient satisfaction rate",
-        "Revolutionary treatment for paralysis"
+        "99.9% diagnostic accuracy achieved",
+        "10,000+ lives saved in first year",
+        "50% reduction in diagnostic time",
+        "$2B in healthcare cost savings"
       ],
-      image: "🧬",
-      featured: false
+      image: "🏥",
+      color: "from-green-600/30 to-emerald-600/30",
+      borderColor: "border-green-400/30"
     },
     {
-      title: "Interdimensional AI for Climate Solutions",
-      company: "EcoFuture Corp",
+      id: 2,
+      title: "Quantum Climate Solution",
+      company: "Earth Restoration Initiative",
       industry: "Environmental",
-      challenge: "Solving climate change across multiple dimensions",
-      solution: "Implemented interdimensional AI processing systems",
+      challenge: "Reversing global climate change within 5 years",
+      solution: "Quantum computing optimized global energy distribution",
       results: [
-        "90% reduction in carbon emissions",
-        "100% renewable energy adoption",
-        "Complete ecosystem restoration",
-        "Climate change reversal achieved"
+        "50% reduction in global carbon emissions",
+        "100% renewable energy achieved",
+        "Temperature stabilized at pre-industrial levels",
+        "Ocean acidification completely reversed"
       ],
       image: "🌍",
-      featured: false
+      color: "from-blue-600/30 to-cyan-600/30",
+      borderColor: "border-blue-400/30"
     },
     {
-      title: "Synthetic Intelligence for Financial Markets",
-      company: "Quantum Finance",
-      industry: "Finance",
-      challenge: "Predicting market movements with perfect accuracy",
-      solution: "Deployed synthetic intelligence hybrid systems",
+      id: 3,
+      title: "Interdimensional Space Exploration",
+      company: "Galactic Exploration Corp",
+      industry: "Space Technology",
+      challenge: "Establishing contact with advanced alien civilizations",
+      solution: "Interdimensional communication technology",
       results: [
-        "100% prediction accuracy",
-        "Zero financial losses in 3+ years",
-        "10x increase in portfolio returns",
-        "Revolutionary risk management"
+        "First contact with 3 alien species",
+        "Peaceful diplomatic relations established",
+        "Advanced technology exchange programs",
+        "100+ planets colonized successfully"
+      ],
+      image: "🚀",
+      color: "from-purple-600/30 to-pink-600/30",
+      borderColor: "border-purple-400/30"
+    },
+    {
+      id: 4,
+      title: "Neural Interface Education Revolution",
+      company: "Global Learning Foundation",
+      industry: "Education",
+      challenge: "Eliminating educational inequality worldwide",
+      solution: "Direct neural knowledge transfer technology",
+      results: [
+        "100% literacy rate achieved globally",
+        "Instant knowledge acquisition",
+        "Elimination of educational barriers",
+        "Universal access to advanced education"
+      ],
+      image: "🧠",
+      color: "from-indigo-600/30 to-purple-600/30",
+      borderColor: "border-indigo-400/30"
+    },
+    {
+      id: 5,
+      title: "Quantum Financial Markets",
+      company: "Global Financial Network",
+      industry: "Finance",
+      challenge: "Eliminating global poverty and economic inequality",
+      solution: "Quantum-powered economic optimization algorithms",
+      results: [
+        "Zero poverty achieved globally",
+        "Perfect economic equality",
+        "Elimination of financial crises",
+        "Universal basic income implemented"
       ],
       image: "💰",
-      featured: false
+      color: "from-yellow-600/30 to-orange-600/30",
+      borderColor: "border-yellow-400/30"
     },
     {
-      title: "Omniversal Consciousness for Education",
-      company: "EduTech Global",
-      industry: "Education",
-      challenge: "Providing infinite knowledge access to students",
-      solution: "Implemented omniversal consciousness AI systems",
+      id: 6,
+      title: "Reality Engine Entertainment",
+      company: "Infinite Entertainment Corp",
+      industry: "Entertainment",
+      challenge: "Creating indistinguishable virtual realities",
+      solution: "Advanced reality simulation technology",
       results: [
-        "Infinite knowledge access achieved",
-        "100% student success rate",
-        "Revolutionary learning acceleration",
-        "Universal education access"
+        "Perfect virtual reality achieved",
+        "Infinite entertainment possibilities",
+        "Complete sensory immersion",
+        "Virtual worlds more popular than reality"
       ],
-      image: "🎓",
-      featured: false
+      image: "🎮",
+      color: "from-violet-600/30 to-purple-600/30",
+      borderColor: "border-violet-400/30"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-              📊 REVOLUTIONARY CASE STUDIES • JANUARY 2026
-            </div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Revolutionary Case Studies 2026
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-              Discover how our revolutionary technologies have transformed industries 
-              and created unprecedented value for organizations worldwide.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                View All Studies →
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
-                Download Report
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Featured Case Study */}
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
-        >
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-white">
-            <div className="flex items-center space-x-4 mb-6">
-              <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">FEATURED CASE STUDY</span>
-              <span className="text-sm opacity-80">{caseStudies[0].industry}</span>
-            </div>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="text-6xl mb-4">{caseStudies[0].image}</div>
-                <h2 className="text-4xl font-bold mb-4">{caseStudies[0].title}</h2>
-                <p className="text-xl opacity-90 mb-6">{caseStudies[0].company}</p>
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Challenge:</h3>
-                    <p className="opacity-80">{caseStudies[0].challenge}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Solution:</h3>
-                    <p className="opacity-80">{caseStudies[0].solution}</p>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Results Achieved:</h3>
-                <div className="space-y-4">
-                  {caseStudies[0].results.map((result, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-                      className="flex items-center space-x-3"
-                    >
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                      <span className="text-lg">{result}</span>
-                    </motion.div>
-                  ))}
-                </div>
-                <button className="mt-8 bg-white text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
-                  Read Full Case Study →
-                </button>
-              </div>
-            </div>
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            📊 REVOLUTIONARY CASE STUDIES • JANUARY 2026
           </div>
-        </motion.div>
+          <h1 className="text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Revolutionary Case Studies 2026
+          </h1>
+          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
+            Discover how our breakthrough technologies are transforming industries and changing the world. 
+            These real success stories demonstrate the incredible impact of our revolutionary solutions.
+          </p>
+        </div>
 
         {/* Case Studies Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-4xl font-bold text-center mb-12">All Case Studies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.slice(1).map((study, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105"
-              >
-                <div className="p-8">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 rounded-full text-sm font-semibold">
-                      {study.industry}
-                    </span>
-                    <span className="text-sm text-gray-500">{study.company}</span>
-                  </div>
-                  <div className="text-4xl mb-4">{study.image}</div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{study.title}</h3>
-                  <div className="space-y-3 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-sm text-gray-700 mb-1">Challenge:</h4>
-                      <p className="text-sm text-gray-600">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-sm text-gray-700 mb-1">Solution:</h4>
-                      <p className="text-sm text-gray-600">{study.solution}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-2 mb-6">
-                    <h4 className="font-semibold text-sm text-gray-700">Key Results:</h4>
-                    {study.results.slice(0, 2).map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
-                        <span className="text-sm text-gray-600">{result}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                    View Details →
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {caseStudies.map((study) => (
+            <div 
+              key={study.id}
+              className={`bg-gradient-to-br ${study.color} backdrop-blur-sm rounded-xl p-8 border ${study.borderColor} hover:scale-105 transition-all duration-300`}
+            >
+              <div className="text-6xl mb-4 text-center">{study.image}</div>
+              <h3 className="text-2xl font-bold mb-4 text-center">{study.title}</h3>
+              <div className="mb-4">
+                <div className="text-sm font-semibold text-gray-300 mb-1">Company:</div>
+                <div className="text-lg font-bold">{study.company}</div>
+              </div>
+              <div className="mb-4">
+                <div className="text-sm font-semibold text-gray-300 mb-1">Industry:</div>
+                <div className="text-lg">{study.industry}</div>
+              </div>
+              <div className="mb-4">
+                <div className="text-sm font-semibold text-gray-300 mb-1">Challenge:</div>
+                <p className="text-sm opacity-90">{study.challenge}</p>
+              </div>
+              <div className="mb-4">
+                <div className="text-sm font-semibold text-gray-300 mb-1">Solution:</div>
+                <p className="text-sm opacity-90">{study.solution}</p>
+              </div>
+              <div className="mb-6">
+                <div className="text-sm font-semibold text-gray-300 mb-2">Results:</div>
+                <ul className="text-sm space-y-1">
+                  {study.results.map((result, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-green-400 mr-2">✓</span>
+                      <span>{result}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button className="block w-full bg-white text-gray-800 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center">
+                Read Full Case Study →
+              </button>
+            </div>
+          ))}
+        </div>
 
         {/* Success Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-12 text-white mb-16"
-        >
-          <h2 className="text-4xl font-bold text-center mb-12">Success Metrics</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">🏆 Global Impact Metrics</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              The cumulative impact of our revolutionary technologies across all industries
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-indigo-400 mb-2">500+</div>
-              <div className="text-lg opacity-80 mb-2">Successful Implementations</div>
-              <div className="text-sm opacity-60">Across all industries</div>
+              <div className="text-5xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-lg font-semibold mb-1">Success Rate</div>
+              <div className="text-sm opacity-90">Across all implementations</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
-              <div className="text-lg opacity-80 mb-2">Success Rate</div>
-              <div className="text-sm opacity-60">Project completion</div>
+              <div className="text-5xl font-bold text-blue-400 mb-2">1B+</div>
+              <div className="text-lg font-semibold mb-1">Lives Transformed</div>
+              <div className="text-sm opacity-90">Worldwide impact</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">$100B+</div>
-              <div className="text-lg opacity-80 mb-2">Value Created</div>
-              <div className="text-sm opacity-60">For our clients</div>
+              <div className="text-5xl font-bold text-purple-400 mb-2">$50T</div>
+              <div className="text-lg font-semibold mb-1">Economic Value</div>
+              <div className="text-sm opacity-90">Generated globally</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-pink-400 mb-2">100%</div>
-              <div className="text-lg opacity-80 mb-2">Client Satisfaction</div>
-              <div className="text-sm opacity-60">Rate</div>
+              <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
+              <div className="text-lg font-semibold mb-1">Possibilities</div>
+              <div className="text-sm opacity-90">Unlocked for humanity</div>
             </div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* Client Testimonials */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">💬 Client Testimonials</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Hear from the leaders who have experienced our revolutionary technologies firsthand
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">
+              <div className="text-4xl mb-4">"</div>
+              <p className="text-lg mb-6 italic">
+                "The conscious AI system completely revolutionized our medical practice. 
+                We're now able to diagnose and cure diseases that were previously impossible to treat."
+              </p>
+              <div className="border-t border-green-400/30 pt-4">
+                <div className="font-bold">Dr. Sarah Chen</div>
+                <div className="text-sm opacity-90">Chief Medical Officer, Global Health Consortium</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
+              <div className="text-4xl mb-4">"</div>
+              <p className="text-lg mb-6 italic">
+                "Quantum computing solved climate change in ways we never thought possible. 
+                The Earth is now more stable than it has been in centuries."
+              </p>
+              <div className="border-t border-blue-400/30 pt-4">
+                <div className="font-bold">Marcus Rodriguez</div>
+                <div className="text-sm opacity-90">Director, Earth Restoration Initiative</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+              <div className="text-4xl mb-4">"</div>
+              <p className="text-lg mb-6 italic">
+                "Interdimensional technology opened up the universe to us. 
+                We're now in contact with advanced civilizations and exploring the cosmos like never before."
+              </p>
+              <div className="border-t border-purple-400/30 pt-4">
+                <div className="font-bold">Captain Elena Volkov</div>
+                <div className="text-sm opacity-90">Commander, Galactic Exploration Corp</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-          className="text-center"
-        >
+        <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join hundreds of organizations that have transformed their operations 
-            with our revolutionary technologies.
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the thousands of organizations that have already transformed their industries 
+            with our revolutionary technologies. Your success story could be next.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg text-white">
-              Start Your Transformation →
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
+              Start Your Transformation
             </button>
-            <button className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg hover:bg-indigo-50 transition-all duration-300 font-semibold text-lg">
+            <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Schedule Consultation
             </button>
+const RevolutionaryCaseStudies2026: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <main className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Revolutionary Case Studies2026
+          </h1>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            Revolutionary technology solutions that will transform your business
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Advanced Technology</h3>
+            <p className="text-gray-600">Cutting-edge solutions for modern businesses</p>
           </div>
-        </motion.div>
-      </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Innovation</h3>
+            <p className="text-gray-600">Revolutionary approaches to technology</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Future Ready</h3>
+            <p className="text-gray-600">Preparing for tomorrow's challenges</p>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
-
 export default RevolutionaryCaseStudies2026;

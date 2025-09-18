@@ -1,18 +1,22 @@
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
-}
-export default function HelpdeskPlatform(props: any) {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="HelpdeskPlatform - Zion Tech Group" description="Professional HelpdeskPlatform services by Zion Tech Group"   />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">HelpdeskPlatform</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional HelpdeskPlatform services to help your business grow.
-        </p>
-      </div>
-  )
-}
-}""
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-</div>
+const HelpdeskPlatform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>HelpdeskPlatform | Zion Tech Group</title>
+        <meta name="description" content="HelpdeskPlatform - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">HelpdeskPlatform</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HelpdeskPlatform;

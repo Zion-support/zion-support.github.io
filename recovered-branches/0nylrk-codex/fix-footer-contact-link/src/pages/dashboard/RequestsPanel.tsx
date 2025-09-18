@@ -1,155 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-  const {
-    quotes,
-    unreadCount,
-    isLoading,
-    statusFilter,
-    setStatusFilter,
-    archiveFilter,
-    setArchiveFilter,
-    markAsViewed,
-    markAsResponded,
-    toggleArchive
-
+const RequestsPanel: React.FC = () => {
   return (
-    <ProtectedRoute>
-      <div>
-        <Header />
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
-          <div className="container mx-auto">
-            <RequestsHeader
-
-
-
-
-              unreadCount={unreadCount}
-              statusFilter={statusFilter}
-              setStatusFilter={setStatusFilter}
-              archiveFilter={archiveFilter}
-              setArchiveFilter={setArchiveFilter}
-                <QuoteRequestsList
-                  quotes={activeQuotes}
-                  isLoading={isLoading}
-                  isArchived={false}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
-                  onToggleArchive={toggleArchive}
-                <QuoteRequestsList
-                  quotes={archivedQuotes}
-                  isLoading={isLoading}
-                  isArchived={true}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
-                  onToggleArchive={toggleArchive}
-        {/* Quote Details Modal */}
-        <QuoteDetails
-          quote={selectedQuote}
-          isOpen={showDetails}
-
-
-
-
-          }}
-        />
-        <Footer />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>RequestsPanel | Zion Tech Group</title>
+        <meta name="description" content="RequestsPanel - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">RequestsPanel</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </ProtectedRoute>
-  )
-}
-
-            setSelectedQuote(null);
-          }}
-        />;
-
-        <Footer />;
-      </div>;
-    </ProtectedRoute>;
+    </div>
   );
-}
-    toggle_archive;
-  } = useTalentQuotes ();
-;
-  const handleViewDetails = (quote: QuoteRequest) =>: any {
-    setSelectedQuote (quote);
-    setShowDetails (true),
-    // If status is new, mark as viewed;
-    // Check condition
-if ( {) {
-  $2
-}
-      markAsViewed (quote.id);
-    }
-  }
-;
-  // Filter quotes by archive status;
-  const active_quotes = quotes.filter (q => !q.is_archived);
-  const archived_quotes = quotes.filter (q => q.is_archived);
-;
-  return (
-    <ProtectedRoute>;
-      <div>;
-        <Header />;
-        <div className="min - h-screen bg - zion - blue px - 4 py - 8">;
-          <div className="container mx - auto">;
-            <RequestsHeader;
-              unread_count={unread_count}
-              status_filter={status_filter}
-              setStatusFilter={setStatusFilter}
-              archive_filter={archive_filter}
-              setArchiveFilter={setArchiveFilter}
-            />;
-            {/* Main Content */}
-            <Tabs default_value="active" className="mb - 6">;
-              <TabsList className="bg - zion - blue - dark border border - zion - blue - light">;
-                <TabsTrigger value="active">Active Requests</TabsTrigger>;
-                <TabsTrigger value="archived">Archived</TabsTrigger>;
-              </TabsList>;
-              <TabsContent value="active">;
-                <QuoteRequestsList;
-                  quotes={active_quotes}
-                  is_loading={is_loading}
-                  is_archived={false}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
-                  onToggleArchive={toggle_archive}
-                />;
-              </TabsContent>;
-              <TabsContent value="archived">;
-                <QuoteRequestsList;
-                  quotes={archived_quotes}
-                  is_loading={is_loading}
-                  is_archived={true}
-                  onViewDetails={handleViewDetails}
-                  onMarkAsResponded={markAsResponded}
-                  onToggleArchive={toggle_archive}
-                />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-        </div>;
-        {/* Quote Details Modal */}
-        <QuoteDetails;
-          quote={selected_quote}
-          is_open={show_details}
-          on_close={() => {
-            setShowDetails (false);
-            setSelectedQuote (null);
-          }}
-        />;
-        <Footer />;
-      </div>;
-    </ProtectedRoute>);
-}
+};
 
-          onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null);
-          }}
-        />
-        
-        <Footer />
-      </div>
-    </ProtectedRoute>
-  );
-}
+export default RequestsPanel;

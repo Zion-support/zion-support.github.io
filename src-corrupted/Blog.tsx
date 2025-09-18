@@ -1,22 +1,11 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
 
 const Blog: React.FC = () => {
   return (
-    <>
-      <SEO
-        title="Blog | Zion Tech Group"
-        description="Blog and articles from Zion Tech Group"
-        keywords="blog, articles, news, Zion Tech Group"
-        canonical="/blog"
-      />
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-        <div className="text-center text-white">
-          <h1 className="text-4xl font-bold mb-4">Blog</h1>
-          <p className="text-xl text-slate-300">This page is being updated with new content.</p>
-        </div>
-      </div>
-    </>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Blog</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
 

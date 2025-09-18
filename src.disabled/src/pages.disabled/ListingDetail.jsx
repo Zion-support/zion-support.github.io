@@ -37,6 +37,8 @@ export default function ListingDetail({ }: ListingDetailProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ListingDetail.jsx
 }
 }

@@ -1,28 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const CustomerSupportChatbot: NextPage = () => {
+const customer-support-chatbot: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>CustomerSupportChatbot - Zion Tech Solutions</title>
-        <meta name="description" content="CustomerSupportChatbot service" />
-      </Head>
-      <main className="space-y-4">
-        <h1>CustomerSupportChatbot</h1>
-        <p>Service details coming soon...</p>
-        <UseTokensButton serviceId="customer-support-chatbot" defaultType="premium_support" />
-        <Link href="/services">Back to Services</Link>
-      </main>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>customer-support-chatbot | Zion Tech Group</title>
+        <meta name="description" content="customer-support-chatbot - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">customer-support-chatbot</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-  )
+  );
+};
 
-}
-export default CustomerSupportChatbot;
-
-},
-export default CustomerSupportChatbot,
-},
-},
-export default CustomerSupportChatbot,
-},
-
+export default customer-support-chatbot;
