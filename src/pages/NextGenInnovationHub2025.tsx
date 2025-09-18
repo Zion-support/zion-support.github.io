@@ -6,11 +6,10 @@ const NextGenInnovationHub2025: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-<<<<<<< HEAD
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION HUB • JANUARY 2025
           </div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             Next-Gen Innovation Hub 2025
           </h1>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
@@ -210,7 +209,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             </button>
           </div>
         </div>
-=======
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION HUB • JANUARY 2025
           </div>
@@ -451,7 +449,6 @@ const NextGenInnovationHub2025: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> da6eea862eb0 (Add revolutionary new content and advertising components)
       </div>
     </div>
   );

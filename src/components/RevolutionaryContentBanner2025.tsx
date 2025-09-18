@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner2025: React.FC = () => {
@@ -135,13 +134,6 @@ const RevolutionaryContentBanner2025: React.FC = () => {
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-white/40 rounded-full animate-ping delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 w-1.5 h-1.5 bg-white/20 rounded-full animate-ping delay-2000"></div>
       </div>
-=======
-import React from 'react';
-
-const RevolutionaryContentBanner2025: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-sm font-bold mb-6 animate-pulse">

@@ -2,8 +2,7 @@ import React from 'react';
 
 const RevolutionaryAIServices2025: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
@@ -143,9 +142,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
             </ul>
             <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
               See the World →
-=======
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -292,12 +288,10 @@ const RevolutionaryAIServices2025: React.FC = () => {
             </div>
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Start Innovation
->>>>>>> da6eea862eb0 (Add revolutionary new content and advertising components)
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Success Stories */}
         <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -351,7 +345,8 @@ const RevolutionaryAIServices2025: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
               Schedule Consultation
             </button>
-=======
+        </div>
+
         {/* Success Metrics */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
@@ -409,7 +404,6 @@ const RevolutionaryAIServices2025: React.FC = () => {
               </p>
               <div className="text-yellow-400 font-bold">★★★★★</div>
             </div>
->>>>>>> da6eea862eb0 (Add revolutionary new content and advertising components)
           </div>
         </div>
       </div>
