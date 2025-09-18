@@ -1,8 +1,8 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-19T00:45:00Z (run-12)
+# Updated: Fixed for Vite React SPA deployment at 2025-01-19T12:00:00Z
 [build]
   base = "."
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  publish = "dist"
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-19T00:45:00Z (run-12)
 
