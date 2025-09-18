@@ -1,4 +1,7 @@
 
+import React, { lazy, useState, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 // Core pages
 const Home = lazy(() => import('./pages/Home'));
 const ServicesPage = lazy(() => import('./pages/Services'));
