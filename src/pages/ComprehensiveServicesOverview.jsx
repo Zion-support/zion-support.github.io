@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Search, Users, Zap, Shield, Code, BarChart3, Bot, Building, CheckCircle, Sparkles, Brain, Database, Cloud, Smartphone, FileText, Settings, DollarSign, Clock, Target, Cpu, Heart, Eye, ExternalLink, Play, BookOpen, Mail, Phone, MapPin } from 'lucide-react';

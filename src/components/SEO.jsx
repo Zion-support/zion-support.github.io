@@ -1,24 +1,5 @@
 import * as React from 'react';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'profile' | 'product';
-  siteName?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  canonical?: string;
-  robots?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  section?: string;
-  tags?: string[];
-}
-
 export function SEO({
   title = 'Zion Tech Group - The Future of Tech Marketplace',
   description = 'Connect with AI experts, discover innovative services, and accelerate your digital transformation with Zion Tech Group\'s comprehensive platform.',
@@ -36,7 +17,7 @@ export function SEO({
   nofollow = false,
   section,
   tags = []
-}: SEOProps) {
+}) {
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const robotsContent = [
     noindex ? 'noindex' : 'index',

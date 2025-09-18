@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { SEO } from '../components/SEO.jsx';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';

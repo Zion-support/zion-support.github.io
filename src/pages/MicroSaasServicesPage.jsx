@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
 import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
+import { SEO } from '../components/SEO.jsx';
+import { Button } from '../components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '../components/ui/badge';
 const categories = [
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"/>, count: MICRO_SAAS_SERVICES.length },
     { id: 'AI Services', name: 'AI Services', icon: <Zap className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('AI Services').length },

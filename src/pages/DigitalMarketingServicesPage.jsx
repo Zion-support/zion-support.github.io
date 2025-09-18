@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/badge';
 import { Link } from 'react-router-dom';
 import { Search, TrendingUp, Share2, FileText, Mail, BarChart3, CheckCircle, Users, Globe, Eye, Video, MessageSquare, Zap, Monitor, ShoppingCart } from 'lucide-react';
 const MarketingServices = [

@@ -1,8 +1,8 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { SEO } from '../components/SEO.jsx';
+import { GradientHeading } from '../components/GradientHeading';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
