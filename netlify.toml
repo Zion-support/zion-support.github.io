@@ -1,11 +1,11 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T17:20:00Z
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T18:05:00Z
 [build]
   # Build Vite app from repo root
-  # No-op change to trigger Netlify deploy at 2025-09-18T17:05:00Z
+  # No-op change to trigger Netlify deploy at 2025-09-18T18:05:00Z
   command = "npm ci --no-audit --no-fund && npm run build:netlify"
   publish = "dist"
   command_timeout = "30m"
-  # No-op: trigger Netlify rebuild at 2025-09-18T17:20:00Z
+  # No-op: trigger Netlify rebuild at 2025-09-18T18:05:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -221,4 +221,4 @@
 
 ## Note: Do not add SPA fallback for Next.js; plugin handles routing.
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T17:20:00Z
+# No-op: trigger deploy 2025-09-18T18:05:00Z
