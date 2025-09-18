@@ -7,6 +7,10 @@ import ScrollToTop from './ScrollToTop';
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+import AnalyticsDashboard from './components/AnalyticsDashboard';
 import './styles/accessibility.css';
 import AI2026NextGenContentShowcase from './components/AI2026NextGenContentShowcase';
 import AbsoluteTechShowcase2031 from './components/AbsoluteTechShowcase2031';
@@ -142,6 +146,10 @@ export default function App(): React.JSX.Element {
             <Footer />
             <PerformanceOptimizer />
             <AccessibilityEnhancer />
+            <PerformanceMonitor />
+            <SecurityEnhancer />
+            <UserExperienceEnhancer />
+            <AnalyticsDashboard />
           </Router>
         </ThemeProvider>
       </WhitelabelProvider>
