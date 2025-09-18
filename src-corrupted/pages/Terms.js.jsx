@@ -1,16 +1,22 @@
 import React from 'react';
-import {SEO} from "@/components/SEO";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import TermsOfService from "@/legal/TermsOfService";
-export default function Terms
-export {Terms}() {return (<>
-      <SEO title="Terms of Service" description="The terms and conditions for using the Zion platform." canonical="https://ziontechgroup.com/terms" />
-      <Header  />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4">
-          <TermsOfService  />
+import { Helmet } from 'react-helmet-async';
+
+const Terms.js: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Terms.js | Zion Tech Group</title>
+        <meta name="description" content="Terms.js - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Terms.js</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
-      </main>
-      <Footer  />
-    </>)}
+      </div>
+    </div>
+  );
+};
+
+export default Terms.js;

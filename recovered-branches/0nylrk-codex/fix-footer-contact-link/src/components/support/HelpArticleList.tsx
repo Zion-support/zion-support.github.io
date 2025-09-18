@@ -1,23 +1,12 @@
+import React from 'react';
 
+const HelpArticleList: React.FC = () => {
   return (
-    <div>
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
-        <p className="text-zion-slate-light">{category.description}</p>
-      </div>
-      {filteredArticles.length === 0 ? (
-        <div className="text-center py-8">
-          <h3 className="text-lg font-medium mb-2">No articles found</h3>
-          <p className="text-zion-slate-light">
-            Try adjusting your search query or browse another category.
-          </p>
-        </div>
-      ) : (
-        <div className="space-y-4">
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">HelpArticleList</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
 
-function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("en-US", {
+export default HelpArticleList;

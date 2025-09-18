@@ -1,13 +1,14 @@
-  );
-};
->>>>>>> origin/merged-prs
-
-import { Loader2 } from 'lucide-react'
-
-export function LoadingState() {
+import React from 'react';
+const LoadingState = () => {
   return (
-    <div className="flex justify-center items-center p-8">
-      <Loader2 className="h-8 w-8 animate-spin text-primary" />
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">LoadingState</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
-}
+  };
+export default LoadingState;

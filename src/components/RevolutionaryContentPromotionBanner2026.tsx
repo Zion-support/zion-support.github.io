@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Zap, Brain, Target, TrendingUp, Users, Shield } from 'lucide-react';
+import { Link }  from 'react-router-dom';
+import { ArrowRight, Star, Zap, Brain, Target, TrendingUp, Users, Shield }  from 'lucide-react';
 
 const RevolutionaryContentPromotionBanner2026 = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-      {/* Animated Background */}
+      {/* Animated Background */};
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23A855F7" fill-opacity="0.1"%3E%3Cpath d="M50 50c0-27.614-22.386-50-50-50v100c27.614 0 50-22.386 50-50z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%2522100%2522%2520height%253D%2522100%2522%2520viewBox%253D%25220%25200%2520100%2520100%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523A855F7%2522%2520fill-opacity%253D%25220.1%2522%253E%253Cpath%2520d%253D%2522M50%252050c0-27.614-22.386-50-50-50v100c27.614%25200%252050-22.386%252050-50z%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header */}
+        {/* Header */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg font-bold rounded-full mb-8 animate-pulse">
             <Star className="h-5 w-5 mr-2" />
@@ -31,32 +31,32 @@ const RevolutionaryContentPromotionBanner2026 = () => {
           </p>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats Section */};
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {[
             { number: "10,000x", label: "Faster Processing", icon: Zap },
             { number: "99.9%", label: "Accuracy Rate", icon: Target },
             { number: "∞", label: "Parallel Operations", icon: Brain },
-            { number: "24/7", label: "Autonomous Operations", icon: Shield }
+            { number: "24/7", label: "Autonomous Operations", icon: Shield };
           ].map((stat, index) => (
             <div
-              key={index}
+              key={index};
               className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 mb-4">
                 <stat.icon className="h-6 w-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">
-                {stat.number}
+                {stat.number};
               </div>
               <div className="text-sm text-gray-300">
-                {stat.label}
+                {stat.label};
               </div>
             </div>
-          ))}
+          ))};
         </div>
 
-        {/* Featured Content Grid */}
+        {/* Featured Content Grid */};
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {[
             {
@@ -84,16 +84,16 @@ const RevolutionaryContentPromotionBanner2026 = () => {
               link: "/quantum-ai-revolution-2026",
               image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
               gradient: "from-purple-500 to-pink-500"
-            }
+            };
           ].map((content, index) => (
             <div
-              key={index}
+              key={index};
               className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={content.image}
-                  alt={content.title}
+                  src={content.image};
+                  alt={content.title};
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -106,23 +106,23 @@ const RevolutionaryContentPromotionBanner2026 = () => {
               
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                  {content.title}
+                  {content.title};
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  {content.description}
+                  {content.description};
                 </p>
                 
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {content.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                      {feature}
+                      {feature};
                     </div>
-                  ))}
+                  ))};
                 </div>
                 
                 <Link
-                  to={content.link}
+                  to={content.link};
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 group-hover:scale-105"
                 >
                   Explore Now
@@ -130,57 +130,57 @@ const RevolutionaryContentPromotionBanner2026 = () => {
                 </Link>
               </div>
             </div>
-          ))}
+          ))};
         </div>
 
-        {/* Additional Content Showcase */}
+        {/* Additional Content Showcase */};
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {[
             {
               title: "Advanced AI Consciousness 2026",
               description: "AI with genuine consciousness and emotional intelligence",
               link: "/advanced-ai-consciousness-2026",
-              icon: Brain,
+              icon: "Brain",
               color: "from-blue-500 to-cyan-500"
             },
             {
               title: "Autonomous Business Operations",
               description: "Complete business automation with self-managing AI systems",
               link: "/autonomous-business-operations-2026",
-              icon: Target,
+              icon: "Target",
               color: "from-green-500 to-emerald-500"
             },
             {
               title: "Quantum Computing Guide 2026",
               description: "Master quantum computing and its applications",
               link: "/quantum-computing-guide-2026",
-              icon: Zap,
+              icon: "Zap",
               color: "from-purple-500 to-pink-500"
-            }
+            };
           ].map((item, index) => (
             <Link
-              key={index}
-              to={item.link}
+              key={index};
+              to={item.link};
               className="group bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 text-center"
             >
               <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${item.color} mb-4`}>
                 <item.icon className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                {item.title}
+                {item.title};
               </h3>
               <p className="text-gray-300 text-sm mb-4">
-                {item.description}
+                {item.description};
               </p>
               <div className="flex items-center justify-center text-purple-400 text-sm font-semibold group-hover:text-purple-300">
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
-          ))}
+          ))};
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section */};
         <div className="text-center bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-12">
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -208,6 +208,5 @@ const RevolutionaryContentPromotionBanner2026 = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default RevolutionaryContentPromotionBanner2026;

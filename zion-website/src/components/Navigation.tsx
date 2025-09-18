@@ -9,7 +9,6 @@ const navLinks = [
 	{ name: 'Research', href: '/research' },
 	{ name: 'Updates', href: '/updates', badge: 'New' },
 ]
-
 export default function Navigation() {
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">

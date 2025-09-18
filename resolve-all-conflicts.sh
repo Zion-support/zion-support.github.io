@@ -1,48 +1,65 @@
 #!/bin/bash
 
-echo "🔧 Resolving all merge conflicts systematically..."
+# Script to resolve all merge conflicts automatically
+set -e
 
-# Find all files with merge conflict markers
-echo "📁 Searching for files with merge conflicts..."
-conflict_files=$(grep -l "<<<<<<< HEAD" -r . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null)
+echo "🔧 Resolving all merge conflicts..."
 
-if [ -z "$conflict_files" ]; then
-    echo "✅ No merge conflicts found!"
-    exit 0
-fi
+# Get all files with conflicts
+CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
 
-echo "⚠️  Found $(echo "$conflict_files" | wc -l) files with merge conflicts"
+echo "📋 Found conflicted files:"
+echo "$CONFLICTED_FILES"
 
-# Process each file
-for file in $conflict_files; do
-    echo "🔧 Processing: $file"
+# Function to resolve conflicts in a file
+resolve_conflicts() {
+    local file="$1"
+    echo "🔧 Resolving conflicts in: $file"
     
-    # Create backup
-    cp "$file" "$file.backup.$(date +%s)"
+    if [ ! -f "$file" ]; then
+        echo "⚠️  File $file does not exist, skipping..."
+        return
+    fi
     
-    # Remove all merge conflict markers and keep the first version (HEAD)
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> .*$/d' "$file"
+    # For critical files, keep main version (theirs)
+    if [[ "$file" == "package.json" || "$file" == "package-lock.json" || "$file" == "netlify.toml" || "$file" == "yarn.lock" ]]; then
+        echo "📦 Critical file, keeping main version..."
+        git checkout --theirs "$file"
+        return
+    fi
     
-    # Remove any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD/d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
+    # For deleted files, remove them
+    if [[ "$file" =~ .*\.(tsx|jsx|ts|js)$ ]] && [[ "$file" =~ (deleted|remove|cleanup) ]]; then
+        echo "🗑️  Removing deleted file: $file"
+        git rm "$file" 2>/dev/null || rm -f "$file"
+        return
+    fi
     
-    echo "✅ Resolved conflicts in: $file"
+    # For most other files, keep our version (ours)
+    echo "📝 Keeping our version of: $file"
+    git checkout --ours "$file" 2>/dev/null || {
+        echo "⚠️  Could not checkout ours for $file, trying to resolve manually..."
+        
+        # Remove conflict markers manually
+        sed -i '/<<<<<<< HEAD/d' "$file"
+        sed -i '/=======/d' "$file"
+        sed -i '/>>>>>>> [^\n]*/d' "$file"
+    }
+}
+
+# Process each conflicted file
+for file in $CONFLICTED_FILES; do
+    if [ -n "$file" ]; then
+        resolve_conflicts "$file"
+    fi
 done
 
-echo "🎉 All merge conflicts resolved!"
-echo "📝 Files processed:"
-echo "$conflict_files"
+# Add all resolved files
+echo "📝 Adding resolved files..."
+git add .
 
-# Check if any conflicts remain
-remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | wc -l)
+# Commit the resolved conflicts
+echo "💾 Committing resolved conflicts..."
+git commit -m "Resolve merge conflicts - $(date)"
 
-if [ "$remaining_conflicts" -eq 0 ]; then
-    echo "✅ No remaining conflicts found!"
-else
-    echo "⚠️  $remaining_conflicts conflicts still remain"
-    echo "🔍 Remaining conflicts:"
-    grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.md" --include="*.json" 2>/dev/null | head -10
-fi
+echo "✅ All conflicts resolved and committed!"

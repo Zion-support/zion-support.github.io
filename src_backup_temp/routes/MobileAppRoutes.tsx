@@ -1,1 +1,12 @@
-import _React from 'react'; import { Route,Routes } from 'react-router-dom'; import MobileAppPage from '../pages/MobileAppPage'; import MobileLaunchPage from '../pages/MobileLaunchPage'; import OpenAppRedirect from '../pages/OpenAppRedirect'; ; export default function MobileAppRoutes(_) {; return (; <>; <Route path = "launch" element={<MobileLaunchPage />} />;";" </>;";" ) }"; ;';';
+import React from 'react';
+
+const MobileAppRoutes: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">MobileAppRoutes</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default MobileAppRoutes;

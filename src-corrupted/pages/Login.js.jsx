@@ -1,44 +1,22 @@
-import React, {useState} from 'react';
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-export default function Login
-export {Login}() {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const {dispatch} = useCart();
-  const reduxDispatch = useDispatch();
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  useEffect(() => {
-    // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
-    const params = new URLSearchParams(location.search);
-    const token = params.get('token');
-    if (token) {
-      safeStorage.setItem('zion_token', token);
-      // Clear token from URL to prevent re-processing
-      router(location.pathname, { replace: true })}
-  }, [location.search, location.pathname, navigate]);
+const Login.js: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Login.js | Zion Tech Group</title>
+        <meta name="description" content="Login.js - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Login.js</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-  useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
-      const next = new URLSearchParams(location.search).get('next') || '/dashboard';
-      router(next, { replace: true })}
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
-
-  // Render LoginContent if not authenticated and auth is not loading
-  if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent  />
-      </ErrorBoundary>
-    )}
-
-  // Optional: Render a loading indicator while isLoading is true
-  if (isLoading) {return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component}
-
-  // If authenticated and isLoading is false, the useEffect above should have navigated.
-  // Return null or a minimal layout if needed, though direct navigation is preferred.
-  return null}
+export default Login.js;

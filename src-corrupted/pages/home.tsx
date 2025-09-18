@@ -1,41 +1,22 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
-const Home: Reac t.FC = () => {
-  return (<>
-      <SEO title="Zion Tech Group - Leading Technology Solutions"
-        description="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
-       />
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md: tex t-7xl font-bold text-white mb-6">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md: tex t-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
-              cloud infrastructure, and digital transformation services.</p>
-            <div className="flex flex-col sm: fle x-row gap-4 justify-center">
-              <a 
-                href="/services" 
-                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover: b g-blue-50 transition-colors"
-              >
-                Our Services
-              </a>
-              <a 
-                href="/contact" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: b g-white hover: tex t-blue-900 transition-colors"
-              >
-                Get Started
-              </a>
-            </div>
-          </div>
-        </section>
+const home: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>home | Zion Tech Group</title>
+        <meta name="description" content="home - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">home</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Home;
-
-</SEO>
+export default home;

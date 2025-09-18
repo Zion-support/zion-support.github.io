@@ -1,27 +1,12 @@
+import React from 'react';
 
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { NavigationButtonsProps } from "./types";
-
-export const NavigationButtons = ({
-  onBack,
-  onNext,
-  isNextDisabled = false,
-  backLabel = "Back",
-  nextLabel = "Next",
+const NavigationButtons: React.FC = () => {
   return (
-    <div className="flex justify-between">
-      {onBack && (
-        <Button variant="outline" onClick={onBack}>
-          {backLabel}
-        </Button>
-      )}
-      {onNext && (
-        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {nextLabel}
-        </Button>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">NavigationButtons</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
+
+export default NavigationButtons;

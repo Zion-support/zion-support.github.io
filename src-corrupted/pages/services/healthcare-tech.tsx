@@ -1,23 +1,22 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const HealthcareTechServices: Reac t.FC = () => {
+const healthcare-tech: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white py-20">
-      <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Healthcare Technology Solutions</h1>
-        <p className="text-lg text-gray-600 mb-8">
-          HIPAA-ready data platforms, AI diagnostics, and patient experience solutions
-          built for security, reliability, and compliance.
-        </p>
-        <ul className="list-disc pl-6 space-y-2 text-gray-700">
-          <li>AI predictive analytics and triage</li>
-          <li>Secure interoperability and FHIR integration</li>
-          <li>Patient engagement and experience platforms</li>
-          <li>Compliance automation and audit tooling</li>
-        </ul>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>healthcare-tech | Zion Tech Group</title>
+        <meta name="description" content="healthcare-tech - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">healthcare-tech</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
   );
 };
 
-export default HealthcareTechServices;
+export default healthcare-tech;

@@ -1,164 +1,107 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive merge conflict resolution and PR merging process..."
+echo "=== Resolving Merge Conflicts and Merging PRs ==="
 
-# Function to resolve merge conflicts
-resolve_conflicts() {
-    echo "📋 Resolving merge conflicts..."
+# Function to clean up merge conflict markers
+cleanup_conflicts() {
+    echo "Cleaning up merge conflict markers..."
     
-    # Remove deleted files that are causing conflicts
-    echo "🗑️ Removing deleted files..."
-    git rm dist/index.html 2>/dev/null || true
-    git rm src/components/InteractiveTechShowcase2028.tsx 2>/dev/null || true
-    
-    # For files with conflicts, we'll use our version (HEAD) as the primary
-    echo "🔧 Resolving file conflicts using our version..."
-    
-    # Resolve App.tsx conflicts by using our version
-    git checkout --ours App.tsx
-    git add App.tsx
-    
-    # Resolve component conflicts
-    git checkout --ours src/components/RevolutionaryAdBanner2025.tsx
-    git add src/components/RevolutionaryAdBanner2025.tsx
-    
-    git checkout --ours src/components/RevolutionaryContentBanner2025.tsx
-    git add src/components/RevolutionaryContentBanner2025.tsx
-    
-    git checkout --ours src/components/UltimateContentBanner2025.tsx
-    git add src/components/UltimateContentBanner2025.tsx
-    
-    # Resolve page conflicts
-    git checkout --ours src/pages/AISolutionsComprehensive2025.tsx
-    git add src/pages/AISolutionsComprehensive2025.tsx
-    
-    git checkout --ours src/pages/NextGenInnovationHub2025.tsx
-    git add src/pages/NextGenInnovationHub2025.tsx
-    
-    git checkout --ours src/pages/RevolutionaryTechBreakthrough2025.tsx
-    git add src/pages/RevolutionaryTechBreakthrough2025.tsx
-    
-    git checkout --ours src/pages/UltimateTechRevolution2025.tsx
-    git add src/pages/UltimateTechRevolution2025.tsx
-    
-    echo "✅ Merge conflicts resolved"
-}
-
-# Function to merge all open PRs
-merge_all_prs() {
-    echo "🔄 Starting bulk PR merge process..."
-    
-    # Get list of all remote branches (excluding main)
-    echo "📋 Getting list of remote branches..."
-    branches=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | head -50)
-    
-    echo "Found $(echo "$branches" | wc -l) branches to process"
-    
-    # Counter for processed branches
-    count=0
-    success_count=0
-    error_count=0
-    
-    for branch in $branches; do
-        count=$((count + 1))
-        echo ""
-        echo "🔄 Processing branch $count: $branch"
-        
-        # Skip if branch is main or HEAD
-        if [[ "$branch" == "main" || "$branch" == "HEAD" ]]; then
-            echo "⏭️ Skipping $branch"
-            continue
-        fi
-        
-        # Try to merge the branch
-        echo "🔄 Attempting to merge origin/$branch into main..."
-        
-        if git merge origin/$branch --no-edit 2>/dev/null; then
-            echo "✅ Successfully merged $branch"
-            success_count=$((success_count + 1))
-        else
-            echo "⚠️ Merge conflict in $branch, resolving automatically..."
-            
-            # Auto-resolve conflicts by using our version
-            git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-                if [[ "$status" == "UU" || "$status" == "AA" ]]; then
-                    echo "🔧 Resolving conflict in $file using our version"
-                    git checkout --ours "$file" 2>/dev/null || true
-                    git add "$file" 2>/dev/null || true
-                elif [[ "$status" == "DD" ]]; then
-                    echo "🗑️ Removing deleted file $file"
-                    git rm "$file" 2>/dev/null || true
-                fi
-            done
-            
-            # Try to commit the merge
-            if git commit --no-edit 2>/dev/null; then
-                echo "✅ Successfully resolved and merged $branch"
-                success_count=$((success_count + 1))
-            else
-                echo "❌ Failed to merge $branch after conflict resolution"
-                git merge --abort 2>/dev/null || true
-                error_count=$((error_count + 1))
-            fi
-        fi
-        
-        # Limit to prevent infinite loops
-        if [ $count -ge 50 ]; then
-            echo "🛑 Reached processing limit of 50 branches"
-            break
+    # Find and remove merge conflict markers from backup files
+    find /workspace -name "*.backup*" -type f -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
+        echo "Cleaning $file"
+        # Remove the file if it's just a backup with conflicts
+        if [[ "$file" == *.backup* ]]; then
+            rm -f "$file"
         fi
     done
     
-    echo ""
-    echo "📊 Merge Summary:"
-    echo "   Total processed: $count"
-    echo "   Successfully merged: $success_count"
-    echo "   Failed: $error_count"
+    # Find and clean actual source files with conflicts
+    find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+        if grep -q "<<<<<<< HEAD" "$file"; then
+            echo "Resolving conflicts in $file"
+            # Use git checkout to resolve conflicts by taking the current branch version
+            git checkout --ours "$file" 2>/dev/null || true
+        fi
+    done
 }
 
-# Function to push all changes
-push_changes() {
-    echo "🚀 Pushing all changes to remote..."
+# Function to merge all open PRs
+merge_open_prs() {
+    echo "Checking for open PRs..."
     
-    if git push origin main --force; then
-        echo "✅ Successfully pushed all changes to main branch"
-    else
-        echo "❌ Failed to push changes"
-        return 1
+    # Get list of open PRs
+    PRS=$(gh pr list --state open --json number,title,headRefName --jq '.[].number' 2>/dev/null || echo "")
+    
+    if [ -z "$PRS" ]; then
+        echo "No open PRs found or GitHub CLI not available"
+        return
     fi
+    
+    echo "Found open PRs: $PRS"
+    
+    for pr in $PRS; do
+        echo "Processing PR #$pr"
+        
+        # Get PR details
+        PR_BRANCH=$(gh pr view $pr --json headRefName --jq '.headRefName' 2>/dev/null)
+        
+        if [ -n "$PR_BRANCH" ]; then
+            echo "Merging PR #$pr from branch $PR_BRANCH"
+            
+            # Try to merge the PR
+            gh pr merge $pr --merge --delete-branch 2>/dev/null || {
+                echo "Failed to merge PR #$pr, trying to resolve conflicts..."
+                
+                # Checkout the PR branch
+                git fetch origin $PR_BRANCH:$PR_BRANCH
+                git checkout $PR_BRANCH
+                
+                # Try to merge with main
+                git checkout main
+                git pull origin main
+                git merge $PR_BRANCH --no-ff -m "Merge PR #$pr: $PR_BRANCH" || {
+                    echo "Merge conflict detected, resolving..."
+                    cleanup_conflicts
+                    git add .
+                    git commit -m "Resolve merge conflicts for PR #$pr"
+                }
+                
+                # Push changes
+                git push origin main
+                
+                # Delete the branch
+                git branch -D $PR_BRANCH
+                git push origin --delete $PR_BRANCH 2>/dev/null || true
+            }
+        fi
+    done
 }
 
 # Main execution
-main() {
-    echo "🎯 Starting comprehensive merge and conflict resolution process..."
-    
-    # Step 1: Resolve current conflicts
-    resolve_conflicts
-    
-    # Step 2: Commit current merge
-    echo "💾 Committing current merge resolution..."
-    if git commit -m "Resolve merge conflicts and integrate latest changes
+echo "Starting merge conflict resolution and PR merging process..."
 
-- Resolved all merge conflicts using our version
-- Removed deleted files causing conflicts
-- Integrated latest changes from remote main
-- Prepared for bulk PR merging"; then
-        echo "✅ Current merge committed successfully"
-    else
-        echo "❌ Failed to commit current merge"
-        exit 1
-    fi
-    
-    # Step 3: Merge all open PRs
-    merge_all_prs
-    
-    # Step 4: Push all changes
-    push_changes
-    
-    echo ""
-    echo "🎉 Merge conflict resolution and PR merging process completed!"
-    echo "📈 All changes have been integrated and pushed to main branch"
+# Clean up any existing merge state
+git merge --abort 2>/dev/null || true
+
+# Switch to main branch
+git checkout main 2>/dev/null || {
+    echo "Failed to checkout main branch"
+    exit 1
 }
 
-# Run main function
-main "$@"
+# Pull latest changes
+git pull origin main
+
+# Clean up merge conflicts
+cleanup_conflicts
+
+# Merge open PRs
+merge_open_prs
+
+# Final cleanup
+echo "Performing final cleanup..."
+git add .
+git commit -m "Clean up merge conflicts and consolidate changes" || true
+git push origin main
+
+echo "=== Merge conflict resolution and PR merging completed ==="

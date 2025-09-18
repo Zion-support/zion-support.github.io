@@ -1,30 +1,12 @@
-import React from 'react';'''';';
 import React from 'react';
-import React from 'react';'''
-import {Button} from '@/components/ui/button';
-export default function CreatePostButton;
-export {CreatePostButton}({categoryId}) {return (<Button className="bg-zion-cyan "hover": "bg-zion-cyan-light text-zion-slate-dark">;
-      Create New Post;
-    </Button>)"}
-;
-export default function CreatePostButton()({categoryId}) {return (<Button className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark">
-      Create New Post
-    </Button>)}
-;
-export {CreatePostButton};
-;
-export {CreatePostButton};
-;
-export {CreatePostButton};
-;
-export {CreatePostButton};
-export {CreatePostButton};';
-;';;';
-;
-export {CreatePostButton};
-;
-export {CreatePostButton};
-export {CreatePostButton};
-export {CreatePostButton};
-export {CreatePostButton};
-export {CreatePostButton};
+
+const CreatePostButton.js: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CreatePostButton.js</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default CreatePostButton.js;

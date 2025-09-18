@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const RevolutionaryTech2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
@@ -9,7 +8,6 @@ const RevolutionaryTech2027: React.FC = () => {
         <meta name="description" content="Experience the most revolutionary technologies of 2027 including conscious AI, quantum computing, and interdimensional technology." />
         <meta name="keywords" content="revolutionary tech 2027, conscious AI, quantum computing, interdimensional technology, future tech" />
       </Helmet>
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>
@@ -33,7 +31,6 @@ const RevolutionaryTech2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Content Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -45,7 +42,6 @@ const RevolutionaryTech2027: React.FC = () => {
             pushing the boundaries of what's possible.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">🧠</div>
@@ -57,7 +53,6 @@ const RevolutionaryTech2027: React.FC = () => {
               Learn More
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 p-8 rounded-2xl border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-white">Quantum Computing</h3>
@@ -68,7 +63,6 @@ const RevolutionaryTech2027: React.FC = () => {
               Learn More
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 p-8 rounded-2xl border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">🔗</div>
             <h3 className="text-2xl font-bold mb-4 text-white">Neural Interface</h3>
@@ -81,7 +75,6 @@ const RevolutionaryTech2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -105,5 +98,4 @@ const RevolutionaryTech2027: React.FC = () => {
     </div>
   );
 };
-
 export default RevolutionaryTech2027;

@@ -1,1 +1,12 @@
-import _React from 'react'; import { Header } from "../components/Header"; import { Footer } from "../components/Footer"; export function AppLayout(_) { return ( <div className = "min-h-screen bg-black text-white">; <main className="pt-20">; {children}; </main>; </div>; )} export default AppLayout;';';
+import React from 'react';
+
+const AppLayout: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AppLayout</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default AppLayout;

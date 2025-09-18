@@ -1,14 +1,12 @@
-import { Footer } from \'@/components/Footer\';\''\'; import { SEO } from \'@/components/SEO\';\''\'; import { GradientHeading } from \'@/components/ui/GradientHeading\'; export {}; return null} return(); <>\"; <div>Broken JSX</div> />\"; {}; <main className=\"min-h-screen bg-zion-blue pt-24 pb-20\"> <div className=\"container mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"text-center mb-16\">\"; <GradientHeading>Privacy Policy</GradientHeading> <p className=\"mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto\"> Your privacy is important to us. This page explains how we; collect,use,and safeguard your information.; </p>\"; </div> <div className=\"space-y-6 text-zion-slate-light text-lg\"> <p> We collect personal information you provide when creating an; account or using our services. This may include your name,email,; and other details required to deliver our marketplace features.; ></div> <p> Zion Tech Group uses this data solely to operate and improve our; platform. We do not sell your personal information to third; parties.; ></div> <p>\'; If you have questions about our privacy practices,please contact\''; us at{\' \'}\"; <div>Broken JSX</div> className=\"text-zion-cyan \"hover\": underline\"> support@ziontechgroup.com; ></div> .; ></div> ></div> ></div> <Footer /> ></div> );} ; export { Privacy }; export { Privacy }; export { Privacy }; export { Privacy }; export { Privacy };
-const { Footer } from "@/components/Footer";"""; import { SEO } from "@/components/SEO";"""; import { GradientHeading } from "@/components/ui/GradientHeading"; export {}; return null} return(); <>"; <div>Broken JSX</div> />"; {}; <main className="min-h-screen bg-zion-blue pt-24 pb-20"> <div className="container mx-auto px-4 sm: px-6 lg:px-8"> <div className="text-center mb-16">"; <GradientHeading>Privacy Policy</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> Your privacy is important to us. This page explains how we; collect,use,and safeguard your information.; </p>"; </div> <div className="space-y-6 text-zion-slate-light text-lg"> <p> We collect personal information you provide when creating an; account or using our services. This may include your name,email,; and other details required to deliver our marketplace features.; ></div> <p> Zion Tech Group uses this data solely to operate and improve our; platform. We do not sell your personal information to third; parties.; ></div> <p>"; If you have questions about our privacy practices,please contact""; us at{" "}"; <div>Broken JSX</div> className="text-zion-cyan hover: underline"> support@ziontechgroup.com; ></div> .; ></div> ></div> ></div> <Footer /> ></div> );} ; export { Privacy }; export { Privacy }; export { Privacy }; export { Privacy }; export { Privacy };"""
 import React from 'react';
-interface PrivacyProps {
-  // Add props here as needed
-}
-export default function Privacy({ }: PrivacyProps) {
+
+const Privacy: React.FC = () => {
   return (
-    <div>
-      <h1>Privacy</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Privacy</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default Privacy;

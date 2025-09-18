@@ -1,52 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import type { NextPage } from 'next';
-import Head from 'next/head';
-
-
-import type { NextPage } from 'next',
-import Head from 'next/head',
-const ForgotPassword: NextPage = () => {
+const forgot-password: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>ForgotPassword - Zion Tech Solutions</title>
-        <meta name="description" content="ForgotPassword page" />
-      </Head>
-
-
-
-
-      <main>
-        <h1>ForgotPassword</h1>
-        <p>This page is under construction.</p>
-      </main>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>forgot-password | Zion Tech Group</title>
+        <meta name="description" content="forgot-password - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">forgot-password</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-
-  ),
+  );
 };
 
-export default ForgotPassword;
-  )
-
-}
-export default ForgotPassword;
-
-
-},
-export default ForgotPassword,
-
-
-
-
-export default ForgotPassword;
-
-
-
-
-
-
-
-
-
-
-
+export default forgot-password;

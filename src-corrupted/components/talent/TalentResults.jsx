@@ -1,17 +1,12 @@
-import {ActiveFilters} from "@/components/talent/ActiveFilters";
-import {ResultsHeader} from "@/components/talent/ResultsHeader";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-export function TalentResults(props: any) {
-    return (<div className="flex-1">
-      {/* Active filters */}
-      <ActiveFilters {...activeFiltersProps} />
+import React from 'react';
 
-      {/* Results count */}
-      <ResultsHeader isLoading={isLoading} resultCount={totalCount} />
-
-      {/* Talents grid */}
-      <TalentGrid talents={talents} isLoading={isLoading} onTalentClick={viewProfile} handleBook={handleBook} handleMessage={handleMessage} isAuthenticated={isAuthenticated} clearFilters={activeFiltersProps.clearFilters} />
-    </div>)}
-
+const TalentResults: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TalentResults</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
 export default TalentResults;

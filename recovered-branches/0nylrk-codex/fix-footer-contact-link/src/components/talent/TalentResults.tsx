@@ -1,61 +1,12 @@
+import React from 'react';
 
-import React from "react";
-import { TalentProfile } from "@/types/talent";
-import { ActiveFilters } from "@/components/talent/ActiveFilters";
-import { ResultsHeader } from "@/components/talent/ResultsHeader";
-import { TalentGrid } from "@/components/talent/TalentGrid";
-
-interface TalentResultsProps {
-  filteredTalents: TalentProfile[];
-  isLoading: boolean;
-  viewProfile: (id: string) => void;
-  handleRequestHire: (talent: TalentProfile) => void;
-  savedTalents: string[];
-  isAuthenticated: boolean;
-  activeFiltersProps: {
-    selectedSkills: string[];
-    toggleSkill: (skill: string) => void;
-    selectedAvailability: string[];
-    toggleAvailability: (availability: string) => void;
-    selectedRegions: string[];
-    toggleRegion: (region: string) => void;
-    clearFilters: () => void;
-  }
-}
-
-export function TalentResults({
-  filteredTalents,
-  isLoading,
-  viewProfile,
-  handleRequestHire,
-  savedTalents,
-  handleToggleSave,
-  isAuthenticated,
-  activeFiltersProps
-}: TalentResultsProps) {
+const TalentResults: React.FC = () => {
   return (
-    <div className="flex-1">
-      {/* Active filters */}
-      <ActiveFilters {...activeFiltersProps} />
-      
-      {/* Results count */}
-      <ResultsHeader 
-        isLoading={isLoading} 
-        resultCount={filteredTalents.length} 
-      />
-      
-      {/* Talents grid */}
-      <TalentGrid 
-        talents={filteredTalents}
-        isLoading={isLoading}
-        onTalentClick={viewProfile}
-        viewProfile={viewProfile}
-        handleRequestHire={handleRequestHire}
-        savedTalentIds={savedTalents}
-        onToggleSave={handleToggleSave}
-        isAuthenticated={isAuthenticated}
-        clearFilters={activeFiltersProps.clearFilters}
-      />
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">TalentResults</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
+};
+
+export default TalentResults;

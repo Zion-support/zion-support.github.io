@@ -13,6 +13,24 @@ const DynamicContentCarousel: React.FC = () => {
 import React from 'react';
 
 const DynamicContentCarousel: React.FC = () => {
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
+import React from 'react';
+
+const DynamicContentCarousel: React.FC = () => {
   return (
     <div className="bg-white rounded-2xl p-8 shadow-lg">
       <h3 className="text-2xl font-bold text-gray-900 mb-6">Dynamic Content Carousel</h3>

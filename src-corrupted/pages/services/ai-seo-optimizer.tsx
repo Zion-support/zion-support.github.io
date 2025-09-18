@@ -1,28 +1,22 @@
 import React from 'react';
-const AISeoOptimizer: Reac t.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const ai-seo-optimizer: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <h1 className="text-4xl font-bold mb-4">AI SEO Content Optimizer</h1>
-      <p className="text-gray-300 mb-6">
-        Improve rankings with AI-driven content briefs, on-page optimization, internal linking, and technical audits.
-      </p>
-      <ul className="list-disc pl-6 space-y-2 text-gray-300">
-        <li>Real-time recommendations and SERP gap analysis</li>
-        <li>Internal link graph builder and topic clustering</li>
-        <li>Schema markup suggestions and lighthouse checks</li>
-      </ul>
-      <div className="mt-8">
-        <h2 className="text-2xl font-semibold mb-2">Pricing</h2>
-        <p className="text-gray-300">Essentials $149/mo, Pro $399/mo, Agency $999/mo.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-seo-optimizer | Zion Tech Group</title>
+        <meta name="description" content="ai-seo-optimizer - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-seo-optimizer</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-      <div className="mt-6 text-blue-400">
-        <a href="https: //ahrefs.com/" target="_blank" rel="noopener noreferrer">Ahrefs</a>
-        {" • "}
-        <a href="https://semrush.com/" target="_blank" rel="noopener noreferrer">Semrush</a>
-        {" • "}
-        <a href="https: //developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">Google SEO guide</a>
-      </div>
-    </div>';
-  )};';';
-export default AISeoOptimizer;';';';
-"';';';';
+    </div>
+  );
+};
+
+export default ai-seo-optimizer;

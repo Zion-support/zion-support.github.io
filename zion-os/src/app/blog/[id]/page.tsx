@@ -1,11 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
-import { getPostById } from '../../../data/blog';
+import Link from 'next/link'
+import React from 'react'
+import { getPostById } from '../../../data/blog'
 
-type Params = { params: { id: string } };
-
-export default function BlogPostPage({ params }: Params) {
-  const post = getPostById(params.id);
+export default function BlogPostPage({ params }: { params: { id: string } }) {
+  const post = getPostById(params.id)
 
   if (!post) {
     return (
@@ -14,7 +12,7 @@ export default function BlogPostPage({ params }: Params) {
         <p className="text-gray-600 mb-6">The article you are looking for does not exist or has been moved.</p>
         <Link href="/blog" className="text-blue-600 hover:text-blue-700">← Back to Blog</Link>
       </div>
-    );
+    )
   }
 
   return (
@@ -41,5 +39,5 @@ export default function BlogPostPage({ params }: Params) {
         </div>
       </div>
     </article>
-  );
+  )
 }

@@ -1,38 +1,14 @@
-"use client";
-
+import React from 'react';
+const AccessibilityProvider: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AccessibilityProvider</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
   };
-  return context
-};
-,
-interface AccessibilityProviderProps {,
-  children: React.ReactNode
-};
-,
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {,
-  const [highContrastsetHighContrast] = useState(false),
-  const [largeTextsetLargeText] = useState(false),
-  const [reducedMotionsetReducedMotion] = useState(false),
-,
-  const toggleHighContrast = () => setHighContrast(!highContrast),
-  const toggleLargeText = () => setLargeText(!largeText),
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion),
-,
-  const value = {,
-    highContrast,
-    largeText,
-    reducedMotion,
-    toggleHighContrast,
-    toggleLargeText,
-
-    toggleReducedMotion
-  };
-,
-  return (,
-    <AccessibilityContext.Provider value={value}>,
-      <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>,
-        {children};
-      </div>,
-    </AccessibilityContext.Provider>)
-};
-,
-export default AccessibilityProvider,
+export default AccessibilityProvider;

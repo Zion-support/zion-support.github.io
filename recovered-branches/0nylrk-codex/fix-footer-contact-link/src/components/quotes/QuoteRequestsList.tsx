@@ -1,48 +1,12 @@
+import React from 'react';
 
-import React from "react";
-import { QuoteRequestCard } from "./QuoteRequestCard";
-import { EmptyStateCard } from "./EmptyStateCard";
-import type { QuoteRequest } from "@/types/quotes";
-
-type QuoteRequestsListProps = {
-  quotes: QuoteRequest[];
-  isLoading: boolean;
-  isArchived: boolean;
-  onViewDetails: (quote: QuoteRequest) => void;
-  onMarkAsResponded: (id: string) => void;
-};
-
-export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-  quotes,
-  isLoading,
-  isArchived,
-  onViewDetails,
-  onMarkAsResponded,
-  onToggleArchive
-}) => {
-  if (isLoading) {
-    return (
-      <div className="text-center py-20">
-        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
-      </div>
-    );
-  }
-  
-  if (quotes.length === 0) {
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
-  }
-  
+const QuoteRequestsList: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      {quotes.map(quote => (
-        <QuoteRequestCard
-          key={quote.id}
-          quote={quote}
-          onViewDetails={onViewDetails}
-          onMarkAsResponded={!isArchived ? onMarkAsResponded : undefined}
-          onToggleArchive={onToggleArchive}
-        />
-      ))}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">QuoteRequestsList</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };
+
+export default QuoteRequestsList;

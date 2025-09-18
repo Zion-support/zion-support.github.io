@@ -2,55 +2,43 @@ const fs = require('fs');
 const path = require('path');
 
 const missingComponents = [
-  'RealTimePerformanceDashboard',
-  'IntelligentSearchEngine',
-  'AdvancedAIAssistant',
-  'BusinessIntelligenceDashboard',
-  'AdvancedSecurityMonitor',
-  'AdvancedAnalyticsEngine',
-  'AutomationWorkflowEngine',
-  'EnterpriseDataManagement',
-  'APIManagementSystem',
-  'NewContentPromotionBanner',
-  'InteractiveContentDiscoveryWidget',
-  'ComprehensiveSolutionsBanner2025',
-  'NewServicesShowcase2025',
-  'EnhancedContentPromotionBanner',
-  'NewContent2026Showcase',
-  'RevolutionaryContent2026Banner',
-  'FeaturedContentShowcase2026',
-  'EnhancedContentPromotionBanner2026',
-  'ComprehensiveContentShowcase2026',
-  'RevolutionaryContent2025Banner',
-  'UltimateContentShowcase2025',
-  'UltimatePromotionBanner2026',
-  'UltimateContentShowcase2026',
-  'SuccessMetricsShowcase2026',
-  'AI2025BreakthroughBanner',
-  'NewContent2025PromotionBanner',
-  'LatestContentShowcase2025',
-  'RevolutionaryAIContentBanner',
-  'NewContent2025UltimateBanner',
-  'AI2026QuantumRevolutionBanner',
-  'AI2026AutonomousSystemsBanner',
-  'AI2026UltimateShowcaseBanner',
-  'QuantumAI2026BreakthroughBanner',
-  'QuantumAIContentShowcase2026',
-  'RevolutionaryContentBanner2025'
+  'RevolutionaryContentShowcase2026',
+  'RevolutionaryContentBanner',
+  'RevolutionaryContentBanner2026',
+  'RevolutionaryContentBanner2027',
+  'UltimateContentBanner2027',
+  'NewContentPromotion2027',
+  'UltimateContentBanner',
+  'RevolutionaryContentCarousel2027',
+  'NewContentBanner2028',
+  'UltimateContentBanner2029',
+  'RevolutionaryContentCarousel2029',
+  'UltimateContentBanner2030',
+  'RevolutionaryContentShowcase2030',
+  'RevolutionaryContentBanner2032',
+  'UltimateContentBanner2032',
+  'RevolutionaryContentCarousel2032',
+  'RevolutionaryTechBanner2032',
+  'EnhancedContentCarousel2032',
+  'UltimateContentBanner2033',
+  'UltimateContentBanner2034',
+  'RevolutionaryServicesShowcase',
+  'InteractiveTechShowcase2035',
+  'DynamicContentCarousel',
+  'InteractiveTechShowcase',
+  'InteractiveTechShowcase2026'
 ];
 
 const componentTemplate = (name) => `import React from 'react';
 
 const ${name}: React.FC = () => {
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            ${name.replace(/([A-Z])/g, ' $1').trim()}
-          </h2>
-          <p className="text-lg text-gray-600">
-            Advanced AI component for enhanced functionality.
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 rounded-2xl">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">${name.replace(/([A-Z])/g, ' $1').trim()}</h2>
+          <p className="text-xl opacity-90">
+            Revolutionary technology showcase
           </p>
         </div>
       </div>
@@ -58,10 +46,14 @@ const ${name}: React.FC = () => {
   );
 };
 
-export default ${name};
-`;
+export default ${name};`;
 
-const componentsDir = path.join(__dirname, 'app', 'components');
+const componentsDir = path.join(__dirname, 'src', 'components');
+
+// Ensure components directory exists
+if (!fs.existsSync(componentsDir)) {
+  fs.mkdirSync(componentsDir, { recursive: true });
+}
 
 missingComponents.forEach(componentName => {
   const filePath = path.join(componentsDir, `${componentName}.tsx`);
@@ -69,6 +61,8 @@ missingComponents.forEach(componentName => {
   if (!fs.existsSync(filePath)) {
     fs.writeFileSync(filePath, componentTemplate(componentName));
     console.log(`Created ${componentName}.tsx`);
+  } else {
+    console.log(`${componentName}.tsx already exists`);
   }
 });
 

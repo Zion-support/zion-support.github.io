@@ -1,24 +1,12 @@
+import React from 'react';
 
-import { Button } from "@/components/ui/button";
-import { FilePlus } from "lucide-react";
-import { EmptyResumeProps } from "./types";
-
-export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
+const EmptyResumeState: React.FC = () => {
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardContent className="py-8">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>
-          <p className="text-muted-foreground mb-6">Create a professional resume to showcase your skills and experience</p>
-          <Button 
-            onClick={onCreateClick}
-            className="gap-2"
-          >
-            <FilePlus className="h-4 w-4" />
-            Create Resume
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EmptyResumeState</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
 };
+
+export default EmptyResumeState;

@@ -1,138 +1,31 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function EvidenceLedOperationsBlueprint2026() {
+const Ai2026EvidenceLedOperationsBlueprint: NextPage = () => {
   return (
-    <>
+    <div>
       <Head>
-        <title>AI 2026: Evidence‑Led Operations Blueprint | Zion Tech Group</title>
-        <meta name="description" content="Blueprint for evidence‑led operations: unify evals, incidents, KPIs, and customer signals to drive safer, faster decisions." />
-        <meta property="og:title" content="AI 2026: Evidence‑Led Operations Blueprint" />
-        <meta property="og:description" content="Unify evals, incidents, KPIs, and customer signals for decisions." />
+        <title>Ai2026EvidenceLedOperationsBlueprint - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026EvidenceLedOperationsBlueprint blog post" />
       </Head>
-
-      <div className='min-h-screen bg-gradient-to-br from-slate-950 via-fuchsia-950 to-indigo-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <div className='max-w-4xl mx-auto'>
-            <nav className='mb-8'>
-              <Link href='/blog' className='text-cyan-400 hover:text-cyan-300 transition-colors'>
-                ← Back to Blog
-              </Link>
-            </nav>
-
-            <article className='prose prose-invert prose-lg max-w-none'>
-              <header className='mb-12 text-center'>
-                <div className='flex items-center gap-3 justify-center mb-4'>
-                  <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
-                    Operations
-                  </span>
-                  <span className='text-white/60 text-sm'>September 2025</span>
-                  <span className='text-white/60 text-sm'>•</span>
-                  <span className='text-white/60 text-sm'>7 min read</span>
-                </div>
-                <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
-                  Evidence‑Led Operations Blueprint (2026)
-                </h1>
-                <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-                  Centralize model evals, incidents, KPIs, and customer signals into an evidence hub to improve safety, velocity, and reliability.
-                </p>
-              </header>
-
-              <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-cyan-300'>Evidence model</h2>
-                <ul className='list-disc pl-6 space-y-2 text-white/90'>
-                  <li>Session: intents, plans, tools, outcomes</li>
-                  <li>Evals: task success, groundedness, policy adherence</li>
-                  <li>Incidents: linked to sessions and SLOs</li>
-                  <li>KPIs: business impact and budget adherence</li>
-                </ul>
-              </section>
-
-              <section className='mb-12'>
-                <h2 className='text-2xl font-semibold mb-6 text-emerald-300'>Operating cadence</h2>
-                <p className='text-white/90 mb-4'>
-                  Weekly review of evidence dashboards, SLO breaches, and incident learnings with ticketed actions and follow‑ups.
-                </p>
-              </section>
-            </article>
-          </div>
-        </main>
-      </div>
-    </>
-  )
-}
-
-import React from 'react'
-import Link from 'next/link'
-
-export default function EvidenceLedOperationsBlueprint2026() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <article className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
-        <header className="mb-8">
-          <div className="flex items-center gap-3 text-sm text-gray-600 mb-3">
-            <span className="inline-flex items-center px-2 py-1 rounded-md bg-blue-100 text-blue-800">Operations</span>
-            <time dateTime="2025-09-16">September 16, 2025</time>
-            <span>•</span>
-            <span>7 min read</span>
-          </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-            Evidence‑Led Operations Blueprint (2026)
-          </h1>
-          <p className="mt-4 text-lg text-gray-700">
-            How to centralize evals, incidents, KPIs, and customer signals into a living evidence hub that
-            drives safer, faster decisions for AI‑powered organizations.
-          </p>
-        </header>
-
-        <div className="prose prose-slate max-w-none">
-          <h2>Why evidence‑led?</h2>
-          <p>
-            As AI systems take on more responsibilities, decisions must be grounded in auditable evidence.
-            Evidence‑led operations aligns product, safety, and SRE by unifying telemetry across evals,
-            incidents, SLAs/SLOs, and user feedback.
-          </p>
-
-          <h2>Core components</h2>
-          <ul>
-            <li><strong>Evaluation Registry</strong>: versioned test suites mapped to risks and capabilities.</li>
-            <li><strong>Incident Ledger</strong>: standardized postmortems with remediation status tracking.</li>
-            <li><strong>Operational KPIs</strong>: latency, cost, quality, and safety metrics with SLOs.</li>
-            <li><strong>Customer Signals</strong>: tickets, ratings, and qualitative feedback.</li>
-          </ul>
-
-          <h2>Reference architecture</h2>
-          <p>
-            Use a single source of truth with event streams (Kafka/PubSub), a lakehouse for history,
-            and a thin governance layer for policy, access, and audit. Attach every change to a ticket and
-            a test run. Ship dashboards that correlate eval drift with incident frequency.
-          </p>
-
-          <h2>Operating model</h2>
-          <ol>
-            <li>Codify risks and required evals per capability.</li>
-            <li>Gate releases with scorecards and SLO conformance.</li>
-            <li>Automate rollback and routing based on guardrail breaches.</li>
-            <li>Continuously learn from incidents to update playbooks.</li>
-          </ol>
-
-          <h2>Outcomes</h2>
-          <p>
-            Teams reduce MTTR, prevent regressions, and earn stakeholder trust. This blueprint provides a
-            pragmatic path to evidence‑led decisions at scale.
-          </p>
-        </div>
-
-        <div className="mt-12">
-          <Link
-            href="/blog"
-            className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transition-all duration-200"
-          >
-            Back to Blog
-          </Link>
-        </div>
-      </article>
+      
+      <main>
+        <h1>Ai2026EvidenceLedOperationsBlueprint</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026EvidenceLedOperationsBlueprint;
+=======
+export default Ai2026EvidenceLedOperationsBlueprint;
+>>>>>>> origin/backup-main-20250918-004015

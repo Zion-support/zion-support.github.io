@@ -1,38 +1,24 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
+import React from 'react';
+
+const LanguageContext: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">LanguageContext</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default LanguageContext;
 import _React,{ createContext,useContext,useState } from "react" const LanguageProvider({ children }) { const [language,setLanguage] = useState("en") const t = (key) => { return translations[language]?.[key] || key} const isRTL = language === "ar" || language === "he" return (<LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error("useLanguage must be used within a LanguageProvider")} return context}';"; ); export default Component;
 import React,{ createContext,useContext,useState } from \"react\" const LanguageProvider({ children }) { const [language,setLanguage] = useState(\"en\") const t = (key) => { return translations[language]?.[key] || key} const isRTL = language === \"ar\" || language === \"he\" return (<LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error(\"useLanguage must be used within a LanguageProvider\")} return context}\';\"; ); export default Component;
 const React,{ createContext,useContext,useState } from "react" const LanguageProvider({ children }) { const [language,setLanguage] = useState("en") const t = (key) => { return translations[language]?.[key] | key} const isRTL = language === "ar" | language === "he" return (<LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error("useLanguage must be used within a LanguageProvider")} return context}";"; ); export default Component;"""
 import _React,{ createContext,useContext,useState } from "react" const LanguageProvider({ children }) { const [language,setLanguage] = useState("en") const t = (key) => { return translations[language]?.[key] || key} const isRTL = language === "ar" || language === "he" return (<LanguageContext.Provider value = { { language,setLanguage,t,isRTL }}> {children} </LanguageContext.Provider>)} export function useLanguage() { const context = useContext(LanguageContext) if (!context) { throw new Error("useLanguage must be used within a LanguageProvider")} return context}';"; ); export default Component;
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
+>>>>>>> origin/backup-main-20250918-004015

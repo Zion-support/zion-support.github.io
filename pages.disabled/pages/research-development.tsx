@@ -1,2 +1,22 @@
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const RDPage = () => {; return (; <> <SEOHead title=\"Research & Development - Zion Tech Group\" description=\"Explore our R&D initiatives and innovation programs.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Research & Development></div> <p className=\"text-gray-600\">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const research-development: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>research-development | Zion Tech Group</title>
+        <meta name="description" content="research-development - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">research-development</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default research-development;

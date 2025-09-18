@@ -1,1 +1,22 @@
-import React from 'react'; import { SEO } from '../../components/SEO'; ; export default function AIEnergyManagementSystem(props: any) {; return (; <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center"> <SEO " title="AI Energy Management System - Zion Tech Group" description="Intelligent energy management platform that optimizes energy consumption, reduces costs, and provides real-time monitoring."  />" <div className="text-center text-white">" <h1 className="text-4xl font-bold mb-4">AI Energy Management System</h1>" <p className="text-xl text-gray-300">Coming Soon</p>;" </div>;";" </div>;";" ) }"
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ai-energy-management-system: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>ai-energy-management-system | Zion Tech Group</title>
+        <meta name="description" content="ai-energy-management-system - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">ai-energy-management-system</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ai-energy-management-system;

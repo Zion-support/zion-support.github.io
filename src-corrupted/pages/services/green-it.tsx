@@ -1,23 +1,22 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const GreenITServices: Reac t.FC = () => {
+const green-it: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white py-20">
-      <div className="max-w-5xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Green IT & Sustainability</h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Reduce environmental impact with sustainable cloud, energy-efficient workloads,
-          and responsible AI. Track emissions and optimize costs without sacrificing performance.
-        </p>
-        <ul className="list-disc pl-6 space-y-2 text-gray-700">
-          <li>Carbon-aware workload scheduling</li>
-          <li>Energy and cost optimization (FinOps + GreenOps)</li>
-          <li>Sustainable cloud architecture reviews</li>
-          <li>ESG reporting enablement</li>
-        </ul>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>green-it | Zion Tech Group</title>
+        <meta name="description" content="green-it - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">green-it</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
   );
 };
 
-export default GreenITServices;
+export default green-it;

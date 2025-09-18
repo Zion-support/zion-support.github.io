@@ -3,7 +3,7 @@ import React from 'react';
 const QuantumNeuralRevolution2035: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
@@ -29,7 +29,7 @@ const QuantumNeuralRevolution2035: React.FC = () => {
         </div>
       </div>
 
-      {/* Quantum Neural Features */}
+      {/* Quantum Neural Features */};
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🧠 Quantum Neural Features</h2>
@@ -80,7 +80,7 @@ const QuantumNeuralRevolution2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Advanced Capabilities */}
+        {/* Advanced Capabilities */};
         <div className="bg-gradient-to-br from-cyan-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🚀 Advanced Capabilities</h2>
@@ -178,7 +178,7 @@ const QuantumNeuralRevolution2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Performance Metrics */}
+        {/* Performance Metrics */};
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">📊 Performance Metrics</h2>
           <p className="text-xl opacity-90">Revolutionary performance improvements over traditional computing</p>
@@ -210,7 +210,7 @@ const QuantumNeuralRevolution2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Applications */}
+        {/* Applications */};
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🌍 Real-World Applications</h2>
           <p className="text-xl opacity-90">Revolutionary applications changing the world</p>
@@ -245,7 +245,7 @@ const QuantumNeuralRevolution2035: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center bg-gradient-to-r from-cyan-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready for the Quantum Neural Revolution?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -263,6 +263,5 @@ const QuantumNeuralRevolution2035: React.FC = () => {
       </div>
     </div>
   );
-};
-
+  };
 export default QuantumNeuralRevolution2035;

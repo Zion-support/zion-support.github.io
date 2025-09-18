@@ -1,104 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore
-import data from '../../data/dao-leaderboard.json';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore
-import data from '../../data/dao-leaderboard.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/dao-leaderboard.json',
-
-export default function DaoLeaderboardPage() {
-
-  const items: any[] = (data?.items |[]).slice(0, 25)
-
+const dao-leaderboard: React.FC = () => {
   return (
-    <EnhancedLayout>
-      <div className="max-w-5xl mx-auto py-10">
-        <h1 className="text-3xl font-bold">DAO Leaderboard</h1>
-
-
-
-
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
-
-
-
-        <ul className="mt-6 space-y-2">
-          {items.map((it, idx) => (
-            <li key={idx} className="p-3 border border-gray-200 dark:border-gray-800 rounded-lg flex items-center justify-between">
-              <div>
-                <div className="font-medium">{it.name}</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">Proposals {it.proposals}</div>
-              </div>
-              <div className="text-sm font-semibold">Score {it.totalScore}</div>
-            </li>
-
-
-
-
-export default function DaoLeaderboardPage() {
-
-  const items: any[] = (data?.items |[]).slice(0, 25)
-
-  return (
-    <EnhancedLayout>
-      <div className="max-w-5xl mx-auto py-10">
-        <h1 className="text-3xl font-bold">DAO Leaderboard</h1>
-
-        <ul className="mt-6 space-y-2">
-          {items.map((it, idx) => (
-            <li key={idx} className="p-3 border border-gray-200 dark:border-gray-800 rounded-lg flex items-center justify-between">
-              <div>
-                <div className="font-medium">{it.name}</div>
-                <div className="text-xs text-gray-500 dark:text-gray-400">Proposals {it.proposals}</div>
-              </div>
-              <div className="text-sm font-semibold">Score {it.totalScore}</div>
-            </li>
-
-
-
-
-
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-
-
-import EnhancedLayout from '../../components / layout / EnhancedLayout',
-// @ts - ignore;
-import data from '../../data / dao - leaderboard.json',
-export default /**
- * DaoLeaderboardPage - Function description
- */
-function DaoLeaderboardPage() {
-  const items: any[] = (data?.items || []).slice (0, 25),
-  return (
-    <EnhancedLayout>;
-      <div className="max - w-5xl mx - auto py - 10">;
-        <h1 className="text - 3xl font - bold">DAO Leaderboard</h1>;
-        <p className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300">Updated at {data?.generated_at || ''}</p>;
-        <ul className="mt - 6 space - y-2">;
-          {items.map ((it, idx) => (
-            <li key={idx} className="p - 3 border border - gray - 200 dark:border - gray - 800 rounded - lg flex items - center justify - between">;
-              <div>;
-                <div className="font - medium">{it.name}</div>;
-                <div className="text - xs text - gray - 500 dark:text - gray - 400">Proposals {it.proposals}</div>;
-              </div>;
-              <div className="text - sm font - semibold">Score {it.total_score}</div>;
-            </li>))}
-        </ul>;
-      </div>;
-    </EnhancedLayout>;
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>dao-leaderboard | Zion Tech Group</title>
+        <meta name="description" content="dao-leaderboard - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">dao-leaderboard</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
+};
 
+export default dao-leaderboard;

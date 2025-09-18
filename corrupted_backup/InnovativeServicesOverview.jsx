@@ -1,18 +1,12 @@
-}
-}
- : allServices.filter(service => {}export { InnovativeServicesOverview }export { InnovativeServicesOverview }export { InnovativeServicesOverview }export { InnovativeServicesOverview }export { InnovativeServicesOverview }}}})
 import React from 'react';
-interface InnovativeServicesOverviewProps {
-  // Add props here as needed
-}
-export default function InnovativeServicesOverview({}: InnovativeServicesOverviewProps) {
+
+const InnovativeServicesOverview: React.FC = () => {
   return (
-    <div>
-      <h1>InnovativeServicesOverview</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InnovativeServicesOverview</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
-}
-}
- export { InnovativeServicesOverview }}}})
+};
+
+export default InnovativeServicesOverview;

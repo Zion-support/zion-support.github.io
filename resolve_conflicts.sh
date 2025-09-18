@@ -1,42 +1,45 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-echo "Resolving merge conflicts by accepting our changes..."
+echo "Starting merge conflict resolution..."
 
 # Find all files with merge conflicts
-find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
+echo "Finding files with merge conflicts..."
+conflicted_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+
+echo "Found conflicted files:"
+echo "$conflicted_files"
+
+# For each conflicted file, resolve conflicts by keeping the most recent version
+for file in $conflicted_files; do
     echo "Resolving conflicts in: $file"
-    # Accept our changes (HEAD)
-    git checkout --ours "$file"
-  fi
-done
-
-echo "All merge conflicts resolved!"
-=======
-echo "Resolving merge conflicts..."
-
-# Function to resolve merge conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Processing: $file"
     
-    # Remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
-    sed -i '/^>>>>>>> .*$/d' "$file"
-    
-    # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> .*$/d' "$file"
-}
-
-# Find all files with merge conflicts in src directory
-find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        resolve_conflicts "$file"
+    # Skip temp files and backup files
+    if [[ "$file" == *"temp_exclude"* ]] || [[ "$file" == *"backup"* ]] || [[ "$file" == *"corrupted"* ]]; then
+        echo "Skipping temp/backup file: $file"
+        continue
     fi
+    
+    # Create a backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Use git checkout --theirs to keep the most recent version
+    git checkout --theirs "$file" 2>/dev/null || {
+        echo "Failed to resolve $file with git checkout --theirs"
+        # If git checkout fails, try to manually clean the file
+        sed -i '/<<<<<<< HEAD/,/>>>>>>> /d' "$file" 2>/dev/null || {
+            echo "Failed to clean $file with sed"
+        }
+    }
 done
 
-echo "Merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-d9c7
+echo "Merge conflict resolution completed!"
+
+# Check if there are still conflicts
+remaining_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null | wc -l)
+
+if [ "$remaining_conflicts" -gt 0 ]; then
+    echo "Warning: $remaining_conflicts files still have conflicts"
+    find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null
+else
+    echo "All merge conflicts resolved successfully!"
+fi

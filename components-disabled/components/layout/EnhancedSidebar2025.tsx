@@ -1,8 +1,0 @@
-    ]
-  }
-];
-
-    }
-    setExpandedSections(newExpanded);
-  };
-
