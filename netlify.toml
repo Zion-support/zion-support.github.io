@@ -1,9 +1,9 @@
 [build]
   base = "zion-website"
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = "dist"
+  publish = ".next"
   command_timeout = "30m"
-  # Trigger Netlify build: no-op change on 2025-09-18T15:45:00Z
+  # Next.js on Netlify
 
 [build.environment]
   NODE_VERSION = "20"
@@ -16,100 +16,12 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
-# Vite build - no specific plugin needed
-
-# Functions configuration removed for Vite build
+# Enable Next.js runtime
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [build.processing]
   skip_processing = true
-
-# Vite SPA routing - add fallback redirect
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/js/*"
-  [headers.values]
-    Content-Type = "application/javascript"
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Content-Type = "text/css"
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Content-Type = "text/css"
-
-[[headers]]
-  for = "*.svg"
-  [headers.values]
-    Content-Type = "image/svg+xml"
-
-[[headers]]
-  for = "*.ico"
-  [headers.values]
-    Content-Type = "image/x-icon"
-
-[[headers]]
-  for = "*.png"
-  [headers.values]
-    Content-Type = "image/png"
-
-[[headers]]
-  for = "*.jpg"
-  [headers.values]
-    Content-Type = "image/jpeg"
-
-[[headers]]
-  for = "*.jpeg"
-  [headers.values]
-    Content-Type = "image/jpeg"
-
-[[headers]]
-  for = "*.gif"
-  [headers.values]
-    Content-Type = "image/gif"
-
-[[headers]]
-  for = "*.webp"
-  [headers.values]
-    Content-Type = "image/webp"
-
-[[headers]]
-  for = "/manifest.json"
-  [headers.values]
-    Content-Type = "application/manifest+json"
-
-[[headers]]
-  for = "/sw.js"
-  [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/service-worker.js"
-  [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/site.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json"
-
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/*"
@@ -127,7 +39,7 @@
 #   [headers.values]
 #     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
-# Redirects for legacy URLs
+# Redirects for legacy URLs (optional)
 [[redirects]]
   from = "/api/*"
   to = "https://backend.example.com/:splat"
@@ -213,11 +125,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# SPA fallback for Vite routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
- 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T15:45:00Z
