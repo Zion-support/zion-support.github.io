@@ -1,7 +1,6 @@
 [build]
-  base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  command = "cd zion-website && npm ci --no-audit --no-fund && npm run build"
+  publish = "zion-website/.next"
   command_timeout = "30m"
 
 # Trigger Netlify build: no-op change on 2025-09-18
