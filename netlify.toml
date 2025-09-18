@@ -1,4 +1,4 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:59Z (refresh 2025-09-18T23:59:59Z)
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T14:36:50Z (refresh 2025-09-18T14:36:50Z)
 [build]
   # Build the Next.js site located in the monorepo subdirectory from the repo root
   base = "zion-website"
