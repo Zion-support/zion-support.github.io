@@ -1,9 +1,10 @@
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build:netlify"
-  publish = "dist"
+  base = "zion-website"
+  command = "npm ci --no-audit --no-fund && npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
-# Trigger Netlify build: no-op change on 2025-09-18T00:00:00Z
+# Trigger Netlify build: no-op change on 2025-09-18T14:10:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -15,21 +16,18 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
+  NEXT_TELEMETRY_DISABLED = "1"
 
-## No Next.js plugin needed for Vite SPA
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [functions]
-  directory = "netlify/functions"
+  directory = "../netlify/functions"
   node_bundler = "esbuild"
+  included_files = ["public/**/*"]
 
 [build.processing]
   skip_processing = true
-
-# SPA fallback for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
 
 [[headers]]
   for = "/assets/*"
@@ -127,12 +125,6 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-
-# Optional CSP for JS if needed
-# [[headers]]
-#   for = "*.js"
-#   [headers.values]
-#     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
 # Redirects for legacy URLs
 [[redirects]]
