@@ -1,8 +1,9 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T18:05:00Z
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T19:20:00Z
 [build]
   # Build the Next.js site in the monorepo subdirectory
   base = "zion-website"
   command = "npm ci --no-audit --no-fund && npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
@@ -20,6 +21,11 @@
 # Use the official Next.js plugin for routing, SSR/ISR, and functions
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[functions]
+  directory = "../netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["public/**/*"]
 
 [build.processing]
   skip_processing = true
@@ -217,4 +223,4 @@
 
 ## Note: Do not add SPA fallback for Next.js; plugin handles routing.
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T18:05:00Z
+# No-op: trigger deploy 2025-09-18T19:20:00Z
