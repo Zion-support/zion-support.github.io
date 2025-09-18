@@ -46,6 +46,14 @@
     "sw-*.js",
     "service-worker.js",
     "public/",
-    "static/"
+    "static/",
+    "src/components-disabled/",
+    "src/utils-disabled/",
+    "src.disabled/",
+    "src.broken/",
+    "src.corrupted/",
+    "src-corrupted/",
+    "src-clean/",
+    "src_backup_temp/"
   ]
 }
