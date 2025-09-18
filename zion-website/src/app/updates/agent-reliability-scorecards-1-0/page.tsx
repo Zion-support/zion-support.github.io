@@ -1,4 +1,29 @@
-import React from 'react'
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <p className="text-sm text-indigo-700 font-semibold mb-2">Release</p>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Agent Reliability Scorecards v1.0</h1>
+        <p className="text-gray-600 mb-8">Standardized SLIs, risk signals, and trend analytics for agent reliability at scale.</p>
+        <div className="prose prose-lg max-w-none">
+          <h2>Highlights</h2>
+          <ul>
+            <li>SLIs: success rate, tool error rate, timeout rate, hallucination risk</li>
+            <li>Reliability trends with weekly regressions flagged automatically</li>
+            <li>Exportable evidence bundles for audits and postmortems</li>
+          </ul>
+          <h2>Use Cases</h2>
+          <ul>
+            <li>Track reliability by agent, tenant, or workflow</li>
+            <li>Gate releases using reliability thresholds</li>
+            <li>Share scorecards with stakeholders and compliance</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  )
+}
+
 
 export const metadata = {
   title: 'Launch: Agent Reliability Scorecards v1.0',
