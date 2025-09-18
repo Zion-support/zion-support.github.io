@@ -1,9 +1,10 @@
 import React from "react";
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
-import SEO from "../../components/SEO";
-import { GradientHeading } from "../../components/GradientHeading";
-import { Button } from "../../components/ui/button";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { SEO } from "../components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
+import { Button } from "../components/ui/button";
+
 import { Link } from 'react-router-dom';
 export default function TalentMarketplace() {
     const schema = {

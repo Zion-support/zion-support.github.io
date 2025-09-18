@@ -1,6 +1,7 @@
 
 import React from 'react';
-import SEO from "../components/SEO";
+import { SEO } from "../components/SEO";
+
 import { GradientHeading } from "../components/GradientHeading";
 
 export default function RequestQuote() {

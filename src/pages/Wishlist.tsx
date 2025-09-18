@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-import { useFavorites } from '../hooks/useFavorites';
+import { useFavorites } from '@/hooks/useFavorites';
 import { MARKETPLACE_LISTINGS } from '../data/marketplaceData';
 import { TALENT_PROFILES } from '../data/talentData';
 import { ProductListingCard } from '../components/ProductListingCard';
 import { TalentCard } from '../components/talent/TalentCard';
-import { Button } from '../components/ui/button';
-import { useCart } from '../context/CartContext';
-import { useAuth } from '../hooks/useAuth';
-import { getCartKey } from '../utils/cartUtils';
-=======
-import { useFavorites } from '@/hooks/useFavorites';
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
-import { TALENT_PROFILES } from '@/data/talentData';
-import { ProductListingCard } from '@/components/ProductListingCard';
-import { TalentCard } from '@/components/talent/TalentCard';
+
 import { Button } from '../components/ui/button';
 import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey } from '@/utils/cartUtils';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+
 import { useNavigate } from 'react-router-dom';
 export default function WishlistPage() {
     const { favorites, loading } = useFavorites();

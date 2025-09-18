@@ -4,13 +4,13 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
-<<<<<<< HEAD
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '../data/comprehensiveServices';
-import SEO from '../components/SEO';
-=======
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import { SEO } from '../components/SEO.jsx';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+
+=======
+import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '../data/comprehensiveServices';
+import { SEO } from '../components/SEO';
+
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
     const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export {};
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/seo/SEOHead';
@@ -1421,4 +1418,4 @@ export default function CybersecurityServicesPage() {
     </div>
   );
 }
->>>>>>> fd231cbddf0c0534909cb1476cb2677d96a47224
+

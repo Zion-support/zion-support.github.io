@@ -1,15 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
-import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import SEO from "../components/SEO";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
+import { SEO } from "../components/SEO";
+
 import { 
   PenTool, 
   FileText, 
@@ -31,7 +30,7 @@ import {
   ShoppingBag,
   Mail
 } from "lucide-react";
->>>>>>> fd231cbddf0c0534909cb1476cb2677d96a47224
+
 import { Link } from "react-router-dom";
 export default function AIContentGenerator() {
     const features = [

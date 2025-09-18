@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
@@ -9,11 +10,18 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <Helmet>
-        <title>Zion Tech Group 2026 - Revolutionary AI & Quantum Computing</title>
-        <meta name="description" content="Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions. Discover the next generation of technology that will transform your business." />
+        <title>Zion Tech Group - Revolutionary AI & Quantum Computing</title>
+        <meta name="description" content="Leading the future with revolutionary AI, quantum computing, and cybersecurity solutions." />
       </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+
           <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Zion Tech Group 2026
           </h1>
@@ -43,7 +51,13 @@ const Home: React.FC = () => {
           </div>
         </motion.div>
         
-        <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🤖</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">Conscious AI Systems</h3>
@@ -60,6 +74,7 @@ const Home: React.FC = () => {
               </Link>
             </div>
           </div>
+          
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">⚛️</div>
@@ -77,6 +92,7 @@ const Home: React.FC = () => {
               </Link>
             </div>
           </div>
+          
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🛡️</div>
@@ -95,17 +111,44 @@ const Home: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
-        <motion.div className="mt-20" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Revolutionary Technology Showcase</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-6">Enhanced Content Showcase</h3>
-              <EnhancedContentShowcase />
+        
+        <div className="container mx-auto px-4 py-20">
+          <EnhancedContentShowcase />
+        </div>
+        
+        <div className="container mx-auto px-4 py-20">
+          <RevolutionaryContentShowcase />
+        </div>
+        
+        <div className="container mx-auto px-4 py-16">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">🔥 Latest Revolutionary Content 2026</h2>
+            <p className="text-xl text-gray-300">Explore our newest groundbreaking content and technologies</p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-2">Production Agent Postmortems — Playbook</h3>
+              <p className="text-gray-300 mb-4">Blameless, evidence‑driven postmortems that improve safety and speed.</p>
+              <Link to="/blog/ai-2026-production-agent-postmortems-playbook" className="text-cyan-400 hover:text-cyan-300 font-semibold">Read →</Link>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-semibold text-white mb-6">Revolutionary Content Showcase</h3>
-              <RevolutionaryContentShowcase />
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-2">Agent Release Scorecards — Evidence‑First</h3>
+              <p className="text-gray-300 mb-4">Executive scorecards wired to SLOs, evals, incidents, and budgets.</p>
+              <Link to="/blog/ai-2026-agent-release-scorecards" className="text-cyan-400 hover:text-cyan-300 font-semibold">Read →</Link>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-2">Agent Rollback Patterns — Safe Recovery</h3>
+              <p className="text-gray-300 mb-4">Staged deploys, eval gates, evidence bundles, and containment.</p>
+              <Link to="/blog/ai-2026-agent-rollback-patterns" className="text-cyan-400 hover:text-cyan-300 font-semibold">Read →</Link>
+
             </div>
           </div>
         </motion.div>

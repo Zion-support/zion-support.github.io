@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import SEO from "../components/SEO";
+import { SEO } from "../components/SEO";
+
 import { Button } from "../components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { Badge } from "../components/ui/badge";
@@ -8,7 +9,8 @@ import { Card, CardContent } from "../components/ui/card";
 import { Alert, AlertDescription } from "../components/ui/alert";
 import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Pin, Lock, CheckCircle } from "lucide-react";
 import { formatDistanceToNow, format } from "date-fns";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth";
+
 import ReplyCard from "../components/community/ReplyCard";
 import ReplyForm from "../components/community/ReplyForm";
 import { useToast } from "../components/ui/use-toast";

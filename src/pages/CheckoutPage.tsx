@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router'; // Changed from useParams
 import { useEffect, useState } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
-import { getStripe } from '../utils/getStripe';
+import { getStripe } from '@/utils/getStripe';
+
 import CardForm from '../components/checkout/CardForm';
 import CheckoutProgress from '../components/checkout/CheckoutProgress';
 import { NEW_PRODUCTS } from '../data/newProductsData';

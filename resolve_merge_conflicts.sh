@@ -1,107 +1,69 @@
 #!/bin/bash
 
-echo "=== Resolving Merge Conflicts and Merging PRs ==="
+echo "Starting automated merge conflict resolution..."
 
-# Function to clean up merge conflict markers
-cleanup_conflicts() {
-    echo "Cleaning up merge conflict markers..."
-    
-    # Find and remove merge conflict markers from backup files
-    find /workspace -name "*.backup*" -type f -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
-        echo "Cleaning $file"
-        # Remove the file if it's just a backup with conflicts
-        if [[ "$file" == *.backup* ]]; then
-            rm -f "$file"
-        fi
-    done
-    
-    # Find and clean actual source files with conflicts
-    find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-        if grep -q "<<<<<<< HEAD" "$file"; then
-            echo "Resolving conflicts in $file"
-            # Use git checkout to resolve conflicts by taking the current branch version
-            git checkout --ours "$file" 2>/dev/null || true
-        fi
-    done
-}
+# Remove build artifacts that shouldn't be committed
+echo "Removing build artifacts..."
+git rm -f dist/index.html 2>/dev/null || true
+git rm -f src/pages/AIContentGenerator.jsx 2>/dev/null || true
+git rm -f src/pages/PricingPage.jsx 2>/dev/null || true
+git rm -f src/pages/Services.jsx 2>/dev/null || true
+git rm -f src/pages/TalentsPage.jsx 2>/dev/null || true
 
-# Function to merge all open PRs
-merge_open_prs() {
-    echo "Checking for open PRs..."
-    
-    # Get list of open PRs
-    PRS=$(gh pr list --state open --json number,title,headRefName --jq '.[].number' 2>/dev/null || echo "")
-    
-    if [ -z "$PRS" ]; then
-        echo "No open PRs found or GitHub CLI not available"
-        return
+# Function to resolve common import conflicts
+resolve_import_conflicts() {
+    local file="$1"
+    if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Resolving import conflicts in $file"
+        # Use the incoming version (from PR) for import statements
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i 's/^>>>>>>>.*$//' "$file"
     fi
-    
-    echo "Found open PRs: $PRS"
-    
-    for pr in $PRS; do
-        echo "Processing PR #$pr"
-        
-        # Get PR details
-        PR_BRANCH=$(gh pr view $pr --json headRefName --jq '.headRefName' 2>/dev/null)
-        
-        if [ -n "$PR_BRANCH" ]; then
-            echo "Merging PR #$pr from branch $PR_BRANCH"
-            
-            # Try to merge the PR
-            gh pr merge $pr --merge --delete-branch 2>/dev/null || {
-                echo "Failed to merge PR #$pr, trying to resolve conflicts..."
-                
-                # Checkout the PR branch
-                git fetch origin $PR_BRANCH:$PR_BRANCH
-                git checkout $PR_BRANCH
-                
-                # Try to merge with main
-                git checkout main
-                git pull origin main
-                git merge $PR_BRANCH --no-ff -m "Merge PR #$pr: $PR_BRANCH" || {
-                    echo "Merge conflict detected, resolving..."
-                    cleanup_conflicts
-                    git add .
-                    git commit -m "Resolve merge conflicts for PR #$pr"
-                }
-                
-                # Push changes
-                git push origin main
-                
-                # Delete the branch
-                git branch -D $PR_BRANCH
-                git push origin --delete $PR_BRANCH 2>/dev/null || true
-            }
-        fi
-    done
 }
 
-# Main execution
-echo "Starting merge conflict resolution and PR merging process..."
-
-# Clean up any existing merge state
-git merge --abort 2>/dev/null || true
-
-# Switch to main branch
-git checkout main 2>/dev/null || {
-    echo "Failed to checkout main branch"
-    exit 1
+# Function to resolve component conflicts by keeping the newer version
+resolve_component_conflicts() {
+    local file="$1"
+    if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
+        echo "Resolving component conflicts in $file"
+        # Keep the incoming version (from PR) which has the fixes
+        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+        sed -i 's/^>>>>>>>.*$//' "$file"
+    fi
 }
 
-# Pull latest changes
-git pull origin main
+# Resolve conflicts in key configuration files
+echo "Resolving netlify.toml conflicts..."
+if [ -f "netlify.toml" ] && grep -q "<<<<<<< HEAD" "netlify.toml"; then
+    # Keep the incoming version which has the fixes
+    sed -i '/<<<<<<< HEAD/,/=======/d' "netlify.toml"
+    sed -i 's/^>>>>>>>.*$//' "netlify.toml"
+fi
 
-# Clean up merge conflicts
-cleanup_conflicts
+echo "Resolving vite.config.ts conflicts..."
+if [ -f "vite.config.ts" ] && grep -q "<<<<<<< HEAD" "vite.config.ts"; then
+    # Keep the incoming version which has the fixes
+    sed -i '/<<<<<<< HEAD/,/=======/d' "vite.config.ts"
+    sed -i 's/^>>>>>>>.*$//' "vite.config.ts"
+fi
 
-# Merge open PRs
-merge_open_prs
+echo "Resolving utils.ts conflicts..."
+if [ -f "src/lib/utils.ts" ] && grep -q "<<<<<<< HEAD" "src/lib/utils.ts"; then
+    # Keep the incoming version which has the cn function
+    sed -i '/<<<<<<< HEAD/,/=======/d' "src/lib/utils.ts"
+    sed -i 's/^>>>>>>>.*$//' "src/lib/utils.ts"
+fi
 
-# Final cleanup
-echo "Performing final cleanup..."
-git add .
-git commit -m "Clean up merge conflicts and consolidate changes" || true
-git push origin main
+# Resolve conflicts in all page files
+echo "Resolving conflicts in page files..."
+find src/pages -name "*.tsx" -type f | while read file; do
+    resolve_component_conflicts "$file"
+done
 
-echo "=== Merge conflict resolution and PR merging completed ==="
+# Resolve conflicts in component files
+echo "Resolving conflicts in component files..."
+find src/components -name "*.tsx" -type f | while read file; do
+    resolve_component_conflicts "$file"
+done
+
+echo "Merge conflict resolution completed!"

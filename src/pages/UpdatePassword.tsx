@@ -8,8 +8,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "../components/ui/form";
-import { toast } from "../hooks/use-toast";
-import { cleanupAuthState } from "../utils/authUtils";
+import { toast } from "@/hooks/use-toast";
+import { cleanupAuthState } from "@/utils/authUtils";
+
 // Form validation schema
 const updatePasswordSchema = z
     .object({

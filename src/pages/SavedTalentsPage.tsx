@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import SEO from "../components/SEO";
+import { SEO } from "../components/SEO";
 import { TalentCard } from "../components/talent/TalentCard";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth";
+
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "../components/ui/use-toast";
 import { useNavigate } from "react-router-dom";

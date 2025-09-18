@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import SEO from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import { servicesCatalog } from '@/data/servicesCatalog';
-import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-=======
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -194,10 +187,11 @@ export default function Services() {
 
         {/* CTA Section */}
 import React from 'react';
-import SEO from "../components/SEO";
+import { SEO } from "../components/SEO";
+
 import { GradientHeading } from "../components/GradientHeading";
 
->>>>>>> fd231cbddf0c0534909cb1476cb2677d96a47224
+
 export default function Services() {
     const contact = {
         mobile: '+1 302 464 0950',

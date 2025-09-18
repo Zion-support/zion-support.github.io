@@ -1,15 +1,13 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { Button } from '../components/ui/button';
-<<<<<<< HEAD
-import { NEW_PRODUCTS } from '../data/newProductsData';
-import { useCart } from '../context/CartContext';
-import { toast } from '../hooks/use-toast';
-=======
 import { NEW_PRODUCTS } from '@/data/newProductsData';
+=======
+import { NEW_PRODUCTS } from '../data/newProductsData';
+
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+
 export default function ProductPage() {
     const { id } = useParams();
     const product = NEW_PRODUCTS.find(p => p.id === id);

@@ -3,11 +3,12 @@ import { useParams, Link } from "react-router-dom";
 import { Suspense } from "react";
 import CreatePostButton from "../components/community/CreatePostButton";
 import { Input } from "../components/ui/input";
-import SEO from "../components/SEO";
+import { SEO } from "../components/SEO";
 import PostCard from "../components/community/PostCard";
-import { usePostsByCategory } from "../hooks/usePostsByCategory";
+import { usePostsByCategory } from "@/hooks/usePostsByCategory";
 import NotFound from "./NotFound";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth";
+
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from "../components/icons";
 // Mock category data
 const categoriesInfo = {

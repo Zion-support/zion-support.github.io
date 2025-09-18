@@ -5,7 +5,8 @@ import { GlobalServiceSection } from "../components/GlobalServiceSection";
 import { QuoteFormSection } from "../components/QuoteFormSection";
 import { TrustedBySection } from "../components/TrustedBySection";
 import { onsiteServicePricing } from "../data/onsiteServicePricing";
-import { toast } from "../hooks/use-toast";
+import { toast } from "@/hooks/use-toast";
+
 import { PageHero } from "../components/services/PageSections/PageHero";
 import { CountryTabs } from "../components/services/PageSections/CountryTabs";
 import { ServiceDetailsSection } from "../components/services/PageSections/ServiceDetailsSection";

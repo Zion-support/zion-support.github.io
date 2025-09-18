@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const RevolutionaryTechShowcase2026 = () => {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-5xl font-bold text-gray-900 mb-8 text-center">Revolutionary Tech Showcase2026</h1>
-      <p className="text-xl text-gray-700 mb-8 text-center">
-        Explore Revolutionary Tech Showcase2026 and discover innovative solutions for your business needs.
-      </p>
-      
-      <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-        <div>
-          <img 
-            src="/api/placeholder/1920/1080" 
-            alt="Revolutionary Tech Showcase2026" 
-            className="rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">About This Technology</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            This page showcases cutting-edge technology solutions and innovations that are shaping the future.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Learn more about our comprehensive approach to technology implementation and optimization.
-          </p>
-          <a 
-            href="/contact" 
-            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-xl font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
-          >
-            Learn More →
-          </a>
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -198,10 +164,10 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
               Contact Us
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
+
             </button>
           </div>
->>>>>>> fd231cbddf0c0534909cb1476cb2677d96a47224
+
         </div>
       </div>
 

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Shield, Settings, Info, CheckCircle, AlertTriangle, Cookie, Lock, Eye, EyeOff, BarChart3, Target } from 'lucide-react';
-import SEO from "../components/SEO";
+import React from 'react';
+import { SEO } from "../components/SEO";
+
 import { GradientHeading } from "../components/GradientHeading";
 
 interface CookieType {

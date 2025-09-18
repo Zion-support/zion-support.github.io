@@ -2,21 +2,23 @@ import React from 'react';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 import { AppLayout } from '@/layout/AppLayout';
-<<<<<<< HEAD
-import { NextSeo } from "../../components/NextSeo';
-import { Button } from "../../components/ui/button';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
-import { Input } from "../../components/ui/input';
-import { Label } from "../../components/ui/label';
-=======
 import { NextSeo } from '@/components/NextSeo';
 import { Button } from '../components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+
 // Card components are usually exported from 'card.tsx' like this:
 // import { Card, CardHeader, CardTitle, CardContent } from "../../components/ui/card';
+=======
+import { NextSeo } from '../components/NextSeo';
+import { Button } from '../components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
+// Card components are usually exported from 'card.tsx' like this:
+// import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/card';
+
 // However, the provided JSX doesn't use Card, CardHeader, etc. explicitly as wrappers,
 // but implies their styling might be used. The current JSX structure is fine as is
 // and will rely on Tailwind classes primarily. If Card components were needed for structure,

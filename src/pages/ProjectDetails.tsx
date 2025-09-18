@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { useRouter } from 'next/router';
 import { format } from "date-fns";
-import { useAuth } from "../hooks/useAuth";
-import { useProjects } from "../hooks/useProjects";
-import SEO from "../components/SEO";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "../components/SEO";
+
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "../components/ui/card";
@@ -13,7 +14,8 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Avatar } from "../components/ui/avatar";
 import { Badge } from "../components/ui/badge";
 import { Textarea } from "../components/ui/textarea";
-import { toast } from "../hooks/use-toast";
+import { toast } from "@/hooks/use-toast";
+
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "../components/projects/reviews/ProjectReviewSection";
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";

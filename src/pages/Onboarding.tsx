@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth";
+
 import { Button } from "../components/ui/button";
 import { UserTypeSelection } from "../components/onboarding/UserTypeSelection";
 import { ProfileSetup } from "../components/onboarding/ProfileSetup";

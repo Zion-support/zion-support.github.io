@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-<<<<<<< HEAD
-import SEO from '../components/SEO';
-import { ProfileLoadingState } from '../components/profile/ProfileLoadingState';
-import { ProfileErrorState } from '../components/profile/ProfileErrorState';
-=======
 import { SEO } from '../components/SEO.jsx';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+
+=======
+import { SEO } from '../components/SEO';
+import { ProfileLoadingState } from '../components/profile/ProfileLoadingState';
+import { ProfileErrorState } from '../components/profile/ProfileErrorState';
+
 export default function TalentProfilePage() {
     const { id } = useParams();
     const [profile, setProfile] = useState(null);
