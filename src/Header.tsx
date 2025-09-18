@@ -1,76 +1,12 @@
 import React from 'react';
-import NotificationSystem from './components/NotificationSystem';
-import NewContentNavigation2026 from './components/NewContentNavigation2026';
+
 const Header: React.FC = () => {
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
-      {/* Promotional Banner */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center space-x-4 text-sm">
-            <span className="animate-pulse">🚀</span>
-            <span className="font-semibold">NEW: Revolutionary Content 2026 - Autonomous AI, Quantum ML, Conscious AI & More!</span>
-            <a href="/pages/NewContentShowcase2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
-              Explore Now →
-            </a>
-            <span className="animate-pulse">🚀</span>
-          </div>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </a>
-          </div>
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <a href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Home
-            </a>
-            <a href="/pages/NextGenInnovationHub2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Innovation Hub
-            </a>
-            <a href="/pages/AITrends2026Insights" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg">
-              AI Trends 2026
-            </a>
-            <a href="/pages/RevolutionaryCaseStudies2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-              Case Studies
-            </a>
-            <a href="/revolutionary-content-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg">
-              Revolutionary 2026
-            </a>
-            <a href="/pages/NewContentShowcase2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-green-50 to-teal-50 rounded-lg">
-              New Content 2026
-            </a>
-            <a href="/ultimate-content-showcase-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-              Content Showcase
-            </a>
-            <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Services
-            </a>
-            <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Contact
-            </a>
-            {/* New Content Navigation */}
-            <NewContentNavigation2026 />
-          </nav>
-          {/* Right side actions */}
-          <div className="flex items-center space-x-4">
-            <NotificationSystem />
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-medium">
-              Get Started
-            </button>
-          </div>
-        </div>
+    <header className="bg-gray-800 text-white py-4">
+      <div className="container mx-auto px-4">
+        <h1 className="text-2xl font-bold">Zion Tech Group</h1>
       </div>
     </header>
   );
-};
-
-
+  };
 export default Header;

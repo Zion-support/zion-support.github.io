@@ -13,52 +13,13 @@ const UltimateTechShowcase2026: React.FC = () => {
       color: "from-blue-500 to-cyan-500",
       applications: ["Business automation", "Research assistance", "Creative industries", "Healthcare diagnostics"]
     },
-    quantum: {
-      title: "Quantum Computing Breakthrough",
-      icon: "⚡",
-      color: "from-cyan-600 to-blue-600",
-      description: "Unlock exponential computing power that solves impossible problems with quantum supremacy and molecular simulation.",
-      features: [
-        "Quantum Supremacy",
-        "Molecular Simulation",
-        "Unbreakable Encryption",
-        "Climate Modeling",
-        "Drug Discovery",
-        "Financial Optimization"
-      ],
-      demos: [
-        {
-          title: "Quantum Supremacy Demo",
-          description: "See quantum computers solve problems impossible for classical computers",
-          video: "🔬",
-          stats: "10^50 operations per second"
-        },
-        {
-          title: "Molecular Simulation",
-          description: "Real-time simulation of complex molecular structures",
-          video: "🧬",
-          stats: "99.9% accuracy"
-        }
-      ]
-    }
-  };
-
-  const [isAnimating, setIsAnimating] = useState(false);
-  const technologies = {
-    ai: {
-      title: "Artificial Intelligence Revolution",
-      icon: "🧠",
-      description: "Next-generation AI systems with consciousness and creativity",
-      features: [
-        "Synthetic consciousness and self-awareness",
-        "Quantum-enhanced neural processing",
-        "Emotional intelligence and empathy",
-        "Creative problem solving beyond human capability",
-        "Autonomous decision making with ethical frameworks"
-      ],
-      color: "from-purple-600 to-pink-600",
-      bgColor: "from-purple-600/20 to-pink-600/20",
-      borderColor: "border-purple-400/30"
+    {
+      title: "Quantum-Neural Computing",
+      description: "Revolutionary fusion of quantum processing with neural networks",
+      features: ["1000x faster processing", "Parallel reality computing", "Quantum encryption", "Neural optimization"],
+      icon: <Cpu className="w-12 h-12" />,
+      color: "from-purple-500 to-pink-500",
+      applications: ["Complex simulations", "Drug discovery", "Financial modeling", "Climate prediction"]
     },
     {
       title: "Multi-Dimensional Security",
@@ -189,3 +150,7 @@ const UltimateTechShowcase2026: React.FC = () => {
           </div>
         </motion.div>
       </div>
+    </div>
+  );
+};
+export default UltimateTechShowcase2026;

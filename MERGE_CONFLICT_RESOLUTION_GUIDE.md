@@ -55,17 +55,24 @@ If merge conflicts are detected, resolve them by:
 
 2. **Open each conflicted file and look for conflict markers:**
    ```
-   <<<<<<< HEAD
-   (content from main branch)
-   =======
+<<<<<<< HEAD
+=======
    (content from feature branch)
-   >>>>>>> cursor/create-and-deploy-new-content-ee85
    ```
+=======
+>>>>>>> origin/backup-main-20250918-004015
+      (content from main branch)
+      (content from feature branch)
+      ```
 
 3. **Resolve conflicts by:**
    - Keeping both changes where appropriate
    - Choosing the feature branch changes for new content
-   - Removing conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+   - Removing conflict markers (`<<<<<<<`, ``, `>>>>>>>`)
 
 4. **Add resolved files:**
    ```bash

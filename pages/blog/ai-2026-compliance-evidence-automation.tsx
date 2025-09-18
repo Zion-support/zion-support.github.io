@@ -1,31 +1,31 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function ComplianceEvidenceAutomation2026() {
+const Ai2026ComplianceEvidenceAutomation: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>Compliance Evidence Automation (2026) | Zion Tech Group</title>
-        <meta name="description" content="Automate policy checks and evidence capture to accelerate audits and approvals." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-compliance-evidence-automation" />
+        <title>Ai2026ComplianceEvidenceAutomation - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026ComplianceEvidenceAutomation blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Compliance Evidence Automation (2026)</h1>
-        <p>
-          Turn policies into executable checks and continuously collect audit‑ready evidence from evals,
-          traces, and incidents. Replace manual attestations with trustworthy, versioned artifacts.
-        </p>
-
-        <h2>Core Patterns</h2>
-        <ul>
-          <li>Policy‑as‑code with automatic control mapping</li>
-          <li>Evidence bundles per release and per incident</li>
-          <li>Automated approvals with override capture</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026ComplianceEvidenceAutomation</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026ComplianceEvidenceAutomation;
+=======
+export default Ai2026ComplianceEvidenceAutomation;
+>>>>>>> origin/backup-main-20250918-004015

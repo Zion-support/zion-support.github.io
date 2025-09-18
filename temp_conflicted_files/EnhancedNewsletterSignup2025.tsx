@@ -112,7 +112,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
           </divdiv>
         </div>
 
->>>>>>> origin/backup-main-20250916-071805
         {!isSubscribed ? (
           <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4">
@@ -215,7 +214,6 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
               </div>
             </div>
           </divdiv>
->>>>>>> origin/backup-main-20250916-071805
         </div>
       </div>
     </div>

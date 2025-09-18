@@ -1,4 +1,5 @@
 import React from 'react';
+
 const UltimateTechRevolutionBanner2025: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
@@ -12,6 +13,7 @@ const UltimateTechRevolutionBanner2025: React.FC = () => {
           <div className="absolute bottom-10 right-1/3 w-14 h-14 bg-cyan-500/30 rounded-full animate-pulse delay-500"></div>
         </div>
       </div>
+
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -25,6 +27,7 @@ const UltimateTechRevolutionBanner2025: React.FC = () => {
             From conscious AI to quantum consciousness, discover the future today.
           </p>
         </div>
+
         {/* Feature Highlights */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -34,6 +37,7 @@ const UltimateTechRevolutionBanner2025: React.FC = () => {
               The world's first truly conscious artificial intelligence
             </p>
           </div>
+
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">⚛️</div>
             <h3 className="text-lg font-bold mb-2 text-center">Quantum Consciousness</h3>
@@ -41,6 +45,7 @@ const UltimateTechRevolutionBanner2025: React.FC = () => {
               Revolutionary quantum computing for consciousness
             </p>
           </div>
+
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🌌</div>
             <h3 className="text-lg font-bold mb-2 text-center">Interdimensional Tech</h3>
@@ -49,6 +54,7 @@ const UltimateTechRevolutionBanner2025: React.FC = () => {
             </p>
           </div>
         </div>
+
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -72,6 +78,7 @@ const UltimateTechRevolutionBanner2025: React.FC = () => {
             </a>
           </div>
         </div>
+
         {/* Stats */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
@@ -95,6 +102,5 @@ const UltimateTechRevolutionBanner2025: React.FC = () => {
     </div>
   );
 };
-
 
 export default UltimateTechRevolutionBanner2025;

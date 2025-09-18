@@ -1,0 +1,46 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const cloud-native-automation: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>cloud-native-automation | Zion Tech Group</title>
+        <meta name="description" content="cloud-native-automation - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">cloud-native-automation</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const CloudNativeAutomation: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>CloudNativeAutomation - Zion Tech Solutions</title>
+        <meta name="description" content="CloudNativeAutomation blog post" />
+      </Head>
+      
+      <main>
+        <h1>CloudNativeAutomation</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+export default cloud-native-automation;
+=======
+export default CloudNativeAutomation;
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

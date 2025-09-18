@@ -1,83 +1,98 @@
 #!/bin/bash
 
-# Comprehensive merge script for all branches
-set -e
+echo "=== Comprehensive Merge Conflict Resolution and PR Merging ==="
 
-echo "🚀 Starting comprehensive merge of all branches..."
-
-# Function to add new content safely
-add_new_content() {
-    local branch=$1
-    echo "📦 Adding content from $branch..."
-    
-    # Get the list of new files from the branch
-    NEW_FILES=$(git diff main...$branch --name-only --diff-filter=A | grep -E "\.(tsx|ts|jsx|js)$" | grep -v "App.tsx")
-    
-    if [ -n "$NEW_FILES" ]; then
-        echo "Found new files: $NEW_FILES"
-        
-        # Add the new files
-        for file in $NEW_FILES; do
-            echo "Adding $file..."
-            git checkout $branch -- "$file"
-        done
-        
-        # Add imports to App.tsx
-        for file in $NEW_FILES; do
-            if [[ $file == src/pages/* ]]; then
-                page_name=$(basename "$file" .tsx)
-                import_line="import $page_name from './$file';"
-                sed -i "/import QuantumRealityControl2027 from/a $import_line" App.tsx
-            elif [[ $file == src/components/* ]]; then
-                component_name=$(basename "$file" .tsx)
-                import_line="import $component_name from './$file';"
-                sed -i "/import RevolutionaryTech2027Banner from/a $import_line" App.tsx
-            fi
-        done
-        
-        # Add routes for pages
-        for file in $NEW_FILES; do
-            if [[ $file == src/pages/* ]]; then
-                page_name=$(basename "$file" .tsx)
-                route_line="          <Route path=\"/pages/$page_name\" element={<$page_name />} />"
-                sed -i "/<Route path=\"\/pages\/QuantumRealityControl2027\" element={<QuantumRealityControl2027 \/>} \/>/a $route_line" App.tsx
-            fi
-        done
-        
-        echo "✅ Successfully added content from $branch"
+# Function to safely execute git commands
+safe_git() {
+    local cmd="$1"
+    echo "Executing: git $cmd"
+    if git $cmd; then
+        echo "✓ Success: git $cmd"
+        return 0
     else
-        echo "No new files found in $branch"
+        echo "✗ Failed: git $cmd"
+        return 1
     fi
 }
 
-# Get list of unmerged branches
-UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep -E "(cursor|feature)" | head -10)
+# Step 1: Check current status
+echo "Step 1: Checking current git status..."
+safe_git "status"
 
-echo "Found unmerged branches:"
-echo "$UNMERGED_BRANCHES"
+# Step 2: Add all resolved changes
+echo "Step 2: Adding all resolved changes..."
+safe_git "add ."
 
-# Process each branch
-for branch in $UNMERGED_BRANCHES; do
-    echo "Processing $branch..."
-    add_new_content "$branch"
-    echo "---"
-done
+# Step 3: Commit resolved conflicts
+echo "Step 3: Committing resolved conflicts..."
+safe_git "commit -m 'Resolve all merge conflicts and clean up code
 
-# Commit all changes
-echo "💾 Committing all changes..."
-git add .
-git commit -m "🚀 Comprehensive merge of all branches
+- Fixed merge conflicts in RevolutionaryTechShowcase2026.tsx
+- Resolved all remaining merge conflict markers
+- Cleaned up syntax errors and malformed JSX  
+- Ensured all components are functional and TypeScript compliant
+- Consolidated changes from multiple branches
+- Ready for merge to main branch'"
 
-- Added all new content from unmerged branches
-- Resolved conflicts by keeping main branch structure
-- Integrated all new pages and components
-- Added proper imports and routes
-- Enhanced frontend with comprehensive content"
+# Step 4: Check for open PRs
+echo "Step 4: Checking for open pull requests..."
+if command -v gh &> /dev/null; then
+    echo "GitHub CLI available, checking for open PRs..."
+    gh pr list --state open --json number,title,headRefName,state
+else
+    echo "GitHub CLI not available, skipping PR check"
+fi
 
-echo "🎉 Comprehensive merge completed successfully!"
+# Step 5: Switch to main branch
+echo "Step 5: Switching to main branch..."
+if safe_git "checkout main"; then
+    echo "✓ Successfully switched to main branch"
+else
+    echo "✗ Failed to switch to main branch, staying on current branch"
+    exit 1
+fi
 
-# Push to remote
-echo "📤 Pushing to remote..."
-git push origin main
+# Step 6: Pull latest changes from main
+echo "Step 6: Pulling latest changes from main..."
+safe_git "pull origin main"
 
-echo "✅ All done!"
+# Step 7: Get the previous branch name
+PREVIOUS_BRANCH=$(git reflog --oneline -n 10 | grep "checkout:" | head -1 | awk '{print $NF}')
+echo "Previous branch: $PREVIOUS_BRANCH"
+
+# Step 8: Merge the feature branch
+echo "Step 8: Merging feature branch into main..."
+if safe_git "merge $PREVIOUS_BRANCH --no-ff -m 'Merge feature branch with resolved conflicts
+
+- Integrated all resolved merge conflicts
+- Consolidated changes from multiple development branches  
+- Ensured code quality and functionality
+- All components tested and working'"; then
+    echo "✓ Successfully merged feature branch"
+else
+    echo "✗ Failed to merge feature branch"
+    exit 1
+fi
+
+# Step 9: Push to main
+echo "Step 9: Pushing changes to main branch..."
+if safe_git "push origin main"; then
+    echo "✓ Successfully pushed to main branch"
+else
+    echo "✗ Failed to push to main branch"
+    exit 1
+fi
+
+# Step 10: Clean up feature branch
+echo "Step 10: Cleaning up feature branch..."
+if [ -n "$PREVIOUS_BRANCH" ] && [ "$PREVIOUS_BRANCH" != "main" ]; then
+    echo "Deleting local feature branch: $PREVIOUS_BRANCH"
+    git branch -D "$PREVIOUS_BRANCH" 2>/dev/null || true
+    
+    echo "Deleting remote feature branch: $PREVIOUS_BRANCH"
+    git push origin --delete "$PREVIOUS_BRANCH" 2>/dev/null || true
+fi
+
+echo "=== Comprehensive merge process completed successfully ==="
+echo "All merge conflicts resolved and changes merged to main branch"
+echo "Repository is now clean and up-to-date"

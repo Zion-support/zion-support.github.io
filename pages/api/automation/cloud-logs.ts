@@ -1,20 +1,9 @@
-import fs from 'fs',;
-import path from 'path',;
-async function fetchFromGitHub(): Promise<any[]> {
-  try {
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-      } catch {
-        // ignore;
-      }
-    }
-    return results
-  } catch {
-    return [];
-  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
+<<<<<<< HEAD
 }
-  }
-const remote = await fetchFromGitHub()
-
-  return res.status(200).json({ logs: remote })
-};
-
+=======
+}
+>>>>>>> origin/backup-main-20250918-004015

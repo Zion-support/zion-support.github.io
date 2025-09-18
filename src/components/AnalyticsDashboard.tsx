@@ -1,14 +1,249 @@
-import React from 'react';
-const AnalyticsDashboard: React.FC = () => {
+import React, { useEffect, useState } from 'react';
+import { BarChart3, TrendingUp, Users, Eye, MousePointer, Clock, Globe, Smartphone } from 'lucide-react';
+
+interface AnalyticsData {
+  pageViews: number;
+  uniqueVisitors: number;
+  bounceRate: number;
+  avgSessionDuration: number;
+  topPages: Array<{ page: string; views: number }>;
+  trafficSources: Array<{ source: string; percentage: number }>;
+  deviceTypes: Array<{ device: string; percentage: number }>;
+  realTimeUsers: number;
+}
+
+export default function AnalyticsDashboard() {
+  const [analytics, setAnalytics] = useState<AnalyticsData>({
+    pageViews: 0,
+    uniqueVisitors: 0,
+    bounceRate: 0,
+    avgSessionDuration: 0,
+    topPages: [],
+    trafficSources: [],
+    deviceTypes: [],
+    realTimeUsers: 0
+  });
+  const [isVisible, setIsVisible] = useState(false);
+  const [timeRange, setTimeRange] = useState('24h');
+
+  useEffect(() => {
+    const generateAnalytics = () => {
+      const baseViews = Math.floor(Math.random() * 50000) + 10000;
+      const baseVisitors = Math.floor(baseViews * 0.7);
+      
+      setAnalytics({
+        pageViews: baseViews,
+        uniqueVisitors: baseVisitors,
+        bounceRate: Math.random() * 20 + 30,
+        avgSessionDuration: Math.floor(Math.random() * 300) + 120,
+        topPages: [
+          { page: '/', views: Math.floor(baseViews * 0.4) },
+          { page: '/services', views: Math.floor(baseViews * 0.2) },
+          { page: '/about', views: Math.floor(baseViews * 0.15) },
+          { page: '/contact', views: Math.floor(baseViews * 0.1) },
+          { page: '/blog', views: Math.floor(baseViews * 0.1) }
+        ],
+        trafficSources: [
+          { source: 'Direct', percentage: 45 },
+          { source: 'Google', percentage: 30 },
+          { source: 'Social', percentage: 15 },
+          { source: 'Referral', percentage: 10 }
+        ],
+        deviceTypes: [
+          { device: 'Desktop', percentage: 60 },
+          { device: 'Mobile', percentage: 35 },
+          { device: 'Tablet', percentage: 5 }
+        ],
+        realTimeUsers: Math.floor(Math.random() * 50) + 10
+      });
+    };
+
+    generateAnalytics();
+    const interval = setInterval(generateAnalytics, 30000); // Update every 30 seconds
+
+    return () => clearInterval(interval);
+  }, [timeRange]);
+
+  const formatNumber = (num: number) => {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toString();
+  };
+
+  const formatTime = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
+
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed top-4 left-4 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors z-50"
+        title="Show Analytics Dashboard"
+      >
+        <BarChart3 className="w-5 h-5" />
+      </button>
+    );
+  }
+
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AnalyticsDashboard</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div className="fixed top-4 left-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 w-96 z-50 max-h-96 overflow-y-auto">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
+          <BarChart3 className="w-5 h-5 mr-2" />
+          Analytics Dashboard
+        </h3>
+        <div className="flex items-center space-x-2">
+          <select
+            value={timeRange}
+            onChange={(e) => setTimeRange(e.target.value)}
+            className="text-xs border border-gray-300 dark:border-gray-600 rounded px-2 py-1 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          >
+            <option value="1h">1 Hour</option>
+            <option value="24h">24 Hours</option>
+            <option value="7d">7 Days</option>
+            <option value="30d">30 Days</option>
+          </select>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+
+      {/* Key Metrics */}
+      <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
+          <div className="flex items-center">
+            <Eye className="w-4 h-4 text-blue-600 dark:text-blue-400 mr-2" />
+            <div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Page Views</div>
+              <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
+                {formatNumber(analytics.pageViews)}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+          <div className="flex items-center">
+            <Users className="w-4 h-4 text-green-600 dark:text-green-400 mr-2" />
+            <div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Unique Visitors</div>
+              <div className="text-lg font-bold text-green-600 dark:text-green-400">
+                {formatNumber(analytics.uniqueVisitors)}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg">
+          <div className="flex items-center">
+            <MousePointer className="w-4 h-4 text-yellow-600 dark:text-yellow-400 mr-2" />
+            <div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Bounce Rate</div>
+              <div className="text-lg font-bold text-yellow-600 dark:text-yellow-400">
+                {analytics.bounceRate.toFixed(1)}%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
+          <div className="flex items-center">
+            <Clock className="w-4 h-4 text-purple-600 dark:text-purple-400 mr-2" />
+            <div>
+              <div className="text-xs text-gray-600 dark:text-gray-300">Avg. Session</div>
+              <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
+                {formatTime(analytics.avgSessionDuration)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Real-time Users */}
+      <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg mb-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <TrendingUp className="w-4 h-4 text-red-600 dark:text-red-400 mr-2" />
+            <span className="text-sm font-medium text-red-600 dark:text-red-400">Live Users</span>
+          </div>
+          <span className="text-2xl font-bold text-red-600 dark:text-red-400">
+            {analytics.realTimeUsers}
+          </span>
+        </div>
+      </div>
+
+      {/* Top Pages */}
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Top Pages</h4>
+        <div className="space-y-2">
+          {analytics.topPages.map((page, index) => (
+            <div key={index} className="flex items-center justify-between">
+              <span className="text-xs text-gray-600 dark:text-gray-300 truncate">
+                {page.page}
+              </span>
+              <span className="text-xs font-medium text-gray-900 dark:text-white">
+                {formatNumber(page.views)}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Traffic Sources */}
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Traffic Sources</h4>
+        <div className="space-y-2">
+          {analytics.trafficSources.map((source, index) => (
+            <div key={index} className="flex items-center justify-between">
+              <span className="text-xs text-gray-600 dark:text-gray-300">{source.source}</span>
+              <div className="flex items-center">
+                <div className="w-16 bg-gray-200 dark:bg-gray-700 rounded-full h-2 mr-2">
+                  <div
+                    className="bg-blue-500 h-2 rounded-full"
+                    style={{ width: `${source.percentage}%` }}
+                  />
+                </div>
+                <span className="text-xs font-medium text-gray-900 dark:text-white">
+                  {source.percentage}%
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Device Types */}
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Device Types</h4>
+        <div className="space-y-2">
+          {analytics.deviceTypes.map((device, index) => (
+            <div key={index} className="flex items-center justify-between">
+              <div className="flex items-center">
+                {device.device === 'Desktop' && <Globe className="w-3 h-3 mr-1 text-gray-500" />}
+                {device.device === 'Mobile' && <Smartphone className="w-3 h-3 mr-1 text-gray-500" />}
+                {device.device === 'Tablet' && <Smartphone className="w-3 h-3 mr-1 text-gray-500" />}
+                <span className="text-xs text-gray-600 dark:text-gray-300">{device.device}</span>
+              </div>
+              <span className="text-xs font-medium text-gray-900 dark:text-white">
+                {device.percentage}%
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
+        <div className="text-xs text-gray-500 dark:text-gray-400">
+          Last updated: {new Date().toLocaleTimeString()}
+        </div>
+      </div>
     </div>
   );
-
-};
-
-
-export default AnalyticsDashboard;
-</p></p>
+}

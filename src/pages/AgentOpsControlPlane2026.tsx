@@ -1,27 +1,46 @@
 import React from 'react';
+import { Helmet }  from 'react-helmet-async';
 const AgentOpsControlPlane2026: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 text-white">
-      <h1 className="text-3xl md:text-4xl font-extrabold mb-4">Agent Ops Control Plane (2026)</h1>
-      <p className="text-white/80 mb-6">
-        Reference controls for approvals, observability, rollback, and policy-aware tool permissions.
-      </p>
-      <div className="space-y-4 text-white/85">
-        <p>
-          Use this blueprint as a starting point to implement an operational control plane for agentic systems,
-          balancing autonomy with safety via guardrails and evidence-backed gates.
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Approval workflows and escalation paths</li>
-          <li>Runtime policy checks and tool adapters</li>
-          <li>Observability: traces, metrics, artifacts</li>
-          <li>Rollback strategies and incident response</li>
-        </ul>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      <Helmet>
+        <title>AgentOpsControlPlane2026 - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary technology and AI solutions for the future." />
+        <meta name="keywords" content="AI, technology, innovation, future, agentopscontrolplane2026" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            AgentOpsControlPlane2026
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the latest innovations and breakthrough technologies in agentopscontrolplane2026.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              Explore Innovation
+            </button>
+            <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Innovation</h3>
+            <p className="text-blue-100">Cutting-edge technology solutions</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Technology</h3>
+            <p className="text-blue-100">Revolutionary technological advances</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Future</h3>
+            <p className="text-blue-100">Next-generation solutions</p>
+          </div>
+        </div>
       </div>
     </div>
   );
-
-};
-
-
+  };
 export default AgentOpsControlPlane2026;

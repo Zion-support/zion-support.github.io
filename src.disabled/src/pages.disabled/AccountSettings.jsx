@@ -36,11 +36,15 @@ export default function AccountSettings({ }: AccountSettingsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<<<<<<< HEAD
 =======
 
 
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+
+
 }
 :src.disabled/src/pages.disabled/AccountSettings.jsx
 }

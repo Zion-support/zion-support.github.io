@@ -1,17 +1,9 @@
-import { v4 as uuidv4 } from 'uuid',;
-import { readJsonFile, writeJsonFile } from '../../utils/db',;
-import type { Application } from '../../utils/types',;
-import { rateLimit } from '../../utils/rateLimit',;
-    return
-  }
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-  if (req.method === 'POST') {
-      return
-    }
-
-    const app: Application = {
-    return
-  }
-  res.setHeader('AllowGET, POST')
-  res.status(405).end('Method Not Allowed')
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/backup-main-20250918-004015

@@ -1,32 +1,31 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function EvalScorecardsInPractice2026() {
+const Ai2026EvalScorecardsInPractice: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>Evaluation Scorecards in Practice (2026) | Zion Tech Group</title>
-        <meta name="description" content="Translate raw evals into executive‑friendly scorecards wired to gates." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-eval-scorecards-in-practice" />
+        <title>Ai2026EvalScorecardsInPractice - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026EvalScorecardsInPractice blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Evaluation Scorecards in Practice (2026)</h1>
-        <p>
-          Move beyond model‑level metrics. Scorecards measure business‑aligned SLIs and scenario outcomes, wired to
-          deployment gates and incident workflows.
-        </p>
-
-        <h2>How to Implement</h2>
-        <ol>
-          <li>Define scenarios and SLIs that matter to the business</li>
-          <li>Automate evals across preflight, canary, and runtime</li>
-          <li>Aggregate into scorecards with budgets and policies</li>
-          <li>Report deltas release‑over‑release to spot regressions</li>
-        </ol>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026EvalScorecardsInPractice</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026EvalScorecardsInPractice;
+=======
+export default Ai2026EvalScorecardsInPractice;
+>>>>>>> origin/backup-main-20250918-004015

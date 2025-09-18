@@ -1,29 +1,46 @@
 import React from 'react';
+import { Helmet }  from 'react-helmet-async';
 const AutonomousOpsPlaybook2026: React.FC = () => {
-	return (
-		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-			<h1 className="text-4xl md:text-5xl font-bold mb-6">Autonomous Ops Playbook 2026</h1>
-			<p className="text-white/80 text-lg mb-8 max-w-3xl">
-				Operational guidance for production-grade autonomous systems: incident simulation, rollback automations, and compliance-grade observability.
-			</p>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-				<div className="glass-effect rounded-2xl p-6">
-					<h2 className="text-2xl font-semibold mb-2">Key chapters</h2>
-					<ol className="list-decimal list-inside text-white/80 space-y-1">
-						<li>Agentic incident simulation</li>
-						<li>Policy-driven rollbacks</li>
-						<li>Runtime evals and SLOs</li>
-					</ol>
-				</div>
-				<div className="glass-effect rounded-2xl p-6">
-					<h2 className="text-2xl font-semibold mb-2">Resources</h2>
-					<a className="btn-secondary" href="/news">See latest updates →</a>
-				</div>
-			</div>
-		</div>
-	);
-};
-
-
-
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      <Helmet>
+        <title>AutonomousOpsPlaybook2026 - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary technology and AI solutions for the future." />
+        <meta name="keywords" content="AI, technology, innovation, future, autonomousopsplaybook2026" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            AutonomousOpsPlaybook2026
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover the latest innovations and breakthrough technologies in autonomousopsplaybook2026.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              Explore Innovation
+            </button>
+            <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Innovation</h3>
+            <p className="text-blue-100">Cutting-edge technology solutions</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Technology</h3>
+            <p className="text-blue-100">Revolutionary technological advances</p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4">Future</h3>
+            <p className="text-blue-100">Next-generation solutions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+  };
 export default AutonomousOpsPlaybook2026;

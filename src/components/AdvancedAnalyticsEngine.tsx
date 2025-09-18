@@ -1,13 +1,14 @@
 import React from 'react';
 const AdvancedAnalyticsEngine: React.FC = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">AdvancedAnalyticsEngine</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AdvancedAnalyticsEngine</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
   );
-
-};
-
-
+  };
 export default AdvancedAnalyticsEngine;

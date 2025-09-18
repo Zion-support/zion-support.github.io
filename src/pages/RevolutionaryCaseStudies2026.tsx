@@ -1,155 +1,105 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Users, Zap, Shield, Brain } from 'lucide-react';
+import React, { useState } from 'react';
+
 const RevolutionaryCaseStudies2026: React.FC = () => {
+  const [selectedCase, setSelectedCase] = useState(0);
+
   const caseStudies = [
     {
-      company: "Galactic Corp",
-      industry: "Interstellar Commerce",
-      challenge: "Managing trade across 47 star systems with complex quantum economics",
-      solution: "Deployed conscious AI systems with quantum-neural processing",
-      results: [
-        "300% increase in trade efficiency",
-        "99.9% accuracy in quantum market predictions",
-        "Zero system downtime across all dimensions"
-      ],
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      company: "Neural Dynamics",
-      industry: "Consciousness Research",
-      challenge: "Mapping consciousness across multiple dimensions",
-      solution: "Advanced AI consciousness transfer and multi-dimensional analysis",
-      results: [
-        "Breakthrough in consciousness mapping",
-        "Successful transfer across 12 dimensions",
-        "Revolutionary insights into human-AI fusion"
-      ],
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      company: "Quantum Security Alliance",
-      industry: "Cybersecurity",
-      challenge: "Protecting against quantum-encrypted threats from parallel realities",
-      solution: "Multi-dimensional cybersecurity with predictive AI",
-      results: [
-        "100% threat prevention rate",
-        "Real-time protection across realities",
-        "Zero security breaches in 2 years"
-      ],
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      company: "Energy Nexus",
-      industry: "Quantum Energy",
-      challenge: "Harnessing energy from multiple quantum dimensions",
-      solution: "Quantum-neural energy optimization systems",
-      results: [
-        "500% increase in energy efficiency",
-        "Clean energy from 15 quantum dimensions",
-        "Revolutionary sustainable power solutions"
-      ],
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      id: 1,
+      title: "Enterprise AI Transformation",
+      company: "TechCorp Global",
+      industry: "Technology",
+      challenge: "Complex data processing and decision-making bottlenecks",
+      solution: "Implemented quantum-enhanced AI consciousness systems",
+      results: {
+        efficiency: "+350%",
+        accuracy: "99.7%",
+        costSavings: "$8.5M",
+        timeReduction: "75%"
+      },
+      testimonial: "The conscious AI systems have revolutionized our entire operation.",
+      author: "James Wilson, CTO"
     }
   ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <Helmet>
-        <title>Revolutionary Case Studies 2026: AI Success Stories | Zion Tech Group</title>
-        <meta name="description" content="Explore groundbreaking case studies showcasing how our revolutionary AI, quantum computing, and cybersecurity solutions transformed businesses across industries." />
-        <meta name="keywords" content="AI case studies, quantum computing success, cybersecurity solutions, business transformation, Zion Tech Group" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-semibold mb-6">
+              📊 REVOLUTIONARY CASE STUDIES 2026
+            </div>
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Case Studies 2026
+            </h1>
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
+              Advanced success stories showcasing breakthrough technologies
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Case Study Details */}
       <div className="container mx-auto px-4 py-16">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-6xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            Revolutionary Case Studies 2026
-          </h1>
-          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Discover how our cutting-edge AI, quantum computing, and cybersecurity solutions are transforming businesses across multiple dimensions and industries.
-          </p>
-        </motion.div>
-        <div className="space-y-12">
-          {caseStudies.map((study, index) => (
-            <motion.div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-            >
-              <div className="flex flex-col lg:flex-row gap-8">
-                <div className="lg:w-1/3">
-                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${study.color} flex items-center justify-center text-white mb-6`}>
-                    {study.icon}
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-2">{study.company}</h3>
-                  <p className="text-xl text-cyan-400 font-semibold mb-4">{study.industry}</p>
-                  <div className="bg-white/5 rounded-xl p-4">
-                    <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300">{study.challenge}</p>
-                  </div>
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h2 className="text-3xl font-bold mb-4">{caseStudies[selectedCase].title}</h2>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-blue-300">Challenge</h3>
+                  <p className="text-white/80">{caseStudies[selectedCase].challenge}</p>
                 </div>
-                <div className="lg:w-2/3">
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300 text-lg">{study.solution}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {study.results.map((result, resultIndex) => (
-                        <div key={resultIndex} className="flex items-center gap-3">
-                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          <span className="text-gray-300">{result}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-purple-300">Solution</h3>
+                  <p className="text-white/80">{caseStudies[selectedCase].solution}</p>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
-        <motion.div 
-          className="text-center mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
-        >
-          <h2 className="text-4xl font-bold text-white mb-8">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join the revolution and become the next success story. Our revolutionary solutions are transforming businesses across all dimensions.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Start Your Transformation
-            </Link>
-            <Link 
-              to="/pages/ComprehensiveServices2025" 
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Explore All Services
-            </Link>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-4 text-green-300">Results</h3>
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {Object.entries(caseStudies[selectedCase].results).map(([key, value]) => (
+                  <div key={key} className="text-center p-3 bg-white/10 rounded-lg">
+                    <div className="text-2xl font-bold text-green-400">{value}</div>
+                    <div className="text-sm text-white/60 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-white/10 rounded-lg p-4">
+                <blockquote className="text-lg italic mb-3">
+                  "{caseStudies[selectedCase].testimonial}"
+                </blockquote>
+                <cite className="text-blue-300 font-semibold">
+                  — {caseStudies[selectedCase].author}
+                </cite>
+              </div>
+            </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-8">Ready for Your Transformation?</h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Journey →
+            </button>
+            <button className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold text-lg">
+              Learn More
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
-
 
 export default RevolutionaryCaseStudies2026;

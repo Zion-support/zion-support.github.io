@@ -1,48 +1,31 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function ProductionEvalGatesLiveOps() {
+const Ai2026ProductionEvalGatesLiveOps: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white">
+    <div>
       <Head>
-        <title>Production Eval Gates (2026) | Zion Tech Group</title>
-        <meta name="description" content="Enforce evaluation gates pre‑merge, pre‑deploy, and continuously to ship safer, faster, and more predictably." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-production-eval-gates-live-ops" />
+        <title>Ai2026ProductionEvalGatesLiveOps - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026ProductionEvalGatesLiveOps blog post" />
       </Head>
-
-      <main className="container mx-auto px-6 py-12">
-        <nav className="mb-8">
-          <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">← Back to Blog</Link>
-        </nav>
-
-        <article className="prose prose-invert prose-lg max-w-3xl mx-auto">
-          <header className="mb-10">
-            <h1>Production Eval Gates (2026)</h1>
-            <p className="text-white/80">Pre‑merge, pre‑deploy, and continuous checks wired to SLOs and incidents.</p>
-          </header>
-
-          <h2>Why eval gates</h2>
-          <p>
-            AI changes fast: prompts, tools, routing. Eval gates prevent regressions by catching
-            quality, safety, and cost issues before customers do. Treat them like unit and integration tests
-            with clear pass/fail criteria.
-          </p>
-
-          <h2>Three layers</h2>
-          <ul>
-            <li>Pre‑merge: scenario suites for features and safety checks</li>
-            <li>Pre‑deploy: canary rollouts with on‑policy data</li>
-            <li>Continuous: RUM + sampled tasks with drift and guardrail alerts</li>
-          </ul>
-
-          <h2>Operationalizing</h2>
-          <p>
-            Gate releases on error budgets and policy violations. Attach eval results to PRs and deployments.
-            Pager alerts should include scenario diffs and suggested rollbacks.
-          </p>
-        </article>
+      
+      <main>
+        <h1>Ai2026ProductionEvalGatesLiveOps</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026ProductionEvalGatesLiveOps;
+=======
+export default Ai2026ProductionEvalGatesLiveOps;
+>>>>>>> origin/backup-main-20250918-004015

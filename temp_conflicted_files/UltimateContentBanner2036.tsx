@@ -80,7 +80,6 @@ const UltimateContentBanner2036: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> origin/aggressive-merge-backup-20250916-072750
     <div className="bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -225,7 +224,6 @@ const UltimateContentBanner2036: React.FC = () => {
             Experience Ultimate Breakthrough →
           </a>
         </div>
->>>>>>> origin/aggressive-merge-backup-20250916-072750
       </div>
     </motion.div>
   );
