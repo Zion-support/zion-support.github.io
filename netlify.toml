@@ -1,8 +1,9 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:59Z
 [build]
   # Build the Next.js site located in the monorepo subdirectory from the repo root
-  command = "cd zion-website && npm ci --no-audit --no-fund && npm run build"
-  publish = "zion-website/.next"
+  base = "zion-website"
+  command = "npm ci --no-audit --no-fund && npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
