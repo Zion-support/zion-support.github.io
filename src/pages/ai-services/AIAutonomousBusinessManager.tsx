@@ -2,11 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
-<<<<<<< HEAD
 import { SEO } from '../components/SEO';
-=======
-import { SEO } from '../components/SEO.jsx';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 const features = [
     {
         title: "Intelligent Decision Making",

@@ -210,13 +210,6 @@ export default function Services() {
         </motion.div>
 
         {/* CTA Section */}
-import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "../components/GradientHeading";
-
-export default function Services() {
-  return (
-    <>
       <SEO 
         title="Services - Zion Tech Group" 
         description="Discover Zion Tech Group's comprehensive AI and tech marketplace services. From AI solutions to enterprise tech services." 
