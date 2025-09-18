@@ -1,61 +1,29 @@
-# Build output
-.next/
-out/
-build/
+# Build artifacts
 dist/
-coverage/
-
-# Dependencies
+.next/
 node_modules/
 
-# Generated artifacts
-*.log
-**/*.generated.*
-*.backup.*
-*.cjs
-*.js
-*.jsx
-
-# Disabled/problematic directories
-automation/
-backup-merge-conflicts/
-recovered-branches/
-public/automation/
-temp-problematic-pages/
-temp_backup_*/
-zion-os/
+# Disabled directories
 zion-os.disabled/
+zion-os/
 zion-website/
 zion.app/
 zion_academy/
-utils/
-src.broken/
-src/components/disabled/
-src/pages-disabled/
-src/components-disabled/
-src/utils-disabled/
-**/components-disabled/**
-**/utils-disabled/**
 
-# Netlify functions (serverless functions with different linting rules)
-netlify/functions/
+# Backup files
+*.backup
+*.backup.*
 
-# Scripts and configs
-scripts/
-apps/
+# Generated files
+*.min.js
+*.bundle.js
+*.chunk.js
 
-# Specific problematic files
-**/.next/**
-**/static/**
-**/chunks/**
-**/server/**
-**/middleware-**
-**/server-reference-**
-**/postcss.config.js
-**/tailwind.config.js
-**/next.config.js
-**/sw.js
-**/analytics.js
-**/feedback.js
-**/integration.js
-**/*.cjs
+# Service worker files
+sw.js
+sw-*.js
+service-worker.js
+
+# Static files
+public/
+static/
