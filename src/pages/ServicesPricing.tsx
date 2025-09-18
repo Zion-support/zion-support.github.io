@@ -24,13 +24,16 @@ const pricingTiers = [
             "Priority Support",
             "Custom Integrations",
             "Advanced Analytics"
+        ],
         color: "from-emerald-500 to-green-600",
         popular: false
     },
+    {
         name: "Professional",
         description: "Ideal for growing businesses and teams",
         price: "From $2,000",
         priceRange: "2,000 - 4,999",
+        features: [
             "Advanced AI Features",
             "Enhanced Security",
             "Advanced Analytics",
@@ -38,6 +41,8 @@ const pricingTiers = [
             "Custom Templates",
             "API Access",
             "Integration Support"
+        ],
+        notIncluded: [
             "Enterprise Security",
             "Custom Development",
             "Dedicated Account Manager"
