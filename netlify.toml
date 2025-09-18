@@ -121,7 +121,7 @@
 #   [headers.values]
 #     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
-# Redirects for legacy URLs (timestamp refresh 2025-09-19T00:15:00Z)
+# Redirects for legacy URLs (timestamp refresh 2025-09-19T01:05:00Z)
 [[redirects]]
   from = "/api/*"
   to = "https://backend.example.com/:splat"
@@ -209,8 +209,8 @@
 
 # Note: SPA routing fallback handled via public/_redirects
 
-# No-op: trigger deploy 2025-09-19 00:15 (run-11)
+# No-op: trigger deploy 2025-09-19 01:05 (run-12)
 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-19T00:15:00Z (refresh 2025-09-19T00:15:00Z)
-# trigger: 2025-09-19T00:15:00Z (refresh) re-run-11
+# No-op: trigger deploy 2025-09-19T01:05:00Z (refresh 2025-09-19T01:05:00Z)
+# trigger: 2025-09-19T01:05:00Z (refresh) re-run-12
