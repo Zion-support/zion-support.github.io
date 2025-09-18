@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env bash
-=======
-#!/bin/bash
->>>>>>> origin/auto/autonomy-17186719616
 set -e
 
 # Check if offline shims exist and need to be cleaned up

@@ -14,7 +14,7 @@ export interface FraudEvent {
   userId: string | null;
   source: MonitoredSource;
   content: string | null;
-  metadata: Record<string, unknown> | null;
+  metadata: Record<stringunknown> | null;
   ipAddress: string | null;
   createdAt: string; // ISO string
 }
@@ -72,7 +72,7 @@ export interface MonthlyReport {
     suspicious: number;
     dangerous: number;
   };
-  bySource: Record<MonitoredSource, number>;
+  bySource: Record<MonitoredSourcenumber>;
   falsePositives: number; // count of IGNORED actions
   topReasons: Array<{ reason: string; count: number }>;
 }

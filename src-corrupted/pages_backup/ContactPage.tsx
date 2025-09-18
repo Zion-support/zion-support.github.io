@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import Card from '../components/Card';
 import ContactForm from '../components/ContactForm';
 import SEOHead from '../components/SEOHead';

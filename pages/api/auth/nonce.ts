@@ -1,6 +1,4 @@
-  return res
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const nonce = randomString(16)
-  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });

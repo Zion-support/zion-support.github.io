@@ -1,11 +1,85 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 const InteractiveTechDemo2027: React.FC = () => {
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  const demos = [
+    {
+      id: 0,
+      title: "AI Consciousness Simulation",
+      description: "Experience how AI consciousness works in real-time",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      features: [
+        "Real-time neural network visualization",
+        "Consciousness state monitoring",
+        "Emotional response simulation",
+        "Decision-making process display"
+      ]
+    },
+    {
+      id: 1,
+      title: "Quantum Computing Demo",
+      description: "See quantum algorithms solving complex problems",
+      icon: "⚡",
+      color: "from-cyan-600 to-blue-600",
+      features: [
+        "Quantum circuit visualization",
+        "Superposition state display",
+        "Entanglement demonstration",
+        "Quantum speed comparison"
+      ]
+    },
+    {
+      id: 2,
+      title: "Neural Interface Experience",
+      description: "Control devices with your thoughts",
+      icon: "🧬",
+      color: "from-emerald-600 to-teal-600",
+      features: [
+        "Brain signal visualization",
+        "Thought-to-action mapping",
+        "Neural pathway tracking",
+        "Interface responsiveness test"
+      ]
+    }
+  ];
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) {
+            setIsPlaying(false);
+            return 0;
+          }
+          return prev + 2;
+        });
+      }, 100);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying]);
+
+  const startDemo = () => {
+    setIsPlaying(true);
+    setProgress(0);
+  };
+
+  const stopDemo = () => {
+    setIsPlaying(false);
+    setProgress(0);
+  };
+
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -20,12 +94,13 @@ const InteractiveTechDemo2027: React.FC = () => {
               Experience cutting-edge technologies through interactive demonstrations. 
               See, feel, and understand how the future works.
             </p>
-          </div>
+          </motion.div>
         </div>
+
         {/* Demo Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {demos.map((demo, index) => (
-            <button
+            <motion.button
               key={demo.id}
               onClick={() => setActiveDemo(index)}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -38,12 +113,13 @@ const InteractiveTechDemo2027: React.FC = () => {
             >
               <span className="mr-2">{demo.icon}</span>
               {demo.title.split(' ')[0]} {demo.title.split(' ')[1]}
-            </button>
+            </motion.button>
           ))}
         </div>
+
         {/* Demo Content */}
         <AnimatePresence mode="wait">
-          <div
+          <motion.div
             key={activeDemo}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,9 +137,10 @@ const InteractiveTechDemo2027: React.FC = () => {
                 <p className="text-xl opacity-90 mb-8">
                   {demos[activeDemo].description}
                 </p>
+                
                 <div className="space-y-4 mb-8">
                   {demos[activeDemo].features.map((feature, index) => (
-                    <div
+                    <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -72,11 +149,12 @@ const InteractiveTechDemo2027: React.FC = () => {
                     >
                       <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                       <span className="text-lg">{feature}</span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
+
                 <div className="flex flex-wrap gap-4">
-                  <button
+                  <motion.button
                     onClick={startDemo}
                     disabled={isPlaying}
                     className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
@@ -88,20 +166,21 @@ const InteractiveTechDemo2027: React.FC = () => {
                     whileTap={!isPlaying ? { scale: 0.95 } : {}}
                   >
                     {isPlaying ? 'Demo Running...' : 'Start Demo'}
-                  </button>
-                  <button
+                  </motion.button>
+                  <motion.button
                     onClick={stopDemo}
                     className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     Stop Demo
-                  </button>
+                  </motion.button>
                 </div>
               </div>
+
               {/* Demo Visualization */}
               <div className="relative">
-                <div
+                <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
@@ -111,10 +190,11 @@ const InteractiveTechDemo2027: React.FC = () => {
                   <div className="relative z-10">
                     <div className="text-8xl mb-4">{demos[activeDemo].icon}</div>
                     <h4 className="text-2xl font-bold mb-4">Live Demo</h4>
+                    
                     {/* Progress Bar */}
                     <div className="mb-6">
                       <div className="bg-white/20 rounded-full h-4 mb-2">
-                        <div
+                        <motion.div
                           className="bg-white rounded-full h-4"
                           style={{ width: `${progress}%` }}
                           transition={{ duration: 0.1 }}
@@ -124,6 +204,7 @@ const InteractiveTechDemo2027: React.FC = () => {
                         {isPlaying ? `Demo Progress: ${progress}%` : 'Click Start Demo to begin'}
                       </p>
                     </div>
+
                     {/* Demo Stats */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-white/20 rounded-lg p-4">
@@ -142,12 +223,14 @@ const InteractiveTechDemo2027: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
-          </div>
+          </motion.div>
+        </AnimatePresence>
+
         {/* Call to Action */}
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -159,25 +242,25 @@ const InteractiveTechDemo2027: React.FC = () => {
             the revolutionary technologies that will shape tomorrow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button
+            <motion.button
               className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Explore All Technologies
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Learn More
-            </button>
+            </motion.button>
           </div>
-        </div>
-        </AnimatePresence>
+        </motion.div>
       </div>
     </div>
   );
 };
+
 export default InteractiveTechDemo2027;

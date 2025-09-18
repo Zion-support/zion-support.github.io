@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Zap, Brain, Shield, Globe, Target, TrendingUp } from 'lucide-react';
+
 const QuantumAIRevolution2026 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -34,9 +35,10 @@ const QuantumAIRevolution2026 = () => {
                 Get Quantum Access
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
+
       {/* Quantum Capabilities */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,6 +50,7 @@ const QuantumAIRevolution2026 = () => {
               Harness the power of quantum mechanics for unprecedented AI performance
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -129,6 +132,7 @@ const QuantumAIRevolution2026 = () => {
           </div>
         </div>
       </div>
+
       {/* Quantum Applications */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,6 +144,7 @@ const QuantumAIRevolution2026 = () => {
               Revolutionary applications powered by quantum artificial intelligence
             </p>
           </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {[
               {
@@ -213,6 +218,7 @@ const QuantumAIRevolution2026 = () => {
           </div>
         </div>
       </div>
+
       {/* Quantum Performance Metrics */}
       <div className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,6 +230,7 @@ const QuantumAIRevolution2026 = () => {
               Measurable improvements over classical AI systems
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { metric: "10,000x", label: "Faster Processing", description: "Quantum speed advantage" },
@@ -249,6 +256,7 @@ const QuantumAIRevolution2026 = () => {
           </div>
         </div>
       </div>
+
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-purple-600/30 to-pink-600/30">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -279,4 +287,5 @@ const QuantumAIRevolution2026 = () => {
     </div>
   );
 };
+
 export default QuantumAIRevolution2026;

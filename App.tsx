@@ -1,24 +1,33 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './src/index.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './src/ScrollToTop';
+import Header from './src/Header';
+import Footer from './src/Footer';
 
-const App: React.FC = () => {
+// Import key pages
+import HomePage from './src/pages/HomePage';
+import AboutPage from './src/pages/About';
+import ServicesPage from './src/pages/ServicesPage';
+import ContactPage from './src/pages/ContactPage';
+import NotFoundPage from './src/pages/404';
+
+export default function App(): React.JSX.Element {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionary technology solutions and insights for the future
-            </p>
-          </div>
-        </div>
+      <div className="min-h-screen bg-white">
+        <ScrollToTop />
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </Router>
   );
-};
-
-export default App;
+}

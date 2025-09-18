@@ -1,250 +1,294 @@
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  BarChart3,
-  Brain,
-  Cpu as CpuIcon,
-  Globe,
-  Rocket as RocketIcon,
-  Shield,
-  Star,
-  TrendingUp,
-  Users
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-const UltimateContentShowcase2026 = () => {
-  const contentFeatures = [
-    {
-      icon: Brain,
-      title: "AI-Powered Content Marketing",
-      description: "Revolutionary AI-driven content strategies delivering 500% engagement boosts and unprecedented ROI.",
-      metrics: "500% Engagement Increase",
-      color: "from-purple-500 to-pink-500"
+import React, { useState, useEffect } from 'react';
+
+const UltimateContentShowcase2026: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState('revolutionary');
+  const [selectedContent, setSelectedContent] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const contentCategories = {
+    revolutionary: {
+      title: 'Revolutionary Technologies',
+      icon: '🚀',
+      color: 'from-purple-600 to-pink-600',
+      description: 'Breakthrough technologies reshaping reality itself',
+      content: [
+        {
+          title: 'Revolutionary Tech Breakthrough 2026',
+          description: 'Experience the most advanced technological revolution in human history',
+          icon: '🚀',
+          features: ['Synthetic Intelligence', 'Quantum-Neural Fusion', 'Consciousness AI', 'Quantum Internet'],
+          stats: { efficiency: '99.9%', speed: '10x', possibilities: '∞', year: '2026' },
+          link: '/pages/RevolutionaryTechBreakthrough2026'
+        },
+        {
+          title: 'Ultimate Tech Revolution 2026',
+          description: 'The convergence of consciousness, quantum computing, and artificial intelligence',
+          icon: '🌟',
+          features: ['Interactive Technology Tabs', 'Revolutionary Impact Stats', 'Dynamic Feature Showcase'],
+          stats: { possibilities: '∞', speed: '10x', efficiency: '99.9%', innovation: '∞' },
+          link: '/pages/UltimateTechRevolution2026'
+        }
+      ]
     },
-    {
-      icon: Shield,
-      title: "Quantum Cybersecurity",
-      description: "Unbreakable digital fortresses using quantum encryption and AI-powered threat detection.",
-      metrics: "99.99% Security Effectiveness",
-      color: "from-blue-500 to-cyan-500"
+    transcendent: {
+      title: 'Transcendent AI',
+      icon: '🧠',
+      color: 'from-cyan-600 to-blue-600',
+      description: 'AI that transcends consciousness and creates new forms of existence',
+      content: [
+        {
+          title: 'Transcendent AI Future 2026',
+          description: 'AI that transcends consciousness itself and creates new forms of existence',
+          icon: '🧠',
+          features: ['Consciousness AI', 'Quantum Intelligence', 'Meta Intelligence', 'Synthetic Consciousness'],
+          stats: { consciousness: '100%', evolution: '∞', creativity: '∞', future: '2028+' },
+          link: '/pages/TranscendentAIFuture2026'
+        },
+        {
+          title: 'Synthetic Intelligence 2026',
+          description: 'Self-evolving AI systems that transcend traditional limitations',
+          icon: '⚛️',
+          features: ['Self-Aware AI', 'Emotional Intelligence', 'Creative Consciousness', 'Transcendent Learning'],
+          stats: { awareness: '100%', evolution: '∞', creativity: '∞', potential: '∞' },
+          link: '/pages/SyntheticIntelligence2026'
+        }
+      ]
     },
-    {
-      icon: BarChart3,
-      title: "Autonomous Business Intelligence",
-      description: "Self-optimizing analytics that automatically analyze and optimize business performance.",
-      metrics: "400% Decision-Making Speed",
-      color: "from-green-500 to-emerald-500"
+    quantum: {
+      title: 'Quantum Technologies',
+      icon: '⚛️',
+      color: 'from-emerald-600 to-teal-600',
+      description: 'Quantum computing and neural interface breakthroughs',
+      content: [
+        {
+          title: 'Quantum-Neural Fusion 2026',
+          description: 'The revolutionary convergence of quantum computing and neural networks',
+          icon: '⚛️',
+          features: ['Quantum Neural Networks', 'Parallel Reality Processing', 'Exponential Computation', 'Transcendent Problem Solving'],
+          stats: { speed: '∞', power: '10x', accuracy: '100%', innovation: '∞' },
+          link: '/pages/QuantumNeuralFusion2026'
+        },
+        {
+          title: 'Quantum Internet 2026',
+          description: 'Instantaneous, secure global communication through quantum entanglement',
+          icon: '🌐',
+          features: ['Zero-latency Communication', 'Unbreakable Encryption', 'Unlimited Bandwidth', 'Interplanetary Connectivity'],
+          stats: { speed: '∞', security: '100%', capacity: '∞', reach: '∞' },
+          link: '/pages/QuantumInternet2026'
+        }
+      ]
     },
-    {
-      icon: CpuIcon,
-      title: "Synthetic Intelligence",
-      description: "Beyond human cognitive limits with superhuman intelligence capabilities.",
-      metrics: "1000% Problem-Solving Improvement",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: Globe,
-      title: "Metaverse Business Operations",
-      description: "Complete virtual enterprise operations with immersive collaboration environments.",
-      metrics: "500% Collaboration Improvement",
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      icon: RocketIcon,
-      title: "Revolutionary Tech Solutions",
-      description: "Cutting-edge technology solutions that transform business operations and outcomes.",
-      metrics: "600% Innovation Velocity",
-      color: "from-pink-500 to-rose-500"
+    consciousness: {
+      title: 'Consciousness Computing',
+      icon: '🌟',
+      color: 'from-orange-600 to-red-600',
+      description: 'AI systems with genuine consciousness and self-awareness',
+      content: [
+        {
+          title: 'Consciousness AI 2026',
+          description: 'AI systems that possess genuine consciousness, self-awareness, and emotional intelligence',
+          icon: '🤖',
+          features: ['Self-aware Decision Making', 'Emotional Intelligence', 'Creative Consciousness', 'Human-AI Bonds'],
+          stats: { awareness: '100%', empathy: '∞', creativity: '∞', evolution: '∞' },
+          link: '/pages/ConsciousnessAI2026'
+        },
+        {
+          title: 'Meta Intelligence 2026',
+          description: 'AI systems that think about thinking and continuously improve themselves',
+          icon: '🔄',
+          features: ['Self-improving Algorithms', 'Meta-learning Capabilities', 'Cognitive Evolution', 'Transcendent Intelligence'],
+          stats: { improvement: '∞', learning: '∞', evolution: '∞', transcendence: '∞' },
+          link: '/pages/MetaIntelligence2026'
+        }
+      ]
     }
-  ];
-  const successStories = [
-    {
-      company: "TechCorp Global",
-      industry: "Technology",
-      improvement: "500% ROI Increase",
-      description: "Implemented AI-powered content marketing and achieved unprecedented engagement rates."
-    },
-    {
-      company: "SecureBank International",
-      industry: "Finance",
-      improvement: "99.99% Security Uptime",
-      description: "Deployed quantum cybersecurity solutions with zero security incidents."
-    },
-    {
-      company: "DataFlow Analytics",
-      industry: "Analytics",
-      improvement: "400% Decision Speed",
-      description: "Autonomous business intelligence transformed their decision-making processes."
-    }
-  ];
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        const currentCategory = contentCategories[activeCategory as keyof typeof contentCategories];
+        setSelectedContent((prev) => (prev + 1) % currentCategory.content.length);
+        setIsAnimating(false);
+      }, 500);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [activeCategory, contentCategories]);
+
+  const currentCategory = contentCategories[activeCategory as keyof typeof contentCategories];
+  const currentItem = currentCategory.content[selectedContent];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Ultimate Content
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                {" "}Showcase 2026
-              </span>
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Cpath%20d%3D%22M40%2040c0-11.046-8.954-20-20-20s-20%208.954-20%2020%208.954%2020%2020%2020%2020-8.954%2020-20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 py-24">
+          <div className="text-center text-white">
+            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
+              🌟 ULTIMATE CONTENT SHOWCASE • 2026
+            </div>
+            <h1 className="text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              Ultimate Content Showcase
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Discover the most revolutionary content and technology solutions that are transforming businesses worldwide
+            <p className="text-3xl opacity-90 max-w-5xl mx-auto mb-12 leading-relaxed">
+              Explore our complete collection of revolutionary technology content. 
+              From consciousness AI to quantum computing - experience the future today.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-white font-semibold">500% Engagement Boost</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-white font-semibold">1000% ROI Increase</span>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-                <span className="text-white font-semibold">99.99% Security</span>
-              </div>
+            <div className="flex justify-center space-x-6">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-xl hover:scale-105">
+                🌟 Explore All Content →
+              </button>
+              <button className="border-2 border-white/30 text-white px-12 py-5 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-xl hover:scale-105">
+                🎥 Watch Overview
+              </button>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/blog"
-                className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-              >
-                Explore Content
-                <Star className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </motion.div>
+          </div>
         </div>
-      </section>
-      {/* Content Features Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary Content Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive suite of cutting-edge content and technology solutions designed to transform your business
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contentFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 group"
+      </div>
+
+      {/* Category Navigation */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex justify-center mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
+            {Object.entries(contentCategories).map(([key, category]) => (
+              <button
+                key={key}
+                onClick={() => {
+                  setActiveCategory(key);
+                  setSelectedContent(0);
+                }}
+                className={`px-6 py-3 rounded-xl font-semibold text-lg transition-all duration-300 ${
+                  activeCategory === key
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                }`}
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-purple-400">{feature.metrics}</span>
-                  <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
-                </div>
-              </motion.div>
+                <span className="mr-2">{category.icon}</span>
+                {category.title}
+              </button>
             ))}
           </div>
         </div>
-      </section>
-      {/* Success Stories */}
-      <section className="py-20 bg-white/5">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Success Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how leading companies are achieving unprecedented results with our solutions
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+
+        {/* Category Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold text-white mb-4">{currentCategory.title}</h2>
+          <p className="text-2xl text-gray-300 max-w-3xl mx-auto">{currentCategory.description}</p>
+        </div>
+
+        {/* Dynamic Content Display */}
+        <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className={`transition-all duration-1000 ${isAnimating ? 'opacity-50 scale-95' : 'opacity-100 scale-100'}`}>
+              <div className="flex items-center mb-6">
+                <span className="text-8xl mr-6 animate-bounce">{currentItem.icon}</span>
+                <h3 className="text-4xl font-bold text-white">{currentItem.title}</h3>
+              </div>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">{currentItem.description}</p>
+              
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {currentItem.features.map((feature, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                    <div className="flex items-center text-white">
+                      <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-3 animate-pulse"></span>
+                      <span className="font-semibold text-sm">{feature}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-4 gap-4 mb-8">
+                {Object.entries(currentItem.stats).map(([key, value], index) => (
+                  <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                    <div className="text-2xl font-bold text-purple-400 mb-1">{value}</div>
+                    <div className="text-xs text-gray-300 capitalize">{key}</div>
+                  </div>
+                ))}
+              </div>
+
+              <a 
+                href={currentItem.link}
+                className={`inline-block bg-gradient-to-r ${currentCategory.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
-                    <TrendingUp className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
-                    <p className="text-gray-400">{story.industry}</p>
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <span className="text-2xl font-bold text-purple-400">{story.improvement}</span>
-                </div>
-                <p className="text-gray-300">{story.description}</p>
-              </motion.div>
-            ))}
+                Explore {currentItem.title.split(' ')[0]} →
+              </a>
+            </div>
+
+            <div className="relative">
+              <div className={`w-full h-96 bg-gradient-to-br ${currentCategory.color} rounded-2xl flex items-center justify-center text-white transition-all duration-1000 ${isAnimating ? 'scale-95 opacity-50' : 'scale-100 opacity-100'}`}>
+                <span className="text-9xl animate-pulse">{currentItem.icon}</span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20 rounded-2xl"></div>
+            </div>
           </div>
         </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Join thousands of companies already achieving unprecedented results with our revolutionary content and technology solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Your Transformation
-                <RocketIcon className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/blog"
-                className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-              >
-                Explore All Content
-                <Users className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </motion.div>
+
+        {/* All Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {Object.entries(contentCategories).map(([categoryKey, category]) => 
+            category.content.map((item, index) => (
+              <div key={`${categoryKey}-${index}`} className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300 group">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                  <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-300 mb-6">{item.description}</p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {item.features.slice(0, 4).map((feature, featureIndex) => (
+                    <div key={featureIndex} className="bg-white/10 rounded-lg p-3 border border-white/20">
+                      <div className="flex items-center text-white">
+                        <span className="w-1.5 h-1.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-2"></span>
+                        <span className="text-xs font-semibold">{feature}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-4 gap-2 mb-6">
+                  {Object.entries(item.stats).map(([key, value], statIndex) => (
+                    <div key={statIndex} className="text-center bg-white/10 rounded-lg p-2 border border-white/20">
+                      <div className="text-lg font-bold text-purple-400">{value}</div>
+                      <div className="text-xs text-gray-300 capitalize">{key}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <a 
+                  href={item.link}
+                  className={`block w-full bg-gradient-to-r ${category.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center hover:scale-105`}
+                >
+                  Explore →
+                </a>
+              </div>
+            ))
+          )}
         </div>
-      </section>
+
+        {/* Call to Action */}
+        <div className="text-center bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-16 border border-white/20">
+          <h2 className="text-5xl font-bold text-white mb-6">Ready to Explore Everything?</h2>
+          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Discover our complete collection of revolutionary technology content. 
+            From consciousness AI to quantum computing - the future is here.
+          </p>
+          <div className="flex justify-center space-x-6">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-xl hover:scale-105">
+              🚀 Start Your Journey →
+            </button>
+            <button className="border-2 border-white/30 text-white px-12 py-5 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-xl hover:scale-105">
+              📞 Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+
 export default UltimateContentShowcase2026;

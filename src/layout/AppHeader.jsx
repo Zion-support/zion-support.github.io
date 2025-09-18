@@ -12,12 +12,14 @@ import {
   Sun,
   Moon
 } from 'lucide-react';
+
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -26,10 +28,12 @@ export function AppHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
+
   const navigation = [
     { name: 'Home', href: '/', current: location.pathname === '/' },
     { name: 'About', href: '/about', current: location.pathname === '/about' },
@@ -38,6 +42,7 @@ export function AppHeader() {
     { name: 'Pricing', href: '/comprehensive-pricing', current: location.pathname === '/comprehensive-pricing' },
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
   ];
+
   const servicesDropdown = [
     { name: 'AI Solutions', href: '/comprehensive-services#ai' },
     { name: 'Quantum Technology', href: '/comprehensive-services#quantum' },
@@ -45,6 +50,7 @@ export function AppHeader() {
     { name: 'Cloud Infrastructure', href: '/comprehensive-services#cloud' },
     { name: 'DevOps', href: '/comprehensive-services#devops' },
   ];
+
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -53,11 +59,12 @@ export function AppHeader() {
     }
     return location.pathname.startsWith(path);
   };
+
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     // Here you would typically update the theme context
   };
-const AppHeader= () => {
+
   return (
     <>
       <header 
@@ -73,17 +80,20 @@ const AppHeader= () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-              <div className="relative">
+              <divdiv 
+                className="relative"
+              >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg lg:text-xl">Z</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              </div>
+              </divdiv>
               <div className="hidden sm:block">
                 <div className="text-xl lg:text-2xl font-bold text-white">ZION TECH GROUP</div>
                 <div className="text-xs text-zion-cyan font-medium">INNOVATION • TECHNOLOGY • FUTURE</div>
               </div>
             </Link>
+
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8" role="navigation" aria-label="Main menu">
               {navigation.map((item) => (
@@ -100,6 +110,7 @@ const AppHeader= () => {
                   {item.name}
                 </Link>
               ))}
+              
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-200 rounded-md">
@@ -121,6 +132,7 @@ const AppHeader= () => {
                 </div>
               </div>
             </nav>
+
             {/* Search Bar - Hidden on mobile */}
             <div className="hidden md:flex ml-6 flex-1 max-w-md">
               <form onSubmit={handleSearch} className="relative w-full" role="search">
@@ -141,6 +153,7 @@ const AppHeader= () => {
                 </button>
               </form>
             </div>
+
             {/* Right side actions */}
             <div className="ml-6 flex items-center space-x-4">
               {/* Theme Toggle */}
@@ -151,6 +164,7 @@ const AppHeader= () => {
               >
                 {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </button>
+
               {/* Language Selector */}
               <button 
                 className="hidden lg:flex p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
@@ -158,6 +172,7 @@ const AppHeader= () => {
               >
                 <Globe className="h-5 w-5" />
               </button>
+
               {/* Settings */}
               <button 
                 className="hidden lg:flex p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
@@ -165,6 +180,7 @@ const AppHeader= () => {
               >
                 <Settings className="h-5 w-5" />
               </button>
+
               {/* Notifications */}
               <button 
                 className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10 relative"
@@ -173,6 +189,7 @@ const AppHeader= () => {
                 <Bell className="h-5 w-5" />
                 <span className="absolute top-1 right-1 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></span>
               </button>
+
               {/* User menu */}
               <button 
                 className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
@@ -180,6 +197,7 @@ const AppHeader= () => {
               >
                 <User className="h-5 w-5" />
               </button>
+
               {/* CTA Button */}
               <Link 
                 to="/contact" 
@@ -187,6 +205,7 @@ const AppHeader= () => {
               >
                 Get Started
               </Link>
+
               {/* Mobile menu button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -194,45 +213,100 @@ const AppHeader= () => {
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle mobile menu"
               >
-                {mobileMenuOpen ? (
-                  <div key="close">
-                    <X className="w-6 h-6" />
-                  </div>
-                ) : (
-                  <div key="menu">
-                    <Menu className="w-6 h-6" />
-                  </div>
-                )}
+                  {mobileMenuOpen ? (
+                    <divdiv
+                      key="close"
+                    >
+                      <X className="w-6 h-6" />
+                    </divdiv>
+                  ) : (
+                    <divdiv
+                      key="menu"
+                    >
+                      <Menu className="w-6 h-6" />
+                    </divdiv>
+                  )}
+                </div>
               </button>
             </div>
           </div>
+
           {/* Mobile Navigation */}
-          {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-white/10">
-              <nav className="py-4 space-y-2" role="navigation" aria-label="Mobile menu">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
-                      item.current
-                        ? 'bg-zion-cyan/20 text-zion-cyan'
-                        : 'text-white hover:bg-white/10'
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span>{item.name}</span>
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          )}
+          <div>
+            {mobileMenuOpen && (
+              <divdiv 
+                className="lg:hidden"
+              >
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-zion-slate-dark/95 border-t border-zion-cyan/20 backdrop-blur-md">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`block px-3 py-2 text-base font-medium transition-all duration-200 rounded-md ${
+                        item.current
+                          ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
+                          : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                  
+                  {/* Mobile Services Dropdown */}
+                  <div className="px-3 py-2">
+                    <div className="text-sm font-medium text-zion-cyan mb-2">Services</div>
+                    {servicesDropdown.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                  
+                  {/* Mobile Search */}
+                  <form onSubmit={handleSearch} className="px-3 py-2">
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                      aria-label="Search"
+                    />
+                  </form>
+                  
+                  {/* Mobile Actions */}
+                  <div className="px-3 py-2 space-y-2">
+                    <Link
+                      to="/login"
+                      className="block w-full text-center px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="block w-full text-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
+              </divdiv>
+            )}
+          </div>
         </div>
       </header>
+      
       {/* Spacer to prevent content from hiding behind fixed header */}
       <div className="h-16 lg:h-20"></div>
     </>
   );
-};
-export default AppHeader;
+}

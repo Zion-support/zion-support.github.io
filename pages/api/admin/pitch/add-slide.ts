@@ -1,9 +1,4 @@
-import { ensureAdminFromApi } from '../../../../utils/auth',;
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { allowed } = await ensureAdminFromApi(req)
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
-
-    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
-};
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });

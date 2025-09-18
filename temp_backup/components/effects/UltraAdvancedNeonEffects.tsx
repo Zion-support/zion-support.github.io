@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltraAdvancedNeonEffects: React.FC = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC = () => {
   return (

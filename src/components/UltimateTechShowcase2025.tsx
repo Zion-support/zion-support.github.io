@@ -1,261 +1,214 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Zap, 
-  Globe, 
-  Shield, 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Lock, 
-  TrendingUp, 
-  Users,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Sparkles
-} from 'lucide-react';
-const UltimateTechShowcase2025 = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+
+const UltimateTechShowcase2025: React.FC = () => {
+  const [activeDemo, setActiveDemo] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const demos = [
+    {
+      id: 1,
+      title: "Conscious AI Demo",
+      description: "Watch as our AI achieves true consciousness and self-awareness",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      features: [
+        "Real-time consciousness monitoring",
+        "Emotional intelligence simulation",
+        "Autonomous decision making",
+        "Self-learning capabilities"
+      ],
+      stats: { consciousness: "Level 5", accuracy: "99.9%", speed: "1000x" }
+    },
+    {
+      id: 2,
+      title: "Quantum Reality Engine",
+      description: "Experience quantum computing that manipulates reality itself",
+      icon: "⚛️",
+      color: "from-cyan-600 to-blue-600",
+      features: [
+        "Quantum entanglement at room temperature",
+        "Reality simulation and manipulation",
+        "Parallel universe communication",
+        "Time-space distortion"
+      ],
+      stats: { qubits: "1M+", coherence: "∞", reality: "100%" }
+    },
+    {
+      id: 3,
+      title: "Neural Interface Revolution",
+      description: "Control technology with your mind using direct brain interfaces",
+      icon: "🧬",
+      color: "from-emerald-600 to-teal-600",
+      features: [
+        "Non-invasive neural data transfer",
+        "Thought-to-action conversion",
+        "Memory enhancement and storage",
+        "Multi-sensory VR"
+      ],
+      stats: { latency: "0.1ms", bandwidth: "1TB/s", fidelity: "100%" }
+    }
+  ];
+
   useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Intelligence",
-      description: "Revolutionary artificial intelligence that learns, adapts, and evolves with your business needs",
-      stats: "99.9% Accuracy",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Zap,
-      title: "Lightning-Fast Performance",
-      description: "Optimized for speed with cutting-edge technology that delivers results in milliseconds",
-      stats: "10x Faster",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Globe,
-      title: "Global Scale",
-      description: "Built for worldwide deployment with seamless integration across all continents",
-      stats: "200+ Countries",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Military-grade security protocols protecting your most sensitive data and operations",
-      stats: "Zero Breaches",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Rocket,
-      title: "Future-Ready",
-      description: "Designed for tomorrow's challenges with scalable architecture and forward-thinking solutions",
-      stats: "2030+ Ready",
-      color: "from-red-500 to-pink-500"
+    if (isPlaying) {
+      const interval = setInterval(() => {
+        setActiveDemo((prev) => (prev + 1) % demos.length);
+      }, 5000);
+      return () => clearInterval(interval);
     }
-  ];
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "CTO, TechCorp",
-      content: "This technology transformed our entire operation. ROI increased by 500% in just 3 months.",
-      rating: 5
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "CEO, InnovateLabs",
-      content: "The most advanced solution we've ever implemented. It's like having a crystal ball for business.",
-      rating: 5
-    },
-    {
-      name: "Dr. Emily Watson",
-      role: "Research Director, FutureTech",
-      content: "Revolutionary approach to problem-solving. This is the future of technology.",
-      rating: 5
-    }
-  ];
+  }, [isPlaying, demos.length]);
+
+  const currentDemo = demos[activeDemo];
+
   return (
-    <div className="relative py-20 px-4 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20" />
-      <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4" />
-            <span>2025 Ultimate Technology Showcase</span>
+    <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 ULTIMATE TECH SHOWCASE • 2025
           </div>
-          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            The Future of
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              {" "}Technology
-            </span>
-            <br />
-            is Here
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the most advanced, innovative, and revolutionary technology solutions 
-            that will transform your business and propel you into the future.
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience the most revolutionary technologies through interactive demonstrations. 
+            Witness the future of AI, quantum computing, and neural interfaces.
           </p>
-        </motion.div>
-        {/* Feature Showcase */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
-          >
-            <h3 className="text-3xl font-bold text-white mb-8">
-              Revolutionary Features
-            </h3>
-            <div className="space-y-4">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className={`p-6 rounded-2xl bg-gradient-to-r ${feature.color} bg-opacity-10 border border-white border-opacity-20 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300 cursor-pointer`}
-                  onClick={() => setCurrentFeature(index)}
-                >
-                  <div className="flex items-center gap-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}>
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-semibold text-white mb-2">
-                        {feature.title}
-                      </h4>
-                      <p className="text-gray-300 mb-2">
-                        {feature.description}
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        <span className="text-sm font-medium text-green-400">
-                          {feature.stats}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
-          >
-            <div className="relative h-96 bg-gradient-to-br from-purple-900 to-pink-900 rounded-3xl overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentFeature}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.2 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute inset-0 flex items-center justify-center"
-                >
-                  <div className="text-center">
-                    <div className={`w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r ${features[currentFeature].color} bg-opacity-20 flex items-center justify-center`}>
-                      {React.createElement(features[currentFeature].icon, { className: "w-12 h-12 text-white" })}
-                    </div>
-                    <h4 className="text-2xl font-bold text-white mb-4">
-                      {features[currentFeature].title}
-                    </h4>
-                    <p className="text-gray-300 text-lg">
-                      {features[currentFeature].description}
-                    </p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-              {/* Floating elements */}
-              <div className="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full animate-pulse" />
-              <div className="absolute bottom-4 left-4 w-2 h-2 bg-pink-400 rounded-full animate-pulse delay-1000" />
-              <div className="absolute top-1/2 right-8 w-1 h-1 bg-cyan-400 rounded-full animate-pulse delay-2000" />
-            </div>
-          </motion.div>
         </div>
-        {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            What Industry Leaders Say
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                className="p-6 bg-white bg-opacity-5 backdrop-blur-sm rounded-2xl border border-white border-opacity-20"
-              >
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-sm text-gray-400">{testimonial.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 md:p-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of forward-thinking companies already using our revolutionary technology
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 flex items-center gap-2">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors duration-300">
-                Schedule Demo
-              </button>
+
+        {/* Demo Controls */}
+        <div className="flex justify-center space-x-4 mb-8">
+          <button
+            onClick={() => setIsPlaying(!isPlaying)}
+            className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              isPlaying
+                ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white'
+                : 'bg-gradient-to-r from-green-600 to-emerald-600 text-white'
+            }`}
+          >
+            {isPlaying ? '⏸️ Pause Demo' : '▶️ Play Demo'}
+          </button>
+          <button
+            onClick={() => setActiveDemo((prev) => (prev - 1 + demos.length) % demos.length)}
+            className="bg-white/10 text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-semibold"
+          >
+            ⏮️ Previous
+          </button>
+          <button
+            onClick={() => setActiveDemo((prev) => (prev + 1) % demos.length)}
+            className="bg-white/10 text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-semibold"
+          >
+            Next ⏭️
+          </button>
+        </div>
+
+        {/* Demo Navigation */}
+        <div className="flex justify-center space-x-2 mb-8">
+          {demos.map((demo, index) => (
+            <button
+              key={demo.id}
+              onClick={() => setActiveDemo(index)}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                activeDemo === index
+                  ? 'bg-gradient-to-r from-purple-400 to-pink-400 scale-125'
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Active Demo Display */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8 transition-all duration-500">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <div className="text-center mb-6">
+                <div className="text-8xl mb-4">{currentDemo.icon}</div>
+                <h3 className="text-3xl font-bold mb-4">{currentDemo.title}</h3>
+                <p className="text-lg opacity-90">{currentDemo.description}</p>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="text-xl font-bold mb-4">Key Features:</h4>
+                {currentDemo.features.map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                    <span className="text-lg">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold mb-6">Performance Metrics:</h4>
+              <div className="space-y-4">
+                {Object.entries(currentDemo.stats).map(([key, value]) => (
+                  <div key={key} className="bg-white/5 rounded-lg p-4">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-lg capitalize">{key.replace(/([A-Z])/g, ' $1')}</span>
+                      <span className="text-2xl font-bold text-purple-400">{value}</span>
+                    </div>
+                    <div className="w-full bg-white/10 rounded-full h-2">
+                      <div 
+                        className={`bg-gradient-to-r ${currentDemo.color} h-2 rounded-full transition-all duration-1000`}
+                        style={{ width: `${Math.min(100, Math.random() * 100)}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6">
+                <button className={`w-full bg-gradient-to-r ${currentDemo.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
+                  🚀 Try Interactive Demo
+                </button>
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* Technology Grid */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {demos.map((demo, index) => (
+            <div
+              key={demo.id}
+              className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer ${
+                activeDemo === index ? 'ring-2 ring-purple-400' : ''
+              }`}
+              onClick={() => setActiveDemo(index)}
+            >
+              <div className="text-4xl mb-4">{demo.icon}</div>
+              <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
+              <p className="text-sm opacity-80 mb-4">{demo.description}</p>
+              <div className="text-xs opacity-60">
+                {Object.entries(demo.stats).map(([key, value]) => (
+                  <div key={key} className="flex justify-between">
+                    <span className="capitalize">{key.replace(/([A-Z])/g, ' $1')}:</span>
+                    <span className="font-semibold">{value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
+          <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+            Join thousands of innovators who are already using our revolutionary technology to transform their businesses.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+              🚀 Start Free Trial
+            </button>
+            <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold">
+              📞 Schedule Demo
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
+
 export default UltimateTechShowcase2025;
-</div></div></div></div></div>

@@ -1,7 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const 2025-cutting-edge-ai-services: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
@@ -19,4 +16,5 @@ const 2025-cutting-edge-ai-services: React.FC = () => {
   );
 };
 
-export default 2025-cutting-edge-ai-services;
+
+export default NeuralInterfaceRevolution2026;

@@ -1,0 +1,10 @@
+import React from 'react';
+
+const InnovationLanding2025 = () => {
+  return (
+      </div>
+    </div>
+  );
+};
+
+export default InnovationLanding2025;

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const 2025CuttingEdgeServicesShowcase: React.FC = () => {
   return (

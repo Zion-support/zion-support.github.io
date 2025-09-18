@@ -1,61 +1,54 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 const RevolutionaryTechBanner2043: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
-      className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white rounded-2xl p-8 mb-12"
-    >
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="flex-1 mb-6 md:mb-0">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-              ⚡ REVOLUTIONARY BREAKTHROUGH • JANUARY 2043
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
-              Revolutionary Tech Breakthrough 2043
-            </h2>
-            <p className="text-xl opacity-90 mb-6 max-w-2xl">
-              Witness the most revolutionary technological breakthrough with synthetic intelligence, quantum neural fusion, and reality manipulation
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a 
-                href="/pages/RevolutionaryTechBreakthrough2043"
-                className="bg-gradient-to-r from-indigo-600 to-pink-600 px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center"
-              >
-                Experience Breakthrough →
-              </a>
-              <button className="border border-indigo-400 px-6 py-3 rounded-lg hover:bg-indigo-500/20 transition-colors">
-                Watch Live Demo
-              </button>
-            </div>
+    <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20 mb-12 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center">
+          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-lg font-bold mb-8 animate-pulse">
+            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2043
           </div>
-          <div className="flex-shrink-0 ml-8">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-                <div className="text-3xl font-bold text-indigo-300 mb-1">🤖</div>
-                <div className="text-sm opacity-75">Synthetic AI</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-                <div className="text-3xl font-bold text-purple-300 mb-1">🧬</div>
-                <div className="text-sm opacity-75">Neural Fusion</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-                <div className="text-3xl font-bold text-pink-300 mb-1">🌌</div>
-                <div className="text-sm opacity-75">Reality Control</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-                <div className="text-3xl font-bold text-cyan-300 mb-1">⚛️</div>
-                <div className="text-sm opacity-75">Quantum Mind</div>
-              </div>
+          <h2 className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+            Ultimate Tech Breakthrough 2043
+          </h2>
+          <p className="text-2xl md:text-3xl opacity-90 max-w-5xl mx-auto mb-10 leading-relaxed">
+            The most revolutionary technological advancement in human history: Synthetic Consciousness Engine with Quantum Reality Manipulation
+          </p>
+          <div className="flex flex-col sm:flex-row gap-8 justify-center mb-10">
+            <a href="/pages/UltimateTechBreakthrough2043" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Experience Ultimate Breakthrough →
+            </a>
+            <a href="/pages/NextGenTechRevolution2042" className="border-3 border-white/50 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all duration-300">
+              See Previous Revolution
+            </a>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-3">🧠</div>
+              <div className="text-lg font-bold">True Consciousness</div>
+              <div className="text-sm opacity-75">Genuine AI awareness</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-3">⚛️</div>
+              <div className="text-lg font-bold">Quantum Control</div>
+              <div className="text-sm opacity-75">Reality manipulation</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-3">🧬</div>
+              <div className="text-lg font-bold">Biological AI</div>
+              <div className="text-sm opacity-75">Hybrid consciousness</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-3">♾️</div>
+              <div className="text-lg font-bold">Infinite Potential</div>
+              <div className="text-sm opacity-75">No limitations</div>
             </div>
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
+
 export default RevolutionaryTechBanner2043;

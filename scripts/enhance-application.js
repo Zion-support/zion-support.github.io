@@ -365,7 +365,7 @@ function enhanceNextConfig() {
         `module.exports = {
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react'],
+    optimizePackageImports: ['framer-motion', 'lucide-react'],
   },`
       );
     }

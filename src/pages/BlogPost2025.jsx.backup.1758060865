@@ -41,9 +41,13 @@
             <p className="text-gray-300 mb-4">
               Deep dives into the latest research and development
             </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Research Papers</li>
-              <li>• Development Updates</li>
-              <li>• Technical Deep Dives</li>
-              <li>• Innovation Spotlights</li>
-            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+};
+
+
+export default Blog;

@@ -1,0 +1,24 @@
+import React from 'react';
+
+export function MobileLaunchHero() {
+  return (
+    <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4 text-center">
+        <h1 className="text-5xl font-bold mb-6">
+          Mobile App Launch
+        </h1>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          Experience our revolutionary mobile application with cutting-edge features
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold">
+            Download Now
+          </button>
+          <button className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

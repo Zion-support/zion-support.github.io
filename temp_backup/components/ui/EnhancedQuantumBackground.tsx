@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnhancedQuantumBackground: React.FC = () => {
   return (

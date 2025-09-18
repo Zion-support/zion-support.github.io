@@ -1,74 +1,118 @@
-import React from 'react';
-import NotificationSystem from './components/NotificationSystem';
-import NewContentNavigation2026 from './components/NewContentNavigation2026';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 const Header: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const navigationItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
-      {/* Promotional Banner */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center space-x-4 text-sm">
-            <span className="animate-pulse">🚀</span>
-            <span className="font-semibold">NEW: Revolutionary Content 2026 - Autonomous AI, Quantum ML, Conscious AI & More!</span>
-            <a href="/pages/NewContentShowcase2026" className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">
-              Explore Now →
-            </a>
-            <span className="animate-pulse">🚀</span>
-          </div>
-        </div>
-      </div>
+    <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center py-6">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
-            </a>
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
           </div>
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <a href="/" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Home
-            </a>
-            <a href="/pages/NextGenInnovationHub2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Innovation Hub
-            </a>
-            <a href="/pages/AITrends2026Insights" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg">
-              AI Trends 2026
-            </a>
-            <a href="/pages/RevolutionaryCaseStudies2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-              Case Studies
-            </a>
-            <a href="/revolutionary-content-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg">
-              Revolutionary 2026
-            </a>
-            <a href="/pages/NewContentShowcase2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-green-50 to-teal-50 rounded-lg">
-              New Content 2026
-            </a>
-            <a href="/ultimate-content-showcase-2026" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-              Content Showcase
-            </a>
-            <a href="/pages/ComprehensiveServices2025" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Services
-            </a>
-            <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              Contact
-            </a>
-            {/* New Content Navigation */}
-            <NewContentNavigation2026 />
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 relative group"
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
+              </Link>
+            ))}
           </nav>
-          {/* Right side actions */}
-          <div className="flex items-center space-x-4">
-            <NotificationSystem />
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-medium">
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              to="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            >
               Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900"
+              aria-label="Toggle mobile menu"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {isMobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                to="/contact"
+                className="block px-3 py-2 mt-4 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
 };
+
 export default Header;

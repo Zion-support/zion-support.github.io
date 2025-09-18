@@ -2633,8 +2633,7 @@ export const getBlogTags = () => {
   }));
 };
 
-const extraContent2029 = [
-  {
+export const additionalBlogPost = {
     id: 9501,
     title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
     excerpt: "Copy‑paste CI checks, scorecards, and rollback contracts that block risky merges.",
@@ -2648,8 +2647,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/exec-guide-eval-gates-2026.jpg",
     slug: "exec-guide-eval-gates-ship-tomorrow"
-  },
-  {
+  };
+
+export const additionalBlogPost2 = {
     id: 9511,
     title: "Playbook: Safe Agent Rollouts in 7 Days",
     excerpt: "A day‑by‑day plan with eval gates, scorecards, and rollback drills.",
@@ -2663,8 +2663,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/safe-agent-rollouts-7-days.jpg",
     slug: "playbook-safe-agent-rollouts-7-days"
-  },
-  {
+  };
+
+export const additionalBlogPost3 = {
     id: 9512,
     title: "Blueprint: Cost‑Aware Model Routing That Holds Quality",
     excerpt: "Reduce spend 30%+ with confidence‑tier routing and online evals.",
@@ -2678,8 +2679,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/cost-aware-routing-blueprint.jpg",
     slug: "blueprint-cost-aware-model-routing"
-  },
-  {
+  };
+
+export const additionalBlogPost4 = {
     id: 9502,
     title: "FinServ Case Study: 35% Savings With Policy Routing",
     excerpt: "Spend bands, confidence ladders, and online evals—quality held, cost down 35%.",
@@ -2693,8 +2695,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/finserv-policy-routing-35-2026.jpg",
     slug: "finserv-case-study-policy-routing-35-savings"
-  },
-  {
+  };
+
+export const additionalBlogPost5 = {
     id: 9503,
     title: "Journey Scorecards Starter: KPIs That Actually Gate Change",
     excerpt: "JSON KPI templates, policy examples, and CI wiring to make changes safe.",
@@ -2708,8 +2711,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/journey-scorecards-starter-2026.jpg",
     slug: "journey-scorecards-starter-kpis"
-  },
-  {
+  };
+
+export const additionalBlogPost6 = {
     id: 9401,
     title: "AI 2026: Production Guardrails You Can Ship Today",
     excerpt: "Drop-in eval gates, rollback contracts, and scorecards that block risky merges.",
@@ -2723,8 +2727,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/production-guardrails-2026.jpg",
     slug: "ai-2026-production-guardrails-ship-today"
-  },
-  {
+  };
+
+export const additionalBlogPost7 = {
     id: 9402,
     title: "RAG 2026: Grounded Answers Under Spend Caps",
     excerpt: "Freshness windows, budget-aware routing, and evaluators that keep answers true.",
@@ -2738,8 +2743,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/rag-grounded-answers-spend-caps-2026.jpg",
     slug: "rag-2026-grounded-under-spend-caps"
-  },
-  {
+  };
+
+export const additionalBlogPost8 = {
     id: 9403,
     title: "Agent KPIs That Matter: Override Rate, Groundedness, Cost",
     excerpt: "A minimal KPI set wired to alerts, scorecards, and rollback triggers.",
@@ -2753,8 +2759,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/agent-kpis-that-matter-2026.jpg",
     slug: "agent-kpis-that-matter-2026"
-  },
-  {
+  };
+
+export const additionalBlogPost9 = {
     id: 9404,
     title: "FinOps for LLMs: 30% Savings With Policy-Driven Routing",
     excerpt: "Route by confidence and latency while holding quality; cut waste fast.",
@@ -2768,8 +2775,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/finops-policy-routing-2026.jpg",
     slug: "finops-llm-30-percent-savings-2026"
-  },
-  {
+  };
+
+export const additionalBlogPost10 = {
     id: 9405,
     title: "Scorecards in CI: Block Merges With Evidence, Not Opinions",
     excerpt: "Make risk explicit with eval results, incidents, and SLO deltas in one view.",
@@ -2783,8 +2791,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/scorecards-in-ci-2026.jpg",
     slug: "scorecards-in-ci-block-merges-evidence"
-  },
-  {
+  };
+
+export const additionalBlogPost11 = {
     id: 9301,
     title: "AI 2026: Policy‑as‑Code Starter Kit — Ship Safer, Faster",
     excerpt: "Copy‑paste policies, approvals, and risk tiers to gate agent behavior and releases.",
@@ -2798,8 +2807,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/policy-as-code-starter-kit-2026.jpg",
     slug: "ai-2026-policy-as-code-starter-kit"
-  },
-  {
+  };
+
+export const additionalBlogPost12 = {
     id: 8001,
     title: "2025 Q3: Practical Eval-Gated Rollouts",
     excerpt: "How teams shipped 42 features safely using scorecards, canaries, and auto-rollback.",
@@ -2813,7 +2823,9 @@ const extraContent2029 = [
     featured: true,
     imageUrl: "/images/blog/2025-q3-eval-gated-rollouts.jpg",
     slug: "2025-q3-practical-eval-gated-rollouts"
-  },
+  };
+
+export const additionalBlogPost13 = [
   {
     id: 8201,
     title: "Operational Evidence Hubs: From Evals to Exec Decisions",
@@ -3561,9 +3573,6 @@ export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent202
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
 export const BLOG_POSTS = allBlogPosts;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-60a7
 // Helpers for UI components
 // (kept earlier helper versions; remove duplicates below)

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const blockchain-infrastructure-platform-2026: React.FC = () => {
   return (

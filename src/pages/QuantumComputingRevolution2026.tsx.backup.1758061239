@@ -19,5 +19,5 @@ const QuantumComputingRevolution2026: React.FC = () => {
   );
 };
 
-export default QuantumComputingRevolution2026;
->>>>>>> 1345827b8fdbf69cd3ef329763121cf019722526
+
+export default QuantumComputingBreakthroughs2025;

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const AnimatedBackground: React.FC = () => {
   return (

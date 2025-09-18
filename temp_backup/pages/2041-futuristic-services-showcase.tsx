@@ -19,4 +19,3 @@ const 2041-futuristic-services-showcase: React.FC = () => {
   );
 };
 
-export default 2041-futuristic-services-showcase;

@@ -1,113 +1,14 @@
 import React from 'react';
 const QuantumAI2025RevolutionBanner: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-            <span className="text-sm font-medium">🚀 NEW: QUANTUM AI REVOLUTION 2025</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Quantum AI Transformation
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Achieve 2000% ROI
-            </span>
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover how Fortune 500 companies are achieving unprecedented success with quantum AI. 
-            Complete implementation guide with real-world case studies and proven results.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {/* Featured Content Cards */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <div className="text-3xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold mb-3">Quantum Machine Learning Guide</h3>
-            <p className="text-gray-300 mb-4">
-              Complete guide to quantum machine learning implementation in 2025. 
-              Revolutionary capabilities and business transformation strategies.
-            </p>
-            <a 
-              href="/blog/ai-2025-quantum-machine-learning-revolution-ultimate-guide"
-              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
-            >
-              Read Guide →
-            </a>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <div className="text-3xl mb-4">🎯</div>
-            <h3 className="text-xl font-bold mb-3">Generative AI Revolution</h3>
-            <p className="text-gray-300 mb-4">
-              Ultimate breakthrough guide to generative AI enterprise implementation. 
-              Transform your business with cutting-edge AI capabilities.
-            </p>
-            <a 
-              href="/blog/ai-2025-generative-ai-enterprise-revolution-ultimate-breakthrough"
-              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
-            >
-              Explore Now →
-            </a>
-          </div>
-          <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
-            <div className="text-3xl mb-4">💎</div>
-            <h3 className="text-xl font-bold mb-3">2000% ROI Success Story</h3>
-            <p className="text-gray-300 mb-4">
-              Real Fortune 500 case study: How quantum AI transformation delivered 
-              $1.05 billion in annual savings and 2000% ROI.
-            </p>
-            <a 
-              href="/case-studies/ai-2025-quantum-ai-transformation-2000-roi-success-story"
-              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
-            >
-              View Case Study →
-            </a>
-          </div>
-        </div>
-        {/* Key Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">2000%</div>
-            <div className="text-sm text-gray-300">ROI Achievement</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">$1.05B</div>
-            <div className="text-sm text-gray-300">Annual Savings</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">18</div>
-            <div className="text-sm text-gray-300">Months to ROI</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-orange-400 mb-2">95%</div>
-            <div className="text-sm text-gray-300">Success Rate</div>
-          </div>
-        </div>
-        {/* Call to Action */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Quantum AI Journey
-            </a>
-            <a
-              href="/services/quantum-ai"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300"
-            >
-              Explore Quantum AI Services
-            </a>
-          </div>
-          <p className="text-sm text-gray-300 mt-4">
-            Join leading enterprises transforming their business with quantum AI
-          </p>
+          <h1 className="text-4xl font-bold mb-6">QuantumAI2025RevolutionBanner</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
+  };
 export default QuantumAI2025RevolutionBanner;

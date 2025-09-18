@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const enhanced-micro-saas-showcase: React.FC = () => {
   return (
@@ -19,4 +17,5 @@ const enhanced-micro-saas-showcase: React.FC = () => {
   );
 };
 
-export default enhanced-micro-saas-showcase;
+
+export default RevolutionaryCaseStudies2025;

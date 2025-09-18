@@ -1,51 +1,28 @@
-# This is a VITE project, NOT a Next.js project
-# The build process uses Vite to create a static site in the 'dist' folder
-# No Next.js plugins or configurations are needed
-# Configuration updated to resolve merge conflicts
-
+# Updated: Fixed for Vite React app deployment
 [build]
-  # Use `npm install` for consistent dependency management, Vite builds to dist/
-  command = "npm ci && npm run build:netlify"
+  command = "npm install --include=optional && npm run build"
   publish = "dist"
-  # Force static site build (not Next.js)
-  # Functions moved to PM2 automation
-  # Explicitly specify this is a static site, not a framework
-  base = "."
+  command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max_old_space_size=6144"
-  # Use npm for dependency management
-  NPM_FLAGS = "--ignore-scripts --no-optional"
-  # Skip Netlify's Next.js plugin since this is a Vite static site
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  # Force Vite/static site detection
-  NETLIFY_USE_YARN = "false"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
-  # Disable framework detection
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
-  # Force static site build
-  NETLIFY_FORCE_STATIC_BUILD = "true"
-  # Skip all framework plugins
-  NETLIFY_SKIP_FRAMEWORK_PLUGINS = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
-  # Fix Rollup module issues
-  NPM_CONFIG_OPTIONAL = "false"
-  NPM_CONFIG_PLATFORM = "linux"
-  NPM_CONFIG_ARCH = "x64"
-  NPM_CONFIG_TARGET_PLATFORM = "linux"
-  NPM_CONFIG_TARGET_ARCH = "x64"
+  GIT_SUBMODULE_STRATEGY = "none"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-  # Additional Rollup fixes
-  VITE_ROLLUP_PLATFORM = "linux"
-  VITE_ROLLUP_ARCH = "x64"
-  ROLLUP_PLATFORM = "linux"
-  ROLLUP_ARCH = "x64"
 
-# Fix MIME type issues
+[build.processing]
+  skip_processing = true
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/js/*"
   [headers.values]
@@ -123,9 +100,33 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Removed Next.js plugin since this is a Vite project
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
-# Redirects for SEO/legacy URLs
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# Optional CSP for JS if needed
+# [[headers]]
+#   for = "*.js"
+#   [headers.values]
+#     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
+
+# Redirects for legacy URLs (timestamp refresh 2025-09-19T00:15:00Z)
+[[redirects]]
+  from = "/api/*"
+  to = "https://backend.example.com/:splat"
+  status = 200
+
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -206,8 +207,10 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Handle client-side routing for SPA
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Note: SPA routing fallback handled via public/_redirects
+
+# No-op: trigger deploy 2025-09-19 00:15 (run-11)
+
+## End of Netlify configuration
+# No-op: trigger deploy 2025-09-19T00:15:00Z (refresh 2025-09-19T00:15:00Z)
+# trigger: 2025-09-19T00:15:00Z (refresh) re-run-11

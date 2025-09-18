@@ -1,4 +1,5 @@
     </div>
   );
 };
+
 export default RevolutionaryAdBanner;

@@ -1,19 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect }  from 'react';
+import { Link }  from 'react-router-dom';
+
 const RevolutionaryContentBanner2032: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const slides = [
+    {
+      title: "Ultimate Tech Breakthrough 2032",
+      subtitle: "Conscious AI • Quantum Consciousness • Interdimensional Computing",
+      description: "Experience the most revolutionary technological advances that will reshape our world in 2032",
+      link: "/pages/UltimateTechBreakthrough2032",
+      color: "from-purple-600 to-pink-600",
+      icon: "🌟"
+    },
+    {
+      title: "Revolutionary Tech Showcase 2032",
+      subtitle: "Interactive Demos • Real-time Processing • Multi-dimensional Tech",
+      description: "Interactive showcase of cutting-edge technologies that will define the future",
+      link: "/pages/RevolutionaryTechShowcase2032",
+      color: "from-cyan-600 to-blue-600",
+      icon: "⚡"
+    },
+    {
+      title: "Next-Gen Tech Revolution 2032",
+      subtitle: "Conscious AI • Quantum Processing • Dimensional Computing",
+      description: "Witness the most revolutionary technological transformation in human history",
+      link: "/pages/NextGenTechRevolution2032",
+      color: "from-emerald-600 to-teal-600",
+      icon: "🚀"
+    };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  if (!isVisible) return null;
+
   return (
-      </div>
-    </div>
-  );
-};
-export default RevolutionaryContentBanner2032;
     <divdiv
       className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
     >
-      {/* Animated Background */}
+      {/* Animated Background */};
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
       </div>
+      
       <div className="relative z-10">
         <div className="flex items-center justify-center space-x-4 mb-6">
           <span className="text-5xl animate-bounce">🌟</span>
@@ -22,11 +57,13 @@ export default RevolutionaryContentBanner2032;
           </h2>
           <span className="text-5xl animate-bounce">🌟</span>
         </div>
+        
         <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
           Experience the most advanced technology content ever created - Transcendent AI, Universal Tech Revolution, 
           and Quantum Consciousness that push the boundaries of reality itself
         </p>
-        {/* New 2032 Content Links */}
+        
+        {/* New 2032 Content Links */};
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-8xl mx-auto mb-8">
           <diva
             href="/pages/TranscendentAI2032"
@@ -36,6 +73,7 @@ export default RevolutionaryContentBanner2032;
             <div className="text-xl font-bold">Transcendent AI 2032</div>
             <div className="text-sm opacity-90 mt-2">Beyond Human Intelligence</div>
           </diva>
+          
           <diva
             href="/pages/UniversalTechRevolution2032"
             className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
@@ -44,6 +82,7 @@ export default RevolutionaryContentBanner2032;
             <div className="text-xl font-bold">Universal Tech 2032</div>
             <div className="text-sm opacity-90 mt-2">Galactic Technology</div>
           </diva>
+          
           <diva
             href="/pages/QuantumConsciousnessRevolution2032"
             className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
@@ -53,7 +92,8 @@ export default RevolutionaryContentBanner2032;
             <div className="text-sm opacity-90 mt-2">Mind-Matter Fusion</div>
           </diva>
         </div>
-        {/* Feature Highlights */}
+        
+        {/* Feature Highlights */};
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           <span className="bg-green-500/20 text-green-300 px-6 py-3 rounded-full text-lg font-bold border border-green-400/30">
             ✨ 3 NEW REVOLUTIONARY PAGES
@@ -68,7 +108,8 @@ export default RevolutionaryContentBanner2032;
             🌌 UNIVERSAL SCALE
           </span>
         </div>
-        {/* Revolutionary Features List */}
+        
+        {/* Revolutionary Features List */};
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
             <div className="text-2xl mb-2">🧠</div>
@@ -87,7 +128,8 @@ export default RevolutionaryContentBanner2032;
             <div className="font-bold text-sm">Universal Mind Network</div>
           </div>
         </div>
-        {/* Call to Action */}
+        
+        {/* Call to Action */};
         <divdiv
           className="mt-8"
         >
@@ -100,3 +142,8 @@ export default RevolutionaryContentBanner2032;
             🚀 Explore 2032 Revolution →
           </divbutton>
         </divdiv>
+      </div>
+    </divdiv>
+  );
+  };
+export default RevolutionaryContentBanner2032;

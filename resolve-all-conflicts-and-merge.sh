@@ -57,7 +57,6 @@ fetch_latest() {
 get_open_prs() {
     print_status "Getting open PRs..."
     
-<<<<<<< HEAD
     # Try to get PRs using GitHub CLI if available
     if command -v gh &> /dev/null; then
         OPEN_PRS=$(gh pr list --state open --json number,headRefName,title --jq '.[].number')
@@ -98,53 +97,6 @@ pull_latest_main() {
 resolve_conflicts_for_branch() {
     local branch=$1
     print_status "Resolving conflicts for branch: $branch"
-=======
-    echo "🔧 Resolving conflicts in $file..."
-    
-    # Create backup
-    cp "$file" "${file}.backup.$(date +%s)"
-    
-    # Remove conflict markers and keep both versions where possible
-    if grep -q "        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Different strategies for different file types
-        case "$file" in
-            "package.json"|"package-lock.json")
-                echo "📦 Package file detected, keeping main version..."
-                git checkout --ours "$file" 2>/dev/null || true
-                ;;
-            "next.config.js"|"tsconfig.json"|"tailwind.config.js")
-                echo "⚙️  Config file detected, keeping main version..."
-                git checkout --ours "$file" 2>/dev/null || true
-                ;;
-            "app/layout.tsx"|"app/page.tsx")
-                echo "🏗️  Layout/page file detected, keeping resolved version..."
-                # Already resolved manually
-                ;;
-            *.tsx|*.ts|*.jsx|*.js)
-                echo "💻 Component file detected, preferring incoming changes..."
-                git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-                ;;
-            *.md|*.txt)
-                echo "📝 Documentation file detected, merging both versions..."
-                git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-                ;;
-            *)
-                echo "📄 Generic file detected, using intelligent merge..."
-                git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-                ;;
-        esac
-        
-        echo "✅ Resolved conflicts in $file"
-    fi
-}
-
-# Get all files with conflicts
-echo "🔍 Finding files with merge conflicts..."
-CONFLICTED_FILES=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.json" -o -name "*.md" | xargs grep -l "
-if [ -n "$CONFLICTED_FILES" ]; then
-    echo "📋 Found conflicted files: $CONFLICTED_FILES"
->>>>>>> 1d3831578ae98329b18f0b6376f6b8ab172a1dfd
     
     # Try to merge the branch
     if git merge "origin/$branch" --no-commit; then

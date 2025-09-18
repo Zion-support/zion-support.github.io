@@ -1,0 +1,21 @@
+// Notification context
+import React, { createContext, useContext } from 'react';
+const NotificationContext = createContext();
+export const NotificationProvider = ({ children }) => {
+  const value = {
+    notifications: [],
+    addNotification: () => {},
+    removeNotification: () => {}
+  };
+<<<<<<< HEAD:src/context/notifications/NotificationContext.jsx
+
+=======
+>>>>>>> c1e5621b0f46218b676cd6bc92e46266a11f8a7e:src/context/notifications/NotificationContext.jsx.backup
+  return (
+    <NotificationContext.Provider value={value}>
+      {children}
+    </NotificationContext.Provider>
+  );
+};
+
+export const useNotifications = () => useContext(NotificationContext);

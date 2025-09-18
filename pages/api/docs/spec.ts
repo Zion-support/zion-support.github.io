@@ -1,6 +1,4 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-}
-
-  res.setHeader('Content-Typeapplication/json');
-  res.status(200).json(v1)
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });

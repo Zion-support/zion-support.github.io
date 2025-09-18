@@ -1,137 +1,14 @@
 import React from 'react';
 const FuturePredictionsShowcase2025: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-indigo-500/10 to-transparent"></div>
-      </div>
-      <div className="relative z-10 container mx-auto px-4 py-16">
-        {/* Header */}
-        <div
-          className="text-center mb-16"
-        >
-          <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent mb-6">
-            Future Predictions
-            <span className="block text-4xl md:text-6xl mt-2">Showcase 2025-2030</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Explore our expert predictions for the future of AItechnologyand human civilization 
-            from 2025 to 2030 and beyond.
-          </p>
-        </div>
-        {/* Year Navigation */}
-        <div
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {years.map((year) => {
-            const yearData = predictions[year];
-            const Icon = yearData.icon;
-            return (
-              <button
-                key={year}
-                onClick={() => setActiveYear(year)}
-                className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${
-                  activeYear === year
-                    ? `bg-gradient-to-r ${yearData.color} text-white shadow-2xl scale-105`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                <Icon className="w-6 h-6" />
-                {year}
-                <span className="text-sm opacity-75">{yearData.title}</span>
-              </button>
-            );
-          })}
-        </div>
-        {/* Predictions Display */}
-          <div
-            key={activeYear}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {predictions[activeYear].predictions.map((predictionindex) => {
-              const Icon = prediction.icon;
-              return (
-                <div
-                  key={index}
-                  className="group relative"
-                >
-                  <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
-                    {/* Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${predictions[activeYear].color} opacity-10 rounded-3xl group-hover:opacity-20 transition-opacity duration-500`}></div>
-                    {/* Content */}
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className={`p-4 rounded-2xl bg-gradient-to-r ${predictions[activeYear].color} shadow-lg`}>
-                          <Icon className="w-8 h-8 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-white mb-2">{prediction.title}</h3>
-                          <div className="flex gap-2">
-                            <div className="text-sm font-semibold text-green-400 bg-green-400/20 px-3 py-1 rounded-full">
-                              {prediction.probability}
-                            </div>
-                            <div className="text-sm font-semibold text-blue-400 bg-blue-400/20 px-3 py-1 rounded-full">
-                              {prediction.impact}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                        {prediction.description}
-                      </p>
-                      <div className="flex items-center gap-2 text-indigo-400 font-semibold group-hover:text-indigo-300 transition-colors">
-                        <span>Learn More</span>
-                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        {/* Timeline Visualization */}
-        <div
-          className="mt-16 bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-8">Technology Evolution Timeline</h3>
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-orange-500 rounded-full"></div>
-            {/* Timeline Points */}
-            <div className="flex justify-between items-center">
-              {years.map((yearindex) => {
-                const yearData = predictions[year];
-                const Icon = yearData.icon;
-                return (
-                  <div key={year} className="flex flex-col items-center">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${yearData.color} rounded-full flex items-center justify-center shadow-2xl z-10`}>
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="mt-4 text-center">
-                      <div className="text-2xl font-bold text-white">{year}</div>
-                      <div className="text-sm text-gray-400">{yearData.title}</div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-        {/* Call to Action */}
-        <div
-          className="text-center mt-16"
-        >
-          <div className="inline-flex items-center gap-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform cursor-pointer shadow-2xl">
-            <Star className="w-6 h-6" />
-            Explore Full Predictions
-            <ArrowRight className="w-5 h-5" />
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">FuturePredictionsShowcase2025</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
-};
+  };
 export default FuturePredictionsShowcase2025;

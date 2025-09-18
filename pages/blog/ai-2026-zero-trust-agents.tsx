@@ -1,64 +1,19 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import type { NextPage } from 'next';
 
-export default function ZeroTrustAgents2026() {
+const Ai2026ZeroTrustAgents: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
+    <div>
       <Head>
-        <title>Zero‑Trust Agents (2026) | Zion Tech Group</title>
-        <meta name="description" content="Design zero‑trust agent architectures with risk tiers, scoped credentials, and runtime approvals." />
-        <meta property="og:title" content="Zero‑Trust Agents (2026)" />
-        <meta property="og:description" content="Risk‑tiered adapters, budget constraints, and just‑in‑time approvals for safe tool use." />
+        <title>Ai2026ZeroTrustAgents - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026ZeroTrustAgents blog post" />
       </Head>
-
-      <main className="container mx-auto px-6 py-12">
-        <nav className="mb-8">
-          <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">← Back to Blog</Link>
-        </nav>
-
-        <article className="max-w-4xl mx-auto">
-          <header className="mb-10">
-            <div className="text-white/60 text-sm mb-2">Security • 7 min read • September 16, 2025</div>
-            <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Zero‑Trust Agents (2026)
-            </h1>
-            <p className="mt-4 text-white/80 text-lg">
-              Build agent systems that assume breach: constrained tools, scoped tokens, isolated runtimes, and audit trails.
-            </p>
-          </header>
-
-          <div className="prose prose-invert prose-lg max-w-none">
-            <h2>Threat model</h2>
-            <p>
-              Treat every tool call as untrusted. Capture inputs, outputs, policy decisions, and approvals as evidence.
-              Bound blast radius with time- and scope-limited credentials and network segmentation.
-            </p>
-
-            <h2>Controls</h2>
-            <ul>
-              <li>Risk tiers mapped to allowed tools, budgets, and human approvals</li>
-              <li>Deterministic fallbacks and sandboxed execution</li>
-              <li>Runtime guardrails with policy-as-code</li>
-              <li>Continuous evals and incident integration</li>
-            </ul>
-
-            <h2>Rollout checklist</h2>
-            <ol>
-              <li>Inventory tools and classify by risk tier</li>
-              <li>Implement scoped credentials and brokered access</li>
-              <li>Add JIT approvals for high-risk actions</li>
-              <li>Wire traces, evals, and policy outcomes to dashboards</li>
-            </ol>
-
-            <p className="mt-8 text-white/70">Written by Zion Tech Group</p>
-          </div>
-
-          <footer className="mt-12 pt-6 border-t border-white/10 flex items-center justify-between text-sm text-white/70">
-            <Link href="/blog" className="text-cyan-400 hover:text-cyan-300">← Back to Blog</Link>
-            <Link href="/contact" className="text-fuchsia-400 hover:text-fuchsia-300">Get in touch</Link>
-          </footer>
-        </article>
+      
+      <main>
+        <h1>Ai2026ZeroTrustAgents</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  )
-}
+  );
+};
+

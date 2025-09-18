@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnhancedAnalyticsTracker: React.FC = () => {
   return (
@@ -9,4 +8,5 @@ const EnhancedAnalyticsTracker: React.FC = () => {
   );
 };
 
-export default EnhancedAnalyticsTracker;
+
+export default InteractiveTechShowcase2032;
