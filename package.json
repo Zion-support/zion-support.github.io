@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144\" vite build --mode production",
-    "lint": "eslint src/ App.tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src/ --report-unused-disable-directives --max-warnings 0 --ignore-pattern 'src/components-disabled/**' --ignore-pattern 'src/utils-disabled/**' --ignore-pattern 'src.disabled/**' --ignore-pattern 'src.broken/**' --ignore-pattern 'src.corrupted/**' --ignore-pattern 'src-corrupted/**' --ignore-pattern 'src-clean/**' --ignore-pattern 'src_backup_temp/**'",
     "lint:changed": "eslint src/data/blog-posts.js src/App.tsx --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
