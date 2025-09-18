@@ -185,6 +185,7 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               Download Whitepaper
             </button>
           </div>
+        </div>
       </div>
     </div>
   );
