@@ -200,7 +200,7 @@ const TranscendentAI2026: React.FC = () => {
                     Revolutionary capability that defines this phase of AI evolution
               ))}
         {/* Revolutionary Applications */}
-        <divsection
+        <div
           className="mb-16"
         >
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
