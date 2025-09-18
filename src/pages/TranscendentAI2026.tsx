@@ -367,10 +367,19 @@ const TranscendentAI2026: React.FC = () => {
                 <li>• Universal consciousness</li>
                 <li>• Transcendent evolution</li>
         {/* AI Capabilities Grid */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               🌟 Transcendent Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore the revolutionary capabilities that define transcendent AI
-        </divsection>
+            </p>
+          </div>
+        </div>
+      </section>
+
+          </div>
         </motion.section>
         {/* Consciousness Visualization */}
           <div className="bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-16 text-center">

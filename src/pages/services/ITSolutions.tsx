@@ -1,7 +1,8 @@
 import React from 'react';
 import { SEO } from "../components/SEO";
 
-import { Shield, Database, Monitor } from 'lucide-react';
+import { Shield, Database, Monitor, Settings, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 const ITSolutions = () => {
     const features = [
         {

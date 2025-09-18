@@ -25,6 +25,7 @@ export class SecurityManager {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
       const handlerAttributes = [
         "onerror","onload","onclick","onmouseover","onfocus","onblur","onchange","onsubmit"
+      ];
 
       let node = walker.nextNode() as Element | null;
       while (node) {
