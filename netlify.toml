@@ -1,10 +1,10 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:59Z (run-8)
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:59Z (run-9)
 [build]
   base = "zion-website"
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = ".next"
   command_timeout = "30m"
-# No-op: trigger Netlify rebuild at 2025-09-18T23:59:59Z (run-8)
+# No-op: trigger Netlify rebuild at 2025-09-18T23:59:59Z (run-9)
 
 [build.environment]
   NODE_VERSION = "20"
@@ -220,8 +220,8 @@
 
 # Note: Next.js routing is handled by @netlify/plugin-nextjs
 
-# No-op: trigger deploy 2025-09-18 23:59 (run-8)
+# No-op: trigger deploy 2025-09-18 23:59 (run-9)
 
 ## End of Netlify configuration
 # No-op: trigger deploy 2025-09-18T23:59:59Z (refresh 2025-09-18T23:59:59Z)
-# trigger: 2025-09-18T23:59:59Z (refresh) re-run-8
+# trigger: 2025-09-18T23:59:59Z (refresh) re-run-9
