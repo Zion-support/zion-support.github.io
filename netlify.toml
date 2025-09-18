@@ -1,13 +1,12 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T16:35:00Z (run-12)
+# Updated: Fixed for Vite React app deployment
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "npm install --no-audit --no-fund && npm run build"
   publish = "dist"
   command_timeout = "30m"
-# No-op: trigger Netlify rebuild at 2025-09-18T16:35:00Z (run-12)
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=6144"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
@@ -15,13 +14,6 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-
-## No Next.js plugin needed for Vite SPA build
-
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-  included_files = ["public/**/*"]
 
 [build.processing]
   skip_processing = true
