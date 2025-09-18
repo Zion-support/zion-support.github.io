@@ -1,11 +1,10 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T15:45:00Z (refresh 2025-09-18T15:45:00Z-5)
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T15:58:00Z (refresh 2025-09-18T15:58:00Z-5)
 [build]
   # Build the Next.js site located in the monorepo subdirectory from the repo root
   base = "zion-website"
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = ".next"
   command_timeout = "30m"
-# No-op: trigger Netlify rebuild at 2025-09-18T00:00:00Z-5
 
 [build.environment]
   NODE_VERSION = "20"
@@ -124,7 +123,7 @@
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Permissions-Policy = "camera=(), microphone=(), geolocation()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-DNS-Prefetch-Control = "on"
 
@@ -222,5 +221,5 @@
 ## Note: Do not add SPA fallback for Next.js; plugin handles routing.
 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T15:45:00Z (refresh 2025-09-18T15:45:00Z-5)
-# trigger: 2025-09-18T15:45:00Z (refresh) re-run-12
+# No-op: trigger deploy 2025-09-18T15:58:00Z (refresh 2025-09-18T15:58:00Z-5)
+# trigger: 2025-09-18T15:58:00Z (refresh) re-run-14
