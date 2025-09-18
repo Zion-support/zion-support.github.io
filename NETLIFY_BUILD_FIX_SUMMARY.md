@@ -107,8 +107,4 @@ To verify the fix worked:
 - The Netlify configuration is properly set up for a Vite-based static site
 - All necessary headers and redirects are configured
 - The build environment variables are optimized for the build process
-<<<<<<< HEAD
 - The site includes proper SEO meta tags and structured data
-=======
-- The site includes proper SEO meta tags and structured data
->>>>>>> origin/backup-main-20250918-004015
