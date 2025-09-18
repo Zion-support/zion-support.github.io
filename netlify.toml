@@ -20,6 +20,9 @@
   node_bundler = "esbuild"
   included_files = ["public/**/*", "zion-website/public/**/*"]
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [build.processing]
   skip_processing = true
 
@@ -212,8 +215,5 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# SPA fallback (must be last)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Note: Do not add a catch-all SPA redirect for Next.js. The Netlify Next.js
+# runtime handles routing, including dynamic routes and 404s.
