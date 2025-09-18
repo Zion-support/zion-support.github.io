@@ -3,12 +3,55 @@ dist/
 .next/
 node_modules/
 
-# Disabled directories
-zion-os.disabled/
+# Generated artifacts
+*.log
+**/*.generated.*
+*.backup.*
+
+# Disabled/problematic directories
+automation/
+backup-merge-conflicts/
+recovered-branches/
+public/automation/
+temp-problematic-pages/
+temp_backup_*/
 zion-os/
+zion-os.disabled/
 zion-website/
 zion.app/
 zion_academy/
+
+# All problematic directories and files
+**/zion-os/**
+**/zion-os.disabled/**
+**/zion-website/**
+**/zion.app/**
+**/zion_academy/**
+**/automation/**
+**/backup-merge-conflicts/**
+**/recovered-branches/**
+**/public/automation/**
+**/temp-problematic-pages/**
+**/temp_backup_*/**
+
+# Static assets and generated files
+**/.next/**
+**/static/**
+**/chunks/**
+**/server/**
+**/middleware-**
+**/server-reference-**
+**/postcss.config.js
+**/tailwind.config.js
+**/next.config.js
+**/sw.js
+**/analytics.js
+**/feedback.js
+**/integration.js
+**/*.cjs
+
+# Netlify functions (serverless functions with different linting rules)
+netlify/functions/
 
 # Backup files
 *.backup
