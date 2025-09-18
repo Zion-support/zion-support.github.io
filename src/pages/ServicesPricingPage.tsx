@@ -7,9 +7,6 @@ import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import { SEO } from '../components/SEO.jsx';
 
-=======
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '../data/comprehensiveServices';
-import { SEO } from '../components/SEO';
 
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
