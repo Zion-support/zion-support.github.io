@@ -1,11 +1,21 @@
 import React from 'react';
-import Header from "@/components/Header";
+<<<<<<< HEAD
+import Header from "../components/Header";
+import { Footer } from "../components/Footer";
+import SEO from "../components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
+import { Button } from "../components/ui/button";
+import { Card } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+=======
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { 
   Brain, 
   Zap, 
@@ -27,7 +37,7 @@ import {
   Lock,
   Sparkles
 } from "lucide-react";
-import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
+import { COMPREHENSIVE_SERVICES } from "../data/comprehensiveServices";
 
 export default function AIServicesShowcase() {
   const aiServices = COMPREHENSIVE_SERVICES.filter(service => 

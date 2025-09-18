@@ -1,0 +1,123 @@
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+import { Check, Handshake, Search, Send } from 'lucide-react';
+import { cn } from "../lib/utils";
+import { useTranslation } from "react-i18next";
+
+interface HowItWorksSectionProps {
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ className, style }) => {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      number: "01",
+      title: t('howItWorks.step1.title'),
+      description: t('howItWorks.step1.description'),
+      icon: <Search className="w-8 h-8" />,
+    },
+    {
+      number: "02",
+      title: t('howItWorks.step2.title'),
+      description: t('howItWorks.step2.description'),
+      icon: <Handshake className="w-8 h-8" />,
+    },
+    {
+      number: "03",
+      title: t('howItWorks.step3.title'),
+      description: t('howItWorks.step3.description'),
+      icon: <Send className="w-8 h-8" />,
+    },
+  ];
+
+  return (
+    <section className={cn("py-16 bg-white", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <GradientHeading
+          title={t('howItWorks.title')}
+          subtitle={t('howItWorks.subtitle')}
+          className="text-center mb-12"
+        />
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-zion-cyan/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-blue/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <motion.div variants={itemVariants} className="mb-4">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Simple Process
+            </span>
+          </motion.div>
+          
+          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-white mb-6">
+            How It Works
+          </motion.h2>
+          
+          <motion.p variants={itemVariants} className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Get started with Zion Tech Group in just three simple steps. Our AI-powered platform 
+            makes finding the right tech solutions faster and easier than ever before.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {steps.map((step, index) => (
+            <div key={index} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-4">
+                {step.icon}
+              </div>
+              <div className="text-2xl font-bold text-blue-600 mb-2">{step.number}</div>
+              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+              <p className="text-gray-600">{step.description}</p>
+            </div>
+          ))}
+        </div>
+            <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+              Start Your Project
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default HowItWorksSection;

@@ -1,68 +1,67 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AIMatcher() {
+const AIMatcher = () => {
   return (
     <>
-      <SEO 
-        title="AI Matcher - Zion Tech Group" 
-        description="Find the perfect AI solution for your business needs with our intelligent matching system." 
-        keywords="AI matcher, AI solutions, business AI, intelligent matching, Zion Tech Group"
-        url="https://ziontechgroup.com/ai-matcher"
-      />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>AI Matcher</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Discover the perfect AI solution for your business needs
+      <Helmet>
+        <title>AI Matcher - Zion Tech Group</title>
+        <meta name="description" content="Find the perfect AI solution for your business needs with our intelligent matching system."/>
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Matcher</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover the perfect AI solution for your business needs with our intelligent matching system.
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Find Your Perfect AI Solution</h2>
-              <p className="text-zion-slate-light mb-8">
-                Our AI Matcher analyzes your business requirements and recommends the most suitable AI solutions from our comprehensive portfolio.
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="text-center">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
+              <p className="text-gray-600 mb-6">
+                Our AI matching platform is currently under development. Soon you'll be able to find the perfect AI solution for your specific business needs.
               </p>
               
-              <div className="space-y-6">
-                <div className="bg-zion-blue p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-white mb-4">How It Works</h3>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="text-center">
-                      <div className="bg-zion-cyan text-zion-blue-dark w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-xl font-bold">1</span>
-                      </div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Answer Questions</h4>
-                      <p className="text-zion-slate-light text-sm">Tell us about your business needs and challenges</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-zion-cyan text-zion-blue-dark w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-xl font-bold">2</span>
-                      </div>
-                      <h4 className="text-lg font-semibold text-white mb-2">AI Analysis</h4>
-                      <p className="text-zion-slate-light text-sm">Our AI analyzes your requirements and matches solutions</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-zion-cyan text-zion-blue-dark w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-xl font-bold">3</span>
-                      </div>
-                      <h4 className="text-lg font-semibold text-white mb-2">Get Recommendations</h4>
-                      <p className="text-zion-slate-light text-sm">Receive personalized AI solution recommendations</p>
-                    </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🤖</span>
                   </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Analysis</h3>
+                  <p className="text-gray-600 text-sm">
+                    Analyze your business requirements and goals
+                  </p>
                 </div>
                 
                 <div className="text-center">
-                  <button className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan-light transition-colors">
-                    Start AI Matching
-                  </button>
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🎯</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Smart Matching</h3>
+                  <p className="text-gray-600 text-sm">
+                    Get personalized AI solution recommendations
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📊</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">ROI Insights</h3>
+                  <p className="text-gray-600 text-sm">
+                    Understand potential impact and returns
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
-}
+};
+
+export default AIMatcher;

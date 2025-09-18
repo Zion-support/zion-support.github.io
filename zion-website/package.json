@@ -19,9 +19,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "build:analyze": "ANALYZE=true next build",
     "build:netlify": "npm ci --no-audit --no-fund && npm run build",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "audit": "npm audit --audit-level=moderate",
+    "audit:fix": "npm audit fix",
+    "outdated": "npm outdated",
+    "clean": "rm -rf .next out node_modules/.cache",
+    "build:production": "NODE_ENV=production next build",
+    "preview": "next build && next start",
+    "health-check": "curl -f http://localhost:3000/api/health || exit 1"
   },
   "devDependencies": {
     "@headlessui/react": "^2.2.8",
