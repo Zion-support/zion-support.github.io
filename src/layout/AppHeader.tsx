@@ -18,6 +18,8 @@ export function AppHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   // Handle scroll effect
@@ -57,7 +59,6 @@ export function AppHeader() {
       // Implement search functionality
       console.log('Searching for:', searchQuery);
     }
-    return location.pathname.startsWith(path);
   };
 
   const toggleDarkMode = () => {
@@ -80,14 +81,14 @@ export function AppHeader() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-              <divdiv 
+              <div 
                 className="relative"
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg lg:text-xl">Z</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-              </divdiv>
+              </div>
               <div className="hidden sm:block">
                 <div className="text-xl lg:text-2xl font-bold text-white">ZION TECH GROUP</div>
                 <div className="text-xs text-zion-cyan font-medium">INNOVATION • TECHNOLOGY • FUTURE</div>
@@ -213,20 +214,11 @@ export function AppHeader() {
                 aria-expanded={mobileMenuOpen}
                 aria-label="Toggle mobile menu"
               >
-                  {mobileMenuOpen ? (
-                    <divdiv
-                      key="close"
-                    >
-                      <X className="w-6 h-6" />
-                    </divdiv>
-                  ) : (
-                    <divdiv
-                      key="menu"
-                    >
-                      <Menu className="w-6 h-6" />
-                    </divdiv>
-                  )}
-                </div>
+                {mobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </button>
             </div>
           </div>
@@ -234,7 +226,7 @@ export function AppHeader() {
           {/* Mobile Navigation */}
           <div>
             {mobileMenuOpen && (
-              <divdiv 
+              <div 
                 className="lg:hidden"
               >
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-zion-slate-dark/95 border-t border-zion-cyan/20 backdrop-blur-md">
@@ -299,7 +291,7 @@ export function AppHeader() {
                     </Link>
                   </div>
                 </div>
-              </divdiv>
+              </div>
             )}
           </div>
         </div>
