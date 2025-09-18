@@ -1,3 +1,21 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Zap, TrendingUp, Clock, Database, Globe, 
+  Shield, CheckCircle, AlertCircle, Loader,
+  BarChart3, Brain, ArrowRight
+} from 'lucide-react';
+
+interface PerformanceMetric {
+  id: string;
+  name: string;
+  value: number;
+  target: number;
+  unit: string;
+  status: 'excellent' | 'good' | 'warning' | 'critical';
+  trend: 'up' | 'down' | 'stable';
+}
 
 const AdvancedPerformanceOptimizer: React.FC = () => {
   return (

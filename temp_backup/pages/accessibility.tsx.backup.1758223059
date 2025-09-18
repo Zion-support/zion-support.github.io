@@ -1,0 +1,274 @@
+import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import {
+  Accessibility,
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+  ArrowRight,
+  Globe,
+  Users,
+  Shield,
+  Zap,
+  Heart
+} from 'lucide-react';
+
+const accessibilityFeatures = [
+  {
+    icon: Eye,
+    title: "Visual Accessibility",
+    description: "High contrast themes, scalable fonts, and screen reader compatibility",
+    features: [
+      "WCAG 2.1 AA compliant color contrast",
+      "Scalable text up to 200% without loss of functionality",
+      "Alt text for all images and media",
+      "Focus indicators for keyboard navigation",
+      "Screen reader compatibility",
+      "High contrast mode",
+      "Text scaling options",
+      "Alternative text for images",
+      "Keyboard navigation"
+    ]
+  },
+  {
+    icon: Ear,
+    title: "Audio Accessibility", 
+    description: "Captions, transcripts, and audio descriptions for multimedia content",
+    features: [
+      "Closed captions for all video content",
+      "Audio descriptions for visual content",
+      "Transcript files for audio content",
+      "Visual indicators for audio alerts"
+    ]
+  },
+  {
+    category: "Audio Accessibility",
+    features: [
+      "Closed captions",
+      "Visual alerts",
+      "Text alternatives for audio",
+      "Sign language support",
+      "Volume controls",
+      "Audio descriptions"
+    ]
+  },
+  {
+    title: "Motor Accessibility",
+    description: "Features to support users with motor impairments",
+    icon: Hand,
+    title: "Motor Accessibility",
+    description: "Keyboard navigation and customizable interaction methods",
+    features: [
+      "Full keyboard navigation support",
+      "Customizable click targets",
+      "Drag and drop alternatives",
+      "Timeout extensions and controls"
+    ]
+  },
+  {
+    category: "Motor Accessibility",
+    features: [
+      "Keyboard-only navigation",
+      "Voice control",
+      "Large click targets",
+      "Customizable timing",
+      "Switch navigation",
+      "Gesture alternatives"
+    ]
+  },
+  {
+    title: "Cognitive Accessibility",
+    description: "Features to support users with cognitive impairments",
+    icon: Brain,
+    title: "Cognitive Accessibility",
+    description: "Clear navigation, consistent layouts, and simplified interfaces",
+    features: [
+      "Consistent navigation patterns",
+      "Clear and simple language",
+      "Error prevention and recovery",
+      "Customizable interface complexity",
+      "Clear navigation",
+      "Consistent layout",
+      "Error prevention",
+      "Progress indicators",
+      "Help and support",
+      "Customizable interface"
+    ]
+  }
+];
+
+const complianceStandards = [
+  {
+    name: "WCAG 2.1 AA",
+    description: "Web Content Accessibility Guidelines Level AA compliance",
+    status: "Compliant",
+    icon: Award
+  },
+  {
+    name: "Section 508",
+    description: "US Federal accessibility requirements",
+    status: "Compliant", 
+    icon: FileText
+  },
+  {
+    name: "ADA",
+    description: "Americans with Disabilities Act compliance",
+    status: "Compliant",
+    icon: Users
+  },
+  {
+    name: "EN 301 549",
+    description: "European accessibility standard",
+    status: "Compliant",
+    icon: Globe
+  }
+];
+
+export default function AccessibilityPage() {
+  const accessibilityFeatures = [
+    {
+      title: 'Screen Reader Compatibility',
+      description: 'Our website is fully compatible with screen readers and assistive technologies',
+      icon: Ear,
+      features: [
+        'Semantic HTML structure',
+        'Alt text for all images',
+        'Proper heading hierarchy',
+        'ARIA labels and descriptions'
+      ]
+    },
+    {
+      title: 'Keyboard Navigation',
+      description: 'Complete website functionality accessible via keyboard only',
+      icon: Hand,
+      features: [
+        'Tab navigation support',
+        'Skip links for main content',
+        'Focus indicators',
+        'Keyboard shortcuts'
+      ]
+    },
+    {
+      title: 'Visual Accessibility',
+      description: 'High contrast and customizable visual elements for better visibility',
+      icon: Eye,
+      features: [
+        'High contrast color schemes',
+        'Resizable text up to 200%',
+        'Color-blind friendly palettes',
+        'Clear visual hierarchy'
+      ]
+    },
+    {
+      title: 'Cognitive Accessibility',
+      description: 'Clear, simple language and intuitive navigation for all users',
+      icon: Brain,
+      features: [
+        'Plain language content',
+        'Consistent navigation',
+        'Clear error messages',
+        'Logical content flow'
+      ]
+    }
+  ];
+
+  const complianceStandards = [
+    {
+      standard: 'WCAG 2.1 AA',
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
+      status: 'Compliant',
+      icon: CheckCircle
+    },
+    {
+      standard: 'Section 508',
+      description: 'U.S. federal accessibility requirements compliance',
+      status: 'Compliant',
+      icon: CheckCircle
+    },
+    {
+      standard: 'ADA Compliance',
+      description: 'Americans with Disabilities Act compliance',
+      status: 'Compliant',
+      icon: CheckCircle
+    },
+    {
+      standard: 'EN 301 549',
+      description: 'European accessibility standard compliance',
+      status: 'Compliant',
+      icon: CheckCircle
+    }
+  ];
+
+  const accessibilityTools = [
+    {
+      name: 'Screen Reader Testing',
+      description: 'Regular testing with NVDA, JAWS, and VoiceOver',
+      icon: Ear
+    },
+    {
+      name: 'Keyboard Testing',
+      description: 'Comprehensive keyboard-only navigation testing',
+      icon: Hand
+    },
+    {
+      name: 'Color Contrast Analysis',
+      description: 'Automated and manual color contrast verification',
+      icon: Eye
+    },
+    {
+      name: 'User Testing',
+      description: 'Regular testing with users with disabilities',
+      icon: Users
+    }
+  ];
+
+  const accessibilityCommitments = [
+    {
+      title: 'Continuous Improvement',
+      description: 'We regularly audit and improve our accessibility features',
+      icon: Zap
+    },
+    {
+      title: 'User Feedback',
+      description: 'We actively seek and incorporate feedback from users with disabilities',
+      icon: Heart
+    },
+    {
+      title: 'Training & Awareness',
+      description: 'Our team receives regular accessibility training and education',
+      icon: Brain
+    },
+    {
+      title: 'Compliance Monitoring',
+      description: 'Ongoing monitoring to ensure continued compliance with standards',
+      icon: Shield
+    }
+  ];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1
+
+const accessibility: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>accessibility | Zion Tech Group</title>
+        <meta name="description" content="accessibility - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">accessibility</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+export default NeuralRealityEngine2035;

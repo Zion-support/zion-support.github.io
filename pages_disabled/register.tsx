@@ -1,3 +1,34 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import Layout from '../components/Layout';
+
+export default function RegisterPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    agreeToTerms: false
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle registration logic here
+    console.log('Registration attempt:', formData);
+  };
 
 const register: React.FC = () => {
   return (

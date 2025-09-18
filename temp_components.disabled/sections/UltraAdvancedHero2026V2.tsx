@@ -1,4 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Zap, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Sparkles, Globe, Shield } from 'lucide-react';
+import Link from 'next/link';
 
 const UltraAdvancedHero2026V2: React.FC = () => {
   return (

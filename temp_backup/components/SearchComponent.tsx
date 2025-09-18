@@ -1,4 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X, ArrowRight, Globe, Brain, Shield, Cpu, Cloud, BarChart3, Lock } from 'lucide-react';
+
+interface SearchResult {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  url: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
 
 const SearchComponent: React.FC = () => {
   return (

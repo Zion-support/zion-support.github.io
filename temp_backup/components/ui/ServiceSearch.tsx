@@ -1,4 +1,122 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface Service {
+  id: string;
+  name: string;
+  description?: string;
+  tagline?: string;
+  category?: string;
+  tags?: string[];
+  price?: string;
+  period?: string;
+  icon?: string;
+  popular?: boolean;
+}
+
+interface ServiceSearchProps {
+  services: Service[];
+  onServiceSelect?: (service: Service) => void;
+  placeholder?: string;
+  showFilters?: boolean;
+  maxResults?: number;
+}
+
+const ServiceSearch: React.FC<ServiceSearchProps> = ({
+  services,
+  onServiceSelect,
+  placeholder = "Search for services, technologies, or solutions...",
+  showFilters = true,
+  maxResults = 12
+}) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [sortBy, setSortBy] = useState<'name' | 'popular' | 'price'>('popular');
+
+  // Extract unique categories and tags
+  const categories = useMemo(() => {
+    const cats = new Set<string>();
+    services.forEach(service => {
+      if (service.category) cats.add(service.category);
+    });
+    return Array.from(cats).sort();
+  }, [services]);
+
+  const allTags = useMemo(() => {
+    const tags = new Set<string>();
+    services.forEach(service => {
+      if (service.tags) {
+        service.tags.forEach(tag => tags.add(tag));
+      }
+    });
+    return Array.from(tags).sort();
+  }, [services]);
+
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    let filtered = services;
+
+    // Category filter
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => 
+        service.category?.toLowerCase() === selectedCategory.toLowerCase()
+      );
+    }
+
+    // Tag filter
+    if (selectedTags.length > 0) {
+      filtered = filtered.filter(service =>
+        service.tags?.some(tag => selectedTags.includes(tag))
+      );
+    }
+
+    // Search query filter
+    if (searchQuery) {
+      filtered = filtered.filter(service =>
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tagline?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    }
+
+    // Sort services
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'name': {
+          return a.name.localeCompare(b.name);
+        }
+        case 'popular': {
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        }
+        case 'price': {
+          const priceA = parseFloat(a.price?.replace(/[^0-9.]/g, '') || '0');
+          const priceB = parseFloat(b.price?.replace(/[^0-9.]/g, '') || '0');
+          return priceA - priceB;
+        }
+        default:
+          return 0;
+      }
+    });
+
+    return filtered.slice(0, maxResults);
+  }, [services, searchQuery, selectedCategory, selectedTags, sortBy, maxResults]);
+
+  const handleTagToggle = (tag: string) => {
+    setSelectedTags(prev => 
+      prev.includes(tag) 
+        ? prev.filter(t => t !== tag)
+        : [...prev, tag]
+    );
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setSelectedCategory('all');
+    setSelectedTags([]);
+    setSortBy('popular');
+  };
 
 const ServiceSearch: React.FC = () => {
   return (

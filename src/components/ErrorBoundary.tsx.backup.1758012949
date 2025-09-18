@@ -1,19 +1,4 @@
-<<<<<<< HEAD:src/components/ErrorBoundary.tsx.backup.1758012949
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import React, { Component, ReactNode } from 'react';
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import React, { Component, ReactNode } from 'react';
->>>>>>> origin/merged-prs
->>>>>>> origin/aggressive-merge-backup-20250915-162542
-=======
 import React from "react";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ErrorBoundary.tsx
 
 const ErrorBoundary = () => {
   return (
@@ -28,11 +13,4 @@ const ErrorBoundary = () => {
   );
 };
 
-<<<<<<< HEAD:src/components/ErrorBoundary.tsx.backup.1758012949
-    return this.props.children;
-  }
-}
-
-=======
 export default ErrorBoundary;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/ErrorBoundary.tsx

@@ -1,11 +1,6 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> origin/backup-main-20250918-004015
 
 const Genai2025PracticalCompliancePatterns: NextPage = () => {
   return (
@@ -24,8 +19,4 @@ const Genai2025PracticalCompliancePatterns: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Genai2025PracticalCompliancePatterns;
-=======
-export default Genai2025PracticalCompliancePatterns;
->>>>>>> origin/backup-main-20250918-004015

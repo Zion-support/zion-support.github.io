@@ -1,3 +1,24 @@
+import {useState, useMemo, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
+import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
+;
+export const AdvancedDataTable = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;});'
+    // State management''
+    const [searchQuery, setSearchQuery] = useState('');
+    const [sortConfig, setSortConfig] = useState(null);
+    const [filters, setFilters] = useState([]);
+    const [selectedItems, setSelectedItems] = useState(new Set());
+    const [currentPage, setCurrentPage] = useState(1);
+    const [showFilters, setShowFilters] = useState(false);
+    // Process data based on search, filters, and sorting;
+    const processedData = useMemo(() => {}
+        let result = [...data];
+        // Apply search;
+        if (searchQuery.trim()) {}
+result = result.filter(item => columns.some(col => {}
 
 const AdvancedDataTable.js: React.FC = () => {
   return (

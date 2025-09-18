@@ -1,16 +1,96 @@
+import {motion} from 'framer-motion';
+import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store export default function RetailSolutions
+export { RetailSolutions }() {
+    const features = [
+        {
+            icon: Brain,
+            title: "AI-Powered Customer Insights",
+            description: "Machine learning models to understand customer behavior and preferences"
+        },
+        {icon: BarChart3,
+            title: "Real-time Analytics",
+            description: "Live monitoring of sales, inventory, and customer engagement metrics"},
+        {icon: Target,
+            title: "Personalized Marketing",
+            description: "AI-driven targeted marketing campaigns and product recommendations"},
+        {icon: Zap,
+            title: "Inventory Optimization",
+            description: "Intelligent inventory management and demand forecasting"},
+        {icon: Shield,
+            title: "E-commerce Security",
+            description: "Advanced security for online retail and payment processing"},
+        {
+            icon: Smartphone,
+            title: "Omnichannel Experience",
+            description: "Seamless integration across online and offline retail channels"
 
-const RetailSolutions: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RetailSolutions | Zion Tech Group</title>
-        <meta name="description" content="RetailSolutions - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RetailSolutions</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+    ];
+    const benefits = [
+        "Increase sales by 25-40%",
+        "Improve customer retention by 30%",
+        "Reduce inventory costs by 20-35%",
+        "Enhance customer experience",
+        "Better marketing ROI",
+        "Streamlined operations"
+    ];
+    const solutions = [
+        {
+            title: "E-commerce Platform",
+            description: "Modern online retail platform with AI-powered features"
+        },
+        {title: "Customer Analytics",
+            description: "Comprehensive customer behavior analysis and insights"},
+        {title: "Inventory Management",
+            description: "Smart inventory optimization and demand forecasting"},
+        {
+            title: "Marketing Automation",
+            description: "AI-driven marketing campaigns and personalization"
+
+    ];
+    const retailTypes = [
+        "Fashion & Apparel",
+        "Electronics",
+        "Home & Garden",
+        "Beauty & Health",
+        "Sports & Outdoor",
+        "Books & Media",
+        "Food & Beverage",
+        "Automotive"
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+}} transition={{ duration: 0.8 }}>
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <ShoppingCart className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Retail Solutions
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your retail business with cutting-edge AI technology. Enhance customer experience,
+              optimize operations, and drive sales growth with intelligent retail solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

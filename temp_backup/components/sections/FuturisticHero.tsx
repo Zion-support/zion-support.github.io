@@ -1,4 +1,9 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { ArrowRight, Star, Zap, Shield, Users, Globe } from 'lucide-react';
+import AnimatedBackground from '../ui/AnimatedBackground';
+import { Button } from '../ui/Button';
 
 const FuturisticHero: React.FC = () => {
   return (

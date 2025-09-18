@@ -12,9 +12,8 @@ const SpaceTechInnovation2026: React.FC = () => {
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Space Technology Innovation 2026
           </h1>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
-            Explore the final frontier with our revolutionary space technology solutions that are 
-            making interplanetary travel, space colonization, and cosmic exploration a reality.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Revolutionary space technology that will make human colonization of Mars and deep space exploration a reality.
           </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -133,36 +132,49 @@ const SpaceTechInnovation2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Mission Types */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">🎯 Mission Capabilities</h2>
-            <p className="text-xl opacity-90">Comprehensive space technology solutions for every mission type</p>
+        {/* Technology Specifications */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Propulsion Systems</h3>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                <span className="text-gray-300">Fusion Engine Power</span>
+                <span className="text-white font-bold">10 GW</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                <span className="text-gray-300">Mars Transit Time</span>
+                <span className="text-white font-bold">30 days</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                <span className="text-gray-300">Payload Capacity</span>
+                <span className="text-white font-bold">1000 tons</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                <span className="text-gray-300">Fuel Efficiency</span>
+                <span className="text-white font-bold">1000x better</span>
+              </div>
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-lg p-6 border border-blue-400/30">
-              <div className="text-4xl mb-4">🪐</div>
-              <h3 className="text-lg font-semibold mb-2">Planetary Exploration</h3>
-              <p className="text-sm text-gray-300">Robotic missions to explore Mars, Europa, and other celestial bodies.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 border border-purple-400/30">
-              <div className="text-4xl mb-4">🏠</div>
-              <h3 className="text-lg font-semibold mb-2">Space Colonization</h3>
-              <p className="text-sm text-gray-300">Establishing permanent human settlements on Mars and the Moon.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-lg p-6 border border-green-400/30">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-lg font-semibold mb-2">Space Mining</h3>
-              <p className="text-sm text-gray-300">Extracting valuable resources from asteroids and other space objects.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-lg p-6 border border-orange-400/30">
-              <div className="text-4xl mb-4">🔭</div>
-              <h3 className="text-lg font-semibold mb-2">Deep Space Observation</h3>
-              <p className="text-sm text-gray-300">Advanced telescopes and observatories for studying the universe.</p>
+
+          <div className="bg-gradient-to-br from-purple-900 to-pink-900 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-6">Life Support Systems</h3>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                <span className="text-gray-300">Oxygen Generation</span>
+                <span className="text-white font-bold">100% recycled</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                <span className="text-gray-300">Water Recycling</span>
+                <span className="text-white font-bold">99.9% efficient</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                <span className="text-gray-300">Food Production</span>
+                <span className="text-white font-bold">Hydroponic farms</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-gray-700">
+                <span className="text-gray-300">Radiation Protection</span>
+                <span className="text-white font-bold">99.9% effective</span>
+              </div>
             </div>
           </div>
         </div>

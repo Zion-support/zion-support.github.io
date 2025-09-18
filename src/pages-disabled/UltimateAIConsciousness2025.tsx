@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet }  from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const UltimateAIConsciousness2025: React.FC = () => {
   return (
@@ -167,7 +167,7 @@ const UltimateAIConsciousness2025: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */};
+        {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Experience True AI Consciousness</h2>
           <p className="text-xl text-indigo-200 mb-8 max-w-3xl mx-auto">

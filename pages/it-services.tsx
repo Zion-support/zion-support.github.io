@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
 import { Cloud, Shield, Database, Smartphone, Globe, Code, Server, BarChart3, Link as LinkIcon, Cpu, TestTube, BookOpen, Wrench, Brain } from 'lucide-react';
 
 export default function ITServices() {

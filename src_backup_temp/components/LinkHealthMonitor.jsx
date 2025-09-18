@@ -1,3 +1,349 @@
+import React, {useState, useEffect} from 'react';'''';';
+import React, {useState, useEffect} from 'react';'''
+import {motion} from 'framer-motion';
+import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = ("props": "any) => {"}
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMonitoring, setIsMonitoring] = useState(false);'
+    const [linkStatuses, setLinkStatuses] = useState([]);''
+    const [report, setReport] = useState(null);'''
+    const [selectedFilter, setSelectedFilter] = useState('all');
+    // Sample data based on the analysis report;
+    const sampleLinks = []
+        {}
+';
+'';
+''';
+            "url": '"https": "//linkedin.com/company/ziontechgroup'",''';
+            "status": 'broken',;
+            "statusCode": "404",';
+            "responseTime": "1200",'';
+            "lastChecked": "new Date()",''';
+            "parentPage": 'Homepage',''';
+            "linkText": 'LinkedIn';
+        },;
+        {}
+';
+'';
+''';
+            "url": '"https": "//twitter.com/ziontechgroup'",''';
+            "status": 'external',;
+            "statusCode": "200",';
+            "responseTime": "800",'';
+            "lastChecked": "new Date()",''';
+            "parentPage": 'Homepage',''';
+            "linkText": 'Twitter';
+        },;
+        {}
+';
+'';
+''';
+            "url": '"tel": "+1 302 464 0950'",''';
+            "status": 'healthy',;
+            "statusCode": "200",';
+            "responseTime": "50",'';
+            "lastChecked": "new Date()",''';
+            "parentPage": 'Contact',''';
+            "linkText": 'Phone Number';
+        },;
+        {}
+';
+'';
+''';
+            "url": '"mailto": "kleber@ziontechgroup.com'",''';
+            "status": 'healthy',;
+            "statusCode": "200",';
+            "responseTime": "50",'';
+            "lastChecked": "new Date()",''';
+            "parentPage": 'Contact',''';
+            "linkText": 'Email';
+'
+''
+'''
+            url: 'https://linkedin.com/company/ziontechgroup','''
+            status: 'broken',
+            statusCode: 404,'
+            responseTime: 1200,''
+            lastChecked: new Date(),'''
+            parentPage: 'Homepage','''
+            linkText: 'LinkedIn'
+        },
+        {}
+'
+''
+'''
+            url: 'https://twitter.com/ziontechgroup','''
+            status: 'external',
+            statusCode: 200,'
+            responseTime: 800,''
+            lastChecked: new Date(),'''
+            parentPage: 'Homepage','''
+            linkText: 'Twitter'
+        },
+        {}
+'
+''
+'''
+            url: 'tel:+1 302 464 0950','''
+            status: 'healthy',
+            statusCode: 200,'
+            responseTime: 50,''
+            lastChecked: new Date(),'''
+            parentPage: 'Contact','''
+            linkText: 'Phone Number'
+        },
+        {}
+'
+''
+'''
+            url: 'mailto:kleber@ziontechgroup.com','''
+            status: 'healthy',
+            statusCode: 200,'
+            responseTime: 50,''
+            lastChecked: new Date(),'''
+            parentPage: 'Contact','''
+            linkText: 'Email'
+    ];
+    useEffect ( () => {}
+        setLinkStatuses (sampleLinks) ;
+        generateReport (sampleLinks) }, []) ;';
+    const generateReport = (props: any) => {}';';
+        const totalLinks = links.length;'';';
+        const healthyLinks = links.filter(l => l.status === 'healthy').length;'';';
+        const brokenLinks = links.filter(l => l.status === 'broken').length;'';';
+import React, {useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
+import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = (props: any) => {}
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMonitoring, setIsMonitoring] = useState(false);';
+    const [linkStatuses, setLinkStatuses] = useState([]);'';
+    const [report, setReport] = useState(null);''';
+    const [selectedFilter, setSelectedFilter] = useState('all');
+    // Sample data based on the analysis report;
+    const sampleLinks = [];
+        {}
+';
+'';
+''';
+            url: 'https://linkedin.com/company/ziontechgroup',''';
+            status: 'broken',;
+            statusCode: 404,';
+            responseTime: 1200,'';
+            lastChecked: new Date(),''';
+            parentPage: 'Homepage',''';
+            linkText: 'LinkedIn';
+        },;
+        {}
+';
+'';
+''';
+            url: 'https://twitter.com/ziontechgroup',''';
+            status: 'external',;
+            statusCode: 200,';
+            responseTime: 800,'';
+            lastChecked: new Date(),''';
+            parentPage: 'Homepage',''';
+            linkText: 'Twitter';
+        },;
+        {}
+';
+'';
+''';
+            url: 'tel:+1 302 464 0950',''';
+            status: 'healthy',;
+            statusCode: 200,';
+            responseTime: 50,'';
+            lastChecked: new Date(),''';
+            parentPage: 'Contact',''';
+            linkText: 'Phone Number';
+        },;
+        {}
+';
+'';
+''';
+            url: 'mailto:kleber@ziontechgroup.com',''';
+            status: 'healthy',;
+            statusCode: 200,';
+            responseTime: 50,'';
+            lastChecked: new Date(),''';
+            parentPage: 'Contact',''';
+            linkText: 'Email';
+    ];
+    useEffect ( () => {}
+        setLinkStatuses (sampleLinks) ;
+        generateReport (sampleLinks) }, []) ;
+    const generateReport = ("props": "any) => {"}
+        const totalLinks = links.length;';
+        const healthyLinks = links.filter(l => l.status === 'healthy').length;';
+        const brokenLinks = links.filter(l => l.status === 'broken').length;';
+        const externalLinks = links.filter(l => l.status === 'external').length;
+        const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
+        setReport({}
+            totalLinks,;
+            healthyLinks,;
+            brokenLinks,;
+            externalLinks,;
+            "averageResponseTime": "avgResponseTime",;
+            "lastUpdated": "new Date () "}) };
+    const generateReport = (props: any) => {}
+        const totalLinks = links.length;'
+        const healthyLinks = links.filter(l => l.status === 'healthy').length;'
+        const brokenLinks = links.filter(l => l.status === 'broken').length;'
+        const externalLinks = links.filter(l => l.status === 'external').length;
+        const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
+        setReport({}
+            totalLinks,
+            healthyLinks,
+            brokenLinks,
+            externalLinks,
+            averageResponseTime: avgResponseTime,
+            lastUpdated: new Date () }) };
+    const startMonitoring = async () => {}
+        setIsMonitoring(true) ;
+        // Simulate link checking;
+        await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+        setIsMonitoring(false) };
+    const getStatusIcon = (props: any) => {}';
+        switch (status) {}';';
+'';';
+            case 'healthy': any;';';
+                return <CheckCircle className="w-4 h-4 text-green-400" />;'"""';';
+            case 'broken':""""';';
+                return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""';';
+            case 'external':""""
+                return <ExternalLink className="w-4 h-4 text-blue-400" />;"""
+            default:""""
+                return <RefreshCw className="w-4 h-4 text-yellow-400" />}
+    };
+    const getStatusColor = (props: any) => {}';
+        switch (status) {}';';
+'';';
+''';';
+'''';';
+            case 'healthy':''''';';
+                return 'text-green-400';'''';';
+            case 'broken':''''';';
+                return 'text-red-400';'''';';
+            case 'external':''''';';
+                return 'text-blue-400';'''';';
+            default:''''';';
+                return 'text-yellow-400'}
+    };';
+    const filteredLinks = linkStatuses.filter(link => {}';';
+'';';
+''';';
+'''';';
+        if (selectedFilter === 'all')
+    const getStatusIcon = (props: any) => {}
+    const getStatusIcon = ("props": "any) => {"}
+        switch (status) {}
+';
+            case 'healthy': "any;
+                return <CheckCircle className="w-4 h-4 text-green-400" />;'""";
+            case 'broken':"""";
+                return <AlertTriangle className="w-4 h-4 text-red-400" />;'""";
+            case 'external':"""";
+                return <ExternalLink className="w-4 h-4 text-blue-400" />;""";
+            "default":"""";
+                return <RefreshCw className="w-4 h-4 text-yellow-400" />"}
+'
+            case 'healthy': any;
+                return <CheckCircle className="w-4 h-4 text-green-400" />;'"""
+            case 'broken':""""
+                return <AlertTriangle className="w-4 h-4 text-red-400" />;'"""
+            case 'external':""""
+                return <ExternalLink className="w-4 h-4 text-blue-400" />;"""
+            default:""""
+                return <RefreshCw className="w-4 h-4 text-yellow-400" />}
+    };
+    const getStatusColor = ("props": "any) => {"}
+        switch (status) {}
+';
+'';
+''';
+            case 'healthy':'''';
+                return 'text-green-400';''';
+            case 'broken':'''';
+                return 'text-red-400';''';
+            case 'external':'''';
+                return 'text-blue-400';''';
+            "default":'''';
+'
+''
+'''
+            case 'healthy':''''
+                return 'text-green-400';'''
+            case 'broken':''''
+                return 'text-red-400';'''
+            case 'external':''''
+                return 'text-blue-400';'''
+            default:''''
+                return 'text-yellow-400'}
+    };
+    const filteredLinks = linkStatuses.filter(link => {}
+';
+'';
+''';
+        if (selectedFilter === 'all');
+'
+''
+'''
+        if (selectedFilter === 'all')
+            return true;
+        return link.status === selectedFilter});
+    return (<>""";
+      {/* Floating Action Button */}"""";
+      <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg "hover": "shadow-xl transition-all duration-300 transform "hover":scale-110" whileHover={{ "scale": 1.1 "}} whileTap={{ "scale": "0.9 "}}>"""";
+        <Link className="w-6 h-6"  />;
+      </motion.button>;
+""";
+      {/* Modal */}"""";
+      {isOpen && (<motion.div initial={{ "opacity": "0 "}} animate={{ "opacity": "1 "}} exit={{ "opacity": "0 "}} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>;
+          <motion.div initial = {}
+  {"scale": "0.9",;
+  "opacity": "0;"}} animate = {}
+  {"scale": "1",;
+  "opacity": "1;"}} exit = {}
+  {"scale": "0.9",;
+  "opacity": "0;
+""";
+"""""}} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>""";
+            {/* Header */}"""";
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">"""";
+              <div className="flex items-center justify-between">"""";
+                <div className="flex items-center space-x-3">"""";
+                  <Link className="w-8 h-8"  />"""";
+                  <h2 className="text-2xl font-bold">Link Health Monitor</h2>""";
+                </div>"""";
+                <button onClick={() => setIsOpen(false)} className="text-white/80 "hover": "text-white transition-colors">;
+                  ✕;
+                </button>""";
+              </div>"""";
+              <p className="text-cyan-100 mt-2">;
+                Monitor and maintain the health of all website links;
+              </p>
+            </div>
+"""
+            {/* Content */}""""
+            <div className="p-6 space-y-6">"""
+              {/* Summary Cards */}""""
+              {report && (<div className="grid grid-cols-1 md:grid-cols-4 gap-4">""""
+                  <div className="bg-gray-800 rounded-lg p-4 text-center">""""
+                    <div className="text-2xl font-bold text-white">{report.totalLinks}</div>""""
+                    <div className="text-gray-400 text-sm">Total Links</div>"""
+                  </div>""""
+                  <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4 text-center">""""
+                    <div className="text-2xl font-bold text-green-400">{report.healthyLinks}</div>""""
+                    <div className="text-green-400 text-sm">Healthy</div>"""
+                  </div>""""
+                  <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">""""
+                    <div className="text-2xl font-bold text-red-400">{report.brokenLinks}</div>""""
+                    <div className="text-red-400 text-sm">Broken</div>"""
+                  </div>""""
+                  <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">""""
+                    <div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>""""
+                    <div className="text-blue-400 text-sm">External</div>
+                  </div>
+                    </div>
   );
 };
 

@@ -1,4 +1,32 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Globe, 
+  Twitter, 
+  Linkedin, 
+  Github, 
+  Instagram,
+  Youtube,
+  Facebook,
+  ArrowRight,
+  Heart,
+  Shield,
+  Zap,
+  Brain,
+  Rocket,
+  Star,
+  Users,
+  Award,
+  Clock,
+  Target,
+  Building,
+  BookOpen
+} from 'lucide-react';
+import Link from 'next/link';
 
 const UltraFuturisticFooter2036: React.FC = () => {
   return (

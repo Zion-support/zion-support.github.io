@@ -1,6 +1,88 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 
-const UltraFuturisticBackground2030: React.FC = () => {
+interface UltraFuturisticBackground2030Props {
+  children: React.ReactNode;
+}
+
+const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let animationId: number;
+    let particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      color: string;
+      opacity: number;
+    }> = [];
+
+    // Initialize particles
+    const initParticles = () => {
+      particles = [];
+      for (let i = 0; i < 150; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.8 + 0.2
+        });
+      }
+    };
+
+    const animate = () => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle
+        ctx.beginPath();
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.opacity;
+        ctx.fill();
+
+        // Draw connections
+              ctx.strokeStyle = particle.color;
+              ctx.globalAlpha = (100 - distance) / 100 * 0.3;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        });
+      });
+
+      ctx.globalAlpha = 1;
+      animationId = requestAnimationFrame(animate);
+    };
+
+    initParticles();
+    animate();
+
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    };
+
+
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2030</h3>

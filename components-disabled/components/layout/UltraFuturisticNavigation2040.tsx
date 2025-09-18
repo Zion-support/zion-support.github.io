@@ -1,4 +1,19 @@
-import React from 'react';
+"use client";
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { 
+  Menu, X, ChevronDown, Search, Globe, Brain, Rocket, Shield, 
+  Cpu, Database, Atom, Target, Star, Sparkles, Zap, Eye, Heart
+} from 'lucide-react';
+
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+  description: string;
+  subItems?: NavigationItem[];
+}
 
 const UltraFuturisticNavigation2040: React.FC = () => {
   return (

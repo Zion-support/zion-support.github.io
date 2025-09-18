@@ -1,13 +1,9 @@
-import type { NextPage } from 'next';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import Head from 'next/head';
+=======
+import React from 'react';
 import Link from 'next/link';
->>>>>>> origin/backup-main-20250918-004015
 
-const Ai2026RealTimeRetrievalArchitectures: NextPage = () => {
+export default function AI2026RealTimeRetrievalArchitectures() {
   return (
     <div>
       <Head>
@@ -22,10 +18,7 @@ const Ai2026RealTimeRetrievalArchitectures: NextPage = () => {
       </main>
     </div>
   );
-};
-
-<<<<<<< HEAD
 export default Ai2026RealTimeRetrievalArchitectures;
 =======
-export default Ai2026RealTimeRetrievalArchitectures;
->>>>>>> origin/backup-main-20250918-004015
+}
+

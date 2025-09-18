@@ -1,3 +1,32 @@
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  TrendingUp, 
+  DollarSign, 
+  Clock, 
+  Target,
+  Users,
+  Award,
+  CheckCircle,
+  Zap,
+  BarChart3,
+  PieChart
+} from 'lucide-react';
+
+interface Metric {
+  icon: React.ComponentType<any>;
+  value: string;
+  label: string;
+  description: string;
+  color: string;
+  bgColor: string;
+  trend?: {
+    direction: 'up' | 'down' | 'stable';
+    value: string;
+  };
+}
 
 const SuccessMetricsShowcase2026: React.FC = () => {
   return (

@@ -62,10 +62,16 @@ const RevolutionaryContentBanner2025: React.FC = () => {
           </div>
         </div>
         
-        <div className="text-center mt-12">
-          <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-full font-semibold text-white hover:shadow-lg hover:scale-105 transition-all duration-300">
-            View All Revolutionary Content
-          </button>
+        <div className="text-center mt-8">
+          <div className="inline-flex items-center space-x-4">
+            <div className="text-sm opacity-80">Revolutionary Features:</div>
+            <div className="flex space-x-2">
+              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Reality Control</span>
+              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Mind Interface</span>
+              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Tech</span>
+              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Multi-Dimensional</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

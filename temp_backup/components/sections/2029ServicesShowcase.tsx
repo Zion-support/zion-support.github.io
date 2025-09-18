@@ -1,6 +1,52 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Dna, Globe2, CheckCircle, TrendingUp } from 'lucide-react';
+import { futuristicAIServices2029 } from '../../data/2029-futuristic-ai-services';
+import { quantumInnovationServices2029 } from '../../data/2029-quantum-innovation-services';
+import { spaceInnovationServices2029 } from '../../data/2029-space-innovation-services';
+import { biotechInnovationServices2029 } from '../../data/2029-biotech-innovation-services';
+import { metaverseInnovationServices2029 } from '../../data/2029-metaverse-innovation-services';
 
-const 2029ServicesShowcase: React.FC = () => {
+export default function ServicesShowcase2029() {
+  const categories = [
+    {
+      title: '🚀 2029 Futuristic AI Services',
+      icon: Brain,
+      color: 'from-violet-600 to-purple-600',
+      services: futuristicAIServices2029,
+      description: 'Next-generation artificial intelligence that reads emotions, orchestrates creativity, and predicts the future'
+    },
+    {
+      title: '⚛️ 2029 Quantum Innovation',
+      icon: Atom,
+      color: 'from-indigo-600 to-blue-600',
+      services: quantumInnovationServices2029,
+      description: 'Quantum computing breakthroughs in finance, cybersecurity, drug discovery, and logistics'
+    },
+    {
+      title: '🌌 2029 Space Innovation',
+      icon: Rocket,
+      color: 'from-blue-600 to-cyan-600',
+      services: spaceInnovationServices2029,
+      description: 'Revolutionary space technology including autonomous mining, weather prediction, and solar power'
+    },
+    {
+      title: '🧬 2029 Biotech Innovation',
+      icon: Dna,
+      color: 'from-emerald-600 to-teal-600',
+      services: biotechInnovationServices2029,
+      description: 'Cutting-edge biotechnology with DNA computing, synthetic biology, and brain-computer interfaces'
+    },
+    {
+      title: '🌐 2029 Metaverse Innovation',
+      icon: Globe2,
+      color: 'from-orange-600 to-red-600',
+      services: metaverseInnovationServices2029,
+      description: 'Next-generation digital reality with holographic communication and virtual economies'
+    }
+  ];
+
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">2029ServicesShowcase</h3>

@@ -89,41 +89,6 @@
   ],
   "items": [
     {
-      "title": "Reliable Agent Integrations in Production (2026)",
-      "href": "/blog/ai-2026-reliable-agent-integrations",
-      "desc": "Patterns for safe, observable, and reversible integrations.",
-      "createdAt": "2025-09-16T23:59:59.884Z",
-      "source": "blog"
-    },
-    {
-      "title": "Agent Observability Probes That Matter (2026)",
-      "href": "/blog/ai-2026-agent-observability-probes",
-      "desc": "Lightweight probes and SLIs that map to real outcomes.",
-      "createdAt": "2025-09-16T23:59:59.883Z",
-      "source": "blog"
-    },
-    {
-      "title": "Governed Tool Adapters for Safer Autonomy (2026)",
-      "href": "/blog/ai-2026-governed-tool-adapters",
-      "desc": "Tiered permissions and runtime checks for agent tools.",
-      "createdAt": "2025-09-16T23:59:59.882Z",
-      "source": "blog"
-    },
-    {
-      "title": "AI 2026: Autonomous Release Guardrails",
-      "href": "/blog/ai-2026-autonomous-release-guardrails",
-      "desc": "Preflight, canary, scorecards, and rollback patterns for auditable releases.",
-      "createdAt": "2025-09-16T23:59:59.999Z",
-      "source": "blog"
-    },
-    {
-      "title": "AI 2026: Governed Agent Deployments",
-      "href": "/blog/ai-2026-governed-agent-deployments",
-      "desc": "Approvals, policy checks, and evidence woven into delivery pipelines.",
-      "createdAt": "2025-09-16T23:59:59.998Z",
-      "source": "blog"
-    },
-    {
       "title": "Governed Real‑Time Observability (2026)",
       "href": "/blog/ai-2026-governed-real-time-observability",
       "desc": "Streaming metrics and governed traces for reliable, auditable autonomy.",

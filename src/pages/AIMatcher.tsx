@@ -1,6 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from '@/components/SEO';
 
 export default function AIMatcher() {
   return (

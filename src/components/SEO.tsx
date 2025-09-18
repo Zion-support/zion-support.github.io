@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 interface SEOProps {
   title?: string;
@@ -45,10 +45,17 @@ export function SEO({
     robots
   ].filter(Boolean).join(', ');
 
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 2025, breakthrough',
+  image = '/og-image.jpg',
+  url = 'https://zion.app',
+  type = 'website'
+}) => {
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+    <Head>
+      <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content={robotsContent} />
@@ -82,11 +89,9 @@ export function SEO({
       
       {/* Viewport */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
-      {/* Manifest */}
-      <link rel="manifest" href="/site.webmanifest" />
-    </Helmet>
+    </Head>
   );
-}
+};
 
 export default SEO;
+

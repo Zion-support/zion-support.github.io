@@ -1,22 +1,23 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
+  Building, Factory, Camera, Video, Music, Gamepad2
+} from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
-const 2028-services-showcase: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>2028-services-showcase | Zion Tech Group</title>
-        <meta name="description" content="2028-services-showcase - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">2028-services-showcase</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
 
 export default 2028-services-showcase;

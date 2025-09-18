@@ -1,4 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ExternalLink,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Cloud,
+  Bot,
+  RefreshCw,
+  BarChart3
+} from 'lucide-react';
+import Link from 'next/link';
 
 const EnhancedFuturisticNavigation: React.FC = () => {
   return (

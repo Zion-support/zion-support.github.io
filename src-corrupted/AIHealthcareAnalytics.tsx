@@ -1,4 +1,71 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Heart, 
+  Activity, 
+  Brain, 
+  Target, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  Clock,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Rocket,
+  Briefcase,
+  Award,
+  TrendingUp,
+  Stethoscope,
+  Database
+import { Link } from 'react-router-dom';
+import { 
+  Heart, 
+  Brain, 
+  Activity, 
+  Zap, 
+  BarChart3, 
+  Clock, 
+  CheckCircle, 
+  ArrowRight,
+  Star,
+  Shield,
+  Users,
+  TrendingUp,
+  Lock,
+  Eye,
+  Database,
+  Network,
+  Calendar,
+  DollarSign,
+  Target,
+  Stethoscope,
+  Pill,
+  Microscope,
+  FileText,
+  AlertTriangle,
+import { Link } from 'react-router-dom';
+import { 
+  Heart, 
+  Activity, 
+  Brain, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  DollarSign,
+  Zap,
+  Target
+} from 'lucide-react';
+
+export default function AIHealthcareAnalytics() {
+  const features = [
+    {
+  LineChart,
+  Building
+} from 'lucide-react';
 
 const AIHealthcareAnalytics: React.FC = () => {
   return (

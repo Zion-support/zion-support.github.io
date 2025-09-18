@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, 
   ArrowLeft, 
@@ -86,10 +87,8 @@ const RevolutionaryContentCarousel: React.FC = () => {
         "Universal Mind Network",
         "Infinite Intelligence"
       ],
-      impact: "Revolutionary"
       link: "/pages/NextGenTechShowcase2026",
       status: "Live Now",
-      impact: "Revolutionary"
       impact: "Unprecedented"
       impact: "Unprecedented"
       title: "Neural Reality Interface",
@@ -214,6 +213,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
     <div className="relative w-full max-w-7xl mx-auto">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-3xl">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -300 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
             className={`relative bg-gradient-to-br ${currentContent.bgColor} text-white overflow-hidden`}
           >
             {/* Animated Background */}
@@ -221,16 +227,19 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
               <div className="absolute top-0 left-0 w-full h-full">
                 {[...Array(100)].map((_, i) => (
+                  <motion.div
                     key={i}
                     className="absolute w-1 h-1 bg-white rounded-full opacity-30"
                     style={{
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
+                    animate={{
                       y: [0, -200, 0],
                       opacity: [0.3, 1, 0.3],
                       scale: [1, 2, 1],
                     }}
+                    transition={{
                       duration: 4 + Math.random() * 2,
                       repeat: Infinity,
                       delay: Math.random() * 3,
@@ -243,6 +252,10 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Content */}
                 <div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
                     className="mb-6"
                   >
                     <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4">
@@ -258,14 +271,36 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <p className="text-lg text-white/80 mb-8 leading-relaxed">
                       {currentContent.description}
                     </p>
+                  </motion.div>
+
+                  {/* Features */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
                     className="mb-8"
                   >
                     <ul className="space-y-3">
                       {currentContent.features.map((feature, index) => (
+                        <motion.li
+                          key={index}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                           className="flex items-center space-x-3"
                         >
                           <div className="w-2 h-2 bg-white rounded-full"></div>
                           <span className="text-white/90">{feature}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </motion.div>
+
+                  {/* CTA Buttons */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
                     className="flex flex-col sm:flex-row gap-4"
                   >
                     <a
@@ -279,9 +314,14 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <button className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                       <span>Learn More</span>
                     </button>
+                  </motion.div>
                 </div>
                 {/* Visual */}
                 <div className="relative">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
                     className="relative"
                   >
                     <div className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}>
@@ -291,6 +331,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
                     <div className="absolute -top-4 -right-4 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
                     <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/30 rounded-full animate-pulse delay-1000"></div>
                     <div className="absolute top-1/2 -right-8 w-4 h-4 bg-white/40 rounded-full animate-pulse delay-500"></div>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
@@ -325,17 +372,20 @@ const RevolutionaryContentCarousel: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(100)].map((_, i) => (
+            <motion.div
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
+              animate={{
                 y: [0, -300, 0],
                 opacity: [0.3, 1, 0.3],
                 scale: [1, 3, 1],
                 rotate: [0, 360, 0],
               }}
+              transition={{
                 duration: 4 + Math.random() * 3,
                 repeat: Infinity,
                 delay: Math.random() * 2,
@@ -349,10 +399,24 @@ const RevolutionaryContentCarousel: React.FC = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 50 }}
+              transition={{ duration: 0.5 }}
+              className="text-white"
+            >
+              <div className="mb-6">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.2 }}
                   className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-4"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span className="text-sm font-semibold">{currentContent.status}</span>
+                </motion.div>
               </div>
               <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                 {currentContent.title}
@@ -367,26 +431,68 @@ const RevolutionaryContentCarousel: React.FC = () => {
                 <h4 className="text-lg font-semibold mb-4">Key Features:</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {currentContent.features.map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
                       className="flex items-center space-x-2 text-sm"
                     >
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       <span className="text-gray-200">{feature}</span>
+                    </motion.div>
                   ))}
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
+                <motion.a
+                  href={currentContent.link}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className={`inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r ${currentContent.color} text-white rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg`}
                 >
                   <Play className="w-5 h-5" />
                   <span>Explore Content</span>
                   <ArrowRight className="w-5 h-5" />
+                </motion.a>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
+                >
+                  Learn More
+                </motion.button>
+              </div>
+            </motion.div>
+
+            {/* Right Content - Visual */}
+            <motion.div
+              key={`visual-${currentSlide}`}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
               className="relative"
             >
               <div className="relative">
                 {/* Main Icon */}
+                <motion.div
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className={`w-32 h-32 mx-auto mb-8 bg-gradient-to-r ${currentContent.color} rounded-3xl flex items-center justify-center shadow-2xl`}
+                >
+                  <currentContent.icon className="w-16 h-16 text-white" />
+                </motion.div>
+
                 {/* Floating Elements */}
                 <div className="absolute inset-0">
                   {stats.map((stat, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                       className="absolute bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
                       style={{
                         top: `${20 + (index * 15)}%`,
@@ -397,6 +503,11 @@ const RevolutionaryContentCarousel: React.FC = () => {
                       <stat.icon className="w-6 h-6 text-white mb-2" />
                       <div className="text-2xl font-bold text-white">{stat.number}</div>
                       <div className="text-xs text-gray-300">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -437,6 +548,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
           <Play className={`w-5 h-5 ${isAutoPlaying ? 'animate-pulse' : ''}`} />
         </button>
       {/* Main content */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentSlide}
+          initial={{ opacity: 0, x: 300 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -300 }}
+          transition={{ duration: 0.5 }}
           className="absolute inset-0 flex items-center"
         >
           <div className="container mx-auto px-8 grid md:grid-cols-2 gap-12 items-center">
@@ -513,6 +631,9 @@ const RevolutionaryContentCarousel: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
             </div>
           </div>
+        </motion.div>
+      </AnimatePresence>
+
       {/* Navigation arrows */}
       <button
         onClick={prevSlide}
@@ -546,84 +667,13 @@ const RevolutionaryContentCarousel: React.FC = () => {
       </div>
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+        <motion.div
+          className="h-full bg-gradient-to-r from-purple-500 to-indigo-500"
+          initial={{ width: "0%" }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 5, ease: "linear" }}
           key={currentSlide}
         />
-      {/* Content Preview Grid */}
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {revolutionaryContent.map((content, index) => (
-            className={`p-4 rounded-xl text-left transition-all duration-300 ${
-              index === currentSlide
-                ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
-                : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
-            }`}
-          >
-            <div className={`w-8 h-8 mx-auto mb-3 rounded-lg flex items-center justify-center ${
-              index === currentSlide ? 'bg-white/20' : `bg-gradient-to-r ${content.color}`
-            }`}>
-              <content.icon className={`w-4 h-4 ${index === currentSlide ? 'text-white' : 'text-white'}`} />
-            </div>
-            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
-            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </motion.button>
-        ))}
-      </div>
-      {/* Dots Navigation */}
-      <div className="flex justify-center space-x-3 mt-8">
-        {revolutionaryContent.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
-      {/* Content Preview Grid */}
-      <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {revolutionaryContent.map((content, index) => (
-          <motion.button
-            key={content.id}
-            onClick={() => goToSlide(index)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={`p-4 rounded-xl text-left transition-all duration-300 ${
-              index === currentSlide
-                ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
-                : 'bg-white hover:bg-gray-50 text-gray-700 border border-gray-200'
-            }`}
-          >
-            <div className={`w-8 h-8 mx-auto mb-3 rounded-lg flex items-center justify-center ${
-              index === currentSlide ? 'bg-white/20' : `bg-gradient-to-r ${content.color}`
-            }`}>
-              <content.icon className={`w-4 h-4 ${index === currentSlide ? 'text-white' : 'text-white'}`} />
-            </div>
-            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
-            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </motion.button>
-        ))}
-      </div>
-            <h3 className="text-sm font-semibold mb-1 line-clamp-2">{content.title}</h3>
-            <p className="text-xs opacity-75 line-clamp-2">{content.subtitle}</p>
-          </divbutton>
-        ))}
-      </div>
-      {/* Dots Navigation */}
-      <div className="flex justify-center space-x-3 mt-8">
-        {revolutionaryContent.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
-                : 'bg-gray-300 hover:bg-gray-400'
-            }`}
-          />
-        ))}
-      </div>
       {/* Content Preview Grid */}
       <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         {revolutionaryContent.map((content, index) => (

@@ -1,4 +1,25 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { 
+  Star, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ExternalLink, 
+  ArrowRight,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Cloud,
+  RefreshCw,
+  BarChart3,
+  Globe,
+  Lock,
+  Building,
+  BookOpen
+} from 'lucide-react';
 
 const EnhancedFuturisticFooter: React.FC = () => {
   return (

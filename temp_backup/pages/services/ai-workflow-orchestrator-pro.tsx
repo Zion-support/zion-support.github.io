@@ -1,7 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  Check, Star, Users, Zap, Shield, TrendingUp,
+  ArrowRight, Play, Clock, Award, Globe, Cpu, Brain
+} from 'lucide-react';
 
-const ai-workflow-orchestrator-pro: React.FC = () => {
+export default function AIWorkflowOrchestratorPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

@@ -1,4 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BarChart3, Check, X, Star, Brain, Atom, Rocket, Shield, Zap, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+
+interface ServiceFeature {
+  name: string;
+  category: string;
+  description: string;
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price: string;
+  rating: number;
+  features: string[];
+  pros: string[];
+  cons: string[];
+  icon: React.ReactNode;
+  color: string;
+  popular?: boolean;
+}
 
 const ServiceComparisonTool: React.FC = () => {
   return (

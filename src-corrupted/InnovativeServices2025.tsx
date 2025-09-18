@@ -1,4 +1,32 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Network, 
+  Code, 
+  BarChart3, 
+  Target, 
+  Lightbulb, 
+  Rocket, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Cpu, 
+  Sparkles,
+  ShieldCheck,
+  Globe2,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const InnovativeServices2025: React.FC = () => {
   return (

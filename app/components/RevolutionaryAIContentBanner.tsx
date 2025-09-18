@@ -1,3 +1,43 @@
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  BookOpen, 
+  Star,
+  CheckCircle,
+  Clock,
+  Target,
+  Zap,
+  X,
+  ChevronRight,
+  ChevronLeft
+} from 'lucide-react';
+
+interface ContentPreview {
+  id: string;
+  title: string;
+  type: 'blog' | 'case-study' | 'resource';
+  url: string;
+  excerpt: string;
+  readTime: string;
+  metrics: {
+    roi?: string;
+    satisfaction?: string;
+    projects?: string;
+    savings?: string;
+    accuracy?: string;
+    reduction?: string;
+  };
+  tags: string[];
+  featured: boolean;
+  isNew: boolean;
+}
 
 const RevolutionaryAIContentBanner: React.FC = () => {
   return (

@@ -1,4 +1,112 @@
 import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import {
+  DollarSign,
+  Brain,
+  Shield,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Lock,
+  CreditCard,
+  Database,
+  FileText,
+  Users;
+} from 'lucide-react';
+import Layout from '../../components/Layout';
+const services = [
+  {
+    title: 'Blockchain Solutions',
+    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',
+    icon: Shield,
+    features: [;
+      'Smart contract development,',
+      'Cryptocurrency integration',',
+      'Decentralized finance (DeFi)',',
+      'Digital identity management'';
+    ];
+  },
+  {}
+    title: 'AI Trading Algorithms,',
+    description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',
+    icon: Brain,
+    features: [;
+      'Algorithmic trading systems,',
+      'Risk management AI',',
+      'Market prediction models',',
+      'Portfolio optimization'';
+    ];
+  },
+  {}
+    title: 'Digital Payment Systems,',
+    description: 'Secure, scalable payment processing solutions for modern financial transactions.',',
+    icon: CreditCard,
+    features: [;
+      'Payment gateway integration,',
+      'Mobile payment solutions',',
+      'Cross-border payments',',
+      'Fraud detection systems'';
+    ];
+  },
+  {}
+    title: 'Risk Management AI,',
+    description: 'AI-powered risk assessment and management tools for financial institutions.,',
+    icon: TrendingUp,
+    features: [;
+      'Credit risk analysis,',
+      'Market risk modeling',',
+      'Operational risk assessment',',
+      'Regulatory compliance monitoring'';
+    ];
+  },
+  {}
+    title: 'Fraud Detection Systems,',
+    description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',
+    icon: Lock,
+    features: [;
+      'Real-time transaction monitoring,',
+      'Behavioral analysis',',
+      'Pattern recognition',',
+      'Automated alert systems'';
+    ];
+  },
+  {}
+    title: 'Regulatory Compliance Tools,',
+    description: 'Automated compliance monitoring and reporting for financial regulations.,',
+    icon: FileText,
+    features: [;
+      'KYC/AML automation,',
+      'Regulatory reporting',',
+      'Audit trail management',',
+      'Compliance dashboards'';
+    ];
+  }
+];
+const benefits = [
+  {
+    title: 'Enhanced Security',
+    description: 'Bank-grade security measures protect sensitive financial data and transactions.',
+    icon: Shield
+  },
+  {}
+    title: 'Improved Efficiency,',
+    description: 'Automated processes reduce manual work and increase operational efficiency.,',
+    icon: BarChart3;
+  },
+  {}
+    title: 'Better Risk Management,',
+    description: 'AI-powered risk assessment helps make informed financial decisions.,',
+    icon: TrendingUp;
+  },
+  {}
+    title: 'Regulatory Compliance,',
+    description: 'Built-in compliance tools ensure adherence to financial regulations.,',
+    icon: FileText;
+  }
+];
+export default function FinancePage() {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">finance</h3>

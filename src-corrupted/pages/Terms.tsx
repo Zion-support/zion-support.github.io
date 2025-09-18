@@ -1,5 +1,268 @@
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { 
+  Shield, 
+  Users, 
+  Globe, 
+  CheckCircle,
+  AlertTriangle,
+  Scale,
+  Lock,
+  Mail,
+  Phone,
+  MapPin,
+  Calendar
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-const Terms: React.FC = () => {
+export default function Terms() {
+  const termsSections = [
+    {
+      icon: Users,
+      title: 'Acceptance of Terms',
+      description: 'By accessing and using our services, you agree to be bound by these terms and conditions.',
+      details: 'These terms constitute a legally binding agreement between you and Zion Tech Group. Continued use of our services indicates acceptance of any updates to these terms.'
+    },
+    {
+      icon: Shield,
+      title: 'Service Description',
+      description: 'We provide technology consulting, development, and digital transformation services.',
+      details: 'Our services include AI solutions, cloud computing, cybersecurity, software development, and digital transformation consulting across various industries.'
+    },
+    {
+      icon: Lock,
+      title: 'User Responsibilities',
+      description: 'Users must comply with applicable laws and respect intellectual property rights.',
+      details: 'You are responsible for maintaining account security, using services lawfully, and respecting the rights of other users and third parties.'
+    },
+    {
+      icon: Globe,
+      title: 'Intellectual Property',
+      description: 'All content and technology remain the property of Zion Tech Group.',
+      details: 'We retain ownership of our proprietary technology, while you maintain rights to your content and data provided to our services.'
+    },
+    {
+      icon: Scale,
+      title: 'Legal Compliance',
+      description: 'All services must be used in compliance with applicable laws and regulations.',
+      details: 'We operate under US law and international regulations, and users must ensure their use complies with local, national, and international laws.'
+    },
+    {
+      icon: Calendar,
+      title: 'Service Availability',
+      description: 'We strive for high availability but cannot guarantee uninterrupted service.',
+      details: 'Services are provided on an "as-is" basis with scheduled maintenance windows and potential for unscheduled downtime.'
+    }
+  ];
+
+  const userObligations = [
+    {
+      obligation: 'Compliance',
+      description: 'Comply with all applicable laws and regulations when using our services.',
+      examples: ['Data protection laws', 'Industry regulations', 'Export controls', 'Tax obligations'],
+      severity: 'high'
+    },
+    {
+      obligation: 'Account Security',
+      description: 'Maintain the security of your account credentials and notify us of any unauthorized access.',
+      examples: ['Strong passwords', '2FA when available', 'Immediate breach notification', 'Regular credential updates'],
+      severity: 'high'
+    },
+    {
+      obligation: 'Acceptable Use',
+      description: 'Use our services only for lawful purposes and in accordance with these terms.',
+      examples: ['Business purposes only', 'No illegal activities', 'Respect service limits', 'Proper authentication'],
+      severity: 'high'
+    },
+    {
+      obligation: 'Content Standards',
+      description: 'Ensure all content you provide is accurate, lawful, and does not infringe on others\' rights.',
+      examples: ['Original content only', 'No copyright violations', 'Accurate information', 'Respectful communication'],
+      severity: 'medium'
+    },
+    {
+      obligation: 'Payment Terms',
+      description: 'Pay all fees and charges in accordance with agreed payment schedules.',
+      examples: ['Timely payments', 'Valid payment methods', 'Dispute resolution', 'Late fee acceptance'],
+      severity: 'medium'
+    },
+    {
+      obligation: 'Confidentiality',
+      description: 'Maintain the confidentiality of any proprietary information shared with you.',
+      examples: ['NDA compliance', 'Secure storage', 'Limited disclosure', 'Return of materials'],
+      severity: 'high'
+    },
+    {
+      obligation: 'Data Protection',
+      description: 'Handle personal and sensitive data in accordance with privacy laws and our policies.',
+      examples: ['GDPR compliance', 'Data minimization', 'Secure processing', 'Breach notification'],
+      severity: 'high'
+    },
+    {
+      obligation: 'Service Limits',
+      description: 'Respect service usage limits and not attempt to circumvent restrictions.',
+      examples: ['Rate limiting', 'Bandwidth restrictions', 'Storage quotas', 'API usage limits'],
+      severity: 'medium'
+    }
+  ];
+
+  const prohibitedActivities = [
+    {
+      activity: 'Attempting to gain unauthorized access to our systems or other users\' accounts',
+      category: 'Security Violations',
+      consequences: ['Immediate account suspension', 'Legal action', 'Reporting to authorities']
+    },
+    {
+      activity: 'Transmitting viruses, malware, or other harmful code',
+      category: 'Malicious Software',
+      consequences: ['Service termination', 'Legal action', 'Damage claims']
+    },
+    {
+      activity: 'Interfering with the proper functioning of our services',
+      category: 'Service Disruption',
+      consequences: ['Account suspension', 'Service limitations', 'Performance monitoring']
+    },
+    {
+      activity: 'Using our services for illegal or fraudulent activities',
+      category: 'Illegal Activities',
+      consequences: ['Immediate termination', 'Legal action', 'Law enforcement reporting']
+    },
+    {
+      activity: 'Reverse engineering or attempting to extract source code',
+      category: 'Intellectual Property',
+      consequences: ['Legal action', 'Injunction requests', 'Damages claims']
+    },
+    {
+      activity: 'Harassing, threatening, or abusing other users',
+      category: 'User Conduct',
+      consequences: ['Account suspension', 'Service termination', 'Legal action']
+    },
+    {
+      activity: 'Violating intellectual property rights',
+      category: 'IP Violations',
+      consequences: ['Content removal', 'Account suspension', 'Legal action']
+    },
+    {
+      activity: 'Collecting personal information without consent',
+      category: 'Privacy Violations',
+      consequences: ['Data deletion', 'Account suspension', 'Regulatory reporting']
+    },
+    {
+      activity: 'Attempting to circumvent security measures or access controls',
+      category: 'Security Bypass',
+      consequences: ['Immediate termination', 'Legal action', 'Security monitoring']
+    },
+    {
+      activity: 'Using services for cryptocurrency mining without authorization',
+      category: 'Resource Abuse',
+      consequences: ['Service termination', 'Usage restrictions', 'Additional charges']
+    }
+  ];
+
+  const serviceLevels = [
+    {
+      level: 'Standard Support',
+      description: 'Email support during business hours',
+      response: '24-48 hours',
+      included: true,
+      features: ['Email support', 'Business hours only', 'Documentation access', 'Community forums'],
+      sla: '99.5% uptime'
+    },
+    {
+      level: 'Priority Support',
+      description: 'Phone and email support with faster response times',
+      response: '4-8 hours',
+      included: false,
+      features: ['Phone & email support', 'Extended hours', 'Priority ticket handling', 'Dedicated support engineer'],
+      sla: '99.8% uptime'
+    },
+    {
+      level: 'Premium Support',
+      description: 'Dedicated support team and 24/7 emergency response',
+      response: '1-2 hours',
+      included: false,
+      features: ['24/7 phone support', 'Dedicated team', 'Emergency response', 'Custom SLA agreements'],
+      sla: '99.9% uptime'
+    },
+    {
+      level: 'Enterprise Support',
+      description: 'Custom support agreements with dedicated resources',
+      response: 'Custom SLA',
+      included: false,
+      features: ['Custom SLA', 'Dedicated account manager', 'On-site support', 'Training & consulting'],
+      sla: '99.99% uptime'
+    }
+  ];
+
+  const dataHandlingTerms = [
+    {
+      category: 'Data Ownership',
+      description: 'You retain ownership of your data, while we maintain rights to aggregated and anonymized usage data.',
+      details: 'Your business data remains your property. We may use anonymized, aggregated data for service improvement and analytics.'
+    },
+    {
+      category: 'Data Processing',
+      description: 'We process your data only as necessary to provide our services and as outlined in our Privacy Policy.',
+      details: 'Data processing follows GDPR principles and is limited to service delivery, support, and legal compliance.'
+    },
+    {
+      category: 'Data Security',
+      description: 'We implement industry-standard security measures to protect your data from unauthorized access.',
+      details: 'Security measures include encryption, access controls, regular audits, and compliance with SOC 2 standards.'
+    },
+    {
+      category: 'Data Retention',
+      description: 'We retain your data according to our data retention policy and legal requirements.',
+      details: 'Data is retained for the duration of service provision and as required by law or business needs.'
+    }
+  ];
+
+  const paymentTerms = [
+    {
+      term: 'Billing Cycles',
+      description: 'Services are billed according to agreed-upon cycles (monthly, quarterly, or annually).',
+      details: 'Invoices are generated at the beginning of each billing cycle with payment due within 30 days.'
+    },
+    {
+      term: 'Payment Methods',
+      description: 'We accept major credit cards, bank transfers, and other approved payment methods.',
+      details: 'Payment methods may vary by region and service type. All payments are processed securely.'
+    },
+    {
+      term: 'Late Payments',
+      description: 'Late payments may result in service suspension and additional fees.',
+      details: 'Services may be suspended after 15 days of non-payment. Reinstatement requires full payment plus fees.'
+    },
+    {
+      term: 'Refunds',
+      description: 'Refunds are provided according to our refund policy and service agreements.',
+      details: 'Refunds are typically processed within 30 days and may be subject to administrative fees.'
+    }
+  ];
+
+  const disputeResolution = [
+    {
+      step: 'Direct Communication',
+      description: 'Attempt to resolve disputes through direct communication with our support team.',
+      timeframe: 'Within 30 days'
+    },
+    {
+      step: 'Mediation',
+      description: 'If direct communication fails, we may engage in formal mediation.',
+      timeframe: 'Within 60 days'
+    },
+    {
+      step: 'Arbitration',
+      description: 'Disputes may be resolved through binding arbitration in accordance with our agreement.',
+      timeframe: 'Within 90 days'
+    },
+    {
+      step: 'Legal Action',
+      description: 'As a last resort, disputes may be resolved through legal proceedings.',
+      timeframe: 'As required by law'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

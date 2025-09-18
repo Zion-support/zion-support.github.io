@@ -359,6 +359,10 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
           </div>
         </div>
 
+            </div>
+          </div>
+        </div>
+
         {/* Applications */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -430,8 +434,6 @@ const ConsciousnessComputingRevolution2034: React.FC = () => {
                 <li>• Multidimensional existence</li>
                 <li>• Universal creation abilities</li>
               </ul>
-            </motion.div>
-            </motion.div>
             </motion.div>
           </div>
         </div>

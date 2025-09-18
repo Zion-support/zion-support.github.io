@@ -1,4 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Brain, Rocket, Shield, Atom, Cpu, Cloud, Target,
+  ArrowRight, Play, Star, Zap, Users, Award, Globe,
+  ChevronDown, Sparkles, Eye, Lock, Clock, CheckCircle,
+  Phone, Mail, X
+} from 'lucide-react';
 
 const UltraAdvancedFuturisticHero2025: React.FC = () => {
   return (

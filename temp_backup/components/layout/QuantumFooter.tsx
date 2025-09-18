@@ -1,4 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Mail, Phone, MapPin, Globe, Twitter, Linkedin, 
+  Github, Facebook, Instagram, Youtube, Rocket,
+  Shield, Brain, Cpu, Database, Sparkles
+} from 'lucide-react';
 
 const QuantumFooter: React.FC = () => {
   return (

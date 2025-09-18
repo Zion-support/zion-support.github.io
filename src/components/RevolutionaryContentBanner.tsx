@@ -104,36 +104,6 @@ const RevolutionaryContentBanner: React.FC = () => {
             ))}
           </div>
         </div>
-
-        {/* Additional Content Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-3xl mb-4">🚀</div>
-            <h4 className="text-xl font-bold mb-2">Advanced AI Solutions</h4>
-            <p className="text-sm opacity-90 mb-4">Cutting-edge AI technologies for enterprise transformation</p>
-            <a href="/pages/AdvancedAISolutions2026" className="text-purple-300 hover:text-white transition-colors">
-              Learn More →
-            </a>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-3xl mb-4">⚛️</div>
-            <h4 className="text-xl font-bold mb-2">Quantum Computing</h4>
-            <p className="text-sm opacity-90 mb-4">Revolutionary quantum technologies for the future</p>
-            <a href="/pages/QuantumComputingRevolution2025" className="text-purple-300 hover:text-white transition-colors">
-              Explore →
-            </a>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-            <div className="text-3xl mb-4">🧠</div>
-            <h4 className="text-xl font-bold mb-2">Neural Interfaces</h4>
-            <p className="text-sm opacity-90 mb-4">Next-generation brain-computer interfaces</p>
-            <a href="/pages/NeuralInterfaceRevolution2025" className="text-purple-300 hover:text-white transition-colors">
-              Discover →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );

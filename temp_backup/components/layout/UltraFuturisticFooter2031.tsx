@@ -1,4 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, ArrowRight, 
+  Facebook, Twitter, Linkedin, Instagram, 
+  Github, Youtube, Rocket, Brain, Atom, 
+  Shield, Zap, Star, Heart, ArrowUp
+} from 'lucide-react';
 
 const UltraFuturisticFooter2031: React.FC = () => {
   return (

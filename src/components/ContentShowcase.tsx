@@ -1,4 +1,4 @@
-import React, { useMemo, useState }  from 'react';
+import React, { useState } from 'react';
 import { 
   BookOpen, 
   FileText, 
@@ -31,18 +31,67 @@ const ContentShowcase: React.FC = () => {
     { id: 'blog', name: 'Latest Blog Posts', icon: BookOpen },
     { id: 'case-studies', name: 'Case Studies', icon: FileText },
     { id: 'webinars', name: 'Webinars', icon: Play },
-    { id: 'whitepapers', name: 'White Papers', icon: FileText };
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { blogPosts } = require('../data/blog-posts.js');
-  const latestFour = useMemo(() => {
-    try {
-      return [...blogPosts];
-        .sort((a, b) => (b.publishDate || '').localeCompare(a.publishDate || ''))
-        .slice(0, 4);
-    } ,catch {
-      return blogPosts.slice(0, 4);
-    };
-  }, [blogPosts]);
+    { id: 'whitepapers', name: 'White Papers', icon: FileText }
+  ];
+
+  const blogPosts = [
+    {
+      id: 1,
+      title: "The Future of AI in Business: Autonomous Operations by 2025",
+      excerpt: "Explore how AI autonomous business managers are revolutionizing operations, reducing costs by 40%, and enabling 24/7 decision-making capabilities.",
+      author: "Dr. Sarah Chen",
+      authorRole: "Chief AI Officer",
+      date: "2025-01-15",
+      readTime: "8 min read",
+      views: "12.5k",
+      likes: 342,
+      tags: ["AI", "Business Automation", "Future Tech"],
+      category: "AI & Machine Learning",
+      featured: true,
+      image: "/api/placeholder/400/250"
+    },
+    {
+      id: 2,
+      title: "Quantum Computing: Breaking the Security Barrier",
+      excerpt: "Discover how quantum encryption is creating unbreakable security protocols and what it means for your business data protection.",
+      author: "Michael Rodriguez",
+      authorRole: "Quantum Security Expert",
+      date: "2025-01-12",
+      readTime: "12 min read",
+      views: "8.9k",
+      likes: 267,
+      tags: ["Quantum Computing", "Security", "Encryption"],
+      category: "Cybersecurity",
+      featured: true
+    },
+    {
+      id: 3,
+      title: "Building Resilient Multi-Cloud Architectures",
+      excerpt: "Learn the best practices for creating fault-tolerant, cost-optimized multi-cloud environments that scale with your business needs.",
+      author: "Jennifer Liu",
+      authorRole: "Cloud Architecture Lead",
+      date: "2025-01-10",
+      readTime: "10 min read",
+      views: "15.2k",
+      likes: 423,
+      tags: ["Cloud Computing", "Architecture", "DevOps"],
+      category: "Cloud Solutions"
+    },
+    {
+      id: 4,
+      title: "DeFi Revolution: Decentralizing Financial Services",
+      excerpt: "Understand how decentralized finance platforms are transforming traditional banking and creating new opportunities for businesses.",
+      author: "Alex Thompson",
+      authorRole: "Blockchain Strategist",
+      date: "2025-01-08",
+      readTime: "14 min read",
+      views: "6.7k",
+      likes: 198,
+      tags: ["DeFi", "Blockchain", "Finance"],
+      category: "Blockchain & Web3",
+      new: true
+    }
+  ];
 
   const caseStudies = [
     {

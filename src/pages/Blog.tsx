@@ -1,22 +1,23 @@
 import React from 'react';
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
 
 export default function Blog() {
   return (
-    <>
-      <SEO 
-        title="Blog - Zion Tech Group" 
-        description="Stay updated with the latest insights, tech trends, and company news from Zion Tech Group." 
-        keywords="blog, tech insights, AI trends, Zion Tech Group news, industry updates"
-        url="https://ziontechgroup.com/blog"
-      />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Blog & Insights</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Stay informed with the latest tech trends, AI insights, and company updates
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Blog
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Revolutionary technology solutions and insights for the future
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 rounded-xl p-6 backdrop-blur-sm border border-blue-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-blue-300">Advanced Technology</h3>
+            <p className="text-gray-300 mb-4">
+              Cutting-edge solutions that push the boundaries of what's possible
             </p>
           </div>
           

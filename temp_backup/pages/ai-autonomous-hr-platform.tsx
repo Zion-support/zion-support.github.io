@@ -1,7 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
+import { Layout } from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { 
+  Users, Brain, Zap, CheckCircle, ArrowRight, 
+  Target, Calendar, BarChart3, Heart, Shield
+} from 'lucide-react';
 
-const ai-autonomous-hr-platform: React.FC = () => {
+const AIAutonomousHRPlatform: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

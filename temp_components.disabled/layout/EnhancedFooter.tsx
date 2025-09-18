@@ -1,4 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Zap, Brain, Atom, Rocket, Shield, Target, 
+  Phone, Mail, MapPin, Globe, ExternalLink,
+  Twitter, Linkedin, Github, Facebook, Instagram,
+  ArrowRight, Star, TrendingUp, Users, Award
+} from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
   return (

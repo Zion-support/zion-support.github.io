@@ -1,5 +1,63 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  PenTool, FileText, Image, Video, Mic, Globe, 
+  Zap, Shield, Users, CheckCircle, Star, Lock, 
+  Smartphone, Monitor, TrendingUp, Palette
+} from 'lucide-react';
+
+export default function AIContentCreationSuite() {
+  const features = [
+    {
+      icon: <PenTool className="w-6 h-6" />,
+      title: 'AI Writing Assistant',
+      description: 'Generate high-quality written content including blog posts, articles, social media posts, and marketing copy.'
+    },
+    {
+      icon: <Image className="w-6 h-6" />,
+      title: 'AI Image Generation',
+      description: 'Create stunning visuals, graphics, and illustrations using advanced AI image generation technology.'
+    },
+    {
+      icon: <Video className="w-6 h-6" />,
+      title: 'AI Video Creation',
+      description: 'Generate engaging video content, animations, and multimedia presentations automatically.'
+    },
+    {
+      icon: <Mic className="w-6 h-6" />,
+      title: 'AI Audio Generation',
+      description: 'Create voiceovers, podcasts, and audio content with natural-sounding AI voices.'
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: 'Multi-Language Support',
+      description: 'Generate content in multiple languages with accurate translations and cultural adaptations.'
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Smart Content Optimization',
+      description: 'AI-powered SEO optimization and content performance analysis to maximize engagement.'
+    }
+  ];
+
+  const benefits = [
+    'Create content 10x faster than traditional methods',
+    'Reduce content creation costs by 70%',
+    'Improve content engagement by 50%',
+    'Generate unlimited content variations',
+    'Maintain consistent brand voice across all content',
+    'Scale content production effortlessly',
+    'Optimize content for better SEO performance',
+    'Create personalized content for different audiences'
+  ];
+
+  const contentTypes = [
+    'Blog Posts & Articles', 'Social Media Content', 'Marketing Copy',
+    'Product Descriptions', 'Email Campaigns', 'Landing Pages',
+    'Video Scripts', 'Podcast Scripts', 'Press Releases',
+    'White Papers', 'Case Studies', 'Infographics'
+  ];
 
 const ai-content-creation-suite: React.FC = () => {
   return (

@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-const UltimateContentCarousel2025: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">UltimateContentCarousel2025</h1>
-          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
-=======
 import React, { useState, useEffect } from 'react';
+// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+ChevronLeftChevronRightStarArrowRightPlayDownloadUsersTrendingUp
 
 const UltimateContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,19 +74,35 @@ const UltimateContentCarousel2025: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-16 mb-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🌟 ULTIMATE CONTENT CAROUSEL • JANUARY 2025
-          </div>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
-            Ultimate Content Experience
-          </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore our most revolutionary content with interactive carousel navigation
-          </p>
+    <divsection
+      className="py-20 bg-gradient-to-br from-slate-50 to-blue-50"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <divdiv
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6"
+          >
+            <Star className="w-4 h-4 mr-2" />
+            Ultimate Content Carousel 2025
+          </divdiv>
+          
+          <divh2
+            className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
+          >
+            Revolutionary Technology
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+              Showcase
+            </span>
+          </divh2>
+          
+          <divp
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+          >
+            Discover the most advanced AI and technology solutions that are reshaping 
+            industries and transforming businesses worldwide.
+          </divp>
         </div>
 
         <div className="relative max-w-6xl mx-auto">
@@ -127,7 +135,7 @@ const UltimateContentCarousel2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+              </divdiv>
             </div>
           </div>
 
@@ -163,36 +171,28 @@ const UltimateContentCarousel2025: React.FC = () => {
           </div>
         </div>
 
-        {/* Quick Access Grid */}
-        <div className="mt-16">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Quick Access to All Content</h3>
-            <p className="text-xl opacity-90">Jump directly to any of our revolutionary content sections</p>
+        {/* Additional Info */}
+        <divdiv
+          className="mt-16 text-center"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex items-center justify-center space-x-2 text-gray-600">
+              <Users className="w-5 h-5" />
+              <span>50,000+ Active Users</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-gray-600">
+              <Play className="w-5 h-5" />
+              <span>Interactive Demos Available</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-gray-600">
+              <Download className="w-5 h-5" />
+              <span>Free Resources & Guides</span>
+            </div>
           </div>
-          <div className="grid md:grid-cols-5 gap-4">
-            {slides.map((slide) => (
-              <a
-                key={slide.id}
-                href={slide.link}
-                className={`bg-gradient-to-br ${slide.gradient} backdrop-blur-sm rounded-xl p-6 border ${slide.borderColor} hover:scale-105 transition-all duration-300 text-center`}
-              >
-                <div className="text-4xl mb-3">{slide.image}</div>
-                <h4 className="font-bold text-sm mb-2">{slide.title}</h4>
-                <p className={`text-xs ${slide.textColor}`}>
-                  {slide.description.substring(0, 60)}...
-                </p>
-              </a>
-            ))}
-          </div>
->>>>>>> 05fabbf610e8ccaf3f54e32b18aef1bf80799814
         </div>
       </div>
-    </div>
+    </divsection>
   );
-<<<<<<< HEAD
-  };
-=======
 };
 
->>>>>>> 05fabbf610e8ccaf3f54e32b18aef1bf80799814
 export default UltimateContentCarousel2025;

@@ -1,4 +1,11 @@
-import React from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,
+  ChevronUp, ExternalLink, Download, Calendar, Users, Award
+} from 'lucide-react';
 
 const UltraFuturisticFooter2044: React.FC = () => {
   return (

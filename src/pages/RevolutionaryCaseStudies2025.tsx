@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const RevolutionaryCaseStudies2025: React.FC = () => {
-  const [selectedCase, setSelectedCase] = useState(0);
-
   const caseStudies = [
     {
       id: 1,
@@ -81,83 +79,121 @@ const RevolutionaryCaseStudies2025: React.FC = () => {
         </div>
       </div>
 
-      {/* Case Study Navigation */}
+      {/* Case Studies Grid */}
       <div className="container mx-auto px-4 py-16">
-        <div className="mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {caseStudies.map((caseStudy, index) => (
-              <button
-                key={caseStudy.id}
-                onClick={() => setSelectedCase(index)}
-                className={`p-4 rounded-lg transition-all duration-300 ${
-                  selectedCase === index
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white scale-105'
-                    : 'bg-white/10 hover:bg-white/20 text-white/80 hover:text-white'
-                }`}
-              >
-                <div className="text-2xl mb-2">
-                  {caseStudy.industry === 'Manufacturing' ? '🏭' : 
-                   caseStudy.industry === 'Healthcare' ? '🏥' :
-                   caseStudy.industry === 'Education' ? '🎓' : '🚀'}
-                </div>
-                <h3 className="font-semibold mb-1">{caseStudy.company}</h3>
-                <p className="text-sm opacity-75">{caseStudy.industry}</p>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Selected Case Study Details */}
-        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">{caseStudies[selectedCase].title}</h2>
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-orange-300">Challenge</h3>
-                  <p className="text-white/80">{caseStudies[selectedCase].challenge}</p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-blue-300">Solution</h3>
-                  <p className="text-white/80">{caseStudies[selectedCase].solution}</p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-green-300">Results</h3>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {Object.entries(caseStudies[selectedCase].results).map(([key, value]) => (
-                  <div key={key} className="text-center p-3 bg-white/10 rounded-lg">
-                    <div className={`text-2xl font-bold ${getResultColor(value)}`}>{value}</div>
-                    <div className="text-sm text-white/60 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          {caseStudies.map((study) => (
+            <div key={study.id} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
+              {/* Header */}
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center space-x-4">
+                  <div className="text-6xl">{study.image}</div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
+                    <div className="flex items-center space-x-2 text-sm opacity-80">
+                      <span>{study.company}</span>
+                      <span>•</span>
+                      <span>{study.industry}</span>
+                    </div>
                   </div>
-                ))}
+                </div>
+                <div className={`px-3 py-1 bg-gradient-to-r ${study.color} text-white text-xs font-semibold rounded-full`}>
+                  SUCCESS
+                </div>
               </div>
 
-              <div className="bg-white/10 rounded-lg p-4">
-                <blockquote className="text-lg italic mb-3">
-                  "{caseStudies[selectedCase].testimonial}"
-                </blockquote>
-                <cite className="text-orange-300 font-semibold">
-                  — {caseStudies[selectedCase].author}
-                </cite>
+              {/* Challenge & Solution */}
+              <div className="mb-6">
+                <div className="mb-4">
+                  <h4 className="text-lg font-semibold mb-2 text-red-400">Challenge:</h4>
+                  <p className="text-gray-300 text-sm">{study.challenge}</p>
+                </div>
+                <div className="mb-4">
+                  <h4 className="text-lg font-semibold mb-2 text-green-400">Solution:</h4>
+                  <p className="text-gray-300 text-sm">{study.solution}</p>
+                </div>
+                <div className="mb-4">
+                  <h4 className="text-lg font-semibold mb-2 text-blue-400">Description:</h4>
+                  <p className="text-gray-300 text-sm">{study.description}</p>
+                </div>
               </div>
+
+              {/* Results */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-2xl font-bold text-green-400">{study.results.efficiency}</div>
+                  <div className="text-xs opacity-80">Efficiency Gain</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-2xl font-bold text-blue-400">{study.results.costSavings}</div>
+                  <div className="text-xs opacity-80">Cost Savings</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-2xl font-bold text-purple-400">{study.results.accuracy}</div>
+                  <div className="text-xs opacity-80">Accuracy Rate</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">
+                  <div className="text-2xl font-bold text-orange-400">{study.results.timeReduction}</div>
+                  <div className="text-xs opacity-80">Time Reduction</div>
+                </div>
+              </div>
+
+              {/* Technologies Used */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-3">Technologies Used:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {study.technologies.map((tech, index) => (
+                    <span key={index} className="px-3 py-1 bg-white/20 text-white text-xs rounded-full">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <button className={`w-full bg-gradient-to-r ${study.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                View Detailed Case Study →
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Success Metrics */}
+        <div className="bg-gradient-to-r from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Overall Success Metrics</h2>
+            <p className="text-xl opacity-90">Combined results across all our revolutionary AI implementations</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-green-400 mb-2">+400%</div>
+              <div className="text-lg opacity-80">Average Efficiency Gain</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">$98M</div>
+              <div className="text-lg opacity-80">Total Cost Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-purple-400 mb-2">99.8%</div>
+              <div className="text-lg opacity-80">Average Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-orange-400 mb-2">500+</div>
+              <div className="text-lg opacity-80">Companies Transformed</div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
+        {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-8">Ready to Transform Your Business?</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Transformation →
             </button>
-            <button className="border border-orange-400 text-orange-300 px-8 py-4 rounded-lg hover:bg-orange-50 hover:text-orange-600 transition-colors font-semibold text-lg">
-              View More Cases
+            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
+              Schedule Consultation
             </button>
           </div>
         </div>

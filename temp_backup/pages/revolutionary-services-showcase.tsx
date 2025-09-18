@@ -1,5 +1,115 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search, Filter, Star, Users, TrendingUp, 
+  DollarSign, Clock, CheckCircle, ArrowRight,
+  Brain, Rocket, Dna, Globe, Shield, Wifi, 
+  Package, Bot, Car, Building2, Monitor, Cpu, 
+  Zap, Atom, Database, Cloud, Lock, Code,
+  Phone, Mail, MapPin, ExternalLink, Award,
+  Target, Sparkles, Crown, Infinity, Zap as ZapIcon
+} from 'lucide-react';
+import { revolutionary2025Services } from '../data/revolutionary-2025-services';
+import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+
+export default function RevolutionaryServicesShowcase() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+
+  const allServices = [
+    ...revolutionary2025Services,
+    ...nextGenInnovations2025
+  ];
+
+  // Enhanced category mapping
+  const categories = [
+    { id: 'all', name: 'All Revolutionary Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Next-Gen')).length },
+    { id: 'business', name: 'Business & Finance', icon: '💼', count: allServices.filter(s => s.category.includes('Business') || s.category.includes('Finance')).length },
+    { id: 'industry', name: 'Industry 4.0', icon: '🏭', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industry')).length }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $10K/month', range: 'Under $10K' },
+    { id: 'medium', name: '$10K - $25K/month', range: '$10K - $25K' },
+    { id: 'high', name: '$25K+/month', range: '$25K+' }
+  ];
+
+  const sortOptions = [
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'customers', name: 'Customer Count' }
+  ];
+
+  // Filter and sort services
+  const filteredServices = React.useMemo(() => {
+    const parsePriceToNumber = (price: any): number => {
+      if (typeof price === 'number') return price;
+      if (typeof price === 'string') {
+        const match = price.replace(/[^0-9.]/g, '');
+        const parsed = parseFloat(match || '0');
+        return isNaN(parsed) ? 0 : parsed;
+      }
+      return 0;
+    };
+
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      const matchesCategory = selectedCategory === 'all' || 
+                             (selectedCategory === 'ai' && service.category.includes('AI')) ||
+                             (selectedCategory === 'quantum' && service.category.includes('Quantum')) ||
+                             (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Next-Gen'))) ||
+                             (selectedCategory === 'business' && (service.category.includes('Business') || service.category.includes('Finance'))) ||
+                             (selectedCategory === 'industry' && (service.category.includes('Manufacturing') || service.category.includes('Industry')));
+
+      const matchesPrice = selectedPriceRange === 'all' ||
+                          (selectedPriceRange === 'low' && parsePriceToNumber(service.price) < 10000) ||
+                          (selectedPriceRange === 'medium' && parsePriceToNumber(service.price) >= 10000 && parsePriceToNumber(service.price) <= 25000) ||
+                          (selectedPriceRange === 'high' && parsePriceToNumber(service.price) > 25000);
+
+      return matchesSearch && matchesCategory && matchesPrice;
+    });
+
+    // Sort services
+    switch (sortBy) {
+      case 'price-low':
+        filtered.sort((a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price));
+        break;
+      case 'price-high':
+        filtered.sort((a, b) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price));
+        break;
+      case 'rating':
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
+      case 'customers':
+        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0));
+        break;
+      default:
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    return filtered;
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
 
 const revolutionary-services-showcase: React.FC = () => {
   return (

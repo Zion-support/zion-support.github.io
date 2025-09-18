@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function IncidentSimulationToolkitPage() {
+export default function Page() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-4xl px-6 pt-24">

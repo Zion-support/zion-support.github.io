@@ -53,3 +53,4 @@ const DynamicContentCarousel: React.FC = () => {
 };
 
 export default DynamicContentCarousel;
+export default DynamicContentCarousel;

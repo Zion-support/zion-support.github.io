@@ -1,6 +1,8 @@
 import React from 'react';
+import { SEO   } from '../../components/SEO';
+import { motion   } from 'framer-motion';
 
-const ai-iot-edge-computing-platform: React.FC = () => {
+const AIIoTEdgeComputingPlatform: Reac t.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

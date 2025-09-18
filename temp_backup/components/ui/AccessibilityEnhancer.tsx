@@ -1,4 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Eye, EyeOff, Volume2, VolumeX, MousePointer, 
+  Keyboard, Monitor, Smartphone, Sun, Moon, 
+  Accessibility, SkipForward, SkipBack
+} from 'lucide-react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  focusIndicator: boolean;
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+}
 
 const AccessibilityEnhancer: React.FC = () => {
   return (

@@ -1,3 +1,23 @@
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Eye, 
+  Headphones, 
+  Camera, 
+  FileText, 
+  Activity, 
+  Zap, 
+  TrendingUp, 
+  Target,
+  ChevronRight,
+  Star,
+  Award,
+  Users,
+  Clock
+} from 'lucide-react';
 
 const MultimodalIntelligenceShowcase2025: React.FC = () => {
   return (

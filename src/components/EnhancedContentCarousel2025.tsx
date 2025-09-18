@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const EnhancedContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+const EnhancedContentCarousel2025: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const contentItems = [
     {
@@ -12,6 +15,25 @@ const EnhancedContentCarousel2025: React.FC = () => {
       gradient: 'from-purple-600 to-pink-600',
       link: '/pages/NextGenAIConsciousness2025',
       features: ['Self-aware AI systems', 'Emotional intelligence', 'Quantum consciousness', 'Transcendent learning']
+  const contentSlides = [
+    {
+      id: 1,
+      title: "Conscious AI Revolution",
+      subtitle: "Experience AI that thinks and feels",
+      description: "Our breakthrough artificial intelligence demonstrates self-awareness, emotional intelligence, and ethical decision-making capabilities that are reshaping industries worldwide.",
+      features: [
+        "Self-aware decision making",
+        "Emotional intelligence processing", 
+        "Ethical reasoning capabilities",
+        "Contextual understanding"
+      ],
+      stats: { performance: "99.9%", accuracy: "98.7%", efficiency: "300%" },
+      image: "🧠",
+      color: "from-purple-600 to-pink-600",
+      bgColor: "from-purple-600/20 to-pink-600/20",
+      borderColor: "border-purple-400/30",
+      features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Autonomous learning"],
+      link: "/pages/UltimateTechRevolution2025"
     },
     {
       id: 2,
@@ -68,7 +90,16 @@ const EnhancedContentCarousel2025: React.FC = () => {
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const currentItem = contentItems[currentIndex];
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12 relative overflow-hidden">
@@ -90,7 +121,7 @@ const EnhancedContentCarousel2025: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Discover the most advanced technologies that are reshaping our world and defining the future
           </p>
-        </div>
+        </motion.div>
 
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
@@ -113,6 +144,33 @@ const EnhancedContentCarousel2025: React.FC = () => {
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-6 h-6 bg-gradient-to-r ${contentItems[currentSlide].gradient} rounded-full flex items-center justify-center text-sm font-bold`}>
                         ✓
+          {/* Main Carousel */}
+          <div className="relative overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={slide.id} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-br ${slide.color}/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20`}>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                      {/* Content */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -50 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="space-y-8"
+                      >
+                        <div className="flex items-center space-x-4">
+                          <div className="text-6xl">{slide.image}</div>
+                          <div>
+                            <h3 className="text-4xl font-bold mb-2">{slide.title}</h3>
+                            <p className="text-xl text-purple-200">{slide.subtitle}</p>
+                          </div>
+                        </div>
+                        <button className={`w-full mt-4 bg-gradient-to-r ${slide.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                          Start Interactive Demo →
+                        </button>
                       </div>
                       <span className="text-lg">{feature}</span>
                     </div>
@@ -224,8 +282,48 @@ const EnhancedContentCarousel2025: React.FC = () => {
           <div className="text-center">
             <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
             <div className="text-gray-300">Possibilities</div>
+        {/* Technology Tags */}
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center space-x-4">
+            <div className="text-sm opacity-80">Featured Technologies:</div>
+            <div className="flex space-x-2">
+              <span className="px-3 py-1 bg-purple-500/30 rounded-full text-xs">Conscious AI</span>
+              <span className="px-3 py-1 bg-cyan-500/30 rounded-full text-xs">Quantum Computing</span>
+              <span className="px-3 py-1 bg-emerald-500/30 rounded-full text-xs">Interdimensional Tech</span>
+              <span className="px-3 py-1 bg-indigo-500/30 rounded-full text-xs">Neural Interfaces</span>
+              <span className="px-3 py-1 bg-pink-500/30 rounded-full text-xs">Reality Control</span>
+            </div>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+          className="text-center bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 border border-white/20"
+        >
+          <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
+          <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
+            Join thousands of forward-thinking companies already using our revolutionary technologies to transform their operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
+            >
+              Schedule Consultation
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg"
+            >
+              Download Whitepaper
+            </motion.button>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

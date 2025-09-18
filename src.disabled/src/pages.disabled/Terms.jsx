@@ -1,20 +1,7 @@
-import React from 'react';
-
-const Terms: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Terms</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default Terms;
 import _React from 'react'; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from 'lucide-react'; export default function Terms() {}; return null} },; {}},; {}},; {}},; {}},; {}} ]; return (; <div className="min-h-screen bg-white"> {} <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-24"> <div className="text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6">Terms of Service></div> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Please read these terms and conditions carefully before using our services.; ></div> <div className="mt-8 text-sm text-gray-400"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
 import React from \'react\'; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from \'lucide-react\'; export default function Terms() {}; return null} },; {}},; {}},; {}},; {}},; {}} ]; return (; <div className=\"min-h-screen bg-white\"> {} <div className=\"bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8 py-24\"> <div className=\"text-center\"> <h1 className=\"text-4xl md:text-6xl font-bold mb-6\">Terms of Service></div> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"> Please read these terms and conditions carefully before using our services.; ></div> <div className=\"mt-8 text-sm text-gray-400\"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
 const React from "react"; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from "lucide-react"; export default function Terms() { return; }; return null} },; {}},; {}},; {}},; {}},; {}} ]; return (; <div className="min-h-screen bg-white"> {} <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24"> <div className="text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6">Terms of Service></div> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Please read these terms and conditions carefully before using our services.; ></div> <div className="mt-8 text-sm text-gray-400"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };'"'"
 import _React from 'react'; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from 'lucide-react'; export default function Terms() {}; return null} },; {}},; {}},; {}},; {}},; {}} ]; return (; <div className="min-h-screen bg-white"> {} <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-24"> <div className="text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6">Terms of Service></div> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Please read these terms and conditions carefully before using our services.; ></div> <div className="mt-8 text-sm text-gray-400"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
-<<<<<<< HEAD
 =======
 =======
 =======
@@ -25,4 +12,3 @@ import _React from 'react'; import { FileText,Scale,Shield,AlertTriangle,CheckCi
 =======
 =======
 =======
->>>>>>> origin/backup-main-20250918-004015

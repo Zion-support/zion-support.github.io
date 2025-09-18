@@ -6,18 +6,11 @@ const InteractiveTechShowcase2025: React.FC = () => {
 
   const technologies = [
     {
-      name: "AI Consciousness Engine",
-      description: "Revolutionary AI with genuine consciousness and self-awareness",
-      features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving"],
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      status: "Active"
-    },
-    {
-      name: "Quantum Neural Networks",
-      description: "Merging quantum computing with neural networks for unprecedented capabilities",
-      features: ["Quantum superposition", "Neural quantum states", "Exponential processing power"],
-      icon: "⚛️",
+      id: 1,
+      name: "Quantum AI Processing",
+      description: "Revolutionary quantum computing meets artificial intelligence for unprecedented processing power",
+      icon: "⚡",
+      features: ["1000x faster processing", "Quantum neural networks", "Complex optimization", "Real-time analysis"],
       color: "from-cyan-600 to-blue-600",
       status: "In Development"
     },
@@ -161,8 +154,8 @@ const InteractiveTechShowcase2025: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full font-semibold text-white hover:shadow-lg hover:scale-105 transition-all duration-300">
               Start Your Journey
             </button>
-            <button className="border border-white/30 px-8 py-4 rounded-full font-semibold text-white hover:bg-white/10 transition-all duration-300">
-              Learn More
+            <button className="border border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400/10 transition-colors text-lg">
+              Schedule Consultation
             </button>
           </div>
         </div>

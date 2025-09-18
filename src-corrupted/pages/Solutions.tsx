@@ -1,6 +1,187 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Building, Cpu, Brain, Shield, Cloud, Code, Users, Globe, 
+  Rocket, Target, TrendingUp, Award, Zap, Database, Network,
+  Smartphone, Lock, BarChart3, Server, Chip, Wifi, Bot,
+  Workflow, Eye, Sparkles, Leaf, Gamepad2, Coins, Satellite,
+  Activity, FileText, MessageCircle, Search, BarChart, Settings,
+  Palette, Truck, Factory, Heart, Car, Plane, Ship, Train,
+  Check, ArrowRight
+} from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-const Solutions: React.FC = () => {
+const Solutions = (props: any) => {
+  const industrySolutions = [
+    {
+      title: 'Healthcare Solutions',
+      description: 'Transform healthcare delivery with AI-powered diagnostics, patient management, and medical research platforms.',
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      features: [
+        'AI Medical Imaging Analysis',
+        'Patient Data Management',
+        'Drug Discovery Platforms',
+        'Telemedicine Solutions',
+        'Healthcare Analytics',
+        'Compliance & Security'
+      ],
+      href: '/solutions/healthcare',
+      image: '/images/healthcare-solutions.jpg'
+    },
+    {
+      title: 'Financial Solutions',
+      description: 'Revolutionize financial services with quantum computing, AI trading, and blockchain technology.',
+      icon: Coins,
+      color: 'from-green-500 to-emerald-500',
+      features: [
+        'AI Trading Platforms',
+        'Risk Management Systems',
+        'Fraud Detection',
+        'Compliance Automation',
+        'Financial Analytics',
+        'Blockchain Integration'
+      ],
+      href: '/financial-solutions',
+      image: '/images/financial-solutions.jpg'
+    },
+    {
+      title: 'Manufacturing Solutions',
+      description: 'Drive Industry 4.0 transformation with smart manufacturing, IoT integration, and predictive maintenance.',
+      icon: Factory,
+      color: 'from-blue-500 to-cyan-500',
+      features: [
+        'Smart Factory Systems',
+        'IoT Edge Computing',
+        'Predictive Maintenance',
+        'Quality Control AI',
+        'Supply Chain Optimization',
+        'Digital Twin Technology'
+      ],
+      href: '/manufacturing-solutions',
+      image: '/images/manufacturing-solutions.jpg'
+    },
+    {
+      title: 'Transportation & Logistics',
+      description: 'Optimize transportation networks with AI routing, autonomous systems, and real-time tracking.',
+      icon: Truck,
+      color: 'from-orange-500 to-yellow-500',
+      features: [
+        'AI Route Optimization',
+        'Autonomous Vehicle Systems',
+        'Fleet Management',
+        'Supply Chain Tracking',
+        'Traffic Prediction',
+        'Smart Infrastructure'
+      ],
+      href: '/transportation-solutions',
+      image: '/images/transportation-solutions.jpg'
+    }
+  ];
+
+  const technologySolutions = [
+    {
+      title: 'AI Solutions',
+      description: 'Comprehensive artificial intelligence solutions for business transformation and automation.',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      features: [
+        'Machine Learning Platforms',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Ethics & Governance',
+        'Custom AI Development'
+      ],
+      href: '/ai-solutions',
+      image: '/images/ai-solutions.jpg'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation services to modernize your business operations.',
+      icon: Rocket,
+      color: 'from-indigo-500 to-blue-500',
+      features: [
+        'Process Automation',
+        'Cloud Migration',
+        'Legacy System Modernization',
+        'Change Management',
+        'Digital Strategy',
+        'Technology Roadmap'
+      ],
+      href: '/services/digital-transformation',
+      image: '/images/digital-transformation.jpg'
+    },
+    {
+      title: 'Research & Development',
+      description: 'Cutting-edge R&D services in emerging technologies and innovation.',
+      icon: Search,
+      color: 'from-cyan-500 to-teal-500',
+      features: [
+        'Emerging Tech Research',
+        'Prototype Development',
+        'Technology Validation',
+        'Innovation Labs',
+        'Patent Support',
+        'Academic Collaboration'
+      ],
+      href: '/research-development',
+      image: '/images/research-development.jpg'
+    },
+    {
+      title: 'Green IT Solutions',
+      description: 'Sustainable technology solutions for environmental responsibility and efficiency.',
+      icon: Leaf,
+      color: 'from-emerald-500 to-green-500',
+      features: [
+        'Energy Optimization',
+        'Carbon Footprint Reduction',
+        'Sustainable Infrastructure',
+        'Green Data Centers',
+        'Renewable Energy Integration',
+        'Environmental Monitoring'
+      ],
+      href: '/green-it',
+      image: '/images/green-it-solutions.jpg'
+    }
+  ];
+
+  const enterpriseSolutions = [
+    {
+      title: 'Enterprise Solutions',
+      description: 'Scalable solutions for large organizations with complex requirements.',
+      icon: Building,
+      color: 'from-slate-500 to-gray-500',
+      features: [
+        'Enterprise Architecture',
+        'Scalable Infrastructure',
+        'Multi-tenant Systems',
+        'Enterprise Security',
+        'Compliance Management',
+        '24/7 Support'
+      ],
+      href: '/solutions/enterprise',
+      image: '/images/enterprise-solutions.jpg'
+    },
+    {
+      title: 'SMB Solutions',
+      description: 'Cost-effective solutions designed for small and medium businesses.',
+      icon: Users,
+      color: 'from-blue-500 to-indigo-500',
+      features: [
+        'Affordable Pricing',
+        'Quick Implementation',
+        'Essential Features',
+        'Basic Support',
+        'Scalable Growth',
+        'Training & Onboarding'
+      ],
+      href: '/solutions/smb',
+      image: '/images/smb-solutions.jpg'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

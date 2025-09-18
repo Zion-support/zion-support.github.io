@@ -19,4 +19,5 @@ const 2041-futuristic-services-showcase: React.FC = () => {
   );
 };
 
-export default 2041-futuristic-services-showcase;
+// Import motion from framer-motion
+import { motion } from 'framer-motion';

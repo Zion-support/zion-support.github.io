@@ -1,10 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap, BarChart3, Star, TrendingUp, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+import React from 'react'
 
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
@@ -179,42 +175,121 @@ export default function Home() {
               </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                  Ready to Transform Your Business?
-                </h2>
-                <p className="text-xl text-slate-400 mb-12">
-                  Get in touch with our experts to discuss your project requirements and discover 
-                  how our innovative solutions can drive your business forward.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Link 
-                    href="/contact" 
-                    className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
-                  >
-                    Get Started Today
-                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                  <a 
-                    href="tel:+13024640950" 
-                    className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    Call Us Now
-                  </a>
-                </div>
-              </div>
-            </section>
-          </main>
-        </Suspense>
-      </ErrorBoundary>
-      <PerformanceMonitor />
-    </>
-  );
+			{/* Features Section */}
+			<section className="py-24 sm:py-32 bg-gray-50">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center mb-16">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Choose Zion Tech Group?</h2>
+						<p className="mt-6 text-lg text-gray-600">
+							We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+						</p>
+					</div>
+					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+						{features.map((feature) => (
+							<div key={feature.title} className="text-center group">
+								<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+									{React.createElement(feature.icon, { className: "h-8 w-8 text-white" })}
+								</div>
+								<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+								<p className="text-gray-600 mb-6">{feature.description}</p>
+								<Link
+									href={feature.href}
+									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
+								>
+									Learn More <ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* Benefits Section */}
+			<section className="py-24 sm:py-32 bg-white">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="grid lg:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+								Transform Your Business with Advanced Technology
+							</h2>
+							<p className="text-lg text-gray-600 mb-8">
+								Our comprehensive suite of services empowers businesses to innovate, scale, and compete in the digital age.
+							</p>
+							<div className="space-y-4">
+								{benefits.map((benefit, index) => (
+									<div key={index} className="flex items-start space-x-3">
+										<CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+										<span className="text-gray-700">{benefit}</span>
+									</div>
+								))}
+							</div>
+							<div className="mt-8">
+								<Link
+									href="/services"
+									className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+								>
+									View All Services
+									<ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						</div>
+						<div className="relative">
+							<div className="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8">
+								<div className="grid grid-cols-2 gap-4 h-full">
+									<div className="space-y-4">
+										<div className="h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
+											<Brain className="h-8 w-8 text-purple-600" />
+										</div>
+										<div className="h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
+											<Cloud className="h-6 w-6 text-blue-600" />
+										</div>
+									</div>
+									<div className="space-y-4 pt-8">
+										<div className="h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
+											<Shield className="h-6 w-6 text-red-600" />
+										</div>
+										<div className="h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
+											<BarChart3 className="h-8 w-8 text-green-600" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* CTA Section */}
+			<section className="py-24 sm:py-32 bg-gradient-to-r from-blue-600 to-purple-600">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Ready to Transform Your Business?</h2>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Let's discuss how our AI, cloud, and cybersecurity solutions can help you achieve your technology goals.
+						</p>
+						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+							<Link
+								href="/contact"
+								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+							>
+								Get Started Today
+							</Link>
+							<Link
+								href="/about"
+								className="text-sm font-semibold leading-6 text-gray-900"
+							>
+								Learn More About Us
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</>
+	)
+}
+import React from 'react';
+import Homepage2025 from '../components/Homepage2025';
+
+export default function HomePage() {
+  return <Homepage2025 />;
 }

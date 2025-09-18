@@ -1,0 +1,253 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+=======
+
+
+
+
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
+  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,
+  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink,
+  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',;
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced',;
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+
+
+
+
+
+
+
+const categories = [
+  { name: 'All Services', value: 'all', icon: Globe, color: 'from-blue-500 to-cyan-600' },
+  { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from-purple-500 to-pink-600' },
+  { name: 'Quantum & Emerging Tech', value: 'quantum', icon: Atom, color: 'from-indigo-500 to-blue-600' },
+  { name: 'Enterprise IT', value: 'enterprise', icon: Shield, color: 'from-green-500 to-emerald-600' },
+  { name: 'Micro SAAS', value: 'saas', icon: Rocket, color: 'from-orange-500 to-red-600' },
+  { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' },
+  { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' },
+  { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
+],
+
+export default function InnovativeMicroSaasShowcase() {
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState('grid'),
+  const [sortBy, setSortBy] = useState('popularity'),
+
+  // Combine all services
+  const allServices = [
+    ...innovativeRealMicroSaasServices2025,
+    ...emergingTechServicesEnhanced2025
+  ],
+
+  // Filter services based on category and search
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      service.category.toLowerCase().includes(selectedCategory) ||
+      service.name.toLowerCase().includes(selectedCategory),
+    
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+
+    return matchesCategory && matchesSearch
+
+
+
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket
+  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target
+  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink
+  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
+} from 'lucide-react'
+import Layout from '../components/layout/Layout';
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
+const contactInfo = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+  website: 'https://ziontechgroup.com'
+}
+const stats = [
+  { number: '50+', label: 'Innovative Services', icon: Star, color: 'text-cyan-400' }
+  { number: '1000+', label: 'Companies Served', icon: Users, color: 'text-purple-400' }
+  { number: '99.9%', label: 'Uptime', icon: Award, color: 'text-green-400' }
+  { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
+]
+const categories = [
+  { name: 'All Services', value: 'all', icon: Globe, color: 'from-blue-500 to-cyan-600' }
+  { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from-purple-500 to-pink-600' }
+  { name: 'Quantum & Emerging Tech', value: 'quantum', icon: Atom, color: 'from-indigo-500 to-blue-600' }
+  { name: 'Enterprise IT', value: 'enterprise', icon: Shield, color: 'from-green-500 to-emerald-600' }
+  { name: 'Micro SAAS', value: 'saas', icon: Rocket, color: 'from-orange-500 to-red-600' }
+  { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }
+  { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }
+  { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
+
+
+
+export default function InnovativeMicroSaasShowcase() {
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [viewMode, setViewMode] = useState('grid')
+  const [sortBy, setSortBy] = useState('popularity')
+  // Combine all services
+  const allServices = [
+
+  // Filter services based on category and search
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      service.category.toLowerCase().includes(selectedCategory) ||
+      service.name.toLowerCase().includes(selectedCategory);
+    
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesCategory && matchesSearch
+  });
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
+      case 'price-low':
+
+
+      default: return 0
+    }
+  })
+
+import {;
+  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket,;
+  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,;
+  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink,;
+  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const stats = [;
+  { number: '50+', label: 'Innovative Services', icon: Star, color: 'text-cyan-400' },;
+  { number: '1000+', label: 'Companies Served', icon: Users, color: 'text-purple-400' },;
+  { number: '99.9%', label: 'Uptime', icon: Award, color: 'text-green-400' },;
+  { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const categories = [;
+  { name: 'All Services', value: 'all', icon: Globe, color: 'from-blue-500 to-cyan-600' },;
+  { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from-purple-500 to-pink-600' },;
+  { name: 'Quantum & Emerging Tech', value: 'quantum', icon: Atom, color: 'from-indigo-500 to-blue-600' },;
+  { name: 'Enterprise IT', value: 'enterprise', icon: Shield, color: 'from-green-500 to-emerald-600' },;
+  { name: 'Micro SAAS', value: 'saas', icon: Rocket, color: 'from-orange-500 to-red-600' },;
+  { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' },;
+  { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' },;
+  { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+export default function InnovativeMicroSaasShowcase(req, res) {
+  try {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState('grid');
+  const [sortBy, setSortBy] = useState('popularity');
+  // Combine all services;
+  const allServices = [;
+    ...innovativeRealMicroSaasServices2025;
+    ...emergingTechServicesEnhanced2025;
+  ];
+  // Filter services based on category and search;
+  const filteredServices = allServices.filter(service => {;
+    const matchesCategory = selectedCategory === 'all' ||;
+      service.category.toLowerCase().includes(selectedCategory) ||;
+      service.name.toLowerCase().includes(selectedCategory);
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+  // Sort services;
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'popularity':;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),;
+      case 'price-low':;
+        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')),;
+      case 'price-high':;
+        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', '')),;
+      case 'rating':;
+        return b.rating - a.rating,;
+      case 'newest':;
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+      default: return 0;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
+
+
+
+  }),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>innovative-micro-saas-showcase | Zion Tech Group</title>
+        <meta name="description" content="innovative-micro-saas-showcase - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">innovative-micro-saas-showcase</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default innovative-micro-saas-showcase;

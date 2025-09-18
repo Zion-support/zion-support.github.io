@@ -1,4 +1,16 @@
 import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, ArrowRight, ExternalLink,
+  Brain, Atom, Shield, Rocket, Cpu, Target, Sparkles,
+  Zap, Star, TrendingUp, Award, Clock, CheckCircle,
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github,
+  Heart, Shield as ShieldIcon, Lock, Eye, Code, Server,
+  Cloud, Network, Settings, Users, Handshake, HelpCircle,
+  Building, Briefcase, BookOpen, FileText, Video, GraduationCap,
+  MessageCircle, Users as UsersIcon, Briefcase as BriefcaseIcon, Package, Search
+} from 'lucide-react';
 
 const UltraFuturisticFooter2045V2: React.FC = () => {
   return (

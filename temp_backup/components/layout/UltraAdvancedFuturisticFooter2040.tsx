@@ -1,4 +1,48 @@
 import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Rocket, 
+  Brain, 
+  Atom, 
+  Shield, 
+  Globe, 
+  Mail, 
+  Phone, 
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Infinity,
+  Zap,
+  ShieldCheck,
+  TrendingUp,
+  Award,
+  Eye,
+  Car,
+  TestTube,
+  Globe as PlanetIcon,
+  Lock,
+  Palette,
+  Heart,
+  Truck,
+  Cpu,
+  Users,
+  Building,
+  Target,
+  FileText,
+  Video,
+  Handshake,
+  BookOpen,
+  Code,
+  BarChart3,
+  Lightbulb,
+  Settings
+} from 'lucide-react';
 
 const UltraAdvancedFuturisticFooter2040: React.FC = () => {
   return (

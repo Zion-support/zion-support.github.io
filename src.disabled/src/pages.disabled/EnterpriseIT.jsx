@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/backup-main-20250918-004015
 import React from 'react';
 
 const EnterpriseIT: React.FC = () => {
@@ -14,6 +11,8 @@ const EnterpriseIT: React.FC = () => {
 };
 
 export default EnterpriseIT;
+=======
+import _React from 'react'; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;
 import React from \'react\'; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;
 const React from "react"; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;''"
 import _React from 'react'; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;

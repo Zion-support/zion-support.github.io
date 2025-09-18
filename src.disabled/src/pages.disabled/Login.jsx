@@ -36,16 +36,15 @@ export default function Login({ }: LoginProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-=======
 
 
 =======
 =======
->>>>>>> origin/backup-main-20250918-004015
 
 
 }
+=======
+
 :src.disabled/src/pages.disabled/Login.jsx
 }
 }

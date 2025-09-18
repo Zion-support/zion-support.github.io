@@ -1,6 +1,88 @@
 import React from 'react';
+import { motion  } from 'framer-motion';
+import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy  } from 'lucide-react';
+import { SEO  } from '@/components/SEO';
 
-const interview-assessment-ai: React.FC = () => {
+export default function InterviewAssessmentAI
+export { InterviewAssessmentAI }(...args: an y[]): any {
+  const features = [
+    {
+      icon: Brai n,
+      title: "AI-Powered Candidate Evaluation",
+      description: "Advanced machine learning algorithms assess candidates objectively and consistently"
+    },
+    {
+      icon: Vide o,
+      title: "Video Interview Analysis",
+      description: "Analyze facial expressions, tone, and communication skills in real-time"
+    },
+    {
+      icon: Targe t,
+      title: "Skills Assessment",
+      description: "Comprehensive evaluation of technical and soft skills"
+    },
+    {
+      icon: BarChart 3,
+      title: "Predictive Performance Analytics",
+      description: "Forecast candidate success and cultural fit with high accuracy"
+    },
+    {
+      icon: Shiel d,
+      title: "Bias Elimination",
+      description: "Remove unconscious bias and ensure fair evaluation processes"
+    },
+    {
+      icon: Cloc k,
+      title: "24/7 Availability",
+      description: "Conduct assessments anytime, anywhere with automated scheduling"
+    }
+  ];
+
+  const benefits = [
+    "Reduce hiring time by 60-80%",
+    "Improve candidate quality by 40-60%",
+    "Eliminate unconscious bias completely",
+    "Save 15+ hours per hire on interviews",
+    "Increase diversity in hiring by 30-50%",
+    "Reduce turnover by 25-40%"
+  ];
+
+  const assessmentTypes = [
+    {
+      title: "Technical Skills Assessment",
+      description: "Comprehensive evaluation of programming, problem-solving, and technical knowledge",
+      duration: "45-90 minutes",
+      price: "From $150/candidate"
+    },
+    {
+      title: "Behavioral & Cultural Fit",
+      description: "AI analysis of personality traits, communication, and cultural alignment",
+      duration: "30-60 minutes",
+      price: "From $100/candidate"
+    },
+    {
+      title: "Leadership Assessment",
+      description: "Evaluation of leadership potential, decision-making, and team management",
+      duration: "60-120 minutes",
+      price: "From $200/candidate"
+    },
+    {
+      title: "Full Assessment Suite",
+      description: "Complete evaluation covering all aspects of candidate suitability",
+      duration: "2-3 hours",
+      price: "From $350/candidate"
+    }
+  ];
+
+  const industries = [
+    "Technology & Software",
+    "Healthcare & Life Sciences",
+    "Finance & Banking",
+    "Manufacturing & Engineering",
+    "Retail & E-commerce",
+    "Consulting & Professional Services"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

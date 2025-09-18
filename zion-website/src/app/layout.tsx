@@ -13,103 +13,21 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Zion Tech Group - Leading AI & Technology Solutions',
-    template: '%s | Zion Tech Group'
-  },
-  description: 'Transform your business with cutting-edge AI, quantum computing, and autonomous solutions. Leading the future of enterprise technology innovation.',
-  keywords: [
-    'AI',
-    'artificial intelligence',
-    'quantum computing',
-    'autonomous solutions',
-    'enterprise technology',
-    'innovation',
-    'zion tech group',
-    'machine learning',
-    'automation',
-    'AI governance',
-    'agent observability',
-    'real-time AI',
-    'production AI',
-    'AI evaluation',
-    'AI safety',
-    'AI reliability'
-  ],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://zion.app'),
-  alternates: {
-    canonical: '/',
-  },
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.',
+  keywords: ['AI', 'artificial intelligence', 'quantum computing', 'autonomous solutions', 'technology'],
   openGraph: {
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.',
     type: 'website',
-    locale: 'en_US',
-    url: 'https://zion.app',
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Transform your business with cutting-edge AI, quantum computing, and autonomous solutions.',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI & Technology Innovation',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Leading AI & Technology Solutions',
-    description: 'Transform your business with cutting-edge AI, quantum computing, and autonomous solutions.',
-    images: ['/og-image.jpg'],
-    creator: '@ziontech',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-  category: 'technology',
-  classification: 'Business',
-  other: {
-    'application-name': 'Zion Tech Group',
-    'apple-mobile-web-app-capable': 'yes',
-    'apple-mobile-web-app-status-bar-style': 'black-translucent',
-    'apple-mobile-web-app-title': 'Zion Tech',
-    'mobile-web-app-capable': 'yes',
-    'msapplication-TileColor': '#000000',
-    'msapplication-config': '/browserconfig.xml',
   },
 }
 
-export const viewport: Viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-  userScalable: true,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#000000' },
-  ],
-}
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" className={inter.variable}>
       <head>

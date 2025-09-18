@@ -1,5 +1,38 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Shield, Globe, Cpu, Database } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
+import { revolutionary2026ITInfrastructureServices } from '../data/revolutionary-2026-it-infrastructure';
+import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas';
+
+export default function Revolutionary2026ServicesShowcase() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  const allRevolutionaryServices = [
+    ...revolutionary2026AIServices,
+    ...revolutionary2026ITInfrastructureServices,
+    ...revolutionary2026MicroSaasServices
+  ];
+
+  const serviceStats = {
+    totalServices: allRevolutionaryServices.length,
+    aiServices: revolutionary2026AIServices.length,
+    itInfrastructure: revolutionary2026ITInfrastructureServices.length,
+    microSaas: revolutionary2026MicroSaasServices.length,
+    totalValue: allRevolutionaryServices.reduce((sum, service) => {
+      const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+      return sum + price;
+    }, 0)
+  };
 
 const revolutionary-2026-services-showcase: React.FC = () => {
   return (

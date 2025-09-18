@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Star, Quote } from 'lucide-react';
 
 const TestimonialSection: React.FC = () => {
   return (

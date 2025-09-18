@@ -46,10 +46,4 @@ const DynamicContentCarousel: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD:src/components/DynamicContentCarousel.tsx.backup.1758013166
 export default DynamicContentCarousel;
-export default DynamicContentCarousel;
->>>>>>> origin/backup-main-20250916-071805
-=======
-export default DynamicContentCarousel;
->>>>>>> origin/resolve-conflicts-and-improvements:src/components/DynamicContentCarousel.tsx

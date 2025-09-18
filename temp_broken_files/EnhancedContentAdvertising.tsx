@@ -45,15 +45,6 @@ const EnhancedContentAdvertising: React.FC = () => {
       color: "from-blue-500 to-cyan-500",
       badge: "REVOLUTIONARY",
       features: ["Quantum Propulsion", "Space Colonies", "Asteroid Mining"]
-    },
-    {
-      title: "Latest Articles 2026",
-      description: "Read our newest insights across AI, quantum, biotech, and more",
-      icon: Zap,
-      href: "/pages/Blog",
-      color: "from-cyan-500 to-blue-500",
-      badge: "UPDATED",
-      features: ["Fresh Weekly", "Expert Authors", "Deep Dives"]
     }
   ];
   const stats = [
@@ -86,7 +77,7 @@ const EnhancedContentAdvertising: React.FC = () => {
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <div
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
@@ -102,12 +93,12 @@ const EnhancedContentAdvertising: React.FC = () => {
             Explore our comprehensive collection of cutting-edge technologies, revolutionary solutions, 
             and breakthrough innovations that will define the next decade of human progress.
           </p>
-        </div>
+        </divdiv>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
-            <div
+            <divdiv
               key={index}
               whileInView={{ opacity: 1, scale: 1 }}
               className="text-center"
@@ -117,13 +108,13 @@ const EnhancedContentAdvertising: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-purple-200 text-sm">{stat.label}</div>
               </div>
-            </div>
+            </divdiv>
           ))}
         </div>
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {featuredContent.map((content, index) => (
-            <div
+            <divdiv
               key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300 group"
@@ -155,22 +146,22 @@ const EnhancedContentAdvertising: React.FC = () => {
               >
                 Explore Now <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-            </div>
+            </divdiv>
           ))}
         </div>
         {/* Testimonials Section */}
         <div className="mb-20">
-          <div
+          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
             <h3 className="text-3xl font-bold mb-4">What Our Partners Say</h3>
             <p className="text-xl opacity-90">Real testimonials from industry leaders and innovators</p>
-          </div>
+          </divdiv>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
+              <divdiv
                 key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
@@ -185,12 +176,12 @@ const EnhancedContentAdvertising: React.FC = () => {
                   <div className="font-semibold text-white">{testimonial.author}</div>
                   <div className="text-purple-300 text-sm">{testimonial.role}</div>
                 </div>
-              </div>
+              </divdiv>
             ))}
           </div>
         </div>
         {/* Call to Action */}
-        <div
+        <divdiv
           whileInView={{ opacity: 1, y: 0 }}
           className="bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-400/30"
         >
@@ -207,7 +198,7 @@ const EnhancedContentAdvertising: React.FC = () => {
               Schedule Demo
             </button>
           </div>
-        </div>
+        </divdiv>
       </div>
     </div>
   );

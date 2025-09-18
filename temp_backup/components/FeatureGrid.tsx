@@ -1,6 +1,20 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
-const FeatureGrid: React.FC = () => {
+interface Feature {
+  icon: any;
+  title: string;
+  description: string;
+  href: string;
+  color: string;
+}
+
+interface FeatureGridProps {
+  features: Feature[];
+}
+
+const FeatureGrid: React.FC<FeatureGridProps> = ({ features }) => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">FeatureGrid</h3>

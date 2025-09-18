@@ -1,4 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion';
+import { 
+  Smartphone, Tablet, Monitor, Wifi, Battery,
+  Hand, Settings
+} from 'lucide-react';
+
+
+
+interface DeviceInfo {
+  type: 'mobile' | 'tablet' | 'desktop';
+  orientation: 'portrait' | 'landscape';
+  screenSize: { width: number; height: number };
+  touchSupport: boolean;
+  batteryLevel?: number;
+  connectionType?: string;
+}
 
 const EnhancedMobileExperience: React.FC = () => {
   return (

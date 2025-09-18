@@ -1,4 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Zap, Brain, Rocket, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react';
+import RevolutionaryServiceCard from '../ui/RevolutionaryServiceCard';
+import { revolutionaryMicroSaasServices } from '../../data/revolutionary-micro-saas-services';
 
 const RevolutionaryServices: React.FC = () => {
   return (

@@ -1,3 +1,23 @@
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, 
+  TrendingUp, 
+  Users, 
+  DollarSign, 
+  Clock, 
+  CheckCircle,
+  Star,
+  BookOpen,
+  FileText,
+  Lightbulb,
+  Target,
+  Zap,
+  X
+} from 'lucide-react';
 
 const NewContent2025Banner: React.FC = () => {
   return (

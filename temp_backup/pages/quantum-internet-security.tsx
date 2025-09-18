@@ -1,7 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Globe, Zap, Target, Users, ArrowRight, Atom } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
-const quantum-internet-security: React.FC = () => {
+export default function QuantumInternetSecurity() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

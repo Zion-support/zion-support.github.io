@@ -1,6 +1,18 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { LucideIcon } from 'lucide-react';
 
-const StatsSection: React.FC = () => {
+interface Stat {
+  number: string;
+  label: string;
+  icon: LucideIcon;
+}
+
+interface StatsSectionProps {
+  stats: Stat[];
+}
+
+const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">StatsSection</h3>

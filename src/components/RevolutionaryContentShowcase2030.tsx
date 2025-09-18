@@ -32,6 +32,7 @@ const RevolutionaryContentShowcase2030: React.FC = () => {
               Explore Revolutionary Tech →
             </a>
           </div>
+          
           <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-10 border border-cyan-400/40 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🧠</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Omniversal AI 2030</h3>

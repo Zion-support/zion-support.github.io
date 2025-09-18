@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
@@ -24,8 +24,8 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Personal AI companions with genuine personality',
           'Educational tutors with emotional intelligence',
           'Therapeutic AI for mental health support'
-        ];
-      };
+        ]
+      }
     },
     quantum: {
       title: 'Quantum Reality',
@@ -47,8 +47,8 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Space exploration and faster-than-light communication',
           'Financial modeling and risk analysis',
           'Cryptography and secure communications'
-        ];
-      };
+        ]
+      }
     },
     neural: {
       title: 'Neural Evolution',
@@ -70,8 +70,8 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Gaming and entertainment experiences',
           'Professional training and skill development',
           'Communication for speech-impaired individuals'
-        ];
-      };
+        ]
+      }
     },
     synthetic: {
       title: 'Synthetic Intelligence',
@@ -93,9 +93,9 @@ const InteractiveContentShowcase2026: React.FC = () => {
           'Scientific research and discovery',
           'Social AI companions and assistants',
           'Autonomous space and exploration missions'
-        ];
-      };
-    };
+        ]
+      }
+    }
   };
   return (
     <div className="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-12 mb-12 text-white">
@@ -140,7 +140,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
               </div>
             </div>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-              {contentTabs[activeTab as keyof typeof contentTabs].content.description};
+              {contentTabs[activeTab as keyof typeof contentTabs].content.description}
             </p>
             
             <div className="space-y-6">
@@ -152,7 +152,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
                       <span className="text-cyan-400 mt-1">•</span>
                       <span className="text-gray-200">{feature}</span>
                     </li>
-                  ))};
+                  ))}
                 </ul>
               </div>
             </div>
@@ -168,7 +168,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
                     <span className="text-gray-200">{application}</span>
                   </div>
                 </div>
-              ))};
+              ))}
             </div>
             
             <div className="mt-8">

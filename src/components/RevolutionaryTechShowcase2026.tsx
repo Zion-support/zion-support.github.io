@@ -1,88 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY 2026 TECHNOLOGY SHOWCASE
-          </div>
-          <h2 className="text-5xl font-bold mb-6">🌟 Next-Generation Technology Experience</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Experience the future with our groundbreaking 2026 technology innovations in AI systems, 
-            space technology, biotechnology, and quantum computing
-          </p>
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🌟 REVOLUTIONARY BREAKTHROUGH • JANUARY 2026
+            </div>
+            <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Revolutionary Technology Showcase 2026
+            </h2>
+            <p className="text-xl opacity-90 max-w-4xl mx-auto">
+              Experience the most groundbreaking technologies that will define the future of humanity
+            </p>
+          </motion.div>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🤖</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Advanced AI Systems</h3>
-            <p className="text-purple-100 mb-6 text-center">
-              Revolutionary AI systems with autonomous learning, quantum processing, and distributed intelligence
-            </p>
-            <ul className="text-purple-200 space-y-2 mb-6 text-sm">
-              <li>• Autonomous learning algorithms</li>
-              <li>• Quantum AI processing</li>
-              <li>• Distributed intelligence networks</li>
-              <li>• Self-improving systems</li>
-            </ul>
-            <a href="/pages/AdvancedAISystems2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
-              Explore AI Systems →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🚀</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Space Technology</h3>
-            <p className="text-cyan-100 mb-6 text-center">
-              Revolutionary space technology enabling interplanetary travel, space colonization, and cosmic exploration
-            </p>
-            <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
-              <li>• Advanced propulsion systems</li>
-              <li>• Space habitat technology</li>
-              <li>• Satellite networks</li>
-              <li>• Terraforming capabilities</li>
-            </ul>
-            <a href="/pages/SpaceTechInnovation2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
-              Explore Space Tech →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">🧬</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Biotechnology</h3>
-            <p className="text-emerald-100 mb-6 text-center">
-              Cutting-edge biotechnology revolutionizing healthcare, agriculture, and environmental sustainability
-            </p>
-            <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
-              <li>• Gene editing technology</li>
-              <li>• Synthetic biology</li>
-              <li>• Personalized medicine</li>
-              <li>• Lab-grown organs</li>
-            </ul>
-            <a href="/pages/BiotechRevolution2026" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
-              Explore Biotech →
-            </a>
-          </div>
-          
-          <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-            <div className="text-6xl mb-4 text-center">⚡</div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
-            <p className="text-orange-100 mb-6 text-center">
-              Next-generation quantum computing with exponential processing power and quantum supremacy
-            </p>
-            <ul className="text-orange-200 space-y-2 mb-6 text-sm">
-              <li>• 1000+ logical qubits</li>
-              <li>• Quantum supremacy achieved</li>
-              <li>• Molecular simulation</li>
-              <li>• Quantum AI integration</li>
-            </ul>
-            <a href="/pages/AdvancedQuantumComputing2026" className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
-              Explore Quantum →
-            </a>
+
+        {/* Interactive Tech Selector */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
+            {revolutionaryTechs.map((tech, index) => (
+              <button
+                key={tech.id}
+                onClick={() => setActiveTech(index)}
+                className={`px-6 py-3 rounded-xl transition-all duration-300 ${
+                  activeTech === index
+                    ? `bg-gradient-to-r ${tech.gradient} text-white shadow-lg`
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="text-2xl mr-3">{tech.icon}</span>
+                <span className="font-semibold">{tech.title.split(' ')[0]}</span>
+              </button>
+            ))}
           </div>
         </div>
 
@@ -307,4 +265,27 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-20">
+          <h3 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h3>
+          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+            Join us in the most significant technological revolution in human history. 
+            Transform your reality with our breakthrough technologies.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Your Journey
+            </button>
+            <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
+              Contact Our Experts
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryTechShowcase2026;

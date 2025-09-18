@@ -1,6 +1,5 @@
-# Next.js handles routing via @netlify/plugin-nextjs. Do NOT force SPA fallback.
-# Removing SPA catch-all prevents conflicts with Next.js routes.
-# (If you need a fallback for a pure SPA, configure it in Netlify plugin config instead.)
+# Handle client-side routing for SPA
+/*    /index.html   200
 
 # Normalize trailing slashes for key marketing pages
 /services      /services     301!

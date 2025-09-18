@@ -1,4 +1,22 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  opacity: number;
+  color: string;
+}
+
+interface NeonGrid {
+  x: number;
+  y: number;
+  opacity: number;
+  scale: number;
+}
 
 const UltraFuturisticAnimatedBackground: React.FC = () => {
   return (

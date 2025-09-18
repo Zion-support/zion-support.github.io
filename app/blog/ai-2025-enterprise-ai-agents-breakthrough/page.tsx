@@ -1,36 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
-export default function EnterpriseAIAgentsBreakthrough2025() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-gradient-to-r from-purple-700 to-indigo-700 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-10">
-          <Link href="/blog" className="inline-block text-purple-100 hover:text-white mb-4">← Back to Blog</Link>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact</h1>
-          <p className="text-lg md:text-xl mt-4 opacity-95 max-w-3xl">How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.</p>
-        </div>
-      </div>
-      <article className="max-w-4xl mx-auto px-6 py-12 prose prose-lg">
-        <p>From customer service to finance, AI agents are moving from pilots to production. This article summarizes the architectures, controls, and KPIs we see across successful deployments.</p>
-        <h2>Key Takeaways</h2>
-        <ul>
-          <li>Adopt evaluation gates and policy-as-code to scale safely.</li>
-          <li>Focus on high-leverage workflows where latency and accuracy are measurable.</li>
-          <li>Instrument agents with observability, tracing, and feedback loops.</li>
-        </ul>
-        <p>For a deeper dive into production safety and governance, explore our related guides linked below.</p>
-        <div className="mt-8 flex gap-3">
-          <Link href="/blog/ai-2026-enterprise-agent-observability-guide" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Observability Guide</Link>
-          <Link href="/blog/ai-2026-agentic-risk-and-safety-playbook" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Risk & Safety</Link>
-        </div>
-      </article>
-    </div>
-  );
-}
-
-import React from 'react';
-import Link from 'next/link';
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 

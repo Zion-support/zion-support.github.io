@@ -1,149 +1,88 @@
 #!/bin/bash
 
-# Script to systematically merge branches into main
-# This will handle conflicts and merge branches one by one
+# Script to systematically merge branches and resolve conflicts
+set -e
 
 set -e
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
-
-# Function to log messages
-log() {
-    echo -e "${GREEN}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
-}
-
-error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-# Function to merge a single branch
-merge_branch() {
-    local branch_name="$1"
-    local branch_ref="origin/$branch_name"
+# Function to resolve conflicts automatically
+resolve_conflicts() {
+    local file="$1"
+    echo "Resolving conflicts in $file"
     
-    log "Attempting to merge branch: $branch_name"
-    
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/$branch_ref"; then
-        warning "Branch $branch_ref does not exist, skipping"
-        return 1
-    fi
-    
-    # Try to merge
-    if git merge --no-ff "$branch_ref" -m "Merge branch '$branch_name' into main"; then
-        log "Successfully merged $branch_name"
+    # For most files, we'll take the incoming changes (theirs) to get the latest content
+    if [[ -f "$file" ]]; then
+        # Check if file has merge conflicts
+    if git merge "origin/$branch" --no-commit; then
+        echo "  - Merge successful without conflicts"
+        git commit -m "Merge $branch into main"
+        echo "  - Successfully merged $branch"
         return 0
     else
-        error "Failed to merge $branch_name due to conflicts"
+        echo "  - Merge has conflicts, resolving..."
         
-        # Check if there are conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            warning "Resolving conflicts for $branch_name"
+        # Get list of conflicted files
+        local conflicted_files=$(git diff --name-only --diff-filter=U)
+        
+        if [[ -n "$conflicted_files" ]]; then
+            echo "  - Resolving conflicts in $(echo "$conflicted_files" | wc -l) files..."
             
-            # Auto-resolve simple conflicts
-            git status --porcelain | while read status file; do
-                case "$status" in
-                    "UU"|"AA")
-                        warning "Conflict in $file - attempting auto-resolution"
-                        # Try to resolve by taking the incoming version for most files
-                        if [[ "$file" == *.tsx ]] || [[ "$file" == *.ts ]] || [[ "$file" == *.jsx ]] || [[ "$file" == *.js ]]; then
-                            git checkout --theirs "$file" 2>/dev/null || true
-                        else
-                            git checkout --ours "$file" 2>/dev/null || true
-                        fi
-                        git add "$file" 2>/dev/null || true
-                        ;;
-                    "DD")
-                        warning "Deleted file $file - removing"
-                        git rm "$file" 2>/dev/null || true
-                        ;;
-                esac
-            done
+            # Resolve conflicts for each file
+            while IFS= read -r file; do
+                if [[ -n "$file" ]]; then
+                    resolve_conflicts "$file"
+                fi
+            done <<< "$conflicted_files"
             
-            # Try to commit the resolution
-            if git commit --no-edit; then
-                log "Successfully resolved conflicts for $branch_name"
+            # Check if all conflicts are resolved
+            if git diff --check; then
+                git commit -m "Merge $branch into main (resolved conflicts)"
+                echo "  - Successfully merged $branch with resolved conflicts"
                 return 0
             else
-                error "Could not resolve conflicts for $branch_name, aborting merge"
+                echo "  - Failed to resolve all conflicts in $branch"
                 git merge --abort
                 return 1
             fi
         else
-            error "Unknown merge failure for $branch_name"
-            git merge --abort
-            return 1
+            echo "  - No conflicted files found, committing..."
+            git commit -m "Merge $branch into main"
+            return 0
         fi
     fi
 }
 
-# Get list of branches to merge
-get_branches_to_merge() {
-    # Get recent branches (last 50) that are not main
-    git branch -r | grep -E "(cursor|codex)" | grep -v "main" | head -50
-}
+# List of branches to merge (in order of priority)
+branches=(
+    "content-update-2025-09-16"
+    "chore/add-latest-content-2025-09-16"
+    "chore/add-new-content-and-promos-2025-09-16"
+    "automation/bundle-report"
+    "automation/changelog"
+)
 
-# Main execution
-main() {
-    log "Starting branch merging process"
+# Merge each branch
+for branch in "${branches[@]}"; do
+    echo ""
+    echo "=== Processing branch: $branch ==="
     
-    # Ensure we're on main branch
-    git checkout main
-    
-    # Pull latest changes
-    log "Pulling latest changes from origin/main"
-    git pull origin main
-    
-    # Get branches to merge
-    branches=$(get_branches_to_merge)
-    
-    if [ -z "$branches" ]; then
-        log "No branches found to merge"
-        return 0
+    if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+        merge_branch "$branch"
+    else
+        echo "  - Branch $branch not found, skipping..."
     fi
-    
-    log "Found branches to merge:"
-    echo "$branches"
-    
-    # Counter for statistics
-    success_count=0
-    failure_count=0
-    total_count=$(echo "$branches" | wc -l)
-    
-    # Merge each branch
-    while IFS= read -r branch; do
-        branch_name=$(echo "$branch" | sed 's/origin\///')
-        log "Processing branch $branch_name ($((success_count + failure_count + 1))/$total_count)"
-        
-        if merge_branch "$branch_name"; then
-            ((success_count++))
-        else
-            ((failure_count++))
-        fi
-        
-        # Add a small delay to avoid overwhelming the system
-        sleep 1
-        
-    done <<< "$branches"
-    
-    # Final statistics
-    log "Merge process completed!"
-    log "Successfully merged: $success_count branches"
-    log "Failed to merge: $failure_count branches"
-    log "Total processed: $total_count branches"
-    
-    # Push changes
-    log "Pushing changes to origin/main"
-    git push origin main
-}
+done
 
-# Run main function
-main "$@"
+echo ""
+echo "=== Merge process completed ==="
+echo "Checking build status..."
+
+# Test the build
+if npm run build:netlify; then
+    echo "✅ Build successful after merges"
+else
+    echo "❌ Build failed after merges"
+    exit 1
+fi
+
+echo "All branches merged successfully!"

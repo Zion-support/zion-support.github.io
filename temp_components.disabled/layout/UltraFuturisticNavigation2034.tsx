@@ -1,4 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search, Menu, X, ChevronDown, Sparkles, 
+  Brain, Atom, Rocket, Target, Shield, Cpu,
+  Database, Cloud, Lock, Users, Briefcase, 
+  BookOpen, MessageCircle, Star, TrendingUp,
+  Phone, Mail, MapPin, Globe, Zap, Handshake,
+  Linkedin, Github, Twitter, Youtube, Instagram,
+  Home
+} from 'lucide-react';
 
 const UltraFuturisticNavigation2034: React.FC = () => {
   return (

@@ -1,4 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Sparkles, Rocket, Brain, Atom, Zap, Star } from 'lucide-react';
+import Button from '../ui/Button';
 
 const UltraFuturisticHero2030: React.FC = () => {
   return (

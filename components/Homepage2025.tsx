@@ -46,6 +46,42 @@ const Homepage2025 = ({ showInternalNav = true }: Homepage2025Props) => {
   const featuredServices: Array<{ title: string; description: string; popular?: boolean }> = [];
 
   const latestInsights = [
+    {
+      title: 'Governed Real‑Time Observability (2026)',
+      href: '/blog/ai-2026-governed-real-time-observability',
+      tag: 'New',
+      gradient: 'from-teal-500 to-emerald-600'
+    },
+    {
+      title: 'Governed Real‑Time Observability (2026)',
+      href: '/blog/ai-2026-governed-real-time-observability',
+      tag: 'New',
+      gradient: 'from-emerald-500 to-teal-600'
+    },
+    {
+      title: 'Agent Release Scorecards — Evidence‑First (2026)',
+      href: '/blog/ai-2026-agent-release-scorecards',
+      tag: 'New',
+      gradient: 'from-amber-500 to-orange-600'
+    },
+    {
+      title: 'Safe Tooling Permissions — Playbook (2026)',
+      href: '/blog/ai-2026-safe-tooling-permissions-playbook',
+      tag: 'New',
+      gradient: 'from-fuchsia-500 to-pink-600'
+    },
+    {
+      title: 'Reliable Real‑Time Agents (2026)',
+      href: '/blog/ai-2026-reliable-real-time-agents',
+      tag: 'New',
+      gradient: 'from-cyan-500 to-blue-600'
+    },
+    {
+      title: 'Zero‑Trust Agents (2026)',
+      href: '/blog/ai-2026-zero-trust-agents',
+      tag: 'New',
+      gradient: 'from-violet-500 to-indigo-500'
+    },
     // Newly added content (Sept 16, 2025)
     {
       title: 'Low‑Latency Agent Observability (2026)',

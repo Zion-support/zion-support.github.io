@@ -1,7 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import { Brain, Zap, Star, Users, Target } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Brain, Zap, Target, Users, Globe, Star, ArrowRight } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
-const ai-consciousness-evolution: React.FC = () => {
+export default function AIConsciousnessEvolution() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

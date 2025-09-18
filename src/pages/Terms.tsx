@@ -82,4 +82,6 @@ export default function Terms() {
       </main>
     </>
   );
-}
+};
+
+export default Terms;

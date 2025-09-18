@@ -1,13 +1,22 @@
 /** @type {import('next').NextConfig} */
 const path = require('path')
 const nextConfig = {
-  // Next.js 15: move experimental.outputFileTracingRoot to top-level
-  outputFileTracingRoot: path.join(__dirname, '..'),
-  
-  // ESLint configuration
-  eslint: {
-    // Netlify builds fail if ESLint config contains unsupported options; skip at build time
-    ignoreDuringBuilds: true,
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+    optimizePackageImports: ['@heroicons/react']
+  },
+  images: {
+    domains: ['images.unsplash.com'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ]
   },
   
   // TypeScript configuration

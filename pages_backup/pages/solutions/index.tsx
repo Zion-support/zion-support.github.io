@@ -1,6 +1,22 @@
 import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Shield, 
+  Rocket, 
+  BarChart3, 
+  Settings, 
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Building,
+  Globe,
+  Target
+} from 'lucide-react';
+import Layout from '../../components/Layout';
+import MainLayout from '../../src/components/layout/MainLayout';
 
-const index: React.FC = () => {
+const Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>

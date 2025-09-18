@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Brain, Shield, Rocket, Star } from 'lucide-react';
 
 const StatisticsSection: React.FC = () => {
   return (

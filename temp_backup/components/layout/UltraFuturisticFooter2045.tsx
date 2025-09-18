@@ -1,4 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, Star, ArrowUp,
+  Brain, Rocket, Shield, Atom, Target, Star as StarIcon,
+  Linkedin, Twitter, Github, Youtube, MessageCircle,
+  Calendar, HelpCircle, FileText, Users, Award
+} from 'lucide-react';
 
 const UltraFuturisticFooter2045: React.FC = () => {
   return (

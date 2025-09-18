@@ -1,4 +1,11 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Mail, Phone, MapPin, 
+  Linkedin, Twitter, Github, 
+  Youtube, Facebook, Instagram,
+  ArrowUpRight
+} from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (

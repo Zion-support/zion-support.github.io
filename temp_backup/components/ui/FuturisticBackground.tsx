@@ -1,6 +1,12 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const FuturisticBackground: React.FC = () => {
+interface FuturisticBackgroundProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, className = '' }) => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">FuturisticBackground</h3>

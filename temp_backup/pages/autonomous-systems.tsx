@@ -1,7 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Cpu, Brain, Rocket, Zap, Shield, Target, ArrowRight, Play, Star, Cog, Wrench, Globe } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
-const autonomous-systems: React.FC = () => {
+export default function AutonomousSystems() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
