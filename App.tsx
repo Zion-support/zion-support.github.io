@@ -4,7 +4,7 @@ import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
 
-export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
