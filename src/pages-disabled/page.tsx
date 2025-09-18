@@ -1,5 +1,5 @@
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Quantum AI Breakthrough - Zion Tech Group',

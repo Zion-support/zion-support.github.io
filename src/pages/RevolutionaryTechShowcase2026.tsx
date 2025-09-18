@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
@@ -166,7 +164,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
               Contact Us
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
             </button>
           </div>
         </div>

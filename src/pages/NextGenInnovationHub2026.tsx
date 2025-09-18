@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -226,7 +223,6 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
     </div>
   );
 };
