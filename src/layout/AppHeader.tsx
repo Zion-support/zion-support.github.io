@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -12,6 +13,16 @@ import {
   Sun,
   Moon
 } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, PanelLeft } from 'lucide-react';
+import { MobileMenu } from '../components/header/MobileMenu';
+import { useIsMobile } from '../hooks/use-mobile';
+import { MobileBottomNav } from '../components/header/MobileBottomNav';
+import { useAuth } from '../hooks/useAuth';
+import { Logo } from '../components/header/Logo';
+>>>>>>> fd231cbddf0c0534909cb1476cb2677d96a47224
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

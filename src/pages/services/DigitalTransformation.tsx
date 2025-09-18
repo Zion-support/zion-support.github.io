@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+<<<<<<< HEAD
+import SEO from '../components/SEO';
+=======
+import { SEO } from '../components/SEO.jsx';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 const DigitalTransformation = () => {

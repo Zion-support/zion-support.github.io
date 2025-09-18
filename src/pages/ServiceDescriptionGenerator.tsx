@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
+import { ServiceDescriptionForm } from "../components/services/ServiceDescriptionForm";
+import { GeneratedDescriptionDisplay } from "../components/services/GeneratedDescriptionDisplay";
+import SEO from "../components/SEO";
+import { useAuth } from "../hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
     const { isAuthenticated, isLoading } = useAuth();

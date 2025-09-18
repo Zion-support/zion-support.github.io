@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { setLoggedIn } from '@/store/authSlice';
+import { setLoggedIn } from '../store/authSlice';
 
 export default function Login() {
   const navigate = useNavigate();

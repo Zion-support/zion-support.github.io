@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '../data/expandedServices';
+=======
 import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
 import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+<<<<<<< HEAD
+import SEO from '../components/SEO';
+=======
+import { SEO } from '../components/SEO.jsx';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 export default function PricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'

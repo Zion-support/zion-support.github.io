@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { ContentShowcase } from '../components/ContentShowcase';
 import { ServicesHighlight } from '../components/ServicesHighlight';
 

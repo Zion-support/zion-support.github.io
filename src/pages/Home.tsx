@@ -22,9 +22,24 @@ const Home: React.FC = () => {
             Discover the next generation of technology that will transform your business.
           </p>
           <div className="flex flex-wrap justify-center gap-6 mb-16">
-            <Link to="/pages/RevolutionaryAIServices2026" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🚀 Revolutionary AI Services</Link>
-            <Link to="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">⚛️ Quantum Computing Revolution</Link>
-            <Link to="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🛡️ Cybersecurity Solutions</Link>
+            <Link 
+              to="/pages/RevolutionaryAIServices2026" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              🚀 Revolutionary AI Services
+            </Link>
+            <Link 
+              to="/pages/QuantumComputingRevolution2026" 
+              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              ⚛️ Quantum Computing Revolution
+            </Link>
+            <Link 
+              to="/pages/ComprehensiveServices2025" 
+              className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              🛡️ Cybersecurity Solutions
+            </Link>
           </div>
         </motion.div>
         
@@ -32,25 +47,51 @@ const Home: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🤖</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">Conscious AI Systems</h3>
-            <p className="text-gray-300 mb-6 text-center">Revolutionary AI systems that exhibit true consciousness and self-awareness, capable of independent thought and creative problem-solving.</p>
+            <p className="text-gray-300 mb-6 text-center">
+              Revolutionary AI systems that exhibit true consciousness and self-awareness, 
+              capable of independent thought and creative problem-solving.
+            </p>
             <div className="text-center">
-              <Link to="/pages/RevolutionaryAIServices2026" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">Explore AI Services →</Link>
+              <Link 
+                to="/pages/ConsciousAISystems2026" 
+                className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+              >
+                Explore AI
+              </Link>
             </div>
           </div>
+
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">⚛️</div>
             <h3 className="text-2xl font-semibold text-white mb-4 text-center">Quantum Computing</h3>
-            <p className="text-gray-300 mb-6 text-center">Ultra-fast quantum processing that transcends classical limitations, enabling computations across multiple dimensions and realities.</p>
+            <p className="text-gray-300 mb-6 text-center">
+              Breakthrough quantum computing technologies that will revolutionize 
+              computation and solve previously impossible problems.
+            </p>
             <div className="text-center">
-              <Link to="/pages/QuantumComputingRevolution2026" className="text-purple-400 hover:text-purple-300 font-semibold text-lg">Discover Quantum Tech →</Link>
+              <Link 
+                to="/pages/QuantumComputingRevolution2026" 
+                className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+              >
+                Discover Quantum
+              </Link>
             </div>
           </div>
+
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
-            <div className="text-6xl mb-6 text-center">🔒</div>
-            <h3 className="text-2xl font-semibold text-white mb-4 text-center">AI Cybersecurity</h3>
-            <p className="text-gray-300 mb-6 text-center">Advanced AI-powered security systems that predict and prevent threats before they occur, protecting across all dimensions.</p>
+            <div className="text-6xl mb-6 text-center">🛡️</div>
+            <h3 className="text-2xl font-semibold text-white mb-4 text-center">Cybersecurity</h3>
+            <p className="text-gray-300 mb-6 text-center">
+              Advanced cybersecurity solutions that protect your digital assets 
+              with cutting-edge threat detection and prevention.
+            </p>
             <div className="text-center">
-              <Link to="/pages/CybersecurityFortress2025" className="text-green-400 hover:text-green-300 font-semibold text-lg">Secure Your Future →</Link>
+              <Link 
+                to="/pages/CybersecuritySolutions2026" 
+                className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+              >
+                Secure Now
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -77,6 +118,8 @@ const Home: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-6">
             <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Get Started Today</Link>
             <Link to="/about" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Learn More</Link>
+          </div>
+        </motion.div>
           </div>
         </motion.div>
       </div>

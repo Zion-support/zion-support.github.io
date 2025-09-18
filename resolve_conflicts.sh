@@ -1,86 +1,46 @@
 #!/bin/bash
-set -e
 
-<<<<<<< HEAD
-# Script to resolve merge conflicts by choosing HEAD version
-<<<<<<< HEAD
-# This will remove all merge conflict markers and keep only the HEAD version
+# Script to resolve merge conflicts by choosing the most recent version
+echo "Starting merge conflict resolution..."
 
-echo "Resolving merge conflicts..."
+# Find all files with merge conflicts
+echo "Finding files with merge conflicts..."
+conflicted_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-# Find all files with merge conflicts (excluding node_modules)
-find . -name "*.js" -o -name "*.jsx" -o -name "*.ts" -o -name "*.tsx" -o -name "*.json" | \
-grep -v node_modules | \
-while read file; do
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Resolving conflicts in: $file"
-        
-        # Create a temporary file
-        temp_file=$(mktemp)
-        
-        # Process the file to resolve conflicts
-        awk '
-        /^<<<<<<< HEAD/ { in_head = 1; next }
-        /^=======/ { in_head = 0; in_other = 1; next }
-        /^>>>>>>>/ { in_other = 0; next }
-        in_head { print; next }
-        !in_other { print }
-        ' "$file" > "$temp_file"
-        
-        # Replace the original file
-        mv "$temp_file" "$file"
+echo "Found conflicted files:"
+echo "$conflicted_files"
+
+# For each conflicted file, resolve conflicts by keeping the most recent version
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
+    
+    # Skip temp files and backup files
+    if [[ "$file" == *"temp_exclude"* ]] || [[ "$file" == *"backup"* ]] || [[ "$file" == *"corrupted"* ]]; then
+        echo "Skipping temp/backup file: $file"
+        continue
     fi
+    
+    # Create a backup
+    cp "$file" "$file.backup.$(date +%s)"
+    
+    # Use git checkout --theirs to keep the most recent version
+    git checkout --theirs "$file" 2>/dev/null || {
+        echo "Failed to resolve $file with git checkout --theirs"
+        # If git checkout fails, try to manually clean the file
+        sed -i '/<<<<<<< HEAD/,/>>>>>>> /d' "$file" 2>/dev/null || {
+            echo "Failed to clean $file with sed"
+        }
+    }
 done
 
-echo "Merge conflicts resolved!"
-=======
-echo "Resolving merge conflicts..."
-=======
-echo "Resolving merge conflicts automatically..."
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
+echo "Merge conflict resolution completed!"
 
-# Function to resolve conflicts by choosing HEAD version
-resolve_conflicts() {
-    local file="$1"
-    if [ -f "$file" ]; then
-        echo "Resolving conflicts in $file"
-        # Use git checkout to choose HEAD version for conflicted files
-        git checkout --ours "$file" 2>/dev/null || true
-        git add "$file" 2>/dev/null || true
-    fi
-}
+# Check if there are still conflicts
+remaining_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null | wc -l)
 
-# Get list of conflicted files
-conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
-
-if [ -n "$conflicted_files" ]; then
-    echo "Found conflicted files:"
-    echo "$conflicted_files"
-    
-    # Resolve each conflicted file
-    while IFS= read -r file; do
-        if [ -n "$file" ]; then
-            resolve_conflicts "$file"
-        fi
-    done <<< "$conflicted_files"
-    
-<<<<<<< HEAD
-    # Use sed to resolve conflicts by choosing HEAD version
-    # Remove conflict markers and keep only HEAD content
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
-    sed -i '/^=======/,/^>>>>>>>/d' "$file"
-    sed -i '/^<<<<<<< HEAD/d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>>/d' "$file"
-    
-    echo "Resolved: $file"
-done
-
-echo "All merge conflicts resolved!"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
-=======
-    echo "All conflicts resolved automatically"
+if [ "$remaining_conflicts" -gt 0 ]; then
+    echo "Warning: $remaining_conflicts files still have conflicts"
+    find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null
 else
-    echo "No conflicts found"
+    echo "All merge conflicts resolved successfully!"
 fi
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955

@@ -1,7 +1,13 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+<<<<<<< HEAD
+import SEO from '../components/SEO';
+import { ProtectedRoute } from '../components/ProtectedRoute';
+import { ContractBuilderContent } from '../components/contracts/page/ContractBuilderContent';
+=======
+import { SEO } from '../components/SEO.jsx';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 function ContractBuilderPage() {
     return (<ProtectedRoute>
       <>
