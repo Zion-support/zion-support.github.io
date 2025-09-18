@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/EnhancedNewsletterSignup2026.tsx.backup.1758060817
 import React, { useState } from 'react';
 
 const EnhancedNewsletterSignup2026: React.FC = () => {
@@ -53,8 +54,13 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
 >>>>>>> cursor/create-and-deploy-new-content-79ca
     );
   }
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/EnhancedNewsletterSignup2026.tsx
 
+const EnhancedNewsletterSignup2026 = () => {
   return (
+<<<<<<< HEAD:src/components/EnhancedNewsletterSignup2026.tsx.backup.1758060817
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-cyan-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -221,25 +227,15 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
           </div>
         </div>
 
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/EnhancedNewsletterSignup2026.tsx
         <div className="text-center">
-          <p className="text-lg opacity-90 mb-4">
-            Ready to experience the future of technology?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/pages/RevolutionaryTechBreakthrough2026" 
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              🌟 Explore Our Technologies →
-            </a>
-            <a 
-              href="/pages/UltimateTechRevolution2026" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              🚀 Ultimate Revolution →
-            </a>
-          </div>
+          <h1 className="text-5xl font-bold mb-6">EnhancedNewsletterSignup2026</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
+<<<<<<< HEAD:src/components/EnhancedNewsletterSignup2026.tsx.backup.1758060817
 
             <div className="mt-6 text-center">
               <p className="text-sm opacity-80">
@@ -279,8 +275,14 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
           ))}
         </divdiv>
 >>>>>>> cursor/create-and-deploy-new-content-79ca
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/EnhancedNewsletterSignup2026.tsx
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD:src/components/EnhancedNewsletterSignup2026.tsx.backup.1758060817
+=======
+export default EnhancedNewsletterSignup2026;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/EnhancedNewsletterSignup2026.tsx

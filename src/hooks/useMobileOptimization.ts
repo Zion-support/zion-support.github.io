@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect }  from 'react';
 export const useMobileOptimization = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -12,7 +12,7 @@ export const useMobileOptimization = () => {
       setIsMobile(isMobileDevice);
       setIsTablet(isTabletDevice);
       setIsDesktop(isDesktopDevice);
-    };
+  };
     checkDevice();
     window.addEventListener('resize', checkDevice);
     return () => window.removeEventListener('resize', checkDevice);
@@ -23,6 +23,5 @@ export const useMobileOptimization = () => {
     isDesktop,
     deviceType: isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'
   };
-};
-
+  };
 export default useMobileOptimization;

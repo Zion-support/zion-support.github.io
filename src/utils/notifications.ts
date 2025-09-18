@@ -1,8 +1,16 @@
+// Notification utilities
+interface NotificationOptions {
+// Notifications utility for handling browser notifications and toast messages
+
+interface NotificationOptions {
 /**
  * Notification utility for handling browser notifications
  * with fallbacks and error handling
  */
+
 export interface NotificationOptions {
+// Notification utilities
+interface NotificationOptions {
   title: string;
   body?: string;
   icon?: string;
@@ -19,6 +27,33 @@ interface NotificationAction {
   action: string;
   title: string;
   icon?: string;
+}
+
+class NotificationManager {
+  private permission: NotificationPermission = 'default';
+
+  async requestPermission(): Promise<NotificationPermission> {
+    if ('Notification' in window) {
+      this.permission = await Notification.requestPermission();
+    }
+    return this.permission;
+  }
+
+  async showNotification(options: NotificationOptions): Promise<Notification | null> {
+    if (!('Notification' in window)) {
+      console.warn('This browser does not support notifications');
+      return null;
+    }
+
+    if (this.permission !== 'granted') {
+      this.permission = await this.requestPermission();
+      if (this.permission !== 'granted') {
+        console.warn('Notification permission denied');
+        return null;
+      }
+  requireInteraction?: boolean;
+  silent?: boolean;
+  vibrate?: number[];
 }
 
 export const notifications = {
@@ -42,6 +77,7 @@ export const notifications = {
    */
   requestPermission: async (): Promise<NotificationPermission> => {
     if (!notifications.isSupported()) return 'denied';
+    
     try {
       const permission = await Notification.requestPermission();
       return permission;
@@ -59,9 +95,17 @@ export const notifications = {
       console.warn('Notifications not supported');
       return null;
     }
+
     if (Notification.permission !== 'granted') {
       console.warn('Notification permission not granted');
       return null;
+  data?: any;
+  requireInteraction?: boolean;
+  silent?: boolean;
+  timestamp?: number;
+  actions?: NotificationAction[];
+}
+
     }
 
     try {
@@ -74,7 +118,10 @@ export const notifications = {
         requireInteraction: options.requireInteraction || false,
         silent: options.silent || false,
         timestamp: options.timestamp || Date.now(),
-        actions: options.actions || []
+        actions: options.actions || [],
+        requireInteraction: options.requireInteraction || false,
+        silent: options.silent || false,
+        vibrate: options.vibrate
       });
 
       // Auto-close after 5 seconds unless requireInteraction is true
@@ -87,6 +134,22 @@ export const notifications = {
       return notification;
     } catch (error) {
       console.error('Error showing notification:', error);
+      return null;
+    }
+  }
+
+  showSuccess(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/success.png',
+      tag: 'success',
+    });
+  }
+
+  showError(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      console.warn('Failed to show notification:', error);
       return null;
     }
   },
@@ -108,10 +171,40 @@ export const notifications = {
    */
   error: (title: string, body?: string): Notification | null => {
     return notifications.show({
+      console.error('Error showing notification:', error);
+      return null;
+    }
+  }
+
       title,
       body,
       icon: '/icons/error.png',
       tag: 'error',
+      requireInteraction: true,
+    });
+  }
+
+  showInfo(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/info.png',
+      tag: 'info',
+    });
+  }
+
+  showWarning(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/warning.png',
+      tag: 'warning',
+    });
+  }
+}
+
+export const notificationManager = new NotificationManager();
+export default notificationManager;
       requireInteraction: true
     });
   },
@@ -142,3 +235,28 @@ export const notifications = {
 };
 
 export default notifications;
+      requireInteraction: true,
+    });
+  }
+
+  showInfo(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/info.png',
+      tag: 'info',
+    });
+  }
+
+  showWarning(title: string, body?: string): Promise<Notification | null> {
+    return this.showNotification({
+      title,
+      body,
+      icon: '/icons/warning.png',
+      tag: 'warning',
+    });
+  }
+}
+
+export const notificationManager = new NotificationManager();
+export default notificationManager;

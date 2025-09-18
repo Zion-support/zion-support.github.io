@@ -1,15 +1,9 @@
 #!/bin/bash
-<<<<<<< HEAD
 set -e
 
 # Deployment script for Zion Tech Group
 ENVIRONMENT=${1:-staging}
 VERSION=${2:-latest}
-=======
-
-# Deployment script for production
-set -e
->>>>>>> origin/merge-pr-12271
 
 echo "🚀 Starting deployment to ${ENVIRONMENT} environment..."
 

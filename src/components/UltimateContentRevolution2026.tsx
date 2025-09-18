@@ -1,141 +1,14 @@
 import React from 'react';
 const UltimateContentRevolution2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div
-          className="text-center mb-16"
-        >
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-6 animate-pulse">
-            <Sparkles className="w-4 h-4 mr-2" />
-            REVOLUTIONARY CONTENT 2026
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Ultimate Content Revolution
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            Experience the most advanced AIquantum computingand automation technologies 
-            that are reshaping the future of business and technology.
-          </p>
-        </div>
-        {/* Content Tabs */}
-        <div
-          className="mb-12"
-        >
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {contentSections.map((sectionindex) => (
-              <button
-                key={section.id}
-                onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTab === index
-                    ? `bg-gradient-to-r ${section.color} text-white shadow-lg scale-105`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                <section.icon className="w-5 h-5" />
-                {section.title}
-              </button>
-            ))}
-          </div>
-          {/* Tab Content */}
-            <div
-              key={activeTab}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-            >
-              <div className="grid lg:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-3xl font-bold mb-4 text-white">
-                    {contentSections[activeTab].content.headline}
-                  </h3>
-                  <p className="text-lg text-gray-300 mb-6">
-                    {contentSections[activeTab].content.description}
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    {contentSections[activeTab].content.stats.map((statindex) => (
-                      <div key={index} className="bg-white/10 rounded-lg p-4 text-center">
-                        <stat.icon className="w-8 h-8 mx-auto mb-2 text-purple-400" />
-                        <div className="text-2xl font-bold text-white">{stat.value}</div>
-                        <div className="text-sm text-gray-400">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold mb-4 text-white">Key Features</h4>
-                  <div className="space-y-3">
-                    {contentSections[activeTab].content.features.map((featureindex) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Testimonials */}
-        <div
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">
-            What Industry Leaders Are Saying
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonialindex) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-400">{testimonial.role}{testimonial.company}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                <div className="flex items-center gap-1">
-                  {[...Array(testimonial.rating)].map((_i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* CTA Section */}
-        <div
-          className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Join thousands of companies already using our revolutionary AI and quantum computing solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center gap-2">
-              <Play className="w-5 h-5" />
-              Watch Demo
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors duration-300 flex items-center gap-2">
-              <ArrowRight className="w-5 h-5" />
-              Get Started
-            </button>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">UltimateContentRevolution2026</h1>
+          <p className="text-xl text-gray-300">Coming soon - Revolutionary technology solutions</p>
         </div>
       </div>
     </div>
   );
-};
-
-
+  };
 export default UltimateContentRevolution2026;

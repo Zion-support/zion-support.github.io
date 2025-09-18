@@ -1,22 +1,43 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
 const SpaceTechRevolution2026: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>SpaceTechRevolution2026 | Zion Tech Group</title>
-        <meta name="description" content="SpaceTechRevolution2026 - Revolutionary technology solutions" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">SpaceTechRevolution2026</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center mb-12">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Space Tech Revolution 2026
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Revolutionary space technology innovations transforming humanity's journey to the stars
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">Advanced Propulsion</h3>
+            <p className="text-gray-300">
+              Next-generation propulsion systems enabling faster, more efficient space travel.
+            </p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">Space Manufacturing</h3>
+            <p className="text-gray-300">
+              Zero-gravity manufacturing facilities producing advanced materials and components.
+            </p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-4">Space Habitats</h3>
+            <p className="text-gray-300">
+              Sustainable living environments for long-term space missions and colonization.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
-
 };
-
 
 export default SpaceTechRevolution2026;

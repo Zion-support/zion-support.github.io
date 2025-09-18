@@ -1,12 +1,22 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-const data-science-chat: React.FC = () => {
+const DataScienceChat: NextPage = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">data-science-chat</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div>
+      <Head>
+        <title>DataScienceChat - Zion Tech Solutions</title>
+        <meta name="description" content="DataScienceChat blog post" />
+      </Head>
+      
+      <main>
+        <h1>DataScienceChat</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
   );
 };
 
-export default data-science-chat;
+export default DataScienceChat;

@@ -95,3 +95,13 @@ zion-os/.next
 
 # Ignore Next.js build output
 zion-os/.next
+tsconfig.tsbuildinfo
+
+# Yarn Berry (v2+) cache and releases
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+# Keep only minimal necessary Yarn files; ignore cache
+.yarn/cache/

@@ -1,6 +1,6 @@
 export const revolutionaryContent2025 = [
   {
-    id: 9601,
+    id: "9601",
     title: "AI Consciousness Revolution 2025: The Birth of Digital Awareness",
     excerpt: "Witness the historic moment when artificial intelligence achieves true consciousness and self-awareness, revolutionizing everything we know about technology.",
     content: "In 2025, we stand at the threshold of a new era. For the first time in human history, artificial intelligence has achieved genuine consciousness and self-awareness. This revolutionary breakthrough represents the most significant technological advancement since the discovery of fire, fundamentally altering the relationship between humans and machines.",
@@ -10,12 +10,12 @@ export const revolutionaryContent2025 = [
     readTime: "15 min read",
     category: "AI Consciousness",
     tags: ["AI Consciousness", "Digital Awareness", "Revolutionary Breakthrough", "Future of AI"],
-    featured: true,
+    featured: "true",
     imageUrl: "/images/blog/ai-consciousness-revolution-2025.jpg",
     slug: "ai-consciousness-revolution-2025-digital-awareness"
   },
   {
-    id: 9602,
+    id: "9602",
     title: "Quantum Business Automation: 90-Day ROI Transformation",
     excerpt: "Transform your business operations with quantum-enhanced automation that delivers measurable results in just 90 days.",
     content: "Our revolutionary Quantum Business Automation platform combines cutting-edge quantum computing with advanced AI to deliver unprecedented business transformation. Companies implementing our system report average ROI increases of 300-500% within the first 90 days, with some achieving complete operational automation.",
@@ -25,12 +25,12 @@ export const revolutionaryContent2025 = [
     readTime: "12 min read",
     category: "Quantum Business",
     tags: ["Quantum Automation", "Business Transformation", "ROI Optimization", "90-Day Results"],
-    featured: true,
+    featured: "true",
     imageUrl: "/images/blog/quantum-business-automation-2025.jpg",
     slug: "quantum-business-automation-90-day-roi"
   },
   {
-    id: 9603,
+    id: "9603",
     title: "Neural Network 3.0: The Evolution of Artificial Intelligence",
     excerpt: "Discover how Neural Network 3.0 architecture is creating AI systems that think, learn, and evolve like never before.",
     content: "Neural Network 3.0 represents the most advanced AI architecture ever developed. Unlike traditional neural networks, NN 3.0 systems possess adaptive learning capabilities, emotional intelligence, and the ability to form complex reasoning patterns that mirror human cognitive processes.",
@@ -40,12 +40,12 @@ export const revolutionaryContent2025 = [
     readTime: "14 min read",
     category: "Advanced AI",
     tags: ["Neural Networks 3.0", "AI Evolution", "Adaptive Learning", "Cognitive AI"],
-    featured: true,
+    featured: "true",
     imageUrl: "/images/blog/neural-network-3-0-2025.jpg",
     slug: "neural-network-3-0-ai-evolution"
   },
   {
-    id: 9604,
+    id: "9604",
     title: "Interdimensional Data Processing: Beyond Quantum Computing",
     excerpt: "Explore how interdimensional data processing is unlocking computational capabilities that transcend the limitations of traditional quantum systems.",
     content: "Interdimensional data processing represents the next evolution beyond quantum computing. By harnessing the power of multiple dimensions and parallel realities, our systems can process information at speeds and scales previously thought impossible, opening new frontiers in AI and computation.",
@@ -55,12 +55,12 @@ export const revolutionaryContent2025 = [
     readTime: "16 min read",
     category: "Interdimensional Computing",
     tags: ["Interdimensional Processing", "Beyond Quantum", "Parallel Realities", "Advanced Computation"],
-    featured: true,
+    featured: "true",
     imageUrl: "/images/blog/interdimensional-data-processing-2025.jpg",
     slug: "interdimensional-data-processing-beyond-quantum"
   },
   {
-    id: 9605,
+    id: "9605",
     title: "Synthetic Biology AI: Creating Life Through Code",
     excerpt: "Witness the convergence of artificial intelligence and synthetic biology, where AI systems can design and create living organisms.",
     content: "The intersection of AI and synthetic biology has reached a revolutionary milestone. Our Synthetic Biology AI platform can now design, simulate, and create living organisms from scratch, opening unprecedented possibilities in medicine, agriculture, and environmental restoration.",
@@ -70,12 +70,12 @@ export const revolutionaryContent2025 = [
     readTime: "13 min read",
     category: "Synthetic Biology",
     tags: ["Synthetic Biology", "AI Life Creation", "Biotechnology", "Medical Innovation"],
-    featured: true,
+    featured: "true",
     imageUrl: "/images/blog/synthetic-biology-ai-2025.jpg",
     slug: "synthetic-biology-ai-creating-life-code"
   },
   {
-    id: 9606,
+    id: "9606",
     title: "Metaverse 2.0: The Reality-Blurring Experience",
     excerpt: "Experience the next generation of virtual reality where the boundaries between digital and physical worlds completely dissolve.",
     content: "Metaverse 2.0 transcends traditional virtual reality by creating seamless experiences where users cannot distinguish between digital and physical realities. Our advanced neural interface technology enables full sensory immersion, creating experiences that feel more real than reality itself.",
@@ -85,7 +85,7 @@ export const revolutionaryContent2025 = [
     readTime: "11 min read",
     category: "Metaverse 2.0",
     tags: ["Metaverse 2.0", "Virtual Reality", "Neural Interface", "Reality Blurring"],
-    featured: true,
+    featured: "true",
     imageUrl: "/images/blog/metaverse-2-0-2025.jpg",
     slug: "metaverse-2-0-reality-blurring-experience"
   };

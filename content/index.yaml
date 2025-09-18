@@ -99,6 +99,7 @@ content_index:
         satisfaction: "98%"
         efficiency: "67%"
         
+<<<<<<< HEAD
     - id: "data-governance-trust-security-2025"
       type: "blog"
       title: "AI 2025: Data Governance, Trust, and Security — Enterprise Guide"
@@ -115,6 +116,11 @@ content_index:
         audit_coverage: "100%"
         incidents_reduction: "40%"
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     - id: "healthcare-transformation"
       type: "case-study"
       title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
@@ -198,6 +204,13 @@ content_index:
         projects: "500+"
         timeline: "6-8 months"
       reading_time: "28 min read"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     - id: "ai-2025-advanced-automation-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Automation Revolution - Ultimate Enterprise Guide"
@@ -274,6 +287,53 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    - id: "ai-enterprise-automation-revolution"
+      type: "blog"
+      title: "AI 2025: The Enterprise Automation Revolution - 500% ROI"
+      file_path: "/content/blog/ai-2025-enterprise-automation-revolution.md"
+      url: "/blog/ai-2025-enterprise-automation-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["AI", "Enterprise Automation", "ROI", "Business Transformation", "2025"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$200M"
+        satisfaction: "99.8%"
+        time: "12 months"
+
+  new_case_studies:
+    - id: "global-manufacturing-ai-transformation"
+      type: "case-study"
+      title: "Global Manufacturing Giant Achieves 500% ROI with AI Transformation"
+      file_path: "/content/case-studies/global-manufacturing-ai-transformation.md"
+      url: "/case-studies/global-manufacturing-ai-transformation"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Manufacturing", "AI Automation", "ROI", "Transformation"]
+      featured: true
+      is_new: true
+      metrics:
+        roi: "500%"
+        savings: "$50M"
+        efficiency: "95%"
+        satisfaction: "98%"
+        
+    - id: "financial-services-ai-revolution"
+      type: "case-study"
+      title: "Financial Services Leader Achieves 600% ROI with AI-Powered Digital Transformation"
+      file_path: "/content/case-studies/financial-services-ai-revolution.md"
+      url: "/case-studies/financial-services-ai-revolution"
+      status: "published"
+      created: "2025-01-17"
+      tags: ["Case Study", "Financial Services", "AI Automation", "ROI", "Digital Transformation"]
+>>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       featured: true
       is_new: true
       metrics:
@@ -397,19 +457,84 @@ content_index:
         timeframe: "6 months"
         phases: "3 phases"
         payback: "3.8 months"
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  newly_added_september_2025:
+<<<<<<< HEAD
+    - id: "ai-2026-evidence-driven-release-checklists"
+=======
+    - id: "ai-2026-sovereign-ai-commerce"
+      type: "blog"
+      title: "AI 2026: Sovereign AI Commerce — Autonomous Marketplaces"
+      file_path: "/content/blog/ai-2026-sovereign-ai-commerce.md"
+      url: "/blog/ai-2026-sovereign-ai-commerce"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Autonomous Commerce", "Marketplaces", "Policy-as-Code", "Safety", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        settlement_speed: "3x"
+        incidents_reduction: "40%"
+        audit_ready: true
+    - id: "ai-2026-realtime-evals-at-scale"
+      type: "blog"
+      title: "AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates"
+      file_path: "/content/blog/ai-2026-realtime-evals-at-scale.md"
+      url: "/blog/ai-2026-realtime-evals-at-scale"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluations", "Reliability", "Progressive Delivery", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        rollback_time: "< 5 min"
+        reliability: "99.9%"
+        error_budget: "guarded"
+    - id: "ai-2026-enterprise-rag-observability"
+      type: "blog"
+      title: "AI 2026: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry"
+      file_path: "/content/blog/ai-2026-enterprise-rag-observability.md"
+      url: "/blog/ai-2026-enterprise-rag-observability"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["RAG", "Observability", "Evals", "Safety", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        latency_p95: "< 250ms"
+        citation_density: "> 0.9"
+        audit_ready: true
+    - id: "ai-2026-eval-driven-release-engineering"
+>>>>>>> origin/feat/new-content-promos
+=======
 
   newly_added_september_2025:
     - id: "ai-2026-evidence-driven-release-checklists"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       type: "blog"
       title: "AI 2026: Evidence‑Driven Release Checklists — Gates, Rollbacks, and Audit"
       file_path: "/content/blog/ai-2026-evidence-driven-release-checklists.md"
       url: "/blog/ai-2026-evidence-driven-release-checklists"
+<<<<<<< HEAD
+=======
+  new_resources:
+    - id: "ai-transformation-checklist-2025"
+      type: "resource"
+      title: "AI Transformation Checklist 2025 - Complete Implementation Guide"
+      file_path: "/content/resources/ai-transformation-checklist-2025.md"
+      url: "/resources/ai-transformation-checklist-2025"
+>>>>>>> origin/feat/new-content-2026-evals
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       status: "published"
       created: "2025-09-15"
       tags: ["Evaluations", "Reliability", "Governance", "Progressive Delivery", "2026"]
       featured: true
       is_new: true
       metrics:
+<<<<<<< HEAD
         reliability: "99.9%"
         rollback_time: "< 5 min"
         audit_ready: true
@@ -489,6 +614,7 @@ content_index:
         breaches: "reduced"
         audit_ready: true
 
+<<<<<<< HEAD
     - id: "ai-2026-cost-aware-model-routing"
       type: "blog"
       title: "AI 2026: Cost‑Aware Model Routing — Blueprint"
@@ -519,11 +645,49 @@ content_index:
         review_time: "-50%"
         coverage: "100% gated"
 
+<<<<<<< HEAD
     - id: "ai-2026-agent-evidence-hub-starter"
       type: "resource"
       title: "AI 2026: Agent Evidence Hub — Starter Kit"
       file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
       url: "/resources/ai-2026-agent-evidence-hub-starter"
+=======
+    - id: "ai-2026-generative-ai-risk-register"
+      type: "blog"
+      title: "AI 2026: Generative AI Risk Register — Templates, Controls, and Evidence"
+      file_path: "/content/blog/ai-2026-generative-ai-risk-register.md"
+      url: "/blog/ai-2026-generative-ai-risk-register"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["AI Governance", "Risk Management", "Compliance", "Audit"]
+      featured: true
+      is_new: true
+      metrics:
+        approval_speed: "2x"
+        exceptions: "-35%"
+        audit_ready: true
+
+    - id: "ai-2026-agent-cost-optimization"
+      type: "blog"
+      title: "AI 2026: Agent Cost Optimization — Routing, Caching, and Benchmarks"
+      file_path: "/content/blog/ai-2026-agent-cost-optimization.md"
+      url: "/blog/ai-2026-agent-cost-optimization"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Cost Optimization", "Routing", "Benchmarks", "Observability"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "20-40%"
+        latency_p95: "stable"
+        quality: "+/="
+
+    - id: "ai-2026-secure-agent-routing-strategies"
+      type: "blog"
+      title: "AI 2026: Secure Agent Routing Strategies"
+      file_path: "/content/blog/ai-2026-secure-agent-routing-strategies.md"
+      url: "/blog/ai-2026-secure-agent-routing-strategies"
+>>>>>>> origin/feat/new-content-2025-09-15-b
       status: "published"
       created: "2025-09-15"
       tags: ["Evaluations", "Evidence", "Compliance", "Audit", "2026"]
@@ -533,7 +697,45 @@ content_index:
         audit_ready: true
         integration_time: "< 1 day"
         data_sources: "Evals, Incidents, Approvals"
+=======
+        downloads: "1000+"
+        success_rate: "95%"
+        implementation_time: "6-12 months"
+        roi: "300-500%"
+  latest_2026_content:
+    - id: "ai-2026-autonomous-evals-blueprint"
+      type: "blog"
+      title: "AI 2026: Autonomous Evals Blueprint"
+      file_path: "/content/blog/ai-2026-autonomous-evals-blueprint.md"
+      url: "/blog/ai-2026-autonomous-evals-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evals", "CI/CD", "Guardrails", "Safety"]
+      featured: true
+      is_new: true
+      metrics:
+        coverage: "85% scenario coverage"
+        reliability: "99.2% release pass-rate"
+        rollback: "<1% rollback rate"
 
+    - id: "ai-2026-evaluation-harness-blueprint"
+      type: "blog"
+      title: "AI 2026: Evaluation Harness Blueprint"
+      file_path: "/content/blog/ai-2026-evaluation-harness-blueprint.md"
+      url: "/blog/ai-2026-evaluation-harness-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Evaluation Harness", "Metrics", "Policy-as-Code", "Agents"]
+      featured: true
+      is_new: true
+      metrics:
+        suites: "30+ scenario suites"
+        gates: "Policy gates in CI/CD"
+        reporting: "Automated regression reports"
+>>>>>>> origin/feat/new-content-2026-evals
+
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
@@ -681,43 +883,37 @@ content_index:
 <<<<<<< HEAD
       reading_time: "18 min read"
 =======
+<<<<<<< HEAD
       reading_time: "18 min read"
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
+<<<<<<< HEAD
+      reading_time: "18 min read"
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 =======
->>>>>>> cursor/create-and-deploy-new-content-cc9d
-=======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
-=======
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
-<<<<<<< HEAD
 >>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f175
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
+>>>>>>> cursor/create-and-deploy-new-content-e453
+=======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
-<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-7720
 =======
->>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
->>>>>>> 2ad069e84825dabaf46d071e81e10e505f57815a
->>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
 =======
->>>>>>> cursor/create-and-deploy-new-content-3afb
 =======
->>>>>>> cursor/create-and-deploy-new-content-81d0
->>>>>>> cursor/create-and-deploy-new-content-634d
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

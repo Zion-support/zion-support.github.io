@@ -1,13 +1,9 @@
-          </div>
-        </div>
-        {/* Call to Action */}
-        <div className="text-center">
+import React from 'react';
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
-
 
 export default RevolutionaryTechShowcase2025;

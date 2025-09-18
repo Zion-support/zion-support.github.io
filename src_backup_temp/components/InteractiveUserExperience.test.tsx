@@ -1,6 +1,3 @@
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function InteractiveUserExperience.test() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveUserExperience.test - Zion Tech Group" description="Professional InteractiveUserExperience.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveUserExperience.test</h1> <p className="text-gray-300 text-lg"> Professional InteractiveUserExperience.test services to help your business grow. </p> </div>'; </div>';'; );';';'}";
 import React from 'react',;',';';
     ';';';';
@@ -18,36 +15,3 @@ import React from 'react',;',';'; ';';';'; import {SEO } from '@/components/SEO'
     </div>';';
   );';';';
 }"';';';';
-
-
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function InteractiveUserExperience() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveUserExperience && InteractiveUserExperience.test - Zion Tech Group" description="Professional InteractiveUserExperience && InteractiveUserExperience.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveUserExperience && InteractiveUserExperience.test</h1> <pclassName="text-gray-300 text-lg"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
-}"
-import React from 'react',','' '''' import {SEO } from '@/components/SEO' export default function InteractiveUserExperience() {return ( <div className="min-h-screen bg-white"> <SEO title="InteractiveUserExperience && InteractiveUserExperience.test - Zion Tech Group" description="Professional InteractiveUserExperience && InteractiveUserExperience.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">InteractiveUserExperience && InteractiveUserExperience.test</h1> <p className="text-gray-300 text-lg"> Professional InteractiveUserExperience && InteractiveUserExperience.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"

@@ -1,69 +1,277 @@
 #!/bin/bash
 
-# Script to merge multiple branches into main
-# This will attempt to merge branches and handle conflicts
+<<<<<<< HEAD
+# Script to systematically merge branches and resolve conflicts
+set -e
+=======
+# Script to systematically merge branches into main
+# This will handle conflicts and merge branches one by one
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
-echo "Starting branch merge process..."
+set -e
 
-# List of branches to merge (prioritizing most recent and important ones)
-branches=(
-    "origin/feat/new-content-sept-2025"
-    "origin/cursor/create-and-deploy-new-content-80c6"
-    "origin/cursor/create-and-deploy-new-content-d188"
-    "origin/cursor/create-and-deploy-new-content-eed6"
-    "origin/cursor/create-and-deploy-new-content-b459"
-    "origin/cursor/create-and-deploy-new-content-1b2c"
-    "origin/cursor/create-and-deploy-new-content-4918"
-    "origin/cursor/create-and-deploy-new-content-9af8"
-    "origin/feat/add-agentic-crm-post-and-homepage-promo"
-    "origin/performance-optimizations"
-)
-
-# Counter for successful merges
-successful_merges=0
-failed_merges=0
-
-for branch in "${branches[@]}"; do
-    echo "Attempting to merge $branch..."
+<<<<<<< HEAD
+# Function to resolve conflicts automatically
+resolve_conflicts() {
+    local file="$1"
+    echo "Resolving conflicts in $file"
     
-    # Try to merge the branch
-    if git merge "$branch" --no-edit 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        ((successful_merges++))
+    # For most files, we'll take the incoming changes (theirs) to get the latest content
+    if [[ -f "$file" ]]; then
+        # Check if file has merge conflicts
+        if grep -q "<<<<<<< HEAD" "$file"; then
+            echo "  - File has merge conflicts, resolving..."
+            
+            # For specific file types, use different strategies
+            case "$file" in
+                *.json)
+                    # For JSON files, try to merge intelligently or take theirs
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    ;;
+                *.tsx|*.jsx|*.ts|*.js)
+                    # For code files, take theirs (incoming changes)
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    ;;
+                *.css)
+                    # For CSS files, take theirs
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    ;;
+                *.md)
+                    # For markdown files, take theirs
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    ;;
+                *)
+                    # For other files, take theirs
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    ;;
+            esac
+            
+            # Add the resolved file
+            git add "$file"
+        fi
+=======
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# Function to log messages
+log() {
+    echo -e "${GREEN}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
+}
+
+error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
+
+warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
+
+# Function to merge a single branch
+merge_branch() {
+    local branch_name="$1"
+    local branch_ref="origin/$branch_name"
+    
+    log "Attempting to merge branch: $branch_name"
+    
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/$branch_ref"; then
+        warning "Branch $branch_ref does not exist, skipping"
+        return 1
+    fi
+    
+    # Try to merge
+    if git merge --no-ff "$branch_ref" -m "Merge branch '$branch_name' into main"; then
+        log "Successfully merged $branch_name"
+        return 0
     else
-        echo "❌ Failed to merge $branch due to conflicts"
+        error "Failed to merge $branch_name due to conflicts"
         
         # Check if there are conflicts
         if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "Resolving conflicts for $branch..."
+            warning "Resolving conflicts for $branch_name"
             
-            # Try to resolve conflicts automatically where possible
-            # This is a basic conflict resolution - in practice, you'd want more sophisticated logic
-            git status --porcelain | grep "^UU" | while read -r file; do
-                file_path=$(echo "$file" | cut -c4-)
-                echo "Resolving conflicts in $file_path"
-                
-                # For now, we'll abort the merge and continue with the next branch
-                # In a production environment, you'd want proper conflict resolution
+            # Auto-resolve simple conflicts
+            git status --porcelain | while read status file; do
+                case "$status" in
+                    "UU"|"AA")
+                        warning "Conflict in $file - attempting auto-resolution"
+                        # Try to resolve by taking the incoming version for most files
+                        if [[ "$file" == *.tsx ]] || [[ "$file" == *.ts ]] || [[ "$file" == *.jsx ]] || [[ "$file" == *.js ]]; then
+                            git checkout --theirs "$file" 2>/dev/null || true
+                        else
+                            git checkout --ours "$file" 2>/dev/null || true
+                        fi
+                        git add "$file" 2>/dev/null || true
+                        ;;
+                    "DD")
+                        warning "Deleted file $file - removing"
+                        git rm "$file" 2>/dev/null || true
+                        ;;
+                esac
             done
             
-            # Abort the merge for now
-            git merge --abort
-            ((failed_merges++))
+            # Try to commit the resolution
+            if git commit --no-edit; then
+                log "Successfully resolved conflicts for $branch_name"
+                return 0
+            else
+                error "Could not resolve conflicts for $branch_name, aborting merge"
+                git merge --abort
+                return 1
+            fi
         else
-            ((failed_merges++))
+            error "Unknown merge failure for $branch_name"
+            git merge --abort
+            return 1
         fi
     fi
+}
+
+# Get list of branches to merge
+get_branches_to_merge() {
+    # Get recent branches (last 50) that are not main
+    git branch -r | grep -E "(cursor|codex)" | grep -v "main" | head -50
+}
+
+# Main execution
+main() {
+    log "Starting branch merging process"
     
-    echo "---"
+    # Ensure we're on main branch
+    git checkout main
+    
+    # Pull latest changes
+    log "Pulling latest changes from origin/main"
+    git pull origin main
+    
+    # Get branches to merge
+    branches=$(get_branches_to_merge)
+    
+    if [ -z "$branches" ]; then
+        log "No branches found to merge"
+        return 0
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
+    fi
+}
+
+# Function to merge a branch with conflict resolution
+merge_branch() {
+    local branch="$1"
+    echo "Attempting to merge $branch..."
+    
+<<<<<<< HEAD
+    if git merge "origin/$branch" --no-commit; then
+        echo "  - Merge successful without conflicts"
+        git commit -m "Merge $branch into main"
+        echo "  - Successfully merged $branch"
+        return 0
+    else
+        echo "  - Merge has conflicts, resolving..."
+        
+        # Get list of conflicted files
+        local conflicted_files=$(git diff --name-only --diff-filter=U)
+        
+        if [[ -n "$conflicted_files" ]]; then
+            echo "  - Resolving conflicts in $(echo "$conflicted_files" | wc -l) files..."
+            
+            # Resolve conflicts for each file
+            while IFS= read -r file; do
+                if [[ -n "$file" ]]; then
+                    resolve_conflicts "$file"
+                fi
+            done <<< "$conflicted_files"
+            
+            # Check if all conflicts are resolved
+            if git diff --check; then
+                git commit -m "Merge $branch into main (resolved conflicts)"
+                echo "  - Successfully merged $branch with resolved conflicts"
+                return 0
+            else
+                echo "  - Failed to resolve all conflicts in $branch"
+                git merge --abort
+                return 1
+            fi
+        else
+            echo "  - No conflicted files found, committing..."
+            git commit -m "Merge $branch into main"
+            return 0
+        fi
+    fi
+}
+
+# List of branches to merge (in order of priority)
+branches=(
+    "content-update-2025-09-16"
+    "chore/add-latest-content-2025-09-16"
+    "chore/add-new-content-and-promos-2025-09-16"
+    "automation/bundle-report"
+    "automation/changelog"
+)
+
+# Merge each branch
+for branch in "${branches[@]}"; do
+    echo ""
+    echo "=== Processing branch: $branch ==="
+    
+    if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+        merge_branch "$branch"
+    else
+        echo "  - Branch $branch not found, skipping..."
+    fi
 done
 
-echo "Merge process completed:"
-echo "✅ Successful merges: $successful_merges"
-echo "❌ Failed merges: $failed_merges"
+echo ""
+echo "=== Merge process completed ==="
+echo "Checking build status..."
 
-# Push the changes
-if [ $successful_merges -gt 0 ]; then
-    echo "Pushing merged changes..."
-    git push origin main --force
+# Test the build
+if npm run build:netlify; then
+    echo "✅ Build successful after merges"
+else
+    echo "❌ Build failed after merges"
+    exit 1
 fi
+
+echo "All branches merged successfully!"
+=======
+    log "Found branches to merge:"
+    echo "$branches"
+    
+    # Counter for statistics
+    success_count=0
+    failure_count=0
+    total_count=$(echo "$branches" | wc -l)
+    
+    # Merge each branch
+    while IFS= read -r branch; do
+        branch_name=$(echo "$branch" | sed 's/origin\///')
+        log "Processing branch $branch_name ($((success_count + failure_count + 1))/$total_count)"
+        
+        if merge_branch "$branch_name"; then
+            ((success_count++))
+        else
+            ((failure_count++))
+        fi
+        
+        # Add a small delay to avoid overwhelming the system
+        sleep 1
+        
+    done <<< "$branches"
+    
+    # Final statistics
+    log "Merge process completed!"
+    log "Successfully merged: $success_count branches"
+    log "Failed to merge: $failure_count branches"
+    log "Total processed: $total_count branches"
+    
+    # Push changes
+    log "Pushing changes to origin/main"
+    git push origin main
+}
+
+# Run main function
+main "$@"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

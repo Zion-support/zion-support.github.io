@@ -1566,8 +1566,3 @@ zion-os/src/app/page.tsx
 [2025-09-15 15:46:36] 🔧 Resolving conflicts in zion-os/src/app/page.tsx for branch content/ai-safety-benchmarks-2025...
 [2025-09-15 15:46:36] 🧩 Generic file: prefer main version
 [2025-09-15 15:46:36] ✅ Resolved conflicts in zion-os/src/app/page.tsx
-[2025-09-15 15:46:37] ✅ Successfully resolved conflicts and merged content/ai-safety-benchmarks-2025
-[2025-09-15 15:46:37] ✅ Branch content/ai-safety-benchmarks-2025 processed successfully
-[2025-09-15 15:46:37] 📊 Batch progress: 49 successful, 1 failed
-[2025-09-15 15:46:37] 📊 Overall progress: 49 successful, 1 failed, 212 conflicts resolved
-[2025-09-15 15:46:37] 💾 Pushing batch changes to remote...

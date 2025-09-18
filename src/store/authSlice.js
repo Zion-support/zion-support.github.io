@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
 // Async thunk for login
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
@@ -29,7 +30,9 @@ export const loginUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  };
+  }
+);
+
 // Async thunk for signup
 export const signupUser = createAsyncThunk(
   'auth/signupUser',
@@ -60,7 +63,9 @@ export const signupUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  };
+  }
+);
+
 // Async thunk for logout
 export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
@@ -73,7 +78,9 @@ export const logoutUser = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  };
+  }
+);
+
 // Async thunk for checking auth status
 export const checkAuthStatus = createAsyncThunk(
   'auth/checkAuthStatus',
@@ -92,13 +99,17 @@ export const checkAuthStatus = createAsyncThunk(
     } catch (error) {
       return rejectWithValue(error.message);
     }
-  };
+  }
+);
+
 const initialState = {
   user: null,
   token: localStorage.getItem('token'),
   isAuthenticated: false,
   isLoading: false,
   error: null
+};
+
 const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -183,14 +194,16 @@ const authSlice = createSlice({
         state.user = null;
         state.token = null;
       });
-  };
+  }
+});
+
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
+
 // Selectors
 export const selectUser = (state) => state.auth.user;
 export const selectToken = (state) => state.auth.token;
 export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
 export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;
-};
 
 export default authSlice.reducer;

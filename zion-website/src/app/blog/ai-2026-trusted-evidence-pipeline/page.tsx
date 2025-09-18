@@ -1,0 +1,36 @@
+import React from 'react'
+
+export default function BlogPostPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <article className="max-w-3xl mx-auto px-6 py-24">
+        <header>
+          <h1 className="text-4xl font-bold text-gray-900">AI 2026: Trusted Evidence Pipeline</h1>
+          <p className="mt-2 text-gray-500">Blueprint for audit‑ready evals, traces, and policy evidence in production.</p>
+        </header>
+        <section className="prose prose-lg mt-8">
+          <p>
+            Establishing a trusted evidence pipeline is foundational for safe, scalable AI operations. This blueprint
+            details how to collect, sign, and retain objective signals—evaluation results, policy events, traces, and
+            post‑incident artifacts—so teams can ship with confidence and pass audits.
+          </p>
+          <h2>Core capabilities</h2>
+          <ul>
+            <li>Evaluation harness with versioned datasets, rubrics, and SLAs</li>
+            <li>Signed telemetry for traces, tool invocations, and policy decisions</li>
+            <li>Evidence registry with lineage, retention, and access controls</li>
+            <li>Release gates and automated rollback on objective regressions</li>
+          </ul>
+          <h2>Rollout checklist</h2>
+          <ol>
+            <li>Define risk metrics and evidence requirements by use case</li>
+            <li>Integrate evidence emitters in CI/CD and runtime</li>
+            <li>Backfill lineage for critical workflows</li>
+            <li>Operationalize reviews and periodic drills</li>
+          </ol>
+        </section>
+      </article>
+    </div>
+  )
+}
+

@@ -1,11 +1,4 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { randomUUID } from 'crypto',;
-type Note = {
-  id: string
-  targetType: string
-  targetId: string
-  text: string
-  authorId: string
-  createdAt: number
-}
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });

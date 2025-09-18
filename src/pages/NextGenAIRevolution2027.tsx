@@ -1,3 +1,8 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const NextGenAIRevolution2027: React.FC = () => {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -27,6 +32,9 @@
               </button>
             </div>
           </div>
+        </div>
+      </div>
+
       {/* Revolutionary AI Technologies */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -40,6 +48,7 @@
             Discover the most advanced AI systems that are redefining what's possible in artificial intelligence
           </p>
         </motion.div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -62,6 +71,7 @@
               Explore Consciousness →
             </button>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -83,6 +93,7 @@
               Go Quantum →
             </button>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -105,13 +116,87 @@
             </button>
           </motion.div>
         </div>
+      </div>
+
+      {/* AI Applications Section */}
+      <div className="bg-gradient-to-r from-emerald-800/50 to-cyan-800/50 py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6">🚀 AI Applications</h2>
+            <p className="text-xl opacity-80 max-w-3xl mx-auto">
+              See how next-generation AI is transforming industries and creating new possibilities
+            </p>
           </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
+            >
+              <h3 className="text-2xl font-bold mb-4">🏥 Healthcare Revolution</h3>
+              <p className="text-emerald-100 mb-4">
+                AI systems that can diagnose diseases, develop treatments, and perform complex surgeries with superhuman precision
+              </p>
+              <ul className="text-emerald-200 space-y-2">
+                <li>• Instant disease diagnosis</li>
+                <li>• Personalized treatment plans</li>
+                <li>• Robotic surgery assistance</li>
+                <li>• Drug discovery acceleration</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-8"
+            >
+              <h3 className="text-2xl font-bold mb-4">🏭 Industrial Automation</h3>
+              <p className="text-cyan-100 mb-4">
+                Fully autonomous manufacturing systems that can adapt, optimize, and self-repair without human intervention
+              </p>
+              <ul className="text-cyan-200 space-y-2">
+                <li>• Self-optimizing production</li>
+                <li>• Predictive maintenance</li>
+                <li>• Quality control automation</li>
+                <li>• Supply chain optimization</li>
+              </ul>
+            </motion.div>
+          </div>
         </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="container mx-auto px-4 py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <h2 className="text-4xl font-bold mb-6">Ready to Experience the AI Future?</h2>
+          <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+            Join us in shaping the future of artificial intelligence and be part of the next technological revolution
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+              Start Your AI Journey
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
+              Contact Our AI Experts
+            </button>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
-
 };
-
 
 export default NextGenAIRevolution2027;

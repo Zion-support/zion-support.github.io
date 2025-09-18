@@ -1,4 +1,3 @@
-import React from 'react';
 
 const LiveChatWidget: React.FC = () => {
   return (

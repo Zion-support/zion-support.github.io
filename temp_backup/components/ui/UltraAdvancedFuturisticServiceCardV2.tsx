@@ -1,4 +1,3 @@
-import React from 'react';
 
 const UltraAdvancedFuturisticServiceCardV2: React.FC = () => {
   return (

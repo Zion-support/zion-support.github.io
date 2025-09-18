@@ -9,5 +9,4 @@ const AdvancedTechShowcase2027: React.FC = () => {
 
 };
 
-
 export default AdvancedTechShowcase2027;

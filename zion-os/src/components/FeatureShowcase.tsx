@@ -1,7 +1,4 @@
 // @ts-nocheck
-      "Cross-chain bridges",
-    ],
-  },
   const getColorClasses = (color: Feature["color"]) => {
     const colorMap = {
       blue: "from-blue-500 to-blue-600",

@@ -1,0 +1,29 @@
+# Build artifacts
+dist/
+.next/
+node_modules/
+
+# Disabled directories
+zion-os.disabled/
+zion-os/
+zion-website/
+zion.app/
+zion_academy/
+
+# Backup files
+*.backup
+*.backup.*
+
+# Generated files
+*.min.js
+*.bundle.js
+*.chunk.js
+
+# Service worker files
+sw.js
+sw-*.js
+service-worker.js
+
+# Static files
+public/
+static/

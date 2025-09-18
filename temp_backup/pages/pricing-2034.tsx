@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const pricing-2034: React.FC = () => {
   return (

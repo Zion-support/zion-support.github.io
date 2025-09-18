@@ -1,6 +1,4 @@
 import React from 'react';
-
-const Revolutionary2027ServicesShowcase: React.FC = () => {
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">Revolutionary2027ServicesShowcase</h3>
