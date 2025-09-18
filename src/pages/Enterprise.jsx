@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import SEO from '../components/SEO';
+=======
+import { SEO } from '../components/SEO.jsx';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';

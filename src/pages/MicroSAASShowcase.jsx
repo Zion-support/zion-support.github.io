@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+=======
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';

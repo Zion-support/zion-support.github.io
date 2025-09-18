@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import SEO from '../components/SEO';
 import { useAuth } from '../hooks/useAuth';
 import { Button } from '../components/ui/button';
@@ -8,6 +9,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../co
 import { Separator } from '../components/ui/separator';
 import { Switch } from '../components/ui/switch';
 import { Label } from '../components/ui/label';
+=======
+import { SEO } from '../components/SEO.jsx';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '../components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Wallet, Database, Save } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 import { toast } from 'sonner';
 export default function AccountSettings() {
     const { user } = useAuth();

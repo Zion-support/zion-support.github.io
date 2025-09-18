@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Star, Phone, Mail, Globe, CheckCircle, TrendingUp, Users, Shield, Zap } from 'lucide-react';
 import { Button } from '../components/ui/button';
+<<<<<<< HEAD
 import { Input } from '../components/ui/input';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '../data/expandedServices';
 import { TrustedBySection } from '../components/TrustedBySection';
+=======
+import { Input } from '@/components/ui/input';
+import { Badge } from '../components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
+import { TrustedBySection } from '@/components/TrustedBySection';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 export default function ExpandedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
