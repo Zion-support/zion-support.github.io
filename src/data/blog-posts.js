@@ -2825,7 +2825,8 @@ export const additionalBlogPost12 = {
     slug: "2025-q3-practical-eval-gated-rollouts"
   };
 
-export const additionalBlogPost13 = {
+export const additionalBlogPost13 = [
+  {
     id: 8201,
     title: "Operational Evidence Hubs: From Evals to Exec Decisions",
     excerpt: "How to centralize evals, incidents, approvals, and cost into one page that actually drives change.",
