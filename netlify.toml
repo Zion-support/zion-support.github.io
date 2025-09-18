@@ -1,12 +1,13 @@
-# Updated: Fixed for Vite React app deployment
+# Updated: Fixed for Next.js app deployment - 2025-09-18T17:10:00Z (run-13)
 [build]
-  command = "npm install --no-audit --no-fund && npm run build"
-  publish = "dist"
+  base = "zion-website"
+  command = "npm ci --no-audit --no-fund && npm run clean && npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
+  NODE_OPTIONS = "--max-old-space-size=6144"
   NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
@@ -14,26 +15,22 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
+  NEXT_TELEMETRY_DISABLED = "1"
+  NEXT_PRIVATE_TARGET = "server"
 
 [build.processing]
   skip_processing = true
 
 [[headers]]
-  for = "/assets/*"
+  for = "/_next/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/js/*"
+  for = "/api/*"
   [headers.values]
-    Content-Type = "application/javascript"
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/css/*"
-  [headers.values]
-    Content-Type = "text/css"
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "no-store, max-age=0"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "*.js"
