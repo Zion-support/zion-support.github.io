@@ -1,148 +1,109 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 interface PerformanceMetrics {
-  lcp: number
-  fid: number
-  cls: number
   loadTime: number
-  memoryUsage?: number
-  connectionType?: string
+  domContentLoaded: number
+  firstContentfulPaint: number
+  largestContentfulPaint: number
+  firstInputDelay: number
+  cumulativeLayoutShift: number
+  timeToInteractive: number
 }
 
 export default function PerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
-
   useEffect(() => {
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      let lcpValue = 0
-      let fidValue = 0
-      let clsValue = 0
+    // Only run in production and when performance API is available
+    if (process.env.NODE_ENV !== 'production' || typeof window === 'undefined' || !('performance' in window)) {
+      return
+    }
 
-      // Monitor Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as PerformanceEntry[]) {
+    const collectMetrics = () => {
+      const metrics: PerformanceMetrics = {
+        loadTime: 0,
+        domContentLoaded: 0,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        firstInputDelay: 0,
+        cumulativeLayoutShift: 0,
+        timeToInteractive: 0
+      }
+
+      // Basic timing metrics
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (navigation) {
+        metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart
+        metrics.domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart
+      }
+
+      // Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'paint') {
+            if (entry.name === 'first-contentful-paint') {
+              metrics.firstContentfulPaint = entry.startTime
+            }
+          }
+          
           if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry as PerformanceEntry & { startTime: number }
-            lcpValue = lcp.startTime
-            console.log('LCP:', lcpValue)
+            metrics.largestContentfulPaint = entry.startTime
           }
-        }
-      })
-
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as PerformanceEntry[]) {
+          
           if (entry.entryType === 'first-input') {
-            const e = entry as PerformanceEventTiming
-            if (typeof e.processingStart === 'number') {
-              fidValue = e.processingStart - e.startTime
-              console.log('FID:', fidValue)
-            }
+            metrics.firstInputDelay = (entry as any).processingStart - entry.startTime
+          }
+          
+          if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+            metrics.cumulativeLayoutShift += (entry as any).value
           }
         }
       })
 
-      fidObserver.observe({ entryTypes: ['first-input'] })
+      // Observe different types of performance entries
+      try {
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
+      } catch (error) {
+        console.warn('Performance Observer not fully supported:', error)
+      }
 
-      // Monitor Cumulative Layout Shift (CLS)
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries() as PerformanceEntry[]) {
-          if (entry.entryType === 'layout-shift') {
-            const ls = entry as PerformanceEntry & { value?: number; hadRecentInput?: boolean }
-            if (!ls.hadRecentInput && typeof ls.value === 'number') {
-              clsValue += ls.value
-              console.log('CLS:', clsValue)
-            }
-          }
-        }
-      })
-
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
-
-      // Monitor page load time and connection
-      const collectMetrics = () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        const loadTime = navigation.loadEventEnd - navigation.fetchStart
-        
-        // Get connection info
-        const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection
-        
-        // Get memory usage if available
-        const memory = (performance as any).memory
-        
-        const performanceData: PerformanceMetrics = {
-          lcp: lcpValue,
-          fid: fidValue,
-          cls: clsValue,
-          loadTime,
-          connectionType: connection?.effectiveType || 'unknown',
-          memoryUsage: memory ? memory.usedJSHeapSize : undefined
-        }
-        
-        setMetrics(performanceData)
-        console.log('Performance Metrics:', performanceData)
-        
-        // Send to analytics service
-        if (process.env.NODE_ENV === 'production') {
+      // Send metrics to analytics endpoint
+      const sendMetrics = () => {
+        if (metrics.loadTime > 0 || metrics.firstContentfulPaint > 0) {
           fetch('/api/analytics/performance', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify(performanceData),
+            body: JSON.stringify({
+              ...metrics,
+              url: window.location.href,
+              timestamp: new Date().toISOString(),
+              userAgent: navigator.userAgent,
+              connection: (navigator as any).connection?.effectiveType || 'unknown'
+            }),
           }).catch(err => console.error('Failed to send performance metrics:', err))
         }
       }
 
-      window.addEventListener('load', collectMetrics)
-      
-      // Also collect after a delay to ensure all metrics are captured
-      setTimeout(collectMetrics, 3000)
-
-      return () => {
-        lcpObserver.disconnect()
-        fidObserver.disconnect()
-        clsObserver.disconnect()
-        window.removeEventListener('load', collectMetrics)
+      // Send metrics after page load
+      if (document.readyState === 'complete') {
+        setTimeout(sendMetrics, 1000)
+      } else {
+        window.addEventListener('load', () => {
+          setTimeout(sendMetrics, 1000)
+        })
       }
+
+      // Cleanup observer after 10 seconds
+      setTimeout(() => {
+        observer.disconnect()
+      }, 10000)
     }
+
+    // Start collecting metrics
+    collectMetrics()
   }, [])
 
-  // Performance debug panel (development only)
-  if (process.env.NODE_ENV === 'development' && metrics) {
-    return (
-      <div style={{
-        position: 'fixed',
-        bottom: 0,
-        right: 0,
-        background: 'rgba(0,0,0,0.9)',
-        color: 'white',
-        padding: '12px',
-        fontSize: '11px',
-        fontFamily: 'monospace',
-        zIndex: 9999,
-        borderTopLeftRadius: '8px',
-        minWidth: '200px'
-      }}>
-        <div style={{ fontWeight: 'bold', marginBottom: '8px', color: '#60a5fa' }}>
-          Performance Metrics
-        </div>
-        <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-        <div>FID: {metrics.fid.toFixed(0)}ms</div>
-        <div>CLS: {metrics.cls.toFixed(3)}</div>
-        <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
-        <div>Connection: {metrics.connectionType}</div>
-        {metrics.memoryUsage && (
-          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB</div>
-        )}
-      </div>
-    )
-  }
-
-  return null
+  return null // This component doesn't render anything
 }

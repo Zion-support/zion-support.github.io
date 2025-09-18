@@ -69,7 +69,6 @@ import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryCont
 import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 import RevolutionaryTechShowcase2026 from './src/pages/RevolutionaryTechShowcase2026';
 import AdvancedAISolutions2027 from './src/pages/AdvancedAISolutions2027';
-import QuantumComputingSolutions2025 from './src/pages/QuantumComputingSolutions2025';
 import RevolutionaryContentBanner from './src/components/RevolutionaryContentBanner';
 import UltimateTechBreakthrough2026 from './src/pages/UltimateTechBreakthrough2026';
 import RevolutionaryServices2025 from './src/pages/RevolutionaryServices2025';
