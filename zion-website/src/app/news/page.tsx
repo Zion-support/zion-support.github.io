@@ -1,54 +1,3 @@
-import React from 'react'
-
-const posts = [
-  {
-    slug: 'ai-platform-2-0',
-    title: 'Announcing Zion AI Platform 2.0',
-    date: '2025-09-15',
-    summary: 'Major upgrades to inference performance, observability, and enterprise security.',
-  },
-  {
-    slug: 'customer-win-retail',
-    title: 'Global retail autonomous fulfillment rollout',
-    date: '2025-09-15',
-    summary: 'Autonomous agents improved OTIF by 11% across 14 DCs with dynamic routing.',
-  },
-  {
-    slug: 'customer-win-finance',
-    title: 'Fortune 100 finance deployment',
-    date: '2025-09-10',
-    summary: 'Rolled out autonomous operations across 12 business units in 8 weeks.',
-  },
-  {
-    slug: 'research-breakthrough',
-    title: 'New research on quantum neural search',
-    date: '2025-09-02',
-    summary: 'Peer-reviewed paper on hybrid classical-quantum retrieval achieves SOTA.',
-  },
-]
-
-export default function NewsPage() {
-  return (
-    <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-7xl px-6 pt-24">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">News & Updates</h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">Latest announcements, customer wins, and research highlights.</p>
-        </div>
-
-        <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {posts.map((post) => (
-              <a key={post.slug} href={`/news/${post.slug}`} className="group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors">
-                <p className="text-xs text-gray-400">{new Date(post.date).toLocaleDateString()}</p>
-                <h3 className="mt-1 text-white font-semibold group-hover:text-blue-400">{post.title}</h3>
-                <p className="mt-2 text-sm text-gray-300 line-clamp-3">{post.summary}</p>
-                <span className="mt-4 inline-block text-sm font-semibold text-blue-400 group-hover:text-blue-300">Read more →</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
 import Link from 'next/link'
 
 export const metadata = {
@@ -59,40 +8,63 @@ export const metadata = {
 const newsItems = [
   {
     id: 'ai-governance-blueprint-2025',
-    title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
-    summary: 'A pragmatic framework combining machine-enforceable policy with human oversight to safely scale autonomous systems.',
+    title: 'AI Governance Blueprint 2025',
+    summary: 'Comprehensive framework for implementing AI governance in enterprise environments.',
     date: '2025-09-15',
-    category: 'AI Governance'
+    href: '/news/ai-governance-blueprint-2025'
+  },
+  {
+    id: 'ai-platform-2-0',
+    title: 'AI Platform 2.0 Launch',
+    summary: 'Next-generation AI platform with enhanced capabilities and improved performance.',
+    date: '2025-09-10',
+    href: '/news/ai-platform-2-0'
+  },
+  {
+    id: 'customer-win-finance',
+    title: 'Customer Success: Finance Sector',
+    summary: 'How we helped a major financial institution reduce costs by 40% with AI automation.',
+    date: '2025-09-05',
+    href: '/news/customer-win-finance'
+  },
+  {
+    id: 'research-breakthrough',
+    title: 'Research Breakthrough: Quantum AI',
+    summary: 'Our research team achieves breakthrough in quantum-enhanced machine learning.',
+    date: '2025-09-01',
+    href: '/news/research-breakthrough'
   }
 ]
 
-export default function NewsIndexPage() {
+export default function NewsPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <section className="px-6 py-16 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">News & Updates</h1>
-          <p className="mt-4 text-lg text-gray-300">Announcements, research highlights, and product updates.</p>
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">News & Updates</h1>
+          <p className="mt-4 text-lg text-gray-300">
+            Stay informed with the latest announcements, research highlights, and product updates from Zion Tech Group.
+          </p>
         </div>
-        <div className="mx-auto mt-12 max-w-5xl grid grid-cols-1 gap-6 sm:gap-8">
-          {newsItems.map((item) => (
-            <article key={item.id} className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
-              <div className="flex items-center justify-between text-sm text-gray-400">
-                <span className="px-2 py-1 rounded-lg bg-white/10 text-blue-300">{item.category}</span>
-                <time dateTime={item.date}>{new Date(item.date).toLocaleDateString()}</time>
-              </div>
-              <h2 className="mt-3 text-2xl font-semibold">
-                <Link href={`/news/${item.id}`} className="hover:text-blue-400">{item.title}</Link>
-              </h2>
-              <p className="mt-2 text-gray-300">{item.summary}</p>
-              <div className="mt-4">
-                <Link href={`/news/${item.id}`} className="text-blue-400 hover:text-blue-300 font-medium">Read more →</Link>
-              </div>
-            </article>
-          ))}
+        <div className="mx-auto mt-16 max-w-2xl lg:mt-20 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+            {newsItems.map((post) => (
+              <a
+                key={post.id}
+                href={post.href}
+                className="group relative rounded-2xl bg-white/5 p-6 backdrop-blur-sm hover:bg-white/10 transition-colors"
+              >
+                <div>
+                  <div className="text-xs text-blue-300">{post.date}</div>
+                  <h3 className="mt-2 text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">{post.title}</h3>
+                  <p className="mt-2 text-sm text-gray-300 line-clamp-3">{post.summary}</p>
+                  <span className="mt-4 inline-block text-sm font-semibold text-blue-400 group-hover:text-blue-300">Read more →</span>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   )
 }
-

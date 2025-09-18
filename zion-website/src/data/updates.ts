@@ -1,4 +1,4 @@
-export type SiteUpdate = {
+export type UpdateItem = {
   title: string
   summary: string
   href: string
@@ -6,7 +6,8 @@ export type SiteUpdate = {
   tag?: string
 }
 
-export const siteUpdates: SiteUpdate[] = [
+export const siteUpdates: UpdateItem[] = [
+  {
     title: 'Deep Dive: Enterprise Agent Observability (2026)',
     summary:
       'Unified command center with live evals, guardrails, and automated incident workflows for agent ops.',
@@ -175,6 +176,9 @@ export const siteUpdates: SiteUpdate[] = [
     summary:
       'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
     href: '/updates/ai-lab-open-benchmarks-portal',
+    date: '2025-09-15',
+    tag: 'Launch'
+  },
   // Added 2025-09-15 (new content created now)
   {
     title: 'Launch: Autonomous Security Copilot v1.0',
@@ -1443,75 +1447,13 @@ export const siteUpdates: SiteUpdate[] = [
   }
 ]
 
-export const getLatestUpdates = (limit = 6): SiteUpdate[] => {
+// Export aliases for compatibility
+export type SiteUpdate = UpdateItem
+
+export const getLatestUpdates = (limit = 6): UpdateItem[] => {
   const safeDate = (d?: string) => (d ? new Date(d).getTime() : 0)
   return [...siteUpdates]
     .sort((a, b) => safeDate(b.date) - safeDate(a.date))
     .slice(0, limit)
 }
-
-}
-
-export const updates: UpdateItem[] = [
-  {
-    id: 'advanced-blockchain-course',
-    tag: 'Announcement',
-  },
-  {
-    id: 'advanced-blockchain-dev-course',
-    title: 'New Course: Advanced Blockchain Development',
-    summary:
-      'Best practices for securing AI systems in production: model, data, and pipeline.',
-    href: '/updates/ai-security-blueprint-2025',
-    date: '2025-09-14',
-    tag: 'Announcement',
-  },
-  {
-    id: 'genai-engineering-course',
-    title: 'New Course: GenAI Engineering Masterclass',
-    summary:
-      'Hands-on masterclass on RAG, agents, evals, safety, and productionization.',
-    href: '/updates/genai-engineering-masterclass',
-    date: '2025-09-13',
-    tag: 'Course',
-  },
-  {
-    id: 'ai-lab-research-update',
-    title: 'Research: Long-horizon Planning with Tool-using Agents',
-    summary:
-      'Our latest results show scalable planning via hierarchical tool-use and memory.',
-    href: '/updates/long-horizon-tool-agents',
-    date: '2025-09-12',
-    tag: 'Research',
-  },
-  {
-    id: 'advanced-blockchain-dev-course',
-    title: 'New Course: Advanced Blockchain Development',
-    summary:
-      'Comprehensive blockchain course covering smart contracts, DeFi, L2 scaling, and security.',
-    date: '2025-09-10',
-    href: '/updates/advanced-blockchain-course',
-  },
-  {
-    id: 'dapp-challenge',
-    title: 'Community Challenge: Build a DApp',
-    summary: 'Join our DApp challenge and win prizes up to $1000 in ZION tokens.',
-    date: '2025-09-08',
-    href: '/updates/dapp-challenge',
-  },
-  {
-    id: 'web3-learning-path',
-    title: 'New Learning Path: Web3 Fundamentals',
-    summary: 'Beginner-friendly path covering blockchain basics, NFTs, and Web3 security.',
-    date: '2025-09-05',
-    href: '/updates/web3-learning-path',
-  },
-  {
-    id: 'ai-research-lab',
-    title: 'AI Research Lab: September Highlights',
-    summary: 'Breakthroughs in autonomous research agents and multimodal retrieval.',
-    date: '2025-09-01',
-    href: '/updates/ai-research-lab-sept',
-  },
-]
 
