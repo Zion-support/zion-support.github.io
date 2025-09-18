@@ -51,6 +51,7 @@ const Header: React.FC = () => {
               onClick={toggleMobileMenu}
               className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900"
               aria-label="Toggle mobile menu"
+            >
               <svg
                 className="h-6 w-6"
                 fill="none"

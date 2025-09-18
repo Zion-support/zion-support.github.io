@@ -15,6 +15,7 @@ const Footer: React.FC = () => {
       { name: 'Quantum Computing', path: '/services' },
       { name: 'Cybersecurity', path: '/services' },
       { name: 'Cloud Solutions', path: '/services' }
+    ],
     resources: [
       { name: 'Documentation', path: '/docs' },
       { name: 'API Reference', path: '/api' },
