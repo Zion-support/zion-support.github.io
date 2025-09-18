@@ -1,7 +1,6 @@
 [build]
-  base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  command = "npm ci --no-audit --no-fund && npm run build:netlify"
+  publish = "dist"
   command_timeout = "30m"
 
 # Trigger Netlify build: no-op change on 2025-09-18T00:00:00Z
@@ -17,18 +16,20 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+## No Next.js plugin needed for Vite SPA
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["zion-website/public/**/*"]
 
 [build.processing]
   skip_processing = true
 
-# Note: Next.js handles routing; SPA fallback not required
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/assets/*"
@@ -219,4 +220,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js routing is handled by @netlify/plugin-nextjs
+## End of Netlify configuration
