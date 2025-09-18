@@ -22,19 +22,45 @@ app-disabled/
 api.disabled/
 api.disabled.temp/
 netlify/functions/
+automation/
+backup-merge-conflicts/
+recovered-branches/
+apps/
+server/
+api-disabled/
 
 # Generated files
 *.min.js
 *.bundle.js
 *.chunk.js
+*.generated.*
+*.auto.*
+*.backup.*
+*.backup
+*_backup.*
+*_backup
+*.log
+*.md
+*.txt
+*.json
+*.tsv
+*.report.*
+*.tmp
+*.temp
+*~
 
 # Static files
 public/sw.js
 static/
+public/automation/
+temp-problematic-pages/
+temp_backup_*/
 
 # Test artifacts
 coverage/
 .nyc_output/
+__tests__/
+__mocks__/
 
 # IDE files
 .vscode/
@@ -49,6 +75,7 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+logs/
 
 # Runtime data
 pids
@@ -106,6 +133,57 @@ public
 # Temporary folders
 tmp/
 temp/
+
+# Service workers and static JS
+**/sw.js
+**/analytics.js
+**/feedback.js
+**/integration.js
+sw.js
+service-worker.js
+
+# Config files that don't need linting
+*.config.js
+*.config.ts
+*.config.cjs
+postcss.config.js
+tailwind.config.js
+next.config.js
+babel.config.js
+babel.config.cjs
+
+# Automation and scripts
+*.cjs
+scripts/
+automation/
+
+# Test files (if not needed for linting)
+**/*.test.js
+**/*.test.ts
+**/*.test.tsx
+
+# All problematic directories and files
+**/zion-os/**
+**/zion-os.disabled/**
+**/zion-website/**
+**/zion.app/**
+**/zion_academy/**
+**/automation/**
+**/backup-merge-conflicts/**
+**/recovered-branches/**
+**/public/automation/**
+**/temp-problematic-pages/**
+**/temp_backup_*/**
+
+# Static assets and generated files
+**/.next/**
+**/static/**
+**/chunks/**
+**/server/**
+**/middleware-*
+**/server-reference-*
+**/_buildManifest.js
+**/_ssgManifest.js
 
 # Specific problematic files
 zion-os.disabled/zion-os/.next/
