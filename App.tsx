@@ -4,7 +4,6 @@ import Header from './src/Header';
 import ScrollToTop from './src/ScrollToTop';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
-<<<<<<< HEAD
 import CaseStudyPage from './src/CaseStudyPage';
 // Commented out missing imports - these files don't exist in the pages directory
 // import InnovationLanding2025 from './src/pages/InnovationLanding2025';
@@ -43,17 +42,6 @@ import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 // import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 
 export default function App(): JSX.Element {
-=======
-import './src/index.css';
-import './src/styles/accessibility.css';
-import './src/styles/optimizations.css';
-
-// Import only existing components
-import About from './About';
-import Blog from './src/pages/Blog';
-
-function App() {
->>>>>>> origin/backup-main-20250918-004015
   return (
     <Router>
       <div className="min-h-screen bg-white">
@@ -127,7 +115,7 @@ function App() {
           <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} /> */}
           
           <Route path="/case-study/:id" element={<CaseStudyPage />} />
-=======
+          
           <Route
             path="/"
             element={
@@ -160,7 +148,6 @@ function App() {
               </div>
             }
           />
->>>>>>> origin/backup-main-20250918-004015
         </Routes>
 
         <Footer />
