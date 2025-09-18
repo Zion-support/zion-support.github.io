@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/Layout.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import Layout from "./components/Layout" describe("Layout",() => {" test("renders without crashing",() => {" render(<Layout / / />) expect(screen.getByTestId("layout")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<Layout / / />) }) test("handles user interactions",() => {" render(<Layout / / />) }) test("applies correct styling",() => {" render(<Layout / / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import Layout from '../components/Layout" describe('Layout',() => {' test('renders without crashing',() => {' render(<Layout / / />) expect(screen.getByTestId("layout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Layout / / />) }) test('handles user interactions',() => {' render(<Layout / / />) }) test('applies correct styling',() => {' render(<Layout / / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import Layout from '../components/Layout" describe('Layout',() => {' test('renders without crashing',() => {' render(<Layout / / />) expect(screen.getByTestId("layout")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<Layout / / />) }) test('handles user interactions',() => {' render(<Layout / / />) }) test('applies correct styling',() => {' render(<Layout / / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/Layout.test.js
