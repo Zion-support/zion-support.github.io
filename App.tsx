@@ -76,7 +76,6 @@ export default function App(): JSX.Element {
                         🔍 Comprehensive Tech Insights →
                       </a>
                     </div>
-                    </div>
                   </div>
                 </div>
 
