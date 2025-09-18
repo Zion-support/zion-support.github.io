@@ -27,6 +27,9 @@
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [build.processing]
   skip_processing = true
 [[headers]]
@@ -219,5 +222,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+
