@@ -1,33 +1,43 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the main branch version
-# This will resolve conflicts by keeping the main branch version (HEAD)
+# Script to automatically resolve merge conflicts
+# Takes the version from the incoming branch (origin/revolutionary-content-merge-1758084568) for most files
 
-echo "Resolving merge conflicts by keeping main branch version..."
+echo "Resolving merge conflicts automatically..."
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- > conflicted_files.txt
+# List of files with conflicts
+conflict_files=(
+    "src/Footer.tsx"
+    "src/components/InteractiveTechShowcase.tsx"
+    "src/components/InteractiveTechShowcase2026.tsx"
+    "src/components/NewContentShowcase.tsx"
+    "src/components/RevolutionaryContentShowcase2026.tsx"
+    "src/components/UltimateContentShowcase2026.tsx"
+    "src/hooks/useWebhooks.ts"
+    "src/pages/AIInnovationHub2026.tsx"
+    "src/pages/FutureTechTrends2026.tsx"
+    "src/pages/QuantumAIRevolution2026.tsx"
+    "src/pages/QuantumNeuralFusion2026.tsx"
+    "src/pages/UltimateTechShowcase2026.tsx"
+    "src/utils/notifications.ts"
+    "src/utils/safeStorage.ts"
+)
 
-echo "Found $(wc -l < conflicted_files.txt) conflicted files"
-
-# For each conflicted file, resolve by choosing main branch version
-while IFS= read -r file; do
+# For each conflicted file, take the version from the incoming branch
+for file in "${conflict_files[@]}"; do
     if [ -f "$file" ]; then
-        echo "Resolving conflict in: $file"
-        # Use git checkout to choose the main branch version (HEAD)
-        git checkout --ours "$file"
+        echo "Resolving conflicts in $file..."
+        # Use git checkout to take the version from the incoming branch
+        git checkout --theirs "$file"
         git add "$file"
     fi
-done < conflicted_files.txt
+done
 
-# Clean up
-rm conflicted_files.txt
+# Handle backup files and dist files by removing them (they're not needed)
+echo "Removing unnecessary backup and dist files..."
+rm -f "dist/sw.js"
+rm -f "recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/fetchWithRetry.ts.backup.1758109657.backup.1758130384"
+rm -f "recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/productionLogger.ts"
+rm -f "src/pages/FutureTechInnovationHub2026.tsx.backup"
 
-echo "Conflicts resolved. Committing merge..."
-git commit -m "Resolve merge conflicts by keeping main branch version
-
-- Merged origin/auto/autonomy-17186719616 into main
-- Resolved conflicts by choosing main branch version
-- All conflicts automatically resolved"
-
-echo "Merge completed successfully!"
+echo "All conflicts resolved!"

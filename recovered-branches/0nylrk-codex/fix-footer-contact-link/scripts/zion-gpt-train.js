@@ -34,11 +34,6 @@ function stripPii(text) {
   if (!text) return text;
   let result = text;
   // Emails
-<<<<<<< HEAD
-  result = result.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]');
-=======
-  result = result.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, '[email]');
->>>>>>> origin/auto/autonomy-17186719616
   // US-style phone numbers
   result = result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]');
   // Naive full name removal (two capitalized words)

@@ -1,21 +1,22 @@
 import React from 'react';
-const Enterprise: Reac t.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const Enterprise: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <h1 className="text-3xl font-bold text-gray-900">Enterprise Solutions</h1>
-      <p className="mt-4 text-gray-700">
-        Explore our enterprise-grade AI, cloud, and cybersecurity solutions tailored for large organizations.
-      </p>
-      <ul className="mt-6 list-disc pl-6 space-y-2 text-gray-700">
-        <li>AI-powered analytics and automation</li>
-        <li>Cloud modernization and FinOps</li>
-        <li>Zero Trust cybersecurity and compliance</li>
-        <li>Scalable infrastructure and observability</li>
-      </ul>
-      <a href="/contact" className="mt-8 inline-block rounded-md bg-blue-600 px-5 py-2.5 text-white hover: b g-blue-700">
-        Talk to an expert
-      </a>
-    </div>';
-  )};';';
-export default Enterprise;';';';
-"';';';';
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>Enterprise | Zion Tech Group</title>
+        <meta name="description" content="Enterprise - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">Enterprise</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Enterprise;

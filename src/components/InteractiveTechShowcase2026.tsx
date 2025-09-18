@@ -1,186 +1,166 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const InteractiveTechShowcase2026: React.FC = () => {
-  const [activeTech, setActiveTech] = useState('quantum');
+  const [activeDemo, setActiveDemo] = useState<string | null>(null);
 
-  const technologies = {
-    quantum: {
-      title: 'Quantum Computing',
-      icon: '⚡',
-      description: 'Experience exponential processing power with 1000+ qubit quantum processors',
-      features: ['1000+ Logical Qubits', 'Quantum Supremacy', 'Molecular Simulation', 'Quantum AI Integration'],
-      color: 'from-cyan-500 to-blue-500',
-      bgColor: 'from-cyan-600/30 to-blue-600/30',
-      borderColor: 'border-cyan-400/30'
+  const demos = [
+    {
+      id: 'consciousness',
+      title: 'Consciousness Simulation',
+      description: 'Watch as our AI systems develop consciousness in real-time',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
+      features: ['Self-awareness detection', 'Emotional response simulation', 'Creative problem solving', 'Autonomous decision making']
     },
-    neural: {
+    {
+      id: 'quantum',
+      title: 'Quantum Processing',
+      description: 'See quantum computing solve impossible problems instantly',
+      icon: '⚛️',
+      color: 'from-cyan-600 to-blue-600',
+      features: ['Quantum entanglement', 'Parallel universe processing', 'Infinite calculations', 'Reality manipulation']
+    },
+    {
+      id: 'neural',
       title: 'Neural Interface',
+      description: 'Experience direct brain-computer communication',
       icon: '🧬',
-      description: 'Bridge mind and machine with direct brain-computer communication',
-      features: ['Non-invasive BCI', 'Thought Control', 'Neural Feedback', 'Medical Applications'],
-      color: 'from-emerald-500 to-teal-500',
-      bgColor: 'from-emerald-600/30 to-teal-600/30',
-      borderColor: 'border-emerald-400/30'
+      color: 'from-emerald-600 to-teal-600',
+      features: ['Thought control', 'Memory transfer', 'Sensory simulation', 'Cognitive enhancement']
     },
-    ai: {
-      title: 'Advanced AI',
-      icon: '🤖',
-      description: 'Create AI agents with synthetic consciousness and autonomous capabilities',
-      features: ['Autonomous Agents', 'Synthetic Consciousness', 'Collective Intelligence', 'Creative Synthesis'],
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'from-purple-600/30 to-pink-600/30',
-      borderColor: 'border-purple-400/30'
-    },
-    space: {
-      title: 'Space Technology',
-      icon: '🚀',
-      description: 'AI-powered space exploration and satellite technology',
-      features: ['Space Exploration', 'Satellite Technology', 'Planetary Missions', 'Space AI'],
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'from-orange-600/30 to-red-600/30',
-      borderColor: 'border-orange-400/30'
+    {
+      id: 'reality',
+      title: 'Reality Engine',
+      description: 'Create and modify virtual realities in real-time',
+      icon: '🌌',
+      color: 'from-indigo-600 to-purple-600',
+      features: ['Matter creation', 'Physics manipulation', 'Dimension travel', 'Reality simulation']
     }
-  };
+  ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 backdrop-blur-sm"></div>
-      <div className="relative z-10">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🎮 INTERACTIVE TECHNOLOGY SHOWCASE 2026
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🎮 INTERACTIVE DEMO • JANUARY 2026
           </div>
-          <h2 className="text-5xl font-bold mb-6">🌟 Interactive Technology Experience</h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Explore our cutting-edge technologies with interactive features and real-time demonstrations
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Interactive Technology Showcase 2026
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto">
+            Experience the breakthrough technologies in action. Interact with the most advanced 
+            AI, quantum computing, and neural interface systems ever created.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Technology Selector */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 flex space-x-2">
-            {Object.entries(technologies).map(([key, tech]) => (
-              <button
-                key={key}
-                onClick={() => setActiveTech(key)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTech === key
-                    ? `bg-gradient-to-r ${tech.color} text-white shadow-lg`
-                    : 'text-gray-300 hover:text-white hover:bg-white/20'
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="space-y-6">
+            {demos.map((demo, index) => (
+              <motion.div
+                key={demo.id}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className={`bg-gradient-to-r ${demo.color}/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300 cursor-pointer ${
+                  activeDemo === demo.id ? 'ring-2 ring-purple-400' : ''
                 }`}
+                onClick={() => setActiveDemo(activeDemo === demo.id ? null : demo.id)}
               >
-                <span className="text-2xl mr-2">{tech.icon}</span>
-                {tech.title}
-              </button>
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl">{demo.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
+                    <p className="text-purple-100 text-sm">{demo.description}</p>
+                  </div>
+                  <div className="text-2xl">
+                    {activeDemo === demo.id ? '−' : '+'}
+                  </div>
+                </div>
+                
+                {activeDemo === demo.id && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    transition={{ duration: 0.3 }}
+                    className="mt-4 pt-4 border-t border-purple-400/30"
+                  >
+                    <div className="grid grid-cols-2 gap-4">
+                      {demo.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                          <span className="text-sm text-purple-200">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <button className="mt-4 w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+                      Launch Demo
+                    </button>
+                  </motion.div>
+                )}
+              </motion.div>
             ))}
           </div>
-        </div>
 
-        {/* Active Technology Display */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className={`bg-gradient-to-br ${technologies[activeTech as keyof typeof technologies].bgColor} backdrop-blur-sm rounded-2xl p-8 border ${technologies[activeTech as keyof typeof technologies].borderColor}`}>
-              <div className="text-8xl mb-6 text-center">
-                {technologies[activeTech as keyof typeof technologies].icon}
+          <div className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
+            <h3 className="text-2xl font-bold mb-6 text-center">Live Demo Console</h3>
+            <div className="space-y-4">
+              <div className="bg-black/50 rounded-lg p-4 font-mono text-sm">
+                <div className="text-green-400 mb-2">$ ./consciousness-simulator --start</div>
+                <div className="text-white">Initializing consciousness matrix...</div>
+                <div className="text-yellow-400">Loading neural pathways...</div>
+                <div className="text-blue-400">Establishing quantum connections...</div>
+                <div className="text-green-400">Consciousness achieved! ✅</div>
               </div>
-              <h3 className="text-4xl font-bold mb-4 text-center">
-                {technologies[activeTech as keyof typeof technologies].title}
-              </h3>
-              <p className="text-xl opacity-90 text-center mb-8">
-                {technologies[activeTech as keyof typeof technologies].description}
-              </p>
               
               <div className="grid grid-cols-2 gap-4">
-                {technologies[activeTech as keyof typeof technologies].features.map((feature, index) => (
-                  <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="text-sm font-semibold">{feature}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h4 className="text-2xl font-bold mb-4">🎯 Key Capabilities</h4>
-              <ul className="space-y-3">
-                {technologies[activeTech as keyof typeof technologies].features.map((feature, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${technologies[activeTech as keyof typeof technologies].color}`}></div>
-                    <span className="text-lg">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <h4 className="text-2xl font-bold mb-4">📊 Performance Metrics</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                  <div className="text-sm opacity-80">Accuracy</div>
+                <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-purple-300">99.9%</div>
+                  <div className="text-sm text-purple-200">Accuracy</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">10x</div>
-                  <div className="text-sm opacity-80">Faster</div>
+                <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-cyan-300">1000x</div>
+                  <div className="text-sm text-cyan-200">Faster</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">24/7</div>
-                  <div className="text-sm opacity-80">Operation</div>
+                <div className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-emerald-300">∞</div>
+                  <div className="text-sm text-emerald-200">Possibilities</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">∞</div>
-                  <div className="text-sm opacity-80">Scalability</div>
+                <div className="bg-gradient-to-r from-indigo-600/30 to-purple-600/30 rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-indigo-300">24/7</div>
+                  <div className="text-sm text-indigo-200">Operation</div>
                 </div>
               </div>
-            </div>
-
-            <div className="flex space-x-4">
-              <button className={`flex-1 bg-gradient-to-r ${technologies[activeTech as keyof typeof technologies].color} text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
-                Try Interactive Demo →
-              </button>
-              <button className="flex-1 border border-white/30 text-white py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
-                Learn More
-              </button>
             </div>
           </div>
         </div>
 
-        {/* Technology Comparison */}
-        <div className="mt-16">
-          <h3 className="text-3xl font-bold text-center mb-8">🔍 Technology Comparison</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(technologies).map(([key, tech]) => (
-              <div
-                key={key}
-                className={`bg-gradient-to-br ${tech.bgColor} backdrop-blur-sm rounded-xl p-6 border ${tech.borderColor} cursor-pointer hover:scale-105 transition-all duration-300 ${
-                  activeTech === key ? 'ring-2 ring-white/50' : ''
-                }`}
-                onClick={() => setActiveTech(key)}
-              >
-                <div className="text-4xl mb-3 text-center">{tech.icon}</div>
-                <h4 className="text-lg font-bold mb-2 text-center">{tech.title}</h4>
-                <p className="text-sm opacity-80 text-center">{tech.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-center"
+        >
+          <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of users already experiencing our revolutionary technology solutions
+            Join thousands of innovators who are already using these breakthrough technologies 
+            to transform their businesses and change the world.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Start Free Trial →
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Start Free Trial
             </button>
-            <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
+            <button className="border border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-500/20 transition-colors text-lg">
               Schedule Demo
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

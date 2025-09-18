@@ -62,10 +62,6 @@ export const innovative2025AIAutonomousEcosystem = [
     demoUrl: 'https://ziontechgroup.com/demo/ai-content-creation',
     documentation: 'https://ziontechgroup.com/docs/ai-content-creation'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Autonomous Customer Service Platform
   {
     id: 'ai-autonomous-customer-service-2025',
@@ -129,10 +125,6 @@ export const innovative2025AIAutonomousEcosystem = [
     demoUrl: 'https://ziontechgroup.com/demo/ai-customer-service',
     documentation: 'https://ziontechgroup.com/docs/ai-customer-service'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Autonomous Sales Intelligence Platform
   {
     id: 'ai-autonomous-sales-intelligence-2025',
@@ -196,10 +188,6 @@ export const innovative2025AIAutonomousEcosystem = [
     demoUrl: 'https://ziontechgroup.com/demo/ai-sales-intelligence',
     documentation: 'https://ziontechgroup.com/docs/ai-sales-intelligence'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Autonomous Financial Analysis Platform
   {
     id: 'ai-autonomous-financial-analysis-2025',
@@ -263,10 +251,6 @@ export const innovative2025AIAutonomousEcosystem = [
     demoUrl: 'https://ziontechgroup.com/demo/ai-financial-analysis',
     documentation: 'https://ziontechgroup.com/docs/ai-financial-analysis'
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Autonomous Healthcare Diagnostics Platform
   {
     id: 'ai-autonomous-healthcare-diagnostics-2025',

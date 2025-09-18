@@ -1,36 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-import { useRouter } from 'next/router';
-import CertificatePreview from '../../../components/learn/CertificatePreview';
-export default function CertificatePage() {
-  const router = useRouter()
-  const { courseId } = router.query as { courseId: string }
-  if (!courseId) return null
-
+const certificate: React.FC = () => {
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Certificate</h1>
-      <CertificatePreview courseId={courseId} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>certificate | Zion Tech Group</title>
+        <meta name="description" content="certificate - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">certificate</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
+  );
+};
 
-
-
-
-
-}
-
-}
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
+export default certificate;

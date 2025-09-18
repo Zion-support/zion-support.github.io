@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export { default } from "./subscribe";
-export { default } from "./subscribe";
-
-=======
-export { default } from './subscribe';
->>>>>>> origin/auto/autonomy-17186719616
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
+}

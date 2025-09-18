@@ -37,6 +37,8 @@ export default function ProfileDetail({ }: ProfileDetailProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/ProfileDetail.jsx
 }
 }

@@ -1,117 +1,133 @@
 {
-<<<<<<< HEAD
-  "name": "Zion Tech Group - AI-Powered Business Solutions",
+  "name": "Zion Tech Group - AI & Technology Solutions",
   "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
+  "description": "Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Interactive AI calculator, enterprise case studies, and personalized recommendations.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#06b6d4",
+  "background_color": "#000000",
+  "theme_color": "#1e40af",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
-  "categories": ["business", "productivity", "technology", "utilities"],
+  "dir": "ltr",
+  "categories": ["business", "technology", "productivity"],
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32",
-      "type": "image/x-icon",
-      "purpose": "any"
+      "src": "/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-=======
-  "name": "Zion Tech Group",
-  "short_name": "Zion Tech",
-  "description": "Leading-edge technology solutions and autonomous innovation platform",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
-  "icons": [
+      "src": "/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Desktop View"
     },
     {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
->>>>>>> origin/auto/autonomy-17186719616
+      "src": "/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile View"
     }
   ],
   "shortcuts": [
     {
-<<<<<<< HEAD
       "name": "AI Solutions",
       "short_name": "AI",
-      "description": "Explore our AI-powered business solutions",
-      "url": "/ai-solutions"
-=======
-      "name": "Launch Economy",
-      "short_name": "Launch",
-      "description": "Quick access to launch your digital economy",
-      "url": "/multiverse/launch",
+      "description": "Explore our AI solutions",
+      "url": "/ai-solutions",
       "icons": [
         {
-          "src": "/icon-192x192.png",
-          "sizes": "192x192"
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
         }
       ]
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
-      "name": "Services",
-      "short_name": "Services",
-<<<<<<< HEAD
-      "description": "View our comprehensive service offerings",
-      "url": "/services"
-=======
-      "description": "View our technology services",
-      "url": "/services",
+      "name": "Quantum Computing",
+      "short_name": "Quantum",
+      "description": "Discover quantum computing solutions",
+      "url": "/quantum-computing",
       "icons": [
         {
-          "src": "/icon-192x192.png",
-          "sizes": "192x192"
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
         }
       ]
->>>>>>> origin/auto/autonomy-17186719616
     },
     {
-      "name": "Contact",
+      "name": "Cybersecurity",
+      "short_name": "Security",
+      "description": "Learn about our cybersecurity services",
+      "url": "/cybersecurity",
+      "icons": [
+        {
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
       "short_name": "Contact",
-<<<<<<< HEAD
       "description": "Get in touch with our team",
-      "url": "/contact"
-    },
-    {
-      "name": "Request Quote",
-      "short_name": "Quote",
-      "description": "Request a custom quote for your project",
-      "url": "/request-quote"
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
     }
   ],
-  "related_applications": [
-    {
-      "platform": "webapp",
-      "url": "https://ziontechgroup.com"
-    }
-  ],
+  "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
@@ -123,18 +139,18 @@
   "capture_links": "new-client",
   "file_handlers": [
     {
-      "action": "/upload",
+      "action": "/file-handler",
       "accept": {
-        "text/*": [".txt", ".md", ".json"],
+        "text/plain": [".txt"],
         "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
+        "application/json": [".json"]
       }
     }
   ],
   "protocol_handlers": [
     {
-      "protocol": "web+zion",
-      "url": "/protocol-handler?url=%s"
+      "protocol": "web+ziontech",
+      "url": "/protocol-handler?protocol=%s"
     }
   ],
   "share_target": {
@@ -147,8 +163,8 @@
       "url": "url",
       "files": [
         {
-          "name": "files",
-          "accept": ["image/*", "text/*", "application/pdf"]
+          "name": "file",
+          "accept": ["text/plain", "application/pdf", "image/*"]
         }
       ]
     }
@@ -156,45 +172,12 @@
   "permissions": [
     "notifications",
     "background-sync",
-    "storage"
+    "persistent-storage"
   ],
   "features": [
     "Cross Platform",
     "fast",
-    "simple",
-    "AI-Powered",
-    "Quantum Computing",
-    "Business Solutions"
+    "simple"
   ],
-  "developer": {
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com"
-  }
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7"
 }
-=======
-      "description": "Get in touch with us",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/icon-192x192.png",
-          "sizes": "192x192"
-        }
-      ]
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ]
-}
->>>>>>> origin/auto/autonomy-17186719616

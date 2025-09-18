@@ -20,7 +20,6 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -43,7 +42,6 @@ export default async function handler(
     }
 
     const leaders = Array && Array.from(map && map.entries())
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
@@ -149,7 +147,6 @@ export default async function handler(req, res) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

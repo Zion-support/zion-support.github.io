@@ -1,210 +1,98 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
-  renderTime: number | null;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+  memory?: {
+    used: number;
+    total: number;
+    limit: number;
+  };
+  resourceCount?: number;
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  reportToAnalytics?: boolean;
-  showMetrics?: boolean;
+  onPerformanceData?: (data: PerformanceMetrics) => void;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  reportToAnalytics = true,
-  showMetrics = false
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fid: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-    loadTime: null,
-    renderTime: null
-  });
-
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-
-  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
-    setMetrics(prev => {
-      const updated = { ...prev, ...newMetrics };
-      onMetricsUpdate?.(updated);
-      return updated;
-    });
-  }, [onMetricsUpdate]);
-
-  const reportMetric = useCallback((name: string, value: number) => {
-    if (reportToAnalytics && typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', name, {
-        event_category: 'Web Vitals',
-        value: Math.round(name === 'CLS' ? value * 1000 : value),
-        event_label: 'Performance',
-        non_interaction: true,
-      });
-    }
-  }, [reportToAnalytics]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const startTime = performance.now();
-
-    // Measure page load time
-    const measureLoadTime = () => {
-      const loadTime = performance.now() - startTime;
-      updateMetrics({ loadTime });
-    };
-
-    // Measure render time
-    const measureRenderTime = () => {
-      const renderTime = performance.now() - startTime;
-      updateMetrics({ renderTime });
-    };
-
-    // Web Vitals
-    getCLS((metric) => {
-      updateMetrics({ cls: metric.value });
-      reportMetric('CLS', metric.value);
-    });
-
-    getFID((metric) => {
-      updateMetrics({ fid: metric.value });
-      reportMetric('FID', metric.value);
-    });
-
-    getFCP((metric) => {
-      updateMetrics({ fcp: metric.value });
-      reportMetric('FCP', metric.value);
-    });
-
-    getLCP((metric) => {
-      updateMetrics({ lcp: metric.value });
-      reportMetric('LCP', metric.value);
-    });
-
-    getTTFB((metric) => {
-      updateMetrics({ ttfb: metric.value });
-      reportMetric('TTFB', metric.value);
-    });
-
-    // Measure load and render times
-    if (document.readyState === 'complete') {
-      measureLoadTime();
-      measureRenderTime();
-    } else {
-      window.addEventListener('load', measureLoadTime);
-      window.addEventListener('DOMContentLoaded', measureRenderTime);
+    // Only show in development or for admin users
+    if (process.env.NODE_ENV === 'development') {
+      setIsVisible(true);
     }
 
-    // Cleanup
-    return () => {
-      window.removeEventListener('load', measureLoadTime);
-      window.removeEventListener('DOMContentLoaded', measureRenderTime);
+    const measurePerformance = () => {
+      const performanceData: PerformanceMetrics = {
+        // Core Web Vitals
+        fcp: performance.getEntriesByName('first-contentful-paint')[0]?.startTime,
+        lcp: performance.getEntriesByType('largest-contentful-paint')[0]?.startTime,
+        fid: performance.getEntriesByType('first-input')[0]?.processingStart,
+        cls: performance.getEntriesByType('layout-shift').reduce((acc, entry) => acc + (entry as any).value, 0),
+        ttfb: performance.getEntriesByType('navigation')[0]?.responseStart,
+
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length,
+        // Memory usage (if available)
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        } : undefined
+      };
+
+      if (onPerformanceData) {
+        onPerformanceData(performanceData);
+      }
+
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance Metrics:', performanceData);
+      }
+
+      setMetrics(performanceData);
     };
-  }, [updateMetrics, reportMetric]);
 
-  const getPerformanceGrade = (value: number | null, thresholds: { good: number; poor: number }) => {
-    if (value === null) return 'N/A';
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  };
+    // Measure performance after a delay to allow for initial render
+    const timeoutId = setTimeout(measurePerformance, 1000);
 
-  const formatMetric = (value: number | null, unit: string = 'ms') => {
-    if (value === null) return 'N/A';
-    return `${Math.round(value)}${unit}`;
-  };
+    // Also measure on visibility change
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        measurePerformance();
+      }
+    };
 
-  if (!showMetrics) return null;
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      clearTimeout(timeoutId);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [onPerformanceData]);
+
+  if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 max-w-sm z-50">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold text-gray-900 dark:text-white">Performance Metrics</h3>
-        <button
-          onClick={() => setIsVisible(!isVisible)}
-          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-        >
-          {isVisible ? '▼' : '▶'}
-        </button>
-      </div>
-      
-      {isVisible && (
-        <div className="space-y-2 text-xs">
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">CLS:</span>
-            <span className={`font-medium ${
-              metrics.cls !== null && metrics.cls <= 0.1 ? 'text-green-600' :
-              metrics.cls !== null && metrics.cls <= 0.25 ? 'text-yellow-600' : 'text-red-600'
-            }`}>
-              {formatMetric(metrics.cls, '')}
-            </span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">FID:</span>
-            <span className={`font-medium ${
-              metrics.fid !== null && metrics.fid <= 100 ? 'text-green-600' :
-              metrics.fid !== null && metrics.fid <= 300 ? 'text-yellow-600' : 'text-red-600'
-            }`}>
-              {formatMetric(metrics.fid)}
-            </span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">FCP:</span>
-            <span className={`font-medium ${
-              metrics.fcp !== null && metrics.fcp <= 1800 ? 'text-green-600' :
-              metrics.fcp !== null && metrics.fcp <= 3000 ? 'text-yellow-600' : 'text-red-600'
-            }`}>
-              {formatMetric(metrics.fcp)}
-            </span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">LCP:</span>
-            <span className={`font-medium ${
-              metrics.lcp !== null && metrics.lcp <= 2500 ? 'text-green-600' :
-              metrics.lcp !== null && metrics.lcp <= 4000 ? 'text-yellow-600' : 'text-red-600'
-            }`}>
-              {formatMetric(metrics.lcp)}
-            </span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">TTFB:</span>
-            <span className={`font-medium ${
-              metrics.ttfb !== null && metrics.ttfb <= 800 ? 'text-green-600' :
-              metrics.ttfb !== null && metrics.ttfb <= 1800 ? 'text-yellow-600' : 'text-red-600'
-            }`}>
-              {formatMetric(metrics.ttfb)}
-            </span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
-            <span className="font-medium text-blue-600">
-              {formatMetric(metrics.loadTime)}
-            </span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span className="text-gray-600 dark:text-gray-400">Render Time:</span>
-            <span className="font-medium text-blue-600">
-              {formatMetric(metrics.renderTime)}
-            </span>
-          </div>
-        </div>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs font-mono">
+      <div>FCP: {metrics.fcp?.toFixed(2)}ms</div>
+      <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
+      <div>FID: {metrics.fid?.toFixed(2)}ms</div>
+      <div>CLS: {metrics.cls?.toFixed(4)}</div>
+      <div>TTFB: {metrics.ttfb?.toFixed(2)}ms</div>
+      {metrics.memory && (
+        <div>Memory: {Math.round(metrics.memory.used / 1024 / 1024)}MB</div>
       )}
+      <div>Resources: {metrics.resourceCount}</div>
     </div>
   );
 };

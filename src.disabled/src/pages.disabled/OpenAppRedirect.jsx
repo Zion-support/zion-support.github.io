@@ -37,6 +37,8 @@ export default function OpenAppRedirect({ }: OpenAppRedirectProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/OpenAppRedirect.jsx
 }
 }

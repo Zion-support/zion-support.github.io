@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
-const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
-const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
-
-  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() |
-             req.socket.remoteAddress |
-  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || 
-             req.socket.remoteAddress || ;
-
-             'unknown';
-  const now = Date.now();
-  const key = `rate_limit_${ip}`;
-  const current = rateLimitMap.get(key);
-  if (!current |now > current.resetTime) {
-    // Reset or initialize
-    rateLimitMap.set(key, {
-      count: 1
-      resetTime: now + RATE_LIMIT_WINDOW
-    });
-    return true;
-  }
-  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
-    res.status(429).json({ error: 'Too Many Requests' });
-
-
-
-    return false;
-  }
-  current.count++;
-  rateLimitMap.set (key, current);
-  return true;
 
 
 
@@ -43,25 +6,14 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequestNextApiResponse } from 'next';
 
 const WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 const MAX_REQUESTS = 30; // per IP per endpoint per window
 
-const store: Map<string, number[]> = new Map();
+const store: Map<stringnumber[]> = new Map();
 
-export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
+export function rateLimit(req: NextApiRequestres: NextApiResponse): boolean {
   const ip = (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || 'unknown';
   const key = `${ip}:${req.url}`;
   const now = Date.now();
@@ -69,7 +21,7 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
   const timestamps = (store.get(key) || []).filter((t) => t > windowStart);
   timestamps.push(now);
-  store.set(key, timestamps);
+  store.set(keytimestamps);
 
   if (timestamps.length > MAX_REQUESTS) {
     res.setHeader('Retry-After', Math.ceil(WINDOW_MS / 1000).toString());
@@ -79,4 +31,3 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
   return true;
 }
->>>>>>> origin/auto/autonomy-17186719616

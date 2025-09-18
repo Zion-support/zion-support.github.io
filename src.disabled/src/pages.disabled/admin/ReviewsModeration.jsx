@@ -37,6 +37,8 @@ export default function ReviewsModeration({ }: ReviewsModerationProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/admin/ReviewsModeration.jsx
 }
 }

@@ -1,438 +1,288 @@
-<<<<<<< HEAD
-// Service Worker for Zion Tech Group
-// Provides offline support, caching, and performance improvements
-
-const CACHE_NAME = 'zion-tech-group-v3.0.0';
-const STATIC_CACHE_NAME = 'zion-static-v3.0.0';
-const DYNAMIC_CACHE_NAME = 'zion-dynamic-v3.0.0';
-=======
-/* eslint-env serviceworker */
-/* global self, caches, Response */
+/**
+ * Modern Service Worker for Zion Tech Group
+ * Provides caching, offline support, and performance optimizations
+ */
 
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
-const STATIC_CACHE = 'zion-static-v1.0.0';
-const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
->>>>>>> origin/auto/autonomy-17186719616
+const STATIC_CACHE = 'static-v1.0.0';
+const DYNAMIC_CACHE = 'dynamic-v1.0.0';
 
 // Files to cache immediately
 const STATIC_FILES = [
   '/',
-<<<<<<< HEAD
   '/index.html',
   '/manifest.json',
-  '/favicon.ico'
+  '/favicon.ico',
+  '/apple-touch-icon.png',
+  '/favicon-32x32.png',
+  '/favicon-16x16.png'
 ];
+
+// Cache strategies
+const CACHE_STRATEGIES = {
+  // Cache first for static assets
+  CACHE_FIRST: 'cache-first',
+  // Network first for API calls
+  NETWORK_FIRST: 'network-first',
+  // Stale while revalidate for dynamic content
+  STALE_WHILE_REVALIDATE: 'stale-while-revalidate'
+};
 
 // Install event - cache static files
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...');
+  console.log('Service Worker: Installing...');
   
   event.waitUntil(
-    caches.open(STATIC_CACHE_NAME)
-=======
-  '/offline',
-  '/manifest.json',
-  '/favicon.ico',
-  '/apple-touch-icon.png'
-];
-
-// API endpoints to cache (commented out for now)
-// const API_CACHE = [
-//   '/api/analytics',
-//   '/api/error-reporting'
-// ];
-
-// Install event - cache static files
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
->>>>>>> origin/auto/autonomy-17186719616
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static files');
+        console.log('Service Worker: Caching static files');
         return cache.addAll(STATIC_FILES);
       })
-<<<<<<< HEAD
-      .catch((error) => {
-        console.error('Error caching static files:', error);
-      })
-  );
-  
-  // Skip waiting to activate immediately
-  self.skipWaiting();
-=======
       .then(() => {
-        console.log('Static files cached successfully');
+        console.log('Service Worker: Installation complete');
         return self.skipWaiting();
       })
       .catch((error) => {
-        console.error('Failed to cache static files:', error);
+        console.error('Service Worker: Installation failed', error);
       })
   );
-});
-
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
->>>>>>> origin/auto/autonomy-17186719616
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-<<<<<<< HEAD
-  console.log('Service Worker activating...');
+  console.log('Service Worker: Activating...');
   
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE_NAME && 
-              cacheName !== DYNAMIC_CACHE_NAME &&
-              cacheName.startsWith('zion-')) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-  
-  // Claim all clients
-  self.clients.claim();
-});
-
-// Fetch event - serve from cache or network
-self.addEventListener('fetch', (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
-  
-=======
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
+              console.log('Service Worker: Deleting old cache', cacheName);
               return caches.delete(cacheName);
             }
           })
         );
       })
       .then(() => {
-        console.log('Service worker activated');
+        console.log('Service Worker: Activation complete');
         return self.clients.claim();
       })
   );
 });
 
-// Fetch event - implement caching strategies
+// Fetch event - handle requests
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
->>>>>>> origin/auto/autonomy-17186719616
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
-<<<<<<< HEAD
-  
-  // Handle different types of requests
-  if (url.pathname.startsWith('/images/') || url.pathname.startsWith('/static/')) {
-    // Static assets - cache first, then network
-    event.respondWith(handleStaticRequest(request));
-  } else {
-    // HTML pages - network first, then cache
-    event.respondWith(handlePageRequest(request));
+
+  // Determine cache strategy based on request type
+  let strategy = CACHE_STRATEGIES.STALE_WHILE_REVALIDATE;
+
+  if (url.pathname.match(/\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$/)) {
+    strategy = CACHE_STRATEGIES.CACHE_FIRST;
+  } else if (url.pathname.startsWith('/api/')) {
+    strategy = CACHE_STRATEGIES.NETWORK_FIRST;
   }
+
+  event.respondWith(handleRequest(request, strategy));
 });
 
-// Handle static asset requests
-async function handleStaticRequest(request) {
-  const cachedResponse = await caches.match(request);
+// Handle different caching strategies
+async function handleRequest(request, strategy) {
+  const cache = await caches.open(DYNAMIC_CACHE);
   
-  if (cachedResponse) {
-    // Return cached response and update cache in background
-    fetch(request).then((response) => {
-      if (response.ok) {
-        caches.open(DYNAMIC_CACHE_NAME).then((cache) => {
-          cache.put(request, response);
-        });
-      }
-    });
+  switch (strategy) {
+    case CACHE_STRATEGIES.CACHE_FIRST:
+      return cacheFirst(request, cache);
     
-    return cachedResponse;
-  }
-  
-  // Try network if not cached
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE_NAME);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    // Return offline response
-    return new Response('Offline', { status: 503 });
+    case CACHE_STRATEGIES.NETWORK_FIRST:
+      return networkFirst(request, cache);
+    
+    case CACHE_STRATEGIES.STALE_WHILE_REVALIDATE:
+      return staleWhileRevalidate(request, cache);
+    
+    default:
+      return fetch(request);
   }
 }
 
-// Handle page requests
-async function handlePageRequest(request) {
+// Cache first strategy
+async function cacheFirst(request, cache) {
   try {
-    // Try network first
-    const networkResponse = await fetch(request);
-    
-    if (networkResponse.ok) {
-      // Cache successful responses
-      const cache = await caches.open(DYNAMIC_CACHE_NAME);
-      cache.put(request, networkResponse.clone());
-    }
-    
-    return networkResponse;
-  } catch (error) {
-    // Fallback to cache
-=======
-
-  // Handle different types of requests
-  if (url.pathname === '/') {
-    // Homepage - cache first strategy
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-  } else if (url.pathname.startsWith('/api/')) {
-    // API requests - network first strategy
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
-  } else if (url.pathname.startsWith('/_next/') || url.pathname.startsWith('/static/')) {
-    // Static assets - cache first strategy
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-  } else if (url.pathname.startsWith('/images/') || url.pathname.startsWith('/icons/')) {
-    // Images - cache first strategy
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-  } else {
-    // Other pages - network first strategy
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
-  }
-});
-
-// Cache First Strategy
-async function cacheFirst(request, cacheName) {
-  try {
->>>>>>> origin/auto/autonomy-17186719616
-    const cachedResponse = await caches.match(request);
+    const cachedResponse = await cache.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
-    
-<<<<<<< HEAD
-    // Return offline page
-    return caches.match('/offline.html') || new Response('Offline', { status: 503 });
-  }
-}
 
-// Message handling from main thread
-self.addEventListener('message', (event) => {
-  console.log('Message received in service worker:', event.data);
-  
-=======
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
   } catch (error) {
     console.error('Cache first strategy failed:', error);
-    // Check if Response is available (it should be in service worker context)
-    if (typeof Response !== 'undefined') {
-      return new Response('Network error', { status: 503, statusText: 'Service Unavailable' });
-    }
-    // Fallback for older browsers
-    return { status: 503, statusText: 'Service Unavailable' };
+    return new Response('Offline content not available', { status: 503 });
   }
 }
 
-// Network First Strategy
-async function networkFirst(request, cacheName) {
+// Network first strategy
+async function networkFirst(request, cache) {
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
   } catch (error) {
-    console.error('Network first strategy failed:', error);
-    
-    // Try to get from cache
-    const cachedResponse = await caches.match(request);
+    console.log('Network failed, trying cache:', error);
+    const cachedResponse = await cache.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
-    
-    // Return offline page for HTML requests
-    if (request.headers.get('accept')?.includes('text/html')) {
-      return caches.match('/offline');
-    }
-    
-    // Check if Response is available (it should be in service worker context)
-    if (typeof Response !== 'undefined') {
-      return new Response('Network error', { status: 503, statusText: 'Service Unavailable' });
-    }
-    // Fallback for older browsers
-    return { status: 503, statusText: 'Service Unavailable' };
+    return new Response('Offline content not available', { status: 503 });
   }
+}
+
+// Stale while revalidate strategy
+async function staleWhileRevalidate(request, cache) {
+  const cachedResponse = await cache.match(request);
+  
+  const fetchPromise = fetch(request).then((networkResponse) => {
+    if (networkResponse.ok) {
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  }).catch((error) => {
+    console.log('Network request failed:', error);
+    return null;
+  });
+
+  return cachedResponse || fetchPromise || new Response('Offline content not available', { status: 503 });
 }
 
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
+  console.log('Service Worker: Background sync', event.tag);
+  
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
   }
 });
 
+// Push notifications
+self.addEventListener('push', (event) => {
+  console.log('Service Worker: Push received');
+  
+  const options = {
+    body: event.data ? event.data.text() : 'New update available!',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'View Details',
+        icon: '/icon-192x192.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icon-192x192.png'
+      }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
+
+// Notification click handler
+self.addEventListener('notificationclick', (event) => {
+  console.log('Service Worker: Notification clicked');
+  
+  event.notification.close();
+
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// Message handler for communication with main thread
+self.addEventListener('message', (event) => {
+  console.log('Service Worker: Message received', event.data);
+  
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: CACHE_NAME });
+  }
+});
+
+// Background sync implementation
 async function doBackgroundSync() {
   try {
-    // Perform background sync operations
-    console.log('Performing background sync');
+    // Implement background sync logic here
+    console.log('Service Worker: Performing background sync');
     
-    // Example: sync analytics data
-    const analyticsData = await getStoredAnalytics();
-    if (analyticsData.length > 0) {
-      await syncAnalytics(analyticsData);
+    // Example: Sync offline data
+    const offlineData = await getOfflineData();
+    if (offlineData.length > 0) {
+      await syncOfflineData(offlineData);
     }
-    
-    console.log('Background sync completed');
   } catch (error) {
     console.error('Background sync failed:', error);
   }
 }
 
-// Get stored analytics data
-async function getStoredAnalytics() {
-  // This would typically get data from IndexedDB
+// Helper functions
+async function getOfflineData() {
+  // Implement getting offline data from IndexedDB or localStorage
   return [];
 }
 
-// Sync analytics data
-async function syncAnalytics(data) {
-  try {
-    const response = await fetch('/api/analytics', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    });
-    
-    if (response.ok) {
-      console.log('Analytics synced successfully');
-    }
-  } catch (error) {
-    console.error('Failed to sync analytics:', error);
-  }
+async function syncOfflineData(data) {
+  // Implement syncing offline data with server
+  console.log('Syncing offline data:', data);
 }
 
-// Push notification handling
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/icons/icon-192x192.png',
-      badge: '/icons/badge-72x72.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: 1
-      },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Explore',
-          icon: '/icons/checkmark.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/icons/xmark.png'
-        }
-      ]
-    };
-
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
-});
-
-// Notification click handling
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-      if (event.action === 'explore') {
-      event.waitUntil(
-        self.clients.openWindow('/')
-      );
-    }
-});
-
-// Message handling from main thread
-self.addEventListener('message', (event) => {
->>>>>>> origin/auto/autonomy-17186719616
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
+// Performance monitoring
+self.addEventListener('fetch', (event) => {
+  const startTime = performance.now();
   
-<<<<<<< HEAD
-  if (event.data && event.data.type === 'CACHE_URLS') {
-    event.waitUntil(
-      caches.open(DYNAMIC_CACHE_NAME)
-        .then(cache => {
-          return cache.addAll(event.data.urls);
-        })
-    );
-=======
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: CACHE_NAME });
->>>>>>> origin/auto/autonomy-17186719616
-  }
+  event.respondWith(
+    handleRequest(event.request, CACHE_STRATEGIES.STALE_WHILE_REVALIDATE)
+      .then((response) => {
+        const endTime = performance.now();
+        const duration = endTime - startTime;
+        
+        // Log slow requests
+        if (duration > 1000) {
+          console.warn(`Slow request: ${event.request.url} took ${duration}ms`);
+        }
+        
+        return response;
+      })
+  );
 });
 
-// Error handling
-self.addEventListener('error', (event) => {
-<<<<<<< HEAD
-  console.error('Service Worker error:', event.error);
-});
-
-self.addEventListener('unhandledrejection', (event) => {
-  console.error('Service Worker unhandled rejection:', event.reason);
-});
-
-console.log('Zion Tech Group Service Worker loaded successfully');
-=======
-  console.error('Service worker error:', event.error);
-});
-
-self.addEventListener('unhandledrejection', (event) => {
-  console.error('Service worker unhandled rejection:', event.reason);
-});
->>>>>>> origin/auto/autonomy-17186719616
+console.log('Service Worker: Loaded successfully');

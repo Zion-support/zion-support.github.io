@@ -24,8 +24,8 @@ const posts = [
     title: 'New research on quantum neural search',
     date: '2025-09-02',
     summary: 'Peer-reviewed paper on hybrid classical-quantum retrieval achieves SOTA.',
-  },
-]
+  }
+];
 
 export default function NewsPage() {
   return (
@@ -50,6 +50,5 @@ export default function NewsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

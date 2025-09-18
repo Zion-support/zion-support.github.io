@@ -37,6 +37,8 @@ export default function Onboarding({ }: OnboardingProps) {
     </div>
   );
 
+
+}
 :src.disabled/src/pages.disabled/Onboarding.jsx
 }
 }

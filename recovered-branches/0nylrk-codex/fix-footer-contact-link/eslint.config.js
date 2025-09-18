@@ -11,31 +11,8 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
-<<<<<<< HEAD
-      globals: globals.browser},
-    plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh},
-=======
-      globals: globals.browser,
-    },
-    plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-    },
->>>>>>> origin/auto/autonomy-17186719616
     rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
-<<<<<<< HEAD
-        { allowConstantExport: true }],
-      "@typescript-eslint/no-unused-vars": "off"}}
-=======
-        { allowConstantExport: true },
-      ],
-      "@typescript-eslint/no-unused-vars": "off",
-    },
-  }
->>>>>>> origin/auto/autonomy-17186719616
 );

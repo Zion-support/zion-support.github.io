@@ -5,7 +5,6 @@ import React from 'react';
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export default function TestMinimal(req, res) {
   try {
@@ -32,11 +31,9 @@ export default function TestMinimal(req, res) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

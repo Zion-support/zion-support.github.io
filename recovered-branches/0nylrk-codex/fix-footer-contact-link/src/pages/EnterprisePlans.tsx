@@ -1,114 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
-import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
-import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
-import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
-import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
-import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
-import {SEO} from "@/components/SEO";
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",
-import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",
-import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",
-import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",
-import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",
-import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
-import { SEO } from "@/components/SEO";
-import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
-import { SEO } from "@/components/SEO",
-=======
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero";
-import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable";
-import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";
-import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";
-import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";
-import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
-import { SEO } from "@/components/SEO";
->>>>>>> origin/auto/autonomy-17186719616
-
-export default function EnterprisePlans() {
+const EnterprisePlans: React.FC = () => {
   return (
-    <>
-<<<<<<< HEAD
-      <SEO
-=======
-      <SEO 
->>>>>>> origin/auto/autonomy-17186719616
-        title="Enterprise Plans - Zion AI Marketplace"
-        description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."
-      />
-      <Header />
-      <main className="min-h-screen bg-background">
-        <EnterpriseHero />
-        <EnterprisePricingTable />
-        <EnterpriseFeatures />
-        <EnterpriseTestimonials />
-        <EnterpriseTrustBadges />
-        <EnterpriseCTA />
-      </main>
-      <Footer />
-    </>
-<<<<<<< HEAD
-  )
-
-
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
-import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
-import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
-import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
-import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
-import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
-import {SEO} from "@/components/SEO";
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>EnterprisePlans | Zion Tech Group</title>
+        <meta name="description" content="EnterprisePlans - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">EnterprisePlans</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
->>>>>>> origin/auto/autonomy-17186719616
+};
+
+export default EnterprisePlans;

@@ -74,12 +74,6 @@ export const badgeList: BadgeMeta[] = [
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
-<<<<<<< HEAD
-  }];
-=======
-  },
-];
->>>>>>> origin/auto/autonomy-17186719616
 
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key);

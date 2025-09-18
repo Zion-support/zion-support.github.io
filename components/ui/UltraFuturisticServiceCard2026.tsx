@@ -1,749 +1,258 @@
-<<<<<<< HEAD
-
-
-import React from 'react';
-
-import {motion} from 'framer-motion';
-import {Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket} from 'lucide-react';
-
-interface Service {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  price?: string | {;
-
-    monthly?: number;
-    yearly?: number;
-    currency?: string;
-
-    setupTime?: string;
-  };
-    trial_days?: number;
-    setup_time?: string;
-  }
-
-  period?: string;
-  pricing?: any;
-  features: string[],;
-  popular?: boolean;
-
-=======
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Zap, Brain, Atom, Rocket } from 'lucide-react';
 
 interface Service {
   id: string;
   name: string;
   tagline: string;
   description: string;
-  price?: string | {
-    monthly?: number;
-    yearly?: number;
-    currency?: string;
-    trialDays?: number;
-    setupTime?: string;
-  };
-  period?: string;
-  pricing?: any;
+  price: string;
+  period: string;
   features: string[];
   popular?: boolean;
   category: string;
   icon: string;
->>>>>>> origin/auto/autonomy-17186719616
-  marketPrice?: string;
-  competitors?: string[];
-  targetMarket?: string;
-  useCases?: string[];
-<<<<<<< HEAD
-  integration?: string[],
-  benefits?: string[]
 }
 
-interface ServiceCardProps {
-
-interface ServiceCardProps {
-  service: Service,
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
-
-
-  service: Service
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
-  const getVariantStyles = () => {
-
-  category: string,
-  icon: string,
-  market_price?: string;
-  competitors?: string[];
-  target_market?: string;
-  use_cases?: string[];
-  integration?: string[];
-  benefits?: string[];
-}
-interface ServiceCardProps {
-  service: Service,
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
-}
-const UltraFuturisticServiceCard2026: React.FC < ServiceCardProps> = ({ service, variant = 'default' }) => {
-  const getVariantStyles = () =>: any {
-
-    switch (variant) {
-      case 'ai':;
-        return {
-
-  integration?: string[];
-  benefits?: string[];
-}
-interface ServiceCardProps {;
-  service: Service,;
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
-}
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {;
-  const getVariantStyles = () => {;
-    switch (variant) {;
-      case 'ai':;
-        return {;
-          gradient: 'from-purple-600 via-pink-600 to-purple-700',;
-          borderColor: 'border-purple-400/30',;
-          textColor: 'text-purple-400',;
-          iconBg: 'bg-purple-500/20',;
-          iconBorder: 'border-purple-400/30';
-        };
-      case 'quantum':;
-        return {;
-          gradient: 'from-cyan-600 via-blue-600 to-cyan-700',;
-          borderColor: 'border-cyan-400/30',;
-          textColor: 'text-cyan-400',;
-          iconBg: 'bg-cyan-500/20',;
-          iconBorder: 'border-cyan-400/30';
-        };
-      case 'space':;
-        return {;
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',;
-          borderColor: 'border-indigo-400/30',;
-          textColor: 'text-indigo-400',;
-          iconBg: 'bg-indigo-500/20',;
-          iconBorder: 'border-indigo-400/30';
-        };
-      case 'cybersecurity':;
-        return {;
-          gradient: 'from-red-600 via-orange-600 to-red-700',;
-          borderColor: 'border-red-400/30',;
-          textColor: 'text-red-400',;
-          iconBg: 'bg-red-500/20',;
-          iconBorder: 'border-red-400/30';
-        };
-      case 'enterprise':;
-        return {;
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',;
-          borderColor: 'border-indigo-400/30',;
-          textColor: 'text-indigo-400',;
-          iconBg: 'bg-indigo-500/20',;
-          iconBorder: 'border-indigo-400/30';
-        };
-      case 'automation':;
-        return {;
-          gradient: 'from-green-600 via-emerald-600 to-green-700',;
-          borderColor: 'border-green-400/30',;
-          textColor: 'text-green-400',;
-          iconBg: 'bg-green-500/20',;
-          iconBorder: 'border-green-400/30';
-        };
-      case 'it':;
-        return {;
-          gradient: 'from-blue-600 via-indigo-600 to-blue-700',;
-          borderColor: 'border-blue-400/30',;
-          textColor: 'text-blue-400',;
-          iconBg: 'bg-blue-500/20',;
-          iconBorder: 'border-blue-400/30';
-        };
-      case 'emerging':;
-        return {;
-          gradient: 'from-yellow-600 via-orange-600 to-yellow-700',;
-          borderColor: 'border-yellow-400/30',;
-          textColor: 'text-yellow-400',;
-          iconBg: 'bg-yellow-500/20',;
-          iconBorder: 'border-yellow-400/30';
-        };
-      case 'premium':;
-        return {;
-          gradient: 'from-amber-600 via-yellow-600 to-amber-700',;
-          borderColor: 'border-amber-400/30',;
-          textColor: 'text-amber-400',;
-          iconBg: 'bg-amber-500/20',;
-          iconBorder: 'border-amber-400/30';
-        };
-      default:;
-        return {;
-          gradient: 'from-gray-600 via-gray-700 to-gray-800',;
-          borderColor: 'border-gray-400/30',;
-          textColor: 'text-gray-400',;
-          iconBg: 'bg-gray-500/20',;
-          iconBorder: 'border-gray-400/30';
-
-        }
-    }
-  }
-  const styles = getVariantStyles();
-
-
-  const getCategoryIcon = (category: string) => {;
-    if (category && category.includes('AI')) return Brain;
-    if (category && category.includes('Quantum')) return Atom;
-    if (category && category.includes('Space')) return Rocket;
-    if (category && category.includes('Cybersecurity')) return Shield;
-    return TrendingUp;
-  };
-
-  const CategoryIcon = getCategoryIcon(service && service.category);
-
-
-  return (
-    <motion&& motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0 && 0.6 }}
-      viewport={{ once: true }}
-      className="group relative">;
-      <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
-        {/* Enhanced Background Glow */}
-
-        <div className={`absolute inset-0 bg-gradient-to-br ${styles && styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
-
-
-
-
-
-
-
-        {/* Popular Badge */}
-        {service && service.popular && (;
-          <motion&& motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0 && 0.2, type: "spring", stiffness: 200 }}
-            className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg">;
-            <Star className="w-4 h-4 inline mr-1" />;
-            Popular;
-          </motion && motion.div>;
-        )}
-
-          gradient: 'from - purple - 600 via - pink - 600 to - purple - 700',
-          border_color: 'border - purple - 400 / 30',
-          text_color: 'text - purple - 400',
-          icon_bg: 'bg - purple - 500 / 20',
-          icon_border: 'border - purple - 400 / 30';
-        }
-      case 'quantum':;
-        return {
-          gradient: 'from - cyan - 600 via - blue - 600 to - cyan - 700',
-          border_color: 'border - cyan - 400 / 30',
-          text_color: 'text - cyan - 400',
-          icon_bg: 'bg - cyan - 500 / 20',
-          icon_border: 'border - cyan - 400 / 30';
-        }
-      case 'space':;
-        return {
-          gradient: 'from - indigo - 600 via - purple - 600 to - indigo - 700',
-          border_color: 'border - indigo - 400 / 30',
-          text_color: 'text - indigo - 400',
-          icon_bg: 'bg - indigo - 500 / 20',
-          icon_border: 'border - indigo - 400 / 30';
-        }
-      case 'cybersecurity':;
-        return {
-          gradient: 'from - red - 600 via - orange - 600 to - red - 700',
-          border_color: 'border - red - 400 / 30',
-          text_color: 'text - red - 400',
-          icon_bg: 'bg - red - 500 / 20',
-          icon_border: 'border - red - 400 / 30';
-        }
-      case 'enterprise':;
-        return {
-          gradient: 'from - indigo - 600 via - purple - 600 to - indigo - 700',
-          border_color: 'border - indigo - 400 / 30',
-          text_color: 'text - indigo - 400',
-          icon_bg: 'bg - indigo - 500 / 20',
-          icon_border: 'border - indigo - 400 / 30';
-        }
-      case 'automation':;
-        return {
-          gradient: 'from - green - 600 via - emerald - 600 to - green - 700',
-          border_color: 'border - green - 400 / 30',
-          text_color: 'text - green - 400',
-          icon_bg: 'bg - green - 500 / 20',
-          icon_border: 'border - green - 400 / 30';
-        }
-      case 'it':;
-        return {
-          gradient: 'from - blue - 600 via - indigo - 600 to - blue - 700',
-          border_color: 'border - blue - 400 / 30',
-          text_color: 'text - blue - 400',
-          icon_bg: 'bg - blue - 500 / 20',
-          icon_border: 'border - blue - 400 / 30';
-        }
-      case 'emerging':;
-        return {
-          gradient: 'from - yellow - 600 via - orange - 600 to - yellow - 700',
-          border_color: 'border - yellow - 400 / 30',
-          text_color: 'text - yellow - 400',
-          icon_bg: 'bg - yellow - 500 / 20',
-          icon_border: 'border - yellow - 400 / 30';
-        }
-      case 'premium':;
-        return {
-          gradient: 'from - amber - 600 via - yellow - 600 to - amber - 700',
-          border_color: 'border - amber - 400 / 30',
-          text_color: 'text - amber - 400',
-          icon_bg: 'bg - amber - 500 / 20',
-          icon_border: 'border - amber - 400 / 30';
-        }
-      default:;
-        return {
-          gradient: 'from - gray - 600 via - gray - 700 to - gray - 800',
-          border_color: 'border - gray - 400 / 30',
-          text_color: 'text - gray - 400',
-          icon_bg: 'bg - gray - 500 / 20',
-          icon_border: 'border - gray - 400 / 30';
-        }
-    }
-  }
-;
-  const styles = getVariantStyles ();
-;
-  const getCategoryIcon = (category: string) =>: any {
-    if () return Brain) {
-  $2
-}
-    if () return Atom) {
-  $2
-}
-    if () return Rocket) {
-  $2
-}
-    if () return Shield) {
-  $2
-}
-    return TrendingUp;
-  }
-;
-  const CategoryIcon = getCategoryIcon (service.category);
-;
-  return (
-    <motion.div;
-      initial={{ opacity: 0, coordinate_y: 20 }}
-      whileInView={{ opacity: 1, coordinate_y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="group relative";
-    >;
-      <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm overflow - hidden">;
-        {/* Enhanced Background Glow */}
-
-
-
-
-
-
-
-
-        {/* Popular Badge */}
-        {service.popular && (
-          <motion.div;
-=======
-  integration?: string[];
-  benefits?: string[];
-}
-
-interface ServiceCardProps {
+interface UltraFuturisticServiceCard2026Props {
   service: Service;
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
+  variant?: 'default' | 'quantum' | 'ai' | 'automation' | 'it' | 'emerging' | 'enterprise' | 'premium';
+  theme?: 'quantum' | 'cyber' | 'neon';
+  className?: string;
+  onClick?: () => void;
 }
 
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
-  const getVariantStyles = () => {
+const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Props> = ({
+  service,
+  variant = 'default',
+  className = '',
+  onClick
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Get variant-specific styles
+  const getVariantStyles = useCallback((variant: string) => {
     switch (variant) {
-      case 'ai':
-        return {
-          gradient: 'from-purple-600 via-pink-600 to-purple-700',
-          borderColor: 'border-purple-400/30',
-          textColor: 'text-purple-400',
-          iconBg: 'bg-purple-500/20',
-          iconBorder: 'border-purple-400/30'
-        };
       case 'quantum':
         return {
-          gradient: 'from-cyan-600 via-blue-600 to-cyan-700',
-          borderColor: 'border-cyan-400/30',
-          textColor: 'text-cyan-400',
-          iconBg: 'bg-cyan-500/20',
-          iconBorder: 'border-cyan-400/30'
+          border: 'border-cyan-500/30 hover:border-cyan-400/60',
+          gradient: 'from-cyan-500/20 to-blue-500/20',
+          text: 'text-cyan-400',
+          accent: 'bg-cyan-500/20',
+          icon: <Atom className="w-6 h-6 text-cyan-400" />
         };
-      case 'space':
+      case 'ai':
         return {
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',
-          borderColor: 'border-indigo-400/30',
-          textColor: 'text-indigo-400',
-          iconBg: 'bg-indigo-500/20',
-          iconBorder: 'border-indigo-400/30'
-        };
-      case 'cybersecurity':
-        return {
-          gradient: 'from-red-600 via-orange-600 to-red-700',
-          borderColor: 'border-red-400/30',
-          textColor: 'text-red-400',
-          iconBg: 'bg-red-500/20',
-          iconBorder: 'border-red-400/30'
-        };
-      case 'enterprise':
-        return {
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',
-          borderColor: 'border-indigo-400/30',
-          textColor: 'text-indigo-400',
-          iconBg: 'bg-indigo-500/20',
-          iconBorder: 'border-indigo-400/30'
+          border: 'border-purple-500/30 hover:border-purple-400/60',
+          gradient: 'from-purple-500/20 to-pink-500/20',
+          text: 'text-purple-400',
+          accent: 'bg-purple-500/20',
+          icon: <Brain className="w-6 h-6 text-purple-400" />
         };
       case 'automation':
         return {
-          gradient: 'from-green-600 via-emerald-600 to-green-700',
-          borderColor: 'border-green-400/30',
-          textColor: 'text-green-400',
-          iconBg: 'bg-green-500/20',
-          iconBorder: 'border-green-400/30'
+          border: 'border-green-500/30 hover:border-green-400/60',
+          gradient: 'from-green-500/20 to-emerald-500/20',
+          text: 'text-green-400',
+          accent: 'bg-green-500/20',
+          icon: <Zap className="w-6 h-6 text-green-400" />
         };
       case 'it':
         return {
-          gradient: 'from-blue-600 via-indigo-600 to-blue-700',
-          borderColor: 'border-blue-400/30',
-          textColor: 'text-blue-400',
-          iconBg: 'bg-blue-500/20',
-          iconBorder: 'border-blue-400/30'
+          border: 'border-blue-500/30 hover:border-blue-400/60',
+          gradient: 'from-blue-500/20 to-indigo-500/20',
+          text: 'text-blue-400',
+          accent: 'bg-blue-500/20',
+          icon: <Rocket className="w-6 h-6 text-blue-400" />
         };
       case 'emerging':
         return {
-          gradient: 'from-yellow-600 via-orange-600 to-yellow-700',
-          borderColor: 'border-yellow-400/30',
-          textColor: 'text-yellow-400',
-          iconBg: 'bg-yellow-500/20',
-          iconBorder: 'border-yellow-400/30'
+          border: 'border-yellow-500/30 hover:border-yellow-400/60',
+          gradient: 'from-yellow-500/20 to-orange-500/20',
+          text: 'text-yellow-400',
+          accent: 'bg-yellow-500/20',
+          icon: <Star className="w-6 h-6 text-yellow-400" />
+        };
+      case 'enterprise':
+        return {
+          border: 'border-indigo-500/30 hover:border-indigo-400/60',
+          gradient: 'from-indigo-500/20 to-purple-500/20',
+          text: 'text-indigo-400',
+          accent: 'bg-indigo-500/20',
+          icon: <CheckCircle className="w-6 h-6 text-indigo-400" />
         };
       case 'premium':
         return {
-          gradient: 'from-amber-600 via-yellow-600 to-amber-700',
-          borderColor: 'border-amber-400/30',
-          textColor: 'text-amber-400',
-          iconBg: 'bg-amber-500/20',
-          iconBorder: 'border-amber-400/30'
+          border: 'border-amber-500/30 hover:border-amber-400/60',
+          gradient: 'from-amber-500/20 to-yellow-500/20',
+          text: 'text-amber-400',
+          accent: 'bg-amber-500/20',
+          icon: <Star className="w-6 h-6 text-amber-400" />
         };
       default:
         return {
-          gradient: 'from-gray-600 via-gray-700 to-gray-800',
-          borderColor: 'border-gray-400/30',
-          textColor: 'text-gray-400',
-          iconBg: 'bg-gray-500/20',
-          iconBorder: 'border-gray-400/30'
+          border: 'border-white/20 hover:border-white/40',
+          gradient: 'from-white/10 to-white/5',
+          text: 'text-white',
+          accent: 'bg-white/10',
+          icon: <Star className="w-6 h-6 text-white" />
         };
     }
-  };
+  }, []);
 
-  const styles = getVariantStyles();
+  const variantStyles = getVariantStyles(variant);
 
-  const getCategoryIcon = (category: string) => {
-    if (category.includes('AI')) return Brain;
-    if (category.includes('Quantum')) return Atom;
-    if (category.includes('Space')) return Rocket;
-    if (category.includes('Cybersecurity')) return Shield;
-    return TrendingUp;
-  };
+  const handleCardClick = useCallback(() => {
+    if (onClick) {
+      onClick();
+    }
+  }, [onClick]);
 
-  const CategoryIcon = getCategoryIcon(service.category);
+  const toggleExpanded = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsExpanded(!isExpanded);
+  }, [isExpanded]);
 
   return (
     <motion.div
+      className={`group relative overflow-hidden rounded-2xl transition-all duration-500 transform hover:scale-105 cursor-pointer ${className}`}
+      role="button"
+      tabIndex={0}
+      aria-label={`${service.name} service card`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={handleCardClick}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="group relative"
     >
-      <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">
-        {/* Enhanced Background Glow */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-        
-        {/* Popular Badge */}
-        {service.popular && (
-          <motion.div
->>>>>>> origin/auto/autonomy-17186719616
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg"
-          >
-            <Star className="w-4 h-4 inline mr-1" />
-            Popular
-          </motion.div>
-        )}
-<<<<<<< HEAD
+      {/* Background Layers */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${variantStyles.gradient} ${variantStyles.border} transition-all duration-500`}></div>
+      <div className={`absolute inset-0 bg-gradient-to-br ${variantStyles.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl`}></div>
+      
+      {/* Animated Background Elements */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        animate={{
+          rotate: isHovered ? 360 : 0,
+        }}
+        transition={{ duration: 20, ease: "linear" }}
+      >
+        <div className="absolute top-4 right-4 w-16 h-16 border border-current opacity-20 rounded-full"></div>
+        <div className="absolute bottom-4 left-4 w-12 h-12 border border-current opacity-20 transform rotate-45"></div>
+      </motion.div>
 
-        
-
-        {/* Service Header */}
-        <div className="text - center mb - 8 relative z - 10">;
-          <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
-            {service.icon}
-
-
-        {/* Service Header */}
-        <div className="text-center mb-8 relative z-10">;
-          <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles && styles.iconBg} flex items-center justify-center border ${styles && styles.iconBorder} text-4xl backdrop-blur-sm`}>;
-            {service && service.icon}
-          </div>;
-          <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">;
-            {service && service.name}
-          </h3>;
-          <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
-            {service && service.tagline}
-          </p>;
-          <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">;
-            {service && service.price}
-            <span className="text-lg text-gray-400 font-normal">/{service && service.period}</span>;
-          </div>;
-          {/* Category Badge */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">;
-            <CategoryIcon className="w-3 h-3" />;
-            <span>{service && service.category}</span>;
-          </div>;
-        </div>;
-
-
-        {/* Features List */}
-        <div className="space-y-3 mb-8 relative z-10">;
-          <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">;
-            <Zap className="w-4 h-4 mr-2 text-cyan-400" />;
-            Key Features;
-          </h4>;
-          {service && service.features.slice(0, 6).map((feature, idx) => (;
-            <motion&& motion.div
-              key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0 && 0.1 }}
-              className="flex items-center space-x-3 text-sm text-gray-300 group-hover:text-gray-200 transition-colors">;
-              <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:bg-cyan-300 transition-colors"></div>;
-              <span>{feature}</span>;
-            </motion && motion.div>;
-          ))}
-        </div>
-
-        
-
-
-
-
-
-
-
-
-
-
-=======
-        
-        {/* Service Header */}
-        <div className="text-center mb-8 relative z-10">
-          <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
-            {service.icon}
+      {/* Content */}
+      <div className="relative z-10 p-6 h-full flex flex-col">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex items-center gap-3">
+            <div className="text-4xl mb-2" aria-hidden="true">{service.icon}</div>
+            <div className="flex items-center gap-2">
+              {variantStyles.icon}
+            </div>
           </div>
-          
-          <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">
-            {service.name}
-          </h3>
-          
-          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-            {service.tagline}
-          </p>
-          
-          <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">
-            {service.price}
-            <span className="text-lg text-gray-400 font-normal">/{service.period}</span>
-          </div>
-          
-          {/* Category Badge */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">
-            <CategoryIcon className="w-3 h-3" />
-            <span>{service.category}</span>
-          </div>
-        </div>
-        
-        {/* Features List */}
-        <div className="space-y-3 mb-8 relative z-10">
-          <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">
-            <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-            Key Features
-          </h4>
-          {service.features.slice(0, 6).map((feature, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0.1 }}
-              className="flex items-center space-x-3 text-sm text-gray-300 group-hover:text-gray-200 transition-colors"
+          {service.popular && (
+            <motion.div 
+              className={`px-3 py-1 rounded-full text-xs font-semibold ${variantStyles.accent} ${variantStyles.text}`}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.3, type: "spring" }}
             >
-              <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:bg-cyan-300 transition-colors"></div>
-              <span>{feature}</span>
+              Popular
             </motion.div>
-          ))}
+          )}
         </div>
-        
->>>>>>> origin/auto/autonomy-17186719616
-        {/* Enhanced Market Information */}
-        {service.marketPrice && (
-          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-gray-400">Market Price:</span>
-              <span className="text-green-400 font-semibold">{service.marketPrice}</span>
-            </div>
-<<<<<<< HEAD
-            {service.competitors && (
-              <div className="text-xs text-gray-500">
-                Competes with: {service.competitors.slice(0, 2).join()}
-              </div>
 
-        </div>;
-        {/* Enhanced Market Information */}
-        {service && service.marketPrice && (;
-          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">;
-            <div className="flex items-center justify-between text-xs">;
-              <span className="text-gray-400">Market Price:</span>;
-              <span className="text-green-400 font-semibold">{service && service.marketPrice}</span>;
-            </div>;
-            {service && service.competitors && (;
-              <div className="text-xs text-gray-500">;
-                Competes with: {service && service.competitors.slice(0, 2).join()}
-              </div>;
-
-            )}
-          </div>
-        )}
-
-
-=======
-            
-            {service.competitors && (
-              <div className="text-xs text-gray-500">
-                Competes with: {service.competitors.slice(0, 2).join(', ')}
-              </div>
-            )}
-          </div>
-        )}
-        
->>>>>>> origin/auto/autonomy-17186719616
-        {/* Target Market & Use Cases */}
-        {service.targetMarket && (
-          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
-            <div className="text-xs">
-              <div className="text-gray-400 mb-2">Target Market:</div>
-              <div className="text-gray-300">{service.targetMarket}</div>
-            </div>
-<<<<<<< HEAD
-            {service.useCases && (
-              <div className="text-xs mt-3">
-                <div className="text-gray-400 mb-2">Use Cases:</div>
-                <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
-              </div>
-
-            )}
-          </div>
-        )}
-
-=======
-            
-            {service.useCases && (
-              <div className="text-xs mt-3">
-                <div className="text-gray-400 mb-2">Use Cases:</div>
-                <div className="text-gray-300">{service.useCases.slice(0, 3).join(', ')}</div>
-              </div>
-            )}
-          </div>
-        )}
-        
->>>>>>> origin/auto/autonomy-17186719616
-        {/* Benefits Section */}
-        {service.benefits && (
-          <div className="border-t border-white/10 pt-4 mb-6 relative z-10">
-            <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2 text-green-400" />
-              Key Benefits
-            </h4>
-            <div className="space-y-2">
-              {service.benefits.slice(0, 3).map((benefit, idx) => (
-                <div key={idx} className="text-xs text-gray-400 flex items-start space-x-2">
-                  <Check className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span>{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/auto/autonomy-17186719616
-        {/* CTA Button */}
-        <div className="relative z-10">
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles.textColor}/25 border border-white/20 hover:border-white/40`}
+        {/* Service Info */}
+        <div className="flex-1">
+          <motion.h3 
+            className={`text-xl font-bold mb-2 ${variantStyles.text}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
           >
-            Get Started
-          </motion.button>
+            {service.name}
+          </motion.h3>
+          
+          <motion.p 
+            className="text-gray-300 text-sm mb-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            {service.tagline}
+          </motion.p>
+          
+          <motion.div 
+            className="mb-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            <span className="text-2xl font-bold text-white">
+              {typeof service.price === 'object' ? 'Contact for pricing' : service.price}
+            </span>
+            <span className="text-gray-400 text-sm ml-1">{service.period}</span>
+          </motion.div>
+
+          {/* Features */}
+          <motion.div 
+            className="space-y-2 mb-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            {service.features.slice(0, isExpanded ? service.features.length : 3).map((feature, index) => (
+              <motion.div 
+                key={feature}
+                className="flex items-center text-sm text-gray-300"
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 + index * 0.1 }}
+              >
+                <div className={`w-2 h-2 rounded-full mr-3 ${variantStyles.accent}`}></div>
+                {feature}
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Show More/Less Button */}
+          {service.features.length > 3 && (
+            <motion.button 
+              className={`text-sm ${variantStyles.text} hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-cyan-400`}
+              onClick={toggleExpanded}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {isExpanded ? 'Show Less' : `Show ${service.features.length - 3} More`}
+            </motion.button>
+          )}
         </div>
-<<<<<<< HEAD
 
+        {/* Action Button */}
+        <motion.button 
+          className={`w-full mt-4 py-3 px-4 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-cyan-400 ${variantStyles.accent} ${variantStyles.text} hover:bg-opacity-30 focus:ring-opacity-40 flex items-center justify-center gap-2`}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          Get Started
+          <ArrowRight className="w-4 h-4" />
+        </motion.button>
 
-
-
-        {/* Enhanced Hover Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
-      </div>
-    </motion.div>
-
-  );
-};
-
-
-UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
-export default UltraFuturisticServiceCard2026;
-
-
-
-
-
-
-
-
-export default UltraFuturisticServiceCard2026;
-
-
-
-
-
-
-=======
-        
-        {/* Enhanced Hover Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover:from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
+        {/* Hover Effect Overlay */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
+        />
       </div>
     </motion.div>
   );
 };
 
-UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
-
 export default UltraFuturisticServiceCard2026;
->>>>>>> origin/auto/autonomy-17186719616

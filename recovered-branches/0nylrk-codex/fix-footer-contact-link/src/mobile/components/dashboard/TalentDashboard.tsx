@@ -1,16 +1,5 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { CardContentCardHeaderCardTitleCardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRightFileTextImageClockZapBookOpen } from "lucide-react";
-=======
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { Link } from "react-router-dom";
 
 export function TalentDashboard() {

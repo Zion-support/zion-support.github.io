@@ -189,13 +189,6 @@
     "go_to_dashboard": "الانتقال إلى لوحة التحكم",
     "go_to_marketplace": "اذهب إلى المتجر",
     "go_back": "عودة",
-<<<<<<< HEAD
-    "forbidden_title": "403 – محظور",
-    "server_error_title": "500 – خطأ في الخادم",
-=======
-    "forbidden_title": "403 \u2013 محظور",
-    "server_error_title": "500 \u2013 خطأ في الخادم",
->>>>>>> origin/auto/autonomy-17186719616
     "server_error": "خطأ في الخادم",
     "page_lost_message": "يبدو أن الصفحة التي تبحث عنها اختفت. لنعد لمتابعة استكشاف مستقبل التقنية.",
     "explore_marketplace": "استكشف سوقنا",
@@ -227,8 +220,3 @@
     "sending": "جارٍ الإرسال...",
     "submit": "احصل على عرضك التجاري المجاني"
   }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/auto/autonomy-17186719616
