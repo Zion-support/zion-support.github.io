@@ -9,7 +9,6 @@ const RevolutionaryContentBanner2030: React.FC = () => {
           <div className="flex items-center justify-center space-x-3 mb-4">
             <span className="text-4xl animate-bounce">{slides[currentSlide].icon}</span>
             <h3 className="text-3xl font-bold">REVOLUTIONARY BREAKTHROUGH CONTENT 2030-2040</h3>
-            <span className="text-4xl animate-bounce">{slides[currentSlide].icon}</span>
           </div>
           <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
             Experience the future of technology with our groundbreaking new content featuring 
@@ -28,7 +27,6 @@ const RevolutionaryContentBanner2030: React.FC = () => {
                 {slide.title} →
               </a>
             ))};
-          </div>
         </div>
       </div>
     </div>

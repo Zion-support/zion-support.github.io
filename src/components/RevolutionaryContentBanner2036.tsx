@@ -16,8 +16,6 @@ const RevolutionaryContentBanner2036: React.FC = () => {
             </a>
             <a href="/pages/QuantumConsciousnessRevolution2037" className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold">
               Quantum Revolution →
-            </a>
-          </div>
         </div>
         
               <li>• Quantum Neural Networks</li>
@@ -27,12 +25,8 @@ const RevolutionaryContentBanner2036: React.FC = () => {
               <li>• Dimensional Portals</li>
               <li>• Reality Shifting</li>
               <li>• Parallel Universe Access</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentBanner2036;

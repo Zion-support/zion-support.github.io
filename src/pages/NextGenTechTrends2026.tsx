@@ -15,73 +15,53 @@ const NextGenTechTrends2026: React.FC = () => {
       ],
       impact: "Transform how we interact with technology and solve complex global challenges"
     },
-    {
       id: 2,
       title: "Quantum-Neural Hybrid Computing",
       description: "Revolutionary fusion of quantum computing and neural networks, enabling unprecedented computational power and problem-solving capabilities.",
       icon: "⚛️",
-      features: [
         "Exponential processing speed",
         "Quantum machine learning",
         "Neural quantum algorithms",
         "Breakthrough cryptography"
-      ],
       impact: "Solve previously impossible problems in seconds that would take classical computers millennia"
-    },
-    {
       id: 3,
       title: "Consciousness Interface Technology",
       description: "Direct neural interfaces that enable seamless communication between human consciousness and digital systems.",
       icon: "🧬",
-      features: [
         "Non-invasive brain-computer interfaces",
         "Thought-controlled devices",
         "Memory augmentation",
         "Consciousness backup systems"
-      ],
       impact: "Merge human intelligence with artificial systems for enhanced cognitive capabilities"
-    },
-    {
       id: 4,
       title: "Autonomous Reality Fabrication",
       description: "AI systems that can create, modify, and maintain entire virtual and augmented reality environments autonomously.",
       icon: "🌐",
-      features: [
         "Self-generating virtual worlds",
         "Dynamic reality adaptation",
         "Immersive experience creation",
         "Autonomous content generation"
-      ],
       impact: "Create infinite virtual experiences tailored to individual preferences and needs"
-    },
-    {
       id: 5,
       title: "Molecular-Scale Manufacturing",
       description: "Revolutionary manufacturing technology that builds products atom by atom, enabling previously impossible materials and structures.",
       icon: "⚗️",
-      features: [
         "Atomic precision manufacturing",
         "Self-assembling materials",
         "Programmable matter",
         "Zero-waste production"
-      ],
       impact: "Create materials with impossible properties and eliminate manufacturing waste entirely"
-    },
-    {
       id: 6,
       title: "Temporal Computing Systems",
       description: "Computing systems that can process information across different time dimensions, enabling predictive and retroactive analysis.",
       icon: "⏰",
-      features: [
         "Time-based data processing",
         "Predictive reality modeling",
         "Temporal pattern recognition",
         "Causality analysis"
-      ],
       impact: "Predict and prevent future problems while learning from alternative timelines"
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -89,20 +69,11 @@ const NextGenTechTrends2026: React.FC = () => {
       transition: {
         staggerChildren: 0.1
       }
-    }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: {
       y: 0,
-      opacity: 1,
-      transition: {
         duration: 0.5
-      }
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -128,12 +99,9 @@ const NextGenTechTrends2026: React.FC = () => {
               </button>
               <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400 hover:text-white transition-colors">
                 Download Report
-              </button>
-            </div>
           </divdiv>
         </div>
       </div>
-
       {/* Trends Grid */}
       <div className="container mx-auto px-4 py-20">
         <divdiv
@@ -161,45 +129,28 @@ const NextGenTechTrends2026: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4 mb-6">
                 <h4 className="text-sm font-semibold text-purple-300 mb-2">Impact:</h4>
                 <p className="text-gray-300 text-sm">{trend.impact}</p>
-              </div>
-              
               <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Learn More →
-              </button>
             </divdiv>
           ))}
         </divdiv>
-      </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-purple-900 to-pink-900 py-20">
         <div className="container mx-auto px-4 text-center">
-          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-white"
-          >
             <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
               Join us in exploring and implementing these revolutionary technologies. 
               Be part of the next generation of innovation.
-            </p>
-            <div className="flex justify-center space-x-4">
               <button className="bg-white text-purple-900 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Your Journey
-              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-900 transition-colors">
                 Contact Our Experts
-              </button>
-            </div>
-          </divdiv>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default NextGenTechTrends2026;

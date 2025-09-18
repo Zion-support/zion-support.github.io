@@ -17,13 +17,11 @@ const TransdimensionalComputing2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Hero Section */}
       <div className="container mx-auto px-6 py-16">
         <div className="text-center mb-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
             🌌 TRANSDIMENSIONAL COMPUTING REVOLUTION 2027
-          </div>
           <h1 className="text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Computing Beyond Dimensions
           </h1>
@@ -37,10 +35,6 @@ const TransdimensionalComputing2027: React.FC = () => {
             </button>
             <button className="border-2 border-purple-500 text-purple-300 px-12 py-6 rounded-xl hover:bg-purple-500/20 transition-all duration-300 font-bold text-xl">
               Watch Demo
-            </button>
-          </div>
-        </div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
@@ -53,75 +47,40 @@ const TransdimensionalComputing2027: React.FC = () => {
               <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
                 ∞ Infinite Scale
               </span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30">
             <div className="text-6xl mb-6 text-center">🌀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Manipulation</h3>
             <p className="text-indigo-200 text-center mb-6">
               Manipulate computational reality itself, creating and destroying processing dimensions on demand
-            </p>
-            <div className="text-center">
               <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
                 Reality Control
-              </span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-pink-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/30">
             <div className="text-6xl mb-6 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Parallel Processing</h3>
             <p className="text-pink-200 text-center mb-6">
               Execute computations in parallel across infinite universes, achieving unprecedented processing power
-            </p>
-            <div className="text-center">
               <span className="bg-red-500/20 text-red-300 px-4 py-2 rounded-full text-sm font-semibold">
                 Multi-Universe
-              </span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
             <div className="text-6xl mb-6 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Temporal Computing</h3>
             <p className="text-cyan-200 text-center mb-6">
               Process information across time dimensions, solving problems before they're even posed
-            </p>
-            <div className="text-center">
               <span className="bg-teal-500/20 text-teal-300 px-4 py-2 rounded-full text-sm font-semibold">
                 Time Travel
-              </span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/20 to-green-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30">
             <div className="text-6xl mb-6 text-center">🌊</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Dimensions</h3>
             <p className="text-emerald-200 text-center mb-6">
               Harness quantum dimensional states for computing that exists in superposition across realities
-            </p>
-            <div className="text-center">
-              <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
                 Quantum Reality
-              </span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-orange-600/20 to-yellow-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/30">
             <div className="text-6xl mb-6 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Consciousness Interface</h3>
             <p className="text-orange-200 text-center mb-6">
               Direct consciousness-to-computer interface enabling thought-based dimensional navigation
-            </p>
-            <div className="text-center">
               <span className="bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-semibold">
                 Mind Control
-              </span>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Deep Dive */}
         <div className="bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm rounded-3xl p-12 border border-purple-500/30 mb-16">
           <h2 className="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -139,85 +98,38 @@ const TransdimensionalComputing2027: React.FC = () => {
                     <p className="text-purple-200">Quantum processors that exist across multiple dimensions</p>
                   </div>
                 </li>
-                <li className="flex items-center space-x-4">
                   <span className="text-2xl">🌀</span>
-                  <div>
                     <h4 className="text-xl font-semibold">Reality Engines</h4>
                     <p className="text-purple-200">Engines capable of manipulating computational reality</p>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-4">
                   <span className="text-2xl">⚡</span>
-                  <div>
                     <h4 className="text-xl font-semibold">Parallel Universe Networks</h4>
                     <p className="text-purple-200">Networks spanning infinite parallel universes</p>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-4">
                   <span className="text-2xl">🔮</span>
-                  <div>
                     <h4 className="text-xl font-semibold">Temporal Processors</h4>
                     <p className="text-purple-200">Processors that compute across time dimensions</p>
-                  </div>
-                </li>
               </ul>
-            </div>
-
-            <div>
               <h3 className="text-3xl font-bold mb-6 text-pink-300">Applications</h3>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-4">
                   <span className="text-2xl">🧠</span>
-                  <div>
                     <h4 className="text-xl font-semibold">Consciousness Upload</h4>
                     <p className="text-pink-200">Upload human consciousness across dimensions</p>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-4">
                   <span className="text-2xl">🌍</span>
-                  <div>
                     <h4 className="text-xl font-semibold">Reality Simulation</h4>
                     <p className="text-pink-200">Create and simulate infinite realities</p>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-4">
                   <span className="text-2xl">🔬</span>
-                  <div>
                     <h4 className="text-xl font-semibold">Scientific Discovery</h4>
                     <p className="text-pink-200">Solve problems across infinite universes</p>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-4">
                   <span className="text-2xl">🎮</span>
-                  <div>
                     <h4 className="text-xl font-semibold">Infinite Gaming</h4>
                     <p className="text-pink-200">Games that exist across multiple realities</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-8">Ready to Transcend Dimensions?</h2>
           <p className="text-2xl opacity-90 mb-12 max-w-4xl mx-auto">
             Join the transdimensional computing revolution and experience processing power beyond imagination. 
             Explore infinite realities and unlock the secrets of the multiverse.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-bold text-xl">
               Start Journey →
-            </button>
-            <button className="border-2 border-purple-500 text-purple-300 px-12 py-6 rounded-xl hover:bg-purple-500/20 transition-all duration-300 font-bold text-xl">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default TransdimensionalComputing2027;

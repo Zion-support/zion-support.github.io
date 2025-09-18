@@ -1,5 +1,5 @@
 import React from 'react';
-import { newBlogPosts2026, newServices2026 } from '../data/newContent2026';
+import { newBlogPosts2026, newServices2026 } from '@/data/newContent2026';
 
 const NewContentShowcase2026: React.FC = () => {
   return (
@@ -14,7 +14,6 @@ const NewContentShowcase2026: React.FC = () => {
             Discover the latest breakthroughs in AI, quantum computing, and autonomous systems that are reshaping the future of technology.
           </p>
         </div>
-
         {/* Featured Blog Posts */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -34,7 +33,6 @@ const NewContentShowcase2026: React.FC = () => {
                       {post.category}
                     </span>
                     <span className="ml-2 text-gray-500 text-sm">{post.readTime}</span>
-                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                     {post.title}
                   </h3>
@@ -47,84 +45,52 @@ const NewContentShowcase2026: React.FC = () => {
                       <p className="text-sm text-gray-500">{post.authorRole}</p>
                     </div>
                     <span className="text-sm text-gray-500">{post.publishDate}</span>
-                  </div>
-                </div>
               </div>
             ))}
           </div>
         </section>
-
         {/* Featured Services */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Revolutionary Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newServices2026.map((service) => (
               <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="h-48 bg-gradient-to-r from-green-500 to-teal-600 flex items-center justify-center">
-                  <div className="text-white text-4xl font-bold">
                     {service.title.charAt(0)}
-                  </div>
-                </div>
-                <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
                       {service.category}
-                    </span>
                     <div className="flex items-center">
                       <span className="text-yellow-500 text-sm">★</span>
                       <span className="text-sm text-gray-600 ml-1">{service.reviews.rating}</span>
-                    </div>
-                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
                     {service.description}
-                  </p>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-green-600">
                       {service.currency}{service.price.toLocaleString()}
-                    </span>
                     <span className="text-sm text-gray-500">AI Score: {service.aiScore}</span>
-                  </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (
                       <span key={tag} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                         {tag}
                       </span>
                     ))}
-                  </div>
                   <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200">
                     Learn More
                   </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Call to Action */}
         <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Transform Your Business?
-          </h2>
           <p className="text-xl mb-8 opacity-90">
             Join thousands of companies already using our revolutionary AI solutions to achieve unprecedented growth and efficiency.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
               Get Started Today
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200">
               Schedule Demo
-            </button>
-          </div>
-        </section>
       </div>
     </div>
   );
 };
-
 export default NewContentShowcase2026;

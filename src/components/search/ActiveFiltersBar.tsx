@@ -16,11 +16,9 @@ export function ActiveFiltersBar({
                           selectedAvailability?.length > 0 || 
                           selectedRating || 
                           searchQuery;
-
   if (!hasActiveFilters) {
     return null;
   }
-
   const renderFilterChip = (label, value, filterType) => (
     <motion.div
       key={`${filterType}-${value}`}
@@ -38,7 +36,6 @@ export function ActiveFiltersBar({
       </button>
     </motion.div>
   );
-
   return (
     <div className="bg-zion-slate-dark border border-zion-slate-light rounded-lg p-4 mb-6">
       <div className="flex items-center justify-between mb-4">
@@ -53,24 +50,16 @@ export function ActiveFiltersBar({
           Clear All
         </button>
       </div>
-
       <div className="flex flex-wrap gap-2">
         {searchQuery && renderFilterChip('Search', searchQuery, 'search')}
         
         {selectedProductTypes?.map(type => 
           renderFilterChip('Product Type', type, 'productType')
         )}
-        
         {selectedLocations?.map(location => 
           renderFilterChip('Location', location, 'location')
-        )}
-        
         {selectedAvailability?.map(availability => 
           renderFilterChip('Availability', availability, 'availability')
-        )}
-        
         {selectedRating && renderFilterChip('Rating', `${selectedRating}+ stars`, 'rating')}
-      </div>
     </div>
-  );
 }

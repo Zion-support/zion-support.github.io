@@ -9,11 +9,8 @@ const RevolutionaryTech2027: React.FC = () => {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
             </div>
-          </div>
         </div>
             </button>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -22,16 +22,12 @@ const QuantumBreakthroughs2026: React.FC = () => {
             </a>
             <a href="#applications" className="border border-cyan-400 text-cyan-300 px-8 py-3 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors">
               View Applications
-            </a>
-          </div>
         </div>
-
         {/* Quantum Capabilities */}
         <section id="capabilities" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Quantum Computing Capabilities</h2>
             <p className="text-xl text-cyan-200">Unlock the power of quantum mechanics for your business</p>
-          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -52,54 +48,35 @@ const QuantumBreakthroughs2026: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🔐</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Cryptography</h3>
               <p className="text-purple-100 mb-6 text-center">
                 Unbreakable security using quantum key distribution and quantum-resistant encryption
-              </p>
               <ul className="text-purple-200 space-y-2 mb-6 text-sm">
                 <li>• Quantum key distribution</li>
                 <li>• Post-quantum cryptography</li>
                 <li>• Secure communication</li>
                 <li>• Future-proof security</li>
-              </ul>
-              <div className="text-center">
                 <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">
                   COMING Q3 2026
-                </span>
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🧬</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Molecular Simulation</h3>
               <p className="text-emerald-100 mb-6 text-center">
                 Simulate complex molecular interactions for drug discovery, materials science, and chemical engineering
-              </p>
               <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
                 <li>• Protein folding simulation</li>
                 <li>• Drug discovery acceleration</li>
                 <li>• Materials optimization</li>
                 <li>• Chemical reaction modeling</li>
-              </ul>
-              <div className="text-center">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
-                  AVAILABLE NOW
-                </span>
-              </div>
-            </div>
-          </div>
         </section>
-
         {/* Quantum Applications */}
         <section id="applications" className="mb-16">
           <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-12 backdrop-blur-sm border border-cyan-400/30">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">🌍 Quantum Applications</h2>
               <p className="text-xl text-cyan-200">Transform industries with quantum computing solutions</p>
-            </div>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
@@ -110,85 +87,42 @@ const QuantumBreakthroughs2026: React.FC = () => {
                     <p className="text-cyan-200">High-frequency trading, risk analysis, and portfolio optimization with quantum algorithms</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">💊</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Healthcare & Pharma</h3>
                     <p className="text-cyan-200">Drug discovery, genomic analysis, and personalized medicine using quantum simulation</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">🔬</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Scientific Research</h3>
                     <p className="text-cyan-200">Climate modeling, particle physics, and complex system optimization</p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">🚗</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Transportation</h3>
                     <p className="text-cyan-200">Route optimization, traffic management, and autonomous vehicle coordination</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">🏭</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Manufacturing</h3>
                     <p className="text-cyan-200">Supply chain optimization, quality control, and production scheduling</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">🔋</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Energy</h3>
                     <p className="text-cyan-200">Grid optimization, renewable energy integration, and battery technology advancement</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Quantum Performance Metrics */}
         <section className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">📊 Quantum Performance</h2>
             <p className="text-xl text-cyan-200">Measurable impact of quantum computing</p>
-          </div>
-          
           <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-cyan-400/30">
               <div className="text-4xl font-bold text-white mb-2">10,000x</div>
               <div className="text-cyan-200">Speed Increase</div>
-            </div>
             <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-purple-400/30">
               <div className="text-4xl font-bold text-white mb-2">1000+</div>
               <div className="text-purple-200">Qubits</div>
-            </div>
             <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-green-400/30">
               <div className="text-4xl font-bold text-white mb-2">99.99%</div>
               <div className="text-green-200">Accuracy</div>
-            </div>
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-orange-400/30">
               <div className="text-4xl font-bold text-white mb-2">∞</div>
               <div className="text-orange-200">Possibilities</div>
-            </div>
-          </div>
-        </section>
-
         {/* Quantum Implementation */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Quantum Implementation</h2>
             <p className="text-xl text-cyan-200">Get started with quantum computing in 60 days</p>
-          </div>
-          
-          <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-12 backdrop-blur-sm border border-cyan-400/30">
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
                 <div className="text-4xl mb-4">🔍</div>
                 <h3 className="text-xl font-bold text-white mb-4">Phase 1: Discovery</h3>
                 <ul className="text-cyan-200 space-y-2 text-sm">
@@ -197,83 +131,41 @@ const QuantumBreakthroughs2026: React.FC = () => {
                   <li>• Quantum algorithm design</li>
                   <li>• Infrastructure planning</li>
                 </ul>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl mb-4">⚙️</div>
                 <h3 className="text-xl font-bold text-white mb-4">Phase 2: Development</h3>
-                <ul className="text-cyan-200 space-y-2 text-sm">
                   <li>• Quantum system setup</li>
                   <li>• Algorithm implementation</li>
                   <li>• Testing & validation</li>
                   <li>• Performance optimization</li>
-                </ul>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-bold text-white mb-4">Phase 3: Deployment</h3>
-                <ul className="text-cyan-200 space-y-2 text-sm">
                   <li>• Production deployment</li>
                   <li>• Monitoring & maintenance</li>
                   <li>• Scaling optimization</li>
                   <li>• Continuous improvement</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Success Stories */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🏆 Quantum Success Stories</h2>
             <p className="text-xl text-cyan-200">Real results from quantum computing implementations</p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
               <div className="text-center mb-6">
                 <div className="text-4xl font-bold text-white mb-2">$500M</div>
                 <div className="text-cyan-200">Trading Profit Increase</div>
-              </div>
               <h3 className="text-xl font-bold text-white mb-4">Global Investment Bank</h3>
               <p className="text-cyan-200 mb-4">Quantum algorithms optimized trading strategies, resulting in 500% increase in trading profits</p>
-              <div className="text-center">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
                   COMPLETED
-                </span>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="text-center mb-6">
                 <div className="text-4xl font-bold text-white mb-2">50x</div>
                 <div className="text-purple-200">Faster Drug Discovery</div>
-              </div>
               <h3 className="text-xl font-bold text-white mb-4">Pharmaceutical Company</h3>
               <p className="text-purple-200 mb-4">Quantum simulation accelerated drug discovery process from years to weeks</p>
-              <div className="text-center">
-                <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">
                   IN PROGRESS
-                </span>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <div className="text-center mb-6">
                 <div className="text-4xl font-bold text-white mb-2">99.9%</div>
                 <div className="text-emerald-200">Security Improvement</div>
-              </div>
               <h3 className="text-xl font-bold text-white mb-4">Government Agency</h3>
               <p className="text-emerald-200 mb-4">Quantum cryptography achieved unbreakable security for classified communications</p>
-              <div className="text-center">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
                   DEPLOYED
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12">
@@ -287,13 +179,8 @@ const QuantumBreakthroughs2026: React.FC = () => {
               </a>
               <a href="/pages/AISolutions2026" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors">
                 Explore AI Solutions
-              </a>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
 };
-
 export default QuantumBreakthroughs2026;

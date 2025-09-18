@@ -1,29 +1,17 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Button } from '../components/ui/button';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Calendar, Clock, DollarSign, Briefcase } from '../components/icons';
-import { formatDistanceToNow } from 'date-fns';
-import { toast } from 'sonner';
-import { useAuth } from '../hooks/useAuth';
-import useJobDetails from '../hooks/useJobDetails';
-import { ApplyToJobModal } from '../components/messaging/job-application';
-import { SEO } from '../components/SEO';
-import { useWhitelabel } from '../context/WhitelabelContext';
-=======
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '../components/ui/badge';
+import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, DollarSign, Briefcase } from '@/components/icons';
 import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '../components/SEO.jsx';
+import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+import SEO from '@/components/SEO.jsx';
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { jobId } = useParams();
@@ -45,9 +33,7 @@ export default function JobDetails() {
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
         </div>
-        
       </>);
-    }
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
@@ -56,19 +42,15 @@ export default function JobDetails() {
         }
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
             toast.error("Only job seekers can apply for jobs");
-            return;
-        }
         setIsApplyModalOpen(true);
     };
     const handleApplySuccess = async (appliedJobId) => {
         toast.success("Application submitted successfully!");
         setIsApplyModalOpen(false);
-    };
     const formatBudget = (budget) => {
         if (!budget)
             return "Not specified";
         return `$${budget.min} - $${budget.max}`;
-    };
     const isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
@@ -78,8 +60,6 @@ export default function JobDetails() {
           <Button variant="outline" size="sm" onClick={() => navigate('/jobs')}>
             ← Back to Jobs
           </Button>
-        </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
             <Card>
@@ -100,64 +80,38 @@ export default function JobDetails() {
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>
                   <div className="whitespace-pre-wrap">
                     {job.description}
-                  </div>
-                </div>
                 
-                <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill, i) => (<Badge key={i} variant="secondary">
                         {skill}
                       </Badge>))}
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>
           
           <div>
-            <Card>
               <CardContent className="pt-6 space-y-4">
                 <div className="flex items-start">
                   <DollarSign className="mt-1 h-5 w-5 text-muted-foreground"/>
                   <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Budget</p>
                     <p className="font-medium">{formatBudget(job.budget)}</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground"/>
-                  <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Deadline</p>
                     <p className="font-medium">
                       {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
                     </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground"/>
-                  <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Job Type</p>
                     <p className="font-medium">Freelance / Remote</p>
-                  </div>
-                </div>
-                
                 {!isOwnJob && (<Button className="w-full mt-4" onClick={handleApply} disabled={isOwnJob}>
                     Apply Now
                   </Button>)}
-                
                 {isOwnJob && (<div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>)}
-              </CardContent>
-            </Card>
-          </div>
-        </div>
       </main>
-      
-      
       {/* Job application modal */}
       {job && (<ApplyToJobModal job={{
                 id: job.id,

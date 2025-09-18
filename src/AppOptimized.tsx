@@ -18,7 +18,6 @@ const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
-
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,10 +29,8 @@ const queryClient = new QueryClient({
     },
     mutations: {
       retry: 1,
-    },
   },
 });
-
 const AppOptimized: React.FC = () => {
   return (
     <ErrorBoundary>
@@ -67,5 +64,4 @@ const AppOptimized: React.FC = () => {
     </ErrorBoundary>
   );
 };
-
 export default AppOptimized;

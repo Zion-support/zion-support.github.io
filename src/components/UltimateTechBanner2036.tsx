@@ -30,47 +30,31 @@ const UltimateTechBanner2036: React.FC = () => {
             <a href="/pages/UltimateAIConsciousness2036" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Explore Consciousness →
             </a>
-          </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">⚡</div>
             <h3 className="text-xl font-bold mb-3 text-center">Tech Showcase</h3>
             <p className="text-cyan-100 mb-4 text-center text-sm">
               Interactive demonstrations of cutting-edge technologies
-            </p>
             <a href="/pages/RevolutionaryTechShowcase2036" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
               View Showcase →
-            </a>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🌌</div>
             <h3 className="text-xl font-bold mb-3 text-center">Next-Gen Revolution</h3>
             <p className="text-emerald-100 mb-4 text-center text-sm">
               Revolutionary technologies that transcend current limitations
-            </p>
             <a href="/pages/NextGenTechRevolution2036" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Join Revolution →
-            </a>
-          </div>
-        </div>
-        
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
             <a href="/pages/NextGenTechRevolution2036" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400">
               🚀 NEW: Ultimate Tech 2036 →
-            </a>
             <a href="/pages/UltimateAIConsciousness2036" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400">
               🧠 AI Consciousness 2036 →
-            </a>
             <a href="/pages/RevolutionaryTechShowcase2036" className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg animate-pulse border-2 border-yellow-400">
               ⚡ Tech Showcase 2036 →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateTechBanner2036;

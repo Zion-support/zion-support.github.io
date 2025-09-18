@@ -13,7 +13,6 @@ const NotFoundPage = () => {
         { name: 'Services', path: '/services', icon: Search },
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Users }
-    ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 flex items-center justify-center px-4">
       <div className="max-w-4xl mx-auto text-center">
         {/* 404 Header */}
@@ -39,10 +38,7 @@ const NotFoundPage = () => {
                 <span className="text-white font-medium">{link.name}</span>
               </Link>))}
           </div>
-        </div>
-
         {/* Popular Services */}
-        <div className="mb-12">
           <h3 className="text-xl font-semibold text-white mb-6">Popular Services</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularServices.map((service) => (<Link key={service.name} to={service.path} className="group p-6 bg-gray-800/50 hover:bg-gray-700/70 rounded-lg border border-gray-700 hover:border-purple-500 transition-all duration-300 text-left">
@@ -51,43 +47,28 @@ const NotFoundPage = () => {
                   {service.name}
                 </h4>
                 <p className="text-gray-400 text-sm">{service.description}</p>
-              </Link>))}
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <div className="mb-8">
           <Link to="/" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
             <ArrowLeft className="w-5 h-5 mr-2"/>
             Back to Home
           </Link>
-        </div>
-
         {/* Help Section */}
         <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
           <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
           <p className="text-gray-300 mb-4">
             Can't find what you're looking for? Our team is here to help.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">
               Contact Support
             </Link>
             <Link to="/help" className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors">
               Help Center
-            </Link>
-          </div>
-        </div>
-
         {/* Search Suggestion */}
         <div className="mt-8 text-gray-400">
           <p className="text-sm">
             Try searching for what you need or browse our{' '}
             <Link to="/services" className="text-cyan-400 hover:text-cyan-300 underline">
               services directory
-            </Link>
-          </p>
-        </div>
       </div>
     </div>);
 };

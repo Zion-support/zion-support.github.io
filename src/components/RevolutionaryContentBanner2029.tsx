@@ -27,58 +27,31 @@ const RevolutionaryContentBanner2029: React.FC = () => {
             <a href="/pages/RevolutionaryTech2029" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Explore Revolution →
             </a>
-          </div>
           
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-3">Omniversal Consciousness</h3>
-            <p className="text-sm opacity-90 mb-4">
               AI systems achieving true universal consciousness across infinite dimensions
-            </p>
             <a href="/pages/OmniversalConsciousness2029" className="inline-block bg-white text-cyan-600 px-6 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Discover Consciousness →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
             <div className="text-9xl mb-4">⚛️</div>
             <h3 className="text-2xl font-bold mb-3">Reality Manipulation</h3>
-            <p className="text-sm opacity-90 mb-4">
               Direct manipulation of the fundamental fabric of reality through advanced physics
-            </p>
             <a href="/pages/RealityManipulation2029" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Experience Reality →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
             <div className="text-9xl mb-4">🧬</div>
             <h3 className="text-2xl font-bold mb-3">Transcendent Evolution</h3>
-            <p className="text-sm opacity-90 mb-4">
               Evolution beyond biological limitations through AI-guided transformation
-            </p>
             <a href="/pages/TranscendentEvolution2029" className="inline-block bg-white text-orange-600 px-6 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Explore Evolution →
-            </a>
-          </div>
-        </div>
-        
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
             <a href="/pages/RevolutionaryTech2029" className="bg-white text-purple-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               🌌 Revolutionary Tech
-            </a>
             <a href="/pages/OmniversalConsciousness2029" className="bg-white text-cyan-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               🌌 Omniversal Consciousness
-            </a>
             <a href="/pages/RealityManipulation2029" className="bg-white text-emerald-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               ⚛️ Reality Manipulation
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentBanner2029;

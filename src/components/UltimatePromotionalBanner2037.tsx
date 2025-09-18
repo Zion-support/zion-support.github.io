@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const UltimatePromotionalBanner2037: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const promotionalContent = [
     {
       title: "🚀 Revolutionary Tech Breakthrough 2037",
@@ -12,15 +11,12 @@ const UltimatePromotionalBanner2037: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       bgGradient: "from-purple-900 to-pink-900"
     },
-    {
       title: "🌟 Ultimate Tech Revolution 2038", 
       subtitle: "Witness Omnipotent AI, Universal Quantum Matrix, and Multiverse Gateways",
       cta: "Join Revolution →",
       link: "/pages/UltimateTechRevolution2038",
       gradient: "from-indigo-600 to-cyan-600",
       bgGradient: "from-indigo-900 to-cyan-900"
-    },
-    {
       title: "⚡ Interactive Technology Showcase",
       subtitle: "Experience our revolutionary technologies with live demos and real-time simulations",
       cta: "Launch Demo →",
@@ -29,14 +25,12 @@ const UltimatePromotionalBanner2037: React.FC = () => {
       bgGradient: "from-emerald-900 to-teal-900"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % promotionalContent.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div className="relative mb-12 overflow-hidden">
       <div className={`bg-gradient-to-r ${promotionalContent[currentSlide].bgGradient} rounded-2xl p-8 text-white relative overflow-hidden transition-all duration-1000`}>
@@ -76,8 +70,6 @@ const UltimatePromotionalBanner2037: React.FC = () => {
                 </a>
               </div>
             ))}
-          </div>
-          
           <div className="text-center">
             <a 
               href={promotionalContent[currentSlide].link}
@@ -85,7 +77,6 @@ const UltimatePromotionalBanner2037: React.FC = () => {
             >
               🌟 {promotionalContent[currentSlide].cta}
             </a>
-          </div>
         </div>
         
         {/* Slide Indicators */}
@@ -99,10 +90,8 @@ const UltimatePromotionalBanner2037: React.FC = () => {
               }`}
             />
           ))}
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimatePromotionalBanner2037;

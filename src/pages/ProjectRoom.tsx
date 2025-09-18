@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-=======
-import { SEO } from '../components/SEO.jsx';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+import SEO from '@/components/SEO.jsx';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
-import { VideoCallRoom } from '../components/video/VideoCallRoom';
+import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
     const { projectId } = useParams();
@@ -35,14 +29,11 @@ export default function ProjectRoom() {
         // Switch to video tab if not already there
         if (activeTab !== 'video') {
             setActiveTab('video');
-        }
     };
     const endVideoCall = () => {
         setIsInCall(false);
         toast.info("Video call ended", {
             description: "Call duration and participants will be logged"
-        });
-    };
     const simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
@@ -54,8 +45,6 @@ export default function ProjectRoom() {
         if (!callParticipants.find(p => p.id === randomUser.id)) {
             setCallParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`);
-        }
-    };
     return (<>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
       
@@ -80,7 +69,6 @@ export default function ProjectRoom() {
             <TabsTrigger value="files" className="flex items-center gap-2">
               <FileText className="h-4 w-4"/>
               <span className="hidden sm:inline">Files</span>
-            </TabsTrigger>
             <TabsTrigger value="video" className="flex items-center gap-2">
               <Video className="h-4 w-4"/>
               <span className="hidden sm:inline">Video</span>
@@ -88,19 +76,15 @@ export default function ProjectRoom() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                 </span>)}
-            </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items-center gap-2">
               <Calendar className="h-4 w-4"/>
               <span className="hidden sm:inline">Calendar</span>
-            </TabsTrigger>
             <TabsTrigger value="team" className="flex items-center gap-2">
               <Users className="h-4 w-4"/>
               <span className="hidden sm:inline">Team</span>
-            </TabsTrigger>
             <TabsTrigger value="settings" className="flex items-center gap-2">
               <Settings className="h-4 w-4"/>
               <span className="hidden sm:inline">Settings</span>
-            </TabsTrigger>
           </TabsList>
           
           <TabsContent value="chat" className="space-y-4">
@@ -116,27 +100,13 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="files" className="space-y-4">
-            <Card>
-              <CardHeader>
                 <CardTitle>Project Files</CardTitle>
                 <CardDescription>Manage documents and files</CardDescription>
-              </CardHeader>
-              <CardContent className="h-[400px]">
-                <div className="flex items-center justify-center h-full">
                   <p className="text-muted-foreground">File management will be implemented soon</p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
           <TabsContent value="video" className="space-y-4">
-            <Card>
-              <CardHeader>
                 <CardTitle>Video Meetings</CardTitle>
                 <CardDescription>Schedule and join video calls</CardDescription>
-              </CardHeader>
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (<div className="space-y-4">
                     <VideoCallRoom roomId={`project-${projectId}`} participants={callParticipants} onLeave={endVideoCall}/>
@@ -153,60 +123,23 @@ export default function ProjectRoom() {
                       <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
                         <Video className="h-4 w-4"/>
                         Start Video Call
-                      </Button>
-                    </div>
                     <div className="text-xs text-muted-foreground mt-4">
                       <p>Recent calls:</p>
                       <p>No recent calls for this project</p>
-                    </div>
                   </div>)}
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
           <TabsContent value="calendar" className="space-y-4">
-            <Card>
-              <CardHeader>
                 <CardTitle>Project Calendar</CardTitle>
                 <CardDescription>Schedule and manage events</CardDescription>
-              </CardHeader>
-              <CardContent className="h-[400px]">
-                <div className="flex items-center justify-center h-full">
                   <p className="text-muted-foreground">Calendar will be implemented soon</p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
           <TabsContent value="team" className="space-y-4">
-            <Card>
-              <CardHeader>
                 <CardTitle>Team Members</CardTitle>
                 <CardDescription>Manage project participants</CardDescription>
-              </CardHeader>
-              <CardContent className="h-[400px]">
-                <div className="flex items-center justify-center h-full">
                   <p className="text-muted-foreground">Team management will be implemented soon</p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
           <TabsContent value="settings" className="space-y-4">
-            <Card>
-              <CardHeader>
                 <CardTitle>Project Settings</CardTitle>
                 <CardDescription>Configure project parameters</CardDescription>
-              </CardHeader>
-              <CardContent className="h-[400px]">
-                <div className="flex items-center justify-center h-full">
                   <p className="text-muted-foreground">Settings will be implemented soon</p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
         </Tabs>
       </main>
-      
     </>);
 }

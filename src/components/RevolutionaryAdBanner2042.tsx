@@ -9,28 +9,22 @@ const RevolutionaryAdBanner2042: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       link: "/pages/UltimateTechRevolution2042"
     },
-    {
       title: "Revolutionary Tech Showcase",
       subtitle: "Interactive Technology Demos",
       description: "Live demonstrations of cutting-edge innovations",
       icon: "⚡",
       color: "from-cyan-600 to-blue-600",
       link: "/pages/RevolutionaryTechShowcase2042"
-    },
-    {
       icon: "🧠",
       color: "from-emerald-600 to-teal-600",
       link: "/pages/NextGenInnovationHub2042"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
     return () => clearInterval(interval);
   }, [slides.length]);
-
   return (
-
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-4 animate-pulse">
@@ -40,7 +34,6 @@ const RevolutionaryAdBanner2042: React.FC = () => {
             Experience the Ultimate Technological Breakthrough
           </h2>
         </div>
-
         {/* Rotating Ad Display */}
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 relative overflow-hidden">
@@ -65,10 +58,7 @@ const RevolutionaryAdBanner2042: React.FC = () => {
               <div className="hidden md:block">
                 <div className="w-64 h-64 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20 flex items-center justify-center">
                   <div className="text-8xl animate-pulse">{ads[currentAd].icon}</div>
-                </div>
-              </div>
             </div>
-
             {/* Ad Indicators */}
             <div className="flex justify-center space-x-2 mt-6">
               {ads.map((_, index) => (
@@ -80,10 +70,6 @@ const RevolutionaryAdBanner2042: React.FC = () => {
                   }`}
                 />
               ))}
-            </div>
-          </div>
-        </div>
-
         {/* Quick Access Links */}
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           {ads.map((ad, index) => (
@@ -97,10 +83,8 @@ const RevolutionaryAdBanner2042: React.FC = () => {
               {ad.icon} {ad.title}
             </a>
           ))}
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryAdBanner2042;

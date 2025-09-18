@@ -43,16 +43,13 @@ export default function IntegrationsFeature() {
               <p className="font-semibold">Where can I find the API docs?</p>
               <p className="text-zion-slate-light">Visit our Developer Portal for authentication guides and endpoint references.</p>
             </div>
-            <div>
               <p className="font-semibold">Is there a rate limit?</p>
               <p className="text-zion-slate-light">Yes, free tier requests are limited per hour. Contact sales for higher limits.</p>
-            </div>
           </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
             </Button>
-          </div>
         </div>
       </main>
       <Footer />

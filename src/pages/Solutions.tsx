@@ -20,8 +20,6 @@ const Solutions = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Custom solutions page coming soon. We're building comprehensive solution offerings.
-            </p>
-          </div>
         </div>
       </div>
     </>);

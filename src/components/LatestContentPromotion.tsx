@@ -31,59 +31,41 @@ const LatestContentPromotion: React.FC = () => {
             <a href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Read Full Guide →
             </a>
-          </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🏆</div>
             <h3 className="text-xl font-bold mb-3 text-center">800% ROI Success Story</h3>
             <p className="text-cyan-100 mb-4 text-center text-sm">
               Fortune 500 company achieves unprecedented transformation with AI 2026 technologies
-            </p>
             <ul className="text-cyan-200 space-y-1 mb-4 text-xs">
               <li>• 800% return on investment</li>
               <li>• 300% efficiency improvements</li>
               <li>• 400% faster innovation</li>
               <li>• Industry leadership achieved</li>
-            </ul>
             <a href="/content/case-studies/fortune-500-ai-transformation-800-roi-success" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
               View Case Study →
-            </a>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-3 text-center">🛠️</div>
             <h3 className="text-xl font-bold mb-3 text-center">Implementation Guide</h3>
             <p className="text-emerald-100 mb-4 text-center text-sm">
               Step-by-step framework for implementing AI 2026 technologies in your organization
-            </p>
             <ul className="text-emerald-200 space-y-1 mb-4 text-xs">
               <li>• Strategic foundation setup</li>
               <li>• Technology assessment</li>
               <li>• Change management</li>
               <li>• ROI optimization</li>
-            </ul>
             <a href="/content/resources/ai-2026-implementation-guide" className="block w-full bg-white text-emerald-600 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center text-sm">
               Download Guide →
-            </a>
-          </div>
-        </div>
-        
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
             <a href="/content/blog/ai-2026-revolutionary-breakthrough-ultimate-guide" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               📚 Read Ultimate Guide
-            </a>
             <a href="/content/case-studies/fortune-500-ai-transformation-800-roi-success" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               🏆 View Success Story
-            </a>
             <a href="/content/resources/ai-2026-implementation-guide" className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               🛠️ Get Implementation Guide
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default LatestContentPromotion;

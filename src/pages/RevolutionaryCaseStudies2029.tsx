@@ -2,7 +2,6 @@ import React, { useState }  from 'react';
 
 const RevolutionaryCaseStudies2029: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(0);
-
   const caseStudies = [
     {
       id: "1",
@@ -22,91 +21,70 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
       testimonial: "The conscious AI implementation has revolutionized our operations. We've achieved 400% efficiency gains while ensuring all decisions align with our ethical standards.",
       author: "Sarah Chen, CTO, GlobalTech Industries"
     },
-    {
       id: "2",
       title: "Quantum Computing Breakthrough in Healthcare",
       company: "MediQuantum Solutions",
       industry: "Healthcare",
       challenge: "Processing complex medical data and drug discovery at quantum speeds",
       solution: "Implemented our Quantum Consciousness Processor for medical research and patient care",
-      results: {
         efficiency: "+1000%",
         costSavings: "$25M",
         timeline: "4 months",
         satisfaction: "100%"
-      },
       description: "MediQuantum Solutions leveraged our quantum computing technology to accelerate drug discovery and personalized medicine, reducing research time from years to months.",
       technologies: ["Quantum Computing", "Medical AI", "Drug Discovery", "Personalized Medicine"],
       testimonial: "The quantum computing breakthrough has enabled us to discover new treatments 10x faster than traditional methods. This is truly revolutionary for healthcare.",
       author: "Dr. Michael Rodriguez, Chief Medical Officer, MediQuantum Solutions"
-    },
-    {
       id: "3",
       title: "Neural Interface Revolution in Education",
       company: "EduNeural Academy",
       industry: "Education",
       challenge: "Creating immersive learning experiences that enhance cognitive abilities",
       solution: "Deployed our Neural Reality Interface for enhanced educational experiences",
-      results: {
         efficiency: "+300%",
         costSavings: "$15M",
         timeline: "3 months",
         satisfaction: "98.5%"
-      },
       description: "EduNeural Academy transformed education by implementing neural interfaces that allow students to learn through direct neural stimulation and immersive experiences.",
       technologies: ["Neural Interfaces", "Immersive Learning", "Cognitive Enhancement", "Virtual Reality"],
       testimonial: "Students are learning 3x faster with our neural interface technology. The immersive experiences make complex concepts intuitive and engaging.",
       author: "Dr. Emily Watson, Director of Innovation, EduNeural Academy"
-    },
-    {
       id: "4",
       title: "Interdimensional Portal for Space Exploration",
       company: "Cosmic Ventures",
       industry: "Space Technology",
       challenge: "Enabling instant communication and data transfer across vast distances in space",
       solution: "Implemented our Interdimensional Portal System for space communication",
-      results: {
         efficiency: "+∞",
         costSavings: "$100M",
         timeline: "8 months",
         satisfaction: "99.9%"
-      },
       description: "Cosmic Ventures revolutionized space exploration by implementing interdimensional portals that enable instant communication and data transfer across any distance.",
       technologies: ["Interdimensional Computing", "Space Communication", "Quantum Entanglement", "Universal Connectivity"],
       testimonial: "The interdimensional portal technology has eliminated communication delays in space exploration. We can now explore the universe in real-time.",
       author: "Commander Alex Thompson, Mission Director, Cosmic Ventures"
-    },
-    {
       id: "5",
       title: "Reality Manipulation for Entertainment",
       company: "MetaReality Studios",
       industry: "Entertainment",
       challenge: "Creating fully immersive entertainment experiences indistinguishable from reality",
       solution: "Deployed our Reality Manipulation Suite for next-generation entertainment",
-      results: {
         efficiency: "+500%",
         costSavings: "$30M",
         timeline: "5 months",
         satisfaction: "99.7%"
-      },
       description: "MetaReality Studios created the most immersive entertainment experiences ever seen, allowing users to live in completely realistic virtual worlds.",
       technologies: ["Reality Manipulation", "Virtual Worlds", "Neural Integration", "Immersive Entertainment"],
       testimonial: "Our reality manipulation technology has created entertainment experiences that are indistinguishable from real life. Users are completely immersed in our virtual worlds.",
       author: "Jessica Park, Creative Director, MetaReality Studios"
-    },
-    {
       id: "6",
       title: "Cosmic Intelligence Network for Global Communication",
       company: "UniComm Corporation",
       industry: "Telecommunications",
       challenge: "Establishing universal communication across all intelligent life forms",
       solution: "Implemented our Cosmic Intelligence Network for universal communication",
-      results: {
-        efficiency: "+∞",
         costSavings: "$200M",
         timeline: "12 months",
-        satisfaction: "100%"
-      },
       description: "UniComm Corporation established the first universal communication network that connects all intelligent life forms across the galaxy.",
       technologies: ["Cosmic Intelligence", "Universal Communication", "Interstellar Networking", "Galactic Connectivity"],
       testimonial: "The cosmic intelligence network has enabled communication with intelligent life forms across the galaxy. This is humanity's greatest achievement.",
@@ -134,7 +112,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
             Real-world success stories showcasing the transformative power of our revolutionary technologies
           </p>
         </div>
-
         {/* Case Study Navigation */}
         <div className="mb-12">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -156,9 +133,6 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                 <div className="text-sm font-semibold">{caseStudy.company}</div>
               </button>
             ))};
-          </div>
-        </div>
-
         {/* Selected Case Study */};
         <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30 mb-16">
           <div className="grid lg:grid-cols-2 gap-8">
@@ -175,26 +149,14 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                   <h2 className="text-3xl font-bold mb-2">{caseStudies[selectedCase].title}</h2>
                   <div className="text-lg opacity-90">{caseStudies[selectedCase].company}</div>
                   <div className="text-sm text-orange-400 font-semibold">{caseStudies[selectedCase].industry}</div>
-                </div>
               </div>
-
               <div className="space-y-6">
-                <div>
                   <h3 className="text-xl font-semibold mb-3 text-orange-400">Challenge</h3>
                   <p className="opacity-90">{caseStudies[selectedCase].challenge}</p>
-                </div>
-
-                <div>
                   <h3 className="text-xl font-semibold mb-3 text-cyan-400">Solution</h3>
                   <p className="opacity-90">{caseStudies[selectedCase].solution}</p>
-                </div>
-
-                <div>
                   <h3 className="text-xl font-semibold mb-3 text-emerald-400">Description</h3>
                   <p className="opacity-90">{caseStudies[selectedCase].description}</p>
-                </div>
-
-                <div>
                   <h3 className="text-xl font-semibold mb-3 text-purple-400">Technologies Used</h3>
                   <div className="flex flex-wrap gap-2">
                     {caseStudies[selectedCase].technologies.map((tech, index) => (
@@ -203,98 +165,59 @@ const RevolutionaryCaseStudies2029: React.FC = () => {
                       </span>
                     ))};
                   </div>
-                </div>
-              </div>
             </div>
-
-            <div>
               <h3 className="text-2xl font-bold mb-6 text-center">Results</h3>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${getResultColor(caseStudies[selectedCase].results.efficiency)}`}>
                     {caseStudies[selectedCase].results.efficiency};
-                  </div>
                   <div className="text-sm opacity-90">Efficiency Gain</div>
-                </div>
-                <div className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${getResultColor(caseStudies[selectedCase].results.costSavings)}`}>
                     {caseStudies[selectedCase].results.costSavings};
-                  </div>
                   <div className="text-sm opacity-90">Cost Savings</div>
-                </div>
-                <div className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${getResultColor(caseStudies[selectedCase].results.timeline)}`}>
                     {caseStudies[selectedCase].results.timeline};
-                  </div>
                   <div className="text-sm opacity-90">Implementation</div>
-                </div>
-                <div className="text-center">
                   <div className={`text-3xl font-bold mb-2 ${getResultColor(caseStudies[selectedCase].results.satisfaction)}`}>
                     {caseStudies[selectedCase].results.satisfaction};
-                  </div>
                   <div className="text-sm opacity-90">Satisfaction</div>
-                </div>
-              </div>
-
               <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-lg p-6 border border-orange-400/30">
                 <h4 className="text-lg font-semibold mb-3 text-orange-400">Client Testimonial</h4>
                 <p className="italic mb-4 opacity-90">"{caseStudies[selectedCase].testimonial}"</p>
                 <div className="text-sm font-semibold text-orange-300">
                   — {caseStudies[selectedCase].author};
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Success Metrics */};
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold mb-4">📊 Overall Success Metrics</h2>
             <p className="text-xl opacity-90">Cumulative results across all our revolutionary technology implementations</p>
-          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-emerald-400 mb-2">500+</div>
               <div className="text-lg opacity-90 mb-2">Successful Implementations</div>
               <div className="text-sm opacity-75">Across all industries worldwide</div>
-            </div>
-            <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
               <div className="text-lg opacity-90 mb-2">Success Rate</div>
               <div className="text-sm opacity-75">Proven technology reliability</div>
-            </div>
-            <div className="text-center">
               <div className="text-4xl font-bold text-purple-400 mb-2">$1B+</div>
               <div className="text-lg opacity-90 mb-2">Total Cost Savings</div>
               <div className="text-sm opacity-75">Generated for our clients</div>
-            </div>
-            <div className="text-center">
               <div className="text-4xl font-bold text-orange-400 mb-2">100%</div>
               <div className="text-lg opacity-90 mb-2">Client Satisfaction</div>
               <div className="text-sm opacity-75">Exceeding expectations</div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Create Your Success Story?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the hundreds of companies that have transformed their operations with our revolutionary technologies
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Transformation
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-orange-900 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
-  };
 export default RevolutionaryCaseStudies2029;

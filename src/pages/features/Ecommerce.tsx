@@ -38,16 +38,13 @@ export default function Ecommerce() {
               <p className="font-semibold">How do I list a new product?</p>
               <p className="text-zion-slate-light">Sign in and click "Publish Product" from your dashboard to add pricing, images and details.</p>
             </div>
-            <div>
               <p className="font-semibold">Do you support international shipping?</p>
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
-            </div>
           </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
             </Button>
-          </div>
         </div>
       </main>
       <Footer />

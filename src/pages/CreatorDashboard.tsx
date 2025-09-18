@@ -22,17 +22,9 @@ export default function CreatorDashboard() {
                 </div>
                 <div className="text-3xl text-white font-bold">23,400 <span className="text-zion-cyan text-lg font-normal">Views</span></div>
               </div>
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 transition-shadow hover:shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="bg-zion-purple/20 rounded-full p-2">
-                    <span className="text-zion-purple">
                       <svg width="28" height="28"><use href="#lucide-file-text"/></svg>
-                    </span>
-                  </span>
                   <span className="text-zion-slate-light font-medium">Your Posts</span>
-                </div>
                 <div className="text-3xl text-white font-bold">12</div>
-              </div>
             </div>
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
               <h2 className="text-xl font-bold text-white mb-4">Welcome back, Creator!</h2>
@@ -40,9 +32,7 @@ export default function CreatorDashboard() {
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
               </p>
               {/* Placeholder for more creator-specific content */}
-            </div>
           </main>
-          
         </div>
       </div>
       <SidebarTrigger />

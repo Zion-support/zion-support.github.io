@@ -2,7 +2,6 @@
 const UltimateInteractiveShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('revolution');
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-
   const categories = {
     revolution: {
       title: "🚀 Revolutionary Technology",
@@ -15,15 +14,12 @@ const UltimateInteractiveShowcase: React.FC = () => {
           features: ["Self-Aware AI", "Quantum Learning", "Dimensional Networks"],
           gradient: "from-purple-500 to-pink-500"
         },
-        {
           title: "Cosmic AI Consciousness 2029",
           description: "Universal Artificial Consciousness Spanning Galaxies",
           icon: "🌌",
           link: "/pages/CosmicAIConsciousness2029",
           features: ["Galactic Network", "Universal Mind", "Cosmic Evolution"],
           gradient: "from-cyan-500 to-blue-500"
-        },
-        {
           title: "Transcendent Tech 2030",
           description: "Technology Beyond All Known Limitations",
           icon: "🌟",
@@ -35,61 +31,43 @@ const UltimateInteractiveShowcase: React.FC = () => {
     },
     innovation: {
       title: "💡 Innovation Showcase",
-      items: [
-        {
           title: "AI Revolution 2025",
           description: "Next-Generation Artificial Intelligence Solutions",
           icon: "🤖",
           link: "/pages/AIRevolution2025",
           features: ["Autonomous Agents", "Edge AI", "Generative AI 2.0"],
           gradient: "from-indigo-500 to-purple-500"
-        },
-        {
           title: "Quantum Computing Breakthrough",
           description: "Revolutionary Quantum Technology Applications",
           icon: "⚡",
           link: "/pages/QuantumComputingBreakthrough",
           features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation"],
           gradient: "from-blue-500 to-cyan-500"
-        },
-        {
           title: "Neural Interface Future",
           description: "Mind-Machine Interface Technology",
           icon: "🧬",
           link: "/pages/NeuralInterfaceFuture",
           features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback"],
           gradient: "from-green-500 to-emerald-500"
-        };
-      ];
-    },
     services: {
       title: "🛠️ Advanced Services",
-      items: [
-        {
           title: "Comprehensive Services 2025",
           description: "Complete Technology Solutions Portfolio",
           icon: "🚀",
           link: "/pages/ComprehensiveServices2025",
           features: ["AI Solutions", "Cloud Services", "Blockchain Tech"],
           gradient: "from-orange-500 to-red-500"
-        },
-        {
           title: "Advanced Tech Solutions",
           description: "Cutting-Edge Technology Implementation",
           icon: "⚙️",
           link: "/pages/AdvancedTechSolutions2025",
           features: ["Advanced AI", "Quantum Computing", "Neural Networks"],
           gradient: "from-purple-500 to-indigo-500"
-        },
-        {
           title: "Innovation Landing 2025",
           description: "Revolutionary Innovation Showcase",
-          icon: "🌟",
           link: "/pages/InnovationLanding2025",
           features: ["Future Tech", "Innovation Hub", "Tech Trends"],
           gradient: "from-pink-500 to-rose-500"
-        };
-      ];
     };
   };
   return (
@@ -102,7 +80,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
           Explore our revolutionary technology solutions with immersive interactive experiences
         </p>
       </div>
-
       {/* Category Tabs */};
       <div className="flex justify-center mb-12">
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
@@ -120,8 +97,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
             </button>
           ))};
         </div>
-      </div>
-
       {/* Interactive Grid */};
       <AnimatePresence mode="wait">
         <motion.div
@@ -142,7 +117,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
               onHoverStart={() => setHoveredItem(index)};
               onHoverEnd={() => setHoveredItem(null)};
               className={`bg-gradient-to-br ${item.gradient} rounded-2xl p-8 relative overflow-hidden cursor-pointer transition-all duration-300`};
-            >
               {/* Animated Background */};
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
@@ -160,11 +134,9 @@ const UltimateInteractiveShowcase: React.FC = () => {
                     {item.icon};
                   </motion.span>
                 </div>
-
                 {/* Content */};
                 <h3 className="text-2xl font-bold mb-4 text-center">{item.title}</h3>
                 <p className="text-white/90 mb-6 text-center">{item.description}</p>
-
                 {/* Features */};
                 <div className="space-y-2 mb-8">
                   {item.features.map((feature, idx) => (
@@ -179,8 +151,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
                       {feature};
                     </motion.div>
                   ))};
-                </div>
-
                 {/* Action Button */};
                 <motion.a
                   href={item.link};
@@ -191,7 +161,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
                   Explore {item.title.split(' ')[0]} →
                 </motion.a>
               </div>
-
               {/* Hover Effect */};
               <AnimatePresence>
                 {hoveredItem === index && (
@@ -204,16 +173,13 @@ const UltimateInteractiveShowcase: React.FC = () => {
                 )};
               </AnimatePresence>
             </motion.div>
-          ))};
         </motion.div>
       </AnimatePresence>
-
       {/* Call to Action */};
       <div className="text-center mt-16">
         <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
         <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
           Dive into our revolutionary technology showcase and discover solutions that will transform your business
-        </p>
         <div className="flex justify-center space-x-6">
           <motion.button
             whileHover={{ scale: 1.05 }};
@@ -225,9 +191,6 @@ const UltimateInteractiveShowcase: React.FC = () => {
           <button className="border border-white/30 text-white px-10 py-4 rounded-xl hover:bg-white/10 transition-colors text-lg">
             Contact Our Experts
           </button>
-        </div>
-      </div>
     </div>
   );
-  };
 export default UltimateInteractiveShowcase;

@@ -1,17 +1,14 @@
 
 const RevolutionaryCaseStudies2026: React.FC = () => {
   const [selectedCase, setSelectedCase] = useState(0);
-
   const caseStudies = [
     {
     }
   ];
-
   return (
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -22,12 +19,7 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
             </button>
             <button className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold text-lg">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionaryCaseStudies2026;

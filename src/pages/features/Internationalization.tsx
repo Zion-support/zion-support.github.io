@@ -38,16 +38,13 @@ export default function Internationalization() {
               <p className="font-semibold">Which languages are supported?</p>
               <p className="text-zion-slate-light">The platform currently supports English, Spanish, Portuguese and more.</p>
             </div>
-            <div>
               <p className="font-semibold">Can I suggest new translations?</p>
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
-            </div>
           </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
             </Button>
-          </div>
         </div>
       </main>
       <Footer />

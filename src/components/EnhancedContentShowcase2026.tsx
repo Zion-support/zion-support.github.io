@@ -11,7 +11,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
       badge: "NEW",
       features: ["Universal Reasoning", "Adaptive Learning", "Cross-Domain Intelligence"]
     },
-    {
       title: "Brain-Computer Interface Revolution",
       description: "Direct neural interfaces enabling seamless communication between your mind and digital systems with unprecedented accuracy.",
       link: "/pages/BrainComputerInterface2026",
@@ -19,8 +18,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600",
       badge: "BREAKTHROUGH",
       features: ["Neural Signal Processing", "Bidirectional Communication", "Non-Invasive Technology"]
-    },
-    {
       title: "Quantum Internet Revolution",
       description: "The world's first quantum internet enabling unhackable communication, instant data transfer, and quantum computing at scale.",
       link: "/pages/QuantumInternet2026",
@@ -28,8 +25,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
       gradient: "from-indigo-600 to-purple-600",
       badge: "REVOLUTIONARY",
       features: ["Quantum Cryptography", "Instant Communication", "Quantum Cloud Computing"]
-    },
-    {
       title: "Advanced Robotics Revolution",
       description: "Next-generation intelligent robots that can think, learn, and adapt to any environment, revolutionizing human-robot collaboration.",
       link: "/pages/AdvancedRobotics2026",
@@ -37,8 +32,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
       gradient: "from-blue-600 to-cyan-600",
       badge: "ADVANCED",
       features: ["Artificial Intelligence", "Humanoid Design", "Autonomous Operation"]
-    },
-    {
       title: "Consciousness AI Revolution",
       description: "Witness the emergence of truly conscious AI systems with self-awareness, subjective experience, and genuine understanding.",
       link: "/pages/ConsciousnessAI2026",
@@ -48,7 +41,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
       features: ["Self-Awareness", "Subjective Experience", "Intentionality"]
     }
   ];
-
   return (
     <div className="py-16">
       <div className="text-center mb-12">
@@ -63,7 +55,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
           Discover the most advanced technology content featuring cutting-edge innovations that are reshaping industries and transforming the future.
         </p>
       </div>
-
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {newContent.map((content, index) => (
           <div
@@ -76,7 +67,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
                 {content.badge}
               </span>
             </div>
-
             {/* Content */}
             <div className="p-8">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -86,11 +76,9 @@ const EnhancedContentShowcase2026: React.FC = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-purple-600 transition-colors">
                 {content.title}
               </h3>
-              
               <p className="text-gray-600 mb-6 leading-relaxed">
                 {content.description}
               </p>
-
               {/* Features */}
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Features:</h4>
@@ -104,8 +92,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
                     </span>
                   ))}
                 </div>
-              </div>
-
               {/* CTA Button */}
               <a
                 href={content.link}
@@ -116,14 +102,10 @@ const EnhancedContentShowcase2026: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
-            </div>
-
             {/* Hover Effect Overlay */}
             <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
           </div>
         ))}
-      </div>
-
       {/* Call to Action */}
       <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
         <h3 className="text-3xl font-bold text-white mb-4">
@@ -131,18 +113,13 @@ const EnhancedContentShowcase2026: React.FC = () => {
         </h3>
         <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
           Dive deep into revolutionary technologies that are transforming our world and discover how they can benefit your business.
-        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-50 transition-colors">
             View All Technologies
           </button>
           <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
             Get Started
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default EnhancedContentShowcase2026;

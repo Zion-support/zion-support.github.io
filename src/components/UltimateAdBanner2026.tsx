@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const UltimateAdBanner2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const bannerSlides = [
     {
       id: 0,
@@ -13,7 +12,6 @@ const UltimateAdBanner2026: React.FC = () => {
       gradient: 'from-indigo-600 via-purple-600 to-pink-600',
       icon: '🚀'
     },
-    {
       id: 1,
       title: '🧠 AI Consciousness Breakthrough',
       subtitle: 'Advanced AI with true consciousness and emotional understanding',
@@ -21,8 +19,6 @@ const UltimateAdBanner2026: React.FC = () => {
       link: '/pages/AIRevolutionaryBreakthrough2026',
       gradient: 'from-purple-600 via-pink-600 to-red-600',
       icon: '🧠'
-    },
-    {
       id: 2,
       title: '⚛️ Quantum Supremacy Achieved',
       subtitle: 'Breakthrough quantum computing achieving computational supremacy',
@@ -32,15 +28,12 @@ const UltimateAdBanner2026: React.FC = () => {
       icon: '⚛️'
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % bannerSlides.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [bannerSlides.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16 mb-12">
       <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -57,7 +50,6 @@ const UltimateAdBanner2026: React.FC = () => {
             Discover the most advanced technological breakthroughs in human history
           </p>
         </div>
-
         {/* Rotating Banner */}
         <div className="relative h-64 mb-8">
           {bannerSlides.map((slide, index) => (
@@ -83,8 +75,6 @@ const UltimateAdBanner2026: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
         {/* Navigation Dots */}
         <div className="flex justify-center space-x-2">
           {bannerSlides.map((_, index) => (
@@ -93,13 +83,9 @@ const UltimateAdBanner2026: React.FC = () => {
               onClick={() => setCurrentSlide(index)}
               className={`w-4 h-4 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-white' : 'bg-white/50'
-              }`}
             />
-          ))}
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateAdBanner2026;

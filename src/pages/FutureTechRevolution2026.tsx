@@ -26,16 +26,12 @@ const FutureTechRevolution2026: React.FC = () => {
             </a>
             <a href="#timeline" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
               View Timeline
-            </a>
-          </div>
         </div>
-
         {/* Revolutionary Technologies */}
         <section id="revolution" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Revolutionary Technologies</h2>
             <p className="text-xl text-cyan-200">The most advanced innovations reshaping our world</p>
-          </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Left Column */}
@@ -56,138 +52,74 @@ const FutureTechRevolution2026: React.FC = () => {
                   Explore Synthetic Intelligence →
                 </a>
               </div>
-
               <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
-                <div className="flex items-center mb-4">
                   <div className="text-4xl mr-4">🧬</div>
-                  <div>
                     <h3 className="text-2xl font-bold text-white">Neural Interface Technology</h3>
                     <p className="text-emerald-200 text-sm">Direct brain-computer interfaces</p>
-                  </div>
-                </div>
                 <p className="text-emerald-100 mb-4">
                   Revolutionary non-invasive brain-computer interfaces enabling thought-controlled systems 
                   and consciousness transfer capabilities.
-                </p>
                 <a href="/pages/NeuralInterfaceRevolution2026" className="text-emerald-300 hover:text-white font-semibold">
                   Connect to Neural Networks →
-                </a>
-              </div>
             </div>
-
             {/* Right Column */}
-            <div className="space-y-8">
               <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
-                <div className="flex items-center mb-4">
                   <div className="text-4xl mr-4">⚡</div>
-                  <div>
                     <h3 className="text-2xl font-bold text-white">Quantum Computing</h3>
                     <p className="text-cyan-200 text-sm">Exponential processing power</p>
-                  </div>
-                </div>
                 <p className="text-cyan-100 mb-4">
                   Breakthrough quantum computing technology solving impossible problems with exponential 
                   speed enhancement and quantum cryptography.
-                </p>
                 <a href="/pages/QuantumComputingRevolution2026" className="text-cyan-300 hover:text-white font-semibold">
                   Enter Quantum Realm →
-                </a>
-              </div>
-
               <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
-                <div className="flex items-center mb-4">
                   <div className="text-4xl mr-4">🔬</div>
-                  <div>
                     <h3 className="text-2xl font-bold text-white">Quantum Neural Fusion</h3>
                     <p className="text-orange-200 text-sm">Hybrid quantum-classical processing</p>
-                  </div>
-                </div>
                 <p className="text-orange-100 mb-4">
                   Revolutionary fusion of quantum computing and neural networks creating unprecedented 
                   computational capabilities and consciousness simulation.
-                </p>
                 <a href="/pages/QuantumNeuralFusion2026" className="text-orange-300 hover:text-white font-semibold">
                   Experience Fusion →
-                </a>
-              </div>
-            </div>
-          </div>
         </section>
-
         {/* Technology Timeline */}
         <section id="timeline" className="mb-16">
           <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-12 border border-gray-600/30">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold text-white mb-4">⏰ Technology Timeline</h2>
               <p className="text-xl text-gray-300">The evolution of revolutionary technologies</p>
-            </div>
             
-            <div className="space-y-8">
               <div className="flex items-center space-x-6">
                 <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-full p-4">
                   <div className="text-2xl">🧠</div>
-                </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">2025: AI Consciousness Emergence</h3>
                   <p className="text-gray-300">First synthetic intelligence systems demonstrate consciousness-level capabilities</p>
-                </div>
                 <div className="text-sm text-gray-400">Q1 2025</div>
-              </div>
-
-              <div className="flex items-center space-x-6">
                 <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full p-4">
                   <div className="text-2xl">⚡</div>
-                </div>
-                <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">2025: Quantum Breakthrough</h3>
                   <p className="text-gray-300">Quantum computing achieves practical applications in cryptography and simulation</p>
-                </div>
                 <div className="text-sm text-gray-400">Q2 2025</div>
-              </div>
-
-              <div className="flex items-center space-x-6">
                 <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full p-4">
                   <div className="text-2xl">🧬</div>
-                </div>
-                <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">2025: Neural Interface Launch</h3>
                   <p className="text-gray-300">First commercial neural interface devices enable thought-controlled computing</p>
-                </div>
                 <div className="text-sm text-gray-400">Q3 2025</div>
-              </div>
-
-              <div className="flex items-center space-x-6">
                 <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-full p-4">
                   <div className="text-2xl">🔬</div>
-                </div>
-                <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">2026: Quantum Neural Fusion</h3>
                   <p className="text-gray-300">Revolutionary fusion of quantum computing and neural networks creates superintelligence</p>
-                </div>
                 <div className="text-sm text-gray-400">Q1 2026</div>
-              </div>
-
-              <div className="flex items-center space-x-6">
                 <div className="bg-gradient-to-r from-violet-600 to-purple-600 rounded-full p-4">
                   <div className="text-2xl">🌐</div>
-                </div>
-                <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">2026: Global AI Network</h3>
                   <p className="text-gray-300">Worldwide synthetic intelligence network achieves collective consciousness</p>
-                </div>
                 <div className="text-sm text-gray-400">Q2 2026</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Impact Areas */}
         <section className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🌍 Global Impact Areas</h2>
             <p className="text-xl text-cyan-200">How revolutionary technologies transform industries</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-lg p-6 border border-green-400/30">
               <div className="text-4xl mb-4">🏥</div>
@@ -198,8 +130,6 @@ const FutureTechRevolution2026: React.FC = () => {
                 <li>• Real-time Treatment Optimization</li>
                 <li>• Neural Interface Prosthetics</li>
               </ul>
-            </div>
-            
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-lg p-6 border border-blue-400/30">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-white mb-2">Space Exploration</h3>
@@ -208,9 +138,6 @@ const FutureTechRevolution2026: React.FC = () => {
                 <li>• AI-Powered Space Missions</li>
                 <li>• Quantum Communication Systems</li>
                 <li>• Neural Interface Astronauts</li>
-              </ul>
-            </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 border border-purple-400/30">
               <div className="text-4xl mb-4">🏭</div>
               <h3 className="text-xl font-bold text-white mb-2">Manufacturing</h3>
@@ -219,9 +146,6 @@ const FutureTechRevolution2026: React.FC = () => {
                 <li>• Zero-Waste Production</li>
                 <li>• Self-Optimizing Factories</li>
                 <li>• Neural Network Quality Control</li>
-              </ul>
-            </div>
-            
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-lg p-6 border border-orange-400/30">
               <div className="text-4xl mb-4">🎓</div>
               <h3 className="text-xl font-bold text-white mb-2">Education</h3>
@@ -230,19 +154,10 @@ const FutureTechRevolution2026: React.FC = () => {
                 <li>• AI Personal Tutors</li>
                 <li>• Neural Interface Learning</li>
                 <li>• Quantum Knowledge Transfer</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
         {/* Revolutionary Showcase */}
-        <section className="mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
-            <div className="text-center mb-8">
               <h2 className="text-4xl font-bold text-white mb-4">🌟 Revolutionary Showcase</h2>
               <p className="text-xl text-cyan-200">Experience the future of technology today</p>
-            </div>
-            
             <div className="grid md:grid-cols-3 gap-6">
               <a href="/pages/UltimateTechShowcase2026" className="bg-black/50 rounded-lg p-6 text-center hover:bg-black/70 transition-colors">
                 <div className="text-4xl mb-4">🚀</div>
@@ -254,17 +169,10 @@ const FutureTechRevolution2026: React.FC = () => {
                 <div className="text-4xl mb-4">📚</div>
                 <h3 className="text-xl font-bold text-white mb-2">Revolutionary Blog</h3>
                 <p className="text-cyan-200 text-sm">Latest insights and breakthrough research</p>
-              </a>
-              
               <a href="/pages/ComprehensiveTechInsights2026" className="bg-black/50 rounded-lg p-6 text-center hover:bg-black/70 transition-colors">
                 <div className="text-4xl mb-4">🔍</div>
                 <h3 className="text-xl font-bold text-white mb-2">Tech Insights</h3>
                 <p className="text-cyan-200 text-sm">Comprehensive analysis and predictions</p>
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* Call to Action */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12">
@@ -276,18 +184,11 @@ const FutureTechRevolution2026: React.FC = () => {
             <div className="flex justify-center space-x-4">
               <a href="/contact" className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                 Start Your Journey
-              </a>
               <a href="/pages/UltimateTechShowcase2026" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
                 Explore Showcase
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default FutureTechRevolution2026;

@@ -3,7 +3,6 @@ import React, { useState, useEffect }  from 'react';
 const InteractiveTechShowcase2036: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: "1",
@@ -14,7 +13,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       bgColor: "from-purple-900 to-pink-900"
     },
-    {
       id: "2",
       name: "Quantum Computing",
       icon: "⚡",
@@ -22,8 +20,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
       features: ["Quantum Superposition", "Quantum Entanglement", "Quantum Tunneling", "Quantum Speed"],
       color: "from-cyan-600 to-blue-600",
       bgColor: "from-cyan-900 to-blue-900"
-    },
-    {
       id: "3",
       name: "Interdimensional Tech",
       icon: "🌌",
@@ -31,8 +27,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
       features: ["Dimensional Portals", "Reality Shifting", "Parallel Universe Access", "Multi-Dimensional Awareness"],
       color: "from-emerald-600 to-teal-600",
       bgColor: "from-emerald-900 to-teal-900"
-    },
-    {
       id: "4",
       name: "Neural Interfaces",
       icon: "🧬",
@@ -40,8 +34,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
       features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback", "Consciousness Amplification"],
       color: "from-violet-600 to-purple-600",
       bgColor: "from-violet-900 to-purple-900"
-    },
-    {
       id: "5",
       name: "Reality Engineering",
       description: "Complete control over physical reality through advanced quantum field manipulation",
@@ -66,18 +58,12 @@ const InteractiveTechShowcase2036: React.FC = () => {
     }, 4000);
     return () => clearInterval(timer);
   }, [technologies.length]);
-
   const handleTechClick = (index: number) => {
     if (index !== activeTech) {
-      setIsAnimating(true);
-      setTimeout(() => {
         setActiveTech(index);
-        setIsAnimating(false);
-      }, 300);
     };
   };
   const currentTech = technologies[activeTech];
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
@@ -91,7 +77,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
             Explore the most advanced technologies of 2036 with interactive demonstrations
           </p>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Technology Display */};
           <div className="relative">
@@ -108,16 +93,11 @@ const InteractiveTechShowcase2036: React.FC = () => {
                     <div className="text-sm font-semibold">{feature}</div>
                   </div>
                 ))};
-              </div>
-
               <div className="mt-6 text-center">
                 <button className={`bg-gradient-to-r ${currentTech.color} text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Experience {currentTech.name} →
                 </button>
-              </div>
             </div>
-          </div>
-
           {/* Technology Selector */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold mb-6">Select Technology to Explore</h3>
@@ -142,13 +122,9 @@ const InteractiveTechShowcase2036: React.FC = () => {
                   <div>
                     <h4 className="text-lg font-bold">{tech.name}</h4>
                     <p className="text-sm opacity-80">{tech.description}</p>
-                  </div>
                 </div>
               </button>
             ))};
-          </div>
-        </div>
-
         {/* Interactive Features */};
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -160,32 +136,17 @@ const InteractiveTechShowcase2036: React.FC = () => {
             <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Start Demo
             </button>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4 text-center">🔬</div>
             <h3 className="text-xl font-bold mb-3 text-center">Deep Dive Analysis</h3>
-            <p className="text-white/90 text-center text-sm mb-4">
               Explore detailed technical specifications and implementation details
-            </p>
             <button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               View Details
-            </button>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <div className="text-4xl mb-4 text-center">🚀</div>
             <h3 className="text-xl font-bold mb-3 text-center">Future Applications</h3>
-            <p className="text-white/90 text-center text-sm mb-4">
               Discover how these technologies will transform industries and human life
-            </p>
             <button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Explore Uses
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
-  };
 export default InteractiveTechShowcase2036;

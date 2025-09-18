@@ -5,11 +5,9 @@ import { Helmet }  from 'react-helmet-async';
 const RevolutionaryTechShowcase2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const technologies = [
     {
       id: "1",
@@ -24,64 +22,47 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
       icon: "🧠",
       gradient: "from-purple-600 to-pink-600"
     },
-    {
       id: "2",
       title: "Quantum Neural Networks",
       description: "Breakthrough technology combining quantum computing with neural networks for unprecedented processing power and speed.",
-      features: [
         "Quantum superposition processing",
         "Exponential speed improvements",
         "Parallel universe computing",
         "Instant problem solving"
-      ],
       icon: "⚡",
       gradient: "from-cyan-600 to-blue-600"
-    },
-    {
       id: "3",
       title: "Interdimensional Computing",
       description: "Access computing resources across multiple dimensions, enabling infinite scalability and processing power.",
-      features: [
         "Multi-dimensional processing",
         "Infinite scalability",
         "Reality-bending algorithms",
         "Transcendent data storage"
-      ],
       icon: "🌌",
       gradient: "from-emerald-600 to-teal-600"
-    },
-    {
       id: "4",
       title: "Neural Interface Revolution",
       description: "Direct brain-computer interfaces that enable thought-based control and seamless human-AI integration.",
-      features: [
         "Thought-based control",
         "Neural data streaming",
         "Consciousness transfer",
         "Enhanced cognitive abilities"
-      ],
       icon: "🧬",
       gradient: "from-orange-600 to-red-600"
     };
   const caseStudies = [
-    {
       company: "TechCorp Global",
       result: "300% efficiency increase",
       description: "Implemented conscious AI systems that reduced operational costs by 40% and increased productivity by 300%.",
       logo: "🏢"
-    },
-    {
       company: "Quantum Dynamics Inc",
       result: "$2M annual savings",
       description: "Deployed quantum neural networks that solved previously impossible problems and saved $2M annually.",
       logo: "⚛️"
-    },
-    {
       company: "NeuralTech Solutions",
       result: "99.9% accuracy rate",
       description: "Revolutionary neural interfaces achieved 99.9% accuracy in thought-based control systems.",
       logo: "🧠"
-    };
   return (
     <>
       <Helmet>
@@ -111,8 +92,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                 "name": "Zion Tech Group"
               },
               "publisher": {
-                "@type": "Organization",
-                "name": "Zion Tech Group"
               };
             };
           })};
@@ -144,7 +123,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               Experience the future with our groundbreaking technologies that are reshaping industries and creating new possibilities for humanity.
             </p>
           </div>
-
           {/* Technology Grid */};
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {technologies.map((tech, index) => (
@@ -173,8 +151,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                 </button>
               </motion.div>
             ))};
-          </div>
-
           {/* Interactive Demo Section */};
           <motion.div
             initial={{ opacity: "0", scale: 0.9 }};
@@ -194,34 +170,23 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                 <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
                 <p className="text-sm opacity-75">Faster than traditional systems</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-bold mb-2">AI Intelligence</h3>
                 <div className="text-3xl font-bold text-blue-400 mb-2">∞</div>
                 <p className="text-sm opacity-75">Unlimited learning capacity</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-4xl mb-4">🌌</div>
                 <h3 className="text-xl font-bold mb-2">Dimensional Access</h3>
                 <div className="text-3xl font-bold text-purple-400 mb-2">11D</div>
                 <p className="text-sm opacity-75">Multi-dimensional processing</p>
-              </div>
-            </div>
           </motion.div>
-
           {/* Case Studies */};
-          <motion.div
             initial={{ opacity: "0", y: 50 }};
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
             transition={{ duration: 0.8, delay: 0.6 }};
             className="mb-20"
-          >
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
               <p className="text-xl opacity-90">Real results from real companies</p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <motion.div
                   key={index};
@@ -236,16 +201,9 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                   <p className="text-gray-300 text-sm leading-relaxed">{study.description}</p>
                 </motion.div>
               ))};
-            </div>
-          </motion.div>
-
           {/* CTA Section */};
-          <motion.div
-            initial={{ opacity: "0", y: 50 }};
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
             transition={{ duration: 0.8, delay: 0.8 }};
             className="text-center"
-          >
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
               <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
               <p className="text-xl mb-8 opacity-90">
@@ -254,13 +212,8 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
                   Start Your Journey →
-                </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
                   Schedule Demo
-                </button>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </motion.div>
       </div>

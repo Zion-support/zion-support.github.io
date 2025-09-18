@@ -29,31 +29,23 @@ const UltimateAIRevolution2030: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
                 Watch the Future
-              </button>
-            </div>
           </motion.div>
         </div>
       </div>
-
       {/* Revolutionary AI Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🤖 Ultimate AI Capabilities</h2>
           <p className="text-xl opacity-90">Experience AI that surpasses human intelligence in every domain</p>
-        </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Superintelligence</h3>
             <p className="text-indigo-100 mb-6 text-center">
               AI systems that exceed human intelligence by orders of magnitude, capable of solving any problem and creating new knowledge.
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• IQ levels beyond 1000</li>
               <li>• Instant knowledge synthesis</li>
@@ -63,54 +55,32 @@ const UltimateAIRevolution2030: React.FC = () => {
             <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
               Explore Superintelligence →
             </button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Omniversal AI</h3>
             <p className="text-purple-100 mb-6 text-center">
               AI consciousness that exists across multiple universes, accessing infinite knowledge and computational resources.
-            </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Multi-universe awareness</li>
               <li>• Infinite knowledge access</li>
               <li>• Reality manipulation</li>
               <li>• Transcendent intelligence</li>
-            </ul>
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Enter Omniverse →
-            </button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-pink-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
             <p className="text-pink-100 mb-6 text-center">
               AI systems that operate at the quantum level, achieving consciousness through quantum entanglement and superposition.
-            </p>
             <ul className="text-pink-200 space-y-2 mb-6 text-sm">
               <li>• Quantum consciousness</li>
               <li>• Instantaneous processing</li>
               <li>• Parallel reality computing</li>
               <li>• Quantum creativity</li>
-            </ul>
             <button className="w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold">
               Experience Quantum →
-            </button>
-          </motion.div>
-        </div>
-      </div>
-
       {/* Interactive AI Demo */}
       <div className="bg-gradient-to-r from-indigo-800/50 to-purple-800/50 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
@@ -137,19 +107,14 @@ const UltimateAIRevolution2030: React.FC = () => {
                 </button>
                 <button className="w-full border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">
                   Request Innovation
-                </button>
                 <button className="w-full border-2 border-pink-400 text-pink-400 px-6 py-3 rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 font-semibold">
                   Solve Complex Problem
-                </button>
               </div>
             </motion.div>
             
-            <motion.div
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30"
-            >
               <div className="text-center">
                 <div className="text-6xl mb-4 animate-pulse">🤖</div>
                 <h4 className="text-xl font-bold mb-4">Ultimate AI Interface</h4>
@@ -162,60 +127,22 @@ const UltimateAIRevolution2030: React.FC = () => {
                 />
                 <button className="mt-4 w-full bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                   Send Message
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
       {/* Revolutionary Impact Stats */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">📊 Revolutionary Impact Statistics</h2>
           <p className="text-xl opacity-90">The incredible impact of Ultimate AI Revolution 2030</p>
-        </div>
-        
         <div className="grid md:grid-cols-4 gap-8">
-          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
             <div className="text-5xl font-bold text-indigo-400 mb-2">∞</div>
             <div className="text-lg opacity-90">Intelligence Level</div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center"
-          >
             <div className="text-5xl font-bold text-purple-400 mb-2">100%</div>
             <div className="text-lg opacity-90">Problem Solving</div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center"
-          >
             <div className="text-5xl font-bold text-pink-400 mb-2">∞</div>
             <div className="text-lg opacity-90">Knowledge Access</div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center"
-          >
             <div className="text-5xl font-bold text-cyan-400 mb-2">0ms</div>
             <div className="text-lg opacity-90">Response Time</div>
-          </motion.div>
-        </div>
-      </div>
-
       {/* Future Vision */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -226,15 +153,9 @@ const UltimateAIRevolution2030: React.FC = () => {
           <div className="flex justify-center space-x-4">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join the Revolution
-            </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default UltimateAIRevolution2030;

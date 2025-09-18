@@ -57,7 +57,6 @@ interface ServiceRecommendation {
   trending: boolean;
   featured: boolean;
 }
-
 interface UserProfile {
   industry: string;
   companySize: string;
@@ -67,8 +66,6 @@ interface UserProfile {
   currentTech: string[];
   timeline: string;
   experience: string;
-}
-
 export const AIRecommendationEngine: React.FC = () => {
   const [userProfile, setUserProfile] = useState<UserProfile>({
     industry: '',
@@ -80,56 +77,41 @@ export const AIRecommendationEngine: React.FC = () => {
     timeline: '',
     experience: ''
   });
-
   const [recommendations, setRecommendations] = useState<ServiceRecommendation[]>([]);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisProgress, setAnalysisProgress] = useState(0);
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
-
   const industries = [
     'Technology', 'Healthcare', 'Finance', 'E-commerce', 'Education',
     'Manufacturing', 'Real Estate', 'Consulting', 'Media', 'Non-profit'
   ];
-
   const companySizes = [
     'Startup (1-10)', 'Small (11-50)', 'Medium (51-200)', 
     'Large (201-1000)', 'Enterprise (1000+)'
-  ];
-
   const budgets = [
     '$1K - $10K', '$10K - $50K', '$50K - $100K', 
     '$100K - $500K', '$500K+'
-  ];
-
   const commonGoals = [
     'Increase Efficiency', 'Reduce Costs', 'Improve Security', 'Scale Operations',
     'Enhance Customer Experience', 'Automate Processes', 'Data Analytics',
     'Digital Transformation', 'Cloud Migration', 'AI Integration'
-  ];
-
   const painPoints = [
     'Legacy Systems', 'Security Concerns', 'Scalability Issues', 'High Costs',
     'Manual Processes', 'Data Silos', 'Poor Performance', 'Integration Challenges',
     'Compliance Requirements', 'Skill Gaps'
-  ];
-
   const technologies = [
     'React', 'Node.js', 'Python', 'AWS', 'Azure', 'Google Cloud',
     'Docker', 'Kubernetes', 'MongoDB', 'PostgreSQL', 'Redis',
     'Machine Learning', 'AI/ML', 'Blockchain', 'IoT'
-  ];
-
   const generateRecommendations = async () => {
     setIsAnalyzing(true);
     setAnalysisProgress(0);
-
     // Simulate AI analysis
     for (let i = 0; i <= 100; i += 10) {
       setAnalysisProgress(i);
       await new Promise(resolve => setTimeout(resolve, 200));
     }
-
     // Generate mock recommendations based on user profile
     const mockRecommendations: ServiceRecommendation[] = [
       {
@@ -153,7 +135,6 @@ export const AIRecommendationEngine: React.FC = () => {
         trending: true,
         featured: true
       },
-      {
         id: '2',
         title: 'Cloud Infrastructure Optimization',
         description: 'Comprehensive cloud infrastructure assessment and optimization service.',
@@ -173,14 +154,11 @@ export const AIRecommendationEngine: React.FC = () => {
         popularity: 76,
         trending: false,
         featured: false
-      },
-      {
         id: '3',
         title: 'Automated Security Monitoring System',
         description: '24/7 automated security monitoring and threat detection platform.',
         category: 'Cybersecurity',
         price: 3200,
-        rating: 4.9,
         reviewCount: 156,
         features: ['Real-time Monitoring', 'Threat Detection', 'Incident Response', 'Compliance Reporting'],
         benefits: ['99.9% threat detection rate', '60% faster incident response', 'Full compliance'],
@@ -192,10 +170,6 @@ export const AIRecommendationEngine: React.FC = () => {
         implementationTime: '3-5 weeks',
         difficulty: 'Hard',
         popularity: 93,
-        trending: true,
-        featured: true
-      },
-      {
         id: '4',
         title: 'Digital Transformation Consulting',
         description: 'End-to-end digital transformation strategy and implementation consulting.',
@@ -211,18 +185,12 @@ export const AIRecommendationEngine: React.FC = () => {
         icon: 'Target',
         estimatedROI: 650,
         implementationTime: '8-12 weeks',
-        difficulty: 'Hard',
         popularity: 78,
-        trending: false,
-        featured: false
-      },
-      {
         id: '5',
         title: 'Advanced Data Analytics Platform',
         description: 'Comprehensive data analytics and visualization platform with AI capabilities.',
         category: 'Data & Analytics',
         price: 2800,
-        rating: 4.8,
         reviewCount: 142,
         features: ['Data Visualization', 'Advanced Analytics', 'Real-time Processing', 'Custom Reports'],
         benefits: ['80% faster insights', '30% better decisions', 'Automated reporting'],
@@ -232,17 +200,12 @@ export const AIRecommendationEngine: React.FC = () => {
         icon: 'BarChart3',
         estimatedROI: 380,
         implementationTime: '4-6 weeks',
-        difficulty: 'Medium',
         popularity: 84,
-        trending: true,
-        featured: true
       }
     ];
-
     setRecommendations(mockRecommendations);
     setIsAnalyzing(false);
   };
-
   const getIcon = (iconName: string) => {
     const icons: { [key: string]: React.ReactNode } = {
       Brain: <Brain className="w-6 h-6" />,
@@ -257,17 +220,12 @@ export const AIRecommendationEngine: React.FC = () => {
       Lock: <Lock className="w-6 h-6" />
     };
     return icons[iconName] || <Brain className="w-6 h-6" />;
-  };
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Easy': return 'text-green-400 bg-green-400/10';
       case 'Medium': return 'text-yellow-400 bg-yellow-400/10';
       case 'Hard': return 'text-red-400 bg-red-400/10';
       default: return 'text-gray-400 bg-gray-400/10';
-    }
-  };
-
   const filteredRecommendations = recommendations.filter(rec => {
     const matchesSearch = rec.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          rec.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -278,10 +236,7 @@ export const AIRecommendationEngine: React.FC = () => {
                             rec.category.toLowerCase().includes(filter.toLowerCase()) ||
                             rec.tags.some(tag => tag.toLowerCase().includes(filter.toLowerCase()))
                           );
-    
     return matchesSearch && matchesFilters;
-  });
-
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       <motion.div
@@ -298,7 +253,6 @@ export const AIRecommendationEngine: React.FC = () => {
             Tell us about your business and we'll find the perfect solutions for your needs.
           </p>
         </div>
-
         {/* User Profile Form */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -309,7 +263,6 @@ export const AIRecommendationEngine: React.FC = () => {
             <Sparkles className="w-6 h-6 mr-2 text-blue-400" />
             Tell Us About Your Business
           </h3>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -326,45 +279,21 @@ export const AIRecommendationEngine: React.FC = () => {
                 ))}
               </select>
             </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Company Size
-              </label>
-              <select
                 value={userProfile.companySize}
                 onChange={(e) => setUserProfile({...userProfile, companySize: e.target.value})}
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-blue-500 focus:outline-none"
-              >
                 <option value="">Select Size</option>
                 {companySizes.map(size => (
                   <option key={size} value={size}>{size}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Budget Range
-              </label>
-              <select
                 value={userProfile.budget}
                 onChange={(e) => setUserProfile({...userProfile, budget: e.target.value})}
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:border-blue-500 focus:outline-none"
-              >
                 <option value="">Select Budget</option>
                 {budgets.map(budget => (
                   <option key={budget} value={budget}>{budget}</option>
-                ))}
-              </select>
-            </div>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Business Goals (Select all that apply)
-              </label>
               <div className="grid grid-cols-2 gap-2">
                 {commonGoals.map(goal => (
                   <label key={goal} className="flex items-center space-x-2 text-sm">
@@ -382,36 +311,14 @@ export const AIRecommendationEngine: React.FC = () => {
                     />
                     <span className="text-gray-300">{goal}</span>
                   </label>
-                ))}
               </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">
                 Pain Points (Select all that apply)
-              </label>
-              <div className="grid grid-cols-2 gap-2">
                 {painPoints.map(pain => (
                   <label key={pain} className="flex items-center space-x-2 text-sm">
-                    <input
-                      type="checkbox"
                       checked={userProfile.painPoints.includes(pain)}
-                      onChange={(e) => {
-                        if (e.target.checked) {
                           setUserProfile({...userProfile, painPoints: [...userProfile.painPoints, pain]});
-                        } else {
                           setUserProfile({...userProfile, painPoints: userProfile.painPoints.filter(p => p !== pain)});
-                        }
-                      }}
-                      className="rounded border-gray-600 bg-gray-800 text-blue-500 focus:ring-blue-500"
-                    />
                     <span className="text-gray-300">{pain}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-          </div>
-
           <div className="flex justify-center">
             <button
               onClick={generateRecommendations}
@@ -424,14 +331,10 @@ export const AIRecommendationEngine: React.FC = () => {
                   <span>Analyzing... {analysisProgress}%</span>
                 </>
               ) : (
-                <>
                   <Brain className="w-5 h-5" />
                   <span>Get AI Recommendations</span>
-                </>
               )}
             </button>
-          </div>
-
           {isAnalyzing && (
             <div className="mt-4">
               <div className="w-full bg-gray-800 rounded-full h-2">
@@ -441,15 +344,12 @@ export const AIRecommendationEngine: React.FC = () => {
                   animate={{ width: `${analysisProgress}%` }}
                   transition={{ duration: 0.3 }}
                 />
-              </div>
               <p className="text-center text-gray-400 mt-2">
                 Our AI is analyzing your profile and matching you with the best services...
               </p>
-            </div>
           )}
         </motion.div>
       </motion.div>
-
       {/* Recommendations */}
       <AnimatePresence>
         {recommendations.length > 0 && (
@@ -489,13 +389,8 @@ export const AIRecommendationEngine: React.FC = () => {
                     <option value="Consulting">Consulting</option>
                     <option value="Data">Data & Analytics</option>
                   </select>
-                </div>
-              </div>
-            </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {filteredRecommendations.map((recommendation, index) => (
-                <motion.div
                   key={recommendation.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -512,7 +407,6 @@ export const AIRecommendationEngine: React.FC = () => {
                           {recommendation.title}
                         </h4>
                         <p className="text-gray-400 text-sm">{recommendation.category}</p>
-                      </div>
                     </div>
                     
                     <div className="flex items-center space-x-2">
@@ -524,79 +418,45 @@ export const AIRecommendationEngine: React.FC = () => {
                       {recommendation.trending && (
                         <span className="px-2 py-1 bg-red-600/20 text-red-400 text-xs rounded-full">
                           Trending
-                        </span>
-                      )}
-                    </div>
                   </div>
-
                   <p className="text-gray-300 mb-4">{recommendation.description}</p>
-
                   <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="flex items-center space-x-2">
                       <Star className="w-4 h-4 text-yellow-400" />
                       <span className="text-white font-medium">{recommendation.rating}</span>
                       <span className="text-gray-400">({recommendation.reviewCount} reviews)</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
                       <Brain className="w-4 h-4 text-blue-400" />
                       <span className="text-white font-medium">{recommendation.aiScore}% AI Score</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
                       <Target className="w-4 h-4 text-green-400" />
                       <span className="text-white font-medium">{recommendation.matchPercentage}% Match</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
                       <DollarSign className="w-4 h-4 text-green-400" />
                       <span className="text-white font-medium">{recommendation.estimatedROI}% ROI</span>
-                    </div>
-                  </div>
-
                   <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-2">
                       <span className="text-gray-400">Price:</span>
                       <span className="text-white font-bold text-lg">${recommendation.price.toLocaleString()}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
                       <Clock className="w-4 h-4 text-gray-400" />
                       <span className="text-gray-300">{recommendation.implementationTime}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(recommendation.difficulty)}`}>
                       {recommendation.difficulty}
                     </span>
-                    <div className="flex items-center space-x-2">
                       <TrendingUp className="w-4 h-4 text-green-400" />
                       <span className="text-gray-300">{recommendation.popularity}% popular</span>
-                    </div>
-                  </div>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {recommendation.tags.slice(0, 4).map((tag, tagIndex) => (
                       <span key={tagIndex} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-full">
                         {tag}
                       </span>
                     ))}
-                  </div>
-
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
                       <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors">
                         <Bookmark className="w-4 h-4 text-gray-400" />
                       </button>
-                      <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors">
                         <Share2 className="w-4 h-4 text-gray-400" />
-                      </button>
-                    </div>
                     <button className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300">
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
-                  </div>
                 </motion.div>
               ))}
-            </div>
           </motion.div>
         )}
       </AnimatePresence>

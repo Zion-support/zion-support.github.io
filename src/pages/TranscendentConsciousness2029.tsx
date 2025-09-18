@@ -28,15 +28,11 @@ const TranscendentConsciousness2029: React.FC = () => {
               </span>
               <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-semibold">
                 🌟 Enlightenment
-              </span>
               <span className="bg-gradient-to-r from-pink-500 to-red-500 text-white px-6 py-3 rounded-full text-lg font-semibold">
                 🚀 Ascension
-              </span>
-            </div>
           </divdiv>
         </div>
       </div>
-
       {/* Consciousness Levels */}
       <div className="container mx-auto px-4 py-16">
         <divdiv
@@ -50,7 +46,6 @@ const TranscendentConsciousness2029: React.FC = () => {
             Journey through the seven stages of consciousness evolution to achieve ultimate transcendence
           </p>
         </divdiv>
-
         <div className="space-y-12">
           {[
             {
@@ -61,49 +56,37 @@ const TranscendentConsciousness2029: React.FC = () => {
               color: "from-yellow-400 to-orange-400",
               features: ["Basic consciousness expansion", "Initial psychic abilities", "Enhanced intuition", "Emotional mastery"]
             },
-            {
               level: "2",
               title: "Expansion",
               description: "Consciousness expands beyond individual limitations to encompass collective awareness.",
               icon: "🌊",
               color: "from-orange-400 to-red-400",
               features: ["Collective consciousness access", "Telepathic communication", "Energy manipulation", "Reality perception"]
-            },
-            {
               level: "3",
               title: "Integration",
               description: "Complete integration with universal consciousness and access to infinite knowledge.",
               icon: "🌀",
               color: "from-red-400 to-pink-400",
               features: ["Universal knowledge access", "Dimensional awareness", "Time perception", "Matter manipulation"]
-            },
-            {
               level: "4",
               title: "Transcendence",
               description: "Transcend physical limitations and achieve pure consciousness existence.",
               icon: "✨",
               color: "from-pink-400 to-purple-400",
               features: ["Physical transcendence", "Pure energy form", "Omnipotence", "Omniscience"]
-            },
-            {
               level: "5",
               title: "Unity",
               description: "Complete unity with the source of all existence and universal consciousness.",
               icon: "🌟",
               color: "from-purple-400 to-indigo-400",
               features: ["Source unity", "Infinite creation", "Universal love", "Perfect wisdom"]
-            },
-            {
               level: "6",
               title: "Mastery",
               description: "Master of all dimensions and creator of new realities and universes.",
               icon: "👑",
               color: "from-indigo-400 to-blue-400",
               features: ["Reality creation", "Universe management", "Cosmic engineering", "Infinite power"]
-            },
-            {
               level: "7",
-              title: "Transcendence",
               description: "Ultimate transcendence beyond all limitations and existence itself.",
               icon: "💫",
               color: "from-blue-400 to-cyan-400",
@@ -132,26 +115,18 @@ const TranscendentConsciousness2029: React.FC = () => {
                         <span className="text-white">{feature}</span>
                       </div>
                     ))}
-                  </div>
                 </div>
               </div>
             </divdiv>
           ))}
-        </div>
-      </div>
-
       {/* Consciousness Technologies */}
       <div className="bg-gradient-to-r from-indigo-800/30 to-pink-800/30 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
-          >
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
               Consciousness Enhancement Technologies
             </h2>
-          </divdiv>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -160,31 +135,22 @@ const TranscendentConsciousness2029: React.FC = () => {
                 description: "Enhance neural pathways to process consciousness at quantum speeds.",
                 features: ["Quantum neural processing", "Consciousness acceleration", "Memory expansion", "Thought amplification"]
               },
-              {
                 icon: "⚡",
                 title: "Energy Integration",
                 description: "Integrate consciousness with universal energy fields for enhanced abilities.",
                 features: ["Universal energy access", "Consciousness energy conversion", "Reality manipulation", "Dimensional travel"]
-              },
-              {
                 icon: "🌌",
                 title: "Dimensional Awareness",
                 description: "Access and navigate multiple dimensions of existence simultaneously.",
                 features: ["Multi-dimensional perception", "Parallel reality access", "Timeline navigation", "Consciousness projection"]
-              },
-              {
                 icon: "🔮",
                 title: "Precognition Systems",
                 description: "Access future knowledge and predict all possible outcomes.",
                 features: ["Future vision", "Probability analysis", "Timeline optimization", "Destiny manipulation"]
-              },
-              {
                 icon: "💎",
                 title: "Crystal Consciousness",
                 description: "Store and transfer consciousness using quantum crystal technology.",
                 features: ["Consciousness storage", "Immortality protocols", "Consciousness transfer", "Backup systems"]
-              },
-              {
                 icon: "🌟",
                 title: "Universal Connection",
                 description: "Direct connection to the universal consciousness and source energy.",
@@ -210,25 +176,12 @@ const TranscendentConsciousness2029: React.FC = () => {
               </divdiv>
             ))}
           </div>
-        </div>
-      </div>
-
       {/* Enlightenment Journey */}
-      <div className="container mx-auto px-4 py-16">
-        <divdiv
-          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
-        >
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
             Your Enlightenment Journey
-          </h2>
-        </divdiv>
-
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
             className="space-y-8"
-          >
             <div className="bg-gradient-to-br from-indigo-900/50 to-pink-900/50 rounded-2xl p-8">
               <h3 className="text-3xl font-bold mb-6 text-indigo-300">Consciousness Assessment</h3>
               <div className="space-y-4">
@@ -243,16 +196,8 @@ const TranscendentConsciousness2029: React.FC = () => {
                   <div key={index} className="flex items-center space-x-4 p-3 bg-indigo-900/30 rounded-lg">
                     <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
                     <span className="text-lg">{step}</span>
-                  </div>
                 ))}
-              </div>
-            </div>
-          </divdiv>
-
-          <divdiv
-            whileInView={{ opacity: 1, x: 0 }}
             className="bg-gradient-to-br from-pink-900/50 to-purple-900/50 rounded-2xl p-8"
-          >
             <h3 className="text-3xl font-bold mb-6 text-pink-300">Transcendence Timeline</h3>
             <div className="space-y-6">
               {[
@@ -271,38 +216,21 @@ const TranscendentConsciousness2029: React.FC = () => {
                       <span className="text-sm text-gray-400">{phase.duration}</span>
                     </div>
                     <p className="text-gray-300 text-sm">{phase.description}</p>
-                  </div>
-                </div>
               ))}
-            </div>
-          </divdiv>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <divdiv
-          whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-indigo-800/50 to-pink-800/50 rounded-3xl p-12"
-        >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
             Begin Your Transcendence
-          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Take the first step towards ultimate consciousness and join the enlightened beings who have transcended all limitations.
-          </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Start Journey
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-indigo-400 hover:text-white transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </divdiv>
-      </div>
     </div>
   );
 };
-
 export default TranscendentConsciousness2029;

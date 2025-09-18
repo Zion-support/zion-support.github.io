@@ -36,32 +36,19 @@ const CommunityPage = () => {
                   </p>
                 </div>
                 
-                <div className="text-center">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">👥</span>
-                  </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Networking</h3>
-                  <p className="text-gray-600 text-sm">
                     Connect with like-minded professionals
-                  </p>
-                </div>
-                
-                <div className="text-center">
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">📚</span>
-                  </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Knowledge Sharing</h3>
-                  <p className="text-gray-600 text-sm">
                     Share insights and learn from others
-                  </p>
-                </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </>
   );
 };
-
 export default CommunityPage;

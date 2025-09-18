@@ -8,11 +8,9 @@ const UltimateContentBanner2042: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 ULTIMATE BREAKTHROUGH • JANUARY 2042
           </div>
-          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default UltimateContentBanner2042;

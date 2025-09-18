@@ -27,14 +27,11 @@ const mockUser = {
             icon: "Award",
             color: "#10B981"
         },
-        {
             id: "badge2",
             name: "Top Contributor",
             description: "Among the top 5% of contributors",
             icon: "Trophy",
             color: "#3b82f6"
-        },
-        {
             id: "badge3",
             name: "First Post",
             description: "Created your first forum post",
@@ -65,30 +62,18 @@ const userPosts = [
         isAnswered: true,
         isFeatured: true
     },
-    {
         id: "11",
         title: "How to structure an AI prompt for best results",
         content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
-        authorId: "user1",
-        authorName: "Alex Johnson",
-        authorAvatar: "https://i.pravatar.cc/150?img=3",
-        authorRole: "Verified Talent",
-        categoryId: "ai-tools",
         tags: ["prompts", "techniques", "optimization"],
         createdAt: "2025-03-20T14:25:00Z",
         updatedAt: "2025-03-20T14:25:00Z",
         upvotes: 36,
         downvotes: 1,
         replyCount: 8
-    },
-    {
         id: "12",
         title: "Setting up effective monitoring for AI systems",
         content: "Here's my approach to monitoring AI systems in production environments...",
-        authorId: "user1",
-        authorName: "Alex Johnson",
-        authorAvatar: "https://i.pravatar.cc/150?img=3",
-        authorRole: "Verified Talent",
         categoryId: "project-help",
         tags: ["monitoring", "production", "devops"],
         createdAt: "2025-03-12T09:30:00Z",
@@ -116,15 +101,11 @@ export default function CommunityProfilePage() {
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
         </div>);
-    }
     if (!user) {
-        return (<div className="container py-8">
           <h1>User not found</h1>
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
-        </div>);
-    }
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
         ,
             <div className="container py-8">
@@ -134,7 +115,6 @@ export default function CommunityProfilePage() {
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">Profile</span>
-          <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium">{user.name}</span>
         </div>
         
@@ -166,13 +146,9 @@ export default function CommunityProfilePage() {
                 <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Reputation</h3>
                   <ReputationDisplay reputation={user.reputation} size="lg"/>
-                </div>
                 
-                <div>
                   <h3 className="text-sm font-medium text-muted-foreground mb-2">Badges</h3>
                   <UserBadges badges={user.badges}/>
-                </div>
-                
                 <div className="grid grid-cols-2 gap-4">
                   <Card>
                     <CardContent className="p-4 text-center">
@@ -180,20 +156,12 @@ export default function CommunityProfilePage() {
                       <p className="text-sm text-muted-foreground">Posts</p>
                     </CardContent>
                   </Card>
-                  <Card>
-                    <CardContent className="p-4 text-center">
                       <div className="text-2xl font-bold">{user.replyCount}</div>
                       <p className="text-sm text-muted-foreground">Replies</p>
-                    </CardContent>
-                  </Card>
-                </div>
-                
                 <div className="text-sm text-muted-foreground">
                   <p>Member since April 2025</p>
-                </div>
               </CardContent>
             </Card>
-          </div>
           
           <div className="md:col-span-2">
             <Tabs defaultValue="posts">
@@ -201,22 +169,17 @@ export default function CommunityProfilePage() {
                 <TabsTrigger value="posts">Posts</TabsTrigger>
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>
               </TabsList>
-              
               <TabsContent value="posts" className="mt-6">
                 <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
-                
                 {posts.length > 0 ? (<div className="space-y-4">
                     {posts.map((post) => (<PostCard key={post.id} post={post}/>))}
                   </div>) : (<Card>
                     <CardContent className="p-6 text-center">
                       <p className="text-muted-foreground">This user hasn't created any posts yet.</p>
-                    </CardContent>
                   </Card>)}
               </TabsContent>
-              
               <TabsContent value="activity" className="mt-6">
                 <h2 className="text-xl font-bold mb-4">Recent Activity</h2>
-                
                 <Card>
                   <CardContent className="p-6">
                     <ul className="space-y-4">
@@ -226,46 +189,18 @@ export default function CommunityProfilePage() {
                         </div>
                         <div>
                           <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline">Looking for feedback on my automated testing approach</Link></p>
-                        </div>
                       </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
                           {formatDistanceToNow(new Date("2025-04-08T09:15:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
                           <p>Earned badge <span className="font-medium">Top Contributor</span></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
                           {formatDistanceToNow(new Date("2025-04-05T16:40:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
                           <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline">Comparing different vector embedding models</Link></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
                           {formatDistanceToNow(new Date("2025-04-01T12:00:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
                           <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline">Best practices for AI model fine-tuning</Link></p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-4">
-                        <div className="min-w-fit text-sm text-muted-foreground">
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
-                        </div>
-                        <div>
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover:underline">How to optimize RAG systems for better results</Link></p>
-                        </div>
-                      </li>
                     </ul>
                   </CardContent>
                 </Card>
-              </TabsContent>
             </Tabs>
-          </div>
-        </div>
       </div>);
 }

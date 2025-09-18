@@ -6,4 +6,3 @@ const EdgeAIandIoT2025 = () => {
     </div>
   );
 };
-

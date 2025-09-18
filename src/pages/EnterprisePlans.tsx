@@ -18,6 +18,5 @@ export default function EnterprisePlans() {
         <EnterpriseTrustBadges />
         <EnterpriseCTA />
       </main>
-      
     </>);
 }

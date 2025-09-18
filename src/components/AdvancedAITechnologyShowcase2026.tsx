@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const AdvancedAITechnologyShowcase2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const technologies = [
     {
       id: 'neural-consensus',
@@ -21,7 +20,6 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
         'Multi-agent coordination',
         'Emergent problem solving',
         'Distributed learning systems'
-      ],
       icon: '🧠',
       color: 'from-purple-600 to-indigo-600',
       bgColor: 'from-purple-600/20 to-indigo-600/20',
@@ -34,66 +32,49 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
       },
       link: '/blog/ai-2026-neural-consensus-revolution'
     },
-    {
       id: 'synthetic-intelligence',
       title: 'Synthetic Intelligence',
       description: 'Next-generation AI systems with synthetic consciousness and autonomous reasoning capabilities',
-      features: [
         'Synthetic consciousness',
         'Autonomous reasoning',
         'Creative synthesis',
         'Self-directed evolution'
-      ],
-      capabilities: [
         'Consciousness simulation',
         'Autonomous decision making',
         'Creative problem solving',
         'Self-improvement algorithms'
-      ],
       icon: '🤖',
       color: 'from-cyan-600 to-blue-600',
       bgColor: 'from-cyan-600/20 to-blue-600/20',
       borderColor: 'border-cyan-400/30',
-      stats: {
         consciousness: '98.7%',
         autonomy: '99.2%',
         creativity: '95.8%',
         evolution: '200%'
-      },
       link: '/blog/ai-2026-synthetic-intelligence-breakthrough'
-    },
-    {
       id: 'quantum-ai',
       title: 'Quantum AI Systems',
       description: 'Quantum-enhanced artificial intelligence leveraging quantum computing for exponential processing power',
-      features: [
         'Quantum neural networks',
         'Quantum machine learning',
         'Quantum optimization',
         'Quantum consciousness'
-      ],
-      capabilities: [
         'Quantum supremacy algorithms',
         'Exponential speedup',
         'Quantum entanglement processing',
         'Quantum consciousness simulation'
-      ],
       icon: '⚛️',
       color: 'from-emerald-600 to-teal-600',
       bgColor: 'from-emerald-600/20 to-teal-600/20',
       borderColor: 'border-emerald-400/30',
-      stats: {
         speedup: '∞',
         accuracy: '100%',
         efficiency: '1000x',
         power: '∞'
-      },
       link: '/pages/QuantumAIRevolution2026'
     }
   ];
-
   const currentTech = technologies[activeDemo];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -104,7 +85,6 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
     }, 6000);
     return () => clearInterval(interval);
   }, []);
-
   const handleDemoChange = (index: number) => {
     setIsAnimating(true);
     setTimeout(() => {
@@ -112,7 +92,6 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
       setIsAnimating(false);
     }, 300);
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
       {/* Animated background */}
@@ -123,7 +102,6 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
           backgroundRepeat: 'repeat'
         }}></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -136,7 +114,6 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
             Experience the most advanced artificial intelligence technologies that are reshaping the future of human-machine collaboration
           </p>
         </div>
-
         {/* Technology Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {technologies.map((tech, index) => (
@@ -153,8 +130,6 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
               {tech.title}
             </button>
           ))}
-        </div>
-
         {/* Technology Display */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -178,7 +153,6 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Features */}
                   <div className="space-y-4">
                     <h4 className="text-xl font-semibold text-white">Core Features</h4>
@@ -189,34 +163,18 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
                           <span className="text-gray-300 text-sm">{feature}</span>
                         </div>
                       ))}
-                    </div>
-                  </div>
-
                   {/* Capabilities */}
-                  <div className="space-y-4">
                     <h4 className="text-xl font-semibold text-white">Advanced Capabilities</h4>
-                    <div className="grid grid-cols-2 gap-3">
                       {currentTech.capabilities.map((capability, index) => (
-                        <div key={index} className="flex items-center space-x-3">
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${currentTech.color}`} />
                           <span className="text-gray-300 text-sm">{capability}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Stats */}
                   <div className="grid grid-cols-4 gap-4">
                     {Object.entries(currentTech.stats).map(([key, value]) => (
                       <div key={key} className={`bg-gradient-to-r ${currentTech.bgColor} rounded-lg p-4 border ${currentTech.borderColor} text-center`}>
                         <div className={`text-2xl font-bold bg-gradient-to-r ${currentTech.color} bg-clip-text text-transparent`}>
                           {value}
-                        </div>
                         <div className="text-xs text-gray-400 capitalize">{key}</div>
-                      </div>
                     ))}
-                  </div>
-
                   {/* CTA */}
                   <div className="pt-4">
                     <button 
@@ -225,9 +183,7 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
                     >
                       Explore Technology →
                     </button>
-                  </div>
                 </div>
-
                 {/* Interactive Demo Area */}
                 <div className={`bg-gradient-to-br ${currentTech.bgColor} rounded-2xl p-12 min-h-[500px] flex items-center justify-center border ${currentTech.borderColor} backdrop-blur-sm`}>
                   <motion.div 
@@ -238,10 +194,8 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
                     <div className="text-9xl mb-6">{currentTech.icon}</div>
                     <div className={`text-3xl font-bold bg-gradient-to-r ${currentTech.color} bg-clip-text text-transparent mb-4`}>
                       {currentTech.title}
-                    </div>
                     <div className="text-gray-400 mb-6">
                       Interactive Technology Demo
-                    </div>
                     <div className="flex justify-center space-x-2">
                       {technologies.map((_, index) => (
                         <div
@@ -252,17 +206,12 @@ const AdvancedAITechnologyShowcase2026: React.FC = () => {
                               : 'bg-gray-600'
                           }`}
                         />
-                      ))}
-                    </div>
                   </motion.div>
-                </div>
               </div>
             </div>
           </motion.div>
         </AnimatePresence>
-      </div>
     </div>
   );
 };
-
 export default AdvancedAITechnologyShowcase2026;

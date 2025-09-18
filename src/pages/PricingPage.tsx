@@ -36,7 +36,6 @@ const pricingFeatures = {
         "Phone & email support",
         "Dedicated account manager",
         "Training sessions"
-    ],
     enterprise: [
         "All Professional features",
         "Custom development",
@@ -47,7 +46,6 @@ const pricingFeatures = {
         "Custom contracts",
         "Dedicated infrastructure"
     ]
-};
 const comparisonFeatures = [
     "AI-Powered Automation",
     "Real-time Analytics",
@@ -110,8 +108,6 @@ export default function PricingPage() {
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Start with Basic and scale up as your business grows. All plans include our core features.
             </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([key, tier]) => (<Card key={key} className={`relative ${key === 'professional' ? 'border-zion-purple border-2 scale-105 shadow-xl' : ''}`}>
                 {key === 'professional' && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -139,22 +135,11 @@ export default function PricingPage() {
                   </Button>
                 </CardContent>
               </Card>))}
-          </div>
-        </div>
       </section>
-
       {/* Service Pricing by Category */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
               Service Pricing by Category
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Explore our comprehensive range of micro SAAS solutions with transparent pricing
-            </p>
-          </div>
-          
           <Tabs defaultValue="all" className="w-full" onValueChange={(value) => setSelectedCategory(value)}>
             <TabsList className="grid w-full grid-cols-9 bg-zion-blue-dark border-zion-blue-light">
               <TabsTrigger value="all" className="text-white">All</TabsTrigger>
@@ -193,7 +178,6 @@ export default function PricingPage() {
                           AI Score: {service.aiScore}
                         </Badge>
                       </div>
-                      <div className="flex items-center justify-between mb-4">
                         <div>
                           <div className="text-2xl font-bold text-zion-blue">
                             ${getDiscountedPrice(service.price)}
@@ -204,31 +188,16 @@ export default function PricingPage() {
                           {billingCycle === 'yearly' && (<div className="text-sm text-green-600">
                               Save ${Math.round(service.price * 12 * 0.2)} annually
                             </div>)}
-                        </div>
                         <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark">
                           Learn More
                         </Button>
-                      </div>
                     </CardContent>
                   </Card>))}
-              </div>
             </TabsContent>
           </Tabs>
-        </div>
-      </section>
-
       {/* Feature Comparison */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
               Feature Comparison
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               See how our plans stack up against each other and the competition
-            </p>
-          </div>
-          
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -245,31 +214,17 @@ export default function PricingPage() {
                     <td className="p-4 text-center">
                       {index < 4 ? (<CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>) : (<X className="h-5 w-5 text-red-500 mx-auto"/>)}
                     </td>
-                    <td className="p-4 text-center">
                       {index < 7 ? (<CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>) : (<X className="h-5 w-5 text-red-500 mx-auto"/>)}
-                    </td>
-                    <td className="p-4 text-center">
                       <CheckCircle className="h-5 w-5 text-green-500 mx-auto"/>
-                    </td>
                   </tr>))}
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us */}
       <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
-            </h2>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               We deliver enterprise-grade solutions with startup agility and proven results
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
             {
@@ -277,48 +232,24 @@ export default function PricingPage() {
                 title: "Immediate Deployment",
                 description: "All services ready for instant deployment"
             },
-            {
                 icon: <Shield className="h-8 w-8"/>,
                 title: "Enterprise Security",
                 description: "SOC 2 compliance and 24/7 monitoring"
-            },
-            {
                 icon: <Users className="h-8 w-8"/>,
                 title: "Dedicated Support",
                 description: "24/7 technical support with account managers"
-            },
-            {
                 icon: <TrendingUp className="h-8 w-8"/>,
                 title: "Proven ROI",
                 description: "Average 300% ROI within 6 months"
             }
         ].map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
-                <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mb-4">
                     {benefit.icon}
-                  </div>
                   <CardTitle className="text-xl">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
                   <p className="text-zion-slate-light">{benefit.description}</p>
-                </CardContent>
-              </Card>))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-zion-blue mb-4">
               Ready to Get Started?
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Get in touch with our team to discuss your needs and find the perfect plan for your business
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h3>
@@ -328,53 +259,30 @@ export default function PricingPage() {
                   <div>
                     <p className="font-medium">Phone</p>
                     <p className="text-gray-600">{CONTACT_INFO.mobile}</p>
-                  </div>
                 </div>
-                <div className="flex items-center">
                   <Mail className="h-5 w-5 text-zion-purple mr-3"/>
-                  <div>
                     <p className="font-medium">Email</p>
                     <p className="text-gray-600">{CONTACT_INFO.email}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
                   <MapPin className="h-5 w-5 text-zion-purple mr-3"/>
-                  <div>
                     <p className="font-medium">Address</p>
                     <p className="text-gray-600">{CONTACT_INFO.address}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
                   <Globe className="h-5 w-5 text-zion-purple mr-3"/>
-                  <div>
                     <p className="font-medium">Website</p>
                     <a href={CONTACT_INFO.website} className="text-zion-cyan hover:underline">
                       {CONTACT_INFO.website}
                     </a>
-                  </div>
-                </div>
-              </div>
             </div>
-            
-            <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
-              <div className="space-y-4">
                 <Link to="/request-quote">
                   <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
                     Request Custom Quote
-                  </Button>
                 </Link>
                 <Link to="/contact">
                   <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
                     Schedule Consultation
-                  </Button>
-                </Link>
                 <Link to="/micro-saas-services">
                   <Button variant="outline" className="w-full border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white">
                     View All Services
-                  </Button>
-                </Link>
-              </div>
               
               <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">
                 <h4 className="font-medium text-zion-blue mb-2">What's Included:</h4>
@@ -386,10 +294,6 @@ export default function PricingPage() {
                   <li>• Free Migration Support</li>
                   <li>• Custom Integration Services</li>
                 </ul>
-              </div>
-            </div>
-          </div>
-          
           <div className="text-center mt-12">
             <Link to="/micro-saas-services">
               <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark">
@@ -397,8 +301,5 @@ export default function PricingPage() {
                 <ArrowRight className="h-5 w-5 ml-2"/>
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
     </div>);
 }

@@ -21,12 +21,9 @@ const Training = () => {
           </h2>
           <p className="text-xl text-slate-600 mb-8">
             We're developing comprehensive training programs. Check back soon!
-          </p>
           <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
             Contact Us
           </Link>
-        </div>
-      </section>
     </div>);
 };
 export default Training;

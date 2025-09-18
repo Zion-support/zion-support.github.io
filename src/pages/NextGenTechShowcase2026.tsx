@@ -12,5 +12,4 @@ const NextGenTechShowcase2026 = () => {
     </div>
   );
 };
-
 export default NextGenTechShowcase2026;

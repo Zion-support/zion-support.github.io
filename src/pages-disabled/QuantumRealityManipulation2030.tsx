@@ -17,7 +17,6 @@ const QuantumRealityManipulation2030: React.FC = () => {
             that allows us to reshape the fundamental fabric of space-time.
           </p>
         </div>
-
         {/* Core Technologies */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
@@ -33,7 +32,6 @@ const QuantumRealityManipulation2030: React.FC = () => {
               <li>• Dimensional bridging</li>
               <li>• Gravity field manipulation</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
             <div className="text-6xl mb-4 text-center">🔮</div>
@@ -41,31 +39,22 @@ const QuantumRealityManipulation2030: React.FC = () => {
             <p className="text-purple-100 mb-6 text-center">
               Manipulate quantum probability waves to influence outcomes 
               and create desired realities at the quantum level.
-            </p>
             <ul className="text-purple-200 space-y-2 text-sm">
               <li>• Probability wave collapse</li>
               <li>• Quantum superposition control</li>
               <li>• Entanglement manipulation</li>
               <li>• Observer effect amplification</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Reality Rendering</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Real-time reality rendering that can create, modify, and 
               destroy matter and energy at will.
-            </p>
             <ul className="text-emerald-200 space-y-2 text-sm">
               <li>• Matter synthesis</li>
               <li>• Energy conversion</li>
               <li>• Molecular reconstruction</li>
               <li>• Reality simulation</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Applications */}
         <div className="bg-gradient-to-r from-gray-800/50 to-purple-800/50 backdrop-blur-sm rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Revolutionary Applications</h2>
@@ -77,44 +66,17 @@ const QuantumRealityManipulation2030: React.FC = () => {
                   <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                   Instantaneous interstellar travel via wormholes
                 </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                   Terraforming planets through reality manipulation
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                   Creating habitable environments in hostile space
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                   Time-dilated research stations for rapid development
-                </li>
               </ul>
             </div>
-            <div>
               <h3 className="text-2xl font-bold mb-4 text-purple-300">Human Enhancement</h3>
-              <ul className="space-y-3 text-gray-200">
-                <li className="flex items-center">
                   <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                   Biological reality modification for health
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                   Consciousness transfer between bodies
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                   Age reversal through quantum manipulation
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                   Enhanced cognitive abilities via reality tuning
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Technical Specifications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Technical Specifications</h2>
@@ -123,74 +85,33 @@ const QuantumRealityManipulation2030: React.FC = () => {
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-xl font-bold mb-2">Quantum Processors</h3>
               <p className="text-sm text-gray-300">10^15 qubit quantum computers for reality calculations</p>
-            </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="text-4xl mb-4">🌊</div>
               <h3 className="text-xl font-bold mb-2">Reality Fields</h3>
               <p className="text-sm text-gray-300">Controlled quantum field generators for space-time manipulation</p>
-            </div>
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-4xl mb-4">⚛️</div>
               <h3 className="text-xl font-bold mb-2">Matter Synthesizers</h3>
               <p className="text-sm text-gray-300">Quantum matter creation and destruction devices</p>
-            </div>
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold mb-2">Precision Control</h3>
               <p className="text-sm text-gray-300">Sub-atomic level reality manipulation accuracy</p>
-            </div>
-          </div>
-        </div>
-
         {/* Safety and Ethics */}
         <div className="bg-gradient-to-r from-red-800/30 to-orange-800/30 backdrop-blur-sm rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8 text-red-300">Safety & Ethics</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
               <h3 className="text-2xl font-bold mb-4 text-red-300">Safety Protocols</h3>
-              <ul className="space-y-3 text-gray-200">
-                <li className="flex items-center">
                   <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
                   Multi-layered reality stability monitoring
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
                   Automatic reality restoration systems
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
                   Quantum entanglement safety locks
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-red-400 rounded-full mr-3"></span>
                   Emergency reality reset protocols
-                </li>
-              </ul>
-            </div>
-            <div>
               <h3 className="text-2xl font-bold mb-4 text-orange-300">Ethical Guidelines</h3>
-              <ul className="space-y-3 text-gray-200">
-                <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
                   Universal reality preservation principles
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
                   Consent-based reality modification
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
                   Temporal causality protection
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
                   Multiverse integrity maintenance
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 max-w-4xl mx-auto">
@@ -198,20 +119,14 @@ const QuantumRealityManipulation2030: React.FC = () => {
             <p className="text-xl mb-6 opacity-90">
               Join the ultimate frontier of human achievement. 
               Master the power to reshape reality itself.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
                 Explore Reality Manipulation →
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                 Learn More
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default QuantumRealityManipulation2030;

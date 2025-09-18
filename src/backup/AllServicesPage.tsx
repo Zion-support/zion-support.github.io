@@ -1,5 +1,5 @@
 import React from 'react';
-import { MicroSaasServicesShowcase } from '../components/services/MicroSaasServicesShowcase';
+import { MicroSaasServicesShowcase } from '@/components/services/MicroSaasServicesShowcase';
 import { Sparkles, Star, Zap, Brain } from 'lucide-react';
 
 export default function AllServicesPage() {
@@ -19,12 +19,10 @@ export default function AllServicesPage() {
               Service Portfolio
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto mb-8 leading-relaxed">
             Discover our extensive range of AI services, IT solutions, and micro SAAS platforms 
             designed to meet every business need and drive digital transformation.
           </p>
-          
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="flex items-center gap-3 justify-center">
@@ -34,34 +32,19 @@ export default function AllServicesPage() {
               <div className="text-left">
                 <div className="text-2xl font-bold text-zion-cyan">12+</div>
                 <div className="text-sm text-zion-slate-light">AI Services</div>
-              </div>
             </div>
-            <div className="flex items-center gap-3 justify-center">
               <div className="w-12 h-12 bg-zion-purple/20 rounded-lg flex items-center justify-center">
                 <Zap className="h-6 w-6 text-zion-purple" />
-              </div>
-              <div className="text-left">
                 <div className="text-2xl font-bold text-zion-purple">24/7</div>
                 <div className="text-sm text-zion-slate-light">Support</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 justify-center">
-              <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
                 <Star className="h-6 w-6 text-zion-cyan" />
-              </div>
-              <div className="text-left">
                 <div className="text-2xl font-bold text-zion-cyan">98%</div>
                 <div className="text-sm text-zion-slate-light">Success Rate</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-
       {/* Services Showcase */}
       <div className="py-16 lg:py-20">
         <MicroSaasServicesShowcase />
-      </div>
     </div>
   );
 }

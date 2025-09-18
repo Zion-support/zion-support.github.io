@@ -2,7 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { User, Sparkles } from 'lucide-react';
-
 export function ProfileLoadingState() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -13,29 +12,16 @@ export function ProfileLoadingState() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: {
       y: 0,
-      opacity: 1,
-      transition: {
         duration: 0.5
-      }
-    }
-  };
-
   const pulseVariants = {
     pulse: {
       scale: [1, 1.1, 1],
       opacity: [0.5, 1, 0.5],
-      transition: {
         duration: 2,
         repeat: Infinity
-      }
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark flex flex-col justify-center items-center p-4">
       <motion.div
@@ -57,20 +43,11 @@ export function ProfileLoadingState() {
             <User className="w-10 h-10 text-zion-cyan" />
           </motion.div>
         </motion.div>
-
         {/* Loading text */}
-        <motion.div
           className="text-zion-cyan text-2xl font-semibold mb-4"
-          variants={itemVariants}
-        >
           Loading Profile
-        </motion.div>
-
         {/* Animated dots */}
-        <motion.div
           className="flex justify-center gap-2"
-          variants={itemVariants}
-        >
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}
@@ -84,18 +61,11 @@ export function ProfileLoadingState() {
                 repeat: Infinity,
                 delay: i * 0.2,
                 ease: "easeInOut"
-              }}
             />
           ))}
-        </motion.div>
-
         {/* Sparkles effect */}
-        <motion.div
           className="mt-6 text-zion-purple-light"
-          variants={itemVariants}
-        >
           <Sparkles className="w-6 h-6 animate-pulse" />
-        </motion.div>
       </motion.div>
     </div>
   );

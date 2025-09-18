@@ -16,10 +16,8 @@ const UltimateContentBanner2036: React.FC = () => {
           <a href="/pages/UltimateTechBreakthrough2036" className="inline-block bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             🌟 Experience the Ultimate Breakthrough 2036 →
           </a>
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateContentBanner2036;

@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-import { ProfileLoadingState } from '../components/profile/ProfileLoadingState';
-import { ProfileErrorState } from '../components/profile/ProfileErrorState';
-=======
-import { SEO } from '../components/SEO.jsx';
+import { SEO } from '@/components/SEO';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+import SEO from '@/components/SEO.jsx';
 export default function TalentProfilePage() {
     const { id } = useParams();
     const [profile, setProfile] = useState(null);
@@ -27,13 +22,8 @@ export default function TalentProfilePage() {
                     throw new Error('Failed to load profile');
                 const data = await res.json();
                 setProfile(data.profile);
-            }
             catch (err) {
-                setError('Profile not found');
-            }
             finally {
-                setLoading(false);
-            }
         };
         fetchProfile();
     }, [id]);
@@ -58,14 +48,11 @@ export default function TalentProfilePage() {
             </div>)}
           {profile.social && (<div>
               <h2 className="font-semibold">Social Links</h2>
-              <ul className="list-disc ml-5">
                 {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>
                     <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
                       {platform}
                     </a>
                   </li>))}
-              </ul>
-            </div>)}
         </div>
       </main>
     </>);

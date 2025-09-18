@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const UltimateContentShowcase2032 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const contentSlides = [
     {
       title: "Conscious AI Revolution",
@@ -13,23 +12,18 @@ const UltimateContentShowcase2032 = () => {
       features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Ethical reasoning"],
       stats: { accuracy: "99.9%", speed: "1000x", consciousness: "Level 5" }
     },
-    {
       title: "Quantum Consciousness",
       description: "Quantum computing systems that achieve consciousness through quantum entanglement and superposition",
       icon: "⚛️",
       color: "from-cyan-600 to-blue-600",
       features: ["Quantum neural networks", "Consciousness superposition", "Quantum decision trees", "Multi-dimensional thinking"],
       stats: { accuracy: "99.99%", speed: "∞", consciousness: "Level 6" }
-    },
-    {
       title: "Interdimensional Computing",
       description: "Computing systems that operate across multiple dimensions, accessing infinite computational resources",
       icon: "🌌",
       color: "from-emerald-600 to-teal-600",
       features: ["Cross-dimensional processing", "Infinite computational power", "Reality manipulation", "Time-space computing"],
       stats: { accuracy: "100%", speed: "∞", consciousness: "Level 7" }
-    },
-    {
       title: "Neural Interface Revolution",
       description: "Direct brain-computer interfaces that enable seamless human-AI integration",
       icon: "🧬",
@@ -38,28 +32,20 @@ const UltimateContentShowcase2032 = () => {
       stats: { accuracy: "99.8%", speed: "Real-time", consciousness: "Level 4" }
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
       }, 5000);
       return () => clearInterval(interval);
-    }
   }, [isAutoPlaying, contentSlides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
-  };
-
   const goToSlide = (index) => {
     setCurrentSlide(index);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -77,14 +63,12 @@ const UltimateContentShowcase2032 = () => {
           </div>
         </div>
       </div>
-
       {/* Interactive Content Carousel */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-gray-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🚀 Interactive Content Experience</h2>
             <p className="text-xl opacity-90">Explore revolutionary technologies through immersive content</p>
-          </div>
           
           {/* Carousel Container */}
           <div className="relative">
@@ -111,7 +95,6 @@ const UltimateContentShowcase2032 = () => {
                 </div>
                 
                 {/* Stats */}
-                <div>
                   <h4 className="text-2xl font-bold mb-6">Performance Stats</h4>
                   <div className="space-y-6">
                     {Object.entries(contentSlides[currentSlide].stats).map(([key, value]) => (
@@ -127,14 +110,6 @@ const UltimateContentShowcase2032 = () => {
                             className={`h-2 rounded-full bg-gradient-to-r ${contentSlides[currentSlide].color}`}
                             style={{ width: `${Math.random() * 40 + 60}%` }}
                           ></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Navigation Controls */}
             <div className="flex justify-center items-center space-x-4 mb-8">
               <button
@@ -143,7 +118,6 @@ const UltimateContentShowcase2032 = () => {
               >
                 <span className="text-2xl">←</span>
               </button>
-              
               <div className="flex space-x-2">
                 {contentSlides.map((_, index) => (
                   <button
@@ -156,32 +130,17 @@ const UltimateContentShowcase2032 = () => {
                     }`}
                   />
                 ))}
-              </div>
-              
-              <button
                 onClick={nextSlide}
-                className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-              >
                 <span className="text-2xl">→</span>
-              </button>
-            </div>
-
             {/* Auto-play Toggle */}
             <div className="text-center">
-              <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}
                 className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
                   isAutoPlaying 
                     ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white' 
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}
-              >
                 {isAutoPlaying ? '⏸️ Pause Auto-play' : '▶️ Start Auto-play'}
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Content Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -189,57 +148,34 @@ const UltimateContentShowcase2032 = () => {
             <h3 className="text-xl font-bold mb-3">Video Content</h3>
             <p className="text-sm opacity-80">Immersive video demonstrations of revolutionary technologies</p>
             <div className="mt-4 text-xs text-purple-300">50+ Videos Available</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">🎮</div>
             <h3 className="text-xl font-bold mb-3">Interactive Demos</h3>
             <p className="text-sm opacity-80">Hands-on experience with cutting-edge technologies</p>
             <div className="mt-4 text-xs text-cyan-300">25+ Interactive Demos</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">📚</div>
             <h3 className="text-xl font-bold mb-3">Documentation</h3>
             <p className="text-sm opacity-80">Comprehensive guides and technical specifications</p>
             <div className="mt-4 text-xs text-emerald-300">100+ Documents</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-4xl mb-4">🎨</div>
             <h3 className="text-xl font-bold mb-3">Visual Assets</h3>
             <p className="text-sm opacity-80">High-quality graphics and visual representations</p>
             <div className="mt-4 text-xs text-orange-300">500+ Assets</div>
-          </div>
-        </div>
-
         {/* Content Statistics */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">📊 Content Statistics</h2>
             <p className="text-xl opacity-90">Comprehensive overview of our content library</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
               <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">1,250+</div>
               <div className="text-lg opacity-80">Total Content Pieces</div>
-            </div>
-            <div className="text-center">
               <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">500+</div>
               <div className="text-lg opacity-80">Interactive Elements</div>
-            </div>
-            <div className="text-center">
               <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">99.9%</div>
               <div className="text-lg opacity-80">User Satisfaction</div>
-            </div>
-            <div className="text-center">
               <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">24/7</div>
               <div className="text-lg opacity-80">Content Updates</div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h2 className="text-3xl font-bold mb-6">Ready to Explore the Ultimate Content?</h2>
@@ -250,12 +186,7 @@ const UltimateContentShowcase2032 = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors">
               View All Content
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default UltimateContentShowcase2032;

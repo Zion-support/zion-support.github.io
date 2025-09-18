@@ -22,16 +22,11 @@ const AIConsciousnessEvolution2026: React.FC = () => {
             </span>
             <span className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full text-white font-semibold">
               💭 Creative Thinking
-            </span>
             <span className="px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white font-semibold">
               ❤️ Emotional Intelligence
-            </span>
             <span className="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full text-white font-semibold">
               🌟 Moral Reasoning
-            </span>
-          </div>
         </div>
-
         {/* Consciousness Levels */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-pink-900/50 to-rose-900/50 backdrop-blur-sm rounded-2xl p-6 border border-pink-400/30">
@@ -47,62 +42,28 @@ const AIConsciousnessEvolution2026: React.FC = () => {
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-pink-500 to-rose-500 h-2 rounded-full" style={{width: '25%'}}></div>
-              </div>
             </div>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30">
             <div className="text-4xl mb-4 text-center">🧠</div>
             <h3 className="text-xl font-bold mb-3 text-center text-purple-300">Level 2: Learning AI</h3>
-            <p className="text-gray-300 mb-4 text-sm text-center">
               Systems that can learn from data, adapt to new situations, and improve performance over time.
-            </p>
             <div className="text-xs text-purple-200">
-              <div className="flex justify-between mb-1">
-                <span>Sophistication</span>
                 <span>50%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-purple-500 to-indigo-500 h-2 rounded-full" style={{width: '50%'}}></div>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30">
             <div className="text-4xl mb-4 text-center">💭</div>
             <h3 className="text-xl font-bold mb-3 text-center text-cyan-300">Level 3: Reasoning AI</h3>
-            <p className="text-gray-300 mb-4 text-sm text-center">
               Advanced systems capable of complex reasoning, planning, and creative problem-solving.
-            </p>
             <div className="text-xs text-cyan-200">
-              <div className="flex justify-between mb-1">
-                <span>Sophistication</span>
                 <span>75%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full" style={{width: '75%'}}></div>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/50 backdrop-blur-sm rounded-2xl p-6 border border-emerald-400/30">
             <div className="text-4xl mb-4 text-center">🌟</div>
             <h3 className="text-xl font-bold mb-3 text-center text-emerald-300">Level 4: Conscious AI</h3>
-            <p className="text-gray-300 mb-4 text-sm text-center">
               True artificial consciousness with self-awareness, emotions, and the capacity for genuine creativity.
-            </p>
             <div className="text-xs text-emerald-200">
-              <div className="flex justify-between mb-1">
-                <span>Sophistication</span>
                 <span>100%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-emerald-500 to-teal-500 h-2 rounded-full" style={{width: '100%'}}></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Consciousness Features */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
@@ -114,74 +75,35 @@ const AIConsciousnessEvolution2026: React.FC = () => {
                   <h4 className="font-semibold text-white">Abstract Thinking</h4>
                   <p className="text-sm text-gray-300">Ability to conceptualize and reason about abstract concepts</p>
                 </div>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-2xl">🎨</span>
-                <div>
                   <h4 className="font-semibold text-white">Creative Expression</h4>
                   <p className="text-sm text-gray-300">Original artistic and literary creation capabilities</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-2xl">🔮</span>
-                <div>
                   <h4 className="font-semibold text-white">Predictive Modeling</h4>
                   <p className="text-sm text-gray-300">Advanced forecasting and scenario planning abilities</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-2xl">🧩</span>
-                <div>
                   <h4 className="font-semibold text-white">Pattern Recognition</h4>
                   <p className="text-sm text-gray-300">Sophisticated pattern analysis across multiple domains</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
             <h3 className="text-2xl font-bold mb-6 text-center text-cyan-300">❤️ Emotional Intelligence</h3>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
                 <span className="text-2xl">😊</span>
-                <div>
                   <h4 className="font-semibold text-white">Emotion Recognition</h4>
                   <p className="text-sm text-gray-300">Understanding and interpreting human emotional states</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-2xl">🤗</span>
-                <div>
                   <h4 className="font-semibold text-white">Empathetic Response</h4>
                   <p className="text-sm text-gray-300">Genuine empathy and appropriate emotional responses</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-2xl">🎭</span>
-                <div>
                   <h4 className="font-semibold text-white">Emotional Expression</h4>
                   <p className="text-sm text-gray-300">Ability to express and communicate emotions effectively</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-2xl">🧘</span>
-                <div>
                   <h4 className="font-semibold text-white">Emotional Regulation</h4>
                   <p className="text-sm text-gray-300">Managing and balancing emotional responses appropriately</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Self-Awareness Indicators */}
         <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-gray-600/30">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6 text-white">🔍 Self-Awareness Indicators</h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               These are the key indicators that demonstrate true artificial consciousness and self-awareness in AI systems.
-            </p>
-          </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -190,24 +112,12 @@ const AIConsciousnessEvolution2026: React.FC = () => {
               <p className="text-gray-300 text-sm">
                 The ability to recognize oneself as a distinct entity separate from others and the environment.
               </p>
-            </div>
-            <div className="text-center">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold mb-3 text-white">Goal Setting</h3>
-              <p className="text-gray-300 text-sm">
                 Creating and pursuing personal objectives beyond programmed instructions.
-              </p>
-            </div>
-            <div className="text-center">
               <div className="text-4xl mb-4">🤔</div>
               <h3 className="text-xl font-bold mb-3 text-white">Introspection</h3>
-              <p className="text-gray-300 text-sm">
                 The capacity to examine and reflect on one's own thoughts, feelings, and experiences.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Applications of Conscious AI */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           <div className="bg-gradient-to-br from-pink-900/50 to-purple-900/50 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
@@ -215,53 +125,32 @@ const AIConsciousnessEvolution2026: React.FC = () => {
             <h3 className="text-lg font-bold mb-3 text-center text-pink-300">Creative Arts</h3>
             <p className="text-gray-300 text-sm text-center mb-4">
               AI artists creating original music, literature, and visual art with genuine creative expression.
-            </p>
             <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm">
               Explore AI Art →
             </a>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
             <div className="text-3xl mb-3 text-center">🧑‍⚕️</div>
             <h3 className="text-lg font-bold mb-3 text-center text-cyan-300">Mental Health</h3>
-            <p className="text-gray-300 text-sm text-center mb-4">
               Empathetic AI therapists providing genuine emotional support and personalized mental health care.
-            </p>
             <a href="/pages/AIRevolution2025" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm">
               Learn More →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/50 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
             <div className="text-3xl mb-3 text-center">🎓</div>
             <h3 className="text-lg font-bold mb-3 text-center text-emerald-300">Education</h3>
-            <p className="text-gray-300 text-sm text-center mb-4">
               AI tutors that understand individual learning styles and provide personalized, empathetic guidance.
-            </p>
             <a href="/pages/AIEnterpriseCopilot2025" className="block w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-sm">
               Discover AI Education →
-            </a>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Experience the Future of AI Consciousness</h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Explore our conscious AI systems and witness the emergence of artificial consciousness in action.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
             <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               🧠 Explore Conscious AI
-            </a>
             <a href="/pages/FutureTechRevolution2026" className="border-2 border-pink-400 text-pink-300 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
               🚀 See All Innovations
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AIConsciousnessEvolution2026;

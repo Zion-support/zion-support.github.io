@@ -7,16 +7,13 @@ export function Header() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navigation = [
     { name: 'Home', href: '/', current: location.pathname === '/' },
     { name: 'Services', href: '/services', current: location.pathname.startsWith('/services') || location.pathname.startsWith('/micro-saas-services') },
@@ -25,7 +22,6 @@ export function Header() {
     { name: 'About', href: '/about', current: location.pathname === '/about' },
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
   ];
-
   const serviceCategories = [
     {
       name: 'AI Services',
@@ -33,38 +29,27 @@ export function Header() {
       href: '/micro-saas-services?category=AI Services',
       icon: '🤖'
     },
-    {
       name: 'IT Services',
       description: 'Comprehensive IT infrastructure',
       href: '/micro-saas-services?category=IT Services',
       icon: '🔧'
-    },
-    {
       name: 'Micro SAAS',
       description: 'Scalable software solutions',
       href: '/micro-saas-services?category=Micro SAAS',
       icon: '💼'
-    },
-    {
       name: 'Development',
       description: 'Custom software development',
       href: '/micro-saas-services?category=Development',
       icon: '💻'
-    },
-    {
       name: 'Analytics',
       description: 'Data-driven insights',
       href: '/micro-saas-services?category=Analytics',
       icon: '📊'
-    },
-    {
       name: 'Security',
       description: 'Cybersecurity solutions',
       href: '/micro-saas-services?category=Security',
       icon: '🛡️'
     }
-  ];
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
@@ -106,7 +91,6 @@ export function Header() {
                         ? 'text-zion-cyan border-b-2 border-zion-cyan'
                         : 'text-zion-slate-light hover:text-zion-cyan'
                     }`}
-                  >
                     {item.name}
                   </Link>
                 )}
@@ -122,7 +106,6 @@ export function Header() {
               Get Started
             </Link>
           </nav>
-
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
@@ -131,22 +114,18 @@ export function Header() {
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
-
         {/* Services Dropdown */}
         {isServicesDropdownOpen && (
           <div
             className="absolute top-full left-0 right-0 bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg"
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
             onMouseLeave={() => setIsServicesDropdownOpen(false)}
-          >
             <div className="container mx-auto px-4 py-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {serviceCategories.map((category) => (
-                  <Link
                     key={category.name}
                     to={category.href}
                     className="group p-4 rounded-lg border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-cyan/10 transition-all duration-300"
-                  >
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">{category.icon}</span>
                       <div>
@@ -158,34 +137,20 @@ export function Header() {
                         </p>
                       </div>
                     </div>
-                  </Link>
                 ))}
-              </div>
-            </div>
           </div>
         )}
-
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg">
-            <div className="container mx-auto px-4 py-6">
               <nav className="space-y-2">
                 {navigation.map((item) => (
-                  <Link
                     key={item.name}
-                    to={item.href}
                     className={`block py-3 px-4 rounded-lg transition-colors duration-300 ${
-                      item.current
                         ? 'text-zion-cyan bg-zion-cyan/10'
                         : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/5'
-                    }`}
                     onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
               </nav>
-
               {/* Service Categories */}
               <div className="pt-4 border-t border-zion-cyan/20">
                 <h3 className="text-sm font-medium text-zion-cyan/60 mb-3">Service Categories</h3>
@@ -200,28 +165,18 @@ export function Header() {
                       <div className="flex items-center space-x-2">
                         <span className="text-lg">{category.icon}</span>
                         <span className="text-sm text-white/80">{category.name}</span>
-                      </div>
                     </Link>
                   ))}
                 </div>
-              </div>
-
               {/* Contact Information */}
               <div className="pt-4 border-t border-zion-cyan/20 space-y-3">
                 <div className="flex items-center space-x-3 text-zion-cyan/80">
                   <Phone className="h-4 w-4" />
                   <span className="text-sm">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-zion-cyan/80">
                   <Mail className="h-4 w-4" />
                   <span className="text-sm">kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-zion-cyan/80">
                   <MapPin className="h-4 w-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-              </div>
-
               {/* CTA Button */}
               <Link
                 to="/contact"
@@ -230,9 +185,6 @@ export function Header() {
               >
                 Get Started Today
               </Link>
-            </div>
-          </div>
-        )}
       </div>
     </header>
   );

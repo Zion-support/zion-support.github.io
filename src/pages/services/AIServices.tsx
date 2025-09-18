@@ -8,17 +8,12 @@ const AIServices = () => {
             title: "AI Strategy",
             description: "Comprehensive AI strategy development and implementation"
         },
-        {
             icon: Cpu,
             title: "Machine Learning",
             description: "Custom ML models and algorithms for your business"
-        },
-        {
             icon: Database,
             title: "Data Analytics",
             description: "Advanced analytics powered by artificial intelligence"
-        },
-        {
             icon: Shield,
             title: "AI Ethics",
             description: "Responsible AI development and governance"
@@ -30,7 +25,6 @@ const AIServices = () => {
         "Automated decision-making processes",
         "Competitive advantage through AI innovation",
         "Scalable AI solutions that grow with your business"
-    ];
     return (<div className="min-h-screen bg-background">
       <SEO title="AI Services - Zion Tech Group" description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" canonical="https://ziontechgroup.com/services/ai-services"/>
 
@@ -55,7 +49,6 @@ const AIServices = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -65,7 +58,6 @@ const AIServices = () => {
               Comprehensive AI services designed to meet your business challenges
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                 <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -74,13 +66,8 @@ const AIServices = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Services?</h2>
@@ -88,7 +75,6 @@ const AIServices = () => {
                 Experience the transformative power of AI with our proven approach
               </p>
             </div>
-
             <div className="space-y-6">
               {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
                   <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-4">
@@ -96,11 +82,6 @@ const AIServices = () => {
                   </div>
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-pink-600 to-rose-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -111,8 +92,6 @@ const AIServices = () => {
           <button className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Schedule a Consultation
           </button>
-        </div>
-      </section>
     </div>);
 };
 export default AIServices;

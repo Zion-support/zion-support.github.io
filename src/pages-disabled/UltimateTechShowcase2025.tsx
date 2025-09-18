@@ -31,10 +31,7 @@ const UltimateTechShowcase2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-xl">
               📖 Learn More
-            </button>
-          </div>
         </motion.div>
-
         {/* Technology Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           <motion.div
@@ -59,77 +56,49 @@ const UltimateTechShowcase2025: React.FC = () => {
               Explore AI →
             </a>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-8xl mb-6 text-center">⚡</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Quantum Computing</h3>
             <p className="text-cyan-200 mb-8 text-center text-lg">
               Revolutionary quantum computing solving impossible problems with exponential speed
-            </p>
             <ul className="text-cyan-300 space-y-3 text-sm mb-8">
               <li>• Quantum Supremacy</li>
               <li>• Quantum Cryptography</li>
               <li>• Molecular Simulation</li>
               <li>• Optimization Algorithms</li>
               <li>• Quantum-Neural Fusion</li>
-            </ul>
             <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Go Quantum →
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-gradient-to-br from-emerald-600/40 to-teal-600/40 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-8xl mb-6 text-center">🧬</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Neural Interfaces</h3>
             <p className="text-emerald-200 mb-8 text-center text-lg">
               Direct brain-computer interfaces enabling mind-machine communication
-            </p>
             <ul className="text-emerald-300 space-y-3 text-sm mb-8">
               <li>• Non-Invasive BCI</li>
               <li>• Thought Control</li>
               <li>• Neural Feedback</li>
               <li>• Mind-Machine Fusion</li>
               <li>• Cognitive Enhancement</li>
-            </ul>
             <a href="/pages/NeuralInterfaceFuture" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Connect Mind →
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-orange-600/40 to-red-600/40 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-8xl mb-6 text-center">🚀</div>
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Space Technology</h3>
             <p className="text-orange-200 mb-8 text-center text-lg">
               Revolutionary space technologies enabling interplanetary exploration
-            </p>
             <ul className="text-orange-300 space-y-3 text-sm mb-8">
               <li>• Advanced Propulsion</li>
               <li>• Space Habitats</li>
               <li>• Asteroid Mining</li>
               <li>• Mars Colonization</li>
               <li>• Interstellar Travel</li>
-            </ul>
             <a href="/pages/NextGenSpaceTech2026" className="block w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold text-center">
               Explore Space →
-            </a>
-          </motion.div>
         </div>
-
         {/* Featured Innovations */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">🌟 Featured Innovations</h2>
@@ -150,82 +119,40 @@ const UltimateTechShowcase2025: React.FC = () => {
                   <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                   <span className="text-purple-300">Self-evolving neural architectures</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                   <span className="text-purple-300">Autonomous problem-solving</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                   <span className="text-purple-300">Creative AI generation</span>
-                </div>
               </div>
               <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Explore Synthetic AI →
               </a>
             </motion.div>
-
-            <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-10 border border-cyan-400/30"
-            >
               <div className="text-6xl mb-6 text-center">⚛️</div>
               <h3 className="text-3xl font-bold text-white mb-6 text-center">Quantum-Neural Fusion</h3>
               <p className="text-cyan-200 mb-8 text-center text-lg">
                 The revolutionary convergence of quantum computing and neural networks, creating unprecedented processing power.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center space-x-3">
                   <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-cyan-300">Quantum-enhanced neural processing</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-cyan-300">Exponential computation speed</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-cyan-300">Complex problem solving</span>
-                </div>
-              </div>
               <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Discover Fusion →
-              </a>
-            </motion.div>
-
-            <motion.div
               initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
               className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-10 border border-emerald-400/30"
-            >
               <div className="text-6xl mb-6 text-center">🔬</div>
               <h3 className="text-3xl font-bold text-white mb-6 text-center">Biotech AI</h3>
               <p className="text-emerald-200 mb-8 text-center text-lg">
                 AI-powered biotechnology revolutionizing healthcare, drug discovery, and personalized medicine.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center space-x-3">
                   <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
                   <span className="text-emerald-300">AI drug discovery</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
                   <span className="text-emerald-300">Personalized medicine</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
                   <span className="text-emerald-300">Genetic analysis</span>
-                </div>
-              </div>
               <a href="/pages/AdvancedBiotechAI2026" className="block w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center text-lg">
                 Explore Biotech →
-              </a>
-            </motion.div>
-          </div>
-        </div>
-
         {/* Technology Stats */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-16 mb-20">
           <h2 className="text-5xl font-bold text-white text-center mb-16">📊 Technology Impact 2025</h2>
@@ -235,52 +162,30 @@ const UltimateTechShowcase2025: React.FC = () => {
               <h3 className="text-2xl font-bold text-white mb-2">AI Efficiency Gain</h3>
               <p className="text-purple-200">Average productivity increase with AI integration</p>
             </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-cyan-400 mb-4">10^18</div>
               <h3 className="text-2xl font-bold text-white mb-2">Quantum Speed</h3>
               <p className="text-cyan-200">Exponential processing power increase</p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-emerald-400 mb-4">99.9%</div>
               <h3 className="text-2xl font-bold text-white mb-2">Neural Accuracy</h3>
               <p className="text-emerald-200">Precision in brain-computer interfaces</p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-orange-400 mb-4">50+</div>
               <h3 className="text-2xl font-bold text-white mb-2">Space Missions</h3>
               <p className="text-orange-200">Active space exploration missions</p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-16"
-        >
           <h2 className="text-6xl font-bold text-white mb-8">Ready to Experience the Future?</h2>
           <p className="text-2xl text-purple-100 mb-12 max-w-4xl mx-auto">
             Join us on this revolutionary journey through the most exciting technological breakthroughs of 2025
-          </p>
-          <div className="flex justify-center space-x-6">
             <a href="/pages/SyntheticIntelligence2026" className="bg-white text-purple-600 px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
               🧠 Explore Synthetic AI
-            </a>
             <a href="/pages/QuantumNeuralFusion2026" className="border-2 border-white text-white px-12 py-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-xl">
               ⚛️ Quantum-Neural Fusion
-            </a>
             <a href="/pages/RevolutionaryTechInsights2025" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-xl">
               🔮 Tech Insights
-            </a>
-          </div>
-        </motion.div>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default UltimateTechShowcase2025;

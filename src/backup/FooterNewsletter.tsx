@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
-import { useToast } from '../hooks/use-toast';
+import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
-import { logErrorToProduction } from '../utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';
 
 export function FooterNewsletter(): React.ReactElement {
   const [email, setEmail] = useState('');
@@ -11,11 +11,8 @@ export function FooterNewsletter(): React.ReactElement {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailError, setEmailError] = useState('');
   const { toast } = useToast();
-
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   const lastSubmit = useRef(0);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (honeypot) return; // ignore bots
@@ -29,17 +26,14 @@ export function FooterNewsletter(): React.ReactElement {
     } else {
       setEmailError('');
     }
-
     setIsSubmitting(true);
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`; // Generate a base for unique ID
-
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: trimmedEmail }),
       });
-
       const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error
       if (res.ok) {
         if (data.status === 'already_subscribed') {
@@ -65,12 +59,9 @@ export function FooterNewsletter(): React.ReactElement {
       logErrorToProduction('Newsletter subscription error:', { data: err });
       toast.error('Unable to subscribe right now. Please try again later.', {
         id: `${uniqueToastIdBase}-catch-error`,
-      });
     } finally {
       setIsSubmitting(false);
-    }
   };
-
   return (
     <form onSubmit={handleSubmit} className='flex flex-col gap-2'>
       <label htmlFor='newsletter-email' className='sr-only'>
@@ -95,7 +86,6 @@ export function FooterNewsletter(): React.ReactElement {
         tabIndex={-1}
         autoComplete='off'
         style={{ display: 'none' }}
-      />
       <Button
         type='submit'
         aria-label='Subscribe to newsletter'

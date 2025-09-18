@@ -8,17 +8,12 @@ const Blog: React.FC = () => {
       date: '2025-01-15',
       author: 'Zion Tech Team'
     },
-    {
       title: 'Quantum Computing Breakthroughs',
       excerpt: 'Latest developments in quantum computing and their practical applications.',
       date: '2025-01-10',
-      author: 'Zion Tech Team'
-    },
-    {
       title: 'Cybersecurity Best Practices',
       excerpt: 'Essential cybersecurity strategies to protect your business.',
       date: '2025-01-05',
-      author: 'Zion Tech Team'
     }
   ];
   return (

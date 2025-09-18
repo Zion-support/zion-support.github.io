@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const InteractiveTechShowcase2033: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const technologies = {
     ai: {
       title: 'Transcendent AI 2033',
@@ -19,29 +18,23 @@ const InteractiveTechShowcase2033: React.FC = () => {
     quantum: {
       title: 'Quantum Reality Engine',
       description: 'Manipulate reality itself with quantum computing that transcends physical limitations',
-      features: [
         'Quantum reality manipulation',
         'Dimensional computing',
         'Matter transformation',
         'Universal constants control'
-      ],
       icon: '⚛️',
       color: 'from-cyan-600 to-blue-600'
-    },
     space: {
       title: 'Next-Gen Space Tech',
       description: 'Explore the universe with revolutionary space technology enabling interstellar travel',
-      features: [
         'Faster-than-light travel',
         'Planetary terraforming',
         'Space megacities',
         'Interstellar highways'
-      ],
       icon: '🚀',
       color: 'from-emerald-600 to-teal-600'
     }
   };
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
@@ -72,9 +65,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
                 {tech.icon} {tech.title}
               </button>
             ))}
-          </div>
-        </div>
-
         {/* Active Technology Display */}
         <div className="grid md:grid-cols-2 gap-8">
           <div className={`bg-gradient-to-br ${technologies[activeTab as keyof typeof technologies].color}/30 backdrop-blur-sm rounded-xl p-8 border border-white/20`}>
@@ -98,7 +88,6 @@ const InteractiveTechShowcase2033: React.FC = () => {
             <button className={`w-full bg-gradient-to-r ${technologies[activeTab as keyof typeof technologies].color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
               Explore {technologies[activeTab as keyof typeof technologies].title} →
             </button>
-          </div>
           
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
@@ -108,63 +97,37 @@ const InteractiveTechShowcase2033: React.FC = () => {
                   <span className="text-2xl">⚡</span>
                   <span className="text-sm">Instant problem solving across all domains</span>
                 </div>
-                <div className="flex items-center space-x-3">
                   <span className="text-2xl">🌌</span>
                   <span className="text-sm">Multi-dimensional processing capabilities</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <span className="text-2xl">♾️</span>
                   <span className="text-sm">Unlimited computational resources</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <span className="text-2xl">🔮</span>
                   <span className="text-sm">Future prediction and optimization</span>
-                </div>
               </div>
-            </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <h4 className="text-xl font-semibold mb-4">📊 Impact Statistics</h4>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-400">99.9%</div>
                   <div className="text-xs opacity-80">Accuracy</div>
-                </div>
-                <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400">∞</div>
                   <div className="text-xs opacity-80">Speed</div>
-                </div>
-                <div className="text-center">
                   <div className="text-2xl font-bold text-emerald-400">100%</div>
                   <div className="text-xs opacity-80">Success</div>
-                </div>
-                <div className="text-center">
                   <div className="text-2xl font-bold text-pink-400">24/7</div>
                   <div className="text-xs opacity-80">Operation</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Join the technological revolution and be part of the most advanced era in human history
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey →
-            </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Learn More
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default InteractiveTechShowcase2033;

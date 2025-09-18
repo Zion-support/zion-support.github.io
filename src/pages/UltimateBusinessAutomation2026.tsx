@@ -25,130 +25,61 @@ const UltimateBusinessAutomation2026: React.FC = () => {
               </button>
               <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
                 Watch Demo
-              </button>
-            </div>
           </divdiv>
         </div>
       </div>
-
       {/* Features Grid */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🎯 Revolutionary Automation Features</h2>
           <p className="text-xl text-purple-200">Experience the future of business automation</p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-5xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI-Powered Automation</h3>
             <p className="text-purple-200 text-center mb-6">
               Advanced AI algorithms that learn from your business processes and optimize workflows automatically
-            </p>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center space-x-2">
                 <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Smart workflow optimization</span>
               </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Predictive analytics</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Self-healing processes</span>
-              </li>
             </ul>
-          </divdiv>
-
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
-            className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-5xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Real-Time Processing</h3>
-            <p className="text-purple-200 text-center mb-6">
               Process thousands of tasks simultaneously with our quantum-enhanced processing engine
-            </p>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Parallel task execution</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Instant decision making</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Zero latency processing</span>
-              </li>
-            </ul>
-          </divdiv>
-
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
-            className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-5xl mb-4 text-center">🔒</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Enterprise Security</h3>
-            <p className="text-purple-200 text-center mb-6">
               Military-grade security with blockchain verification and quantum encryption
-            </p>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Quantum encryption</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Blockchain verification</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                 <span>Zero-trust architecture</span>
-              </li>
-            </ul>
-          </divdiv>
-        </div>
-      </div>
-
       {/* Success Metrics */}
-      <div className="container mx-auto px-4 py-20">
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">📊 Proven Results</h2>
             <p className="text-xl text-purple-200">Real-world success metrics from our automation platform</p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">80%</div>
               <div className="text-lg font-semibold mb-2">Cost Reduction</div>
               <div className="text-sm text-purple-200">Average operational cost savings</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">300%</div>
               <div className="text-lg font-semibold mb-2">Productivity Boost</div>
               <div className="text-sm text-purple-200">Increase in team productivity</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
               <div className="text-lg font-semibold mb-2">Uptime</div>
               <div className="text-sm text-purple-200">System reliability guarantee</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">24/7</div>
               <div className="text-lg font-semibold mb-2">Monitoring</div>
               <div className="text-sm text-purple-200">Continuous process oversight</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold mb-4">Ready to Automate Your Business?</h2>
@@ -161,11 +92,7 @@ const UltimateBusinessAutomation2026: React.FC = () => {
           </button>
           <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
             Schedule Demo
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default UltimateBusinessAutomation2026;

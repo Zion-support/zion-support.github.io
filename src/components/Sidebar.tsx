@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 interface SidebarProps {
   className?: string;
 }
-
 export function Sidebar({ className }: SidebarProps) {
   return (
     <aside className={`w-64 bg-gray-800 p-6 ${className}`}>
@@ -18,4 +17,3 @@ export function Sidebar({ className }: SidebarProps) {
       </nav>
     </aside>
   );
-}

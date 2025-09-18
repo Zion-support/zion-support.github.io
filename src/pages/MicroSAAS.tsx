@@ -7,17 +7,12 @@ const MicroSAAS = () => {
             description: "Automated content creation platform for marketing, social media, and business communications.",
             features: ["Content Templates", "AI Writing", "Multi-language Support", "SEO Optimization"]
         },
-        {
             title: "Accessibility Auditor",
             description: "Comprehensive accessibility testing and compliance tools for web applications.",
             features: ["WCAG Compliance", "Automated Testing", "Detailed Reports", "Remediation Guidance"]
-        },
-        {
             title: "Affiliate Attribution Hub",
             description: "Advanced tracking and analytics platform for affiliate marketing campaigns.",
             features: ["Real-time Tracking", "Performance Analytics", "Commission Management", "Fraud Detection"]
-        },
-        {
             title: "SOC2 Compliance Automation",
             description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
             features: ["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
@@ -53,7 +48,6 @@ const MicroSAAS = () => {
                       </li>))}
                   </ul>
                 </div>
-                
                 <div className="mt-4">
                   <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                     Learn More
@@ -61,10 +55,7 @@ const MicroSAAS = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                     </svg>
                   </Link>
-                </div>
               </div>))}
-          </div>
-          
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>
@@ -76,7 +67,6 @@ const MicroSAAS = () => {
                 Discuss Custom Development
               </Link>
             </div>
-          </div>
         </div>
       </section>
     </div>);

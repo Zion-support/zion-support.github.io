@@ -8,7 +8,6 @@ interface SEOHeadProps {
   canonical?: string;
   ogImage?: string;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
@@ -27,24 +26,20 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={canonical} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImage} />
-      
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
       </script>
     </Helmet>
   );
 };
-
 export default SEOHead;

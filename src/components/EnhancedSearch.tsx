@@ -15,7 +15,6 @@ const EnhancedSearch: React.FC = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-
   const searchSuggestions = [
     { title: "Consciousness Computing", category: "AI", icon: "🧠" },
     { title: "Quantum Neural Networks", category: "Quantum", icon: "⚡" },
@@ -27,7 +26,6 @@ const EnhancedSearch: React.FC = () => {
     item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
   return (
     <div className="relative max-w-2xl mx-auto">
       <motion.div
@@ -49,7 +47,6 @@ const EnhancedSearch: React.FC = () => {
       tags: ['AI', 'Machine Learning', 'Revolutionary', '2026'],
       type: 'page'
     },
-    {
       id: '2',
       title: 'Quantum Computing Revolution 2026',
       description: 'Experience the power of quantum computing and its revolutionary applications.',
@@ -58,9 +55,6 @@ const EnhancedSearch: React.FC = () => {
       relevance: 92,
       lastUpdated: '2025-01-19',
       tags: ['Quantum', 'Computing', 'Revolution', '2026'],
-      type: 'page'
-    },
-    {
       id: '3',
       title: 'Neural Interface Revolution 2026',
       description: 'Direct brain-computer interfaces that enable thought-controlled devices.',
@@ -69,20 +63,14 @@ const EnhancedSearch: React.FC = () => {
       relevance: 90,
       lastUpdated: '2025-01-18',
       tags: ['Neural', 'Interface', 'BCI', 'Revolution'],
-      type: 'page'
-    },
-    {
       id: '4',
       title: 'Advanced AI Transformation 2026',
       description: 'Transform your business with advanced AI solutions and automation.',
-      category: 'AI',
       url: '/pages/AdvancedAITransformation2026',
       relevance: 88,
       lastUpdated: '2025-01-17',
       tags: ['AI', 'Transformation', 'Business', 'Automation'],
       type: 'service'
-    },
-    {
       id: '5',
       title: 'Ultimate Tech Revolution 2026',
       description: 'The most comprehensive showcase of revolutionary technologies.',
@@ -91,37 +79,29 @@ const EnhancedSearch: React.FC = () => {
       relevance: 85,
       lastUpdated: '2025-01-16',
       tags: ['Technology', 'Revolution', 'Showcase', '2026'],
-      type: 'page'
     }
   ];
-
   const categories = ['AI', 'Quantum', 'Neural', 'Biotech', 'Space', 'Robotics', 'Technology'];
   const types = ['service', 'page', 'blog', 'case-study'];
-
   // Load recent searches from localStorage
   useEffect(() => {
     const saved = localStorage.getItem('recentSearches');
     if (saved) {
       setRecentSearches(JSON.parse(saved));
-    }
   }, []);
-
   // Save recent searches to localStorage
   const saveRecentSearch = useCallback((searchQuery: string) => {
     if (searchQuery.trim() && !recentSearches.includes(searchQuery)) {
       const updated = [searchQuery, ...recentSearches.slice(0, 4)];
       setRecentSearches(updated);
       localStorage.setItem('recentSearches', JSON.stringify(updated));
-    }
   }, [recentSearches]);
-
   // Search function
   const performSearch = async (query: string) => {
     if (!query.trim()) return;
     
     setSearchResults([]);
     setIsSearching(true);
-    
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 500));
@@ -136,15 +116,12 @@ const EnhancedSearch: React.FC = () => {
           type: 'page'
         }
       ];
-      
       setSearchResults(results);
     } catch (error) {
       console.error('Search error:', error);
     } finally {
       setIsSearching(false);
-    }
   };
-
   // Debounce search
   if (value.trim()) {
     searchTimeoutRef.current = setTimeout(() => {
@@ -153,62 +130,40 @@ const EnhancedSearch: React.FC = () => {
   } else {
       setResults([]);
       setIsOpen(false);
-    }
-  }, []);
-
   // Perform search
   const performSearch = useCallback(async (searchQuery: string) => {
     if (!searchQuery.trim()) {
-      setResults([]);
       return;
-    }
-
     setIsLoading(true);
-    
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 300));
-    
     // Filter results based on query and filters
     let filteredResults = searchData.filter(item => {
       const matchesQuery = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      
       const matchesCategory = filters.category.length === 0 || 
                              filters.category.includes(item.category);
-      
       const matchesType = filters.type.length === 0 || 
                          filters.type.includes(item.type);
-      
       return matchesQuery && matchesCategory && matchesType;
     });
-
     // Sort by relevance
     filteredResults.sort((a, b) => b.relevance - a.relevance);
-    
     setResults(filteredResults);
     setIsLoading(false);
   }, [filters]);
-
   // Debounced search
-  useEffect(() => {
     const timeoutId = setTimeout(() => {
       performSearch(query);
-    }, 300);
-
     return () => clearTimeout(timeoutId);
   }, [query, performSearch]);
-
   // Handle search submission
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
       saveRecentSearch(query);
-      performSearch(query);
       setShowSuggestions(false);
-    }
-  };
-
   // Handle filter change
   const handleFilterChange = (filterType: keyof SearchFilters, value: string) => {
     setFilters(prev => ({
@@ -217,16 +172,9 @@ const EnhancedSearch: React.FC = () => {
         ? prev[filterType].filter(item => item !== value)
         : [...prev[filterType], value]
     }));
-  };
-
   // Handle single value filter change
   const handleSingleFilterChange = (filterType: keyof SearchFilters, value: string) => {
-    setFilters(prev => ({
-      ...prev,
       [filterType]: prev[filterType].includes(value) ? [] : [value]
-    }));
-  };
-
   // Clear all filters
   const clearFilters = () => {
     setFilters({
@@ -234,9 +182,6 @@ const EnhancedSearch: React.FC = () => {
       type: [],
       dateRange: 'all',
       relevance: 'all'
-    });
-  };
-
   // Get icon for category
   const getCategoryIcon = (category: string) => {
     const icons: { [key: string]: React.ReactNode } = {
@@ -249,16 +194,11 @@ const EnhancedSearch: React.FC = () => {
       'Technology': <Globe className="w-4 h-4" />
     };
     return icons[category] || <Cloud className="w-4 h-4" />;
-  };
-
   // Get relevance color
   const getRelevanceColor = (relevance: number) => {
     if (relevance >= 90) return 'text-green-600 bg-green-100';
     if (relevance >= 80) return 'text-yellow-600 bg-yellow-100';
     return 'text-gray-600 bg-gray-100';
-  };
-
-  return (
     <div ref={searchRef} className="relative max-w-4xl mx-auto">
       {/* Search Form */}
       <form onSubmit={handleSearch} className="relative">
@@ -302,10 +242,8 @@ const EnhancedSearch: React.FC = () => {
                 <X className="h-5 w-5" />
               </button>
             )}
-          </div>
         </div>
       </form>
-
         <AnimatePresence>
           {isFocused && searchTerm && (
             <motion.div
@@ -314,7 +252,6 @@ const EnhancedSearch: React.FC = () => {
               exit={{ opacity: "0", y: -10 }};
               transition={{ duration: 0.2 }};
               className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 max-h-80 overflow-y-auto"
-            >
               {filteredSuggestions.length > 0 ? (
                 <div className="p-2">
                   {filteredSuggestions.map((suggestion, index) => (
@@ -333,19 +270,13 @@ const EnhancedSearch: React.FC = () => {
               ) : (
                 <div className="p-4 text-center text-gray-500">
                   No results found for "{searchTerm}"
-                </div>
               )};
             </motion.div>
           )};
         </AnimatePresence>
       </motion.div>
-
-      <motion.div
-        initial={{ opacity: "0", y: 20 }};
-        animate={{ opacity: "1", y: 0 }};
         transition={{ duration: 0.6, delay: 0.2 }};
         className="flex flex-wrap justify-center gap-3 mt-6"
-      >
         {[
           { label: "AI Revolution", icon: "🤖", color: "from-purple-600 to-pink-600" },
           { label: "Quantum Computing", icon: "⚡", color: "from-cyan-600 to-blue-600" },
@@ -362,10 +293,6 @@ const EnhancedSearch: React.FC = () => {
             {button.label};
           </motion.button>
         ))};
-      </motion.div>
     </div>
-  );
 };
-
-
 export default EnhancedSearch;

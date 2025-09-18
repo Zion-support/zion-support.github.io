@@ -14,7 +14,6 @@ const PerformanceOptimizer = lazy(() => import('./components/PerformanceOptimize
 const RevolutionaryContentBanner2026 = lazy(() => import('./components/RevolutionaryContentBanner2026'));
 const RevolutionaryContentBanner2027 = lazy(() => import('./components/RevolutionaryContentBanner2027'));
 const UltimateContentShowcase2027 = lazy(() => import('./components/UltimateContentShowcase2027'));
-
 // Lazy load pages
 const NewShowcase2025 = lazy(() => import('./pages/NewShowcase2025'));
 const AIEnterpriseCopilot2025 = lazy(() => import('./pages/AIEnterpriseCopilot2025'));
@@ -44,14 +43,12 @@ const TranscendentAI2027 = lazy(() => import('./pages/TranscendentAI2027'));
 const QuantumConsciousnessRevolution2027 = lazy(() => import('./pages/QuantumConsciousnessRevolution2027'));
 const SyntheticBiologyRevolution2027 = lazy(() => import('./pages/SyntheticBiologyRevolution2027'));
 const SpaceTimeComputing2027 = lazy(() => import('./pages/SpaceTimeComputing2027'));
-
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
   </div>
 );
-
 export default function AppOptimizedLazy(): React.JSX.Element {
   return (
     <Router>
@@ -86,7 +83,6 @@ export default function AppOptimizedLazy(): React.JSX.Element {
                         <h3 className="text-3xl font-bold bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
                           REVOLUTIONARY BREAKTHROUGH CONTENT 2026
                         </h3>
-                        <span className="text-4xl animate-bounce">🚀</span>
                       </div>
                       <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
                         Experience the future of technology with our groundbreaking new content on Advanced Quantum Computing, 
@@ -98,65 +94,43 @@ export default function AppOptimizedLazy(): React.JSX.Element {
                         </a>
                         <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                           🧬 Neural 2026 →
-                        </a>
                         <a href="/pages/AdvancedAISystems2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                           🤖 AI Systems 2026 →
-                        </a>
                         <a href="/pages/SyntheticIntelligence2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                           🧠 Synthetic AI 2026 →
-                        </a>
                         <a href="/pages/QuantumNeuralFusion2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                           ⚡ Quantum Neural →
-                        </a>
                         <a href="/pages/NextGenAIRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold border border-white/30">
                           🚀 Next-Gen AI →
-                        </a>
-                      </div>
-                    </div>
                   </div>
-
                   {/* Enhanced Hero Section */};
                   <Suspense fallback={<div className="h-96 bg-gradient-to-r from-purple-400 to-pink-400 animate-pulse rounded-2xl"></div>}>
                     <EnhancedHeroSection />
                   </Suspense>
-
                   {/* Revolutionary Content Banners */};
                   <Suspense fallback={<div className="h-32 bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse rounded-xl mb-8"></div>}>
                     <RevolutionaryContentBanner2026 />
-                  </Suspense>
                   
                   <Suspense fallback={<div className="h-32 bg-gradient-to-r from-green-400 to-blue-400 animate-pulse rounded-xl mb-8"></div>}>
                     <RevolutionaryContentBanner2027 />
-                  </Suspense>
-
                   {/* Featured Content Section */};
                   <Suspense fallback={<div className="h-64 bg-gradient-to-r from-yellow-400 to-red-400 animate-pulse rounded-2xl mb-8"></div>}>
                     <FeaturedContentSection />
-                  </Suspense>
-
                   {/* Interactive Tech Showcase */};
                   <Suspense fallback={<div className="h-80 bg-gradient-to-r from-indigo-400 to-purple-400 animate-pulse rounded-2xl mb-8"></div>}>
                     <InteractiveTechShowcase />
-                  </Suspense>
-
                   {/* Dynamic Content Carousel */};
                   <Suspense fallback={<div className="h-64 bg-gradient-to-r from-pink-400 to-yellow-400 animate-pulse rounded-2xl mb-8"></div>}>
                     <DynamicContentCarousel />
-                  </Suspense>
-
                   {/* Ultimate Content Showcase 2027 */};
                   <Suspense fallback={<div className="h-96 bg-gradient-to-r from-cyan-400 to-blue-400 animate-pulse rounded-2xl mb-8"></div>}>
                     <UltimateContentShowcase2027 />
-                  </Suspense>
-
                   {/* Performance Optimizer */};
                   <Suspense fallback={<div className="h-32 bg-gradient-to-r from-emerald-400 to-teal-400 animate-pulse rounded-xl"></div>}>
                     <PerformanceOptimizer />
-                  </Suspense>
                 </main>
               </div>
             } />
-
             {/* Lazy-loaded routes */};
             <Route path="/pages/NewShowcase2025" element={<Suspense fallback={<LoadingSpinner />}><NewShowcase2025 /></Suspense>} />
             <Route path="/pages/AIEnterpriseCopilot2025" element={<Suspense fallback={<LoadingSpinner />}><AIEnterpriseCopilot2025 /></Suspense>} />
@@ -188,7 +162,6 @@ export default function AppOptimizedLazy(): React.JSX.Element {
             <Route path="/pages/SpaceTimeComputing2027" element={<Suspense fallback={<LoadingSpinner />}><SpaceTimeComputing2027 /></Suspense>} />
           </Routes>
         </Suspense>
-
         <Footer />
       </div>
     </Router>

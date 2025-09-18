@@ -6,7 +6,6 @@ import { setLoggedIn } from '../store/authSlice';
 export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
-
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
     // It runs when component mounts or location.search changes
@@ -19,7 +18,6 @@ export default function Login() {
       navigate(location.pathname, { replace: true });
     }
   }, [location.search, location.pathname, navigate]);
-
   // Simple login form for now
   return (
     <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center">
@@ -47,28 +45,18 @@ export default function Login() {
               />
             </div>
             
-            <div>
               <label htmlFor="password" className="block text-sm font-medium text-white">
                 Password
-              </label>
-              <input
                 id="password"
                 name="password"
                 type="password"
-                required
-                className="mt-1 block w-full px-3 py-2 bg-zion-slate-light/20 border border-zion-cyan/20 rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
                 placeholder="Enter your password"
-              />
-            </div>
-            
-            <div>
               <button
                 type="submit"
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-cyan"
               >
                 Sign in
               </button>
-            </div>
           </form>
           
           <div className="mt-6 text-center">
@@ -76,7 +64,6 @@ export default function Login() {
               Need help? Contact support
             </a>
           </div>
-        </div>
       </div>
     </div>
   );

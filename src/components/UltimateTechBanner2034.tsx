@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const UltimateTechBanner2034: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       title: "AI Consciousness Revolution 2034",
@@ -11,14 +10,11 @@ const UltimateTechBanner2034: React.FC = () => {
       color: "from-purple-600 via-pink-600 to-red-600",
       icon: "🧠"
     },
-    {
       title: "Quantum Reality Engine 2034",
       subtitle: "Manipulate the fundamental fabric of reality with quantum technology",
       link: "/pages/QuantumRealityEngine2026",
       color: "from-cyan-600 via-blue-600 to-purple-600",
       icon: "⚛️"
-    },
-    {
       title: "Interdimensional Computing 2034",
       subtitle: "Access computing power from parallel dimensions and alternate realities",
       link: "/pages/InterdimensionalTechRevolution2026",
@@ -26,14 +22,12 @@ const UltimateTechBanner2034: React.FC = () => {
       icon: "🌌"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [slides.length]);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 text-white py-16 mb-12">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
@@ -49,7 +43,6 @@ const UltimateTechBanner2034: React.FC = () => {
             Experience the most advanced technologies that will reshape the future of humanity
           </p>
         </div>
-
         {/* Carousel */}
         <div className="relative">
           <div className="overflow-hidden rounded-2xl">
@@ -79,8 +72,6 @@ const UltimateTechBanner2034: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center mt-6 space-x-2">
             {slides.map((_, index) => (
@@ -92,11 +83,8 @@ const UltimateTechBanner2034: React.FC = () => {
                 }`}
               />
             ))}
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateTechBanner2034;

@@ -1,7 +1,6 @@
 
 const UltimateContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       id: 1,
@@ -13,7 +12,6 @@ const UltimateContentCarousel2025: React.FC = () => {
       textColor: "text-purple-100",
       link: "/pages/UltimateTechShowcase2025"
     },
-    {
       id: 2,
       title: "Revolutionary AI Services 2025",
       description: "Transform your business with cutting-edge AI services",
@@ -22,18 +20,13 @@ const UltimateContentCarousel2025: React.FC = () => {
       borderColor: "border-cyan-400/30",
       textColor: "text-cyan-100",
       link: "/pages/RevolutionaryAIServices2025"
-    },
-    {
       id: 3,
       title: "Next-Gen Innovation Hub 2025",
       description: "Discover and implement revolutionary technologies",
-      image: "🧠",
       gradient: "from-emerald-600/30 to-teal-600/30",
       borderColor: "border-emerald-400/30",
       textColor: "text-emerald-100",
       link: "/pages/NextGenInnovationHub2025"
-    },
-    {
       id: 4,
       title: "Conscious AI Systems",
       description: "AI with self-awareness and emotional intelligence",
@@ -41,9 +34,6 @@ const UltimateContentCarousel2025: React.FC = () => {
       gradient: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30",
       textColor: "text-violet-100",
-      link: "/pages/UltimateTechShowcase2025"
-    },
-    {
       id: 5,
       title: "Quantum Computing Revolution",
       description: "Quantum processors and quantum algorithms",
@@ -51,28 +41,21 @@ const UltimateContentCarousel2025: React.FC = () => {
       gradient: "from-orange-600/30 to-red-600/30",
       borderColor: "border-orange-400/30",
       textColor: "text-orange-100",
-      link: "/pages/NextGenInnovationHub2025"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   return (
         </div>
-
         <div className="relative max-w-6xl mx-auto">
           {/* Main Carousel */}
           <div className="relative overflow-hidden rounded-2xl">
@@ -105,7 +88,6 @@ const UltimateContentCarousel2025: React.FC = () => {
                 </div>
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -115,15 +97,9 @@ const UltimateContentCarousel2025: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
@@ -135,12 +111,7 @@ const UltimateContentCarousel2025: React.FC = () => {
                 }`}
               />
             ))}
-          </div>
-        </div>
-
-          </div>
 >>>>>>> 05fabbf610e8ccaf3f54e32b18aef1bf80799814
-        </div>
       </div>
   );
 export default UltimateContentCarousel2025;

@@ -18,26 +18,12 @@ export const MainNavigation: React.FC = () => {
                 className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
               >
                 Home
-              </Link>
-              <Link
                 to="/about"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
                 About
-              </Link>
-              <Link
                 to="/services"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
                 Services
-              </Link>
-              <Link
                 to="/contact"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
                 Contact
-              </Link>
-            </div>
           </div>
         </div>
       </div>

@@ -12,5 +12,4 @@ const BlogPost: React.FC = () => {
     </div>
   );
 };
-
 export default BlogPost;

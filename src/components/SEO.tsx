@@ -18,7 +18,6 @@ interface SEOProps {
   section?: string;
   tags?: string[];
 }
-
 export function SEO({
   title = 'Zion Tech Group - The Future of Tech Marketplace',
   description = 'Connect with AI experts, discover innovative services, and accelerate your digital transformation with Zion Tech Group\'s comprehensive platform.',
@@ -43,7 +42,6 @@ export function SEO({
     nofollow ? 'nofollow' : 'follow',
     robots
   ].filter(Boolean).join(', ');
-
   return (
     <>
       <title>{fullTitle}</title>
@@ -54,7 +52,6 @@ export function SEO({
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
-      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
@@ -62,14 +59,12 @@ export function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={siteName} />
-      
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
       {/* Additional Meta Tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
@@ -77,9 +72,7 @@ export function SEO({
       {tags.length > 0 && tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
-      
       {/* Viewport */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
     </>
   );
-}

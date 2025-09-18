@@ -12,13 +12,10 @@ const FutureTechTrends2025 = () => {
             Discover the revolutionary technology trends that will shape the future
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechTrends2025;

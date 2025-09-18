@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const AdvancedSpaceTech2026: React.FC = () => {
   const [activeMission, setActiveMission] = useState('mars-colony');
   const [launchCountdown, setLaunchCountdown] = useState(0);
-
   const spaceMissions = {
     'mars-colony': {
       title: "Mars Colony Alpha",
@@ -25,48 +24,38 @@ const AdvancedSpaceTech2026: React.FC = () => {
       icon: "☄️",
       color: "from-yellow-500 to-amber-500",
       status: "Active",
-      features: [
         "Automated mining drones",
         "Zero-gravity processing",
         "Rare earth extraction",
         "Orbital refineries"
-      ]
-    },
     'space-elevator': {
       title: "Space Elevator",
       description: "Revolutionary transportation to space",
       icon: "🏗️",
       color: "from-blue-500 to-cyan-500",
       status: "Construction",
-      features: [
         "Carbon nanotube cables",
         "Electromagnetic propulsion",
         "Low-cost space access",
         "Continuous transport"
-      ]
-    },
     'interstellar-probe': {
       title: "Interstellar Probe",
       description: "First mission to another star system",
       icon: "🌌",
       color: "from-purple-500 to-pink-500",
       status: "Planning",
-      features: [
         "Light sail propulsion",
         "AI navigation",
         "Deep space communication",
         "Multi-generational mission"
-      ]
     }
   };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setLaunchCountdown(prev => (prev + 1) % 100);
     }, 100);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -86,7 +75,6 @@ const AdvancedSpaceTech2026: React.FC = () => {
               that make interplanetary travel and space colonization a reality.
             </p>
           </div>
-
           {/* Mission Selector */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {Object.entries(spaceMissions).map(([key, mission]) => (
@@ -104,8 +92,6 @@ const AdvancedSpaceTech2026: React.FC = () => {
                 <div className="text-xs opacity-75">{mission.status}</div>
               </button>
             ))}
-          </div>
-
           {/* Active Mission Display */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -140,12 +126,10 @@ const AdvancedSpaceTech2026: React.FC = () => {
                     </div>
                   </motion.div>
                 ))}
-              </div>
             </motion.div>
           </AnimatePresence>
         </div>
       </div>
-
       {/* Launch Countdown */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 backdrop-blur-sm rounded-3xl p-12 text-center mb-16">
@@ -154,25 +138,15 @@ const AdvancedSpaceTech2026: React.FC = () => {
             <div className="text-center">
               <div className="text-6xl font-bold text-red-400">{Math.floor(launchCountdown / 10)}</div>
               <div className="text-sm opacity-75">Days</div>
-            </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-orange-400">{launchCountdown % 10}</div>
               <div className="text-sm opacity-75">Hours</div>
-            </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-yellow-400">{Math.floor(launchCountdown / 2)}</div>
               <div className="text-sm opacity-75">Minutes</div>
-            </div>
-          </div>
           <p className="text-xl opacity-90">Mars Colony Alpha Mission Launch</p>
-        </div>
-
         {/* Revolutionary Technologies */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
           <p className="text-xl text-blue-200">Cutting-edge innovations powering the future of space exploration</p>
-        </div>
-
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -185,80 +159,31 @@ const AdvancedSpaceTech2026: React.FC = () => {
             <p className="text-lg mb-6 opacity-90">
               Nuclear fusion engines that enable rapid interplanetary travel 
               with unprecedented efficiency and speed.
-            </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">10x faster than chemical rockets</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">Continuous acceleration</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">Mars in 30 days</span>
-              </div>
-            </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 shadow-2xl"
-          >
             <div className="text-6xl mb-6 text-center">🏗️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Elevator</h3>
-            <p className="text-lg mb-6 opacity-90">
               Revolutionary transportation system using carbon nanotube cables 
               for low-cost access to space.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">99% cost reduction</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">Continuous transport</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">Zero emissions</span>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 shadow-2xl"
-          >
             <div className="text-6xl mb-6 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Interstellar Travel</h3>
-            <p className="text-lg mb-6 opacity-90">
               Breakthrough propulsion systems enabling travel to other star systems 
               within human lifetimes.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">Light sail technology</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">20% light speed</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
                 <span className="text-sm">AI navigation</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
         {/* Space Colonies */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 text-center">
           <h2 className="text-4xl font-bold mb-6">Space Colonies</h2>
@@ -271,26 +196,15 @@ const AdvancedSpaceTech2026: React.FC = () => {
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-bold mb-2">Earth Orbit</h3>
               <p className="text-sm opacity-90">Low Earth orbit stations</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="text-4xl mb-4">🌙</div>
               <h3 className="text-xl font-bold mb-2">Lunar Base</h3>
               <p className="text-sm opacity-90">Permanent moon settlement</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="text-4xl mb-4">🔴</div>
               <h3 className="text-xl font-bold mb-2">Mars Colony</h3>
               <p className="text-sm opacity-90">First Mars city</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <div className="text-4xl mb-4">🪐</div>
               <h3 className="text-xl font-bold mb-2">Jupiter Moons</h3>
               <p className="text-sm opacity-90">Europa and Ganymede bases</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-16 text-center">
         <h2 className="text-4xl font-bold mb-6">Join the Space Revolution</h2>
@@ -304,11 +218,7 @@ const AdvancedSpaceTech2026: React.FC = () => {
           </button>
           <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-white transition-colors font-semibold text-lg">
             Join Mission
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default AdvancedSpaceTech2026;

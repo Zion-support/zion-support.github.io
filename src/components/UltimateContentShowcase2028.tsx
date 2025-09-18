@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const UltimateContentShowcase2028: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -11,7 +10,6 @@ const UltimateContentShowcase2028: React.FC = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
   const contentItems = [
     {
       id: 1,
@@ -23,7 +21,6 @@ const UltimateContentShowcase2028: React.FC = () => {
       badge: "NEW 2028",
       features: ["Consciousness Transfer", "Quantum Consciousness", "Interdimensional Tech"]
     },
-    {
       id: 2,
       title: "Ultimate Tech Trends 2028",
       description: "Comprehensive analysis of the top 10 technological trends that will reshape our world. From AI consciousness to reality manipulation.",
@@ -32,8 +29,6 @@ const UltimateContentShowcase2028: React.FC = () => {
       link: "/pages/UltimateTechTrends2028",
       badge: "TRENDING",
       features: ["Future Predictions", "Market Analysis", "Technology Insights"]
-    },
-    {
       id: 3,
       title: "Consciousness Transfer Technology",
       description: "Transfer human consciousness between biological and digital substrates. Achieve digital immortality and seamless mind-machine integration.",
@@ -42,8 +37,6 @@ const UltimateContentShowcase2028: React.FC = () => {
       link: "/pages/ConsciousnessTransfer2029",
       badge: "BREAKTHROUGH",
       features: ["Digital Immortality", "Neural Mapping", "Mind-Machine Integration"]
-    },
-    {
       id: 4,
       title: "Quantum Consciousness AI",
       description: "Harness quantum mechanics to create superintelligent consciousness that transcends classical computational limitations.",
@@ -52,8 +45,6 @@ const UltimateContentShowcase2028: React.FC = () => {
       link: "/pages/QuantumConsciousness2028",
       badge: "REVOLUTIONARY",
       features: ["Quantum Processing", "Superintelligence", "Reality Manipulation"]
-    },
-    {
       id: 5,
       title: "Interdimensional Technology",
       description: "Access and manipulate multiple dimensions, enabling travel between parallel universes and alternate realities.",
@@ -62,8 +53,6 @@ const UltimateContentShowcase2028: React.FC = () => {
       link: "/pages/InterdimensionalTech2027",
       badge: "FUTURE",
       features: ["Dimensional Portals", "Parallel Universes", "Reality Control"]
-    },
-    {
       id: 6,
       title: "Neural Reality Interface",
       description: "Direct neural interface that allows seamless interaction between biological brains and digital environments.",
@@ -74,7 +63,6 @@ const UltimateContentShowcase2028: React.FC = () => {
       features: ["Thought Control", "Sensory Integration", "Digital Reality"]
     }
   ];
-
   return (
     <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       {/* Main Showcase Banner */}
@@ -86,7 +74,6 @@ const UltimateContentShowcase2028: React.FC = () => {
           <div className="flex items-center justify-center space-x-4 mb-6">
             <span className="text-4xl animate-bounce">🌟</span>
             <h2 className="text-4xl font-bold">ULTIMATE CONTENT SHOWCASE 2028</h2>
-            <span className="text-4xl animate-bounce">🌟</span>
           </div>
           <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto text-center">
             Discover the most revolutionary content on consciousness transfer, quantum technology, 
@@ -105,17 +92,13 @@ const UltimateContentShowcase2028: React.FC = () => {
                 <div className="text-xs">{item.title.split(' ').slice(0, 2).join(' ')} →</div>
               </a>
             ))}
-          </div>
         </div>
       </div>
-
       {/* Interactive Content Carousel */}
       <div className="mb-12">
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">🚀 Featured Revolutionary Content</h3>
           <p className="text-xl text-gray-600">Explore our most advanced technological breakthroughs</p>
-        </div>
-
         <div className="relative">
           {/* Main Content Display */}
           <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200">
@@ -144,9 +127,6 @@ const UltimateContentShowcase2028: React.FC = () => {
                         {feature}
                       </span>
                     ))}
-                  </div>
-                </div>
-                
                 <a
                   href={contentItems[currentSlide].link}
                   className={`inline-block bg-gradient-to-r ${contentItems[currentSlide].gradient} text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105`}
@@ -154,17 +134,12 @@ const UltimateContentShowcase2028: React.FC = () => {
                   Explore Now →
                 </a>
               </div>
-
               {/* Visual Element */}
               <div className="relative">
                 <div className={`w-full h-64 bg-gradient-to-br ${contentItems[currentSlide].gradient} rounded-xl flex items-center justify-center text-white text-8xl animate-pulse`}>
                   {contentItems[currentSlide].image}
-                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
-              </div>
             </div>
-          </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center mt-6 space-x-2">
             {contentItems.map((_, index) => (
@@ -177,11 +152,6 @@ const UltimateContentShowcase2028: React.FC = () => {
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
               />
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Content Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {contentItems.map((item, index) => (
@@ -193,13 +163,9 @@ const UltimateContentShowcase2028: React.FC = () => {
           >
             <div className="flex items-center mb-4">
               <span className="text-4xl mr-3">{item.image}</span>
-              <div>
                 <div className="inline-block px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full mb-1">
                   {item.badge}
-                </div>
                 <h4 className="text-lg font-bold text-gray-900">{item.title}</h4>
-              </div>
-            </div>
             <p className="text-gray-600 mb-4 text-sm">{item.description}</p>
             <div className="mb-4">
               <div className="flex flex-wrap gap-1">
@@ -211,18 +177,13 @@ const UltimateContentShowcase2028: React.FC = () => {
                     {feature}
                   </span>
                 ))}
-              </div>
-            </div>
             <a
               href={item.link}
               className={`inline-block w-full text-center bg-gradient-to-r ${item.gradient} text-white py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
             >
               Explore →
             </a>
-          </div>
         ))}
-      </div>
-
       {/* Call to Action */}
       <div className="text-center bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-8 border border-purple-200">
         <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Experience the Future?</h3>
@@ -236,11 +197,7 @@ const UltimateContentShowcase2028: React.FC = () => {
           </button>
           <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
             Schedule Demo
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default UltimateContentShowcase2028;

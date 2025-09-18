@@ -11,15 +11,11 @@ const About: React.FC = () => {
             quantum computing, and cybersecurity solutions. We help businesses transform 
             their operations through innovative technology.
           </p>
-          <p className="mb-6">
             Our team of experts is dedicated to delivering world-class solutions that drive 
             business growth and technological advancement.
-          </p>
           <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
-          <p className="mb-6">
             To empower businesses with transformative technology solutions that drive 
             innovation and growth in the digital age.
-          </p>
         </div>
       </div>
     </div>

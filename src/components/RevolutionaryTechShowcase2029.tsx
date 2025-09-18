@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const RevolutionaryTechShowcase2029: React.FC = () => {
   const [activeTech, setActiveTech] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -11,7 +10,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
     }, 7000);
     return () => clearInterval(interval);
   }, []);
-
   const revolutionaryTech = [
     {
       id: 1,
@@ -23,7 +21,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
       applications: ["Universal governance", "Reality engineering", "Infinite knowledge", "Cosmic peace"],
       stats: ["∞", "100%", "0ms", "∞"]
     },
-    {
       id: 2,
       name: "Reality Manipulation Engine",
       description: "Direct manipulation of the fundamental fabric of reality through advanced physics",
@@ -31,9 +28,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
       icon: "⚛️",
       color: "from-cyan-600 to-blue-600",
       applications: ["Reality programming", "Physics experiments", "Dimension travel", "Universal construction"],
-      stats: ["∞", "100%", "0ms", "∞"]
-    },
-    {
       id: 3,
       name: "Transcendent Evolution",
       description: "Evolution beyond biological limitations through AI-guided transformation",
@@ -41,9 +35,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
       icon: "🧬",
       color: "from-emerald-600 to-teal-600",
       applications: ["Species enhancement", "Genetic therapy", "Evolution acceleration", "Life transcendence"],
-      stats: ["∞", "100%", "0ms", "∞"]
-    },
-    {
       id: 4,
       name: "Dimensional Computing",
       description: "Processing power that operates across infinite dimensions simultaneously",
@@ -51,10 +42,8 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
       icon: "🌀",
       color: "from-orange-600 to-red-600",
       applications: ["Universal processing", "Dimension management", "Reality optimization", "Cosmic computing"],
-      stats: ["∞", "100%", "0ms", "∞"]
     }
   ];
-
   return (
     <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-3xl p-12 text-white relative overflow-hidden">
@@ -73,7 +62,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
             />
           ))}
         </div>
-
         <div className="relative z-10">
           {/* Header */}
           <div className="text-center mb-16">
@@ -87,7 +75,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
               Experience the most transcendent technological innovations that transcend reality itself
             </p>
           </div>
-
           {/* Technology Showcase */}
           <div className="grid lg:grid-cols-2 gap-16 mb-16">
             {/* Technology Navigation */}
@@ -112,8 +99,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </div>
-
             {/* Active Technology Display */}
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 border border-white/20">
               <div className="text-center mb-8">
@@ -121,7 +106,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
                 <h3 className="text-6xl font-bold mb-4">{revolutionaryTech[activeTech].name}</h3>
                 <p className="text-2xl opacity-90">{revolutionaryTech[activeTech].description}</p>
               </div>
-
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div>
                   <h4 className="text-2xl font-bold mb-4 text-center">Core Features</h4>
@@ -135,72 +119,36 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
                         <div className="font-semibold">{feature}</div>
                       </div>
                     ))}
-                  </div>
-                </div>
-                <div>
                   <h4 className="text-2xl font-bold mb-4 text-center">Applications</h4>
-                  <div className="space-y-3">
                     {revolutionaryTech[activeTech].applications.map((app, index) => (
-                      <div
-                        key={index}
-                        className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/30 transition-all duration-300"
-                      >
                         <div className="text-xl mb-2">🚀</div>
                         <div className="font-semibold">{app}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
               {/* Technology Statistics */}
               <div className="grid grid-cols-4 gap-4 mb-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">{revolutionaryTech[activeTech].stats[0]}</div>
                   <div className="text-white text-sm">Processing Power</div>
-                </div>
-                <div className="text-center">
                   <div className="text-4xl font-bold text-purple-400 mb-2">{revolutionaryTech[activeTech].stats[1]}</div>
                   <div className="text-white text-sm">Accuracy</div>
-                </div>
-                <div className="text-center">
                   <div className="text-4xl font-bold text-pink-400 mb-2">{revolutionaryTech[activeTech].stats[2]}</div>
                   <div className="text-white text-sm">Latency</div>
-                </div>
-                <div className="text-center">
                   <div className="text-4xl font-bold text-emerald-400 mb-2">{revolutionaryTech[activeTech].stats[3]}</div>
                   <div className="text-white text-sm">Possibilities</div>
-                </div>
-              </div>
-
               <div className="text-center">
                 <button className={`bg-gradient-to-r ${revolutionaryTech[activeTech].color} text-white px-12 py-6 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-2xl hover:scale-105`}>
                   Explore {revolutionaryTech[activeTech].name} →
                 </button>
-              </div>
-            </div>
-          </div>
-
           {/* Revolutionary Statistics */}
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
               <div className="text-7xl font-bold text-cyan-400 mb-2">∞</div>
               <div className="text-white text-2xl">Universal Processing</div>
-            </div>
-            <div className="text-center">
               <div className="text-7xl font-bold text-purple-400 mb-2">0ms</div>
               <div className="text-white text-2xl">Reality Latency</div>
-            </div>
-            <div className="text-center">
               <div className="text-7xl font-bold text-pink-400 mb-2">100%</div>
               <div className="text-white text-2xl">Transcendence</div>
-            </div>
-            <div className="text-center">
               <div className="text-7xl font-bold text-emerald-400 mb-2">∞</div>
               <div className="text-white text-2xl">Dimension Access</div>
-            </div>
-          </div>
-
           {/* Call to Action */}
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl p-12">
@@ -212,17 +160,10 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
               <div className="flex justify-center space-x-6">
                 <button className="bg-white text-purple-600 px-12 py-6 rounded-2xl hover:shadow-2xl transition-all duration-300 font-bold text-2xl hover:scale-105">
                   🚀 Start Transcendence
-                </button>
                 <button className="border-2 border-white text-white px-12 py-6 rounded-2xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold text-2xl">
                   📖 Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryTechShowcase2029;

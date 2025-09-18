@@ -8,33 +8,23 @@ const AIServicesPage = () => {
       description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
       price: 'Starting at $2,999/month'
     },
-    {
       title: 'Machine Learning Automation',
       description: 'Automate complex processes and decision-making with custom machine learning models.',
       price: 'Starting at $4,999/month'
-    },
-    {
       title: 'AI Customer Support',
       description: 'Enhance customer experience with intelligent chatbots and automated support systems.',
       price: 'Starting at $1,999/month'
-    },
-    {
       title: 'Predictive Analytics',
       description: 'Forecast trends and make data-driven decisions with our predictive modeling services.',
       price: 'Starting at $3,499/month'
-    },
-    {
       title: 'AI Content Generation',
       description: 'Create high-quality content at scale with our AI-powered content generation tools.',
       price: 'Starting at $999/month'
-    },
-    {
       title: 'Computer Vision Solutions',
       description: 'Implement image recognition and visual analysis for your business applications.',
       price: 'Starting at $5,999/month'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -49,25 +39,19 @@ const AIServicesPage = () => {
             </divh1>
             <divp 
               className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-            >
               Transform your business with cutting-edge AI solutions designed to automate, optimize, and revolutionize your operations.
             </divp>
             <divdiv 
               className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
                 Get Started
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
                 Learn More
-              </button>
             </divdiv>
 import { Link } from 'react-router-dom';
-
 export default function AIServicesPage() {
-  return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -87,26 +71,18 @@ export default function AIServicesPage() {
                   Get Started Today
                 </button>
               </Link>
-              <Link to="/contact">
                 <button className="border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
                   Schedule Demo
-                </button>
-              </Link>
             </div>
           </div>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our AI Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive AI solutions designed to drive innovation and growth across your organization
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* AI Content Generation */}
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -124,65 +100,32 @@ export default function AIServicesPage() {
                 <li>• Brand voice consistency</li>
                 <li>• 24/7 support</li>
               </ul>
-              <Link to="/contact">
                 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition-colors">
                   Get Started
-                </button>
-              </Link>
-            </div>
-
             {/* AI Customer Support */}
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🤖</span>
-              </div>
               <h3 className="text-xl font-semibold mb-3">AI Customer Support</h3>
-              <p className="text-gray-600 mb-4">
                 Intelligent chatbots and support systems that provide 24/7 customer assistance.
-              </p>
               <div className="text-2xl font-bold text-green-600 mb-4">$499/month</div>
-              <ul className="text-sm text-gray-600 mb-4 space-y-1">
                 <li>• Multi-language support</li>
                 <li>• Integration with CRM</li>
                 <li>• Analytics dashboard</li>
                 <li>• Custom training</li>
-              </ul>
-              <Link to="/contact">
                 <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition-colors">
-                  Get Started
-                </button>
-              </Link>
-            </div>
-
             {/* Predictive Analytics */}
-            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">📊</span>
-              </div>
               <h3 className="text-xl font-semibold mb-3">Predictive Analytics</h3>
-              <p className="text-gray-600 mb-4">
                 Advanced analytics and forecasting to predict trends and optimize decisions.
-              </p>
               <div className="text-2xl font-bold text-purple-600 mb-4">$799/month</div>
-              <ul className="text-sm text-gray-600 mb-4 space-y-1">
                 <li>• Real-time data processing</li>
                 <li>• Custom algorithms</li>
                 <li>• Interactive dashboards</li>
                 <li>• Expert consultation</li>
-              </ul>
-              <Link to="/contact">
                 <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition-colors">
-                  Get Started
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4">
-        <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <divdiv
@@ -201,15 +144,9 @@ export default function AIServicesPage() {
                   <button className="text-cyan-400 hover:text-cyan-300 transition-colors">
                     <ArrowRight className="w-5 h-5" />
                   </button>
-                </div>
               </divdiv>
             ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <divh2 
             className="text-4xl font-bold text-white mb-6"
@@ -218,29 +155,22 @@ export default function AIServicesPage() {
           </divh2>
           <divp 
             className="text-xl text-gray-300 mb-8"
-          >
             Let's discuss how our AI services can drive your success.
           </divp>
           <divdiv 
             className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
               Contact Us
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
               View Portfolio
-            </button>
           </divdiv>
-        </div>
-      </section>
     </div>
   );
 };
-
 export default AIServicesPage;
       {/* Contact Section */}
       <section className="bg-gray-900 py-20">
-        <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss how our AI solutions can transform your business operations and drive growth.
@@ -249,14 +179,8 @@ export default AIServicesPage;
             <Link to="/contact">
               <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
                 Contact Us
-              </button>
             </Link>
             <a href="tel:+13024640950" className="border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
               Call +1 302 464 0950
             </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
 }

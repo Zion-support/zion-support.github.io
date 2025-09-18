@@ -23,9 +23,7 @@ const FutureTechPredictions2025: React.FC = () => {
           </p>
         </div>
         {/* Year Navigation */}
-        <div
           className="mb-16"
-        >
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {predictions.map((predictionindex) => (
               <button
@@ -41,7 +39,6 @@ const FutureTechPredictions2025: React.FC = () => {
                 {prediction.year}
               </button>
             ))}
-          </div>
           {/* Active Prediction Display */}
             <div
               key={activeYear}
@@ -60,7 +57,6 @@ const FutureTechPredictions2025: React.FC = () => {
                   </p>
                   <p className="text-lg text-gray-400 mb-8">
                     {predictions[activeYear].impact}
-                  </p>
                   {/* Probability Bar */}
                   <div className="mb-8">
                     <div className="flex justify-between items-center mb-2">
@@ -71,18 +67,14 @@ const FutureTechPredictions2025: React.FC = () => {
                       <div
                         className={`h-3 rounded-full bg-gradient-to-r ${predictions[activeYear].color}`}
                       />
-                    </div>
-                  </div>
                   <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center">
                     Learn More
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
                 </div>
-                <div>
                   <h4 className="text-2xl font-bold text-white mb-6">Key Predictions</h4>
                   <div className="space-y-4">
                     {predictions[activeYear].predictions.map((predictionindex) => (
-                      <div
                         key={prediction}
                         className="flex items-center"
                       >
@@ -90,16 +82,10 @@ const FutureTechPredictions2025: React.FC = () => {
                         <span className="text-gray-300">{prediction}</span>
                       </div>
                     ))}
-                  </div>
-                </div>
               </div>
             </div>
-          </div>
-        </div>
         {/* Technology Progress */}
-        <div
           className="mb-20"
-        >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Technology Development Progress
           </h2>
@@ -113,33 +99,20 @@ const FutureTechPredictions2025: React.FC = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-white font-medium">{tech.name}</span>
                     <span className="text-gray-400">{tech.progress}%</span>
-                  </div>
                   <div className="w-full bg-gray-700 rounded-full h-3">
                     <div
                       className={`h-3 rounded-full bg-gradient-to-r ${tech.color}`}
                     />
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
-        </div>
         {/* Timeline */}
-        <div
-          className="mb-20"
-        >
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
             Technology Timeline
-          </h2>
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-indigo-500 to-purple-500"></div>
             <div className="space-y-12">
               {milestones.map((milestoneindex) => (
-                <div
                   key={milestone.year}
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                       <div className="text-2xl font-bold text-white mb-2">{milestone.year}</div>
@@ -153,27 +126,15 @@ const FutureTechPredictions2025: React.FC = () => {
                         'bg-gray-500/20 text-gray-400'
                       }`}>
                         {milestone.status}
-                      </div>
-                    </div>
-                  </div>
                   {/* Timeline Dot */}
                   <div className="relative z-10 w-4 h-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full border-4 border-slate-900"></div>
                   <div className="w-1/2"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
         {/* CTA Section */}
-        <div
           className="text-center bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-3xl p-12 border border-indigo-500/30"
-        >
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready for the Future?
-          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Stay ahead of the curve and prepare your business for the technological revolution 'that', 's coming.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center">
               Get Future-Ready
@@ -182,9 +143,6 @@ const FutureTechPredictions2025: React.FC = () => {
             <button className="bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 border border-white/20 transition-all duration-300 flex items-center justify-center">
               <Calendar className="w-5 h-5 mr-2" />
               Schedule Consultation
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

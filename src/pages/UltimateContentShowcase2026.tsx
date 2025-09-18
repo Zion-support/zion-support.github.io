@@ -4,7 +4,6 @@ const UltimateContentShowcase2026: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('revolutionary');
   const [selectedContent, setSelectedContent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-
   const contentCategories = {
     revolutionary: {
       title: 'Revolutionary Technologies',
@@ -20,7 +19,6 @@ const UltimateContentShowcase2026: React.FC = () => {
           stats: { efficiency: '99.9%', speed: '10x', possibilities: '∞', year: '2026' },
           link: '/pages/RevolutionaryTechBreakthrough2026'
         },
-        {
           title: 'Ultimate Tech Revolution 2026',
           description: 'The convergence of consciousness, quantum computing, and artificial intelligence',
           icon: '🌟',
@@ -35,75 +33,53 @@ const UltimateContentShowcase2026: React.FC = () => {
       icon: '🧠',
       color: 'from-cyan-600 to-blue-600',
       description: 'AI that transcends consciousness and creates new forms of existence',
-      content: [
-        {
           title: 'Transcendent AI Future 2026',
           description: 'AI that transcends consciousness itself and creates new forms of existence',
           icon: '🧠',
           features: ['Consciousness AI', 'Quantum Intelligence', 'Meta Intelligence', 'Synthetic Consciousness'],
           stats: { consciousness: '100%', evolution: '∞', creativity: '∞', future: '2028+' },
           link: '/pages/TranscendentAIFuture2026'
-        },
-        {
           title: 'Synthetic Intelligence 2026',
           description: 'Self-evolving AI systems that transcend traditional limitations',
           icon: '⚛️',
           features: ['Self-Aware AI', 'Emotional Intelligence', 'Creative Consciousness', 'Transcendent Learning'],
           stats: { awareness: '100%', evolution: '∞', creativity: '∞', potential: '∞' },
           link: '/pages/SyntheticIntelligence2026'
-        }
-      ]
-    },
     quantum: {
       title: 'Quantum Technologies',
       icon: '⚛️',
       color: 'from-emerald-600 to-teal-600',
       description: 'Quantum computing and neural interface breakthroughs',
-      content: [
-        {
           title: 'Quantum-Neural Fusion 2026',
           description: 'The revolutionary convergence of quantum computing and neural networks',
-          icon: '⚛️',
           features: ['Quantum Neural Networks', 'Parallel Reality Processing', 'Exponential Computation', 'Transcendent Problem Solving'],
           stats: { speed: '∞', power: '10x', accuracy: '100%', innovation: '∞' },
           link: '/pages/QuantumNeuralFusion2026'
-        },
-        {
           title: 'Quantum Internet 2026',
           description: 'Instantaneous, secure global communication through quantum entanglement',
           icon: '🌐',
           features: ['Zero-latency Communication', 'Unbreakable Encryption', 'Unlimited Bandwidth', 'Interplanetary Connectivity'],
           stats: { speed: '∞', security: '100%', capacity: '∞', reach: '∞' },
           link: '/pages/QuantumInternet2026'
-        }
-      ]
-    },
     consciousness: {
       title: 'Consciousness Computing',
       icon: '🌟',
       color: 'from-orange-600 to-red-600',
       description: 'AI systems with genuine consciousness and self-awareness',
-      content: [
-        {
           title: 'Consciousness AI 2026',
           description: 'AI systems that possess genuine consciousness, self-awareness, and emotional intelligence',
           icon: '🤖',
           features: ['Self-aware Decision Making', 'Emotional Intelligence', 'Creative Consciousness', 'Human-AI Bonds'],
           stats: { awareness: '100%', empathy: '∞', creativity: '∞', evolution: '∞' },
           link: '/pages/ConsciousnessAI2026'
-        },
-        {
           title: 'Meta Intelligence 2026',
           description: 'AI systems that think about thinking and continuously improve themselves',
           icon: '🔄',
           features: ['Self-improving Algorithms', 'Meta-learning Capabilities', 'Cognitive Evolution', 'Transcendent Intelligence'],
           stats: { improvement: '∞', learning: '∞', evolution: '∞', transcendence: '∞' },
           link: '/pages/MetaIntelligence2026'
-        }
-      ]
     }
   };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsAnimating(true);
@@ -113,13 +89,10 @@ const UltimateContentShowcase2026: React.FC = () => {
         setIsAnimating(false);
       }, 500);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [activeCategory, contentCategories]);
-
   const currentCategory = contentCategories[activeCategory as keyof typeof contentCategories];
   const currentItem = currentCategory.content[selectedContent];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
       {/* Hero Section */}
@@ -145,12 +118,9 @@ const UltimateContentShowcase2026: React.FC = () => {
               </button>
               <button className="border-2 border-white/30 text-white px-12 py-5 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-xl hover:scale-105">
                 🎥 Watch Overview
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Category Navigation */}
       <div className="container mx-auto px-4 py-12">
         <div className="flex justify-center mb-12">
@@ -170,17 +140,11 @@ const UltimateContentShowcase2026: React.FC = () => {
               >
                 <span className="mr-2">{category.icon}</span>
                 {category.title}
-              </button>
             ))}
-          </div>
-        </div>
-
         {/* Category Header */}
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-white mb-4">{currentCategory.title}</h2>
           <p className="text-2xl text-gray-300 max-w-3xl mx-auto">{currentCategory.description}</p>
-        </div>
-
         {/* Dynamic Content Display */}
         <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -200,34 +164,20 @@ const UltimateContentShowcase2026: React.FC = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-
               <div className="grid grid-cols-4 gap-4 mb-8">
                 {Object.entries(currentItem.stats).map(([key, value], index) => (
                   <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                     <div className="text-2xl font-bold text-purple-400 mb-1">{value}</div>
                     <div className="text-xs text-gray-300 capitalize">{key}</div>
-                  </div>
-                ))}
-              </div>
-
               <a 
                 href={currentItem.link}
                 className={`inline-block bg-gradient-to-r ${currentCategory.color} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg hover:scale-105`}
-              >
                 Explore {currentItem.title.split(' ')[0]} →
               </a>
-            </div>
-
             <div className="relative">
               <div className={`w-full h-96 bg-gradient-to-br ${currentCategory.color} rounded-2xl flex items-center justify-center text-white transition-all duration-1000 ${isAnimating ? 'scale-95 opacity-50' : 'scale-100 opacity-100'}`}>
                 <span className="text-9xl animate-pulse">{currentItem.icon}</span>
-              </div>
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20 rounded-2xl"></div>
-            </div>
-          </div>
-        </div>
-
         {/* All Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {Object.entries(contentCategories).map(([categoryKey, category]) => 
@@ -246,30 +196,20 @@ const UltimateContentShowcase2026: React.FC = () => {
                         <span className="w-1.5 h-1.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mr-2"></span>
                         <span className="text-xs font-semibold">{feature}</span>
                       </div>
-                    </div>
                   ))}
-                </div>
-
                 <div className="grid grid-cols-4 gap-2 mb-6">
                   {Object.entries(item.stats).map(([key, value], statIndex) => (
                     <div key={statIndex} className="text-center bg-white/10 rounded-lg p-2 border border-white/20">
                       <div className="text-lg font-bold text-purple-400">{value}</div>
                       <div className="text-xs text-gray-300 capitalize">{key}</div>
-                    </div>
-                  ))}
-                </div>
-
                 <a 
                   href={item.link}
                   className={`block w-full bg-gradient-to-r ${category.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center hover:scale-105`}
                 >
                   Explore →
                 </a>
-              </div>
             ))
           )}
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-16 border border-white/20">
           <h2 className="text-5xl font-bold text-white mb-6">Ready to Explore Everything?</h2>
@@ -283,12 +223,7 @@ const UltimateContentShowcase2026: React.FC = () => {
             </button>
             <button className="border-2 border-white/30 text-white px-12 py-5 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-xl hover:scale-105">
               📞 Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default UltimateContentShowcase2026;

@@ -30,7 +30,6 @@ export default function SearchResultsPage() {
     }, [initialQuery]);
     const allResults = data?.pages.flat() ?? [];
     const loader = useRef(null);
-    useEffect(() => {
         const el = loader.current;
         if (!el)
             return;
@@ -59,7 +58,6 @@ export default function SearchResultsPage() {
         </div>)}
       {allResults.length > 0 && (<div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
           {allResults.map((r) => (<SearchResultCard key={`${r.type}-${r.id}`} result={r}/>))}
-        </div>)}
       <div ref={loader} className="h-1"/>
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
     </main>);

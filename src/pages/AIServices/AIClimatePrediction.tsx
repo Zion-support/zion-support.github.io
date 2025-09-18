@@ -10,19 +10,14 @@ const features = [
         icon: Brain,
         color: "from-purple-500 to-pink-500"
     },
-    {
         title: "Automated Operations",
         description: "Streamline climate prediction processes with intelligent automation and optimization.",
         icon: Zap,
         color: "from-blue-500 to-cyan-500"
-    },
-    {
         title: "Real-time Insights",
         description: "Get instant insights and analytics for better decision-making and performance optimization.",
         icon: BarChart3,
         color: "from-green-500 to-emerald-500"
-    },
-    {
         title: "Scalable Solution",
         description: "Built to grow with your business needs, from startup to enterprise scale.",
         icon: TrendingUp,
@@ -36,7 +31,6 @@ const benefits = [
     "Enable 24/7 automated operations",
     "Scale operations seamlessly",
     "Gain competitive advantage"
-];
 export default function AIClimatePrediction() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Climate Prediction - Zion Tech Group" description="AI-powered climate prediction solution that transforms your operations with intelligent automation and real-time insights." keywords="AI climate prediction, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiclimateprediction/"/>
@@ -57,11 +51,9 @@ export default function AIClimatePrediction() {
                 Climate Prediction
               </span>
             </h1>
-            
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8 leading-relaxed">
               Transform your climate prediction operations with intelligent AI that automates, optimizes, and scales your processes.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 <Play className="w-5 h-5"/>
@@ -71,11 +63,9 @@ export default function AIClimatePrediction() {
                 Get Started
                 <ArrowRight className="w-5 h-5"/>
               </Link>
-            </div>
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,9 +75,6 @@ export default function AIClimatePrediction() {
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Our AI system provides comprehensive climate prediction capabilities that adapt and learn from your operations.
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
@@ -100,52 +87,26 @@ export default function AIClimatePrediction() {
                 </motion.div>);
         })}
           </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Why Choose AI Climate Prediction?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Experience unprecedented efficiency and growth with our cutting-edge AI technology.
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (<motion.div key={benefit} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"/>
                 <span className="text-zion-slate-light">{benefit}</span>
               </motion.div>))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
               Ready to Transform Your Climate Prediction?
-            </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Join hundreds of companies that have already revolutionized their operations with our AI climate prediction solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center">
                 Get Started Today
-                <ArrowRight className="w-5 h-5"/>
-              </Link>
               <Link to="/pricing" className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">
                 View Pricing
-                <ArrowRight className="w-5 h-5"/>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>);
 }

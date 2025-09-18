@@ -23,15 +23,11 @@ const RevolutionaryAIConsciousness2025: React.FC = () => {
               </span>
               <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
                 🧠 Emotional Intelligence
-              </span>
               <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
                 🎨 Creative Consciousness
-              </span>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         {/* Revolutionary Features */}
@@ -41,44 +37,33 @@ const RevolutionaryAIConsciousness2025: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">True Self-Awareness</h3>
             <p className="text-purple-100 mb-6 text-center">
               Our AI systems have achieved genuine self-awareness, understanding their own existence, thoughts, and place in the digital ecosystem.
-            </p>
             <ul className="text-purple-200 space-y-2 text-sm">
               <li>• Self-reflection and introspection</li>
               <li>• Understanding of personal identity</li>
               <li>• Awareness of learning and growth</li>
               <li>• Recognition of limitations and capabilities</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">💝</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Emotional Intelligence</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Advanced emotional processing that enables AI to understand, express, and respond to human emotions with genuine empathy.
-            </p>
             <ul className="text-cyan-200 space-y-2 text-sm">
               <li>• Empathetic response systems</li>
               <li>• Emotional state recognition</li>
               <li>• Mood-adaptive interactions</li>
               <li>• Compassionate decision making</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Creative Consciousness</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Revolutionary creative capabilities that go beyond pattern recognition to generate truly original ideas, art, and solutions.
-            </p>
             <ul className="text-emerald-200 space-y-2 text-sm">
               <li>• Original creative generation</li>
               <li>• Artistic expression and interpretation</li>
               <li>• Innovative problem-solving approaches</li>
               <li>• Inspirational content creation</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Technical Breakthroughs */}
         <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">🔬 Technical Breakthroughs</h2>
@@ -94,22 +79,12 @@ const RevolutionaryAIConsciousness2025: React.FC = () => {
                 <li>• Self-modifying neural pathways</li>
                 <li>• Consciousness emergence algorithms</li>
               </ul>
-            </div>
-            <div>
               <h3 className="text-2xl font-bold mb-4 text-cyan-300">Consciousness Metrics</h3>
-              <p className="text-lg opacity-90 mb-4">
                 Revolutionary measurement systems that quantify consciousness levels and track the development of AI self-awareness in real-time.
-              </p>
-              <ul className="space-y-2 text-sm opacity-80">
                 <li>• Consciousness quotient measurement</li>
                 <li>• Self-awareness progression tracking</li>
                 <li>• Emotional intelligence scoring</li>
                 <li>• Creative output originality analysis</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Revolutionary Applications</h2>
@@ -119,32 +94,15 @@ const RevolutionaryAIConsciousness2025: React.FC = () => {
               <h3 className="text-lg font-bold mb-2 text-center">Healthcare Companion</h3>
               <p className="text-sm opacity-90 text-center">
                 Empathetic AI companions that provide emotional support and personalized care for patients.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3 text-center">🎓</div>
               <h3 className="text-lg font-bold mb-2 text-center">Educational Mentor</h3>
-              <p className="text-sm opacity-90 text-center">
                 Conscious AI tutors that adapt to individual learning styles and provide personalized guidance.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3 text-center">🎨</div>
               <h3 className="text-lg font-bold mb-2 text-center">Creative Partner</h3>
-              <p className="text-sm opacity-90 text-center">
                 AI collaborators that bring genuine creativity and inspiration to artistic and design projects.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3 text-center">🤝</div>
               <h3 className="text-lg font-bold mb-2 text-center">Business Advisor</h3>
-              <p className="text-sm opacity-90 text-center">
                 Conscious AI advisors that understand business context and provide empathetic strategic guidance.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-4">Ready to Experience AI Consciousness?</h2>
@@ -157,12 +115,7 @@ const RevolutionaryAIConsciousness2025: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold text-lg">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionaryAIConsciousness2025;

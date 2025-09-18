@@ -14,13 +14,10 @@ const ServicesShowcase = () => {
                     href: "/services/ai-business-intelligence",
                     features: ["Predictive Analytics", "Real-time Insights", "Custom Dashboards"]
                 },
-                {
                     name: "AI Marketing Automation",
                     description: "Intelligent marketing automation with AI-driven optimization",
                     href: "/services/ai-marketing-automation",
                     features: ["Campaign Optimization", "Customer Segmentation", "ROI Tracking"]
-                },
-                {
                     name: "AI Workflow Automation",
                     description: "Streamline business processes with intelligent automation",
                     href: "/services/ai-workflow-automation",
@@ -28,101 +25,62 @@ const ServicesShowcase = () => {
                 }
             ]
         },
-        {
             category: "Cloud & Infrastructure",
             icon: Cloud,
-            services: [
-                {
                     name: "Cloud & DevOps",
                     description: "Comprehensive cloud infrastructure and DevOps automation",
                     href: "/services/cloud",
                     features: ["Multi-cloud Strategy", "CI/CD Pipelines", "Infrastructure as Code"]
-                },
-                {
                     name: "IT Infrastructure",
                     description: "Enterprise-grade IT infrastructure solutions",
                     href: "/services/infrastructure",
                     features: ["Network Design", "Security Implementation", "Scalability Planning"]
-                },
-                {
                     name: "Digital Transformation",
                     description: "End-to-end digital transformation consulting and implementation",
                     href: "/services/transformation",
                     features: ["Strategy Development", "Technology Selection", "Change Management"]
-                }
-            ]
-        },
-        {
             category: "Cybersecurity & Compliance",
             icon: Shield,
-            services: [
-                {
                     name: "Cybersecurity Services",
                     description: "Comprehensive cybersecurity solutions for modern threats",
                     href: "/services/cybersecurity",
                     features: ["Threat Detection", "Vulnerability Assessment", "Incident Response"]
-                },
-                {
                     name: "SOC2 Compliance Automation",
                     description: "Automated SOC2 compliance and audit preparation",
                     href: "/soc2-compliance-automation",
                     features: ["Compliance Monitoring", "Audit Preparation", "Risk Management"]
-                },
-                {
                     name: "Zero Trust Architecture",
                     description: "Modern zero trust security implementation",
                     href: "/zero-trust-network-architecture",
                     features: ["Identity Verification", "Access Control", "Continuous Monitoring"]
-                }
-            ]
-        },
-        {
             category: "Emerging Technologies",
             icon: Rocket,
-            services: [
-                {
                     name: "Quantum Technology",
                     description: "Next-generation quantum computing solutions",
                     href: "/quantum-technology",
                     features: ["Quantum Algorithms", "Quantum Security", "Research & Development"]
-                },
-                {
                     name: "Space Technology",
                     description: "Innovative space technology and satellite solutions",
                     href: "/space-tech",
                     features: ["Satellite Systems", "Space Analytics", "Ground Station Solutions"]
-                },
-                {
                     name: "5G Enterprise Solutions",
                     description: "Enterprise-grade 5G network optimization",
                     href: "/5g-enterprise-solutions",
                     features: ["Network Optimization", "Edge Computing", "IoT Integration"]
-                }
-            ]
-        },
-        {
             category: "Specialized Solutions",
             icon: Target,
-            services: [
-                {
                     name: "AI-Powered IT Asset Management",
                     description: "Intelligent IT asset lifecycle management",
                     href: "/ai-powered-it-asset-management",
                     features: ["Asset Tracking", "Predictive Maintenance", "Cost Optimization"]
-                },
-                {
                     name: "Autonomous Business Operations",
                     description: "AI-driven business process automation platform",
                     href: "/autonomous-business-operations-platform",
                     features: ["Process Automation", "Decision Support", "Performance Analytics"]
-                },
-                {
                     name: "Micro SAAS Services",
                     description: "Specialized software-as-a-service solutions",
                     href: "/micro-saas-services",
                     features: ["Custom Development", "Scalable Architecture", "API Integration"]
-                }
-            ]
         }
     ];
     const containerVariants = {
@@ -132,18 +90,11 @@ const ServicesShowcase = () => {
             transition: {
                 staggerChildren: 0.1
             }
-        }
     };
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
-        visible: {
             y: 0,
-            opacity: 1,
-            transition: {
                 duration: 0.5
-            }
-        }
-    };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -166,7 +117,6 @@ const ServicesShowcase = () => {
               </Link>
               <Link to="/comprehensive-pricing-2025" className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
                 View Pricing
-              </Link>
             </div>
           </motion.div>
         </div>
@@ -203,8 +153,6 @@ const ServicesShowcase = () => {
                             {feature}
                           </li>))}
                       </ul>
-                    </div>
-                    
                     <Link to={service.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">
                       Learn More
                       <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -212,11 +160,8 @@ const ServicesShowcase = () => {
                       </svg>
                     </Link>
                   </motion.div>))}
-              </div>
             </motion.div>))}
         </motion.div>
-      </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -227,18 +172,9 @@ const ServicesShowcase = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let our team of experts help you implement the right technology solutions 
               to drive growth and innovation in your organization.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                 Schedule Consultation
-              </Link>
               <Link to="/case-studies" className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
                 View Case Studies
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </div>
     </div>);
 };
 export default ServicesShowcase;

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const InteractiveTechShowcase2037: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-
   const technologies = [
     {
       id: 0,
@@ -17,34 +16,26 @@ const InteractiveTechShowcase2037: React.FC = () => {
       ],
       color: "from-purple-600 to-pink-600"
     },
-    {
       id: 1,
       name: "Quantum Reality Engine",
       icon: "⚡",
       description: "Revolutionary quantum computing system that can create, modify, and manipulate reality at the quantum level",
-      features: [
         "Quantum Reality Creation",
         "Time-Space Manipulation",
         "Dimensional Engineering",
         "Universal Constants Modification"
-      ],
       color: "from-cyan-600 to-blue-600"
-    },
-    {
       id: 2,
       name: "Interdimensional Portal Network",
       icon: "🌌",
       description: "Advanced portal technology enabling instant travel between dimensions and parallel universes",
-      features: [
         "Instant Dimensional Travel",
         "Parallel Universe Access",
         "Reality Branching",
         "Cosmic Consciousness Network"
-      ],
       color: "from-emerald-600 to-teal-600"
     }
   ];
-
           </div>
           <h2 className="text-5xl font-bold mb-6">🚀 Interactive Technology Showcase 2037</h2>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
@@ -69,9 +60,6 @@ const InteractiveTechShowcase2037: React.FC = () => {
                 {tech.name}
               </button>
             ))}
-          </div>
-        </div>
-        
         {/* Active Technology Display */}
         <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <div className="grid md:grid-cols-2 gap-8">
@@ -91,10 +79,8 @@ const InteractiveTechShowcase2037: React.FC = () => {
                 ))}
               </div>
             </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default InteractiveTechShowcase2037;

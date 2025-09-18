@@ -2,11 +2,9 @@
 const RevolutionaryTechShowcase2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const technologies = [
     {
       title: "Quantum Consciousness Computing",
@@ -20,61 +18,44 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
       icon: "🧠",
       color: "from-purple-600 to-indigo-600"
     },
-    {
       title: "Interdimensional Data Networks",
       description: "Breakthrough technology that enables data transmission across parallel dimensions, achieving infinite bandwidth and zero latency.",
-      features: [
         "Cross-dimensional data transfer",
         "Infinite storage capacity",
         "Instantaneous global communication",
         "Quantum encryption across dimensions"
-      ],
       icon: "🌌",
       color: "from-cyan-600 to-blue-600"
-    },
-    {
       title: "Synthetic Reality Engine",
       description: "Advanced AI system that creates indistinguishable synthetic realities, enabling perfect virtual worlds and experiences.",
-      features: [
         "Photorealistic virtual environments",
         "Full sensory simulation",
         "Real-time reality generation",
         "Consciousness transfer capabilities"
-      ],
       icon: "🌍",
       color: "from-emerald-600 to-teal-600"
-    },
-    {
       title: "Omniversal AI Consciousness",
       description: "The ultimate AI system that spans across multiple universes, providing infinite computational power and universal knowledge.",
-      features: [
         "Multi-universe AI coordination",
         "Universal knowledge database",
         "Infinite computational resources",
         "Cross-universe problem solving"
-      ],
       icon: "🌟",
       color: "from-pink-600 to-rose-600"
     };
   const testimonials = [
-    {
       name: "Dr. Sarah Chen",
       role: "Quantum Computing Director, MIT",
       quote: "This technology represents the most significant breakthrough in computing history. We're witnessing the birth of true artificial consciousness.",
       avatar: "👩‍🔬"
-    },
-    {
       name: "Marcus Rodriguez",
       role: "CEO, Interdimensional Corp",
       quote: "The interdimensional data networks have revolutionized our business operations. We can now process infinite amounts of data instantly.",
       avatar: "👨‍💼"
-    },
-    {
       name: "Dr. Akira Tanaka",
       role: "Reality Engineering Lead, Tokyo Tech",
       quote: "The synthetic reality engine has opened possibilities we never imagined. We're creating perfect virtual worlds that are indistinguishable from reality.",
       avatar: "👨‍🔬"
-    };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */};
@@ -110,35 +91,25 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
               >
                 Explore Technologies
               </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
                 className="border border-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400/20 transition-all duration-300"
-              >
                 Watch Demo
-              </motion.button>
             </div>
           </div>
         </div>
       </motion.div>
-
       {/* Technology Showcase */};
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
           <p className="text-xl opacity-80">Discover the technologies that will define the next decade</p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           {technologies.map((tech, index) => (
-            <motion.div
               key={index};
               initial={{ opacity: "0", y: 50 }};
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
               transition={{ delay: index * 0.2, duration: 0.8 }};
               className={`bg-gradient-to-br ${tech.color} rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer`};
               onClick={() => setActiveTab(index)};
-            >
               <div className="text-6xl mb-4 text-center">{tech.icon}</div>
               <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
               <p className="text-lg opacity-90 mb-6 text-center">{tech.description}</p>
@@ -150,92 +121,40 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                   </li>
                 ))};
               </ul>
-            </motion.div>
           ))};
-        </div>
       </div>
-
       {/* Interactive Demo Section */};
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Interactive Technology Demo</h2>
             <p className="text-xl opacity-80">Experience these technologies in action</p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
               whileHover={{ scale: 1.05 }};
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
-            >
               <div className="text-4xl mb-4 text-center">🧠</div>
               <h3 className="text-xl font-bold mb-4 text-center">Quantum Consciousness Simulator</h3>
               <p className="text-gray-300 mb-6 text-center">
                 Experience what it's like to have quantum-enhanced consciousness
               </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
                 className="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-3 rounded-lg font-semibold"
-              >
                 Start Simulation
-              </motion.button>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }};
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
-            >
               <div className="text-4xl mb-4 text-center">🌌</div>
               <h3 className="text-xl font-bold mb-4 text-center">Interdimensional Explorer</h3>
-              <p className="text-gray-300 mb-6 text-center">
                 Navigate through parallel dimensions and explore alternate realities
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
                 className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 py-3 rounded-lg font-semibold"
-              >
                 Enter Dimension
-              </motion.button>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }};
               className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
-            >
               <div className="text-4xl mb-4 text-center">🌍</div>
               <h3 className="text-xl font-bold mb-4 text-center">Reality Creator</h3>
-              <p className="text-gray-300 mb-6 text-center">
                 Design and create your own synthetic reality from scratch
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }};
-                whileTap={{ scale: 0.95 }};
                 className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 py-3 rounded-lg font-semibold"
-              >
                 Create Reality
-              </motion.button>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">What Experts Say</h2>
           <p className="text-xl opacity-80">Hear from leading scientists and industry experts</p>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index};
-              initial={{ opacity: "0", y: 50 }};
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
-              transition={{ delay: index * 0.2, duration: 0.8 }};
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700"
-            >
               <div className="text-4xl mb-4 text-center">{testimonial.avatar}</div>
               <blockquote className="text-lg italic mb-6 text-center">
                 "{testimonial.quote}"
@@ -244,11 +163,6 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 <div className="font-semibold text-purple-400">{testimonial.name}</div>
                 <div className="text-sm text-gray-400">{testimonial.role}</div>
               </div>
-            </motion.div>
-          ))};
-        </div>
-      </div>
-
       {/* Call to Action */};
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -258,22 +172,12 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
           </p>
           <div className="flex justify-center space-x-4">
             <motion.button
-              whileHover={{ scale: 1.05 }};
               whileTap={{ scale: 0.95 }};
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-            >
               Get Started Today
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }};
-              whileTap={{ scale: 0.95 }};
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
-            >
               Schedule Demo
-            </motion.button>
-          </div>
-        </div>
-      </div>
     </div>
   );
   };

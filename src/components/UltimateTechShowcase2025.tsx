@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const UltimateTechShowcase2025: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-
   const demos = [
     {
       id: 1,
@@ -19,47 +18,36 @@ const UltimateTechShowcase2025: React.FC = () => {
       ],
       stats: { consciousness: "Level 5", accuracy: "99.9%", speed: "1000x" }
     },
-    {
       id: 2,
       title: "Quantum Reality Engine",
       description: "Experience quantum computing that manipulates reality itself",
       icon: "⚛️",
       color: "from-cyan-600 to-blue-600",
-      features: [
         "Quantum entanglement at room temperature",
         "Reality simulation and manipulation",
         "Parallel universe communication",
         "Time-space distortion"
-      ],
       stats: { qubits: "1M+", coherence: "∞", reality: "100%" }
-    },
-    {
       id: 3,
       title: "Neural Interface Revolution",
       description: "Control technology with your mind using direct brain interfaces",
       icon: "🧬",
       color: "from-emerald-600 to-teal-600",
-      features: [
         "Non-invasive neural data transfer",
         "Thought-to-action conversion",
         "Memory enhancement and storage",
         "Multi-sensory VR"
-      ],
       stats: { latency: "0.1ms", bandwidth: "1TB/s", fidelity: "100%" }
     }
   ];
-
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
         setActiveDemo((prev) => (prev + 1) % demos.length);
       }, 5000);
       return () => clearInterval(interval);
-    }
   }, [isPlaying, demos.length]);
-
   const currentDemo = demos[activeDemo];
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -75,7 +63,6 @@ const UltimateTechShowcase2025: React.FC = () => {
             Witness the future of AI, quantum computing, and neural interfaces.
           </p>
         </div>
-
         {/* Demo Controls */}
         <div className="flex justify-center space-x-4 mb-8">
           <button
@@ -88,20 +75,11 @@ const UltimateTechShowcase2025: React.FC = () => {
           >
             {isPlaying ? '⏸️ Pause Demo' : '▶️ Play Demo'}
           </button>
-          <button
             onClick={() => setActiveDemo((prev) => (prev - 1 + demos.length) % demos.length)}
             className="bg-white/10 text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-semibold"
-          >
             ⏮️ Previous
-          </button>
-          <button
             onClick={() => setActiveDemo((prev) => (prev + 1) % demos.length)}
-            className="bg-white/10 text-white px-6 py-3 rounded-lg hover:bg-white/20 transition-colors font-semibold"
-          >
             Next ⏭️
-          </button>
-        </div>
-
         {/* Demo Navigation */}
         <div className="flex justify-center space-x-2 mb-8">
           {demos.map((demo, index) => (
@@ -115,8 +93,6 @@ const UltimateTechShowcase2025: React.FC = () => {
               }`}
             />
           ))}
-        </div>
-
         {/* Active Demo Display */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8 transition-all duration-500">
           <div className="grid md:grid-cols-2 gap-8">
@@ -126,7 +102,6 @@ const UltimateTechShowcase2025: React.FC = () => {
                 <h3 className="text-3xl font-bold mb-4">{currentDemo.title}</h3>
                 <p className="text-lg opacity-90">{currentDemo.description}</p>
               </div>
-
               <div className="space-y-4">
                 <h4 className="text-xl font-bold mb-4">Key Features:</h4>
                 {currentDemo.features.map((feature, index) => (
@@ -135,12 +110,8 @@ const UltimateTechShowcase2025: React.FC = () => {
                     <span className="text-lg">{feature}</span>
                   </div>
                 ))}
-              </div>
             </div>
-
-            <div>
               <h4 className="text-xl font-bold mb-6">Performance Metrics:</h4>
-              <div className="space-y-4">
                 {Object.entries(currentDemo.stats).map(([key, value]) => (
                   <div key={key} className="bg-white/5 rounded-lg p-4">
                     <div className="flex justify-between items-center mb-2">
@@ -152,29 +123,15 @@ const UltimateTechShowcase2025: React.FC = () => {
                         className={`bg-gradient-to-r ${currentDemo.color} h-2 rounded-full transition-all duration-1000`}
                         style={{ width: `${Math.min(100, Math.random() * 100)}%` }}
                       ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
               <div className="mt-6">
                 <button className={`w-full bg-gradient-to-r ${currentDemo.color} text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}>
                   🚀 Try Interactive Demo
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {demos.map((demo, index) => (
             <div
-              key={demo.id}
               className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer ${
                 activeDemo === index ? 'ring-2 ring-purple-400' : ''
-              }`}
-              onClick={() => setActiveDemo(index)}
             >
               <div className="text-4xl mb-4">{demo.icon}</div>
               <h3 className="text-xl font-bold mb-2">{demo.title}</h3>
@@ -184,31 +141,19 @@ const UltimateTechShowcase2025: React.FC = () => {
                   <div key={key} className="flex justify-between">
                     <span className="capitalize">{key.replace(/([A-Z])/g, ' $1')}:</span>
                     <span className="font-semibold">{value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             Join thousands of innovators who are already using our revolutionary technology to transform their businesses.
-          </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               🚀 Start Free Trial
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold">
               📞 Schedule Demo
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateTechShowcase2025;

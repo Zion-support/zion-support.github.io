@@ -5,7 +5,6 @@ const AdvancedIoTPlatform2026: React.FC = () => {
   const [activeDevice, setActiveDevice] = useState('smart');
   const [dataFlow, setDataFlow] = useState(0);
   const [isConnected, setIsConnected] = useState(true);
-
   const deviceTypes = {
     smart: {
       title: "Smart Cities",
@@ -24,90 +23,65 @@ const AdvancedIoTPlatform2026: React.FC = () => {
       title: "Industrial IoT",
       icon: "🏭",
       description: "Connected manufacturing and industrial automation systems",
-      features: [
         "Predictive maintenance",
         "Quality control",
         "Supply chain optimization",
         "Worker safety monitoring"
-      ],
       devices: "500K+",
       efficiency: "60%"
-    },
     healthcare: {
       title: "Healthcare IoT",
       icon: "🏥",
       description: "Connected medical devices and health monitoring systems",
-      features: [
         "Remote patient monitoring",
         "Medical device integration",
         "Health data analytics",
         "Emergency response"
-      ],
       devices: "200K+",
       efficiency: "35%"
-    },
     agriculture: {
       title: "Smart Agriculture",
       icon: "🌾",
       description: "Precision farming with connected sensors and automated systems",
-      features: [
         "Crop monitoring",
         "Soil analysis",
         "Irrigation control",
         "Livestock tracking"
-      ],
       devices: "300K+",
       efficiency: "50%"
     }
   };
-
   const platformFeatures = [
     {
       category: "Device Management",
       icon: "📱",
-      features: [
         "Remote device provisioning",
         "Firmware updates",
         "Device health monitoring",
         "Bulk device operations"
-      ],
       capability: "Unlimited"
-    },
-    {
       category: "Data Analytics",
       icon: "📊",
-      features: [
         "Real-time data processing",
         "Machine learning insights",
         "Predictive analytics",
         "Custom dashboards"
-      ],
       capability: "10TB/day"
-    },
-    {
       category: "Security",
       icon: "🔒",
-      features: [
         "End-to-end encryption",
         "Device authentication",
         "Secure communication",
         "Threat detection"
-      ],
       capability: "Military-grade"
-    },
-    {
       category: "Integration",
       icon: "🔗",
-      features: [
         "API connectivity",
         "Cloud integration",
         "Third-party services",
         "Custom protocols"
-      ],
       capability: "Universal"
-    }
   ];
-
   const industryMetrics = [
     { metric: "Connected Devices", value: "2M+", trend: "+25%" },
     { metric: "Data Processed", value: "50TB/day", trend: "+40%" },
@@ -115,8 +89,6 @@ const AdvancedIoTPlatform2026: React.FC = () => {
     { metric: "Energy Saved", value: "30%", trend: "+5%" },
     { metric: "Cost Reduction", value: "45%", trend: "+10%" },
     { metric: "Response Time", value: "<100ms", trend: "-20%" }
-  ];
-
   // Simulate real-time data flow
   useEffect(() => {
     const interval = setInterval(() => {
@@ -124,7 +96,6 @@ const AdvancedIoTPlatform2026: React.FC = () => {
     }, 50);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <>
       <Helmet>
@@ -136,7 +107,6 @@ const AdvancedIoTPlatform2026: React.FC = () => {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/pages/AdvancedIoTPlatform2026" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -161,25 +131,16 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                 </button>
                 <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400 hover:text-white transition-colors font-semibold">
                   View Platform Demo
-                </button>
-              </div>
             </divdiv>
           </div>
         </section>
-
         {/* Real-time Metrics */}
         <section className="py-20 px-4 bg-gradient-to-br from-teal-900/50 to-blue-900/50">
           <div className="container mx-auto">
-            <divdiv
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-center mb-16"
-            >
               <h2 className="text-4xl font-bold mb-6 text-green-300">📊 Real-time Platform Metrics</h2>
               <p className="text-xl text-green-100 max-w-3xl mx-auto">
                 Live data from our global IoT network
-              </p>
-            </divdiv>
-
             <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
               {industryMetrics.map((metric, index) => (
                 <divdiv
@@ -193,32 +154,17 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                 </divdiv>
               ))}
             </div>
-          </div>
-        </section>
-
         {/* Device Types */}
         <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <divdiv
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-center mb-16"
-            >
               <h2 className="text-4xl font-bold mb-6 text-green-300">🔌 Device Types</h2>
-              <p className="text-xl text-green-100 max-w-3xl mx-auto">
                 Support for all types of connected devices and applications
-              </p>
-            </divdiv>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {Object.entries(deviceTypes).map(([key, device], index) => (
-                <divdiv
                   key={key}
-                  whileInView={{ opacity: 1, y: 0 }}
                   className={`bg-gradient-to-br from-green-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 cursor-pointer transition-all duration-300 hover:scale-105 ${
                     activeDevice === key ? 'ring-2 ring-green-400' : ''
                   }`}
                   onClick={() => setActiveDevice(key)}
-                >
                   <div className="text-5xl mb-6 text-center">{device.icon}</div>
                   <h3 className="text-2xl font-bold mb-4 text-center text-green-300">{device.title}</h3>
                   <p className="text-green-100 mb-6 text-center text-sm">{device.description}</p>
@@ -227,10 +173,6 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                     <div className="text-lg font-bold text-green-400">{device.devices}</div>
                     <div className="text-sm text-green-300 mt-2">Efficiency: +{device.efficiency}</div>
                   </div>
-                </divdiv>
-              ))}
-            </div>
-
             {/* Active Device Details */}
               <divdiv
                 key={activeDevice}
@@ -245,11 +187,9 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                     <p className="text-green-100">
                       {deviceTypes[activeDevice as keyof typeof deviceTypes].description}
                     </p>
-                  </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div>
                     <h4 className="text-xl font-bold text-green-300 mb-4">Key Features:</h4>
                     <ul className="space-y-2">
                       {deviceTypes[activeDevice as keyof typeof deviceTypes].features.map((feature, index) => (
@@ -259,8 +199,6 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                  <div className="text-center">
                     <div className="bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6">
                       <div className="text-green-200 text-sm mb-2">Connected Devices</div>
                       <div className="text-3xl font-bold text-white">
@@ -268,35 +206,15 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                       </div>
                       <div className="text-green-200 text-sm mt-2">
                         Efficiency: +{deviceTypes[activeDevice as keyof typeof deviceTypes].efficiency}
-                      </div>
                     </div>
-                  </div>
-                </div>
               </divdiv>
-            </div>
-          </div>
-        </section>
-
         {/* Platform Features */}
-        <section className="py-20 px-4 bg-gradient-to-br from-teal-900/50 to-blue-900/50">
-          <div className="container mx-auto">
-            <divdiv
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-center mb-16"
-            >
               <h2 className="text-4xl font-bold mb-6 text-teal-300">⚡ Platform Features</h2>
               <p className="text-xl text-teal-100 max-w-3xl mx-auto">
                 Comprehensive IoT platform capabilities for any use case
-              </p>
-            </divdiv>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {platformFeatures.map((feature, index) => (
-                <divdiv
-                  key={index}
-                  whileInView={{ opacity: 1, y: 0 }}
                   className="bg-gradient-to-br from-teal-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30"
-                >
                   <div className="text-5xl mb-6 text-center">{feature.icon}</div>
                   <h3 className="text-2xl font-bold mb-4 text-center text-teal-300">{feature.category}</h3>
                   <ul className="space-y-2 mb-6">
@@ -306,29 +224,11 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="text-center">
                     <div className="text-sm text-teal-200 mb-2">Capability:</div>
                     <div className="text-sm font-bold text-teal-300">{feature.capability}</div>
-                  </div>
-                </divdiv>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Data Flow Visualization */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <divdiv
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-center mb-16"
-            >
               <h2 className="text-4xl font-bold mb-6 text-green-300">📈 Real-time Data Flow</h2>
-              <p className="text-xl text-green-100 max-w-3xl mx-auto">
                 Visualize data flowing through our IoT network in real-time
-              </p>
-            </divdiv>
-
             <div className="bg-gradient-to-r from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">
               <div className="grid md:grid-cols-4 gap-8">
                 <div className="text-center">
@@ -336,57 +236,30 @@ const AdvancedIoTPlatform2026: React.FC = () => {
                   <h3 className="text-xl font-bold text-green-300 mb-2">Devices</h3>
                   <div className="text-2xl font-bold text-green-400">2M+</div>
                   <div className="text-sm text-green-200">Connected</div>
-                </div>
-                
-                <div className="text-center">
                   <div className="text-4xl mb-4">☁️</div>
                   <h3 className="text-xl font-bold text-green-300 mb-2">Cloud</h3>
                   <div className="text-2xl font-bold text-green-400">50TB</div>
                   <div className="text-sm text-green-200">Data/day</div>
-                </div>
-                
-                <div className="text-center">
                   <div className="text-4xl mb-4">🧠</div>
                   <h3 className="text-xl font-bold text-green-300 mb-2">AI Processing</h3>
                   <div className="text-2xl font-bold text-green-400">99.9%</div>
                   <div className="text-sm text-green-200">Accuracy</div>
-                </div>
-                
-                <div className="text-center">
                   <div className="text-4xl mb-4">📊</div>
                   <h3 className="text-xl font-bold text-green-300 mb-2">Analytics</h3>
                   <div className="text-2xl font-bold text-green-400">Real-time</div>
                   <div className="text-sm text-green-200">Insights</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-green-600 via-teal-600 to-blue-600">
           <div className="container mx-auto text-center">
-            <divdiv
-              whileInView={{ opacity: 1, y: 0 }}
-            >
               <h2 className="text-4xl font-bold mb-6">Connect Your World Today</h2>
               <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
                 Join thousands of organizations using our IoT platform to transform their operations
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
                 <button className="bg-white text-green-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
                   Start Your IoT Journey →
-                </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold">
                   Schedule Demo
-                </button>
-              </div>
-            </divdiv>
-          </div>
-        </section>
       </div>
     </>
   );
 };
-
 export default AdvancedIoTPlatform2026;

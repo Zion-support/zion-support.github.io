@@ -21,10 +21,7 @@ const NextGenTechBreakthrough2025: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Watch Demo
-            </button>
-          </div>
         </div>
-
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -41,51 +38,36 @@ const NextGenTechBreakthrough2025: React.FC = () => {
             </ul>
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Explore AI Revolution →
-            </button>
-          </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Direct neural interface with quantum computing systems for enhanced cognitive processing
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Quantum Neural Networks</li>
               <li>• Consciousness Amplification</li>
               <li>• Multi-dimensional Thinking</li>
               <li>• Reality Simulation</li>
-            </ul>
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Enter Quantum Realm →
-            </button>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Technology</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Breakthrough technology that allows interaction with parallel dimensions and alternate realities
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Dimensional Portals</li>
               <li>• Reality Shifting</li>
               <li>• Parallel Universe Access</li>
               <li>• Time-Space Manipulation</li>
-            </ul>
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Enter New Reality →
-            </button>
-          </div>
-        </div>
-
         {/* Advanced Features Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🌟 Revolutionary Features</h2>
             <p className="text-xl opacity-90">Discover the cutting-edge capabilities that set us apart</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -96,89 +78,45 @@ const NextGenTechBreakthrough2025: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">⚡</div>
-                <div>
                   <h3 className="text-xl font-bold mb-2">Quantum Processing</h3>
                   <p className="text-gray-300">Exponential computational power through quantum computing integration</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🧬</div>
-                <div>
                   <h3 className="text-xl font-bold mb-2">Neural Interfaces</h3>
                   <p className="text-gray-300">Direct brain-computer interfaces for seamless human-AI interaction</p>
-                </div>
-              </div>
             </div>
             
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🌐</div>
-                <div>
                   <h3 className="text-xl font-bold mb-2">Global Network</h3>
                   <p className="text-gray-300">Worldwide infrastructure connecting all breakthrough technologies</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🔮</div>
-                <div>
                   <h3 className="text-xl font-bold mb-2">Predictive Analytics</h3>
                   <p className="text-gray-300">Advanced AI that predicts future trends and outcomes with 99.9% accuracy</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🛡️</div>
-                <div>
                   <h3 className="text-xl font-bold mb-2">Quantum Security</h3>
                   <p className="text-gray-300">Unbreakable encryption using quantum mechanics principles</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Success Metrics */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
             <div className="text-gray-300">Success Rate</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
             <div className="text-gray-300">Active Innovations</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
             <div className="text-gray-300">Possibilities</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
             <div className="text-gray-300">Availability</div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join thousands of innovators who are already using our breakthrough technologies to transform their businesses and lives.
-          </p>
-          <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
-            </button>
             <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               Schedule Demo
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default NextGenTechBreakthrough2025;

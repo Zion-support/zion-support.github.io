@@ -16,7 +16,6 @@ const FeaturedContentSection: React.FC = () => {
       readTime: '8 min read',
       difficulty: 'Advanced'
     },
-    {
       id: 'quantum-leap',
       title: 'Quantum Leap Technology 2025',
       subtitle: 'Quantum Computing Revolution',
@@ -29,8 +28,6 @@ const FeaturedContentSection: React.FC = () => {
       category: 'Quantum Technology',
       readTime: '12 min read',
       difficulty: 'Expert'
-    },
-    {
       id: 'digital-transformation',
       title: 'Digital Transformation Hub 2025',
       subtitle: 'Complete Business Transformation',
@@ -46,28 +43,18 @@ const FeaturedContentSection: React.FC = () => {
     }
   ];
   const industryInsights = [
-    {
       title: 'Healthcare Revolution',
       description: 'How AI is transforming patient care and medical research',
       icon: '🏥',
-      link: '/pages/AIFutureInnovation2025',
       metric: '+45% efficiency'
-    },
-    {
       title: 'Manufacturing 4.0',
       description: 'Quantum computing in smart manufacturing',
       icon: '🏭',
-      link: '/pages/QuantumLeapTechnology2025',
       metric: '+35% productivity'
-    },
-    {
       title: 'Financial Innovation',
       description: 'Digital transformation in banking and finance',
       icon: '💰',
-      link: '/pages/DigitalTransformationHub2025',
       metric: '+80% speed'
-    }
-  ];
   return (
     <div className="mb-16">
       {/* Main Featured Content */}
@@ -113,12 +100,9 @@ const FeaturedContentSection: React.FC = () => {
               <div className="flex items-center mb-4">
                 <span className="text-4xl mr-4 group-hover:scale-110 transition-transform duration-300">
                   {content.icon}
-                </span>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{content.title}</h3>
                   <p className="text-sm text-gray-600">{content.subtitle}</p>
-                </div>
-              </div>
               {/* Description */}
               <p className="text-gray-600 mb-6 leading-relaxed">{content.description}</p>
               {/* Features */}
@@ -131,8 +115,6 @@ const FeaturedContentSection: React.FC = () => {
                       <span className="text-sm text-gray-600">{feature}</span>
                     </div>
                   ))}
-                </div>
-              </div>
               {/* Stats */}
               <div className="grid grid-cols-3 gap-2 mb-6">
                 {content.stats.map((stat, index) => (
@@ -141,7 +123,6 @@ const FeaturedContentSection: React.FC = () => {
                     <div className="text-sm font-semibold text-gray-900">{stat}</div>
                   </div>
                 ))}
-              </div>
               {/* CTA Button */}
               <a
                 href={content.link}
@@ -154,49 +135,33 @@ const FeaturedContentSection: React.FC = () => {
             <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
           </div>
         ))}
-      </div>
       {/* Industry Insights Section */}
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 mb-12">
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">Industry Impact Insights</h3>
           <p className="text-lg text-gray-600">See how our technologies are transforming different sectors</p>
-        </div>
         <div className="grid md:grid-cols-3 gap-6">
           {industryInsights.map((insight, index) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="flex items-center mb-4">
                 <span className="text-3xl mr-3">{insight.icon}</span>
-                <div>
                   <h4 className="font-bold text-gray-900">{insight.title}</h4>
                   <div className="text-sm text-green-600 font-semibold">{insight.metric}</div>
-                </div>
-              </div>
               <p className="text-gray-600 mb-4 text-sm">{insight.description}</p>
-              <a
                 href={insight.link}
                 className="text-blue-600 hover:text-blue-700 font-semibold text-sm"
-              >
                 Learn more →
-              </a>
-            </div>
           ))}
-        </div>
-      </div>
       {/* Call to Action */}
       <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white">
         <h3 className="text-3xl font-bold mb-4">Ready to Explore the Future?</h3>
         <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
           Dive deep into our revolutionary technology content and discover how these innovations can transform your business.
-        </p>
         <div className="flex justify-center space-x-4">
           <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
             Browse All Content
           </button>
           <button className="border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors font-semibold">
             Get Personalized Recommendations
-          </button>
-        </div>
-      </div>
     </div>
   );
 };

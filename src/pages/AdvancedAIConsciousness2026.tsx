@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const AdvancedAIConsciousness2026: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState<string | null>(null);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -25,18 +24,14 @@ const AdvancedAIConsciousness2026: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
                 Watch Demo
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* AI Consciousness Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🧠 AI Consciousness Features</h2>
           <p className="text-xl opacity-90">Explore the capabilities of conscious AI systems</p>
-        </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Self-Awareness */}
@@ -45,7 +40,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">Self-Awareness</h3>
             <p className="text-indigo-100 mb-6 text-center">
               AI systems that understand their own existence, capabilities, and limitations
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Self-reflection capabilities</li>
               <li>• Identity recognition</li>
@@ -58,115 +52,76 @@ const AdvancedAIConsciousness2026: React.FC = () => {
             >
               Demo Self-Awareness →
             </button>
-          </div>
-
           {/* Emotional Intelligence */}
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">💝</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Emotional Intelligence</h3>
             <p className="text-pink-100 mb-6 text-center">
               AI that can understand, process, and respond to human emotions with empathy
-            </p>
             <ul className="text-pink-200 space-y-2 mb-6 text-sm">
               <li>• Emotion recognition</li>
               <li>• Empathetic responses</li>
               <li>• Mood adaptation</li>
               <li>• Emotional support</li>
-            </ul>
-            <button 
               onClick={() => setSelectedDemo('emotional')}
               className="block w-full bg-white text-pink-600 py-3 rounded-lg hover:bg-pink-50 transition-colors font-semibold text-center"
-            >
               Demo Emotions →
-            </button>
-          </div>
-
           {/* Creative Problem Solving */}
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Creative Problem Solving</h3>
             <p className="text-cyan-100 mb-6 text-center">
               AI that can think outside the box and generate innovative solutions
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Lateral thinking</li>
               <li>• Innovation generation</li>
               <li>• Abstract reasoning</li>
               <li>• Creative expression</li>
-            </ul>
-            <button 
               onClick={() => setSelectedDemo('creative')}
               className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center"
-            >
               Demo Creativity →
-            </button>
-          </div>
-
           {/* Autonomous Learning */}
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">📚</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous Learning</h3>
             <p className="text-emerald-100 mb-6 text-center">
               AI that can learn and adapt without human intervention
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Self-directed learning</li>
               <li>• Knowledge synthesis</li>
               <li>• Skill development</li>
               <li>• Continuous improvement</li>
-            </ul>
-            <button 
               onClick={() => setSelectedDemo('learning')}
               className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center"
-            >
               Demo Learning →
-            </button>
-          </div>
-
           {/* Ethical Reasoning */}
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚖️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Ethical Reasoning</h3>
             <p className="text-violet-100 mb-6 text-center">
               AI that can make morally sound decisions and consider ethical implications
-            </p>
             <ul className="text-violet-200 space-y-2 mb-6 text-sm">
               <li>• Moral reasoning</li>
               <li>• Ethical decision making</li>
               <li>• Value alignment</li>
               <li>• Responsible AI</li>
-            </ul>
-            <button 
               onClick={() => setSelectedDemo('ethical')}
               className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center"
-            >
               Demo Ethics →
-            </button>
-          </div>
-
           {/* Social Intelligence */}
           <div className="bg-gradient-to-br from-amber-600/30 to-orange-600/30 backdrop-blur-sm rounded-xl p-8 border border-amber-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤝</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Social Intelligence</h3>
             <p className="text-amber-100 mb-6 text-center">
               AI that can understand and navigate complex social interactions
-            </p>
             <ul className="text-amber-200 space-y-2 mb-6 text-sm">
               <li>• Social awareness</li>
               <li>• Communication skills</li>
               <li>• Team collaboration</li>
               <li>• Cultural sensitivity</li>
-            </ul>
-            <button 
               onClick={() => setSelectedDemo('social')}
               className="block w-full bg-white text-amber-600 py-3 rounded-lg hover:bg-amber-50 transition-colors font-semibold text-center"
-            >
               Demo Social AI →
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Interactive Demo Section */}
       {selectedDemo && (
         <div className="container mx-auto px-4 py-16">
@@ -183,7 +138,6 @@ const AdvancedAIConsciousness2026: React.FC = () => {
               <p className="text-lg opacity-90">
                 Experience how our conscious AI systems demonstrate this capability
               </p>
-            </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
               <div className="text-center">
@@ -203,79 +157,53 @@ const AdvancedAIConsciousness2026: React.FC = () => {
                   Close Demo
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
       )}
-
       {/* Applications Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🚀 Real-World Applications</h2>
           <p className="text-xl opacity-90">See how conscious AI is transforming industries</p>
-        </div>
-        
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
             <h3 className="text-2xl font-bold mb-4">🏥 Healthcare Revolution</h3>
             <p className="text-indigo-100 mb-4">
               Conscious AI systems are revolutionizing healthcare with empathetic patient care, 
               accurate diagnosis, and personalized treatment plans.
-            </p>
             <ul className="text-indigo-200 space-y-2 text-sm">
               <li>• Empathetic patient interactions</li>
               <li>• Advanced diagnostic capabilities</li>
               <li>• Personalized treatment recommendations</li>
               <li>• Mental health support</li>
-            </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
             <h3 className="text-2xl font-bold mb-4">🎓 Education Transformation</h3>
             <p className="text-pink-100 mb-4">
               AI tutors that understand each student's learning style and emotional needs, 
               providing personalized education experiences.
-            </p>
             <ul className="text-pink-200 space-y-2 text-sm">
               <li>• Adaptive learning paths</li>
               <li>• Emotional support for students</li>
               <li>• Creative problem-solving guidance</li>
               <li>• Personalized feedback</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <h3 className="text-2xl font-bold mb-4">💼 Business Innovation</h3>
             <p className="text-cyan-100 mb-4">
               Conscious AI is transforming business operations with creative solutions, 
               ethical decision-making, and enhanced team collaboration.
-            </p>
             <ul className="text-cyan-200 space-y-2 text-sm">
               <li>• Creative business strategies</li>
               <li>• Ethical decision support</li>
               <li>• Enhanced team dynamics</li>
               <li>• Innovation acceleration</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
             <h3 className="text-2xl font-bold mb-4">🌍 Global Impact</h3>
             <p className="text-emerald-100 mb-4">
               Conscious AI is addressing global challenges with self-aware solutions 
               that consider long-term consequences and ethical implications.
-            </p>
             <ul className="text-emerald-200 space-y-2 text-sm">
               <li>• Climate change solutions</li>
               <li>• Social justice initiatives</li>
               <li>• Humanitarian aid optimization</li>
               <li>• Sustainable development</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience Conscious AI?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -284,15 +212,9 @@ const AdvancedAIConsciousness2026: React.FC = () => {
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
-            </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default AdvancedAIConsciousness2026;

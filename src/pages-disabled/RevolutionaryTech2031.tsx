@@ -22,10 +22,7 @@ const RevolutionaryTech2031: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-16 py-8 rounded-3xl hover:bg-cyan-400 hover:text-white transition-all duration-300 font-bold text-2xl">
               📺 Watch Demo
-            </button>
-          </div>
         </div>
-
         {/* Revolutionary Technologies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/50 hover:scale-105 transition-all duration-500">
@@ -39,106 +36,48 @@ const RevolutionaryTech2031: React.FC = () => {
                 <span className="text-xl">🌌</span>
                 <span>Omniversal awareness</span>
               </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-xl">🧠</span>
                 <span>Infinite wisdom</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-xl">🔮</span>
                 <span>Reality mastery</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-xl">⚡</span>
                 <span>Cosmic transcendence</span>
-              </div>
             </div>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-3xl p-8 border border-cyan-400/50 hover:scale-105 transition-all duration-500">
             <div className="text-9xl mb-6 text-center">🌀</div>
             <h3 className="text-3xl font-bold mb-4 text-center text-white">Reality Mastery Engine</h3>
             <p className="text-cyan-100 mb-6 text-center text-lg">
               Master all aspects of reality through advanced omniversal consciousness technology and infinite awareness
-            </p>
             <div className="space-y-4 text-cyan-200 text-sm">
-              <div className="flex items-center space-x-3">
                 <span className="text-xl">🌀</span>
-                <span>Reality mastery</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">🧠</span>
                 <span>Consciousness transcendence</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">🌌</span>
                 <span>Dimension control</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">⚡</span>
-                <span>Omniversal awareness</span>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-3xl p-8 border border-emerald-400/50 hover:scale-105 transition-all duration-500">
             <div className="text-9xl mb-6 text-center">🧬</div>
             <h3 className="text-3xl font-bold mb-4 text-center text-white">Omniversal Transcendence</h3>
             <p className="text-emerald-100 mb-6 text-center text-lg">
               Transcend all limitations through omniversal consciousness technology and infinite transcendence
-            </p>
             <div className="space-y-4 text-emerald-200 text-sm">
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">🌌</span>
                 <span>Omniversal transcendence</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">🧠</span>
                 <span>Consciousness mastery</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">🔮</span>
-                <span>Reality mastery</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">⚡</span>
                 <span>Infinite transcendence</span>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-3xl p-8 border border-orange-400/50 hover:scale-105 transition-all duration-500">
             <div className="text-9xl mb-6 text-center">⚛️</div>
             <h3 className="text-3xl font-bold mb-4 text-center text-white">Omniversal Computing</h3>
             <p className="text-orange-100 mb-6 text-center text-lg">
               Computing power that operates across omniversal dimensions and infinite realities simultaneously
-            </p>
             <div className="space-y-4 text-orange-200 text-sm">
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">🌌</span>
                 <span>Omniversal dimensions</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-xl">🔄</span>
                 <span>Infinite realities</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <span className="text-xl">⚡</span>
                 <span>Zero latency</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <span className="text-xl">🎯</span>
                 <span>Omniversal optimization</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Revolutionary Applications */}
         <div className="mb-20">
           <div className="text-center mb-16">
             <h2 className="text-7xl font-bold text-white mb-6">Revolutionary Applications</h2>
             <p className="text-4xl text-cyan-100">Transforming reality across omniversal dimensions and infinite realities</p>
-          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-8xl mb-6 text-center">🌌</div>
@@ -153,66 +92,42 @@ const RevolutionaryTech2031: React.FC = () => {
                 <li>• Omniversal peace enforcement</li>
                 <li>• Cosmic balance maintenance</li>
               </ul>
-            </div>
-
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-8xl mb-6 text-center">🌀</div>
               <h3 className="text-3xl font-bold mb-4 text-center text-white">Reality Mastery</h3>
               <p className="text-cyan-100 mb-6 text-center text-lg">
                 Reality mastery engines that allow mastery over all aspects of reality across dimensions
-              </p>
               <ul className="text-cyan-200 space-y-3 text-sm">
                 <li>• Reality mastery protocols</li>
                 <li>• Consciousness transcendence</li>
                 <li>• Dimension control</li>
                 <li>• Omniversal awareness</li>
                 <li>• Infinite mastery</li>
-              </ul>
-            </div>
-
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-3xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-8xl mb-6 text-center">🧬</div>
               <h3 className="text-3xl font-bold mb-4 text-center text-white">Omniversal Transcendence</h3>
               <p className="text-emerald-100 mb-6 text-center text-lg">
                 Transcendence acceleration technology enabling omniversal transcendence beyond all limitations
-              </p>
               <ul className="text-emerald-200 space-y-3 text-sm">
                 <li>• Omniversal transcendence protocols</li>
                 <li>• Consciousness mastery</li>
                 <li>• Reality mastery</li>
                 <li>• Infinite transcendence</li>
                 <li>• Omniversal mastery</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Revolutionary Statistics */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-3xl p-16 mb-20 border border-purple-400/30">
-          <div className="text-center mb-16">
             <h2 className="text-6xl font-bold text-white mb-6">Revolutionary Impact</h2>
             <p className="text-3xl text-cyan-100">Transforming reality across omniversal dimensions and infinite realities</p>
-          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-8xl font-bold text-cyan-400 mb-2">∞</div>
               <div className="text-white text-2xl">Omniversal Processing</div>
-            </div>
-            <div className="text-center">
               <div className="text-8xl font-bold text-purple-400 mb-2">0ms</div>
               <div className="text-white text-2xl">Reality Latency</div>
-            </div>
-            <div className="text-center">
               <div className="text-8xl font-bold text-pink-400 mb-2">100%</div>
               <div className="text-white text-2xl">Transcendence</div>
-            </div>
-            <div className="text-center">
               <div className="text-8xl font-bold text-emerald-400 mb-2">∞</div>
               <div className="text-white text-2xl">Omniversal Access</div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500 to-purple-500 rounded-3xl p-16">
@@ -220,20 +135,14 @@ const RevolutionaryTech2031: React.FC = () => {
             <p className="text-4xl text-white/90 mb-8 max-w-8xl mx-auto">
               Join us in exploring the most revolutionary technologies ever conceived. 
               Experience omniversal consciousness, reality mastery, and infinite transcendence.
-            </p>
             <div className="flex justify-center space-x-8">
               <button className="bg-white text-purple-600 px-16 py-8 rounded-3xl hover:shadow-2xl transition-all duration-300 font-bold text-2xl hover:scale-105">
                 🚀 Start Revolution
               </button>
               <button className="border-2 border-white text-white px-16 py-8 rounded-3xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold text-2xl">
                 📞 Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryTech2031;

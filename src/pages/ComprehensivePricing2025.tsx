@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
-import { specializedEnterpriseSolutions2025 } from '../data/2025-specialized-enterprise-solutions';
+import { advancedInnovativeServicesExpansionV3 } from '@/data/2025-advanced-innovative-services-expansion-v3';
+import { specializedEnterpriseSolutions2025 } from '@/data/2025-specialized-enterprise-solutions';
 const ComprehensivePricing2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
@@ -24,7 +24,6 @@ const ComprehensivePricing2025 = () => {
         { id: 'Automotive & Transportation', name: 'Automotive & Transportation', count: allServices.filter(s => s.category.includes('Automotive') || s.category.includes('Transportation')).length },
         { id: 'Energy & Sustainability', name: 'Energy & Sustainability', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Sustainability')).length },
         { id: 'Manufacturing & Industrial', name: 'Manufacturing & Industrial', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industrial')).length }
-    ];
     const filteredServices = allServices.filter(service => {
         if (selectedCategory === 'all')
             return true;
@@ -60,7 +59,6 @@ const ComprehensivePricing2025 = () => {
             </button>
             <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}>
               Annual <span className="text-green-400 text-sm">(Save up to 40%)</span>
-            </span>
           </div>
 
           {/* Key Statistics */}
@@ -69,22 +67,14 @@ const ComprehensivePricing2025 = () => {
               <div className="text-3xl font-bold text-blue-400 mb-2">{allServices.length}+</div>
               <div className="text-sm text-gray-300">Innovative Services</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-3xl font-bold text-cyan-400 mb-2">15</div>
               <div className="text-sm text-gray-300">Technology Categories</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
               <div className="text-sm text-gray-300">Annual Discount</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-3xl font-bold text-purple-400 mb-2">30</div>
               <div className="text-sm text-gray-300">Day Free Trial</div>
-            </div>
-          </div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -100,7 +90,6 @@ const ComprehensivePricing2025 = () => {
                 <Play className="w-5 h-5"/>
                 Schedule Demo
               </motion.button>))}
-            </div>
           </motion.div>
         </></div>);
 };
@@ -113,20 +102,13 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-6" >
             <div className="flex items-center gap-4 mb-4 md:mb-0">
               <Phone className="w-5 h-5 text-green-300"/>
               <span className="font-semibold">+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-4 mb-4 md:mb-0">
               <Mail className="w-5 h-5 text-green-300"/>
               <span className="font-semibold">kleber@ziontechgroup.com</span>
-            </div>
             <div className="flex items-center gap-4">
               <MapPin className="w-5 h-5 text-green-300"/>
               <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </motion.div>
         </div>;
-div >
     { /* Search and Filters */}
-    < div;
 className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
     <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -135,7 +117,6 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                 <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-green-400"/>
                 <Search className="absolute right-3 top-3 w-5 h-5 text-white/60"/>
               </div>
-            </div>
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400">
               {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
@@ -144,19 +125,13 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
             <select value={selectedIndustry} onChange={(e) => setSelectedIndustry(e.target.value)} className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400">
               {industries.map(industry => (<option key={industry} value={industry} className="bg-slate-800 text-white">
                   {industry === 'all' ? 'All Industries' : industry}
-                </option>))}
-            </select>
             <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400">
               <option value="price" className="bg-slate-800 text-white">Price: Low to High</option>
               <option value="price-desc" className="bg-slate-800 text-white">Price: High to Low</option>
               <option value="roi" className="bg-slate-800 text-white">ROI: High to Low</option>
               <option value="delivery" className="bg-slate-800 text-white">Delivery: Fast to Slow</option>
-            </select>
-          </div>
-        </div>;
 { /* Pricing Grid */ }
 <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (<div key={service.id} className={`bg-white/10 backdrop-blur-lg rounded-xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${service.popular
             ? 'border-purple-500/50 bg-gradient-to-br from-purple-600/20 to-pink-600/20'
@@ -168,13 +143,11 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
                 <p className="text-gray-300 mb-4 line-clamp-2">{service.description}</p>
-                
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
                     {service.category}
                   </span>
                 </div>
-
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-green-400 mb-2">
                     {billingCycle === 'annual' && service.annualDiscount
@@ -185,9 +158,6 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                   {billingCycle === 'annual' && service.annualDiscount && (<div className="text-sm text-green-400">
                       {service.annualDiscount} off annual billing
                     </div>)}
-                </div>
-
-                <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
@@ -199,32 +169,20 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                         +{service.features.length - 4} more features
                       </li>)}
                   </ul>
-                </div>
-
-                <div className="mb-6">
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                     <span>Setup Fee:</span>
                     <span className="text-white">{service.setupFee || 'Included'}</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                     <span>Free Trial:</span>
                     <span className="text-white">{service.trialDays} days</span>
-                  </div>
                   <div className="flex items-center justify-between text-sm text-gray-400">
                     <span>Setup Time:</span>
                     <span className="text-white">{service.setupTime}</span>
-                  </div>
-                </div>
-
                 <div className="space-y-3">
                   <a href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`} className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                     Get Started
                   </a>
                   <a href={`tel:${service.contactInfo.mobile}`} className="block w-full text-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                     Call for Demo
-                  </a>
-                </div>
-
                 <div className="mt-6 pt-6 border-t border-white/20">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">Rating:</span>
@@ -236,22 +194,15 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                       </div>
                       <span className="text-gray-400">({service.reviews})</span>
                     </div>
-                  </div>
-                </div>
               </div>))}
-          </div>
-        </div>
       </section>;
 { /* Enterprise Solutions */ }
 <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Enterprise Solutions
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Custom enterprise deployments with dedicated support, custom integrations, and tailored solutions for large organizations
-          </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🏢</div>
@@ -260,28 +211,15 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
                 Tailored solutions built specifically for your business requirements and workflows
               </p>
               <div className="text-green-400 font-semibold">Custom Pricing</div>
-            </div>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-semibold text-white mb-3">Integration Services</h3>
-              <p className="text-gray-300 mb-4">
                 Seamless integration with your existing systems and third-party applications
-              </p>
               <div className="text-green-400 font-semibold">From $5,000</div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-4xl mb-4">👥</div>
               <h3 className="text-xl font-semibold text-white mb-3">Dedicated Support</h3>
-              <p className="text-gray-300 mb-4">
                 24/7 dedicated support team and account management for enterprise clients
-              </p>
               <div className="text-green-400 font-semibold">From $2,000/month</div>
-            </div>
-          </div>
-        </div>
-      </section>;
 { /* Call to Action */ }
 {
     sortedServices.length === 0 && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
@@ -293,48 +231,30 @@ className = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" >
             setSelectedIndustry('all');
         }} className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300">
               View All Services
-            </button>
           </motion.div>);
 }
-div >
     { /* Bottom CTA Section */}
-    < div;
 className = "bg-gradient-to-r from-green-800 to-blue-800 py-16" >
     <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
-          </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
-          </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📧</div>
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 text-sm mb-3">Get detailed information and custom quotes</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
                 kleber@ziontechgroup.com
               </a>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📞</div>
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 text-sm mb-3">Speak directly with our experts</p>
               <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
                 +1 302 464 0950
-              </a>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-2xl mb-2">📍</div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 text-sm mb-3">Schedule an in-person meeting</p>
               <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               <Phone className="w-5 h-5 inline mr-2"/>
@@ -343,12 +263,5 @@ className = "bg-gradient-to-r from-green-800 to-blue-800 py-16" >
             <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-all duration-300">
               Schedule Consultation
             </a>
-          </div>
-        </div>;
-div >
-;
-div >
-;
-;
 ;
 export default ComprehensivePricing2025;

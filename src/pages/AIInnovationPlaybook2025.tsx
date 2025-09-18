@@ -6,5 +6,4 @@ const AIInnovationPlaybook2025 = () => {
     </div>
   );
 };
-
 export default AIInnovationPlaybook2025;

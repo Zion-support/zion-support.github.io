@@ -21,28 +21,21 @@ const HomePage: React.FC = () => {
               >
                 Explore Our Services
               </Link>
-              <Link
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition duration-300"
-              >
                 Get in Touch
-              </Link>
             </div>
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Cutting-Edge Technology Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative solutions that transform businesses and drive digital transformation
-            </p>
-          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
@@ -55,71 +48,31 @@ const HomePage: React.FC = () => {
               <p className="text-gray-600">
                 Advanced AI solutions that automate processes, enhance decision-making, and drive innovation across industries.
               </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Quantum Computing</h3>
-              <p className="text-gray-600">
                 Revolutionary quantum computing solutions that solve complex problems beyond classical computing capabilities.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cybersecurity</h3>
-              <p className="text-gray-600">
                 Comprehensive security solutions protecting your digital assets with cutting-edge threat detection and prevention.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
               <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Cloud Solutions</h3>
-              <p className="text-gray-600">
                 Scalable cloud infrastructure and services that enable seamless digital transformation and operational efficiency.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
               <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Data Analytics</h3>
-              <p className="text-gray-600">
                 Advanced analytics and business intelligence solutions that turn data into actionable insights and competitive advantage.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
               <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Mobile Solutions</h3>
-              <p className="text-gray-600">
                 Innovative mobile applications and solutions that enhance user experience and drive business growth.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-blue-900 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -133,10 +86,7 @@ const HomePage: React.FC = () => {
           >
             Start Your Journey Today
           </Link>
-        </div>
-      </section>
     </div>
   );
 };
-
 export default HomePage;

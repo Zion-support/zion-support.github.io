@@ -13,7 +13,6 @@ const ComprehensiveBlog2026: React.FC = () => {
       image: "🤖",
       featured: true
     },
-    {
       id: 2,
       title: "Quantum Computing Breakthrough: 1000+ Qubit Systems",
       excerpt: "Discover how the latest quantum computing advances are solving previously impossible problems and accelerating scientific discovery.",
@@ -22,9 +21,6 @@ const ComprehensiveBlog2026: React.FC = () => {
       category: "Quantum Computing",
       readTime: "6 min read",
       image: "⚡",
-      featured: true
-    },
-    {
       id: 3,
       title: "Neural Interfaces: Bridging Mind and Machine",
       excerpt: "Learn about the latest developments in brain-computer interfaces and how they're revolutionizing human-computer interaction.",
@@ -34,8 +30,6 @@ const ComprehensiveBlog2026: React.FC = () => {
       readTime: "7 min read",
       image: "🧬",
       featured: false
-    },
-    {
       id: 4,
       title: "Synthetic Intelligence: The Next Evolution of AI",
       excerpt: "Understanding synthetic intelligence systems that possess consciousness-like capabilities and autonomous creativity.",
@@ -44,9 +38,6 @@ const ComprehensiveBlog2026: React.FC = () => {
       category: "Synthetic Intelligence",
       readTime: "9 min read",
       image: "🎨",
-      featured: false
-    },
-    {
       id: 5,
       title: "Space Technology Revolution: Interplanetary AI Systems",
       excerpt: "How AI is enabling space exploration and colonization with autonomous systems designed for extreme environments.",
@@ -55,21 +46,15 @@ const ComprehensiveBlog2026: React.FC = () => {
       category: "Space Technology",
       readTime: "5 min read",
       image: "🚀",
-      featured: false
-    },
-    {
       id: 6,
       title: "Biotech AI: Revolutionizing Healthcare and Life Sciences",
       excerpt: "The intersection of biotechnology and artificial intelligence is creating breakthrough treatments and personalized medicine.",
       author: "Dr. Alex Thompson",
       date: "January 3, 2026",
       category: "Biotechnology",
-      readTime: "6 min read",
       image: "🔬",
-      featured: false
     }
   ];
-
   const categories = [
     "All Posts",
     "AI & Machine Learning",
@@ -78,8 +63,6 @@ const ComprehensiveBlog2026: React.FC = () => {
     "Synthetic Intelligence",
     "Space Technology",
     "Biotechnology"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -98,11 +81,8 @@ const ComprehensiveBlog2026: React.FC = () => {
             quantum computing, neural interfaces, and cutting-edge technologies that are shaping our future.
           </p>
         </divdiv>
-
         {/* Category Filter */}
-        <divdiv
           className="flex flex-wrap justify-center gap-4 mb-12"
-        >
           {categories.map((category, index) => (
             <button
               key={index}
@@ -115,12 +95,8 @@ const ComprehensiveBlog2026: React.FC = () => {
               {category}
             </button>
           ))}
-        </divdiv>
-
         {/* Featured Posts */}
-        <divdiv
           className="mb-16"
-        >
           <h2 className="text-4xl font-bold text-center mb-12">Featured Articles</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {blogPosts.filter(post => post.featured).map((post, index) => (
@@ -140,58 +116,32 @@ const ComprehensiveBlog2026: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">
                     By {post.author} • {post.date}
-                  </div>
                   <button className="text-purple-400 hover:text-purple-300 font-semibold">
                     Read More →
                   </button>
-                </div>
               </divdiv>
             ))}
-          </div>
-        </divdiv>
-
         {/* All Posts Grid */}
-        <divdiv
-          className="mb-16"
-        >
           <h2 className="text-4xl font-bold text-center mb-12">All Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <divdiv
-                key={post.id}
                 className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:scale-105 transition-all duration-300"
-              >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="text-3xl">{post.image}</div>
-                  <div>
                     <div className="text-xs text-purple-300">{post.category}</div>
                     <div className="text-xs text-gray-400">{post.readTime}</div>
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold mb-3">{post.title}</h3>
                 <p className="text-slate-300 text-sm mb-4">{post.excerpt}</p>
-                <div className="flex items-center justify-between">
                   <div className="text-xs text-gray-400">
                     {post.author} • {post.date}
-                  </div>
                   <button className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
                     Read →
-                  </button>
-                </div>
-              </divdiv>
-            ))}
-          </div>
-        </divdiv>
-
         {/* Newsletter Subscription */}
-        <divdiv
           className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 text-center"
-        >
           <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Subscribe to our newsletter and never miss the latest insights, breakthroughs, 
             and innovations in technology.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input
               type="email"
@@ -200,36 +150,21 @@ const ComprehensiveBlog2026: React.FC = () => {
             />
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Subscribe
-            </button>
-          </div>
-        </divdiv>
-
         {/* Call to Action */}
-        <divdiv
           className="text-center mt-16"
-        >
           <h2 className="text-4xl font-bold mb-6">Explore More Content</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Discover our comprehensive technology insights, case studies, and innovation showcases.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/pages/ComprehensiveTechInsights2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
               View All Insights →
             </a>
-            <a
               href="/pages/RevolutionaryTechBlog2026"
               className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-            >
               Revolutionary Blog
-            </a>
-          </div>
-        </divdiv>
       </div>
     </div>
   );
 };
-
 export default ComprehensiveBlog2026;

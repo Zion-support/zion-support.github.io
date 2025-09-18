@@ -3,7 +3,6 @@ import React from "react";
 import { Card, CardContent } from "../components/ui/card";
 import { Check, Sparkles, Users, Building, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-
 export function FeatureHighlights() {
   const highlightsData = [
     {
@@ -21,38 +20,30 @@ export function FeatureHighlights() {
         "Post jobs and receive AI-matched applicants"
       ]
     },
-    {
       title: "For Talent & Service Providers",
       icon: <Sparkles className="w-6 h-6" />,
       color: "from-purple-500 to-indigo-600",
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/20",
-      features: [
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
         "Secure payment processing with on-time disbursements",
         "Build your reputation through client reviews and ratings",
         "Access to enterprise clients and high-value projects",
         "Professional development resources and community support"
-      ]
-    },
-    {
       title: "For Enterprise Clients",
       icon: <Building className="w-6 h-6" />,
       color: "from-emerald-500 to-green-600",
       bgColor: "bg-emerald-500/10",
       borderColor: "border-emerald-500/20",
-      features: [
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"
-      ]
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -61,32 +52,17 @@ export function FeatureHighlights() {
         staggerChildren: 0.2,
         delayChildren: 0.1
       }
-    }
   };
-
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
-    visible: {
       y: 0,
-      opacity: 1,
-      transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
-    }
-  };
-
   const cardVariants = {
     hover: {
       y: -8,
       scale: 1.02,
-      transition: {
         duration: 0.3,
-        ease: "easeOut"
-      }
-    }
-  };
-
   return (
     <section className="py-16 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
       {/* Background decorative elements */}
@@ -95,7 +71,6 @@ export function FeatureHighlights() {
         <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple/10 rotate-45 opacity-30"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-zion-cyan/5 rounded-full opacity-20"></div>
       </div>
-
       <motion.div 
         className="container mx-auto px-4 relative z-10"
         variants={containerVariants}
@@ -113,10 +88,8 @@ export function FeatureHighlights() {
           </p>
         </motion.div>
         
-        <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
           variants={containerVariants}
-        >
           {highlightsData.map((category, index) => (
             <motion.div
               key={index}
@@ -149,33 +122,24 @@ export function FeatureHighlights() {
                       </li>
                     ))}
                   </ul>
-
                   <div className="flex items-center justify-between">
                     <div className="w-8 h-8 bg-zion-purple/20 rounded-full flex items-center justify-center group-hover:bg-zion-purple/40 transition-colors">
                       <ArrowRight className="w-4 h-4 text-zion-purple" />
-                    </div>
                     <span className="text-xs text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">
                       Learn More
                     </span>
-                  </div>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
-        </motion.div>
-
         {/* Call to action */}
-        <motion.div 
           className="mt-12 text-center"
-          variants={itemVariants}
-        >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 px-8 py-4 rounded-full border border-zion-purple/30">
             <Sparkles className="w-5 h-5 text-zion-cyan" />
             <span className="text-zion-slate-light font-medium">
               Ready to get started? Join thousands of users already on Zion
             </span>
           </div>
-        </motion.div>
       </motion.div>
     </section>
   );

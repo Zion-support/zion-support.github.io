@@ -6,5 +6,4 @@ const InnovationLanding2025 = () => {
     </div>
   );
 };
-
 export default InnovationLanding2025;

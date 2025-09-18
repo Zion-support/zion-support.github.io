@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const SocialProofShowcase2034: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -12,7 +11,6 @@ const SocialProofShowcase2034: React.FC = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   const testimonials = [
     {
       id: 1,
@@ -23,35 +21,26 @@ const SocialProofShowcase2034: React.FC = () => {
       rating: 5,
       avatar: "👩‍🔬"
     },
-    {
       id: 2,
       name: "Marcus Rodriguez",
       role: "CTO",
       company: "Future Dynamics Inc.",
       content: "The quantum computing integration they provided has transformed our data processing capabilities. We're now solving problems that were previously impossible.",
-      rating: 5,
       avatar: "👨‍💼"
-    },
-    {
       id: 3,
       name: "Dr. Aisha Patel",
       role: "Head of Innovation",
       company: "TechVision Global",
       content: "Their autonomous business operations platform has streamlined our entire workflow. The AI-driven decision making is incredibly accurate and fast.",
-      rating: 5,
       avatar: "👩‍💻"
-    },
-    {
       id: 4,
       name: "James Thompson",
       role: "CEO",
       company: "NextGen Solutions",
       content: "The cybersecurity solutions they implemented have made our systems virtually impenetrable. We've had zero security incidents since deployment.",
-      rating: 5,
       avatar: "👨‍🚀"
     }
   ];
-
   const stats = [
   return (
     <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -69,14 +58,11 @@ const SocialProofShowcase2034: React.FC = () => {
             Join thousands of satisfied clients who have transformed their businesses with our cutting-edge AI solutions
           </p>
         </motion.div>
-
         {/* Stats Grid */}
-        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-        >
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl mb-2">{stat.icon}</div>
@@ -84,15 +70,9 @@ const SocialProofShowcase2034: React.FC = () => {
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
-
         {/* Testimonials */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="relative"
-        >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <AnimatePresence mode="wait">
               <motion.div
@@ -114,13 +94,10 @@ const SocialProofShowcase2034: React.FC = () => {
                 </blockquote>
                 <div className="text-lg font-semibold text-blue-400">
                   {testimonials[activeTestimonial].name}
-                </div>
                 <div className="text-gray-400">
                   {testimonials[activeTestimonial].role} at {testimonials[activeTestimonial].company}
-                </div>
               </motion.div>
             </AnimatePresence>
-
             {/* Testimonial Navigation Dots */}
             <div className="flex justify-center mt-8 space-x-2">
               {testimonials.map((_, index) => (
@@ -134,20 +111,13 @@ const SocialProofShowcase2034: React.FC = () => {
                   }`}
                 />
               ))}
-            </div>
           </div>
-
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
-        >
           <h3 className="text-2xl font-bold mb-4">Ready to Join Our Success Stories?</h3>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Let us help you achieve the same level of success with our proven AI solutions and expert team.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
@@ -155,17 +125,11 @@ const SocialProofShowcase2034: React.FC = () => {
             >
               Start Your Journey
             </a>
-            <a
               href="/services"
               className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold"
-            >
               Explore Solutions
-            </a>
-          </div>
-        </motion.div>
       </div>
     </div>
   );
 };
-
 export default SocialProofShowcase2034;

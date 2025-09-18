@@ -28,7 +28,6 @@ const OpenAppRedirect = () => {
                     }
                     else if (isiOS) {
                         window.location.href = iosAppUrl;
-                    }
                 }, 2500); // Wait 2.5 seconds before redirecting to store
                 // Try to open the app
                 window.location.href = appScheme;
@@ -39,7 +38,6 @@ const OpenAppRedirect = () => {
                 setTimeout(() => {
                     navigate(fallbackUrl);
                 }, 1500);
-            }
             // Clear timeout if page visibility changes (meaning app opened successfully)
             document.addEventListener("visibilitychange", () => {
                 if (document.hidden && timeout) {

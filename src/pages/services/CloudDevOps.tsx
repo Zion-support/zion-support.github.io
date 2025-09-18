@@ -10,7 +10,6 @@ const CloudDevOps = () => {
     { icon: Zap, title: 'CI/CD Pipelines', desc: 'Automated build, test, and deploy.' },
     { icon: Shield, title: 'Security & Compliance', desc: 'Hardened, auditable systems.' },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <Helmet>
@@ -18,7 +17,6 @@ const CloudDevOps = () => {
         <meta name="description" content="Cloud migration, IaC, CI/CD and security best practices." />
         <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops" />
       </Helmet>
-
       <section className="pt-24 pb-12 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Cloud & DevOps</h1>
@@ -29,11 +27,9 @@ const CloudDevOps = () => {
             </Link>
             <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg font-semibold">
               View Services
-            </Link>
           </div>
         </div>
       </section>
-
       <section className="pb-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, i) => {
@@ -48,10 +44,7 @@ const CloudDevOps = () => {
               </div>
             );
           })}
-        </div>
-      </section>
     </div>
   );
 };
-
 export default CloudDevOps;

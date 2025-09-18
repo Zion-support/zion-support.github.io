@@ -10,5 +10,4 @@ const CyberPhysicalSystems2026 = () => {
     </div>
   );
 };
-
 export default CyberPhysicalSystems2026;

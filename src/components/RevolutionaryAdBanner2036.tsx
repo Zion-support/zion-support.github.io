@@ -3,9 +3,7 @@ import React, { useState, useEffect } from 'react';
 const RevolutionaryAdBanner2036: React.FC = () => {
     }
   ];
-
   useEffect(() => {
-
   return (
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
@@ -33,16 +31,12 @@ const RevolutionaryAdBanner2036: React.FC = () => {
               </a>
             </div>
           ))}
-        </div>
-        
         <div className="text-center mt-8">
           <a href="/pages/RevolutionaryTechShowcase2036" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             Experience All Technologies →
           </a>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryAdBanner2036;

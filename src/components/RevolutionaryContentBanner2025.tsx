@@ -15,10 +15,8 @@ const RevolutionaryContentBanner2025: React.FC = () => {
             Our revolutionary innovations are reshaping reality itself, creating possibilities that were once considered impossible.
           </p>
         </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentBanner2025;

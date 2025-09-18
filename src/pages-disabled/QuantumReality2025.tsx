@@ -54,8 +54,6 @@ const QuantumReality2025: React.FC = () => {
               </button>
               <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
                 Quantum Demo
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -77,36 +75,21 @@ const QuantumReality2025: React.FC = () => {
                 <div className="text-gray-300 text-lg">{stat.label}</div>
               </div>
             ))}
-          </div>
-        </div>
-      </div>
       {/* Quantum Technologies */}
       <div className="py-24">
-        <div className="container mx-auto px-4">
-          <div
             className="text-center mb-20"
-          >
             <h2 className="text-6xl font-bold text-white mb-8">
               Quantum Technologies
             </h2>
             <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Discover the revolutionary quantum technologies that are transforming 
               every aspect of human existence and opening infinite possibilities.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {quantumTechnologies.map((tech, index) => (
-              <div
-                key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 hover:bg-white/20 transition-all duration-300 group border border-white/20"
-              >
                 <div className="flex items-center space-x-4 mb-8">
-                  <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
                     {tech.icon}
-                  </div>
                   <h3 className="text-3xl font-bold text-white">{tech.title}</h3>
-                </div>
                 <p className="text-gray-300 mb-6 text-xl leading-relaxed">
                   {tech.description}
                 </p>
@@ -114,7 +97,6 @@ const QuantumReality2025: React.FC = () => {
                   <div className="flex items-center space-x-2 text-green-400 font-bold text-lg mb-4">
                     <CheckCircle className="w-6 h-6" />
                     <span>{tech.impact}</span>
-                  </div>
                   <div className="space-y-2">
                     {tech.capabilities.map((capability, capIndex) => (
                       <div key={capIndex} className="flex items-center space-x-2 text-gray-300">
@@ -122,105 +104,42 @@ const QuantumReality2025: React.FC = () => {
                         <span>{capability}</span>
                       </div>
                     ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
       {/* Quantum Principles */}
       <div className="py-24 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
-        <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-16"
-          >
             <h2 className="text-5xl font-bold text-white mb-6">
               Quantum Principles
-            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Understanding the fundamental principles that make quantum technology 
               so revolutionary and powerful.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             {quantumPrinciples.map((principle, index) => (
-              <div
-                key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
-              >
                 <h3 className="text-2xl font-bold text-white mb-4">{principle.principle}</h3>
                 <p className="text-gray-300 mb-4 text-lg">{principle.description}</p>
                 <div className="bg-cyan-500/20 text-cyan-300 p-4 rounded-lg">
                   <strong>Example:</strong> {principle.example}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
       {/* Applications */}
-      <div className="py-24">
-        <div className="container mx-auto px-4">
-          <div
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl font-bold text-white mb-6">
               Quantum Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how quantum technology is already revolutionizing industries 
               and solving previously impossible problems.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quantumApplications.map((app, index) => (
-              <div
-                key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
                     {app.icon}
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>
                 <p className="text-gray-300 mb-4">{app.description}</p>
                 <div className="text-green-400 font-semibold">{app.impact}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <div
-          >
-            <h2 className="text-6xl font-bold text-white mb-8">
               Enter the Quantum Future
-            </h2>
             <p className="text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
               Be part of the quantum revolution that's reshaping reality itself. 
               Experience infinite possibilities with quantum technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button className="bg-white text-cyan-600 px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Explore Quantum World
                 <Atom className="inline-block ml-3 w-6 h-6" />
-              </button>
-              <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
                 Schedule Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
-
 export default QuantumReality2025;

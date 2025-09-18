@@ -12,5 +12,4 @@ const EdgeAIandIoT2025 = () => {
     </div>
   );
 };
-
 export default EdgeAIandIoT2025;

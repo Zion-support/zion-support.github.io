@@ -21,10 +21,7 @@ const FutureTechInnovation2026: React.FC = () => {
             </button>
             <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400/10 transition-all duration-300 font-semibold text-lg">
               Watch Innovation Demo
-            </button>
-          </div>
         </div>
-
         {/* Innovation Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300">
@@ -35,52 +32,33 @@ const FutureTechInnovation2026: React.FC = () => {
             </p>
             <button className="w-full bg-white text-blue-600 py-2 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm">
               Explore Space Tech →
-            </button>
-          </div>
-
           <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-6 border border-green-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🌱</div>
             <h3 className="text-xl font-bold mb-3 text-center">Green Technology</h3>
             <p className="text-green-100 text-sm text-center mb-4">
               Sustainable solutions for a cleaner, greener future
-            </p>
             <button className="w-full bg-white text-green-600 py-2 rounded-lg hover:bg-green-50 transition-colors font-semibold text-sm">
               Go Green →
-            </button>
-          </div>
-
           <div className="bg-gradient-to-br from-yellow-600/30 to-orange-600/30 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">⚡</div>
             <h3 className="text-xl font-bold mb-3 text-center">Energy Innovation</h3>
             <p className="text-yellow-100 text-sm text-center mb-4">
               Next-generation energy storage and generation systems
-            </p>
             <button className="w-full bg-white text-yellow-600 py-2 rounded-lg hover:bg-yellow-50 transition-colors font-semibold text-sm">
               Power the Future →
-            </button>
-          </div>
-
           <div className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-6 border border-red-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-5xl mb-4 text-center">🏥</div>
             <h3 className="text-xl font-bold mb-3 text-center">Health Tech</h3>
             <p className="text-red-100 text-sm text-center mb-4">
               Advanced healthcare technology and medical innovations
-            </p>
             <button className="w-full bg-white text-red-600 py-2 rounded-lg hover:bg-red-50 transition-colors font-semibold text-sm">
               Heal the World →
-            </button>
-          </div>
-        </div>
-
         {/* Featured Innovations */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Featured Innovations</h2>
             <p className="text-xl opacity-90 max-w-4xl mx-auto">
               Explore our most groundbreaking technology innovations that are changing the world
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
               <div className="text-6xl mb-6 text-center">🧠</div>
@@ -93,63 +71,30 @@ const FutureTechInnovation2026: React.FC = () => {
                   <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                   <span className="text-purple-200">Self-aware decision making</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                   <span className="text-purple-200">Emotional intelligence</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                   <span className="text-purple-200">Creative problem solving</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                   <span className="text-purple-200">Ethical reasoning</span>
-                </div>
               </div>
               <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
                 Learn About Conscious AI →
               </button>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
               <div className="text-6xl mb-6 text-center">🌊</div>
               <h3 className="text-3xl font-bold mb-4 text-center">Quantum Internet</h3>
               <p className="text-cyan-100 mb-6 text-center text-lg">
                 Ultra-secure quantum communication network that enables instant, unhackable data transmission
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center space-x-3">
                   <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-cyan-200">Quantum encryption</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-cyan-200">Instant global communication</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-cyan-200">Unhackable security</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   <span className="text-cyan-200">Quantum teleportation</span>
-                </div>
-              </div>
               <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
                 Explore Quantum Internet →
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Innovation Timeline */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Innovation Timeline</h2>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto">
               Our roadmap for the next decade of technological breakthroughs
-            </p>
-          </div>
           
           <div className="space-y-8">
             <div className="flex items-center space-x-6">
@@ -157,60 +102,32 @@ const FutureTechInnovation2026: React.FC = () => {
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2">2026 - Conscious AI Launch</h3>
                 <p className="text-gray-300">First commercially available conscious AI systems</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
               <div className="w-4 h-4 bg-cyan-400 rounded-full"></div>
-              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2">2027 - Quantum Internet</h3>
                 <p className="text-gray-300">Global quantum communication network deployment</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
               <div className="w-4 h-4 bg-emerald-400 rounded-full"></div>
-              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2">2028 - Neural Interface</h3>
                 <p className="text-gray-300">Consumer-ready brain-computer interfaces</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
               <div className="w-4 h-4 bg-purple-400 rounded-full"></div>
-              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2">2029 - Space Colonization</h3>
                 <p className="text-gray-300">First permanent human settlements on Mars</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
               <div className="w-4 h-4 bg-yellow-400 rounded-full"></div>
-              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2">2030 - Immortality Tech</h3>
                 <p className="text-gray-300">Biological age reversal and life extension technology</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Be Part of the Future</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in creating the technologies that will define the next century and beyond
-          </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-pink-600 to-purple-600 px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Innovation Lab →
-            </button>
             <button className="border-2 border-pink-400 text-pink-400 px-10 py-4 rounded-lg hover:bg-pink-400/10 transition-all duration-300 font-semibold text-lg">
               Invest in Future
-            </button>
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400/10 transition-all duration-300 font-semibold text-lg">
               Partner With Us
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechInnovation2026;

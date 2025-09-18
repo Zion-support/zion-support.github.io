@@ -17,12 +17,9 @@ const FutureTechTrends2026: React.FC = () => {
               </button>
               <button className="border-2 border-violet-400 text-violet-400 px-8 py-4 rounded-lg hover:bg-violet-400 hover:text-white transition-all duration-300 font-semibold text-lg">
                 Get Trend Report
-              </button>
-            </div>
           </motion.div>
         </div>
       </div>
-
       {/* Top Trends */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -30,15 +27,10 @@ const FutureTechTrends2026: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             The most significant technology trends that will transform industries and societies
           </p>
-        </div>
                   </div>
                 </div>
               </div>
-        </div>
-      </div>
     </div>
   );
 };
-
-
 export default FutureTechTrends2026;

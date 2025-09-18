@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, Clock, Eye, Heart, MessageCircle, Share2 } from 'lucide-react';
-import { REVOLUTIONARY_BLOG_POSTS_2026 } from '../data/revolutionaryContent2026';
+import { REVOLUTIONARY_BLOG_POSTS_2026 } from '@/data/revolutionaryContent2026';
 
 interface TrendingTopic {
   id: string;
@@ -14,11 +14,9 @@ interface TrendingTopic {
   color: string;
   icon: string;
 }
-
 const TrendingTopicsWidget2026: React.FC = () => {
   const [trendingTopics, setTrendingTopics] = useState<TrendingTopic[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   useEffect(() => {
     // Generate trending topics based on our new content
     const topics: TrendingTopic[] = [
@@ -33,97 +31,66 @@ const TrendingTopicsWidget2026: React.FC = () => {
         color: 'from-purple-500 to-pink-500',
         icon: '🧠'
       },
-      {
         id: 'quantum-computing',
         title: 'Quantum Computing Breakthrough',
         category: 'Quantum',
         engagement: 88,
         growth: 280,
-        isHot: true,
-        isNew: true,
         color: 'from-blue-500 to-cyan-500',
         icon: '⚛️'
-      },
-      {
         id: 'neural-interfaces',
         title: 'Neural Interface Technology',
         category: 'Neural',
         engagement: 92,
         growth: 420,
-        isHot: true,
-        isNew: true,
         color: 'from-green-500 to-teal-500',
         icon: '🔗'
-      },
-      {
         id: 'metaverse-ai',
         title: 'Metaverse AI Ecosystem',
         category: 'Metaverse',
         engagement: 85,
         growth: 190,
         isHot: false,
-        isNew: true,
         color: 'from-orange-500 to-red-500',
         icon: '🌐'
-      },
-      {
         id: 'autonomous-systems',
         title: 'Autonomous Business AI',
         category: 'Automation',
         engagement: 90,
         growth: 310,
-        isHot: true,
-        isNew: true,
         color: 'from-indigo-500 to-purple-500',
         icon: '🤖'
-      },
-      {
         id: 'synthetic-intelligence',
         title: 'Synthetic Intelligence',
-        category: 'AI',
         engagement: 87,
         growth: 250,
-        isHot: false,
-        isNew: true,
         color: 'from-pink-500 to-rose-500',
         icon: '✨'
-      },
-      {
         id: 'digital-twins',
         title: 'Digital Twins Technology',
         category: 'IoT',
         engagement: 82,
         growth: 180,
-        isHot: false,
-        isNew: true,
         color: 'from-cyan-500 to-blue-500',
         icon: '👥'
-      },
-      {
         id: 'edge-computing',
         title: 'Edge Computing Revolution',
         category: 'Infrastructure',
         engagement: 79,
         growth: 160,
-        isHot: false,
-        isNew: true,
         color: 'from-emerald-500 to-green-500',
         icon: '⚡'
       }
     ];
-
     setTrendingTopics(topics);
   }, []);
-
   const categories = ['all', 'AI', 'Quantum', 'Neural', 'Metaverse', 'Automation', 'IoT', 'Infrastructure'];
   
   const filteredTopics = selectedCategory === 'all' 
     ? trendingTopics 
     : trendingTopics.filter(topic => topic.category === selectedCategory);
-
   const hotTopics = trendingTopics.filter(topic => topic.isHot);
   const newTopics = trendingTopics.filter(topic => topic.isNew);
-
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
       {/* Header */}
@@ -136,11 +103,9 @@ const TrendingTopicsWidget2026: React.FC = () => {
           <div className="flex items-center gap-2 text-sm">
             <Clock className="w-4 h-4" />
             <span>Live</span>
-          </div>
         </div>
         <p className="text-purple-100 mt-2">Discover what's revolutionizing technology today</p>
       </div>
-
       {/* Category Filter */}
       <div className="p-4 border-b border-gray-100">
         <div className="flex flex-wrap gap-2">
@@ -157,15 +122,11 @@ const TrendingTopicsWidget2026: React.FC = () => {
               {category === 'all' ? 'All Topics' : category}
             </button>
           ))}
-        </div>
-      </div>
-
       {/* Hot Topics Section */}
       <div className="p-6">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
           <h3 className="text-lg font-semibold text-gray-800">🔥 Hot Right Now</h3>
-        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {hotTopics.slice(0, 4).map((topic, index) => (
@@ -175,7 +136,6 @@ const TrendingTopicsWidget2026: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-4 border border-gray-200 hover:shadow-md transition-all duration-300"
-            >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">{topic.icon}</span>
@@ -187,7 +147,6 @@ const TrendingTopicsWidget2026: React.FC = () => {
                 <div className="flex items-center gap-1 text-red-500">
                   <TrendingUp className="w-4 h-4" />
                   <span className="text-sm font-medium">+{topic.growth}%</span>
-                </div>
               </div>
               
               <div className="flex items-center justify-between">
@@ -195,24 +154,14 @@ const TrendingTopicsWidget2026: React.FC = () => {
                   <div className="flex items-center gap-1">
                     <Eye className="w-4 h-4" />
                     <span>{topic.engagement}%</span>
-                  </div>
-                  <div className="flex items-center gap-1">
                     <Heart className="w-4 h-4" />
                     <span>2.3k</span>
-                  </div>
-                  <div className="flex items-center gap-1">
                     <MessageCircle className="w-4 h-4" />
                     <span>156</span>
-                  </div>
-                </div>
                 <button className="p-2 hover:bg-gray-200 rounded-full transition-colors duration-300">
                   <Share2 className="w-4 h-4 text-gray-500" />
                 </button>
-              </div>
             </motion.div>
-          ))}
-        </div>
-
         {/* All Topics Grid */}
         <div className="mb-4">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">All Trending Topics</h3>
@@ -246,39 +195,25 @@ const TrendingTopicsWidget2026: React.FC = () => {
                       {topic.isHot && (
                         <span className="px-2 py-1 bg-red-100 text-red-600 text-xs rounded-full font-medium">
                           Hot
-                        </span>
-                      )}
-                    </div>
-                  </div>
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-600">
                       <div className="flex items-center gap-1">
                         <Eye className="w-4 h-4" />
                         <span>{topic.engagement}%</span>
-                      </div>
                       <div className="flex items-center gap-1 text-green-600">
                         <TrendingUp className="w-4 h-4" />
                         <span>+{topic.growth}%</span>
-                      </div>
-                    </div>
                     <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${topic.color}`} />
-                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>
-          </div>
-        </div>
-
         {/* View All Button */}
         <div className="text-center">
           <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
             View All Trending Topics
           </button>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default TrendingTopicsWidget2026;

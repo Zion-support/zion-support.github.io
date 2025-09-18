@@ -22,10 +22,7 @@ const QuantumAIFusion2026: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-200 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               View Demo
-            </button>
-          </div>
         </div>
-
         {/* Revolutionary Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -40,37 +37,27 @@ const QuantumAIFusion2026: React.FC = () => {
               <li>• Exponential speedup</li>
               <li>• Parallel universe processing</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">AI Integration</h3>
             <p className="text-purple-200 mb-6 text-center">
               Seamlessly integrated artificial intelligence that leverages quantum computing for unprecedented capabilities.
-            </p>
             <ul className="text-purple-300 space-y-2 text-sm">
               <li>• Quantum neural networks</li>
               <li>• Quantum machine learning</li>
               <li>• Quantum optimization</li>
               <li>• Quantum pattern recognition</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Universe Simulation</h3>
             <p className="text-emerald-200 mb-6 text-center">
               Simulate entire universes, molecular structures, and complex systems with unprecedented accuracy.
-            </p>
             <ul className="text-emerald-300 space-y-2 text-sm">
               <li>• Molecular dynamics simulation</li>
               <li>• Climate modeling</li>
               <li>• Drug discovery</li>
               <li>• Material science</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Quantum AI Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Revolutionary Applications</h2>
@@ -94,74 +81,48 @@ const QuantumAIFusion2026: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3">Climate Modeling</h3>
               <p className="text-purple-200 mb-4">
                 Predict climate change and weather patterns with unprecedented accuracy and detail.
-              </p>
               <ul className="text-purple-300 space-y-1 text-sm">
                 <li>• Global weather prediction</li>
                 <li>• Climate change modeling</li>
                 <li>• Natural disaster forecasting</li>
                 <li>• Environmental impact analysis</li>
-              </ul>
-            </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-4xl mb-4">🔬</div>
               <h3 className="text-xl font-bold text-white mb-3">Material Science</h3>
               <p className="text-emerald-200 mb-4">
                 Design revolutionary materials with properties that were previously impossible to achieve.
-              </p>
               <ul className="text-emerald-300 space-y-1 text-sm">
                 <li>• Superconducting materials</li>
                 <li>• Quantum materials</li>
                 <li>• Energy storage solutions</li>
                 <li>• Space-age alloys</li>
-              </ul>
-            </div>
-            
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-white mb-3">Space Exploration</h3>
               <p className="text-orange-200 mb-4">
                 Optimize space missions and explore the cosmos with quantum-enhanced AI systems.
-              </p>
               <ul className="text-orange-300 space-y-1 text-sm">
                 <li>• Mission optimization</li>
                 <li>• Exoplanet discovery</li>
                 <li>• Space weather prediction</li>
                 <li>• Interstellar travel planning</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Performance Metrics */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-gray-600/30">
           <h2 className="text-4xl font-bold text-white text-center mb-8">Performance Metrics</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">10^18</div>
               <h3 className="text-lg font-bold text-white mb-2">Operations per Second</h3>
               <p className="text-cyan-200 text-sm">Exponential processing power</p>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
               <h3 className="text-lg font-bold text-white mb-2">Accuracy Rate</h3>
               <p className="text-purple-200 text-sm">Quantum error correction</p>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-emerald-400 mb-2">1M+</div>
               <h3 className="text-lg font-bold text-white mb-2">Qubits</h3>
               <p className="text-emerald-200 text-sm">Quantum processing units</p>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
               <h3 className="text-lg font-bold text-white mb-2">Operation</h3>
               <p className="text-orange-200 text-sm">Continuous processing</p>
-            </div>
-          </div>
-        </div>
-
         {/* Technical Architecture */}
-        <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Technical Architecture</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
@@ -172,8 +133,6 @@ const QuantumAIFusion2026: React.FC = () => {
                 <li>• Superconducting quantum processors</li>
                 <li>• Cryogenic cooling systems</li>
                 <li>• Quantum state manipulation</li>
-              </ul>
-            </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
               <h3 className="text-2xl font-bold text-white mb-4">AI Integration Layer</h3>
               <ul className="text-purple-200 space-y-2">
@@ -182,30 +141,18 @@ const QuantumAIFusion2026: React.FC = () => {
                 <li>• Quantum machine learning models</li>
                 <li>• Real-time optimization</li>
                 <li>• Adaptive learning systems</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum AI?</h2>
           <p className="text-xl text-cyan-200 mb-8 max-w-3xl mx-auto">
             Experience the future of computing with our revolutionary Quantum AI Fusion technology. 
             Solve impossible problems and unlock new possibilities.
-          </p>
-          <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               Start Quantum Journey →
-            </button>
             <button className="border-2 border-cyan-400 text-cyan-200 px-12 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Request Access
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default QuantumAIFusion2026;

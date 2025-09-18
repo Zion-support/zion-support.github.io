@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const EnhancedContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const slides = [
     {
       id: 1,
@@ -15,7 +14,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
       features: ["Self-aware AI", "Emotional intelligence", "Creative problem solving", "Ethical reasoning"],
       link: "/pages/UltimateTechBreakthrough2036"
     },
-    {
       id: 2,
       title: "Quantum Reality Engine",
       subtitle: "Computing across infinite dimensions",
@@ -24,8 +22,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
       gradient: "from-cyan-600 to-blue-600",
       features: ["Reality manipulation", "Multi-dimensional processing", "Infinite computing", "Quantum teleportation"],
       link: "/pages/RevolutionaryTechShowcase2036"
-    },
-    {
       id: 3,
       title: "Interdimensional Technology",
       subtitle: "Bridging realities and dimensions",
@@ -34,8 +30,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
       gradient: "from-emerald-600 to-teal-600",
       features: ["Cross-dimensional access", "Reality bridging", "Multi-universe computing", "Infinite storage"],
       link: "/pages/NextGenInnovationHub2036"
-    },
-    {
       id: 4,
       title: "Neural Interface 2.0",
       subtitle: "Direct mind-to-machine communication",
@@ -43,32 +37,22 @@ const EnhancedContentCarousel2036: React.FC = () => {
       image: "🧬",
       gradient: "from-orange-600 to-red-600",
       features: ["Thought control", "Memory transfer", "Skill downloading", "Consciousness backup"],
-      link: "/pages/RevolutionaryTechShowcase2036"
     }
   ];
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-  };
-
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white overflow-hidden">
       {/* Background Pattern */}
@@ -87,7 +71,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
             Explore the most advanced technologies that will define the future of humanity
           </p>
         </div>
-
         {/* Carousel Container */}
         <div className="relative">
           {/* Main Slide Display */}
@@ -107,7 +90,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
                   </p>
                   <p className="text-lg opacity-90 mb-6">
                     {slides[currentSlide].description}
-                  </p>
                   
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-2 mb-8">
@@ -117,8 +99,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
                         <span>{feature}</span>
                       </div>
                     ))}
-                  </div>
-                  
                   <a 
                     href={slides[currentSlide].link}
                     className={`inline-block bg-gradient-to-r ${slides[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
@@ -126,7 +106,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
                     Explore Technology →
                   </a>
                 </div>
-
                 {/* Visual Element */}
                 <div className="hidden md:block">
                   <div className={`bg-gradient-to-br ${slides[currentSlide].gradient} rounded-2xl p-8 text-center`}>
@@ -135,16 +114,10 @@ const EnhancedContentCarousel2036: React.FC = () => {
                     </div>
                     <div className="text-2xl font-bold mb-2">
                       {slides[currentSlide].title}
-                    </div>
                     <div className="text-lg opacity-90">
                       {slides[currentSlide].subtitle}
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-          </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-between items-center mt-6">
             <div className="flex space-x-2">
@@ -154,15 +127,8 @@ const EnhancedContentCarousel2036: React.FC = () => {
               >
                 ←
               </button>
-              <button
                 onClick={nextSlide}
-                className="p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300"
-              >
                 →
-              </button>
-            </div>
-
-            <div className="flex space-x-2">
               {slides.map((_, index) => (
                 <button
                   key={index}
@@ -174,8 +140,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
                   }`}
                 />
               ))}
-            </div>
-
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
               className={`px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -186,9 +150,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
             >
               {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
             </button>
-          </div>
-        </div>
-
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-4 gap-4 mt-12">
           {slides.map((slide, index) => (
@@ -197,17 +158,13 @@ const EnhancedContentCarousel2036: React.FC = () => {
               href={slide.link}
               className={`bg-gradient-to-r ${slide.gradient} text-white p-6 rounded-xl hover:scale-105 transition-all duration-300 text-center ${
                 index === currentSlide ? 'ring-2 ring-white/50' : ''
-              }`}
-            >
               <div className="text-4xl mb-3">{slide.image}</div>
               <h4 className="text-lg font-bold mb-2">{slide.title}</h4>
               <p className="text-sm opacity-90">{slide.subtitle}</p>
             </a>
           ))}
-        </div>
       </div>
     </div>
   );
 };
-
 export default EnhancedContentCarousel2036;

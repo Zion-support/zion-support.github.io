@@ -12,5 +12,4 @@ const AdvancedNeuralInterface2026 = () => {
     </div>
   );
 };
-
 export default AdvancedNeuralInterface2026;

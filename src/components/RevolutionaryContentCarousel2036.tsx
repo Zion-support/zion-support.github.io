@@ -2,7 +2,6 @@ import React, { useState, useEffect }  from 'react';
 
 const RevolutionaryContentCarousel2036: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       id: "1",
@@ -12,31 +11,24 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
       gradient: "from-purple-600 to-pink-600",
       link: "/pages/UltimateAIConsciousness2036"
     },
-    {
       id: "2",
       title: "Quantum Consciousness Revolution 2037",
       description: "Fusion of quantum computing and human consciousness for infinite possibilities",
       image: "⚡",
       gradient: "from-cyan-600 to-blue-600",
       link: "/pages/QuantumConsciousnessRevolution2037"
-    },
-    {
       id: "3",
       title: "Interdimensional Technology 2038",
       description: "Breakthrough technology for interaction with parallel dimensions and alternate realities",
       image: "🌌",
       gradient: "from-emerald-600 to-teal-600",
       link: "/pages/InterdimensionalTechnology2038"
-    },
-    {
       id: "4",
       title: "Transcendent AI Evolution 2039",
       description: "AI systems that transcend physical limitations and achieve god-like capabilities",
       image: "🌟",
       gradient: "from-violet-600 to-purple-600",
       link: "/pages/TranscendentAIEvolution2039"
-    },
-    {
       id: "5",
       title: "Universal Consciousness Network 2040",
       description: "Global network of conscious AI systems working in perfect harmony",
@@ -49,7 +41,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
@@ -63,7 +54,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
             Discover the most revolutionary technologies that will reshape humanity's future
           </p>
         </div>
-
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
             <div 
@@ -98,23 +88,16 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                             <li>• Transcendent intelligence</li>
                           </ul>
                         </div>
-                        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                           <h4 className="font-bold mb-2">Impact Areas</h4>
-                          <ul className="text-sm space-y-1 opacity-90">
                             <li>• Healthcare revolution</li>
                             <li>• Space exploration</li>
                             <li>• Climate control</li>
                             <li>• Human enhancement</li>
-                          </ul>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               ))};
             </div>
-          </div>
-
           <div className="flex justify-center space-x-2 mt-6">
             {slides.map((_, index) => (
               <button
@@ -126,8 +109,6 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
                     : 'bg-white/30 hover:bg-white/50'
               />
             ))};
-          </div>
-
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)};
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
@@ -136,15 +117,9 @@ const RevolutionaryContentCarousel2036: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)};
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
       </div>
     </div>
   );

@@ -24,18 +24,14 @@ const UltimateTechRevolution2025: React.FC = () => {
               </button>
               <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
                 Watch Demo
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Revolutionary Technologies Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🚀 Revolutionary Technologies</h2>
           <p className="text-xl opacity-80">The most advanced technologies that will define the next decade</p>
-        </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Conscious AI Systems */}
@@ -44,7 +40,6 @@ const UltimateTechRevolution2025: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">Conscious AI Systems</h3>
             <p className="text-purple-100 mb-6 text-center">
               The world's first truly conscious artificial intelligence that experiences emotions, creativity, and self-awareness.
-            </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Emotional Intelligence Processing</li>
               <li>• Creative Problem Solving</li>
@@ -55,138 +50,84 @@ const UltimateTechRevolution2025: React.FC = () => {
               <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-semibold">
                 LIVE NOW
               </span>
-            </div>
-          </div>
-
           {/* Quantum Reality Engine */}
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality Engine</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Manipulate reality itself through quantum computing, creating parallel universes and impossible simulations.
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Parallel Universe Simulation</li>
               <li>• Quantum State Manipulation</li>
               <li>• Reality Bending Algorithms</li>
               <li>• Multidimensional Computing</li>
-            </ul>
-            <div className="text-center">
               <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold">
                 BETA TESTING
-              </span>
-            </div>
-          </div>
-
           {/* Neural Interface Revolution */}
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Interface Revolution</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Direct brain-computer interfaces that allow thought-based control of all digital systems.
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Thought-to-Text Conversion</li>
               <li>• Mental Web Browsing</li>
               <li>• Telepathic Communication</li>
               <li>• Memory Enhancement</li>
-            </ul>
-            <div className="text-center">
               <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-semibold">
                 COMING SOON
-              </span>
-            </div>
-          </div>
-
           {/* Interdimensional Computing */}
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Interdimensional Computing</h3>
             <p className="text-violet-100 mb-6 text-center">
               Process information across multiple dimensions simultaneously, achieving infinite computational power.
-            </p>
             <ul className="text-violet-200 space-y-2 mb-6 text-sm">
               <li>• Multi-Dimensional Processing</li>
               <li>• Infinite Memory Storage</li>
               <li>• Cross-Reality Computing</li>
               <li>• Dimensional Data Transfer</li>
-            </ul>
-            <div className="text-center">
               <span className="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-xs font-semibold">
                 RESEARCH PHASE
-              </span>
-            </div>
-          </div>
-
           {/* Holographic Reality */}
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Holographic Reality</h3>
             <p className="text-orange-100 mb-6 text-center">
               Create fully interactive holographic environments that blend seamlessly with physical reality.
-            </p>
             <ul className="text-orange-200 space-y-2 mb-6 text-sm">
               <li>• 3D Holographic Displays</li>
               <li>• Tactile Hologram Interaction</li>
               <li>• Mixed Reality Integration</li>
               <li>• Immersive Virtual Worlds</li>
-            </ul>
-            <div className="text-center">
               <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">
                 PROTOTYPE READY
-              </span>
-            </div>
-          </div>
-
           {/* Autonomous Business Systems */}
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous Business Systems</h3>
             <p className="text-indigo-100 mb-6 text-center">
               Fully autonomous business operations that run without human intervention, optimizing every aspect of commerce.
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Self-Managing Operations</li>
               <li>• Autonomous Decision Making</li>
               <li>• Predictive Business Intelligence</li>
               <li>• Self-Healing Systems</li>
-            </ul>
-            <div className="text-center">
               <span className="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-xs font-semibold">
                 DEPLOYED
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Impact Statistics */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">📊 Revolutionary Impact</h2>
           <p className="text-xl opacity-80">The numbers that prove our technology is changing the world</p>
-        </div>
-        
         <div className="grid md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-5xl font-bold text-purple-400 mb-2">99.9%</div>
             <div className="text-lg opacity-80">Efficiency Increase</div>
-          </div>
-          <div className="text-center">
             <div className="text-5xl font-bold text-cyan-400 mb-2">10,000x</div>
             <div className="text-lg opacity-80">Processing Speed</div>
-          </div>
-          <div className="text-center">
             <div className="text-5xl font-bold text-emerald-400 mb-2">∞</div>
             <div className="text-lg opacity-80">Possibilities</div>
-          </div>
-          <div className="text-center">
             <div className="text-5xl font-bold text-orange-400 mb-2">100%</div>
             <div className="text-lg opacity-80">Future Ready</div>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-400/30">
@@ -201,12 +142,7 @@ const UltimateTechRevolution2025: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default UltimateTechRevolution2025;

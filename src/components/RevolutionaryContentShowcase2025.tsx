@@ -18,7 +18,6 @@
       features: ["Quantum neural networks", "Exponential processing speed", "Quantum machine learning", "Parallel universe computing"],
       link: "/pages/QuantumComputingRevolution2025"
     },
-    {
       id: 3,
       title: "Neural Reality Engine",
       description: "Direct brain-computer interfaces that create immersive virtual realities indistinguishable from physical reality.",
@@ -35,8 +34,6 @@
       bgColor: "from-violet-600/30 to-purple-600/30",
       features: ["Multi-dimensional processing", "Parallel universe networks", "Dimensional data storage", "Reality manipulation"],
       link: "/pages/InterdimensionalTechRevolution2030"
-    },
-    {
       id: 5,
       title: "Synthetic Intelligence",
       description: "Artificially created intelligence that surpasses human cognitive abilities in every measurable way.",
@@ -46,8 +43,6 @@
       bgColor: "from-orange-600/30 to-red-600/30",
       features: ["Superhuman intelligence", "Creative synthesis", "Emotional understanding", "Intuitive problem solving"],
       link: "/pages/SyntheticIntelligence2026"
-    },
-    {
       id: 6,
       title: "Consciousness Transfer",
       description: "The ability to transfer human consciousness into digital substrates, achieving digital immortality.",
@@ -100,19 +95,11 @@
                             <div className="flex justify-between items-center">
                               <span className="opacity-90">Processing Power</span>
                               <span className="font-bold text-2xl">∞</span>
-                            </div>
-                            <div className="flex justify-between items-center">
                               <span className="opacity-90">Accuracy Rate</span>
                               <span className="font-bold text-2xl">99.9%</span>
-                            </div>
-                            <div className="flex justify-between items-center">
                               <span className="opacity-90">Innovation Level</span>
                               <span className="font-bold text-2xl">Revolutionary</span>
-                            </div>
-                            <div className="flex justify-between items-center">
                               <span className="opacity-90">Future Impact</span>
-                              <span className="font-bold text-2xl">∞</span>
-                            </div>
                           </div>
           {/* Navigation Arrows */}
           <button
@@ -123,30 +110,19 @@
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
           {/* Play/Pause Button */}
-          <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
             className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-          >
             {isAutoPlaying ? (
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
               </svg>
             ) : (
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
-              </svg>
             )}
-          </button>
-        </div>
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-8">
           {revolutionaryContent.map((_, index) => (
@@ -160,13 +136,11 @@
               }`}
             />
           ))}
-        </div>
         {/* Content Grid */}
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Explore All Revolutionary Content</h3>
             <p className="text-lg opacity-90">Discover the full spectrum of our breakthrough technologies</p>
-          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {revolutionaryContent.map((content) => (
               <div key={content.id} className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-xl p-6 border ${content.borderColor}/30 hover:scale-105 transition-all duration-300`}>
@@ -193,14 +167,10 @@
                 }`}
               />
             ))}
-          </div>
-        </div>
 
         {/* Quick Access Grid */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Revolutionary Content</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {revolutionaryContent.map((content) => (
               <a
                 key={content.id}
                 href={content.link}
@@ -213,14 +183,10 @@
                 <p className="text-white/80 text-sm">{content.description}</p>
                 <div className="mt-4 text-white/60 text-sm">Explore →</div>
               </a>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentShowcase2025;
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

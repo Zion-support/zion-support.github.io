@@ -5,7 +5,6 @@ import { ArrowRight, Star, Zap, Brain, Rocket, Shield, Globe } from 'lucide-reac
 const UltimateTechBanner2040: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const features = [
     {
       title: "Consciousness Transfer",
@@ -13,34 +12,26 @@ const UltimateTechBanner2040: React.FC = () => {
       icon: "🧠",
       color: "from-purple-600 to-pink-600"
     },
-    {
       title: "Reality Manipulation",
       description: "Engineer reality at the quantum level",
       icon: "🌌",
       color: "from-cyan-600 to-blue-600"
-    },
-    {
       title: "Interdimensional Access",
       description: "Connect with infinite parallel universes",
       icon: "⚡",
       color: "from-emerald-600 to-teal-600"
-    },
-    {
       title: "Synthetic Universes",
       description: "Create and manage entire virtual realities",
       icon: "🚀",
       color: "from-orange-600 to-red-600"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 4000);
     return () => clearInterval(interval);
   }, [features.length]);
-
-  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -49,19 +40,15 @@ const UltimateTechBanner2040: React.FC = () => {
       },
       { threshold: 0.1 }
     );
-
     const element = document.getElementById('ultimate-tech-banner-2040');
     if (element) {
       observer.observe(element);
-    }
-
     return () => {
       if (element) {
         observer.unobserve(element);
       }
     };
   }, []);
-
   return (
     <div
       id="ultimate-tech-banner-2040"
@@ -85,16 +72,13 @@ const UltimateTechBanner2040: React.FC = () => {
             animate={{
               y: [0, -20, 0],
               opacity: [0.3, 0.8, 0.3],
-            }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-            }}
           />
         ))}
       </div>
-
       <div className="relative z-10">
         {/* Header */}
         <motion.div
@@ -114,11 +98,9 @@ const UltimateTechBanner2040: React.FC = () => {
             From consciousness transfer to interdimensional computing, witness the future today.
           </p>
         </motion.div>
-
         {/* Feature Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
           {/* Left Side - Feature Display */}
-          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -145,16 +127,11 @@ const UltimateTechBanner2040: React.FC = () => {
               </motion.div>
             </div>
           </motion.div>
-
           {/* Right Side - Feature List */}
-          <motion.div
             initial={{ opacity: 0, x: 20 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-6"
-          >
             {features.map((feature, index) => (
-              <motion.div
                 key={index}
                 className={`p-6 rounded-2xl border cursor-pointer transition-all duration-300 ${
                   currentFeature === index
@@ -164,7 +141,6 @@ const UltimateTechBanner2040: React.FC = () => {
                 onClick={() => setCurrentFeature(index)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-              >
                 <div className="flex items-center">
                   <div className="text-4xl mr-4">{feature.icon}</div>
                   <div>
@@ -179,45 +155,23 @@ const UltimateTechBanner2040: React.FC = () => {
                     <ArrowRight className={`w-6 h-6 ${
                       currentFeature === index ? 'text-white' : 'text-gray-400'
                     }`} />
-                  </div>
-                </div>
-              </motion.div>
             ))}
-          </motion.div>
         </div>
-
         {/* Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
-        >
           <div className="text-center">
             <div className="text-4xl font-bold text-white mb-2">2.3M+</div>
             <div className="text-gray-300 text-sm">Consciousness Transfers</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-white mb-2">847K+</div>
             <div className="text-gray-300 text-sm">Reality Modifications</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-white mb-2">156</div>
             <div className="text-gray-300 text-sm">Dimension Connections</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-white mb-2">12</div>
             <div className="text-gray-300 text-sm">Synthetic Universes</div>
-          </div>
-        </motion.div>
-
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
-        >
           <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Experience the Future?
@@ -232,13 +186,7 @@ const UltimateTechBanner2040: React.FC = () => {
               </button>
               <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors">
                 Schedule Demo
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
     </div>
   );
 };
-
 export default UltimateTechBanner2040;

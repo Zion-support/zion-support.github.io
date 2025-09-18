@@ -35,18 +35,12 @@ export default function EquipmentDetail() {
                       <span className="text-zion-cyan font-semibold">Model:</span>
                       <span className="text-white ml-2">ZionTech Pro Series</span>
                     </div>
-                    <div>
                       <span className="text-zion-cyan font-semibold">Category:</span>
                       <span className="text-white ml-2">Enterprise Solutions</span>
-                    </div>
-                    <div>
                       <span className="text-zion-cyan font-semibold">Performance:</span>
                       <span className="text-white ml-2">High Performance</span>
-                    </div>
-                    <div>
                       <span className="text-zion-cyan font-semibold">Warranty:</span>
                       <span className="text-white ml-2">3 Years</span>
-                    </div>
                   </div>
                 </div>
                 
@@ -54,10 +48,8 @@ export default function EquipmentDetail() {
                   <button className="bg-zion-cyan text-zion-blue-dark px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan-light transition-colors">
                     Request Quote
                   </button>
-                </div>
               </div>
             </div>
-          </div>
         </div>
       </main>
     </>

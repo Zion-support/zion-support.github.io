@@ -12,5 +12,4 @@ const QuantumComputingRevolution2025 = () => {
     </div>
   );
 };
-
 export default QuantumComputingRevolution2025;

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const RevolutionaryContentShowcase = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   const revolutionaryContent = [
     {
       title: 'Revolutionary Tech Breakthrough 2026',
@@ -14,7 +13,6 @@ const RevolutionaryContentShowcase = () => {
       color: 'from-purple-600 to-pink-600',
       features: ['AI Consciousness', 'Quantum Internet', 'Neural Interfaces', 'Space Elevator']
     },
-    {
       title: 'Ultimate Tech Showcase 2026',
       description: 'Experience the most comprehensive collection of revolutionary technologies that are defining the future of human civilization.',
       image: '🌟',
@@ -22,8 +20,6 @@ const RevolutionaryContentShowcase = () => {
       category: 'SHOWCASE',
       color: 'from-cyan-600 to-blue-600',
       features: ['Interactive Demos', 'Live Technology', 'Real-time Stats', 'Future Vision']
-    },
-    {
       title: 'Next-Gen AI Revolution 2026',
       description: 'Discover how artificial intelligence is evolving beyond current limitations to create truly autonomous and creative systems.',
       image: '🧠',
@@ -31,26 +27,18 @@ const RevolutionaryContentShowcase = () => {
       category: 'REVOLUTION',
       color: 'from-emerald-600 to-teal-600',
       features: ['Autonomous AI', 'Creative Intelligence', 'Quantum AI', 'Neural Networks']
-    },
-    {
       title: 'Quantum Computing Revolution 2026',
       description: 'Experience exponential processing power with quantum technology that solves impossible problems in seconds.',
       image: '⚡',
       link: '/pages/QuantumComputingRevolution2026',
-      category: 'REVOLUTION',
       color: 'from-orange-600 to-red-600',
       features: ['Quantum Supremacy', 'Quantum Internet', 'Quantum AI', 'Quantum Security']
-    },
-    {
       title: 'Neural Interface Revolution 2026',
       description: 'Bridge the gap between mind and machine with direct neural interfaces that enable thought-controlled technology.',
       image: '🧬',
       link: '/pages/NeuralInterfaceRevolution2026',
-      category: 'REVOLUTION',
       color: 'from-violet-600 to-fuchsia-600',
       features: ['Non-Invasive BCI', 'Thought Control', 'Neural Augmentation', 'Collective Intelligence']
-    },
-    {
       title: 'Comprehensive Tech Insights 2026',
       description: 'Deep dive into the latest technology trends, innovations, and insights that are shaping our digital future.',
       image: '🔍',
@@ -58,29 +46,20 @@ const RevolutionaryContentShowcase = () => {
       category: 'INSIGHTS',
       color: 'from-rose-600 to-pink-600',
       features: ['Trend Analysis', 'Market Insights', 'Technology Forecasts', 'Innovation Reports']
-    },
-    {
       title: 'Future Tech Innovation Hub 2026',
       description: 'Explore the most advanced technology innovations including autonomous AI ecosystems, quantum neural networks, and consciousness transfer.',
-      image: '🌟',
       link: '/pages/FutureTechInnovationHub2026',
       category: 'INNOVATION',
-      color: 'from-violet-600 to-fuchsia-600',
       features: ['Autonomous AI', 'Quantum Neural Networks', 'Synthetic Reality', 'Consciousness Transfer']
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
     }, 6000);
     return () => clearInterval(interval);
   }, []);
-
-  useEffect(() => {
     setIsVisible(true);
-  }, []);
-
   return (
     <div className="mb-16">
       <div className="text-center mb-12">
@@ -94,7 +73,6 @@ const RevolutionaryContentShowcase = () => {
           Explore our groundbreaking collection of technology content that showcases the future of innovation
         </p>
       </div>
-
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-2xl mb-8">
         <div 
@@ -127,7 +105,6 @@ const RevolutionaryContentShowcase = () => {
                             {feature}
                           </span>
                         ))}
-                      </div>
                       <a
                         href={content.link}
                         className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg hover:scale-105"
@@ -138,14 +115,11 @@ const RevolutionaryContentShowcase = () => {
                     <div className="text-center">
                       <div className="w-full h-80 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
                         <span className="text-8xl animate-pulse">{content.image}</span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </div>
         
         {/* Navigation dots */}
         <div className="flex justify-center mt-6 space-x-3">
@@ -159,10 +133,6 @@ const RevolutionaryContentShowcase = () => {
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
             />
-          ))}
-        </div>
-      </div>
-
       {/* Content Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {revolutionaryContent.map((content, index) => (
@@ -175,29 +145,21 @@ const RevolutionaryContentShowcase = () => {
               <div className="text-6xl mb-4 group-hover:animate-bounce">{content.image}</div>
               <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold rounded-full mb-3">
                 {content.category}
-              </div>
               <h3 className="text-2xl font-bold mb-4">{content.title}</h3>
               <p className="text-white/90 mb-6 leading-relaxed">{content.description}</p>
-            </div>
             
             <div className="space-y-2 mb-6">
               {content.features.map((feature, featureIndex) => (
                 <div key={featureIndex} className="flex items-center text-sm">
                   <span className="w-2 h-2 bg-white/60 rounded-full mr-3"></span>
                   {feature}
-                </div>
               ))}
-            </div>
-            
             <div className="text-center">
               <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-lg hover:bg-white/30 transition-colors font-semibold group-hover:scale-105">
                 Explore →
               </span>
-            </div>
           </div>
         ))}
-      </div>
-
       {/* Call to Action */}
       <div className="text-center mt-16">
         <div className="bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-sm rounded-2xl p-12 border border-purple-200">
@@ -214,17 +176,10 @@ const RevolutionaryContentShowcase = () => {
             >
               Start Exploring →
             </a>
-            <a
               href="/pages/UltimateTechShowcase2026"
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg hover:scale-105"
-            >
               View Showcase →
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionaryContentShowcase;

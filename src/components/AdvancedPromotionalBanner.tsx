@@ -4,7 +4,6 @@ import { motion, AnimatePresence }  from 'framer-motion';
 const AdvancedPromotionalBanner: React.FC = () => {
   const [currentPromo, setCurrentPromo] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const promotionalContent = [
     {
       title: "🚀 BREAKTHROUGH: Advanced AI Consciousness 2026",
@@ -15,7 +14,6 @@ const AdvancedPromotionalBanner: React.FC = () => {
       animation: "animate-pulse",
       features: ["Quantum Processing", "Self-Awareness", "Autonomous Learning", "Ethical AI"]
     },
-    {
       title: "🌟 INNOVATION: Next-Gen Neural Interfaces",
       subtitle: "Direct brain-computer interfaces enabling seamless human-AI collaboration",
       cta: "Discover Neural Tech →",
@@ -23,26 +21,20 @@ const AdvancedPromotionalBanner: React.FC = () => {
       gradient: "from-green-600 via-emerald-600 to-teal-600",
       animation: "animate-bounce",
       features: ["Brain-Computer Interface", "Neural Networks", "Real-time Processing", "Enhanced Cognition"];
-    },
-    {
       title: "⚡ REVOLUTION: Quantum Reality Engine",
       subtitle: "Holographic reality manipulation with quantum computing power",
       cta: "Experience Quantum Reality →",
       link: "/pages/QuantumRealityEngine2026",
       gradient: "from-red-600 via-orange-600 to-yellow-600",
-      animation: "animate-pulse",
       features: ["Holographic Display", "Quantum Computing", "Reality Manipulation", "3D Interfaces"];
     };
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentPromo((prev) => (prev + 1) % promotionalContent.length);
     }, 8000);
-
     return () => clearInterval(timer);
   }, []);
-
   const currentContent = promotionalContent[currentPromo];
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -67,11 +59,8 @@ const AdvancedPromotionalBanner: React.FC = () => {
                 </motion.h2>
                 <motion.p
                   key={currentContent.subtitle};
-                  initial={{ opacity: "0", x: -20 }};
-                  animate={{ opacity: "1", x: 0 }};
                   transition={{ duration: 0.3, delay: 0.1 }};
                   className="text-white/90 mb-4 text-lg"
-                >
                   {currentContent.subtitle};
                 </motion.p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -92,7 +81,6 @@ const AdvancedPromotionalBanner: React.FC = () => {
                   className="inline-block bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }};
                   whileTap={{ scale: 0.95 }};
-                >
                   {currentContent.cta};
                 </motion.a>
               </div>
@@ -106,7 +94,6 @@ const AdvancedPromotionalBanner: React.FC = () => {
                     }`};
                   />
                 ))};
-              </div>
             </div>
           </div>
           <button

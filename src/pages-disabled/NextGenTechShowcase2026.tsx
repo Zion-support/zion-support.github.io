@@ -20,25 +20,14 @@ const NextGenTechShowcase2026 = () => {
             </p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="text-4xl mb-4">🚀</div>
             <h2 className="text-2xl font-bold mb-4">Future Technologies</h2>
-            <p className="text-gray-600">
               Preview of future technologies and their applications.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-8">
             <div className="text-4xl mb-4">💡</div>
             <h2 className="text-2xl font-bold mb-4">Breakthrough Solutions</h2>
-            <p className="text-gray-600">
               Breakthrough solutions that solve complex problems.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default NextGenTechShowcase2026;

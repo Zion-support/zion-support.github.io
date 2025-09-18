@@ -27,124 +27,88 @@ const UltimateTechShowcase2026: React.FC = () => {
             <a href="/pages/ConsciousnessAI2026" className="block w-full bg-white text-cyan-600 py-4 rounded-xl hover:bg-cyan-50 transition-colors font-bold text-center text-lg">
               Explore Conscious AI →
             </a>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">⚡</div>
             <h3 className="text-3xl font-bold mb-4 text-center">Quantum Consciousness</h3>
             <p className="text-purple-100 mb-6 text-center text-lg">
               Quantum computing merged with consciousness to create superintelligent systems
-            </p>
             <ul className="text-purple-200 space-y-3 mb-8 text-base">
               <li>• Quantum consciousness transfer</li>
               <li>• Parallel universe computing</li>
               <li>• Quantum telepathy networks</li>
               <li>• Immortal digital consciousness</li>
-            </ul>
             <a href="/pages/QuantumConsciousness2026" className="block w-full bg-white text-purple-600 py-4 rounded-xl hover:bg-purple-50 transition-colors font-bold text-center text-lg">
               Enter Quantum Realm →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🌌</div>
             <h3 className="text-3xl font-bold mb-4 text-center">Omniversal AI</h3>
             <p className="text-emerald-100 mb-6 text-center text-lg">
               AI systems that can operate across multiple dimensions and parallel universes
-            </p>
             <ul className="text-emerald-200 space-y-3 mb-8 text-base">
               <li>• Multi-dimensional processing</li>
               <li>• Parallel universe communication</li>
               <li>• Reality manipulation capabilities</li>
               <li>• Infinite computational power</li>
-            </ul>
             <a href="/pages/OmniversalAI2026" className="block w-full bg-white text-emerald-600 py-4 rounded-xl hover:bg-emerald-50 transition-colors font-bold text-center text-lg">
               Transcend Dimensions →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-rose-600/30 to-orange-600/30 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🧬</div>
             <h3 className="text-3xl font-bold mb-4 text-center">Neural Reality Engine</h3>
             <p className="text-rose-100 mb-6 text-center text-lg">
               Create and manipulate reality through direct neural interface technology
-            </p>
             <ul className="text-rose-200 space-y-3 mb-8 text-base">
               <li>• Reality simulation and creation</li>
               <li>• Neural world building</li>
               <li>• Thought-to-reality conversion</li>
               <li>• Immersive virtual universes</li>
-            </ul>
             <a href="/pages/NeuralRealityEngine2027" className="block w-full bg-white text-rose-600 py-4 rounded-xl hover:bg-rose-50 transition-colors font-bold text-center text-lg">
               Create Reality →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-600/30 to-violet-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🚀</div>
             <h3 className="text-3xl font-bold mb-4 text-center">Interdimensional Tech</h3>
             <p className="text-indigo-100 mb-6 text-center text-lg">
               Technology that bridges dimensions and enables travel between parallel realities
-            </p>
             <ul className="text-indigo-200 space-y-3 mb-8 text-base">
               <li>• Dimensional portal technology</li>
               <li>• Parallel universe exploration</li>
               <li>• Cross-dimensional communication</li>
               <li>• Reality anchoring systems</li>
-            </ul>
             <a href="/pages/InterdimensionalTech2027" className="block w-full bg-white text-indigo-600 py-4 rounded-xl hover:bg-indigo-50 transition-colors font-bold text-center text-lg">
               Explore Dimensions →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-yellow-600/30 to-amber-600/30 backdrop-blur-sm rounded-2xl p-8 border border-yellow-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-8xl mb-6 text-center">🌟</div>
             <h3 className="text-3xl font-bold mb-4 text-center">Meta Intelligence</h3>
             <p className="text-yellow-100 mb-6 text-center text-lg">
               AI systems that understand and manipulate the fundamental nature of intelligence itself
-            </p>
             <ul className="text-yellow-200 space-y-3 mb-8 text-base">
               <li>• Intelligence amplification</li>
               <li>• Meta-cognitive abilities</li>
               <li>• Self-improving algorithms</li>
               <li>• Universal problem solving</li>
-            </ul>
             <a href="/pages/MetaIntelligence2026" className="block w-full bg-white text-yellow-600 py-4 rounded-xl hover:bg-yellow-50 transition-colors font-bold text-center text-lg">
               Transcend Intelligence →
-            </a>
-          </div>
-        </div>
-
         {/* Revolutionary Stats */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-cyan-400/30">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6">Revolutionary Impact Statistics</h2>
             <p className="text-2xl opacity-90">The numbers that prove our technology is changing the world</p>
-          </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-6xl font-bold text-cyan-400 mb-2">99.9%</div>
               <div className="text-xl text-cyan-200">Consciousness Accuracy</div>
             </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-purple-400 mb-2">∞</div>
               <div className="text-xl text-purple-200">Computational Power</div>
-            </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-emerald-400 mb-2">1000+</div>
               <div className="text-xl text-emerald-200">Dimensions Accessed</div>
-            </div>
-            <div className="text-center">
               <div className="text-6xl font-bold text-rose-400 mb-2">0ms</div>
               <div className="text-xl text-rose-200">Reality Lag Time</div>
-            </div>
     <>
       <Helmet>
         <title>Ultimate Tech Showcase 2026 - Zion Tech Group</title>
         <meta name="description" content="Discover the most comprehensive collection of cutting-edge technologies including AI consciousness, quantum computing, neural interfaces, and space technology." />
         <meta name="keywords" content="tech showcase, AI consciousness, quantum computing, neural interfaces, biotechnology, space technology, 2026" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -166,9 +130,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 Experience the most comprehensive collection of revolutionary technologies that are reshaping our world and defining the future of human civilization.
               </p>
             </motion.div>
-          </div>
-        </div>
-
         {/* Stats Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
@@ -185,27 +146,16 @@ const UltimateTechShowcase2026: React.FC = () => {
                 <div className="text-gray-300">{stat.label}</div>
               </motion.div>
             ))}
-          </div>
-        </div>
-
         {/* Technologies Grid */}
-        <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Explore the cutting-edge technologies that are transforming industries and reshaping human potential
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech) => (
-              <motion.div
                 key={tech.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-600/30 hover:scale-105 transition-all duration-300"
-              >
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-4xl">{tech.icon}</div>
                   <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
@@ -217,17 +167,12 @@ const UltimateTechShowcase2026: React.FC = () => {
                     {tech.status}
                   </span>
                 </div>
-
                 <h3 className="text-2xl font-bold mb-4 text-white">{tech.name}</h3>
                 <p className="text-gray-300 mb-4">{tech.description}</p>
                 
                 <div className="mb-6">
                   <span className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     {tech.category}
-                  </span>
-                </div>
-
-                <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-emerald-400">Key Features:</h4>
                   <ul className="space-y-2">
                     {tech.features.map((feature, index) => (
@@ -237,20 +182,10 @@ const UltimateTechShowcase2026: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-400">Impact Level:</span>
                   <span className="text-sm font-semibold text-emerald-400">{tech.impact}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
         {/* Call to Action */}
-          </div>
-        <div className="container mx-auto px-4 py-20">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -260,22 +195,16 @@ const UltimateTechShowcase2026: React.FC = () => {
             <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
               Join us in exploring these revolutionary technologies and discover how they can transform your business and unlock unprecedented possibilities.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Schedule Demo
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
                 Contact Our Experts
-              </button>
-            </div>
           </motion.div>
-        </div>
       </div>
     </>
   );
   };
 export default UltimateTechShowcase2026;
 };
-
-export default UltimateTechShowcase2026;

@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
 import { Loader2, Sparkles } from 'lucide-react';
-
 interface EnhancedLoadingProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple';
@@ -12,7 +11,6 @@ interface EnhancedLoadingProps {
   progress?: number;
   className?: string;
 }
-
 export function EnhancedLoading({
   size = 'md',
   variant = 'spinner',
@@ -27,14 +25,11 @@ export function EnhancedLoading({
     lg: 'w-8 h-8',
     xl: 'w-12 h-12'
   };
-
   const textSizes = {
     sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg',
     xl: 'text-xl'
-  };
-
   const renderSpinner = () => (
     <motion.div
       animate={{ rotate: 360 }}
@@ -42,7 +37,6 @@ export function EnhancedLoading({
       className={cn('border-2 border-zion-blue-light/20 border-t-zion-cyan rounded-full', sizeClasses[size])}
     />
   );
-
   const renderDots = () => (
     <div className="flex space-x-1">
       {[0, 1, 2].map((i) => (
@@ -57,15 +51,11 @@ export function EnhancedLoading({
             repeat: Infinity,
             delay: i * 0.2,
             ease: 'easeInOut'
-          }}
           className={cn('bg-zion-cyan rounded-full', sizeClasses[size])}
         />
       ))}
     </div>
-  );
-
   const renderPulse = () => (
-    <motion.div
       animate={{
         scale: [1, 1.1, 1],
         opacity: [0.7, 1, 0.7]
@@ -74,32 +64,14 @@ export function EnhancedLoading({
         duration: 2,
         repeat: Infinity,
         ease: 'easeInOut'
-      }}
       className={cn('bg-zion-cyan rounded-full', sizeClasses[size])}
-    />
-  );
-
   const renderBars = () => (
-    <div className="flex space-x-1">
       {[0, 1, 2, 3].map((i) => (
-        <motion.div
-          key={i}
-          animate={{
             height: ['20%', '100%', '20%']
-          }}
-          transition={{
             duration: 1.2,
-            repeat: Infinity,
             delay: i * 0.1,
-            ease: 'easeInOut'
-          }}
           className="w-1 bg-zion-cyan rounded-full"
           style={{ height: sizeClasses[size].split(' ')[1] }}
-        />
-      ))}
-    </div>
-  );
-
   const renderRipple = () => (
     <div className="relative">
       <motion.div
@@ -111,26 +83,11 @@ export function EnhancedLoading({
           duration: 1.5,
           repeat: Infinity,
           ease: 'easeOut'
-        }}
         className={cn('absolute inset-0 bg-zion-cyan rounded-full', sizeClasses[size])}
       />
-      <motion.div
-        animate={{
           scale: [1, 1.5],
-          opacity: [1, 0]
-        }}
-        transition={{
-          duration: 1.5,
-          repeat: Infinity,
           delay: 0.5,
-          ease: 'easeOut'
-        }}
-        className={cn('absolute inset-0 bg-zion-cyan rounded-full', sizeClasses[size])}
-      />
       <div className={cn('relative bg-zion-cyan rounded-full', sizeClasses[size])} />
-    </div>
-  );
-
   const renderVariant = () => {
     switch (variant) {
       case 'dots':
@@ -144,8 +101,6 @@ export function EnhancedLoading({
       default:
         return renderSpinner();
     }
-  };
-
   return (
     <div className={cn('flex flex-col items-center justify-center', className)}>
       <div className="relative">
@@ -160,7 +115,6 @@ export function EnhancedLoading({
           </motion.div>
         )}
       </div>
-
       {text && (
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -171,14 +125,11 @@ export function EnhancedLoading({
           {text}
         </motion.p>
       )}
-
       {showProgress && (
-        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
           className="mt-4 w-full max-w-xs"
-        >
           <div className="w-full bg-zion-blue-light/20 rounded-full h-2">
             <motion.div
               className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
@@ -191,7 +142,3 @@ export function EnhancedLoading({
             {Math.round(progress)}% Complete
           </p>
         </motion.div>
-      )}
-    </div>
-  );
-}

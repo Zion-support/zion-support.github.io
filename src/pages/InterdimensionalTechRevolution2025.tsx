@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header';
-import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedFooter from '@/components/EnhancedFooter';
 
 const InterdimensionalTechRevolution2025: React.FC = () => {
   return (
@@ -21,7 +21,6 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             The first system to achieve true multiverse navigation.
           </p>
         </div>
-
         {/* Revolutionary Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -36,37 +35,27 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
               <li>• Dimension hopping</li>
               <li>• Reality navigation</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Reality Manipulation</h3>
             <p className="text-indigo-100 mb-6 text-center">
               Manipulate the fundamental structure of reality across dimensions
-            </p>
             <ul className="text-indigo-200 space-y-2 text-sm">
               <li>• Physics law modification</li>
               <li>• Reality restructuring</li>
               <li>• Dimension merging</li>
               <li>• Universe creation</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Multiverse Computing</h3>
             <p className="text-blue-100 mb-6 text-center">
               Infinite computational power through parallel universe processing
-            </p>
             <ul className="text-blue-200 space-y-2 text-sm">
               <li>• Parallel processing</li>
               <li>• Infinite resources</li>
               <li>• Multiverse simulation</li>
               <li>• Reality optimization</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Advanced Capabilities */}
         <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center text-white mb-8">Revolutionary Capabilities</h2>
@@ -79,47 +68,22 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
                   <p className="text-purple-200">Explore infinite parallel universes and alternate realities</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🔬</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Reality Research</h3>
                   <p className="text-purple-200">Study the fundamental nature of reality across dimensions</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">⚡</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Energy Harvesting</h3>
                   <p className="text-purple-200">Harvest infinite energy from parallel universes</p>
-                </div>
-              </div>
             </div>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🧠</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Consciousness Transfer</h3>
                   <p className="text-purple-200">Transfer consciousness between dimensions and realities</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🚀</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Instantaneous Travel</h3>
                   <p className="text-purple-200">Travel instantly between any points in the multiverse</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
                 <div className="text-3xl">🔮</div>
-                <div>
                   <h3 className="text-xl font-bold text-white mb-2">Future Prediction</h3>
                   <p className="text-purple-200">Predict outcomes by analyzing parallel timelines</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Showcase */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/20 to-indigo-600/20 rounded-2xl p-8">
@@ -127,46 +91,21 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             <p className="text-purple-200 mb-6">
               Advanced interdimensional gateway technology that creates stable portals between 
               different realities, enabling safe and controlled multiverse navigation.
-            </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                 <span className="text-purple-200">Stable dimension portals</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                 <span className="text-purple-200">Reality synchronization</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                 <span className="text-purple-200">Safe multiverse travel</span>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-600/20 to-blue-600/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Multiverse Computing Network</h3>
             <p className="text-indigo-200 mb-6">
               Revolutionary computing network that harnesses the computational power of 
               infinite parallel universes for unlimited processing capabilities.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
                 <span className="text-indigo-200">Infinite processing power</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
                 <span className="text-indigo-200">Parallel universe simulation</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
                 <span className="text-indigo-200">Reality optimization</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl p-12">
@@ -174,22 +113,15 @@ const InterdimensionalTechRevolution2025: React.FC = () => {
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
               Access infinite parallel realities and dimensions. Experience the power to navigate 
               the multiverse and harness unlimited resources from parallel universes.
-            </p>
             <div className="flex flex-wrap justify-center gap-4">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-purple-100 transition-colors">
                 Explore Technology
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
                 Learn More
-              </button>
-            </div>
-          </div>
-        </div>
       </main>
-
       <EnhancedFooter />
     </div>
   );
 };
-
 export default InterdimensionalTechRevolution2025;

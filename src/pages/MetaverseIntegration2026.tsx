@@ -24,12 +24,9 @@ const MetaverseIntegration2026: React.FC = () => {
               </button>
               <button className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-xl hover:bg-cyan-400 hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
                 Watch Trailer
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Features Grid */}
       <div className="container mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -38,145 +35,50 @@ const MetaverseIntegration2026: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">Infinite Virtual Worlds</h3>
             <p className="text-cyan-200 mb-6">
               Explore limitless virtual environments with photorealistic graphics, dynamic weather systems, and procedurally generated landscapes.
-            </p>
             <div className="space-y-2">
               <div className="flex items-center text-sm text-cyan-300">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Photorealistic Rendering
               </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Dynamic Ecosystems
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Procedural Generation
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
             <div className="text-4xl mb-4">👥</div>
             <h3 className="text-2xl font-bold mb-4">Social VR Integration</h3>
-            <p className="text-cyan-200 mb-6">
               Connect with millions of users worldwide through advanced social VR features, realistic avatars, and natural communication systems.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Realistic Avatars
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Voice & Gesture Recognition
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Global Social Networks
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
             <div className="text-4xl mb-4">💼</div>
             <h3 className="text-2xl font-bold mb-4">Virtual Workspaces</h3>
-            <p className="text-cyan-200 mb-6">
               Transform your work experience with immersive virtual offices, collaborative spaces, and advanced productivity tools.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Immersive Meetings
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 3D Data Visualization
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Virtual Whiteboards
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
             <div className="text-4xl mb-4">🎮</div>
             <h3 className="text-2xl font-bold mb-4">Gaming & Entertainment</h3>
-            <p className="text-cyan-200 mb-6">
               Experience next-generation gaming with full-body tracking, haptic feedback, and AI-powered NPCs that learn and adapt.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Full-Body Tracking
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Haptic Feedback Systems
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 AI-Powered NPCs
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
             <div className="text-4xl mb-4">🏛️</div>
             <h3 className="text-2xl font-bold mb-4">Virtual Education</h3>
-            <p className="text-cyan-200 mb-6">
               Revolutionize learning with immersive educational experiences, virtual field trips, and interactive 3D learning environments.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Virtual Classrooms
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Historical Simulations
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Interactive Laboratories
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white border border-white/20">
             <div className="text-4xl mb-4">🛒</div>
             <h3 className="text-2xl font-bold mb-4">Virtual Commerce</h3>
-            <p className="text-cyan-200 mb-6">
               Shop in immersive virtual stores, try products in 3D, and experience the future of e-commerce with AR/VR integration.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 3D Product Visualization
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Virtual Try-On
-              </div>
-              <div className="flex items-center text-sm text-cyan-300">
-                <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                 Cryptocurrency Payments
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Technology Showcase */}
-      <div className="container mx-auto px-4 py-20">
         <div className="text-center text-white mb-16">
           <h2 className="text-5xl font-bold mb-6">Advanced Metaverse Technology</h2>
           <p className="text-xl text-cyan-200 max-w-4xl mx-auto">
             Our metaverse platform combines cutting-edge VR/AR technology, blockchain integration, and AI-powered systems 
             to create the most immersive and realistic virtual experiences ever developed.
           </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -186,33 +88,15 @@ const MetaverseIntegration2026: React.FC = () => {
               </p>
               <div className="w-full bg-cyan-900/50 rounded-full h-3 mb-2">
                 <div className="bg-gradient-to-r from-cyan-500 to-purple-500 h-3 rounded-full" style={{width: '98%'}}></div>
-              </div>
               <span className="text-sm text-cyan-300">98% Spatial Accuracy</span>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🔗 Blockchain Integration</h3>
-              <p className="text-cyan-200 mb-4">
                 Secure blockchain technology for virtual asset ownership, NFT trading, and decentralized virtual economies.
-              </p>
-              <div className="w-full bg-cyan-900/50 rounded-full h-3 mb-2">
                 <div className="bg-gradient-to-r from-cyan-500 to-purple-500 h-3 rounded-full" style={{width: '96%'}}></div>
-              </div>
               <span className="text-sm text-cyan-300">96% Security Rating</span>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🤖 AI-Powered Worlds</h3>
-              <p className="text-cyan-200 mb-4">
                 Intelligent virtual environments that adapt and evolve based on user behavior and preferences.
-              </p>
-              <div className="w-full bg-cyan-900/50 rounded-full h-3 mb-2">
                 <div className="bg-gradient-to-r from-cyan-500 to-purple-500 h-3 rounded-full" style={{width: '94%'}}></div>
-              </div>
               <span className="text-sm text-cyan-300">94% AI Responsiveness</span>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 text-center">
             <div className="text-8xl mb-6">🌐</div>
             <h3 className="text-3xl font-bold text-white mb-4">Metaverse Metrics</h3>
@@ -220,94 +104,46 @@ const MetaverseIntegration2026: React.FC = () => {
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold text-cyan-300">50M+</div>
                 <div className="text-sm text-cyan-200">Active Users</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold text-cyan-300">1000+</div>
                 <div className="text-sm text-cyan-200">Virtual Worlds</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold text-cyan-300">99.9%</div>
                 <div className="text-sm text-cyan-200">Uptime</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold text-cyan-300">4K</div>
                 <div className="text-sm text-cyan-200">Resolution</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Use Cases */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center text-white mb-16">
           <h2 className="text-5xl font-bold mb-6">Metaverse Applications</h2>
-          <p className="text-xl text-cyan-200 max-w-4xl mx-auto">
             Discover how our metaverse platform is transforming industries and creating new possibilities for human interaction and collaboration.
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center text-white border border-white/20">
             <div className="text-5xl mb-4">🏥</div>
             <h3 className="text-xl font-bold mb-3">Healthcare</h3>
             <p className="text-cyan-200 text-sm">
               Virtual medical consultations, therapy sessions, and surgical training in immersive environments.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center text-white border border-white/20">
             <div className="text-5xl mb-4">🎓</div>
             <h3 className="text-xl font-bold mb-3">Education</h3>
-            <p className="text-cyan-200 text-sm">
               Immersive learning experiences, virtual field trips, and interactive educational content.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center text-white border border-white/20">
             <div className="text-5xl mb-4">🏢</div>
             <h3 className="text-xl font-bold mb-3">Business</h3>
-            <p className="text-cyan-200 text-sm">
               Virtual offices, remote collaboration, and immersive business presentations.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center text-white border border-white/20">
             <div className="text-5xl mb-4">🎨</div>
             <h3 className="text-xl font-bold mb-3">Creative Arts</h3>
-            <p className="text-cyan-200 text-sm">
               Virtual art galleries, 3D design tools, and collaborative creative spaces.
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-20">
         <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12 text-center text-white">
           <h2 className="text-4xl font-bold mb-6">Enter the Metaverse Today</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Join millions of users in the most advanced metaverse platform. Experience the future of virtual reality and digital interaction.
-          </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-white text-cyan-600 px-8 py-4 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
               Start Your Journey
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
               Download App
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Footer */}
       <div className="bg-black/50 py-8">
         <div className="container mx-auto px-4 text-center text-white">
           <p>&copy; 2026 Zion Tech Group. All rights reserved. | Metaverse Integration Revolution</p>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default MetaverseIntegration2026;

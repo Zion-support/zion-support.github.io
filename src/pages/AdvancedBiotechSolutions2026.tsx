@@ -10,5 +10,4 @@ const AdvancedBiotechSolutions2026 = () => {
     </div>
   );
 };
-
 export default AdvancedBiotechSolutions2026;

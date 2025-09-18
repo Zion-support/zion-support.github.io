@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const DynamicContentCarousel2025: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const carouselItems = [
     {
       id: 'conscious-ai',
@@ -18,7 +17,6 @@ const DynamicContentCarousel2025: React.FC = () => {
       link: '/pages/RevolutionaryTechBreakthrough2025',
       cta: 'Explore AI Revolution →'
     },
-    {
       id: 'quantum-computing',
       title: 'Quantum Consciousness',
       subtitle: 'Revolutionary quantum computing that processes reality itself',
@@ -28,10 +26,7 @@ const DynamicContentCarousel2025: React.FC = () => {
       bgColor: 'from-cyan-600/20 to-blue-600/20',
       borderColor: 'border-cyan-400/30',
       features: ['Quantum Neural Networks', 'Reality Simulation', 'Consciousness Transfer', 'Multi-Dimensional Processing'],
-      link: '/pages/RevolutionaryTechBreakthrough2025',
       cta: 'Go Quantum →'
-    },
-    {
       id: 'interdimensional',
       title: 'Interdimensional Technology',
       subtitle: 'Transcend dimensional boundaries for infinite power',
@@ -41,10 +36,7 @@ const DynamicContentCarousel2025: React.FC = () => {
       bgColor: 'from-emerald-600/20 to-teal-600/20',
       borderColor: 'border-emerald-400/30',
       features: ['Infinite Resources', 'Cross-Dimensional Transfer', 'Reality Manipulation', 'Universal Access'],
-      link: '/pages/RevolutionaryTechBreakthrough2025',
       cta: 'Enter New Dimension →'
-    },
-    {
       id: 'neural-interface',
       title: 'Neural Interface Revolution',
       subtitle: 'Direct brain-computer interfaces for thought control',
@@ -54,10 +46,7 @@ const DynamicContentCarousel2025: React.FC = () => {
       bgColor: 'from-orange-600/20 to-red-600/20',
       borderColor: 'border-orange-400/30',
       features: ['Thought Control', 'Neural Feedback', 'Memory Enhancement', 'Telepathic Communication'],
-      link: '/pages/RevolutionaryTechBreakthrough2025',
       cta: 'Connect Mind & Machine →'
-    },
-    {
       id: 'reality-engine',
       title: 'Reality Engine 2025',
       subtitle: 'Manipulate the fabric of space and time',
@@ -67,34 +56,23 @@ const DynamicContentCarousel2025: React.FC = () => {
       bgColor: 'from-violet-600/20 to-purple-600/20',
       borderColor: 'border-violet-400/30',
       features: ['Reality Simulation', 'Time Manipulation', 'Space Bending', 'Dimension Creation'],
-      link: '/pages/RevolutionaryTechBreakthrough2025',
       cta: 'Manipulate Reality →'
     }
   ];
-
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
     }, 6000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, carouselItems.length]);
-
   const handleSlideChange = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
-
   const handleMouseEnter = () => {
-    setIsAutoPlaying(false);
-  };
-
   const handleMouseLeave = () => {
     setIsAutoPlaying(true);
-  };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -110,7 +88,6 @@ const DynamicContentCarousel2025: React.FC = () => {
             Discover our revolutionary technologies through an interactive, dynamic showcase that adapts to your interests
           </p>
         </div>
-
         {/* Main Carousel */}
         <div 
           className="relative overflow-hidden rounded-2xl"
@@ -142,7 +119,6 @@ const DynamicContentCarousel2025: React.FC = () => {
                           </div>
                         ))}
                       </div>
-                      
                       {/* CTA Button */}
                       <a
                         href={item.link}
@@ -151,24 +127,18 @@ const DynamicContentCarousel2025: React.FC = () => {
                         {item.cta}
                       </a>
                     </div>
-
                     {/* Visual Element */}
                     <div className="relative">
                       <div className="w-full h-96 bg-gradient-to-br from-white/10 to-white/5 rounded-xl flex items-center justify-center">
                         <div className="text-9xl animate-pulse">{item.image}</div>
-                      </div>
-                      
                       {/* Floating Elements */}
                       <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full animate-ping"></div>
                       <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full animate-bounce"></div>
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-emerald-500/30 to-teal-500/30 rounded-full animate-pulse"></div>
-                    </div>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-3 mt-8">
             {carouselItems.map((_, index) => (
@@ -181,51 +151,31 @@ const DynamicContentCarousel2025: React.FC = () => {
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
               />
-            ))}
-          </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={() => handleSlideChange((currentSlide - 1 + carouselItems.length) % carouselItems.length)}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-3 transition-all duration-300"
-          >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           
-          <button
             onClick={() => handleSlideChange((currentSlide + 1) % carouselItems.length)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-3 transition-all duration-300"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-
         {/* Statistics */}
         <div className="mt-16 grid md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
             <div className="text-sm opacity-75">Revolutionary Technologies</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
             <div className="text-sm opacity-75">Success Rate</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-emerald-400 mb-2">∞</div>
             <div className="text-sm opacity-75">Possibilities</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-orange-400 mb-2">2025</div>
             <div className="text-sm opacity-75">Future is Now</div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default DynamicContentCarousel2025;

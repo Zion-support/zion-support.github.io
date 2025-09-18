@@ -16,7 +16,6 @@ export default function PublishProduct() {
     // Redirect to login if not authenticated
     if (!isAuthenticated) {
         return <Navigate to="/login" state={{ from: '/publish' }} replace/>;
-    }
     return (<div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO title="Publish Your Product" description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals." keywords="publish product, sell online, digital marketplace, AI tools, tech services"/>
       
@@ -30,8 +29,6 @@ export default function PublishProduct() {
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">
             <ProductSubmissionForm />
           </div>
-        </div>
       </main>
-      
     </div>);
 }

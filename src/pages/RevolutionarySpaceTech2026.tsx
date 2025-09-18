@@ -4,12 +4,10 @@ import { motion } from 'framer-motion';
 const RevolutionarySpaceTech2026: React.FC = () => {
   const [activeMission, setActiveMission] = useState('mars');
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
-
   const spaceMissions = [
     {
       id: 'mars',
@@ -20,7 +18,6 @@ const RevolutionarySpaceTech2026: React.FC = () => {
       technologies: ['Advanced Life Support', '3D Printing Habitats', 'Mars Agriculture', 'Nuclear Power'],
       status: 'In Progress'
     },
-    {
       id: 'europa',
       name: 'Europa Exploration',
       description: 'Searching for life in Europa\'s subsurface ocean',
@@ -28,8 +25,6 @@ const RevolutionarySpaceTech2026: React.FC = () => {
       timeline: '2026-2028',
       technologies: ['Ice Penetrating Radar', 'Submarine Drones', 'Life Detection Systems', 'Cryogenic Storage'],
       status: 'Planning'
-    },
-    {
       id: 'asteroid',
       name: 'Asteroid Mining',
       description: 'Extracting rare minerals from near-Earth asteroids',
@@ -37,8 +32,6 @@ const RevolutionarySpaceTech2026: React.FC = () => {
       timeline: '2026-2029',
       technologies: ['Autonomous Mining Rovers', 'Zero-G Processing', 'Orbital Refineries', 'Space Tugs'],
       status: 'Development'
-    },
-    {
       id: 'exoplanet',
       name: 'Exoplanet Discovery',
       description: 'Finding and analyzing habitable exoplanets',
@@ -48,58 +41,38 @@ const RevolutionarySpaceTech2026: React.FC = () => {
       status: 'Research'
     }
   ];
-
   const breakthroughTechnologies = [
-    {
       title: 'Fusion Propulsion',
       description: 'Revolutionary fusion engines enabling rapid interplanetary travel',
       icon: '⚡',
       benefits: ['10x faster than chemical rockets', 'Unlimited fuel from hydrogen', 'Reduced radiation exposure', 'Cost-effective space travel']
-    },
-    {
       title: 'Artificial Gravity',
       description: 'Rotating space stations and ships with Earth-like gravity',
-      icon: '🌍',
       benefits: ['Prevents bone loss', 'Maintains muscle mass', 'Improves crew health', 'Enables long-term missions']
-    },
-    {
       title: 'Space Elevators',
       description: 'Carbon nanotube cables connecting Earth to space',
       icon: '🛗',
       benefits: ['99% cost reduction', 'Frequent launches', 'No rocket pollution', 'Massive cargo capacity']
-    },
-    {
       title: 'Warp Drive',
       description: 'Theoretical faster-than-light travel using spacetime manipulation',
       icon: '🚀',
       benefits: ['Interstellar travel', 'Time dilation effects', 'Galactic exploration', 'Human expansion']
-    }
-  ];
-
   const spaceStations = [
-    {
       name: 'Lunar Gateway',
       location: 'Lunar Orbit',
       purpose: 'Moon base and deep space launch platform',
       capacity: '4-6 astronauts',
       features: ['Lunar landing capability', 'Deep space missions', 'Research facilities', 'Fuel depot']
-    },
-    {
       name: 'Mars Orbital Station',
       location: 'Mars Orbit',
       purpose: 'Mars surface mission coordination',
       capacity: '8-12 astronauts',
       features: ['Mars surface access', 'Cargo handling', 'Emergency shelter', 'Communication hub']
-    },
-    {
       name: 'Asteroid Mining Station',
       location: 'Near-Earth Asteroid',
       purpose: 'Asteroid resource extraction and processing',
       capacity: '6-8 astronauts',
       features: ['Mining operations', 'Processing facilities', 'Cargo storage', 'Refueling station']
-    }
-  ];
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex items-center justify-center">
@@ -111,7 +84,6 @@ const RevolutionarySpaceTech2026: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
       {/* Hero Section */}
@@ -145,12 +117,9 @@ const RevolutionarySpaceTech2026: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg">
                 Watch Launch
-              </button>
             </div>
           </div>
-        </div>
       </motion.div>
-
       {/* Mission Navigation */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex justify-center mb-12">
@@ -167,11 +136,7 @@ const RevolutionarySpaceTech2026: React.FC = () => {
               >
                 <span className="mr-2">{mission.icon}</span>
                 {mission.name}
-              </button>
             ))}
-          </div>
-        </div>
-
         {/* Mission Details */}
         <motion.div
           key={activeMission}
@@ -193,7 +158,6 @@ const RevolutionarySpaceTech2026: React.FC = () => {
                     </span>
                     <span className="px-4 py-2 bg-green-500 text-white rounded-full text-sm font-semibold">
                       {mission.status}
-                    </span>
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8">
@@ -206,34 +170,20 @@ const RevolutionarySpaceTech2026: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
-                  <div>
                     <h3 className="text-2xl font-bold text-white mb-4">Mission Impact</h3>
                     <ul className="space-y-3 text-blue-200">
                       <li className="flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         Revolutionary space exploration
                       </li>
-                      <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         Human expansion beyond Earth
-                      </li>
-                      <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         Scientific discoveries
-                      </li>
-                      <li className="flex items-center">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         Economic opportunities
-                      </li>
                     </ul>
-                  </div>
-                </div>
               </div>
             )
           ))}
         </motion.div>
-
         {/* Breakthrough Technologies */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Breakthrough Technologies</h2>
@@ -245,7 +195,6 @@ const RevolutionarySpaceTech2026: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
-              >
                 <div className="text-6xl mb-4 text-center">{tech.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-center text-white">{tech.title}</h3>
                 <p className="text-purple-100 mb-6 text-center">{tech.description}</p>
@@ -258,45 +207,25 @@ const RevolutionarySpaceTech2026: React.FC = () => {
                   ))}
                 </ul>
               </motion.div>
-            ))}
-          </div>
-        </div>
-
         {/* Space Stations */}
-        <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Space Infrastructure</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {spaceStations.map((station, index) => (
-              <motion.div
-                key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
                 className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
-              >
                 <h3 className="text-2xl font-bold mb-4 text-center text-white">{station.name}</h3>
                 <div className="text-center mb-6">
                   <span className="px-4 py-2 bg-cyan-500 text-white rounded-full text-sm font-semibold">
                     {station.location}
                   </span>
-                </div>
                 <p className="text-cyan-100 mb-6 text-center">{station.purpose}</p>
                 <div className="mb-4">
                   <span className="text-cyan-200 font-semibold">Capacity: {station.capacity}</span>
-                </div>
-                <ul className="space-y-2">
                   {station.features.map((feature, i) => (
                     <li key={i} className="text-cyan-200 flex items-center text-sm">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                       {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
         {/* Future Vision */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -311,22 +240,13 @@ const RevolutionarySpaceTech2026: React.FC = () => {
               <div className="text-6xl mb-4">🌍</div>
               <h3 className="text-2xl font-bold text-white mb-4">Multi-Planetary Species</h3>
               <p className="text-purple-200">Human civilization expanding across the solar system</p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl mb-4">💰</div>
               <h3 className="text-2xl font-bold text-white mb-4">Space Economy</h3>
               <p className="text-purple-200">Trillion-dollar space industry driving innovation</p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl mb-4">🔬</div>
               <h3 className="text-2xl font-bold text-white mb-4">Scientific Discovery</h3>
               <p className="text-purple-200">Revolutionary discoveries about the universe</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionarySpaceTech2026;

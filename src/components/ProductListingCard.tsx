@@ -23,20 +23,15 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             setImageSrc('/placeholder.svg');
             setImageError(true);
         }
-    };
     const handleViewListing = () => {
         navigate(`${detailBasePath}/${listing.id}`);
-    };
     const handleRequestQuote = (e) => {
         e.preventDefault();
         e.stopPropagation();
         if (onRequestQuote) {
             onRequestQuote(listing.id);
-        }
         else {
             navigate(`/request-quote?listing=${listing.id}`);
-        }
-    };
     const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
     return (<div data-testid="equipment-link" className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`} onClick={handleViewListing} tabIndex={0} role="button" onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -48,11 +43,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
       <div className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'} onClick={handleViewListing} // Keep existing onClick for navigation
      role="button" tabIndex={-1} // Remove from tab order as parent is focusable
      onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                handleViewListing();
-            }
-        }}>
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <img src={imageSrc} alt={listing.title} className="w-full h-full object-cover" onError={handleImageError} />
           {listing.featured && (<Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
@@ -78,18 +68,15 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
-          </div>
           <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
             {listing.description}
           </p>
-          
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (<div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (<span key={idx} className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full">
                   {tag}
                 </span>))}
             </div>)}
-        </div>
         
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
@@ -98,10 +85,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
                 <DollarSign className="h-4 w-4 mr-1"/>
                 {formatPrice()}
               </div>) : (<span className="text-foreground/80">
-                {formatPrice()}
               </span>)}
-          </div>
-          
           <div className="flex gap-2">
             <Button size="sm" className="bg-primary hover:bg-primary/80 text-primary-foreground" onClick={(e) => {
             e.stopPropagation();
@@ -118,9 +102,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             {onRequestQuote && (<Button size="sm" variant="outline" onClick={handleRequestQuote} className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground">
                 Request Quote
               </Button>)}
-          </div>
-        </div>
-      </div>
     </div>);
 }
 

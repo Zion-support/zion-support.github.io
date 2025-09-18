@@ -23,10 +23,8 @@ import {
 interface SidebarProps {
   className?: string;
 }
-
 export function Sidebar({ className }: SidebarProps) {
   const location = useLocation();
-
   const navigationItems = [
     {
       title: 'Main',
@@ -37,25 +35,17 @@ export function Sidebar({ className }: SidebarProps) {
         { name: 'Contact', href: '/contact', icon: MessageSquare },
       ]
     },
-    {
       title: 'Services',
-      items: [
         { name: 'AI Solutions', href: '/services/ai', icon: Brain },
         { name: 'Cloud Infrastructure', href: '/services/cloud', icon: Cloud },
         { name: 'Cybersecurity', href: '/services/security', icon: Shield },
         { name: 'Digital Transformation', href: '/services/transformation', icon: Zap },
-      ]
-    },
-    {
       title: 'Support',
-      items: [
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'FAQ', href: '/faq', icon: FileText },
         { name: 'Request Quote', href: '/quote', icon: FileText },
-      ]
     }
   ];
-
   return (
     <aside className={cn("w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4", className)}>
       <div className="mb-6">
@@ -99,4 +89,3 @@ export function Sidebar({ className }: SidebarProps) {
       </nav>
     </aside>
   );
-}

@@ -41,7 +41,7 @@ import {
   Network,
   Shield
 } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '@/components/SEOHead';
 
 const AIAutonomousResearchAssistant: React.FC = () => {
   return (
@@ -69,12 +69,10 @@ const AIAutonomousResearchAssistant: React.FC = () => {
                 </button>
                 <button className="border border-gray-300 text-white hover:bg-gray-800 px-8 py-3 rounded-lg font-semibold transition-colors">
                   Learn More
-                </button>
               </div>
             </div>
           </div>
         </section>
-
         {/* Features Section */};
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -88,42 +86,24 @@ const AIAutonomousResearchAssistant: React.FC = () => {
                 <p className="text-gray-300">
                   AI conducts comprehensive research across multiple sources and databases automatically.
                 </p>
-              </div>
-              <div className="bg-gray-800 p-6 rounded-lg">
                 <Search className="h-12 w-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Intelligent Search</h3>
-                <p className="text-gray-300">
                   Advanced search algorithms find the most relevant and accurate information.
-                </p>
-              </div>
-              <div className="bg-gray-800 p-6 rounded-lg">
                 <BarChart3 className="h-12 w-12 text-blue-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Data Analysis</h3>
-                <p className="text-gray-300">
                   Sophisticated analysis of research data to extract meaningful insights.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */};
-        <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Research Process?
-            </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI research assistant.
             </p>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Start Your Free Trial
             </button>
-          </div>
-        </section>
       </div>
     </>
   );
 };
-
 export default AIAutonomousResearchAssistant;

@@ -8,11 +8,7 @@
         description;
     'Consistently exceeding client expectations and needs';
 }
-{
     '100%',
-        label;
     'Carbon Neutral',
-        description;
     'Committed to sustainable technology development';
-}
 export {};

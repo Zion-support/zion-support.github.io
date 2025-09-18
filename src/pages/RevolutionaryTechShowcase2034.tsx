@@ -13,7 +13,6 @@
               </button>
               <button className="border-2 border-white text-white px-12 py-6 rounded-2xl text-2xl font-bold hover:bg-white hover:text-indigo-900 transition-all duration-300">
                 Learn More
-              </button>
             </div>
           </div>
         </div>
@@ -21,5 +20,4 @@
     </>
   );
 };
-
 export default RevolutionaryTechShowcase2034;

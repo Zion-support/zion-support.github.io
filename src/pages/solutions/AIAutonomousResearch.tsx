@@ -8,31 +8,22 @@ const AIAutonomousResearch = () => {
             description: "AI systems that independently conduct research and generate insights",
             benefits: ["24/7 research operation", "Data-driven insights", "Pattern recognition", "Hypothesis generation"]
         },
-        {
             icon: Zap,
             title: "Automated Experimentation",
             description: "Self-running experiments with continuous optimization and learning",
             benefits: ["Parameter optimization", "Result analysis", "Iterative improvement", "Efficiency gains"]
-        },
-        {
             icon: Target,
             title: "Predictive Modeling",
             description: "Advanced AI models that predict research outcomes and trends",
             benefits: ["Outcome prediction", "Risk assessment", "Resource optimization", "Strategic planning"]
-        },
-        {
             icon: Shield,
             title: "Data Security & Privacy",
             description: "Secure handling of sensitive research data with privacy protection",
             benefits: ["Data encryption", "Access control", "Compliance management", "Audit trails"]
-        },
-        {
             icon: Users,
             title: "Collaborative Research",
             description: "AI-facilitated collaboration across research teams and institutions",
             benefits: ["Team coordination", "Knowledge sharing", "Resource pooling", "Cross-disciplinary insights"]
-        },
-        {
             icon: Globe,
             title: "Global Research Network",
             description: "Connect with research institutions worldwide through AI-powered platforms",
@@ -40,37 +31,24 @@ const AIAutonomousResearch = () => {
         }
     ];
     const applications = [
-        {
             title: "Scientific Research",
             description: "Automated hypothesis testing and experimental design",
             icon: Lightbulb
-        },
-        {
             title: "Medical Research",
             description: "Drug discovery and clinical trial optimization",
             icon: Shield
-        },
-        {
             title: "Academic Research",
             description: "Literature review and knowledge synthesis automation",
             icon: BookOpen
-        },
-        {
             title: "Market Research",
             description: "Consumer behavior analysis and trend prediction",
             icon: BarChart3
-        },
-        {
             title: "Technology Research",
             description: "Innovation tracking and technology forecasting",
             icon: Cpu
-        },
-        {
             title: "Environmental Research",
             description: "Climate modeling and sustainability analysis",
             icon: Globe
-        }
-    ];
     const benefits = [
         "Accelerated research timelines and faster discoveries",
         "Reduced research costs and resource requirements",
@@ -78,7 +56,6 @@ const AIAutonomousResearch = () => {
         "24/7 autonomous operation and monitoring",
         "Cross-disciplinary insights and innovation",
         "Global collaboration and knowledge sharing"
-    ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -102,8 +79,6 @@ const AIAutonomousResearch = () => {
               </a>
               <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 Get Started
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -118,8 +93,6 @@ const AIAutonomousResearch = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive AI capabilities that enable truly autonomous research 
               across all domains and disciplines.
-            </p>
-          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {researchFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
@@ -135,38 +108,17 @@ const AIAutonomousResearch = () => {
                     </li>))}
                 </ul>
               </div>))}
-          </div>
-        </div>
-      </section>
-
       {/* Applications */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Research Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Discover how autonomous AI research systems are transforming 
               various fields and accelerating discoveries.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((app, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <app.icon className="w-8 h-8 text-white"/>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
                 <p className="text-gray-300">{app.description}</p>
-              </div>))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -182,7 +134,6 @@ const AIAutonomousResearch = () => {
                     {benefit}
                   </li>))}
               </ul>
-            </div>
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
               <div className="text-center">
                 <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
@@ -195,15 +146,8 @@ const AIAutonomousResearch = () => {
                   <p>• Advanced AI algorithms</p>
                   <p>• Autonomous discovery</p>
                   <p>• Continuous learning</p>
-                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Accelerate Your Research?
@@ -218,10 +162,6 @@ const AIAutonomousResearch = () => {
             </a>
             <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Solutions
-            </a>
-          </div>
-        </div>
-      </section>
     </div>);
 };
 // Icon components

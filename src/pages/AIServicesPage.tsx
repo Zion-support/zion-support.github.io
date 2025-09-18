@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
 const AIServices = [
@@ -15,7 +15,6 @@ const AIServices = [
         badge: "Popular",
         link: "/request-quote?service=ai-strategy"
     },
-    {
         title: "Custom AI Model Development",
         description: "Tailored machine learning models for your specific use case",
         price: "$5,000 - $50,000",
@@ -24,8 +23,6 @@ const AIServices = [
         category: "Development",
         badge: "Premium",
         link: "/request-quote?service=custom-ai-models"
-    },
-    {
         title: "Data Labeling & Annotation",
         description: "High-quality data preparation for machine learning projects",
         price: "$0.50 - $5.00 per item",
@@ -33,8 +30,6 @@ const AIServices = [
         icon: <FileText className="h-8 w-8 text-zion-blue"/>,
         category: "Data",
         link: "/request-quote?service=data-labeling"
-    },
-    {
         title: "AI-Powered Analytics",
         description: "Advanced business intelligence with machine learning insights",
         price: "$1,500 - $8,000/month",
@@ -43,8 +38,6 @@ const AIServices = [
         category: "Analytics",
         badge: "New",
         link: "/request-quote?service=ai-analytics"
-    },
-    {
         title: "Computer Vision Solutions",
         description: "Image and video analysis for automation and quality control",
         price: "$3,000 - $25,000",
@@ -52,8 +45,6 @@ const AIServices = [
         icon: <Eye className="h-8 w-8 text-zion-purple"/>,
         category: "Vision",
         link: "/request-quote?service=computer-vision"
-    },
-    {
         title: "Natural Language Processing",
         description: "Text analysis, chatbots, and language understanding systems",
         price: "$2,000 - $20,000",
@@ -61,8 +52,6 @@ const AIServices = [
         icon: <MessageSquare className="h-8 w-8 text-zion-blue"/>,
         category: "NLP",
         link: "/request-quote?service=nlp"
-    },
-    {
         title: "AI Ethics & Compliance",
         description: "Ensure your AI systems are fair, transparent, and compliant",
         price: "$1,500 - $10,000",
@@ -70,8 +59,6 @@ const AIServices = [
         icon: <Shield className="h-8 w-8 text-zion-cyan"/>,
         category: "Compliance",
         link: "/request-quote?service=ai-ethics"
-    },
-    {
         title: "AI Model Optimization",
         description: "Improve performance and efficiency of existing AI models",
         price: "$1,000 - $15,000",
@@ -79,8 +66,6 @@ const AIServices = [
         icon: <Zap className="h-8 w-8 text-zion-purple"/>,
         category: "Optimization",
         link: "/request-quote?service=model-optimization"
-    },
-    {
         title: "AI Training & Workshops",
         description: "Custom training programs for your team on AI technologies",
         price: "$500 - $3,000 per person",
@@ -88,17 +73,12 @@ const AIServices = [
         icon: <Users className="h-8 w-8 text-zion-blue"/>,
         category: "Training",
         link: "/request-quote?service=ai-training"
-    },
-    {
         title: "AI Integration Services",
         description: "Seamlessly integrate AI solutions into existing systems",
-        price: "$2,000 - $20,000",
         features: ["API development", "System integration", "Testing", "Maintenance"],
         icon: <Code className="h-8 w-8 text-zion-cyan"/>,
         category: "Integration",
         link: "/request-quote?service=ai-integration"
-    },
-    {
         title: "AI Security & Testing",
         description: "Comprehensive security testing for AI systems",
         price: "$1,500 - $12,000",
@@ -106,13 +86,10 @@ const AIServices = [
         icon: <Lock className="h-8 w-8 text-zion-purple"/>,
         category: "Security",
         link: "/request-quote?service=ai-security"
-    },
-    {
         title: "AI Content Generation",
         description: "Automated content creation for marketing and communication",
         price: "$500 - $5,000/month",
         features: ["Blog posts", "Social media content", "Product descriptions", "Multilingual support"],
-        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
         category: "Content",
         link: "/request-quote?service=ai-content"
     }
@@ -131,7 +108,6 @@ const categories = [
     { name: "Integration", value: "integration", icon: <Code className="h-4 w-4"/> },
     { name: "Security", value: "security", icon: <Lock className="h-4 w-4"/> },
     { name: "Content", value: "content", icon: <FileText className="h-4 w-4"/> }
-];
 export default function AIServicesPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredServices = selectedCategory === "all"
@@ -157,7 +133,6 @@ export default function AIServicesPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2"/>
               Get Consultation
-            </Button>
           </div>
         </div>
       </div>
@@ -171,8 +146,6 @@ export default function AIServicesPage() {
               {category.icon}
               {category.name}
             </Button>))}
-        </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredServices.map((service, index) => (<Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/50 backdrop-blur-sm">
@@ -196,7 +169,6 @@ export default function AIServicesPage() {
                 <div className="mb-4">
                   <p className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</p>
                   <p className="text-sm text-zion-slate-light">Starting price</p>
-                </div>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
@@ -212,8 +184,6 @@ export default function AIServicesPage() {
                 </Button>
               </div>
             </Card>))}
-        </div>
-
         {/* CTA Section */}
         <div className="text-center py-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -221,18 +191,10 @@ export default function AIServicesPage() {
           </h2>
           <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Our expert team can design and implement custom AI solutions tailored to your specific business needs.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white">
-              <MessageSquare className="h-5 w-5 mr-2"/>
               Schedule Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Code className="h-5 w-5 mr-2"/>
               View Case Studies
-            </Button>
-          </div>
-        </div>
-      </div>
     </div>);
 }

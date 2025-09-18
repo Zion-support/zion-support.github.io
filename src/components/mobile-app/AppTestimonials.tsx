@@ -15,20 +15,12 @@ export function AppTestimonials() {
             <div className="font-semibold">John Smith</div>
             <div className="text-sm text-gray-500">CEO, Tech Corp</div>
           </div>
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <p className="text-gray-600 mb-4">
               "The best mobile app I've ever used. Highly recommended!"
-            </p>
             <div className="font-semibold">Sarah Johnson</div>
             <div className="text-sm text-gray-500">Product Manager</div>
-          </div>
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <p className="text-gray-600 mb-4">
               "Amazing features and excellent user experience."
-            </p>
             <div className="font-semibold">Mike Davis</div>
             <div className="text-sm text-gray-500">Developer</div>
-          </div>
         </div>
       </div>
     </div>

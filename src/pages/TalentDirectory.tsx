@@ -36,32 +36,19 @@ const TalentDirectory = () => {
                   </p>
                 </div>
                 
-                <div className="text-center">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">📋</span>
-                  </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Detailed Profiles</h3>
-                  <p className="text-gray-600 text-sm">
                     View portfolios, work history, and verified credentials
-                  </p>
-                </div>
-                
-                <div className="text-center">
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">💬</span>
-                  </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Direct Contact</h3>
-                  <p className="text-gray-600 text-sm">
                     Message and connect with talent directly
-                  </p>
-                </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </>
   );
 };
-
 export default TalentDirectory;

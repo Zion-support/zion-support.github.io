@@ -4,14 +4,12 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubscribed(true);
     setIsLoading(false);
     setEmail('');
@@ -44,14 +42,11 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
           <div className="flex items-center justify-center space-x-3 mb-4">
             <span className="text-4xl animate-pulse">🚀</span>
             <h3 className="text-4xl font-bold">Join the Revolution</h3>
-            <span className="text-4xl animate-pulse">🚀</span>
           </div>
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">
             Be the first to experience the most advanced technologies in human history. 
             Get exclusive access to AI consciousness, quantum reality, and neural interfaces.
           </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -61,43 +56,24 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                   <span className="text-2xl">🧠</span>
                   <span>Early access to AI consciousness demos</span>
                 </li>
-                <li className="flex items-center space-x-3">
                   <span className="text-2xl">⚡</span>
                   <span>Quantum computing virtual experiences</span>
-                </li>
-                <li className="flex items-center space-x-3">
                   <span className="text-2xl">🧬</span>
                   <span>Neural interface prototype testing</span>
-                </li>
-                <li className="flex items-center space-x-3">
                   <span className="text-2xl">🌟</span>
                   <span>Direct communication with our AI systems</span>
-                </li>
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h4 className="text-2xl font-bold mb-4 text-purple-400">What You'll Receive</h4>
-              <ul className="space-y-3">
-                <li className="flex items-center space-x-3">
                   <span className="text-2xl">📧</span>
                   <span>Weekly technology updates and insights</span>
-                </li>
-                <li className="flex items-center space-x-3">
                   <span className="text-2xl">🎥</span>
                   <span>Exclusive video demonstrations</span>
-                </li>
-                <li className="flex items-center space-x-3">
                   <span className="text-2xl">🎯</span>
                   <span>Priority access to new features</span>
-                </li>
-                <li className="flex items-center space-x-3">
                   <span className="text-2xl">🤝</span>
                   <span>Invitation to our exclusive community</span>
-                </li>
-              </ul>
-            </div>
-          </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
             <h4 className="text-2xl font-bold mb-6 text-center text-white">Get Started Today</h4>
@@ -128,21 +104,9 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                     I agree to receive updates about revolutionary technologies and consent to 
                     the processing of my data for this purpose.
                   </span>
-                </label>
                 
-                <label className="flex items-start space-x-3">
-                  <input
-                    type="checkbox"
-                    className="mt-1 w-5 h-5 text-cyan-500 bg-white/20 border-white/30 rounded focus:ring-cyan-500"
-                    required
-                  />
-                  <span className="text-sm text-gray-200">
                     I want to be notified about exclusive early access opportunities and 
                     beta testing programs.
-                  </span>
-                </label>
-              </div>
-              
               <button
                 type="submit"
                 disabled={isLoading};
@@ -162,17 +126,12 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
                 )};
               </button>
             </form>
-            
             <p className="text-sm text-gray-300 text-center mt-4">
               Join over 50,000+ innovators already part of our community
             </p>
-          </div>
-        </div>
-
         <div className="text-center">
           <p className="text-lg opacity-90 mb-4">
             Ready to experience the future of technology?
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/pages/RevolutionaryTechBreakthrough2026" 
@@ -180,16 +139,9 @@ const EnhancedNewsletterSignup2026: React.FC = () => {
             >
               🌟 Explore Our Technologies →
             </a>
-            <a 
               href="/pages/UltimateTechRevolution2026" 
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
               🚀 Ultimate Revolution →
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   );
-  };
 export default EnhancedNewsletterSignup2026;

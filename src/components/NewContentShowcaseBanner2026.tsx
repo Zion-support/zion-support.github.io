@@ -26,15 +26,12 @@ export default function NewContentShowcaseBanner2026() {
       badge: "New",
       link: "/ai-trends-2026-ultimate"
     },
-    {
       title: "Ultimate Services 2026",
       description: "Comprehensive AI solutions for every business",
       icon: Rocket,
       color: "from-blue-500 to-cyan-500",
       badge: "Featured",
       link: "/ultimate-services-2026"
-    },
-    {
       title: "Quantum AI Breakthrough",
       description: "Next-generation quantum-enhanced AI systems",
       icon: Zap,
@@ -43,7 +40,6 @@ export default function NewContentShowcaseBanner2026() {
       link: "/quantum-ai-breakthrough"
     }
   ];
-
   const benefits = [
     "Latest AI insights and trends",
     "Proven business solutions",
@@ -51,8 +47,6 @@ export default function NewContentShowcaseBanner2026() {
     "Real-world case studies",
     "Industry best practices",
     "Future technology previews"
-  ];
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Background Effects */}
@@ -62,7 +56,6 @@ export default function NewContentShowcaseBanner2026() {
         <div className="absolute bottom-20 right-20 w-60 h-60 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative container mx-auto px-4 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -77,13 +70,11 @@ export default function NewContentShowcaseBanner2026() {
             <br />
             AI Content
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Stay ahead of the curve with our cutting-edge AI content, featuring the latest trends, 
             breakthrough technologies, and industry insights that matter most.
           </p>
         </div>
-
         {/* Content Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {newContent.map((content, index) => (
@@ -101,12 +92,9 @@ export default function NewContentShowcaseBanner2026() {
                   </div>
                   <div className={`p-3 rounded-2xl bg-gradient-to-r ${content.color}`}>
                     <content.icon className="w-6 h-6 text-white" />
-                  </div>
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-4">{content.title}</h3>
                 <p className="text-gray-300 mb-6">{content.description}</p>
-
                 <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                   Explore Content
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -114,8 +102,6 @@ export default function NewContentShowcaseBanner2026() {
               </div>
             </div>
           ))}
-        </div>
-
         {/* Benefits Section */}
         <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 rounded-3xl p-12 border border-slate-700/50">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -133,61 +119,35 @@ export default function NewContentShowcaseBanner2026() {
                   <div key={index} className="flex items-center text-green-400">
                     <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0" />
                     <span className="font-medium">{benefit}</span>
-                  </div>
                 ))}
-              </div>
-            </div>
-
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-6 border border-purple-500/30">
                 <div className="flex items-center mb-4">
                   <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-4">
                     <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
                   <div>
                     <h4 className="text-lg font-bold text-white">Industry Leading</h4>
                     <p className="text-purple-300 text-sm">Trusted by 500+ companies</p>
-                  </div>
-                </div>
                 <p className="text-gray-300 text-sm">
                   Our content is backed by real-world implementations and proven results across diverse industries.
                 </p>
-              </div>
-
               <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-2xl p-6 border border-blue-500/30">
-                <div className="flex items-center mb-4">
                   <div className="p-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mr-4">
                     <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
                     <h4 className="text-lg font-bold text-white">Expert Curation</h4>
                     <p className="text-blue-300 text-sm">50+ industry awards</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm">
                   Content is carefully selected and reviewed by leading AI experts and thought leaders.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 text-yellow-300 text-sm font-medium mb-6">
             <Clock className="w-5 h-5 mr-2" />
             Limited Time Access
-          </div>
-          
           <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Get Exclusive Access Today
           </h3>
-          
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals who trust our content to stay ahead of the AI revolution. 
             Get instant access to all premium content and updates.
-          </p>
-          
           <div className="flex flex-wrap justify-center gap-4">
             <button className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-full hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-yellow-500/25">
               Get Instant Access
@@ -195,10 +155,6 @@ export default function NewContentShowcaseBanner2026() {
             </button>
             <button className="px-8 py-4 border-2 border-purple-400 text-purple-300 font-semibold rounded-full hover:bg-purple-500/20 transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

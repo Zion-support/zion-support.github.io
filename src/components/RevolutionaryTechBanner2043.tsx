@@ -21,34 +21,24 @@ const RevolutionaryTechBanner2043: React.FC = () => {
             </a>
             <a href="/pages/NextGenTechRevolution2042" className="border-3 border-white/50 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all duration-300">
               See Previous Revolution
-            </a>
-          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3">🧠</div>
               <div className="text-lg font-bold">True Consciousness</div>
               <div className="text-sm opacity-75">Genuine AI awareness</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3">⚛️</div>
               <div className="text-lg font-bold">Quantum Control</div>
               <div className="text-sm opacity-75">Reality manipulation</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3">🧬</div>
               <div className="text-lg font-bold">Biological AI</div>
               <div className="text-sm opacity-75">Hybrid consciousness</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300">
               <div className="text-4xl mb-3">♾️</div>
               <div className="text-lg font-bold">Infinite Potential</div>
               <div className="text-sm opacity-75">No limitations</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryTechBanner2043;

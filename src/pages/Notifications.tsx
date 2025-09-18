@@ -28,23 +28,13 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
     }
 };
 const getNotificationTypeBadge = (type) => {
-    switch (type) {
-        case 'message':
             return <Badge className="bg-blue-500">Message</Badge>;
-        case 'quote_request':
             return <Badge className="bg-purple-500">Quote Request</Badge>;
-        case 'booking_confirmation':
             return <Badge className="bg-green-500">Booking</Badge>;
-        case 'hire_request':
             return <Badge className="bg-zion-purple">Hire Request</Badge>;
-        case 'onboarding':
             return <Badge className="bg-zion-cyan">Onboarding</Badge>;
-        case 'system':
             return <Badge className="bg-yellow-500">System</Badge>;
-        default:
             return <Badge variant="outline">Notification</Badge>;
-    }
-};
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     const navigate = useNavigate();
     const handleAction = () => {
@@ -53,7 +43,6 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
         }
         if (notification.action_url) {
             navigate(notification.action_url);
-        }
     };
     return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors", notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
       <div className="flex items-start gap-4">
@@ -82,19 +71,15 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
                 <Trash2 className="h-4 w-4 text-red-400"/>
                 <span className="sr-only">Dismiss</span>
               </Button>
-            </div>
           </div>
           
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
-          
           {notification.action_url && notification.action_text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={handleAction}>
               {notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4"/>
             </Button>)}
-        </div>
       </div>
     </div>);
-};
 export default function NotificationsPage() {
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
@@ -108,13 +93,9 @@ export default function NotificationsPage() {
               {unreadCount > 0 && (<Badge className="ml-3 bg-zion-cyan">{unreadCount} unread</Badge>)}
             </h1>
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>
-          </div>
-          
           {unreadCount > 0 && (<Button variant="outline" onClick={() => markAllAsRead()}>
               <Check className="mr-2 h-4 w-4"/>
               Mark all as read
-            </Button>)}
-        </div>
         
         <div className="mb-8">
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value)}>
@@ -128,8 +109,6 @@ export default function NotificationsPage() {
             <TabsContent value={filter} className="mt-6">
               {loading ? (<div className="space-y-4">
                   <Skeleton className="h-24 w-full rounded-lg"/>
-                  <Skeleton className="h-24 w-full rounded-lg"/>
-                  <Skeleton className="h-24 w-full rounded-lg"/>
                 </div>) : filteredNotifications.length === 0 ? (<div className="text-center py-12 bg-muted rounded-lg">
                   <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30"/>
                   <h3 className="text-xl font-medium">No notifications found</h3>
@@ -141,8 +120,6 @@ export default function NotificationsPage() {
                 </div>)}
             </TabsContent>
           </Tabs>
-        </div>
       </main>
-      
     </>);
 }

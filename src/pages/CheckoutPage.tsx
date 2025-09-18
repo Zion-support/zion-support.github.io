@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import { getStripe } from '@/utils/getStripe';
 
-import CardForm from '../components/checkout/CardForm';
-import CheckoutProgress from '../components/checkout/CheckoutProgress';
-import { NEW_PRODUCTS } from '../data/newProductsData';
+import CardForm from '@/components/checkout/CardForm';
+import CheckoutProgress from '@/components/checkout/CheckoutProgress';
+import { NEW_PRODUCTS } from '@/data/newProductsData';
 export default function CheckoutPage() {
     const router = useRouter();
     const { id: rawId } = router.query;
@@ -32,10 +32,8 @@ export default function CheckoutPage() {
                 setError(err.message);
                 const fallback = NEW_PRODUCTS.find(p => p.id === id) || null;
                 setProduct(fallback);
-            }
             finally {
                 setIsLoading(false);
-            }
         };
         fetchProduct();
     }, [id]);
@@ -44,10 +42,7 @@ export default function CheckoutPage() {
     }
     if (error && !product) {
         return <div className="p-6 text-white">Failed to load product.</div>;
-    }
     if (!product) {
-        return <div className="p-6 text-white">Loading...</div>;
-    }
     return (<div className="container max-w-2xl py-10 space-y-6">
       <h1 className="text-3xl font-bold">Checkout</h1>
       <CheckoutProgress currentStep={1} className="mb-6"/>

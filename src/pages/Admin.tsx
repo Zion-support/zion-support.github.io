@@ -19,8 +19,6 @@ const Admin = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Admin dashboard coming soon. We're building comprehensive administrative tools.
-            </p>
-          </div>
         </div>
       </div>
     </>);

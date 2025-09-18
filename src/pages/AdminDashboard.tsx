@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminLayout from '../components/admin/AdminLayout';
+import AdminLayout from '@/components/admin/AdminLayout';
 export default function AdminDashboard() {
     return (<AdminLayout>
       <div className="space-y-4">

@@ -24,6 +24,5 @@ export default function TalentOnboarding() {
           <TalentOnboardingForm />
         </div>
       </div>
-      
     </>);
 }

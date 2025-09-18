@@ -48,16 +48,13 @@ export default function UpdatePassword() {
         }
         else {
             setError("No access token found. Please request a new password reset link.");
-        }
         // Clean up auth state to prevent issues
         cleanupAuthState();
     }, [location]);
     // Form submission handler
     const onSubmit = async (data) => {
         if (!accessToken) {
-            setError("No access token found. Please request a new password reset link.");
             return;
-        }
         setIsLoading(true);
         try {
             // Set the session with the access token
@@ -68,7 +65,6 @@ export default function UpdatePassword() {
             // Update the password
             const { error } = await supabase.auth.updateUser({
                 password: data.password,
-            });
             if (error) {
                 toast({
                     title: "Password update failed",
@@ -83,32 +79,24 @@ export default function UpdatePassword() {
             toast({
                 title: "Password updated successfully",
                 description: "You can now log in with your new password.",
-            });
             // Clean auth state and redirect after a delay
             cleanupAuthState();
             setTimeout(() => {
                 navigate("/login");
             }, 3000);
-        }
         catch (error) {
             console.error("Password update error:", error);
-            toast({
                 title: "Password update failed",
                 description: error.message || "An unexpected error occurred",
                 variant: "destructive",
-            });
             setError(error.message || "An unexpected error occurred");
-        }
         finally {
             setIsLoading(false);
-        }
     };
     const onInvalid = (errors) => {
         const firstError = Object.keys(errors)[0];
         if (firstError) {
             form.setFocus(firstError);
-        }
-    };
     return (<>
       
       <div className="flex min-h-screen bg-zion-blue">
@@ -122,7 +110,6 @@ export default function UpdatePassword() {
                 Enter your new password below.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
@@ -130,7 +117,6 @@ export default function UpdatePassword() {
                     Request new reset link
                   </Button>
                 </div>)}
-
               {success ? (<div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
                     <LockKeyhole className="h-6 w-6 text-zion-purple"/>
@@ -139,9 +125,7 @@ export default function UpdatePassword() {
                   <p className="mt-2 text-sm text-zion-slate-light">
                     Your password has been successfully updated.
                   </p>
-                  <p className="mt-2 text-sm text-zion-slate-light">
                     Redirecting you to login...
-                  </p>
                 </div>) : (<Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6">
                     <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
@@ -151,19 +135,12 @@ export default function UpdatePassword() {
                           </FormControl>
                           <FormMessage className="text-red-400"/>
                         </FormItem>)}/>
-
                     <FormField control={form.control} name="confirmPassword" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
-                          <FormControl>
                             <Input type="password" placeholder="Enter password" aria-label="Confirm password" aria-invalid={!!form.formState.errors.confirmPassword} className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled={isLoading} {...field}/>
-                          </FormControl>
-                          <FormMessage className="text-red-400"/>
-                        </FormItem>)}/>
-
                     <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || !accessToken}>
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
-
                     <div className="text-center">
                       <Button variant="link" className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0" onClick={() => navigate("/login")} type="button">
                         Back to login
@@ -171,7 +148,6 @@ export default function UpdatePassword() {
                     </div>
                   </form>
                 </Form>)}
-            </div>
           </div>
         </div>
         <div className="hidden lg:block relative w-0 flex-1">
@@ -183,10 +159,6 @@ export default function UpdatePassword() {
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
       </div>
-      
     </>);
 }

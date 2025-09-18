@@ -17,15 +17,12 @@ import { motion } from 'framer-motion';
 import { useCurrency } from "../hooks/useCurrency';
 import {logErrorToProduction} from "../utils/productionLogger';
 
-
 interface EquipmentSpecification {
   name: string;
   value: string;
 }
-
 interface EquipmentDetails {
   id: string;
-  name: string;
   description: string;
   brand: string;
   category: string;
@@ -41,8 +38,6 @@ interface EquipmentDetails {
   features: string[];
   warranty?: string;
   returnPolicy?: string;
-}
-
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {
   return {
@@ -67,15 +62,12 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy'
   };
-}
-
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
     acc[item.id] = convertProductListingToEquipmentDetails(item);
     return acc;
   }, {} as { [key: string]: EquipmentDetails });
-
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -87,9 +79,7 @@ export default function EquipmentDetail() {
   const [isAdding, setIsAdding] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
-
   useEffect(() => {
     async function loadEquipment() {
       if (!id) {
@@ -97,11 +87,9 @@ export default function EquipmentDetail() {
         setError('No equipment ID provided');
         return;
       }
-
       try {
         setLoading(true);
         setError(null);
-
         // Try to find in static data first
         const equipmentFromSample = SAMPLE_EQUIPMENT[id];
         if (equipmentFromSample) {
@@ -109,7 +97,6 @@ export default function EquipmentDetail() {
           setLoading(false);
           return;
         }
-
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
           try {
@@ -126,7 +113,6 @@ export default function EquipmentDetail() {
                 // It's a ProductListing, convert it
                 equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
               }
-              
               setEquipment(equipmentData);
               setLoading(false);
               return;
@@ -134,21 +120,14 @@ export default function EquipmentDetail() {
           } catch (storageError) {
             logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
           }
-        }
-
         // If not found anywhere, set error
         setError('Equipment not found');
-        setLoading(false);
       } catch (error) {
         logErrorToProduction('Error loading equipment:', { data: error });
         setError('Failed to load equipment details');
-        setLoading(false);
-      }
     }
-
     loadEquipment();
   }, [id]);
-
   const handleAddToCart = async () => {
     if (!equipment || !isAuthenticated) {
       toast({
@@ -157,8 +136,6 @@ export default function EquipmentDetail() {
         variant: "destructive",
       });
       return;
-    }
-
     setIsAdding(true);
     try {
       dispatch({
@@ -169,25 +146,14 @@ export default function EquipmentDetail() {
           price: equipment.price,
           quantity,
         },
-      });
-
-      toast({
         title: "Added to Cart",
         description: `${equipment.name} has been added to your cart.`,
-      });
     } catch (error) {
-      toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
-        variant: "destructive",
-      });
     } finally {
       setIsAdding(false);
-    }
-  };
-
   const inCart = items.some(item => item.id === equipment?.id);
-
   // Loading state
   if (loading) {
     return (
@@ -204,17 +170,12 @@ export default function EquipmentDetail() {
       </>
     );
   }
-
   // Error state
   if (error || !equipment) {
-    return (
-      <>
         <NextSeo
           title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
         />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
             <motion.div 
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
@@ -239,20 +200,11 @@ export default function EquipmentDetail() {
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   Go Back
                 </Button>
-                <Button 
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
-                >
                   Browse Equipment
-                </Button>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
   return (
     <>
       <NextSeo
@@ -275,21 +227,17 @@ export default function EquipmentDetail() {
             <button
               onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
-            >
               Equipment
             </button>
             <span className="mx-2 text-zion-slate-light">/</span>
             <span className="text-zion-slate-light">{equipment.name}</span>
           </motion.nav>
-
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Images */}
-            <motion.div 
               className="space-y-4"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
-            >
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
                 <ImageWithRetry
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
@@ -297,7 +245,6 @@ export default function EquipmentDetail() {
                   className="object-cover"
                 />
               </AspectRatio>
-              
               {equipment.images.length > 1 && (
                 <div className="grid grid-cols-4 gap-2">
                   {equipment.images.map((image, index) => (
@@ -319,15 +266,10 @@ export default function EquipmentDetail() {
                   ))}
                 </div>
               )}
-            </motion.div>
-
             {/* Product Details */}
-            <motion.div 
               className="space-y-6"
               initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-            >
               {/* Header */}
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
@@ -336,11 +278,8 @@ export default function EquipmentDetail() {
                   </Badge>
                   <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">
                     {equipment.brand}
-                  </Badge>
-                </div>
                 
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
-                
                 {equipment.rating && (
                   <div className="flex items-center gap-2">
                     <div className="flex items-center">
@@ -360,27 +299,19 @@ export default function EquipmentDetail() {
                     </span>
                   </div>
                 )}
-              </div>
-
               {/* Price */}
               <div className="bg-zion-blue-light rounded-lg p-4">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">
                   {formatPrice(equipment.price)}
-                </div>
                 <div className="flex items-center gap-2 text-sm">
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span className={equipment.inStock ? 'text-green-400' : 'text-yellow-400'}>
                     {equipment.expectedShipping}
                   </span>
-                </div>
-              </div>
-
               {/* Description */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white">Description</h3>
                 <p className="text-zion-slate-light leading-relaxed">{equipment.description}</p>
-              </div>
-
               {/* Specifications */}
               {equipment.specifications.length > 0 && (
                 <div className="space-y-4">
@@ -392,48 +323,28 @@ export default function EquipmentDetail() {
                         <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
                       </div>
                     ))}
-                  </div>
-                </div>
-              )}
-
               {/* Add to Cart */}
               <div className="space-y-4 pt-6 border-t border-zion-blue-light">
                 <div className="flex items-center gap-4">
                   <label className="text-white font-medium">Quantity:</label>
-                  <div className="flex items-center gap-2">
                     <Button
                       variant="outline"
                       size="sm"
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       className="h-8 w-8 p-0"
-                    >
                       -
                     </Button>
                     <span className="text-white w-8 text-center">{quantity}</span>
-                    <Button
-                      variant="outline"
-                      size="sm"
                       onClick={() => setQuantity(quantity + 1)}
-                      className="h-8 w-8 p-0"
-                    >
                       +
-                    </Button>
-                  </div>
-                </div>
-                
                 <Button
                   onClick={handleAddToCart}
                   disabled={isAdding || !equipment.inStock}
                   size="lg"
-                  variant="outline"
                   className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   data-testid="add-to-cart-button"
-                >
                   <ShoppingCart className="h-4 w-4 mr-2" />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
-                </Button>
-              </div>
-              
               {/* Additional Info */}
               <div className="space-y-4 border-t border-zion-blue-light pt-4">
                 {/* Shipping */}
@@ -442,9 +353,6 @@ export default function EquipmentDetail() {
                   <div>
                     <p className="text-white text-sm font-medium">Free Shipping</p>
                     <p className="text-xs">For orders over $100 within the US</p>
-                  </div>
-                </div>
-                
                 {/* Warranty */}
                 {equipment.warranty && (
                   <div className="flex gap-3 text-zion-slate-light">
@@ -452,26 +360,11 @@ export default function EquipmentDetail() {
                     <div>
                       <p className="text-white text-sm font-medium">Warranty</p>
                       <p className="text-xs">{equipment.warranty}</p>
-                    </div>
-                  </div>
-                )}
-                
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
-                  <div className="flex gap-3 text-zion-slate-light">
                     <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                    <div>
                       <p className="text-white text-sm font-medium">Returns</p>
                       <p className="text-xs">{equipment.returnPolicy}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          </div>
-        </div>
       </div>
     </>
   );
-}
-

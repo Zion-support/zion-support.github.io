@@ -1,17 +1,10 @@
 import { useState } from 'react';
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-import { ProtectedRoute } from '../components/ProtectedRoute';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { ResumeWizard } from '../components/resume-builder/ResumeWizard';
-import { PortfolioBuilder as PortfolioSection } from '../components/resume-builder/portfolio/PortfolioBuilder';
-=======
-import { SEO } from '../components/SEO.jsx';
+import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+import SEO from '@/components/SEO.jsx';
 function PortfolioBuilderContent() {
     const [activeTab, setActiveTab] = useState('resume');
     return (<>
@@ -29,17 +22,13 @@ function PortfolioBuilderContent() {
           <TabsContent value="resume" className="space-y-6">
             <ResumeWizard />
           </TabsContent>
-          
           <TabsContent value="portfolio" className="space-y-6">
             <PortfolioSection />
-          </TabsContent>
         </Tabs>
       </main>
-      
     </>);
 }
 export default function PortfolioBuilder() {
     return (<ProtectedRoute>
       <PortfolioBuilderContent />
     </ProtectedRoute>);
-}

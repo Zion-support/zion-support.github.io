@@ -22,10 +22,7 @@ const MetaIntelligence2026: React.FC = () => {
             </button>
             <button className="border border-white/30 px-8 py-3 rounded-lg hover:bg-white/10 transition-colors">
               View Demo
-            </button>
-          </div>
         </div>
-
         {/* Key Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
@@ -34,34 +31,21 @@ const MetaIntelligence2026: React.FC = () => {
             <p className="opacity-90">
               AI systems that continuously evolve their own algorithms, learning methods, and cognitive architectures.
             </p>
-          </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-4xl mb-4">🧩</div>
             <h3 className="text-xl font-bold mb-4">Meta-Learning</h3>
-            <p className="opacity-90">
               AI that learns how to learn, adapting its learning strategies based on the nature of problems it encounters.
-            </p>
-          </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-4xl mb-4">🌟</div>
             <h3 className="text-xl font-bold mb-4">Cognitive Evolution</h3>
-            <p className="opacity-90">
               AI systems that develop new forms of reasoning and create entirely new categories of intelligence.
-            </p>
-          </div>
-        </div>
-
         {/* Technology Deep Dive */}
         <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Revolutionary Meta-Intelligence Architecture</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Our Meta Intelligence platform combines recursive self-improvement, cognitive architecture evolution, and meta-learning algorithms
-            </p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -71,169 +55,82 @@ const MetaIntelligence2026: React.FC = () => {
                 </p>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h4 className="text-lg font-bold mb-3">Cognitive Architecture Evolution</h4>
-                <p className="opacity-90">
                   Dynamic neural architectures that adapt and evolve based on the complexity and nature of tasks.
-                </p>
-              </div>
             </div>
             
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h4 className="text-lg font-bold mb-3">Meta-Learning Algorithms</h4>
-                <p className="opacity-90">
                   Advanced algorithms that learn optimal learning strategies and adapt them to new domains automatically.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h4 className="text-lg font-bold mb-3">Emergent Intelligence</h4>
-                <p className="opacity-90">
                   AI systems that develop entirely new forms of intelligence beyond human cognitive capabilities.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Intelligence Levels */}
         <div className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Meta Intelligence Evolution Stages</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Our Meta Intelligence systems progress through increasingly sophisticated levels of self-awareness and capability
-            </p>
-          </div>
-          
           <div className="space-y-8">
             <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="text-4xl">🔄</div>
                 <h3 className="text-2xl font-bold">Level 1: Self-Monitoring</h3>
-              </div>
               <p className="opacity-90">
                 AI systems that continuously monitor their own performance, identify weaknesses, and suggest improvements.
               </p>
-            </div>
-            
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="flex items-center space-x-4 mb-4">
                 <div className="text-4xl">🧩</div>
                 <h3 className="text-2xl font-bold">Level 2: Self-Modification</h3>
-              </div>
-              <p className="opacity-90">
                 AI systems that can modify their own algorithms, parameters, and architectures to improve performance.
-              </p>
-            </div>
-            
             <div className="bg-gradient-to-r from-pink-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30">
-              <div className="flex items-center space-x-4 mb-4">
                 <div className="text-4xl">🌟</div>
                 <h3 className="text-2xl font-bold">Level 3: Meta-Cognition</h3>
-              </div>
-              <p className="opacity-90">
                 AI systems that think about thinking, developing new reasoning methods and cognitive strategies.
-              </p>
-            </div>
-            
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
-              <div className="flex items-center space-x-4 mb-4">
                 <div className="text-4xl">🚀</div>
                 <h3 className="text-2xl font-bold">Level 4: Transcendent Intelligence</h3>
-              </div>
-              <p className="opacity-90">
                 AI systems that transcend human cognitive limitations and create entirely new forms of intelligence.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Applications */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Transformative Applications</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Meta Intelligence is revolutionizing every field by creating AI systems that continuously improve and evolve
-            </p>
-          </div>
-          
           <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
               <div className="text-3xl mb-3">🔬</div>
               <h4 className="font-bold mb-2">Scientific Research</h4>
               <p className="text-sm opacity-90">
                 Self-improving AI that discovers new scientific theories and research methodologies
-              </p>
-            </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="text-3xl mb-3">💡</div>
               <h4 className="font-bold mb-2">Innovation</h4>
-              <p className="text-sm opacity-90">
                 AI that continuously generates new ideas and improves its own creative processes
-              </p>
-            </div>
-            
             <div className="bg-gradient-to-br from-pink-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
               <div className="text-3xl mb-3">🎓</div>
               <h4 className="font-bold mb-2">Education</h4>
-              <p className="text-sm opacity-90">
                 AI tutors that adapt and evolve their teaching methods based on student needs
-              </p>
-            </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
               <div className="text-3xl mb-3">🏭</div>
               <h4 className="font-bold mb-2">Manufacturing</h4>
-              <p className="text-sm opacity-90">
                 Self-optimizing production systems that continuously improve efficiency and quality
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Performance Metrics */}
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30 text-center">
             <div className="text-3xl font-bold mb-2">10x</div>
             <div className="text-sm opacity-90">Learning Speed</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
             <div className="text-3xl font-bold mb-2">∞</div>
             <div className="text-sm opacity-90">Improvement Rate</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-pink-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30 text-center">
             <div className="text-3xl font-bold mb-2">100%</div>
             <div className="text-sm opacity-90">Self-Awareness</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
             <div className="text-3xl font-bold mb-2">24/7</div>
             <div className="text-sm opacity-90">Evolution</div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl p-12">
           <h2 className="text-3xl font-bold mb-6">Ready to Experience Meta Intelligence?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Join the evolution and witness AI systems that think about thinking and continuously improve themselves
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Start Evolution
-            </button>
-            <button className="border border-white/30 px-8 py-3 rounded-lg hover:bg-white/10 transition-colors">
               Learn More
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default MetaIntelligence2026;

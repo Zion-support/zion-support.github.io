@@ -34,17 +34,13 @@ function HiringTrackerContent() {
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId}/>
           </TabsContent>
-          
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId}/>
-          </TabsContent>
         </Tabs>
       </main>
-      
     </>);
 }
 export default function HiringTracker() {
     return (<ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>);
-}

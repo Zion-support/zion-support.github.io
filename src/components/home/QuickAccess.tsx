@@ -13,23 +13,18 @@ export function QuickAccess() {
       color: 'from-zion-cyan to-zion-blue',
       gradient: 'from-zion-cyan/20 to-zion-blue/20'
     },
-    {
       title: 'Hire Talent',
       description: 'Connect with tech experts',
       icon: Users,
       href: '/talent',
       color: 'from-zion-purple to-zion-cyan',
       gradient: 'from-zion-purple/20 to-zion-cyan/20'
-    },
-    {
       title: 'Browse Equipment',
       description: 'Find hardware and tools',
       icon: Briefcase,
       href: '/equipment',
       color: 'from-zion-blue to-zion-purple',
       gradient: 'from-zion-blue/20 to-zion-purple/20'
-    },
-    {
       title: 'AI Solutions',
       description: 'Explore AI-powered tools',
       icon: Sparkles,
@@ -38,7 +33,6 @@ export function QuickAccess() {
       gradient: 'from-zion-cyan/20 to-zion-purple/20'
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -46,14 +40,10 @@ export function QuickAccess() {
       transition: {
         staggerChildren: 0.1
       }
-    }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  };
-
   return (
     <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
       {/* Background Elements */}
@@ -61,7 +51,6 @@ export function QuickAccess() {
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-zion-cyan/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="container mx-auto px-4 relative">
         <motion.div
           variants={containerVariants}
@@ -77,14 +66,7 @@ export function QuickAccess() {
             Get started quickly with our most popular features and services
           </motion.p>
         </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
           {quickActions.map((action) => (
             <motion.div
               key={action.title}
@@ -99,7 +81,6 @@ export function QuickAccess() {
                 <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                   <action.icon className="w-8 h-8 text-white" />
                 </div>
-
                 {/* Content */}
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {action.title}
@@ -107,20 +88,15 @@ export function QuickAccess() {
                 <p className="text-zion-slate-light text-sm mb-4">
                   {action.description}
                 </p>
-
                 {/* Arrow */}
                 <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan/80 transition-colors">
                   <span className="text-sm font-medium">Get Started</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-
                 {/* Hover Effect */}
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${action.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
               </Link>
             </motion.div>
           ))}
-        </motion.div>
-      </div>
     </section>
   );
 }

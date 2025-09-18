@@ -39,12 +39,7 @@ const UltimateInnovationHub2026: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-lg">
                 Watch Live Demo
-              </button>
-            </div>
           </div>
-        </div>
-      </div>
-
       {/* Technology Tabs */}
       <div className="container mx-auto px-4 py-16">
         <div
@@ -68,16 +63,10 @@ const UltimateInnovationHub2026: React.FC = () => {
                 }`}
               >
                 {tech.icon} {tech.title}
-              </button>
             ))}
-          </div>
-        </div>
-
         {/* Active Technology Display */}
-        <div
           key={activeTab}
           className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-12 mb-16"
-        >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="text-8xl mb-6">{technologies[activeTab as keyof typeof technologies].icon}</div>
@@ -97,8 +86,6 @@ const UltimateInnovationHub2026: React.FC = () => {
               </ul>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
                 Learn More →
-              </button>
-            </div>
             <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-8">
               <div className="text-center">
                 <h4 className="text-2xl font-bold mb-4">Interactive Demo</h4>
@@ -111,14 +98,8 @@ const UltimateInnovationHub2026: React.FC = () => {
                   Try Demo →
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-
         {/* Innovation Showcase Grid */}
-        <div
           className="mb-16"
-        >
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Featured Innovations</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -128,31 +109,21 @@ const UltimateInnovationHub2026: React.FC = () => {
                 icon: "🧠",
                 color: "from-purple-500 to-pink-500"
               },
-              {
                 title: "Quantum Supremacy",
                 description: "Quantum computers solving impossible problems",
                 icon: "⚡",
                 color: "from-cyan-500 to-blue-500"
-              },
-              {
                 title: "Neural Interfaces",
                 description: "Direct brain-computer communication technology",
                 icon: "🧬",
                 color: "from-emerald-500 to-teal-500"
-              },
-              {
                 title: "Space Colonization",
                 description: "Technologies for interstellar travel and colonization",
                 icon: "🚀",
                 color: "from-orange-500 to-red-500"
-              },
-              {
                 title: "Biotech Revolution",
                 description: "Revolutionary biotechnology and human enhancement",
-                icon: "🧬",
                 color: "from-green-500 to-emerald-500"
-              },
-              {
                 title: "Metaverse Integration",
                 description: "Seamless virtual and physical world integration",
                 icon: "🌐",
@@ -162,46 +133,27 @@ const UltimateInnovationHub2026: React.FC = () => {
               <div
                 key={index}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 hover:scale-105 transition-all duration-300"
-              >
                 <div className={`text-4xl mb-4 bg-gradient-to-r ${innovation.color} bg-clip-text text-transparent`}>
                   {innovation.icon}
-                </div>
                 <h3 className="text-xl font-bold mb-3">{innovation.title}</h3>
                 <p className="text-white/80 mb-4">{innovation.description}</p>
                 <button className={`bg-gradient-to-r ${innovation.color} text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                   Explore →
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <div
           className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12"
-        >
           <h2 className="text-5xl font-bold mb-6">Ready to Shape the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
             Join us in the ultimate innovation journey. Be part of the technological revolution 
             that's reshaping humanity's future.
-          </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
               🌟 Start Innovation Journey →
             </button>
             <button className="border-2 border-white text-white px-12 py-5 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-bold text-xl">
               📞 Contact Innovation Team
-            </button>
             <button className="bg-gradient-to-r from-pink-500 to-violet-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-xl">
               🎮 Try Interactive Demo
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
-
 };
-
-
 export default UltimateInnovationHub2026;

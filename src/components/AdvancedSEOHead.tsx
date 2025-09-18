@@ -55,7 +55,6 @@ const AdvancedSEOHead: React.FC<SEOHeadProps> = ({
       "telephone": "+1-555-0123",
       "contactType": "customer service",
       "availableLanguage": "English"
-    },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup"

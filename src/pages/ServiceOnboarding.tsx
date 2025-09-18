@@ -24,6 +24,5 @@ export default function ServiceOnboarding() {
           <ServiceProviderRegistrationForm />
         </div>
       </div>
-      
     </>);
 }

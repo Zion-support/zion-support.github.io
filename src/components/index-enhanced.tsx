@@ -12,5 +12,4 @@ const index-enhanced = () => {
   );
 
 };
-
 export default index-enhanced;

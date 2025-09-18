@@ -1,34 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { usePerformance } from '../hooks/usePerformance';
+import { usePerformance } from '@/hooks/usePerformance';
 
 interface PerformanceMonitorProps {
   show?: boolean;
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
   show = false, 
   position = 'bottom-right' 
 }) => {
   const [isVisible, setIsVisible] = useState(show);
   const metrics = usePerformance();
-
   const positionClasses = {
     'top-left': 'top-4 left-4',
     'top-right': 'top-4 right-4',
     'bottom-left': 'bottom-4 left-4',
     'bottom-right': 'bottom-4 right-4',
   };
-
   useEffect(() => {
     // Show performance monitor in development
     if (process.env.NODE_ENV === 'development') {
       setIsVisible(true);
     }
   }, []);
-
   if (!isVisible) return null;
-
   return (
     <div className={`fixed ${positionClasses[position]} z-50`}>
       <div className="bg-black bg-opacity-75 text-white p-3 rounded-lg text-xs font-mono max-w-xs">
@@ -47,10 +42,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           {metrics.memoryUsage && (
             <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>
           )}
-        </div>
       </div>
     </div>
   );
 };
-
 export default PerformanceMonitor;

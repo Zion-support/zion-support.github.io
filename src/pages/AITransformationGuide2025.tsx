@@ -6,5 +6,4 @@ const AITransformationGuide2025 = () => {
     </div>
   );
 };
-
 export default AITransformationGuide2025;

@@ -60,16 +60,12 @@ export default function ITOnsiteServicesPage() {
           <div className="mb-12">
             <CountryTabs popularCountries={popularCountries} filteredCountries={filteredCountries} handleCountrySelect={handleCountrySelect} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
           </div>
-          
           {/* Service Details Section */}
           <ServiceDetailsSection selectedCountry={selectedCountry} setSelectedCountry={setSelectedCountry}/>
-          
           {/* How It Works Section */}
           <ServiceProcessSteps />
-          
           {/* What's Included Section */}
           <ServiceIncludes />
-          
           {/* Complete Pricing Table */}
           <div id="pricing-table" className="my-16">
             <div className="text-center mb-8">
@@ -81,8 +77,6 @@ export default function ITOnsiteServicesPage() {
             </div>
             
             <ITServicePricingTable />
-          </div>
-          
           <EnterpriseCallToAction />
         </div>
       </section>

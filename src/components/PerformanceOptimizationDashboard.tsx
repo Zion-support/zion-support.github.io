@@ -8,9 +8,7 @@ const PerformanceOptimizationDashboard: React.FC = () => {
     memoryUsage: 0,
     networkLatency: 0
   });
-
   const [isOptimized, setIsOptimized] = useState(false);
-
   useEffect(() => {
     // Simulate performance metrics
     const interval = setInterval(() => {
@@ -21,10 +19,8 @@ const PerformanceOptimizationDashboard: React.FC = () => {
         networkLatency: Math.random() * 30 + 5
       }));
     }, 2000);
-
     return () => clearInterval(interval);
   }, []);
-
   const optimizations = [
     {
       name: 'Code Splitting',
@@ -32,32 +28,20 @@ const PerformanceOptimizationDashboard: React.FC = () => {
       impact: '85%',
       status: 'active'
     },
-    {
       name: 'Image Optimization',
       description: 'WebP format and lazy loading',
       impact: '70%',
-      status: 'active'
-    },
-    {
       name: 'Bundle Optimization',
       description: 'Tree shaking and minification',
       impact: '60%',
-      status: 'active'
-    },
-    {
       name: 'Caching Strategy',
       description: 'Service worker and CDN caching',
       impact: '90%',
-      status: 'active'
-    },
-    {
       name: 'Performance Monitoring',
       description: 'Real-time performance tracking',
       impact: '95%',
-      status: 'active'
     }
   ];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-16 relative overflow-hidden">
       {/* Animated background */}
@@ -75,7 +59,6 @@ const PerformanceOptimizationDashboard: React.FC = () => {
             Real-time performance metrics and optimization strategies for maximum efficiency
           </p>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Performance Metrics */}
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50">
@@ -93,58 +76,24 @@ const PerformanceOptimizationDashboard: React.FC = () => {
                     animate={{ width: `${Math.min(metrics.pageLoad / 2, 100)}%` }}
                     transition={{ duration: 1 }}
                   />
-                </div>
               </div>
-
               <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-xl p-6 border border-green-400/30">
-                <div className="flex items-center justify-between mb-4">
                   <span className="text-green-300">Render Time</span>
                   <span className="text-2xl font-bold text-green-400">{metrics.renderTime.toFixed(1)}ms</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <motion.div 
                     className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full"
-                    initial={{ width: 0 }}
                     animate={{ width: `${Math.min(metrics.renderTime * 2, 100)}%` }}
-                    transition={{ duration: 1 }}
-                  />
-                </div>
-              </div>
-
               <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-xl p-6 border border-orange-400/30">
-                <div className="flex items-center justify-between mb-4">
                   <span className="text-orange-300">Memory Usage</span>
                   <span className="text-2xl font-bold text-orange-400">{metrics.memoryUsage.toFixed(1)}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <motion.div 
                     className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full"
-                    initial={{ width: 0 }}
                     animate={{ width: `${metrics.memoryUsage}%` }}
-                    transition={{ duration: 1 }}
-                  />
-                </div>
-              </div>
-
               <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-purple-400/30">
-                <div className="flex items-center justify-between mb-4">
                   <span className="text-purple-300">Network Latency</span>
                   <span className="text-2xl font-bold text-purple-400">{metrics.networkLatency.toFixed(1)}ms</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
-                  <motion.div 
                     className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
-                    initial={{ width: 0 }}
                     animate={{ width: `${Math.min(metrics.networkLatency * 3, 100)}%` }}
-                    transition={{ duration: 1 }}
-                  />
-                </div>
-              </div>
             </div>
-          </div>
-
           {/* Optimization Strategies */}
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50">
             <h3 className="text-2xl font-bold mb-6 text-white">Active Optimizations</h3>
             <div className="space-y-4">
               {optimizations.map((optimization, index) => (
@@ -165,18 +114,14 @@ const PerformanceOptimizationDashboard: React.FC = () => {
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-green-400 text-sm font-medium">Active</span>
-                  </div>
                 </motion.div>
               ))}
-            </div>
-
             <div className="mt-8 p-6 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl border border-blue-400/30">
               <div className="flex items-center justify-between mb-4">
                 <h4 className="text-xl font-bold text-white">Overall Performance Score</h4>
                 <span className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   98.5%
                 </span>
-              </div>
               <div className="w-full bg-gray-700 rounded-full h-3">
                 <motion.div 
                   className="bg-gradient-to-r from-green-500 to-emerald-500 h-3 rounded-full"
@@ -184,16 +129,11 @@ const PerformanceOptimizationDashboard: React.FC = () => {
                   animate={{ width: "98.5%" }}
                   transition={{ duration: 2 }}
                 />
-              </div>
               <p className="text-gray-300 text-sm mt-2">
                 Excellent performance across all metrics
               </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default PerformanceOptimizationDashboard;

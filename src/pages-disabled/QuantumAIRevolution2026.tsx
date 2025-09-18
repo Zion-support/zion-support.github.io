@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const QuantumAIRevolution2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-
   const quantumFeatures = [
     {
       title: "Quantum Neural Networks",
@@ -22,76 +21,52 @@ const QuantumAIRevolution2026: React.FC = () => {
         "Cryptography"
       ]
     },
-    {
       title: "Quantum Machine Learning",
       description: "Advanced machine learning algorithms that harness quantum properties for superior pattern recognition and optimization.",
       icon: "⚡",
-      benefits: [
         "Quantum Speedup",
         "Parallel Processing",
         "Quantum Optimization",
         "Enhanced Accuracy"
-      ],
-      applications: [
         "Image Recognition",
         "Natural Language Processing",
         "Predictive Analytics",
         "Autonomous Systems"
-      ]
-    },
-    {
       title: "Quantum Consciousness Interface",
       description: "Direct integration between quantum computing and human consciousness for enhanced cognitive capabilities.",
       icon: "🧬",
-      benefits: [
         "Thought Acceleration",
         "Memory Enhancement",
         "Consciousness Backup",
         "Neural Augmentation"
-      ],
-      applications: [
         "Medical Diagnosis",
         "Creative Problem Solving",
         "Learning Acceleration",
         "Mental Health"
-      ]
     }
   ];
-
   const quantumStats = [
     { metric: "Processing Speed", value: "10^18", unit: "Operations/sec", improvement: "1000x" },
     { metric: "Memory Capacity", value: "10^15", unit: "Quantum Bits", improvement: "∞" },
     { metric: "Accuracy Rate", value: "99.99%", unit: "Precision", improvement: "50x" },
     { metric: "Energy Efficiency", value: "95%", unit: "Reduction", improvement: "10x" }
-  ];
-
   const useCases = [
-    {
       title: "Healthcare Revolution",
       description: "Quantum AI is revolutionizing medical diagnosis and treatment through advanced pattern recognition and molecular simulation.",
       icon: "🏥",
       impact: "90% faster diagnosis, 95% accuracy improvement"
-    },
-    {
       title: "Climate Solutions",
       description: "Complex climate modeling and optimization for sustainable energy solutions and environmental protection.",
       icon: "🌍",
       impact: "Real-time climate prediction, 99% accuracy"
-    },
-    {
       title: "Financial Markets",
       description: "Advanced risk assessment, fraud detection, and algorithmic trading with quantum-enhanced security.",
       icon: "💰",
       impact: "99.9% fraud detection, 300% ROI improvement"
-    },
-    {
       title: "Space Exploration",
       description: "Navigation, communication, and life support systems for deep space missions and Mars colonization.",
       icon: "🚀",
       impact: "Autonomous space missions, 10x efficiency"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -120,24 +95,18 @@ const QuantumAIRevolution2026: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                 Watch Demo
-              </button>
-            </div>
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Stats */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
-          >
             <h2 className="text-4xl font-bold mb-4">Quantum Performance Metrics</h2>
             <p className="text-xl opacity-80">Revolutionary improvements over classical computing</p>
-          </motion.div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {quantumStats.map((stat, index) => (
@@ -155,25 +124,13 @@ const QuantumAIRevolution2026: React.FC = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </div>
-
       {/* Quantum Features Tabs */}
       <div className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
             <h2 className="text-5xl font-bold mb-6">Quantum AI Capabilities</h2>
             <p className="text-xl opacity-90 max-w-4xl mx-auto">
               Discover the revolutionary features that make quantum AI the most powerful 
               computing paradigm ever created.
-            </p>
-          </motion.div>
-
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2">
@@ -190,9 +147,6 @@ const QuantumAIRevolution2026: React.FC = () => {
                   {feature.title}
                 </button>
               ))}
-            </div>
-          </div>
-
           {/* Tab Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -216,94 +170,48 @@ const QuantumAIRevolution2026: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <button className="bg-gradient-to-r from-cyan-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                     Learn More →
                   </button>
                 </div>
                 
-                <div>
                   <h4 className="text-2xl font-bold mb-6">Key Applications</h4>
                   <div className="space-y-4">
                     {quantumFeatures[activeTab].applications.map((application, index) => (
                       <div key={index} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                         <span className="text-lg">{application}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
-      </div>
-
       {/* Use Cases */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
             <h2 className="text-5xl font-bold mb-6">Real-World Impact</h2>
-            <p className="text-xl opacity-90 max-w-4xl mx-auto">
               See how quantum AI is transforming industries and creating new possibilities 
               for human advancement.
-            </p>
-          </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:scale-105 transition-all duration-300"
-              >
                 <div className="text-6xl mb-6 text-center">{useCase.icon}</div>
                 <h3 className="text-2xl font-bold mb-4 text-center">{useCase.title}</h3>
                 <p className="text-lg opacity-90 mb-6 text-center">{useCase.description}</p>
                 <div className="bg-green-500/20 text-green-400 px-4 py-2 rounded-lg text-center text-sm font-semibold">
                   {useCase.impact}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
             <h2 className="text-4xl font-bold mb-6">Join the Quantum AI Revolution</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
               Be part of the most significant technological advancement in human history. 
               Experience the power of quantum AI today.
-            </p>
-            <div className="flex justify-center space-x-4">
               <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Start Your Journey
-              </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold">
                 Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
     </div>
   );
   };
 export default QuantumAIRevolution2026;
 };
-
-export default QuantumAIRevolution2026;

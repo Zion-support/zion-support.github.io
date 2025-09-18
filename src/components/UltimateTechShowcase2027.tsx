@@ -40,17 +40,13 @@ const UltimateTechShowcase2027: React.FC = () => {
               {item.title.split(' ')[0]} {item.title.split(' ')[1]}
             </motion.button>
           ))}
-        </div>
         {/* Content Display */}
         <AnimatePresence mode="wait">
-          <motion.div
             key={activeTab}
-            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
-          >
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <div>
@@ -86,12 +82,8 @@ const UltimateTechShowcase2027: React.FC = () => {
                   </motion.a>
                   <motion.button
                     className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
                     Watch Demo
                   </motion.button>
-                </div>
               </div>
               {/* Right Visual */}
               <div className="relative">
@@ -114,16 +106,12 @@ const UltimateTechShowcase2027: React.FC = () => {
                         <div className="text-sm font-semibold">Performance</div>
                         <div className="text-xs opacity-75">99.9% Uptime</div>
                       </div>
-                      <div className="bg-white/20 rounded-lg p-4">
                         <div className="text-2xl mb-2">🔒</div>
                         <div className="text-sm font-semibold">Security</div>
                         <div className="text-xs opacity-75">Quantum Safe</div>
-                      </div>
                     </div>
                   </div>
                 </motion.div>
-              </div>
-            </div>
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -137,20 +125,10 @@ const UltimateTechShowcase2027: React.FC = () => {
             The future is here, and it's more incredible than you can imagine.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.button
               className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
               Start Your Journey
-            </motion.button>
-            <motion.button
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
               Learn More
-            </motion.button>
           </div>
         </motion.div>
       </div>

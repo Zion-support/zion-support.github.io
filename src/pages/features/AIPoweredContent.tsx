@@ -45,16 +45,13 @@ export default function AIPoweredContent() {
               <p className="font-semibold">How does ZionGPT generate content?</p>
               <p className="text-zion-slate-light">Our fine-tuned AI model analyzes your prompts and produces human-like copy tailored for SEO.</p>
             </div>
-            <div>
               <p className="font-semibold">Can I edit the generated text?</p>
               <p className="text-zion-slate-light">Yes, you can review and modify all suggestions before publishing.</p>
-            </div>
           </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
-          </div>
         </div>
       </main>
       <Footer />

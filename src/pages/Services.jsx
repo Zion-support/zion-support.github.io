@@ -1,7 +1,7 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { servicesCatalog } from '../data/servicesCatalog';
+import { servicesCatalog } from '@/data/servicesCatalog';
 import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 export default function Services() {
     const contact = {
@@ -21,7 +21,6 @@ export default function Services() {
 							Real, ready-to-deploy offerings across Micro SaaS, AI, Cybersecurity, Data, and Cloud.
 						</p>
 					</div>
-
 					<div className="grid grid-cols-1 gap-12">
 						{servicesCatalog.map(category => (<section key={category.slug}>
 								<h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">{category.name}</h2>
@@ -35,43 +34,31 @@ export default function Services() {
 												<div className="text-right min-w-[120px]">
 													<div className="text-zion-cyan font-semibold">{item.price}</div>
 													<div className="text-zion-slate-light text-sm">{item.billing === 'month' ? 'Monthly' : item.billing === 'hour' ? 'Hourly' : 'Project-based'}</div>
-												</div>
 											</div>
-
 											<ul className="mt-4 space-y-2 text-zion-slate-light text-sm list-disc list-inside">
 												{item.features.map((f, idx) => (<li key={idx}>{f}</li>))}
 											</ul>
-
 											<div className="mt-6 flex items-center justify-between">
 												<Link to={item.href} target={item.external ? '_blank' : undefined} rel={item.external ? 'noopener noreferrer' : undefined} className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-2 px-4 rounded-lg border border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20">
 													<span>{item.ctaLabel}</span>
 													{item.external && <ExternalLink className="w-4 h-4"/>}
 												</Link>
 												<span className="text-zion-slate-light text-sm">Category: {item.category}</span>
-											</div>
 										</div>))}
 								</div>
 							</section>))}
-					</div>
-
 					<section className="mt-16">
 						<h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Contact Us</h2>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
 								<div className="flex items-center gap-3 text-white"><Phone className="w-5 h-5"/><span>{contact.mobile}</span></div>
 							</div>
-							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
 								<div className="flex items-center gap-3 text-white"><Mail className="w-5 h-5"/><span>{contact.email}</span></div>
-							</div>
-							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
 								<div className="flex items-center gap-3 text-white"><MapPin className="w-5 h-5"/><span>{contact.address}</span></div>
-							</div>
 						</div>
 						<div className="mt-6">
 							<Link to="/contact" className="inline-flex items-center gap-2 text-white underline">Go to contact page</Link>
-						</div>
 					</section>
-
 				</div>
 			</main>
 		</>);

@@ -6,7 +6,6 @@ const ComprehensiveServices2034: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Service Categories Navigation */}
         <div className="container mx-auto px-4 py-16">
           <div className="flex flex-wrap justify-center gap-4 mb-16">
@@ -23,11 +22,8 @@ const ComprehensiveServices2034: React.FC = () => {
                 {category.icon} {category.name}
               </button>
             ))}
-          </div>
-        </div>
       </div>
     </>
   );
 };
-
 export default ComprehensiveServices2034;

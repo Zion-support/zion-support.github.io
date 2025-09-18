@@ -19,7 +19,6 @@ const FeaturedContentShowcase2025 = () => {
         speed: "10,000x"
       }
     },
-    {
       id: 2,
       title: "Global Transformation: 10,000% ROI Success Story",
       description: "Documenting the most successful AI transformation ever recorded - a 10,000% ROI achievement that revolutionized an entire industry.",
@@ -29,13 +28,9 @@ const FeaturedContentShowcase2025 = () => {
       image: "🏆",
       badge: "10,000% ROI",
       badgeColor: "from-green-500 to-teal-500",
-      metrics: {
         roi: "10,000%",
         revenue: "+200%",
         efficiency: "95%"
-      }
-    },
-    {
       id: 3,
       title: "AI 2025 Ultimate Implementation Master Guide",
       description: "Complete roadmap to achieving 5,000% ROI with revolutionary AI technology. Your definitive resource for AI transformation success.",
@@ -45,13 +40,9 @@ const FeaturedContentShowcase2025 = () => {
       image: "📚",
       badge: "MASTER GUIDE",
       badgeColor: "from-blue-500 to-purple-500",
-      metrics: {
         phases: "4",
         duration: "52 weeks",
         roi: "5,000%"
-      }
-    },
-    {
       id: 4,
       title: "Quantum-Neural Hybrid Systems 2025",
       description: "Revolutionary quantum-neural architecture that combines quantum computing with advanced neural networks for unprecedented performance.",
@@ -61,13 +52,8 @@ const FeaturedContentShowcase2025 = () => {
       image: "⚛️",
       badge: "QUANTUM",
       badgeColor: "from-purple-500 to-indigo-500",
-      metrics: {
         processing: "Quantum",
-        accuracy: "99.9%",
         innovation: "Revolutionary"
-      }
-    },
-    {
       id: 5,
       title: "Autonomous Business Operations 2025",
       description: "Complete automation of business operations with AI systems that manageoptimizeand evolve without human intervention.",
@@ -77,13 +63,9 @@ const FeaturedContentShowcase2025 = () => {
       image: "🤖",
       badge: "AUTONOMOUS",
       badgeColor: "from-orange-500 to-red-500",
-      metrics: {
         automation: "95%",
         efficiency: "95%",
         cost: "-60%"
-      }
-    },
-    {
       id: 6,
       title: "AI 2025 ROI Calculator & Assessment Tool",
       description: "Calculate your potential ROI with AI 2025 Ultimate Breakthrough technology. Get personalized projections and implementation recommendations.",
@@ -93,14 +75,11 @@ const FeaturedContentShowcase2025 = () => {
       image: "🧮",
       badge: "CALCULATOR",
       badgeColor: "from-yellow-500 to-orange-500",
-      metrics: {
         accuracy: "99%",
         speed: "Instant",
         personalized: "Yes"
-      }
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,12 +93,10 @@ const FeaturedContentShowcase2025 = () => {
             Revolutionary AI Content That
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"> Changes Everything</span>
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover the most groundbreaking AI insightscase studiesand implementation guides that are transforming industries worldwide.
           </p>
         </div>
-
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredContent.map((content) => (
@@ -132,8 +109,6 @@ const FeaturedContentShowcase2025 = () => {
               {/* Content Image */}
               <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-6xl">
                 {content.image}
-              </div>
-              
               {/* Content Details */}
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
@@ -145,11 +120,9 @@ const FeaturedContentShowcase2025 = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                   {content.title}
                 </h3>
-                
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {content.description}
                 </p>
-                
                 {/* Metrics */}
                 <div className="grid grid-cols-3 gap-2 mb-4">
                   {Object.entries(content.metrics).map(([keyvalue]) => (
@@ -158,8 +131,6 @@ const FeaturedContentShowcase2025 = () => {
                       <div className="text-xs text-gray-500 capitalize">{key}</div>
                     </div>
                   ))}
-                </div>
-                
                 {/* CTA Button */}
                 <a 
                   href={content.url}
@@ -167,14 +138,10 @@ const FeaturedContentShowcase2025 = () => {
                 >
                   Explore {content.type}
                 </a>
-              </div>
-              
               {/* Hover effect overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
@@ -191,18 +158,11 @@ const FeaturedContentShowcase2025 = () => {
               >
                 Get Started Today
               </a>
-              <a 
                 href="/tools/ai-2025-roi-calculator"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
                 Calculate Your ROI
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
 };
-
 export default FeaturedContentShowcase2025;

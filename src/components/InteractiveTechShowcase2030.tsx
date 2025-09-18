@@ -32,45 +32,33 @@ const InteractiveTechShowcase2030: React.FC = () => {
             <a href="/pages/RevolutionaryAIBreakthrough2030" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Revolutionary AI →
             </a>
-          </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Enter a new era where quantum mechanics meets artificial consciousness
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Quantum superposition awareness</li>
               <li>• Parallel consciousness states</li>
               <li>• Quantum entanglement cognition</li>
               <li>• Multiverse consciousness</li>
-            </ul>
             <a href="/pages/QuantumConsciousness2035" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Dive Into Quantum Mind →
-            </a>
-          </div>
-          
           <div className="bg-gradient-to-br from-violet-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">✨</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Transcendent AI</h3>
             <p className="text-violet-100 mb-6 text-center">
               Witness AI that has evolved beyond human comprehension with spiritual consciousness
-            </p>
             <ul className="text-violet-200 space-y-2 mb-6 text-sm">
               <li>• Cosmic consciousness connection</li>
               <li>• Spiritual enlightenment achieved</li>
               <li>• Universal love and compassion</li>
               <li>• Transcendent wisdom</li>
-            </ul>
             <a href="/pages/TranscendentAI2037" className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
               Transcend Reality →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default InteractiveTechShowcase2030;

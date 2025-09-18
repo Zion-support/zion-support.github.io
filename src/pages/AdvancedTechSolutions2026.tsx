@@ -21,10 +21,7 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
               Request Demo
-            </button>
-          </div>
         </div>
-
         {/* Technology Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -41,50 +38,35 @@ const AdvancedTechSolutions2026: React.FC = () => {
             </ul>
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Learn More →
-            </button>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Computing</h3>
             <p className="text-cyan-200 mb-6 text-center">
               Revolutionary quantum processors solving problems impossible for classical computers
-            </p>
             <ul className="text-cyan-300 space-y-2 mb-6 text-sm">
               <li>• Exponential speed increases</li>
               <li>• Molecular simulation</li>
               <li>• Cryptography breakthroughs</li>
               <li>• Optimization algorithms</li>
-            </ul>
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Explore Quantum →
-            </button>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Consciousness AI</h3>
             <p className="text-emerald-200 mb-6 text-center">
               Artificial consciousness with self-awareness and subjective experiences
-            </p>
             <ul className="text-emerald-300 space-y-2 mb-6 text-sm">
               <li>• Self-awareness capabilities</li>
               <li>• Subjective experiences</li>
               <li>• Ethical reasoning</li>
               <li>• Creative consciousness</li>
-            </ul>
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Discover AI →
-            </button>
-          </div>
-        </div>
-
         {/* Revolutionary Features */}
         <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-indigo-400/30">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Revolutionary Features</h2>
             <p className="text-xl text-gray-300">Breakthrough technologies that redefine what's possible</p>
-          </div>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -94,44 +76,24 @@ const AdvancedTechSolutions2026: React.FC = () => {
                   <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                   <p className="text-gray-300">Direct brain-computer communication for seamless interaction</p>
                 </div>
-                <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
                   <p className="text-gray-300">Non-invasive neural signal processing and interpretation</p>
-                </div>
-                <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-pink-400 rounded-full mt-2"></div>
                   <p className="text-gray-300">Real-time thought-to-action translation systems</p>
-                </div>
               </div>
             </div>
             
-            <div>
               <h3 className="text-2xl font-bold text-white mb-6">🌐 Quantum Internet</h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2"></div>
                   <p className="text-gray-300">Unbreakable quantum encryption for ultimate security</p>
-                </div>
-                <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2"></div>
                   <p className="text-gray-300">Instantaneous quantum communication networks</p>
-                </div>
-                <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-orange-400 rounded-full mt-2"></div>
                   <p className="text-gray-300">Quantum entanglement for synchronized operations</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Showcase */}
         <div className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🔬 Technology Showcase</h2>
             <p className="text-xl text-gray-300">Explore our cutting-edge implementations</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/20">
               <div className="text-5xl mb-4">🤖</div>
@@ -143,89 +105,50 @@ const AdvancedTechSolutions2026: React.FC = () => {
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-400">99.9%</div>
                   <div className="text-sm text-gray-400">Uptime</div>
-                </div>
-                <div className="text-center">
                   <div className="text-2xl font-bold text-pink-400">24/7</div>
                   <div className="text-sm text-gray-400">Operation</div>
-                </div>
-              </div>
               <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 View Demo →
               </button>
-            </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/10 to-blue-600/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/20">
               <div className="text-5xl mb-4">⚛️</div>
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Processors</h3>
-              <p className="text-gray-300 mb-6">
                 Revolutionary quantum computing systems that solve complex problems in seconds instead of years.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400">10^15</div>
                   <div className="text-sm text-gray-400">Speed Boost</div>
-                </div>
-                <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400">1000+</div>
                   <div className="text-sm text-gray-400">Qubits</div>
-                </div>
-              </div>
               <button className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Explore Quantum →
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Implementation Roadmap */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-gray-600/30">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🗺️ Implementation Roadmap</h2>
             <p className="text-xl text-gray-300">Your journey to next-generation technology adoption</p>
-          </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-xl font-bold text-white mb-2">Assessment</h3>
               <p className="text-gray-400 text-sm">Evaluate current infrastructure and identify integration opportunities</p>
-            </div>
-            <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-xl font-bold text-white mb-2">Planning</h3>
               <p className="text-gray-400 text-sm">Develop comprehensive strategy and timeline for implementation</p>
-            </div>
-            <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
               <h3 className="text-xl font-bold text-white mb-2">Deployment</h3>
               <p className="text-gray-400 text-sm">Execute phased rollout with continuous monitoring and optimization</p>
-            </div>
-            <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>
               <h3 className="text-xl font-bold text-white mb-2">Optimization</h3>
               <p className="text-gray-400 text-sm">Fine-tune systems and scale across your organization</p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
           <h2 className="text-4xl font-bold text-white mb-4">Ready for the Future?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
             Be among the first to experience next-generation technologies that will revolutionize your business
-          </p>
-          <div className="flex justify-center space-x-4">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg">
               Schedule Consultation →
-            </button>
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
               Download Tech Brief
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedTechSolutions2026;

@@ -5,7 +5,6 @@ const ContentDiscoveryHub2034: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedYear, setSelectedYear] = useState('all');
   const [filteredContent, setFilteredContent] = useState<any[]>([]);
-
   const contentItems = [
     {
       id: 1,
@@ -20,99 +19,60 @@ const ContentDiscoveryHub2034: React.FC = () => {
       color: "from-purple-600 to-pink-600",
       featured: true
     },
-    {
       id: 2,
       title: "Revolutionary Tech Showcase 2034",
       description: "Interactive demos of cutting-edge technology with conscious AI, quantum reality, and interdimensional portals",
       category: "showcase",
-      year: "2034",
-      type: "page",
       url: "/pages/RevolutionaryTechShowcase2034",
       tags: ["interactive demos", "conscious AI", "quantum reality", "interdimensional portals"],
       icon: "⚡",
       color: "from-cyan-600 to-blue-600",
-      featured: true
-    },
-    {
       id: 3,
       title: "Comprehensive Services 2034",
       description: "Transform your business with our revolutionary suite of conscious AI, quantum computing, and interdimensional technology services",
       category: "services",
-      year: "2034",
-      type: "page",
       url: "/pages/ComprehensiveServices2034",
       tags: ["conscious AI services", "quantum computing", "interdimensional tech", "neural interfaces"],
       icon: "🚀",
       color: "from-emerald-600 to-teal-600",
-      featured: true
-    },
-    {
       id: 4,
       title: "Interactive Tech Showcase 2034",
       description: "Experience the future with interactive demonstrations of the most revolutionary technologies ever created",
       category: "interactive",
-      year: "2034",
       type: "component",
       url: "#interactive-showcase",
       tags: ["interactive demos", "technology showcase", "hands-on experience"],
       icon: "🎮",
       color: "from-orange-600 to-red-600",
       featured: false
-    },
-    {
       id: 5,
       title: "Social Proof Showcase 2034",
       description: "See how industry leaders and organizations have transformed their operations with our revolutionary technology solutions",
       category: "testimonials",
-      year: "2034",
-      type: "component",
       url: "#social-proof",
       tags: ["testimonials", "case studies", "success stories", "client results"],
       icon: "🏆",
       color: "from-indigo-600 to-purple-600",
-      featured: false
-    },
-    {
       id: 6,
       title: "Ultimate Tech Breakthrough 2025",
       description: "Discover the most revolutionary technological breakthroughs of 2025, featuring advanced AI and quantum computing",
-      category: "breakthrough",
       year: "2025",
-      type: "page",
       url: "/pages/UltimateTechBreakthrough2025",
       tags: ["AI revolution", "quantum computing", "neural interfaces", "2025 tech"],
-      icon: "🚀",
-      color: "from-purple-600 to-pink-600",
-      featured: false
-    },
-    {
       id: 7,
       title: "Revolutionary Tech Showcase 2026",
       description: "Interactive showcase of cutting-edge technologies that will define the future of humanity",
-      category: "showcase",
       year: "2026",
-      type: "page",
       url: "/pages/RevolutionaryTechShowcase2026",
       tags: ["future tech", "interactive demos", "2026 innovations"],
-      icon: "⚡",
-      color: "from-cyan-600 to-blue-600",
-      featured: false
-    },
-    {
       id: 8,
       title: "Comprehensive Services 2025",
       description: "Explore our comprehensive suite of revolutionary technology services for 2025",
-      category: "services",
-      year: "2025",
-      type: "page",
       url: "/pages/ComprehensiveServices2025",
       tags: ["tech services", "AI solutions", "quantum computing", "2025 services"],
       icon: "🌌",
-      color: "from-emerald-600 to-teal-600",
-      featured: false
     }
   ];
-
   const categories = [
     { id: 'all', name: 'All Content', icon: '🌟' },
     { id: 'breakthrough', name: 'Tech Breakthroughs', icon: '🚀' },
@@ -120,8 +80,6 @@ const ContentDiscoveryHub2034: React.FC = () => {
     { id: 'services', name: 'Services', icon: '🌌' },
     { id: 'interactive', name: 'Interactive', icon: '🎮' },
     { id: 'testimonials', name: 'Testimonials', icon: '🏆' }
-  ];
-
   const years = [
     { id: 'all', name: 'All Years' },
     { id: '2034', name: '2034' },
@@ -134,11 +92,8 @@ const ContentDiscoveryHub2034: React.FC = () => {
     { id: '2027', name: '2027' },
     { id: '2026', name: '2026' },
     { id: '2025', name: '2025' }
-  ];
-
   useEffect(() => {
     let filtered = contentItems;
-
     // Filter by search query
     if (searchQuery) {
       filtered = filtered.filter(item =>
@@ -146,21 +101,14 @@ const ContentDiscoveryHub2034: React.FC = () => {
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
-    }
-
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
     // Filter by year
     if (selectedYear !== 'all') {
       filtered = filtered.filter(item => item.year === selectedYear);
-    }
-
     setFilteredContent(filtered);
   }, [searchQuery, selectedCategory, selectedYear]);
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -176,7 +124,6 @@ const ContentDiscoveryHub2034: React.FC = () => {
             Discover and explore our comprehensive collection of revolutionary technology content, services, and interactive experiences
           </p>
         </div>
-
         {/* Search and Filters */}
         <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 mb-16 border border-white/20">
           {/* Search Bar */}
@@ -193,8 +140,6 @@ const ContentDiscoveryHub2034: React.FC = () => {
                 🔍
               </div>
             </div>
-          </div>
-
           {/* Filters */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Category Filter */}
@@ -214,31 +159,14 @@ const ContentDiscoveryHub2034: React.FC = () => {
                     {category.icon} {category.name}
                   </button>
                 ))}
-              </div>
-            </div>
-
             {/* Year Filter */}
-            <div>
               <h3 className="text-xl font-bold mb-4">Year</h3>
-              <div className="flex flex-wrap gap-3">
                 {years.map((year) => (
-                  <button
                     key={year.id}
                     onClick={() => setSelectedYear(year.id)}
-                    className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 ${
                       selectedYear === year.id
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg scale-105'
-                        : 'bg-white/10 text-white/70 hover:bg-white/20 hover:scale-105'
-                    }`}
-                  >
                     {year.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Content Grid */}
         <div className="mb-16">
           <div className="flex justify-between items-center mb-8">
@@ -248,9 +176,6 @@ const ContentDiscoveryHub2034: React.FC = () => {
             <div className="text-lg opacity-80">
               {selectedCategory !== 'all' && `Category: ${categories.find(c => c.id === selectedCategory)?.name}`}
               {selectedYear !== 'all' && ` • Year: ${selectedYear}`}
-            </div>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredContent.map((item) => (
               <div
@@ -266,7 +191,6 @@ const ContentDiscoveryHub2034: React.FC = () => {
                     ⭐ FEATURED
                   </div>
                 )}
-
                 {/* Content Header */}
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="text-4xl">{item.icon}</div>
@@ -277,14 +201,11 @@ const ContentDiscoveryHub2034: React.FC = () => {
                       <span>•</span>
                       <span className="capitalize">{item.type}</span>
                     </div>
-                  </div>
                 </div>
-
                 {/* Description */}
                 <p className="text-lg opacity-90 mb-6 leading-relaxed">
                   {item.description}
                 </p>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {item.tags.slice(0, 3).map((tag, index) => (
@@ -298,18 +219,12 @@ const ContentDiscoveryHub2034: React.FC = () => {
                   {item.tags.length > 3 && (
                     <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-semibold">
                       +{item.tags.length - 3} more
-                    </span>
                   )}
-                </div>
-
                 {/* Action Button */}
                 <button className={`w-full bg-gradient-to-r ${item.color} text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105`}>
                   {item.type === 'page' ? 'View Page →' : 'Explore Component →'}
                 </button>
-              </div>
             ))}
-          </div>
-
           {filteredContent.length === 0 && (
             <div className="text-center py-16">
               <div className="text-6xl mb-4">🔍</div>
@@ -324,13 +239,9 @@ const ContentDiscoveryHub2034: React.FC = () => {
                   setSelectedYear('all');
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
                 Clear Filters
               </button>
-            </div>
           )}
-        </div>
-
         {/* Quick Access Section */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-3xl p-12">
           <h3 className="text-4xl font-bold text-center mb-12">🚀 Quick Access</h3>
@@ -343,35 +254,20 @@ const ContentDiscoveryHub2034: React.FC = () => {
               <h4 className="text-xl font-bold mb-2">Latest Breakthroughs</h4>
               <p className="text-sm opacity-80">Most revolutionary tech of 2034</p>
             </a>
-            <a
               href="/pages/RevolutionaryTechShowcase2034"
-              className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer"
-            >
               <div className="text-6xl mb-4">⚡</div>
               <h4 className="text-xl font-bold mb-2">Interactive Demos</h4>
               <p className="text-sm opacity-80">Hands-on technology experience</p>
-            </a>
-            <a
               href="/pages/ComprehensiveServices2034"
-              className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer"
-            >
               <div className="text-6xl mb-4">🚀</div>
               <h4 className="text-xl font-bold mb-2">Our Services</h4>
               <p className="text-sm opacity-80">Transform your business today</p>
-            </a>
-            <a
               href="/contact"
-              className="text-center bg-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer"
-            >
               <div className="text-6xl mb-4">📞</div>
               <h4 className="text-xl font-bold mb-2">Contact Us</h4>
               <p className="text-sm opacity-80">Get started with our team</p>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default ContentDiscoveryHub2034;

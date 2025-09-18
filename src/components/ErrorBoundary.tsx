@@ -4,26 +4,18 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
-}
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
-  }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-  }
-
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -39,13 +31,11 @@ class ErrorBoundary extends Component<Props, State> {
                 <h3 className="text-lg font-medium text-gray-900">
                   Something went wrong
                 </h3>
-              </div>
             </div>
             <div className="mt-2">
               <p className="text-sm text-gray-500">
                 We're sorry, but something unexpected happened. Please try refreshing the page.
               </p>
-            </div>
             <div className="mt-4">
               <button
                 onClick={() => window.location.reload()}
@@ -53,14 +43,9 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 Refresh Page
               </button>
-            </div>
           </div>
         </div>
       );
     }
-
     return this.props.children;
-  }
-}
-
 export default ErrorBoundary;

@@ -10,7 +10,6 @@ const AIAutonomousResearchAssistant = () => {
     { icon: TrendingUp, title: 'Predictive Insights', desc: 'See trends and emerging topics sooner.' },
     { icon: Users, title: 'Collaboration', desc: 'Coordinate research with your team.' },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <Helmet>
@@ -18,7 +17,6 @@ const AIAutonomousResearchAssistant = () => {
         <meta name="description" content="AI assistant that accelerates literature review, analysis and reporting." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-research-assistant" />
       </Helmet>
-
       <section className="pt-24 pb-12 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <div className="flex justify-center mb-4">
@@ -32,11 +30,8 @@ const AIAutonomousResearchAssistant = () => {
             </Link>
             <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg font-semibold">
               View Services
-            </Link>
-          </div>
         </div>
       </section>
-
       <section className="pb-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => {
@@ -51,10 +46,7 @@ const AIAutonomousResearchAssistant = () => {
               </div>
             );
           })}
-        </div>
-      </section>
     </div>
   );
 };
-
 export default AIAutonomousResearchAssistant;

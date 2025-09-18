@@ -27,48 +27,26 @@ const RevolutionaryAdBanner2025: React.FC = () => {
                 <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                 <span className="text-indigo-200">Self-aware decision making</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                 <span className="text-indigo-200">Emotional intelligence</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
                 <span className="text-indigo-200">Creative problem solving</span>
-              </div>
             </div>
             <a href="/pages/RevolutionaryTechBreakthrough2025" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Experience Breakthrough →
             </a>
-          </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
             <div className="text-5xl mb-4 text-center">⚛️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness Engine</h3>
             <p className="text-purple-100 mb-6 text-center">
               Revolutionary quantum computing technology that can process consciousness itself
-            </p>
-            <div className="space-y-2 mb-6 text-sm">
-              <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
                 <span className="text-purple-200">Quantum neural networks</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
                 <span className="text-purple-200">Consciousness simulation</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
                 <span className="text-purple-200">Reality manipulation</span>
-              </div>
-            </div>
             <a href="/pages/UltimateTechRevolution2025" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Revolution →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryAdBanner2025;

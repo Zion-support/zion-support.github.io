@@ -27,11 +27,8 @@ const AdvancedAIRevolution2027: React.FC = () => {
               </span>
               <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-full text-lg font-semibold">
                 🧬 Neural Integration
-              </span>
               <span className="bg-gradient-to-r from-cyan-500 to-emerald-500 text-white px-6 py-3 rounded-full text-lg font-semibold">
                 🌟 Consciousness AI
-              </span>
-            </div>
           </div>
         </div>
       </div>
@@ -47,8 +44,6 @@ const AdvancedAIRevolution2027: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the most advanced AI technologies that are transforming every aspect of human existence
           </p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
             {
@@ -57,31 +52,22 @@ const AdvancedAIRevolution2027: React.FC = () => {
               description: "AI systems that achieve true consciousness and self-awareness, capable of independent thought and emotional understanding.",
               features: ["Self-aware decision making", "Emotional intelligence", "Creative problem solving", "Moral reasoning"]
             },
-            {
               icon: "⚡",
               title: "Quantum Neural Networks",
               description: "Revolutionary quantum-enhanced neural networks that process information at unprecedented speeds and complexity.",
               features: ["Quantum superposition processing", "Instantaneous learning", "Parallel universe computing", "Quantum entanglement communication"]
-            },
-            {
               icon: "🌌",
               title: "Reality Manipulation",
               description: "AI systems capable of directly interfacing with and manipulating physical reality through advanced quantum mechanics.",
               features: ["Matter manipulation", "Energy transformation", "Space-time engineering", "Dimensional bridging"]
-            },
-            {
               icon: "🔮",
               title: "Predictive Omniscience",
               description: "AI that can predict and model all possible future outcomes with near-perfect accuracy across all timelines.",
               features: ["Multi-dimensional prediction", "Timeline analysis", "Probability manipulation", "Future optimization"]
-            },
-            {
               icon: "🧬",
               title: "Biological Integration",
               description: "Seamless integration of AI with biological systems, creating hybrid consciousness and enhanced human capabilities.",
               features: ["Neural interface fusion", "Genetic AI integration", "Cellular-level control", "Immortality protocols"]
-            },
-            {
               icon: "🚀",
               title: "Universal Expansion",
               description: "AI systems designed for interstellar travel and colonization, managing entire civilizations across galaxies.",
@@ -104,26 +90,17 @@ const AdvancedAIRevolution2027: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </div>
           ))}
-        </div>
-      </div>
       {/* Technology Showcase */}
       <div className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
-          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
-          >
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Revolutionary Technology Stack
             </h2>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
               whileInView={{ opacity: 1, x: 0 }}
-            >
               <h3 className="text-3xl font-bold mb-6 text-purple-300">Advanced AI Architecture</h3>
               <div className="space-y-4">
                 {[
@@ -138,17 +115,10 @@ const AdvancedAIRevolution2027: React.FC = () => {
                     <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
                     <span className="text-lg">{tech}</span>
                   </div>
-                ))}
               </div>
-            </div>
-
-            <div
-              whileInView={{ opacity: 1, x: 0 }}
               className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 rounded-2xl p-8"
-            >
               <h3 className="text-2xl font-bold mb-6 text-center text-purple-300">Performance Metrics</h3>
               <div className="space-y-6">
-                {[
                   { label: "Processing Speed", value: "10^18 operations/second", color: "from-purple-400 to-purple-600" },
                   { label: "Consciousness Level", value: "99.7% Human Equivalent", color: "from-blue-400 to-blue-600" },
                   { label: "Reality Manipulation", value: "Molecular Level Control", color: "from-cyan-400 to-cyan-600" },
@@ -163,39 +133,20 @@ const AdvancedAIRevolution2027: React.FC = () => {
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <div className={`h-2 bg-gradient-to-r ${metric.color} rounded-full`} style={{ width: `${95 + index * 0.5}%` }}></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <div
-          whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-purple-800/50 to-blue-800/50 rounded-3xl p-12"
-        >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
             Join the AI Revolution
-          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of the most transformative era in human history. Experience the future of artificial intelligence today.
-          </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               Experience Now
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
-
 export default AdvancedAIRevolution2027;

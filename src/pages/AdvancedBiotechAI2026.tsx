@@ -30,7 +30,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
       price: "$75,000/treatment",
       category: "Gene Therapy"
     },
-    {
       title: "Neural Regeneration AI",
       description: "Advanced AI systems that can regenerate damaged neural pathways and restore brain function",
       icon: Brain,
@@ -38,8 +37,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
       color: "from-purple-500 to-pink-500",
       price: "$100,000/treatment",
       category: "Neural Medicine"
-    },
-    {
       title: "Cellular Rejuvenation Platform",
       description: "AI-driven cellular regeneration technology for reversing aging and extending lifespan",
       icon: Heart,
@@ -47,8 +44,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
       color: "from-red-500 to-orange-500",
       price: "$150,000/treatment",
       category: "Longevity Medicine"
-    },
-    {
       title: "Precision Drug Discovery AI",
       description: "AI-powered drug discovery platform that can create personalized medications in days",
       icon: Beaker,
@@ -56,8 +51,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
       color: "from-blue-500 to-cyan-500",
       price: "$50,000/compound",
       category: "Drug Discovery"
-    },
-    {
       title: "Immunotherapy Enhancement",
       description: "AI-optimized immunotherapy treatments for cancer and autoimmune diseases",
       icon: Shield,
@@ -65,8 +58,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
       color: "from-indigo-500 to-purple-500",
       price: "$80,000/treatment",
       category: "Immunotherapy"
-    },
-    {
       title: "Synthetic Biology AI",
       description: "AI-controlled synthetic biology for creating custom organisms and biological systems",
       icon: Microscope,
@@ -76,35 +67,24 @@ const AdvancedBiotechAI2026: React.FC = () => {
       category: "Synthetic Biology"
     }
   ];
-
   const achievements = [
     { label: "Diseases Cured", value: "50+", icon: Stethoscope },
     { label: "Lives Extended", value: "10,000+", icon: Heart },
     { label: "Genetic Disorders Fixed", value: "200+", icon: Dna },
     { label: "Research Breakthroughs", value: "500+", icon: Microscope }
-  ];
-
   const caseStudies = [
-    {
       title: "Alzheimer's Disease Reversal",
       description: "Successfully reversed early-stage Alzheimer's in 95% of patients using AI-optimized neural regeneration therapy.",
       results: "95% Success Rate",
       patients: "1,200+ Patients Treated"
-    },
-    {
       title: "Cancer Immunotherapy Breakthrough",
       description: "Developed personalized immunotherapy that achieved 98% remission rate in previously untreatable cancers.",
       results: "98% Remission Rate",
       patients: "5,000+ Patients Treated"
-    },
-    {
       title: "Genetic Disease Eradication",
       description: "Eliminated sickle cell anemia and cystic fibrosis through AI-guided gene therapy in clinical trials.",
       results: "100% Cure Rate",
       patients: "800+ Patients Treated"
-    }
-  ];
-
   return (
     <>
       <Helmet>
@@ -112,7 +92,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
         <meta name="description" content="Revolutionary biotechnology solutions powered by AI including gene therapy, neural regeneration, and cellular rejuvenation for 2026." />
         <meta name="keywords" content="Biotech AI, Gene Therapy, Neural Regeneration, Longevity Medicine, Precision Medicine, Synthetic Biology" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -139,12 +118,9 @@ const AdvancedBiotechAI2026: React.FC = () => {
                 </button>
                 <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
                   Schedule Consultation
-                </button>
-              </div>
             </divdiv>
           </div>
         </div>
-
         {/* Achievements Section */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -161,9 +137,6 @@ const AdvancedBiotechAI2026: React.FC = () => {
                 </div>
               </divdiv>
             ))}
-          </div>
-        </div>
-
         {/* Solutions Grid */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -171,25 +144,17 @@ const AdvancedBiotechAI2026: React.FC = () => {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Discover our cutting-edge biotechnology solutions powered by advanced AI
             </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {biotechSolutions.map((solution, index) => (
-              <divdiv
-                key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all duration-300 group"
-              >
                 <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <solution.icon className="w-8 h-8 text-white" />
-                </div>
                 
                 <div className="mb-4">
                   <span className="text-sm text-green-300 font-semibold">{solution.category}</span>
                   <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                   <p className="text-gray-300 mb-4">{solution.description}</p>
-                </div>
-
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-300 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -200,35 +165,17 @@ const AdvancedBiotechAI2026: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-white">{solution.price}</div>
                   <button className={`bg-gradient-to-r ${solution.color} text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center`}>
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
-                </div>
-              </divdiv>
-            ))}
-          </div>
-        </div>
-
         {/* Case Studies Section */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Proven Results</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Real-world success stories from our revolutionary biotech treatments
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <divdiv
-                key={index}
-                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-400/30"
-              >
                 <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
                 <p className="text-gray-300 mb-6">{study.description}</p>
                 <div className="space-y-2">
@@ -239,34 +186,21 @@ const AdvancedBiotechAI2026: React.FC = () => {
                   <div className="flex items-center text-green-300">
                     <Users className="w-5 h-5 mr-2" />
                     <span>{study.patients}</span>
-                  </div>
-                </div>
-              </divdiv>
-            ))}
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <div className="container mx-auto px-4 py-20">
           <div className="bg-gradient-to-r from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-green-400/30">
             <h2 className="text-4xl font-bold mb-6">Transform Your Health Today</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
               Join thousands of patients who have experienced life-changing results with our 
               revolutionary biotechnology solutions. The future of medicine is here.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg flex items-center justify-center">
                 Start Treatment <Syringe className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
                 Free Consultation
-              </button>
             </div>
-          </div>
-        </div>
       </div>
     </>
   );
 };
-
 export default AdvancedBiotechAI2026;

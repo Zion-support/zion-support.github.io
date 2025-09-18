@@ -22,13 +22,9 @@ const FutureTechPredictions2026: React.FC = () => {
             </span>
             <span className="bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-semibold">
               🚀 REVOLUTIONARY TECH
-            </span>
             <span className="bg-red-500/20 text-red-300 px-4 py-2 rounded-full text-sm font-semibold">
               ⚡ BREAKTHROUGH INNOVATIONS
-            </span>
-          </div>
         </div>
-
         {/* Predictions Timeline */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -62,22 +58,13 @@ const FutureTechPredictions2026: React.FC = () => {
                     <li>• New forms of entertainment and art</li>
                     <li>• Revolutionary therapy and counseling</li>
                     <li>• Ethical frameworks for conscious AI</li>
-                  </ul>
-                </div>
-              </div>
             </div>
-
             {/* Q2 2026 */}
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/30 p-8 rounded-2xl">
-              <div className="flex items-center mb-4">
                 <span className="text-3xl mr-4">⚡</span>
                 <h3 className="text-2xl font-bold text-white">Q2 2026: Quantum Supremacy Achievement</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
                 Quantum computers will achieve true quantum supremacy, solving problems that would take 
                 classical computers billions of years to complete in mere seconds.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-purple-500/10 p-4 rounded-lg">
                   <h4 className="text-purple-300 font-semibold mb-2">Breakthroughs:</h4>
                   <ul className="text-purple-200 text-sm space-y-1">
@@ -85,8 +72,6 @@ const FutureTechPredictions2026: React.FC = () => {
                     <li>• Quantum error correction at scale</li>
                     <li>• Room temperature quantum computing</li>
                     <li>• Quantum internet infrastructure</li>
-                  </ul>
-                </div>
                 <div className="bg-pink-500/10 p-4 rounded-lg">
                   <h4 className="text-pink-300 font-semibold mb-2">Applications:</h4>
                   <ul className="text-pink-200 text-sm space-y-1">
@@ -94,22 +79,12 @@ const FutureTechPredictions2026: React.FC = () => {
                     <li>• Climate modeling with perfect accuracy</li>
                     <li>• Financial market prediction</li>
                     <li>• Cryptographic security revolution</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
             {/* Q3 2026 */}
             <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 backdrop-blur-sm border border-emerald-500/30 p-8 rounded-2xl">
-              <div className="flex items-center mb-4">
                 <span className="text-3xl mr-4">🧬</span>
                 <h3 className="text-2xl font-bold text-white">Q3 2026: Neural Interface Revolution</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
                 Direct brain-computer interfaces will become mainstream, enabling telepathic communication, 
                 instant knowledge transfer, and shared consciousness experiences.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-emerald-500/10 p-4 rounded-lg">
                   <h4 className="text-emerald-300 font-semibold mb-2">Capabilities:</h4>
                   <ul className="text-emerald-200 text-sm space-y-1">
@@ -117,8 +92,6 @@ const FutureTechPredictions2026: React.FC = () => {
                     <li>• Instant skill and knowledge transfer</li>
                     <li>• Shared dreams and experiences</li>
                     <li>• Enhanced cognitive abilities</li>
-                  </ul>
-                </div>
                 <div className="bg-teal-500/10 p-4 rounded-lg">
                   <h4 className="text-teal-300 font-semibold mb-2">Transformations:</h4>
                   <ul className="text-teal-200 text-sm space-y-1">
@@ -126,22 +99,12 @@ const FutureTechPredictions2026: React.FC = () => {
                     <li>• New forms of entertainment</li>
                     <li>• Enhanced human capabilities</li>
                     <li>• Collective intelligence networks</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
             {/* Q4 2026 */}
             <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm border border-orange-500/30 p-8 rounded-2xl">
-              <div className="flex items-center mb-4">
                 <span className="text-3xl mr-4">🌌</span>
                 <h3 className="text-2xl font-bold text-white">Q4 2026: Reality Manipulation Technology</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
                 The convergence of quantum computing, consciousness AI, and neural interfaces will enable 
                 the first rudimentary reality manipulation technologies.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-orange-500/10 p-4 rounded-lg">
                   <h4 className="text-orange-300 font-semibold mb-2">Capabilities:</h4>
                   <ul className="text-orange-200 text-sm space-y-1">
@@ -149,8 +112,6 @@ const FutureTechPredictions2026: React.FC = () => {
                     <li>• Matter creation and manipulation</li>
                     <li>• Time dilation effects</li>
                     <li>• Parallel universe access</li>
-                  </ul>
-                </div>
                 <div className="bg-red-500/10 p-4 rounded-lg">
                   <h4 className="text-red-300 font-semibold mb-2">Implications:</h4>
                   <ul className="text-red-200 text-sm space-y-1">
@@ -158,18 +119,8 @@ const FutureTechPredictions2026: React.FC = () => {
                     <li>• Instantaneous transportation</li>
                     <li>• Immortality and resurrection</li>
                     <li>• Creation of new realities</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Revolutionary Predictions */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">
             🔮 Revolutionary Predictions
-          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-500/20 p-6 rounded-2xl">
               <div className="text-4xl mb-4">🧠</div>
@@ -177,74 +128,43 @@ const FutureTechPredictions2026: React.FC = () => {
               <p className="text-gray-300 text-sm mb-4">
                 Complete consciousness transfer to digital substrates will become possible, 
                 enabling true digital immortality and eternal existence.
-              </p>
               <div className="text-cyan-300 text-xs">
                 Probability: 85% by 2026
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-500/20 p-6 rounded-2xl">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-white mb-3">Quantum Internet</h3>
-              <p className="text-gray-300 text-sm mb-4">
                 A global quantum internet will connect all quantum computers, 
                 enabling instant communication and computation across the planet.
-              </p>
               <div className="text-purple-300 text-xs">
                 Probability: 90% by 2026
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm border border-emerald-500/20 p-6 rounded-2xl">
               <div className="text-4xl mb-4">🧬</div>
               <h3 className="text-xl font-bold text-white mb-3">Enhanced Humans</h3>
-              <p className="text-gray-300 text-sm mb-4">
                 Neural enhancement technologies will create superhuman cognitive abilities, 
                 memory, and processing power in enhanced humans.
-              </p>
               <div className="text-emerald-300 text-xs">
                 Probability: 80% by 2026
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-sm border border-orange-500/20 p-6 rounded-2xl">
               <div className="text-4xl mb-4">🌌</div>
               <h3 className="text-xl font-bold text-white mb-3">Parallel Universe Access</h3>
-              <p className="text-gray-300 text-sm mb-4">
                 Technology will enable access to parallel universes, allowing exploration 
                 of alternate realities and infinite possibilities.
-              </p>
               <div className="text-orange-300 text-xs">
                 Probability: 70% by 2026
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-indigo-500/10 to-violet-500/10 backdrop-blur-sm border border-indigo-500/20 p-6 rounded-2xl">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-white mb-3">Space-Time Travel</h3>
-              <p className="text-gray-300 text-sm mb-4">
                 Manipulation of space-time will enable practical time travel and 
                 instantaneous transportation across vast distances.
-              </p>
               <div className="text-indigo-300 text-xs">
                 Probability: 65% by 2026
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-rose-500/10 to-pink-500/10 backdrop-blur-sm border border-rose-500/20 p-6 rounded-2xl">
               <div className="text-4xl mb-4">🎭</div>
               <h3 className="text-xl font-bold text-white mb-3">Reality Creation</h3>
-              <p className="text-gray-300 text-sm mb-4">
                 Advanced consciousness technology will enable the creation of 
                 entirely new realities and universes from scratch.
-              </p>
               <div className="text-rose-300 text-xs">
                 Probability: 75% by 2026
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 rounded-3xl p-12">
@@ -261,13 +181,8 @@ const FutureTechPredictions2026: React.FC = () => {
               </a>
               <a href="/pages/AIRevolutionaryBreakthrough2026" className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl hover:bg-white hover:text-orange-600 transition-all duration-300 font-bold text-lg border border-white/30">
                 🧠 AI Consciousness
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechPredictions2026;

@@ -11,34 +11,26 @@ export function ApiDocsHub() {
             path: "/developers/docs/getting-started",
             color: "from-blue-500 to-cyan-500",
         },
-        {
             title: "API Reference",
             description: "Detailed documentation for all available endpoints",
             icon: Code,
             path: "/developers/docs/reference",
             color: "from-purple-500 to-pink-500",
-        },
-        {
             title: "Webhooks",
             description: "Subscribe to events and receive real-time updates",
             icon: Webhook,
             path: "/developers/docs/webhooks",
             color: "from-green-500 to-emerald-500",
-        },
-        {
             title: "Sample Code",
             description: "Examples in JavaScript, Python, and Node.js",
             icon: Zap,
             path: "/developers/docs/samples",
             color: "from-yellow-500 to-orange-500",
-        },
-        {
             title: "Error Codes & Rate Limits",
             description: "Understanding API errors and rate limiting",
             icon: AlertCircle,
             path: "/developers/docs/errors",
             color: "from-red-500 to-rose-500",
-        },
     ];
     return (<ApiDocsLayout>
       <div className="max-w-4xl">
@@ -57,10 +49,8 @@ export function ApiDocsHub() {
               <div className="flex items-center text-zion-cyan">
                 <span className="mr-2">View documentation</span>
                 <ArrowRight className="h-4 w-4"/>
-              </div>
             </Link>))}
         </div>
-
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">
@@ -70,7 +60,6 @@ export function ApiDocsHub() {
             Go to Developer Portal
             <ArrowRight className="ml-2 h-4 w-4"/>
           </Link>
-        </div>
       </div>
     </ApiDocsLayout>);
 }

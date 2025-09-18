@@ -19,8 +19,6 @@ const Developer = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Developer portal coming soon. We're building comprehensive development resources.
-            </p>
-          </div>
         </div>
       </div>
     </>);

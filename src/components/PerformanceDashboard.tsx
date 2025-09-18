@@ -3,26 +3,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { usePerformance } from '@/hooks/use-performance';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { BarChart3, Zap, Clock, Target, RefreshCw, Eye, EyeOff } from 'lucide-react';
-
 export function PerformanceDashboard() {
   const { metrics, score, grade, resetMetrics, isSupported } = usePerformance();
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-
   if (!isSupported) {
     return null;
   }
-
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-400';
     if (score >= 80) return 'text-yellow-400';
     if (score >= 70) return 'text-orange-400';
     return 'text-red-400';
   };
-
   const getGradeColor = (grade: string) => {
     switch (grade) {
       case 'A': return 'bg-green-500';
@@ -31,13 +27,9 @@ export function PerformanceDashboard() {
       case 'D': return 'bg-red-500';
       default: return 'bg-gray-500';
     }
-  };
-
   const formatMetric = (value: number | null, unit: string) => {
     if (value === null) return 'N/A';
     return `${value.toFixed(2)} ${unit}`;
-  };
-
   const getMetricStatus = (metric: string, value: number | null) => {
     const thresholds: Record<string, { good: number; needsImprovement: number }> = {
       fcp: { good: 1800, needsImprovement: 3000 },
@@ -45,34 +37,23 @@ export function PerformanceDashboard() {
       fid: { good: 100, needsImprovement: 300 },
       cls: { good: 0.1, needsImprovement: 0.25 }
     };
-
     if (value === null) return 'unknown';
     const threshold = thresholds[metric];
     if (!threshold) return 'unknown';
-
     if (value <= threshold.good) return 'good';
     if (value <= threshold.needsImprovement) return 'needs-improvement';
     return 'poor';
-  };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'good': return 'text-green-400';
       case 'needs-improvement': return 'text-yellow-400';
       case 'poor': return 'text-red-400';
       default: return 'text-gray-400';
-    }
-  };
-
   const getStatusIcon = (status: string) => {
-    switch (status) {
       case 'good': return '✓';
       case 'needs-improvement': return '⚠';
       case 'poor': return '✗';
       default: return '?';
-    }
-  };
-
   return (
     <>
       {/* Toggle Button */}
@@ -84,7 +65,6 @@ export function PerformanceDashboard() {
       >
         {isVisible ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
       </motion.button>
-
       {/* Dashboard */}
       <AnimatePresence>
         {isVisible && (
@@ -120,11 +100,8 @@ export function PerformanceDashboard() {
                 <div className="text-center py-4">
                   <div className={`text-3xl font-bold ${getScoreColor(score)}`}>
                     {score}
-                  </div>
                   <div className="text-sm text-zion-slate-light">Performance Score</div>
-                </div>
               </CardHeader>
-
               <CardContent className="space-y-4">
                 {/* Core Web Vitals */}
                 <div className="space-y-3">
@@ -144,38 +121,18 @@ export function PerformanceDashboard() {
                       </div>
                     </div>
                     
-                    <div className="flex items-center justify-between text-sm">
                       <span className="text-zion-slate-light">LCP</span>
-                      <div className="flex items-center space-x-2">
                         <span className={getStatusColor(getMetricStatus('lcp', metrics.lcp))}>
                           {getStatusIcon(getMetricStatus('lcp', metrics.lcp))}
-                        </span>
                         <span>{formatMetric(metrics.lcp, 'ms')}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-sm">
                       <span className="text-zion-slate-light">FID</span>
-                      <div className="flex items-center space-x-2">
                         <span className={getStatusColor(getMetricStatus('fid', metrics.fid))}>
                           {getStatusIcon(getMetricStatus('fid', metrics.fid))}
-                        </span>
                         <span>{formatMetric(metrics.fid, 'ms')}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between text-sm">
                       <span className="text-zion-slate-light">CLS</span>
-                      <div className="flex items-center space-x-2">
                         <span className={getStatusColor(getMetricStatus('cls', metrics.cls))}>
                           {getStatusIcon(getMetricStatus('cls', metrics.cls))}
-                        </span>
                         <span>{formatMetric(metrics.cls, '')}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Additional Metrics */}
                 {isExpanded && (
                   <motion.div
@@ -188,38 +145,22 @@ export function PerformanceDashboard() {
                       <Clock className="w-4 h-4 mr-2" />
                       Additional Metrics
                     </h4>
-                    
                     <div className="space-y-2">
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-zion-slate-light">TTFB</span>
                         <span>{formatMetric(metrics.ttfb, 'ms')}</span>
-                      </div>
-                    </div>
                   </motion.div>
                 )}
-
                 {/* Actions */}
                 <div className="pt-3 border-t border-zion-blue-light/20">
                   <div className="flex space-x-2">
-                    <Button
-                      size="sm"
                       variant="outline"
                       onClick={resetMetrics}
                       className="flex-1 border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/10"
-                    >
                       <RefreshCw className="w-4 h-4 mr-2" />
                       Reset
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
                       onClick={() => setIsVisible(false)}
-                      className="flex-1 border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/10"
-                    >
                       Close
-                    </Button>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </motion.div>

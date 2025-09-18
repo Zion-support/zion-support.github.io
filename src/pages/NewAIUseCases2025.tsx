@@ -6,5 +6,4 @@ const NewAIUseCases2025 = () => {
     </div>
   );
 };
-
 export default NewAIUseCases2025;

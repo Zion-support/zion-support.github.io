@@ -21,24 +21,18 @@ export default function LatestContentPromotionBanner2026() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Revolutionary Content Collection 2026
             </h2>
-            
             <p className="text-xl mb-8 opacity-90 leading-relaxed">
               Discover our latest breakthrough content covering AI automationquantum computing
               cybersecurityand enterprise transformation. Stay ahead with cutting-edge insights 
               from industry leaders.
             </p>
-            
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-white bg-opacity-20 rounded-lg p-4">
                 <div className="text-2xl font-bold text-yellow-300">50+</div>
                 <div className="text-sm opacity-90">Expert Articles</div>
               </div>
-              <div className="bg-white bg-opacity-20 rounded-lg p-4">
                 <div className="text-2xl font-bold text-yellow-300">100K+</div>
                 <div className="text-sm opacity-90">Monthly Readers</div>
-              </div>
-            </div>
-            
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="/blog"
@@ -46,13 +40,9 @@ export default function LatestContentPromotionBanner2026() {
               >
                 Explore All Content
               </a>
-              <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
-              >
                 Get Custom Insights
-              </a>
-            </div>
           </div>
           
           {/* Featured Content Cards */}
@@ -63,59 +53,26 @@ export default function LatestContentPromotionBanner2026() {
                 <div className="inline-flex items-center bg-green-500 bg-opacity-20 rounded-full px-3 py-1">
                   <span className="text-xs font-medium text-green-300">NEW</span>
                 </div>
-              </div>
               <h3 className="text-lg font-bold mb-2">AI 2025 Enterprise Automation Revolution</h3>
               <p className="text-gray-300 text-sm mb-3">
                 Complete guide to implementing AI automation in enterprise environments with real-world case studies.
               </p>
-              <a
                 href="/blog/ai-2025-enterprise-automation-revolution-ultimate-guide"
                 className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
-              >
                 Read More →
-              </a>
-            </div>
-            
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-              <div className="flex items-center mb-3">
                 <div className="text-3xl mr-3">⚛️</div>
                 <div className="inline-flex items-center bg-blue-500 bg-opacity-20 rounded-full px-3 py-1">
                   <span className="text-xs font-medium text-blue-300">BREAKTHROUGH</span>
-                </div>
-              </div>
               <h3 className="text-lg font-bold mb-2">Quantum AI 2026 Business Transformation</h3>
-              <p className="text-gray-300 text-sm mb-3">
                 Revolutionary guide to quantum AI applications in business with implementation strategies.
-              </p>
-              <a
                 href="/blog/quantum-ai-2026-business-transformation-ultimate-guide"
-                className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
-              >
-                Read More →
-              </a>
-            </div>
-            
-            <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
-              <div className="flex items-center mb-3">
                 <div className="text-3xl mr-3">🛡️</div>
                 <div className="inline-flex items-center bg-red-500 bg-opacity-20 rounded-full px-3 py-1">
                   <span className="text-xs font-medium text-red-300">ESSENTIAL</span>
-                </div>
-              </div>
               <h3 className="text-lg font-bold mb-2">AI 2025 Cybersecurity Revolution</h3>
-              <p className="text-gray-300 text-sm mb-3">
                 Next-generation AI-powered cybersecurity solutions protecting enterprises from evolving threats.
-              </p>
-              <a
                 href="/blog/ai-2025-cybersecurity-revolution"
-                className="text-yellow-300 hover:text-yellow-200 text-sm font-semibold"
-              >
-                Read More →
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
   );
 }

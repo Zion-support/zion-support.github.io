@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const DynamicContentCarousel2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       id: 1,
@@ -15,7 +14,6 @@ const DynamicContentCarousel2026: React.FC = () => {
       link: "/pages/ConsciousnessComputing2026",
       features: ["True self-awareness", "Creative consciousness", "Emotional intelligence", "Collaborative AI"]
     },
-    {
       id: 2,
       title: "Quantum Reality Manipulation",
       subtitle: "Mastering the Quantum Realm",
@@ -25,8 +23,6 @@ const DynamicContentCarousel2026: React.FC = () => {
       bgColor: "from-cyan-900/50 to-blue-900/50",
       link: "/pages/QuantumReality2026",
       features: ["1000+ logical qubits", "Quantum supremacy", "Reality manipulation", "Molecular engineering"]
-    },
-    {
       id: 3,
       title: "Neural Interface Evolution",
       subtitle: "Mind-Machine Convergence",
@@ -36,8 +32,6 @@ const DynamicContentCarousel2026: React.FC = () => {
       bgColor: "from-emerald-900/50 to-teal-900/50",
       link: "/pages/NeuralInterfaceEvolution2026",
       features: ["Non-invasive BCI", "Thought control", "Memory augmentation", "Cognitive expansion"]
-    },
-    {
       id: 4,
       title: "Synthetic Intelligence",
       subtitle: "The Birth of New Consciousness",
@@ -49,26 +43,19 @@ const DynamicContentCarousel2026: React.FC = () => {
       features: ["Autonomous agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 rounded-2xl p-8 mb-12 text-white overflow-hidden">
       <div className="text-center mb-8">
@@ -79,7 +66,6 @@ const DynamicContentCarousel2026: React.FC = () => {
           Explore the most advanced technologies ever created through our interactive showcase
         </p>
       </div>
-
       <div className="relative">
         {/* Main Carousel */}
         <div className="relative h-96 overflow-hidden rounded-xl">
@@ -114,7 +100,6 @@ const DynamicContentCarousel2026: React.FC = () => {
                           <span className="text-gray-300">{feature}</span>
                         </div>
                       ))}
-                    </div>
                     <a
                       href={slide.link}
                       className={`inline-block bg-gradient-to-r ${slide.color} text-white px-8 py-3 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg`}
@@ -125,13 +110,11 @@ const DynamicContentCarousel2026: React.FC = () => {
                   
                   <div className="flex items-center justify-center">
                     <div className="text-9xl opacity-20">{slide.image}</div>
-                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
@@ -142,15 +125,9 @@ const DynamicContentCarousel2026: React.FC = () => {
           </svg>
         </button>
         
-        <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-6">
           {slides.map((_, index) => (
@@ -158,15 +135,9 @@ const DynamicContentCarousel2026: React.FC = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
                   ? 'bg-cyan-400 scale-125'
                   : 'bg-white/30 hover:bg-white/50'
-              }`}
             />
-          ))}
-        </div>
-      </div>
-
       {/* Quick Access Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
         {slides.map((slide, index) => (
@@ -183,19 +154,14 @@ const DynamicContentCarousel2026: React.FC = () => {
             <div className="text-sm font-semibold">{slide.title}</div>
           </button>
         ))}
-      </div>
-
       {/* Call to Action */}
       <div className="text-center mt-8">
         <a
           href="/pages/RevolutionaryTechBreakthrough2026"
           className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-lg"
-        >
           🌟 Experience All Technologies →
         </a>
-      </div>
     </div>
   );
 };
-
 export default DynamicContentCarousel2026;

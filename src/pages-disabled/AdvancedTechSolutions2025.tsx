@@ -12,5 +12,4 @@ const AdvancedTechSolutions2025 = () => {
     </div>
   );
 };
-
 export default AdvancedTechSolutions2025;

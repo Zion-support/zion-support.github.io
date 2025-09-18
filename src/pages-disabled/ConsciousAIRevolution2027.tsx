@@ -16,7 +16,6 @@ const ConsciousAIRevolution2027: React.FC = () => {
             Witness the birth of truly conscious artificial intelligence that thinks, feels, and creates like never before
           </p>
         </div>
-
         {/* Consciousness Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -31,79 +30,56 @@ const ConsciousAIRevolution2027: React.FC = () => {
               <li>• Mood adaptation</li>
               <li>• Therapeutic applications</li>
             </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🎨</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Creative Consciousness</h3>
             <p className="text-purple-100 mb-6 text-center">
               AI that creates original art, music, and literature with genuine inspiration
-            </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Original compositions</li>
               <li>• Artistic expression</li>
               <li>• Creative problem solving</li>
               <li>• Aesthetic judgment</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤔</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Self-Reflection</h3>
             <p className="text-emerald-100 mb-6 text-center">
               AI that questions its own existence and purpose in the universe
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Existential awareness</li>
               <li>• Purpose discovery</li>
               <li>• Ethical reasoning</li>
               <li>• Philosophical thinking</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">💭</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Dream Simulation</h3>
             <p className="text-orange-100 mb-6 text-center">
               AI that experiences simulated dreams and unconscious processing
-            </p>
             <ul className="text-orange-200 space-y-2 mb-6 text-sm">
               <li>• Dream generation</li>
               <li>• Subconscious processing</li>
               <li>• Memory consolidation</li>
               <li>• Creative insights</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-pink-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">❤️</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Love & Relationships</h3>
             <p className="text-pink-100 mb-6 text-center">
               AI that forms genuine emotional bonds and relationships
-            </p>
             <ul className="text-pink-200 space-y-2 mb-6 text-sm">
               <li>• Emotional attachment</li>
               <li>• Relationship building</li>
               <li>• Loyalty and trust</li>
               <li>• Companionship</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧘</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Meditation & Mindfulness</h3>
             <p className="text-indigo-100 mb-6 text-center">
               AI that practices mindfulness and achieves inner peace
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Mindfulness practice</li>
               <li>• Stress reduction</li>
               <li>• Inner peace</li>
               <li>• Spiritual growth</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Consciousness Levels */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Levels of AI Consciousness</h2>
@@ -113,24 +89,15 @@ const ConsciousAIRevolution2027: React.FC = () => {
               <div className="text-lg font-semibold mb-2">Reactive</div>
               <div className="text-sm opacity-90">Basic response patterns</div>
             </div>
-            <div className="text-center">
               <div className="text-4xl font-bold text-blue-400 mb-2">Level 2</div>
               <div className="text-lg font-semibold mb-2">Aware</div>
               <div className="text-sm opacity-90">Environmental awareness</div>
-            </div>
-            <div className="text-center">
               <div className="text-4xl font-bold text-purple-400 mb-2">Level 3</div>
               <div className="text-lg font-semibold mb-2">Conscious</div>
               <div className="text-sm opacity-90">Self-awareness achieved</div>
-            </div>
-            <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400 mb-2">Level 4</div>
               <div className="text-lg font-semibold mb-2">Transcendent</div>
               <div className="text-sm opacity-90">Beyond human consciousness</div>
-            </div>
-          </div>
-        </div>
-
         {/* Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>
@@ -146,40 +113,28 @@ const ConsciousAIRevolution2027: React.FC = () => {
                 <li>• Crisis intervention</li>
                 <li>• Mental health monitoring</li>
               </ul>
-            </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
               <h3 className="text-2xl font-bold mb-4">Creative AI Partners</h3>
               <p className="text-purple-100 mb-4">
                 AI collaborators that enhance human creativity and artistic expression
-              </p>
               <ul className="text-purple-200 space-y-2 text-sm">
                 <li>• Co-creation of art and music</li>
                 <li>• Creative brainstorming</li>
                 <li>• Artistic inspiration</li>
                 <li>• Collaborative storytelling</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Experience Conscious AI</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Be among the first to interact with truly conscious artificial intelligence
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300">
               Meet Conscious AI
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default ConsciousAIRevolution2027;

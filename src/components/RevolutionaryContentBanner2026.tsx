@@ -8,7 +8,6 @@ const RevolutionaryContentBanner2026 = () => {
         <div className="flex items-center justify-center space-x-3 mb-4">
           <span className="text-3xl animate-pulse">🌟</span>
           <h3 className="text-2xl font-bold">REVOLUTIONARY CONTENT SHOWCASE 2026</h3>
-          <span className="text-3xl animate-pulse">🌟</span>
         </div>
         <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
           Experience the future of technology with our groundbreaking content featuring Next-Gen AI Revolution, Quantum Computing Revolution, and Neural Interface Revolution
@@ -19,17 +18,12 @@ const RevolutionaryContentBanner2026 = () => {
           </a>
           <a href="/pages/QuantumComputingRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold border border-white/30">
             ⚡ Quantum Revolution 2026 →
-          </a>
           <a href="/pages/NeuralInterfaceRevolution2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold border border-white/30">
             🧬 Neural Interface 2026 →
-          </a>
           <a href="/pages/RevolutionaryTechBlog2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold border border-white/30">
             📝 Tech Blog 2026 →
-          </a>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentBanner2026;

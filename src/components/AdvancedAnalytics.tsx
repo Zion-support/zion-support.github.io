@@ -4,5 +4,4 @@
     </div>
   );
 };
-
 export default AdvancedAnalytics;

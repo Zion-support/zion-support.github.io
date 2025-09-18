@@ -19,8 +19,6 @@ const Documentation = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Documentation coming soon. We're building comprehensive guides and references.
-            </p>
-          </div>
         </div>
       </div>
     </>);

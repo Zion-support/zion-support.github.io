@@ -6,7 +6,6 @@ import { cn } from '../lib/utils';
 interface BreadcrumbProps {
   className?: string;
 }
-
 export function Breadcrumb({ className }: BreadcrumbProps) {
   const location = useLocation();
   
@@ -21,7 +20,6 @@ export function Breadcrumb({ className }: BreadcrumbProps) {
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
-      
       return {
         name: displayName,
         path: routeTo,
@@ -31,13 +29,10 @@ export function Breadcrumb({ className }: BreadcrumbProps) {
     
     return breadcrumbs;
   };
-
   const breadcrumbs = generateBreadcrumbs();
-  
   if (breadcrumbs.length === 0) {
     return null;
   }
-
   return (
     <nav className={cn("flex items-center space-x-2 text-sm text-zion-slate-light", className)}>
       <Link 
@@ -47,7 +42,6 @@ export function Breadcrumb({ className }: BreadcrumbProps) {
         <Home className="w-4 h-4" />
         <span className="sr-only">Home</span>
       </Link>
-      
       {breadcrumbs.map((breadcrumb, index) => (
         <div key={breadcrumb.path} className="flex items-center space-x-2">
           <ChevronRight className="w-4 h-4 text-zion-slate-light" />
@@ -65,4 +59,3 @@ export function Breadcrumb({ className }: BreadcrumbProps) {
       ))}
     </nav>
   );
-}

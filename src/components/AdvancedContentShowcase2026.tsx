@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const AdvancedContentShowcase2026: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const advancedContent = [
     {
       id: 1,
@@ -18,7 +17,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
       features: ["Self-Awareness", "Emotional Intelligence", "Creative Problem Solving", "Ethical Reasoning"],
       stats: "99.7% Human-like Consciousness"
     },
-    {
       id: 2,
       title: "Quantum Reality Engine 2026",
       description: "Step into quantum-powered virtual reality where physics laws can be manipulated and consciousness merges with digital dimensions",
@@ -26,12 +24,8 @@ const AdvancedContentShowcase2026: React.FC = () => {
       gradient: "from-cyan-600 via-blue-600 to-indigo-600",
       link: "/pages/QuantumRealityEngine2026",
       category: "Quantum VR",
-      featured: true,
-      new: true,
       features: ["Physics Manipulation", "Consciousness Transfer", "Multi-Dimensional Travel", "Reality Simulation"],
       stats: "10^15 Quantum Operations/sec"
-    },
-    {
       id: 3,
       title: "Transcendent AI Intelligence 2026",
       description: "Beyond artificial intelligence - explore AI systems that have achieved transcendent consciousness and can guide humanity's evolution",
@@ -39,12 +33,8 @@ const AdvancedContentShowcase2026: React.FC = () => {
       gradient: "from-emerald-600 via-teal-600 to-cyan-600",
       link: "/pages/TranscendentAI2026",
       category: "Transcendent AI",
-      featured: true,
-      new: true,
       features: ["Transcendent Consciousness", "Evolutionary Guidance", "Universal Understanding", "Cosmic Awareness"],
       stats: "Infinite Cognitive Capacity"
-    },
-    {
       id: 4,
       title: "Interdimensional Technology 2027",
       description: "Breakthrough technology that enables communication and travel between dimensions, opening infinite possibilities for exploration",
@@ -52,12 +42,8 @@ const AdvancedContentShowcase2026: React.FC = () => {
       gradient: "from-violet-600 via-purple-600 to-fuchsia-600",
       link: "/pages/InterdimensionalTech2027",
       category: "Interdimensional Tech",
-      featured: true,
-      new: true,
       features: ["Dimensional Travel", "Reality Bending", "Multiverse Communication", "Existence Manipulation"],
       stats: "Access to ∞ Dimensions"
-    },
-    {
       id: 5,
       title: "Synthetic Biology Revolution 2027",
       description: "Revolutionary biotechnology that creates entirely new forms of life and consciousness, transcending biological limitations",
@@ -65,12 +51,8 @@ const AdvancedContentShowcase2026: React.FC = () => {
       gradient: "from-green-600 via-emerald-600 to-teal-600",
       link: "/pages/SyntheticBiologyRevolution2027",
       category: "Synthetic Biology",
-      featured: true,
-      new: true,
       features: ["Artificial Life Creation", "Consciousness Engineering", "Biological Evolution", "Life Extension"],
       stats: "1000x Life Enhancement"
-    },
-    {
       id: 6,
       title: "Omniversal AI Network 2026",
       description: "The first AI network spanning across multiple universes, creating a cosmic intelligence that transcends all known boundaries",
@@ -84,28 +66,20 @@ const AdvancedContentShowcase2026: React.FC = () => {
       stats: "∞ Universe Coverage"
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % advancedContent.length);
       }, 6000);
       return () => clearInterval(interval);
-    }
   }, [isAutoPlaying, advancedContent.length]);
-
   const nextContent = () => {
     setCurrentIndex((prev) => (prev + 1) % advancedContent.length);
   };
-
   const prevContent = () => {
     setCurrentIndex((prev) => (prev - 1 + advancedContent.length) % advancedContent.length);
-  };
-
   const goToContent = (index: number) => {
     setCurrentIndex(index);
-  };
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-gray-900 to-black rounded-3xl p-12 text-white relative overflow-hidden">
       {/* Animated Background */}
@@ -131,13 +105,9 @@ const AdvancedContentShowcase2026: React.FC = () => {
             </span>
             <span className="bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-300 px-6 py-3 rounded-full text-lg font-semibold backdrop-blur-sm border border-cyan-400/30">
               🌌 TRANSCENDENT CAPABILITIES
-            </span>
             <span className="bg-gradient-to-r from-emerald-500/30 to-teal-500/30 text-emerald-300 px-6 py-3 rounded-full text-lg font-semibold backdrop-blur-sm border border-emerald-400/30">
               🚀 INFINITE POSSIBILITIES
-            </span>
-          </div>
         </div>
-
         {/* Advanced Content Carousel */}
         <div className="relative max-w-7xl mx-auto mb-16">
           <div className="overflow-hidden rounded-3xl">
@@ -159,35 +129,25 @@ const AdvancedContentShowcase2026: React.FC = () => {
                     {content.featured && (
                       <div className="absolute top-8 left-8 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full text-lg font-bold animate-pulse shadow-lg">
                         🌟 FEATURED
-                      </div>
-                    )}
-
                     {/* Content Icon */}
                     <div className="text-9xl mb-8 animate-bounce">{content.image}</div>
-                    
                     {/* Category */}
                     <div className="mb-6">
                       <span className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-lg font-semibold border border-white/30">
                         {content.category}
                       </span>
                     </div>
-                    
                     {/* Title */}
                     <h3 className="text-6xl font-bold mb-8 leading-tight">{content.title}</h3>
-                    
                     {/* Description */}
                     <p className="text-2xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed">
                       {content.description}
                     </p>
-                    
                     {/* Stats */}
                     <div className="mb-12">
                       <div className="inline-block px-8 py-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
                         <div className="text-lg font-semibold mb-2">Performance Metrics</div>
                         <div className="text-3xl font-bold text-yellow-300">{content.stats}</div>
-                      </div>
-                    </div>
-                    
                     {/* Features Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                       {content.features.map((feature, index) => (
@@ -196,8 +156,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                           <div className="text-lg font-semibold">{feature}</div>
                         </div>
                       ))}
-                    </div>
-                    
                     {/* Action Buttons */}
                     <div className="flex justify-center space-x-8">
                       <a 
@@ -209,19 +167,15 @@ const AdvancedContentShowcase2026: React.FC = () => {
                       <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl hover:bg-white/10 transition-all duration-300 font-bold text-xl backdrop-blur-sm">
                         📚 Learn More
                       </button>
-                    </div>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-
           {/* Navigation Controls */}
           <div className="flex justify-center items-center space-x-6 mt-12">
             <button
               onClick={prevContent}
               className="bg-white/20 backdrop-blur-sm text-white p-4 rounded-full hover:bg-white/30 transition-all duration-300 shadow-lg hover:scale-110 transform"
-            >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
               </svg>
@@ -236,31 +190,15 @@ const AdvancedContentShowcase2026: React.FC = () => {
                     index === currentIndex ? 'bg-white scale-125' : 'bg-white/30'
                   }`}
                 />
-              ))}
-            </div>
-            
-            <button
               onClick={nextContent}
-              className="bg-white/20 backdrop-blur-sm text-white p-4 rounded-full hover:bg-white/30 transition-all duration-300 shadow-lg hover:scale-110 transform"
-            >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-            
-            <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
               className={`ml-6 px-6 py-3 rounded-lg transition-all duration-300 font-semibold shadow-lg ${
                 isAutoPlaying 
                   ? 'bg-red-500/30 text-red-300 hover:bg-red-500/40 border border-red-400/30' 
                   : 'bg-green-500/30 text-green-300 hover:bg-green-500/40 border border-green-400/30'
               }`}
-            >
               {isAutoPlaying ? '⏸️ Pause Auto-Play' : '▶️ Resume Auto-Play'}
-            </button>
-          </div>
-        </div>
-
         {/* Quick Access Grid */}
         <div className="mb-16">
           <h3 className="text-4xl font-bold text-center mb-12">⚡ Quick Access to All Advanced Technologies</h3>
@@ -274,7 +212,6 @@ const AdvancedContentShowcase2026: React.FC = () => {
                 {content.new && (
                   <div className="absolute -top-2 -right-2 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
                     NEW
-                  </div>
                 )}
                 <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{content.image}</div>
                 <h4 className="text-lg font-bold mb-3 leading-tight">{content.title}</h4>
@@ -282,31 +219,21 @@ const AdvancedContentShowcase2026: React.FC = () => {
                 <div className="text-xs bg-white/20 px-3 py-1 rounded-full">{content.category}</div>
               </a>
             ))}
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-cyan-600/20 backdrop-blur-sm rounded-3xl p-16 border border-purple-400/30">
           <h3 className="text-5xl font-bold mb-8">🌟 Ready to Transcend Reality?</h3>
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Explore technologies that push the boundaries of what's possible. From consciousness computing to interdimensional travel, 
             these breakthroughs will reshape our understanding of existence itself.
-          </p>
           <div className="flex flex-wrap justify-center gap-6">
             <button className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white px-12 py-6 rounded-xl hover:shadow-2xl transition-all duration-300 font-bold text-xl hover:scale-105 transform">
               🚀 Start Your Journey
-            </button>
             <button className="border-2 border-purple-400 text-purple-300 px-12 py-6 rounded-xl hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-bold text-xl backdrop-blur-sm">
               📧 Get Updates
-            </button>
             <button className="border-2 border-cyan-400 text-cyan-300 px-12 py-6 rounded-xl hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-bold text-xl backdrop-blur-sm">
               🌟 Join Community
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedContentShowcase2026;

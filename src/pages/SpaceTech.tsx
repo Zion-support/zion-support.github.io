@@ -7,17 +7,12 @@ const SpaceTech = () => {
             description: "Advanced satellite systems for communication, navigation, and Earth observation.",
             applications: ["Global Communications", "GPS Navigation", "Climate Monitoring", "Remote Sensing"]
         },
-        {
             title: "Space Robotics",
             description: "Autonomous robotic systems for space exploration and satellite maintenance.",
             applications: ["Satellite Repair", "Space Debris Cleanup", "Planetary Exploration", "Space Station Operations"]
-        },
-        {
             title: "Space Communications",
             description: "High-speed, secure communication networks for space missions and satellite operations.",
             applications: ["Deep Space Communication", "Satellite Networks", "Mission Control", "Data Transmission"]
-        },
-        {
             title: "Space Analytics",
             description: "AI-powered analysis of space data for scientific research and commercial applications.",
             applications: ["Space Weather Prediction", "Orbital Mechanics", "Resource Mapping", "Scientific Discovery"]
@@ -54,8 +49,6 @@ const SpaceTech = () => {
                   </ul>
                 </div>
               </div>))}
-          </div>
-          
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Reach for the Stars</h3>
@@ -67,7 +60,6 @@ const SpaceTech = () => {
                 Explore Space Solutions
               </Link>
             </div>
-          </div>
         </div>
       </section>
     </div>);

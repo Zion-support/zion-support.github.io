@@ -13,22 +13,14 @@ const AIInnovationShowcase2026: React.FC = () => {
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
-          }}
         />
-        <div
           className="absolute bottom-20 left-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
             scale: [1.21.2],
             opacity: [0.30.60.3],
-          }}
             duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
       </div>
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
-        <div
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
@@ -47,9 +39,7 @@ const AIInnovationShowcase2026: React.FC = () => {
           </p>
         </div>
         {/* Innovation Grid */}
-        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-        >
           {innovations.map((innovationindex) => {
             const Icon = innovation.icon;
             return (
@@ -68,7 +58,6 @@ const AIInnovationShowcase2026: React.FC = () => {
               </divbutton>
             );
           })}
-        </div>
         {/* Detailed Innovation Display */}
           <div
             key={activeInnovation}
@@ -78,7 +67,6 @@ const AIInnovationShowcase2026: React.FC = () => {
             <div>
               <div
                 className="mb-8"
-              >
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`w-16 h-16 bg-gradient-to-r ${currentInnovation.color} rounded-2xl flex items-center justify-center`}>
                     <currentInnovation.icon className="w-8 h-8 text-white" />
@@ -90,27 +78,20 @@ const AIInnovationShowcase2026: React.FC = () => {
                     <p className="text-gray-400">
                       Revolutionary AI Technology
                     </p>
-                  </div>
                 </div>
                 <p className="text-xl text-gray-300 mb-8">
                   {currentInnovation.description}
                 </p>
               </div>
               {/* Features */}
-              <div
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"
-              >
                 {currentInnovation.features.map((featureindex) => (
                   <div key={index} className="flex items-center gap-3 text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-lg">{feature}</span>
-                  </div>
                 ))}
-              </div>
               {/* Impact Metrics */}
-              <div
                 className="grid grid-cols-3 gap-6 mb-8"
-              >
                 {Object.entries(currentInnovation.impact).map(([keyvalue]index) => (
                   <div key={key} className="text-center">
                     <div className="text-3xl font-bold text-white mb-1">
@@ -118,14 +99,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                     </div>
                     <div className="text-sm text-gray-400 capitalize">
                       {key.replace(/([A-Z])/g' $1').trim()}
-                    </div>
-                  </div>
-                ))}
-              </div>
               {/* Applications */}
-              <div
-                className="mb-8"
-              >
                 <h4 className="text-lg font-semibold text-white mb-4">Key Applications:</h4>
                 <div className="flex flex-wrap gap-2">
                   {currentInnovation.applications.map((appindex) => (
@@ -136,12 +110,8 @@ const AIInnovationShowcase2026: React.FC = () => {
                       {app}
                     </span>
                   ))}
-                </div>
-              </div>
               {/* CTA Buttons */}
-              <div
                 className="flex flex-wrap gap-4"
-              >
                 <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300">
                   <Play className="w-5 h-5" />
                   See in Action
@@ -149,8 +119,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                 <button className="flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300">
                   Get Started
                   <ArrowRight className="w-5 h-5" />
-                </button>
-              </div>
             </div>
             {/* Visual Representation */}
             <div
@@ -175,11 +143,7 @@ const AIInnovationShowcase2026: React.FC = () => {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </div>
-              </div>
               {/* Floating Elements */}
-              <div
                 className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
                   y: [0-10],
                   rotate: [0180360],
@@ -187,67 +151,39 @@ const AIInnovationShowcase2026: React.FC = () => {
                   duration: 3,
                   repeat: Infinity,
                   ease: "easeInOut"
-                }}
-              >
                 <Star className="w-4 h-4 text-yellow-800" />
-              </div>
-              <div
                 className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full"
                   scale: [1.21],
                   opacity: [0.710.7],
-                }}
                   duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
               />
-            </div>
-          </div>
-        </div>
         {/* Success Stories */}
-        <div
           className="mb-20"
-        >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Real-World Success Stories
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((storyindex) => (
-              <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-              >
                 <div className="text-4xl mb-4">{story.logo}</div>
                 <h4 className="text-xl font-bold text-white mb-2">
                   {story.company}
                 </h4>
                 <p className="text-gray-400 text-sm mb-4">
                   {story.industry}
-                </p>
                 <div className="mb-4">
                   <p className="text-sm text-gray-300 mb-2">
                     <strong>Challenge:</strong> {story.challenge}
-                  </p>
-                  <p className="text-sm text-gray-300 mb-2">
                     <strong>Solution:</strong> {story.solution}
-                  </p>
                   <p className="text-sm text-green-400 font-semibold">
                     <strong>Results:</strong> {story.results}
-                  </p>
-                </div>
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
         {/* Final CTA */}
-        <div
           className="text-center"
-        >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
             <h3 className="text-4xl font-bold text-white mb-6">
               Ready to Implement AI Innovation?
@@ -264,11 +200,6 @@ const AIInnovationShowcase2026: React.FC = () => {
               <button className="flex items-center gap-2 bg-white/10 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 transition-all duration-300">
                 Schedule Demo
                 <Users className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

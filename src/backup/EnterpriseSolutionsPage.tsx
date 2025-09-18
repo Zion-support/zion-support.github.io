@@ -32,27 +32,11 @@ export default function EnterpriseSolutionsPage() {
                 </button>
               </div>
               
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Cloud Infrastructure</h3>
-                <p className="text-zion-slate-light mb-4">
                   Robust cloud infrastructure solutions for enterprise scalability
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                  Learn More
-                </button>
-              </div>
-              
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Security Solutions</h3>
-                <p className="text-zion-slate-light mb-4">
                   Enterprise-grade security solutions and compliance management
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                  Learn More
-                </button>
-              </div>
             </div>
-          </div>
         </div>
       </main>
     </>

@@ -19,8 +19,6 @@ const Talent = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Talent page coming soon. We're building a comprehensive talent platform.
-            </p>
-          </div>
         </div>
       </div>
     </>);

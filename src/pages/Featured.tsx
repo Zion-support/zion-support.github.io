@@ -19,6 +19,5 @@ export default function Featured() {
           <FeaturedListingsSection showTitle={false}/>
         </div>
       </div>
-      
     </>);
 }

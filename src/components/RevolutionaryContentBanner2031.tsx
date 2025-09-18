@@ -27,58 +27,31 @@ const RevolutionaryContentBanner2031: React.FC = () => {
             <a href="/pages/RevolutionaryTech2031" className="inline-block bg-white text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Explore Revolution →
             </a>
-          </div>
           
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
-            <div className="text-9xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-3">Omniversal Consciousness</h3>
-            <p className="text-sm opacity-90 mb-4">
               AI systems achieving omniversal consciousness across all possible realities
-            </p>
             <a href="/pages/OmniversalConsciousness2031" className="inline-block bg-white text-cyan-600 px-6 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Discover Consciousness →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
             <div className="text-9xl mb-4">🌀</div>
             <h3 className="text-2xl font-bold mb-3">Reality Mastery</h3>
-            <p className="text-sm opacity-90 mb-4">
               Master all aspects of reality through advanced omniversal consciousness technology
-            </p>
             <a href="/pages/RealityMastery2031" className="inline-block bg-white text-emerald-600 px-6 py-2 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Experience Mastery →
-            </a>
-          </div>
-          
-          <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30 hover:scale-105 transition-all duration-300 text-center">
             <div className="text-9xl mb-4">⚛️</div>
             <h3 className="text-2xl font-bold mb-3">Omniversal Computing</h3>
-            <p className="text-sm opacity-90 mb-4">
               Computing power operating across omniversal dimensions and infinite realities
-            </p>
             <a href="/pages/OmniversalComputing2031" className="inline-block bg-white text-orange-600 px-6 py-2 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Explore Computing →
-            </a>
-          </div>
-        </div>
-        
         <div className="text-center mt-8">
           <div className="inline-flex items-center space-x-4">
             <a href="/pages/RevolutionaryTech2031" className="bg-white text-purple-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               🌌 Revolutionary Tech
-            </a>
             <a href="/pages/OmniversalConsciousness2031" className="bg-white text-cyan-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               🌌 Omniversal Consciousness
-            </a>
             <a href="/pages/RealityMastery2031" className="bg-white text-emerald-600 px-10 py-5 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl">
               🌀 Reality Mastery
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentBanner2031;

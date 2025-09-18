@@ -10,35 +10,26 @@ const RevolutionaryAISolutions2026: React.FC = () => {
       icon: "🧠",
       gradient: "from-purple-600 to-pink-600"
     },
-    {
       title: "Quantum-Enhanced AI",
       description: "AI systems powered by quantum computing for exponential processing capabilities",
       features: ["Quantum neural networks", "Exponential speedup", "Complex pattern recognition", "Real-time optimization"],
       icon: "⚡",
       gradient: "from-cyan-600 to-blue-600"
-    },
-    {
       title: "Synthetic Intelligence",
       description: "Artificial general intelligence that rivals human cognitive abilities across all domains",
       features: ["General problem solving", "Creative thinking", "Multi-domain expertise", "Human-like reasoning"],
       icon: "🌟",
       gradient: "from-emerald-600 to-teal-600"
-    },
-    {
       title: "Neural Interface AI",
       description: "Direct brain-computer interfaces enabling seamless human-AI collaboration",
       features: ["Thought-to-text conversion", "Mental command execution", "Shared cognitive processing", "Enhanced human capabilities"],
       icon: "🧬",
       gradient: "from-orange-600 to-red-600"
-    },
-    {
       title: "Autonomous AI Agents",
       description: "Self-operating AI systems that can independently execute complex business processes",
       features: ["Autonomous decision making", "Process automation", "Self-optimization", "Continuous learning"],
       icon: "🤖",
       gradient: "from-indigo-600 to-purple-600"
-    },
-    {
       title: "Predictive Intelligence",
       description: "AI systems that can predict future events and trends with unprecedented accuracy",
       features: ["Future trend analysis", "Risk prediction", "Market forecasting", "Strategic planning"],
@@ -46,14 +37,11 @@ const RevolutionaryAISolutions2026: React.FC = () => {
       gradient: "from-pink-600 to-rose-600"
     }
   ];
-
   const stats = [
     { number: "99.9%", label: "Accuracy Rate", icon: "🎯" },
     { number: "10x", label: "Faster Processing", icon: "⚡" },
     { number: "50+", label: "AI Solutions", icon: "🚀" },
     { number: "24/7", label: "Autonomous Operation", icon: "🔄" }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
       {/* Hero Section */}
@@ -81,10 +69,7 @@ const RevolutionaryAISolutions2026: React.FC = () => {
               </button>
               <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
                 Watch Demo
-              </button>
-            </div>
           </motion.div>
-
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
             {stats.map((stat, index) => (
@@ -103,7 +88,6 @@ const RevolutionaryAISolutions2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Solutions Grid */}
       <div className="container mx-auto px-4 py-20">
         <motion.div
@@ -117,7 +101,6 @@ const RevolutionaryAISolutions2026: React.FC = () => {
             Discover our cutting-edge AI solutions that are pushing the boundaries of what's possible in artificial intelligence.
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <motion.div
@@ -140,37 +123,18 @@ const RevolutionaryAISolutions2026: React.FC = () => {
               </ul>
               <button className={`w-full bg-gradient-to-r ${solution.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
                 Learn More
-              </button>
             </motion.div>
           ))}
-        </div>
-      </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Join thousands of companies already using our revolutionary AI solutions to drive innovation and achieve unprecedented results.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                 Get Started Today
-              </button>
-              <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
                 Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionaryAISolutions2026;

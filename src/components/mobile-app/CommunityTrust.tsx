@@ -12,18 +12,12 @@ export function CommunityTrust() {
             <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
             <div className="text-gray-600">Active Users</div>
           </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-blue-600 mb-2">4.9★</div>
             <div className="text-gray-600">App Store Rating</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-blue-600 mb-2">99.9%</div>
             <div className="text-gray-600">Uptime</div>
-          </div>
-          <div className="text-center">
             <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
             <div className="text-gray-600">Support</div>
-          </div>
         </div>
       </div>
     </div>

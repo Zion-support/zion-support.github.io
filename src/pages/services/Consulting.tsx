@@ -14,19 +14,12 @@ title: "Technology Assessment",
         icon;
     "📋";
 }
-{
     title: "Vendor Selection",
-        description;
     "Expert guidance in selecting the right technology partners and solutions",
-        features;
     ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"],
-        icon;
     "🤝";
-}
-{
     icon: Target,
         title;
     "Project Management",
     ;
-}
 export {};

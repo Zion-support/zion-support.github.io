@@ -5,14 +5,11 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
-}
-
 export default class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -23,25 +20,17 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: ''
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
       errorInfo
     });
-
     // Log error to monitoring service
     this.logError(error, errorInfo);
-  }
-
   logError = (error: Error, errorInfo: ErrorInfo) => {
     const errorData = {
       errorId: this.state.errorId,
@@ -51,8 +40,6 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    };
-
     // Send to error tracking service
     console.error('Error Boundary caught an error:', errorData);
     
@@ -62,43 +49,24 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
       // errorTrackingService.captureException(error, { extra: errorData });
     }
   };
-
   handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    });
-  };
-
   handleGoHome = () => {
     window.location.href = '/';
-  };
-
   handleReportBug = () => {
-    const errorData = {
-      errorId: this.state.errorId,
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       url: window.location.href,
       timestamp: new Date().toISOString()
-    };
-
     // Open email client with error details
     const subject = `Bug Report - Error ID: ${this.state.errorId}`;
     const body = `Error Details:\n\n${JSON.stringify(errorData, null, 2)}`;
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
     window.open(mailtoLink);
-  };
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 text-center">
@@ -127,7 +95,6 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
                 )}
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
@@ -137,32 +104,18 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
                 Try Again
               </button>
               
-              <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-              >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </button>
-              
-              <button
                 onClick={this.handleReportBug}
                 className="flex items-center justify-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-              >
                 <Bug className="w-4 h-4 mr-2" />
                 Report Bug
-              </button>
-            </div>
-
             <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
               <p>If this problem persists, please contact our support team.</p>
               <p>Error ID: {this.state.errorId}</p>
-            </div>
           </div>
         </div>
       );
-    }
-
     return this.props.children;
-  }
-}

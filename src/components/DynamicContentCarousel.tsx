@@ -4,5 +4,4 @@ const DynamicContentCarousel = () => {
     </div>
   );
 };
-
 export default DynamicContentCarousel;

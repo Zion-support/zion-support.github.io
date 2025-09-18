@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive } from 'lucide-react';
 const ITServices = [
@@ -15,7 +15,6 @@ const ITServices = [
         badge: "Popular",
         link: "/request-quote?service=cloud-infrastructure"
     },
-    {
         title: "Cybersecurity Services",
         description: "Complete security solutions to protect your digital assets",
         price: "$2,000 - $15,000",
@@ -24,8 +23,6 @@ const ITServices = [
         category: "Security",
         badge: "Premium",
         link: "/request-quote?service=cybersecurity"
-    },
-    {
         title: "DevOps & CI/CD",
         description: "Streamline development and deployment processes",
         price: "$3,000 - $12,000/month",
@@ -33,8 +30,6 @@ const ITServices = [
         icon: <Zap className="h-8 w-8 text-zion-blue"/>,
         category: "DevOps",
         link: "/request-quote?service=devops"
-    },
-    {
         title: "Database Management",
         description: "Expert database administration and optimization",
         price: "$1,000 - $6,000/month",
@@ -42,8 +37,6 @@ const ITServices = [
         icon: <Database className="h-8 w-8 text-zion-cyan"/>,
         category: "Database",
         link: "/request-quote?service=database-management"
-    },
-    {
         title: "Network Infrastructure",
         description: "Design, implement, and maintain robust network solutions",
         price: "$2,500 - $20,000",
@@ -51,8 +44,6 @@ const ITServices = [
         icon: <Globe className="h-8 w-8 text-zion-purple"/>,
         category: "Networking",
         link: "/request-quote?service=network-infrastructure"
-    },
-    {
         title: "IT Consulting & Strategy",
         description: "Strategic IT planning and digital transformation guidance",
         price: "$150 - $300/hour",
@@ -60,8 +51,6 @@ const ITServices = [
         icon: <CheckCircle className="h-8 w-8 text-zion-blue"/>,
         category: "Consulting",
         link: "/request-quote?service=it-consulting"
-    },
-    {
         title: "Managed IT Services",
         description: "Complete IT management for small to enterprise businesses",
         price: "$500 - $5,000/month",
@@ -70,8 +59,6 @@ const ITServices = [
         category: "Managed Services",
         badge: "New",
         link: "/request-quote?service=managed-it"
-    },
-    {
         title: "Data Center Services",
         description: "On-premise and colocation data center solutions",
         price: "$1,000 - $10,000/month",
@@ -79,8 +66,6 @@ const ITServices = [
         icon: <Server className="h-8 w-8 text-zion-purple"/>,
         category: "Data Center",
         link: "/request-quote?service=data-center"
-    },
-    {
         title: "Mobile App Development",
         description: "Custom mobile applications for iOS and Android",
         price: "$15,000 - $100,000",
@@ -88,17 +73,12 @@ const ITServices = [
         icon: <Smartphone className="h-8 w-8 text-zion-blue"/>,
         category: "Development",
         link: "/request-quote?service=mobile-development"
-    },
-    {
         title: "Web Development",
         description: "Modern web applications and e-commerce solutions",
         price: "$10,000 - $75,000",
         features: ["Responsive design", "SEO optimization", "Performance tuning", "Maintenance"],
         icon: <Globe className="h-8 w-8 text-zion-cyan"/>,
-        category: "Development",
         link: "/request-quote?service=web-development"
-    },
-    {
         title: "IT Training & Workshops",
         description: "Custom training programs for your IT team",
         price: "$500 - $2,500 per person",
@@ -106,17 +86,12 @@ const ITServices = [
         icon: <Users className="h-8 w-8 text-zion-purple"/>,
         category: "Training",
         link: "/request-quote?service=it-training"
-    },
-    {
         title: "Disaster Recovery",
         description: "Comprehensive backup and recovery solutions",
-        price: "$1,500 - $8,000/month",
         features: ["Automated backups", "Off-site storage", "Recovery testing", "24/7 support"],
         icon: <HardDrive className="h-8 w-8 text-zion-blue"/>,
         category: "Recovery",
         link: "/request-quote?service=disaster-recovery"
-    },
-    {
         title: "IT Audit & Compliance",
         description: "Ensure your IT systems meet industry standards",
         price: "$3,000 - $20,000",
@@ -124,17 +99,12 @@ const ITServices = [
         icon: <FileText className="h-8 w-8 text-zion-cyan"/>,
         category: "Compliance",
         link: "/request-quote?service=it-audit"
-    },
-    {
         title: "Hardware Procurement",
         description: "Strategic hardware sourcing and deployment",
         price: "15-25% of hardware cost",
         features: ["Vendor management", "Volume discounts", "Installation", "Warranty support"],
-        icon: <Server className="h-8 w-8 text-zion-purple"/>,
         category: "Hardware",
         link: "/request-quote?service=hardware-procurement"
-    },
-    {
         title: "IT Project Management",
         description: "Professional project management for IT initiatives",
         price: "$100 - $200/hour",
@@ -142,8 +112,6 @@ const ITServices = [
         icon: <BarChart3 className="h-8 w-8 text-zion-blue"/>,
         category: "Project Management",
         link: "/request-quote?service=it-project-management"
-    },
-    {
         title: "24/7 IT Support",
         description: "Round-the-clock technical support and monitoring",
         price: "$2,000 - $8,000/month",
@@ -171,7 +139,6 @@ const categories = [
     { name: "Hardware", value: "hardware", icon: <Server className="h-4 w-4"/> },
     { name: "Project Management", value: "project management", icon: <BarChart3 className="h-4 w-4"/> },
     { name: "Support", value: "support", icon: <Monitor className="h-4 w-4"/> }
-];
 export default function ITServicesPage() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredServices = selectedCategory === "all"
@@ -197,7 +164,6 @@ export default function ITServicesPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2"/>
               Get Consultation
-            </Button>
           </div>
         </div>
       </div>
@@ -211,8 +177,6 @@ export default function ITServicesPage() {
               {category.icon}
               {category.name}
             </Button>))}
-        </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredServices.map((service, index) => (<Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-zion-blue/20 hover:border-zion-blue/50 bg-zion-blue-dark/50 backdrop-blur-sm">
@@ -236,7 +200,6 @@ export default function ITServicesPage() {
                 <div className="mb-4">
                   <p className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</p>
                   <p className="text-sm text-zion-slate-light">Starting price</p>
-                </div>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
@@ -252,8 +215,6 @@ export default function ITServicesPage() {
                 </Button>
               </div>
             </Card>))}
-        </div>
-
         {/* CTA Section */}
         <div className="text-center py-12">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -261,18 +222,10 @@ export default function ITServicesPage() {
           </h2>
           <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Our expert team can design and implement custom IT solutions tailored to your specific business needs.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-zion-blue hover:bg-zion-blue-light text-white">
-              <MessageSquare className="h-5 w-5 mr-2"/>
               Schedule Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Code className="h-5 w-5 mr-2"/>
               View Case Studies
-            </Button>
-          </div>
-        </div>
-      </div>
     </div>);
 }

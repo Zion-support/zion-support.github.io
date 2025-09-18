@@ -12,7 +12,6 @@ export function CountryTabs({ popularCountries, filteredCountries, handleCountry
     { id: 'africa', name: 'Africa', count: filteredCountries?.filter(c => c.region === 'Africa').length || 0 },
     { id: 'middle-east', name: 'Middle East', count: filteredCountries?.filter(c => c.region === 'Middle East').length || 0 }
   ];
-
   return (
     <div className="py-16">
       <div className="container mx-auto px-4">
@@ -28,7 +27,6 @@ export function CountryTabs({ popularCountries, filteredCountries, handleCountry
               className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark border border-zion-slate-light rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
             />
           </div>
-
           {/* Region Tabs */}
           <div className="flex flex-wrap gap-2 justify-center">
             {regions.map((region) => (
@@ -42,9 +40,7 @@ export function CountryTabs({ popularCountries, filteredCountries, handleCountry
                 </span>
               </button>
             ))}
-          </div>
         </div>
-
         {/* Popular Countries */}
         <div className="mb-12">
           <h3 className="text-2xl font-bold text-white text-center mb-8 flex items-center justify-center gap-2">
@@ -60,7 +56,6 @@ export function CountryTabs({ popularCountries, filteredCountries, handleCountry
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-zion-cyan transition-all duration-300 cursor-pointer"
                 onClick={() => handleCountrySelect(country)}
-              >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5 text-zion-cyan" />
@@ -75,57 +70,28 @@ export function CountryTabs({ popularCountries, filteredCountries, handleCountry
                   <div className="flex justify-between">
                     <span className="text-zion-slate-light">Base Price:</span>
                     <span className="text-white">{country.currency} {country.basePrice}/hr</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-zion-slate-light">Travel Fee:</span>
                     <span className="text-white">{country.currency} {country.travelFee}</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-zion-slate-light">Response:</span>
                     <span className="text-white">{country.responseTime}</span>
-                  </div>
-                </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-
         {/* All Countries Grid */}
         <div>
           <h3 className="text-2xl font-bold text-white text-center mb-8">All Available Countries</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {filteredCountries?.map((country, index) => (
-              <motion.div
-                key={country.country}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.05 * index }}
                 className="bg-zion-slate-dark border border-zion-slate-light rounded-lg p-4 hover:border-zion-cyan transition-all duration-300 cursor-pointer"
-                onClick={() => handleCountrySelect(country)}
-              >
                 <div className="flex items-center gap-2 mb-3">
                   <MapPin className="w-4 h-4 text-zion-cyan" />
                   <h4 className="font-medium text-white">{country.country}</h4>
-                </div>
-                
                 <div className="space-y-1 text-xs">
-                  <div className="flex justify-between">
                     <span className="text-zion-slate-light">Price:</span>
-                    <span className="text-white">{country.currency} {country.basePrice}/hr</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-zion-slate-light">Travel:</span>
-                    <span className="text-white">{country.currency} {country.travelFee}</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-zion-slate-light">Region:</span>
                     <span className="text-zion-slate-light">{country.region}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );

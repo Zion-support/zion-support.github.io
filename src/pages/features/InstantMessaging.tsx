@@ -38,16 +38,13 @@ export default function InstantMessaging() {
               <p className="font-semibold">Is chat history saved?</p>
               <p className="text-zion-slate-light">Yes, messages are stored securely so you can review past discussions.</p>
             </div>
-            <div>
               <p className="font-semibold">Can I disable notifications?</p>
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
-            </div>
           </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
             </Button>
-          </div>
         </div>
       </main>
       <Footer />

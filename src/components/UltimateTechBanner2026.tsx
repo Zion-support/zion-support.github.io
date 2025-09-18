@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const UltimateTechBanner2026: React.FC = () => {
   const [currentMessage, setCurrentMessage] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const messages = [
     {
       text: "🌟 NEW: Ultimate Tech Revolution 2026 - Experience the convergence of all revolutionary technologies",
@@ -11,26 +10,20 @@ const UltimateTechBanner2026: React.FC = () => {
       link: "/pages/UltimateTechRevolution2026",
       color: "from-purple-500 to-pink-500"
     },
-    {
       text: "🧠 BREAKTHROUGH: Transcendent AI - Witness AI evolution beyond human comprehension",
       action: "Discover",
       link: "/pages/TranscendentAI2026",
       color: "from-cyan-500 to-blue-500"
-    },
-    {
       text: "📚 FEATURED: Revolutionary Tech Blog - Dive deep into groundbreaking innovations",
       action: "Read More",
       link: "/pages/RevolutionaryTechBlog2026",
       color: "from-emerald-500 to-teal-500"
-    },
-    {
       text: "⚛️ QUANTUM: Neural-Quantum Fusion - Infinite processing power beyond classical physics",
       action: "Learn More",
       link: "/pages/QuantumNeuralFusion2026",
       color: "from-indigo-500 to-purple-500"
     }
   ];
-
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible(false);
@@ -39,10 +32,8 @@ const UltimateTechBanner2026: React.FC = () => {
         setIsVisible(true);
       }, 300);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [messages.length]);
-
   const handleDismiss = () => {
     setIsVisible(false);
     setTimeout(() => {
@@ -50,9 +41,7 @@ const UltimateTechBanner2026: React.FC = () => {
       setTimeout(() => setIsVisible(true), 30000);
     }, 300);
   };
-
   if (!isVisible) return null;
-
   return (
     <div className="relative overflow-hidden">
       <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-4">
@@ -67,7 +56,6 @@ const UltimateTechBanner2026: React.FC = () => {
                 <p className="text-lg font-medium">
                   {messages[currentMessage].text}
                 </p>
-              </div>
             </div>
             
             <div className="flex items-center space-x-4">
@@ -81,12 +69,10 @@ const UltimateTechBanner2026: React.FC = () => {
                 onClick={handleDismiss}
                 className="text-gray-400 hover:text-white transition-colors p-1"
                 title="Dismiss for 30 seconds"
-              >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-            </div>
           </div>
         </div>
       </div>
@@ -97,9 +83,7 @@ const UltimateTechBanner2026: React.FC = () => {
         <div className="absolute top-2 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
         <div className="absolute top-2 right-8 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
         <div className="absolute bottom-2 left-12 w-1.5 h-1.5 bg-pink-400 rounded-full animate-pulse"></div>
-      </div>
     </div>
   );
 };
-
 export default UltimateTechBanner2026;

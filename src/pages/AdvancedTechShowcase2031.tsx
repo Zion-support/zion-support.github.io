@@ -15,7 +15,6 @@ const AdvancedTechShowcase2031: React.FC = () => {
             Experience the next generation of revolutionary technologies that will define 2031
           </p>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
@@ -28,52 +27,32 @@ const AdvancedTechShowcase2031: React.FC = () => {
                 Available Now
               </div>
             </div>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h2 className="text-3xl font-bold mb-4 text-center">Multiverse Computing</h2>
             <p className="text-purple-100 mb-6 text-center">
               Computing across infinite parallel universes
-            </p>
-            <div className="text-center">
               <div className="inline-block px-4 py-2 bg-purple-500 text-white rounded-lg font-semibold">
                 In Development
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h2 className="text-3xl font-bold mb-4 text-center">Reality Engine</h2>
             <p className="text-pink-100 mb-6 text-center">
               Complete control over physical reality
-            </p>
-            <div className="text-center">
               <div className="inline-block px-4 py-2 bg-pink-500 text-white rounded-lg font-semibold">
                 Coming Soon
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready for the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the revolution and experience technology beyond imagination
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore 2031
             </button>
             <button className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Learn More
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedTechShowcase2031;

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
-
 const AdvancedTechShowcase2027: React.FC = () => {
   const technologies = [
     {
@@ -13,7 +12,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
       status: "In Development",
       timeline: "Q3 2027"
     },
-    {
       id: 2,
       title: "Interdimensional Neural Networks",
       description: "AI systems that operate across multiple dimensions, accessing parallel realities for enhanced problem-solving.",
@@ -21,8 +19,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
       features: ["Multi-Dimensional Processing", "Parallel Reality Access", "Consciousness Transfer", "Reality Manipulation"],
       status: "Research Phase",
       timeline: "Q4 2027"
-    },
-    {
       id: 3,
       title: "Synthetic Intelligence Evolution",
       description: "Self-evolving AI systems that continuously improve their own architecture and capabilities.",
@@ -30,8 +26,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
       features: ["Self-Modification", "Continuous Learning", "Architecture Evolution", "Autonomous Development"],
       status: "Beta Testing",
       timeline: "Q2 2027"
-    },
-    {
       id: 4,
       title: "Holographic Reality Engine",
       description: "Advanced holographic technology that creates indistinguishable virtual realities.",
@@ -39,17 +33,11 @@ const AdvancedTechShowcase2027: React.FC = () => {
       features: ["Full Sensory Immersion", "Reality Overlay", "Holographic Projection", "Spatial Computing"],
       status: "Prototype",
       timeline: "Q1 2027"
-    },
-    {
       id: 5,
       title: "Neural Quantum Fusion",
       description: "Fusion of quantum computing with neural interfaces for direct brain-computer integration.",
       icon: "⚡",
       features: ["Direct Brain Interface", "Quantum Processing", "Neural Enhancement", "Consciousness Upload"],
-      status: "Research Phase",
-      timeline: "Q4 2027"
-    },
-    {
       id: 6,
       title: "Autonomous Space Colonies",
       description: "Self-sustaining space habitats powered by advanced AI and biotechnology.",
@@ -59,28 +47,19 @@ const AdvancedTechShowcase2027: React.FC = () => {
       timeline: "2028"
     }
   ];
-
   const successStories = [
-    {
       company: "NeuralTech Industries",
       result: "300% increase in processing speed",
       technology: "Quantum Consciousness Computing",
       testimonial: "This technology has revolutionized our research capabilities."
-    },
-    {
       company: "Reality Dynamics Corp",
       result: "95% user satisfaction rate",
       technology: "Holographic Reality Engine",
       testimonial: "The most immersive experience we've ever created."
-    },
-    {
       company: "Space Exploration Ltd",
       result: "50% reduction in mission costs",
       technology: "Autonomous Space Colonies",
       testimonial: "Game-changing technology for space exploration."
-    }
-  ];
-
   return (
     <>
       <Helmet>
@@ -88,7 +67,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
         <meta name="description" content="Discover the most advanced technologies of 2027 including quantum consciousness computing, interdimensional neural networks, and holographic reality engines." />
         <meta name="keywords" content="Advanced Technology 2027, Quantum Computing, Neural Networks, Holographic Reality, AI Evolution" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -109,20 +87,17 @@ const AdvancedTechShowcase2027: React.FC = () => {
               </p>
           </div>
         </div>
-
         {/* Advanced Applications */}
         <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-white mb-6">🌟 Revolutionary Applications</h2>
             <p className="text-2xl text-indigo-200">Transforming industries with next-generation technology</p>
-          </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🏥 Medical Holography</h3>
               <p className="text-indigo-200 mb-4">
                 Holographic medical imaging and surgery with time-dilated precision
-              </p>
               <ul className="text-indigo-300 space-y-2 text-sm">
                 <li>• 3D holographic surgery</li>
                 <li>• Real-time organ visualization</li>
@@ -131,47 +106,24 @@ const AdvancedTechShowcase2027: React.FC = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🚀 Space-Time Exploration</h3>
-              <p className="text-indigo-200 mb-4">
                 Exploring space and time with dimensional AI and holographic interfaces
-              </p>
-              <ul className="text-indigo-300 space-y-2 text-sm">
                 <li>• Holographic space mapping</li>
                 <li>• Time-dilated space travel</li>
                 <li>• Dimensional portal technology</li>
                 <li>• Multi-dimensional exploration</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🎓 Educational Holography</h3>
-              <p className="text-indigo-200 mb-4">
                 Immersive 3D learning experiences with instant knowledge transfer
-              </p>
-              <ul className="text-indigo-300 space-y-2 text-sm">
                 <li>• 3D holographic classrooms</li>
                 <li>• Instant skill acquisition</li>
                 <li>• Dimensional learning paths</li>
                 <li>• Time-compressed education</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-4">🏭 Industrial Revolution</h3>
-              <p className="text-indigo-200 mb-4">
                 Manufacturing and production with holographic interfaces and dimensional AI
-              </p>
-              <ul className="text-indigo-300 space-y-2 text-sm">
                 <li>• Holographic manufacturing</li>
                 <li>• Instant production optimization</li>
                 <li>• Dimensional quality control</li>
                 <li>• Time-dilated assembly lines</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Technologies Grid */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -179,8 +131,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Cutting-edge innovations that push the boundaries of what's possible
             </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
               <divdiv
@@ -203,7 +153,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="flex justify-between items-center text-sm">
                   <span className={`px-3 py-1 rounded-full ${
                     tech.status === 'In Development' ? 'bg-yellow-500/20 text-yellow-300' :
@@ -215,12 +164,8 @@ const AdvancedTechShowcase2027: React.FC = () => {
                     {tech.status}
                   </span>
                   <span className="text-purple-300">{tech.timeline}</span>
-                </div>
               </divdiv>
             ))}
-          </div>
-        </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 py-20">
           <div className="container mx-auto px-4">
@@ -228,9 +173,6 @@ const AdvancedTechShowcase2027: React.FC = () => {
               <h2 className="text-4xl font-bold mb-4">Success Stories</h2>
               <p className="text-xl opacity-90 max-w-3xl mx-auto">
                 Real results from our revolutionary technologies
-              </p>
-            </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {successStories.map((story, index) => (
                 <divdiv
@@ -244,30 +186,19 @@ const AdvancedTechShowcase2027: React.FC = () => {
                   <p className="text-gray-300 italic">"{story.testimonial}"</p>
                 </divdiv>
               ))}
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <div className="container mx-auto px-4 py-20">
           <div className="text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
               Join us in shaping the future of technology. Get early access to these revolutionary innovations.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
                 Request Demo →
               </button>
               <button className="border border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
                 Learn More
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
 };
-
 export default AdvancedTechShowcase2027;

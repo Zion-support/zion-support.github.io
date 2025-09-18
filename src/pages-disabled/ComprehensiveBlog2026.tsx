@@ -29,11 +29,8 @@ const ComprehensiveBlog2026: React.FC = () => {
             quantum computing, neural interfaces, and cutting-edge technologies that are shaping our future.
           </p>
         </div>
-
         {/* Category Filter */}
-        <div
           className="flex flex-wrap justify-center gap-4 mb-12"
-        >
           {categories.map((category, index) => (
             <button
               key={index}
@@ -46,12 +43,8 @@ const ComprehensiveBlog2026: React.FC = () => {
               {category}
             </button>
           ))}
-        </div>
-
         {/* Featured Posts */}
-        <div
           className="mb-16"
-        >
           <h2 className="text-4xl font-bold text-center mb-12">Featured Articles</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {blogPosts.filter(post => post.featured).map((post, index) => (
@@ -71,58 +64,32 @@ const ComprehensiveBlog2026: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-gray-400">
                     By {post.author} • {post.date}
-                  </div>
                   <button className="text-purple-400 hover:text-purple-300 font-semibold">
                     Read More →
                   </button>
-                </div>
               </div>
             ))}
-          </div>
-        </div>
-
         {/* All Posts Grid */}
-        <div
-          className="mb-16"
-        >
           <h2 className="text-4xl font-bold text-center mb-12">All Articles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <div
-                key={post.id}
                 className="bg-gradient-to-br from-slate-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:scale-105 transition-all duration-300"
-              >
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="text-3xl">{post.image}</div>
-                  <div>
                     <div className="text-xs text-purple-300">{post.category}</div>
                     <div className="text-xs text-gray-400">{post.readTime}</div>
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold mb-3">{post.title}</h3>
                 <p className="text-slate-300 text-sm mb-4">{post.excerpt}</p>
-                <div className="flex items-center justify-between">
                   <div className="text-xs text-gray-400">
                     {post.author} • {post.date}
-                  </div>
                   <button className="text-purple-400 hover:text-purple-300 text-sm font-semibold">
                     Read →
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Newsletter Subscription */}
-        <div
           className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 text-center"
-        >
           <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Subscribe to our newsletter and never miss the latest insights, breakthroughs, 
             and innovations in technology.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input
               type="email"
@@ -131,38 +98,21 @@ const ComprehensiveBlog2026: React.FC = () => {
             />
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Subscribe
-            </button>
-          </div>
-        </div>
-
         {/* Call to Action */}
-        <div
           className="text-center mt-16"
-        >
           <h2 className="text-4xl font-bold mb-6">Explore More Content</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Discover our comprehensive technology insights, case studies, and innovation showcases.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/pages/ComprehensiveTechInsights2026"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
               View All Insights →
             </a>
-            <a
               href="/pages/RevolutionaryTechBlog2026"
               className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
-            >
               Revolutionary Blog
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
-
 };
-
-
 export default ComprehensiveBlog2026;

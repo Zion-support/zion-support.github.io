@@ -14,7 +14,6 @@ const FutureTechVision2025: React.FC = () => {
             quantum reality, and neural interfaces create unprecedented possibilities for humanity
           </p>
         </div>
-
         {/* Vision Timeline */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Technology Vision Timeline</h2>
@@ -32,61 +31,35 @@ const FutureTechVision2025: React.FC = () => {
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">Self-Aware AI</span>
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">Creative Autonomy</span>
                 <span className="px-3 py-1 bg-blue-500/30 text-blue-200 rounded-full text-sm">Emotional Intelligence</span>
-              </div>
             </div>
-
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
-              <div className="flex items-center mb-4">
                 <div className="text-3xl mr-4">2026</div>
                 <div className="text-2xl font-bold">Quantum Supremacy Revolution</div>
-              </div>
               <p className="text-purple-100 text-lg mb-4">
                 Quantum computers achieve true supremacy, solving problems that would take 
                 classical computers millennia, revolutionizing cryptography and computation.
-              </p>
-              <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-purple-500/30 text-purple-200 rounded-full text-sm">1000+ Qubits</span>
                 <span className="px-3 py-1 bg-purple-500/30 text-purple-200 rounded-full text-sm">Quantum Supremacy</span>
                 <span className="px-3 py-1 bg-purple-500/30 text-purple-200 rounded-full text-sm">Molecular Simulation</span>
-              </div>
-            </div>
-
             <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
-              <div className="flex items-center mb-4">
                 <div className="text-3xl mr-4">2027</div>
                 <div className="text-2xl font-bold">Neural Interface Revolution</div>
-              </div>
               <p className="text-emerald-100 text-lg mb-4">
                 Direct brain-computer interfaces become mainstream, enabling thought-controlled 
                 devices and seamless human-AI collaboration.
-              </p>
-              <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-emerald-500/30 text-emerald-200 rounded-full text-sm">Non-Invasive BCI</span>
                 <span className="px-3 py-1 bg-emerald-500/30 text-emerald-200 rounded-full text-sm">Thought Control</span>
                 <span className="px-3 py-1 bg-emerald-500/30 text-emerald-200 rounded-full text-sm">Mind Uploading</span>
-              </div>
-            </div>
-
             <div className="bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30">
-              <div className="flex items-center mb-4">
                 <div className="text-3xl mr-4">2030</div>
                 <div className="text-2xl font-bold">Consciousness Computing Era</div>
-              </div>
               <p className="text-violet-100 text-lg mb-4">
                 The convergence of AI consciousness, quantum computing, and neural interfaces 
                 creates a new form of hybrid intelligence that transcends human limitations.
-              </p>
-              <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-violet-500/30 text-violet-200 rounded-full text-sm">Hybrid Intelligence</span>
                 <span className="px-3 py-1 bg-violet-500/30 text-violet-200 rounded-full text-sm">Transcendent AI</span>
                 <span className="px-3 py-1 bg-violet-500/30 text-violet-200 rounded-full text-sm">Reality Manipulation</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Future Applications */}
-        <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Future Applications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
@@ -94,87 +67,62 @@ const FutureTechVision2025: React.FC = () => {
               <h3 className="text-2xl font-bold mb-4 text-center text-blue-300">Medical Revolution</h3>
               <p className="text-blue-100 mb-6 text-center">
                 AI-powered medical diagnosis, quantum-enhanced drug discovery, and consciousness transfer for immortality
-              </p>
               <ul className="text-blue-200 space-y-2 text-sm">
                 <li>• Instant disease diagnosis</li>
                 <li>• Molecular-level healing</li>
                 <li>• Consciousness preservation</li>
                 <li>• Genetic optimization</li>
               </ul>
-            </div>
-
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="text-5xl mb-4 text-center">🌍</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-purple-300">Environmental Restoration</h3>
               <p className="text-purple-100 mb-6 text-center">
                 Quantum climate modeling and AI-driven environmental restoration at planetary scale
-              </p>
               <ul className="text-purple-200 space-y-2 text-sm">
                 <li>• Climate change reversal</li>
                 <li>• Ecosystem restoration</li>
                 <li>• Renewable energy optimization</li>
                 <li>• Carbon capture technology</li>
-              </ul>
-            </div>
-
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-5xl mb-4 text-center">🚀</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-emerald-300">Space Exploration</h3>
               <p className="text-emerald-100 mb-6 text-center">
                 Interstellar travel, planetary terraforming, and the creation of habitable worlds
-              </p>
               <ul className="text-emerald-200 space-y-2 text-sm">
                 <li>• Faster-than-light travel</li>
                 <li>• Planetary terraforming</li>
                 <li>• Space habitat construction</li>
                 <li>• Alien civilization contact</li>
-              </ul>
-            </div>
-
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
               <div className="text-5xl mb-4 text-center">🎨</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-orange-300">Creative Evolution</h3>
               <p className="text-orange-100 mb-6 text-center">
                 AI-human creative collaboration producing art, music, and literature beyond imagination
-              </p>
               <ul className="text-orange-200 space-y-2 text-sm">
                 <li>• AI-human art collaboration</li>
                 <li>• Synthetic creativity</li>
                 <li>• Virtual reality experiences</li>
                 <li>• Emotional expression AI</li>
-              </ul>
-            </div>
-
             <div className="bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm rounded-xl p-6 border border-violet-400/30">
               <div className="text-5xl mb-4 text-center">🧬</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-violet-300">Biotech Revolution</h3>
               <p className="text-violet-100 mb-6 text-center">
                 Genetic engineering, synthetic biology, and the creation of artificial life forms
-              </p>
               <ul className="text-violet-200 space-y-2 text-sm">
                 <li>• Precision gene editing</li>
                 <li>• Synthetic organism creation</li>
                 <li>• Life extension technology</li>
                 <li>• Biological computing</li>
-              </ul>
-            </div>
-
             <div className="bg-gradient-to-br from-rose-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-rose-400/30">
               <div className="text-5xl mb-4 text-center">🛡️</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-rose-300">Cybersecurity Evolution</h3>
               <p className="text-rose-100 mb-6 text-center">
                 Quantum-encrypted security systems and AI-powered autonomous defense networks
-              </p>
               <ul className="text-rose-200 space-y-2 text-sm">
                 <li>• Quantum encryption</li>
                 <li>• AI threat detection</li>
                 <li>• Autonomous defense</li>
                 <li>• Digital immortality</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Vision Impact */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-white/10">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Vision Impact</h2>
@@ -186,36 +134,17 @@ const FutureTechVision2025: React.FC = () => {
                   <h4 className="font-semibold text-cyan-200">Human Enhancement</h4>
                   <p className="text-white/90 text-sm">Augmented intelligence and extended lifespans</p>
                 </div>
-                <div className="bg-white/10 rounded-lg p-4">
                   <h4 className="font-semibold text-cyan-200">Global Prosperity</h4>
                   <p className="text-white/90 text-sm">Elimination of poverty and resource scarcity</p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
                   <h4 className="font-semibold text-cyan-200">Environmental Harmony</h4>
                   <p className="text-white/90 text-sm">Sustainable technology and climate restoration</p>
-                </div>
-              </div>
-            </div>
-            <div>
               <h3 className="text-2xl font-bold mb-6 text-blue-300">Challenges & Solutions</h3>
-              <div className="space-y-4">
-                <div className="bg-white/10 rounded-lg p-4">
                   <h4 className="font-semibold text-blue-200">Ethical AI Development</h4>
                   <p className="text-white/90 text-sm">Ensuring AI consciousness serves humanity's best interests</p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
                   <h4 className="font-semibold text-blue-200">Quantum Security</h4>
                   <p className="text-white/90 text-sm">Protecting against quantum-enabled threats</p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4">
                   <h4 className="font-semibold text-blue-200">Neural Privacy</h4>
                   <p className="text-white/90 text-sm">Protecting mental privacy in the neural interface era</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
@@ -230,16 +159,10 @@ const FutureTechVision2025: React.FC = () => {
               </a>
               <a href="/pages/UltimateTechBreakthrough2025" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
                 🌟 Explore Breakthroughs →
-              </a>
               <a href="/contact" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
                 💬 Discuss the Future →
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechVision2025;

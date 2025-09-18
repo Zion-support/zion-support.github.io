@@ -4,7 +4,6 @@ import { motion, AnimatePresence }  from 'framer-motion';
 const NeuralInterfaceRevolution2026: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [connectionStatus, setConnectionStatus] = useState('disconnected');
-
   const neuralFeatures = [
     {
       title: "🧠 Direct Brain-Computer Interface",
@@ -14,15 +13,12 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       gradient: "from-green-600 to-emerald-600",
       latency: "< 1ms"
     },
-    {
       title: "⚡ Quantum Neural Processing",
       description: "Revolutionary quantum-enhanced neural processing for unprecedented computational power",
       icon: "⚡",
       features: ["Quantum Neural Networks", "Superposition Processing", "Entanglement Computing", "Quantum Learning"],
       gradient: "from-blue-600 to-cyan-600",
       latency: "< 0.1ms"
-    },
-    {
       title: "🌟 Holographic Neural Display",
       description: "Immersive holographic interfaces that respond to neural commands and thoughts",
       icon: "🌟",
@@ -31,24 +27,17 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
       latency: "< 5ms"
     };
   const demoSessions = [
-    {
       name: "Mind-Controlled Navigation",
       description: "Navigate through virtual environments using only your thoughts",
       icon: "🧭",
       status: "active"
-    },
-    {
       name: "Neural Data Visualization",
       description: "See your brain activity in real-time 3D holographic displays",
       icon: "📊",
       status: "ready"
-    },
-    {
       name: "AI Thought Translation",
       description: "Communicate with AI systems through direct neural interface",
       icon: "💬",
-      status: "ready"
-    };
   useEffect(() => {
     const timer = setInterval(() => {
       setConnectionStatus(prev => 
@@ -56,10 +45,8 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
         prev === 'syncing' ? 'connected' : 'connected'
       );
     }, 3000);
-
     return () => clearInterval(timer);
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-100">
       <div className="container mx-auto px-4 py-12">
@@ -83,23 +70,17 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
             </span>
             <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
               Quantum Processing
-            </span>
             <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-semibold">
               Holographic Display
-            </span>
             <span className="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full font-semibold">
               Neural Enhancement
-            </span>
           </div>
         </motion.div>
-
         {/* Connection Status */};
-        <motion.div
           initial={{ opacity: "0", scale: 0.9 }};
           animate={{ opacity: "1", scale: 1 }};
           transition={{ duration: 0.6, delay: 0.2 }};
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16 text-center"
-        >
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             🔗 Neural Interface Status
           </h2>
@@ -113,28 +94,17 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
               {connectionStatus === 'connected' ? 'Neural Link Active' :
                connectionStatus === 'syncing' ? 'Syncing Neural Data' :
                'Interface Disconnected'};
-            </span>
-          </div>
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-gray-100 p-4 rounded-lg">
               <div className="text-2xl font-bold text-green-600">99.9%</div>
               <div className="text-sm text-gray-600">Signal Quality</div>
             </div>
-            <div className="bg-gray-100 p-4 rounded-lg">
               <div className="text-2xl font-bold text-blue-600">&lt;1ms</div>
               <div className="text-sm text-gray-600">Response Time</div>
-            </div>
-            <div className="bg-gray-100 p-4 rounded-lg">
               <div className="text-2xl font-bold text-purple-600">2048</div>
               <div className="text-sm text-gray-600">Neural Channels</div>
-            </div>
-            <div className="bg-gray-100 p-4 rounded-lg">
               <div className="text-2xl font-bold text-orange-600">12TB</div>
               <div className="text-sm text-gray-600">Data Processed</div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Features Section */};
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {neuralFeatures.map((feature, index) => (
@@ -158,21 +128,14 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
               </div>
               <div className="bg-white/20 p-3 rounded-lg">
                 <p className="font-semibold">Latency: {feature.latency}</p>
-              </div>
             </motion.div>
           ))};
         </div>
-
         {/* Interactive Demo Section */};
-        <motion.div
-          initial={{ opacity: "0", y: 20 }};
-          animate={{ opacity: "1", y: 0 }};
           transition={{ duration: 0.6, delay: 0.6 }};
           className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
-        >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             🎮 Neural Interface Demos
-          </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {demoSessions.map((demo, index) => (
               <motion.div
@@ -199,24 +162,13 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                 </div>
               </motion.div>
             ))};
-          </div>
           <div className="mt-8 text-center">
             <button className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
               Launch Neural Demo →
             </button>
-          </div>
-        </motion.div>
-
         {/* Technology Deep Dive */};
-        <motion.div
-          initial={{ opacity: "0", y: 20 }};
-          animate={{ opacity: "1", y: 0 }};
           transition={{ duration: 0.6, delay: 0.8 }};
-          className="bg-white rounded-2xl shadow-2xl p-8 mb-16"
-        >
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             🔬 Technology Deep Dive
-          </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xl font-semibold mb-4">Neural Signal Processing</h3>
@@ -224,59 +176,28 @@ const NeuralInterfaceRevolution2026: React.FC = () => {
                 <div className="flex justify-between items-center">
                   <span>EEG Signal Quality</span>
                   <span className="font-semibold">99.9%</span>
-                </div>
-                <div className="flex justify-between items-center">
                   <span>Neural Pattern Recognition</span>
                   <span className="font-semibold">97.5%</span>
-                </div>
-                <div className="flex justify-between items-center">
                   <span>Intent Translation Accuracy</span>
                   <span className="font-semibold">98.2%</span>
-                </div>
-              </div>
-            </div>
-            <div>
               <h3 className="text-xl font-semibold mb-4">Interface Performance</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
                   <span>Data Transfer Rate</span>
                   <span className="font-semibold">10 Gbps</span>
-                </div>
-                <div className="flex justify-between items-center">
                   <span>Concurrent Channels</span>
                   <span className="font-semibold">2048</span>
-                </div>
-                <div className="flex justify-between items-center">
                   <span>Battery Life</span>
                   <span className="font-semibold">72 hours</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Call to Action */};
-        <motion.div
-          initial={{ opacity: "0", y: 20 }};
-          animate={{ opacity: "1", y: 0 }};
           transition={{ duration: 0.6, delay: 1.0 }};
           className="text-center bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white"
-        >
           <h2 className="text-4xl font-bold mb-6">
             Experience the Neural Interface Revolution
-          </h2>
           <p className="text-xl mb-8 text-white/90">
             Join the pioneers of human-AI integration and unlock the full potential of your consciousness.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Schedule Neural Demo →
-            </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Download Research Papers
-            </button>
-          </div>
-        </motion.div>
       </div>
     </div>
   );

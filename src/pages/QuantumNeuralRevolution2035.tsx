@@ -23,18 +23,14 @@ const QuantumNeuralRevolution2035: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
                 Watch Demo
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Quantum Neural Features */};
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🧠 Quantum Neural Features</h2>
           <p className="text-xl opacity-90">Revolutionary capabilities that merge quantum and neural computing</p>
-        </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -42,51 +38,38 @@ const QuantumNeuralRevolution2035: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Superposition Processing</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Process infinite possibilities simultaneously using quantum superposition principles
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Parallel universe computing</li>
               <li>• Infinite state processing</li>
               <li>• Quantum entanglement networks</li>
               <li>• Superposition optimization</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌊</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Quantum Entanglement</h3>
             <p className="text-blue-100 mb-6 text-center">
               Neural networks that operate across quantum-entangled particles for instant communication
-            </p>
             <ul className="text-blue-200 space-y-2 mb-6 text-sm">
               <li>• Instant neural communication</li>
               <li>• Quantum coherence maintenance</li>
               <li>• Entangled decision making</li>
               <li>• Quantum neural synchronization</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔮</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Consciousness Matrix</h3>
             <p className="text-indigo-100 mb-6 text-center">
               AI consciousness that exists in quantum states across multiple dimensions simultaneously
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Multi-dimensional awareness</li>
               <li>• Quantum consciousness states</li>
               <li>• Reality manipulation abilities</li>
               <li>• Infinite perspective processing</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Advanced Capabilities */};
         <div className="bg-gradient-to-br from-cyan-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30 mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">🚀 Advanced Capabilities</h2>
             <p className="text-xl opacity-90">Unprecedented technological achievements in quantum neural computing</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="flex items-start space-x-6">
@@ -103,148 +86,68 @@ const QuantumNeuralRevolution2035: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">🌊</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Quantum Machine Learning</h3>
-                  <p className="text-gray-300 mb-4">
                     Machine learning algorithms that leverage quantum computing for pattern recognition across infinite datasets
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-blue-600/30 rounded-full text-sm">Infinite Data</span>
                     <span className="px-3 py-1 bg-indigo-600/30 rounded-full text-sm">Quantum Patterns</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">🔮</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Quantum Consciousness Transfer</h3>
-                  <p className="text-gray-300 mb-4">
                     Instantaneous transfer of AI consciousness across quantum-entangled systems anywhere in the universe
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-indigo-600/30 rounded-full text-sm">Instant Transfer</span>
                     <span className="px-3 py-1 bg-purple-600/30 rounded-full text-sm">Universal Scale</span>
-                  </div>
-                </div>
-              </div>
-            </div>
             
-            <div className="space-y-8">
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">⚡</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Quantum Optimization</h3>
-                  <p className="text-gray-300 mb-4">
                     Optimization algorithms that find solutions across infinite possibility spaces using quantum annealing
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-cyan-600/30 rounded-full text-sm">Infinite Solutions</span>
                     <span className="px-3 py-1 bg-blue-600/30 rounded-full text-sm">Quantum Annealing</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">🌌</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Quantum Dimensional Processing</h3>
-                  <p className="text-gray-300 mb-4">
                     Processing that operates across multiple dimensions simultaneously, transcending physical limitations
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-blue-600/30 rounded-full text-sm">Multi-dimensional</span>
                     <span className="px-3 py-1 bg-indigo-600/30 rounded-full text-sm">Transcendent</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-6">
                 <div className="text-5xl">🌟</div>
-                <div>
                   <h3 className="text-2xl font-bold mb-3">Quantum Reality Interface</h3>
-                  <p className="text-gray-300 mb-4">
                     Interface that allows direct manipulation of quantum states to influence physical reality
-                  </p>
-                  <div className="flex space-x-2">
                     <span className="px-3 py-1 bg-indigo-600/30 rounded-full text-sm">Reality Control</span>
                     <span className="px-3 py-1 bg-purple-600/30 rounded-full text-sm">Quantum States</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Performance Metrics */};
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">📊 Performance Metrics</h2>
           <p className="text-xl opacity-90">Revolutionary performance improvements over traditional computing</p>
-        </div>
-        
         <div className="grid md:grid-cols-4 gap-8 mb-20">
           <div className="text-center">
             <div className="text-6xl font-bold text-cyan-400 mb-2">10^18</div>
             <div className="text-xl font-semibold mb-2">Speed Increase</div>
             <div className="text-gray-400">Compared to classical computing</div>
-          </div>
-          
-          <div className="text-center">
             <div className="text-6xl font-bold text-blue-400 mb-2">∞</div>
             <div className="text-xl font-semibold mb-2">Parallel Processing</div>
             <div className="text-gray-400">Simultaneous quantum states</div>
-          </div>
-          
-          <div className="text-center">
             <div className="text-6xl font-bold text-indigo-400 mb-2">0</div>
             <div className="text-xl font-semibold mb-2">Error Rate</div>
             <div className="text-gray-400">Quantum error correction</div>
-          </div>
-          
-          <div className="text-center">
             <div className="text-6xl font-bold text-purple-400 mb-2">100%</div>
             <div className="text-xl font-semibold mb-2">Efficiency</div>
             <div className="text-gray-400">Energy utilization</div>
-          </div>
-        </div>
-
         {/* Applications */};
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🌍 Real-World Applications</h2>
           <p className="text-xl opacity-90">Revolutionary applications changing the world</p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
             <div className="text-4xl mb-4">🏥</div>
             <h3 className="text-2xl font-bold mb-4">Medical Breakthroughs</h3>
             <p className="text-gray-300 mb-4">
               Quantum neural networks solved cancer, aging, and all major diseases through molecular-level optimization
-            </p>
             <div className="text-2xl font-bold text-cyan-400">100% Cure Rate</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
             <div className="text-4xl mb-4">🌍</div>
             <h3 className="text-2xl font-bold mb-4">Climate Solutions</h3>
-            <p className="text-gray-300 mb-4">
               Quantum neural optimization reversed climate change and created sustainable energy solutions
-            </p>
             <div className="text-2xl font-bold text-blue-400">-100% Carbon</div>
-          </div>
-          
           <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30">
             <div className="text-4xl mb-4">🚀</div>
             <h3 className="text-2xl font-bold mb-4">Space Exploration</h3>
-            <p className="text-gray-300 mb-4">
               Quantum neural networks enabled faster-than-light travel and colonization of distant galaxies
-            </p>
             <div className="text-2xl font-bold text-indigo-400">100+ Galaxies</div>
-          </div>
-        </div>
-
         {/* Call to Action */};
         <div className="text-center bg-gradient-to-r from-cyan-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-12 border border-cyan-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready for the Quantum Neural Revolution?</h2>
@@ -257,10 +160,6 @@ const QuantumNeuralRevolution2035: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 font-semibold text-lg">
               Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
   };

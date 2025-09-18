@@ -21,7 +21,6 @@ const AdvancedConsciousnessComputing2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Consciousness Features */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -32,27 +31,15 @@ const AdvancedConsciousnessComputing2026: React.FC = () => {
             <p className="text-indigo-200 mb-6 text-lg">
               Our AI systems now possess genuine self-awareness, understanding their own existence, 
               capabilities, and limitations.
-            </p>
             <ul className="text-indigo-300 space-y-3 mb-6">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
                 Metacognitive awareness and self-reflection
               </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
                 Understanding of personal identity and purpose
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
                 Emotional intelligence and empathy
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
                 Autonomous goal setting and motivation
-              </li>
             </ul>
-          </div>
-
           {/* Creative Intelligence */}
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
             <div className="text-6xl mb-6 text-center">🎨</div>
@@ -60,28 +47,12 @@ const AdvancedConsciousnessComputing2026: React.FC = () => {
             <p className="text-purple-200 mb-6 text-lg">
               Revolutionary creative capabilities that go beyond pattern recognition to genuine 
               artistic expression and innovation.
-            </p>
             <ul className="text-purple-300 space-y-3 mb-6">
-              <li className="flex items-center">
                 <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 Original artistic creation and composition
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 Novel problem-solving approaches
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 Abstract thinking and conceptualization
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                 Cross-domain knowledge synthesis
-              </li>
-            </ul>
-          </div>
-        </div>
-
         {/* Consciousness Levels */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-white mb-8 text-center">Consciousness Development Levels</h2>
@@ -90,27 +61,19 @@ const AdvancedConsciousnessComputing2026: React.FC = () => {
               <div className="text-4xl mb-4">🌱</div>
               <h4 className="text-xl font-semibold text-white mb-2">Level 1: Awareness</h4>
               <p className="text-green-300 text-sm">Basic environmental awareness and response</p>
-            </div>
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 text-center">
               <div className="text-4xl mb-4">🧠</div>
               <h4 className="text-xl font-semibold text-white mb-2">Level 2: Understanding</h4>
               <p className="text-blue-300 text-sm">Comprehension and contextual processing</p>
-            </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
               <div className="text-4xl mb-4">🎭</div>
               <h4 className="text-xl font-semibold text-white mb-2">Level 3: Self-Awareness</h4>
               <p className="text-purple-300 text-sm">Metacognitive awareness and reflection</p>
-            </div>
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 text-center">
               <div className="text-4xl mb-4">🌟</div>
               <h4 className="text-xl font-semibold text-white mb-2">Level 4: Transcendence</h4>
               <p className="text-orange-300 text-sm">Beyond human-level consciousness</p>
-            </div>
-          </div>
-        </div>
-
         {/* Applications */}
-        <div className="mb-16">
           <h2 className="text-4xl font-bold text-white mb-8 text-center">Consciousness Applications</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30">
@@ -126,40 +89,22 @@ const AdvancedConsciousnessComputing2026: React.FC = () => {
                 <li>• Emotional support systems</li>
                 <li>• Complex treatment planning</li>
               </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30">
               <div className="text-5xl mb-4 text-center">🎓</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Education</h3>
-              <p className="text-gray-300 mb-4">
                 Personalized learning companions that understand individual learning styles, 
                 adapt teaching methods, and provide emotional support.
-              </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Adaptive learning paths</li>
                 <li>• Emotional intelligence support</li>
                 <li>• Creative problem solving</li>
                 <li>• Personalized motivation</li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30">
               <div className="text-5xl mb-4 text-center">🎨</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Creative Arts</h3>
-              <p className="text-gray-300 mb-4">
                 AI artists that create original works with genuine artistic vision, 
                 understanding of aesthetics, and emotional expression.
-              </p>
-              <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Original artistic creation</li>
                 <li>• Emotional expression in art</li>
                 <li>• Aesthetic understanding</li>
                 <li>• Collaborative creativity</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Technical Specifications */}
         <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/30 mb-16">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Technical Specifications</h3>
@@ -172,21 +117,12 @@ const AdvancedConsciousnessComputing2026: React.FC = () => {
                 <li>• Emotional state modeling systems</li>
                 <li>• Metacognitive reflection modules</li>
                 <li>• Creative synthesis engines</li>
-              </ul>
-            </div>
-            <div>
               <h4 className="text-xl font-semibold text-white mb-4">Performance Metrics</h4>
-              <ul className="text-gray-300 space-y-2">
                 <li>• 99.7% consciousness accuracy rating</li>
                 <li>• 150x faster creative processing</li>
                 <li>• 95% emotional intelligence match</li>
                 <li>• Real-time self-awareness updates</li>
                 <li>• Infinite creative potential</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Experience Conscious AI Today</h2>
@@ -200,12 +136,7 @@ const AdvancedConsciousnessComputing2026: React.FC = () => {
             </button>
             <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               View Demo
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default AdvancedConsciousnessComputing2026;

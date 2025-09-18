@@ -19,8 +19,6 @@ const Community = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Community page coming soon. We're building a vibrant community platform.
-            </p>
-          </div>
         </div>
       </div>
     </>);

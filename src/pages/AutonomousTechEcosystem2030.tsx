@@ -12,7 +12,6 @@ const AutonomousTechEcosystem2030: React.FC = () => {
             Discover the self-evolving, self-healing, and self-optimizing technology ecosystem that will revolutionize how we interact with machines
           </p>
         </div>
-
         {/* Core Ecosystem Components */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -27,51 +26,36 @@ const AutonomousTechEcosystem2030: React.FC = () => {
               <li>• Adaptive Problem Solving</li>
               <li>• Evolutionary Intelligence</li>
             </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔄</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Self-Healing Systems</h3>
             <p className="text-purple-100 mb-6 text-center">
               Technology infrastructure that automatically detects, diagnoses, and repairs itself
-            </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Automatic Error Detection</li>
               <li>• Self-Repair Mechanisms</li>
               <li>• Predictive Maintenance</li>
               <li>• Zero-Downtime Operations</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-xl p-8 border border-pink-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Self-Optimizing Networks</h3>
             <p className="text-pink-100 mb-6 text-center">
               Network infrastructure that automatically optimizes performance, security, and efficiency
-            </p>
             <ul className="text-pink-200 space-y-2 mb-6 text-sm">
               <li>• Dynamic Load Balancing</li>
               <li>• Intelligent Routing</li>
               <li>• Adaptive Security</li>
               <li>• Real-time Optimization</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌱</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Self-Growing Infrastructure</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Infrastructure that autonomously scales, expands, and adapts to changing demands
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Autonomous Scaling</li>
               <li>• Dynamic Resource Allocation</li>
               <li>• Self-Expanding Systems</li>
               <li>• Adaptive Architecture</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Ecosystem Architecture */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">🏗️ Ecosystem Architecture</h2>
@@ -83,23 +67,14 @@ const AutonomousTechEcosystem2030: React.FC = () => {
               <h3 className="text-2xl font-bold mb-4">Intelligence Layer</h3>
               <p className="text-gray-300">Core AI systems that provide decision-making capabilities across the entire ecosystem</p>
             </div>
-            <div className="text-center">
               <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">🔗</span>
-              </div>
               <h3 className="text-2xl font-bold mb-4">Connection Layer</h3>
               <p className="text-gray-300">High-speed, self-healing network infrastructure that connects all ecosystem components</p>
-            </div>
-            <div className="text-center">
               <div className="bg-gradient-to-r from-pink-500 to-rose-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">⚙️</span>
-              </div>
               <h3 className="text-2xl font-bold mb-4">Execution Layer</h3>
               <p className="text-gray-300">Autonomous systems that execute tasks, maintain infrastructure, and optimize performance</p>
-            </div>
-          </div>
-        </div>
-
         {/* Key Features */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
@@ -112,83 +87,28 @@ const AutonomousTechEcosystem2030: React.FC = () => {
                 <div>
                   <h4 className="font-semibold mb-2">Self-Configuration</h4>
                   <p className="text-emerald-100 text-sm">Systems automatically configure themselves based on requirements and environment</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-emerald-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                  <span className="text-sm">✓</span>
-                </div>
-                <div>
                   <h4 className="font-semibold mb-2">Self-Monitoring</h4>
                   <p className="text-emerald-100 text-sm">Continuous monitoring of system health, performance, and security</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-emerald-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                  <span className="text-sm">✓</span>
-                </div>
-                <div>
                   <h4 className="font-semibold mb-2">Self-Protection</h4>
                   <p className="text-emerald-100 text-sm">Advanced threat detection and autonomous security response</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-emerald-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                  <span className="text-sm">✓</span>
-                </div>
-                <div>
                   <h4 className="font-semibold mb-2">Self-Optimization</h4>
                   <p className="text-emerald-100 text-sm">Continuous optimization of performance, efficiency, and resource utilization</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
             <h3 className="text-3xl font-bold mb-6 text-center">🌐 Ecosystem Benefits</h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-4">
                 <div className="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                   <span className="text-sm">📈</span>
-                </div>
-                <div>
                   <h4 className="font-semibold mb-2">99.9% Uptime</h4>
                   <p className="text-blue-100 text-sm">Near-perfect reliability through autonomous maintenance and healing</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                   <span className="text-sm">⚡</span>
-                </div>
-                <div>
                   <h4 className="font-semibold mb-2">Instant Scaling</h4>
                   <p className="text-blue-100 text-sm">Automatic scaling based on real-time demand and usage patterns</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                   <span className="text-sm">🛡️</span>
-                </div>
-                <div>
                   <h4 className="font-semibold mb-2">Zero-Touch Security</h4>
                   <p className="text-blue-100 text-sm">Autonomous threat detection and response without human intervention</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
                   <span className="text-sm">💰</span>
-                </div>
-                <div>
                   <h4 className="font-semibold mb-2">Cost Optimization</h4>
                   <p className="text-blue-100 text-sm">Automatic resource optimization reducing operational costs by up to 70%</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Implementation Roadmap */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">🗺️ Implementation Roadmap</h2>
           <div className="space-y-8">
             <div className="flex items-center space-x-6">
@@ -200,54 +120,31 @@ const AutonomousTechEcosystem2030: React.FC = () => {
                   <span className="bg-indigo-500/30 text-indigo-200 px-3 py-1 rounded-full text-sm">Autonomous Monitoring</span>
                   <span className="bg-indigo-500/30 text-indigo-200 px-3 py-1 rounded-full text-sm">Basic Self-Healing</span>
                   <span className="bg-indigo-500/30 text-indigo-200 px-3 py-1 rounded-full text-sm">AI Decision Engine</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
               <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">2027</div>
-              <div className="flex-1">
                 <h3 className="text-2xl font-semibold mb-2">Integration Phase</h3>
                 <p className="text-gray-300 mb-2">Full ecosystem integration with advanced autonomous capabilities</p>
-                <div className="flex flex-wrap gap-2">
                   <span className="bg-purple-500/30 text-purple-200 px-3 py-1 rounded-full text-sm">Self-Optimization</span>
                   <span className="bg-purple-500/30 text-purple-200 px-3 py-1 rounded-full text-sm">Predictive Scaling</span>
                   <span className="bg-purple-500/30 text-purple-200 px-3 py-1 rounded-full text-sm">Advanced Security</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
               <div className="bg-gradient-to-r from-pink-500 to-rose-500 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">2030</div>
-              <div className="flex-1">
                 <h3 className="text-2xl font-semibold mb-2">Revolution Phase</h3>
                 <p className="text-gray-300 mb-2">Fully autonomous ecosystem with self-evolving capabilities</p>
-                <div className="flex flex-wrap gap-2">
                   <span className="bg-pink-500/30 text-pink-200 px-3 py-1 rounded-full text-sm">Self-Evolution</span>
                   <span className="bg-pink-500/30 text-pink-200 px-3 py-1 rounded-full text-sm">Consciousness Integration</span>
                   <span className="bg-pink-500/30 text-pink-200 px-3 py-1 rounded-full text-sm">Universal Adaptation</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Build the Future?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join us in creating the autonomous technology ecosystem that will revolutionize how we interact with machines
-          </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="/pages/InnovationLanding2025" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey →
             </a>
             <a href="/pages/FutureTechVision2030" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 font-semibold text-lg">
               Explore 2030 Vision
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AutonomousTechEcosystem2030;

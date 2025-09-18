@@ -30,25 +30,15 @@ const AdvancedTechBanner2025: React.FC = () => {
               <li>• AI-Powered Automation</li>
               <li>• Predictive Analytics</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-r from-green-900/30 to-teal-900/30 rounded-xl p-6 border border-teal-500/20">
-            <h3 className="text-2xl font-bold mb-4 flex items-center">
               <span className="text-3xl mr-3">⚛️</span>
               Quantum Computing
-            </h3>
-            <p className="text-gray-300 mb-4">
               Revolutionary quantum computing solutions for complex problem-solving and optimization.
-            </p>
-            <ul className="text-sm space-y-1">
               <li>• Quantum Algorithms</li>
               <li>• Quantum Cryptography</li>
               <li>• Quantum Machine Learning</li>
               <li>• Quantum Simulation</li>
-            </ul>
-          </div>
-        </div>
-        
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/AdvancedTechShowcase2025" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center">
@@ -56,12 +46,8 @@ const AdvancedTechBanner2025: React.FC = () => {
             </a>
             <a href="/pages/FutureInnovationLab2025" className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-all duration-300 inline-flex items-center justify-center">
               🔬 Visit Innovation Lab →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default AdvancedTechBanner2025;

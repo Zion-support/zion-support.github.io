@@ -38,16 +38,13 @@ export default function TalentMarketplace() {
               <p className="font-semibold">How do I contact a freelancer?</p>
               <p className="text-zion-slate-light">Create a free account and send a message or job invite directly from their profile.</p>
             </div>
-            <div>
               <p className="font-semibold">Are payments protected?</p>
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
-            </div>
           </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
             </Button>
-          </div>
         </div>
       </main>
       <Footer />

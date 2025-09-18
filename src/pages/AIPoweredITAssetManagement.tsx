@@ -10,7 +10,6 @@ const AIPoweredITAssetManagement = () => {
     { icon: Database, title: 'Central Inventory', desc: 'Unified, always‑up‑to‑date asset database.' },
     { icon: Network, title: 'Performance Insights', desc: 'Optimize utilization and reduce costs.' },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <Helmet>
@@ -18,7 +17,6 @@ const AIPoweredITAssetManagement = () => {
         <meta name="description" content="AI-powered asset discovery, monitoring, and optimization for your entire IT infrastructure." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-it-asset-management" />
       </Helmet>
-
       <section className="pt-24 pb-12 px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">AI-Powered IT Asset Management</h1>
@@ -29,11 +27,9 @@ const AIPoweredITAssetManagement = () => {
             </Link>
             <Link to="/services" className="inline-flex items-center px-6 py-3 border border-gray-600 rounded-lg font-semibold">
               View Services
-            </Link>
           </div>
         </div>
       </section>
-
       <section className="pb-20 px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => {
@@ -48,10 +44,7 @@ const AIPoweredITAssetManagement = () => {
               </div>
             );
           })}
-        </div>
-      </section>
     </div>
   );
 };
-
 export default AIPoweredITAssetManagement;

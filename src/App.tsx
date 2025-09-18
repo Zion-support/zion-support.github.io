@@ -23,9 +23,7 @@ const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
-
 const PricingPage = lazy(() => import('./pages/PricingPage'));
-
 // Service pages
 // Fallback: route disabled if page missing
 const AIServices = lazy(() => import('./pages/Services'));
@@ -34,7 +32,6 @@ const EnterpriseSolutionsPage = lazy(() => import('./pages/Services'));
 const DigitalTransformation = lazy(() => import('./pages/Services'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
-
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -47,20 +44,17 @@ const HelpCenter = lazy(() => import('./pages/Services'));
 const Docs = lazy(() => import('./pages/Services'));
 const Marketplace = lazy(() => import('./pages/Services'));
 const Community = lazy(() => import('./pages/CommunityPage'));
-
 // Additional pages
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Cookies = lazy(() => import('./pages/Cookies'));
 const FAQ = lazy(() => import('./pages/FAQ'));
-
 // Loading spinner component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
   </div>
 );
-
 const App = () => {
   // const [sidebarOpen, setSidebarOpen] = useState(false); // Commented out unused state
   return (
@@ -87,7 +81,6 @@ const App = () => {
                     <Route path="/talents" element={<TalentsPage />} />
                                          <Route path="/emerging-tech" element={<EmergingTech />} />
                      <Route path="/pricing" element={<PricingPage />} />
-                    
                     {/* AI Service Routes */}
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
@@ -95,7 +88,6 @@ const App = () => {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/ai-marketing-automation" element={<AIMarketingAutomation />} />
-                    
                     {/* Missing Pages from Analysis */}
                     <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
                     <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
@@ -108,13 +100,11 @@ const App = () => {
                     <Route path="/docs" element={<Docs />} />
                     <Route path="/marketplace" element={<Marketplace />} />
                     <Route path="/community" element={<Community />} />
-                    
                     {/* Additional Pages */}
                     <Route path="/privacy" element={<Privacy />} />
                     <Route path="/terms" element={<Terms />} />
                     <Route path="/cookies" element={<Cookies />} />
                     <Route path="/faq" element={<FAQ />} />
-                    
                     {/* 404 Route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center text-white">Page not found</div>} />
                   </Routes>
@@ -133,5 +123,4 @@ const App = () => {
     </EnhancedErrorBoundary>
   );
 };
-
 export default App;

@@ -10,7 +10,6 @@ interface SEOMetaTagsProps {
   ogType?: string;
   twitterCard?: string;
 }
-
 const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
   title,
   description,
@@ -23,7 +22,6 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
   const fullTitle = `${title} | Zion Tech Group`;
   const keywordsString = keywords.join(', ');
   const siteUrl = 'https://ziontechgroup.com';
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -36,7 +34,6 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={`${siteUrl}${canonicalUrl}`} />}
-      
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -45,7 +42,6 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
       <meta property="og:image" content={`${siteUrl}${ogImage}`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -53,14 +49,12 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
       <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#6366f1" />
       <meta name="msapplication-TileColor" content="#6366f1" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -86,5 +80,4 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
     </Helmet>
   );
 };
-
 export default SEOMetaTags;

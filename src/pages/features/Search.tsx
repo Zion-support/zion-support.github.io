@@ -38,16 +38,13 @@ export default function SearchFeature() {
               <p className="font-semibold">Can I search in multiple languages?</p>
               <p className="text-zion-slate-light">Yes, the search engine supports queries in all interface languages.</p>
             </div>
-            <div>
               <p className="font-semibold">How are results ranked?</p>
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
-            </div>
           </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
             </Button>
-          </div>
         </div>
       </main>
       <Footer />

@@ -8,7 +8,6 @@ const UltimateContentBanner2028: React.FC = () => {
         <div className="flex items-center justify-center space-x-4 mb-6">
           <span className="text-4xl animate-bounce">🚀</span>
           <h3 className="text-4xl font-bold">ULTIMATE 2028-2030 REVOLUTIONARY CONTENT</h3>
-          <span className="text-4xl animate-bounce">🚀</span>
         </div>
         <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
           Experience the most advanced technology content featuring AI Consciousness Evolution, Quantum Reality Control, 
@@ -20,31 +19,22 @@ const UltimateContentBanner2028: React.FC = () => {
           </a>
           <a href="/pages/QuantumRealityEngine2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-bold border border-white/30 text-lg">
             ⚛️ Quantum Reality 2028 →
-          </a>
           <a href="/pages/InterdimensionalTechRevolution2028" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-violet-600 transition-all duration-300 font-bold border border-white/30 text-lg">
             🌌 Interdimensional 2028 →
-          </a>
           <a href="/pages/NeuralRealityEngine2029" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-emerald-600 transition-all duration-300 font-bold border border-white/30 text-lg">
             🧠 Neural Reality 2029 →
-          </a>
           <a href="/pages/UltimateTechRevolution2030" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-rose-600 transition-all duration-300 font-bold border border-white/30 text-lg">
             🚀 Ultimate Revolution 2030 →
-          </a>
-        </div>
         <div className="flex justify-center space-x-4">
           <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
             ✨ 5 NEW REVOLUTIONARY PAGES
           </span>
           <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
             🚀 CUTTING-EDGE TECHNOLOGY
-          </span>
           <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
             🌟 INTERACTIVE SHOWCASE
-          </span>
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateContentBanner2028;

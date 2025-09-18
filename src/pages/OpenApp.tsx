@@ -19,8 +19,6 @@ const OpenApp = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               App launcher coming soon. We're building comprehensive application access.
-            </p>
-          </div>
         </div>
       </div>
     </>);

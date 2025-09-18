@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '@/components/SEOHead';
 
 const AdvancedCyberSecurity2026: React.FC = () => {
   return (
@@ -31,10 +31,7 @@ const AdvancedCyberSecurity2026: React.FC = () => {
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
               📊 View Demo
-            </button>
-          </div>
         </div>
-
         {/* Key Features */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm border border-red-500/30 rounded-2xl p-8 text-center">
@@ -49,37 +46,22 @@ const AdvancedCyberSecurity2026: React.FC = () => {
               <li>• Code-based systems</li>
               <li>• Hash-based signatures</li>
             </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8 text-center">
             <div className="text-6xl mb-4">🤖</div>
             <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Threat Detection</h3>
-            <p className="text-gray-300 mb-6">
               Autonomous AI systems that detect and neutralize threats in real-time
-            </p>
-            <ul className="text-left text-gray-300 space-y-2">
               <li>• Behavioral analysis</li>
               <li>• Predictive threat modeling</li>
               <li>• Automated response</li>
               <li>• Continuous learning</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8 text-center">
             <div className="text-6xl mb-4">🌐</div>
             <h3 className="text-2xl font-bold text-white mb-4">Zero-Trust Architecture</h3>
-            <p className="text-gray-300 mb-6">
               Complete network security with never-trust, always-verify principles
-            </p>
-            <ul className="text-left text-gray-300 space-y-2">
               <li>• Micro-segmentation</li>
               <li>• Identity verification</li>
               <li>• Device trust scoring</li>
               <li>• Continuous monitoring</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Advanced Features */}
         <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-3xl p-12 mb-16">
           <div className="text-center mb-12">
@@ -88,9 +70,6 @@ const AdvancedCyberSecurity2026: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of cybersecurity with our breakthrough innovations
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
@@ -108,113 +87,58 @@ const AdvancedCyberSecurity2026: React.FC = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex items-start space-x-4">
                 <div className="text-4xl">⚡</div>
-                <div>
                   <h3 className="text-2xl font-bold text-white mb-3">Quantum Threat Analysis</h3>
-                  <p className="text-gray-300 mb-4">
                     Quantum computing algorithms that analyze massive datasets to predict 
                     and prevent sophisticated cyber attacks before they occur.
-                  </p>
-                  <div className="bg-gray-800/50 rounded-lg p-4">
                     <p className="text-sm text-gray-400">• Quantum machine learning</p>
                     <p className="text-sm text-gray-400">• Predictive analytics</p>
                     <p className="text-sm text-gray-400">• Pattern recognition</p>
-                  </div>
-                </div>
-              </div>
             </div>
-
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
                 <div className="text-4xl">🔮</div>
-                <div>
                   <h3 className="text-2xl font-bold text-white mb-3">Holographic Security</h3>
-                  <p className="text-gray-300 mb-4">
                     Revolutionary holographic data protection that creates multiple layers 
                     of security across parallel dimensions of data storage.
-                  </p>
-                  <div className="bg-gray-800/50 rounded-lg p-4">
                     <p className="text-sm text-gray-400">• Multi-dimensional encryption</p>
                     <p className="text-sm text-gray-400">• Holographic signatures</p>
                     <p className="text-sm text-gray-400">• Quantum entanglement</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
                 <div className="text-4xl">🌊</div>
-                <div>
                   <h3 className="text-2xl font-bold text-white mb-3">Autonomous Defense Systems</h3>
-                  <p className="text-gray-300 mb-4">
                     Self-operating defense mechanisms that automatically detect, analyze, 
                     and neutralize threats without human intervention.
-                  </p>
-                  <div className="bg-gray-800/50 rounded-lg p-4">
                     <p className="text-sm text-gray-400">• Autonomous response</p>
                     <p className="text-sm text-gray-400">• Self-learning algorithms</p>
                     <p className="text-sm text-gray-400">• Real-time adaptation</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Case Studies */}
         <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-6">
               🏆 Success Stories
-            </h2>
             <p className="text-xl text-gray-300">
               See how our cybersecurity solutions have protected leading organizations
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-green-500 text-white text-xs rounded-full">+99.9%</span>
                 <span className="text-sm text-gray-400">Uptime</span>
-              </div>
               <h3 className="text-xl font-bold text-white mb-3">Fortune 500 Bank</h3>
               <p className="text-gray-300 mb-4">
                 Protected against 10,000+ daily cyber attacks with zero successful breaches 
                 using our quantum-resistant encryption and AI threat detection.
               </p>
               <div className="text-green-400 font-semibold">$50M+ Saved</div>
-            </div>
-
             <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8">
-              <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-blue-500 text-white text-xs rounded-full">-95%</span>
                 <span className="text-sm text-gray-400">Threats</span>
-              </div>
               <h3 className="text-xl font-bold text-white mb-3">Healthcare Provider</h3>
-              <p className="text-gray-300 mb-4">
                 Reduced security incidents by 95% using our neural security networks 
                 and autonomous defense systems across 50+ facilities.
-              </p>
               <div className="text-blue-400 font-semibold">$25M+ Saved</div>
-            </div>
-
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
-              <div className="flex items-center space-x-2 mb-4">
                 <span className="px-3 py-1 bg-purple-500 text-white text-xs rounded-full">+300%</span>
                 <span className="text-sm text-gray-400">Efficiency</span>
-              </div>
               <h3 className="text-xl font-bold text-white mb-3">Government Agency</h3>
-              <p className="text-gray-300 mb-4">
                 Achieved 300% improvement in threat response time using our holographic 
                 security and quantum threat analysis systems.
-              </p>
               <div className="text-purple-400 font-semibold">$100M+ Saved</div>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-red-600/20 to-orange-600/20 backdrop-blur-sm rounded-3xl p-12 border border-red-500/30">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -223,20 +147,14 @@ const AdvancedCyberSecurity2026: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join thousands of organizations already protected by our advanced cybersecurity solutions. 
             Get a free security assessment and see how we can protect your digital assets.
-          </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               🛡️ Get Security Assessment
-            </button>
             <button className="border border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-colors text-lg">
               📞 Schedule Demo
-            </button>
-          </div>
-        </div>
       </main>
       <Footer />
     </div>
   );
 };
-
 export default AdvancedCyberSecurity2026;

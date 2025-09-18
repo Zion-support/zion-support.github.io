@@ -4,7 +4,6 @@ import { motion, AnimatePresence }  from 'framer-motion';
 const RevolutionaryAdCarousel: React.FC = () => {
   const [currentAd, setCurrentAd] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const advertisements = [
     {
       id: "1",
@@ -18,7 +17,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
       icon: "🧠",
       badge: "BREAKTHROUGH"
     },
-    {
       id: "2",
       title: "🌟 NEXT-GEN INNOVATION HUB",
       subtitle: "Pioneering Future Technologies",
@@ -29,8 +27,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
       gradient: "from-cyan-600 via-blue-600 to-indigo-600",
       icon: "⚡",
       badge: "INNOVATION"
-    },
-    {
       id: "3",
       title: "🌌 INTERDIMENSIONAL TECH 2035",
       subtitle: "Computing from Parallel Dimensions",
@@ -41,8 +37,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
       gradient: "from-orange-600 via-red-600 to-pink-600",
       icon: "🌌",
       badge: "REVOLUTIONARY"
-    },
-    {
       id: "4",
       title: "🧬 NEURAL INTERFACE REVOLUTION",
       subtitle: "Direct Brain-Computer Interface",
@@ -52,7 +46,6 @@ const RevolutionaryAdCarousel: React.FC = () => {
       link: "/pages/NeuralInterfaceRevolution2025",
       gradient: "from-green-600 via-emerald-600 to-teal-600",
       icon: "🔗",
-      badge: "BREAKTHROUGH"
     };
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -60,16 +53,13 @@ const RevolutionaryAdCarousel: React.FC = () => {
     const interval = setInterval(() => {
       setCurrentAd((prev) => (prev + 1) % advertisements.length);
     }, 5000);
-    
     return () => clearInterval(interval);
   }, [advertisements.length, isAutoPlaying]);
-
   const nextAd = () => {
     setCurrentAd((prev) => (prev + 1) % advertisements.length);
   };
   const prevAd = () => {
     setCurrentAd((prev) => (prev - 1 + advertisements.length) % advertisements.length);
-  };
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       <div 
@@ -113,13 +103,8 @@ const RevolutionaryAdCarousel: React.FC = () => {
                       {advertisements[currentAd].description};
                     </p>
                   </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: "0", y: 20 }};
-                    animate={{ opacity: "1", y: 0 }};
                     transition={{ delay: 0.4 }};
                     className="space-y-3 mb-8"
-                  >
                     {advertisements[currentAd].features.map((feature, index) => (
                       <motion.div
                         key={index};
@@ -132,14 +117,8 @@ const RevolutionaryAdCarousel: React.FC = () => {
                         <span className="text-lg">{feature}</span>
                       </motion.div>
                     ))};
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: "0", y: 20 }};
-                    animate={{ opacity: "1", y: 0 }};
                     transition={{ delay: 0.8 }};
                     className="flex flex-wrap gap-4"
-                  >
                     <motion.a
                       href={advertisements[currentAd].link};
                       whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(147, 51, 234, 0.4)" }};
@@ -150,33 +129,24 @@ const RevolutionaryAdCarousel: React.FC = () => {
                     </motion.a>
                     <motion.button
                       whileHover={{ scale: 1.05 }};
-                      whileTap={{ scale: 0.95 }};
                       className="border-2 border-white/50 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 transition-all duration-300"
-                    >
                       Learn More
                     </motion.button>
-                  </motion.div>
                 </div>
-
                 {/* Visual */};
                 <div className="flex justify-center">
-                  <motion.div
                     initial={{ opacity: "0", scale: 0.8 }};
                     animate={{ opacity: "1", scale: 1 }};
                     transition={{ delay: 0.3, type: "spring", stiffness: 100 }};
                     className="relative"
-                  >
                     <div className="text-9xl mb-4 text-center animate-bounce">
                       {advertisements[currentAd].icon};
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse"></div>
-                  </motion.div>
-                </div>
               </div>
             </div>
           </motion.div>
         </AnimatePresence>
-
         {/* Navigation */};
         <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
           <motion.button
@@ -184,21 +154,12 @@ const RevolutionaryAdCarousel: React.FC = () => {
             whileTap={{ scale: 0.9 }};
             onClick={prevAd};
             className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
             ←
           </motion.button>
         </div>
         <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-          <motion.button
-            whileHover={{ scale: 1.1 }};
-            whileTap={{ scale: 0.9 }};
             onClick={nextAd};
-            className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
-          >
             →
-          </motion.button>
-        </div>
-
         {/* Dots Indicator */};
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
           {advertisements.map((_, index) => (
@@ -212,9 +173,7 @@ const RevolutionaryAdCarousel: React.FC = () => {
               }`};
             />
           ))};
-        </div>
       </div>
     </div>
   );
-  };
 export default RevolutionaryAdCarousel;

@@ -22,10 +22,7 @@ const QuantumComputingBusinessGuide2025: React.FC = () => {
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors font-semibold text-lg">
               Watch Demo
-            </button>
-          </div>
         </div>
-
         {/* Quantum Applications */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30 text-center">
@@ -34,40 +31,24 @@ const QuantumComputingBusinessGuide2025: React.FC = () => {
             <p className="text-gray-300 text-sm">
               Accelerate molecular simulation and drug development by 1000x
             </p>
-          </div>
           
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 text-center">
             <div className="text-5xl mb-4">🔐</div>
             <h3 className="text-xl font-bold text-white mb-3">Cryptography</h3>
-            <p className="text-gray-300 text-sm">
               Unbreakable quantum encryption for secure communications
-            </p>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30 text-center">
             <div className="text-5xl mb-4">📊</div>
             <h3 className="text-xl font-bold text-white mb-3">Optimization</h3>
-            <p className="text-gray-300 text-sm">
               Solve complex optimization problems in logistics and finance
-            </p>
-          </div>
-          
           <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30 text-center">
             <div className="text-5xl mb-4">🤖</div>
             <h3 className="text-xl font-bold text-white mb-3">AI Enhancement</h3>
-            <p className="text-gray-300 text-sm">
               Quantum machine learning for unprecedented AI capabilities
-            </p>
-          </div>
-        </div>
-
         {/* Implementation Roadmap */}
         <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Implementation Roadmap</h2>
             <p className="text-xl text-gray-300">Your journey to quantum advantage in 90 days</p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-gradient-to-r from-cyan-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6">
@@ -85,186 +66,90 @@ const QuantumComputingBusinessGuide2025: React.FC = () => {
               </ul>
             </div>
             
-            <div className="text-center">
               <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6">
                 2
-              </div>
               <h3 className="text-2xl font-bold text-white mb-4">Pilot Program</h3>
-              <p className="text-gray-300 mb-6">
                 Launch a focused pilot project to demonstrate quantum advantage
-              </p>
-              <ul className="text-gray-300 space-y-2 text-sm text-left">
                 <li>• Quantum algorithm design</li>
                 <li>• Hybrid system setup</li>
                 <li>• Performance testing</li>
                 <li>• Results validation</li>
-              </ul>
-            </div>
-            
-            <div className="text-center">
               <div className="bg-gradient-to-r from-emerald-500 to-teal-500 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6">
                 3
-              </div>
               <h3 className="text-2xl font-bold text-white mb-4">Scale & Deploy</h3>
-              <p className="text-gray-300 mb-6">
                 Expand successful pilots into production-ready quantum solutions
-              </p>
-              <ul className="text-gray-300 space-y-2 text-sm text-left">
                 <li>• Production deployment</li>
                 <li>• Team training</li>
                 <li>• Performance monitoring</li>
                 <li>• Continuous optimization</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Quantum Technologies */}
         <div className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Quantum Technologies</h2>
             <p className="text-xl text-gray-300">Explore the quantum technologies powering the future</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30">
               <h3 className="text-2xl font-bold text-white mb-4">Gate-Based Quantum Computing</h3>
-              <p className="text-gray-300 mb-6">
                 Universal quantum computers using quantum gates for complex calculations and algorithms.
-              </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">1000+</div>
                   <div className="text-sm text-gray-400">Logical Qubits</div>
                 </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">99.9%</div>
                   <div className="text-sm text-gray-400">Fidelity</div>
-                </div>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Annealing</h3>
-              <p className="text-gray-300 mb-6">
                 Specialized quantum processors for optimization problems and machine learning.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400">5000+</div>
                   <div className="text-sm text-gray-400">Qubits</div>
-                </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400">100x</div>
                   <div className="text-sm text-gray-400">Speedup</div>
-                </div>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Machine Learning</h3>
-              <p className="text-gray-300 mb-6">
                 Hybrid quantum-classical algorithms for enhanced AI and data processing.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
                   <div className="text-3xl font-bold text-emerald-400">10x</div>
                   <div className="text-sm text-gray-400">Training Speed</div>
-                </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-emerald-400">50%</div>
                   <div className="text-sm text-gray-400">Accuracy Gain</div>
-                </div>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Cryptography</h3>
-              <p className="text-gray-300 mb-6">
                 Unbreakable encryption methods using quantum key distribution and protocols.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center">
                   <div className="text-3xl font-bold text-orange-400">100%</div>
                   <div className="text-sm text-gray-400">Security</div>
-                </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-orange-400">∞</div>
                   <div className="text-sm text-gray-400">Future-Proof</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Business Benefits */}
-        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Business Benefits</h2>
             <p className="text-xl text-gray-300">Transform your operations with quantum advantage</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
               <div className="bg-gradient-to-r from-cyan-500 to-blue-500 w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
                 ⚡
-              </div>
               <h3 className="text-xl font-bold text-white mb-2">Exponential Speed</h3>
               <p className="text-gray-300 text-sm">
                 Solve complex problems in seconds that would take classical computers years
-              </p>
-            </div>
-            
-            <div className="text-center">
               <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
                 💰
-              </div>
               <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>
-              <p className="text-gray-300 text-sm">
                 Reduce computational costs by up to 90% for complex optimization problems
-              </p>
-            </div>
-            
-            <div className="text-center">
               <div className="bg-gradient-to-r from-emerald-500 to-teal-500 w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
                 🔒
-              </div>
               <h3 className="text-xl font-bold text-white mb-2">Enhanced Security</h3>
-              <p className="text-gray-300 text-sm">
                 Unbreakable quantum encryption for ultimate data protection
-              </p>
-            </div>
-            
-            <div className="text-center">
               <div className="bg-gradient-to-r from-orange-500 to-red-500 w-20 h-20 rounded-full flex items-center justify-center text-3xl mb-4 mx-auto">
                 🚀
-              </div>
               <h3 className="text-xl font-bold text-white mb-2">Competitive Edge</h3>
-              <p className="text-gray-300 text-sm">
                 Stay ahead with cutting-edge quantum capabilities and innovation
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-4xl font-bold text-white mb-4">Start Your Quantum Journey Today</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
             Join the quantum revolution and unlock exponential business potential with our comprehensive quantum computing solutions.
-          </p>
-          <div className="flex justify-center space-x-4">
             <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Download Complete Guide
-            </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-colors font-semibold text-lg">
               Schedule Quantum Demo
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default QuantumComputingBusinessGuide2025;

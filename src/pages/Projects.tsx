@@ -44,9 +44,7 @@ function ProjectsContent() {
               </Card>))}
           </div>)}
       </main>
-      
     </>);
 }
 export default function Projects() {
     return <ProjectsContent />;
-}

@@ -21,8 +21,6 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Watch Demo
-            </button>
-          </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -40,30 +38,20 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             </ul>
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Explore AI Consciousness →
-            </button>
-          </div>
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• 1000+ logical qubits</li>
               <li>• Quantum error correction</li>
               <li>• Exponential speed gains</li>
               <li>• Molecular simulation</li>
-            </ul>
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Go Quantum →
-            </button>
-          </div>
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Non-invasive BCI technology</li>
               <li>• Thought-controlled devices</li>
               <li>• Neural feedback systems</li>
               <li>• Medical applications</li>
-            </ul>
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Connect Mind & Machine →
-            </button>
-          </div>
 
           <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
@@ -71,89 +59,61 @@ const RevolutionaryTechBreakthrough2025: React.FC = () => {
             <p className="text-violet-100 mb-6 text-center">
               Seamless integration between physical and virtual worlds, 
               creating immersive digital experiences.
-            </p>
             <ul className="text-violet-200 space-y-2 mb-6 text-sm">
               <li>• Holographic displays</li>
               <li>• Spatial computing</li>
               <li>• Virtual collaboration</li>
               <li>• Digital twins</li>
-            </ul>
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Enter Metaverse →
-            </button>
-          </div>
-
           <div className="bg-gradient-to-br from-rose-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-rose-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🤖</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Autonomous Robotics</h3>
             <p className="text-rose-100 mb-6 text-center">
               Self-managing robotic systems that operate independently, 
               learn continuously, and adapt to new environments.
-            </p>
             <ul className="text-rose-200 space-y-2 mb-6 text-sm">
               <li>• Self-learning capabilities</li>
               <li>• Autonomous navigation</li>
               <li>• Human-robot collaboration</li>
               <li>• Predictive maintenance</li>
-            </ul>
             <button className="w-full bg-white text-rose-600 py-3 rounded-lg hover:bg-rose-50 transition-colors font-semibold">
               Explore Robotics →
-            </button>
-          </div>
-
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🔬</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Biotech Revolution</h3>
             <p className="text-indigo-100 mb-6 text-center">
               Revolutionary biotechnology solutions for healthcare, 
               agriculture, and environmental sustainability.
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Gene editing technology</li>
               <li>• Personalized medicine</li>
               <li>• Synthetic biology</li>
               <li>• Bio-manufacturing</li>
-            </ul>
             <button className="w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold">
               Discover Biotech →
-            </button>
-          </div>
-        </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-cyan-400 mb-2">99.9%</div>
               <div className="text-lg opacity-90">Accuracy Rate</div>
             </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">10x</div>
               <div className="text-lg opacity-90">Performance Boost</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-emerald-400 mb-2">1M+</div>
               <div className="text-lg opacity-90">Lives Improved</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-rose-400 mb-2">24/7</div>
               <div className="text-lg opacity-90">Continuous Operation</div>
-            </div>
-          </div>
-        </div>
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join thousands of innovators who are already transforming their industries 
             with our revolutionary technology solutions.
-          </p>
           <div className="flex justify-center space-x-6">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-xl">
               Start Your Journey
-            </button>
             <button className="border-2 border-purple-400 text-purple-400 px-12 py-4 rounded-lg hover:bg-purple-400 hover:text-purple-900 transition-all duration-300 font-bold text-xl">
               Schedule Demo
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import AdminLayout from '../components/admin/AdminLayout';
-import { Table, TableHead, TableHeader, TableRow, TableBody, TableCell, } from '../components/ui/table';
-import { Input } from '../components/ui/input';
-import { Switch } from '../components/ui/switch';
+import AdminLayout from '@/components/admin/AdminLayout';
+import { Table, TableHead, TableHeader, TableRow, TableBody, TableCell, } from '@/components/ui/table';
+import { Input } from '@/components/ui/input';
+import { Switch } from '@/components/ui/switch';
 const initialProducts = [
     { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
     { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
@@ -49,7 +49,6 @@ export default function ProductsAdminPage() {
                 </TableRow>))}
             </TableBody>
           </Table>
-        </div>
       </div>
     </AdminLayout>);
 }

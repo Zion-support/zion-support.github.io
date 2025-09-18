@@ -24,25 +24,19 @@ const categoriesInfo = {
         name: "Project Help",
         description: "Get help with your ongoing projects and collaboration.",
         postCount: 67,
-        adminOnly: false,
         icon: "MessageSquare"
-    },
     "ai-tools": {
         id: "ai-tools",
         name: "AI Tools Discussion",
         description: "Discuss AI tools, frameworks, and best practices.",
         postCount: 89,
-        adminOnly: false,
         icon: "Code"
-    },
     "feedback": {
         id: "feedback",
         name: "Feedback & Feature Requests",
         description: "Share your feedback and suggest new features.",
         postCount: 23,
-        adminOnly: false,
         icon: "FileText"
-    },
     "announcements": {
         id: "announcements",
         name: "Announcements",
@@ -58,7 +52,6 @@ const iconMap = {
     "Code": Code,
     "FileText": FileText,
     "Megaphone": Megaphone
-};
 function CategoryContent({ categoryId, category, IconComponent, user, }) {
     const [searchQuery, setSearchQuery] = useState("");
     const { posts = [], loading, } = usePostsByCategory(categoryId);
@@ -86,25 +79,17 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
           <div>
             <h1 className="text-3xl font-bold">{category.name}</h1>
             <p className="text-muted-foreground mt-1">{category.description}</p>
-          </div>
         </div>
-
         {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
-      </div>
-
       <div className="mb-6">
         <div className="relative">
           <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground"/>
           <Input placeholder="Search posts in this category..." className="pl-10" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
-        </div>
-      </div>
-
       {loading ? (<div className="text-center py-16">Loading...</div>) : errorMessage ? (<div className="text-center py-16 text-destructive">{errorMessage}</div>) : posts.length > 0 ? (<div className="space-y-4">
           {filteredPosts.map((post) => (<PostCard key={post.id} post={post}/>))}
         </div>) : (<div className="text-center py-16">
           <h2 className="text-xl font-medium mb-2">No posts yet</h2>
           <p className="text-muted-foreground mb-6">Be the first to start a discussion in this category!</p>
-
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
     </div>);
@@ -114,14 +99,11 @@ export default function ForumCategoryPage() {
     const { user } = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {
         return <NotFound />;
-    }
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
       <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
-
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
     </>);
-}

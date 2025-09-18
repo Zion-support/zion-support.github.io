@@ -22,13 +22,9 @@ const NeuralRealityEngine2030: React.FC = () => {
             </span>
             <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
               🌍 Reality Simulation
-            </span>
             <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
               ⚡ Quantum Processing
-            </span>
-          </div>
         </div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -41,69 +37,36 @@ const NeuralRealityEngine2030: React.FC = () => {
             <div className="bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
               Mind-Computer Fusion
             </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🌍</div>
             <h3 className="text-2xl font-bold mb-4">Infinite Reality Worlds</h3>
-            <p className="text-gray-300 mb-6">
               Generate unlimited virtual worlds with perfect physics, 
               photorealistic graphics, and complete sensory immersion.
-            </p>
             <div className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
               Perfect Simulation
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-4">Quantum Processing</h3>
-            <p className="text-gray-300 mb-6">
               Quantum-powered processing that handles infinite complexity, 
               enabling real-time generation of entire universes.
-            </p>
             <div className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
               Infinite Computing
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🎭</div>
             <h3 className="text-2xl font-bold mb-4">Emotional Reality</h3>
-            <p className="text-gray-300 mb-6">
               Experience genuine emotions in virtual environments, 
               with full emotional depth and psychological realism.
-            </p>
             <div className="bg-pink-500/20 text-pink-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
               True Emotional AI
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🔮</div>
             <h3 className="text-2xl font-bold mb-4">Consciousness Transfer</h3>
-            <p className="text-gray-300 mb-6">
               Transfer human consciousness into virtual worlds, 
               enabling immortality and infinite exploration.
-            </p>
             <div className="bg-emerald-500/20 text-emerald-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
               Digital Immortality
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-4">Multi-Dimensional Travel</h3>
-            <p className="text-gray-300 mb-6">
               Explore infinite dimensions and parallel universes, 
               experiencing realities beyond human imagination.
-            </p>
             <div className="bg-violet-500/20 text-violet-300 px-4 py-2 rounded-full text-sm font-semibold inline-block">
               Dimensional Exploration
-            </div>
-          </div>
-        </div>
-
         {/* Technology Showcase */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Neural Reality Technology</h2>
@@ -115,52 +78,26 @@ const NeuralRealityEngine2030: React.FC = () => {
                   <span className="text-cyan-400 mr-3">🧠</span>
                   Advanced Neural Interface Chips
                 </li>
-                <li className="flex items-center">
                   <span className="text-cyan-400 mr-3">⚡</span>
                   Quantum Reality Processors
-                </li>
-                <li className="flex items-center">
                   <span className="text-cyan-400 mr-3">🌍</span>
                   Photorealistic Rendering Engines
-                </li>
-                <li className="flex items-center">
                   <span className="text-cyan-400 mr-3">🎭</span>
                   Emotional AI Systems
-                </li>
-                <li className="flex items-center">
                   <span className="text-cyan-400 mr-3">🔮</span>
                   Consciousness Transfer Protocols
-                </li>
               </ul>
-            </div>
-            <div>
               <h3 className="text-2xl font-bold mb-4">Applications</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center">
                   <span className="text-blue-400 mr-3">🎮</span>
                   Ultimate Gaming Experience
-                </li>
-                <li className="flex items-center">
                   <span className="text-blue-400 mr-3">🏥</span>
                   Virtual Medical Training
-                </li>
-                <li className="flex items-center">
                   <span className="text-blue-400 mr-3">🎓</span>
                   Immersive Education
-                </li>
-                <li className="flex items-center">
                   <span className="text-blue-400 mr-3">🌍</span>
                   Virtual Travel & Exploration
-                </li>
-                <li className="flex items-center">
                   <span className="text-blue-400 mr-3">🔬</span>
                   Scientific Simulation
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Experience Preview */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-3xl p-12 mb-16">
           <h2 className="text-4xl font-bold text-center mb-8">Experience the Impossible</h2>
@@ -172,45 +109,27 @@ const NeuralRealityEngine2030: React.FC = () => {
                 Travel to distant galaxies, explore alien worlds, 
                 and experience the vastness of space.
               </p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl mb-4">🏰</div>
               <h3 className="text-2xl font-bold mb-4">Historical Worlds</h3>
-              <p className="text-gray-300">
                 Walk through ancient civilizations, witness historical events, 
                 and experience the past firsthand.
-              </p>
-            </div>
-            <div className="text-center">
               <div className="text-6xl mb-4">🔮</div>
               <h3 className="text-2xl font-bold mb-4">Future Visions</h3>
-              <p className="text-gray-300">
                 Experience possible futures, explore alternate timelines, 
                 and see what might be.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Enter the Neural Reality</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Step into a world where reality is limited only by imagination. 
             Experience the future of virtual reality today.
-          </p>
-          <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300">
               Enter Neural Reality →
             </button>
             <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold border border-white/30 hover:bg-white/30 transition-all duration-300">
               Watch Demo
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default NeuralRealityEngine2030;

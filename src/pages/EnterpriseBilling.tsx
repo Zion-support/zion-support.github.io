@@ -22,6 +22,5 @@ export default function EnterpriseBilling() {
       <main className="min-h-screen bg-background">
         <BillingDashboard />
       </main>
-      
     </ProtectedRoute>);
 }

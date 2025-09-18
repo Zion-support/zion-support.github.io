@@ -2,29 +2,23 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2037: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       id: 1,
       link: "/pages/UltimateTechBreakthrough2037"
     },
-    {
       id: 2,
       link: "/pages/RevolutionaryTechShowcase2037"
-    },
-    {
       id: 3,
       link: "/pages/NextGenInnovationHub2037"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   return (
         <div className="relative">
           <div className="overflow-hidden rounded-xl">
@@ -49,8 +43,6 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
                 }`}
               />
             ))}
-          </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
@@ -58,12 +50,9 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
           >
             ←
           </button>
-          <button
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
-          >
             →
-          </button>
         </div>
           {slides.map((slide) => (
             <a
@@ -71,10 +60,8 @@ const RevolutionaryContentCarousel2037: React.FC = () => {
               href={slide.link}
             </a>
           ))}
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentCarousel2037;

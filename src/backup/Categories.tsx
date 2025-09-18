@@ -32,27 +32,13 @@ export default function Categories() {
                 </button>
               </div>
               
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>
-                <p className="text-zion-slate-light mb-4">
                   Comprehensive security solutions and protection services
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                   Explore Security
-                </button>
-              </div>
-              
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Cloud Solutions</h3>
-                <p className="text-zion-slate-light mb-4">
                   Scalable cloud infrastructure and management services
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                   Explore Cloud
-                </button>
-              </div>
             </div>
-          </div>
         </div>
       </main>
     </>

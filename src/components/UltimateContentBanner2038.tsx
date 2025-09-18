@@ -25,39 +25,27 @@ const UltimateContentBanner2038: React.FC = () => {
             <a href="/pages/UltimateTechRevolution2038" className="block w-full bg-white text-purple-600 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm">
               Explore Omnipotence →
             </a>
-          </div>
           
           <div className="bg-gradient-to-br from-indigo-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/30">
             <div className="text-4xl mb-3 text-center">⚡</div>
             <h3 className="text-lg font-bold mb-2 text-center">Universal Quantum</h3>
             <p className="text-indigo-100 text-sm text-center mb-4">
               Revolutionary quantum system that can manipulate fundamental forces across all dimensions
-            </p>
             <a href="/pages/RevolutionaryTechBreakthrough2037" className="block w-full bg-white text-indigo-600 py-2 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center text-sm">
               View Quantum Matrix →
-            </a>
-          </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
             <div className="text-4xl mb-3 text-center">🌌</div>
             <h3 className="text-lg font-bold mb-2 text-center">Multiverse Gateway</h3>
             <p className="text-cyan-100 text-sm text-center mb-4">
               Advanced gateway technology enabling instant travel and communication across the multiverse
-            </p>
             <a href="/pages/UltimateTechRevolution2038" className="block w-full bg-white text-cyan-600 py-2 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center text-sm">
               Enter Multiverse →
-            </a>
-          </div>
-        </div>
-        
         <div className="text-center">
           <a href="/pages/UltimateTechRevolution2038" className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
             🌟 Join the Ultimate Revolution 2038 →
           </a>
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateContentBanner2038;

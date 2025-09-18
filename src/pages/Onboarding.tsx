@@ -32,14 +32,10 @@ export default function Onboarding() {
         if (type === "serviceProvider") {
             navigate('/service-onboarding');
             return;
-        }
         else if (type === "talent") {
             navigate('/talent-onboarding');
-            return;
-        }
         // Continue with the onboarding flow for clients
         setCurrentStep(1);
-    };
     const handleProfileComplete = async (data) => {
         if (!user || !userType) {
             toast({
@@ -48,8 +44,6 @@ export default function Onboarding() {
                 variant: "destructive",
             });
             navigate('/login');
-            return;
-        }
         const dbUserType = mapUserTypeToDatabase(userType);
         try {
             await updateProfile({
@@ -59,33 +53,24 @@ export default function Onboarding() {
                 userType: dbUserType,
                 headline: data.headline,
                 profileComplete: true
-            });
             // Update onboarding milestone
             await supabase.rpc('update_onboarding_milestone', {
                 _user_id: user.id,
                 _milestone: 'profile_completed',
                 _status: true
-            });
-            toast({
                 title: 'Profile completed!',
                 description: 'Your profile has been set up successfully.',
-            });
             // Get the appropriate dashboard route based on user type
             const dashboardRoute = userType === "client"
                 ? "/client-dashboard"
                 : "/talent-dashboard";
             // Redirect to dashboard
             navigate(dashboardRoute);
-        }
         catch (error) {
             console.error('Error updating profile:', error);
-            toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile. Please try again.',
                 variant: 'destructive',
-            });
-        }
-    };
     const steps = [
         { label: "Select Role", description: "Choose how you'll use the platform" },
         { label: "Create Profile", description: "Tell us about yourself" },
@@ -106,7 +91,6 @@ export default function Onboarding() {
               Complete your profile to get started
             </p>
           </div>
-
           <div className="mb-12">
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">
               {steps.map((step, index) => (<Step key={index} status={currentStep > index
@@ -115,19 +99,14 @@ export default function Onboarding() {
                     ? "current"
                     : "incomplete"} label={step.label} description={step.description}/>))}
             </Steps>
-          </div>
-
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
             {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>)}
-
             {currentStep === 1 && (<div className="mt-6">
                 <Button variant="outline" className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick={() => setCurrentStep(0)}>
                   Back to Role Selection
                 </Button>
               </div>)}
-          </div>
         </div>
       </div>
-      
     </>);
 }

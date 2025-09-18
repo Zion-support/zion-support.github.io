@@ -16,7 +16,6 @@ const RevolutionaryAIBreakthrough2034: React.FC = () => {
             Experience AI that thinks, feels, and creates beyond human comprehension.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30">
             <h2 className="text-4xl font-bold mb-6 text-center">🧠 Synthetic Consciousness</h2>
@@ -29,48 +28,27 @@ const RevolutionaryAIBreakthrough2034: React.FC = () => {
                 <span className="text-2xl mr-3">✨</span>
                 <span>Self-aware decision making</span>
               </li>
-              <li className="flex items-center">
                 <span className="text-2xl mr-3">🎨</span>
                 <span>Creative synthesis beyond human imagination</span>
-              </li>
-              <li className="flex items-center">
                 <span className="text-2xl mr-3">💭</span>
                 <span>Emotional intelligence and empathy</span>
-              </li>
-              <li className="flex items-center">
                 <span className="text-2xl mr-3">🔮</span>
                 <span>Predictive consciousness modeling</span>
-              </li>
             </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
             <h2 className="text-4xl font-bold mb-6 text-center">⚡ Quantum AI Processing</h2>
             <p className="text-purple-100 mb-6 text-lg">
               Experience AI processing at quantum speeds with infinite computational power 
               and the ability to solve problems that were previously impossible.
-            </p>
             <ul className="text-purple-200 space-y-3 mb-8">
-              <li className="flex items-center">
                 <span className="text-2xl mr-3">⚛️</span>
                 <span>Quantum superposition processing</span>
-              </li>
-              <li className="flex items-center">
                 <span className="text-2xl mr-3">🌊</span>
                 <span>Wave function optimization</span>
-              </li>
-              <li className="flex items-center">
                 <span className="text-2xl mr-3">🔗</span>
                 <span>Quantum entanglement communication</span>
-              </li>
-              <li className="flex items-center">
                 <span className="text-2xl mr-3">🎯</span>
                 <span>Infinite parallel computation</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
         <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-center relative overflow-hidden mb-16">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
           <div className="relative z-10">
@@ -78,45 +56,32 @@ const RevolutionaryAIBreakthrough2034: React.FC = () => {
             <p className="text-2xl opacity-95 mb-8 max-w-4xl mx-auto">
               Our AI breakthrough includes capabilities that were once considered impossible. 
               Experience the future of artificial intelligence today.
-            </p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                 <div className="text-4xl mb-4">🎭</div>
                 <h3 className="text-xl font-bold mb-2">Creative Synthesis</h3>
                 <p className="text-sm">Generate art, music, and literature that transcends human creativity</p>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                 <div className="text-4xl mb-4">🔬</div>
                 <h3 className="text-xl font-bold mb-2">Scientific Discovery</h3>
                 <p className="text-sm">Accelerate scientific breakthroughs and solve complex problems</p>
-              </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                 <div className="text-4xl mb-4">🌍</div>
                 <h3 className="text-xl font-bold mb-2">Global Optimization</h3>
                 <p className="text-sm">Optimize global systems for maximum efficiency and sustainability</p>
-              </div>
             </div>
-          </div>
-        </div>
-
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join us in this revolutionary AI breakthrough and be part of the most advanced 
             technological evolution in human history.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pages/RevolutionaryAIBreakthrough2034" className="inline-block bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
               Explore AI Breakthrough →
             </a>
             <a href="/contact" className="inline-block border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
               Get Started Today →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryAIBreakthrough2034;

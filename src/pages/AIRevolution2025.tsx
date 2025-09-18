@@ -6,5 +6,4 @@ const AIRevolution2025 = () => {
     </div>
   );
 };
-
 export default AIRevolution2025;

@@ -39,7 +39,6 @@ export default function TranslationManager() {
                         }
                         else {
                             acc[`${pre}${key}`] = obj[key];
-                        }
                         return acc;
                     }, {});
                 };
@@ -51,11 +50,9 @@ export default function TranslationManager() {
         const allKeys = new Set();
         Object.values(currentTranslations).forEach(langTranslations => {
             Object.keys(langTranslations).forEach(key => allKeys.add(key));
-        });
         setFilteredKeys(Array.from(allKeys));
     }, [selectedNamespace, i18n]);
     // Filter keys based on search query
-    useEffect(() => {
         if (!searchQuery.trim()) {
             // Get all unique keys across all languages
             const allKeys = new Set();
@@ -74,21 +71,16 @@ export default function TranslationManager() {
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
                     filtered.push(key);
                 }
-            });
-        });
         setFilteredKeys([...new Set(filtered)]);
     }, [searchQuery, translations]);
     const handleEdit = (key) => {
         setEditingKey(key);
         // Initialize edited translations for this key
         const initialEdits = {};
-        supportedLanguages.forEach(lang => {
             initialEdits[lang.code] = translations[lang.code]?.[key] || '';
-        });
         setEditedTranslations({
             ...editedTranslations,
             [key]: initialEdits
-        });
     };
     const handleSave = (key) => {
         setIsSaving(true);
@@ -99,18 +91,14 @@ export default function TranslationManager() {
             supportedLanguages.forEach(lang => {
                 if (!updatedTranslations[lang.code]) {
                     updatedTranslations[lang.code] = {};
-                }
                 updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
-            });
             setTranslations(updatedTranslations);
             setEditingKey(null);
             setIsSaving(false);
             toast({
                 title: t("translation.saved"),
                 description: t("translation.changes_saved"),
-            });
         }, 1000);
-    };
     const handleTranslateKey = async (key) => {
         // Find first non-empty translation to use as source
         let sourceLanguage = 'en';
@@ -120,16 +108,10 @@ export default function TranslationManager() {
                 sourceLanguage = lang;
                 sourceText = translations[lang][key];
                 break;
-            }
-        }
         if (!sourceText) {
-            toast({
                 title: t('translation.no_content'),
                 description: t('translation.add_content_first'),
                 variant: "destructive",
-            });
-            return;
-        }
         try {
             const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage);
             if (error) {
@@ -139,43 +121,26 @@ export default function TranslationManager() {
                     variant: "destructive",
                 });
                 return;
-            }
             // Update edited translations with auto-translated content
             setEditedTranslations({
                 ...editedTranslations,
                 [key]: translatedText
-            });
-            toast({
                 title: t('translation.translation_success'),
                 description: t('translation.content_translated'),
-            });
-        }
         catch (error) {
             console.error(`Error translating key ${key}:`, error);
-            toast({
                 title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),
-                variant: "destructive",
-            });
-        }
-    };
     const handleCancel = () => {
         setEditingKey(null);
-    };
     const handleChange = (lang, key, value) => {
-        setEditedTranslations({
-            ...editedTranslations,
             [key]: {
                 ...editedTranslations[key],
                 [lang]: value
-            }
-        });
-    };
     const getMissingLanguages = (key) => {
         return supportedLanguages
             .map(lang => lang.code)
             .filter(lang => !translations[lang]?.[key]);
-    };
     return (<>
       <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>
       
@@ -206,7 +171,6 @@ export default function TranslationManager() {
                   <div className="p-3 font-medium">{t('translation.key')}</div>
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
-                </div>
                 
                 {filteredKeys.length === 0 ? (<div className="p-6 text-center text-muted-foreground">
                     {t('translation.no_results')}
@@ -236,12 +200,9 @@ export default function TranslationManager() {
                               </Button>
                               <Button size="sm" variant="outline" onClick={handleCancel}>
                                 {t('general.cancel')}
-                              </Button>
                               <Button size="sm" variant="secondary" onClick={() => handleTranslateKey(key)} disabled={isTranslating}>
                                 {isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate-spin"/>) : (<Globe className="mr-2 h-4 w-4"/>)}
                                 {t('translation.auto_translate')}
-                              </Button>
-                            </div>
                           </div>) : (<div className="p-3">
                             <div className="space-y-2">
                               {supportedLanguages.slice(0, 2).map((lang) => (<div key={lang.code} className="flex items-start gap-2">
@@ -249,12 +210,10 @@ export default function TranslationManager() {
                                   <span className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}>
                                     {translations[lang.code]?.[key] || t('translation.missing')}
                                   </span>
-                                </div>))}
                               {getMissingLanguages(key).length > 0 && (<div className="flex items-center gap-2 text-sm text-zion-purple">
                                   <AlertTriangle className="h-4 w-4"/>
                                   {t('translation.missing_languages', { count: getMissingLanguages(key).length })}
                                 </div>)}
-                            </div>
                           </div>)}
                         <div className="p-3 flex items-center justify-end">
                           {editingKey === key ? null : (<Button size="sm" variant="outline" onClick={() => handleEdit(key)}>
@@ -263,11 +222,9 @@ export default function TranslationManager() {
                         </div>
                       </div>))}
                   </div>)}
-              </div>
             </div>
           </CardContent>
         </Card>
       </main>
-      
     </>);
 }

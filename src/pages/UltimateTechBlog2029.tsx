@@ -13,7 +13,6 @@ const UltimateTechBlog2029: React.FC = () => {
       image: "🧠",
       featured: true
     },
-    {
       id: 2,
       title: "Quantum Computing Revolution: Solving Impossible Problems",
       excerpt: "Discover how quantum computing is revolutionizing problem-solving capabilities and opening doors to solutions previously thought impossible.",
@@ -22,9 +21,6 @@ const UltimateTechBlog2029: React.FC = () => {
       category: "Quantum Computing",
       readTime: "6 min read",
       image: "⚛️",
-      featured: true
-    },
-    {
       id: 3,
       title: "Neural Interfaces: The Future of Human-Computer Interaction",
       excerpt: "Learn about the latest advances in brain-computer interfaces that are enabling direct thought-to-computer communication.",
@@ -34,8 +30,6 @@ const UltimateTechBlog2029: React.FC = () => {
       readTime: "7 min read",
       image: "🧬",
       featured: false
-    },
-    {
       id: 4,
       title: "Metaverse Integration: Bridging Physical and Virtual Worlds",
       excerpt: "Explore how advanced metaverse technologies are creating seamless integration between physical and virtual realities.",
@@ -44,9 +38,6 @@ const UltimateTechBlog2029: React.FC = () => {
       category: "Metaverse",
       readTime: "5 min read",
       image: "🌌",
-      featured: false
-    },
-    {
       id: 5,
       title: "The Future of Work: How AI is Transforming Every Industry",
       excerpt: "An in-depth look at how artificial intelligence is revolutionizing work across all sectors and creating new opportunities.",
@@ -55,9 +46,6 @@ const UltimateTechBlog2029: React.FC = () => {
       category: "Future of Work",
       readTime: "9 min read",
       image: "🤖",
-      featured: false
-    },
-    {
       id: 6,
       title: "Quantum AI Fusion: The Next Frontier in Computing",
       excerpt: "Discover the groundbreaking combination of quantum computing and artificial intelligence that's creating unprecedented capabilities.",
@@ -66,12 +54,9 @@ const UltimateTechBlog2029: React.FC = () => {
       category: "Quantum AI",
       readTime: "10 min read",
       image: "⚡",
-      featured: true
     }
   ];
-
   const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Neural Technology", "Metaverse", "Future of Work", "Quantum AI"];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4 py-16">
@@ -87,7 +72,6 @@ const UltimateTechBlog2029: React.FC = () => {
             Stay ahead of the curve with the latest insights, breakthroughs, and innovations in cutting-edge technology
           </p>
         </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, index) => (
@@ -102,8 +86,6 @@ const UltimateTechBlog2029: React.FC = () => {
               {category}
             </button>
           ))}
-        </div>
-
         {/* Featured Posts */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🌟 Featured Articles</h2>
@@ -119,7 +101,6 @@ const UltimateTechBlog2029: React.FC = () => {
                       FEATURED
                     </span>
                     <span className="text-sm text-gray-500">{post.category}</span>
-                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                     {post.title}
                   </h3>
@@ -129,67 +110,34 @@ const UltimateTechBlog2029: React.FC = () => {
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <span>By {post.author}</span>
                     <span>{post.readTime}</span>
-                  </div>
                   <div className="text-sm text-gray-500 mb-4">
                     {post.date}
-                  </div>
                   <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                     Read Article →
                   </button>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
         {/* All Posts */}
-        <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">📚 All Articles</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <div key={post.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
                 <div className="p-6">
                   <div className="text-4xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
-                    {post.image}
-                  </div>
-                  <div className="flex items-center space-x-2 mb-3">
                     <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-semibold">
                       {post.category}
-                    </span>
                     {post.featured && (
                       <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs rounded-full font-bold">
                         FEATURED
                       </span>
                     )}
-                  </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <span>By {post.author}</span>
-                    <span>{post.readTime}</span>
-                  </div>
-                  <div className="text-sm text-gray-500 mb-4">
-                    {post.date}
-                  </div>
                   <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-sm">
                     Read More →
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Stay Updated with the Latest Tech</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Get the latest insights, breakthroughs, and innovations delivered directly to your inbox
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
@@ -198,15 +146,10 @@ const UltimateTechBlog2029: React.FC = () => {
             />
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Subscribe
-            </button>
-          </div>
           <p className="text-sm opacity-80 mt-4">
             Join 100,000+ tech enthusiasts who trust our insights
-          </p>
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateTechBlog2029;

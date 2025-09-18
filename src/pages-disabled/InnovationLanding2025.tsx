@@ -28,31 +28,18 @@ const InnovationLanding2025 = () => {
           
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-xl p-6 backdrop-blur-sm border border-purple-400/20">
             <h3 className="text-2xl font-bold mb-4 text-purple-300">Innovation Hub</h3>
-            <p className="text-gray-300 mb-4">
               Discover the latest developments in technology and innovation
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
               <li>• Research and development</li>
               <li>• Industry partnerships</li>
               <li>• Future technology trends</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 rounded-xl p-6 backdrop-blur-sm border border-green-400/20">
             <h3 className="text-2xl font-bold mb-4 text-green-300">Solutions</h3>
-            <p className="text-gray-300 mb-4">
               Comprehensive technology solutions for modern challenges
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
               <li>• Enterprise solutions</li>
               <li>• Custom development</li>
               <li>• Technology consulting</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default InnovationLanding2025;

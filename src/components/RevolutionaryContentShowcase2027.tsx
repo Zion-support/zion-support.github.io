@@ -39,66 +39,40 @@ const RevolutionaryContentShowcase2027: React.FC = () => {
             </a>
           </motion.div>
           
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality</h3>
             <p className="text-indigo-100 mb-6 text-center">
               Step into a world where quantum computing has achieved supremacy and unlocked infinite possibilities
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Quantum supremacy</li>
               <li>• Molecular simulation</li>
               <li>• Quantum cryptography</li>
               <li>• Reality manipulation</li>
-            </ul>
             <a href="/pages/QuantumReality2027" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Enter Quantum World →
-            </a>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-violet-600/30 to-fuchsia-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Neural Reality Engine</h3>
             <p className="text-violet-100 mb-6 text-center">
               Experience reality through direct neural interfaces that blur the line between mind and machine
-            </p>
             <ul className="text-violet-200 space-y-2 mb-6 text-sm">
               <li>• Non-invasive BCI</li>
               <li>• Virtual reality control</li>
               <li>• AI mind meld</li>
               <li>• Consciousness expansion</li>
-            </ul>
             <a href="/pages/NeuralRealityEngine2027" className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
               Connect Your Mind →
-            </a>
-          </motion.div>
-        </div>
-        
         <div className="text-center mt-12">
-          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
             className="inline-block"
-          >
             <a href="/pages/NextGenAIRevolution2027" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-5 rounded-lg hover:shadow-2xl transition-all duration-300 font-bold text-2xl">
               🌟 Experience the Ultimate Revolution →
-            </a>
-          </motion.div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentShowcase2027;

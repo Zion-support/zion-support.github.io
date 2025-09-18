@@ -13,7 +13,6 @@ const TechInsightsBlog2026: React.FC = () => {
       image: "🧠",
       featured: true
     },
-    {
       id: 2,
       title: "Quantum Computing Breakthrough: Solving Impossible Problems",
       excerpt: "How quantum computing is revolutionizing problem-solving and opening new possibilities in science and technology.",
@@ -22,9 +21,6 @@ const TechInsightsBlog2026: React.FC = () => {
       category: "Quantum Computing",
       readTime: "6 min read",
       image: "⚡",
-      featured: true
-    },
-    {
       id: 3,
       title: "Neural Interfaces: The Next Frontier of Human-Computer Interaction",
       excerpt: "Understanding how direct brain-computer interfaces are changing the way we interact with technology.",
@@ -34,8 +30,6 @@ const TechInsightsBlog2026: React.FC = () => {
       readTime: "7 min read",
       image: "🧬",
       featured: false
-    },
-    {
       id: 4,
       title: "The Rise of Autonomous Systems: From Cars to Cities",
       excerpt: "How autonomous systems are transforming transportation, urban planning, and daily life.",
@@ -44,9 +38,6 @@ const TechInsightsBlog2026: React.FC = () => {
       category: "Autonomous Systems",
       readTime: "5 min read",
       image: "🚗",
-      featured: false
-    },
-    {
       id: 5,
       title: "Blockchain 3.0: Beyond Cryptocurrency",
       excerpt: "Exploring the next generation of blockchain technology and its applications beyond digital currencies.",
@@ -55,21 +46,15 @@ const TechInsightsBlog2026: React.FC = () => {
       category: "Blockchain",
       readTime: "9 min read",
       image: "🔗",
-      featured: false
-    },
-    {
       id: 6,
       title: "The Internet of Things Revolution: Connecting Everything",
       excerpt: "How IoT is creating a connected world where every device communicates and collaborates.",
       author: "David Kim",
       date: "January 15, 2026",
       category: "IoT",
-      readTime: "6 min read",
       image: "🌐",
-      featured: false
     }
   ];
-
   const categories = [
     "All Posts",
     "Artificial Intelligence",
@@ -80,8 +65,6 @@ const TechInsightsBlog2026: React.FC = () => {
     "IoT",
     "Cybersecurity",
     "Cloud Computing"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -105,12 +88,9 @@ const TechInsightsBlog2026: React.FC = () => {
               </button>
               <button className="border-2 border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
                 Browse Categories
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Categories Filter */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -126,11 +106,7 @@ const TechInsightsBlog2026: React.FC = () => {
               {category}
             </button>
           ))}
-        </div>
-      </div>
-
       {/* Featured Posts */}
-      <div className="container mx-auto px-4 py-8">
         <h2 className="text-3xl font-bold mb-8 text-center">🌟 Featured Articles</h2>
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {blogPosts.filter(post => post.featured).map((post) => (
@@ -150,20 +126,11 @@ const TechInsightsBlog2026: React.FC = () => {
                   <span>{post.author}</span>
                   <span>•</span>
                   <span>{post.date}</span>
-                  <span>•</span>
                   <span>{post.readTime}</span>
-                </div>
                 <button className="text-purple-300 hover:text-white font-semibold">
                   Read More →
                 </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* All Posts Grid */}
-      <div className="container mx-auto px-4 py-8">
         <h2 className="text-3xl font-bold mb-8 text-center">📖 All Articles</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
@@ -173,18 +140,11 @@ const TechInsightsBlog2026: React.FC = () => {
                 <span className="px-2 py-1 bg-blue-500/30 text-blue-200 text-xs rounded-full">
                   {post.category}
                 </span>
-              </div>
               <h3 className="text-xl font-bold mb-3">{post.title}</h3>
               <p className="text-gray-300 text-sm mb-4">{post.excerpt}</p>
               <div className="flex items-center justify-between text-xs text-gray-400">
                 <span>{post.author}</span>
                 <span>{post.readTime}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Newsletter Signup */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30 text-center">
@@ -201,60 +161,37 @@ const TechInsightsBlog2026: React.FC = () => {
             />
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
               Subscribe Now
-            </button>
-          </div>
           <p className="text-sm text-gray-300 mt-4">
             No spam, unsubscribe at any time. We respect your privacy.
-          </p>
-        </div>
-      </div>
-
       {/* Trending Topics */}
-      <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center">🔥 Trending Topics</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-gradient-to-br from-red-600/20 to-orange-600/20 backdrop-blur-sm rounded-lg p-6 border border-red-400/30 text-center">
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-lg font-semibold mb-2">AI Revolution</h3>
             <p className="text-sm text-red-200">15 articles</p>
-          </div>
           <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-lg p-6 border border-blue-400/30 text-center">
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-lg font-semibold mb-2">Quantum Computing</h3>
             <p className="text-sm text-blue-200">12 articles</p>
-          </div>
           <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-lg p-6 border border-green-400/30 text-center">
             <div className="text-4xl mb-4">🧬</div>
             <h3 className="text-lg font-semibold mb-2">Neural Interfaces</h3>
             <p className="text-sm text-green-200">8 articles</p>
-          </div>
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 border border-purple-400/30 text-center">
             <div className="text-4xl mb-4">🔗</div>
             <h3 className="text-lg font-semibold mb-2">Blockchain</h3>
             <p className="text-sm text-purple-200">10 articles</p>
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action */}
-      <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Explore the Future?</h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join our community of technology enthusiasts and stay ahead of the curve with the latest insights and innovations.
-          </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Reading
-            </button>
             <button className="border-2 border-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default TechInsightsBlog2026;

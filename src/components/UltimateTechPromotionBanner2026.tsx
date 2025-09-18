@@ -8,7 +8,6 @@ const UltimateTechPromotionBanner2026: React.FC = () => {
         <div className="flex items-center justify-center space-x-3 mb-4">
           <span className="text-3xl animate-bounce">🌟</span>
           <h3 className="text-2xl font-bold">ULTIMATE TECH SHOWCASE 2026</h3>
-          <span className="text-3xl animate-bounce">🌟</span>
         </div>
         <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
           Experience the convergence of AI consciousness, quantum supremacy, and neural interfaces 
@@ -18,24 +17,14 @@ const UltimateTechPromotionBanner2026: React.FC = () => {
           <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30">
             🧠 AI Consciousness →
           </a>
-          <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30">
             ⚡ Quantum Supremacy →
-          </a>
-          <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30">
             🧬 Neural Interfaces →
-          </a>
-          <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold border border-white/30">
             🌟 Holographic Reality →
-          </a>
-        </div>
         <div className="mt-6">
           <a href="/pages/UltimateTechShowcase2026" className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg border-2 border-white/30">
             🌟 NEW: Ultimate Tech Showcase 2026 →
-          </a>
-        </div>
       </div>
     </div>
   );
 };
-
 export default UltimateTechPromotionBanner2026;

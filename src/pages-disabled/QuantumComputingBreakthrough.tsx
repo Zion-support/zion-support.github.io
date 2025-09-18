@@ -12,5 +12,4 @@ const QuantumComputingBreakthrough = () => {
     </div>
   );
 };
-
 export default QuantumComputingBreakthrough;

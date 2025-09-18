@@ -1,7 +1,7 @@
-import { Button } from '../components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Skeleton from '../components/ui/skeleton';
+import Skeleton from '@/components/ui/skeleton';
 import { useAuth } from '@/hooks/useAuth';
 
 export default function CartPage() {
@@ -24,12 +24,9 @@ export default function CartPage() {
                 }
                 catch {
                     dispatch(setItemsAction([]));
-                }
             }
             else {
                 dispatch(setItemsAction([]));
-            }
-        }
         ;
         load();
     }, [user, dispatch]);
@@ -42,27 +39,19 @@ export default function CartPage() {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id, quantity: qty }),
                 });
-            }
             catch (err) {
                 console.error('Failed to update cart', err);
-            }
-        }
         setCartLoading(false);
     }, [reduxItems];
-    useEffect(() => {
         if (!cartLoading && items.length === 0) {
             setShowEmpty(true);
-        }
     }, [cartLoading, items]);
     const updateQuantity = (id, qty) => {
-        dispatch(updateQuantityAction({ id, quantity: qty }));
     };
     const removeItem = (id) => {
         dispatch(removeItemAction(id));
-    };
     const handleCheckout = () => {
         router.push('/checkout');
-    };
     const applyCode = async () => {
         try {
             const res = await apiClient.post('/coupons/validate', {
@@ -70,11 +59,8 @@ export default function CartPage() {
                 amount: subtotal,
             });
             setDiscount(res.data.discount || 0);
-        }
         catch (e) {
             setDiscount(0);
-        }
-    };
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const total = subtotal - discount;
     if (cartLoading) {
@@ -90,8 +76,6 @@ export default function CartPage() {
         <Button asChild className="mt-4">
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
-      </div>);
-    }
     const tax = subtotal * 0.1;
     const total = subtotal + tax;
     return (<div className="container max-w-2xl py-10">
@@ -107,19 +91,16 @@ export default function CartPage() {
               <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
                 Remove
               </Button>
-            </div>
           </li>))}
       </ul>
       <div className="mt-6 flex items-center gap-2">
         <input type="text" value={code} onChange={e => setCode(e.target.value)} placeholder="Apply Coupon / Gift Card" className="flex-1 bg-transparent border border-input rounded p-2"/>
         <Button variant="outline" onClick={applyCode}>
           Apply
-        </Button>
       </div>
       <div className="flex justify-between mt-6 font-semibold">
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
-      </div>
       <Button className="mt-4 w-full" onClick={() => user ? navigate('/checkout') : navigate('/login?next=/checkout')}>
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>

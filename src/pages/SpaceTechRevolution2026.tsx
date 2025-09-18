@@ -21,23 +21,12 @@ const SpaceTechRevolution2026: React.FC = () => {
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-4">Space Manufacturing</h3>
-            <p className="text-gray-300">
               Zero-gravity manufacturing facilities producing advanced materials and components.
-            </p>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-4">Space Habitats</h3>
-            <p className="text-gray-300">
               Sustainable living environments for long-term space missions and colonization.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default SpaceTechRevolution2026;

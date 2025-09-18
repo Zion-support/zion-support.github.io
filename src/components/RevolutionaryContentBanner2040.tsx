@@ -36,41 +36,29 @@ const RevolutionaryContentBanner2040: React.FC = () => {
             <a href="/pages/RevolutionaryTechBreakthrough2038" className="block w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold text-center">
               Explore Breakthrough →
             </a>
-          </div>
           
           <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Ultimate Tech Evolution 2039</h3>
             <p className="text-purple-100 mb-6 text-center">
               Witness the ultimate evolution of technology with Transcendent AI Consciousness and Quantum Reality Manipulation
-            </p>
             <ul className="text-purple-200 space-y-2 mb-6 text-sm">
               <li>• Transcendent AI Consciousness</li>
               <li>• Quantum Reality Manipulation</li>
               <li>• Interdimensional Intelligence</li>
-            </ul>
             <a href="/pages/UltimateTechEvolution2039" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Experience Evolution →
-            </a>
-          </div>
-          
           <div className="bg-gradient-to-br from-indigo-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Transcendent Revolution 2040</h3>
             <p className="text-indigo-100 mb-6 text-center">
               Transcend all limitations with Infinite Consciousness and Reality Transcendence technology
-            </p>
             <ul className="text-indigo-200 space-y-2 mb-6 text-sm">
               <li>• Infinite Consciousness</li>
               <li>• Reality Transcendence</li>
               <li>• Cosmic Evolution</li>
-            </ul>
             <a href="/pages/TranscendentTechRevolution2040" className="block w-full bg-white text-indigo-600 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-center">
               Transcend Reality →
-            </a>
-          </div>
-        </div>
-        
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
             <button className="bg-gradient-to-r from-violet-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -78,12 +66,8 @@ const RevolutionaryContentBanner2040: React.FC = () => {
             </button>
             <button className="border-2 border-violet-400 px-8 py-4 rounded-lg hover:bg-violet-400/20 transition-colors font-semibold text-lg">
               Join Beta Program
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentBanner2040;

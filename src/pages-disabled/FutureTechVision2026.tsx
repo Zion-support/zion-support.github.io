@@ -16,7 +16,6 @@ const FutureTechVision2026: React.FC = () => {
             Envisioning the future of technology with groundbreaking innovations that will reshape our world
           </p>
         </div>
-
         {/* Vision Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300">
@@ -36,52 +35,34 @@ const FutureTechVision2026: React.FC = () => {
                 Explore Global Vision →
               </button>
             </div>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🧠</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Cognitive Enhancement</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Technologies that enhance human cognitive abilities and create new forms of intelligence
-            </p>
             <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
               <li>• Brain-computer interfaces</li>
               <li>• Memory augmentation</li>
               <li>• Cognitive AI assistants</li>
               <li>• Neural enhancement</li>
-            </ul>
-            <div className="text-center">
               <button className="bg-white text-cyan-600 px-6 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
                 Enhance Cognition →
-              </button>
-            </div>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Space Colonization</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Advanced technologies enabling human expansion beyond Earth and into the cosmos
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
               <li>• Mars colonization</li>
               <li>• Space habitats</li>
               <li>• Interplanetary travel</li>
               <li>• Space resource mining</li>
-            </ul>
-            <div className="text-center">
               <button className="bg-white text-emerald-600 px-6 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
                 Explore Space →
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Future Technology Roadmap */}
         <div className="bg-gradient-to-r from-purple-600/20 to-indigo-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">🚀 Future Technology Roadmap</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
               <div className="bg-gradient-to-r from-pink-500 to-rose-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 2026
               </div>
@@ -92,50 +73,24 @@ const FutureTechVision2026: React.FC = () => {
               <div className="bg-white/10 rounded-lg p-3">
                 <div className="text-lg font-bold text-pink-300">100%</div>
                 <div className="text-xs text-purple-200">Autonomous</div>
-              </div>
-            </div>
-            <div className="text-center">
               <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 2027
-              </div>
               <h3 className="text-xl font-bold mb-3">Quantum Supremacy</h3>
-              <p className="text-purple-200 text-sm mb-4">
                 Quantum computers solving problems impossible for classical systems
-              </p>
-              <div className="bg-white/10 rounded-lg p-3">
                 <div className="text-lg font-bold text-cyan-300">1000x</div>
                 <div className="text-xs text-purple-200">Faster</div>
-              </div>
-            </div>
-            <div className="text-center">
               <div className="bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 2028
-              </div>
               <h3 className="text-xl font-bold mb-3">Neural Integration</h3>
-              <p className="text-purple-200 text-sm mb-4">
                 Seamless brain-computer interfaces for enhanced human capabilities
-              </p>
-              <div className="bg-white/10 rounded-lg p-3">
                 <div className="text-lg font-bold text-emerald-300">∞</div>
                 <div className="text-xs text-purple-200">Possibilities</div>
-              </div>
-            </div>
-            <div className="text-center">
               <div className="bg-gradient-to-r from-violet-500 to-purple-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 2029
-              </div>
               <h3 className="text-xl font-bold mb-3">Space Expansion</h3>
-              <p className="text-purple-200 text-sm mb-4">
                 Human colonies on Mars and beyond with AI-powered systems
-              </p>
-              <div className="bg-white/10 rounded-lg p-3">
                 <div className="text-lg font-bold text-violet-300">Mars</div>
                 <div className="text-xs text-purple-200">Colonized</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Innovation Showcase */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Innovation Showcase</h2>
@@ -147,84 +102,48 @@ const FutureTechVision2026: React.FC = () => {
                   <h3 className="text-2xl font-bold">Predictive AI Systems</h3>
                   <p className="text-indigo-200">AI that predicts and prevents future problems</p>
                 </div>
-              </div>
               <p className="text-indigo-100 mb-6">
                 Our Predictive AI Systems can forecast future events, trends, and challenges 
                 with unprecedented accuracy, enabling proactive solutions and strategic planning 
                 that keeps you ahead of the curve.
-              </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-white/10 rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold text-indigo-300">95%</div>
                   <div className="text-sm text-indigo-200">Prediction Accuracy</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold text-indigo-300">10+</div>
                   <div className="text-sm text-indigo-200">Years Ahead</div>
-                </div>
-              </div>
               <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Explore Predictive AI →
-              </button>
-            </div>
-
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
-              <div className="flex items-center mb-6">
                 <div className="text-5xl mr-4">🌐</div>
-                <div>
                   <h3 className="text-2xl font-bold">Global AI Network</h3>
                   <p className="text-cyan-200">Worldwide connected intelligence system</p>
-                </div>
-              </div>
               <p className="text-cyan-100 mb-6">
                 The Global AI Network connects AI systems worldwide, creating a collective 
                 intelligence that can solve global challenges, share knowledge instantly, 
                 and coordinate solutions across all industries and regions.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-white/10 rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold text-cyan-300">7B+</div>
                   <div className="text-sm text-cyan-200">Connected Users</div>
-                </div>
-                <div className="bg-white/10 rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold text-cyan-300">24/7</div>
                   <div className="text-sm text-cyan-200">Global Coverage</div>
-                </div>
-              </div>
               <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Join Global Network →
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Future Impact Metrics */}
         <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-emerald-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">📊 Future Impact Metrics</h2>
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
               <div className="text-5xl font-bold text-emerald-300 mb-2">50%</div>
               <div className="text-emerald-200 font-semibold mb-1">Productivity Increase</div>
               <div className="text-sm text-emerald-300">Global workforce efficiency</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-cyan-300 mb-2">90%</div>
               <div className="text-cyan-200 font-semibold mb-1">Problem Solving</div>
               <div className="text-sm text-cyan-300">Complex issue resolution</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-violet-300 mb-2">1000x</div>
               <div className="text-violet-200 font-semibold mb-1">Processing Speed</div>
               <div className="text-sm text-violet-300">Quantum-enhanced computing</div>
-            </div>
-            <div className="text-center">
               <div className="text-5xl font-bold text-pink-300 mb-2">∞</div>
               <div className="text-pink-200 font-semibold mb-1">Possibilities</div>
               <div className="text-sm text-pink-300">Unlimited potential</div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Shape the Future of Technology</h2>
@@ -232,19 +151,14 @@ const FutureTechVision2026: React.FC = () => {
             Be part of the technological revolution that will define the next decade. 
             Join us in creating a future where technology enhances human potential and 
             solves the world's greatest challenges.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join the Future →
             </button>
             <button className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-colors font-semibold text-lg">
               Explore Vision
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default FutureTechVision2026;

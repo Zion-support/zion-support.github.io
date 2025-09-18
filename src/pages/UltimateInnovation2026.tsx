@@ -25,16 +25,11 @@ const UltimateInnovation2026: React.FC = () => {
               >
                 Discover Breakthroughs
               </divbutton>
-              <divbutton
                 className="border-2 border-fuchsia-400 text-fuchsia-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-fuchsia-400 hover:text-white transition-all duration-300"
-              >
                 Experience Future
-              </divbutton>
-            </div>
           </divdiv>
         </div>
       </div>
-
       {/* Innovation Showcase */}
       <div className="container mx-auto px-6 py-20">
         <divdiv
@@ -48,89 +43,55 @@ const UltimateInnovation2026: React.FC = () => {
             Experience the most advanced innovations that are reshaping reality itself
           </p>
         </divdiv>
-
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
           {/* Consciousness Transfer */}
-          <divdiv
             whileInView={{ opacity: 1, x: 0 }}
             className="bg-gradient-to-br from-fuchsia-600/30 to-purple-600/30 backdrop-blur-sm rounded-3xl p-10 border border-fuchsia-400/30"
-          >
             <div className="text-8xl mb-6 text-center">🧠</div>
             <h3 className="text-3xl font-bold mb-6 text-center">Consciousness Transfer Technology</h3>
             <p className="text-fuchsia-100 mb-8 text-lg text-center">
               Revolutionary breakthrough enabling the transfer of human consciousness into digital substrates, 
               achieving digital immortality and enhanced cognitive capabilities.
-            </p>
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-white/10 rounded-lg p-4 text-center">
                 <div className="text-2xl font-bold text-fuchsia-300">∞</div>
                 <div className="text-sm opacity-80">Digital Immortality</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-4 text-center">
                 <div className="text-2xl font-bold text-fuchsia-300">10x</div>
                 <div className="text-sm opacity-80">Enhanced Intelligence</div>
-              </div>
-              <div className="bg-white/10 rounded-lg p-4 text-center">
                 <div className="text-2xl font-bold text-fuchsia-300">99.9%</div>
                 <div className="text-sm opacity-80">Transfer Accuracy</div>
-              </div>
-              <div className="bg-white/10 rounded-lg p-4 text-center">
                 <div className="text-2xl font-bold text-fuchsia-300">24/7</div>
                 <div className="text-sm opacity-80">Continuous Operation</div>
-              </div>
-            </div>
             <button className="w-full bg-gradient-to-r from-fuchsia-500 to-purple-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300">
               Explore Consciousness Transfer →
             </button>
-          </divdiv>
-
           {/* Quantum Teleportation */}
-          <divdiv
-            whileInView={{ opacity: 1, x: 0 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-3xl p-10 border border-cyan-400/30"
-          >
             <div className="text-8xl mb-6 text-center">🚀</div>
             <h3 className="text-3xl font-bold mb-6 text-center">Quantum Teleportation Network</h3>
             <p className="text-cyan-100 mb-8 text-lg text-center">
               Instant transportation across any distance using quantum entanglement principles, 
               revolutionizing travel, logistics, and space exploration.
-            </p>
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-white/10 rounded-lg p-4 text-center">
                 <div className="text-2xl font-bold text-cyan-300">0s</div>
                 <div className="text-sm opacity-80">Travel Time</div>
-              </div>
-              <div className="bg-white/10 rounded-lg p-4 text-center">
                 <div className="text-2xl font-bold text-cyan-300">∞</div>
                 <div className="text-sm opacity-80">Distance Limit</div>
-              </div>
-              <div className="bg-white/10 rounded-lg p-4 text-center">
                 <div className="text-2xl font-bold text-cyan-300">100%</div>
                 <div className="text-sm opacity-80">Safety Record</div>
-              </div>
-              <div className="bg-white/10 rounded-lg p-4 text-center">
                 <div className="text-2xl font-bold text-cyan-300">24/7</div>
                 <div className="text-sm opacity-80">Global Network</div>
-              </div>
-            </div>
             <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300">
               Teleport Now →
-            </button>
-          </divdiv>
-        </div>
-
         {/* Advanced Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {/* Holographic Reality */}
-          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-6xl mb-6 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Holographic Reality Engine</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Full-sensory holographic environments indistinguishable from physical reality
-            </p>
             <ul className="text-emerald-200 space-y-2 mb-8 text-sm">
               <li>• Full sensory immersion</li>
               <li>• Photorealistic rendering</li>
@@ -139,102 +100,57 @@ const UltimateInnovation2026: React.FC = () => {
             </ul>
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Enter Holographic World →
-            </button>
-          </divdiv>
-
           {/* Anti-Gravity Systems */}
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-6xl mb-6 text-center">🛸</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Anti-Gravity Transportation</h3>
             <p className="text-orange-100 mb-6 text-center">
               Revolutionary anti-gravity technology enabling silent, efficient, and eco-friendly transportation
-            </p>
             <ul className="text-orange-200 space-y-2 mb-8 text-sm">
               <li>• Zero-emission vehicles</li>
               <li>• Silent operation</li>
               <li>• Unlimited range</li>
               <li>• Vertical takeoff/landing</li>
-            </ul>
             <button className="w-full bg-white text-orange-600 py-3 rounded-lg hover:bg-orange-50 transition-colors font-semibold">
               Experience Anti-Gravity →
-            </button>
-          </divdiv>
-
           {/* Mind-Machine Fusion */}
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-violet-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
-          >
             <div className="text-6xl mb-6 text-center">🔗</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Mind-Machine Fusion</h3>
             <p className="text-violet-100 mb-6 text-center">
               Direct neural interfaces that seamlessly integrate human consciousness with AI systems
-            </p>
             <ul className="text-violet-200 space-y-2 mb-8 text-sm">
               <li>• Neural enhancement</li>
               <li>• AI integration</li>
               <li>• Thought-controlled devices</li>
               <li>• Cognitive amplification</li>
-            </ul>
             <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
               Fuse Mind & Machine →
-            </button>
-          </divdiv>
-        </div>
-
         {/* Future Vision */}
         <div className="bg-gradient-to-r from-fuchsia-900/50 to-cyan-900/50 backdrop-blur-sm rounded-3xl p-12 border border-fuchsia-400/30">
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center"
-          >
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
               The Future is Here
             </h2>
             <p className="text-xl opacity-80 max-w-4xl mx-auto mb-12">
               These innovations represent the pinnacle of human achievement and the gateway to a new era of 
               unlimited possibilities. Join us in shaping the future of civilization.
-            </p>
             
             <div className="grid md:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-4xl font-bold text-fuchsia-300 mb-2">2026</div>
                 <div className="text-sm opacity-80">Year of Innovation</div>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-300 mb-2">∞</div>
                 <div className="text-sm opacity-80">Possibilities</div>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl font-bold text-purple-300 mb-2">100%</div>
                 <div className="text-sm opacity-80">Success Rate</div>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl font-bold text-pink-300 mb-2">24/7</div>
                 <div className="text-sm opacity-80">Innovation Lab</div>
-              </div>
-            </div>
-
             <div className="flex flex-wrap justify-center gap-6">
-              <divbutton
                 className="bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white px-10 py-4 rounded-lg font-semibold text-xl hover:shadow-2xl transition-all duration-300"
-              >
                 Join the Innovation Revolution
-              </divbutton>
-              <divbutton
                 className="border-2 border-fuchsia-400 text-fuchsia-400 px-10 py-4 rounded-lg font-semibold text-xl hover:bg-fuchsia-400 hover:text-white transition-all duration-300"
-              >
                 Schedule Innovation Demo
-              </divbutton>
-            </div>
-          </divdiv>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default UltimateInnovation2026;

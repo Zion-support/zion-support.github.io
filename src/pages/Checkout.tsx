@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { safeStorage } from '../utils/safeStorage';
-import { getCartKey } from '../utils/cartUtils';
-import { getStripe } from '../utils/getStripe';
-import { apiClient } from '../utils/apiClient';
+import { safeStorage } from '@/utils/safeStorage';
+import { getCartKey } from '@/utils/cartUtils';
+import { getStripe } from '@/utils/getStripe';
+import { apiClient } from '@/utils/apiClient';
 export default function CheckoutPage() {
     const navigate = useNavigate();
     const { t } = useTranslation();
@@ -25,8 +25,6 @@ export default function CheckoutPage() {
             }
             catch {
                 setItems([]);
-            }
-        }
     }, [sku]);
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const onSubmit = async (data) => {
@@ -59,15 +57,11 @@ export default function CheckoutPage() {
                     }
                     catch (e) {
                         console.error('Failed to add points', e);
-                    }
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
                 navigate(`/orders/${result.id}`);
-            }
-        }
         catch (err) {
             console.error('Payment failed', err);
-        }
     };
     return (<div className="max-w-2xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>
@@ -85,18 +79,14 @@ export default function CheckoutPage() {
             <span>Subtotal:</span>
             <span>${subtotal.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between text-sm text-gray-600 mb-1">
             <span>Tax (8%):</span>
             <span>${tax.toFixed(2)}</span>
-          </div>
           <div className="flex justify-between text-sm text-gray-600 mb-2">
             <span>Shipping:</span>
             <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
-          </div>
           <div className="flex justify-between font-bold text-lg">
             <span>Total:</span>
             <span>${total.toFixed(2)}</span>
-          </div>
         </div>
       </div>
     </div>);

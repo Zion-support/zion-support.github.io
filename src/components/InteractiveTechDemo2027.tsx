@@ -5,7 +5,6 @@ const InteractiveTechDemo2027: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
-
   const demos = [
     {
       id: 0,
@@ -20,34 +19,26 @@ const InteractiveTechDemo2027: React.FC = () => {
         "Decision-making process display"
       ]
     },
-    {
       id: 1,
       title: "Quantum Computing Demo",
       description: "See quantum algorithms solving complex problems",
       icon: "⚡",
       color: "from-cyan-600 to-blue-600",
-      features: [
         "Quantum circuit visualization",
         "Superposition state display",
         "Entanglement demonstration",
         "Quantum speed comparison"
-      ]
-    },
-    {
       id: 2,
       title: "Neural Interface Experience",
       description: "Control devices with your thoughts",
       icon: "🧬",
       color: "from-emerald-600 to-teal-600",
-      features: [
         "Brain signal visualization",
         "Thought-to-action mapping",
         "Neural pathway tracking",
         "Interface responsiveness test"
-      ]
     }
   ];
-
   useEffect(() => {
     let interval: NodeJS.Timeout;
     if (isPlaying) {
@@ -60,20 +51,14 @@ const InteractiveTechDemo2027: React.FC = () => {
           return prev + 2;
         });
       }, 100);
-    }
     return () => clearInterval(interval);
   }, [isPlaying]);
-
   const startDemo = () => {
     setIsPlaying(true);
     setProgress(0);
   };
-
   const stopDemo = () => {
     setIsPlaying(false);
-    setProgress(0);
-  };
-
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
       <div className="container mx-auto">
@@ -96,7 +81,6 @@ const InteractiveTechDemo2027: React.FC = () => {
             </p>
           </motion.div>
         </div>
-
         {/* Demo Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {demos.map((demo, index) => (
@@ -115,18 +99,13 @@ const InteractiveTechDemo2027: React.FC = () => {
               {demo.title.split(' ')[0]} {demo.title.split(' ')[1]}
             </motion.button>
           ))}
-        </div>
-
         {/* Demo Content */}
         <AnimatePresence mode="wait">
-          <motion.div
             key={activeDemo}
-            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
-          >
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Demo Info */}
               <div>
@@ -152,7 +131,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-4">
                   <motion.button
                     onClick={startDemo}
@@ -167,17 +145,12 @@ const InteractiveTechDemo2027: React.FC = () => {
                   >
                     {isPlaying ? 'Demo Running...' : 'Start Demo'}
                   </motion.button>
-                  <motion.button
                     onClick={stopDemo}
                     className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                  >
                     Stop Demo
-                  </motion.button>
-                </div>
               </div>
-
               {/* Demo Visualization */}
               <div className="relative">
                 <motion.div
@@ -204,7 +177,6 @@ const InteractiveTechDemo2027: React.FC = () => {
                         {isPlaying ? `Demo Progress: ${progress}%` : 'Click Start Demo to begin'}
                       </p>
                     </div>
-
                     {/* Demo Stats */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-white/20 rounded-lg p-4">
@@ -213,22 +185,12 @@ const InteractiveTechDemo2027: React.FC = () => {
                         <div className="text-xs opacity-75">
                           {isPlaying ? `${Math.floor(Math.random() * 100)}%` : 'Ready'}
                         </div>
-                      </div>
-                      <div className="bg-white/20 rounded-lg p-4">
                         <div className="text-2xl mb-2">🔒</div>
                         <div className="text-sm font-semibold">Security</div>
-                        <div className="text-xs opacity-75">
                           {isPlaying ? 'Active' : 'Standby'}
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
-              </div>
-            </div>
-          </motion.div>
         </AnimatePresence>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -242,25 +204,14 @@ const InteractiveTechDemo2027: React.FC = () => {
             the revolutionary technologies that will shape tomorrow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.button
               className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
               Explore All Technologies
-            </motion.button>
-            <motion.button
               className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
               Learn More
-            </motion.button>
           </div>
         </motion.div>
       </div>
     </div>
   );
 };
-
 export default InteractiveTechDemo2027;

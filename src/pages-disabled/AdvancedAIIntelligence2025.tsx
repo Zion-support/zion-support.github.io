@@ -26,8 +26,6 @@ const AdvancedAIIntelligence2025: React.FC = () => {
               </button>
               <button className="border border-blue-400 text-blue-200 px-8 py-4 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors">
                 Try AI Assistant
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -47,17 +45,11 @@ const AdvancedAIIntelligence2025: React.FC = () => {
               >
                 <span className="mr-2">{tab.icon}</span>
                 {tab.label}
-              </button>
             ))}
-          </div>
-        </div>
-      </div>
       {/* Tab Content */}
       <div className="container mx-auto px-4 py-12">
         {activeTab === 'overview' && (
-          <div
             className="grid lg:grid-cols-2 gap-12"
-          >
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">AI Intelligence Overview</h2>
               <p className="text-xl text-blue-200 mb-6">
@@ -69,23 +61,15 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                   <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                   <span className="text-blue-200">Autonomous decision making</span>
                 </div>
-                <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
                   <span className="text-blue-200">Emotional intelligence and empathy</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
                   <span className="text-blue-200">Creative problem solving</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-cyan-500 rounded-full"></div>
                   <span className="text-blue-200">Continuous learning and adaptation</span>
-                </div>
               </div>
-            </div>
             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
               <h3 className="text-2xl font-bold text-white mb-4">AI Performance Metrics</h3>
-              <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-white mb-2">
                     <span>Reasoning Accuracy</span>
@@ -93,131 +77,83 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2">
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full" style={{ width: '99.7%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-white mb-2">
                     <span>Learning Speed</span>
                     <span>95.2%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
                     <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style={{ width: '95.2%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-white mb-2">
                     <span>Emotional Recognition</span>
                     <span>98.1%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
                     <div className="bg-gradient-to-r from-pink-500 to-cyan-500 h-2 rounded-full" style={{ width: '98.1%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between text-white mb-2">
                     <span>Creative Output</span>
                     <span>96.8%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full" style={{ width: '96.8%' }}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         )}
         {activeTab === 'capabilities' && (
-          <div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">Advanced Reasoning</h3>
               <p className="text-blue-200 mb-4">
                 Multi-layered reasoning capabilities that can process complex problems and generate innovative solutions.
-              </p>
               <ul className="text-blue-300 space-y-2 text-sm">
                 <li>• Logical deduction</li>
                 <li>• Inductive reasoning</li>
                 <li>• Abductive inference</li>
                 <li>• Causal analysis</li>
               </ul>
-            </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
               <div className="text-4xl mb-4">💭</div>
               <h3 className="text-2xl font-bold text-white mb-4">Emotional Intelligence</h3>
               <p className="text-purple-200 mb-4">
                 Understanding and responding to human emotions with empathy and appropriate social intelligence.
-              </p>
               <ul className="text-purple-300 space-y-2 text-sm">
                 <li>• Emotion recognition</li>
                 <li>• Empathetic responses</li>
                 <li>• Social context understanding</li>
                 <li>• Mood adaptation</li>
-              </ul>
-            </div>
             <div className="bg-gradient-to-br from-pink-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30">
               <div className="text-4xl mb-4">🎨</div>
               <h3 className="text-2xl font-bold text-white mb-4">Creative Generation</h3>
               <p className="text-pink-200 mb-4">
                 Original creative content generation across multiple domains including art, music, and writing.
-              </p>
               <ul className="text-pink-300 space-y-2 text-sm">
                 <li>• Artistic creation</li>
                 <li>• Musical composition</li>
                 <li>• Creative writing</li>
                 <li>• Design innovation</li>
-              </ul>
-            </div>
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
               <div className="text-4xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-4">Pattern Recognition</h3>
               <p className="text-cyan-200 mb-4">
                 Advanced pattern recognition and anomaly detection across vast datasets and complex systems.
-              </p>
               <ul className="text-cyan-300 space-y-2 text-sm">
                 <li>• Data pattern analysis</li>
                 <li>• Anomaly detection</li>
                 <li>• Predictive modeling</li>
                 <li>• Trend identification</li>
-              </ul>
-            </div>
             <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-2xl font-bold text-white mb-4">Multi-Modal Processing</h3>
               <p className="text-green-200 mb-4">
                 Processing and understanding multiple types of input including text, images, audio, and video.
-              </p>
               <ul className="text-green-300 space-y-2 text-sm">
                 <li>• Text understanding</li>
                 <li>• Image analysis</li>
                 <li>• Audio processing</li>
                 <li>• Video interpretation</li>
-              </ul>
-            </div>
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold text-white mb-4">Real-Time Learning</h3>
               <p className="text-orange-200 mb-4">
                 Continuous learning and adaptation in real-time based on new information and experiences.
-              </p>
               <ul className="text-orange-300 space-y-2 text-sm">
                 <li>• Continuous adaptation</li>
                 <li>• Experience integration</li>
                 <li>• Knowledge updating</li>
                 <li>• Skill refinement</li>
-              </ul>
-            </div>
-          </div>
-        )}
         {activeTab === 'applications' && (
-          <div
             className="space-y-12"
-          >
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-4">AI Applications</h2>
               <p className="text-xl text-blue-200">Revolutionary applications across industries</p>
-            </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20">
                 <h3 className="text-2xl font-bold text-white mb-4">🏥 Healthcare</h3>
@@ -228,7 +164,6 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                   <li>• Surgical procedure optimization</li>
                   <li>• Mental health support</li>
                 </ul>
-              </div>
               <div className="bg-gradient-to-br from-purple-600/10 to-pink-600/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/20">
                 <h3 className="text-2xl font-bold text-white mb-4">💼 Business</h3>
                 <ul className="text-purple-200 space-y-2">
@@ -237,8 +172,6 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                   <li>• Customer service automation</li>
                   <li>• Process optimization</li>
                   <li>• Risk assessment</li>
-                </ul>
-              </div>
               <div className="bg-gradient-to-br from-pink-600/10 to-cyan-600/10 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/20">
                 <h3 className="text-2xl font-bold text-white mb-4">🎓 Education</h3>
                 <ul className="text-pink-200 space-y-2">
@@ -247,8 +180,6 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                   <li>• Automated grading and feedback</li>
                   <li>• Curriculum optimization</li>
                   <li>• Student performance prediction</li>
-                </ul>
-              </div>
               <div className="bg-gradient-to-br from-cyan-600/10 to-green-600/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/20">
                 <h3 className="text-2xl font-bold text-white mb-4">🔬 Research</h3>
                 <ul className="text-cyan-200 space-y-2">
@@ -257,21 +188,12 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                   <li>• Literature review automation</li>
                   <li>• Experiment design optimization</li>
                   <li>• Collaborative research support</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        )}
         {activeTab === 'future' && (
-          <div
-            className="text-center"
-          >
             <h2 className="text-4xl font-bold text-white mb-8">Future Vision of AI Intelligence</h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-2xl text-blue-200 mb-8">
                 The future of AI intelligence represents a paradigm shift where artificial minds will not just 
                 assist humans, but collaborate as equal partners in solving the world's greatest challenges.
-              </p>
               <div className="grid md:grid-cols-2 gap-8 mt-12">
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30">
                   <h3 className="text-2xl font-bold text-white mb-4">2025-2030</h3>
@@ -281,7 +203,6 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                     <li>• Emotional intelligence</li>
                     <li>• Creative collaboration</li>
                   </ul>
-                </div>
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
                   <h3 className="text-2xl font-bold text-white mb-4">2030-2035</h3>
                   <ul className="text-purple-200 space-y-2 text-left">
@@ -289,23 +210,12 @@ const AdvancedAIIntelligence2025: React.FC = () => {
                     <li>• Quantum-enhanced AI</li>
                     <li>• Neural interface integration</li>
                     <li>• Autonomous research</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">AdvancedAIIntelligence2025</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
     </div>
   );
 };
-
-
 export default AdvancedAIIntelligence2025;

@@ -4,7 +4,6 @@ import { QuoteRequestForm } from "../components/QuoteRequestForm";
 import { SEO } from "@/components/SEO";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
 export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-background">
@@ -16,7 +15,6 @@ export default function RequestQuote() {
       />
       
       <Header />
-      
       <main className="pt-16">
         {/* Hero Section */}
         <section className="bg-zion-blue py-20">
@@ -39,18 +37,13 @@ export default function RequestQuote() {
                 <QuoteRequestForm />
               </div>
             </div>
-          </div>
-        </section>
-        
         {/* Why Choose Zion Section */}
         <section className="py-20 bg-zion-blue-dark">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion for Your Tech Needs?</h2>
               <p className="text-zion-slate-light text-xl max-w-2xl mx-auto">
                 We combine cutting-edge technology with proven expertise to deliver exceptional results.
               </p>
-            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center p-6">
@@ -63,58 +56,32 @@ export default function RequestQuote() {
                 <p className="text-zion-slate-light">
                   Get your quote within 24 hours and start your project quickly with our streamlined process.
                 </p>
-              </div>
               
-              <div className="text-center p-6">
                 <div className="bg-zion-cyan/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Quality Assured</h3>
-                <p className="text-zion-slate-light">
                   All our services and equipment meet the highest industry standards with comprehensive warranties.
-                </p>
-              </div>
-              
-              <div className="text-center p-6">
                 <div className="bg-zion-purple-light/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <svg className="w-8 h-8 text-zion-purple-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Competitive Pricing</h3>
-                <p className="text-zion-slate-light">
                   Get the best value for your investment with our transparent pricing and no hidden costs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
-      
       <Footer />
     </div>
-import { SEO } from "@/components/SEO";
 import { GradientHeading } from "../components/GradientHeading";
-
-export default function RequestQuote() {
-  return (
     <>
-      <SEO 
         title="Request Quote - Zion Tech Group" 
         description="Get a customized quote for your AI and technology project needs from Zion Tech Group." 
         keywords="request quote, pricing, AI services, tech solutions, project estimate"
         url="https://ziontechgroup.com/request-quote"
-      />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <GradientHeading>Request a Quote</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Get a customized quote for your AI and technology project needs
-            </p>
-          </div>
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8">
@@ -134,50 +101,23 @@ export default function RequestQuote() {
                     />
                   </div>
                   
-                  <div>
                     <label htmlFor="lastName" className="block text-zion-slate-light mb-2">
                       Last Name *
-                    </label>
-                    <input
                       id="lastName"
                       name="lastName"
-                      type="text"
-                      required
-                      className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
                       placeholder="Enter your last name"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
                     <label htmlFor="email" className="block text-zion-slate-light mb-2">
                       Email Address *
-                    </label>
-                    <input
                       id="email"
                       name="email"
                       type="email"
-                      required
-                      className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
                       placeholder="Enter your email address"
-                    />
-                  </div>
-                  
-                  <div>
                     <label htmlFor="phone" className="block text-zion-slate-light mb-2">
                       Phone Number
-                    </label>
-                    <input
                       id="phone"
                       name="phone"
                       type="tel"
-                      className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
                       placeholder="Enter your phone number"
-                    />
-                  </div>
-                </div>
-
                 <div>
                   <label htmlFor="company" className="block text-zion-slate-light mb-2">
                     Company Name
@@ -189,12 +129,8 @@ export default function RequestQuote() {
                     className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg"
                     placeholder="Enter your company name"
                   />
-                </div>
-
-                <div>
                   <label htmlFor="projectType" className="block text-zion-slate-light mb-2">
                     Project Type *
-                  </label>
                   <select
                     id="projectType"
                     name="projectType"
@@ -212,27 +148,16 @@ export default function RequestQuote() {
                     <option value="hardware-setup">Hardware Setup</option>
                     <option value="other">Other</option>
                   </select>
-                </div>
-
-                <div>
                   <label htmlFor="projectDescription" className="block text-zion-slate-light mb-2">
                     Project Description *
-                  </label>
                   <textarea
                     id="projectDescription"
                     name="projectDescription"
-                    required
                     rows={6}
                     className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg resize-none"
                     placeholder="Describe your project requirements, goals, and any specific features you need..."
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
                     <label htmlFor="budget" className="block text-zion-slate-light mb-2">
                       Budget Range
-                    </label>
                     <select
                       id="budget"
                       name="budget"
@@ -246,17 +171,10 @@ export default function RequestQuote() {
                       <option value="50k-100k">$50,000 - $100,000</option>
                       <option value="over-100k">Over $100,000</option>
                     </select>
-                  </div>
-                  
-                  <div>
                     <label htmlFor="timeline" className="block text-zion-slate-light mb-2">
                       Timeline
-                    </label>
-                    <select
                       id="timeline"
                       name="timeline"
-                      className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white rounded-lg"
-                    >
                       <option value="">Select timeline</option>
                       <option value="asap">ASAP</option>
                       <option value="1-2-weeks">1-2 weeks</option>
@@ -264,39 +182,23 @@ export default function RequestQuote() {
                       <option value="2-3-months">2-3 months</option>
                       <option value="3-6-months">3-6 months</option>
                       <option value="6-months-plus">6+ months</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
                   <label htmlFor="additionalInfo" className="block text-zion-slate-light mb-2">
                     Additional Information
-                  </label>
-                  <textarea
                     id="additionalInfo"
                     name="additionalInfo"
                     rows={4}
-                    className="w-full p-3 bg-zion-blue-dark border border-zion-blue-light text-white placeholder-zion-slate-light rounded-lg resize-none"
                     placeholder="Any additional details, constraints, or questions you'd like us to know about..."
-                  />
-                </div>
-
                 <div className="text-center">
                   <button 
                     type="submit" 
                     className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light px-12 py-4 rounded-lg font-semibold text-lg transition-colors"
-                  >
                     Submit Quote Request
                   </button>
-                </div>
               </form>
-            </div>
-
             <div className="mt-12 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Need Immediate Assistance?</h2>
               <p className="text-zion-slate-light mb-6">
                 For urgent inquiries or to speak with our team directly, contact us:
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="tel:+13024640950" 
@@ -304,17 +206,9 @@ export default function RequestQuote() {
                 >
                   Call +1 302 464 0950
                 </a>
-                <a 
                   href="mailto:kleber@ziontechgroup.com" 
-                  className="inline-block bg-zion-blue-dark border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-colors"
-                >
                   Email Us
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </main>
     </>
   );
 }

@@ -11,7 +11,6 @@ interface AnalyticsData {
   deviceTypes: Array<{ device: string; percentage: number }>;
   realTimeUsers: number;
 }
-
 export default function AnalyticsDashboard() {
   const [analytics, setAnalytics] = useState<AnalyticsData>({
     pageViews: 0,
@@ -25,7 +24,6 @@ export default function AnalyticsDashboard() {
   });
   const [isVisible, setIsVisible] = useState(false);
   const [timeRange, setTimeRange] = useState('24h');
-
   useEffect(() => {
     const generateAnalytics = () => {
       const baseViews = Math.floor(Math.random() * 50000) + 10000;
@@ -48,34 +46,26 @@ export default function AnalyticsDashboard() {
           { source: 'Google', percentage: 30 },
           { source: 'Social', percentage: 15 },
           { source: 'Referral', percentage: 10 }
-        ],
         deviceTypes: [
           { device: 'Desktop', percentage: 60 },
           { device: 'Mobile', percentage: 35 },
           { device: 'Tablet', percentage: 5 }
-        ],
         realTimeUsers: Math.floor(Math.random() * 50) + 10
       });
     };
-
     generateAnalytics();
     const interval = setInterval(generateAnalytics, 30000); // Update every 30 seconds
-
     return () => clearInterval(interval);
   }, [timeRange]);
-
   const formatNumber = (num: number) => {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
     if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
     return num.toString();
   };
-
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-  };
-
   if (!isVisible) {
     return (
       <button
@@ -87,7 +77,6 @@ export default function AnalyticsDashboard() {
       </button>
     );
   }
-
   return (
     <div className="fixed top-4 left-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl p-4 w-96 z-50 max-h-96 overflow-y-auto">
       <div className="flex items-center justify-between mb-4">
@@ -109,12 +98,10 @@ export default function AnalyticsDashboard() {
           <button
             onClick={() => setIsVisible(false)}
             className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-          >
             ×
           </button>
         </div>
       </div>
-
       {/* Key Metrics */}
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
@@ -127,58 +114,29 @@ export default function AnalyticsDashboard() {
               </div>
             </div>
           </div>
-        </div>
-
         <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
-          <div className="flex items-center">
             <Users className="w-4 h-4 text-green-600 dark:text-green-400 mr-2" />
-            <div>
               <div className="text-xs text-gray-600 dark:text-gray-300">Unique Visitors</div>
               <div className="text-lg font-bold text-green-600 dark:text-green-400">
                 {formatNumber(analytics.uniqueVisitors)}
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg">
-          <div className="flex items-center">
             <MousePointer className="w-4 h-4 text-yellow-600 dark:text-yellow-400 mr-2" />
-            <div>
               <div className="text-xs text-gray-600 dark:text-gray-300">Bounce Rate</div>
               <div className="text-lg font-bold text-yellow-600 dark:text-yellow-400">
                 {analytics.bounceRate.toFixed(1)}%
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
-          <div className="flex items-center">
             <Clock className="w-4 h-4 text-purple-600 dark:text-purple-400 mr-2" />
-            <div>
               <div className="text-xs text-gray-600 dark:text-gray-300">Avg. Session</div>
               <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
                 {formatTime(analytics.avgSessionDuration)}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Real-time Users */}
       <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg mb-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
             <TrendingUp className="w-4 h-4 text-red-600 dark:text-red-400 mr-2" />
             <span className="text-sm font-medium text-red-600 dark:text-red-400">Live Users</span>
-          </div>
           <span className="text-2xl font-bold text-red-600 dark:text-red-400">
             {analytics.realTimeUsers}
           </span>
-        </div>
-      </div>
-
       {/* Top Pages */}
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Top Pages</h4>
@@ -190,18 +148,10 @@ export default function AnalyticsDashboard() {
               </span>
               <span className="text-xs font-medium text-gray-900 dark:text-white">
                 {formatNumber(page.views)}
-              </span>
-            </div>
           ))}
-        </div>
-      </div>
-
       {/* Traffic Sources */}
-      <div className="mb-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Traffic Sources</h4>
-        <div className="space-y-2">
           {analytics.trafficSources.map((source, index) => (
-            <div key={index} className="flex items-center justify-between">
               <span className="text-xs text-gray-600 dark:text-gray-300">{source.source}</span>
               <div className="flex items-center">
                 <div className="w-16 bg-gray-200 dark:bg-gray-700 rounded-full h-2 mr-2">
@@ -213,37 +163,16 @@ export default function AnalyticsDashboard() {
                 <span className="text-xs font-medium text-gray-900 dark:text-white">
                   {source.percentage}%
                 </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Device Types */}
-      <div className="mb-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Device Types</h4>
-        <div className="space-y-2">
           {analytics.deviceTypes.map((device, index) => (
-            <div key={index} className="flex items-center justify-between">
-              <div className="flex items-center">
                 {device.device === 'Desktop' && <Globe className="w-3 h-3 mr-1 text-gray-500" />}
                 {device.device === 'Mobile' && <Smartphone className="w-3 h-3 mr-1 text-gray-500" />}
                 {device.device === 'Tablet' && <Smartphone className="w-3 h-3 mr-1 text-gray-500" />}
                 <span className="text-xs text-gray-600 dark:text-gray-300">{device.device}</span>
-              </div>
-              <span className="text-xs font-medium text-gray-900 dark:text-white">
                 {device.percentage}%
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="pt-3 border-t border-gray-200 dark:border-gray-700">
         <div className="text-xs text-gray-500 dark:text-gray-400">
           Last updated: {new Date().toLocaleTimeString()}
-        </div>
-      </div>
     </div>
   );
-}

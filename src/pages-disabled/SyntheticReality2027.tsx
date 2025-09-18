@@ -26,8 +26,6 @@ const SyntheticReality2027: React.FC = () => {
               </button>
               <button className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
                 🎮 Try Demo
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -39,8 +37,6 @@ const SyntheticReality2027: React.FC = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Choose Your Reality</h2>
           <p className="text-xl opacity-80">Select from our collection of synthetic realities or create your own</p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {realities.map((reality, index) => (
             <div
@@ -61,14 +57,10 @@ const SyntheticReality2027: React.FC = () => {
                   <li key={idx}>• {feature}</li>
                 ))}
               </ul>
-            </div>
           ))}
-        </div>
         {/* Selected Reality Details */}
-        <div
           key={selectedReality}
           className="max-w-6xl mx-auto"
-        >
           {selectedReality === 'quantum' && (
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -84,14 +76,10 @@ const SyntheticReality2027: React.FC = () => {
                       <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
                       <span>Quantum superposition environments</span>
                     </div>
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                       <span>Probability-based physics simulation</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
                       <span>Multi-dimensional navigation</span>
-                    </div>
                   </div>
                 </div>
                 <div className="text-center">
@@ -99,237 +87,103 @@ const SyntheticReality2027: React.FC = () => {
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold">
                     Enter Quantum Reality
                   </button>
-                </div>
               </div>
-            </div>
           )}
           {selectedReality === 'neural' && (
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
                   <h3 className="text-3xl font-bold mb-4">🧠 Neural Networks</h3>
-                  <p className="text-lg opacity-90 mb-6">
                     Become part of a living neural network where thoughts create reality. 
                     Connect with other consciousnesses, share experiences directly, and 
                     experience collective intelligence beyond individual limitations.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
                       <span>Collective intelligence networks</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
                       <span>Thought-based reality creation</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
                       <span>Consciousness merging protocols</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-center">
                   <div className="text-8xl mb-4">🧠</div>
                   <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold">
                     Connect to Neural Network
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
           {selectedReality === 'temporal' && (
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
                   <h3 className="text-3xl font-bold mb-4">⏰ Temporal Realms</h3>
-                  <p className="text-lg opacity-90 mb-6">
                     Navigate through time itself, experiencing past, present, and future simultaneously. 
                     Witness historical events, explore possible futures, and manipulate the flow of time.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
                       <span>Time manipulation controls</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                       <span>Parallel timeline access</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                       <span>Chronological exploration tools</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-center">
                   <div className="text-8xl mb-4">⏰</div>
                   <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold">
                     Enter Temporal Realm
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
           {selectedReality === 'dimensional' && (
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
                   <h3 className="text-3xl font-bold mb-4">🌌 Higher Dimensions</h3>
-                  <p className="text-lg opacity-90 mb-6">
                     Access realities beyond our 3D perception with infinite dimensional possibilities. 
                     Experience hyperspace, navigate through 4D+ spaces, and understand reality from 
                     perspectives impossible in our physical world.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
                       <span>4D+ spatial navigation</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-teal-400 rounded-full"></div>
                       <span>Hyperspace travel systems</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
                       <span>Dimensional physics simulation</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-center">
                   <div className="text-8xl mb-4">🌌</div>
                   <button className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-3 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold">
                     Access Higher Dimensions
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
           {selectedReality === 'consciousness' && (
             <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
                   <h3 className="text-3xl font-bold mb-4">🌟 Pure Consciousness</h3>
-                  <p className="text-lg opacity-90 mb-6">
                     Experience reality as pure consciousness without physical form or limitations. 
                     Connect with universal consciousness, experience infinite awareness, and 
                     transcend the boundaries of individual existence.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-violet-400 rounded-full"></div>
                       <span>Formless existence experience</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
                       <span>Universal consciousness connection</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
                       <span>Infinite awareness expansion</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-center">
                   <div className="text-8xl mb-4">🌟</div>
                   <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold">
                     Enter Pure Consciousness
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
           {selectedReality === 'creation' && (
             <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
                   <h3 className="text-3xl font-bold mb-4">🏗️ Creation Engine</h3>
-                  <p className="text-lg opacity-90 mb-6">
                     Design and build your own realities with custom physics and rules. 
                     Create infinite worlds, define new laws of nature, and share your 
                     creations with others across the synthetic reality network.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-pink-400 rounded-full"></div>
                       <span>Reality design tools</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
                       <div className="w-3 h-3 bg-rose-400 rounded-full"></div>
                       <span>Custom physics engines</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
                       <span>Infinite creativity platform</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-center">
                   <div className="text-8xl mb-4">🏗️</div>
                   <button className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-3 rounded-lg hover:shadow-xl transition-all duration-300 font-semibold">
                     Start Creating Reality
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
       {/* Features Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20">
         <div className="container mx-auto px-4">
-          <div
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
-          >
             <h2 className="text-4xl font-bold mb-4">Revolutionary Features</h2>
             <p className="text-xl opacity-80">Experience the most advanced synthetic reality technology ever created</p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            <div
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-            >
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-bold mb-3">Perfect Fidelity</h3>
               <p className="text-gray-300">
                 Synthetic realities are indistinguishable from physical reality with perfect 
                 visual, audio, and haptic feedback.
               </p>
-            </div>
-
-            <div
-              whileInView={{ opacity: 1, y: 0 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-            >
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold mb-3">Instant Access</h3>
-              <p className="text-gray-300">
                 Enter any synthetic reality instantly with zero loading times and seamless 
                 transitions between worlds.
-              </p>
-            </div>
-
-            <div
-              whileInView={{ opacity: 1, y: 0 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-            >
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-bold mb-3">Infinite Worlds</h3>
-              <p className="text-gray-300">
                 Access unlimited synthetic realities created by users worldwide, each with 
                 unique physics and experiences.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <div
           whileInView={{ opacity: 1, scale: 1 }}
           className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12"
-        >
           <h2 className="text-4xl font-bold mb-6">Ready to Transcend Reality?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Step into synthetic realities that push the boundaries of what's possible. 
@@ -341,13 +195,7 @@ const SyntheticReality2027: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 font-semibold text-lg">
               🎮 Try Free Demo
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
-
 export default SyntheticReality2027;

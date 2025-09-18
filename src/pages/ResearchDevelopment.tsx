@@ -7,17 +7,12 @@ const ResearchDevelopment = () => {
             description: "Advancing the frontiers of AI with autonomous systems, neural networks, and intelligent automation.",
             focus: ["Neural Networks", "Autonomous Systems", "Natural Language Processing", "Computer Vision"]
         },
-        {
             title: "Quantum Computing",
             description: "Exploring quantum algorithms and applications for solving complex computational problems.",
             focus: ["Quantum Algorithms", "Quantum Cryptography", "Financial Modeling", "Optimization"]
-        },
-        {
             title: "Cybersecurity & Privacy",
             description: "Developing next-generation security solutions and privacy-preserving technologies.",
             focus: ["Zero-Trust Architecture", "Threat Detection", "Privacy Engineering", "Compliance Automation"]
-        },
-        {
             title: "Cloud & Edge Computing",
             description: "Innovating distributed computing architectures and edge intelligence solutions.",
             focus: ["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
@@ -53,8 +48,6 @@ const ResearchDevelopment = () => {
                   </ul>
                 </div>
               </div>))}
-          </div>
-          
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Collaborate With Us</h3>
@@ -66,7 +59,6 @@ const ResearchDevelopment = () => {
                 Get in Touch
               </Link>
             </div>
-          </div>
         </div>
       </section>
     </div>);

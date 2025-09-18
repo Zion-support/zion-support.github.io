@@ -1,16 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
-<<<<<<< HEAD
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '../data/comprehensiveServices';
-import { SEO } from '../components/SEO';
-=======
 import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-import { SEO } from '../components/SEO.jsx';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO.jsx';
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
     const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
@@ -43,12 +39,9 @@ export default function ServicesPricingPage() {
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 <Building className="w-5 h-5 mr-2"/>
                 View All Services
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
-
       {/* Contact Information */}
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
@@ -57,27 +50,16 @@ export default function ServicesPricingPage() {
               <Phone className="w-5 h-5 text-zion-cyan"/>
               <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-zion-cyan"/>
               <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-zion-cyan"/>
               <span>364 E Main St STE 1008 Middletown DE 19709</span>
-            </div>
-            <div className="flex items-center gap-2">
               <Globe className="w-5 h-5 text-zion-cyan"/>
               <a href="https://ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
                 ziontechgroup.com
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Pricing Tiers */}
       <div className="py-16 px-4">
-        <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Choose Your Plan
@@ -85,8 +67,6 @@ export default function ServicesPricingPage() {
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
               Flexible pricing tiers designed to scale with your business needs
             </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (<Card key={tierName} className={`bg-zion-blue border-zion-blue-light ${index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center pb-6">
@@ -102,18 +82,9 @@ export default function ServicesPricingPage() {
                       <Check className="w-5 h-5 text-green-400 flex-shrink-0"/>
                       <span className="text-white text-sm">Custom solution development</span>
                     </li>
-                    <li className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0"/>
                       <span className="text-white text-sm">Technical support</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0"/>
                       <span className="text-white text-sm">Documentation & training</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0"/>
                       <span className="text-white text-sm">Maintenance & updates</span>
-                    </li>
                   </ul>
                   
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -122,22 +93,10 @@ export default function ServicesPricingPage() {
                   </Button>
                 </CardContent>
               </Card>))}
-          </div>
-        </div>
-      </div>
-
       {/* Service-Specific Pricing */}
       <div className="bg-zion-blue-dark py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
               Service-Specific Pricing
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
               Detailed pricing for individual services and solutions
-            </p>
-          </div>
-
           <div className="space-y-8">
             {Object.entries(servicesByCategory).map(([category, services]) => (<div key={category} className="bg-zion-blue rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-4">{category}</h3>
@@ -162,27 +121,12 @@ export default function ServicesPricingPage() {
                         <div className="flex items-center gap-1">
                           <Star className="w-4 h-4 text-yellow-400 fill-current"/>
                           <span className="text-white text-sm">{service.rating}</span>
-                        </div>
-                      </div>
                     </div>))}
                 </div>
               </div>))}
-          </div>
-        </div>
-      </div>
-
       {/* Why Choose Zion Tech Group */}
-      <div className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
               We deliver exceptional value through expertise, innovation, and proven results
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             {
@@ -190,17 +134,12 @@ export default function ServicesPricingPage() {
                 title: "Competitive Pricing",
                 description: "Market-leading rates without compromising on quality or features"
             },
-            {
                 icon: <Shield className="w-8 h-8"/>,
                 title: "No Hidden Fees",
                 description: "Transparent pricing with clear breakdowns of all costs"
-            },
-            {
                 icon: <Users className="w-8 h-8"/>,
                 title: "Flexible Plans",
                 description: "Customizable solutions that grow with your business needs"
-            },
-            {
                 icon: <Building className="w-8 h-8"/>,
                 title: "Proven ROI",
                 description: "Measurable business outcomes and return on investment"
@@ -208,24 +147,15 @@ export default function ServicesPricingPage() {
         ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {feature.icon}
-                </div>
                 <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light text-sm">{feature.description}</p>
-              </div>))}
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
-        <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
           <p className="text-zion-cyan text-lg mb-8 max-w-2xl mx-auto">
             Contact us today for a personalized quote tailored to your specific business requirements
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
               <Phone className="w-5 h-5 mr-2"/>
               Get Custom Quote
@@ -233,9 +163,5 @@ export default function ServicesPricingPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Mail className="w-5 h-5 mr-2"/>
               Schedule Consultation
-            </Button>
-          </div>
-        </div>
-      </div>
     </div>);
 }

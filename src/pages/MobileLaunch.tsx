@@ -19,8 +19,6 @@ const MobileLaunch = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600 text-center">
               Mobile launch page coming soon. We're building comprehensive mobile applications.
-            </p>
-          </div>
         </div>
       </div>
     </>);

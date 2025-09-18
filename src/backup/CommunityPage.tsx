@@ -32,27 +32,13 @@ export default function CommunityPage() {
                 </button>
               </div>
               
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Events</h3>
-                <p className="text-zion-slate-light mb-4">
                   Attend virtual and in-person events and meetups
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                   View Events
-                </button>
-              </div>
-              
-              <div className="bg-zion-blue-dark border border-zion-cyan rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
-                <p className="text-zion-slate-light mb-4">
                   Collaborate on open source projects and initiatives
-                </p>
-                <button className="bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
                   Browse Projects
-                </button>
-              </div>
             </div>
-          </div>
         </div>
       </main>
     </>

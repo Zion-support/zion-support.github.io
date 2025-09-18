@@ -24,12 +24,9 @@ const NextGenSpaceExploration2026: React.FC = () => {
               </button>
               <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
                 Watch Launch
-              </button>
-            </div>
           </div>
         </div>
       </div>
-
       {/* Mission Overview */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -37,61 +34,44 @@ const NextGenSpaceExploration2026: React.FC = () => {
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
             Our next-generation space exploration platform represents the most advanced breakthrough in space technology
           </p>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🛸</div>
             <h3 className="text-2xl font-bold mb-4 text-center">AI-Powered Spacecraft</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Autonomous spacecraft with advanced AI navigation and self-repair capabilities
-            </p>
             <ul className="text-cyan-200 space-y-2 text-sm">
               <li>• Autonomous mission planning</li>
               <li>• Self-healing systems</li>
               <li>• Real-time decision making</li>
               <li>• Adaptive exploration</li>
             </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Propulsion</h3>
             <p className="text-purple-100 mb-6 text-center">
               Revolutionary quantum-based propulsion systems enabling faster-than-light travel
-            </p>
             <ul className="text-purple-200 space-y-2 text-sm">
               <li>• Quantum entanglement drive</li>
               <li>• Faster-than-light capability</li>
               <li>• Zero-emission propulsion</li>
               <li>• Infinite range potential</li>
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌌</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Deep Space Exploration</h3>
             <p className="text-emerald-100 mb-6 text-center">
               Missions to the farthest reaches of the universe with advanced life support systems
-            </p>
             <ul className="text-emerald-200 space-y-2 text-sm">
               <li>• Interstellar travel</li>
               <li>• Exoplanet discovery</li>
               <li>• Alien life detection</li>
               <li>• Cosmic mapping</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Current Missions */}
         <div className="bg-gradient-to-r from-slate-600/20 to-blue-600/20 rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🎯 Active Space Missions</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Currently deployed missions exploring the cosmos with cutting-edge technology
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center mb-4">
@@ -107,166 +87,83 @@ const NextGenSpaceExploration2026: React.FC = () => {
                   <div className="font-semibold">Distance:</div>
                   <div>4.24 light-years</div>
                 </div>
-                <div>
                   <div className="font-semibold">Duration:</div>
                   <div>2.5 years</div>
-                </div>
-                <div>
                   <div className="font-semibold">Crew:</div>
                   <div>12 astronauts</div>
-                </div>
-                <div>
                   <div className="font-semibold">Status:</div>
                   <div className="text-green-400">En route</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
                 <div className="w-3 h-3 bg-yellow-500 rounded-full mr-3 animate-pulse"></div>
                 <span className="text-sm font-semibold text-yellow-400">PREPARING</span>
-              </div>
               <h3 className="text-2xl font-bold mb-3">Mars Colony Initiative</h3>
-              <p className="text-sm opacity-90 mb-4">
                 Establishing the first permanent human settlement on Mars with AI-assisted infrastructure
-              </p>
-              <div className="grid grid-cols-2 gap-4 text-xs">
-                <div>
-                  <div className="font-semibold">Distance:</div>
                   <div>225 million km</div>
-                </div>
-                <div>
-                  <div className="font-semibold">Duration:</div>
                   <div>6 months</div>
-                </div>
-                <div>
                   <div className="font-semibold">Settlers:</div>
                   <div>50 pioneers</div>
-                </div>
-                <div>
-                  <div className="font-semibold">Status:</div>
                   <div className="text-yellow-400">Preparing</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Features */}
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">🔬 Advanced Space Technology</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-12">
             Revolutionary technologies enabling unprecedented space exploration capabilities
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-lg font-semibold mb-3">AI Navigation</h3>
             <p className="text-sm opacity-90 mb-4">
               Autonomous spacecraft navigation with real-time obstacle avoidance and mission optimization
-            </p>
             <div className="text-xs opacity-70">
               • 99.9% accuracy<br/>
               • Real-time adaptation<br/>
               • Self-repair systems
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
             <div className="text-4xl mb-4">⚛️</div>
             <h3 className="text-lg font-semibold mb-3">Quantum Sensors</h3>
-            <p className="text-sm opacity-90 mb-4">
               Ultra-sensitive quantum sensors for detecting gravitational waves and dark matter
-            </p>
-            <div className="text-xs opacity-70">
               • 1000x sensitivity<br/>
               • Dark matter detection<br/>
               • Gravitational mapping
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
             <div className="text-4xl mb-4">🔋</div>
             <h3 className="text-lg font-semibold mb-3">Fusion Power</h3>
-            <p className="text-sm opacity-90 mb-4">
               Compact fusion reactors providing unlimited power for long-duration space missions
-            </p>
-            <div className="text-xs opacity-70">
               • Unlimited energy<br/>
               • Zero waste<br/>
               • Self-sustaining
-            </div>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
             <div className="text-4xl mb-4">🧬</div>
             <h3 className="text-lg font-semibold mb-3">Life Support</h3>
-            <p className="text-sm opacity-90 mb-4">
               Advanced closed-loop life support systems with AI-optimized resource management
-            </p>
-            <div className="text-xs opacity-70">
               • 100% recycling<br/>
               • AI optimization<br/>
               • Emergency protocols
-            </div>
-          </div>
-        </div>
-
         {/* Discovery Highlights */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🌟 Recent Discoveries</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Groundbreaking discoveries from our space exploration missions
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
                 47
-              </div>
               <h3 className="text-xl font-semibold mb-2">Exoplanets Discovered</h3>
               <p className="text-sm opacity-80">Potentially habitable worlds found in the last 6 months</p>
-            </div>
-            <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
                 12
-              </div>
               <h3 className="text-xl font-semibold mb-2">Alien Life Signals</h3>
               <p className="text-sm opacity-80">Possible signs of extraterrestrial life detected</p>
-            </div>
-            <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
                 1.2M
-              </div>
               <h3 className="text-xl font-semibold mb-2">Light Years Explored</h3>
               <p className="text-sm opacity-80">Total distance covered by our exploration fleet</p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12">
           <h2 className="text-4xl font-bold mb-6">🚀 Ready to Explore the Universe?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the next generation of space exploration. Experience the cosmos like never before with our revolutionary technology.
-          </p>
           <div className="flex justify-center space-x-4">
             <button className="bg-gradient-to-r from-cyan-600 to-blue-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Mission →
             </button>
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg">
               View Gallery
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default NextGenSpaceExploration2026;

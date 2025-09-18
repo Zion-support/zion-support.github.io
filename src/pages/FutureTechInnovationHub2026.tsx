@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const FutureTechInnovationHub2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const innovationCategories = {
     ai: {
       title: "Artificial Intelligence",
@@ -15,13 +14,10 @@ const FutureTechInnovationHub2026: React.FC = () => {
           impact: "Revolutionary",
           timeline: "2026-2027"
         },
-        {
           name: "Quantum Neural Networks",
           description: "Hybrid quantum-classical neural architectures",
           impact: "Breakthrough",
           timeline: "2026"
-        },
-        {
           name: "Autonomous AI Agents",
           description: "Self-evolving AI systems with independent decision-making",
           impact: "Transformative",
@@ -33,54 +29,26 @@ const FutureTechInnovationHub2026: React.FC = () => {
       title: "Quantum Computing",
       icon: "⚡",
       color: "from-cyan-600 to-blue-600",
-      innovations: [
-        {
           name: "Quantum Internet",
           description: "Global quantum communication network infrastructure",
-          impact: "Revolutionary",
           timeline: "2026-2030"
-        },
-        {
           name: "Quantum Supremacy",
           description: "Practical quantum advantage in real-world applications",
-          impact: "Breakthrough",
-          timeline: "2026"
-        },
-        {
           name: "Quantum Machine Learning",
           description: "ML algorithms running on quantum processors",
-          impact: "Transformative",
-          timeline: "2026-2027"
-        }
-      ]
-    },
     neural: {
       title: "Neural Interfaces",
       icon: "🧬",
       color: "from-emerald-600 to-teal-600",
-      innovations: [
-        {
           name: "Brain-Computer Integration",
           description: "Direct neural pathways for thought-to-action interfaces",
-          impact: "Revolutionary",
-          timeline: "2026-2028"
-        },
-        {
           name: "Neural Enhancement",
           description: "Cognitive augmentation through neural implants",
-          impact: "Breakthrough",
           timeline: "2026-2029"
-        },
-        {
           name: "Collective Intelligence",
           description: "Human-AI neural network collaboration",
-          impact: "Transformative",
-          timeline: "2026-2030"
-        }
-      ]
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       {/* Hero Section */}
@@ -105,19 +73,14 @@ const FutureTechInnovationHub2026: React.FC = () => {
               </button>
               <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
                 Join Innovation Network
-              </button>
-            </div>
           </divdiv>
         </div>
       </div>
-
       {/* Innovation Categories */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🌟 Innovation Categories</h2>
           <p className="text-xl text-indigo-200">Navigate through revolutionary technology domains</p>
-        </div>
-
         {/* Tab Navigation */}
         <div className="flex justify-center mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 border border-white/20">
@@ -133,23 +96,17 @@ const FutureTechInnovationHub2026: React.FC = () => {
               >
                 <span className="mr-2">{category.icon}</span>
                 {category.title}
-              </button>
             ))}
           </div>
-        </div>
-
         {/* Tab Content */}
-          <divdiv
             key={activeTab}
             className="max-w-6xl mx-auto"
-          >
             <div className={`bg-gradient-to-br ${innovationCategories[activeTab as keyof typeof innovationCategories].color}/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20`}>
               <div className="text-center mb-12">
                 <div className="text-6xl mb-4">{innovationCategories[activeTab as keyof typeof innovationCategories].icon}</div>
                 <h3 className="text-4xl font-bold mb-4">{innovationCategories[activeTab as keyof typeof innovationCategories].title}</h3>
                 <p className="text-xl opacity-90">Revolutionary innovations in {innovationCategories[activeTab as keyof typeof innovationCategories].title.toLowerCase()}</p>
               </div>
-
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {innovationCategories[activeTab as keyof typeof innovationCategories].innovations.map((innovation, index) => (
                   <divdiv
@@ -170,62 +127,31 @@ const FutureTechInnovationHub2026: React.FC = () => {
                     <p className="text-white/80 text-sm">{innovation.description}</p>
                   </divdiv>
                 ))}
-              </div>
-            </div>
-          </divdiv>
-        </div>
-      </div>
-
       {/* Innovation Impact */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">📈 Innovation Impact Projections</h2>
           <p className="text-xl text-green-200">Expected global impact of emerging technologies</p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <divdiv
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-green-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-green-500/30 text-center"
-          >
             <div className="text-5xl mb-4">💰</div>
             <div className="text-4xl font-bold text-green-400 mb-2">$15T</div>
             <div className="text-lg font-semibold mb-2">Economic Impact</div>
             <div className="text-sm text-green-200">Global GDP contribution by 2030</div>
-          </divdiv>
-
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-500/30 text-center"
-          >
             <div className="text-5xl mb-4">👥</div>
             <div className="text-4xl font-bold text-blue-400 mb-2">2.5B</div>
             <div className="text-lg font-semibold mb-2">Jobs Created</div>
             <div className="text-sm text-blue-200">New employment opportunities</div>
-          </divdiv>
-
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-500/30 text-center"
-          >
             <div className="text-5xl mb-4">🌍</div>
             <div className="text-4xl font-bold text-purple-400 mb-2">85%</div>
             <div className="text-lg font-semibold mb-2">Global Adoption</div>
             <div className="text-sm text-purple-200">Expected technology penetration</div>
-          </divdiv>
-
-          <divdiv
-            whileInView={{ opacity: 1, y: 0 }}
             className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-8 border border-orange-500/30 text-center"
-          >
             <div className="text-5xl mb-4">⚡</div>
             <div className="text-4xl font-bold text-orange-400 mb-2">10x</div>
             <div className="text-lg font-semibold mb-2">Productivity Boost</div>
             <div className="text-sm text-orange-200">Average efficiency improvement</div>
-          </divdiv>
-        </div>
-      </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold mb-4">Be Part of the Innovation Revolution</h2>
@@ -238,11 +164,7 @@ const FutureTechInnovationHub2026: React.FC = () => {
           </button>
           <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all duration-300 font-semibold text-lg">
             Subscribe to Updates
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default FutureTechInnovationHub2026;

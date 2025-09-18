@@ -28,31 +28,22 @@ export default function Index() {
             icon: <Sparkles className="h-6 w-6 text-zion-cyan"/>,
             link: "/match"
         },
-        {
             title: t("home.tool_talent"),
             description: t("home.tool_talent_desc"),
             icon: <Users className="h-6 w-6 text-zion-purple"/>,
             link: "/talent"
-        },
-        {
             title: t("home.tool_services"),
             description: t("home.tool_services_desc"),
             icon: <Zap className="h-6 w-6 text-zion-cyan"/>,
             link: "/services"
-        },
-        {
             title: t("home.tool_equipment"),
             description: t("home.tool_equipment_desc"),
             icon: <Settings className="h-6 w-6 text-zion-purple"/>,
             link: "/equipment"
-        },
-        {
             title: t("home.tool_analytics"),
             description: t("home.tool_analytics_desc"),
             icon: <BarChart3 className="h-6 w-6 text-zion-cyan"/>,
             link: "/analytics"
-        },
-        {
             title: "Mobile App",
             description: "Take Zion with you on the go with our mobile app for iOS and Android",
             icon: <Smartphone className="h-6 w-6 text-zion-purple"/>,
@@ -86,27 +77,20 @@ export default function Index() {
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}/>
-                </div>
               </Link>))}
-          </div>
         </div>
       </section>
-      
       <CategoriesSection />
       <BenefitsSection />
-      
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-      
       <HowItWorksSection />
       <FeaturedListingsSection />
       <EnhancedTestimonialsSection />
       <TrustedBySection />
       <BlogSection />
-      
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
-      
       <WaitlistSection />
       <RevolutionaryCTASection2034 />
       <Footer />

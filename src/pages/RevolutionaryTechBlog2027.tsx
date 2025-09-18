@@ -11,7 +11,6 @@ const RevolutionaryTechBlog2027 = () => {
       readTime: "8 min read",
       featured: true
     },
-    {
       id: 2,
       title: "Interdimensional Computing: Beyond the Impossible",
       excerpt: "How we're breaking through dimensional barriers to create infinite computational possibilities.",
@@ -19,48 +18,33 @@ const RevolutionaryTechBlog2027 = () => {
       category: "Quantum Computing",
       readTime: "6 min read",
       featured: false
-    },
-    {
       id: 3,
       title: "Neural Reality Engines: The Future of Experience",
       excerpt: "Direct neural interfaces that create indistinguishable reality experiences through thought alone.",
       date: "January 21, 2027",
       category: "Neural Technology",
       readTime: "7 min read",
-      featured: false
-    },
-    {
       id: 4,
       title: "Consciousness Evolution: The Next Step in AI Development",
       excerpt: "Revolutionary algorithms that enable AI to achieve true sentience and self-awareness.",
       date: "January 19, 2027",
       category: "Consciousness Tech",
       readTime: "9 min read",
-      featured: true
-    },
-    {
       id: 5,
       title: "Reality Creation Protocols: Manifesting the Impossible",
       excerpt: "The first AI systems capable of creating entirely new realities and dimensions.",
       date: "January 17, 2027",
       category: "Reality Tech",
       readTime: "10 min read",
-      featured: false
-    },
-    {
       id: 6,
       title: "Quantum Consciousness Matrix: Processing Beyond Reality",
       excerpt: "How quantum consciousness operates across infinite parallel states simultaneously.",
       date: "January 15, 2027",
       category: "Quantum Consciousness",
-      readTime: "8 min read",
-      featured: true
     }
   ];
-
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -76,7 +60,6 @@ const RevolutionaryTechBlog2027 = () => {
             Explore the future of AI, quantum computing, consciousness technology, and reality manipulation.
           </p>
         </div>
-
         {/* Featured Posts Section */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -98,39 +81,22 @@ const RevolutionaryTechBlog2027 = () => {
                   <a href={`/blog/${post.id}`} className="text-purple-400 hover:text-purple-300 font-semibold text-sm">
                     Read More →
                   </a>
-                </div>
               </div>
             ))}
-          </div>
-        </div>
-
         {/* All Posts Section */}
-        <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             📚 All Revolutionary Articles
-          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogPosts.map((post) => (
               <div key={post.id} className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center justify-between mb-3">
                   <span className="px-2 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs rounded-full font-semibold">
-                    {post.category}
-                  </span>
                   <span className="text-blue-300 text-xs">{post.readTime}</span>
-                </div>
                 <h3 className="text-lg font-bold mb-2 text-blue-100">{post.title}</h3>
                 <p className="text-blue-200 mb-3 text-sm">{post.excerpt}</p>
-                <div className="flex items-center justify-between">
                   <span className="text-blue-300 text-xs">{post.date}</span>
                   <a href={`/blog/${post.id}`} className="text-blue-400 hover:text-blue-300 font-semibold text-xs">
                     Read →
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center">
@@ -149,11 +115,7 @@ const RevolutionaryTechBlog2027 = () => {
                 Subscribe →
               </button>
             </div>
-          </div>
-        </div>
-
         {/* Categories */}
-        <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-cyan-300">🔬 Explore by Category</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {['AI Revolution', 'Quantum Computing', 'Neural Technology', 'Consciousness Tech', 'Reality Tech', 'Quantum Consciousness'].map((category) => (
@@ -164,31 +126,21 @@ const RevolutionaryTechBlog2027 = () => {
               >
                 <span className="text-cyan-300 font-semibold">{category}</span>
               </a>
-            ))}
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Join the Revolutionary Tech Movement
-          </h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Be part of the most revolutionary technological transformation in human history. 
             Explore, learn, and contribute to the future of consciousness and reality.
-          </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               🚀 Join the Revolution →
             </a>
             <a href="/pages/UltimateTechRevolution2027" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               🌟 Explore Ultimate Tech →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryTechBlog2027;

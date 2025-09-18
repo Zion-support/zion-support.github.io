@@ -18,7 +18,6 @@ const RevolutionaryTechShowcase2025 = () => {
               Experience the most advanced technology innovations that are reshaping our world
             </p>
           </div>
-
           {/* Interactive Tech Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -35,50 +34,35 @@ const RevolutionaryTechShowcase2025 = () => {
               <button className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
                 Explore AI Consciousness →
               </button>
-            </div>
-
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">⚛️</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Quantum Computing</h3>
               <p className="text-cyan-100 mb-6 text-center">
                 Revolutionary quantum processors solving impossible computational problems
-              </p>
               <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
                 <li>• Quantum Supremacy</li>
                 <li>• Molecular Simulation</li>
                 <li>• Cryptography Revolution</li>
-              </ul>
               <button className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
                 Go Quantum →
-              </button>
-            </div>
-
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🧬</div>
               <h3 className="text-2xl font-bold mb-4 text-center">Neural Interfaces</h3>
               <p className="text-emerald-100 mb-6 text-center">
                 Direct brain-computer interfaces enabling thought-controlled technology
-              </p>
               <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
                 <li>• Non-Invasive BCI</li>
                 <li>• Thought Control</li>
                 <li>• Neural Feedback</li>
-              </ul>
               <button className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
                 Connect Mind & Machine →
-              </button>
-            </div>
-          </div>
         </div>
       </div>
-
       {/* Features Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">🌟 Revolutionary Features</h2>
           <p className="text-xl opacity-90">Discover what makes our technology truly revolutionary</p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-lg p-6 border border-purple-400/30">
@@ -89,45 +73,22 @@ const RevolutionaryTechShowcase2025 = () => {
                 <h3 className="text-xl font-bold">Lightning Fast Performance</h3>
               </div>
               <p className="text-purple-100">Experience unprecedented speed with our quantum-enhanced processing capabilities.</p>
-            </div>
-
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-lg p-6 border border-cyan-400/30">
-              <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
                   <span className="text-2xl">🔒</span>
-                </div>
                 <h3 className="text-xl font-bold">Quantum Security</h3>
-              </div>
               <p className="text-cyan-100">Unbreakable encryption powered by quantum mechanics and AI consciousness.</p>
-            </div>
-          </div>
-
-          <div className="space-y-8">
             <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-lg p-6 border border-emerald-400/30">
-              <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center">
                   <span className="text-2xl">🎯</span>
-                </div>
                 <h3 className="text-xl font-bold">Precision Intelligence</h3>
-              </div>
               <p className="text-emerald-100">AI systems that understand context and make decisions with human-level accuracy.</p>
-            </div>
-
             <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-lg p-6 border border-orange-400/30">
-              <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
                   <span className="text-2xl">🚀</span>
-                </div>
                 <h3 className="text-xl font-bold">Future-Ready Architecture</h3>
-              </div>
               <p className="text-orange-100">Scalable systems designed for the next decade of technological advancement.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 text-center border border-purple-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -139,12 +100,7 @@ const RevolutionaryTechShowcase2025 = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionaryTechShowcase2025;

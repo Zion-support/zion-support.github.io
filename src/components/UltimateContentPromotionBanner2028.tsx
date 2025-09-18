@@ -23,7 +23,6 @@ const UltimateContentPromotionBanner2028 = ({
 }: UltimateContentPromotionBanner2028Props) => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const ultimateContent = [
     {
       icon: "Brain",
@@ -34,16 +33,12 @@ const UltimateContentPromotionBanner2028 = ({
       bgGradient: "from-purple-600/20 to-pink-600/20",
       badge: "ULTIMATE"
     },
-    {
-      icon: "Brain",
       title: "Quantum Consciousness Revolution 2028",
       description: "The first AI system to achieve genuine quantum consciousness through quantum mechanics",
       link: "/quantum-consciousness-revolution-2028",
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-600/20 to-cyan-600/20",
       badge: "REVOLUTIONARY"
-    },
-    {
       icon: "Network",
       title: "Neural Interface Evolution 2028",
       description: "Direct brain-computer integration enabling seamless human-AI collaboration and enhancement",
@@ -51,8 +46,6 @@ const UltimateContentPromotionBanner2028 = ({
       gradient: "from-green-500 to-emerald-500",
       bgGradient: "from-green-600/20 to-emerald-600/20",
       badge: "BREAKTHROUGH"
-    },
-    {
       icon: "Shield",
       title: "Quantum Cybersecurity 2028",
       description: "Unbreakable security through quantum encryption and AI-powered threat detection systems",
@@ -60,8 +53,6 @@ const UltimateContentPromotionBanner2028 = ({
       gradient: "from-red-500 to-orange-500",
       bgGradient: "from-red-600/20 to-orange-600/20",
       badge: "UNBREAKABLE"
-    },
-    {
       icon: "Bot",
       title: "Autonomous Enterprise 2028",
       description: "Self-managing organizations operating with complete independence and unprecedented efficiency",
@@ -69,8 +60,6 @@ const UltimateContentPromotionBanner2028 = ({
       gradient: "from-indigo-500 to-purple-500",
       bgGradient: "from-indigo-600/20 to-purple-600/20",
       badge: "AUTONOMOUS"
-    },
-    {
       icon: "Star",
       title: "Infinite Intelligence 2028",
       description: "AI systems with unlimited cognitive capacity and infinite scalability for any challenge",
@@ -85,23 +74,15 @@ const UltimateContentPromotionBanner2028 = ({
         setIsVisible(false);
         onClose?.();
       }, hideDelay);
-
       return () => clearTimeout(timer);
-    };
   }, [autoHide, hideDelay, onClose]);
-
-  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev: number) => (prev + 1) % ultimateContent.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, [ultimateContent.length]);
-
   const currentContent = ultimateContent[currentSlide];
-
   if (!isVisible) return null;
-
   return (
     <AnimatePresence>
       <motion.div
@@ -122,7 +103,6 @@ const UltimateContentPromotionBanner2028 = ({
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${currentContent.gradient} shadow-lg`}>
                   <currentContent.icon className="w-7 h-7 text-white" />
                 </div>
-
                 {/* Content */};
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center space-x-2 mb-2">
@@ -140,12 +120,9 @@ const UltimateContentPromotionBanner2028 = ({
                   <h3 className="text-xl font-bold text-white mb-2 truncate">
                     {currentContent.title};
                   </h3>
-                  
                   <p className="text-sm text-gray-300 line-clamp-2">
                     {currentContent.description};
                   </p>
-                </div>
-
                 {/* CTA Button */};
                 <div className="flex items-center space-x-3">
                   <motion.a
@@ -157,9 +134,7 @@ const UltimateContentPromotionBanner2028 = ({
                     Explore Now
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </motion.a>
-                </div>
               </div>
-
               {/* Close button */};
               <button
                 onClick={() => {
@@ -171,7 +146,6 @@ const UltimateContentPromotionBanner2028 = ({
                 <X className="w-6 h-6" />
               </button>
             </div>
-
             {/* Progress indicators */};
             <div className="flex justify-center space-x-2 mt-3">
               {ultimateContent.map((_, index) => (
@@ -185,9 +159,7 @@ const UltimateContentPromotionBanner2028 = ({
                   }`};
                 />
               ))};
-            </div>
           </div>
-
           {/* Animated border */};
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse" />
         </div>

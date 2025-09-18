@@ -10,35 +10,26 @@ const AISolutions = () => {
             features: ["Machine Learning", "Neural Networks", "Predictive Analytics", "Automated Decision Making"],
             path: "/ai-autonomous-systems"
         },
-        {
             icon: Cpu,
             title: "AI Research Assistant",
             description: "Intelligent research tools that accelerate discovery and analysis across all domains",
             features: ["Data Mining", "Pattern Recognition", "Literature Review", "Hypothesis Generation"],
             path: "/ai-autonomous-research-assistant"
-        },
-        {
             icon: Shield,
             title: "AI-Powered Cybersecurity",
             description: "Advanced threat detection and prevention using artificial intelligence",
             features: ["Threat Intelligence", "Behavioral Analysis", "Real-time Monitoring", "Automated Response"],
             path: "/ai-powered-enterprise-security"
-        },
-        {
             icon: Cloud,
             title: "AI Business Intelligence",
             description: "Comprehensive business analytics and insights powered by AI",
             features: ["Data Visualization", "Predictive Modeling", "Performance Metrics", "Strategic Planning"],
             path: "/ai-business-intelligence"
-        },
-        {
             icon: Zap,
             title: "AI Content Generation",
             description: "Automated content creation for marketing, documentation, and communication",
             features: ["Text Generation", "Image Creation", "Video Production", "Multilingual Support"],
             path: "/ai-content-generator"
-        },
-        {
             icon: Target,
             title: "AI Sales & Marketing",
             description: "Intelligent automation for sales processes and marketing campaigns",
@@ -47,27 +38,18 @@ const AISolutions = () => {
         }
     ];
     const benefits = [
-        {
             icon: Rocket,
             title: "Accelerated Innovation",
             description: "Speed up development cycles and bring new solutions to market faster"
-        },
-        {
             icon: Users,
             title: "Enhanced User Experience",
             description: "Create more intuitive and personalized user interactions"
-        },
-        {
             icon: BarChart3,
             title: "Data-Driven Decisions",
             description: "Make better business decisions with AI-powered insights and analytics"
-        },
-        {
             icon: Globe,
             title: "Global Scalability",
             description: "Scale your operations globally with AI automation and optimization"
-        }
-    ];
     return (<div className="min-h-screen bg-background pt-20">
       <SEO title="AI Solutions - Zion Tech Group" description="Discover cutting-edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group." keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence" canonical="https://ziontechgroup.com/ai-solutions"/>
 
@@ -89,12 +71,10 @@ const AISolutions = () => {
               </button>
               <button className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 Learn More
-              </button>
             </div>
           </div>
         </div>
       </section>
-
       {/* AI Services Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,9 +85,6 @@ const AISolutions = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our AI solutions span across all major business domains, providing intelligent automation 
               and insights that drive growth and innovation.
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (<div key={service.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group">
                 <div className="p-8">
@@ -127,37 +104,18 @@ const AISolutions = () => {
                   </button>
                 </div>
               </div>))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our AI Solutions?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the transformative power of AI with our proven solutions and expert implementation.
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit) => (<div key={benefit.title} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white"/>
-                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
-              </div>))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business with AI?
           </h2>
@@ -171,10 +129,6 @@ const AISolutions = () => {
             </button>
             <button className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View Case Studies
-            </button>
-          </div>
-        </div>
-      </section>
     </div>);
 };
 export default AISolutions;

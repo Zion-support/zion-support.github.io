@@ -22,23 +22,16 @@ const QuantumConsciousnessRevolution2025: React.FC = () => {
             </button>
             <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
               Learn More
-            </button>
           </div>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Innovation</h3>
             <p className="text-blue-100">Cutting-edge technology solutions</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Technology</h3>
             <p className="text-blue-100">Revolutionary technological advances</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <h3 className="text-2xl font-bold mb-4">Future</h3>
             <p className="text-blue-100">Next-generation solutions</p>
-          </div>
-        </div>
       </div>
     </div>
   );

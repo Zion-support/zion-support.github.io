@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
   const [activeService, setActiveService] = useState('ai-solutions');
-
   const services = {
     'ai-solutions': {
       title: 'AI Solutions & Automation',
@@ -25,7 +24,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         '90% reduction in manual errors',
         '24/7 automated operations',
         'Real-time insights and analytics'
-      ],
       pricing: {
         starter: '$2,999/month',
         professional: '$9,999/month',
@@ -38,134 +36,93 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       icon: '⚡',
       color: 'from-cyan-500 to-blue-500',
       description: 'Leverage the power of quantum computing to solve complex optimization problems and accelerate research and development.',
-      features: [
         'Quantum Algorithm Development',
         'Optimization Problem Solving',
         'Cryptographic Security',
         'Drug Discovery Acceleration',
         'Financial Modeling',
         'Climate Simulation'
-      ],
-      benefits: [
         '1000x faster problem solving',
         'Exponential computational advantage',
         'Revolutionary breakthrough potential',
         'Future-proof technology investment'
-      ],
-      pricing: {
         starter: '$15,999/month',
         professional: '$49,999/month',
-        enterprise: 'Custom pricing'
-      }
-    },
     'neural-interfaces': {
       title: 'Neural Interface Technology',
       subtitle: 'Direct Brain-Computer Communication',
       icon: '🔗',
       color: 'from-emerald-500 to-teal-500',
       description: 'Enable seamless communication between human minds and digital systems with our advanced neural interface technology.',
-      features: [
         'Non-invasive Neural Reading',
         'Real-time Thought Processing',
         'High-bandwidth Data Transfer',
         'Secure Neural Encryption',
         'Multi-modal Interaction',
         'Consciousness Preservation'
-      ],
-      benefits: [
         'Direct thought-to-action control',
         'Enhanced cognitive capabilities',
         'Seamless human-machine integration',
         'Revolutionary accessibility solutions'
-      ],
-      pricing: {
         starter: '$8,999/month',
         professional: '$24,999/month',
-        enterprise: 'Custom pricing'
-      }
-    },
     'biotech-ai': {
       title: 'Biotech AI Solutions',
       subtitle: 'Personalized Medicine Revolution',
       icon: '🧬',
       color: 'from-purple-500 to-pink-500',
       description: 'Revolutionize healthcare and biotechnology with AI-driven solutions for personalized medicine and advanced research.',
-      features: [
         'Genetic Profile Analysis',
         'Personalized Drug Design',
         'Real-time Health Monitoring',
         'Disease Prediction Algorithms',
         'Automated Treatment Optimization',
         'Regenerative Medicine AI'
-      ],
-      benefits: [
         '95% treatment success rate',
         '10x faster diagnosis',
         '80% cost reduction',
         'Personalized healthcare solutions'
-      ],
-      pricing: {
         starter: '$12,999/month',
         professional: '$39,999/month',
-        enterprise: 'Custom pricing'
-      }
-    },
     'space-technology': {
       title: 'Space Technology Services',
       subtitle: 'Interplanetary Communication & Exploration',
       icon: '🚀',
       color: 'from-orange-500 to-red-500',
       description: 'Pioneer the future of space technology with our advanced communication networks and exploration systems.',
-      features: [
         'Interplanetary Communication',
         'Satellite Constellation Management',
         'Space Resource Mining',
         'Planetary Exploration Systems',
         'Space-based Manufacturing',
         'Cosmic Weather Prediction'
-      ],
-      benefits: [
         'Global communication coverage',
         'Space resource utilization',
         'Planetary exploration capabilities',
         'Future space economy access'
-      ],
-      pricing: {
         starter: '$25,999/month',
         professional: '$79,999/month',
-        enterprise: 'Custom pricing'
-      }
-    },
     'cybersecurity': {
       title: 'Advanced Cybersecurity',
       subtitle: 'Quantum-Safe Security Solutions',
       icon: '🛡️',
       color: 'from-indigo-500 to-purple-500',
       description: 'Protect your digital assets with next-generation cybersecurity solutions powered by quantum-safe encryption.',
-      features: [
         'Quantum-Safe Encryption',
         'AI-Powered Threat Detection',
         'Zero-Trust Architecture',
         'Behavioral Analytics',
         'Automated Incident Response',
         'Blockchain Security'
-      ],
-      benefits: [
         '99.99% security guarantee',
         'Real-time threat prevention',
         'Automated security management',
         'Future-proof protection'
-      ],
-      pricing: {
         starter: '$5,999/month',
         professional: '$19,999/month',
-        enterprise: 'Custom pricing'
-      }
     }
   };
-
   const currentService = services[activeService as keyof typeof services];
-
   return (
     <>
       <Helmet>
@@ -173,7 +130,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         <meta name="description" content="Explore our comprehensive range of revolutionary technology services including AI solutions, quantum computing, neural interfaces, biotech AI, space technology, and advanced cybersecurity." />
         <meta name="keywords" content="AI services, quantum computing, neural interfaces, biotech AI, space technology, cybersecurity, technology solutions, 2027" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
@@ -198,7 +154,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
         {/* Service Navigation */}
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-wrap justify-center gap-4">
@@ -216,20 +171,15 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 {service.title}
               </button>
             ))}
-          </div>
-        </div>
-
         {/* Service Details */}
         <div className="container mx-auto px-4 py-20">
           <AnimatePresence mode="wait">
-            <motion.div
               key={activeService}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-gray-600/30"
-            >
               <div className="grid lg:grid-cols-2 gap-12">
                 {/* Left Side - Description */}
                 <div>
@@ -244,7 +194,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                   <p className="text-gray-300 mb-8 text-lg leading-relaxed">
                     {currentService.description}
                   </p>
-
                   <div className="mb-8">
                     <h3 className="text-2xl font-bold mb-4 text-blue-400">Key Benefits</h3>
                     <div className="space-y-3">
@@ -254,9 +203,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                           <span className="text-gray-300">{benefit}</span>
                         </div>
                       ))}
-                    </div>
-                  </div>
-
                   <div className={`bg-gradient-to-r ${currentService.color} p-6 rounded-lg`}>
                     <h3 className="text-2xl font-bold mb-4">Pricing Plans</h3>
                     <div className="grid grid-cols-3 gap-4">
@@ -264,20 +210,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         <div className="text-sm text-white/80 mb-1">Starter</div>
                         <div className="text-xl font-bold">{currentService.pricing.starter}</div>
                       </div>
-                      <div className="text-center">
                         <div className="text-sm text-white/80 mb-1">Professional</div>
                         <div className="text-xl font-bold">{currentService.pricing.professional}</div>
-                      </div>
-                      <div className="text-center">
                         <div className="text-sm text-white/80 mb-1">Enterprise</div>
                         <div className="text-xl font-bold">{currentService.pricing.enterprise}</div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-
                 {/* Right Side - Features */}
-                <div>
                   <h3 className="text-2xl font-bold mb-6">Service Features</h3>
                   <div className="space-y-4 mb-8">
                     {currentService.features.map((feature, index) => (
@@ -292,8 +230,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         <span className="text-gray-300">{feature}</span>
                       </motion.div>
                     ))}
-                  </div>
-
                   <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-lg p-6 border border-gray-600/30">
                     <h4 className="text-xl font-bold mb-4">Ready to Get Started?</h4>
                     <p className="text-gray-300 mb-6">
@@ -305,17 +241,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                       </button>
                       <button className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                         Schedule Demo
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </AnimatePresence>
-        </div>
-
         {/* Call to Action */}
-        <div className="container mx-auto px-4 py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -330,16 +257,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Contact Our Experts
-              </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Download Service Catalog
-              </button>
             </div>
           </motion.div>
-        </div>
       </div>
     </>
   );
 };
-
 export default ComprehensiveServicesShowcase2027;

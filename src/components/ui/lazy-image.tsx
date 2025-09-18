@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { cn } from '../../lib/utils';
 
-
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -12,7 +11,6 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 export function LazyImage({
   src,
   alt,
@@ -27,10 +25,8 @@ export function LazyImage({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     if (!src) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -45,25 +41,19 @@ export function LazyImage({
         threshold: 0.1
       }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [src]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     setHasError(true);
     setImageSrc(fallback);
     onError?.();
-  };
-
   return (
     <img
       ref={imgRef}
@@ -80,4 +70,3 @@ export function LazyImage({
       )}
     />
   );
-}

@@ -47,16 +47,11 @@ function ClientDashboardContent() {
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>
               <Link to="/post-job">
                 <PlusCircle className="h-4 w-4 mr-2"/> Post New Job
-              </Link>
-            </Button>
-          </div>
         </div>
 
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value)}>
@@ -73,27 +68,19 @@ function ClientDashboardContent() {
               </TabsContent>
               <TabsContent value="new" className="mt-0">
                 <JobsList filter="new" onSelectJob={handleJobSelect}/>
-              </TabsContent>
               <TabsContent value="in_progress" className="mt-0">
                 <JobsList filter="in_progress" onSelectJob={handleJobSelect}/>
-              </TabsContent>
               <TabsContent value="filled" className="mt-0">
                 <JobsList filter="filled" onSelectJob={handleJobSelect}/>
-              </TabsContent>
               <TabsContent value="closed" className="mt-0">
                 <JobsList filter="closed" onSelectJob={handleJobSelect}/>
-              </TabsContent>
             </Tabs>
-          </div>
           
-          <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
               <ActiveProjectsCard />
-              
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />
-              
               {/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
@@ -108,14 +95,10 @@ function ClientDashboardContent() {
                   </div>)}
               </div>
             </div>
-          </div>
-        </div>
       </main>
-      
     </>);
 }
 export default function ClientDashboard() {
     return (<ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>);
-}

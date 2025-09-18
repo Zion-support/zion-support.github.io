@@ -20,10 +20,7 @@ export default function Unauthorized() {
             </Link>
             <Link to="/login" className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">
               Login with Different Account
-            </Link>
-          </div>
         </div>
       </div>
-      
     </>);
 }

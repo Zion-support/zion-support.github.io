@@ -17,12 +17,11 @@ import {
   ArrowRight,
   Sparkles
 } from 'lucide-react';
-import { ADVANCED_AI_SERVICES_2026 } from '../data/advancedAIServices2026';
+import { ADVANCED_AI_SERVICES_2026 } from '@/data/advancedAIServices2026';
 
 const UltimateServicesShowcase2026: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles },
     { id: 'AI Consciousness', name: 'AI Consciousness', icon: Brain },
@@ -32,16 +31,13 @@ const UltimateServicesShowcase2026: React.FC = () => {
     { id: 'Holographic AI', name: 'Holographic AI', icon: Cpu },
     { id: 'Predictive AI', name: 'Predictive AI', icon: TrendingUp }
   ];
-
   const filteredServices = selectedCategory === 'all' 
     ? ADVANCED_AI_SERVICES_2026 
     : ADVANCED_AI_SERVICES_2026.filter(service => service.category === selectedCategory);
-
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || Sparkles;
   };
-
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
       'AI Consciousness': 'from-purple-600 to-pink-600',
@@ -52,8 +48,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
       'Predictive AI': 'from-emerald-600 to-green-600'
     };
     return colors[category] || 'from-gray-600 to-gray-700';
-  };
-
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -71,7 +65,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
               Discover the most advanced AI solutions that are transforming industries and reshaping the future of technology.
             </p>
           </motion.div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => {
@@ -93,7 +86,6 @@ const UltimateServicesShowcase2026: React.FC = () => {
             })}
           </div>
         </div>
-
         {/* Services Grid */}
         <motion.div
           layout
@@ -132,16 +124,12 @@ const UltimateServicesShowcase2026: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-semibold">
                           {service.category}
-                        </span>
                         {service.discount && (
                           <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                             {service.discount} OFF
                           </span>
                         )}
-                      </div>
-                    </div>
                   </div>
-
                   {/* Service Content */}
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
@@ -152,14 +140,9 @@ const UltimateServicesShowcase2026: React.FC = () => {
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-sm font-semibold text-gray-600">
                           {service.aiScore}
-                        </span>
-                      </div>
-                    </div>
-
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     {/* Features */}
                     <div className="mb-4">
                       <div className="flex flex-wrap gap-2">
@@ -169,18 +152,11 @@ const UltimateServicesShowcase2026: React.FC = () => {
                             className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium"
                           >
                             {feature}
-                          </span>
                         ))}
                         {service.features.length > 3 && (
                           <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">
                             +{service.features.length - 3} more
-                          </span>
-                        )}
-                      </div>
-                    </div>
-
                     {/* Benefits */}
-                    <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Benefits:</h4>
                       <ul className="space-y-1">
                         {service.benefits.slice(0, 2).map((benefit, idx) => (
@@ -188,34 +164,23 @@ const UltimateServicesShowcase2026: React.FC = () => {
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                             {benefit}
                           </li>
-                        ))}
                       </ul>
-                    </div>
-
                     {/* Price and Info */}
                     <div className="flex items-center justify-between mb-4">
                       <div>
                         <div className="flex items-center space-x-2">
                           <span className="text-2xl font-bold text-gray-900">
                             {service.price}
-                          </span>
                           <span className="text-sm text-gray-500">
                             {service.deliveryTime}
-                          </span>
                         </div>
                         <div className="flex items-center space-x-4 text-sm text-gray-500">
                           <div className="flex items-center space-x-1">
                             <Users className="w-4 h-4" />
                             <span>{service.reviews.count} reviews</span>
                           </div>
-                          <div className="flex items-center space-x-1">
                             <Clock className="w-4 h-4" />
                             <span>{service.deliveryTime}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
                     {/* CTA Button */}
                     <Link
                       to={`/services/${service.id}`}
@@ -224,18 +189,13 @@ const UltimateServicesShowcase2026: React.FC = () => {
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
-
                     {/* Urgency Badge */}
                     {service.urgency && (
                       <div className="mt-3 text-center">
                         <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
                           {service.urgency}
-                        </span>
-                      </div>
                     )}
-                  </div>
                 </div>
-
                 {/* Hover Effect Overlay */}
                 {hoveredService === service.id && (
                   <motion.div
@@ -248,40 +208,29 @@ const UltimateServicesShowcase2026: React.FC = () => {
             );
           })}
         </motion.div>
-
         {/* Bottom CTA */}
-        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-12"
-        >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl mb-6 text-blue-100">
               Join thousands of companies already using our revolutionary AI solutions
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-white text-blue-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
                 Get Started Today
               </Link>
-              <Link
                 to="/pages/ComprehensiveServices2026"
                 className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
                 View All Services
-              </Link>
             </div>
-          </div>
-        </motion.div>
       </div>
     </div>
   );
 };
-
 export default UltimateServicesShowcase2026;

@@ -12,5 +12,4 @@ const TechnologyInsights2025 = () => {
     </div>
   );
 };
-
 export default TechnologyInsights2025;

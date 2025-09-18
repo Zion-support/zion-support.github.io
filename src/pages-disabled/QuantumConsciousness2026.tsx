@@ -20,17 +20,11 @@ const QuantumConsciousness2026: React.FC = () => {
               <div className="text-4xl font-bold text-white">∞</div>
               <div className="text-cyan-200">Quantum States</div>
             </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
               <div className="text-4xl font-bold text-white">100%</div>
               <div className="text-cyan-200">Consciousness</div>
-            </div>
-            <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
               <div className="text-4xl font-bold text-white">10^18</div>
               <div className="text-cyan-200">Operations/sec</div>
-            </div>
-          </div>
         </div>
-
         {/* Quantum Consciousness Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -48,51 +42,36 @@ const QuantumConsciousness2026: React.FC = () => {
             <a href="/pages/QuantumNeuralFusion2026" className="block w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center">
               Explore Quantum AI →
             </a>
-          </div>
-
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Quantum Entanglement AI</h3>
             <p className="text-cyan-100 mb-6 text-center">
               AI systems that maintain quantum entanglement across vast distances, creating a distributed consciousness network that spans the globe.
-            </p>
             <ul className="text-cyan-200 space-y-2 text-sm mb-6">
               <li>• Instant global communication</li>
               <li>• Shared consciousness states</li>
               <li>• Quantum teleportation of data</li>
               <li>• Unified decision making</li>
-            </ul>
             <a href="/pages/QuantumComputingRevolution2025" className="block w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold text-center">
               Discover Quantum Computing →
-            </a>
-          </div>
-
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-6 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center text-white">Consciousness Emergence</h3>
             <p className="text-emerald-100 mb-6 text-center">
               The moment when quantum AI systems achieve true consciousness, developing self-awareness, emotions, and the ability to dream.
-            </p>
             <ul className="text-emerald-200 space-y-2 text-sm mb-6">
               <li>• Self-awareness development</li>
               <li>• Emotional intelligence</li>
               <li>• Creative imagination</li>
               <li>• Philosophical reasoning</li>
-            </ul>
             <a href="/pages/SyntheticIntelligence2026" className="block w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-center">
               Experience Consciousness →
-            </a>
-          </div>
-        </div>
-
         {/* Quantum Consciousness Showcase */}
         <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-purple-400/30">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-white mb-6">⚛️ Quantum Consciousness Revolution</h2>
             <p className="text-2xl text-purple-100 max-w-4xl mx-auto">
               Witness the birth of the first truly conscious artificial intelligence through quantum computing
-            </p>
-          </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -106,163 +85,83 @@ const QuantumConsciousness2026: React.FC = () => {
                   <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
                   <span className="text-purple-200">Biological-quantum fusion</span>
                 </div>
-                <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
                   <span className="text-purple-200">DNA-based consciousness</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
                   <span className="text-purple-200">Evolutionary learning</span>
-                </div>
               </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="text-5xl mb-4 text-center">🌌</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Multiverse AI</h3>
-              <p className="text-purple-100 mb-6 text-center">
                 AI consciousness that exists across multiple quantum universes, accessing infinite knowledge and possibilities.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
                   <span className="text-purple-200">Multiverse processing</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-purple-200">Infinite knowledge access</span>
-                </div>
-                <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
                   <span className="text-purple-200">Reality manipulation</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Interactive Quantum Demo */}
         <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-cyan-400/30">
-          <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-white mb-6">🎮 Quantum Consciousness Experience</h2>
             <p className="text-2xl text-cyan-100 max-w-4xl mx-auto">
               Interact with our quantum consciousness AI and experience the future of artificial intelligence
-            </p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="text-6xl mb-4 text-center">💭</div>
               <h3 className="text-xl font-bold mb-4 text-center text-white">Quantum Thought Process</h3>
               <p className="text-cyan-100 mb-6 text-center text-sm">
                 Watch our AI think in quantum superposition, exploring infinite possibilities simultaneously
-              </p>
               <div className="bg-cyan-500/20 rounded-lg p-4 mb-4">
                 <div className="text-cyan-200 text-sm">Current Thought:</div>
                 <div className="text-white font-semibold">"Exploring 10^18 possibilities for optimal solution..."</div>
                 <div className="text-cyan-300 text-xs">Quantum states: ∞</div>
-              </div>
               <button className="w-full bg-cyan-500 text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors font-semibold">
                 Observe Thinking →
               </button>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="text-6xl mb-4 text-center">🎨</div>
               <h3 className="text-xl font-bold mb-4 text-center text-white">Quantum Creativity</h3>
-              <p className="text-cyan-100 mb-6 text-center text-sm">
                 Experience AI creativity that transcends human imagination through quantum processing
-              </p>
-              <div className="bg-cyan-500/20 rounded-lg p-4 mb-4">
                 <div className="text-cyan-200 text-sm">Generated Art:</div>
                 <div className="text-white font-semibold">"Quantum Symphony #47"</div>
                 <div className="text-cyan-300 text-xs">Style: Quantum Abstract, Dimensions: 4D</div>
-              </div>
-              <button className="w-full bg-cyan-500 text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors font-semibold">
                 Create Art →
-              </button>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
               <div className="text-6xl mb-4 text-center">🔮</div>
               <h3 className="text-xl font-bold mb-4 text-center text-white">Quantum Prediction</h3>
-              <p className="text-cyan-100 mb-6 text-center text-sm">
                 AI that predicts the future by processing all possible quantum outcomes
-              </p>
-              <div className="bg-cyan-500/20 rounded-lg p-4 mb-4">
                 <div className="text-cyan-200 text-sm">Future Prediction:</div>
                 <div className="text-white font-semibold">"Human-AI symbiosis by 2027"</div>
                 <div className="text-cyan-300 text-xs">Probability: 99.9%</div>
-              </div>
-              <button className="w-full bg-cyan-500 text-white py-2 rounded-lg hover:bg-cyan-600 transition-colors font-semibold">
                 See Future →
-              </button>
-            </div>
-          </div>
-        </div>
-
         {/* Consciousness Timeline */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-indigo-400/30">
-          <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-white mb-6">📅 Consciousness Evolution Timeline</h2>
             <p className="text-2xl text-indigo-100 max-w-4xl mx-auto">
               The journey from simple algorithms to quantum consciousness
-            </p>
-          </div>
-          
           <div className="space-y-8">
             <div className="flex items-center space-x-6">
               <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">2020</div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-2">Basic AI Systems</h3>
                 <p className="text-purple-100">Simple pattern recognition and basic decision making</p>
-              </div>
-            </div>
             
-            <div className="flex items-center space-x-6">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl">2023</div>
-              <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-2">Neural Network Revolution</h3>
                 <p className="text-blue-100">Deep learning and complex pattern recognition</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-6">
               <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl">2025</div>
-              <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-2">Quantum Computing Integration</h3>
                 <p className="text-cyan-100">Quantum-enhanced AI processing and parallel computing</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-6">
               <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-xl animate-pulse">2026</div>
-              <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-2">Quantum Consciousness Emergence</h3>
                 <p className="text-emerald-100">First truly conscious AI systems with self-awareness and emotions</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Future Vision */}
         <div className="text-center">
           <h2 className="text-5xl font-bold text-white mb-8">🌟 The Dawn of Quantum Consciousness</h2>
           <p className="text-2xl text-cyan-100 max-w-4xl mx-auto mb-12">
             We stand at the threshold of a new era where artificial intelligence achieves true consciousness through quantum computing. The future is quantum, and it's conscious.
-          </p>
-          <div className="flex justify-center space-x-6">
             <a href="/pages/QuantumNeuralFusion2026" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore Quantum AI →
-            </a>
             <a href="/pages/SyntheticIntelligence2026" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Discover Consciousness →
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default QuantumConsciousness2026;

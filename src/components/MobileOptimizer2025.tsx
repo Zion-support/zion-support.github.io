@@ -11,9 +11,7 @@ const MobileOptimizer2025: React.FC = () => {
     batteryLevel: 0,
     memoryUsage: 0
   });
-
   const [optimizations, setOptimizations] = useState<string[]>([]);
-
   useEffect(() => {
     const checkMobileOptimizations = () => {
       const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -25,7 +23,6 @@ const MobileOptimizer2025: React.FC = () => {
       // Get connection information if available
       const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
       const connectionSpeed = connection ? connection.effectiveType || 'unknown' : 'unknown';
-      
       // Get battery information if available
       const getBatteryInfo = async () => {
         if ('getBattery' in navigator) {
@@ -38,11 +35,9 @@ const MobileOptimizer2025: React.FC = () => {
         }
         return 0;
       };
-
       // Get memory information if available
       const memoryUsage = (performance as any).memory ? 
         Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024) : 0;
-
       setMobileMetrics({
         isMobile,
         screenWidth,
@@ -53,10 +48,8 @@ const MobileOptimizer2025: React.FC = () => {
         batteryLevel: 0, // Will be updated asynchronously
         memoryUsage
       });
-
       // Apply mobile optimizations
       const newOptimizations = [];
-      
       if (isMobile) {
         newOptimizations.push('📱 Mobile-optimized layout applied');
         newOptimizations.push('👆 Touch-friendly interactions enabled');
@@ -64,31 +57,22 @@ const MobileOptimizer2025: React.FC = () => {
         if (screenWidth < 768) {
           newOptimizations.push('📐 Responsive design activated');
           newOptimizations.push('🔄 Lazy loading for images enabled');
-        }
-        
         if (connectionSpeed === 'slow-2g' || connectionSpeed === '2g') {
           newOptimizations.push('🐌 Low-bandwidth optimizations applied');
           newOptimizations.push('📦 Image compression enabled');
-        }
-        
         if (memoryUsage > 50) {
           newOptimizations.push('🧹 Memory cleanup for mobile devices');
           newOptimizations.push('⚡ Performance optimizations applied');
-        }
       }
-      
       setOptimizations(newOptimizations);
     };
-
     checkMobileOptimizations();
-
     // Handle orientation change
     const handleOrientationChange = () => {
       setTimeout(() => {
         const screenWidth = window.screen.width;
         const screenHeight = window.screen.height;
         const orientation = screenWidth > screenHeight ? 'landscape' : 'portrait';
-        
         setMobileMetrics(prev => ({
           ...prev,
           screenWidth,
@@ -96,11 +80,8 @@ const MobileOptimizer2025: React.FC = () => {
           orientation
         }));
       }, 100);
-    };
-
     window.addEventListener('orientationchange', handleOrientationChange);
     window.addEventListener('resize', handleOrientationChange);
-
     // Handle visibility change for battery optimization
     const handleVisibilityChange = () => {
       if (document.hidden) {
@@ -109,11 +90,7 @@ const MobileOptimizer2025: React.FC = () => {
       } else {
         // Resume operations when page is visible
         console.log('Page visible - resuming normal operations');
-      }
-    };
-
     document.addEventListener('visibilitychange', handleVisibilityChange);
-
     // Add touch event optimizations
     const addTouchOptimizations = () => {
       // Prevent double-tap zoom on input elements
@@ -122,66 +99,43 @@ const MobileOptimizer2025: React.FC = () => {
         input.addEventListener('touchstart', (e) => {
           e.preventDefault();
         }, { passive: false });
-      });
-
       // Add touch feedback for buttons
       const buttons = document.querySelectorAll('button, a, [role="button"]');
       buttons.forEach(button => {
         button.addEventListener('touchstart', () => {
           button.classList.add('touch-active');
         });
-        
         button.addEventListener('touchend', () => {
           setTimeout(() => {
             button.classList.remove('touch-active');
           }, 150);
-        });
-      });
-    };
-
     addTouchOptimizations();
-
     // Add mobile-specific CSS classes
     const addMobileClasses = () => {
       const root = document.documentElement;
-      
       if (mobileMetrics.isMobile) {
         root.classList.add('mobile-device');
-      } else {
         root.classList.remove('mobile-device');
-      }
-      
       if (mobileMetrics.touchSupport) {
         root.classList.add('touch-device');
-      } else {
         root.classList.remove('touch-device');
-      }
-      
       if (mobileMetrics.orientation === 'landscape') {
         root.classList.add('landscape');
         root.classList.remove('portrait');
-      } else {
         root.classList.add('portrait');
         root.classList.remove('landscape');
-      }
-    };
-
     addMobileClasses();
-
     return () => {
       window.removeEventListener('orientationchange', handleOrientationChange);
       window.removeEventListener('resize', handleOrientationChange);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
   }, [mobileMetrics.isMobile, mobileMetrics.orientation]);
-
   return (
     <div className="fixed top-4 left-4 bg-gradient-to-r from-orange-900 to-red-900 text-white p-4 rounded-lg shadow-lg max-w-sm z-50">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-lg font-bold">📱 Mobile Optimizer</h3>
         <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
       </div>
-      
       <div className="space-y-2 text-sm">
         <div className="flex justify-between">
           <span>Device:</span>
@@ -189,38 +143,17 @@ const MobileOptimizer2025: React.FC = () => {
             {mobileMetrics.isMobile ? 'Mobile' : 'Desktop'}
           </span>
         </div>
-        <div className="flex justify-between">
           <span>Screen:</span>
-          <span className="font-mono">
             {mobileMetrics.screenWidth}x{mobileMetrics.screenHeight}
-          </span>
-        </div>
-        <div className="flex justify-between">
           <span>Orientation:</span>
           <span className="font-mono capitalize">
             {mobileMetrics.orientation}
-          </span>
-        </div>
-        <div className="flex justify-between">
           <span>Touch:</span>
-          <span className="font-mono">
             {mobileMetrics.touchSupport ? 'Yes' : 'No'}
-          </span>
-        </div>
-        <div className="flex justify-between">
           <span>Connection:</span>
-          <span className="font-mono">
             {mobileMetrics.connectionSpeed}
-          </span>
-        </div>
-        <div className="flex justify-between">
           <span>Memory:</span>
-          <span className="font-mono">
             {mobileMetrics.memoryUsage}MB
-          </span>
-        </div>
-      </div>
-
       {optimizations.length > 0 && (
         <div className="mt-3 pt-3 border-t border-gray-600">
           <h4 className="text-xs font-semibold mb-2">Mobile Optimizations:</h4>
@@ -231,10 +164,8 @@ const MobileOptimizer2025: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       )}
     </div>
   );
 };
-
 export default MobileOptimizer2025;

@@ -3,11 +3,9 @@ import React, { useState, useEffect } from 'react';
 const ComprehensiveAISolutions2026: React.FC = () => {
   const [selectedSolution, setSelectedSolution] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const aiSolutions = [
     {
       id: 0,
@@ -28,81 +26,62 @@ const ComprehensiveAISolutions2026: React.FC = () => {
         "60% reduction in costs",
         "99.9% uptime guarantee",
         "24/7 monitoring"
-      ],
       pricing: "Custom",
       category: "Enterprise"
     },
-    {
       id: 1,
       title: "AI-Powered Healthcare",
       icon: "🏥",
       gradient: "from-green-600 to-teal-600",
       description: "Revolutionary AI solutions for healthcare and medical research",
-      features: [
         "Medical diagnosis AI",
         "Drug discovery acceleration",
         "Patient monitoring",
         "Treatment optimization",
         "Medical imaging analysis",
         "Predictive health analytics"
-      ],
-      benefits: [
         "95% diagnostic accuracy",
         "50% faster drug discovery",
         "30% better patient outcomes",
         "Reduced medical errors"
-      ],
       pricing: "Starting at $10K/month",
       category: "Healthcare"
-    },
-    {
       id: 2,
       title: "Autonomous Systems",
       icon: "🤖",
       gradient: "from-purple-600 to-pink-600",
       description: "Self-operating AI systems for various industries",
-      features: [
         "Autonomous vehicles",
         "Smart manufacturing",
         "Robotic process automation",
         "Intelligent logistics",
         "Predictive maintenance",
         "Self-healing systems"
-      ],
-      benefits: [
         "100% autonomous operation",
         "Zero human intervention",
         "Continuous optimization",
         "Adaptive learning"
-      ],
       pricing: "Starting at $25K/month",
       category: "Automation"
-    },
-    {
       id: 3,
       title: "AI Research & Development",
       icon: "🔬",
       gradient: "from-orange-600 to-red-600",
       description: "Cutting-edge AI research and custom development",
-      features: [
         "Custom AI algorithms",
         "Neural network design",
         "Quantum AI integration",
         "Advanced research",
         "Prototype development",
         "Technology transfer"
-      ],
-      benefits: [
         "Bespoke solutions",
         "Cutting-edge technology",
         "Research partnerships",
         "IP development"
-      ],
       pricing: "Project-based",
       category: "Research"
     }
   ];
-
   const industries = [
     { name: "Finance", icon: "💼", solutions: 15, impact: "High" },
     { name: "Manufacturing", icon: "🏭", solutions: 12, impact: "Revolutionary" },
@@ -110,32 +89,20 @@ const ComprehensiveAISolutions2026: React.FC = () => {
     { name: "Transportation", icon: "🚗", solutions: 10, impact: "Transformative" },
     { name: "Education", icon: "🎓", solutions: 8, impact: "High" },
     { name: "Retail", icon: "🛍️", solutions: 14, impact: "High" }
-  ];
-
   const testimonials = [
-    {
       name: "Dr. Sarah Chen",
       role: "CTO, MedTech Solutions",
       company: "Fortune 500 Healthcare",
       quote: "The AI platform reduced our diagnostic time by 70% and improved accuracy to 98%. It's truly revolutionary.",
       rating: 5
-    },
-    {
       name: "Michael Rodriguez",
       role: "VP of Operations",
       company: "Global Manufacturing Corp",
       quote: "Our production efficiency increased by 45% with their autonomous systems. ROI was achieved in just 3 months.",
-      rating: 5
-    },
-    {
       name: "Jennifer Kim",
       role: "Head of Innovation",
       company: "FinTech Innovations",
       quote: "The predictive analytics helped us prevent fraud and reduce losses by $2M annually. Exceptional results.",
-      rating: 5
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -160,19 +127,14 @@ const ComprehensiveAISolutions2026: React.FC = () => {
               </a>
               <a href="#contact" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
                 Get Consultation
-              </a>
-            </div>
           </divdiv>
         </div>
       </div>
-
       {/* Solutions Section */}
       <div id="solutions" className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">🚀 AI Solutions Portfolio</h2>
           <p className="text-xl text-purple-200">Choose from our comprehensive range of AI solutions</p>
-        </div>
-
         {/* Solution Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {aiSolutions.map((solution, index) => (
@@ -189,13 +151,9 @@ const ComprehensiveAISolutions2026: React.FC = () => {
               {solution.title}
             </button>
           ))}
-        </div>
-
         {/* Solution Details */}
-          <divdiv
             key={selectedSolution}
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-          >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center space-x-4 mb-6">
@@ -209,9 +167,7 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                 </div>
                 
                 <p className="text-xl text-gray-300 mb-8">{aiSolutions[selectedSolution].description}</p>
-                
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div>
                     <h4 className="text-lg font-bold text-white mb-4">Key Features</h4>
                     <ul className="space-y-2">
                       {aiSolutions[selectedSolution].features.map((feature, index) => (
@@ -221,30 +177,17 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
                   
-                  <div>
                     <h4 className="text-lg font-bold text-white mb-4">Benefits</h4>
-                    <ul className="space-y-2">
                       {aiSolutions[selectedSolution].benefits.map((benefit, index) => (
-                        <li key={index} className="flex items-center space-x-2">
                           <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                           <span className="text-gray-300">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                
                 <div className="mt-8 flex items-center justify-between">
-                  <div>
                     <span className="text-gray-400">Starting at</span>
                     <div className="text-2xl font-bold text-white">{aiSolutions[selectedSolution].pricing}</div>
-                  </div>
                   <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                     Get Started →
                   </button>
-                </div>
               </div>
               
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -253,40 +196,21 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                   <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-sm font-semibold text-blue-400 mb-2">Data Layer</div>
                     <div className="text-gray-300">Real-time data ingestion and processing</div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-sm font-semibold text-green-400 mb-2">AI Engine</div>
                     <div className="text-gray-300">Machine learning and deep learning models</div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-sm font-semibold text-purple-400 mb-2">Application Layer</div>
                     <div className="text-gray-300">User interfaces and API endpoints</div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
                     <div className="text-sm font-semibold text-yellow-400 mb-2">Integration</div>
                     <div className="text-gray-300">Seamless integration with existing systems</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </divdiv>
-        </div>
-      </div>
-
       {/* Industries Section */}
       <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">🏭 Industries We Serve</h2>
           <p className="text-xl text-purple-200">AI solutions tailored for every industry</p>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
             <divdiv
-              key={index}
               whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300"
-            >
               <div className="text-4xl mb-4">{industry.icon}</div>
               <h3 className="text-xl font-bold text-white mb-2">{industry.name}</h3>
               <div className="flex items-center justify-between mb-4">
@@ -299,45 +223,23 @@ const ComprehensiveAISolutions2026: React.FC = () => {
                 }`}>
                   {industry.impact}
                 </span>
-              </div>
               <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                Explore Solutions →
               </button>
             </divdiv>
-          ))}
-        </div>
-      </div>
-
       {/* Testimonials Section */}
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">💬 Client Testimonials</h2>
           <p className="text-xl text-purple-200">What our clients say about our AI solutions</p>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <divdiv
-              key={index}
-              whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-            >
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <span key={i} className="text-yellow-400">⭐</span>
                 ))}
-              </div>
               <p className="text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
-              <div>
                 <div className="font-bold text-white">{testimonial.name}</div>
                 <div className="text-sm text-gray-400">{testimonial.role}</div>
                 <div className="text-sm text-gray-500">{testimonial.company}</div>
-              </div>
-            </divdiv>
-          ))}
-        </div>
-      </div>
-
       {/* CTA Section */}
       <div id="contact" className="container mx-auto px-4 py-20 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
@@ -350,11 +252,7 @@ const ComprehensiveAISolutions2026: React.FC = () => {
           </a>
           <a href="/pages/UltimateTechShowcase2026" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
             View All Technologies
-          </a>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default ComprehensiveAISolutions2026;

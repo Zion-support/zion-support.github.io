@@ -1,13 +1,9 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-import { VideoCallRoom } from '../components/video/VideoCallRoom';
-=======
-import { SEO } from '../components/SEO.jsx';
+import { SEO } from '@/components/SEO';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
-import { Button } from '../components/ui/button';
+import SEO from '@/components/SEO.jsx';
+import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 export default function VideoCall() {
     // useParams is typed as `any` in this environment due to missing type
@@ -41,10 +37,7 @@ export default function VideoCall() {
             description: "You have left the meeting"
         });
         // Navigate back after a short delay
-        setTimeout(() => {
             navigate(-1);
-        }, 1500);
-    };
     const simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
@@ -56,8 +49,6 @@ export default function VideoCall() {
         if (!participants.find(p => p.id === randomUser.id)) {
             setParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`);
-        }
-    };
     return (<>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
       
@@ -79,6 +70,5 @@ export default function VideoCall() {
             </div>
           </div>)}
       </main>
-      
     </>);
 }

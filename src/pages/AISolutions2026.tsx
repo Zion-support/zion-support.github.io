@@ -22,16 +22,12 @@ const AISolutions2026: React.FC = () => {
             </a>
             <a href="#pricing" className="border border-purple-400 text-purple-300 px-8 py-3 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors">
               View Pricing
-            </a>
-          </div>
         </div>
-
         {/* Revolutionary Features */}
         <section id="features" className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Revolutionary AI Features</h2>
             <p className="text-xl text-purple-200">Experience the future of artificial intelligence</p>
-          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -52,54 +48,35 @@ const AISolutions2026: React.FC = () => {
                 </span>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🔮</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Predictive Intelligence</h3>
               <p className="text-cyan-100 mb-6 text-center">
                 Advanced forecasting AI that predicts market trends, customer behavior, and business outcomes with 99.7% accuracy
-              </p>
               <ul className="text-cyan-200 space-y-2 mb-6 text-sm">
                 <li>• Market trend prediction</li>
                 <li>• Customer behavior analysis</li>
                 <li>• Risk assessment</li>
                 <li>• Opportunity identification</li>
-              </ul>
-              <div className="text-center">
                 <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold">
                   COMING Q2 2026
-                </span>
-              </div>
-            </div>
-
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
               <div className="text-6xl mb-4 text-center">🤖</div>
               <h3 className="text-2xl font-bold mb-4 text-center text-white">Autonomous Agents</h3>
               <p className="text-emerald-100 mb-6 text-center">
                 Self-managing AI agents that handle complex business processes without human intervention
-              </p>
               <ul className="text-emerald-200 space-y-2 mb-6 text-sm">
                 <li>• End-to-end process automation</li>
                 <li>• Dynamic problem solving</li>
                 <li>• Continuous learning</li>
                 <li>• Multi-agent collaboration</li>
-              </ul>
-              <div className="text-center">
-                <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold">
-                  AVAILABLE NOW
-                </span>
-              </div>
-            </div>
-          </div>
         </section>
-
         {/* Advanced Capabilities */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-12 backdrop-blur-sm border border-indigo-400/30">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">⚡ Advanced AI Capabilities</h2>
               <p className="text-xl text-indigo-200">Next-generation AI technologies that redefine what's possible</p>
-            </div>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
@@ -110,85 +87,43 @@ const AISolutions2026: React.FC = () => {
                     <p className="text-indigo-200">Revolutionary neural networks with 1000x processing power and consciousness-level understanding</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">🌐</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Quantum-Enhanced Learning</h3>
                     <p className="text-indigo-200">Quantum computing integration for exponential learning speed and pattern recognition</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">🎯</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Precision Decision Engine</h3>
                     <p className="text-indigo-200">AI that makes decisions with 99.9% accuracy using advanced reasoning and context analysis</p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">🔄</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Real-time Adaptation</h3>
                     <p className="text-indigo-200">AI systems that adapt and evolve in real-time based on changing conditions and requirements</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">🌍</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Global Intelligence Network</h3>
                     <p className="text-indigo-200">Connected AI ecosystem that shares knowledge and insights across all deployed systems</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
                   <div className="text-3xl">⚡</div>
-                  <div>
                     <h3 className="text-xl font-bold text-white mb-2">Lightning-Fast Processing</h3>
                     <p className="text-indigo-200">Sub-millisecond response times with parallel processing across quantum and classical systems</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Success Metrics */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">📊 Proven Results</h2>
             <p className="text-xl text-purple-200">Real-world impact of our AI solutions</p>
-          </div>
-          
           <div className="grid md:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-green-400/30">
               <div className="text-4xl font-bold text-white mb-2">500%</div>
               <div className="text-green-200">Productivity Increase</div>
-            </div>
             <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-blue-400/30">
               <div className="text-4xl font-bold text-white mb-2">99.9%</div>
               <div className="text-blue-200">Accuracy Rate</div>
-            </div>
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-purple-400/30">
               <div className="text-4xl font-bold text-white mb-2">$50M+</div>
               <div className="text-purple-200">Cost Savings</div>
-            </div>
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center border border-orange-400/30">
               <div className="text-4xl font-bold text-white mb-2">24/7</div>
               <div className="text-orange-200">Autonomous Operation</div>
-            </div>
-          </div>
-        </section>
-
         {/* Implementation Timeline */}
         <section id="pricing" className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">🚀 Implementation Timeline</h2>
             <p className="text-xl text-purple-200">Get started with AI transformation in 30 days</p>
-          </div>
-          
           <div className="bg-gradient-to-r from-purple-900/50 to-indigo-900/50 rounded-2xl p-12 backdrop-blur-sm border border-purple-400/30">
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
                 <div className="text-4xl mb-4">📋</div>
                 <h3 className="text-xl font-bold text-white mb-4">Week 1-2: Assessment</h3>
                 <ul className="text-purple-200 space-y-2 text-sm">
@@ -197,31 +132,18 @@ const AISolutions2026: React.FC = () => {
                   <li>• Custom solution design</li>
                   <li>• Integration planning</li>
                 </ul>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl mb-4">⚙️</div>
                 <h3 className="text-xl font-bold text-white mb-4">Week 3-4: Implementation</h3>
-                <ul className="text-purple-200 space-y-2 text-sm">
                   <li>• AI system deployment</li>
                   <li>• Data integration</li>
                   <li>• Custom training</li>
                   <li>• Performance optimization</li>
-                </ul>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-bold text-white mb-4">Week 5+: Optimization</h3>
-                <ul className="text-purple-200 space-y-2 text-sm">
                   <li>• Continuous monitoring</li>
                   <li>• Performance tuning</li>
                   <li>• Feature expansion</li>
                   <li>• ROI optimization</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
@@ -235,13 +157,8 @@ const AISolutions2026: React.FC = () => {
               </a>
               <a href="/pages/InnovationShowcase2026" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-colors">
                 View Case Studies
-              </a>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
 };
-
 export default AISolutions2026;

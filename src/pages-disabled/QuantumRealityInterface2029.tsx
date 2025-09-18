@@ -21,13 +21,9 @@ const QuantumRealityInterface2029: React.FC = () => {
             </span>
             <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold">
               🧠 Neural Direct
-            </span>
             <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-semibold">
               🌌 Reality Manipulation
-            </span>
-          </div>
         </div>
-
         {/* Revolutionary Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-cyan-400 transition-all duration-300">
@@ -39,31 +35,18 @@ const QuantumRealityInterface2029: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold text-center">
               Experience Now →
             </div>
-          </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300">
             <div className="text-4xl mb-4">🧬</div>
             <h3 className="text-2xl font-bold mb-4">Neural Quantum Fusion</h3>
-            <p className="text-gray-300 mb-6">
               Advanced neural-quantum hybrid processing that allows human consciousness to directly interface with quantum computational matrices.
-            </p>
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold text-center">
               Explore Interface →
-            </div>
-          </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-green-400 transition-all duration-300">
             <div className="text-4xl mb-4">🌌</div>
             <h3 className="text-2xl font-bold mb-4">Reality Manipulation Engine</h3>
-            <p className="text-gray-300 mb-6">
               Quantum field generators that enable conscious manipulation of physical reality through controlled quantum state superposition.
-            </p>
             <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold text-center">
               Create Reality →
-            </div>
-          </div>
-        </div>
-
         {/* Technical Specifications */}
         <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10 mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
@@ -77,49 +60,20 @@ const QuantumRealityInterface2029: React.FC = () => {
                   <span className="w-2 h-2 bg-cyan-400 rounded-full mr-4"></span>
                   1,000,000+ quantum qubits processing capacity
                 </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-4"></span>
                   Quantum entanglement with 99.99% fidelity
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-4"></span>
                   Sub-atomic precision reality manipulation
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-4"></span>
                   Consciousness-quantum field synchronization
-                </li>
               </ul>
-            </div>
-            <div>
               <h3 className="text-2xl font-bold mb-6 text-purple-400">Neural Integration</h3>
-              <ul className="space-y-4 text-gray-300">
-                <li className="flex items-center">
                   <span className="w-2 h-2 bg-purple-400 rounded-full mr-4"></span>
                   Direct brain-quantum interface with zero latency
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-4"></span>
                   Enhanced cognitive processing 1000x baseline
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-4"></span>
                   Quantum-enhanced memory and learning
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-4"></span>
                   Consciousness backup and restoration
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Applications */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
             Revolutionary Applications
-          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl p-6 border border-blue-400/30">
               <div className="text-3xl mb-4">🏥</div>
@@ -127,52 +81,33 @@ const QuantumRealityInterface2029: React.FC = () => {
               <p className="text-gray-300 text-sm">
                 Instant healing through quantum field manipulation and cellular regeneration.
               </p>
-            </div>
             <div className="bg-gradient-to-br from-green-500/20 to-cyan-500/20 rounded-xl p-6 border border-green-400/30">
               <div className="text-3xl mb-4">🌍</div>
               <h4 className="text-xl font-bold mb-3">Environmental Control</h4>
-              <p className="text-gray-300 text-sm">
                 Climate manipulation and environmental restoration through quantum field engineering.
-              </p>
-            </div>
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-400/30">
               <div className="text-3xl mb-4">🚀</div>
               <h4 className="text-xl font-bold mb-3">Space Exploration</h4>
-              <p className="text-gray-300 text-sm">
                 Instantaneous space travel through quantum tunneling and reality manipulation.
-              </p>
-            </div>
             <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-400/30">
               <div className="text-3xl mb-4">🧠</div>
               <h4 className="text-xl font-bold mb-3">Consciousness Evolution</h4>
-              <p className="text-gray-300 text-sm">
                 Enhanced human consciousness and cognitive capabilities beyond current limitations.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-3xl p-12 border border-white/20">
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Ready to Transcend Reality?
-          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join the quantum consciousness revolution and experience reality manipulation like never before. 
             The future of human potential awaits.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all duration-300 hover:scale-105">
               Begin Quantum Journey →
             </button>
             <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default QuantumRealityInterface2029;

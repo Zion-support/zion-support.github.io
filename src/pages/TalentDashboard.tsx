@@ -43,16 +43,11 @@ function TalentDashboardContent() {
             <Button asChild>
               <Link href="/dashboard/talent/applications">
                 <Inbox className="h-4 w-4 mr-2"/> Application Tracker
-              </Link>
-            </Button>
-          </div>
         </div>
 
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div>
             <Card className="mb-8">
               <CardHeader className="pb-2">
                 <div className="flex items-center justify-between">
@@ -76,14 +71,9 @@ function TalentDashboardContent() {
                     <div className="flex items-center gap-1 text-lg font-bold">
                       <Star className="h-4 w-4 text-yellow-500"/>
                       4.9
-                    </div>
                     <span className="text-xs text-muted-foreground">Rating</span>
-                  </div>
-                  <div className="flex flex-col items-center p-3 bg-muted/30 rounded-md">
                     <div className="text-lg font-bold">18</div>
                     <span className="text-xs text-muted-foreground">Projects</span>
-                  </div>
-                </div>
                 
                 <div className="mt-4">
                   <Button className="w-full" asChild>
@@ -92,7 +82,6 @@ function TalentDashboardContent() {
                       Messages
                     </Link>
                   </Button>
-                </div>
               </CardContent>
             </Card>
             
@@ -101,38 +90,23 @@ function TalentDashboardContent() {
             {showAdvanced && (<div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>)}
-            
             {/* Upcoming Interviews Card */}
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
-            
             <Card className="mt-8">
               <CardHeader>
                 <CardTitle className="text-lg">Quick Stats</CardTitle>
-              </CardHeader>
-              <CardContent>
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Profile views</span>
                     <span className="font-medium">152</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-muted-foreground">Job matches</span>
                     <span className="font-medium">7</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-muted-foreground">Applications</span>
                     <span className="font-medium">3</span>
-                  </div>
-                  <div className="flex justify-between">
                     <span className="text-muted-foreground">Profile completion</span>
                     <span className="font-medium">85%</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
           
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
@@ -148,18 +122,12 @@ function TalentDashboardContent() {
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
               </TabsContent>
-              
               <TabsContent value="applications" className="mt-0">
                 <MyApplications />
                 <div className="mt-4 flex justify-center">
                   <Button variant="outline" asChild>
                     <Link href="/dashboard/talent/applications">
                       <Inbox className="h-4 w-4 mr-2"/> View Full Application Tracker
-                    </Link>
-                  </Button>
-                </div>
-              </TabsContent>
-              
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
@@ -171,16 +139,11 @@ function TalentDashboardContent() {
                     </Button>
                   </CardContent>
                 </Card>
-              </TabsContent>
             </Tabs>
-          </div>
-        </div>
       </main>
-      
     </>);
 }
 export default function TalentDashboard() {
     return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>);
-}

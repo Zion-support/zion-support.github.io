@@ -13,10 +13,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
 
 const function ComprehensiveServicesShowcase2030() {: React.FC = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">function ComprehensiveServicesShowcase2030() {</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
 import React, { useState, useEffect } from 'react';
@@ -141,15 +138,13 @@ import {
   MapPin as MapPinIcon2,
   Infinity as InfinityIcon2
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
-
+import { SEO } from '@/components/SEO';
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '@/data/comprehensiveInnovativeServices2030';
 export default function ComprehensiveServicesShowcase2030() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState('grid');
-
   // Enhanced categories with new services
   const categories = [
     { id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
@@ -178,7 +173,6 @@ export default function ComprehensiveServicesShowcase2030() {
     { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
     { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
   ];
-
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -187,7 +181,6 @@ export default function ComprehensiveServicesShowcase2030() {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
@@ -199,10 +192,7 @@ export default function ComprehensiveServicesShowcase2030() {
       case 'name':
         return a.title.localeCompare(b.title);
       default:
-        return b.rating - a.rating;
     }
-  });
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Business Intelligence':
@@ -244,7 +234,6 @@ export default function ComprehensiveServicesShowcase2030() {
       case 'AI & Metaverse':
         return <Globe2 className="w-6 h-6" />;
       case 'AI & Space Tech':
-        return <Rocket className="w-6 h-6" />;
       case 'AI & Operations':
         return <Factory className="w-6 h-6" />;
       case 'AI & Development':
@@ -253,11 +242,8 @@ export default function ComprehensiveServicesShowcase2030() {
         return <BookOpen className="w-6 h-6" />;
       case 'AI & Entertainment':
         return <Palette className="w-6 h-6" />;
-      default:
         return <Star className="w-6 h-6" />;
-    }
   };
-
   const getServiceCard = (service: any, index: number) => (
     <div
       key={service.id}
@@ -273,55 +259,37 @@ export default function ComprehensiveServicesShowcase2030() {
             <span className="text-sm text-gray-400 bg-gray-700 px-3 py-1 rounded-full">
               {service.subcategory}
             </span>
-          </div>
         </div>
         <div className="flex items-center space-x-2">
           <div className="flex items-center space-x-1">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
             <span className="text-white font-bold">{service.rating}</span>
-          </div>
           <span className="text-gray-400 text-sm">({service.reviewCount})</span>
-        </div>
       </div>
-
       {/* Service Title and Description */}
       <h3 className="text-2xl font-bold text-white mb-4 leading-tight">{service.title}</h3>
       <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
       {/* Key Metrics */}
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-gray-700 rounded-lg p-3">
           <div className="flex items-center justify-between mb-2">
             <span className="text-gray-400 text-sm">Price</span>
             <span className="text-white font-bold text-lg">{service.currency}{service.price.toLocaleString()}</span>
-          </div>
           <div className="text-blue-400 text-sm">{service.marketPrice}</div>
-        </div>
-        <div className="bg-gray-700 rounded-lg p-3">
-          <div className="flex items-center justify-between mb-2">
             <span className="text-gray-400 text-sm">ROI</span>
             <span className="text-green-400 font-bold text-lg">{service.roi}</span>
-          </div>
           <div className="text-yellow-400 text-sm">{service.setupTime}</div>
-        </div>
-      </div>
-
       {/* AI Score */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-gray-400 text-sm font-semibold">AI Intelligence Score</span>
           <span className="text-white font-bold">{service.aiScore}/100</span>
-        </div>
         <div className="w-full bg-gray-700 rounded-full h-3">
           <div 
             className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500"
             style={{ width: `${service.aiScore}%` }}
           ></div>
-        </div>
-      </div>
-
       {/* Key Features */}
-      <div className="mb-6">
         <p className="text-gray-400 text-sm mb-3 font-semibold">Key Features:</p>
         <div className="flex flex-wrap gap-2">
           {service.tags.slice(0, 4).map((tag: string, tagIndex: number) => (
@@ -330,11 +298,7 @@ export default function ComprehensiveServicesShowcase2030() {
               className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs rounded-full font-medium"
             >
               {tag}
-            </span>
           ))}
-        </div>
-      </div>
-
       {/* Action Buttons */}
       <div className="space-y-3">
         <Link
@@ -349,22 +313,15 @@ export default function ComprehensiveServicesShowcase2030() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-full border-2 border-blue-500 text-blue-400 font-semibold py-3 px-4 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center"
-        >
           <span>Visit Service Page</span>
           <Globe className="w-4 h-4 ml-2" />
         </a>
-        <a
           href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
           className="w-full border-2 border-purple-500 text-purple-400 font-semibold py-3 px-4 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center"
-        >
           <span>Get Quote</span>
           <Mail className="w-4 h-4 ml-2" />
-        </a>
-      </div>
     </div>
   );
-
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Services Showcase 2030 - Zion Tech Group"
@@ -400,8 +357,6 @@ export default function ComprehensiveServicesShowcase2030() {
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-10 py-5 border-3 border-blue-500 text-blue-400 font-bold text-xl rounded-2xl hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-              >
-                <Phone className="w-6 h-6 mr-3" />
                 Call Now: +1 302 464 0950
               </a>
             </div>
@@ -412,23 +367,12 @@ export default function ComprehensiveServicesShowcase2030() {
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length}+</div>
                 <div className="text-gray-300">Services Available</div>
               </div>
-              <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">500%+</div>
                 <div className="text-gray-300">Average ROI</div>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
                 <div className="text-gray-300">Support Available</div>
-              </div>
-              <div className="text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Client Satisfaction</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-900 to-purple-900 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -436,51 +380,33 @@ export default function ComprehensiveServicesShowcase2030() {
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
                 <Phone className="w-8 h-8 text-white" />
-              </div>
               <p className="text-white font-bold text-lg mb-2">Call Us</p>
               <a href="tel:+13024640950" className="text-blue-300 hover:text-white transition-colors text-lg">
                 +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mb-4">
                 <Mail className="w-8 h-8 text-white" />
-              </div>
               <p className="text-white font-bold text-lg mb-2">Email Us</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-300 hover:text-white transition-colors text-lg">
                 kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mb-4">
                 <MapPin className="w-8 h-8 text-white" />
-              </div>
               <p className="text-white font-bold text-lg mb-2">Visit Us</p>
               <p className="text-pink-300 text-lg">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Services Overview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div
           className="text-center mb-20"
-        >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Revolutionary Service Portfolio
-            </span>
           </h2>
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Our cutting-edge services span across AI, blockchain, quantum computing, and sustainable technology. 
             Each solution is designed to deliver measurable business value and competitive advantage in the digital age.
           </p>
-        </div>
-
         {/* Category Filter */}
         <div className="mb-16">
           <div className="flex flex-wrap justify-center gap-4">
@@ -493,14 +419,10 @@ export default function ComprehensiveServicesShowcase2030() {
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border-2 border-gray-700'
                 }`}
-              >
                 <span className="mr-3 text-2xl">{category.icon}</span>
                 {category.name} ({category.count})
               </button>
             ))}
-          </div>
-        </div>
-
         {/* Search, Sort, and View Controls */}
         <div className="flex flex-col md:flex-row gap-6 mb-12 justify-center items-center">
           <div className="relative">
@@ -512,12 +434,10 @@ export default function ComprehensiveServicesShowcase2030() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-12 pr-6 py-3 bg-gray-800 border-2 border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-96 text-lg"
             />
-          </div>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
             className="px-6 py-3 bg-gray-800 border-2 border-gray-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
-          >
             <option value="rating">Sort by Rating</option>
             <option value="price">Sort by Price</option>
             <option value="reviews">Sort by Reviews</option>
@@ -529,30 +449,18 @@ export default function ComprehensiveServicesShowcase2030() {
               className={`p-3 rounded-lg transition-all duration-300 ${
                 viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-white'
               }`}
-            >
               <BarChart3 className="w-6 h-6" />
             </button>
-            <button
               onClick={() => setViewMode('list')}
-              className={`p-3 rounded-lg transition-all duration-300 ${
                 viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-gray-400 hover:text-white'
-              }`}
-            >
               <FileText className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-
         {/* Services Grid/List */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
               {sortedServices.map((service, index) => getServiceCard(service, index))}
-            </div>
-          </div>
         ) : (
           <div className="space-y-6">
-            <div>
               {sortedServices.map((service, index) => (
                 <div
                   key={service.id}
@@ -569,7 +477,6 @@ export default function ComprehensiveServicesShowcase2030() {
                           <span className="text-gray-400 bg-gray-700 px-4 py-2 rounded-full text-lg">
                             {service.subcategory}
                           </span>
-                        </div>
                       </div>
                       <p className="text-gray-300 text-lg leading-relaxed mb-6">{service.description}</p>
                       <div className="flex flex-wrap gap-3 mb-6">
@@ -579,9 +486,7 @@ export default function ComprehensiveServicesShowcase2030() {
                             className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm rounded-full font-medium"
                           >
                             {tag}
-                          </span>
                         ))}
-                      </div>
                     </div>
                     <div className="space-y-6">
                       <div className="bg-gray-700 rounded-xl p-6">
@@ -591,21 +496,12 @@ export default function ComprehensiveServicesShowcase2030() {
                             <span className="text-gray-400">Price:</span>
                             <span className="text-white font-bold">{service.currency}{service.price.toLocaleString()}</span>
                           </div>
-                          <div className="flex justify-between">
                             <span className="text-gray-400">Market Price:</span>
                             <span className="text-blue-400">{service.marketPrice}</span>
-                          </div>
-                          <div className="flex justify-between">
                             <span className="text-gray-400">ROI:</span>
                             <span className="text-green-400 font-bold">{service.roi}</span>
-                          </div>
-                          <div className="flex justify-between">
                             <span className="text-gray-400">Setup Time:</span>
                             <span className="text-yellow-400">{service.setupTime}</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="bg-gray-700 rounded-xl p-6">
                         <h4 className="text-white font-bold text-lg mb-4">AI Score</h4>
                         <div className="text-center">
                           <div className="text-4xl font-bold text-white mb-2">{service.aiScore}/100</div>
@@ -614,9 +510,6 @@ export default function ComprehensiveServicesShowcase2030() {
                               className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500"
                               style={{ width: `${service.aiScore}%` }}
                             ></div>
-                          </div>
-                        </div>
-                      </div>
                       <div className="space-y-3">
                         <Link
                           to={`/services/${service.id}`}
@@ -630,30 +523,19 @@ export default function ComprehensiveServicesShowcase2030() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-full border-2 border-blue-500 text-blue-400 font-bold py-4 px-6 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center"
-                        >
                           <span>Visit Service Page</span>
                           <Globe className="w-5 h-5 ml-2" />
                         </a>
-                        <a
                           href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
                           className="w-full border-2 border-purple-500 text-purple-400 font-bold py-4 px-6 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center"
-                        >
                           <span>Get Quote</span>
                           <Mail className="w-5 h-5 ml-2" />
-                        </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
         )}
-
         {/* Call to Action */}
-        <div
           className="text-center mt-20"
-        >
           <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-3xl p-16">
             <h3 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Transform Your Business?
@@ -661,118 +543,55 @@ export default function ComprehensiveServicesShowcase2030() {
             <p className="text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
               Join thousands of businesses already leveraging our cutting-edge technology solutions. 
               Get started today and experience the future of business innovation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                to="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-110 shadow-2xl"
-              >
-                <Phone className="w-6 h-6 mr-3" />
                 Schedule Consultation
-              </Link>
-              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-12 py-6 border-3 border-blue-500 text-blue-400 font-bold text-xl rounded-2xl hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-              >
                 <Mail className="w-6 h-6 mr-3" />
                 Get Quote
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Footer Contact Section */}
       <div className="bg-gray-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
               <h3 className="text-4xl font-bold text-white mb-8">
                 Let's Build the Future Together
               </h3>
               <p className="text-gray-300 mb-10 text-xl leading-relaxed">
                 Our team of technology experts is ready to help you implement cutting-edge solutions 
                 that will transform your business operations and drive unprecedented growth.
-              </p>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <CheckCircle className="w-6 h-6 text-green-400" />
                   <span className="text-white text-lg">24/7 Technical Support</span>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-400" />
                   <span className="text-white text-lg">Custom Implementation</span>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-400" />
                   <span className="text-white text-lg">Ongoing Optimization</span>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-400" />
                   <span className="text-white text-lg">ROI Guarantee</span>
-                </div>
-              </div>
-            </div>
             <div className="bg-gray-800 rounded-2xl p-10">
               <h4 className="text-3xl font-bold text-white mb-8">Contact Information</h4>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
-                  </div>
                   <div>
                     <p className="text-white font-bold text-lg">Phone</p>
                     <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 text-lg">
                       +1 302 464 0950
                     </a>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
                     <p className="text-white font-bold text-lg">Email</p>
                     <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg">
                       kleber@ziontechgroup.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
                     <p className="text-white font-bold text-lg">Address</p>
                     <p className="text-pink-400 text-lg">
                       364 E Main St STE 1008<br />
                       Middletown DE 19709
                     </p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
                     <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
                     <p className="text-white font-bold text-lg">Website</p>
                     <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-lg">
                       ziontechgroup.com
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-
 };
-
-
 export default ComprehensiveServicesShowcase2030;
-};
-
 export default function ComprehensiveServicesShowcase2030() {;

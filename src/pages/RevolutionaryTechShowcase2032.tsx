@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2032 = () => {
   const [activeTab, setActiveTab] = useState('ai');
-
   const technologies = {
     ai: {
       title: "Conscious AI Revolution",
@@ -20,44 +19,35 @@ const RevolutionaryTechShowcase2032 = () => {
     quantum: {
       title: "Quantum Consciousness",
       description: "Quantum computing systems with consciousness",
-      features: [
         "Quantum neural networks",
         "Consciousness superposition",
         "Quantum decision trees",
         "Multi-dimensional thinking",
         "Quantum entanglement processing"
-      ],
       icon: "⚛️",
       color: "from-cyan-600 to-blue-600"
-    },
     interdimensional: {
       title: "Interdimensional Computing",
       description: "Computing across multiple dimensions",
-      features: [
         "Cross-dimensional processing",
         "Infinite computational power",
         "Reality manipulation",
         "Time-space computing",
         "Dimensional data storage"
-      ],
       icon: "🌌",
       color: "from-emerald-600 to-teal-600"
-    },
     neural: {
       title: "Neural Interface Revolution",
       description: "Direct brain-computer interfaces",
-      features: [
         "Thought-controlled computing",
         "Memory enhancement",
         "Cognitive augmentation",
         "Neural data transfer",
         "Consciousness backup"
-      ],
       icon: "🧬",
       color: "from-orange-600 to-red-600"
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Hero Section */}
@@ -75,14 +65,12 @@ const RevolutionaryTechShowcase2032 = () => {
           </div>
         </div>
       </div>
-
       {/* Interactive Technology Tabs */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-gray-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🌟 Choose Your Technology</h2>
             <p className="text-xl opacity-90">Explore the revolutionary technologies that will shape 2032</p>
-          </div>
           
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -100,15 +88,12 @@ const RevolutionaryTechShowcase2032 = () => {
                 {tech.title}
               </button>
             ))}
-          </div>
-
           {/* Active Technology Display */}
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <div className="text-center mb-8">
               <div className="text-6xl mb-4">{technologies[activeTab].icon}</div>
               <h3 className="text-3xl font-bold mb-4">{technologies[activeTab].title}</h3>
               <p className="text-xl opacity-90">{technologies[activeTab].description}</p>
-            </div>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -123,7 +108,6 @@ const RevolutionaryTechShowcase2032 = () => {
                 </ul>
               </div>
               
-              <div>
                 <h4 className="text-xl font-bold mb-4">Interactive Demo</h4>
                 <div className="bg-gradient-to-r from-gray-700/50 to-blue-700/50 rounded-lg p-6">
                   <div className="text-center">
@@ -134,18 +118,10 @@ const RevolutionaryTechShowcase2032 = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">📊 Technology Comparison</h2>
             <p className="text-xl opacity-90">Compare the revolutionary technologies of 2032</p>
-          </div>
-          
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
@@ -166,86 +142,44 @@ const RevolutionaryTechShowcase2032 = () => {
                         <span className="font-semibold">{tech.title}</span>
                       </div>
                     </td>
-                    <td className="py-4">
                       <div className="flex items-center space-x-2">
                         <div className="w-24 bg-gray-700 rounded-full h-2">
                           <div className={`h-2 rounded-full bg-gradient-to-r ${tech.color}`} style={{width: `${Math.random() * 40 + 60}%`}}></div>
                         </div>
                         <span className="text-sm">{Math.floor(Math.random() * 40 + 60)}%</span>
-                      </div>
-                    </td>
-                    <td className="py-4">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-24 bg-gray-700 rounded-full h-2">
-                          <div className={`h-2 rounded-full bg-gradient-to-r ${tech.color}`} style={{width: `${Math.random() * 40 + 60}%`}}></div>
-                        </div>
-                        <span className="text-sm">{Math.floor(Math.random() * 40 + 60)}%</span>
-                      </div>
-                    </td>
-                    <td className="py-4">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-24 bg-gray-700 rounded-full h-2">
-                          <div className={`h-2 rounded-full bg-gradient-to-r ${tech.color}`} style={{width: `${Math.random() * 40 + 60}%`}}></div>
-                        </div>
-                        <span className="text-sm">{Math.floor(Math.random() * 40 + 60)}%</span>
-                      </div>
-                    </td>
-                    <td className="py-4">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-24 bg-gray-700 rounded-full h-2">
-                          <div className={`h-2 rounded-full bg-gradient-to-r ${tech.color}`} style={{width: `${Math.random() * 40 + 60}%`}}></div>
-                        </div>
-                        <span className="text-sm">{Math.floor(Math.random() * 40 + 60)}%</span>
-                      </div>
-                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
-          </div>
-        </div>
-
         {/* Future Applications */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">🔮 Future Applications</h2>
             <p className="text-xl opacity-90">How these technologies will transform our world</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="text-4xl mb-4">🏥</div>
               <h3 className="text-xl font-bold mb-3">Healthcare Revolution</h3>
               <p className="text-sm opacity-80">AI-powered medical diagnosis and treatment with 99.9% accuracy</p>
-            </div>
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-bold mb-3">Climate Solutions</h3>
               <p className="text-sm opacity-80">Quantum computing solving climate change with unprecedented speed</p>
-            </div>
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold mb-3">Space Exploration</h3>
               <p className="text-sm opacity-80">Interdimensional computing enabling faster-than-light space travel</p>
-            </div>
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-bold mb-3">Education Revolution</h3>
               <p className="text-sm opacity-80">Neural interfaces enabling instant knowledge transfer</p>
-            </div>
             <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
               <div className="text-4xl mb-4">🏭</div>
               <h3 className="text-xl font-bold mb-3">Manufacturing</h3>
               <p className="text-sm opacity-80">Conscious AI managing entire production ecosystems</p>
-            </div>
             <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
               <div className="text-4xl mb-4">🎨</div>
               <h3 className="text-xl font-bold mb-3">Creative Arts</h3>
               <p className="text-sm opacity-80">AI creating art that rivals human creativity</p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h2 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h2>
@@ -256,12 +190,7 @@ const RevolutionaryTechShowcase2032 = () => {
             </button>
             <button className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors">
               Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
-
 export default RevolutionaryTechShowcase2032;

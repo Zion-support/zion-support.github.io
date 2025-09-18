@@ -19,14 +19,12 @@ import {
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
   const footerSections = [
     {
       title: "AI & Micro SAAS",
       icon: Brain,
       description: "Intelligent solutions powered by artificial intelligence",
       links: [
-
         { name: "AI Solutions", href: "/ai-solutions" },
         { name: "AI Autonomous Systems", href: "/ai-autonomous-systems-platform" },
         { name: "Quantum Technology", href: "/quantum-technology" },
@@ -36,11 +34,9 @@ export function Footer() {
         { name: "5G Solutions", href: "/5g-enterprise-solutions" }
       ]
     },
-    {
       title: "Solutions",
       icon: Rocket,
       description: "Industry-specific solutions for modern businesses",
-      links: [
         { label: "Enterprise Solutions", path: "/solutions/enterprise", description: "Large-scale transformation" },
         { label: "Healthcare Technology", path: "/solutions/healthcare", description: "Medical innovation" },
         { label: "Financial Services", path: "/solutions/financial", description: "Fintech solutions" },
@@ -49,13 +45,9 @@ export function Footer() {
         { label: "Government Solutions", path: "/solutions/government", description: "Public sector innovation" },
         { label: "Education Technology", path: "/solutions/education", description: "Learning innovation" },
         { label: "Energy Management", path: "/solutions/energy", description: "Sustainable energy solutions" }
-      ]
-    },
-    {
       title: "Emerging Tech",
       icon: Zap,
       description: "Cutting-edge technologies for tomorrow's challenges",
-      links: [
         { label: "Quantum Computing", path: "/emerging-tech", description: "Next-generation computing" },
         { label: "Blockchain & DeFi", path: "/emerging-tech", description: "Decentralized finance" },
         { label: "IoT & Edge Computing", path: "/emerging-tech", description: "Connected device management" },
@@ -64,57 +56,41 @@ export function Footer() {
         { label: "Green Technology", path: "/emerging-tech", description: "Sustainable solutions" },
         { label: "Digital Twins", path: "/emerging-tech", description: "Virtual asset replicas" },
         { label: "Neuromorphic Computing", path: "/emerging-tech", description: "Brain-inspired AI" }
-      ]
-    },
-    {
       title: "Company",
       icon: Star,
       description: "Learn about our mission and team",
-      links: [
-
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/team" },
         { name: "Careers", href: "/careers" },
         { name: "Blog", href: "/blog" },
         { name: "Case Studies", href: "/case-studies" },
         { name: "Partners", href: "/partners" }
-      ]
-    },
-    {
       title: "Resources",
-      links: [
         { name: "Documentation", href: "/docs" },
         { name: "Help Center", href: "/help" },
         { name: "Community", href: "/community" },
         { name: "Webinars", href: "/webinars" },
         { name: "White Papers", href: "/white-papers" },
         { name: "Marketplace", href: "/marketplace" }
-      ]
     }
   ];
-
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', url: 'https://x.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
     { name: 'Facebook', url: 'https://www.facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
     { name: 'Instagram', url: 'https://www.instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
     { name: 'YouTube', url: 'https://www.youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-  ];
-
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   const trustSignals = [
     { label: 'ISO 27001 Certified', icon: Shield },
     { label: 'SOC 2 Type II', icon: Star },
     { label: '24/7 Support', icon: Zap },
     { label: '99.9% Uptime', icon: Rocket }
-  ];
-
   return (
     <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple text-white relative overflow-hidden">
       {/* Futuristic Background Elements */}
@@ -122,7 +98,6 @@ export function Footer() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-20">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
@@ -135,34 +110,23 @@ export function Footer() {
               <div>
                 <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
                 <p className="text-zion-slate-light">Revolutionary Technology Solutions</p>
-              </div>
             </div>
             
             <p className="text-zion-slate-light mb-6 leading-relaxed">
               Leading provider of revolutionary micro SAAS services, AI solutions, cloud infrastructure, 
               and cutting-edge technology services. We transform businesses through innovative technology.
             </p>
-
             {/* Contact Information */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                 <Phone className="w-5 h-5" />
                 <span>{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                 <Mail className="w-5 h-5" />
                 <span>{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                 <MapPin className="w-5 h-5" />
                 <span>{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                 <Globe className="w-5 h-5" />
                 <span>{contactInfo.website}</span>
-              </div>
-            </div>
-
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
               {socialLinks.map((social) => (
@@ -176,8 +140,6 @@ export function Footer() {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
-            </div>
-
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
@@ -186,7 +148,6 @@ export function Footer() {
                   <section.icon className="w-4 h-4 text-white" />
                 </div>
                 <h4 className="text-lg font-semibold text-white">{section.title}</h4>
-              </div>
               <p className="text-sm text-zion-slate-light mb-4">{section.description}</p>
               <ul className="space-y-2">
                 {section.links.map((link) => (
@@ -203,11 +164,8 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
           ))}
         </div>
-      </div>
-
         {/* Trust Signals Section */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-8">
           <div className="text-center mb-6">
@@ -219,13 +177,8 @@ export function Footer() {
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <signal.icon className="w-6 h-6 text-white" />
-                </div>
                 <p className="text-sm text-zion-slate-light font-medium">{signal.label}</p>
-              </div>
             ))}
-          </div>
-        </div>
-
         {/* Newsletter Section */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-16">
           <div className="text-center max-w-2xl mx-auto">
@@ -234,7 +187,6 @@ export function Footer() {
             </h3>
             <p className="text-zion-slate-light mb-6">
               Get insights on AI, emerging technologies, and industry innovations delivered to your inbox.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
@@ -244,31 +196,19 @@ export function Footer() {
               <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Subscribe
               </button>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Footer */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-zion-slate-light text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Terms of Service
-              </Link>
               <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 Cookie Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Floating Elements */}
       <div className="absolute top-20 right-20 w-2 h-2 bg-zion-cyan rounded-full animate-ping opacity-60"></div>
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-zion-purple rounded-full animate-pulse opacity-60"></div>
@@ -276,5 +216,4 @@ export function Footer() {
     </footer>
   );
 }
-
 export default Footer;

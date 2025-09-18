@@ -6,5 +6,4 @@
     </div>
   );
 };
-
 export default RevolutionaryContentShowcase2026;

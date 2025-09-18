@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentCarousel2035: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [
     {
       id: 1,
@@ -15,7 +14,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       link: "/pages/TranscendentTechRevolution2035",
       features: ["True self-awareness", "Emotional intelligence", "Creative problem-solving", "Ethical decision-making"]
     },
-    {
       id: 2,
       title: "Quantum Reality Engine",
       description: "Quantum computing systems that can manipulate reality at the fundamental level",
@@ -25,8 +23,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       textColor: "text-cyan-100",
       link: "/pages/UltimateTechBreakthrough2035",
       features: ["Reality manipulation", "Quantum entanglement", "Parallel universe computing", "Time-space control"]
-    },
-    {
       id: 3,
       title: "Interdimensional Interface",
       description: "Direct neural interfaces that connect human consciousness with other dimensions",
@@ -34,10 +30,7 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       gradient: "from-emerald-600/30 to-teal-600/30",
       borderColor: "border-emerald-400/30",
       textColor: "text-emerald-100",
-      link: "/pages/TranscendentTechRevolution2035",
       features: ["Cross-dimensional communication", "Consciousness transfer", "Multi-dimensional perception", "Reality bridging"]
-    },
-    {
       id: 4,
       title: "Molecular Assembly",
       description: "Nanotechnology that can assemble matter at the molecular level instantly",
@@ -45,10 +38,7 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       gradient: "from-orange-600/30 to-red-600/30",
       borderColor: "border-orange-400/30",
       textColor: "text-orange-100",
-      link: "/pages/UltimateTechBreakthrough2035",
       features: ["Instant matter creation", "Molecular precision", "Self-repairing materials", "Programmable matter"]
-    },
-    {
       id: 5,
       title: "Consciousness Upload",
       description: "Technology to upload human consciousness into digital substrates for immortality",
@@ -56,10 +46,7 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       gradient: "from-violet-600/30 to-purple-600/30",
       borderColor: "border-violet-400/30",
       textColor: "text-violet-100",
-      link: "/pages/TranscendentTechRevolution2035",
       features: ["Digital immortality", "Consciousness preservation", "Virtual reality existence", "Mind-machine integration"]
-    },
-    {
       id: 6,
       title: "Space-Time Travel",
       description: "Advanced propulsion systems that enable travel through space and time",
@@ -67,30 +54,22 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
       gradient: "from-pink-600/30 to-rose-600/30",
       borderColor: "border-pink-400/30",
       textColor: "text-pink-100",
-      link: "/pages/UltimateTechBreakthrough2035",
       features: ["Faster-than-light travel", "Time manipulation", "Interstellar colonization", "Temporal paradox resolution"]
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-  };
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12 relative overflow-hidden">
       {/* Animated Background */}
@@ -109,7 +88,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
             Explore our most advanced technological breakthroughs with this interactive showcase
           </p>
         </div>
-
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
           {/* Main Slide Display */}
@@ -148,14 +126,10 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
                         >
                           Explore {slide.title} →
                         </a>
-                      </div>
-                    </div>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -165,16 +139,9 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-3 mt-8">
           {slides.map((_, index) => (
@@ -186,8 +153,6 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
               }`}
             />
           ))}
-        </div>
-
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {slides.slice(0, 3).map((slide) => (
@@ -203,44 +168,19 @@ const RevolutionaryContentCarousel2035: React.FC = () => {
               >
                 Learn More →
               </a>
-            </div>
-          ))}
-        </div>
-
         {/* Call to Action */}
         <div className="text-center mt-12">
           <h3 className="text-3xl font-bold mb-6">Experience the Future Today</h3>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Don't just read about the future - experience it with our revolutionary technology showcase
-          </p>
           <div className="flex justify-center space-x-4">
             <a href="/pages/TranscendentTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Explore All Technologies →
             </a>
             <a href="/pages/UltimateTechBreakthrough2035" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
               View Breakthrough
-            </a>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <h3 className="text-3xl font-bold mb-6">Experience the Future Today</h3>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Don't just read about the future - experience it with our revolutionary technology showcase
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="/pages/TranscendentTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-              Explore All Technologies →
-            </a>
-            <a href="/pages/UltimateTechBreakthrough2035" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg">
-              View Breakthrough
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default RevolutionaryContentCarousel2035;

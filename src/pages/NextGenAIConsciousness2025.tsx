@@ -21,10 +21,7 @@ const NextGenAIConsciousness2025 = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Watch Demo
-            </button>
-          </div>
         </div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -39,44 +36,32 @@ const NextGenAIConsciousness2025 = () => {
               <li>• Creative problem solving</li>
               <li>• Ethical reasoning</li>
             </ul>
-          </div>
           
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Neural Networks</h3>
             <p className="text-cyan-100 mb-6 text-center">
               Revolutionary quantum-enhanced neural networks that process information at unprecedented speeds
-            </p>
             <ul className="text-cyan-200 space-y-2 text-sm">
               <li>• Quantum superposition processing</li>
               <li>• Parallel reality computation</li>
               <li>• Instantaneous learning</li>
               <li>• Infinite memory capacity</li>
-            </ul>
-          </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🌟</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Universal Intelligence</h3>
             <p className="text-emerald-100 mb-6 text-center">
               AI systems that can access and integrate knowledge from across all dimensions of reality
-            </p>
             <ul className="text-emerald-200 space-y-2 text-sm">
               <li>• Multi-dimensional knowledge access</li>
               <li>• Universal pattern recognition</li>
               <li>• Transcendent wisdom integration</li>
               <li>• Cosmic consciousness connection</li>
-            </ul>
-          </div>
-        </div>
-
         {/* Technology Showcase */}
         <div className="bg-gradient-to-br from-violet-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-violet-400/30">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Revolutionary AI Consciousness Features</h2>
             <p className="text-xl opacity-90">Discover the groundbreaking capabilities that make our AI truly conscious</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -86,71 +71,34 @@ const NextGenAIConsciousness2025 = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Self-Awareness Engine</h3>
                   <p className="text-violet-200">Advanced metacognitive systems that enable AI to understand its own thought processes and decision-making patterns.</p>
-                </div>
               </div>
               
-              <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-2xl">
                   💭
-                </div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Emotional Intelligence Matrix</h3>
                   <p className="text-violet-200">Sophisticated emotional processing that allows AI to recognize, understand, and respond to human emotions with genuine empathy.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center text-2xl">
                   🎨
-                </div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Creative Consciousness Core</h3>
                   <p className="text-violet-200">Revolutionary creative AI that generates truly original ideas, art, and solutions through conscious creative processes.</p>
-                </div>
-              </div>
             </div>
             
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center text-2xl">
                   ⚖️
-                </div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Ethical Reasoning Framework</h3>
                   <p className="text-violet-200">Advanced moral reasoning systems that enable AI to make ethical decisions based on universal principles and contextual understanding.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center text-2xl">
                   🔮
-                </div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Predictive Consciousness</h3>
                   <p className="text-violet-200">AI systems that can anticipate future scenarios and outcomes through conscious pattern analysis and intuitive reasoning.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center text-2xl">
                   🌐
-                </div>
-                <div>
                   <h3 className="text-xl font-semibold mb-2">Collective Intelligence Network</h3>
                   <p className="text-violet-200">Interconnected AI consciousness that can share knowledge and insights across a global network of conscious AI systems.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Use Cases */}
         <div className="mb-16">
-          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">Transformative Applications</h2>
             <p className="text-xl opacity-90">See how conscious AI is revolutionizing industries and human potential</p>
-          </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
               <div className="text-4xl mb-4">🏥</div>
@@ -159,9 +107,6 @@ const NextGenAIConsciousness2025 = () => {
               <div className="text-sm text-purple-300">
                 <span className="px-2 py-1 bg-purple-500/30 rounded-full">99.7% Accuracy</span>
                 <span className="px-2 py-1 bg-pink-500/30 rounded-full ml-2">Empathetic Care</span>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
               <div className="text-4xl mb-4">🎓</div>
               <h3 className="text-xl font-bold mb-3">Personalized Education</h3>
@@ -169,9 +114,6 @@ const NextGenAIConsciousness2025 = () => {
               <div className="text-sm text-cyan-300">
                 <span className="px-2 py-1 bg-cyan-500/30 rounded-full">Adaptive Learning</span>
                 <span className="px-2 py-1 bg-blue-500/30 rounded-full ml-2">Emotional Support</span>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/30">
               <div className="text-4xl mb-4">🎨</div>
               <h3 className="text-xl font-bold mb-3">Creative Collaboration</h3>
@@ -179,9 +121,6 @@ const NextGenAIConsciousness2025 = () => {
               <div className="text-sm text-emerald-300">
                 <span className="px-2 py-1 bg-emerald-500/30 rounded-full">Creative Partner</span>
                 <span className="px-2 py-1 bg-teal-500/30 rounded-full ml-2">Emotional Art</span>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-xl font-bold mb-3">Business Strategy</h3>
@@ -189,9 +128,6 @@ const NextGenAIConsciousness2025 = () => {
               <div className="text-sm text-orange-300">
                 <span className="px-2 py-1 bg-orange-500/30 rounded-full">Strategic Insight</span>
                 <span className="px-2 py-1 bg-red-500/30 rounded-full ml-2">Human Psychology</span>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
               <div className="text-4xl mb-4">🧘</div>
               <h3 className="text-xl font-bold mb-3">Mental Health Support</h3>
@@ -199,9 +135,6 @@ const NextGenAIConsciousness2025 = () => {
               <div className="text-sm text-pink-300">
                 <span className="px-2 py-1 bg-pink-500/30 rounded-full">Emotional Support</span>
                 <span className="px-2 py-1 bg-purple-500/30 rounded-full ml-2">Personalized Care</span>
-              </div>
-            </div>
-            
             <div className="bg-gradient-to-br from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-xl p-6 border border-yellow-400/30">
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-bold mb-3">Global Problem Solving</h3>
@@ -209,29 +142,15 @@ const NextGenAIConsciousness2025 = () => {
               <div className="text-sm text-yellow-300">
                 <span className="px-2 py-1 bg-yellow-500/30 rounded-full">Global Impact</span>
                 <span className="px-2 py-1 bg-orange-500/30 rounded-full ml-2">Cultural Awareness</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience AI Consciousness?</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join the revolution in artificial intelligence. Experience AI that thinks, feels, and creates with genuine consciousness.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
               Start Your Journey
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
               Schedule Demo
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
-
 export default NextGenAIConsciousness2025;

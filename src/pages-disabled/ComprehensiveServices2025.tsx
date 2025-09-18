@@ -12,5 +12,4 @@ const AdvancedAI2026 = () => {
     </div>
   );
 };
-
 export default AdvancedAI2026;

@@ -1,33 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button } from '../components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Phone, Mail, MapPin, Menu, X, Zap, Brain, Cloud, Code, Shield } from 'lucide-react';
 
 export function EnhancedHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-
   const navigationItems = [
     { path: '/', label: 'Home', icon: <Zap className="h-4 w-4" /> },
     { path: '/enhanced-services', label: 'Services', icon: <Brain className="h-4 w-4" /> },
     { path: '/about', label: 'About', icon: <Shield className="h-4 w-4" /> },
     { path: '/contact', label: 'Contact', icon: <Mail className="h-4 w-4" /> },
   ];
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -42,7 +37,6 @@ export function EnhancedHeader() {
           <div className="absolute top-12 left-1/2 w-1.5 h-1.5 bg-zion-cyan rounded-full animate-bounce" />
         </div>
       </div>
-
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -56,10 +50,8 @@ export function EnhancedHeader() {
                   Zion Tech Group
                 </div>
                 <div className="text-xs text-zion-slate-light">Innovation at Your Fingertips</div>
-              </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -80,13 +72,11 @@ export function EnhancedHeader() {
               </Link>
             ))}
           </nav>
-
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <div className="flex items-center gap-2 text-zion-slate-light text-sm">
               <Phone className="h-4 w-4 text-zion-cyan" />
               <span>+1 302 464 0950</span>
-            </div>
             <Link to="/contact">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-2">
                 <Mail className="h-4 w-4" />
@@ -94,7 +84,6 @@ export function EnhancedHeader() {
               </Button>
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -102,8 +91,6 @@ export function EnhancedHeader() {
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
-        </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden border-t border-zion-purple/30 bg-zion-blue-dark/95 backdrop-blur-md">
@@ -129,27 +116,16 @@ export function EnhancedHeader() {
                 <div className="flex items-center gap-2 text-zion-slate-light text-sm">
                   <Phone className="h-4 w-4 text-zion-cyan" />
                   <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center gap-2 text-zion-slate-light text-sm">
                   <Mail className="h-4 w-4 text-zion-cyan" />
                   <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center gap-2 text-zion-slate-light text-sm">
                   <MapPin className="h-4 w-4 text-zion-cyan" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-2">
                     <Mail className="h-4 w-4" />
                     Contact Us
                   </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
         )}
-      </div>
-
       {/* Animated bottom border */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-purple to-transparent opacity-60" />
     </header>

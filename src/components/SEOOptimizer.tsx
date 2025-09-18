@@ -11,7 +11,6 @@ interface SEOProps {
   twitterCard?: string;
   structuredData?: object;
 }
-
 export default function SEOOptimizer({
   title = "Zion Tech Group - Revolutionary AI & Technology Solutions",
   description = "Leading provider of AI-powered solutions, cloud infrastructure, cybersecurity, and digital transformation services. 200+ Micro SaaS services with 99.99% uptime guarantee.",
@@ -37,18 +36,12 @@ export default function SEOOptimizer({
       meta.content = description;
       document.head.appendChild(meta);
     }
-    
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords);
-    } else {
-      const meta = document.createElement('meta');
       meta.name = 'keywords';
       meta.content = keywords;
-      document.head.appendChild(meta);
-    }
-    
     // Update canonical URL
     if (canonical) {
       let canonicalLink = document.querySelector('link[rel="canonical"]');
@@ -57,19 +50,14 @@ export default function SEOOptimizer({
       } else {
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
-        canonicalLink.setAttribute('href', canonical);
         document.head.appendChild(canonicalLink);
       }
-    }
-    
     // Add structured data
     if (structuredData) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
-    }
-    
     // Add Open Graph meta tags
     const ogTags = [
       { property: 'og:title', content: title },
@@ -79,41 +67,24 @@ export default function SEOOptimizer({
       { property: 'og:url', content: window.location.href },
       { property: 'og:site_name', content: 'Zion Tech Group' }
     ];
-    
     ogTags.forEach(tag => {
       let meta = document.querySelector(`meta[property="${tag.property}"]`);
       if (meta) {
         meta.setAttribute('content', tag.content);
-      } else {
         meta = document.createElement('meta');
         meta.setAttribute('property', tag.property);
-        meta.setAttribute('content', tag.content);
         document.head.appendChild(meta);
-      }
     });
-    
     // Add Twitter Card meta tags
     const twitterTags = [
       { name: 'twitter:card', content: twitterCard },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: ogImage }
-    ];
-    
     twitterTags.forEach(tag => {
       let meta = document.querySelector(`meta[name="${tag.name}"]`);
-      if (meta) {
-        meta.setAttribute('content', tag.content);
-      } else {
-        meta = document.createElement('meta');
         meta.setAttribute('name', tag.name);
-        meta.setAttribute('content', tag.content);
-        document.head.appendChild(meta);
-      }
-    });
-    
   }, [title, description, keywords, canonical, ogImage, ogType, twitterCard, structuredData]);
-
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -139,14 +110,11 @@ export default function SEOOptimizer({
       "addressRegion": "CA",
       "postalCode": "94105",
       "addressCountry": "US"
-    },
     "offers": {
       "@type": "Offer",
       "description": "AI-powered technology solutions and consulting services",
       "priceRange": "$$"
-    }
   };
-
   return (
     <Helmet>
       <title>{title}</title>
@@ -161,28 +129,23 @@ export default function SEOOptimizer({
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={window.location.href} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
-      
       {/* Additional SEO meta tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -190,4 +153,3 @@ export default function SEOOptimizer({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     </Helmet>
   );
-}
