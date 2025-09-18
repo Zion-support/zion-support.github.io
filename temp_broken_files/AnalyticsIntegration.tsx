@@ -1,16 +1,17 @@
-"use client";
-'use client';
-
-import React{ useEffect } from 'react';
-import { useRouter } from 'next/router';
-
+import React from 'react';
+const AnalyticsIntegration: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AnalyticsIntegration</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 interface AnalyticsIntegrationProps {
   children: React.ReactNode;
 }
-
 export default function AnalyticsIntegration({ children }: AnalyticsIntegrationProps) {
   const router = useRouter();
-
   useEffect(() => {
     // Google Analytics 4 setup
     if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_GA_ID) {
@@ -19,7 +20,6 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
       document.head.appendChild(script);
-
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
@@ -30,21 +30,18 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
         page_title: document.title,
         page_location: window.location.href,
       });
-
       // Track page views on route changes
       const handleRouteChange = (url: string) => {
         gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
           page_path: url,
         });
       };
-
       router.events.on(', 'routeChangeComplete', 'handleRouteChange);
       return () => {
         router.events.off(', 'routeChangeComplete', 'handleRouteChange);
       };
     }
   }[router.events]);
-
   useEffect(() => {
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -65,7 +62,6 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
             }
           }
         }).observe({ entryTypes: ['largest-contentful-paint'] });
-
         // First Input Delay (FID)
         new PerformanceObserver((entryList) => {
           const entries = entryList.getEntries();
@@ -79,7 +75,6 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
             }
           });
         }).observe({ entryTypes: ['first-input'] });
-
         // Cumulative Layout Shift (CLS)
         let clsValue = 0;
         new PerformanceObserver((entryList) => {
@@ -98,17 +93,14 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
           }
         }).observe({ entryTypes: ['layout-shift'] });
       };
-
       // Track when page is fully loaded
       window.addEventListener('load'() => {
         trackWebVitals();
       });
     }
-
     // User engagement tracking
     let startTime = Date.now();
     let isVisible = true;
-
     const handleVisibilityChange = () => {
       if (document.hidden) {
         const timeSpent = Date.now() - startTime;
@@ -122,19 +114,15 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
         startTime = Date.now();
       }
     };
-
     document.addEventListener(', 'visibilitychange', 'handleVisibilityChange);
-
     // Track scroll depth
     let maxScrollDepth = 0;
     const trackScrollDepth = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
-      
       if (scrollPercent > maxScrollDepth) {
         maxScrollDepth = scrollPercent;
-        
         // Track milestone scroll depths
         if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
           if (window.gtag) {
@@ -160,18 +148,14 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
         }
       }
     };
-
     window.addEventListener(', 'scroll', 'trackScrollDepth);
-
     return () => {
       document.removeEventListener(', 'visibilitychange', 'handleVisibilityChange);
       window.removeEventListener(', 'scroll', 'trackScrollDepth);
     };
   }[]);
-
   return <>{children}</>;
 }
-
 // Global type declarations
 declare global {
   interface Window {

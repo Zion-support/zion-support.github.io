@@ -1,6 +1,4 @@
-"use client";
-import React{ useEffect } from 'react';
-
+import React from 'react';
 export default function PerformanceOptimizer2026() {
   useEffect(() => {
     // Preload critical resources
@@ -10,7 +8,6 @@ export default function PerformanceOptimizer2026() {
         '/images/quantum-computing-breakthrough.jpg',
         '/images/neural-interface-revolution.jpg'
       ];
-      
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -19,7 +16,6 @@ export default function PerformanceOptimizer2026() {
         document.head.appendChild(link);
       });
     };
-
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -32,7 +28,6 @@ export default function PerformanceOptimizer2026() {
         }
       });
     };
-
     // Defer non-critical JavaScript
     const deferNonCriticalJS = () => {
       const scripts = document.querySelectorAll('script[data-defer]');
@@ -40,12 +35,10 @@ export default function PerformanceOptimizer2026() {
         (script as HTMLScriptElement).defer = true;
       });
     };
-
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
     deferNonCriticalJS();
-
     // Performance monitoring
     if ('performance' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -59,15 +52,12 @@ export default function PerformanceOptimizer2026() {
           }
         });
       });
-      
       observer.observe({ entryTypes: ['largest-contentful-'paint', 'first-input'] });
     }
-
     // Cleanup
     return () => {
       // Cleanup if needed
     };
   }[]);
-
   return null;
 }

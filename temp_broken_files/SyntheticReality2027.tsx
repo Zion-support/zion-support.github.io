@@ -1,60 +1,6 @@
-import React, { useState } from 'react';
-
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const SyntheticReality2027: React.FC = () => {
-  const [selectedReality, setSelectedReality] = useState('quantum');
-
-  const realities = [
-    {
-      id: 'quantum',
-      name: 'Quantum Dimensions',
-      description: 'Explore realities where quantum mechanics manifest at macroscopic scales',
-      features: ['Quantum superposition environments', 'Probability-based physics', 'Multi-dimensional navigation'],
-      color: 'from-cyan-500 to-blue-500',
-      icon: '⚛️'
-    },
-    {
-      id: 'neural',
-      name: 'Neural Networks',
-      description: 'Experience reality as a living neural network with interconnected consciousness',
-      features: ['Collective intelligence', 'Thought-based creation', 'Consciousness merging'],
-      color: 'from-purple-500 to-pink-500',
-      icon: '🧠'
-    },
-    {
-      id: 'temporal',
-      name: 'Temporal Realms',
-      description: 'Navigate through time itself, experiencing past, present, and future simultaneously',
-      features: ['Time manipulation', 'Parallel timeline access', 'Chronological exploration'],
-      color: 'from-orange-500 to-red-500',
-      icon: '⏰'
-    },
-    {
-      id: 'dimensional',
-      name: 'Higher Dimensions',
-      description: 'Access realities beyond our 3D perception with infinite dimensional possibilities',
-      features: ['4D+ spatial navigation', 'Hyperspace travel', 'Dimensional physics'],
-      color: 'from-emerald-500 to-teal-500',
-      icon: '🌌'
-    },
-    {
-      id: 'consciousness',
-      name: 'Pure Consciousness',
-      description: 'Experience reality as pure consciousness without physical form or limitations',
-      features: ['Formless existence', 'Universal connection', 'Infinite awareness'],
-      color: 'from-violet-500 to-purple-500',
-      icon: '🌟'
-    },
-    {
-      id: 'creation',
-      name: 'Creation Engine',
-      description: 'Design and build your own realities with custom physics and rules',
-      features: ['Reality design tools', 'Custom physics engines', 'Infinite creativity'],
-      color: 'from-pink-500 to-rose-500',
-      icon: '🏗️'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
@@ -62,9 +8,6 @@ const SyntheticReality2027: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -88,26 +31,20 @@ const SyntheticReality2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Reality Selection */}
       <div className="container mx-auto px-4 py-16">
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">Choose Your Reality</h2>
           <p className="text-xl opacity-80">Select from our collection of synthetic realities or create your own</p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {realities.map((reality, index) => (
             <div
               key={reality.id}
-              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setSelectedReality(reality.id)}
               className={`cursor-pointer rounded-2xl p-6 border-2 transition-all duration-300 hover:scale-105 ${
                 selectedReality === reality.id
@@ -126,13 +63,9 @@ const SyntheticReality2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Selected Reality Details */}
         <div
           key={selectedReality}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           className="max-w-6xl mx-auto"
         >
           {selectedReality === 'quantum' && (
@@ -169,7 +102,6 @@ const SyntheticReality2027: React.FC = () => {
               </div>
             </div>
           )}
-
           {selectedReality === 'neural' && (
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -204,7 +136,6 @@ const SyntheticReality2027: React.FC = () => {
               </div>
             </div>
           )}
-
           {selectedReality === 'temporal' && (
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -238,7 +169,6 @@ const SyntheticReality2027: React.FC = () => {
               </div>
             </div>
           )}
-
           {selectedReality === 'dimensional' && (
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -273,7 +203,6 @@ const SyntheticReality2027: React.FC = () => {
               </div>
             </div>
           )}
-
           {selectedReality === 'consciousness' && (
             <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -308,7 +237,6 @@ const SyntheticReality2027: React.FC = () => {
               </div>
             </div>
           )}
-
           {selectedReality === 'creation' && (
             <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30">
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -345,25 +273,19 @@ const SyntheticReality2027: React.FC = () => {
           )}
         </div>
       </div>
-
       {/* Features Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20">
         <div className="container mx-auto px-4">
           <div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4">Revolutionary Features</h2>
             <p className="text-xl opacity-80">Experience the most advanced synthetic reality technology ever created</p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
               <div className="text-4xl mb-4">🎯</div>
@@ -373,11 +295,8 @@ const SyntheticReality2027: React.FC = () => {
                 visual, audio, and haptic feedback.
               </p>
             </div>
-
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
               <div className="text-4xl mb-4">⚡</div>
@@ -387,11 +306,8 @@ const SyntheticReality2027: React.FC = () => {
                 transitions between worlds.
               </p>
             </div>
-
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
             >
               <div className="text-4xl mb-4">🌐</div>
@@ -404,13 +320,10 @@ const SyntheticReality2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
-          initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
           className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12"
         >
           <h2 className="text-4xl font-bold mb-6">Ready to Transcend Reality?</h2>
@@ -431,5 +344,4 @@ const SyntheticReality2027: React.FC = () => {
     </div>
   );
 };
-
 export default SyntheticReality2027;

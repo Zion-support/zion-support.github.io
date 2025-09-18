@@ -1,9 +1,6 @@
-"use client";
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle
-
 const services = [
   {
     id: 1,
@@ -102,41 +99,29 @@ const services = [
     category: "Consulting"
   }
 ];
-
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"];
-
 export default function UltimateServicesShowcase2025() {
   const [selectedCategorysetSelectedCategory] = React.useState("All");
-
   const filteredServices = selectedCategory === "All" 
     ? services 
     : services.filter(service => service.category === selectedCategory);
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 rounded-full px-6 py-2 mb-6">
             <Star className="w-4 h-4 mr-2 text-white" />
             <span className="text-sm font-semibold text-white">ULTIMATE SERVICES SHOWCASE 2025</span>
-          </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Revolutionary Technology Solutions
-          </h2>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Transform your business with our cutting-edge AIcloudand automation solutions. 
             Join thousands of companies already achieving extraordinary results.
-          </p>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
@@ -150,19 +135,13 @@ export default function UltimateServicesShowcase2025() {
                 }`}
               >
                 {category}
-              </button>
             ))}
-          </div>
-        </div>
-
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {filteredServices.map((serviceindex) => (
             <div
               key={service.id}
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8delay: index * 0.1 }}
               viewport={{ once: true }}
               className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 group ${
                 service.popular ? 'ring-2 ring-blue-500 ring-opacity-50' : ''
@@ -172,37 +151,27 @@ export default function UltimateServicesShowcase2025() {
               {service.popular && (
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
                   Most Popular
-                </div>
               )}
-
               {/* Header */}
               <div className={`bg-gradient-to-r ${service.color} p-6 text-white`}>
                 <div className="flex items-center justify-between mb-4">
                   <service.icon className="w-8 h-8" />
                   <span className="text-sm font-medium opacity-90">{service.category}</span>
-                </div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-white/90 text-sm leading-relaxed">{service.description}</p>
-              </div>
-
               {/* Content */}
               <div className="p-6">
                 {/* Price */}
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-gray-900 mb-1">{service.price}</div>
                   <div className="text-sm text-gray-500">Starting price • No setup fees</div>
-                </div>
-
                 {/* Features */}
                 <div className="space-y-3 mb-6">
                   {service.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{feature}</span>
-                    </div>
                   ))}
-                </div>
-
                 {/* CTA */}
                 <a
                   href={`/services/${service.id}`}
@@ -210,61 +179,40 @@ export default function UltimateServicesShowcase2025() {
                 >
                   Get Started Now
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </div>
-            </div>
           ))}
-        </div>
-
         {/* Stats Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="bg-white rounded-2xl shadow-xl p-8 mb-16"
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Proven Results Across Industries</h3>
             <p className="text-gray-600">Our solutions deliver measurable impact for businesses worldwide</p>
-          </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-sm text-gray-600">Projects Completed</div>
-            </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-green-600 mb-2">250%</div>
               <div className="text-sm text-gray-600">Average ROI</div>
-            </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-purple-600 mb-2">98%</div>
               <div className="text-sm text-gray-600">Client Satisfaction</div>
-            </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-600 mb-2">50+</div>
               <div className="text-sm text-gray-600">Countries Served</div>
-            </div>
-          </div>
-        </div>
-
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Transform Your Business?
-          </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already achieving extraordinary results with our AI solutions. 
             Get a free consultation and custom implementation plan.
-          </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
@@ -272,18 +220,12 @@ export default function UltimateServicesShowcase2025() {
             >
               <Zap className="w-5 h-5 mr-2" />
               Get Free Consultation
-            </a>
-            
             <a
               href="/case-studies"
               className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               <TrendingUp className="w-5 h-5 mr-2" />
               View Success Stories
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
   );
-}
+};
+export default UltimateServicesShowcase2025;

@@ -1,50 +1,9 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 const AnimatedTechShowcase: React.FC = () => {
-  const [currentTech, setCurrentTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const technologies = [
-    {
-      title: 'Transcendent AI 2031',
-      description: 'AI that transcends human limitations',
-      icon: '🧠',
-      color: 'from-purple-600 to-pink-600',
-      features: ['Consciousness Transfer', 'Quantum Neural Networks', 'Reality Manipulation']
-    },
-    {
-      title: 'Universal Tech 2032',
-      description: 'Technology that transcends space and time',
-      icon: '🌌',
-      color: 'from-cyan-600 to-blue-600',
-      features: ['Universal Networks', 'Quantum Reality Engine', 'Intergalactic Transport']
-    },
-    {
-      title: 'Omniversal AI 2033',
-      description: 'AI consciousness across all universes',
-      icon: '🌟',
-      color: 'from-violet-600 to-fuchsia-600',
-      features: ['Omniversal Consciousness', 'Reality Transcendence', 'Universal Creation']
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentTech((prev) => (prev + 1) % technologies.length);
-        setIsAnimating(false);
-      }, 500);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12 text-white relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.05%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25224%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       <div className="relative z-10">
         <div className="text-center mb-8">
           <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -54,7 +13,6 @@ const AnimatedTechShowcase: React.FC = () => {
             Experience the future of technology with our interactive showcase
           </p>
         </div>
-
         {/* Main Showcase Area */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-2xl p-8 border border-gray-600/30 mb-8">
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
@@ -67,7 +25,6 @@ const AnimatedTechShowcase: React.FC = () => {
                 {technologies[currentTech].description}
               </p>
             </div>
-
             {/* Features Grid */}
             <div className="grid md:grid-cols-3 gap-6">
               {technologies[currentTech].features.map((feature, index) => (
@@ -85,7 +42,6 @@ const AnimatedTechShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Selector */}
         <div className="flex justify-center space-x-4 mb-8">
           {technologies.map((tech, index) => (
@@ -109,7 +65,6 @@ const AnimatedTechShowcase: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Interactive Elements */}
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-purple-800/30 to-pink-800/30 p-6 rounded-xl border border-purple-400/30">
@@ -121,7 +76,6 @@ const AnimatedTechShowcase: React.FC = () => {
               🚀 Launch Interactive Demo
             </button>
           </div>
-
           <div className="bg-gradient-to-br from-cyan-800/30 to-blue-800/30 p-6 rounded-xl border border-cyan-400/30">
             <h4 className="text-xl font-bold mb-4 text-cyan-400">Learn More</h4>
             <p className="text-gray-300 mb-4">
@@ -132,7 +86,6 @@ const AnimatedTechShowcase: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-8">
           <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
@@ -152,5 +105,4 @@ const AnimatedTechShowcase: React.FC = () => {
     </div>
   );
 };
-
 export default AnimatedTechShowcase;

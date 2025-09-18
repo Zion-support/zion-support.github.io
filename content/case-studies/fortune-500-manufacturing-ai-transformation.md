@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Fortune 500 Manufacturing Giant Achieves 99.2% Uptime with AI Transformation"
 excerpt: "How a global manufacturing leader transformed operations with AI, achieving 99.2% uptime and $34.7M in annual savings."
@@ -221,3 +222,7 @@ The success of this transformation demonstrates that AI is not just a technology
 ---
 
 *This case study demonstrates Zion Tech Group's expertise in manufacturing AI transformation. Contact us to learn how we can help your organization achieve similar results.*
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

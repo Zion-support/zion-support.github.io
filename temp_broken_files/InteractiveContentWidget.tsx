@@ -1,62 +1,9 @@
-"use client";
-import React{ useState } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-
-const InteractiveContentWidget = () => {
-  const [selectedCategorysetSelectedCategory] = useState('ai');
-  const [hoveredItemsetHoveredItem] = useState(null);
-
-  const contentCategories = {
-    ai: {
-      title: 'AI & Machine Learning',
-      icon: '🤖',
-      items: [
-        { title: 'Advanced AI Services 2025'description: 'Revolutionary automation 'solutions', 'link: '/ai-services-2025'featured: true },
-        { title: 'Neural Network 'Architectures', 'description: 'Next-gen AI brain 'designs', 'link: '/neural-architectures' },
-        { title: 'Machine Learning 'Mastery', 'description: 'Complete ML implementation 'guide', 'link: '/ml-mastery' },
-        { title: 'AI Ethics & 'Governance', 'description: 'Responsible AI 'development', 'link: '/ai-ethics' }
-      ]
-    },
-    quantum: {
-      title: 'Quantum Computing',
-      icon: '⚛️',
-      items: [
-        { title: 'Quantum Supremacy 2025'description: 'Error-corrected quantum 'computers', 'link: '/quantum-'supremacy', 'featured: true },
-        { title: 'Quantum 'Algorithms', 'description: 'Revolutionary problem-solving 'methods', 'link: '/quantum-algorithms' },
-        { title: 'Quantum Machine 'Learning', 'description: 'AI meets quantum 'computing', 'link: '/quantum-ml' },
-        { title: 'Quantum 'Cryptography', 'description: 'Unbreakable security 'systems', 'link: '/quantum-crypto' }
-      ]
-    },
-    automation: {
-      title: 'Business Automation',
-      icon: '🔄',
-      items: [
-        { title: 'Autonomous 'Operations', 'description: 'Self-managing business 'systems', 'link: '/autonomous-'ops', 'featured: true },
-        { title: 'Process 'Optimization', 'description: 'Streamline your 'workflows', 'link: '/process-optimization' },
-        { title: 'Intelligent 'Automation', 'description: 'Smart business process 'automation', 'link: '/intelligent-automation' },
-        { title: 'ROI 'Optimization', 'description: 'Maximize your 'returns', 'link: '/roi-optimization' }
-      ]
-    },
-    future: {
-      title: 'Future Technologies',
-      icon: '🔮',
-      items: [
-        { title: '2030 Technology 'Predictions', 'description: 'What the future 'holds', 'link: '/2030-'predictions', 'featured: true },
-        { title: 'Neural Interface 'Revolution', 'description: 'Brain-computer 'integration', 'link: '/neural-interfaces' },
-        { title: 'Transcendent 'AI', 'description: 'Beyond human 'intelligence', 'link: '/transcendent-ai' },
-        { title: 'Omniversal 'Computing', 'description: 'Computing beyond 'reality', 'link: '/omniversal-computing' }
-      ]
-    }
-  };
-
+import React from 'react';
+const InteractiveContentWidget: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="container mx-auto px-4">
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -66,12 +13,8 @@ const InteractiveContentWidget = () => {
             Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
           </p>
         </div>
-
         {/* Category Selector */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(contentCategories).map(([keycategory]) => (
@@ -89,23 +32,14 @@ const InteractiveContentWidget = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
-        <AnimatePresence mode="wait">
           <div
             key={selectedCategory}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
           >
             {contentCategories[selectedCategory].items.map((itemindex) => (
               <div
                 key={item.title}
-                initial={{ opacity: 0scale: 0.9 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.4delay: index * 0.1 }}
                 onHoverStart={() => setHoveredItem(item.title)}
                 onHoverEnd={() => setHoveredItem(null)}
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 cursor-pointer ${
@@ -119,17 +53,14 @@ const InteractiveContentWidget = () => {
                     🔥 FEATURED
                   </div>
                 )}
-                
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-3xl mb-2">{contentCategories[selectedCategory].icon}</div>
                   {item.featured && (
                     <div className="text-yellow-400 text-2xl">⭐</div>
                   )}
                 </div>
-                
                 <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
                 <p className="text-gray-300 mb-6">{item.description}</p>
-                
                 <a 
                   href={item.link}
                   className={`inline-flex items-center font-semibold transition-colors duration-300 ${
@@ -140,24 +71,17 @@ const InteractiveContentWidget = () => {
                 >
                   Explore Now →
                 </a>
-                
                 {hoveredItem === item.title && (
                   <div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
                     className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none"
                   />
                 )}
               </div>
             ))}
           </div>
-        
-
+        </div>
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <a 
@@ -171,5 +95,4 @@ const InteractiveContentWidget = () => {
     </section>
   );
 };
-
 export default InteractiveContentWidget;

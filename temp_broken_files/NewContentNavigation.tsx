@@ -1,146 +1,7 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-import { 
-  ArrowRight
-  Star
-  Zap
-  Sparkles,
-  TrendingUp,
-  Users,
-  Globe,
-  X,
-  Play,
-  Download,
-  ExternalLink,
-  Brain,
-  Cpu,
-  Database,
-  Cloud,
-  Shield
-} from 'lucide-react';
-
-const NewContentNavigation = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isExpandedsetIsExpanded] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const contentCategories = [
-    {
-      title: "AI Solutions",
-      description: "Revolutionary AI technologies",
-      icon: Brain,
-      color: "from-purple-600 to-pink-600",
-      href: "/ai-solutions",
-      items: [
-        "Machine Learning",
-        "Natural Language Processing",
-        "Computer Vision",
-        "AI Automation"
-      ]
-    },
-    {
-      title: "Quantum Computing",
-      description: "Next-generation quantum solutions",
-      icon: Cpu,
-      color: "from-blue-600 to-cyan-600",
-      href: "/quantum-computing",
-      items: [
-        "Quantum Algorithms",
-        "Quantum Machine Learning",
-        "Quantum Security",
-        "Quantum Optimization"
-      ]
-    },
-    {
-      title: "Neural Interfaces",
-      description: "Brain-computer interface tech",
-      icon: Database,
-      color: "from-green-600 to-emerald-600",
-      href: "/neural-interfaces",
-      items: [
-        "BCI Development",
-        "Cognitive Enhancement",
-        "Medical Applications",
-        "Neural Signal Processing"
-      ]
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions",
-      icon: Cloud,
-      color: "from-orange-600 to-red-600",
-      href: "/cloud-infrastructure",
-      items: [
-        "Multi-Cloud Architecture",
-        "Container Orchestration",
-        "Serverless Computing",
-        "Edge Computing"
-      ]
-    },
-    {
-      title: "Security Solutions",
-      description: "Advanced security measures",
-      icon: Shield,
-      color: "from-indigo-600 to-purple-600",
-      href: "/security-solutions",
-      items: [
-        "Threat Detection",
-        "Data Encryption",
-        "Access Control",
-        "Compliance Monitoring"
-      ]
-    },
-    {
-      title: "Ultimate Showcase",
-      description: "Complete technology showcase",
-      icon: Sparkles,
-      color: "from-pink-600 to-rose-600",
-      href: "/showcase/ultimate-2025",
-      items: [
-        "All Technologies",
-        "Interactive Demos",
-        "Case Studies",
-        "Success Stories"
-      ]
-    }
-  ];
-
-  const featuredContent = [
-    {
-      title: "AI 2025 Breakthrough",
-      description: "Latest AI innovations transforming industries",
-      href: "/ai-solutions",
-      badge: "HOT",
-      icon: TrendingUp
-    },
-    {
-      title: "Quantum Revolution",
-      description: "Quantum computing solutions for complex problems",
-      href: "/quantum-computing",
-      badge: "NEW",
-      icon: Zap
-    },
-    {
-      title: "Neural Interface Demo",
-      description: "Experience brain-computer interfaces",
-      href: "/neural-interfaces",
-      badge: "DEMO",
-      icon: Play
-    }
-  ];
-
+import React from 'react';
+const NewContentNavigation: React.FC = () => {
   return (
     <div
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
       className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -150,28 +11,22 @@ const NewContentNavigation = () => {
             <Sparkles className="w-4 h-4 mr-2" />
             NEW CONTENT 2025
           </div>
-          
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Explore Revolutionary
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               {" "}Technologies
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Discover cutting-edge AIquantum computingand neural interface technologies 
             that are reshaping the future of business and human potential.
           </p>
         </div>
-
         {/* Featured Content */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {featuredContent.map((itemindex) => (
             <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
               <div className="flex items-start justify-between mb-4">
@@ -192,7 +47,6 @@ const NewContentNavigation = () => {
                   {item.badge}
                 </span>
               </div>
-              
               <a
                 href={item.href}
                 className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:translate-x-1 transition-all duration-300"
@@ -203,7 +57,6 @@ const NewContentNavigation = () => {
             </div>
           ))}
         </div>
-
         {/* Expandable Categories */}
         <div className="text-center mb-8">
           <button
@@ -214,23 +67,15 @@ const NewContentNavigation = () => {
             <ArrowRight className={`w-4 h-4 ml-2 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
           </button>
         </div>
-
         {/* Categories Grid */}
-        
+        <div>
           {isExpanded && (
             <div
-              initial={{ opacity: 0height: 0 }}
-              animate={{ opacity: 1height: 'auto' }}
-              exit={{ opacity: 0height: 0 }}
-              transition={{ duration: 0.5 }}
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {contentCategories.map((categoryindex) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-4 mb-4">
@@ -242,7 +87,6 @@ const NewContentNavigation = () => {
                       <p className="text-sm text-gray-300">{category.description}</p>
                     </div>
                   </div>
-                  
                   <div className="space-y-2 mb-6">
                     {category.items.map((itemIndex) => (
                       <div key={itemIndex} className="flex items-center text-sm text-gray-300">
@@ -251,7 +95,6 @@ const NewContentNavigation = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <a
                     href={category.href}
                     className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 font-medium rounded-lg hover:from-purple-600/30 hover:to-blue-600/30 transition-all duration-300 group-hover:translate-y-[-2px]"
@@ -263,13 +106,9 @@ const NewContentNavigation = () => {
               ))}
             </div>
           )}
-        
-
+        </div>
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 0.3 }}
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-white/20">
@@ -280,7 +119,6 @@ const NewContentNavigation = () => {
               Join thousands of companies already using our revolutionary technologies 
               to achieve unprecedented growth and efficiency.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
@@ -289,7 +127,6 @@ const NewContentNavigation = () => {
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
-              
               <a
                 href="/demo"
                 className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
@@ -304,5 +141,4 @@ const NewContentNavigation = () => {
     </div>
   );
 };
-
 export default NewContentNavigation;

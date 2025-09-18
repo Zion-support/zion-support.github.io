@@ -1,42 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  const { companySlug } = useParams() as { companySlug?: string };
-  const { user } = useAuth();
-  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
-  const { isWhitelabel, tenant, brandName } = useWhitelabel();
-  }
-
+const CompanyWorkspace: React.FC = () => {
   return (
-    <ProtectedRoute>
-
-
-
-
-
-
-        title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
-      />
-      <Header
-        customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
-        customTheme={effectiveTheme}
-      />
-      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor |'var(--background)' }}>
-      <SEO 
-        title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
-      />
-      <Header 
-        customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
-        customTheme={effectiveTheme}
-      />
-      <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>
-        <CompanyDashboard company={company} />
-      </main>
-      <Footer />
-    </ProtectedRoute>
-
-
-
-
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>CompanyWorkspace | Zion Tech Group</title>
+        <meta name="description" content="CompanyWorkspace - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">CompanyWorkspace</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default CompanyWorkspace;

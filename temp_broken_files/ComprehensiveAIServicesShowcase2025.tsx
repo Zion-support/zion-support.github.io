@@ -1,242 +1,30 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-import { 
-  Brain
-  Zap
-  Shield
-  BarChart3
-  Users
-  Target,
-  Rocket,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Database,
-  Lightbulb,
-  Settings,
-  Play,
-  Download,
-  ExternalLink
-} from 'lucide-react';
-
-const ComprehensiveAIServicesShowcase2025 = () => {
-  const [activeServicesetActiveService] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const services = [
-    {
-      id: 'ai-automation',
-      title: 'AI-Powered Business Automation',
-      description: 'Transform your business operations with intelligent automation that learns and adapts to your needs.',
-      icon: <Settings className="w-8 h-8" />,
-      features: [
-        'Workflow automation with 90% efficiency gain',
-        'Intelligent document processing',
-        'Predictive maintenance scheduling',
-        'Automated customer service responses',
-        'Real-time decision making support'
-      ],
-      benefits: [
-        'Reduce operational costs by 60%',
-        'Increase productivity by 300%',
-        'Eliminate human error in routine tasks',
-        '24/7 automated operations'
-      ],
-      pricing: 'Starting at $299/month',
-      category: 'Automation',
-      rating: 4.9,
-      clients: 2500,
-      link: '/services/ai-automation'
-    },
-    {
-      id: 'predictive-analytics',
-      title: 'Advanced Predictive Analytics',
-      description: 'Harness the power of AI to predict future trendscustomer behaviorand business outcomes.',
-      icon: <BarChart3 className="w-8 h-8" />,
-      features: [
-        '95% accurate market predictions',
-        'Customer behavior analysis',
-        'Sales forecasting with confidence intervals',
-        'Risk assessment and mitigation',
-        'Real-time data processing'
-      ],
-      benefits: [
-        'Increase revenue by 40%',
-        'Reduce risk exposure by 70%',
-        'Optimize inventory management',
-        'Improve customer retention'
-      ],
-      pricing: 'Starting at $499/month',
-      category: 'Analytics',
-      rating: 4.8,
-      clients: 1800,
-      link: '/services/predictive-analytics'
-    },
-    {
-      id: 'ai-content-generation',
-      title: 'Intelligent Content Generation',
-      description: 'Create high-qualityengaging content at scale with our advanced AI content generation platform.',
-      icon: <Lightbulb className="w-8 h-8" />,
-      features: [
-        'Multi-format content creation',
-        'Brand voice consistency',
-        'SEO optimization',
-        'Multi-language support',
-        'Content performance tracking'
-      ],
-      benefits: [
-        'Reduce content creation time by 80%',
-        'Increase engagement by 150%',
-        'Maintain consistent brand voice',
-        'Scale content production infinitely'
-      ],
-      pricing: 'Starting at $199/month',
-      category: 'Content',
-      rating: 4.7,
-      clients: 3200,
-      link: '/services/ai-content-generation'
-    },
-    {
-      id: 'ai-security',
-      title: 'AI-Powered Cybersecurity',
-      description: 'Protect your business with advanced AI-driven security solutions that adapt to emerging threats.',
-      icon: <Shield className="w-8 h-8" />,
-      features: [
-        'Real-time threat detection',
-        'Automated incident response',
-        'Behavioral analysis',
-        'Zero-day attack prevention',
-        'Compliance monitoring'
-      ],
-      benefits: [
-        'Reduce security incidents by 95%',
-        'Automated 24/7 monitoring',
-        'Faster threat response times',
-        'Compliance assurance'
-      ],
-      pricing: 'Starting at $799/month',
-      category: 'Security',
-      rating: 4.9,
-      clients: 1200,
-      link: '/services/ai-security'
-    },
-    {
-      id: 'ai-customer-service',
-      title: 'Intelligent Customer Service',
-      description: 'Deliver exceptional customer experiences with AI-powered chatbots and support systems.',
-      icon: <Users className="w-8 h-8" />,
-      features: [
-        'Natural language processing',
-        'Multi-channel support',
-        'Sentiment analysis',
-        'Escalation management',
-        'Performance analytics'
-      ],
-      benefits: [
-        'Improve customer satisfaction by 85%',
-        'Reduce support costs by 50%',
-        '24/7 availability',
-        'Faster resolution times'
-      ],
-      pricing: 'Starting at $149/month',
-      category: 'Customer Service',
-      rating: 4.6,
-      clients: 4100,
-      link: '/services/ai-customer-service'
-    },
-    {
-      id: 'ai-data-analysis',
-      title: 'Advanced Data Analysis',
-      description: 'Unlock insights from your data with powerful AI-driven analysis and visualization tools.',
-      icon: <Database className="w-8 h-8" />,
-      features: [
-        'Automated data processing',
-        'Pattern recognition',
-        'Predictive modeling',
-        'Interactive dashboards',
-        'Custom reporting'
-      ],
-      benefits: [
-        'Discover hidden insights',
-        'Make data-driven decisions',
-        'Reduce analysis time by 90%',
-        'Improve accuracy of predictions'
-      ],
-      pricing: 'Starting at $399/month',
-      category: 'Data Analysis',
-      rating: 4.8,
-      clients: 2200,
-      link: '/services/ai-data-analysis'
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
+import React from 'react';
+const ComprehensiveAIServicesShowcase2025: React.FC = () => {
   return (
-    <motion.section
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={containerVariants}
+    <divsection
       className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div variants={itemVariants} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Cpu className="w-4 h-4 text-blue-400" />
             <span>Comprehensive AI Services</span>
             <Award className="w-4 h-4 text-yellow-400" />
           </div>
-          
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Transform Your Business with
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent block">
               AI-Powered Solutions
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Choose from our comprehensive suite of AI services designed to accelerate growth
             improve efficiencyand drive innovation across every aspect of your business.
           </p>
         </div>
-
         {/* Service Navigation */}
-        <div variants={itemVariants} className="flex flex-wrap justify-center gap-4 mb-12">
           {services.map((serviceindex) => (
             <button
               key={service.id}
@@ -252,13 +40,9 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             </button>
           ))}
         </div>
-
         {/* Active Service Details */}
         <div
           key={activeService}
-          initial={{ opacity: 0x: 50 }}
-          animate={{ opacity: 1x: 0 }}
-          transition={{ duration: 0.5 }}
           className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-12"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -274,15 +58,12 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   </span>
                 </div>
               </div>
-
               <h3 className="text-3xl font-bold text-white mb-4">
                 {services[activeService].title}
               </h3>
-              
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                 {services[activeService].description}
               </p>
-
               {/* Stats */}
               <div className="flex items-center gap-6 mb-6">
                 <div className="flex items-center gap-2">
@@ -298,7 +79,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   <span className="text-white font-semibold">Proven ROI</span>
                 </div>
               </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
                 <a
@@ -319,7 +99,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                 </button>
               </div>
             </div>
-
             {/* Features and Benefits */}
             <div className="space-y-8">
               {/* Features */}
@@ -337,7 +116,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   ))}
                 </div>
               </div>
-
               {/* Benefits */}
               <div>
                 <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -353,7 +131,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   ))}
                 </div>
               </div>
-
               {/* Pricing */}
               <div className="bg-white/10 rounded-xl p-4">
                 <div className="flex items-center justify-between">
@@ -373,14 +150,10 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             </div>
           </div>
         </div>
-
         {/* All Services Grid */}
-        <div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((serviceindex) => (
             <div
               key={service.id}
-              variants={itemVariants}
-              whileHover={{ scale: 1.02y: -5 }}
               className="group"
             >
               <a href={service.link}>
@@ -407,7 +180,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                       </p>
                     </div>
                   </div>
-
                   <div className="flex items-center justify-between pt-4 border-t border-white/20">
                     <div className="text-sm text-gray-300">
                       <span className="font-semibold text-white">{service.clients.toLocaleString()}+</span> clients
@@ -419,9 +191,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
-        <div variants={itemVariants} className="text-center mt-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -448,8 +218,7 @@ const ComprehensiveAIServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </divsection>
   );
 };
-
 export default ComprehensiveAIServicesShowcase2025;

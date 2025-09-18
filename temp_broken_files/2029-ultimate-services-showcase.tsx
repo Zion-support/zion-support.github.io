@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Target, Crown, Star, TrendingUp, ArrowRight,
@@ -10,13 +9,10 @@ import {
   Building, Factory, Camera, Video, Music, Gamepad2, Eye,
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon
 } from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
 import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services';
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
-
 export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -133,9 +129,6 @@ export default function UltimateServicesShowcase2029() {
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center space-x-2 mb-6">
@@ -264,15 +257,11 @@ export default function UltimateServicesShowcase2029() {
       <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           >
             {filteredServices.map((service, index) => (
               <div
                 key={service.id}
-                variants={itemVariants}
                 className="group relative"
               >
                 <div className="relative p-6 rounded-2xl border border-gray-700/50 bg-gray-800/20 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 h-full">
@@ -391,9 +380,7 @@ export default function UltimateServicesShowcase2029() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

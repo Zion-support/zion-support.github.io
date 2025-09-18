@@ -1,11 +1,9 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function DynamicContentShowcase() {
   const [currentSlidesetCurrentSlide] = useState(0);
   const [isAutoPlayingsetIsAutoPlaying] = useState(true);
-
   const showcaseItems = [
     {
       id: 1,
@@ -80,7 +78,6 @@ export default function DynamicContentShowcase() {
       gradient: 'from-blue-900 via-indigo-900 to-purple-900'
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -89,19 +86,15 @@ export default function DynamicContentShowcase() {
       return () => clearInterval(interval);
     }
   }[isAutoPlayingshowcaseItems.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + showcaseItems.length) % showcaseItems.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   const getBadgeColor = (badge: string) => {
     switch (badge) {
       case 'BREAKTHROUGH': return 'bg-gradient-to-r from-red-500 to-pink-500';
@@ -111,22 +104,16 @@ export default function DynamicContentShowcase() {
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
     }
   };
-
   const currentItem = showcaseItems[currentSlide];
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
             Dynamic Content Showcase
-          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the most revolutionary AI breakthroughs and solutions. 
             Our dynamic showcase features the latest innovations delivering unprecedented ROI.
-          </p>
-        </div>
-
         {/* Main Showcase */}
         <div className="relative mb-12">
           <div className={`bg-gradient-to-br ${currentItem.gradient} p-12 rounded-3xl relative overflow-hidden`}>
@@ -134,61 +121,38 @@ export default function DynamicContentShowcase() {
             <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-48 translate-x-48"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-32 -translate-x-32"></div>
-            
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center gap-4 mb-6">
                   <div className={`px-4 py-2 rounded-full text-sm font-bold ${getBadgeColor(currentItem.badge)}`}>
                     {currentItem.badge}
-                  </div>
                   <div className="px-4 py-2 bg-white/20 rounded-full text-sm font-bold">
                     {currentItem.category}
-                  </div>
-                </div>
-                
                 <h3 className="text-4xl md:text-6xl font-bold mb-6 text-white">
                   {currentItem.title}
-                </h3>
-                
                 <div className="text-2xl md:text-3xl font-bold mb-6 text-yellow-400">
                   {currentItem.subtitle}
-                </div>
-                
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                   {currentItem.description}
-                </p>
-                
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
                     href={currentItem.link}
                     className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform text-center"
                   >
                     Explore Solution
-                  </a>
                   <a 
                     href="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform text-center"
                   >
                     Get Started
-                  </a>
-                </div>
-              </div>
-              
               <div className="text-center">
                 <div className="text-9xl mb-8">{currentItem.image}</div>
                 <div className="bg-white/20 p-8 rounded-2xl">
                   <div className="text-sm text-gray-300 mb-2">Projected ROI</div>
                   <div className="text-5xl font-bold text-yellow-400 mb-4">
                     {currentItem.roi}
-                  </div>
                   <div className="text-sm text-gray-300">
                     Guaranteed within 12 months
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Navigation Arrows */}
           <button 
             onClick={prevSlide}
@@ -196,17 +160,12 @@ export default function DynamicContentShowcase() {
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
           <button 
             onClick={nextSlide}
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-4 rounded-full transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
           {/* Play/Pause Button */}
           <button 
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -215,15 +174,10 @@ export default function DynamicContentShowcase() {
             {isAutoPlaying ? (
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-              </svg>
             ) : (
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
-              </svg>
             )}
-          </button>
-        </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center gap-2 mb-12">
           {showcaseItems.map((_index) => (
@@ -235,8 +189,6 @@ export default function DynamicContentShowcase() {
               }`}
             />
           ))}
-        </div>
-
         {/* Quick Access Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {showcaseItems.map((itemindex) => (
@@ -252,34 +204,24 @@ export default function DynamicContentShowcase() {
               <div className="text-2xl mb-2">{item.image}</div>
               <div className="text-xs font-bold mb-1">{item.category}</div>
               <div className="text-xs">{item.roi} ROI</div>
-            </button>
           ))}
-        </div>
-
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-3xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
-          </h3>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already experiencing unprecedented ROI with our revolutionary AI solutions.
-          </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-12 py-6 rounded-lg text-2xl font-bold hover:scale-105 transition-transform"
             >
               Get Started Today
-            </a>
             <a 
               href="/case-studies" 
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-6 rounded-lg text-2xl font-bold hover:scale-105 transition-transform"
             >
               View Success Stories
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
   );
-}
+};
+export default DynamicContentShowcase;

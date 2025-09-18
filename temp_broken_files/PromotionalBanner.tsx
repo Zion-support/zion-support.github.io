@@ -1,69 +1,8 @@
-import React, { useState, useEffect } from 'react';
-
-
+import React from 'react';
 const PromotionalBanner: React.FC = () => {
-  const [currentBanner, setCurrentBanner] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const banners = [
-    {
-      id: 0,
-      title: "🚀 BREAKTHROUGH 2026: AI REVOLUTION",
-      subtitle: "Experience the most advanced AI technologies ever created",
-      cta: "Explore Now →",
-      link: "/pages/AdvancedAITransformation2026",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
-      bgPattern: "radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%)"
-    },
-    {
-      id: 1,
-      title: "⚡ QUANTUM COMPUTING BREAKTHROUGH",
-      subtitle: "1000+ qubit processors now available for enterprise",
-      cta: "Learn More →",
-      link: "/pages/QuantumComputingRevolution2026",
-      gradient: "from-cyan-600 via-blue-600 to-indigo-600",
-      bgPattern: "radial-gradient(circle at 30% 40%, rgba(6, 182, 212, 0.3) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(59, 130, 246, 0.3) 0%, transparent 50%)"
-    },
-    {
-      id: 2,
-      title: "🧬 NEURAL INTERFACE REVOLUTION",
-      subtitle: "Direct brain-computer communication is here",
-      cta: "Discover →",
-      link: "/pages/NeuralInterfaceRevolution2026",
-      gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-      bgPattern: "radial-gradient(circle at 40% 30%, rgba(16, 185, 129, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 70%, rgba(20, 184, 166, 0.3) 0%, transparent 50%)"
-    },
-    {
-      id: 3,
-      title: "🌟 ULTIMATE TECH SHOWCASE 2026",
-      subtitle: "See all revolutionary technologies in one place",
-      cta: "View Showcase →",
-      link: "/pages/UltimateTechShowcase2026",
-      gradient: "from-violet-600 via-purple-600 to-fuchsia-600",
-      bgPattern: "radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(192, 132, 252, 0.3) 0%, transparent 50%)"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [banners.length]);
-
-  const closeBanner = () => {
-    setIsVisible(false);
-  };
-
-  if (!isVisible) return null;
-
   return (
-    
+    <div>
       <div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
         className="relative overflow-hidden"
         style={{
           background: `linear-gradient(135deg, ${banners[currentBanner].gradient.split(' ').join(', ')})`,
@@ -79,16 +18,12 @@ const PromotionalBanner: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-
         {/* Banner Content */}
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex-1">
               <div
                 key={currentBanner}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
                 className="text-white"
               >
                 <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -99,7 +34,6 @@ const PromotionalBanner: React.FC = () => {
                 </p>
               </div>
             </div>
-            
             <div className="flex items-center space-x-4">
               <a
                 href={banners[currentBanner].link}
@@ -107,7 +41,6 @@ const PromotionalBanner: React.FC = () => {
               >
                 {banners[currentBanner].cta}
               </a>
-              
               {/* Banner Indicators */}
               <div className="flex space-x-2">
                 {banners.map((_, index) => (
@@ -123,7 +56,6 @@ const PromotionalBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-10 -left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
@@ -131,8 +63,7 @@ const PromotionalBanner: React.FC = () => {
           <div className="absolute bottom-0 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
       </div>
-    
+    </div>
   );
 };
-
 export default PromotionalBanner;

@@ -1,105 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-import { 
-  Brain
-  Sparkles
-  TrendingUp
-  Target
-  Users
-  Clock
-  Star,
-  ArrowRight,
-  BookOpen,
-  Play,
-  Download,
-  Share2,
-  Heart,
-  Eye,
-  Tag,
-  Calendar,
-  User,
-  Zap,
-  Cpu,
-  Globe,
-  Database,
-  Cloud,
-  Shield,
-  CheckCircle,
-  AlertCircle,
-  RefreshCw,
-  Filter,
-  Search,
-  Settings,
-  BarChart3,
-  Activity,
-  Lightbulb,
-  Rocket,
-  Award,
-  ThumbsUp
-} from 'lucide-react';
-
-const AIPoweredContentRecommendationSystemPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const features = [
-    'AI-Powered Personalization',
-    'Real-Time Content Analysis',
-    'Smart Recommendation Engine',
-    'Behavioral Pattern Recognition',
-    'Engagement Optimization',
-    'Cross-Platform Content Discovery'
-  ];
-
-  const stats = [
-    { value: '94.2%'label: 'AI 'Accuracy', 'icon: Target },
-    { value: '98.7%'label: ''Personalization', 'icon: Users },
-    { value: '+67%'label: 'Engagement 'Boost', 'icon: TrendingUp },
-    { value: '1,247'label: 'Content 'Matched', 'icon: Database }
-  ];
-
-  const recommendationTypes = [
-    { icon: BookOpenlabel: 'Blog 'Posts', 'count: '342'color: 'blue' },
-    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' },
-    { icon: Playlabel: ''Tutorials', 'count: '289'color: 'green' },
-    { icon: Cpulabel: ''Research', 'count: '123'color: 'orange' },
-    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' },
-    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
-  ];
-
-  const aiCapabilities = [
-    {
-      title: 'Neural Pattern Recognition',
-      description: 'Advanced AI algorithms analyze your reading patterns and preferences',
-      icon: Brain,
-      accuracy: '94.2%'
-    },
-    {
-      title: 'Behavioral Analysis',
-      description: 'Machine learning models understand your content consumption habits',
-      icon: Users,
-      accuracy: '98.7%'
-    },
-    {
-      title: 'Content Optimization',
-      description: 'AI continuously optimizes recommendations based on engagement data',
-      icon: TrendingUp,
-      accuracy: '+67%'
-    },
-    {
-      title: 'Real-Time Processing',
-      description: 'Instant content analysis and recommendation generation',
-      icon: Zap,
-      accuracy: '<100ms'
-    }
-  ];
-
+import React from 'react';
+const AIPoweredContentRecommendationSystemPromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600">
       {/* Background Pattern */}
@@ -112,31 +12,24 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
           <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-cyan-400/20 rounded-full blur-lg"></div>
         </div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
             <Brain className="w-4 h-4 mr-2" />
             AI-Powered Intelligence
           </div>
-          
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Discover Content with
             <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
               AI Intelligence
             </span>
           </h1>
-          
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
             Experience the future of content discovery with our advanced AI recommendation system. 
             Get personalized content suggestions that match your interests and boost engagement by 67%.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-white text-purple-600 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 flex items-center justify-center group">
               <Brain className="w-5 h-5 mr-2" />
@@ -150,12 +43,8 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </button>
           </div>
         </div>
-
         {/* AI Stats */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
         >
           {stats.map((statindex) => (
@@ -168,12 +57,8 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </div>
           ))}
         </div>
-
         {/* AI Capabilities */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {aiCapabilities.map((capabilityindex) => (
@@ -191,12 +76,8 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </div>
           ))}
         </div>
-
         {/* Features Grid */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           {features.map((featureindex) => (
@@ -213,19 +94,14 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </div>
           ))}
         </div>
-
         {/* Content Types Showcase */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-2">AI-Powered Content Discovery</h2>
             <p className="text-blue-100">Intelligent recommendations across all content types</p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {recommendationTypes.map((typeindex) => (
               <div key={index} className="text-center group">
@@ -238,19 +114,14 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             ))}
           </div>
         </div>
-
         {/* AI Demo Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 1.0 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12"
         >
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-2">See AI in Action</h2>
             <p className="text-blue-100">Watch how our AI analyzes your preferences and generates recommendations</p>
           </div>
-          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-4">
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
@@ -262,7 +133,6 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
                   Analyzing reading patternsengagement historyand content preferences...
                 </div>
               </div>
-              
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
                 <div className="flex items-center mb-2">
                   <Target className="w-5 h-5 text-green-400 mr-2" />
@@ -272,7 +142,6 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
                   Identified 12 content themes and 8 engagement patterns from your activity.
                 </div>
               </div>
-              
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
                 <div className="flex items-center mb-2">
                   <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
@@ -283,7 +152,6 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
                 </div>
               </div>
             </div>
-            
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-lg font-semibold text-white mb-4">Live AI Metrics</h3>
               <div className="space-y-3">
@@ -294,7 +162,6 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
                 <div className="w-full bg-white/20 rounded-full h-2">
                   <div className="bg-gradient-to-r from-green-400 to-blue-400 h-2 rounded-full" style={{width: '98.7%'}}></div>
                 </div>
-                
                 <div className="flex justify-between items-center">
                   <span className="text-blue-100">Content Match Rate</span>
                   <span className="text-white font-bold">94.2%</span>
@@ -302,7 +169,6 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
                 <div className="w-full bg-white/20 rounded-full h-2">
                   <div className="bg-gradient-to-r from-yellow-400 to-orange-400 h-2 rounded-full" style={{width: '94.2%'}}></div>
                 </div>
-                
                 <div className="flex justify-between items-center">
                   <span className="text-blue-100">Engagement Boost</span>
                   <span className="text-white font-bold">+67%</span>
@@ -314,12 +180,8 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 1.2 }}
           className="text-center"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -348,5 +210,4 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
     </div>
   );
 };
-
 export default AIPoweredContentRecommendationSystemPromotionBanner;

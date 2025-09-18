@@ -1,12 +1,30 @@
 User-agent: *
 Allow: /
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -17,6 +35,10 @@ Disallow: /_headers
 Disallow: /*.backup
 Disallow: /*.log
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 =======
 <<<<<<< HEAD
 =======
@@ -39,4 +61,18 @@ Allow: /contact/
 Crawl-delay: 1
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-f995
+<<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+=======
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+=======
+>>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
+>>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

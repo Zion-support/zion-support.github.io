@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
@@ -267,6 +268,11 @@ export default function HomePage() {
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
+=======
+  ],
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
@@ -283,6 +289,7 @@ export default function HomePage() {
                 🔬 New: Foundation Models 2025
               </a>
               </Link>
+<<<<<<< HEAD
               <a href="/multiverse/launch" className="btn-primary hover-lift">🚀 Launch Your Economy</a>
               <a href="/admin/instances" className="btn-secondary hover-lift">📊 View Instances</a>
               <a href="/news" className="btn-secondary hover-lift">📰 See what's new in 2025</a>
@@ -299,6 +306,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+=======
+              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
+                ✅ New: AI Safety & Governance 2025
+              </a>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
 
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
@@ -308,6 +320,7 @@ export default function HomePage() {
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
           >
+<<<<<<< HEAD
       {/* What's New Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
       {/* Latest Blog Content */}
@@ -509,6 +522,8 @@ export default function HomePage() {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
               <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
@@ -517,6 +532,7 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
               </Link>
+<<<<<<< HEAD
               </a>
               <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance Operating Systems
@@ -605,6 +621,10 @@ export default function HomePage() {
     </div>
   );
 }
+=======
+              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
+                📰 New: AI Governance Operating Systems
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -689,6 +709,7 @@ export default function HomePage() {
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto">
           <a href="/blog/sovereign-ai-commerce-2025" className="block w-full bg-white rounded-xl border border-blue-200 p-4 shadow-sm hover:shadow-md transition-shadow" aria-label="Read: Sovereign AI Commerce: Launching Fully Autonomous Marketplaces in 2025">
+<<<<<<< HEAD
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">AR</div>
               <div className="flex-1">
@@ -763,6 +784,8 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
               <FeatureCard
                 key={index}
                 icon={feature.icon}
@@ -771,6 +794,7 @@ export default function HomePage() {
                 features={feature.features}
                 gradient={feature.gradient}
               />
+<<<<<<< HEAD
               <div key={index}>
                 <FeatureCard
                   icon={feature.icon}
@@ -893,3 +917,5 @@ export default function HomePage() {
       </section>;
     </div>;
   )}}
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

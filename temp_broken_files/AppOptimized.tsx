@@ -11,14 +11,13 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEOHead from './components/SEOHead';
 import LoadingSpinner from './components/LoadingSpinner';
-
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
-
+const BlogPost = lazy(() => import('./pages/BlogPost'));
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,7 +32,6 @@ const queryClient = new QueryClient({
     },
   },
 });
-
 const AppOptimized: React.FC = () => {
   return (
     <ErrorBoundary>
@@ -53,10 +51,11 @@ const AppOptimized: React.FC = () => {
                           <Route path="/services" element={<Services />} />
                           <Route path="/contact" element={<Contact />} />
                           <Route path="/blog" element={<Blog />} />
+                          <Route path="/blog/:slug" element={<BlogPost />} />
                         </Routes>
                       </Suspense>
                     </div>
-                    {process.env.NODE_ENV === 'development' && <PerformanceMonitor />}
+                    {import.meta.env.DEV && <PerformanceMonitor />}
                   </Router>
                 </MobileOptimizer>
               </AccessibilityEnhancer>
@@ -67,5 +66,4 @@ const AppOptimized: React.FC = () => {
     </ErrorBoundary>
   );
 };
-
 export default AppOptimized;

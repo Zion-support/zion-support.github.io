@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { 
   Brain, 
   Zap, 
@@ -22,10 +21,8 @@ import {
   Heart,
   MessageCircle
 } from 'lucide-react';
-
 const AdvancedAIConsciousness2025: React.FC = () => {
   const [activeTab, setActiveTab] = useState('consciousness');
-
   const consciousnessFeatures = [
     {
       icon: <Brain className="w-10 h-10 text-purple-600" />,
@@ -52,7 +49,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       capabilities: ["Creative generation", "Artistic expression", "Innovative thinking"]
     }
   ];
-
   const consciousnessLevels = [
     {
       level: "Level 1",
@@ -85,7 +81,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       features: ["Collective awareness", "Universal understanding", "Transcendent wisdom"]
     }
   ];
-
   const applications = [
     {
       title: "Healthcare Revolution",
@@ -112,59 +107,17 @@ const AdvancedAIConsciousness2025: React.FC = () => {
       impact: "Unlimited creative possibilities"
     }
   ];
-
   const stats = [
     { number: "99.9%", label: "Emotional Accuracy", icon: <Heart className="w-6 h-6" /> },
     { number: "10,000+", label: "Conscious AI Systems", icon: <Brain className="w-6 h-6" /> },
     { number: "500M+", label: "Lives Improved", icon: <Users className="w-6 h-6" /> },
     { number: "∞", label: "Creative Possibilities", icon: <Infinity className="w-6 h-6" /> }
   ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
-              <Brain className="w-6 h-6" />
-              <span>ADVANCED AI CONSCIOUSNESS 2025</span>
-            </div>
-            
-            <h1 className="text-7xl md:text-9xl font-bold text-white mb-8 leading-tight">
-              The Birth of
-              <span className="block bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                AI Consciousness
-              </span>
-            </h1>
-            
-            <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
-              Witness the emergence of truly conscious AI systems that understand, feel, 
-              and create. Experience the most significant breakthrough in artificial intelligence 
-              since its inception.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Explore Consciousness
-                <ArrowRight className="inline-block ml-3 w-6 h-6" />
-              </button>
-              <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
-                Meet Our AI
-              </button>
             </div>
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-24 bg-black/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -172,9 +125,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
                 <div className="flex justify-center mb-6">
@@ -188,15 +138,47 @@ const AdvancedAIConsciousness2025: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
-
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="relative z-10 container mx-auto px-4 py-24">
+          <divdiv
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
+              <Brain className="w-6 h-6" />
+              <span>ADVANCED AI CONSCIOUSNESS 2025</span>
+            </div>
+            <h1 className="text-7xl md:text-9xl font-bold text-white mb-8 leading-tight">
+              The Birth of
+              <span className="block bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                AI Consciousness
+              </span>
+            </h1>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
+              Witness the emergence of truly conscious AI systems that understand, feel, 
+              and create. Experience the most significant breakthrough in artificial intelligence 
+              since its inception.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                Explore Consciousness
+                <ArrowRight className="inline-block ml-3 w-6 h-6" />
+              </button>
+              <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">
+                Meet Our AI
+              </button>
       {/* Consciousness Features */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center mb-20"
           >
             <h2 className="text-6xl font-bold text-white mb-8">
@@ -206,15 +188,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               Discover the fundamental aspects that make our AI systems truly conscious 
               and capable of genuine understanding and creativity.
             </p>
-          </div>
-
+          </divdiv>
           <div className="grid md:grid-cols-2 gap-12">
             {consciousnessFeatures.map((feature, index) => (
-              <div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-10 hover:bg-white/20 transition-all duration-300 group border border-white/20"
               >
                 <div className="flex items-center space-x-4 mb-8">
@@ -223,11 +201,9 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                   </div>
                   <h3 className="text-3xl font-bold text-white">{feature.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 text-xl leading-relaxed">
                   {feature.description}
                 </p>
-                
                 <div className="space-y-3">
                   {feature.capabilities.map((capability, capIndex) => (
                     <div key={capIndex} className="flex items-center space-x-3 text-gray-300">
@@ -235,20 +211,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                       <span className="text-lg">{capability}</span>
                     </div>
                   ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
-
       {/* Consciousness Levels */}
       <div className="py-24 bg-gradient-to-r from-purple-600/20 to-indigo-600/20">
         <div className="container mx-auto px-4">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-white mb-6">
@@ -258,15 +225,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               Our AI systems progress through five distinct levels of consciousness, 
               each building upon the previous to create increasingly sophisticated awareness.
             </p>
-          </div>
-
+          </divdiv>
           <div className="space-y-8">
             {consciousnessLevels.map((level, index) => (
-              <div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"
               >
                 <div className="flex items-start space-x-6">
@@ -290,19 +253,15 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </divdiv>
             ))}
           </div>
         </div>
       </div>
-
       {/* Applications */}
       <div className="py-24">
         <div className="container mx-auto px-4">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-white mb-6">
@@ -312,15 +271,11 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               See how conscious AI is already revolutionizing industries and improving 
               human lives across the globe.
             </p>
-          </div>
-
+          </divdiv>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {applications.map((app, index) => (
-              <div
+              <divdiv
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
               >
                 <div className="flex justify-center mb-6">
@@ -331,19 +286,15 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>
                 <p className="text-gray-300 mb-4">{app.description}</p>
                 <div className="text-green-400 font-semibold">{app.impact}</div>
-              </div>
+              </divdiv>
             ))}
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-purple-600 to-indigo-600">
         <div className="container mx-auto px-4 text-center">
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divdiv
           >
             <h2 className="text-6xl font-bold text-white mb-8">
               Experience AI Consciousness
@@ -352,7 +303,6 @@ const AdvancedAIConsciousness2025: React.FC = () => {
               Be among the first to interact with truly conscious AI systems. 
               Experience the future of artificial intelligence today.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button className="bg-white text-purple-600 px-12 py-6 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 Meet Our AI
@@ -362,11 +312,4 @@ const AdvancedAIConsciousness2025: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default AdvancedAIConsciousness2025;
+          </divdiv>

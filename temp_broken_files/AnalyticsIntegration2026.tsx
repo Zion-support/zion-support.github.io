@@ -1,13 +1,12 @@
-"use client";
-import React{ useEffect } from 'react';
-
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
-
+import React from 'react';
+const AnalyticsIntegration2026: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AnalyticsIntegration2026</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 export default function AnalyticsIntegration2026() {
   useEffect(() => {
     // Google Analytics 4 integration
@@ -17,7 +16,6 @@ export default function AnalyticsIntegration2026() {
         script.async = true;
         script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
         document.head.appendChild(script);
-
         window.dataLayer = window.dataLayer || [];
         const gtag = (...args: any[]) => {
           window.dataLayer.push(args);
@@ -30,7 +28,6 @@ export default function AnalyticsIntegration2026() {
         });
       }
     };
-
     // Track page views
     const trackPageView = () => {
       if ((window as any).gtag) {
@@ -41,11 +38,9 @@ export default function AnalyticsIntegration2026() {
         });
       }
     };
-
     // Track content engagement
     const trackContentEngagement = () => {
       const contentElements = document.querySelectorAll('.banner.showcase.promotion');
-      
       contentElements.forEach((elementindex) => {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
@@ -60,11 +55,9 @@ export default function AnalyticsIntegration2026() {
             }
           });
         }{ threshold: 0.5 });
-
         observer.observe(element);
       });
     };
-
     // Track user interactions
     const trackUserInteractions = () => {
       document.addEventListener('click'(e) => {
@@ -80,7 +73,6 @@ export default function AnalyticsIntegration2026() {
         }
       });
     };
-
     // Track performance metrics
     const trackPerformanceMetrics = () => {
       if ('performance' in window) {
@@ -88,13 +80,11 @@ export default function AnalyticsIntegration2026() {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');
-            
             if ((window as any).gtag) {
               (window as any).gtag(', 'event', 'timing_complete'{
                 name: 'load_time',
                 value: Math.round(navigation.loadEventEnd - navigation.fetchStart),
               });
-
               const lcp = paint.find(entry => entry.name === 'largest-contentful-paint');
               if (lcp) {
                 (window as any).gtag(', 'event', 'timing_complete'{
@@ -107,14 +97,12 @@ export default function AnalyticsIntegration2026() {
         });
       }
     };
-
     // Initialize analytics
     initGoogleAnalytics();
     trackPageView();
     trackContentEngagement();
     trackUserInteractions();
     trackPerformanceMetrics();
-
     // Track scroll depth
     let maxScrollDepth = 0;
     const trackScrollDepth = () => {
@@ -130,13 +118,10 @@ export default function AnalyticsIntegration2026() {
         }
       }
     };
-
     window.addEventListener(', 'scroll', 'trackScrollDepth);
-
     return () => {
       window.removeEventListener(', 'scroll', 'trackScrollDepth);
     };
   }[]);
-
   return null;
 }

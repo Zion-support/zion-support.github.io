@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
+<<<<<<< HEAD
 
 const UltimateContentShowcase2026: React.FC = () => {
   return (
@@ -751,9 +752,22 @@ const UltimateContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
+=======
+          </div>
+          <a href="/pages/AIConsciousnessRevolution2026" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+            Explore Consciousness →
+          </a>
+        </div>
+
+        </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default UltimateContentShowcase2026;
+=======
+export default COMPONENT;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

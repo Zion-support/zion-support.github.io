@@ -2,15 +2,12 @@ export default function Page(){return null}
 import React from 'react';
 import React, { useState } from 'react';
 import Head from 'next/head';
-
 import { 
   Phone, Mail, MapPin, Globe, Clock, Users, 
   MessageSquare, Send, CheckCircle, Star, 
   Rocket, Brain, Atom, Shield, Zap
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 
 // Import service data for showcase
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
@@ -106,9 +103,6 @@ export default function ContactPage() {
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="mb-8"
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -122,17 +116,11 @@ export default function ContactPage() {
 
           {/* Stats Grid */}
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12"
           >
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 className="text-center group"
               >
                 <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/70 transition-all duration-300 hover:scale-105">
@@ -160,9 +148,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div
-              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
@@ -172,8 +158,6 @@ export default function ContactPage() {
                 
                 {isSubmitted ? (
                   <div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
@@ -202,9 +186,6 @@ export default function ContactPage() {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -227,9 +208,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {/* Phone Contact */}
               <div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
@@ -246,9 +225,7 @@ export default function ContactPage() {
 
               {/* Email Contact */}
               <div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
@@ -265,9 +242,7 @@ export default function ContactPage() {
 
               {/* Address Contact */}
               <div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="group cursor-pointer"
               >
@@ -285,9 +260,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
@@ -303,8 +276,6 @@ export default function ContactPage() {
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">
                 {submitSuccess ? (
                   <div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
                   >
                     <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
@@ -448,9 +419,7 @@ export default function ContactPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-12"
             >
@@ -466,9 +435,7 @@ export default function ContactPage() {
               {popularServices.map((service, index) => (
                 <div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group cursor-pointer"
                 >
@@ -519,9 +486,7 @@ export default function ContactPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">

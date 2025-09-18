@@ -1,14 +1,9 @@
-import React from 'react';
-
-
-const NextGenAIRevolution2027: React.FC = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -32,12 +27,9 @@ const NextGenAIRevolution2027: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
-      </div>
-
       {/* Revolutionary AI Technologies */}
       <div className="container mx-auto px-4 py-20">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -47,10 +39,9 @@ const NextGenAIRevolution2027: React.FC = () => {
           <p className="text-xl opacity-80 max-w-3xl mx-auto">
             Discover the most advanced AI systems that are redefining what's possible in artificial intelligence
           </p>
-        </div>
-
+        </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -70,9 +61,8 @@ const NextGenAIRevolution2027: React.FC = () => {
             <button className="w-full bg-white text-emerald-600 py-3 rounded-lg hover:bg-emerald-50 transition-colors font-semibold">
               Explore Consciousness →
             </button>
-          </div>
-
-          <div
+          </motion.div>
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -92,9 +82,8 @@ const NextGenAIRevolution2027: React.FC = () => {
             <button className="w-full bg-white text-cyan-600 py-3 rounded-lg hover:bg-cyan-50 transition-colors font-semibold">
               Go Quantum →
             </button>
-          </div>
-
-          <div
+          </motion.div>
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -114,14 +103,19 @@ const NextGenAIRevolution2027: React.FC = () => {
             <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
               Join Network →
             </button>
-          </div>
+          </motion.div>
+        </div>
+          </motion.div>
         </div>
       </div>
-
+            </button>
+          </div>
+        </motion.div>
+      </div>
       {/* AI Applications Section */}
       <div className="bg-gradient-to-r from-emerald-800/50 to-cyan-800/50 py-20">
         <div className="container mx-auto px-4">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -131,10 +125,9 @@ const NextGenAIRevolution2027: React.FC = () => {
             <p className="text-xl opacity-80 max-w-3xl mx-auto">
               See how next-generation AI is transforming industries and creating new possibilities
             </p>
-          </div>
-
+          </motion.div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -150,9 +143,8 @@ const NextGenAIRevolution2027: React.FC = () => {
                 <li>• Robotic surgery assistance</li>
                 <li>• Drug discovery acceleration</li>
               </ul>
-            </div>
-
-            <div
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -168,14 +160,13 @@ const NextGenAIRevolution2027: React.FC = () => {
                 <li>• Quality control automation</li>
                 <li>• Supply chain optimization</li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
-        <div
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -191,12 +182,3 @@ const NextGenAIRevolution2027: React.FC = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-emerald-900 transition-all duration-300 font-semibold text-lg">
               Contact Our AI Experts
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default NextGenAIRevolution2027;

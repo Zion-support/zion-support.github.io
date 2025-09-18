@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type ContentItem = {
   id: string;
   title: string;
@@ -48,6 +49,9 @@ export const latestContent: ContentItem[] = [
     tag: "Guide",
     date: "2025-09-15",
   },
+=======
+export const latestContent = [
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
   {
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
@@ -57,6 +61,7 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
+<<<<<<< HEAD
     id: "autonomous-support-agents-2026",
     title: "AI 2026: Autonomous Customer Support Agents",
     summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
@@ -65,6 +70,8 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",
@@ -157,35 +164,14 @@ export const latestContent: ContentItem[] = [
     title: "AI 2026: Autonomous Enterprise Blueprint",
     summary: "Operating model, controls, and metrics to scale autonomous operations.",
     href: "/content/ai-2026-autonomous-enterprise-blueprint",
+<<<<<<< HEAD
     id: "evaluation-harness-blueprint-2026",
     title: "AI 2026: Evaluation Harness Blueprint",
     summary: "Scenario suites, metrics, and policy gates to ship reliable autonomous agents.",
     href: "/content/ai-2026-evaluation-harness-blueprint",
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
     tag: "Blueprint",
     date: "2025-09-15",
-  },
-  {
-    id: "ai-governance-2025",
-    title: "AI Governance Playbook 2025",
-    summary: "A practical guide to building safe, compliant AI systems at scale.",
-    href: "/resources/ai-governance-2025",
-    tag: "Guide",
-    date: "2025-09-10",
-  },
-  {
-    id: "quantum-edge-report",
-    title: "Quantum + Edge: 2026 Readiness Report",
-    summary: "Where quantum acceleration meets edge workloads—benchmarks and ROI models.",
-    href: "/resources/quantum-edge-readiness",
-    tag: "Report",
-    date: "2025-09-12",
-  },
-  {
-    id: "ai-security-blueprint",
-    title: "AI Security Blueprint",
-    summary: "Threat modeling, red teaming, and runtime defenses for agentic systems.",
-    href: "/resources/ai-security-blueprint",
-    tag: "Blueprint",
-    date: "2025-09-14",
   }
 ];

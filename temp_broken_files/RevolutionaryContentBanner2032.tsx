@@ -1,19 +1,19 @@
-import React from 'react';
-
-
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 const RevolutionaryContentBanner2032: React.FC = () => {
   return (
-    <div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+      </div>
+    </div>
+  );
+};
+export default RevolutionaryContentBanner2032;
+    <divdiv
       className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 rounded-3xl p-12 mb-8 text-white text-center relative overflow-hidden"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-cyan-600/50 backdrop-blur-sm">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
       </div>
-      
       <div className="relative z-10">
         <div className="flex items-center justify-center space-x-4 mb-6">
           <span className="text-5xl animate-bounce">🌟</span>
@@ -22,45 +22,37 @@ const RevolutionaryContentBanner2032: React.FC = () => {
           </h2>
           <span className="text-5xl animate-bounce">🌟</span>
         </div>
-        
         <p className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto">
           Experience the most advanced technology content ever created - Transcendent AI, Universal Tech Revolution, 
           and Quantum Consciousness that push the boundaries of reality itself
         </p>
-        
         {/* New 2032 Content Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-8xl mx-auto mb-8">
-          <motion.a
-            whileHover={{ scale: 1.05 }}
+          <diva
             href="/pages/TranscendentAI2032"
             className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-purple-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
           >
             <div className="text-3xl mb-2">🧠</div>
             <div className="text-xl font-bold">Transcendent AI 2032</div>
             <div className="text-sm opacity-90 mt-2">Beyond Human Intelligence</div>
-          </motion.a>
-          
-          <motion.a
-            whileHover={{ scale: 1.05 }}
+          </diva>
+          <diva
             href="/pages/UniversalTechRevolution2032"
             className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
           >
             <div className="text-3xl mb-2">🌌</div>
             <div className="text-xl font-bold">Universal Tech 2032</div>
             <div className="text-sm opacity-90 mt-2">Galactic Technology</div>
-          </motion.a>
-          
-          <motion.a
-            whileHover={{ scale: 1.05 }}
+          </diva>
+          <diva
             href="/pages/QuantumConsciousnessRevolution2032"
             className="block bg-white/20 backdrop-blur-sm text-white px-8 py-6 rounded-xl hover:bg-white hover:text-indigo-600 transition-all duration-300 font-bold border border-white/30 text-center transform hover:shadow-2xl"
           >
             <div className="text-3xl mb-2">⚛️</div>
             <div className="text-xl font-bold">Quantum Consciousness 2032</div>
             <div className="text-sm opacity-90 mt-2">Mind-Matter Fusion</div>
-          </motion.a>
+          </diva>
         </div>
-        
         {/* Feature Highlights */}
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           <span className="bg-green-500/20 text-green-300 px-6 py-3 rounded-full text-lg font-bold border border-green-400/30">
@@ -76,7 +68,6 @@ const RevolutionaryContentBanner2032: React.FC = () => {
             🌌 UNIVERSAL SCALE
           </span>
         </div>
-        
         {/* Revolutionary Features List */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -96,28 +87,16 @@ const RevolutionaryContentBanner2032: React.FC = () => {
             <div className="font-bold text-sm">Universal Mind Network</div>
           </div>
         </div>
-        
         {/* Call to Action */}
-        <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
+        <divdiv
           className="mt-8"
         >
           <p className="text-lg opacity-90 mb-4">
             Don't miss the most revolutionary technology content of 2032!
           </p>
-          <button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <divbutton
             className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-xl font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl"
           >
             🚀 Explore 2032 Revolution →
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default RevolutionaryContentBanner2032;
+          </divbutton>
+        </divdiv>

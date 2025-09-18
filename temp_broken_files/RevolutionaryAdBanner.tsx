@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_files/RevolutionaryAdBanner.tsx
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -108,8 +109,9 @@ const RevolutionaryAdBanner: React.FC = () => {
           </a>
         </div>
       </motion.div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/RevolutionaryAdBanner.tsx
     </div>
   );
 };
-
 export default RevolutionaryAdBanner;

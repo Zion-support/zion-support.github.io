@@ -1,17 +1,16 @@
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-
-export default function IncubatorPage() {
+import React from 'react';
+const incubator = () => {
   return (
-    <EnhancedLayout>
-      <div className="max-w-3xl">
-        <h1 className="text-3xl font-semibold mb-3">Zion Incubator</h1>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">Support for builders accelerating tools, research, and regional growth aligned with Zion’s mission. Apply to join the incubator and receive mentorship, milestone-based funding, and community resources.</p>
-        <div className="flex gap-3">
-          <a href="/grants/apply"><a className="px-4 py-2 bg-purple-600 text-white rounded">Apply to Incubator</a></a>
-          <a href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></a>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">incubator</h1>
+          <p className="text-lg opacity-90">Revolutionary technology solutions</p>
         </div>
       </div>
-    </EnhancedLayout>
+    </div>
   );
-}
+
+};
+
+export default incubator;

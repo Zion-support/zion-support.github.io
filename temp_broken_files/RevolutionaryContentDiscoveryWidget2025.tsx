@@ -1,10 +1,8 @@
 "use client";
 import React{ useState } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 export default function RevolutionaryContentDiscoveryWidget2025() {
   const [activeCategorysetActiveCategory] = useState('all');
-
   const contentItems = [
     {
       id: 1,
@@ -85,7 +83,6 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
       badgeColor: "from-cyan-500 to-blue-500"
     }
   ];
-
   const categories = [
     { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
     { id: ''breakthrough', 'name: ''Breakthroughs', 'count: contentItems.filter(item => item.category === 'breakthrough').length },
@@ -93,11 +90,9 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
     { id: 'case-'study', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'case-study').length },
     { id: ''guide', 'name: 'Implementation 'Guides', 'count: contentItems.filter(item => item.category === 'guide').length }
   ];
-
   const filteredContent = activeCategory === 'all' 
     ? contentItems 
     : contentItems.filter(item => item.category === activeCategory);
-
   return (
     <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,19 +101,11 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
             <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider">
               🚀 REVOLUTIONARY CONTENT DISCOVERY
-            </span>
-          </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Explore Revolutionary AI Content
-          </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the most advanced AI contentcase studiesand implementation guides. 
             Experience breakthrough technologies that deliver extraordinary results.
-          </p>
-        </div>
-
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
@@ -132,10 +119,7 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
               }`}
             >
               {category.name} ({category.count})
-            </button>
           ))}
-        </div>
-
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredContent.map((item) => (
@@ -147,41 +131,28 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
               <div className="flex items-center justify-between mb-4">
                 <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${item.badgeColor} text-white text-xs font-semibold`}>
                   {item.badge}
-                </div>
                 <div className="text-2xl">
                   {item.type === 'announcement' && '🚀'}
                   {item.type === 'technology' && '⚛️'}
                   {item.type === 'success' && '🏆'}
                   {item.type === 'resource' && '📚'}
-                </div>
-              </div>
-
               {/* Title */}
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">
                 {item.title}
-              </h3>
-
               {/* Description */}
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {item.description}
-              </p>
-
               {/* Metrics */}
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-green-400">{item.roi}</div>
                   <div className="text-xs text-gray-400">ROI</div>
-                </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-400">{item.accuracy}</div>
                   <div className="text-xs text-gray-400">Accuracy</div>
-                </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-purple-400">{item.speed}</div>
                   <div className="text-xs text-gray-400">Speed</div>
-                </div>
-              </div>
-
               {/* CTA */}
               <a
                 href={item.href}
@@ -190,17 +161,11 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
                 Explore Content
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </a>
-            </div>
           ))}
-        </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-xl text-gray-300 mb-8">
             Ready to transform your business with revolutionary AI technology?
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
@@ -209,8 +174,6 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
               🚀 Start Your Transformation
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </a>
             <a
               href="/tools/ai-2025-roi-calculator"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-2xl"
@@ -218,11 +181,6 @@ export default function RevolutionaryContentDiscoveryWidget2025() {
               🧮 Calculate Your ROI
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
   );
-}
+};
+export default RevolutionaryContentDiscoveryWidget2025;

@@ -1,15 +1,11 @@
 import React from 'react';
-
-
+import { Helmet } from 'react-helmet-async';
 const UniversalTechRevolution2032: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
           className="text-center mb-16"
         >
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -19,11 +15,9 @@ const UniversalTechRevolution2032: React.FC = () => {
             The ultimate technological revolution that spans across galaxies, dimensions, and consciousness itself
           </p>
         </div>
-
         {/* Revolutionary Technologies */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-cyan-800/50 to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30"
           >
             <div className="text-4xl mb-4">🚀</div>
@@ -32,9 +26,7 @@ const UniversalTechRevolution2032: React.FC = () => {
               Quantum-entangled communication networks spanning entire galaxies with instant data transfer
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
           >
             <div className="text-4xl mb-4">🔮</div>
@@ -43,9 +35,7 @@ const UniversalTechRevolution2032: React.FC = () => {
               Computing systems that operate across multiple dimensions simultaneously for infinite processing power
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
           >
             <div className="text-4xl mb-4">🌱</div>
@@ -54,9 +44,7 @@ const UniversalTechRevolution2032: React.FC = () => {
               Technology that can create and sustain life forms across any environment in the universe
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-pink-800/50 to-rose-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30"
           >
             <div className="text-4xl mb-4">⚡</div>
@@ -65,9 +53,7 @@ const UniversalTechRevolution2032: React.FC = () => {
               Advanced systems that can engineer and modify the fundamental laws of physics in localized areas
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-yellow-800/50 to-orange-800/50 backdrop-blur-sm rounded-2xl p-8 border border-yellow-400/30"
           >
             <div className="text-4xl mb-4">🌟</div>
@@ -76,9 +62,7 @@ const UniversalTechRevolution2032: React.FC = () => {
               A vast network connecting all conscious beings across the universe for shared experiences
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-red-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30"
           >
             <div className="text-4xl mb-4">🔥</div>
@@ -88,12 +72,8 @@ const UniversalTechRevolution2032: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Advanced Systems */}
         <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
           className="bg-gradient-to-r from-cyan-800/30 to-blue-800/30 backdrop-blur-sm rounded-3xl p-12 mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-8">🔬 Advanced Universal Systems</h2>
@@ -124,12 +104,8 @@ const UniversalTechRevolution2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Implementation Phases */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 1 }}
           className="bg-gradient-to-r from-purple-800/30 to-indigo-800/30 backdrop-blur-sm rounded-3xl p-12 mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-8">📋 Universal Tech Implementation Phases</h2>
@@ -166,12 +142,8 @@ const UniversalTechRevolution2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Benefits and Impact */}
         <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 1 }}
           className="bg-gradient-to-r from-emerald-800/30 to-teal-800/30 backdrop-blur-sm rounded-3xl p-12"
         >
           <h2 className="text-4xl font-bold text-center mb-8">🎯 Universal Impact & Benefits</h2>
@@ -198,12 +170,8 @@ const UniversalTechRevolution2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 1 }}
           className="text-center mt-16"
         >
           <h2 className="text-3xl font-bold mb-6">Join the Universal Revolution</h2>
@@ -226,5 +194,4 @@ const UniversalTechRevolution2032: React.FC = () => {
     </div>
   );
 };
-
 export default UniversalTechRevolution2032;

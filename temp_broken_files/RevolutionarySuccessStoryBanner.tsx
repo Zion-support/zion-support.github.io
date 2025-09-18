@@ -1,13 +1,9 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-
 export default function RevolutionarySuccessStoryBanner() {
   return (
     <div
-      initial={{ opacity: 0scale: 0.95 }}
-      animate={{ opacity: 1scale: 1 }}
-      transition={{ duration: 0.8ease: "easeOut" }}
       className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-green-600 to-teal-600 rounded-3xl p-8 mb-12 border border-emerald-400/30"
     >
       {/* Animated Background */}
@@ -16,11 +12,9 @@ export default function RevolutionarySuccessStoryBanner() {
       
       {/* Floating Success Icons */}
       <div
-        animate={{ 
-          y: [0-10],
-          rotate: [050]
+
+
         }}
-        transition={{ 
           duration: 3,
           repeat: Infinity,
           ease: "easeInOut"
@@ -31,11 +25,9 @@ export default function RevolutionarySuccessStoryBanner() {
       </div>
       
       <div
-        animate={{ 
-          y: [010],
-          rotate: [0-50]
+
+
         }}
-        transition={{ 
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut",
@@ -49,9 +41,6 @@ export default function RevolutionarySuccessStoryBanner() {
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3duration: 0.6 }}
           >
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
               🏆 Revolutionary Success Story
@@ -64,9 +53,6 @@ export default function RevolutionarySuccessStoryBanner() {
         
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
             <div className="text-6xl mb-4">💰</div>
@@ -76,9 +62,6 @@ export default function RevolutionarySuccessStoryBanner() {
           </div>
           
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
             <div className="text-6xl mb-4">⚡</div>
@@ -88,9 +71,6 @@ export default function RevolutionarySuccessStoryBanner() {
           </div>
           
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9duration: 0.6 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center"
           >
             <div className="text-6xl mb-4">🎯</div>
@@ -102,9 +82,6 @@ export default function RevolutionarySuccessStoryBanner() {
         
         <div className="text-center">
           <div
-            initial={{ opacity: 0scale: 0.9 }}
-            animate={{ opacity: 1scale: 1 }}
-            transition={{ delay: 1.1duration: 0.6 }}
             className="mb-6"
           >
             <p className="text-xl text-emerald-100 mb-6 max-w-3xl mx-auto">
@@ -114,9 +91,6 @@ export default function RevolutionarySuccessStoryBanner() {
           </div>
           
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3duration: 0.6 }}
             className="flex flex-wrap justify-center gap-4"
           >
             <a 
@@ -136,9 +110,6 @@ export default function RevolutionarySuccessStoryBanner() {
         
         {/* Success Metrics Bar */}
         <div
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ delay: 1.5duration: 2.5 }}
           className="mt-8 bg-white/20 rounded-full h-3 overflow-hidden"
         >
           <div className="h-full bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 rounded-full"></div>
@@ -152,4 +123,3 @@ export default function RevolutionarySuccessStoryBanner() {
       </div>
     </div>
   );
-}

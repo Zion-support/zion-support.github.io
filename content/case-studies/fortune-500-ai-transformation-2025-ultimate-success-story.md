@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Fortune 500 AI Transformation 2025: $2.8B Annual Savings in 18 Months"
 description: "How a Fortune 500 manufacturing company achieved 1,200% ROI and $2.8 billion in annual savings through comprehensive AI transformation."
@@ -8,6 +9,9 @@ featured: true
 reading_time: "15 min read"
 ---
 
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
 # Fortune 500 AI Transformation 2025: $2.8B Annual Savings in 18 Months
 
 ## Executive Summary
@@ -39,6 +43,7 @@ This case study details how a Fortune 500 manufacturing company achieved **1,200
 - Cloud migration to enterprise AI platform
 - Data lake implementation consolidating 150+ facility data
 - Data quality improvement from 67% to 99.2%
+<<<<<<< HEAD
 *Published: January 17, 2025 | Reading Time: 18 minutes*
 
 ## Executive Summary
@@ -154,3 +159,7 @@ This Fortune 500 AI transformation represents one of the most successful enterpr
 - [Fortune 500 AI Readiness Assessment](/assessment/fortune-500-ai-readiness)
 - [AI ROI Calculator Tool](/tools/ai-roi-calculator)
 - [AI Transformation Consultation](/consultation/ai-transformation-strategy)
+=======
+<<<<<<< HEAD
+**Ready to achieve similar results?** Contact Zion Tech Group for a comprehensive AI transformation assessment and implementation roadmap.
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

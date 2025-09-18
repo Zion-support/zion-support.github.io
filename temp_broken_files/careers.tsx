@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
 import { 
   Users, Rocket, Brain, Globe, Award, Zap, 
   Heart, Star, ArrowRight, CheckCircle, Briefcase
 } from 'lucide-react';
-
 export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
 
@@ -148,9 +145,6 @@ export default function Careers() {
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -164,9 +158,6 @@ export default function Careers() {
 
         {/* Company Culture */}
         <div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Culture & Values</h2>
@@ -185,9 +176,6 @@ export default function Careers() {
 
         {/* Benefits */}
         <div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
@@ -205,9 +193,6 @@ export default function Careers() {
 
         {/* Job Openings */}
         <div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
@@ -234,8 +219,6 @@ export default function Careers() {
             {filteredJobs.map((job) => (
               <div
                 key={job.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
                 className="bg-gradient-to-br from-gray-900/40 to-blue-900/20 p-6 rounded-2xl border border-gray-600/20 hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -296,9 +279,6 @@ export default function Careers() {
 
         {/* General Application */}
         <div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">

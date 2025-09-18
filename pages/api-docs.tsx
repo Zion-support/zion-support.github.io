@@ -1,18 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function ApiDocsPage() {
+const api-docs: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>API Docs | Zion Tech Group</title>
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
-      </Head>
-      <div className="container mx-auto px-4 py-16 text-gray-200">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
-        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>api-docs | Zion Tech Group</title>
+        <meta name="description" content="api-docs - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">api-docs</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
+
+export default api-docs;

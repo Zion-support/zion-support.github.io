@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 const AbsoluteTechShowcase2031: React.FC = () => {
   const [currentTech, setCurrentTech] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -119,15 +118,20 @@ const AbsoluteTechShowcase2031: React.FC = () => {
   }, []);
 
   return (
+<<<<<<< HEAD:temp_broken_files/AbsoluteTechShowcase2031.tsx
     <motion.div
     <div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       transition={{ duration: 1.2 }}
+=======
+    <div
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/AbsoluteTechShowcase2031.tsx
       className="relative overflow-hidden"
     >
       {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+<<<<<<< HEAD:temp_broken_files/AbsoluteTechShowcase2031.tsx
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
@@ -175,36 +179,28 @@ const AbsoluteTechShowcase2031: React.FC = () => {
             }}
           />
         ))}
+=======
+        <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
+        <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"2\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 via-violet-600/40 to-indigo-600/40"></div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/AbsoluteTechShowcase2031.tsx
       </div>
 
       <div className="relative z-10 p-8 md:p-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <div
-            initial={{ scale: 0 }}
-            animate={{ scale: isVisible ? 1 : 0 }}
-            transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
-            className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white rounded-full text-lg font-bold mb-6"
-          >
-            🔮 ABSOLUTE TECH 2031
-          </div>
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.6 }}
+          <h2
             className="text-6xl md:text-7xl font-bold text-white mb-6"
           >
             Beyond All Existence
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.8 }}
+          </h2>
+          <p
             className="text-2xl text-gray-300 max-w-5xl mx-auto"
           >
             Experience technologies that transcend the very concept of existence itself, 
             enabling creation of absolute realities, manipulation of all timelines, and achievement of true absolute existence
-          </motion.p>
+          </p>
         </div>
 
         {/* Technology Showcase */}
@@ -213,10 +209,6 @@ const AbsoluteTechShowcase2031: React.FC = () => {
             {/* Left: Technology Details */}
             <div
               key={currentTech}
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 50 }}
-              transition={{ duration: 1 }}
               className="space-y-10"
             >
               <div className="flex items-center space-x-6">
@@ -241,9 +233,6 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                 {absoluteTechs[currentTech].features.map((feature, index) => (
                   <div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1.2 + index * 0.1 }}
                     className="flex items-center space-x-4 p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
                   >
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full"></div>
@@ -256,9 +245,6 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                 {Object.entries(absoluteTechs[currentTech].stats).map(([key, value], index) => (
                   <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.6 + index * 0.1 }}
                     className="text-center"
                   >
                     <div className="text-4xl font-bold text-white">{value}</div>
@@ -270,9 +256,6 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 
             {/* Right: Visual Representation */}
             <div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.2 }}
               className="relative"
             >
               <div className={`h-[500px] rounded-3xl bg-gradient-to-br ${absoluteTechs[currentTech].gradient} p-10 relative overflow-hidden`}>
@@ -303,17 +286,6 @@ const AbsoluteTechShowcase2031: React.FC = () => {
                       left: `${Math.random() * 100}%`,
                       top: `${Math.random() * 100}%`,
                     }}
-                    animate={{
-                      scale: [0, 5, 0],
-                      opacity: [0, 1, 0],
-                      x: [0, Math.random() * 500 - 250, 0],
-                      y: [0, Math.random() * 500 - 250, 0],
-                    }}
-                    transition={{
-                      duration: 6 + Math.random() * 5,
-                      repeat: Infinity,
-                      delay: Math.random() * 7,
-                    }}
                   />
                 ))}
               </div>
@@ -337,9 +309,6 @@ const AbsoluteTechShowcase2031: React.FC = () => {
 
           {/* Call to Action */}
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ delay: 2 }}
             className="text-center mt-16"
           >
             <div className="inline-flex space-x-6">

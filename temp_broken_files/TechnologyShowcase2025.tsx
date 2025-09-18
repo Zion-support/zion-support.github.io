@@ -1,152 +1,12 @@
-import React, { useState } from 'react';
-
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const TechnologyShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
-  const technologies = {
-    ai: {
-      title: "Artificial Intelligence",
-      icon: "🧠",
-      description: "Revolutionary AI solutions that transform how businesses operate and compete.",
-      features: [
-        {
-          name: "Generative AI 2.0",
-          description: "Next-generation AI that creates, understands, and interacts across multiple modalities",
-          capabilities: ["Multi-modal content generation", "Real-time language understanding", "Creative problem solving", "Autonomous decision making"],
-          impact: "Transformative"
-        },
-        {
-          name: "Edge AI Computing",
-          description: "Ultra-fast AI processing at the edge for real-time applications",
-          capabilities: ["Sub-millisecond latency", "Privacy-preserving processing", "Offline AI capabilities", "Battery-optimized inference"],
-          impact: "High"
-        },
-        {
-          name: "Quantum-Enhanced AI",
-          description: "AI powered by quantum computing for exponential performance gains",
-          capabilities: ["Quantum machine learning", "Exponential optimization", "Quantum cryptography", "Breakthrough algorithms"],
-          impact: "Revolutionary"
-        }
-      ]
-    },
-    quantum: {
-      title: "Quantum Computing",
-      icon: "⚡",
-      description: "Harness the power of quantum mechanics to solve impossible problems.",
-      features: [
-        {
-          name: "Quantum Supremacy",
-          description: "Achieve computational advantages impossible with classical computers",
-          capabilities: ["Exponential speedup", "Quantum parallelism", "Complex optimization", "Cryptographic security"],
-          impact: "Revolutionary"
-        },
-        {
-          name: "Quantum Cryptography",
-          description: "Unbreakable security through quantum key distribution",
-          capabilities: ["Quantum key distribution", "Unhackable communications", "Quantum random numbers", "Future-proof security"],
-          impact: "Critical"
-        },
-        {
-          name: "Quantum Simulation",
-          description: "Simulate complex molecular and material systems with unprecedented accuracy",
-          capabilities: ["Drug discovery", "Materials science", "Climate modeling", "Financial optimization"],
-          impact: "High"
-        }
-      ]
-    },
-    neural: {
-      title: "Neural Interfaces",
-      icon: "🧬",
-      description: "Direct brain-computer interfaces that bridge mind and machine.",
-      features: [
-        {
-          name: "Non-Invasive BCI",
-          description: "Control devices and applications using only your thoughts",
-          capabilities: ["Thought-controlled devices", "Neural pattern recognition", "Real-time processing", "Wearable technology"],
-          impact: "Transformative"
-        },
-        {
-          name: "Neural Feedback",
-          description: "Enhance cognitive abilities through direct neural stimulation",
-          capabilities: ["Memory enhancement", "Focus improvement", "Learning acceleration", "Cognitive rehabilitation"],
-          impact: "High"
-        },
-        {
-          name: "Consciousness AI",
-          description: "AI systems that exhibit consciousness-like behaviors and self-awareness",
-          capabilities: ["Self-aware AI", "Emotional intelligence", "Creative consciousness", "Ethical reasoning"],
-          impact: "Revolutionary"
-        }
-      ]
-    },
-    blockchain: {
-      title: "Blockchain & Web3",
-      icon: "🔗",
-      description: "Decentralized technologies that revolutionize trust and value exchange.",
-      features: [
-        {
-          name: "Web3 Infrastructure",
-          description: "Next-generation internet built on decentralized protocols",
-          capabilities: ["Decentralized applications", "Smart contracts", "Token economies", "Digital ownership"],
-          impact: "High"
-        },
-        {
-          name: "DeFi Revolution",
-          description: "Decentralized finance that eliminates intermediaries",
-          capabilities: ["Automated trading", "Yield farming", "Liquidity pools", "Cross-chain protocols"],
-          impact: "Transformative"
-        },
-        {
-          name: "NFT Innovation",
-          description: "Non-fungible tokens that represent unique digital assets",
-          capabilities: ["Digital art", "Virtual real estate", "Identity verification", "Supply chain tracking"],
-          impact: "High"
-        }
-      ]
-    }
-  };
-
-  const demos = [
-    {
-      title: "AI-Powered Business Automation",
-      description: "See how AI can automate 80% of your business processes",
-      video: "/demos/ai-automation.mp4",
-      features: ["Process automation", "Decision making", "Customer service", "Data analysis"],
-      duration: "3:45"
-    },
-    {
-      title: "Quantum Computing in Action",
-      description: "Witness quantum algorithms solving complex optimization problems",
-      video: "/demos/quantum-demo.mp4",
-      features: ["Optimization problems", "Cryptography", "Simulation", "Machine learning"],
-      duration: "4:20"
-    },
-    {
-      title: "Neural Interface Demo",
-      description: "Control applications using only your thoughts",
-      video: "/demos/neural-interface.mp4",
-      features: ["Thought control", "Real-time processing", "Pattern recognition", "Device control"],
-      duration: "2:30"
-    }
-  ];
-
-  const stats = [
-    { label: "AI Models Deployed", value: "10,000+", icon: "🤖" },
-    { label: "Quantum Qubits", value: "1,000+", icon: "⚡" },
-    { label: "Neural Interfaces", value: "500+", icon: "🧬" },
-    { label: "Blockchain Transactions", value: "1M+", icon: "🔗" }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold mb-6">
@@ -169,7 +29,6 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -177,9 +36,7 @@ const TechnologyShowcase2025: React.FC = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="text-4xl mb-4">{stat.icon}</div>
@@ -190,14 +47,11 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technology Tabs */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -207,7 +61,6 @@ const TechnologyShowcase2025: React.FC = () => {
               Dive deep into the technologies that are defining the future of business and society.
             </p>
           </div>
-
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
             <div className="bg-gray-100 rounded-lg p-2">
@@ -227,13 +80,9 @@ const TechnologyShowcase2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Tab Content */}
           <div
             key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
             className="bg-white rounded-2xl p-8 shadow-lg"
           >
             <div className="text-center mb-8">
@@ -245,14 +94,11 @@ const TechnologyShowcase2025: React.FC = () => {
                 {technologies[activeTab as keyof typeof technologies].description}
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {technologies[activeTab as keyof typeof technologies].features.map((feature, index) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -281,14 +127,11 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Interactive Demos Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -298,14 +141,11 @@ const TechnologyShowcase2025: React.FC = () => {
               Experience our technologies in action through interactive demonstrations and real-world applications.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {demos.map((demo, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="aspect-video bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg mb-4 flex items-center justify-center">
@@ -333,14 +173,11 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Innovation Timeline */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -350,10 +187,8 @@ const TechnologyShowcase2025: React.FC = () => {
               Track the evolution of breakthrough technologies and their impact on society.
             </p>
           </div>
-
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-blue-500"></div>
-            
             {[
               { year: "2024", title: "AI Foundation", description: "Large language models achieve human-level performance" },
               { year: "2025", title: "Quantum Breakthrough", description: "First practical quantum computers enter commercial use" },
@@ -363,9 +198,7 @@ const TechnologyShowcase2025: React.FC = () => {
             ].map((milestone, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`relative flex items-center mb-12 ${
                   index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                 }`}
@@ -384,14 +217,11 @@ const TechnologyShowcase2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-6">
               Ready to Build the Future?
@@ -413,5 +243,4 @@ const TechnologyShowcase2025: React.FC = () => {
     </div>
   );
 };
-
 export default TechnologyShowcase2025;

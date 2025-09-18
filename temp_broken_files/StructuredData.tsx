@@ -1,29 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'Article' | 'TechArticle' | 'BlogPosting';
-  data: any;
-}
-
-const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
-  const getStructuredData = () => {
-    const baseData = {
-      "@context": "https://schema.org",
-      "@type": type,
-      ...data
-    };
-
-    return JSON.stringify(baseData);
-  };
-
+const StructuredData: React.FC = () => {
   return (
-    <Helmet>
-      <script type="application/ld+json">
-        {getStructuredData()}
-      </script>
-    </Helmet>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">StructuredData</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
   );
+
 };
 
 export default StructuredData;

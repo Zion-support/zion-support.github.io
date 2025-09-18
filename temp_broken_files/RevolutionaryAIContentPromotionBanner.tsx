@@ -1,14 +1,10 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 ArrowRightSparklesZapTrendingUpStar
 
 export default function RevolutionaryAIContentPromotionBanner() {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+    <divsection
       className="py-12 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden"
     >
       {/* Animated background elements */}
@@ -22,9 +18,6 @@ export default function RevolutionaryAIContentPromotionBanner() {
         <div className="text-center">
           {/* Badge */}
           <div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2type: "spring"stiffness: 200 }}
             className="inline-flex items-center bg-gradient-to-r from-pink-500 to-purple-500 rounded-full px-6 py-2 mb-6 shadow-lg"
           >
             <Sparkles className="w-4 h-4 mr-2" />
@@ -32,10 +25,7 @@ export default function RevolutionaryAIContentPromotionBanner() {
           </div>
 
           {/* Main heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+          <divh1
             className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           >
             <span className="bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
@@ -43,24 +33,18 @@ export default function RevolutionaryAIContentPromotionBanner() {
             </span>
             <br />
             <span className="text-white">That Transforms Businesses</span>
-          </motion.h1>
+          </divh1>
 
           {/* Subheading */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+          <divp
             className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
             Discover cutting-edge AI insightsimplementation guidesand breakthrough technologies 
             that are reshaping industries worldwide. Join 10,000+ businesses already transforming with our content.
-          </motion.p>
+          </divp>
 
           {/* Stats */}
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
           >
             <div className="text-center">
@@ -83,9 +67,6 @@ export default function RevolutionaryAIContentPromotionBanner() {
 
           {/* CTA Buttons */}
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
@@ -109,9 +90,6 @@ export default function RevolutionaryAIContentPromotionBanner() {
 
           {/* Trust indicators */}
           <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
             className="mt-12 pt-8 border-t border-white/20"
           >
             <p className="text-gray-300 text-sm mb-4">Trusted by industry leaders</p>
@@ -125,6 +103,6 @@ export default function RevolutionaryAIContentPromotionBanner() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </divsection>
   );
 }

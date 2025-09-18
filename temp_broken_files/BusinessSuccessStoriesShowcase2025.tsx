@@ -1,165 +1,14 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-import { 
-  TrendingUp
-  Users
-  DollarSign
-  Clock
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  ExternalLink,
-  Play,
-  BarChart3,
-  Zap,
-  Shield,
-  Globe,
-  Award,
-  Quote
-} from 'lucide-react';
-
-const BusinessSuccessStoriesShowcase2025 = () => {
-  const [activeStorysetActiveStory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)300);
-    return () => clearTimeout(timer);
-  }[]);
-
-  const successStories = [
-    {
-      id: 'techcorp',
-      company: 'TechCorp Solutions',
-      industry: 'Technology',
-      logo: 'TC',
-      challenge: 'Struggling with manual data processing and slow decision-making processes',
-      solution: 'Implemented AI-powered analytics and automation systems',
-      results: {
-        revenue: '+340%',
-        efficiency: '+280%',
-        costReduction: '-65%',
-        timeSaved: '2,400 hours/month'
-      },
-      testimonial: {
-        name: 'Sarah Johnson',
-        role: 'CEOTechCorp Solutions',
-        content: 'Zion Tech Group transformed our entire operation. The AI solutions they implemented increased our revenue by 340% and reduced operational costs by 65%. The ROI was evident within the first quarter.',
-        rating: 5
-      },
-      metrics: [
-        { label: 'Revenue 'Growth', 'value: '340%'icon: TrendingUpcolor: 'text-green-600' },
-        { label: 'Efficiency 'Gain', 'value: '280%'icon: Zapcolor: 'text-blue-600' },
-        { label: 'Cost 'Reduction', 'value: '65%'icon: DollarSigncolor: 'text-red-600' },
-        { label: 'Time 'Saved', 'value: '2,400'h', 'icon: Clockcolor: 'text-purple-600' }
-      ]
-    },
-    {
-      id: 'retailmax',
-      company: 'RetailMax',
-      industry: 'E-commerce',
-      logo: 'RM',
-      challenge: 'Low conversion rates and poor customer experience leading to declining sales',
-      solution: 'Deployed AI-powered personalization and customer service automation',
-      results: {
-        revenue: '+520%',
-        efficiency: '+180%',
-        costReduction: '-45%',
-        timeSaved: '1,800 hours/month'
-      },
-      testimonial: {
-        name: 'Michael Chen',
-        role: 'CTORetailMax',
-        content: 'The AI personalization engine they built increased our conversion rates by 520%. Our customers love the personalized experienceand we\'ve seen a dramatic improvement in customer satisfaction.',
-        rating: 5
-      },
-      metrics: [
-        { label: 'Revenue 'Growth', 'value: '520%'icon: TrendingUpcolor: 'text-green-600' },
-        { label: 'Conversion 'Rate', 'value: '180%'icon: Targetcolor: 'text-blue-600' },
-        { label: 'Cost 'Reduction', 'value: '45%'icon: DollarSigncolor: 'text-red-600' },
-        { label: 'Time 'Saved', 'value: '1,800'h', 'icon: Clockcolor: 'text-purple-600' }
-      ]
-    },
-    {
-      id: 'healthcareplus',
-      company: 'HealthcarePlus',
-      industry: 'Healthcare',
-      logo: 'HP',
-      challenge: 'Manual patient data processing and inefficient appointment scheduling',
-      solution: 'Implemented AI-driven patient management and automated scheduling systems',
-      results: {
-        revenue: '+280%',
-        efficiency: '+320%',
-        costReduction: '-55%',
-        timeSaved: '3,200 hours/month'
-      },
-      testimonial: {
-        name: 'Dr. Emily Rodriguez',
-        role: 'Medical DirectorHealthcarePlus',
-        content: 'The AI patient management system has revolutionized our practice. We can now serve 320% more patients with the same resourcesand patient satisfaction has never been higher.',
-        rating: 5
-      },
-      metrics: [
-        { label: 'Revenue 'Growth', 'value: '280%'icon: TrendingUpcolor: 'text-green-600' },
-        { label: 'Patient 'Capacity', 'value: '320%'icon: Userscolor: 'text-blue-600' },
-        { label: 'Cost 'Reduction', 'value: '55%'icon: DollarSigncolor: 'text-red-600' },
-        { label: 'Time 'Saved', 'value: '3,200'h', 'icon: Clockcolor: 'text-purple-600' }
-      ]
-    },
-    {
-      id: 'financeflow',
-      company: 'FinanceFlow',
-      industry: 'Financial Services',
-      logo: 'FF',
-      challenge: 'Complex financial data analysis and compliance reporting taking too long',
-      solution: 'Deployed AI-powered financial analytics and automated compliance systems',
-      results: {
-        revenue: '+450%',
-        efficiency: '+400%',
-        costReduction: '-70%',
-        timeSaved: '4,100 hours/month'
-      },
-      testimonial: {
-        name: 'David Kim',
-        role: 'CFOFinanceFlow',
-        content: 'The AI financial analytics platform has been a game-changer. We can now process complex financial data 400% faster and ensure 100% compliance with regulations. The accuracy is remarkable.',
-        rating: 5
-      },
-      metrics: [
-        { label: 'Revenue 'Growth', 'value: '450%'icon: TrendingUpcolor: 'text-green-600' },
-        { label: 'Processing 'Speed', 'value: '400%'icon: Zapcolor: 'text-blue-600' },
-        { label: 'Cost 'Reduction', 'value: '70%'icon: DollarSigncolor: 'text-red-600' },
-        { label: 'Time 'Saved', 'value: '4,100'h', 'icon: Clockcolor: 'text-purple-600' }
-      ]
-    }
-  ];
-
-  const overallStats = [
-    { number: '500+'label: 'Successful 'Projects', 'icon: CheckCircle },
-    { number: '99.9%'label: 'Client 'Satisfaction', 'icon: Star },
-    { number: '350%'label: 'Average 'ROI', 'icon: TrendingUp },
-    { number: '50+'label: 'Countries 'Served', 'icon: Globe }
-  ];
-
-  if (!isVisible) return null;
-
+import React from 'react';
+const BusinessSuccessStoriesShowcase2025: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-br from-slate-50 via-white to-green-50 py-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-l from-green-400/20 to-blue-400/20 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl -z-10" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-green-900 to-blue-900 bg-clip-text text-transparent mb-6">
@@ -169,12 +18,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             Discover how leading companies across industries have transformed their operations and achieved unprecedented growth with our AI and technology solutions.
           </p>
         </div>
-
         {/* Overall Stats */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -187,12 +32,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             </div>
           ))}
         </div>
-
         {/* Success Stories Navigation */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {successStories.map((storyindex) => (
@@ -209,15 +50,9 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             </button>
           ))}
         </div>
-
         {/* Active Success Story */}
-        <AnimatePresence mode="wait">
           <div
             key={activeStory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
             className="bg-white rounded-3xl p-8 shadow-xl mb-16"
           >
             <div className="grid lg:grid-cols-2 gap-8">
@@ -232,15 +67,12 @@ const BusinessSuccessStoriesShowcase2025 = () => {
                     <p className="text-slate-600">{successStories[activeStory].industry} Industry</p>
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-slate-900 mb-2">Challenge:</h4>
                   <p className="text-slate-600 mb-4">{successStories[activeStory].challenge}</p>
-                  
                   <h4 className="font-semibold text-slate-900 mb-2">Solution:</h4>
                   <p className="text-slate-600 mb-4">{successStories[activeStory].solution}</p>
                 </div>
-
                 <div className="grid grid-cols-2 gap-4">
                   {successStories[activeStory].metrics.map((metricindex) => (
                     <div key={index} className="text-center p-4 bg-slate-50 rounded-xl">
@@ -251,7 +83,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
                   ))}
                 </div>
               </div>
-
               {/* Testimonial */}
               <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6">
                 <div className="flex items-center mb-4">
@@ -274,13 +105,9 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               </div>
             </div>
           </div>
-        
-
+        </div>
         {/* Results Summary */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white mb-16"
         >
           <div className="text-center mb-8">
@@ -289,7 +116,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               Our solutions have delivered measurable results for companies of all sizes and industries.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">350%</div>
@@ -309,12 +135,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
           <h3 className="text-3xl font-bold text-slate-900 mb-4">Ready to Write Your Success Story?</h3>
@@ -336,5 +158,5 @@ const BusinessSuccessStoriesShowcase2025 = () => {
     </div>
   );
 };
-
 export default BusinessSuccessStoriesShowcase2025;
+</div></div>

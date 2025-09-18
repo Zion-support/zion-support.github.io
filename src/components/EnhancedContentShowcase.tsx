@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
 
 const EnhancedContentShowcase: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+<<<<<<< HEAD
   const contentCategories = {
     breakthroughs: {
       title: "Revolutionary Breakthroughs",
@@ -37,6 +41,8 @@ const EnhancedContentShowcase: React.FC = () => {
     },
     innovations: {
       title: "Next-Gen Innovations",
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
   const showcaseItems = [
     {
       id: 1,
@@ -44,17 +50,31 @@ const EnhancedContentShowcase: React.FC = () => {
       description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
       icon: "🤖",
       gradient: "from-purple-600 to-pink-600",
+<<<<<<< HEAD
       link: "/pages/AdvancedAITransformation2026",
       features: ["Autonomous Reasoning", "Quantum Processing", "Self-Evolving Networks", "Industry Transformation"],
       category: "AI & Machine Learning",
       year: "2026"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous AI agents", "Synthetic consciousness", "Collective intelligence", "Creative synthesis"]
-  const contentCategories = [
+    },
     {
-      id: 0,
-      name: "AI & Machine Learning",
+      id: 2,
+      title: "Quantum Computing Revolution",
+      description: "Unlock unprecedented computational power with quantum algorithms and quantum neural networks",
+      icon: "⚛️",
+      gradient: "from-blue-600 to-cyan-600",
+      link: "/pages/QuantumComputingRevolution2026",
+      features: ["Quantum supremacy", "Quantum algorithms", "Quantum neural networks", "Quantum optimization"]
+    },
+    {
+      id: 3,
+      title: "Neural Interface Technology",
+      description: "Bridge the gap between human consciousness and digital systems with advanced neural interfaces",
       icon: "🧠",
+<<<<<<< HEAD
       color: "from-purple-600 to-indigo-600",
       description: "Revolutionary AI technologies and machine learning breakthroughs",
       content: [
@@ -494,6 +514,11 @@ const EnhancedContentShowcase: React.FC = () => {
       borderColor: "border-purple-400/30",
       link: "/pages/SyntheticIntelligence2026",
       features: ["Autonomous Agents", "Synthetic Consciousness", "Collective Intelligence", "Creative Synthesis"]
+=======
+      gradient: "from-green-600 to-emerald-600",
+      link: "/pages/NeuralInterfaceRevolution2025",
+      features: ["Brain-computer interfaces", "Neural implants", "Consciousness transfer", "Enhanced cognition"]
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
     }
   ];
 
@@ -515,6 +540,7 @@ const EnhancedContentShowcase: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -634,12 +660,29 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
           <h2 className="text-4xl font-bold text-white mb-4">
             Experience the Future of Technology
+=======
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            Revolutionary Content Showcase
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our groundbreaking innovations in quantum computing, neural interfaces, and synthetic intelligence
+            Explore the cutting-edge technologies and innovations that are shaping the future of humanity.
           </p>
-        </div>
+        </motion.div>
 
+<<<<<<< HEAD
         {/* Carousel Container */}
         <div className="relative z-10">
           <div className="relative h-96 overflow-hidden rounded-xl">
@@ -656,23 +699,46 @@ const EnhancedContentShowcase: React.FC = () => {
                   <div className="text-8xl mb-6">{showcaseItems[currentSlide].icon}</div>
                   <h3 className="text-5xl font-bold mb-4">{showcaseItems[currentSlide].title}</h3>
                   <p className="text-xl opacity-90 mb-6 max-w-2xl">
+=======
+        {/* Carousel */}
+        <div className="relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: 300 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -300 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20"
+            >
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="text-6xl mb-4">{showcaseItems[currentSlide].icon}</div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    {showcaseItems[currentSlide].title}
+                  </h3>
+                  <p className="text-lg text-gray-300 mb-6">
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
                     {showcaseItems[currentSlide].description}
                   </p>
-                  <div className="grid grid-cols-2 gap-4 mb-8">
+                  
+                  <div className="grid grid-cols-2 gap-2 mb-6">
                     {showcaseItems[currentSlide].features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <span className="w-2 h-2 bg-white rounded-full"></span>
-                        <span className="text-sm opacity-90">{feature}</span>
+                      <div key={index} className="flex items-center text-sm text-gray-300">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                        {feature}
                       </div>
                     ))}
                   </div>
-                  <a 
+                  
+                  <a
                     href={showcaseItems[currentSlide].link}
-                    className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${showcaseItems[currentSlide].gradient} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
                   >
-                    Explore {showcaseItems[currentSlide].title} →
+                    Explore Now →
                   </a>
                 </div>
+<<<<<<< HEAD
                 <div className="flex-1 flex justify-center">
                   <div className="w-80 h-80 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <div className="text-9xl">{showcaseItems[currentSlide].icon}</div>
@@ -767,12 +833,32 @@ const EnhancedContentShowcase: React.FC = () => {
                         {contentSlides[currentSlide].image}
                       </div>
                     </div>
+=======
+                
+                <div className="relative">
+                  <div className={`w-full h-64 bg-gradient-to-r ${showcaseItems[currentSlide].gradient} rounded-xl flex items-center justify-center`}>
+                    <div className="text-8xl opacity-50">{showcaseItems[currentSlide].icon}</div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
                   </div>
                 </div>
               </div>
-            
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation */}
+          <div className="flex justify-center mt-8 space-x-4">
+            {showcaseItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                }`}
+              />
+            ))}
           </div>
 
+<<<<<<< HEAD
           {/* Navigation Controls */}
           <div className="flex justify-center items-center space-x-4 mb-8">
             <button
@@ -782,82 +868,37 @@ const EnhancedContentShowcase: React.FC = () => {
                 activeTab === key
                   ? `${colorClasses.bg} text-white shadow-lg`
                   : `text-gray-600 hover:bg-gray-200`
+=======
+          {/* Controls */}
+          <div className="flex justify-between items-center mt-8">
+            <button
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
               onClick={prevSlide}
-              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300"
             >
               ←
             </button>
             
-            <div className="flex space-x-2">
-              {showcaseItems.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-          <div className="flex justify-center items-center mt-6 space-x-4">
             <button
-              onClick={prevSlide}
-              className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-all duration-300"
+              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+              className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                isAutoPlaying 
+                  ? 'bg-red-500/20 text-red-400 border border-red-500/30' 
+                  : 'bg-green-500/20 text-green-400 border border-green-500/30'
+              }`}
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
+              {isAutoPlaying ? 'Pause' : 'Play'}
             </button>
             
-            {/* Dots Indicator */}
-            <div className="flex space-x-2">
-              {contentSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-            </div>
-
             <button
               onClick={nextSlide}
-              className="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors"
+              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300"
             >
               →
             </button>
-
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg hover:bg-white/30 transition-colors text-sm"
-            >
-              {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
-            </button>
-          </div>
-
-          {/* Quick Access Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {showcaseItems.map((item, index) => (
-              <div
-                key={item.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gradient-to-br ${item.gradient} backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer`}
-                onClick={() => setCurrentSlide(index)}
-              >
-                <div className="text-4xl mb-3 text-center">{item.icon}</div>
-                <h3 className="text-lg font-bold mb-2 text-center text-white">{item.title}</h3>
-                <p className="text-white/80 mb-4 text-sm text-center">
-                  {item.description.substring(0, 80)}...
-                </p>
-                <a 
-                  href={item.link}
-                  className="block w-full bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-center text-sm"
-                >
-                  Explore →
-                </a>
-              </div>
-            ))}
           </div>
         </div>
+<<<<<<< HEAD
 
       {/* Features Section */}
       <div className="container mx-auto px-4 py-20">
@@ -1281,6 +1322,8 @@ const EnhancedContentShowcase: React.FC = () => {
           </div>
         </motion.div>
         </div>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
       </div>
     </div>
   );

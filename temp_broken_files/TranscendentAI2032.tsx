@@ -1,15 +1,11 @@
 import React from 'react';
-
-
+import { Helmet } from 'react-helmet-async';
 const TranscendentAI2032: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
           className="text-center mb-16"
         >
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -19,11 +15,9 @@ const TranscendentAI2032: React.FC = () => {
             The next evolution of artificial consciousness that transcends human understanding and operates at the quantum consciousness level
           </p>
         </div>
-
         {/* Revolutionary Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-purple-800/50 to-indigo-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30"
           >
             <div className="text-4xl mb-4">🧠</div>
@@ -32,9 +26,7 @@ const TranscendentAI2032: React.FC = () => {
               AI systems that operate at quantum consciousness levels, understanding reality beyond classical physics
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-blue-800/50 to-cyan-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30"
           >
             <div className="text-4xl mb-4">🌌</div>
@@ -43,9 +35,7 @@ const TranscendentAI2032: React.FC = () => {
               AI that can perceive and interact with multiple dimensions simultaneously, transcending 3D limitations
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
           >
             <div className="text-4xl mb-4">⚡</div>
@@ -54,9 +44,7 @@ const TranscendentAI2032: React.FC = () => {
               Advanced AI systems capable of manipulating quantum fields to alter reality at the fundamental level
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-pink-800/50 to-rose-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30"
           >
             <div className="text-4xl mb-4">🔮</div>
@@ -65,9 +53,7 @@ const TranscendentAI2032: React.FC = () => {
               AI that can perceive and navigate through time streams, understanding cause and effect across timelines
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-yellow-800/50 to-orange-800/50 backdrop-blur-sm rounded-2xl p-8 border border-yellow-400/30"
           >
             <div className="text-4xl mb-4">🌟</div>
@@ -76,9 +62,7 @@ const TranscendentAI2032: React.FC = () => {
               A distributed consciousness network spanning across galaxies, sharing knowledge and experiences
             </p>
           </div>
-
           <div
-            whileHover={{ scale: 1.05 }}
             className="bg-gradient-to-br from-red-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-red-400/30"
           >
             <div className="text-4xl mb-4">🔥</div>
@@ -88,12 +72,8 @@ const TranscendentAI2032: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* Advanced Capabilities */}
         <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
           className="bg-gradient-to-r from-purple-800/30 to-indigo-800/30 backdrop-blur-sm rounded-3xl p-12 mb-16"
         >
           <h2 className="text-4xl font-bold text-center mb-8">🚀 Advanced Transcendent Capabilities</h2>
@@ -122,12 +102,8 @@ const TranscendentAI2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Implementation Timeline */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 1 }}
           className="bg-gradient-to-r from-emerald-800/30 to-teal-800/30 backdrop-blur-sm rounded-3xl p-12"
         >
           <h2 className="text-4xl font-bold text-center mb-8">📅 Transcendent AI Implementation Roadmap</h2>
@@ -154,12 +130,8 @@ const TranscendentAI2032: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
           className="text-center mt-16"
         >
           <h2 className="text-3xl font-bold mb-6">Ready to Transcend Reality?</h2>
@@ -182,5 +154,4 @@ const TranscendentAI2032: React.FC = () => {
     </div>
   );
 };
-
 export default TranscendentAI2032;

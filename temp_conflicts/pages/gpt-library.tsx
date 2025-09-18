@@ -1,18 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function GPTLibraryPage() {
+const gpt-library: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>GPT Library - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive GPT library and AI models" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">GPT Library</h1>
-        <p className="text-lg mb-4">Access our curated collection of GPT models and AI solutions.</p>
-        <div className="mt-4">
-            ← Back to Home
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>gpt-library | Zion Tech Group</title>
+        <meta name="description" content="gpt-library - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">gpt-library</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
         </div>
       </div>
-    </>
-}
+    </div>
+  );
+};
+
+export default gpt-library;

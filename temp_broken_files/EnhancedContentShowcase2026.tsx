@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 const EnhancedContentShowcase2026: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const contentItems = [
     {
       id: 'revolutionary-breakthrough',
@@ -66,7 +64,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
       badge: 'INNOVATIVE'
     }
   ];
-
   useEffect(() => {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
@@ -75,19 +72,15 @@ const EnhancedContentShowcase2026: React.FC = () => {
       return () => clearInterval(interval);
     }
   }, [isAutoPlaying, contentItems.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % contentItems.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + contentItems.length) % contentItems.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="container mx-auto px-4">
@@ -103,7 +96,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
             Discover our most advanced and innovative content featuring breakthrough technologies and revolutionary concepts
           </p>
         </div>
-
         {/* Main Carousel */}
         <div className="relative max-w-7xl mx-auto">
           <div className="overflow-hidden rounded-2xl">
@@ -126,7 +118,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
                           </div>
                           <h3 className="text-4xl font-bold mb-6">{item.title}</h3>
                           <p className="text-xl opacity-90 mb-8">{item.description}</p>
-                          
                           <div className="mb-8">
                             <h4 className="text-lg font-bold mb-4">Key Features:</h4>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -137,7 +128,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
                               ))}
                             </div>
                           </div>
-                          
                           <div className="flex space-x-4">
                             <a
                               href={item.link}
@@ -150,7 +140,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
                             </button>
                           </div>
                         </div>
-                        
                         <div className="hidden lg:block">
                           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
                             <div className="text-center">
@@ -167,7 +156,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -177,7 +165,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-all duration-300"
@@ -186,7 +173,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Play/Pause Button */}
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -203,7 +189,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
             )}
           </button>
         </div>
-
         {/* Dots Navigation */}
         <div className="flex justify-center mt-8 space-x-2">
           {contentItems.map((_, index) => (
@@ -218,14 +203,12 @@ const EnhancedContentShowcase2026: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">All Revolutionary Content</h3>
             <p className="text-lg opacity-90">Explore our complete collection of breakthrough content</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contentItems.map((item) => (
               <div key={item.id} className={`bg-gradient-to-br ${item.gradient} rounded-xl p-6 text-white hover:scale-105 transition-all duration-300`}>
@@ -254,7 +237,6 @@ const EnhancedContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-20">
           <h3 className="text-3xl font-bold mb-6">Ready to Explore the Future?</h3>
@@ -274,5 +256,5 @@ const EnhancedContentShowcase2026: React.FC = () => {
     </div>
   );
 };
-
 export default EnhancedContentShowcase2026;
+</p></p></p></p>

@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import { Helmet } from 'react-helmet-async';
 const EnterpriseSolutions2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900">
@@ -9,9 +8,6 @@ const EnterpriseSolutions2025: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto text-center">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
               🏢 ENTERPRISE SOLUTIONS • 2025
@@ -33,7 +29,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Solution Categories */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -41,7 +36,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Enterprise Solutions</h2>
             <p className="text-xl text-gray-300">End-to-end solutions designed for enterprise-scale operations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -89,9 +83,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             ].map((solution, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-blue-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/30 hover:scale-105 transition-all duration-300"
               >
                 <div className="text-5xl mb-4">{solution.icon}</div>
@@ -113,7 +104,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Industry Solutions */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-900/50 to-indigo-900/50">
         <div className="container mx-auto">
@@ -121,7 +111,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-xl text-gray-300">Tailored solutions for different industry verticals</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12">
             {[
               {
@@ -193,9 +182,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             ].map((industry, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
               >
                 <div className="flex items-center mb-6">
@@ -218,7 +204,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
@@ -226,7 +211,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
             <p className="text-xl text-gray-300">A proven methodology for successful enterprise implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
@@ -256,9 +240,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             ].map((phase, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
@@ -274,7 +255,6 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Success Metrics */}
       <section className="py-20 px-4 bg-gradient-to-r from-indigo-900/50 to-blue-900/50">
         <div className="container mx-auto">
@@ -282,7 +262,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Proven Success Metrics</h2>
             <p className="text-xl text-gray-300">Real results from our enterprise implementations</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -308,9 +287,6 @@ const EnterpriseSolutions2025: React.FC = () => {
             ].map((metric, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center border border-white/20"
               >
                 <div className="text-4xl font-bold text-blue-400 mb-2">{metric.metric}</div>
@@ -321,14 +297,10 @@ const EnterpriseSolutions2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -351,5 +323,4 @@ const EnterpriseSolutions2025: React.FC = () => {
     </div>
   );
 };
-
 export default EnterpriseSolutions2025;

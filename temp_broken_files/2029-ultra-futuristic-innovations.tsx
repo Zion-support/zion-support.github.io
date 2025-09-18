@@ -1,14 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
-
 export default function UltraFuturistic2029InnovationsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -42,9 +38,6 @@ export default function UltraFuturistic2029InnovationsPage() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="max-w-7xl mx-auto text-center">
             <div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="mb-8"
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-full px-6 py-3 mb-8">
@@ -53,31 +46,22 @@ export default function UltraFuturistic2029InnovationsPage() {
               </div>
             </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+            <divh1
               className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8 leading-tight"
             >
               2029 Ultra-Futuristic
               <br />
               <span className="text-white">Innovations</span>
-            </motion.h1>
+            </divh1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <divp
               className="text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
             >
               Experience the future of technology with our revolutionary services that push the boundaries 
               of what's possible. From AI consciousness simulation to Mars colonization automation.
-            </motion.p>
+            </divp>
 
             <div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <a
@@ -100,9 +84,7 @@ export default function UltraFuturistic2029InnovationsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -160,9 +142,7 @@ export default function UltraFuturistic2029InnovationsPage() {
               ].map((category, index) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -203,9 +183,7 @@ export default function UltraFuturistic2029InnovationsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -225,9 +203,7 @@ export default function UltraFuturistic2029InnovationsPage() {
               ].map((stat, index) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
                   <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-6`}>
@@ -245,9 +221,7 @@ export default function UltraFuturistic2029InnovationsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">

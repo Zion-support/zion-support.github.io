@@ -1,71 +1,5 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-import { 
-  ArrowRight
-  Star
-  TrendingUp
-  Users
-  Zap
-  Shield
-  Brain,
-  Globe,
-  Target,
-  Award,
-  CheckCircle,
-  PlayCircle,
-  BookOpen,
-  Lightbulb,
-  Sparkles,
-  Rocket
-} from 'lucide-react';
-
-const NewContentShowcase2025PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Rotate features every 3 seconds
-    const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % 3);
-    }3000);
-
-    return () => clearInterval(interval);
-  }[]);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Revolutionary AI technology',
-      color: 'from-purple-500 to-blue-500'
-    },
-    {
-      icon: Zap,
-      title: 'Automation',
-      description: 'Intelligent workflow automation',
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Advanced cybersecurity protection',
-      color: 'from-red-500 to-orange-500'
-    }
-  ];
-
-  const stats = [
-    { label: 'New 'Features', 'value: '50+'icon: Sparkles },
-    { label: 'Success 'Rate', 'value: '99.8%'icon: Award },
-    { label: 'Client 'Satisfaction', 'value: '5.0★'icon: Star },
-    { label: 'ROI 'Increase', 'value: '300%'icon: TrendingUp }
-  ];
-
+import React from 'react';
+const NewContentShowcase2025PromotionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -74,57 +8,38 @@ const NewContentShowcase2025PromotionBanner = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div
-            initial={{ opacity: 0x: -50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8 }}
             className="text-white"
           >
             {/* Badge */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-sm font-medium mb-6"
             >
               <Sparkles className="w-4 h-4 mr-2" />
               NEW CONTENT AVAILABLE
             </div>
-
             {/* Main Heading */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.3 }}
+            <divh2
               className="text-4xl md:text-5xl font-bold mb-6"
             >
               Discover Our Latest{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
                 Innovations
               </span>
-            </motion.h2>
-
+            </divh2>
             {/* Subheading */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.4 }}
+            <divp
               className="text-xl text-gray-300 mb-8"
             >
               Explore cutting-edge AI solutionsintelligent automationand advanced cybersecurity 
               designed to revolutionize your business operations and drive unprecedented growth.
-            </motion.p>
-
+            </divp>
             {/* Rotating Feature */}
             <div
               key={currentFeature}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
               className="mb-8"
             >
               <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
@@ -141,12 +56,8 @@ const NewContentShowcase2025PromotionBanner = () => {
                 </div>
               </div>
             </div>
-
             {/* Stats */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.5 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
             >
               {stats.map((statindex) => (
@@ -156,12 +67,8 @@ const NewContentShowcase2025PromotionBanner = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -181,12 +88,8 @@ const NewContentShowcase2025PromotionBanner = () => {
               </a>
             </div>
           </div>
-
           {/* Right Content - Visual */}
           <div
-            initial={{ opacity: 0x: 50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8delay: 0.2 }}
             className="relative"
           >
             {/* Main Visual Card */}
@@ -200,15 +103,11 @@ const NewContentShowcase2025PromotionBanner = () => {
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
               </div>
-
               {/* Feature Cards */}
               <div className="space-y-4">
                 {features.map((featureindex) => (
                   <div
                     key={index}
-                    initial={{ opacity: 0x: 20 }}
-                    animate={{ opacity: 1x: 0 }}
-                    transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
                     className={`p-4 rounded-xl border transition-all duration-300 ${
                       index === currentFeature
                         ? 'bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-400/50'
@@ -225,8 +124,6 @@ const NewContentShowcase2025PromotionBanner = () => {
                       </div>
                       {index === currentFeature && (
                         <div
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
                           className="ml-auto"
                         >
                           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -236,7 +133,6 @@ const NewContentShowcase2025PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-
               {/* Progress Bar */}
               <div className="mt-6">
                 <div className="flex justify-between text-sm text-gray-300 mb-2">
@@ -246,25 +142,17 @@ const NewContentShowcase2025PromotionBanner = () => {
                 <div className="w-full bg-white/20 rounded-full h-2">
                   <div
                     className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: '100%' }}
-                    transition={{ duration: 2delay: 1 }}
                   />
                 </div>
               </div>
             </div>
-
             {/* Floating Elements */}
             <div
-              animate={{ y: [0-10] }}
-              transition={{ duration: 2repeat: Infinity }}
               className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-4 h-4 text-white" />
             </div>
             <div
-              animate={{ y: [010] }}
-              transition={{ duration: 2repeat: Infinitydelay: 1 }}
               className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center"
             >
               <CheckCircle className="w-3 h-3 text-white" />
@@ -275,5 +163,5 @@ const NewContentShowcase2025PromotionBanner = () => {
     </div>
   );
 };
-
 export default NewContentShowcase2025PromotionBanner;
+</div></div></div></div></div></div>

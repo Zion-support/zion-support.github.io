@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+};
+
 
 export default function DeveloperPage() {
   return (
@@ -10,7 +12,6 @@ export default function DeveloperPage() {
         <title>Developer Portal | Zion Tech Group</title>
         <meta name="description" content="Developer resourcesAPI keysexamplesand SDKs." />
         <link rel="canonical" href="https://ziontechgroup.com/developer" />
-      </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docsSDKsand quickstarts for all services. Contact us for enterprise onboarding.</p>
@@ -18,8 +19,5 @@ export default function DeveloperPage() {
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
         <a href="/docs" className="text-cyan-400 underline">Guides</a>
         <a href="/support" className="text-cyan-400 underline">Support</a>
-      </div>
-      </div>
     </>
   );
-}

@@ -1,9 +1,7 @@
 "use client";
 'use client';
-
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 interface ContentItem {
   id: string;
   title: string;
@@ -14,11 +12,9 @@ interface ContentItem {
   badge?: string;
   icon: string;
 }
-
 export default function ContentDiscoveryWidget() {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentItemsetCurrentItem] = useState(0);
-
   const contentItems: ContentItem[] = [
     {
       id: 'breakthrough-revolution',
@@ -81,27 +77,20 @@ export default function ContentDiscoveryWidget() {
       icon: '🧠'
     }
   ];
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }2000);
-
     return () => clearTimeout(timer);
   }[]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentItem((prev) => (prev + 1) % contentItems.length);
     }5000);
-
     return () => clearInterval(interval);
   }[contentItems.length]);
-
   if (!isVisible) return null;
-
   const currentContent = contentItems[currentItem];
-
   return (
     <div className="fixed bottom-4 right-4 z-50 max-w-sm">
       <div className="bg-white rounded-lg shadow-2xl border border-gray-200 overflow-hidden">
@@ -111,7 +100,6 @@ export default function ContentDiscoveryWidget() {
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold">New Content Available</span>
-            </div>
             <button
               onClick={() => setIsVisible(false)}
               className="text-white/80 hover:text-white transition-colors"
@@ -119,11 +107,6 @@ export default function ContentDiscoveryWidget() {
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
         {/* Content */}
         <div className="p-4">
           <div className="flex items-start space-x-3">
@@ -132,41 +115,25 @@ export default function ContentDiscoveryWidget() {
               <div className="flex items-center space-x-2 mb-2">
                 <span className="text-xs font-semibold text-purple-600 bg-purple-100 px-2 py-1 rounded">
                   {currentContent.badge}
-                </span>
                 <span className="text-xs text-gray-500">{currentContent.category}</span>
-              </div>
-              
               <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
                 {currentContent.title}
-              </h3>
-              
               <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                 {currentContent.description}
-              </p>
-              
               <div className="flex items-center justify-between">
                 <div className="text-sm font-semibold text-green-600">
                   {currentContent.roi}
-                </div>
                 <a
                   href={currentContent.link}
                   className="text-sm font-semibold text-purple-600 hover:text-purple-700 transition-colors"
                 >
                   Learn More →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Progress Indicator */}
         <div className="h-1 bg-gray-200">
           <div 
             className="h-full bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-100"
             style={{ width: `${((currentItem + 1) / contentItems.length) * 100}%` }}
           />
-        </div>
-
         {/* Navigation Dots */}
         <div className="flex justify-center space-x-1 p-2">
           {contentItems.map((_index) => (
@@ -179,8 +146,6 @@ export default function ContentDiscoveryWidget() {
               aria-label={`Go to content ${index + 1}`}
             />
           ))}
-        </div>
-      </div>
-    </div>
   );
-}
+};
+export default ContentDiscoveryWidget;

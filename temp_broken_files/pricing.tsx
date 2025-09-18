@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
   Shield, Zap, Rocket, Brain, Atom, Globe, Target,
   ArrowRight, Phone, Mail, MapPin, ExternalLink
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
@@ -147,9 +142,6 @@ export default function PricingPage() {
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -198,9 +190,7 @@ export default function PricingPage() {
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
               <div
                 key={category}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
                 className="mb-20"
               >
@@ -217,9 +207,7 @@ export default function PricingPage() {
                   {services.map((service, serviceIndex) => (
                     <div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className="group cursor-pointer"
                     >
@@ -350,9 +338,7 @@ export default function PricingPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">

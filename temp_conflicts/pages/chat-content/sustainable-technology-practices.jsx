@@ -1,15 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const SustainableTechnologyPractices = () => {
+const sustainable-technology-practices: React.FC = () => {
   return (
-    <div>
-      <Head>
-        <title>SustainableTechnologyPractices - Zion Tech Solutions</title>
-        <meta name="description" content="SustainableTechnologyPractices page" />
-      </Head>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>sustainable-technology-practices | Zion Tech Group</title>
+        <meta name="description" content="sustainable-technology-practices - Revolutionary technology solutions" />
+      </Helmet>
       
-      <main>
-        <h1>SustainableTechnologyPractices</h1>
-        <p>This page is under construction.</p>
-      </main>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">sustainable-technology-practices</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
+  );
+};
+
+export default sustainable-technology-practices;

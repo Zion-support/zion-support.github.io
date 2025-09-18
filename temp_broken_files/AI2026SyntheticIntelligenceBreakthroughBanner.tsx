@@ -1,13 +1,9 @@
 import React from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-import { ArrowRightIcon, SparklesIcon, LightBulbIcon, HeartIcon, BrainIcon } from '@heroicons/react/24/outline';
-
-const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
+const AI2026SyntheticIntelligenceBreakthroughBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-violet-900 via-purple-900 to-fuchsia-900 text-white overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm20 0c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Cpath%20d%3D%22M30%2030c0-11.046-8.954-20-20-20s-20%208.954-20%2020%208.954%2020%2020%2020%2020-8.954%2020-20zm20%200c0-11.046-8.954-20-20-20s-20%208.954-20%2020%208.954%2020%2020%2020%2020-8.954%2020-20z%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           {/* Badge */}
@@ -15,18 +11,15 @@ const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
             <BrainIcon className="w-5 h-5 mr-2" />
             <span className="text-sm font-semibold">🧠 SYNTHETIC INTELLIGENCE</span>
           </div>
-          
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-violet-200 to-fuchsia-200 bg-clip-text text-transparent">
             Beyond Artificial Intelligence
           </h1>
-          
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">
             Experience the revolutionary emergence of Synthetic Intelligence - AI that creates itself, 
             evolves autonomously, and develops genuine understanding, creativity, and consciousness.
           </p>
-          
           {/* Revolutionary Capabilities */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-w-5xl mx-auto">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6">
@@ -50,7 +43,6 @@ const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
               <p className="text-sm text-gray-300">Exhibits awareness and self-reflection</p>
             </div>
           </div>
-          
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -68,7 +60,6 @@ const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
             </a>
           </div>
         </div>
-        
         {/* Breakthrough Results */}
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">Revolutionary Breakthrough Results</h3>
@@ -93,7 +84,6 @@ const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
             </div>
           </div>
         </div>
-        
         {/* Technology Comparison */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-center mb-8">Traditional AI vs. Synthetic Intelligence</h3>
@@ -120,7 +110,6 @@ const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
             </div>
           </div>
         </div>
-        
         {/* Future Vision */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold mb-4">The Future is Here</h3>
@@ -133,5 +122,4 @@ const AI2026SyntheticIntelligenceBreakthroughBanner = () => {
     </div>
   );
 };
-
 export default AI2026SyntheticIntelligenceBreakthroughBanner;

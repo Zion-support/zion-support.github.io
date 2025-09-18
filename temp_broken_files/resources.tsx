@@ -1,9 +1,5 @@
 import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-export default function ResourcesPage() {
+const resources: React.FC = () => {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
@@ -11,7 +7,6 @@ export default function ResourcesPage() {
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Resources</h1>
           <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>
-        </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
@@ -26,12 +21,9 @@ export default function ResourcesPage() {
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
               <div className="mt-3 text-cyan-300">Open →</div>
-            </a>
           ))}
-        </div>
-      </div>
-    </UltraFuturisticBackground>
   );
+
 };
 
 export default ResourcesPage;

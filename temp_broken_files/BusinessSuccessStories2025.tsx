@@ -1,141 +1,10 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
-import { 
-  ArrowRight
-  Star
-  TrendingUp
-  Users
-  Zap
-  Shield
-  Brain,
-  Globe,
-  Target,
-  Award,
-  CheckCircle,
-  PlayCircle,
-  BookOpen,
-  Lightbulb,
-  DollarSign,
-  BarChart3,
-  Clock,
-  Building2
-} from 'lucide-react';
-
-const BusinessSuccessStories2025 = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeStorysetActiveStory] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
-  const successStories = [
-    {
-      id: 1,
-      company: 'TechCorp Solutions',
-      industry: 'Technology',
-      logo: 'TC',
-      challenge: 'Manual data processing causing 40% efficiency loss',
-      solution: 'Implemented AI-powered automation suite',
-      results: {
-        efficiency: '+300%',
-        costSavings: '$2.5M',
-        timeSaved: '2000 hours/month',
-        roi: '450%'
-      },
-      testimonial: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.',
-      author: 'Sarah Johnson',
-      role: 'CEO',
-      rating: 5,
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 2,
-      company: 'Global Finance Inc',
-      industry: 'Financial Services',
-      logo: 'GF',
-      challenge: 'Security breaches costing millions in damages',
-      solution: 'Deployed advanced cybersecurity framework',
-      results: {
-        security: '99.9%',
-        costSavings: '$5.2M',
-        incidents: '0 breaches',
-        compliance: '100%'
-      },
-      testimonial: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.',
-      author: 'Michael Chen',
-      role: 'CTO',
-      rating: 5,
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 3,
-      company: 'Manufacturing Plus',
-      industry: 'Manufacturing',
-      logo: 'MP',
-      challenge: 'Supply chain inefficiencies causing delays',
-      solution: 'AI-driven supply chain optimization',
-      results: {
-        efficiency: '+250%',
-        costSavings: '$3.8M',
-        deliveryTime: '-60%',
-        quality: '+95%'
-      },
-      testimonial: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.',
-      author: 'Emily Rodriguez',
-      role: 'Operations Director',
-      rating: 5,
-      image: '/api/placeholder/400/300'
-    },
-    {
-      id: 4,
-      company: 'HealthCare First',
-      industry: 'Healthcare',
-      logo: 'HF',
-      challenge: 'Patient data management and compliance issues',
-      solution: 'Comprehensive data management and compliance system',
-      results: {
-        efficiency: '+180%',
-        costSavings: '$1.9M',
-        compliance: '100%',
-        patientSatisfaction: '+85%'
-      },
-      testimonial: 'The data management system has revolutionized our patient care. We\'re now fully compliant and our patients are much happier with our services.',
-      author: 'Dr. James Wilson',
-      role: 'Chief Medical Officer',
-      rating: 5,
-      image: '/api/placeholder/400/300'
-    }
-  ];
-
-  const overallStats = [
-    { label: 'Projects 'Completed', 'value: '1,200+'icon: Target },
-    { label: 'Average 'ROI', 'value: '300%'icon: TrendingUp },
-    { label: 'Client 'Satisfaction', 'value: '99.8%'icon: Star },
-    { label: 'Cost 'Savings', 'value: '$50M+'icon: DollarSign }
-  ];
-
-  const industries = [
-    { name: ''Technology', 'count: 45icon: Brain },
-    { name: ''Finance', 'count: 32icon: DollarSign },
-    { name: ''Healthcare', 'count: 28icon: Shield },
-    { name: ''Manufacturing', 'count: 25icon: Building2 },
-    { name: ''Retail', 'count: 20icon: Globe },
-    { name: ''Education', 'count: 15icon: BookOpen }
-  ];
-
+import React from 'react';
+const BusinessSuccessStories2025: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-green-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -145,12 +14,8 @@ const BusinessSuccessStories2025 = () => {
             Discover how businesses across industries have transformed their operations and achieved remarkable results with our solutions.
           </p>
         </div>
-
         {/* Overall Stats */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -163,15 +28,11 @@ const BusinessSuccessStories2025 = () => {
             </div>
           ))}
         </div>
-
         {/* Success Stories Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {successStories.map((storyindex) => (
             <div
               key={story.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
               className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300"
             >
               {/* Company Header */}
@@ -191,7 +52,6 @@ const BusinessSuccessStories2025 = () => {
                   ))}
                 </div>
               </div>
-
               {/* Challenge & Solution */}
               <div className="mb-6">
                 <div className="mb-4">
@@ -203,7 +63,6 @@ const BusinessSuccessStories2025 = () => {
                   <p className="text-gray-700">{story.solution}</p>
                 </div>
               </div>
-
               {/* Results */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {Object.entries(story.results).map(([keyvalue]) => (
@@ -213,7 +72,6 @@ const BusinessSuccessStories2025 = () => {
                   </div>
                 ))}
               </div>
-
               {/* Testimonial */}
               <div className="border-l-4 border-green-500 pl-4 mb-4">
                 <p className="text-gray-700 italic mb-2">"{story.testimonial}"</p>
@@ -221,7 +79,6 @@ const BusinessSuccessStories2025 = () => {
                   <span className="font-semibold">{story.author}</span>{story.role}
                 </div>
               </div>
-
               {/* CTA */}
               <a
                 href={`/case-study/${story.id}`}
@@ -233,12 +90,8 @@ const BusinessSuccessStories2025 = () => {
             </div>
           ))}
         </div>
-
         {/* Industries Served */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 0.8 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -248,9 +101,6 @@ const BusinessSuccessStories2025 = () => {
             {industries.map((industryindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.5delay: 0.9 + index * 0.1 }}
                 className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-4">
@@ -263,12 +113,8 @@ const BusinessSuccessStories2025 = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 1.0 }}
           className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">
@@ -298,5 +144,4 @@ const BusinessSuccessStories2025 = () => {
     </div>
   );
 };
-
 export default BusinessSuccessStories2025;

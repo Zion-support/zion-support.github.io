@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-
 const UltimateContentShowcase2027: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('breakthroughs');
-
   const contentCategories = {
     breakthroughs: {
       title: 'Revolutionary Breakthroughs',
@@ -98,7 +96,6 @@ const UltimateContentShowcase2027: React.FC = () => {
       ]
     }
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -114,7 +111,6 @@ const UltimateContentShowcase2027: React.FC = () => {
             Discover the most revolutionary content that's reshaping our understanding of technology and the future
           </p>
         </div>
-
         {/* Category Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {Object.entries(contentCategories).map(([key, category]) => (
@@ -132,7 +128,6 @@ const UltimateContentShowcase2027: React.FC = () => {
             </button>
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {contentCategories[activeCategory as keyof typeof contentCategories].content.map((item, index) => (
@@ -144,17 +139,14 @@ const UltimateContentShowcase2027: React.FC = () => {
               <div className="text-6xl mb-4 text-center group-hover:scale-110 transition-transform duration-300">
                 {item.image}
               </div>
-
               {/* Title */}
               <h3 className="text-2xl font-bold mb-4 text-center group-hover:text-purple-300 transition-colors">
                 {item.title}
               </h3>
-
               {/* Description */}
               <p className="text-white/80 mb-6 text-center leading-relaxed">
                 {item.description}
               </p>
-
               {/* Features */}
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-purple-300 mb-3">Key Features:</h4>
@@ -169,7 +161,6 @@ const UltimateContentShowcase2027: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* CTA Button */}
               <a
                 href={item.link}
@@ -180,7 +171,6 @@ const UltimateContentShowcase2027: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
@@ -208,5 +198,4 @@ const UltimateContentShowcase2027: React.FC = () => {
     </div>
   );
 };
-
 export default UltimateContentShowcase2027;
