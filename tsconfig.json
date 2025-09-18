@@ -49,11 +49,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-<<<<<<< HEAD
-    "**/*.spec.tsx",
-    "coverage"
-=======
     "**/*.spec.tsx"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   ]
 }

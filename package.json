@@ -7,24 +7,6 @@
     "node": "20.x"
   },
   "scripts": {
-<<<<<<< HEAD
-    "dev": "vite",
-    "build": "vite build",
-    "build:netlify": "vite build",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:ci": "jest --ci --coverage --watchAll=false",
-    "type-check": "npx tsc --noEmit",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --browser chrome",
-    "test:accessibility": "vitest run tests/Accessibility.test.tsx",
-    "build:analyze": "vite build --mode production && npx vite-bundle-analyzer dist/assets/*.js",
-    "build:clean": "rm -rf dist && npm run build:netlify",
-    "build:optimize": "npm run build:clean && npm run build:analyze",
-    "preview:build": "npm run build:netlify && npm run preview"
-=======
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "dev:backend": "cd server && npm run dev",
     "dev:hybrid": "concurrently \"npm run dev\" \"npm run dev:backend\"",
@@ -57,14 +39,24 @@
     "pm2:status": "pm2 status",
     "pm2:delete": "pm2 delete all",
     "pm2:save": "pm2 save",
-    "pm2:startup": "pm2 startup"
+    "pm2:startup": "pm2 startup",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
+    "test:accessibility": "vitest run tests/Accessibility.test.tsx",
+    "build:analyze": "vite build --mode production && npx vite-bundle-analyzer dist/assets/*.js",
+    "build:clean": "rm -rf dist && npm run build:netlify",
+    "build:optimize": "npm run build:clean && npm run build:analyze",
+    "preview:build": "npm run build:netlify && npm run preview"
   },
   "npmConfig": {
     "optional": false,
     "legacy-peer-deps": true,
     "strict-ssl": false,
     "prefer-offline": true
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.9",
@@ -122,29 +114,21 @@
     "date-fns": "^3.3.1",
     "dotenv": "^16.4.5",
     "embla-carousel-react": "^8.0.0-rc19",
-<<<<<<< HEAD
-    "framer-motion": "^10.16.4",
-=======
-    "esbuild": "0.25.9",
+    "esbuild": "^0.25.10",
     "events": "^3.3.0",
     "framer-motion": "^11.0.3",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
     "https": "^1.0.0",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     "i18next": "^23.7.16",
     "i18next-browser-languagedetector": "^8.2.0",
     "import-fresh": "^3.3.1",
     "js-cookie": "^3.0.5",
     "js-yaml": "^4.1.0",
     "lucide-react": "^0.544.0",
-<<<<<<< HEAD
-    "motion-utils": "^11.18.1",
-=======
     "motion-utils": "^12.23.6",
     "next": "^15.5.3",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     "next-themes": "^0.4.6",
     "node-cron": "^4.2.1",
     "notistack": "^3.0.2",
@@ -179,18 +163,6 @@
     "zod": "^4.1.8"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@eslint/js": "^9.35.0",
-    "@types/jest": "^29.5.3",
-    "@types/node": "^20.4.5",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "cypress": "^12.17.2",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.20",
-=======
     "@babel/core": "^7.28.4",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-decorators": "^7.28.0",
@@ -200,6 +172,7 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+    "@eslint/js": "^9.35.0",
     "@next/bundle-analyzer": "^15.5.2",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -220,18 +193,10 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "globals": "^16.4.0",
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^30.1.2",
     "postcss": "^8.5.6",
     "rollup-plugin-visualizer": "^6.0.3",
-<<<<<<< HEAD
-    "vitest": "^0.34.1"
-  },
-  "resolutions": {
-    "motion-utils": "^12.23.6"
-  }
-=======
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
     "ts-jest": "^29.1.1",
@@ -249,5 +214,4 @@
     "motion-utils": "^12.23.6"
   },
   "packageManager": "yarn@4.9.4+sha512.7b1cb0b62abba6a537b3a2ce00811a843bea02bcf53138581a6ae5b1bf563f734872bd47de49ce32a9ca9dcaff995aa789577ffb16811da7c603dcf69e73750b"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 }
