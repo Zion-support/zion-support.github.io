@@ -1,4 +1,7 @@
+import { newBlogPosts2026 } from './newContent2026';
+
 export const blogPosts = [
+  ...newBlogPosts2026,
   {
     id: 10001,
     title: "AI 2027: The Consciousness Revolution - Building Truly Self-Aware Systems",
