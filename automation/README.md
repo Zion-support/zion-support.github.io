@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Automation
 
 This directory contains autonomous, credential-free local automations and logs.
@@ -17,3 +16,4 @@ node automation/auto-health-monitor/index.mjs
 It runs continuously and writes to both stdout and the log file.
 
 
+=======

@@ -51,7 +51,8 @@ After running the complete script, you should see:
 
 ```
 🎉 COMPLETE MERGE RESOLUTION PROCESS FINISHED!
-==============================================
+=======
+====
 
 📊 FINAL SUMMARY:
 ✅ Initial conflicts resolved and merged

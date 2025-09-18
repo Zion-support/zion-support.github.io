@@ -1,83 +1,149 @@
 #!/bin/bash
 
-# Comprehensive merge script for all branches
+# Comprehensive Merge Resolution Script
+# This script handles all merge conflicts and PR merging
+
 set -e
 
-echo "🚀 Starting comprehensive merge of all branches..."
+echo "=== COMPREHENSIVE MERGE RESOLUTION SCRIPT ==="
+echo "Starting at: $(date)"
 
-# Function to add new content safely
-add_new_content() {
-    local branch=$1
-    echo "📦 Adding content from $branch..."
+# Function to run command with timeout
+run_with_timeout() {
+    local cmd="$1"
+    local timeout="${2:-30}"
+    echo "Running: $cmd"
+    timeout $timeout bash -c "$cmd" || {
+        echo "Command timed out or failed: $cmd"
+        return 1
+    }
+}
+
+# Function to check git status
+check_git_status() {
+    echo "=== CHECKING GIT STATUS ==="
+    run_with_timeout "git status --porcelain" 10
+    run_with_timeout "git branch --show-current" 10
+}
+
+# Function to switch to main and pull latest
+prepare_main_branch() {
+    echo "=== PREPARING MAIN BRANCH ==="
+    run_with_timeout "git checkout main" 30
+    run_with_timeout "git pull origin main" 60
+}
+
+# Function to merge fix branch
+merge_fix_branch() {
+    echo "=== MERGING FIX BRANCH ==="
+    local branch="cursor/fix-netlify-build-and-merge-to-main-96e2"
     
-    # Get the list of new files from the branch
-    NEW_FILES=$(git diff main...$branch --name-only --diff-filter=A | grep -E "\.(tsx|ts|jsx|js)$" | grep -v "App.tsx")
-    
-    if [ -n "$NEW_FILES" ]; then
-        echo "Found new files: $NEW_FILES"
-        
-        # Add the new files
-        for file in $NEW_FILES; do
-            echo "Adding $file..."
-            git checkout $branch -- "$file"
-        done
-        
-        # Add imports to App.tsx
-        for file in $NEW_FILES; do
-            if [[ $file == src/pages/* ]]; then
-                page_name=$(basename "$file" .tsx)
-                import_line="import $page_name from './$file';"
-                sed -i "/import QuantumRealityControl2027 from/a $import_line" App.tsx
-            elif [[ $file == src/components/* ]]; then
-                component_name=$(basename "$file" .tsx)
-                import_line="import $component_name from './$file';"
-                sed -i "/import RevolutionaryTech2027Banner from/a $import_line" App.tsx
-            fi
-        done
-        
-        # Add routes for pages
-        for file in $NEW_FILES; do
-            if [[ $file == src/pages/* ]]; then
-                page_name=$(basename "$file" .tsx)
-                route_line="          <Route path=\"/pages/$page_name\" element={<$page_name />} />"
-                sed -i "/<Route path=\"\/pages\/QuantumRealityControl2027\" element={<QuantumRealityControl2027 \/>} \/>/a $route_line" App.tsx
-            fi
-        done
-        
-        echo "✅ Successfully added content from $branch"
+    echo "Attempting to merge $branch..."
+    if run_with_timeout "git merge $branch --no-edit" 60; then
+        echo "Merge successful without conflicts"
     else
-        echo "No new files found in $branch"
+        echo "Merge conflicts detected, resolving..."
+        
+        # List conflicted files
+        echo "Conflicted files:"
+        run_with_timeout "git diff --name-only --diff-filter=U" 10
+        
+        # Auto-resolve conflicts
+        echo "Auto-resolving conflicts..."
+        run_with_timeout "git checkout --theirs ." 30
+        run_with_timeout "git add ." 30
+        
+        # Commit the merge
+        run_with_timeout "git commit -m 'Resolved merge conflicts: Auto-merged $branch into main'" 30
+        echo "Conflicts resolved and committed"
     fi
 }
 
-# Get list of unmerged branches
-UNMERGED_BRANCHES=$(git branch -r --no-merged main | grep -E "(cursor|feature)" | head -10)
+# Function to push changes
+push_changes() {
+    echo "=== PUSHING CHANGES ==="
+    run_with_timeout "git push origin main" 60
+    echo "Changes pushed successfully"
+}
 
-echo "Found unmerged branches:"
-echo "$UNMERGED_BRANCHES"
+# Function to test build
+test_build() {
+    echo "=== TESTING BUILD ==="
+    run_with_timeout "npm ci" 120
+    run_with_timeout "npm run build:netlify" 60
+    
+    if [ -d "dist" ]; then
+        echo "Build successful - dist folder created"
+        echo "Dist folder contents:"
+        ls -la dist/ | head -10
+    else
+        echo "Build failed - no dist folder created"
+        return 1
+    fi
+}
 
-# Process each branch
-for branch in $UNMERGED_BRANCHES; do
-    echo "Processing $branch..."
-    add_new_content "$branch"
-    echo "---"
-done
+# Function to list all branches
+list_all_branches() {
+    echo "=== LISTING ALL BRANCHES ==="
+    run_with_timeout "git branch -a" 30
+}
 
-# Commit all changes
-echo "💾 Committing all changes..."
-git add .
-git commit -m "🚀 Comprehensive merge of all branches
+# Function to find and merge other PRs
+merge_other_prs() {
+    echo "=== CHECKING FOR OTHER PRs TO MERGE ==="
+    
+    # Get list of remote branches
+    local branches=$(git branch -r | grep -v main | grep -v HEAD | sed 's/origin\///' | head -10)
+    
+    for branch in $branches; do
+        echo "Checking branch: $branch"
+        
+        # Skip the fix branch we already merged
+        if [ "$branch" = "cursor/fix-netlify-build-and-merge-to-main-96e2" ]; then
+            continue
+        fi
+        
+        # Try to merge the branch
+        echo "Attempting to merge $branch..."
+        if run_with_timeout "git merge origin/$branch --no-edit" 60; then
+            echo "Successfully merged $branch"
+        else
+            echo "Conflicts in $branch, resolving..."
+            
+            # Auto-resolve conflicts
+            run_with_timeout "git checkout --theirs ." 30
+            run_with_timeout "git add ." 30
+            run_with_timeout "git commit -m 'Resolved conflicts: Auto-merged $branch into main'" 30
+            
+            echo "Conflicts resolved for $branch"
+        fi
+    done
+}
 
-- Added all new content from unmerged branches
-- Resolved conflicts by keeping main branch structure
-- Integrated all new pages and components
-- Added proper imports and routes
-- Enhanced frontend with comprehensive content"
+# Main execution
+main() {
+    echo "Starting comprehensive merge resolution..."
+    
+    # Check if we're in a git repository
+    if [ ! -d ".git" ]; then
+        echo "Error: Not in a git repository"
+        exit 1
+    fi
+    
+    # Execute all steps
+    check_git_status
+    prepare_main_branch
+    merge_fix_branch
+    push_changes
+    test_build
+    list_all_branches
+    merge_other_prs
+    push_changes
+    
+    echo "=== MERGE RESOLUTION COMPLETED ==="
+    echo "Finished at: $(date)"
+    echo "Please check GitHub for any remaining open PRs that need manual resolution"
+}
 
-echo "🎉 Comprehensive merge completed successfully!"
-
-# Push to remote
-echo "📤 Pushing to remote..."
-git push origin main
-
-echo "✅ All done!"
+# Run main function
+main "$@"

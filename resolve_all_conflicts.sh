@@ -1,5 +1,52 @@
 #!/bin/bash
 
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
 echo "Resolving all merge conflicts by accepting our version..."
 
 # Accept our version for all conflicted files
@@ -11,6 +58,68 @@ git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}' | while read fi
     fi
 done
 
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+echo "🎉 All conflict resolution complete!"
+=======
+=======
+echo "Resolving all merge conflicts by using main branch version..."
+
+# Find all files with merge conflicts
+=======
+echo "All merge conflicts resolved!"
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
 # For files that were deleted by us but modified by them, keep them deleted
 git status --porcelain | grep "^DU" | awk '{print $2}' | while read file; do
     echo "Keeping deleted: $file"

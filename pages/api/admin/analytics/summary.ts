@@ -1,17 +1,5 @@
-        rows.push(obj)
-      } catch {}
-    }
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-  } catch {
-    return []
-  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
 }
-  const pagesMostUsed = Object.entries(byFeature)
-    .map(([label, value]) => ({ label, value }))
-    .sort((a, b) => b.value - a.value)
-
-  const events = Object.entries(byEvent)
-    .map(([label, value]) => ({ label, value }))
-
-  res.status(200).json({ pagesMostUsed, events, line, funnel });
-

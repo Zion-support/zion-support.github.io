@@ -1,6 +1,3 @@
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
 =======
 import React from 'react';
 
@@ -16,5 +13,4 @@ const EnterpriseIT: React.FC = () => {
 export default EnterpriseIT;
 import React from \'react\'; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;
 const React from "react"; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;''"
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
 import _React from 'react'; const EnterpriseIT = () => { return ( <div> <h1>EnterpriseIT</h1> <p>Component placeholder</p> </div> )}; export default EnterpriseIT;
