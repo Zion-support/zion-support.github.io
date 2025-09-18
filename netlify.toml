@@ -5,7 +5,7 @@
   command_timeout = "30m"
   # No-op: touch to trigger Netlify rebuild at 2025-09-18T15:22:00Z
 
-# Trigger Netlify build: no-op change on 2025-09-18T15:15:00Z
+# Trigger Netlify build: no-op change on 2025-09-18T15:22:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -225,4 +225,4 @@
 # Note: Next.js routing is handled by @netlify/plugin-nextjs
  
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18 15:15 UTC
+# No-op: trigger deploy 2025-09-18T15:22:00Z
