@@ -5,6 +5,8 @@ import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackgr
 
 const posts = [
   // Featured content (Sept 18, 2025)
+  { slug: 'ai-driven-customer-experience-2025', title: 'AI-Driven Customer Experience: The Future of Customer Service in 2025', excerpt: 'Discover how AI is revolutionizing customer experience with personalized interactions, predictive support, and seamless omnichannel experiences.' },
+  { slug: 'blockchain-ai-integration-2025', title: 'Blockchain and AI Integration: Building Trust in the Digital Economy', excerpt: 'Explore how the convergence of blockchain and AI is creating new opportunities for secure, transparent, and intelligent business solutions.' },
   { slug: 'ai-powered-business-transformation-2025', title: 'AI-Powered Business Transformation Guide', excerpt: 'Discover how AI is revolutionizing business operations, from autonomous workflows to intelligent decision-making systems.' },
   { slug: 'quantum-computing-enterprise-applications-2025', title: 'Quantum Computing Enterprise Applications', excerpt: 'Explore how quantum computing is solving complex business problems and creating new opportunities for enterprise innovation.' },
   { slug: 'ai-ops-autonomous-platforms-2025', title: 'AI Ops 2025: Autonomous Platforms in Production', excerpt: 'Design, ship, and run AI-driven autonomous platforms safely in 2025.' },

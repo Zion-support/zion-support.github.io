@@ -1,330 +1,220 @@
-import React from 'react';
+"use client";
+
+import { motion, useAnimation } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
 import Link from 'next/link';
-ArrowRightClockTagStar
 
 interface ContentItem {
   title: string;
-  description: string;
+  excerpt: string;
   href: string;
-  type: 'blog' | 'resource' | 'case-study';
-  readTime?: string;
-  isNew?: boolean;
-  icon?: string;
-  category?: string;
+  author: string;
+  date: string;
+  tags: string[];
+  gradient: string;
   featured?: boolean;
-  isTrending?: boolean;
 }
 
-interface ContentShowcaseProps {
-  title: string;
-  subtitle: string;
-  items: ContentItem[];
-  showViewAll?: boolean;
-  viewAllHref?: string;
-  maxItems?: number;
-  className?: string;
-  variant?: 'default' | 'featured' | 'compact';
-}
+const ContentShowcase = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
-const ContentShowcase: React.FC<ContentShowcaseProps> = ({
-  title,
-  subtitle,
-  items,
-  showViewAll = false,
-  viewAllHref = '/blog',
-  maxItems = 6,
-  className = ', ',
-  variant = 'default'
-}) => {
-  const displayItems = items.slice(0maxItems);
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'bg-blue-100 text-blue-800';
-      case 'resource':
-        return 'bg-green-100 text-green-800';
-      case 'case-study':
-        return 'bg-purple-100 text-purple-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
-  showViewAll = true,
-  viewAllHref = '/blog',
-  variant = 'default'
-}) => {
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'blog': return 'bg-blue-100 text-blue-800';
-      case 'resource': return 'bg-green-100 text-green-800';
-      case 'case-study': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
+  const contentItems: ContentItem[] = [
+    {
+      title: "AI-Driven Customer Experience: The Future of Customer Service in 2025",
+      excerpt: "Discover how AI is revolutionizing customer experience with personalized interactions, predictive support, and seamless omnichannel experiences.",
+      href: "/blog/ai-driven-customer-experience-2025",
+      author: "Customer Experience Team",
+      date: "2025-09-18",
+      tags: ["Customer Experience", "AI Automation", "Personalization"],
+      gradient: "from-blue-500 to-purple-600",
+      featured: true
+    },
+    {
+      title: "Blockchain and AI Integration: Building Trust in the Digital Economy",
+      excerpt: "Explore how the convergence of blockchain and AI is creating new opportunities for secure, transparent, and intelligent business solutions.",
+      href: "/blog/blockchain-ai-integration-2025",
+      author: "Blockchain Innovation Team",
+      date: "2025-09-18",
+      tags: ["Blockchain", "AI Integration", "Digital Economy"],
+      gradient: "from-emerald-500 to-cyan-600"
+    },
+    {
+      title: "AI-Powered Business Transformation: A Complete Guide for 2025",
+      excerpt: "Discover how AI is revolutionizing business operations, from autonomous workflows to intelligent decision-making systems.",
+      href: "/blog/ai-powered-business-transformation-2025",
+      author: "AI Transformation Team",
+      date: "2025-09-18",
+      tags: ["AI Transformation", "Business Automation", "Digital Innovation"],
+      gradient: "from-purple-500 to-pink-600"
+    },
+    {
+      title: "Quantum Computing Enterprise Applications: Practical Applications for 2025",
+      excerpt: "Explore how quantum computing is solving complex business problems and creating new opportunities for enterprise innovation.",
+      href: "/blog/quantum-computing-enterprise-applications-2025",
+      author: "Quantum Solutions Team",
+      date: "2025-09-18",
+      tags: ["Quantum Computing", "Enterprise Solutions", "Advanced Technology"],
+      gradient: "from-indigo-500 to-cyan-500"
     }
-  };
+  ];
 
-  const getTypeLabel = (type: string) => {
-    switch (type) {
-      case 'blog':
-        return 'Article';
-      case 'resource':
-        return 'Resource';
-      case 'case-study':
-        return 'Case Study';
-      default:
-        return 'Content';
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % contentItems.length);
+      }, 5000);
+      return () => clearInterval(interval);
     }
-  };
+  }, [isHovered, contentItems.length]);
 
   return (
-    <section className={`py-16 ${className}`}>
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            {title}
+    <div className="py-20 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Insights</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {subtitle}
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Stay ahead with cutting-edge research, industry insights, and practical guides from our expert teams.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {displayItems.map((itemindex) => (
-            <Link
-              key={index}
-              href={item.href}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-blue-200"
-            >
-              {/* Featured Badge */}
-              {item.featured && (
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-semibold rounded-full">
-                    <Star className="w-3 h-3" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Featured Article */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-2"
+          >
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 p-8">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center space-x-2">
+                  <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold rounded-full">
                     Featured
                   </span>
-                </div>
-              )}
-
-              {/* New Badge */}
-              {item.isNew && (
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-green-400 to-emerald-500 text-white text-sm font-semibold rounded-full">
-                    New
+                  <span className="px-3 py-1 bg-gray-700/50 text-gray-300 text-sm rounded-full">
+                    Latest
                   </span>
                 </div>
-              )}
-
-              <div className="p-6">
-                {/* Type and Category */}
-                <div className="flex items-center gap-2 mb-4">
-                  <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
-                    {getTypeLabel(item.type)}
-                  </span>
-                  {item.category && (
-                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">
-                      <Tag className="w-3 h-3" />
-                      {item.category}
-                    </span>
-                  )}
-                </div>
-
-                {/* Icon */}
-                {item.icon && (
-                  <div className="text-3xl mb-4">
-                    {item.icon}
+                <div className="flex items-center space-x-4 text-sm text-gray-400">
+                  <div className="flex items-center space-x-1">
+                    <User className="w-4 h-4" />
+                    <span>{contentItems[0].author}</span>
                   </div>
-                )}
+                  <div className="flex items-center space-x-1">
+                    <Calendar className="w-4 h-4" />
+                    <span>{contentItems[0].date}</span>
+                  </div>
+                </div>
+              </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                {contentItems[0].title}
+              </h3>
+              
+              <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                {contentItems[0].excerpt}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {contentItems[0].tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-gray-700/30 text-gray-300 text-sm rounded-lg border border-gray-600/30"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <Link
+                href={contentItems[0].href}
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Read Article
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Other Articles */}
+          {contentItems.slice(1).map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700/30 p-6 h-full hover:border-gray-600/50 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2 text-sm text-gray-400">
+                    <User className="w-4 h-4" />
+                    <span>{item.author}</span>
+                  </div>
+                  <div className="flex items-center space-x-1 text-sm text-gray-400">
+                    <Calendar className="w-4 h-4" />
+                    <span>{item.date}</span>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
                   {item.title}
                 </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 mb-4 line-clamp-3">
-                  {item.description}
+                
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  {item.excerpt}
                 </p>
 
-                {/* Meta Information */}
-                <div className="flex items-center justify-between text-sm text-gray-500">
-                  {item.readTime && (
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{item.readTime}</span>
-                    </div>
-                  )}
-                  <div className="flex items-center gap-1 text-blue-600 group-hover:text-blue-800">
-                    <span>Read more</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-      case 'blog': return 'Article';
-      case 'resource': return 'Resource';
-      case 'case-study': return 'Case Study';
-      default: return 'Content';
-    }
-  };
-
-  if (variant === 'compact') {
-    return (
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-          {showViewAll && (
-            <Link
-              href={viewAllHref}
-              className="text-blue-600 hover:text-blue-700 text-sm font-medium"
-            >
-              View All →
-            </Link>
-          )}
-        </div>
-        <div className="space-y-3">
-          {items.slice(03).map((itemindex) => (
-            <Link key={index} href={item.href} className="group block">
-              <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                <div className="text-2xl">{item.icon}</div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className={`text-xs font-medium px-2 py-1 rounded-full ${getTypeColor(item.type)}`}>
-                      {getTypeLabel(item.type)}
+                <div className="flex flex-wrap gap-1 mb-4">
+                  {item.tags.slice(0, 2).map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-2 py-1 bg-gray-700/20 text-gray-400 text-xs rounded border border-gray-600/20"
+                    >
+                      {tag}
                     </span>
-                    {item.isNew && (
-                      <span className="text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded-full">
-                        New
-                      </span>
-                    )}
-                    {item.isTrending && (
-                      <span className="text-xs font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded-full">
-                        Trending
-                      </span>
-                    )}
-                  </div>
-                  <h4 className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors text-sm">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-600 text-xs mt-1 line-clamp-2">
-                    {item.description}
-                  </p>
+                  ))}
                 </div>
+
+                <Link
+                  href={item.href}
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors duration-300"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
               </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  if (variant === 'featured') {
-    return (
-      <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden rounded-2xl">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="relative p-8">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-medium">✨ FEATURED CONTENT</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">{subtitle}</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.slice(06).map((itemindex) => (
-              <Link key={index} href={item.href} className="group">
-                <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-medium bg-white bg-opacity-20 px-2 py-1 rounded-full">
-                      {getTypeLabel(item.type)}
-                    </span>
-                    {item.isNew && (
-                      <span className="text-xs font-medium bg-green-500 bg-opacity-20 px-2 py-1 rounded-full">
-                        New
-                      </span>
-                    )}
-                    {item.isTrending && (
-                      <span className="text-xs font-medium bg-orange-500 bg-opacity-20 px-2 py-1 rounded-full">
-                        Trending
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 group-hover:underline">{item.title}</h3>
-                  <p className="text-sm opacity-90 mb-3 line-clamp-2">{item.description}</p>
-                  <div className="flex items-center text-xs opacity-75">
-                    {item.readTime && <span>{item.readTime}</span>}
-                    <span className="mx-2">•</span>
-                    <span>{item.category}</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {showViewAll && (
-            <div className="text-center mt-8">
-              <Link
-                href={viewAllHref}
-                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-              >
-                View All Content
-              </Link>
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {items.map((itemindex) => (
-            <Link key={index} href={item.href} className="group">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative">
-                  <div className="text-6xl">{item.icon}</div>
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className={`text-xs font-medium px-3 py-1 rounded-full ${getTypeColor(item.type)}`}>
-                      {getTypeLabel(item.type)}
-                    </span>
-                    {item.isNew && (
-                      <span className="text-xs font-medium text-white bg-green-600 px-3 py-1 rounded-full">
-                        NEW
-                      </span>
-                    )}
-                    {item.isTrending && (
-                      <span className="text-xs font-medium text-white bg-orange-600 px-3 py-1 rounded-full">
-                        TRENDING
-                      </span>
-                    )}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-sm text-gray-500">{item.category}</span>
-                    {item.readTime && (
-                      <>
-                        <span className="text-gray-300">•</span>
-                        <span className="text-sm text-gray-500">{item.readTime}</span>
-                      </>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">{item.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-blue-600 font-medium group-hover:underline">
-                      Read More →
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            </motion.div>
           ))}
         </div>
 
+        {/* View All Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center mt-12"
+        >
+          <Link
+            href="/blog"
+            className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+          >
+            View All Articles
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default ContentShowcase;
