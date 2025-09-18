@@ -31,7 +31,7 @@ export default defineConfig({
 		}
 	},
 	css: {
-		postcss: false,
+		postcss: true,
 		// Enable CSS code splitting and optimization
 		devSourcemap: false
 	},
@@ -111,14 +111,5 @@ export default defineConfig({
 		compress: true
 	},
 	// Enable experimental features for better performance
-	experimental: {
-		// Enable renderBuiltUrl for better asset handling
-		renderBuiltUrl(filename: string, { hostType }: { hostType: 'js' | 'css' | 'html' }) {
-			if (hostType === 'js') {
-				return { js: `/${filename}` }
-			} else {
-				return { relative: true }
-			}
-		}
-	}
+	// Note: renderBuiltUrl is not available in current Vite version
 })

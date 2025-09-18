@@ -1,8 +1,8 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import ScrollToTop from './src/ScrollToTop';
-import Header from './src/Header';
+import { Suspense, lazy } from 'react';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './src/Footer';
+import Header from './src/Header';
+import ScrollToTop from './src/ScrollToTop';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import LoadingSpinner from './src/components/LoadingSpinner';
 import PerformanceMonitor from './src/components/PerformanceMonitor';

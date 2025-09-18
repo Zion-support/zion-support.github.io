@@ -7,14 +7,14 @@ console.log('Testing build process...');
 
 try {
   // Check if node_modules exists
-  if (!fs.existsSync('./node_modules')) {
+  if (!fs.existsSync('node_modules')) {
     console.log('Installing dependencies...');
-    execSync('npm install', { stdio: 'inherit' });
+    execSync('npm install --no-audit --no-fund', { stdio: 'inherit' });
   }
 
   // Try to run the build
   console.log('Running build...');
-  execSync('npm run build:netlify', { stdio: 'inherit' });
+  execSync('npm run build', { stdio: 'inherit' });
   
   console.log('Build completed successfully!');
 } catch (error) {
