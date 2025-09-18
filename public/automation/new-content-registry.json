@@ -1,6 +1,230 @@
 {
   "items": [
     {
+      "title": "Agentic Evidence Graphs (2026)",
+      "href": "/blog/ai-2026-agentic-evidence-graphs",
+      "desc": "Connect evals, traces, policy events, and incidents into an auditable graph.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Runtime Observability (2026)",
+      "href": "/blog/ai-2026-governed-runtime-observability",
+      "desc": "Streaming metrics, governed traces, and evidence bundles for reliable autonomy.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Guide — Governed Runtime Observability (2026)",
+      "href": "/reports/guides/guide-2025-09-governed-runtime-observability.md",
+      "desc": "Policy-aware traces and eval hooks tied to incidents and SLOs.",
+      "createdAt": "2025-09-16T23:59:59.997Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Agent Evidence Graphs",
+      "href": "/reports/briefs/brief-2025-09-agent-evidence-graphs.md",
+      "desc": "Connect operational signals into audit-ready narratives and scorecards.",
+      "createdAt": "2025-09-16T23:59:59.996Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "AI 2026: Next‑Gen Real‑Time Guardrails",
+      "href": "/blog/ai-2026-next-gen-realtime-guardrails",
+      "desc": "Runtime checks, approvals, and eval gates that keep autonomy fast and safe.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "2027: Governed Model Routing — Next Stage",
+      "href": "/blog/ai-2026-governed-model-routing-2027",
+      "desc": "Balance quality, latency, and spend with evidence‑driven routing policies.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Operational Maturity Models for Agentic Systems (2026)",
+      "href": "/blog/ai-2026-operational-maturity-models-for-agentic-systems",
+      "desc": "Evidence-first maturity model to safely scale autonomous agents.",
+      "createdAt": "2025-09-16T23:59:59.997Z",
+      "source": "blog"
+    },
+    {
+      "title": "2027: Governed Model Routing — Next Stage",
+      "href": "/blog/ai-2026-governed-model-routing-2027",
+      "desc": "Balance quality, latency, and spend with evidence‑driven routing policies.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Operational Maturity Models for Agentic Systems (2026)",
+      "href": "/blog/ai-2026-operational-maturity-models-for-agentic-systems.md",
+      "desc": "Evidence-first maturity model to safely scale autonomous agents.",
+      "createdAt": "2025-09-16T18:10:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Resilient Agent Architectures (2026)",
+      "href": "/blog/ai-2026-resilient-agent-architectures.md",
+      "desc": "Patterns for resilient, cost-aware, and governable agent systems.",
+      "createdAt": "2025-09-16T18:12:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Real-Time Tooling Approvals (2026)",
+      "href": "/blog/ai-2026-governed-real-time-tooling-approvals.md",
+      "desc": "Gate sensitive actions with runtime approvals without slowing teams.",
+      "createdAt": "2025-09-16T18:14:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Operational Guardrails Integration",
+      "href": "/blog/ai-2026-operational-guardrails-integration.md",
+      "desc": "Wire policy checks, eval gates, and rollback into daily delivery.",
+      "createdAt": "2025-09-17T00:00:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Agentic Evidence Hubs",
+      "href": "/blog/ai-2026-agentic-evidence-hubs.md",
+      "desc": "Bundle traces, evals, and policy events into portable proof.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Governed Model Routing — Blueprint",
+      "href": "/blog/ai-2026-governed-model-routing-blueprint.md",
+      "desc": "Latency, quality, and cost-aware routing with runtime guardrails.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Executive Brief — Safe Agent Rollouts (2026)",
+      "href": "/blog/ai-2026-exec-brief-safe-agent-rollouts.md",
+      "desc": "Evidence-first release patterns that keep autonomy safe, fast, and auditable.",
+      "createdAt": "2025-09-16T23:59:59.999Z",
+      "source": "blog"
+    },
+    {
+      "title": "Production-Ready Agent Runbooks (2026)",
+      "href": "/blog/ai-2026-agent-runbooks-in-production.md",
+      "desc": "Runbooks integrating live evals, incidents, and rollback workflows.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Runtime Observability — Playbook (2026)",
+      "href": "/blog/ai-2026-governed-runtime-observability-playbook.md",
+      "desc": "Streaming SLIs, eval hooks, and policy events wired to incidents and SLOs.",
+      "createdAt": "2025-09-16T23:59:59.997Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Real-Time Observability (2026)",
+      "href": "/blog/ai-2026-governed-real-time-observability.md",
+      "desc": "Streaming SLIs, eval hooks, and policy events without slowing teams.",
+      "createdAt": "2025-09-16T23:59:59.996Z",
+      "source": "blog"
+    },
+    {
+      "title": "Agent Release Scorecards — Evidence-First Rollouts (2026)",
+      "href": "/blog/ai-2026-agent-release-scorecards.md",
+      "desc": "Turn gates into outcomes with SLIs, evals, and incident hooks.",
+      "createdAt": "2025-09-16T23:59:59.997Z",
+      "source": "blog"
+    },
+    {
+      "title": "Safe Tooling Permissions — Practical Playbook (2026)",
+      "href": "/blog/ai-2026-safe-tooling-permissions-playbook.md",
+      "desc": "Risk tiers, approvals, and runtime checks for governed autonomy.",
+      "createdAt": "2025-09-16T23:59:59.998Z",
+      "source": "blog"
+    },
+    {
+      "title": "Executive Brief — Zero‑Downtime Agent Releases (2026)",
+      "href": "/reports/briefs/brief-2026-zero-downtime-agent-releases",
+      "desc": "Blue/green, canary, and rollback patterns wired to evaluation gates.",
+      "createdAt": "2025-09-16T23:59:59.995Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Guide — Trusted RAG in Production (2026)",
+      "href": "/reports/guides/guide-2026-trusted-rag-in-production",
+      "desc": "Grounding, guardrails, and online evals to keep retrieval reliable.",
+      "createdAt": "2025-09-16T23:59:59.992Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 27% Cost Savings via Policy‑Aware Routing (2026)",
+      "href": "/reports/cases/case-2026-policy-aware-routing-cost-savings",
+      "desc": "How adaptive routing cut spend while improving latency and quality.",
+      "createdAt": "2025-09-16T23:59:59.991Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Executive Guide — Agent Safety Evidence Bundles (2026)",
+      "href": "/reports/guides/guide-2026-agent-safety-evidence-bundles",
+      "desc": "Package traces, policy events, evals, and metrics into verifiable bundles.",
+      "createdAt": "2025-09-16T23:59:59.990Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Governed Real-Time Tool Use (2026)",
+      "href": "/reports/blueprints/blueprint-2026-governed-real-time-tool-use",
+      "desc": "Risk-tiered adapters and runtime checks for production tool execution.",
+      "createdAt": "2025-09-16T23:59:59.985Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — 40% Incident Reduction via Agent SLOs (2026)",
+      "href": "/reports/cases/case-2026-agent-slos-incident-reduction",
+      "desc": "Scorecard-driven ops reduced incidents and improved MTTR.",
+      "createdAt": "2025-09-16T23:59:59.980Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Evidence-First AI Governance (2026)",
+      "href": "/reports/briefs/brief-2026-evidence-first-governance",
+      "desc": "Operationalize governance with measurable evidence and policy events.",
+      "createdAt": "2025-09-16T23:59:59.975Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blog — Production-Ready Agent Runbooks (Deep Dive)",
+      "href": "/blog/ai-2026-agent-runbooks-production",
+      "desc": "Runbooks integrating live evals, incidents, and rollback workflows.",
+      "createdAt": "2025-09-16T23:59:59.970Z",
+      "source": "blog"
+    },
+    {
+      "title": "Governed Real‑Time Model Routing (2026)",
+      "href": "/blog/ai-2026-governed-realtime-model-routing",
+      "desc": "Latency, cost, and quality‑aware routing with live evals and guardrails.",
+      "createdAt": "2025-09-16T23:59:59.950Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Low‑Latency Agent Observability",
+      "href": "/blog/ai-2026-low-latency-agent-observability.md",
+      "desc": "Streaming metrics and lean traces for real-time reliability with minimal overhead.",
+      "createdAt": "2025-09-16T23:59:59.900Z",
+      "source": "blog"
+    },
+    {
+      "title": "Guide — Low‑Latency Observability for Agentic Systems",
+      "href": "/reports/guides/guide-2025-09-low-latency-observability.md",
+      "desc": "Monitor agents in real time without adding drag.",
+      "createdAt": "2025-09-16T23:59:50.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Agent Rollback with Evaluation Scorecards",
+      "href": "/reports/briefs/brief-2025-09-agent-rollback-scorecards.md",
+      "desc": "Tie rollback decisions to live evidence for safe autonomy.",
+      "createdAt": "2025-09-16T23:59:40.000Z",
+      "source": "ai-research-scout"
+    },
+    {
       "title": "Reference Architecture — Autonomous Content Mesh",
       "href": "/reports/blueprints/blueprint-2025-08-15-000055",
       "desc": "New autonomous content",
@@ -19,6 +243,143 @@
       "href": "/reports/cases/case-2025-08-15-000055",
       "desc": "New autonomous content",
       "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "2025-09 Research Brief — Agentic Business Ops",
+      "href": "/reports/briefs/brief-2025-09-agentic-business-ops",
+      "desc": "Practical playbook for operationalizing agentic workflows",
+      "createdAt": "2025-09-16T00:00:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Autonomous IT Service Desk (v1)",
+      "href": "/reports/blueprints/blueprint-2025-09-autonomous-it-service-desk",
+      "desc": "LLM-powered triage, routing, and remediation patterns",
+      "createdAt": "2025-09-16T00:10:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — 32% Cost Savings with FinOps AI",
+      "href": "/reports/cases/case-2025-09-finops-ai-savings",
+      "desc": "How FinOps AI reduced cloud waste at scale",
+      "createdAt": "2025-09-16T00:20:00.000Z",
+      "source": "cloud-deep-research-factory"
+    }
+    ,
+    {
+      "title": "Executive Brief — Governed Agent Rollouts (2026)",
+      "href": "/blog/ai-2026-governed-agent-rollouts.md",
+      "desc": "Preflight, canary, and rollback with evidence-first scorecards.",
+      "createdAt": "2025-09-16T17:20:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Deep Dive — Real-Time Guardrails for Tool Use (2026)",
+      "href": "/blog/ai-2026-real-time-guardrails-tool-use.md",
+      "desc": "Risk tiers, scoped creds, approvals, and runtime checks in practice.",
+      "createdAt": "2025-09-16T17:25:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Playbook — Evidence Hubs for AI Ops (2026)",
+      "href": "/blog/ai-2026-evidence-hubs-ai-ops.md",
+      "desc": "Wire traces, evals, and policy events into auditable bundles.",
+      "createdAt": "2025-09-16T17:30:00.000Z",
+      "source": "blog"
+    }
+    ,
+    {
+      "title": "Guide — Real-Time Model Routing (2026)",
+      "href": "/reports/guides/guide-2026-real-time-model-routing",
+      "desc": "Latency, cost, and quality-aware routing with live eval signals",
+      "createdAt": "2025-09-16T15:00:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Agent SLO Scorecards (2026)",
+      "href": "/reports/blueprints/blueprint-2026-agent-slo-scorecards",
+      "desc": "Minimal SLO set for safety, quality, reliability, and cost",
+      "createdAt": "2025-09-16T15:05:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — Governed Tool Use in Production (2026)",
+      "href": "/reports/cases/case-2026-governed-tool-use",
+      "desc": "Risk-tiered adapters and runtime checks across mission-critical workflows",
+      "createdAt": "2025-09-16T15:10:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Cost-Aware GenAI (2026)",
+      "href": "/reports/briefs/brief-2026-cost-aware-genai",
+      "desc": "Align budget, latency, and quality with adaptive routing",
+      "createdAt": "2025-09-16T15:15:00.000Z",
+      "source": "ai-research-scout"
+    }
+    ,
+    {
+      "title": "Reliable Autonomy Operations (2026)",
+      "href": "/blog/ai-2026-reliable-autonomy-operations",
+      "desc": "Operate agents safely with SLOs, eval gates, incidents, and governed tools",
+      "createdAt": "2025-09-16T16:20:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Agentic Observability — Deep Dive (2026)",
+      "href": "/blog/ai-2026-agentic-observability-deep-dive",
+      "desc": "Traces, policy events, and evidence that keep agents reliable in prod",
+      "createdAt": "2025-09-16T16:25:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Guide — Production Guardrails That Don’t Slow Teams",
+      "href": "/reports/guides/guide-2025-09-prod-guardrails-speed",
+      "desc": "Maintain delivery velocity while adding evidence-first quality gates",
+      "createdAt": "2025-09-16T16:30:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 28% MTTR Improvement with Agent Runbooks",
+      "href": "/reports/cases/case-2025-09-mttr-improvement-agent-runbooks",
+      "desc": "Scorecard-driven incident response reduced time-to-recovery",
+      "createdAt": "2025-09-16T16:35:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — CFO Playbook for Cost-Aware Model Routing",
+      "href": "/reports/briefs/brief-2025-09-cfo-playbook-model-routing",
+      "desc": "Budget-aligned routing with guardrails and graceful fallback",
+      "createdAt": "2025-09-16T16:40:00.000Z",
+      "source": "ai-research-scout"
+    }
+    ,
+    {
+      "title": "Guide — Production-Ready Agent Runbooks (2026)",
+      "href": "/reports/guides/guide-2026-agent-runbooks-prod",
+      "desc": "Operational patterns for live evals, incident response, and rollback",
+      "createdAt": "2025-09-16T16:50:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Evidence Hubs for Enterprise AI (2026)",
+      "href": "/reports/blueprints/blueprint-2026-evidence-hubs-enterprise-ai",
+      "desc": "Centralize traces, policy events, and metrics for governed autonomy",
+      "createdAt": "2025-09-16T16:55:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — 99.95% Uptime with Guardrailed Agents",
+      "href": "/reports/cases/case-2026-uptime-guardrailed-agents",
+      "desc": "Service reliability gains from scorecard-driven orchestration",
+      "createdAt": "2025-09-16T17:00:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Blog — Real-Time RAG Architectures (Deep Dive)",
+      "href": "/blog/ai-2026-real-time-rag-architectures",
+      "desc": "Streaming, hybrid indexes, and eval gates for low-latency recall",
+      "createdAt": "2025-09-16T17:10:00.000Z",
+      "source": "blog"
     }
   ]
 }
