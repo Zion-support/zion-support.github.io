@@ -1,3 +1,4 @@
+import React from 'react';
 
 const UltimateContentBanner2035: React.FC = () => {
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -175,48 +176,19 @@ const UltimateContentBanner2035: React.FC = () => {
           </div>
         </div>
 
-            </a>
-          </div>
-        </div>
-      </div>
-    <div className={`bg-gradient-to-r ${currentBannerData.bgColor} text-white py-12 mb-8 relative overflow-hidden transition-all duration-500`}>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="relative z-10 container mx-auto px-4">
         <div className="text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-4 animate-pulse">
-            🌟 ULTIMATE BREAKTHROUGH • JANUARY 2035
-          </div>
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            {currentBannerData.icon} {currentBannerData.title}
-          </h2>
-          <p className="text-2xl opacity-90 max-w-5xl mx-auto mb-8">
-            {currentBannerData.description}
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a
-              href={currentBannerData.link}
-              className={`bg-gradient-to-r ${currentBannerData.color} px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl`}
-            >
-              Explore Revolution →
+          <div className="inline-flex items-center space-x-4">
+            <a href="/pages/UltimateTechRevolution2035" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              🌟 Ultimate Revolution 2035
             </a>
-            <button className="border-2 border-white text-white px-10 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-xl">
-              Interactive Demo
-            </button>
+            <a href="/pages/RevolutionaryTechBreakthrough2035" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
+              🚀 Tech Breakthrough 2035
+            </a>
+            <a href="/pages/UltimateTechRevolution2035" className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400/10 transition-colors font-semibold text-lg">
+              🌌 Interdimensional Tech
+            </a>
           </div>
         </div>
-      </div>
-
-      {/* Banner Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentBanner(index)}
-            className={`w-4 h-4 rounded-full transition-all duration-300 ${
-              index === currentBanner ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-            }`}
-          />
-        ))}
       </div>
     </div>
   );

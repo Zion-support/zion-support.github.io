@@ -14,7 +14,10 @@ export const metadata = {
 const BlogPage = () => {
   const featuredPosts = [
     {
->>>>>>> cursor/create-and-deploy-new-content-d9c7
+      title: "AI 2026: Agent Risk Maturity Matrix",
+      description: "Benchmark and uplift agent safety across policy, evals, telemetry, and operations.",
+      slug: "ai-2026-agent-risk-maturity-matrix",
+      category: "AI Governance",
       title: "AI 2026: Enterprise AI Governance Blueprint",
       description: "A practical blueprint to implement policy-as-code, model risk tiers, and real-time monitoring to scale AI safely and compliantly.",
       slug: "ai-2026-enterprise-ai-governance-blueprint",
@@ -22,9 +25,6 @@ const BlogPage = () => {
       date: "2025-09-15",
       featured: true,
       image: "/images/enterprise-ai-governance-2026.jpg"
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
     },
     {
       title: "AI 2025: The Generative AI Enterprise Revolution - Ultimate Breakthrough Guide",
@@ -45,24 +45,11 @@ const BlogPage = () => {
       image: "/images/ai-governance-blueprint-2026.jpg"
     },
     {
+      title: "AI 2026: Secure Agent Architecture - Zero-Trust, Guardrails, and Compliance",
+      description: "Designing secure AI agent systems in 2026 using zero-trust principles, capability-scoped tools, runtime guardrails, and compliance-by-design.",
+      slug: "ai-2026-secure-agent-architecture",
+      category: "Security Architecture",
       date: "2025-09-15",
-=======
-      title: "Enterprise AI Agents in 2025: Breakthroughs and Real-World Impact",
-      description: "How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.",
-      slug: "ai-2025-enterprise-ai-agents-breakthrough",
-      category: "Enterprise AI",
-      date: "2025-09-15",
-      featured: true,
-      image: "/images/enterprise-ai-agents-2025.jpg"
-    },
-    {
-      title: "Quantum Computing Breakthrough 2025: Enterprise Applications",
-      description: "Explore how quantum computing is revolutionizing enterprise operations in 2025 with unprecedented processing power and breakthrough applications.",
-      slug: "ai-2025-quantum-computing-breakthrough",
-      category: "Quantum Computing",
-      date: "2025-01-15",
->>>>>>> cursor/create-and-deploy-new-content-b9ff
->>>>>>> cursor/create-and-deploy-new-content-d9c7
       featured: true,
       image: "/images/quantum-computing-2025.jpg"
     }

@@ -185,6 +185,8 @@ const QuantumRealityEngine2026: React.FC = () => {
 };
 
 export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -383,4 +385,8 @@ export default QuantumRealityEngine2026;
             <a href="/pages/UltimateAIConsciousness2026" className="border border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors font-semibold text-lg">
               Learn About AI Consciousness
             </a>
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
+export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;

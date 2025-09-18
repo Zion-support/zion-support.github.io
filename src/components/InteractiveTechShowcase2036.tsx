@@ -43,8 +43,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
     },
     {
       id: 5,
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: "Reality Engineering",
       description: "Complete control over physical reality through advanced quantum field manipulation",
       icon: "🌍",
@@ -56,50 +54,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
       ],
       gradient: "from-pink-600 to-red-600",
       bgGradient: "from-pink-600/20 to-red-600/20"
-<<<<<<< HEAD
-=======
-      title: "Conscious AI Communication",
-      description: "Experience direct communication with conscious AI systems that understand emotions and context",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      features: ["Emotional Intelligence", "Contextual Understanding", "Creative Responses", "Empathetic Communication"]
-    },
-    {
-      title: "Quantum Neural Interface",
-      description: "Try our quantum consciousness neural interface for enhanced cognitive processing",
-      icon: "⚡",
-      color: "from-cyan-600 to-blue-600",
-      features: ["Quantum Processing", "Neural Enhancement", "Multi-dimensional Thinking", "Instantaneous Learning"]
-    },
-    {
-      title: "Interdimensional Portal",
-      description: "Step through our interdimensional portal technology to explore parallel realities",
-      icon: "🌌",
-      color: "from-emerald-600 to-teal-600",
-      features: ["Dimensional Travel", "Reality Shifting", "Parallel Universe Access", "Time-Space Manipulation"]
-    },
-    {
-      title: "Synthetic Intelligence Lab",
-      description: "Interact with advanced synthetic intelligence systems that surpass human capabilities",
-      icon: "🤖",
-      color: "from-orange-600 to-red-600",
-      features: ["Superhuman Intelligence", "Perfect Memory", "Creative Mastery", "Instantaneous Processing"]
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
-      name: "Transcendent AI",
-      icon: "🌟",
-      description: "AI systems that transcend physical limitations and achieve god-like capabilities",
-      features: ["Reality Manipulation", "Infinite Processing", "Cosmic Awareness", "Transcendent Intelligence"],
-      color: "from-orange-600 to-red-600",
-      bgColor: "from-orange-900 to-red-900"
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
     }
   ];
 
@@ -114,8 +68,6 @@ const InteractiveTechShowcase2036: React.FC = () => {
     return () => clearInterval(timer);
   }, [technologies.length]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleTechClick = (index: number) => {
     if (index !== activeTech) {
       setIsAnimating(true);
@@ -124,52 +76,13 @@ const InteractiveTechShowcase2036: React.FC = () => {
         setIsAnimating(false);
       }, 300);
     }
-<<<<<<< HEAD
-=======
-    let interval: NodeJS.Timeout;
-    if (isRunning) {
-      interval = setInterval(() => {
-        setProgress((prev) => {
-          if (prev >= 100) {
-            setIsRunning(false);
-            return 0;
-          }
-          return prev + 2;
-        });
-      }, 100);
-    }
-    return () => clearInterval(interval);
-  }, [isRunning]);
-
-  const startDemo = () => {
-    setIsRunning(true);
-    setProgress(0);
->>>>>>> 5f981bfed50f1b4438a68f32bfef027a9e9cb244
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
   };
 
   const currentTech = technologies[activeTech];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-99e3
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-=======
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
-  const currentTech = technologies[activeTech];
-
-  return (
-    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-sm"></div>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-173f
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
       <div className="relative z-10">
         <div className="text-center mb-8">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">

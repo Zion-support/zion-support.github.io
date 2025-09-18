@@ -1,147 +1,246 @@
 "use client";
-'use client';
-
 import React, { useState, useEffect } from 'react';
-BrainZapTrendingUpUsersArrowRightXCheckCircleStar
-// import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
+import { motion, AnimatePresence } from 'framer-motion';
 
 const NeuralConsensus2026PromotionBanner: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  const features = [
+    {
+      title: "🧠 Neural Consensus Revolution",
+      subtitle: "Multiple AI systems collaborating for unprecedented accuracy",
+      description: "Experience 99.2% diagnostic accuracy with collective AI intelligence",
+      link: "/blog/ai-2026-neural-consensus-revolution",
+      gradient: "from-purple-600 to-indigo-600",
+      bgGradient: "from-purple-900/30 to-indigo-900/30"
+    },
+    {
+      title: "🔬 Synthetic Intelligence Breakthrough",
+      subtitle: "AI that thinks beyond human cognitive limits",
+      description: "Discover novel reasoning patterns that solve impossible problems",
+      link: "/blog/ai-2026-synthetic-intelligence-breakthrough",
+      gradient: "from-cyan-600 to-blue-600",
+      bgGradient: "from-cyan-900/30 to-blue-900/30"
+    },
+    {
+      title: "🏥 Healthcare Transformation",
+      subtitle: "Revolutionary medical diagnosis and treatment optimization",
+      description: "See how Neural Consensus transformed healthcare outcomes",
+      link: "/case-studies/neural-consensus-healthcare-transformation",
+      gradient: "from-emerald-600 to-teal-600",
+      bgGradient: "from-emerald-900/30 to-teal-900/30"
+    },
+    {
+      title: "📚 Implementation Guide 2026",
+      subtitle: "Complete roadmap to Neural Consensus success",
+      description: "Step-by-step guide to implementing collective AI intelligence",
+      link: "/guides/neural-consensus-implementation-guide-2026",
+      gradient: "from-orange-600 to-red-600",
+      bgGradient: "from-orange-900/30 to-red-900/30"
+    }
+  ];
 
   useEffect(() => {
-    // Check if banner was previously dismissed
-    const dismissed = localStorage.getItem('neural-consensus-banner-dismissed');
-    if (!dismissed) {
-      const timer = setTimeout(() => setIsVisible(true)2000);
-      return () => clearTimeout(timer);
-    }
-  }[]);
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 4000);
 
-  const handleDismiss = () => {
-    setIsDismissed(true);
-    localStorage.setItem('neural-consensus-banner-'dismissed', 'true');
-  };
+    return () => clearInterval(interval);
+  }, [features.length]);
 
-  const handleLearnMore = () => {
-    // Track banner interaction
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag(', 'event', 'neural_consensus_banner_click'{
-        event_category: 'engagement',
-        event_label: 'learn_more_clicked'
-      });
-    }
-  };
-
-  if (isDismissed) return null;
+  const stats = [
+    { value: "99.2%", label: "Diagnostic Accuracy", color: "text-green-400" },
+    { value: "40-60%", label: "Improvement Over Individual AI", color: "text-blue-400" },
+    { value: "$1.8B", label: "Annual Cost Savings", color: "text-purple-400" },
+    { value: "85%", label: "Rare Disease Detection", color: "text-orange-400" }
+  ];
 
   return (
-    <div>
-      {isVisible && (
-        <divdiv
-          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white shadow-2xl"
+    <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-5 animate-pulse"></div>
+      
+      {/* Floating Neural Network Nodes */}
+      <div className="absolute top-20 left-20 w-16 h-16 bg-purple-500 rounded-full opacity-20 animate-bounce"></div>
+      <div className="absolute top-40 right-32 w-12 h-12 bg-cyan-500 rounded-full opacity-30 animate-bounce delay-1000"></div>
+      <div className="absolute bottom-32 left-40 w-20 h-20 bg-indigo-500 rounded-full opacity-25 animate-bounce delay-2000"></div>
+      <div className="absolute bottom-20 right-20 w-14 h-14 bg-emerald-500 rounded-full opacity-35 animate-bounce delay-3000"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6"
+          >
+            <span className="text-sm font-medium">🚀 NEW 2026 BREAKTHROUGH</span>
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+          >
+            Neural Consensus
+            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Revolution 2026
+            </span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed"
+          >
+            Experience the future of artificial intelligence where multiple AI systems collaborate, 
+            debate, and reach consensus for unprecedented problem-solving capabilities
+          </motion.p>
+        </div>
+
+        {/* Stats Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
-          <div className="relative overflow-hidden">
-            {/* Animated background elements */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute top-4 left-4 w-8 h-8 bg-blue-400 rounded-full animate-pulse"></div>
-              <div className="absolute top-8 right-16 w-6 h-6 bg-purple-400 rounded-full animate-pulse delay-300"></div>
-              <div className="absolute bottom-4 left-1/3 w-4 h-4 bg-indigo-400 rounded-full animate-pulse delay-700"></div>
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className={`text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
+                {stat.value}
+              </div>
+              <div className="text-sm opacity-80">{stat.label}</div>
             </div>
+          ))}
+        </motion.div>
 
-            <div className="relative max-w-7xl mx-auto px-4 py-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  {/* Icon with animation */}
-                  <divdiv
-                    className="flex-shrink-0"
+        {/* Feature Carousel */}
+        <div className="relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentFeature}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              className={`bg-gradient-to-r ${features[currentFeature].bgGradient} rounded-2xl p-8 border border-white border-opacity-20`}
+            >
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                    {features[currentFeature].title}
+                  </h3>
+                  <p className="text-xl opacity-90 mb-4">
+                    {features[currentFeature].subtitle}
+                  </p>
+                  <p className="text-lg opacity-80 mb-6">
+                    {features[currentFeature].description}
+                  </p>
+                  <motion.a
+                    href={features[currentFeature].link}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`inline-flex items-center px-8 py-4 bg-gradient-to-r ${features[currentFeature].gradient} rounded-full text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300`}
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center">
-                      <Brain className="w-6 h-6 text-white" />
-                    </div>
-                  </divdiv>
-
-                  {/* Main content */}
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-1">
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 text-black">
-                        <Star className="w-3 h-3 mr-1" />
-                        BREAKTHROUGH 2026
-                      </span>
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-green-400 to-emerald-500 text-white">
-                        <Zap className="w-3 h-3 mr-1" />
-                        NEW RELEASE
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-lg font-bold mb-1">
-                      🧠 Neural Consensus Revolution: $15B ROI Achieved!
-                    </h3>
-                    
-                    <p className="text-sm text-blue-100 mb-2">
-                      Discover how Fortune 100 companies are using collective AI intelligence to achieve unprecedented business results. 
-                      <span className="font-semibold text-yellow-300"> 99.9% decision accuracy</span> and 
-                      <span className="font-semibold text-green-300"> 400% average ROI</span>.
-                    </p>
-
-                    {/* Key benefits */}
-                    <div className="flex items-center space-x-4 text-xs text-blue-200">
-                      <div className="flex items-center">
-                        <CheckCircle className="w-3 h-3 mr-1 text-green-400" />
-                        <span>99.9% Accuracy</span>
+                    Explore Now
+                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </motion.a>
+                </div>
+                
+                <div className="flex-1">
+                  <div className="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">
+                        {currentFeature === 0 && "🧠"}
+                        {currentFeature === 1 && "🔬"}
+                        {currentFeature === 2 && "🏥"}
+                        {currentFeature === 3 && "📚"}
                       </div>
-                      <div className="flex items-center">
-                        <TrendingUp className="w-3 h-3 mr-1 text-yellow-400" />
-                        <span>$15B ROI</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="w-3 h-3 mr-1 text-purple-400" />
-                        <span>Fortune 100</span>
+                      <div className="space-y-2">
+                        <div className="h-2 bg-white bg-opacity-30 rounded-full overflow-hidden">
+                          <motion.div
+                            className="h-full bg-gradient-to-r from-cyan-400 to-purple-400"
+                            initial={{ width: 0 }}
+                            animate={{ width: "100%" }}
+                            transition={{ duration: 2, delay: 0.5 }}
+                          />
+                        </div>
+                        <div className="text-sm opacity-70">
+                          Revolutionary AI Technology
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                {/* Action buttons */}
-                <div className="flex items-center space-x-3">
-                  <a href="/src/pages/blog/ai-2026-neural-consensus-revolution" onClick={handleLearnMore}>
-                    <divbutton
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-                    >
-                      Read Case Study
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </divbutton>
-                  </a>
-
-                  <a href="/src/pages/case-studies/global-enterprise-neural-consensus-transformation-2026-15-billion-roi" onClick={handleLearnMore}>
-                    <divbutton
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
-                    >
-                      View ROI Results
-                      <TrendingUp className="w-4 h-4 ml-2" />
-                    </divbutton>
-                  </a>
-
-                  <button
-                    onClick={handleDismiss}
-                    className="p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
-                    aria-label="Dismiss banner"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
               </div>
-            </div>
+            </motion.div>
+          </AnimatePresence>
 
-            {/* Progress bar */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-600">
-              <divdiv
-                className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
+          {/* Feature Indicators */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {features.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentFeature(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentFeature 
+                    ? 'bg-white' 
+                    : 'bg-white bg-opacity-30 hover:bg-opacity-50'
+                }`}
               />
-            </div>
+            ))}
           </div>
-        </divdiv>
-      )}
+        </div>
+
+        {/* Call to Action Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Transform Your Organization?
+          </h2>
+          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
+            Join the Neural Consensus revolution and unlock the power of collective AI intelligence 
+            for unprecedented problem-solving capabilities
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.a
+              href="/guides/neural-consensus-implementation-guide-2026"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              Get Implementation Guide
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </motion.a>
+            <motion.a
+              href="/case-studies/neural-consensus-healthcare-transformation"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              View Success Stories
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </motion.a>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };

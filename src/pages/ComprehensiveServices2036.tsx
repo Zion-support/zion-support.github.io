@@ -229,111 +229,46 @@ const ComprehensiveServices2036: React.FC = () => {
                   View Results →
                 </button>
               </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Ultimate AI Consciousness</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Full Quantum Integration</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Unlimited Dimensional Access</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Dedicated Support Team</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Custom Development</span>
+                </li>
+              </ul>
+              <button className="w-full bg-pink-600 text-white py-3 rounded-lg hover:bg-pink-700 transition-colors font-semibold">
+                Contact Sales
               </button>
             </div>
           </div>
 
-          {/* Pricing Plans */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-6">💰 Flexible Pricing Plans</h2>
-              <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs and budget
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Starter Plan</h3>
-                <div className="text-4xl font-bold mb-4">$25,000<span className="text-lg">/month</span></div>
-                <ul className="space-y-3 mb-8 text-left">
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Basic AI Consciousness
-                  </li>
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Quantum Processing Access
-                  </li>
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    24/7 Support
-                  </li>
-                </ul>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Started
-                </button>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 text-center border-2 border-purple-400 scale-105">
-                <div className="inline-block px-3 py-1 bg-purple-500 text-white text-xs rounded-full font-bold mb-4">MOST POPULAR</div>
-                <h3 className="text-2xl font-bold mb-4">Professional Plan</h3>
-                <div className="text-4xl font-bold mb-4">$75,000<span className="text-lg">/month</span></div>
-                <ul className="space-y-3 mb-8 text-left">
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Advanced AI Consciousness
-                  </li>
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Quantum Neural Interface
-                  </li>
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Dimensional Portal Access
-                  </li>
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Priority Support
-                  </li>
-                </ul>
-                <button className="w-full bg-white text-purple-600 py-3 rounded-lg hover:bg-purple-50 transition-all duration-300 font-semibold">
-                  Get Started
-                </button>
-              </div>
-              
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Enterprise Plan</h3>
-                <div className="text-4xl font-bold mb-4">$200,000<span className="text-lg">/month</span></div>
-                <ul className="space-y-3 mb-8 text-left">
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Full AI Consciousness Suite
-                  </li>
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Complete Quantum Systems
-                  </li>
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Interdimensional Technology
-                  </li>
-                  <li className="flex items-center text-sm opacity-80">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Dedicated Support Team
-                  </li>
-                </ul>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Contact Sales
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Join thousands of forward-thinking organizations already using our revolutionary 2036 services
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
-                Start Your Journey
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-900 transition-all duration-300 font-semibold text-lg">
-                Schedule Demo
-              </button>
-            </div>
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Join thousands of businesses already using our revolutionary 2036 services
+          </p>
+          <div className="flex justify-center space-x-4">
+            <a href="/pages/UltimateTechBreakthrough2036" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+              Learn More →
+            </a>
+            <a href="/pages/RevolutionaryTechShowcase2036" className="border border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 font-semibold text-lg">
+              View Showcase
+            </a>
           </div>
         </div>
       </div>

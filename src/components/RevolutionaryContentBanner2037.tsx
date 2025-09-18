@@ -9,7 +9,6 @@ const RevolutionaryContentBanner2037: React.FC = () => {
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🌟 BREAKTHROUGH TECHNOLOGY • JANUARY 2037
           </div>
-<<<<<<< HEAD
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             🚀 Revolutionary AI Consciousness 2037
           </h2>
@@ -66,15 +65,6 @@ const RevolutionaryContentBanner2037: React.FC = () => {
               Enter New Reality →
             </a>
           </div>
-<<<<<<< HEAD
-=======
-            </a>
-          </div>
-        </div>
-        
->>>>>>> cursor/create-and-deploy-new-content-ed0b
-=======
->>>>>>> cursor/create-and-deploy-new-content-f1f3
         </div>
       </div>
     </div>

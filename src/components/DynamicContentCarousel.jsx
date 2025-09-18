@@ -7,6 +7,11 @@ const DynamicContentCarousel = () => {
   const carouselItems = [
     {
       id: 1,
+      title: "AI Innovation Hub 2026",
+      description: "Explore cutting-edge AI technologies and breakthrough innovations",
+      image: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/AIInnovationHub2026"
     },
     {
       id: 2,
@@ -37,6 +42,22 @@ const DynamicContentCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselItems.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [carouselItems.length]);
+
+  return (
+    <div className="relative max-w-6xl mx-auto">
+      <div className="relative overflow-hidden rounded-2xl">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -300 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
+          >
             <div className={`bg-gradient-to-r ${carouselItems[currentSlide].gradient} p-12 text-white`}>
               <div className="flex items-center justify-between">
                 <div className="flex-1">
@@ -57,8 +78,6 @@ const DynamicContentCarousel = () => {
                 </div>
               </div>
             </div>
-              </div>
-            </div>
           </motion.div>
         </AnimatePresence>
       </div>
@@ -70,11 +89,7 @@ const DynamicContentCarousel = () => {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
-            }`}
-          />
-        ))}
-              currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
             }`}
           />
         ))}
