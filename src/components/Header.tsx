@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
   const setTheme = (_: string) => {};
   const location = useLocation();
 
-
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

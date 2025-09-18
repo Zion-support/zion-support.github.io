@@ -65,7 +65,12 @@ const App = () => {
   // const [sidebarOpen, setSidebarOpen] = useState(false); // Commented out unused state
   
   return (
-              
+    <EnhancedErrorBoundary>
+      <ThemeProvider>
+        <WhitelabelProvider>
+          <Router>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <Header />
               <main className="flex-1">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
