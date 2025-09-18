@@ -1,15 +1,17 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T19:25:00Z
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:59Z
+# noop: 2025-09-18T23:59:59Z-1
 [build]
-  # Build Vite app from repo root
-  # No-op change to trigger Netlify deploy at 2025-09-18T19:25:00Z
-  command = "npm ci --no-audit --no-fund && npm run build:netlify"
-  publish = "dist"
+  # Build the Next.js site located in the monorepo subdirectory from the repo root
+  base = "zion-website"
+  command = "npm ci --no-audit --no-fund && npm run build"
+  publish = ".next"
   command_timeout = "30m"
   # No-op: trigger Netlify rebuild at 2025-09-18T19:25:00Z
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
+  NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
@@ -21,7 +23,8 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  directory = "../netlify/functions"
+  # Functions live at the repository root
+  directory = "netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
@@ -219,4 +222,5 @@
 
 ## Note: Do not add SPA fallback for Next.js; plugin handles routing.
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T19:25:00Z
+# No-op: trigger deploy 2025-09-18T23:59:59Z
+# trigger: 2025-09-18T23:59:59Z

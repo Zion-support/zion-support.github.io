@@ -3,9 +3,41 @@ import { getLatestUpdates } from '../data/updates'
 
 export default function HomePage() {
   const latest = getLatestUpdates(6)
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://zion.app",
+    "logo": "https://zion.app/logo.png",
+    "description": "Leading AI and Technology Solutions for Enterprise Innovation",
+    "foundingDate": "2020",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://zion.app/contact"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontech",
+      "https://linkedin.com/company/zion-tech-group"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "category": "AI and Technology Services",
+      "description": "Cutting-edge AI, quantum computing, and autonomous solutions"
+    }
+  }
 
   return (
     <div className="bg-black min-h-screen">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
+      />
+      
       {/* Hero Section with improved accessibility and performance */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-24 sm:py-36 lg:py-40">
