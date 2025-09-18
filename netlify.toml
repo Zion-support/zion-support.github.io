@@ -1,10 +1,10 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:59:59Z (run-8)
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-19T00:15:00Z (run-9)
 [build]
   base = "zion-website"
   command = "corepack enable && corepack prepare yarn@4.9.4 --activate && yarn install --immutable && yarn build"
   publish = ".next"
   command_timeout = "30m"
-# No-op: trigger Netlify rebuild at 2025-09-18T23:59:59Z (run-8)
+# No-op: trigger Netlify rebuild at 2025-09-19T00:15:00Z (run-9)
 
 [build.environment]
   NODE_VERSION = "20"
@@ -132,7 +132,7 @@
 #   [headers.values]
 #     Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data: https:; font-src 'self' *.gstatic.com *.googleapis.com"
 
-# Redirects for legacy URLs
+# Redirects for legacy URLs (timestamp refresh 2025-09-19T00:15:00Z)
 [[redirects]]
   from = "/api/*"
   to = "https://backend.example.com/:splat"
@@ -218,10 +218,10 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js routing is handled by @netlify/plugin-nextjs
+# Note: Next.js routing is handled by @netlify/plugin-nextjs (touched 2025-09-19)
 
-# No-op: trigger deploy 2025-09-18 23:59 (run-8)
+# No-op: trigger deploy 2025-09-19 00:15 (run-9)
 
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T23:59:59Z (refresh 2025-09-18T23:59:59Z)
-# trigger: 2025-09-18T23:59:59Z (refresh) re-run-8
+# No-op: trigger deploy 2025-09-19T00:15:00Z (refresh 2025-09-19T00:15:00Z)
+# trigger: 2025-09-19T00:15:00Z (refresh) re-run-9
