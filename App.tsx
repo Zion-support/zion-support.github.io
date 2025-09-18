@@ -13,6 +13,7 @@ import EnhancedContentCarousel2025 from './src/components/EnhancedContentCarouse
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
 import RevolutionaryContentShowcase2026 from './src/components/RevolutionaryContentShowcase2026';
 import AdvancedAITechnologyShowcase2026 from './src/components/AdvancedAITechnologyShowcase2026';
+import PerformanceOptimizationDashboard from './src/components/PerformanceOptimizationDashboard';
 import './src/index.css';
 
 function App() {
@@ -74,6 +75,11 @@ function App() {
                 {/* Advanced AI Technology Showcase 2026 */}
                 <div className="mb-12">
                   <AdvancedAITechnologyShowcase2026 />
+                </div>
+
+                {/* Performance Optimization Dashboard */}
+                <div className="mb-12">
+                  <PerformanceOptimizationDashboard />
                 </div>
               </div>
             } />
