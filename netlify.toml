@@ -15,6 +15,10 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
+# Use the Next.js Netlify plugin for proper routing/functions
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
@@ -212,8 +216,4 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# SPA fallback (must be last)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Remove SPA fallback to avoid breaking Next.js routing; plugin handles routes
