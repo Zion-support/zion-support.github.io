@@ -1,12 +1,18 @@
 # Updated: Fixed for Vite React SPA deployment at 2025-01-19T12:00:00Z
+# Vite React SPA - explicitly disable Next.js plugin
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disabled = true
+
+# Disable automatic Next.js detection
 [build]
   base = "."
   command = "npm install --include=optional && npm run build:netlify"
   publish = "dist"
   command_timeout = "30m"
+  functions = false
 # No-op: trigger Netlify rebuild at 2025-09-19T00:45:00Z (run-12)
-
-# Vite React SPA - no Next.js plugin needed
 
 [build.environment]
   NODE_VERSION = "20"
