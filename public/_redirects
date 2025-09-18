@@ -1,5 +1,4 @@
-# Handle client-side routing for SPA
-/*    /index.html   200
+# Vite React SPA routing configuration
 
 # Normalize trailing slashes for key marketing pages
 /services      /services     301!
@@ -9,7 +8,7 @@
 /request-quote     /request-quote    301!
 /request-quote/    /request-quote    301!
 
-# Optional: Specific redirects for SEO/legacy URLs
+# Specific redirects for SEO/legacy URLs
 /ai-autonomous-ecosystem /ai-autonomous-ecosystem-manager 301
 /autonomous-it-operations /autonomous-it-operations-center 301
 /quantum-internet-security /quantum-internet-security-platform 301
@@ -18,3 +17,6 @@
 /ai-content-marketing-automation /ai-content-generator 301
 /ai-customer-success-automation /ai-customer-success-platform 301
 /browser-automation-cloud/ /browser-automation-cloud 301
+
+# SPA fallback for Vite React app - all routes go to index.html
+/*    /index.html   200

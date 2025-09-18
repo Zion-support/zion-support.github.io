@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   Users
@@ -186,9 +185,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -206,9 +202,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
 
         {/* Overall Stats */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -224,9 +217,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
 
         {/* Case Study Navigation */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -247,13 +237,8 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
         </div>
 
         {/* Case Study Content */}
-        <AnimatePresence mode="wait">
           <div
             key={activeCase}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -50 }}
-            transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
           >
             <div className="grid lg:grid-cols-2 gap-12">
@@ -268,18 +253,15 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                     <p className="text-gray-300">{caseStudies[activeCase].industry} • {caseStudies[activeCase].duration}</p>
                   </div>
                 </div>
-
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-300">{caseStudies[activeCase].challenge}</p>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                     <p className="text-gray-300">{caseStudies[activeCase].solution}</p>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Key Highlights</h4>
                     <ul className="space-y-2">
@@ -291,7 +273,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
@@ -304,7 +285,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right Column - Results & Testimonial */}
               <div>
                 {/* Results Metrics */}
@@ -320,7 +300,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Testimonial */}
                 <div className="bg-white/10 rounded-lg p-6">
                   <div className="flex items-start gap-4 mb-4">
@@ -338,7 +317,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
                     "{caseStudies[activeCase].testimonial.quote}"
                   </blockquote>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-4 mt-6">
                   <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center gap-2">
@@ -353,13 +331,10 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 text-gray-900">
@@ -385,5 +360,6 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {
     </section>
   );
 };
+
 
 export default RevolutionaryCaseStudiesShowcase2027;

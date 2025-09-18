@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Search
   Grid
@@ -114,33 +113,24 @@ const UltimateContentHub2026PromotionBanner = () => {
   };
 
   return (
-    
+    <div>
       {isVisible && (
         <div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-slate-800 via-blue-900 to-purple-900 text-white overflow-hidden"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/10 rounded-full blur-2xl -z-10" />
-          
           {/* Floating Elements */}
           <div className="absolute top-4 left-4 w-3 h-3 bg-yellow-400 rounded-full animate-pulse" />
           <div className="absolute top-8 right-8 w-2 h-2 bg-pink-400 rounded-full animate-bounce" />
           <div className="absolute bottom-4 right-4 w-4 h-4 bg-green-400 rounded-full animate-ping" />
-
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div>
                 <div
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  transition={{ duration: 0.5delay: 0.2 }}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-4"
                 >
                   <Grid className="w-4 h-4" />
@@ -148,29 +138,20 @@ const UltimateContentHub2026PromotionBanner = () => {
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
                 </div>
 
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: 0.3 }}
+                <divh2
                   className="text-3xl md:text-4xl font-bold mb-4"
                 >
                   DiscoverLearnand Master
-                </motion.h2>
+                </divh2>
 
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: 0.4 }}
+                <divp
                   className="text-lg md:text-xl opacity-90 mb-6"
                 >
                   Access 1,247+ pieces of cutting-edge content including articlesvideostutorialsand case studies from industry experts.
-                </motion.p>
+                </divp>
 
                 {/* Content Types */}
                 <div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: 0.5 }}
                   className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
                 >
                   {contentTypes.map((typeindex) => (
@@ -184,9 +165,6 @@ const UltimateContentHub2026PromotionBanner = () => {
 
                 {/* Stats */}
                 <div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: 0.6 }}
                   className="flex flex-wrap items-center gap-6 text-sm mb-6"
                 >
                   <div className="flex items-center gap-2">
@@ -205,9 +183,6 @@ const UltimateContentHub2026PromotionBanner = () => {
 
                 {/* CTA Buttons */}
                 <div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: 0.7 }}
                   className="flex flex-col sm:flex-row gap-4"
                 >
                   <button className="bg-white text-slate-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105">
@@ -219,12 +194,8 @@ const UltimateContentHub2026PromotionBanner = () => {
                   </button>
                 </div>
               </div>
-
               {/* Preview Section */}
               <div
-                initial={{ opacity: 0x: 20 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.8 }}
                 className="relative"
               >
                 {/* Content Preview Card */}
@@ -236,15 +207,9 @@ const UltimateContentHub2026PromotionBanner = () => {
                       <span className="text-sm opacity-70">Live</span>
                     </div>
                   </div>
-
                   {/* Content Preview */}
-                  <AnimatePresence mode="wait">
                     <div
                       key={activePreview}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.5 }}
                       className="space-y-4"
                     >
                       <div className="flex items-center gap-2">
@@ -255,11 +220,9 @@ const UltimateContentHub2026PromotionBanner = () => {
                           {contentPreviews[activePreview].type}
                         </span>
                       </div>
-                      
                       <h4 className="text-lg font-semibold line-clamp-2">
                         {contentPreviews[activePreview].title}
                       </h4>
-                      
                       <div className="flex flex-wrap gap-2">
                         {contentPreviews[activePreview].tags.map((tagindex) => (
                           <span
@@ -270,7 +233,6 @@ const UltimateContentHub2026PromotionBanner = () => {
                           </span>
                         ))}
                       </div>
-                      
                       <div className="flex items-center justify-between text-sm opacity-70">
                         <div className="flex items-center gap-4">
                           <div className="flex items-center gap-1">
@@ -292,7 +254,7 @@ const UltimateContentHub2026PromotionBanner = () => {
                         </div>
                       </div>
                     </div>
-                  
+                  </div>
 
                   {/* Preview Indicators */}
                   <div className="flex justify-center gap-2 mt-4">
@@ -307,18 +269,13 @@ const UltimateContentHub2026PromotionBanner = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse" />
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full animate-bounce" />
               </div>
             </div>
-
             {/* Bottom Features */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.9 }}
               className="mt-12 pt-6 border-t border-white/20"
             >
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
@@ -341,7 +298,6 @@ const UltimateContentHub2026PromotionBanner = () => {
               </div>
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={handleDismiss}
@@ -352,8 +308,10 @@ const UltimateContentHub2026PromotionBanner = () => {
           </button>
         </div>
       )}
-    
+    </div>
   );
 };
 
+
 export default UltimateContentHub2026PromotionBanner;
+</div></div></div></div></div></div></div></div></div></div></div>

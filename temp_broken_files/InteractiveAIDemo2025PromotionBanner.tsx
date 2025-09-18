@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Bot
   MessageCircle
@@ -71,26 +70,21 @@ const InteractiveAIDemo2025PromotionBanner = () => {
   if (isDismissed || !isVisible) return null;
 
   return (
-    
+    <div>
       <div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
         className="relative bg-gradient-to-r from-blue-900 via-slate-900 to-purple-900 border-b border-blue-500/30 overflow-hidden"
       >
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-purple-600/20"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx="20" cy="20" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%221%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         </div>
-
         <div className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Left Content */}
             <div className="flex items-center gap-6">
               <div
                 className="flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
               >
                 <div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -100,7 +94,6 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                     <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   </div>
                 </div>
-                
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">
                     🤖 Interactive AI Demo 2025
@@ -115,12 +108,8 @@ const InteractiveAIDemo2025PromotionBanner = () => {
               <div className="hidden md:flex items-center gap-4">
                 <div className="w-px h-8 bg-blue-500/30"></div>
                 <div className="flex items-center gap-3">
-                  <AnimatePresence mode="wait">
                     <div
                       key={currentDemo}
-                      initial={{ opacity: 0x: 20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      exit={{ opacity: 0x: -20 }}
                       className="flex items-center gap-2"
                     >
                       <div className={`w-8 h-8 bg-gradient-to-r ${demos[currentDemo].color} rounded-lg flex items-center justify-center`}>
@@ -135,11 +124,10 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                         </div>
                       </div>
                     </div>
-                  
+                  </div>
                 </div>
               </div>
             </div>
-
             {/* Right Content */}
             <div className="flex items-center gap-4">
               {/* Live Stats */}
@@ -150,7 +138,6 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                     {demos[currentDemo].users}
                   </span>
                 </div>
-                
                 <div className="flex items-center gap-2 px-3 py-2 bg-white/10 rounded-lg border border-white/20">
                   <Clock className="w-4 h-4 text-blue-400" />
                   <span className="text-white text-sm font-medium">
@@ -158,13 +145,10 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                   </span>
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className="flex items-center gap-3">
                 <button
                   className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span className="text-sm font-medium">Chat Now</span>
@@ -172,8 +156,6 @@ const InteractiveAIDemo2025PromotionBanner = () => {
 
                 <button
                   className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-blue-500/25"
-                  whileHover={{ scale: 1.05y: -2 }}
-                  whileTap={{ scale: 0.95 }}
                 >
                   <Play className="w-4 h-4" />
                   <span>Try Demo</span>
@@ -183,24 +165,17 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                 <button
                   onClick={() => setIsDismissed(true)}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
                 >
                   <X className="w-5 h-5 text-gray-400 hover:text-white" />
                 </button>
               </div>
             </div>
           </div>
-
           {/* Mobile Demo Features */}
           <div className="md:hidden mt-4">
             <div className="flex items-center justify-center gap-4">
-              <AnimatePresence mode="wait">
                 <div
                   key={currentDemo}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
                   className="flex items-center gap-2"
                 >
                   <div className={`w-6 h-6 bg-gradient-to-r ${demos[currentDemo].color} rounded-lg flex items-center justify-center`}>
@@ -215,22 +190,19 @@ const InteractiveAIDemo2025PromotionBanner = () => {
                     </div>
                   </div>
                 </div>
-              
+              </div>
             </div>
           </div>
         </div>
-
         {/* Animated Border */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
         <div
           className="absolute bottom-0 left-0 h-1 bg-white"
-          initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 4repeat: Infinityease: "linear" }}
         ></div>
       </div>
-    
+    </div>
   );
 };
+
 
 export default InteractiveAIDemo2025PromotionBanner;

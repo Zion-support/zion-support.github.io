@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Building2
   TrendingUp
@@ -108,30 +107,23 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    
+    <div>
       {isVisible && (
         <div
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between py-4">
               {/* Left Content */}
               <div 
                 className="flex items-center space-x-4 flex-1"
-                variants={textVariants}
               >
                 <div className="flex items-center space-x-3">
                   <div
                     className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
-                    animate={{ 
                       rotate: [0360],
                       scale: [1.1]
                     }}
-                    transition={{ 
                       duration: 4
                       repeat: Infinity
                       ease: "easeInOut" 
@@ -153,17 +145,11 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
               {/* Center Metrics Rotator */}
               <div 
                 className="hidden md:flex items-center space-x-6"
-                variants={textVariants}
               >
                 <div className="text-center">
                   <div className="text-sm opacity-80 mb-1">Live Results</div>
-                  <AnimatePresence mode="wait">
                     <div
                       key={currentMetric}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.5 }}
                       className="flex items-center space-x-2"
                     >
                       <div className={`w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center`}>
@@ -176,7 +162,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                         <div className="text-xs opacity-80">{metrics[currentMetric].label}</div>
                       </div>
                     </div>
-                  
+                  </div>
                 </div>
                 <div className="w-px h-8 bg-white/30"></div>
                 <div className="text-center">
@@ -193,18 +179,15 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
               {/* Right Actions */}
               <div 
                 className="flex items-center space-x-3"
-                variants={buttonVariants}
               >
                 <button className="hidden sm:flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200 backdrop-blur-sm">
                   <Users className="w-4 h-4" />
                   <span className="text-sm font-medium">Case Studies</span>
                 </button>
-                
                 <button className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg">
                   <span>Explore Solutions</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-                
                 <button 
                   onClick={handleDismiss}
                   className="p-2 hover:bg-white/20 rounded-lg transition-colors"
@@ -213,20 +196,15 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                 </button>
               </div>
             </div>
-
             {/* Mobile Content */}
             <div 
               className="md:hidden flex items-center justify-between py-2 border-t border-white/20"
-              variants={textVariants}
             >
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <div
                     className={`w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center`}
                     key={currentMetric}
-                    initial={{ scale: 0.8 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.3 }}
                   >
                     {React.createElement(metrics[currentMetric].icon{ 
                       className: `w-3 h-3 ${metrics[currentMetric].color}` 
@@ -252,16 +230,13 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
               </div>
             </div>
           </div>
-
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
               className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full"
-              animate={{
                 scale: [1.21],
                 opacity: [0.30.60.3]
               }}
-              transition={{
                 duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -269,11 +244,9 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
             />
             <div
               className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full"
-              animate={{
                 scale: [1.31],
                 opacity: [0.20.40.2]
               }}
-              transition={{
                 duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
@@ -282,11 +255,9 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
             />
             <div
               className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full"
-              animate={{
                 scale: [1.51],
                 opacity: [0.10.30.1]
               }}
-              transition={{
                 duration: 2.5,
                 repeat: Infinity,
                 ease: "easeInOut",
@@ -296,8 +267,10 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
           </div>
         </div>
       )}
-    
+    </div>
   );
 };
 
+
 export default BusinessSolutionsShowcase2025PromotionBanner;
+</div></div>

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Brain, ArrowRight } from 'lucide-react';
 
 const AIServicesPage = () => {
@@ -42,27 +41,18 @@ const AIServicesPage = () => {
       <section className="relative py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <divh1 
               className="text-5xl md:text-7xl font-bold text-white mb-6"
             >
               AI-Powered
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Services</span>
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            </divh1>
+            <divp 
               className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
             >
               Transform your business with cutting-edge AI solutions designed to automate, optimize, and revolutionize your operations.
-            </motion.p>
+            </divp>
             <div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
@@ -75,7 +65,6 @@ const AIServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -83,9 +72,6 @@ const AIServicesPage = () => {
             {aiServices.map((service, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
@@ -106,30 +92,20 @@ const AIServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <divh2 
             className="text-4xl font-bold text-white mb-6"
           >
             Ready to Transform Your Business?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          </divh2>
+          <divp 
             className="text-xl text-gray-300 mb-8"
           >
             Let's discuss how our AI services can drive your success.
-          </motion.p>
+          </divp>
           <div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
@@ -144,5 +120,6 @@ const AIServicesPage = () => {
     </div>
   );
 };
+
 
 export default AIServicesPage;

@@ -1,115 +1,18 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
-
 const ComprehensiveServicesShowcase2027: React.FC = () => {
-  const services = [
-    {
-      category: "AI Solutions",
-      icon: "🤖",
-      color: "from-blue-600 to-cyan-600",
-      borderColor: "border-blue-400/30",
-      services: [
-        "AI Strategy Consulting",
-        "Machine Learning Implementation",
-        "Natural Language Processing",
-        "Computer Vision Solutions",
-        "AI-Powered Automation",
-        "Predictive Analytics"
-      ]
-    },
-    {
-      category: "Quantum Computing",
-      icon: "⚡",
-      color: "from-purple-600 to-pink-600",
-      borderColor: "border-purple-400/30",
-      services: [
-        "Quantum Algorithm Development",
-        "Quantum Machine Learning",
-        "Quantum Cryptography",
-        "Quantum Simulation",
-        "Quantum Optimization",
-        "Quantum Error Correction"
-      ]
-    },
-    {
-      category: "Neural Interfaces",
-      icon: "🧠",
-      color: "from-emerald-600 to-teal-600",
-      borderColor: "border-emerald-400/30",
-      services: [
-        "Brain-Computer Interface Design",
-        "Neural Signal Processing",
-        "Cognitive Enhancement Systems",
-        "Virtual Reality Integration",
-        "Memory Augmentation",
-        "Thought-Controlled Devices"
-      ]
-    },
-    {
-      category: "Space Technology",
-      icon: "🚀",
-      color: "from-orange-600 to-red-600",
-      borderColor: "border-orange-400/30",
-      services: [
-        "Spacecraft Design & Development",
-        "Mars Colonization Planning",
-        "Asteroid Mining Technology",
-        "Space Tourism Solutions",
-        "Satellite Constellation Management",
-        "Interplanetary Communication"
-      ]
-    },
-    {
-      category: "Biotechnology",
-      icon: "🧬",
-      color: "from-green-600 to-emerald-600",
-      borderColor: "border-green-400/30",
-      services: [
-        "AI-Powered Drug Discovery",
-        "Personalized Medicine",
-        "Genetic Engineering",
-        "Synthetic Biology",
-        "Biomarker Development",
-        "Therapeutic Solutions"
-      ]
-    },
-    {
-      category: "Cybersecurity",
-      icon: "🛡️",
-      color: "from-indigo-600 to-purple-600",
-      borderColor: "border-indigo-400/30",
-      services: [
-        "Quantum-Safe Encryption",
-        "AI-Powered Threat Detection",
-        "Zero-Trust Architecture",
-        "Blockchain Security",
-        "IoT Security Solutions",
-        "Incident Response Planning"
-      ]
-    }
-  ];
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
-        <title>Comprehensive Services Showcase 2027 - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive range of revolutionary technology services including AI, quantum computing, neural interfaces, and more for 2027." />
-        <meta name="keywords" content="Tech Services 2027, AI Solutions, Quantum Computing, Neural Interfaces, Space Technology, Biotechnology" />
-        <meta property="og:title" content="Comprehensive Services Showcase 2027 - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive range of revolutionary technology services for 2027." />
-        <meta property="og:type" content="website" />
+        <title>ComprehensiveServicesShowcase2027 | Zion Tech Group</title>
+        <meta name="description" content="ComprehensiveServicesShowcase2027 - Revolutionary technology solutions" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10 container mx-auto px-4 py-20">
             <div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               className="text-center"
             >
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -125,7 +28,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Services Overview */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -134,14 +36,11 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               From AI solutions to space technology, we offer comprehensive services across all major technology domains
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={service.category}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br ${service.color}/30 backdrop-blur-sm rounded-xl p-8 border ${service.borderColor} hover:scale-105 transition-all duration-300`}
               >
                 <div className="text-6xl mb-4 text-center">{service.icon}</div>
@@ -163,7 +62,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Featured Solutions */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -172,12 +70,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               Our most popular and innovative solutions that are transforming industries worldwide
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8">
             <div
-              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30"
             >
               <div className="flex items-center space-x-4 mb-6">
@@ -211,9 +106,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
 
             <div
-              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30"
             >
               <div className="flex items-center space-x-4 mb-6">
@@ -247,7 +140,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Pricing Tiers */}
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -256,12 +148,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               Choose the perfect service tier for your business needs and budget
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             <div
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50"
             >
               <h3 className="text-2xl font-bold mb-4">Starter</h3>
@@ -290,9 +179,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
 
             <div
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 relative"
             >
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -330,9 +217,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
 
             <div
-              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
             >
               <h3 className="text-2xl font-bold mb-4">Enterprise</h3>
@@ -365,9 +250,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
-        <motion.section className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+        <divsection className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 py-20">
             <div className="text-center">
               <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
@@ -384,10 +268,11 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.section>
+        </divsection>
       </div>
-    </>
+    </div>
   );
 };
+
 
 export default ComprehensiveServicesShowcase2027;

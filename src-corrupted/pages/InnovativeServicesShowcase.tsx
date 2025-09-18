@@ -1,8 +1,22 @@
-import React from 'react'; export default InnovativeServicesShowcase}}}}} const InnovativeServicesShowcase: Reac t.FC = () => {, const [searchTerm, setSearchTerm] = useState<any>("); const [selectedCategory, setSelectedCategory] = useState<any>(all); const [priceRange, setPriceRange] = useState<any>(all); const [sortBy, setSortBy] = useState<any>(rating); const categories = ["all", AI Services, IT Services, Micro SAAS, "Business", Development]; const priceRanges = [
-  { label: All Prices, value: al l }, { label "Under $100", value: 0 - 100 }, { label: $100 - $500, value: 10 0 - 500 }, { label "$500 - $1000", value: 50 0 - 1000 }, { label: $1000 - $3000, value: 100 0 - 3000 }, { label "Over $3000", value: 300 0+ }';
-]; const sortOptions = [';' { label: Highest Rated, value: ratin g }, { label "Highest AI Score", value: aiScor e }, { label: Lowest Price, value: pric e }, { label "Newest Launch", value "launchDate" }';';';
-]; const filtered = INNOVATIVE_SERVICES_2025; "';';';';
-</any>
-</any>
-</any>
-</any>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const InnovativeServicesShowcase: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>InnovativeServicesShowcase | Zion Tech Group</title>
+        <meta name="description" content="InnovativeServicesShowcase - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">InnovativeServicesShowcase</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default InnovativeServicesShowcase;

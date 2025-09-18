@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   Users
@@ -131,15 +130,10 @@ const BusinessTransformationShowcase2025 = () => {
       
       <div
         className="container mx-auto px-4 py-16 relative z-10"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
       >
         {/* Header */}
-        <div className="text-center mb-16" variants={itemVariants}>
           <div 
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6"
-            whileHover={{ scale: 1.05 }}
           >
             <Zap className="w-4 h-4" />
             BUSINESS TRANSFORMATION 2025
@@ -155,7 +149,6 @@ const BusinessTransformationShowcase2025 = () => {
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" variants={itemVariants}>
           {metrics.map((metricindex) => {
             const Icon = metric.icon;
             return (
@@ -165,8 +158,6 @@ const BusinessTransformationShowcase2025 = () => {
                   activeMetric === index ? 'ring-4 ring-white/30' : ''
                 }`}
                 onClick={() => setActiveMetric(index)}
-                whileHover={{ y: -5 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <div className="flex items-center justify-between mb-4">
                   <Icon className="w-8 h-8" />
@@ -181,13 +172,8 @@ const BusinessTransformationShowcase2025 = () => {
         </div>
 
         {/* Active Metric Details */}
-        <AnimatePresence mode="wait">
           <div
             key={activeMetric}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/10 mb-16"
           >
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -205,15 +191,11 @@ const BusinessTransformationShowcase2025 = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="space-y-4">
                   {metrics[activeMetric].details.map((detailindex) => (
                     <div
                       key={index}
                       className="flex items-center gap-3"
-                      initial={{ opacity: 0x: -20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      transition={{ delay: index * 0.1 }}
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{detail}</span>
@@ -221,7 +203,6 @@ const BusinessTransformationShowcase2025 = () => {
                   ))}
                 </div>
               </div>
-
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/10">
                   <div className="text-center">
@@ -233,8 +214,6 @@ const BusinessTransformationShowcase2025 = () => {
                     </div>
                     <button
                       className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300 mx-auto"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                     >
                       Learn More
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -244,10 +223,9 @@ const BusinessTransformationShowcase2025 = () => {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {/* Success Stories */}
-        <div className="mb-16" variants={itemVariants}>
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Success Stories
           </h2>
@@ -256,15 +234,10 @@ const BusinessTransformationShowcase2025 = () => {
               <div
                 key={index}
                 className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                whileHover={{ y: -5 }}
               >
                 <div className="text-4xl mb-4">{story.logo}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{story.company}</h3>
                 <p className="text-blue-300 text-sm mb-4">{story.industry}</p>
-                
                 <div className="space-y-3">
                   <div>
                     <h4 className="text-sm font-semibold text-gray-400 mb-1">Challenge:</h4>
@@ -287,7 +260,6 @@ const BusinessTransformationShowcase2025 = () => {
         {/* Call to Action */}
         <div 
           className="text-center"
-          variants={itemVariants}
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -300,15 +272,11 @@ const BusinessTransformationShowcase2025 = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 Start Your Transformation
               </button>
               <button
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 View Case Studies
               </button>
@@ -318,6 +286,7 @@ const BusinessTransformationShowcase2025 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default BusinessTransformationShowcase2025;

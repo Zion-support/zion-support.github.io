@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Sparkles
   ArrowRight
@@ -36,12 +35,8 @@ const AIInnovationShowcase2025PromotionBanner = () => {
   if (isDismissed || !isVisible) return null;
 
   return (
-    
+    <div>
       <div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.6ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 border-b border-blue-400/30"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +57,6 @@ const AIInnovationShowcase2025PromotionBanner = () => {
                 </div>
               </div>
             </div>
-
             {/* Center Features */}
             <div className="hidden md:flex items-center gap-6">
               <div className="flex items-center gap-2 text-white/80">
@@ -78,7 +72,6 @@ const AIInnovationShowcase2025PromotionBanner = () => {
                 <span className="text-sm">99.9% Accuracy</span>
               </div>
             </div>
-
             {/* Right Actions */}
             <div className="flex items-center gap-3">
               <a
@@ -98,7 +91,6 @@ const AIInnovationShowcase2025PromotionBanner = () => {
               </button>
             </div>
           </div>
-
           {/* Mobile Features */}
           <div className="md:hidden pb-4">
             <div className="flex items-center justify-center gap-4 text-white/80">
@@ -117,15 +109,12 @@ const AIInnovationShowcase2025PromotionBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div
-            animate={{
               x: [0100],
               opacity: [0.30.60.3],
             }}
-            transition={{
               duration: 4,
               repeat: Infinity,
               ease: "linear"
@@ -133,11 +122,9 @@ const AIInnovationShowcase2025PromotionBanner = () => {
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"
           />
           <div
-            animate={{
               x: [0-100],
               opacity: [0.20.50.2],
             }}
-            transition={{
               duration: 6,
               repeat: Infinity,
               ease: "linear",
@@ -147,8 +134,10 @@ const AIInnovationShowcase2025PromotionBanner = () => {
           />
         </div>
       </div>
-    
+    </div>
   );
 };
 
+
 export default AIInnovationShowcase2025PromotionBanner;
+</div></div>

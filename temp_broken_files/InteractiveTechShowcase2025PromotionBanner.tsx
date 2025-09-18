@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Play
   ArrowRight
@@ -59,49 +58,36 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 py-16 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 via-transparent to-purple-600/20"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6"
           >
             <Play className="w-4 h-4" />
             🎮 NEW: Interactive Technology Demo 2025
           </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 0.2 }}
+          <divh2
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
             Watch Our Technology
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Work in Real-Time
             </span>
-          </motion.h2>
+          </divh2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 0.4 }}
+          <divp
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
           >
             Experience our revolutionary AI systems live in action. See how our technology 
             processes dataoptimizes processesand delivers results in real-time.
-          </motion.p>
+          </divp>
 
           {/* Interactive Demo Preview */}
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 0.6 }}
             className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto mb-8"
           >
             <div className="flex items-center justify-between mb-6">
@@ -111,7 +97,6 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                 <span className="text-sm text-gray-400">Live Streaming</span>
               </div>
             </div>
-            
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="bg-black/50 rounded-lg p-4">
@@ -134,7 +119,6 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat, index) => (
                     <div key={index} className="bg-white/5 rounded-lg p-3 text-center">
@@ -144,16 +128,12 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
                   ))}
                 </div>
               </div>
-              
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-white mb-4">Demo Features:</h4>
                 <div className="space-y-3">
                   {demoSteps.map((step, index) => (
                     <div
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
                       className="flex items-center gap-3"
                     >
                       <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
@@ -169,9 +149,6 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 
           {/* Feature Icons */}
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap justify-center gap-8 mb-12"
           >
             {features.map((feature, index) => {
@@ -179,9 +156,6 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
               return (
                 <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.9 + index * 0.1 }}
                   className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className={`p-2 rounded-lg bg-gradient-to-r ${feature.color}`}>
@@ -195,9 +169,6 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
 
           {/* CTA Buttons */}
           <div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8delay: 1.0 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 group shadow-lg hover:shadow-xl transform hover:scale-105">
@@ -212,7 +183,6 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
             </button>
           </div>
         </div>
-
         {/* Floating Elements */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -220,6 +190,8 @@ const InteractiveTechShowcase2025PromotionBanner = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default InteractiveTechShowcase2025PromotionBanner;
+</div></div>

@@ -37,6 +37,9 @@ export default function Cart({ }: CartProps) {
     </div>
   );
 
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 :src.disabled/src/pages.disabled/Cart.jsx
 }
 }

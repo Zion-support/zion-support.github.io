@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   BookOpen
   Play
@@ -209,9 +208,7 @@ const InteractiveAILearningHub2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium mb-6">
@@ -232,9 +229,7 @@ const InteractiveAILearningHub2025 = () => {
 
         {/* Search and Filters */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -249,7 +244,6 @@ const InteractiveAILearningHub2025 = () => {
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
-
             {/* Level Filter */}
             <div className="flex gap-2">
               {levels.map((level) => (
@@ -271,9 +265,7 @@ const InteractiveAILearningHub2025 = () => {
 
         {/* Category Filter */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.3 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -297,17 +289,13 @@ const InteractiveAILearningHub2025 = () => {
 
         {/* Courses Grid */}
         <div
-          variants={containerVariants}
-          initial="hidden"
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          
+          <div>
             {filteredCourses.map((course) => (
               <div
                 key={course.id}
-                variants={itemVariants}
-                layout
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Course Thumbnail */}
@@ -348,7 +336,6 @@ const InteractiveAILearningHub2025 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Course Content */}
                 <div className="p-6">
                   {/* Level Badge */}
@@ -361,15 +348,12 @@ const InteractiveAILearningHub2025 = () => {
                       {course.level.charAt(0).toUpperCase() + course.level.slice(1)}
                     </span>
                   </div>
-
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                     {course.title}
                   </h3>
-
                   <p className="text-gray-600 mb-4 line-clamp-2">
                     {course.description}
                   </p>
-
                   {/* Instructor */}
                   <div className="flex items-center mb-4">
                     <img
@@ -386,7 +370,6 @@ const InteractiveAILearningHub2025 = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {course.tags.slice(02).map((tagindex) => (
@@ -398,7 +381,6 @@ const InteractiveAILearningHub2025 = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
@@ -411,7 +393,6 @@ const InteractiveAILearningHub2025 = () => {
                       {course.modules} modules
                     </div>
                   </div>
-
                   {/* Price and Actions */}
                   <div className="flex items-center justify-between">
                     <div className="text-2xl font-bold text-gray-900">
@@ -427,7 +408,6 @@ const InteractiveAILearningHub2025 = () => {
                       </button>
                     </div>
                   </div>
-
                   {/* Certificate Badge */}
                   {course.certificate && (
                     <div className="mt-3 flex items-center text-sm text-green-600">
@@ -438,14 +418,12 @@ const InteractiveAILearningHub2025 = () => {
                 </div>
               </div>
             ))}
-          
+          </div>
         </div>
 
         {/* Learning Paths Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="mt-20"
         >
           <div className="text-center mb-12">
@@ -456,7 +434,6 @@ const InteractiveAILearningHub2025 = () => {
               Follow curated learning paths designed by industry experts
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -521,9 +498,7 @@ const InteractiveAILearningHub2025 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
@@ -549,5 +524,6 @@ const InteractiveAILearningHub2025 = () => {
     </div>
   );
 };
+
 
 export default InteractiveAILearningHub2025;

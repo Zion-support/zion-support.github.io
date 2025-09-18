@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Award
   ArrowRight
@@ -84,12 +83,8 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
   if (!isVisible || isDismissed) return null;
 
   return (
-    
+    <div>
       <div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.6ease: "easeOut" }}
         className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white overflow-hidden"
       >
         {/* Animated Background */}
@@ -97,7 +92,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-pink-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(139,92,246,0.2),transparent_50%)]"></div>
         </div>
-
         {/* Floating Success Icons */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(6)].map((_i) => (
@@ -108,12 +102,10 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0-250],
                 opacity: [0.40.80.4],
                 scale: [1.21],
               }}
-              transition={{
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
@@ -121,15 +113,11 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
             />
           ))}
         </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between">
             {/* Left Content */}
             <div className="flex-1">
               <div
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.2 }}
                 className="flex items-center space-x-3 mb-4"
               >
                 <Award className="w-6 h-6 text-yellow-300" />
@@ -138,32 +126,22 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                 </span>
               </div>
 
-              <motion.h2
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.3 }}
+              <divh2
                 className="text-2xl md:text-3xl font-bold mb-3"
               >
                 🏆 Revolutionary Case Studies 2026
-              </motion.h2>
+              </divh2>
 
-              <motion.p
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.4 }}
+              <divp
                 className="text-lg text-purple-200 mb-6 max-w-2xl"
               >
                 Real success stories from companies that achieved incredible results with our AI and automation solutions. 
                 See how they transformed their operations and achieved massive ROI.
-              </motion.p>
+              </divp>
 
               {/* Rotating Case Study Display */}
               <div
                 key={currentStat}
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-                exit={{ opacity: 0x: 20 }}
-                transition={{ duration: 0.5 }}
                 className="flex items-center space-x-4 mb-6 p-4 bg-white bg-opacity-10 rounded-lg"
               >
                 <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
@@ -178,9 +156,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
 
               {/* Features */}
               <div
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.5 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6"
               >
                 {features.map((featureindex) => (
@@ -193,9 +168,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
 
               {/* Stats */}
               <div
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.6 }}
                 className="flex space-x-6 mb-6"
               >
                 {stats.map((statindex) => (
@@ -208,9 +180,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
 
               {/* CTA Buttons */}
               <div
-                initial={{ opacity: 0x: -20 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.7 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center group">
@@ -224,31 +193,21 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
                 </button>
               </div>
             </div>
-
             {/* Right Content - Animated Success Icons */}
             <div
-              initial={{ opacity: 0x: 20 }}
-              animate={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6delay: 0.4 }}
               className="hidden lg:flex items-center space-x-4"
             >
               <div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 15repeat: Infinityease: "linear" }}
                 className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <DollarSign className="w-10 h-10 text-green-400" />
               </div>
               <div
-                animate={{ y: [0-20] }}
-                transition={{ duration: 2repeat: Infinity }}
                 className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <TrendingUp className="w-8 h-8 text-yellow-400" />
               </div>
               <div
-                animate={{ scale: [1.31] }}
-                transition={{ duration: 2.5repeat: Infinity }}
                 className="w-18 h-18 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
               >
                 <Award className="w-9 h-9 text-pink-400" />
@@ -256,7 +215,6 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Dismiss Button */}
         <button
           onClick={() => setIsDismissed(true)}
@@ -264,16 +222,15 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {
         >
           <X className="w-5 h-5" />
         </button>
-
         {/* Pulse Effect */}
         <div
           className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-pink-400/20"
-          animate={{ opacity: [0.30] }}
-          transition={{ duration: 3repeat: Infinity }}
         />
       </div>
-    
+    </div>
   );
 };
 
+
 export default RevolutionaryCaseStudiesShowcase2026PromotionBanner;
+</div></div></div></div>

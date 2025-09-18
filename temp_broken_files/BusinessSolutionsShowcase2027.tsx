@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Building2
   TrendingUp
@@ -162,16 +161,12 @@ const BusinessSolutionsShowcase2027 = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
@@ -185,9 +180,6 @@ const BusinessSolutionsShowcase2027 = () => {
 
         {/* Category Navigation */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(categories).map(([keycategory]) => (
@@ -207,13 +199,8 @@ const BusinessSolutionsShowcase2027 = () => {
         </div>
 
         {/* Solutions Display */}
-        <AnimatePresence mode="wait">
           <div
             key={activeCategory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
             className="max-w-7xl mx-auto"
           >
             {activeCategory && categories[activeCategory] && (
@@ -230,15 +217,11 @@ const BusinessSolutionsShowcase2027 = () => {
                     {categories[activeCategory].subtitle}
                   </p>
                 </div>
-
                 {/* Solutions Grid */}
                 <div className="grid md:grid-cols-3 gap-8">
                   {categories[activeCategory].solutions.map((solutionindex) => (
                     <div
                       key={index}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6delay: index * 0.1 }}
                       className="group"
                     >
                       <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 h-full">
@@ -251,11 +234,9 @@ const BusinessSolutionsShowcase2027 = () => {
                             <span className="text-sm text-blue-400 font-medium">{solution.roi}</span>
                           </div>
                         </div>
-                        
                         <p className="text-gray-300 mb-6 leading-relaxed">
                           {solution.description}
                         </p>
-
                         <div className="space-y-3 mb-6">
                           {solution.features.map((featureIndex) => (
                             <div key={featureIndex} className="flex items-center gap-3">
@@ -264,7 +245,6 @@ const BusinessSolutionsShowcase2027 = () => {
                             </div>
                           ))}
                         </div>
-
                         <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group-hover:gap-3">
                           Learn More
                           <ArrowRight className="w-4 h-4" />
@@ -276,13 +256,10 @@ const BusinessSolutionsShowcase2027 = () => {
               </div>
             )}
           </div>
-        
+        </div>
 
         {/* Stats Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mt-20"
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10">
@@ -293,9 +270,6 @@ const BusinessSolutionsShowcase2027 = () => {
               {stats.map((statindex) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                  transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                   className="text-center"
                 >
                   <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-4" />
@@ -309,9 +283,6 @@ const BusinessSolutionsShowcase2027 = () => {
 
         {/* Testimonials */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="mt-20"
         >
           <h3 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -321,9 +292,6 @@ const BusinessSolutionsShowcase2027 = () => {
             {testimonials.map((testimonialindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -349,9 +317,6 @@ const BusinessSolutionsShowcase2027 = () => {
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-20"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30">
@@ -378,5 +343,6 @@ const BusinessSolutionsShowcase2027 = () => {
     </div>
   );
 };
+
 
 export default BusinessSolutionsShowcase2027;

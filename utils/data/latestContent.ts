@@ -57,14 +57,6 @@ export const latestContent: ContentItem[] = [
     date: "2025-09-15",
   },
   {
-    id: "autonomous-support-agents-2026",
-    title: "AI 2026: Autonomous Customer Support Agents",
-    summary: "Deploy guardrailed support agents with routing, evals, and observability for higher CSAT.",
-    href: "/blog/ai-2026-autonomous-customer-support-agents",
-    tag: "Guide",
-    date: "2025-09-15",
-  },
-  {
     id: "ai-agents-roi-playbook-2026",
     title: "AI Agents ROI Playbook 2026",
     summary: "Model and realize ROI from enterprise AI agents with evaluation gates.",

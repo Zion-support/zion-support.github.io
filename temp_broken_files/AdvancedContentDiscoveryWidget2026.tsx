@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Search
   Filter
@@ -225,7 +224,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
             Explore cutting-edge innovationspredictionsand solutions with our intelligent content discovery system.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row gap-4 mb-6">
@@ -240,7 +238,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Sort Dropdown */}
             <div className="relative">
               <select
@@ -255,7 +252,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
               </select>
               <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
             </div>
-
             {/* Filter Toggle */}
             <button
               onClick={() => setShowFilters(!showFilters)}
@@ -265,7 +261,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
               Filters
             </button>
           </div>
-
           {/* Category Filters */}
           <div className="flex flex-wrap gap-3">
             {categories.map((category) => {
@@ -287,19 +282,14 @@ const AdvancedContentDiscoveryWidget2026 = () => {
             })}
           </div>
         </div>
-
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
+          <div>
             {sortedContent.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               return (
                 <div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`relative group cursor-pointer ${
                     item.featured ? 'lg:col-span-2' : ''
                   }`}
@@ -314,7 +304,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                         </div>
                       </div>
                     )}
-
                     {/* Trending Badge */}
                     {item.trending && (
                       <div className="absolute top-4 right-4 z-10">
@@ -324,7 +313,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                         </div>
                       </div>
                     )}
-
                     {/* Thumbnail */}
                     <div className="relative h-48 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-cyan-600/30"></div>
@@ -334,7 +322,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* Content */}
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-3">
@@ -355,15 +342,12 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                           <Heart className={`w-4 h-4 ${favorites.has(item.id) ? 'fill-current' : ''}`} />
                         </button>
                       </div>
-
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">
                         {item.title}
                       </h3>
-
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">
                         {item.description}
                       </p>
-
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2 mb-4">
                         {item.tags.slice(03).map((tagIndex) => (
@@ -375,7 +359,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                           </span>
                         ))}
                       </div>
-
                       {/* Stats */}
                       <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                         <div className="flex items-center gap-4">
@@ -397,7 +380,6 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                           {item.readTime}
                         </div>
                       </div>
-
                       {/* Author */}
                       <div className="flex items-center justify-between">
                         <div className="text-sm text-gray-400">
@@ -417,9 +399,8 @@ const AdvancedContentDiscoveryWidget2026 = () => {
                 </div>
               );
             })}
-          
+          </div>
         </div>
-
         {/* Load More */}
         <div className="text-center mt-12">
           <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300">
@@ -429,6 +410,7 @@ const AdvancedContentDiscoveryWidget2026 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default AdvancedContentDiscoveryWidget2026;

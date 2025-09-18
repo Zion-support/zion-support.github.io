@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Zap
@@ -40,127 +39,11 @@ interface AITool {
 }
 
 const AIToolsInteractiveDemo2025: React.FC = () => {
-  const [selectedToolsetSelectedTool] = useState<string | null>(null);
-  const [activeCategorysetActiveCategory] = useState<string>('all');
-  const [searchQuerysetSearchQuery] = useState('');
-  const [isDemoRunningsetIsDemoRunning] = useState(false);
-  const [demoProgressetDemoProgress] = useState(0);
-
-  const categories = [
-    { id: ''all', 'name: 'All 'Tools', 'count: 24 },
-    { id: ''content', 'name: 'Content 'Creation', 'count: 8 },
-    { id: ''coding', 'name: 'Code 'Generation', 'count: 6 },
-    { id: ''analytics', 'name: 'Analytics & 'Insights', 'count: 4 },
-    { id: ''communication', 'name: ''Communication', 'count: 3 },
-    { id: ''multimedia', 'name: ''Multimedia', 'count: 3 }
-  ];
-
-  const aiTools: AITool[] = [
-    {
-      id: 'gpt-5-ultra',
-      name: 'GPT-5 Ultra',
-      description: 'Next-generation language model with advanced reasoning capabilities',
-      category: 'content',
-      icon: <Brain className="w-6 h-6" />,
-      features: ['Advanced 'reasoning', 'Code 'generation', 'Creative 'writing', 'Data analysis'],
-      pricing: '$20/month',
-      rating: 4.9,
-      users: '2M+',
-      isPopular: true,
-      isNew: true
-    },
-    {
-      id: 'code-gen-pro',
-      name: 'CodeGen Pro',
-      description: 'AI-powered code generation and debugging assistant',
-      category: 'coding',
-      icon: <Code className="w-6 h-6" />,
-      features: ['Multi-language 'support', 'Bug 'detection', 'Code 'optimization', 'Documentation'],
-      pricing: '$15/month',
-      rating: 4.8,
-      users: '500K+'
-    },
-    {
-      id: 'analytics-ai',
-      name: 'Analytics AI',
-      description: 'Intelligent data analysis and business insights platform',
-      category: 'analytics',
-      icon: <BarChart3 className="w-6 h-6" />,
-      features: ['Predictive 'analytics', 'Real-time 'insights', 'Custom 'dashboards', 'Automated reports'],
-      pricing: '$25/month',
-      rating: 4.7,
-      users: '300K+'
-    },
-    {
-      id: 'chat-assistant',
-      name: 'Smart Chat Assistant',
-      description: 'Advanced conversational AI for customer support and engagement',
-      category: 'communication',
-      icon: <MessageSquare className="w-6 h-6" />,
-      features: ['Multi-'language', 'Sentiment 'analysis', 'Integration 'APIs', 'Custom training'],
-      pricing: '$10/month',
-      rating: 4.6,
-      users: '1M+'
-    },
-    {
-      id: 'image-creator',
-      name: 'Image Creator Pro',
-      description: 'AI-powered image generation and editing tool',
-      category: 'multimedia',
-      icon: <Image className="w-6 h-6" />,
-      features: ['Text-to-'image', 'Style 'transfer', 'Upscaling'Batch processing'],
-      pricing: '$18/month',
-      rating: 4.8,
-      users: '800K+'
-    },
-    {
-      id: 'video-editor',
-      name: 'Video Editor AI',
-      description: 'Automated video editing and production platform',
-      category: 'multimedia',
-      icon: <Video className="w-6 h-6" />,
-      features: ['Auto-'editing', 'Voice 'synthesis', 'Background 'removal', 'Motion graphics'],
-      pricing: '$30/month',
-      rating: 4.5,
-      users: '200K+'
-    }
-  ];
-
-  const filteredTools = aiTools.filter(tool => {
-    const matchesCategory = activeCategory === 'all' || tool.category === activeCategory;
-    const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         tool.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const handleToolSelect = (toolId: string) => {
-    setSelectedTool(toolId);
-    setIsDemoRunning(true);
-    setDemoProgress(0);
-    
-    // Simulate demo progress
-    const interval = setInterval(() => {
-      setDemoProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setIsDemoRunning(false);
-          return 100;
-        }
-        return prev + 10;
-      });
-    }200);
-  };
-
-  const selectedToolData = aiTools.find(tool => tool.id === selectedTool);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -173,7 +56,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
             Experience the power of cutting-edge AI tools with live demonstrations. 
             Testexploreand discover how AI can transform your workflow.
           </p>
-          
           {/* Search Bar */}
           <div className="max-w-md mx-auto">
             <div className="relative">
@@ -191,9 +73,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
 
         {/* Category Filter */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -215,17 +94,11 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
           {/* Tools Grid */}
           <div className="lg:col-span-2">
             <div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6delay: 0.4 }}
               className="grid md:grid-cols-2 gap-6"
             >
               {filteredTools.map((toolindex) => (
                 <div
                   key={tool.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group ${
                     selectedTool === tool.id ? 'ring-2 ring-blue-500' : ''
                   }`}
@@ -270,9 +143,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                       )}
                     </div>
                   </div>
-
                   <p className="text-gray-300 mb-4">{tool.description}</p>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {tool.features.slice(02).map((featureidx) => (
                       <span
@@ -288,7 +159,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                       </span>
                     )}
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <div className="flex items-center space-x-1">
@@ -309,25 +179,16 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Demo Panel */}
           <div className="lg:col-span-1">
             <div
-              initial={{ opacity: 0x: 20 }}
-              animate={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6delay: 0.6 }}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-8"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>
               
-              <AnimatePresence mode="wait">
                 {selectedToolData ? (
                   <div
                     key={selectedToolData.id}
-                    initial={{ opacity: 0scale: 0.95 }}
-                    animate={{ opacity: 1scale: 1 }}
-                    exit={{ opacity: 0scale: 0.95 }}
-                    transition={{ duration: 0.3 }}
                   >
                     <div className="text-center mb-6">
                       <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">
@@ -340,7 +201,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                         {selectedToolData.description}
                       </p>
                     </div>
-
                     {isDemoRunning ? (
                       <div className="space-y-4">
                         <div className="text-center">
@@ -354,7 +214,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                           <p className="text-white font-medium">Running Demo...</p>
                           <p className="text-gray-400 text-sm">{demoProgress}% Complete</p>
                         </div>
-                        
                         <div className="w-full bg-gray-700 rounded-full h-2">
                           <div 
                             className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300"
@@ -371,7 +230,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                             Experience the full power of {selectedToolData.name}
                           </p>
                         </div>
-                        
                         <div className="space-y-3">
                           <h5 className="text-white font-medium">Key Features:</h5>
                           {selectedToolData.features.map((featureindex) => (
@@ -381,7 +239,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                             </div>
                           ))}
                         </div>
-
                         <div className="pt-4 border-t border-white/10">
                           <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
                             <span>Users</span>
@@ -399,7 +256,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                             <span className="text-green-400 font-medium">{selectedToolData.pricing}</span>
                           </div>
                         </div>
-
                         <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2">
                           <span>Start Free Trial</span>
                           <ArrowRight className="w-4 h-4" />
@@ -409,8 +265,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                   </div>
                 ) : (
                   <div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
                     className="text-center py-12"
                   >
                     <Sparkles className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -422,16 +276,12 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
                     </p>
                   </div>
                 )}
-              
+              </div>
             </div>
           </div>
         </div>
-
         {/* Stats Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.8 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
@@ -453,5 +303,6 @@ const AIToolsInteractiveDemo2025: React.FC = () => {
     </div>
   );
 };
+
 
 export default AIToolsInteractiveDemo2025;

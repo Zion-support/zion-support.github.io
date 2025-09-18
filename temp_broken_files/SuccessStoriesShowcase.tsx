@@ -1,7 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-
 const SuccessStoriesShowcase = () => {
   const stories = [
     {
@@ -66,9 +65,6 @@ const SuccessStoriesShowcase = () => {
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4">
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
@@ -83,9 +79,6 @@ const SuccessStoriesShowcase = () => {
           {stories.map((storyindex) => (
             <div
               key={story.company}
-              initial={{ opacity: 0x: index % 2 === 0 ? -30 : 30 }}
-              animate={{ opacity: 1x: 0 }}
-              transition={{ duration: 0.6delay: index * 0.2 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               {/* Company Header */}
@@ -96,7 +89,6 @@ const SuccessStoriesShowcase = () => {
                   <p className="text-gray-400">{story.industry}</p>
                 </div>
               </div>
-
               {/* Challenge & Solution */}
               <div className="mb-6">
                 <div className="mb-4">
@@ -108,7 +100,6 @@ const SuccessStoriesShowcase = () => {
                   <p className="text-gray-300">{story.solution}</p>
                 </div>
               </div>
-
               {/* Results */}
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div className="text-center bg-green-500/20 rounded-lg p-3">
@@ -124,7 +115,6 @@ const SuccessStoriesShowcase = () => {
                   <div className="text-sm text-gray-300">Accuracy</div>
                 </div>
               </div>
-
               {/* Quote */}
               <blockquote className="border-l-4 border-cyan-400 pl-4 mb-4">
                 <p className="text-gray-300 italic">"{story.quote}"</p>
@@ -133,18 +123,13 @@ const SuccessStoriesShowcase = () => {
             </div>
           ))}
         </div>
-
         {/* Statistics Summary */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12"
         >
           <h3 className="text-3xl font-bold text-center mb-8 text-white">
             📊 Our Impact in Numbers
           </h3>
-          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-4xl font-bold text-green-400 mb-2">500+</div>
@@ -167,9 +152,6 @@ const SuccessStoriesShowcase = () => {
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 1.0 }}
           className="text-center"
         >
           <h3 className="text-3xl font-bold mb-4 text-white">
@@ -178,7 +160,6 @@ const SuccessStoriesShowcase = () => {
           <p className="text-xl text-gray-300 mb-8">
             Transform your business with our revolutionary AI solutions
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/case-studies" 
@@ -186,7 +167,6 @@ const SuccessStoriesShowcase = () => {
             >
               📖 Read All Case Studies
             </a>
-            
             <a 
               href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-full text-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
@@ -199,5 +179,6 @@ const SuccessStoriesShowcase = () => {
     </section>
   );
 };
+
 
 export default SuccessStoriesShowcase;

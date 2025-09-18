@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   ArrowRight
   Star
@@ -133,9 +132,6 @@ const BusinessSuccessStories2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -148,9 +144,6 @@ const BusinessSuccessStories2025 = () => {
 
         {/* Overall Stats */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -169,9 +162,6 @@ const BusinessSuccessStories2025 = () => {
           {successStories.map((storyindex) => (
             <div
               key={story.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
               className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300"
             >
               {/* Company Header */}
@@ -191,7 +181,6 @@ const BusinessSuccessStories2025 = () => {
                   ))}
                 </div>
               </div>
-
               {/* Challenge & Solution */}
               <div className="mb-6">
                 <div className="mb-4">
@@ -203,7 +192,6 @@ const BusinessSuccessStories2025 = () => {
                   <p className="text-gray-700">{story.solution}</p>
                 </div>
               </div>
-
               {/* Results */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {Object.entries(story.results).map(([keyvalue]) => (
@@ -213,7 +201,6 @@ const BusinessSuccessStories2025 = () => {
                   </div>
                 ))}
               </div>
-
               {/* Testimonial */}
               <div className="border-l-4 border-green-500 pl-4 mb-4">
                 <p className="text-gray-700 italic mb-2">"{story.testimonial}"</p>
@@ -221,7 +208,6 @@ const BusinessSuccessStories2025 = () => {
                   <span className="font-semibold">{story.author}</span>{story.role}
                 </div>
               </div>
-
               {/* CTA */}
               <a
                 href={`/case-study/${story.id}`}
@@ -233,12 +219,8 @@ const BusinessSuccessStories2025 = () => {
             </div>
           ))}
         </div>
-
         {/* Industries Served */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 0.8 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -248,9 +230,6 @@ const BusinessSuccessStories2025 = () => {
             {industries.map((industryindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.5delay: 0.9 + index * 0.1 }}
                 className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-4">
@@ -266,9 +245,6 @@ const BusinessSuccessStories2025 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6delay: 1.0 }}
           className="text-center bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">
@@ -298,5 +274,6 @@ const BusinessSuccessStories2025 = () => {
     </div>
   );
 };
+
 
 export default BusinessSuccessStories2025;

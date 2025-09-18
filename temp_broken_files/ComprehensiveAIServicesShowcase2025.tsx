@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Brain
   Zap
@@ -204,31 +203,24 @@ const ComprehensiveAIServicesShowcase2025 = () => {
   };
 
   return (
-    <motion.section
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      variants={containerVariants}
+    <divsection
       className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div variants={itemVariants} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Cpu className="w-4 h-4 text-blue-400" />
             <span>Comprehensive AI Services</span>
             <Award className="w-4 h-4 text-yellow-400" />
           </div>
-          
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Transform Your Business with
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent block">
               AI-Powered Solutions
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Choose from our comprehensive suite of AI services designed to accelerate growth
             improve efficiencyand drive innovation across every aspect of your business.
@@ -236,7 +228,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
         </div>
 
         {/* Service Navigation */}
-        <div variants={itemVariants} className="flex flex-wrap justify-center gap-4 mb-12">
           {services.map((serviceindex) => (
             <button
               key={service.id}
@@ -256,9 +247,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
         {/* Active Service Details */}
         <div
           key={activeService}
-          initial={{ opacity: 0x: 50 }}
-          animate={{ opacity: 1x: 0 }}
-          transition={{ duration: 0.5 }}
           className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-12"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -274,15 +262,12 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   </span>
                 </div>
               </div>
-
               <h3 className="text-3xl font-bold text-white mb-4">
                 {services[activeService].title}
               </h3>
-              
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                 {services[activeService].description}
               </p>
-
               {/* Stats */}
               <div className="flex items-center gap-6 mb-6">
                 <div className="flex items-center gap-2">
@@ -298,7 +283,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   <span className="text-white font-semibold">Proven ROI</span>
                 </div>
               </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
                 <a
@@ -319,7 +303,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                 </button>
               </div>
             </div>
-
             {/* Features and Benefits */}
             <div className="space-y-8">
               {/* Features */}
@@ -337,7 +320,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   ))}
                 </div>
               </div>
-
               {/* Benefits */}
               <div>
                 <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -353,7 +335,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                   ))}
                 </div>
               </div>
-
               {/* Pricing */}
               <div className="bg-white/10 rounded-xl p-4">
                 <div className="flex items-center justify-between">
@@ -375,12 +356,9 @@ const ComprehensiveAIServicesShowcase2025 = () => {
         </div>
 
         {/* All Services Grid */}
-        <div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((serviceindex) => (
             <div
               key={service.id}
-              variants={itemVariants}
-              whileHover={{ scale: 1.02y: -5 }}
               className="group"
             >
               <a href={service.link}>
@@ -407,7 +385,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
                       </p>
                     </div>
                   </div>
-
                   <div className="flex items-center justify-between pt-4 border-t border-white/20">
                     <div className="text-sm text-gray-300">
                       <span className="font-semibold text-white">{service.clients.toLocaleString()}+</span> clients
@@ -421,7 +398,6 @@ const ComprehensiveAIServicesShowcase2025 = () => {
         </div>
 
         {/* Call to Action */}
-        <div variants={itemVariants} className="text-center mt-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -448,8 +424,9 @@ const ComprehensiveAIServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </divsection>
   );
 };
+
 
 export default ComprehensiveAIServicesShowcase2025;

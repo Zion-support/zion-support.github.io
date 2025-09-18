@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Sparkles
   ArrowRight
@@ -32,9 +31,6 @@ const NewContentShowcase2026PromotionBanner = () => {
 
   return (
     <div
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8 }}
       className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600"
     >
       {/* Animated background */}
@@ -42,7 +38,6 @@ const NewContentShowcase2026PromotionBanner = () => {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         <div
           className="absolute top-0 left-0 w-full h-full"
-          animate={{
             background: [
               'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)',
               'radial-gradient(circle at 80% 20%rgba(2552550.1) 0%transparent 50%)',
@@ -50,10 +45,8 @@ const NewContentShowcase2026PromotionBanner = () => {
               'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)'
             ]
           }}
-          transition={{ duration: 8repeat: Infinity }}
         />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Content */}
@@ -64,17 +57,14 @@ const NewContentShowcase2026PromotionBanner = () => {
                 NEW CONTENT 2026
               </span>
             </div>
-            
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
               Revolutionary Content
               <span className="block text-yellow-300">Showcase 2026</span>
             </h2>
-            
             <p className="text-lg text-purple-100 mb-6">
               Discover the latest breakthroughs in AIautomationand future technology predictions. 
               Explore cutting-edge innovations that will transform your business and shape the future.
             </p>
-            
             <div className="grid grid-cols-2 gap-3 mb-6">
               {features.map((featureindex) => (
                 <div key={index} className="flex items-center gap-2">
@@ -83,7 +73,6 @@ const NewContentShowcase2026PromotionBanner = () => {
                 </div>
               ))}
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="flex items-center gap-2 px-6 py-3 bg-white text-purple-600 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 shadow-lg">
                 <Play className="w-5 h-5" />
@@ -96,13 +85,10 @@ const NewContentShowcase2026PromotionBanner = () => {
               </button>
             </div>
           </div>
-          
           {/* Visual */}
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <div
-                animate={{ y: [-10-10] }}
-                transition={{ duration: 3repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
                 <Brain className="w-8 h-8 text-purple-300 mb-2" />
@@ -111,8 +97,6 @@ const NewContentShowcase2026PromotionBanner = () => {
               </div>
               
               <div
-                animate={{ y: [10-10] }}
-                transition={{ duration: 4repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
                 <Zap className="w-8 h-8 text-pink-300 mb-2" />
@@ -121,8 +105,6 @@ const NewContentShowcase2026PromotionBanner = () => {
               </div>
               
               <div
-                animate={{ y: [-515-5] }}
-                transition={{ duration: 5repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
                 <Rocket className="w-8 h-8 text-yellow-300 mb-2" />
@@ -131,8 +113,6 @@ const NewContentShowcase2026PromotionBanner = () => {
               </div>
               
               <div
-                animate={{ y: [15-515] }}
-                transition={{ duration: 6repeat: Infinity }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
               >
                 <Target className="w-8 h-8 text-green-300 mb-2" />
@@ -140,16 +120,11 @@ const NewContentShowcase2026PromotionBanner = () => {
                 <p className="text-sm text-green-200">Live demonstrations</p>
               </div>
             </div>
-            
             {/* Floating elements */}
             <div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20repeat: Infinityease: "linear" }}
               className="absolute -top-4 -right-4 w-16 h-16 border-2 border-white/30 rounded-full"
             />
             <div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 15repeat: Infinityease: "linear" }}
               className="absolute -bottom-4 -left-4 w-12 h-12 border-2 border-white/20 rounded-full"
             />
           </div>
@@ -159,4 +134,6 @@ const NewContentShowcase2026PromotionBanner = () => {
   );
 };
 
+
 export default NewContentShowcase2026PromotionBanner;
+</div></div></div>

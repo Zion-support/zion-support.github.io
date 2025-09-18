@@ -1,13 +1,10 @@
 "use client";
-'use client';
-
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
-  ArrowRight
-  Star
-  Zap
+  ArrowRight,
+  Star,
+  Zap,
   Brain,
   TrendingUp,
   Users,
@@ -19,13 +16,16 @@ import {
   Sparkles,
   Cpu,
   Database,
-  Cloud
+  Cloud,
+  Rocket,
+  Heart,
+  Lightbulb
 } from 'lucide-react';
 
-const AI2025RevolutionaryContentBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+const RevolutionaryContentBanner2028 = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+  const [currentFeature, setCurrentFeature] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -33,39 +33,43 @@ const AI2025RevolutionaryContentBanner = () => {
     // Auto-advance features
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 4);
-    }3000);
+    }, 4000);
 
     return () => clearInterval(interval);
-  }[]);
+  }, []);
 
   const features = [
     {
-      title: "AI-Powered Automation",
-      description: "Streamline operations with intelligent automation",
-      icon: Brain,
+      title: "Ultimate Tech Revolution 2028",
+      description: "Experience the most advanced technologies ever created",
+      icon: Rocket,
       color: "from-purple-600 to-pink-600",
-      stats: "95% Efficiency Increase"
+      stats: "Revolutionary Breakthrough",
+      link: "/pages/UltimateTechRevolution2028"
     },
     {
-      title: "Quantum Computing",
-      description: "Solve complex problems with quantum algorithms",
-      icon: Cpu,
+      title: "Consciousness Computing",
+      description: "AI systems that achieve true self-awareness and emotional intelligence",
+      icon: Brain,
       color: "from-blue-600 to-cyan-600",
-      stats: "1000x Speed Improvement"
+      stats: "95% Emotional Accuracy",
+      link: "/pages/ConsciousnessComputingRevolution2028"
     },
     {
-      title: "Neural Interfaces",
-      description: "Direct brain-computer communication",
-      icon: Database,
+      title: "Quantum Neural Networks",
+      description: "Fusion of quantum computing with neural networks for unprecedented power",
+      icon: Cpu,
       color: "from-green-600 to-emerald-600",
-      stats: "95% Accuracy Rate"
+      stats: "1000x Speed Improvement",
+      link: "/pages/UltimateTechRevolution2028"
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions",
-      icon: Cloud,
+      title: "Holographic Reality",
+      description: "Full-sensory holographic environments indistinguishable from reality",
+      icon: Globe,
       color: "from-orange-600 to-red-600",
-      stats: "99.9% Uptime"
+      stats: "100% Reality Simulation",
+      link: "/pages/UltimateTechRevolution2028"
     }
   ];
 
@@ -74,21 +78,15 @@ const AI2025RevolutionaryContentBanner = () => {
   if (isDismissed) return null;
 
   return (
-    
+    <div>
       {isVisible && (
         <div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900"
         >
           {/* Background effects */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
-          
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%3D%221.5%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-50" />
           {/* Animated gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-pink-600/10 animate-pulse" />
-
           {/* Floating particles */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(12)].map((_i) => (
@@ -99,12 +97,10 @@ const AI2025RevolutionaryContentBanner = () => {
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
-                animate={{
                   y: [0-20],
                   opacity: [0.40.80.4],
                   scale: [1.51],
                 }}
-                transition={{
                   duration: 3 + Math.random() * 2,
                   repeat: Infinity,
                   delay: Math.random() * 2,
@@ -112,22 +108,17 @@ const AI2025RevolutionaryContentBanner = () => {
               />
             ))}
           </div>
-
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left side - Content */}
               <div className="flex-1 text-center lg:text-left">
                 <div
-                  initial={{ opacity: 0x: -30 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.8 }}
                 >
                   {/* Badge */}
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold mb-6">
                     <Sparkles className="w-4 h-4 mr-2" />
                     AI 2025 REVOLUTIONARY CONTENT
                   </div>
-
                   {/* Main heading */}
                   <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
                     Transform Your Business with
@@ -136,19 +127,14 @@ const AI2025RevolutionaryContentBanner = () => {
                       Revolutionary AI
                     </span>
                   </h1>
-
                   {/* Subheading */}
                   <p className="text-xl text-gray-300 mb-8 max-w-2xl">
                     Discover cutting-edge AI technologies that are reshaping industries 
                     and unlocking unprecedented opportunities for growth and innovation.
                   </p>
-
                   {/* Current feature highlight */}
                   <div
                     key={currentFeature}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
                   >
                     <div className="flex items-center justify-center lg:justify-start space-x-4 mb-4">
@@ -176,7 +162,6 @@ const AI2025RevolutionaryContentBanner = () => {
                       Explore AI Solutions
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>
-                    
                     <a
                       href="/contact"
                       className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 group"
@@ -187,43 +172,32 @@ const AI2025RevolutionaryContentBanner = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right side - Visual elements */}
               <div className="flex-shrink-0">
                 <div className="relative w-80 h-80">
                   {/* Rotating rings */}
                   <div
                     className="absolute inset-0 rounded-full border-2 border-purple-500/30"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20repeat: Infinityease: "linear" }}
                   />
                   
                   <div
                     className="absolute inset-8 rounded-full border-2 border-blue-500/30"
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: 15repeat: Infinityease: "linear" }}
                   />
                   
                   <div
                     className="absolute inset-16 rounded-full border-2 border-pink-500/30"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 10repeat: Infinityease: "linear" }}
                   />
-
                   {/* Center icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div
                       className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentFeatureData.color} flex items-center justify-center shadow-2xl`}
-                      animate={{ 
                         scale: [1.1],
                         rotate: [05-50]
                       }}
-                      transition={{ duration: 3repeat: Infinity }}
                     >
                       <currentFeatureData.icon className="w-12 h-12 text-white" />
                     </div>
                   </div>
-
                   {/* Feature indicators */}
                   {features.map((featureindex) => (
                     <div
@@ -238,14 +212,11 @@ const AI2025RevolutionaryContentBanner = () => {
                         top: `${50 + 40 * Math.sin((index * 90 - 90) * Math.PI / 180)}%`,
                         transform: 'translate(-50%)',
                       }}
-                      animate={{
                         scale: index === currentFeature ? [1.21] : 1,
                         opacity: index === currentFeature ? [0.810.8] : 0.4,
                       }}
-                      transition={{ duration: 2repeat: Infinity }}
                     />
                   ))}
-
                   {/* Floating elements */}
                   {[...Array(8)].map((_i) => (
                     <div
@@ -255,12 +226,10 @@ const AI2025RevolutionaryContentBanner = () => {
                         left: `${30 + (i * 10)}%`,
                         top: `${30 + (i * 8)}%`,
                       }}
-                      animate={{
                         y: [0-150],
                         opacity: [0.610.6],
                         scale: [1.21],
                       }}
-                      transition={{
                         duration: 2 + i * 0.3,
                         repeat: Infinity,
                         delay: i * 0.4,
@@ -270,7 +239,6 @@ const AI2025RevolutionaryContentBanner = () => {
                 </div>
               </div>
             </div>
-
             {/* Feature indicators */}
             <div className="flex justify-center mt-8 space-x-2">
               {features.map((_index) => (
@@ -285,7 +253,6 @@ const AI2025RevolutionaryContentBanner = () => {
                 />
               ))}
             </div>
-
             {/* Close button */}
             <button
               onClick={() => setIsDismissed(true)}
@@ -296,8 +263,10 @@ const AI2025RevolutionaryContentBanner = () => {
           </div>
         </div>
       )}
-    
+    </div>
   );
 };
 
+
 export default AI2025RevolutionaryContentBanner;
+</div></div></div></div></div></div></div></div>

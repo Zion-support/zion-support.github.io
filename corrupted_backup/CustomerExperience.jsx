@@ -1,18 +1,9 @@
-}
-}
- <div>Broken JSX</div> ></div> ></div> ></div> ></div> ></div> ></div> )}export { CustomerExperience }export { CustomerExperience }export { CustomerExperience }export { CustomerExperience }export { CustomerExperience }
 import React from 'react';
-interface CustomerExperienceProps {
-  // Add props here as needed
-}
-export default function CustomerExperience({}: CustomerExperienceProps) {
+
+const CustomerExperience: React.FC = () => {
   return (
-    <div>
-      <h1>CustomerExperience</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">CustomerExperience</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
-}
-}
-

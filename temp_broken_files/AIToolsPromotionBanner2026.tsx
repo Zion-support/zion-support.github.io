@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Sparkles
   Zap
@@ -92,12 +91,8 @@ const AIToolsPromotionBanner2026 = () => {
   if (!isVisible) return null;
 
   return (
-    
+    <div>
       <div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
         className="relative overflow-hidden"
       >
         {/* Main Banner */}
@@ -108,9 +103,6 @@ const AIToolsPromotionBanner2026 = () => {
               <div className="flex items-center gap-4 flex-1">
                 <div
                   key={currentTool}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  transition={{ duration: 0.3 }}
                   className="flex items-center gap-3"
                 >
                   <div className={`w-12 h-12 bg-gradient-to-r ${currentFeature.color} rounded-xl flex items-center justify-center`}>
@@ -126,7 +118,6 @@ const AIToolsPromotionBanner2026 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Center Benefits */}
               <div className="hidden lg:flex items-center gap-6">
                 {benefits.map((benefitindex) => (
@@ -136,7 +127,6 @@ const AIToolsPromotionBanner2026 = () => {
                   </div>
                 ))}
               </div>
-
               {/* Right Actions */}
               <div className="flex items-center gap-3">
                 <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
@@ -157,18 +147,13 @@ const AIToolsPromotionBanner2026 = () => {
             </div>
           </div>
         </div>
-
         {/* Animated Progress Bar */}
         <div className="h-1 bg-gradient-to-r from-blue-600 to-cyan-600 relative overflow-hidden">
           <div
             key={currentTool}
-            initial={{ x: '-100%' }}
-            animate={{ x: '100%' }}
-            transition={{ duration: 3ease: 'linear' }}
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
           />
         </div>
-
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(8)].map((_i) => (
@@ -179,12 +164,10 @@ const AIToolsPromotionBanner2026 = () => {
                 left: `${10 + i * 10}%`,
                 top: '50%',
               }}
-              animate={{
                 y: [0-150],
                 opacity: [0.30.80.3],
                 scale: [0.510.5],
               }}
-              transition={{
                 duration: 2 + i * 0.3,
                 repeat: Infinity,
                 delay: i * 0.4,
@@ -193,8 +176,10 @@ const AIToolsPromotionBanner2026 = () => {
           ))}
         </div>
       </div>
-    
+    </div>
   );
 };
 
+
 export default AIToolsPromotionBanner2026;
+</div></div>

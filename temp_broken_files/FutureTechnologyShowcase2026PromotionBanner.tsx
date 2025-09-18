@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Rocket
   ArrowRight
@@ -54,25 +53,18 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-600/20 via-transparent to-purple-600/20"></div>
       </div>
-
       <div className="relative z-10 py-16 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div
-              initial={{ opacity: 0x: -50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8 }}
               className="space-y-8"
             >
               {/* Badge */}
               <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.2 }}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
               >
                 <Sparkles className="w-4 h-4" />
@@ -80,10 +72,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
               </div>
 
               {/* Main Heading */}
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.3 }}
+              <divh2
                 className="text-4xl md:text-6xl font-bold text-white leading-tight"
               >
                 Next-Generation
@@ -92,24 +81,18 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 </span>
                 <br />
                 Shaping Tomorrow
-              </motion.h2>
+              </divh2>
 
               {/* Description */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.4 }}
+              <divp
                 className="text-xl text-gray-300 leading-relaxed"
               >
                 Explore cutting-edge technologies that will define the future of humanity
                 from quantum computing to neural interfaces and space technology.
-              </motion.p>
+              </divp>
 
               {/* Technologies Grid */}
               <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.5 }}
                 className="grid grid-cols-2 gap-4"
               >
                 {technologies.map((techindex) => (
@@ -124,9 +107,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
 
               {/* Benefits */}
               <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.6 }}
                 className="space-y-3"
               >
                 {benefits.map((benefitindex) => (
@@ -139,9 +119,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
 
               {/* CTA Buttons */}
               <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: 0.7 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300 flex items-center gap-2">
@@ -149,7 +126,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                   Explore Technologies
                   <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                
                 <button className="group bg-white/10 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center gap-2 border border-white/20">
                   <Award className="w-5 h-5" />
                   View Research
@@ -160,9 +136,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
 
             {/* Right Content - Stats & Visual */}
             <div
-              initial={{ opacity: 0x: 50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8delay: 0.4 }}
               className="space-y-8"
             >
               {/* Stats Grid */}
@@ -170,9 +143,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                 {stats.map((statindex) => (
                   <div
                     key={index}
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                    transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
                   >
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -180,12 +150,8 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-
               {/* Visual Element */}
               <div
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.8delay: 0.7 }}
                 className="relative"
               >
                 <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 rounded-3xl p-8 border border-indigo-400/30">
@@ -203,7 +169,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
                   <Star className="w-4 h-4 text-white" />
@@ -226,4 +191,6 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {
   );
 };
 
+
 export default FutureTechnologyShowcase2026PromotionBanner;
+</div></div>

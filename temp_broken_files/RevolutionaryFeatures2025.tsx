@@ -1,7 +1,6 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-
 const RevolutionaryFeatures2025 = () => {
   const features = [
     {
@@ -52,9 +51,6 @@ const RevolutionaryFeatures2025 = () => {
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4">
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -69,19 +65,13 @@ const RevolutionaryFeatures2025 = () => {
           {features.map((featureindex) => (
             <div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative"
             >
               <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl"
                    style={{ background: `linear-gradient(135degvar(--tw-gradient-stops))` }}
               />
-              
               <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 h-full">
                 <div
-                  whileHover={{ scale: 1.2rotate: 10 }}
-                  transition={{ duration: 0.3 }}
                   className="text-5xl mb-6"
                 >
                   {feature.icon}
@@ -90,18 +80,15 @@ const RevolutionaryFeatures2025 = () => {
                 <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
-                
                 <div className="flex items-center justify-between">
                   <span className={`px-4 py-2 bg-gradient-to-r ${feature.color} text-white rounded-full text-sm font-bold`}>
                     {feature.stats}
                   </span>
                   
                   <div
-                    whileHover={{ x: 5 }}
                     className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
                   >
                     →
@@ -113,9 +100,6 @@ const RevolutionaryFeatures2025 = () => {
         </div>
 
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -125,7 +109,6 @@ const RevolutionaryFeatures2025 = () => {
             <p className="text-xl text-gray-300 mb-6">
               Join thousands of businesses already using our revolutionary AI solutions
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/features-showcase" 
@@ -133,7 +116,6 @@ const RevolutionaryFeatures2025 = () => {
               >
                 🚀 Explore All Features
               </a>
-              
               <a 
                 href="/demo-request" 
                 className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-full text-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
@@ -147,5 +129,6 @@ const RevolutionaryFeatures2025 = () => {
     </section>
   );
 };
+
 
 export default RevolutionaryFeatures2025;

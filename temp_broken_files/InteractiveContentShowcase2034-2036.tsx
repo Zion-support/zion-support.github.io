@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-
 const InteractiveContentShowcase2034_2036: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-
   const contentItems = [
     {
       id: 0,
@@ -54,13 +52,11 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
       link: "/pages/TranscendentConsciousness2036"
     }
   ];
-
+const InteractiveContentShowcase2034-2036: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12">
       <div
-        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
         className="text-center mb-12"
       >
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -82,24 +78,16 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                 ? 'bg-white text-purple-600 shadow-lg'
                 : 'bg-white/20 text-white hover:bg-white/30'
             }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             <span className="mr-2">{item.icon}</span>
             {item.title.split(' ')[0]} {item.title.split(' ')[1]}
           </button>
         ))}
       </div>
-
       {/* Content Display */}
       <div className="relative min-h-[500px]">
-        <AnimatePresence mode="wait">
           <div
             key={activeTab}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
             className="grid md:grid-cols-2 gap-12 items-center"
           >
             {/* Content Info */}
@@ -115,18 +103,13 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                   <div className={`w-16 h-1 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}></div>
                 </div>
               </div>
-              
               <p className="text-lg text-gray-300 mb-8">
                 {contentItems[activeTab].description}
               </p>
-
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {contentItems[activeTab].features.map((feature, idx) => (
                   <div
                     key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
                     className="flex items-center space-x-2 text-sm text-gray-300"
                   >
                     <div className={`w-2 h-2 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}></div>
@@ -135,16 +118,13 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                 ))}
               </div>
 
-              <motion.a
+              <a
                 href={contentItems[activeTab].link}
                 className={`inline-block bg-gradient-to-r ${contentItems[activeTab].color} text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 Explore {contentItems[activeTab].title.split(' ')[0]} Technology →
-              </motion.a>
+              </a>
             </div>
-
             {/* Interactive Visualization */}
             <div className="relative">
               <div className={`bg-gradient-to-br ${contentItems[activeTab].color}/20 backdrop-blur-sm rounded-3xl p-8 border border-white/20`}>
@@ -152,7 +132,6 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                   <div className="text-8xl mb-6 animate-pulse">
                     {contentItems[activeTab].icon}
                   </div>
-                  
                   <div className="space-y-4">
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex justify-between items-center mb-2">
@@ -163,7 +142,6 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                         <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '95%' }}></div>
                       </div>
                     </div>
-
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-300">Revolutionary Impact</span>
@@ -173,7 +151,6 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
                         <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}></div>
                       </div>
                     </div>
-
                     <div className="bg-white/10 rounded-lg p-4">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-gray-300">Consciousness Integration</span>
@@ -188,14 +165,11 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
               </div>
             </div>
           </div>
-        
+        </div>
       </div>
-
       {/* Additional Features */}
       <div
-        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
         className="mt-12 grid md:grid-cols-3 gap-6"
       >
         <div className="text-center">
@@ -218,4 +192,5 @@ const InteractiveContentShowcase2034_2036: React.FC = () => {
   );
 };
 
-export default InteractiveContentShowcase2034_2036;
+
+export default InteractiveContentShowcase2034-2036;

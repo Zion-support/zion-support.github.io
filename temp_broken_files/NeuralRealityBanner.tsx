@@ -1,12 +1,9 @@
 import React from 'react';
 
-
 const NeuralRealityBanner: React.FC = () => {
   return (
     <div
-      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
       className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
@@ -46,5 +43,6 @@ const NeuralRealityBanner: React.FC = () => {
     </div>
   );
 };
+
 
 export default NeuralRealityBanner;

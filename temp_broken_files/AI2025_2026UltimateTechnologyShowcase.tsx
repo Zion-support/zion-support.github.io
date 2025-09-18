@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Brain
   Cpu
@@ -99,11 +98,9 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 opacity: [010],
                 scale: [010],
               }}
-              transition={{
                 duration: 3,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -112,13 +109,9 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: -50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -132,20 +125,15 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             Experience the future of artificial intelligence with our revolutionary 2025-2026 technology suite. 
             Transform your business with cutting-edge AI solutions that were once science fiction.
           </p>
-          
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-2xl transition-all duration-300"
             >
               <Play className="w-5 h-5" />
               Watch Demo
             </button>
             <button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <ArrowRight className="w-5 h-5" />
@@ -156,9 +144,6 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
         {/* Tab Navigation */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="flex justify-center mb-12"
         >
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-full p-2 border border-white/20">
@@ -186,13 +171,8 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
         </div>
 
         {/* Technology Features */}
-        <AnimatePresence mode="wait">
           <div
             key={activeTab}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -50 }}
-            transition={{ duration: 0.5 }}
             className="mb-16"
           >
             <div className="text-center mb-12">
@@ -203,14 +183,10 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                 {currentTech.subtitle}
               </p>
             </div>
-
             <div className="grid md:grid-cols-3 gap-8">
               {currentTech.features.map((featureindex) => (
                 <div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.2 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center mb-6">
@@ -219,11 +195,9 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                   </div>
-                  
                   <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                     {feature.description}
                   </p>
-
                   <div className="space-y-3">
                     {feature.benefits.map((benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center">
@@ -236,20 +210,16 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
               ))}
             </div>
           </div>
-        
+        </div>
 
         {/* Stats Section */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="bg-slate-800/30 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">Proven Results</h3>
             <p className="text-gray-300 text-lg">Real-world impact from our AI solutions</p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { number: '500+'label: 'Enterprise Clients' },
@@ -259,9 +229,6 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             ].map((statindex) => (
               <div
                 key={stat.label}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -275,9 +242,6 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
@@ -287,19 +251,14 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of forward-thinking companies already using our AI solutions to revolutionize their operations.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300"
               >
                 <Rocket className="w-6 h-6" />
                 Start Your AI Journey
               </button>
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-12 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
                 <Users className="w-6 h-6" />
@@ -313,4 +272,6 @@ const AI2025_2026UltimateTechnologyShowcase = () => {
   );
 };
 
+
 export default AI2025_2026UltimateTechnologyShowcase;
+</div></div></div></div></div></div>

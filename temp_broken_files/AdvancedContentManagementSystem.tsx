@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Settings
   BarChart3
@@ -160,9 +159,6 @@ const AdvancedContentManagementSystem = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8 }}
           className="mb-8"
         >
           <div className="flex items-center justify-between">
@@ -189,9 +185,6 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Stats Overview */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
         >
           {[
@@ -216,9 +209,6 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Navigation Tabs */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-8"
         >
           <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
@@ -247,9 +237,6 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Content Types Overview */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-8"
         >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Content Types</h2>
@@ -270,9 +257,6 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Recent Content */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="bg-white rounded-xl shadow-lg p-6"
         >
           <div className="flex items-center justify-between mb-6">
@@ -292,7 +276,6 @@ const AdvancedContentManagementSystem = () => {
               </button>
             </div>
           </div>
-
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -366,9 +349,6 @@ const AdvancedContentManagementSystem = () => {
 
         {/* Analytics Charts Placeholder */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 1.0 }}
           className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           <div className="bg-white rounded-xl shadow-lg p-6">
@@ -380,7 +360,6 @@ const AdvancedContentManagementSystem = () => {
               </div>
             </div>
           </div>
-          
           <div className="bg-white rounded-xl shadow-lg p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Engagement Trends</h3>
             <div className="h-64 flex items-center justify-center bg-gray-50 rounded-lg">
@@ -394,6 +373,7 @@ const AdvancedContentManagementSystem = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default AdvancedContentManagementSystem;

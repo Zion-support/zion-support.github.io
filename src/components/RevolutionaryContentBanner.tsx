@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
 const RevolutionaryContentBanner: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const featuredContent = [
+  const [currentBanner, setCurrentBanner] = useState(0);
+  
+  const banners = [
     {
-      title: "Revolutionary Tech Breakthrough 2025",
-      description: "Discover the most revolutionary technology breakthroughs reshaping our digital future",
+      title: "🚀 Revolutionary Tech Breakthrough 2025",
+      description: "Discover the most groundbreaking technological innovations reshaping our digital future",
       link: "/pages/RevolutionaryTechBreakthrough2025",
       gradient: "from-purple-600 to-pink-600",
+      textColor: "text-white"
+    },
+    {
+      title: "🌟 Ultimate Tech Showcase 2026",
+      description: "Experience the ultimate showcase of cutting-edge technology innovations for 2026",
+      link: "/pages/UltimateTechShowcase2026",
+      gradient: "from-cyan-600 to-blue-600",
       textColor: "text-white"
     },
     {
@@ -22,52 +29,76 @@ const RevolutionaryContentBanner: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length);
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
     }, 5000);
+
     return () => clearInterval(interval);
-  }, [featuredContent.length]);
+  }, [banners.length]);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 rounded-2xl mb-12">
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white py-16 mb-12">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 opacity-30"></div>
-      
-      <div className="relative z-10 py-16 px-8">
-        <div className="text-center">
-          <div className="mb-8">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              Revolutionary Content
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Experience the future of technology with our cutting-edge innovations
-            </p>
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/30 rounded-full animate-pulse"></div>
+          <div className="absolute top-32 right-20 w-16 h-16 bg-pink-500/30 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-cyan-500/30 rounded-full animate-pulse delay-2000"></div>
+          <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-indigo-500/30 rounded-full animate-pulse delay-3000"></div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+            🌟 REVOLUTIONARY CONTENT • 2025-2026
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Revolutionary Content Showcase
+          </h2>
+          <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
+            Experience the most innovative and groundbreaking content that defines the future of technology
+          </p>
+        </div>
+
+        {/* Banner Carousel */}
+        <div className="relative max-w-6xl mx-auto">
+          <div className="overflow-hidden rounded-2xl shadow-2xl">
+            <div 
+              className="flex transition-transform duration-1000 ease-in-out"
+              style={{ transform: `translateX(-${currentBanner * 100}%)` }}
+            >
+              {banners.map((banner, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className={`bg-gradient-to-r ${banner.gradient} p-12 text-center`}>
+                    <h3 className={`text-3xl md:text-4xl font-bold mb-4 ${banner.textColor}`}>
+                      {banner.title}
+                    </h3>
+                    <p className={`text-lg mb-8 ${banner.textColor} opacity-90`}>
+                      {banner.description}
+                    </p>
+                    <a 
+                      href={banner.link}
+                      className={`inline-block bg-white/20 backdrop-blur-sm ${banner.textColor} px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30`}
+                    >
+                      Explore Now →
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div
-            key={currentSlide}
-            className="max-w-4xl mx-auto"
-          >
-              <div className={`bg-gradient-to-r ${featuredContent[currentSlide].gradient} rounded-xl p-8`}>
-                <h3 className="text-3xl font-bold mb-4">{featuredContent[currentSlide].title}</h3>
-                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">{featuredContent[currentSlide].description}</p>
-                <a 
-                  href={featuredContent[currentSlide].link}
-                  className={`inline-block bg-white ${featuredContent[currentSlide].textColor} px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
-                >
-                  Explore Now
-                </a>
-              </div>
-            </div>
-
-          {/* Slide Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {featuredContent.map((_, index) => (
+          {/* Navigation Dots */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {banners.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/50'
+                onClick={() => setCurrentBanner(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentBanner 
+                    ? 'bg-white' 
+                    : 'bg-white/30 hover:bg-white/50'
                 }`}
               />
             ))}

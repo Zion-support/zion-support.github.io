@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Zap
@@ -142,12 +141,8 @@ const AI2026UltimateServicesShowcase = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div
         className="max-w-7xl mx-auto"
-        variants={containerVariants}
-        initial="hidden"
-        animate={isVisible ? "visible" : "hidden"}
       >
         {/* Header */}
-        <div variants={itemVariants} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
             <Star className="w-4 h-4" />
             AI 2026 Ultimate Services
@@ -164,7 +159,6 @@ const AI2026UltimateServicesShowcase = () => {
         </div>
 
         {/* Services Grid */}
-        <div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((serviceindex) => (
             <div
               key={service.id}
@@ -172,22 +166,17 @@ const AI2026UltimateServicesShowcase = () => {
                 activeService === index ? 'scale-105' : 'hover:scale-102'
               } transition-all duration-300`}
               onClick={() => setActiveService(index)}
-              whileHover={{ y: -10 }}
-              whileTap={{ scale: 0.95 }}
             >
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 h-full">
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 <div className="space-y-3 mb-6">
                   {service.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -196,21 +185,15 @@ const AI2026UltimateServicesShowcase = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-white">
                     {service.stats}
                   </div>
                   <ArrowRight className="w-6 h-6 text-purple-400 group-hover:translate-x-2 transition-transform" />
                 </div>
-
                 {activeService === index && (
                   <div
                     className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl border-2 border-purple-400"
-                    layoutId="activeService"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
                   />
                 )}
               </div>
@@ -219,13 +202,8 @@ const AI2026UltimateServicesShowcase = () => {
         </div>
 
         {/* Active Service Details */}
-        <AnimatePresence mode="wait">
           <div
             key={activeService}
-            variants={itemVariants}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
             className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -233,15 +211,12 @@ const AI2026UltimateServicesShowcase = () => {
                 <div className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${services[activeService].color} flex items-center justify-center mb-8`}>
                   <services[activeService].icon className="w-10 h-10 text-white" />
                 </div>
-                
                 <h2 className="text-4xl font-bold text-white mb-6">
                   {services[activeService].title}
                 </h2>
-                
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   {services[activeService].description}
                 </p>
-
                 <div className="flex items-center gap-4 mb-8">
                   <div className="text-4xl font-bold text-white">
                     {services[activeService].stats}
@@ -250,21 +225,16 @@ const AI2026UltimateServicesShowcase = () => {
                     Performance Metric
                   </div>
                 </div>
-
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-3 group">
                   Get Started Now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </button>
               </div>
-
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
                 {services[activeService].features.map((featureindex) => (
                   <div
                     key={index}
-                    initial={{ opacity: 0x: 50 }}
-                    animate={{ opacity: 1x: 0 }}
-                    transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10"
                   >
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
@@ -274,10 +244,9 @@ const AI2026UltimateServicesShowcase = () => {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {/* Call to Action */}
-        <div variants={itemVariants} className="text-center mt-16">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -297,5 +266,6 @@ const AI2026UltimateServicesShowcase = () => {
     </div>
   );
 };
+
 
 export default AI2026UltimateServicesShowcase;

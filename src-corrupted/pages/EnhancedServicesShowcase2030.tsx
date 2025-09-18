@@ -1,7 +1,2 @@
 
-
-</any>
-</any>
-</any>
-</any>
-</any>
+export default EnhancedServicesShowcase2030;

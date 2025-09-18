@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const UltimateContentPromotionalBanner2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
@@ -8,36 +7,24 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
       <div className="relative z-10">
         <div className="text-center mb-12">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-lg font-bold mb-8 animate-pulse"
           >
             🚀 ULTIMATE BREAKTHROUGH CONTENT • JANUARY 2026
           </div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <divh2
             className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"
           >
             🌟 Revolutionary Technology Breakthrough 2026
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+          </divh2>
+          <divp
             className="text-2xl opacity-90 max-w-5xl mx-auto mb-8"
           >
             Experience the most revolutionary technological advances that will reshape humanity's future forever. 
             Discover conscious AI, quantum reality manipulation, and breakthrough technologies beyond imagination.
-          </motion.p>
+          </divp>
         </div>
         
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300">
@@ -56,7 +43,6 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               Experience AI Consciousness →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum Reality Manipulation</h3>
@@ -73,7 +59,6 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
               Manipulate Reality →
             </a>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300">
             <div className="text-6xl mb-4 text-center">🚀</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Ultimate Tech Breakthrough</h3>
@@ -93,9 +78,6 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">
@@ -124,9 +106,6 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.0 }}
           className="text-center mt-8"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -146,4 +125,6 @@ const UltimateContentPromotionalBanner2026: React.FC = () => {
   );
 };
 
+
 export default UltimateContentPromotionalBanner2026;
+</div></div>

@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   DollarSign
@@ -170,28 +169,21 @@ const InteractiveSuccessMetrics2025 = () => {
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-bounce" />
         <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
           className="text-center mb-16"
         >
-          <div variants={itemVariants} className="flex items-center justify-center mb-6">
             <BarChart3 className="w-12 h-12 text-green-400 mr-4" />
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-green-200 to-blue-200 bg-clip-text text-transparent">
               Success Metrics 2025
             </h2>
           </div>
           
-          <motion.p variants={itemVariants} className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Real-time performance metrics showcasing unprecedented business transformation results.
             See how our clients achieve extraordinary growth and efficiency.
-          </motion.p>
+          </divp>
 
-          <div variants={itemVariants} className="flex items-center justify-center space-x-4">
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-300"
@@ -206,13 +198,8 @@ const InteractiveSuccessMetrics2025 = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {/* Current Metric Showcase */}
           <div className="lg:col-span-2">
-            <AnimatePresence mode="wait">
               <div
                 key={currentMetric}
-                initial={{ opacity: 0x: -50 }}
-                animate={{ opacity: 1x: 0 }}
-                exit={{ opacity: 0x: 50 }}
-                transition={{ duration: 0.5 }}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${metrics[currentMetric].color} shadow-2xl relative overflow-hidden`}
               >
                 {/* Background Pattern */}
@@ -221,7 +208,6 @@ const InteractiveSuccessMetrics2025 = () => {
                     {metrics[currentMetric].chart}
                   </div>
                 </div>
-
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
                     <div className="p-4 bg-white/20 rounded-full mr-6">
@@ -236,18 +222,13 @@ const InteractiveSuccessMetrics2025 = () => {
                       </p>
                     </div>
                   </div>
-
                   <div className="text-6xl font-bold text-white mb-8">
                     {metrics[currentMetric].value}
                   </div>
-
                   <div className="grid grid-cols-2 gap-4">
                     {metrics[currentMetric].details.map((detailindex) => (
                       <div
                         key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
                         className="flex items-center text-white/90"
                       >
                         <ArrowUp className="w-4 h-4 mr-2 text-white" />
@@ -257,7 +238,7 @@ const InteractiveSuccessMetrics2025 = () => {
                   </div>
                 </div>
               </div>
-            
+            </div>
 
             {/* Metric Navigation */}
             <div className="flex justify-center mt-6 space-x-4">
@@ -273,12 +254,10 @@ const InteractiveSuccessMetrics2025 = () => {
                       ? 'bg-white scale-125 shadow-lg' 
                       : 'bg-white/50 hover:bg-white/70'
                   }`}
-                  whileHover={{ scale: 1.2 }}
                 />
               ))}
             </div>
           </div>
-
           {/* Live Stats Panel */}
           <div className="space-y-6">
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
@@ -286,7 +265,6 @@ const InteractiveSuccessMetrics2025 = () => {
                 <Activity className="w-6 h-6 mr-2 text-green-400" />
                 Live Performance
               </h4>
-              
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between text-white mb-2">
@@ -296,13 +274,9 @@ const InteractiveSuccessMetrics2025 = () => {
                   <div className="w-full bg-white/20 rounded-full h-2">
                     <div 
                       className="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${Math.min(animatedValues.revenue / 30100)}%` }}
-                      transition={{ duration: 1 }}
                     />
                   </div>
                 </div>
-
                 <div>
                   <div className="flex justify-between text-white mb-2">
                     <span>Client Satisfaction</span>
@@ -311,13 +285,9 @@ const InteractiveSuccessMetrics2025 = () => {
                   <div className="w-full bg-white/20 rounded-full h-2">
                     <div 
                       className="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${animatedValues.clients}%` }}
-                      transition={{ duration: 1 }}
                     />
                   </div>
                 </div>
-
                 <div>
                   <div className="flex justify-between text-white mb-2">
                     <span>Efficiency Boost</span>
@@ -326,15 +296,11 @@ const InteractiveSuccessMetrics2025 = () => {
                   <div className="w-full bg-white/20 rounded-full h-2">
                     <div 
                       className="bg-gradient-to-r from-yellow-400 to-orange-600 h-2 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${Math.min(animatedValues.efficiency / 6100)}%` }}
-                      transition={{ duration: 1 }}
                     />
                   </div>
                 </div>
               </div>
             </div>
-
             {/* Achievements */}
             <div className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20">
               <h4 className="text-xl font-bold text-white mb-4">Achievements</h4>
@@ -342,9 +308,6 @@ const InteractiveSuccessMetrics2025 = () => {
                 {achievements.map((achievementindex) => (
                   <div
                     key={index}
-                    initial={{ opacity: 0x: -20 }}
-                    animate={{ opacity: 1x: 0 }}
-                    transition={{ delay: index * 0.1 }}
                     className="flex items-center justify-between text-white"
                   >
                     <div className="flex items-center">
@@ -358,12 +321,8 @@ const InteractiveSuccessMetrics2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Stats Grid */}
         <div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
@@ -374,7 +333,6 @@ const InteractiveSuccessMetrics2025 = () => {
           ].map((statindex) => (
             <div
               key={index}
-              variants={itemVariants}
               className="p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 text-center group"
             >
               <div className="text-blue-400 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
@@ -390,4 +348,6 @@ const InteractiveSuccessMetrics2025 = () => {
   );
 };
 
+
 export default InteractiveSuccessMetrics2025;
+</div></div></div></div>

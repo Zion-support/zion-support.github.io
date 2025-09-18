@@ -1,18 +1,9 @@
-}
-}
- <div>Broken JSX</div> ></div> ></div> ></div> ></div> ></div> ></div> )}export { EducationSolutions }export { EducationSolutions }export { EducationSolutions }export { EducationSolutions }export { EducationSolutions }
 import React from 'react';
-interface EducationSolutionsProps {
-  // Add props here as needed
-}
-export default function EducationSolutions({}: EducationSolutionsProps) {
+
+const EducationSolutions: React.FC = () => {
   return (
-    <div>
-      <h1>EducationSolutions</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EducationSolutions</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
-}
-}
-

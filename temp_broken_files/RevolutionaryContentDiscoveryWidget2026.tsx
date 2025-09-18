@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Search
   Filter
@@ -206,27 +205,21 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4 mr-2" />
             REVOLUTIONARY CONTENT DISCOVERY
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Discover Your
             <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Perfect Content
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             AI-powered content discovery that learns your preferences and recommends the most relevant 
             articlestutorialsand insights tailored to your interests.
@@ -235,9 +228,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
 
         {/* Search and Filters */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 border border-white/20"
         >
           <div className="flex flex-col lg:flex-row gap-4">
@@ -252,7 +242,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                 className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className="relative">
               <select
@@ -268,7 +257,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
             </div>
-
             {/* Sort Options */}
             <div className="relative">
               <select
@@ -284,7 +272,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
               </select>
               <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex bg-white/10 rounded-lg p-1">
               <button
@@ -309,23 +296,16 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
 
         {/* Content Grid */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}
         >
-          
+          <div>
             {filteredContent.map((itemindex) => (
               <div
                 key={item.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5delay: index * 0.1 }}
                 className={`group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -340,7 +320,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  
                   {/* Featured Badge */}
                   {item.featured && (
                     <div className="absolute top-3 left-3">
@@ -350,14 +329,12 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                       </span>
                     </div>
                   )}
-                  
                   {/* Category Badge */}
                   <div className="absolute top-3 right-3">
                     <span className="px-2 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">
                       {categories.find(cat => cat.id === item.category)?.name}
                     </span>
                   </div>
-                  
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
@@ -365,7 +342,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Content */}
                 <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                   <div className="flex items-center justify-between mb-3">
@@ -377,15 +353,12 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                       <span className="ml-1 text-sm font-medium">{item.rating}</span>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                     {item.title}
                   </h3>
-                  
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                     {item.description}
                   </p>
-
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {item.tags.slice(03).map((tagidx) => (
@@ -397,7 +370,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                       </span>
                     ))}
                   </div>
-
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center">
@@ -412,7 +384,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                       by {item.author}
                     </div>
                   </div>
-
                   {/* CTA Button */}
                   <a
                     href={`/content/${item.title.toLowerCase().replace(/\s+/g'-')}`}
@@ -424,14 +395,12 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
                 </div>
               </div>
             ))}
-          
+          </div>
         </div>
 
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             className="text-center py-12"
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -450,12 +419,8 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
             </button>
           </div>
         )}
-
         {/* Bottom CTA */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -489,4 +454,6 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {
   );
 };
 
+
 export default RevolutionaryContentDiscoveryWidget2026;
+</div></div></div>

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const RevolutionaryServicesBanner: React.FC = () => {
   const services = [
     {
@@ -44,7 +43,6 @@ const RevolutionaryServicesBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 mb-8 text-white">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-      
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -54,12 +52,8 @@ const RevolutionaryServicesBanner: React.FC = () => {
           <div className="absolute bottom-10 right-10 w-28 h-28 bg-pink-500/10 rounded-full animate-pulse delay-500"></div>
         </div>
       </div>
-
       <div className="relative z-10">
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -79,10 +73,6 @@ const RevolutionaryServicesBanner: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
               className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               <div className="text-center">
@@ -98,12 +88,8 @@ const RevolutionaryServicesBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
@@ -128,5 +114,6 @@ const RevolutionaryServicesBanner: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryServicesBanner;

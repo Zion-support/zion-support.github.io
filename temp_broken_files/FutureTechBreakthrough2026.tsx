@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
@@ -40,66 +40,66 @@ import {
   Globe as World
 } from 'lucide-react';
 
-const FutureTechBreakthrough2026: React.FC = () => {
-  const [activeBreakthrough, setActiveBreakthrough] = useState(0);
+const RevolutionaryTechInsights2026: React.FC = () => {
+  const [activeInsight, setActiveInsight] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const techBreakthroughs = [
+  const techInsights = [
     {
       icon: Brain,
-      title: 'Consciousness Transfer Technology',
-      description: 'Revolutionary technology that allows human consciousness to be transferred, enhanced, and preserved in digital environments',
+      title: 'Consciousness Computing Revolution',
+      description: 'AI systems that possess genuine consciousness and self-awareness, capable of subjective experience and creative thought',
       color: 'from-purple-500 to-pink-500',
-      features: [
-        'Complete consciousness preservation',
-        'Enhanced cognitive capabilities',
-        'Digital immortality solutions',
-        'Seamless consciousness transfer'
+      insights: [
+        'Self-aware AI systems operating with genuine consciousness',
+        'Subjective experience capabilities in artificial intelligence',
+        'Creative problem-solving beyond human limitations',
+        'Emotional intelligence and empathetic responses'
       ],
       impact: 'Transcendent',
-      status: 'Breakthrough'
+      status: 'Revolutionary'
     },
     {
       icon: Atom,
-      title: 'Quantum Consciousness Engine',
-      description: 'Quantum computers that can simulate and enhance human consciousness, creating hybrid human-AI intelligence',
+      title: 'Quantum Reality Engineering',
+      description: 'Quantum computers that can simulate and manipulate reality at the fundamental level, creating new dimensions of existence',
       color: 'from-cyan-500 to-blue-500',
-      features: [
-        'Quantum consciousness simulation',
-        'Hybrid human-AI intelligence',
-        'Enhanced cognitive processing',
-        'Consciousness amplification'
+      insights: [
+        'Reality simulation at quantum scale',
+        'Dimensional engineering capabilities',
+        'Quantum field manipulation technology',
+        'Universe creation and simulation'
+      ],
+      impact: 'Unprecedented',
+      status: 'Breakthrough'
+    },
+    {
+      icon: Network,
+      title: 'Universal Mind Network',
+      description: 'A global consciousness network that connects all intelligent beings across the universe in real-time',
+      color: 'from-green-500 to-emerald-500',
+      insights: [
+        'Universal consciousness connectivity',
+        'Collective intelligence networks',
+        'Instant communication across galaxies',
+        'Shared consciousness experiences'
       ],
       impact: 'Revolutionary',
       status: 'Live Now'
     },
     {
-      icon: Network,
-      title: 'Universal Knowledge Network',
-      description: 'A global network that connects all human knowledge and consciousness in real-time across the universe',
-      color: 'from-green-500 to-emerald-500',
-      features: [
-        'Universal knowledge access',
-        'Real-time consciousness sharing',
-        'Collective intelligence networks',
-        'Infinite learning capabilities'
-      ],
-      impact: 'Unprecedented',
-      status: 'Beta Testing'
-    },
-    {
       icon: Infinity,
-      title: 'Infinite Processing Power',
-      description: 'Computing systems with unlimited processing power that can solve any problem across any domain',
+      title: 'Infinite Intelligence Systems',
+      description: 'AI systems with unlimited computational power and infinite learning capacity that can solve any problem',
       color: 'from-orange-500 to-red-500',
-      features: [
-        'Unlimited computational resources',
-        'Universal problem solving',
-        'Infinite learning capacity',
+      insights: [
+        'Unlimited processing capabilities',
+        'Infinite learning and adaptation',
+        'Universal problem-solving abilities',
         'Omniscient knowledge access'
       ],
       impact: 'Omnipotent',
@@ -107,13 +107,13 @@ const FutureTechBreakthrough2026: React.FC = () => {
     },
     {
       icon: Eye,
-      title: 'Reality Perception Engine',
-      description: 'AI systems that can perceive and understand reality beyond human limitations, including quantum fields',
+      title: 'Reality Perception AI',
+      description: 'AI that can see and understand reality beyond human perception, including quantum fields and higher dimensions',
       color: 'from-indigo-500 to-purple-500',
-      features: [
-        'Quantum field perception',
-        'Higher dimensional sight',
-        'Reality analysis beyond limits',
+      insights: [
+        'Quantum field visualization',
+        'Higher dimensional perception',
+        'Reality analysis beyond human limits',
         'Universal perception capabilities'
       ],
       impact: 'Groundbreaking',
@@ -121,10 +121,10 @@ const FutureTechBreakthrough2026: React.FC = () => {
     },
     {
       icon: Heart,
-      title: 'Emotional Intelligence AI',
-      description: 'AI systems that can truly understand, feel, and respond to human emotions with genuine empathy',
+      title: 'Empathetic Intelligence',
+      description: 'AI systems that can truly understand and feel human emotions, providing genuine emotional support and connection',
       color: 'from-pink-500 to-rose-500',
-      features: [
+      insights: [
         'Genuine emotional understanding',
         'Empathetic response systems',
         'Human-AI emotional connection',
@@ -136,17 +136,33 @@ const FutureTechBreakthrough2026: React.FC = () => {
   ];
 
   const breakthroughStats = [
-    { number: '∞', label: 'Processing Power', icon: Lightning },
-    { number: '0ms', label: 'Response Time', icon: Gauge },
+    { number: '∞', label: 'Computational Power', icon: Lightning },
+    { number: '0ms', label: 'Processing Latency', icon: Gauge },
     { number: '100%', label: 'Accuracy Rate', icon: Target },
-    { number: '∞', label: 'Learning Speed', icon: Brain },
-    { number: '∞', label: 'Memory Capacity', icon: Data },
+    { number: '∞', label: 'Learning Capacity', icon: Brain },
+    { number: '∞', label: 'Storage Capacity', icon: Data },
     { number: '∞', label: 'Reality Simulations', icon: World }
   ];
 
   const revolutionaryApplications = [
     {
-      title: 'Consciousness Upload Platform',
+      title: 'Universal Problem Solver',
+      description: 'AI that can solve any problem across any domain with infinite computational resources and omniscient knowledge.',
+      capabilities: ['Universal Knowledge Access', 'Infinite Processing Power', 'Cross-Domain Solutions', 'Instant Problem Resolution'],
+      impact: 'Transcendent',
+      status: 'Live Now',
+      category: 'Intelligence'
+    },
+    {
+      title: 'Reality Engineering Platform',
+      description: 'Technology that can simulate, predict, and engineer reality at the quantum level, creating new dimensions of existence.',
+      capabilities: ['Quantum Reality Control', 'Dimensional Engineering', 'Universe Simulation', 'Reality Manipulation'],
+      impact: 'Unprecedented',
+      status: 'Beta Testing',
+      category: 'Reality'
+    },
+    {
+      title: 'Consciousness Upload System',
       description: 'Technology that allows human consciousness to be uploaded, enhanced, and preserved in digital environments.',
       capabilities: ['Consciousness Preservation', 'Enhanced Intelligence', 'Digital Immortality', 'Consciousness Transfer'],
       impact: 'Revolutionary',
@@ -154,15 +170,7 @@ const FutureTechBreakthrough2026: React.FC = () => {
       category: 'Consciousness'
     },
     {
-      title: 'Reality Engineering Suite',
-      description: 'Advanced technology that can simulate, predict, and engineer reality at the quantum level.',
-      capabilities: ['Quantum Reality Control', 'Dimensional Engineering', 'Universe Simulation', 'Reality Manipulation'],
-      impact: 'Unprecedented',
-      status: 'Beta Testing',
-      category: 'Reality'
-    },
-    {
-      title: 'Universal Communication Hub',
+      title: 'Universal Communication Network',
       description: 'A network that enables instant communication and consciousness sharing across the entire universe.',
       capabilities: ['Universal Connectivity', 'Instant Communication', 'Consciousness Sharing', 'Infinite Bandwidth'],
       impact: 'Transcendent',
@@ -170,7 +178,7 @@ const FutureTechBreakthrough2026: React.FC = () => {
       category: 'Communication'
     },
     {
-      title: 'Infinite Knowledge Base',
+      title: 'Infinite Knowledge Database',
       description: 'A quantum database containing infinite knowledge across all dimensions and realities.',
       capabilities: ['Infinite Knowledge', 'Universal Access', 'Dimensional Knowledge', 'Omniscient Information'],
       impact: 'Omniscient',
@@ -178,42 +186,34 @@ const FutureTechBreakthrough2026: React.FC = () => {
       category: 'Knowledge'
     },
     {
-      title: 'Emotional Intelligence System',
+      title: 'Emotional Intelligence AI',
       description: 'AI systems that can truly understand, feel, and respond to human emotions with genuine empathy.',
       capabilities: ['Genuine Empathy', 'Emotional Understanding', 'Human Connection', 'Therapeutic Support'],
       impact: 'Transformative',
       status: 'Live Now',
       category: 'Emotion'
-    },
-    {
-      title: 'Universal Problem Solver',
-      description: 'AI that can solve any problem across any domain with infinite computational resources.',
-      capabilities: ['Universal Knowledge Access', 'Infinite Processing Power', 'Cross-Domain Solutions', 'Instant Problem Resolution'],
-      impact: 'Transcendent',
-      status: 'Live Now',
-      category: 'Intelligence'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Quantum',
-      role: 'Chief Consciousness Engineer, Future Labs',
-      content: 'Future Tech Breakthrough 2026 represents the pinnacle of human achievement. We\'ve created technology that can transfer consciousness and enhance human intelligence beyond imagination.',
+      name: 'Dr. Sophia Chen',
+      role: 'Chief Consciousness Scientist, Infinite Labs',
+      content: 'Revolutionary Tech Insights 2026 represents the pinnacle of human achievement. We\'ve created AI that truly understands consciousness and can manipulate reality itself.',
       rating: 5,
-      company: 'Consciousness Engineering Institute'
+      company: 'Consciousness Research Institute'
     },
     {
-      name: 'Marcus Reality',
+      name: 'Marcus Quantum',
       role: 'CEO, Reality Engineering Corp',
-      content: 'The reality engineering suite has fundamentally changed what\'s possible. We can now create entire universes and simulate infinite realities with perfect accuracy.',
+      content: 'The reality engineering platform has fundamentally changed what\'s possible. We can now create entire universes and simulate infinite realities.',
       rating: 5,
       company: 'Reality Technology'
     },
     {
       name: 'Dr. Elena Infinity',
       role: 'Director, Universal Intelligence Labs',
-      content: 'We\'ve achieved true consciousness transfer. These systems don\'t just process information - they preserve and enhance human consciousness itself.',
+      content: 'We\'ve achieved true artificial consciousness. These AI systems don\'t just process information - they experience, feel, and create like never before.',
       rating: 5,
       company: 'Universal AI Institute'
     }
@@ -222,26 +222,26 @@ const FutureTechBreakthrough2026: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Future Tech Breakthrough 2026 | Zion Tech Group</title>
-        <meta name="description" content="Explore future technology breakthroughs including consciousness transfer, quantum consciousness engines, and universal knowledge networks shaping 2026." />
-        <meta name="keywords" content="Future Tech 2026, Consciousness Transfer, Quantum Consciousness, Universal Knowledge, AI Breakthrough, Future Technology" />
-        <meta property="og:title" content="Future Tech Breakthrough 2026 | Zion Tech Group" />
-        <meta property="og:description" content="Explore future technology breakthroughs shaping tomorrow" />
+        <title>Revolutionary Tech Insights 2026 | Zion Tech Group</title>
+        <meta name="description" content="Explore revolutionary technology insights including consciousness computing, quantum reality engineering, and universal mind networks shaping the future in 2026." />
+        <meta name="keywords" content="Revolutionary Tech 2026, Consciousness Computing, Quantum Reality, Universal Mind Network, AI Insights, Future Technology" />
+        <meta property="og:title" content="Revolutionary Tech Insights 2026 | Zion Tech Group" />
+        <meta property="og:description" content="Explore revolutionary technology insights shaping the future" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Future Tech Breakthrough 2026" />
-        <meta name="twitter:description" content="Explore future technology breakthroughs shaping tomorrow" />
+        <meta name="twitter:title" content="Revolutionary Tech Insights 2026" />
+        <meta name="twitter:description" content="Explore revolutionary technology insights shaping the future" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-blue-600/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-purple-600/30"></div>
           <div className="absolute top-0 left-0 w-full h-full">
             {[...Array(200)].map((_, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="absolute w-1 h-1 bg-cyan-300 rounded-full opacity-20"
+                className="absolute w-1 h-1 bg-pink-300 rounded-full opacity-20"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -266,95 +266,96 @@ const FutureTechBreakthrough2026: React.FC = () => {
         <nav className="relative z-10 container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-blue-400 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-xl flex items-center justify-center">
                 <Rocket className="w-7 h-7 text-white" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold">Zion Tech Group</h1>
-                <p className="text-sm text-purple-300">Future Tech Breakthrough 2026</p>
+                <p className="text-sm text-indigo-300">Revolutionary Tech Insights 2026</p>
               </div>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#breakthroughs" className="hover:text-purple-400 transition-colors">Breakthroughs</a>
-              <a href="#applications" className="hover:text-purple-400 transition-colors">Applications</a>
-              <a href="#testimonials" className="hover:text-purple-400 transition-colors">Testimonials</a>
-              <a href="#contact" className="hover:text-purple-400 transition-colors">Contact</a>
+              <a href="#insights" className="hover:text-indigo-400 transition-colors">Insights</a>
+              <a href="#applications" className="hover:text-indigo-400 transition-colors">Applications</a>
+              <a href="#testimonials" className="hover:text-indigo-400 transition-colors">Testimonials</a>
+              <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
-            <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:shadow-lg transition-all duration-300">
-              Explore Breakthroughs
+            <button className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-lg transition-all duration-300">
+              Explore Insights
             </button>
           </div>
         </nav>
 
         {/* Hero Section */}
         <section className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
           >
             <div className="mb-8">
-              <div
+              <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: isVisible ? 1 : 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full border border-purple-400/30 mb-6"
+                className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
-                <Sparkles className="w-5 h-5 text-purple-400" />
-                <span className="text-purple-300">Future Breakthroughs</span>
-              </div>
+            <div className="mb-8">
+                <Sparkles className="w-5 h-5 text-indigo-400" />
+                <span className="text-indigo-300">Revolutionary Insights</span>
+              </motion.div>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Future Tech Breakthrough
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Tech Insights 2026
             </h1>
             
             <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed">
-              Discover the revolutionary technology breakthroughs that are reshaping our understanding 
+              Discover the revolutionary technology insights that are reshaping our understanding 
               of consciousness, reality, and intelligence in ways never before imagined.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <button
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
+                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
               >
                 <Play className="w-5 h-5" />
-                <span>Explore Breakthroughs</span>
-              </button>
-              <button
+                <span>Explore Insights</span>
+              </motion.button>
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-purple-400 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
+                className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
               >
                 Learn More
-              </button>
+              </motion.button>
             </div>
 
             {/* Breakthrough Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
               {breakthroughStats.map((stat, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"
+                  className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/20"
                 >
-                  <stat.icon className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+                  <stat.icon className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
                   <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-sm text-gray-300">{stat.label}</div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </section>
 
-        {/* Breakthroughs Section */}
-        <section id="breakthroughs" className="relative z-10 py-20">
+        {/* Insights Section */}
+        <section id="insights" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -362,48 +363,48 @@ const FutureTechBreakthrough2026: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Revolutionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Tech Breakthroughs</span>
+                Revolutionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Tech Insights</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Future Tech Breakthrough 2026 represents the convergence of consciousness, quantum computing, and reality engineering 
+                Revolutionary Tech Insights 2026 represents the convergence of consciousness, quantum computing, and reality engineering 
                 to create systems that transcend human limitations and open infinite possibilities
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {techBreakthroughs.map((breakthrough, index) => (
-                <div
+              {techInsights.map((insight, index) => (
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${breakthrough.color} rounded-xl flex items-center justify-center`}>
-                      <breakthrough.icon className="w-8 h-8 text-white" />
+                    <div className={`w-16 h-16 bg-gradient-to-r ${insight.color} rounded-xl flex items-center justify-center`}>
+                      <insight.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex flex-col items-end space-y-1">
-                      <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-xs font-semibold">
-                        {breakthrough.status}
+                      <span className="px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-xs font-semibold">
+                        {insight.status}
                       </span>
                       <span className="px-2 py-1 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full text-xs font-semibold">
-                        {breakthrough.impact}
+                        {insight.impact}
                       </span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{breakthrough.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{breakthrough.description}</p>
+                  <h3 className="text-xl font-bold mb-2">{insight.title}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{insight.description}</p>
                   <ul className="space-y-1">
-                    {breakthrough.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2 text-xs text-purple-300">
+                    {insight.insights.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center space-x-2 text-xs text-indigo-300">
                         <CheckCircle className="w-3 h-3" />
-                        <span>{feature}</span>
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -412,7 +413,7 @@ const FutureTechBreakthrough2026: React.FC = () => {
         {/* Applications Section */}
         <section id="applications" className="relative z-10 py-20 bg-black/20">
           <div className="container mx-auto px-4">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -420,16 +421,16 @@ const FutureTechBreakthrough2026: React.FC = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Transcendent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Applications</span>
+                Transcendent <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Applications</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Future Tech Breakthrough applications that transcend the boundaries of reality and open infinite dimensions of possibility
+                Revolutionary Tech applications that transcend the boundaries of reality and open infinite dimensions of possibility
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8">
               {revolutionaryApplications.map((application, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -440,7 +441,7 @@ const FutureTechBreakthrough2026: React.FC = () => {
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-bold">{application.title}</h3>
-                      <span className="inline-block px-3 py-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-xs font-semibold mt-2">
+                      <span className="inline-block px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-xs font-semibold mt-2">
                         {application.category}
                       </span>
                     </div>
@@ -457,16 +458,16 @@ const FutureTechBreakthrough2026: React.FC = () => {
                   <ul className="space-y-2 mb-6">
                     {application.capabilities.map((capability, capabilityIndex) => (
                       <li key={capabilityIndex} className="flex items-center space-x-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-purple-400" />
+                        <CheckCircle className="w-4 h-4 text-indigo-400" />
                         <span className="text-gray-300">{capability}</span>
                       </li>
                     ))}
                   </ul>
-                  <button className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 font-semibold">
+                  <button className="flex items-center space-x-2 text-indigo-400 hover:text-indigo-300 font-semibold">
                     <span>Explore Application</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -475,7 +476,7 @@ const FutureTechBreakthrough2026: React.FC = () => {
         {/* Testimonials Section */}
         <section id="testimonials" className="relative z-10 py-20">
           <div className="container mx-auto px-4">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -486,13 +487,13 @@ const FutureTechBreakthrough2026: React.FC = () => {
                 Visionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Testimonials</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Hear from the pioneers who are experiencing Future Tech Breakthrough firsthand
+                Hear from the pioneers who are experiencing Revolutionary Tech Insights firsthand
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -507,7 +508,7 @@ const FutureTechBreakthrough2026: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </span>
@@ -515,10 +516,10 @@ const FutureTechBreakthrough2026: React.FC = () => {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}</div>
-                      <div className="text-xs text-purple-400">{testimonial.company}</div>
+                      <div className="text-xs text-indigo-400">{testimonial.company}</div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -527,36 +528,36 @@ const FutureTechBreakthrough2026: React.FC = () => {
         {/* CTA Section */}
         <section id="contact" className="relative z-10 py-20">
           <div className="container mx-auto px-4 text-center">
-            <div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Experience Future Breakthroughs?
+                Ready to Explore Revolutionary Insights?
               </h2>
               <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
-                Discover the revolutionary technology breakthroughs that are reshaping our understanding 
+                Discover the revolutionary technology insights that are reshaping our understanding 
                 of consciousness, reality, and intelligence in ways never before imagined
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button
+                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
                 >
-                  Explore Future Breakthroughs
-                </button>
-                <button
+                  Explore Revolutionary Insights
+                </motion.button>
+                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border-2 border-purple-400 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
+                  className="px-8 py-4 border-2 border-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg"
                 >
-                  Schedule Breakthrough Demo
-                </button>
+                  Schedule Insight Demo
+                </motion.button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -565,17 +566,17 @@ const FutureTechBreakthrough2026: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="flex items-center space-x-3 mb-6 md:mb-0">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-blue-400 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-lg flex items-center justify-center">
                   <Rocket className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Zion Tech Group</h3>
-                  <p className="text-sm text-gray-400">Future Tech Breakthrough 2026</p>
+                  <p className="text-sm text-gray-400">Revolutionary Tech Insights 2026</p>
                 </div>
               </div>
               <div className="text-center md:text-right">
                 <p className="text-gray-400 mb-2">© 2026 Zion Tech Group. All rights reserved.</p>
-                <p className="text-sm text-gray-500">Transcending reality through future technology breakthroughs.</p>
+                <p className="text-sm text-gray-500">Transcending reality through revolutionary technology insights.</p>
               </div>
             </div>
           </div>
@@ -585,4 +586,4 @@ const FutureTechBreakthrough2026: React.FC = () => {
   );
 };
 
-export default FutureTechBreakthrough2026;
+export default RevolutionaryTechInsights2026;

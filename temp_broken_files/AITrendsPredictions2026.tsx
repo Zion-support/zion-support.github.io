@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   Brain
@@ -133,11 +132,9 @@ const AITrendsPredictions2026 = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0-50],
                 opacity: [0.40.80.4],
               }}
-              transition={{
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -146,19 +143,12 @@ const AITrendsPredictions2026 = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div
-            initial={{ scale: 0.8 }}
-            animate={isVisible ? { scale: 1 } : {}}
-            transition={{ duration: 0.6delay: 0.2 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white text-sm font-medium mb-6"
           >
             <TrendingUp className="w-4 h-4 mr-2" />
@@ -171,7 +161,6 @@ const AITrendsPredictions2026 = () => {
               {' '}Artificial Intelligence
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover the groundbreaking AI trends and predictions that will shape 2026 and beyond. 
             From quantum-enhanced AI to artificial consciousnessexplore the technologies that will revolutionize our world.
@@ -180,15 +169,11 @@ const AITrendsPredictions2026 = () => {
 
         {/* Market Insights */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {marketInsights.map((insightindex) => (
             <div
               key={index}
-              whileHover={{ scale: 1.05 }}
               className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20"
             >
               <BarChart3 className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
@@ -201,20 +186,15 @@ const AITrendsPredictions2026 = () => {
 
         {/* Predictions Grid */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Key Predictions for 2026
           </h2>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {predictions.map((predictionindex) => (
               <div
                 key={prediction.id}
-                whileHover={{ scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 cursor-pointer"
                 onClick={() => setActivePrediction(index)}
               >
@@ -236,11 +216,9 @@ const AITrendsPredictions2026 = () => {
                     <div className="text-gray-400 text-sm">Confidence</div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {prediction.description}
                 </p>
-                
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-white/5 rounded-lg">
                     <div className="text-lg font-bold text-white">{prediction.marketValue}</div>
@@ -251,7 +229,6 @@ const AITrendsPredictions2026 = () => {
                     <div className="text-gray-400 text-sm">Adoption Rate</div>
                   </div>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <Target className="w-5 h-5 text-green-400 mr-2" />
@@ -265,13 +242,8 @@ const AITrendsPredictions2026 = () => {
         </div>
 
         {/* Detailed Prediction View */}
-        <AnimatePresence mode="wait">
           <div
             key={activePrediction}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16"
           >
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -288,11 +260,9 @@ const AITrendsPredictions2026 = () => {
                     </div>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {predictions[activePrediction].description}
                 </p>
-                
                 <div className="space-y-3">
                   {predictions[activePrediction].keyPoints.map((pointindex) => (
                     <div key={index} className="flex items-center text-gray-300">
@@ -302,7 +272,6 @@ const AITrendsPredictions2026 = () => {
                   ))}
                 </div>
               </div>
-              
               <div className="relative">
                 <div className={`w-full h-80 bg-gradient-to-br ${predictions[activePrediction].color} rounded-2xl flex items-center justify-center`}>
                   <predictions[activePrediction].icon className="w-32 h-32 text-white opacity-80" />
@@ -313,29 +282,21 @@ const AITrendsPredictions2026 = () => {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {/* Timeline */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Innovation Timeline
           </h2>
-          
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-400"></div>
-            
             <div className="space-y-8">
               {timeline.map((itemindex) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
-                  animate={isVisible ? { opacity: 1x: 0 } : {}}
-                  transition={{ duration: 0.6delay: 1.0 + index * 0.2 }}
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
@@ -356,11 +317,9 @@ const AITrendsPredictions2026 = () => {
                       </div>
                     </div>
                   </div>
-                  
                   <div className="relative z-10 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center">
                     <Star className="w-4 h-4 text-white" />
                   </div>
-                  
                   <div className="w-1/2"></div>
                 </div>
               ))}
@@ -370,9 +329,6 @@ const AITrendsPredictions2026 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 1.2 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12">
@@ -399,4 +355,7 @@ const AITrendsPredictions2026 = () => {
   );
 };
 
+
 export default AITrendsPredictions2026;
+</div></div>
+</p></p></p>

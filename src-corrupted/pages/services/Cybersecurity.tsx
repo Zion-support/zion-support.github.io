@@ -1,9 +1,2 @@
 
-
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+export default Cybersecurity;

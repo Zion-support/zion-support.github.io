@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Sparkles
   ArrowRight
@@ -37,27 +36,21 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
   if (!isVisible) return null;
 
   return (
-    
+    <div>
       <div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
         className="relative bg-gradient-to-r from-purple-900 via-pink-900 to-purple-900 text-white overflow-hidden"
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/30 to-pink-600/30" />
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30" />
         </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left mb-4 lg:mb-0">
               <div className="flex items-center justify-center lg:justify-start mb-3">
                 <div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 2repeat: Infinityease: "linear" }}
                   className="mr-3"
                 >
                   <Sparkles className="w-6 h-6 text-yellow-400" />
@@ -66,18 +59,12 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
                   🚀 New 2025-2026 Innovation Showcase
                 </span>
               </div>
-              
               <h2 className="text-2xl lg:text-3xl font-bold mb-2">
                 Experience the Ultimate AI Breakthroughs
               </h2>
-              
               <div className="flex items-center justify-center lg:justify-start mb-4">
                 <div
                   key={currentFeature}
-                  initial={{ opacity: 0x: 20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  exit={{ opacity: 0x: -20 }}
-                  transition={{ duration: 0.5 }}
                   className="flex items-center"
                 >
                   <features[currentFeature].icon className={`w-5 h-5 ${features[currentFeature].color} mr-2`} />
@@ -86,18 +73,14 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
                   </span>
                 </div>
               </div>
-              
               <p className="text-gray-200 text-sm lg:text-base max-w-2xl">
                 Discover revolutionary AI innovations that will reshape our world. 
                 Quantum-AI fusioneural consensusand synthetic consciousness await.
               </p>
             </div>
-
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-3">
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-full font-bold text-sm hover:shadow-lg transition-all duration-300 flex items-center group"
               >
                 <Rocket className="w-4 h-4 mr-2" />
@@ -106,19 +89,14 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
               </button>
               
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/30 text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-white/10 transition-all duration-300 flex items-center"
               >
                 <Award className="w-4 h-4 mr-2" />
                 Learn More
               </button>
             </div>
-
             {/* Close Button */}
             <button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
             >
@@ -126,19 +104,18 @@ const AI2025_2026UltimateInnovationPromotionBanner = () => {
             </button>
           </div>
         </div>
-
         {/* Animated Progress Bar */}
         <div className="absolute bottom-0 left-0 w-full h-1 bg-black/20">
           <div
             className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 10repeat: Infinityease: "linear" }}
           />
         </div>
       </div>
-    
+    </div>
   );
+
 };
 
+
 export default AI2025_2026UltimateInnovationPromotionBanner;
+</div></div></div></div></div></div>

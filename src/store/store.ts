@@ -1,38 +1,69 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
-import { combineReducers } from '@reduxjs/toolkit';
+// Simple store implementation without external dependencies
+export interface RootState {
+  app: {
+    loading: boolean;
+    error: string | null;
+  };
+}
 
-// Import your reducers here
-// import userReducer from './slices/userSlice';
-// import uiReducer from './slices/uiSlice';
+const initialState: RootState = {
+  app: {
+    loading: false,
+    error: null
+  }
+}
 
-const persistConfig = {
-  key: 'root',
-  storage,
-  whitelist: ['user', 'ui'], // Only persist these reducers
+// Simple store implementation
+class SimpleStore {
+  private state: RootState = initialState;
+  private listeners: Array<() => void> = [];
+
+  getState(): RootState {
+    return this.state;
+  }
+
+  dispatch(action: any): any {
+    // Simple reducer logic
+    switch (action.type) {
+      case 'SET_LOADING':
+        this.state = {
+          ...this.state,
+          app: {
+            ...this.state.app,
+            loading: action.payload
+          }
+        };
+        break;
+      case 'SET_ERROR':
+        this.state = {
+          ...this.state,
+          app: {
+            ...this.state.app,
+            error: action.payload
+          }
+        };
+        break;
+      default:
+        break;
+    }
+    // Notify listeners
+    this.listeners.forEach(listener => listener());
+    return action;
+  }
+
+  subscribe(listener: () => void): () => void {
+    this.listeners.push(listener);
+    return () => {
+      this.listeners = this.listeners.filter(l => l !== listener);
+    };
+  }
+}
+export const store = new SimpleStore();
+export const persistor = {
+  purge: () => Promise.resolve(),
+  flush: () => Promise.resolve(),
+  pause: () => {},
+  persist: () => {},
+  restore: () => {}
 };
-
-const rootReducer = combineReducers({
-  // user: userReducer,
-  // ui: uiReducer,
-  // Add your reducers here
-});
-
-const persistedReducer = persistReducer(persistConfig, rootReducer);
-
-export const store = configureStore({
-  reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
-      },
-    }),
-  devTools: process.env.NODE_ENV !== 'production',
-});
-
-export const persistor = persistStore(store);
-
-export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

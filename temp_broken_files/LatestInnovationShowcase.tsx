@@ -1,54 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-
 const LatestInnovationShowcase: React.FC = () => {
-  const [currentInnovation, setCurrentInnovation] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const innovations = [
-    {
-      title: "AI Innovation Hub 2026",
-      description: "Revolutionary AI systems with synthetic consciousness and autonomous capabilities",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      link: "/pages/AIInnovationHub2026",
-      features: ["Synthetic Consciousness", "Autonomous AI Agents", "Quantum AI Integration", "Collective Intelligence"]
-    },
-    {
-      title: "Quantum Computing Revolution",
-      description: "Breakthrough quantum processors solving impossible problems with exponential speed",
-      icon: "⚛️",
-      color: "from-indigo-600 to-purple-600",
-      link: "/pages/QuantumComputingRevolution2026",
-      features: ["1000+ Qubit Processors", "Quantum Supremacy", "Real-world Applications", "Quantum Internet"]
-    },
-    {
-      title: "Space Technology Innovation",
-      description: "Pioneering space exploration with Mars colonization and asteroid mining",
-      icon: "🚀",
-      color: "from-slate-600 to-blue-600",
-      link: "/pages/SpaceTechInnovation2026",
-      features: ["Mars Colonization", "Lunar Base Alpha", "Asteroid Mining", "Deep Space Exploration"]
-    },
-    {
-      title: "Future Tech Trends 2026",
-      description: "Comprehensive analysis of emerging technologies reshaping our world",
-      icon: "🔮",
-      color: "from-blue-600 to-purple-600",
-      link: "/pages/FutureTechTrends2026",
-      features: ["AI Revolution", "Neural Interfaces", "Biotech Breakthroughs", "Clean Energy"]
-    }
-  ];
-
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, innovations.length]);
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-purple-600/10 backdrop-blur-sm"></div>
@@ -62,16 +14,10 @@ const LatestInnovationShowcase: React.FC = () => {
             Experience the cutting-edge innovations that are defining the future of technology
           </p>
         </div>
-
         {/* Innovation Carousel */}
         <div className="relative">
-          <AnimatePresence mode="wait">
             <div
               key={currentInnovation}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
               className="grid md:grid-cols-2 gap-8 items-center"
             >
               <div>
@@ -103,7 +49,7 @@ const LatestInnovationShowcase: React.FC = () => {
                 </button>
               </div>
             </div>
-          
+          </div>
 
           {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
@@ -120,7 +66,6 @@ const LatestInnovationShowcase: React.FC = () => {
               />
             ))}
           </div>
-
           {/* Play/Pause Button */}
           <div className="flex justify-center mt-4">
             <button
@@ -131,25 +76,23 @@ const LatestInnovationShowcase: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {innovations.map((innovation, index) => (
-            <motion.a
+            <a
               key={index}
               href={innovation.link}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className={`bg-gradient-to-r ${innovation.color} text-white p-4 rounded-lg text-center hover:shadow-lg transition-all duration-300`}
             >
               <div className="text-2xl mb-2">{innovation.icon}</div>
               <div className="text-sm font-semibold">{innovation.title}</div>
-            </motion.a>
+            </a>
           ))}
         </div>
       </div>
     </div>
   );
 };
+
 
 export default LatestInnovationShowcase;

@@ -1,12 +1,3 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
-import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
-
 
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -14,9 +5,7 @@ export default function ComprehensivePricingPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices];
-
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
     { value: '0-100', label: '$0 - $100' },
@@ -26,7 +15,6 @@ export default function ComprehensivePricingPage() {
     { value: '2501-5000', label: '$2,501 - $5,000' },
     { value: '5001+', label: '$5,001+' }
   ];
-
   const sortOptions = [
     { value: 'price', label: 'Price Low-High' },
     { value: 'name', label: 'Name A-Z' },
@@ -34,15 +22,12 @@ export default function ComprehensivePricingPage() {
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
   ];
-
   // Filter and sort services
   let filteredServices = allServices;
-
   // Category filter
   if (selectedCategory !== 'All') {
     filteredServices = filteredServices.filter(service => service.category === selectedCategory);
   }
-
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
@@ -51,7 +36,6 @@ export default function ComprehensivePricingPage() {
       return price >= min && (max === Infinity || price <= max);
     });
   }
-
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -61,7 +45,6 @@ export default function ComprehensivePricingPage() {
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }
-
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
@@ -79,14 +62,12 @@ export default function ComprehensivePricingPage() {
         return a.name.localeCompare(b.name);
     }
   });
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
-
   // Pricing tiers
   const pricingTiers = [
     {
@@ -141,7 +122,6 @@ export default function ComprehensivePricingPage() {
       popular: false
     }
   ];
-
   // Market statistics
   const marketStats = [
     {
@@ -169,7 +149,6 @@ export default function ComprehensivePricingPage() {
       icon: <TrendingUp className="w-6 h-6" />
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -179,7 +158,6 @@ export default function ComprehensivePricingPage() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -190,7 +168,6 @@ export default function ComprehensivePricingPage() {
       }
     }
   };
-
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -204,56 +181,40 @@ export default function ComprehensivePricingPage() {
           <meta property="og:url" content="https://ziontechgroup.com/comprehensive-pricing" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing" />
-        </Head>
-
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-5xl mx-auto">
-              <motion.h1 
+              <divh1 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Comprehensive
-                </span>
                 <br />
                 <span className="text-white">Pricing & Plans</span>
-              </motion.h1>
-              <motion.p 
+              </divh1>
+              <divp 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Transparent pricing for all our revolutionary micro SaaS services. 
                 Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
-              </motion.p>
+              </divp>
               
               {/* Market Stats */}
               <div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {marketStats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
-                  </div>
                 ))}
               </div>
 
               {/* CTA Buttons */}
               <div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Button 
                   variant="primary" 
@@ -262,7 +223,6 @@ export default function ComprehensivePricingPage() {
                 >
                   View Pricing Tiers
                   <DollarSign className="ml-2 w-5 h-5" />
-                </Button>
                 <Button 
                   variant="futuristic" 
                   size="lg"
@@ -285,34 +245,24 @@ export default function ComprehensivePricingPage() {
                 <span className="text-white">{contactInfo.mobile}</span>
                 <Mail className="w-5 h-5 text-purple-400" />
                 <span className="text-white">{contactInfo.email}</span>
-              </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-green-400" />
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Tiers */}
         <section id="pricing-tiers" className="py-20">
           <div className="container mx-auto px-4">
             <div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Flexible Pricing
-                </span>
                 <br />
                 <span className="text-white">for Every Business</span>
-              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
@@ -320,16 +270,12 @@ export default function ComprehensivePricingPage() {
 
             <div 
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
-              variants={containerVariants}
-              initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {pricingTiers.map((tier, index) => (
                 <div
                   key={tier.name}
-                  variants={itemVariants}
-                  whileHover={{ y: -10 }}
                 >
                   <UltraFuturisticCard
                     variant={tier.popular ? 'holographic-advanced' : 'quantum-advanced'}
@@ -340,29 +286,20 @@ export default function ComprehensivePricingPage() {
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
                           Most Popular
-                        </div>
-                      </div>
                     )}
-                    
                     <div className="text-center mb-8">
                       <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${tier.color} mb-6`}>
                         {tier.icon}
-                      </div>
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                       <p className="text-gray-300 text-sm mb-4">{tier.description}</p>
                       <div className="text-4xl font-bold text-cyan-400 mb-2">{tier.price}</div>
                       <div className="text-sm text-gray-400">{tier.period}</div>
-                    </div>
-                    
                     <div className="space-y-3 mb-8">
                       {tier.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
-                        </div>
                       ))}
-                    </div>
-
                     <div className="text-center">
                                              <Button 
                          variant={tier.popular ? 'futuristic' : 'primary'} 
@@ -387,10 +324,8 @@ export default function ComprehensivePricingPage() {
             {/* Filters and Controls */}
             <div 
               className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
             >
               <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
                 <div className="flex flex-wrap gap-4">
@@ -403,8 +338,6 @@ export default function ComprehensivePricingPage() {
                     {revolutionaryServiceCategories.map(category => (
                       <option key={category} value={category}>{category}</option>
                     ))}
-                  </select>
-                  
                   <select
                     value={priceRange}
                     onChange={(e) => setPriceRange(e.target.value)}
@@ -413,8 +346,6 @@ export default function ComprehensivePricingPage() {
                     {priceRanges.map(range => (
                       <option key={range.value} value={range.value}>{range.label}</option>
                     ))}
-                  </select>
-                  
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
@@ -423,9 +354,6 @@ export default function ComprehensivePricingPage() {
                     {sortOptions.map(option => (
                       <option key={option.value} value={option.value}>{option.label}</option>
                     ))}
-                  </select>
-                </div>
-                
                 <div className="flex items-center gap-4">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -436,15 +364,12 @@ export default function ComprehensivePricingPage() {
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64"
                     />
-                  </div>
-                  
                   <div className="flex border border-gray-600 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
                     >
                       <Grid className="w-4 h-4" />
-                    </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -462,16 +387,12 @@ export default function ComprehensivePricingPage() {
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
-              variants={containerVariants}
-              initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               {filteredServices.map((service, index) => (
                 <div
                   key={service.id}
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}
                 >
                   <UltraFuturisticCard
                     variant={service.variant as any || 'quantum-advanced'}
@@ -486,16 +407,12 @@ export default function ComprehensivePricingPage() {
                         <p className="text-gray-300 mb-4 text-sm">{service.tagline}</p>
                         <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-sm text-gray-400 mb-4">{service.period}</div>
-                        
                         <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
-                            </div>
                           ))}
-                        </div>
-
                         <div className="text-center space-y-2">
                                                      <Button 
                              variant="primary" 
@@ -505,7 +422,6 @@ export default function ComprehensivePricingPage() {
                            >
                              Learn More
                              <ExternalLink className="ml-2 w-4 h-4" />
-                           </Button>
                            <Button 
                              variant="futuristic" 
                              size="sm"
@@ -514,9 +430,6 @@ export default function ComprehensivePricingPage() {
                            >
                              Get Pricing
                              <DollarSign className="ml-2 w-4 h-4" />
-                           </Button>
-                        </div>
-                      </div>
                     ) : (
                       // List View
                       <div className="flex flex-col md:flex-row gap-6 w-full">
@@ -526,13 +439,9 @@ export default function ComprehensivePricingPage() {
                             <div>
                               <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                               <p className="text-gray-300 text-sm">{service.tagline}</p>
-                            </div>
                             <div className="text-right mt-2 md:mt-0">
                               <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                               <div className="text-sm text-gray-400">{service.period}</div>
-                            </div>
-                          </div>
-                          
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div>
                               <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
@@ -541,20 +450,13 @@ export default function ComprehensivePricingPage() {
                                   <div key={idx} className="flex items-center gap-2 text-sm">
                                     <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                                     <span className="text-gray-300">{feature}</span>
-                                  </div>
                                 ))}
-                              </div>
-                            </div>
                             <div>
                               <h4 className="text-sm font-semibold text-purple-400 mb-2">Market Info</h4>
                               <div className="space-y-1 text-sm text-gray-300">
                                 <div><span className="text-gray-400">ROI:</span> {service.roi}</div>
                                 <div><span className="text-gray-400">Market:</span> {service.marketSize}</div>
                                 <div><span className="text-gray-400">Growth:</span> {service.growthRate}</div>
-                              </div>
-                            </div>
-                          </div>
-                          
                           <div className="flex gap-2">
                                                          <Button 
                                variant="primary" 
@@ -563,7 +465,6 @@ export default function ComprehensivePricingPage() {
                              >
                                Learn More
                                <ExternalLink className="ml-2 w-4 h-4" />
-                             </Button>
                              <Button 
                                variant="futuristic" 
                                size="sm"
@@ -571,10 +472,6 @@ export default function ComprehensivePricingPage() {
                              >
                                Get Pricing
                                <DollarSign className="ml-2 w-4 h-4" />
-                             </Button>
-                          </div>
-                        </div>
-                      </div>
                     )}
                   </UltraFuturisticCard>
                 </div>
@@ -584,9 +481,6 @@ export default function ComprehensivePricingPage() {
             {filteredServices.length === 0 && (
               <div 
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
@@ -603,26 +497,18 @@ export default function ComprehensivePricingPage() {
                  </Button>
               </div>
             )}
-          </div>
-        </section>
-
         {/* Contact Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <div 
               className="max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
-              </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our sales team to discuss pricing, custom plans, and implementation options.
-              </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Button 
                   variant="primary" 
@@ -631,7 +517,6 @@ export default function ComprehensivePricingPage() {
                 >
                   Contact Sales
                   <Mail className="ml-2 w-5 h-5" />
-                </Button>
                 <Button 
                   variant="futuristic" 
                   size="lg"
@@ -639,20 +524,15 @@ export default function ComprehensivePricingPage() {
                 >
                   Schedule Demo
                   <Calendar className="ml-2 w-5 h-5" />
-                </Button>
-              </div>
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.mobile}</div>
                   <div className="text-gray-400 text-sm">Call us anytime</div>
-                </div>
                 <div>
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.email}</div>
                   <div className="text-gray-400 text-sm">Email us 24/7</div>
-                </div>
                 <div>
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
@@ -665,4 +545,23 @@ export default function ComprehensivePricingPage() {
       </div>
     </UltraFuturisticBackground>
   );
-}
+
+
+
+export default comprehensive-pricing;
+import React from "react";
+
+const function ComprehensivePricingPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function ComprehensivePricingPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function ComprehensivePricingPage() {;

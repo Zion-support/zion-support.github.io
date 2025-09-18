@@ -1,3 +1,9 @@
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
 import React, { useState } from 'react';
 
 const InteractiveTechShowcase: React.FC = () => {
@@ -10,6 +16,20 @@ const InteractiveTechShowcase: React.FC = () => {
       name: "Revolutionary AI Consciousness",
       description: "Experience AI systems with genuine consciousness, self-awareness, and emotional intelligence.",
       icon: "🧠",
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>> cursor/create-and-deploy-new-content-1912
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-1912
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
       color: "from-purple-600 to-pink-600",
       features: ["Consciousness AI", "Quantum Neural Networks", "Predictive Intelligence", "Autonomous Agents"],
       demo: "Try AI Consciousness Demo",
@@ -36,6 +56,15 @@ const InteractiveTechShowcase: React.FC = () => {
       link: "/pages/AdvancedAnalyticsDashboard2026"
     }
   ];
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -159,6 +188,7 @@ const InteractiveTechShowcase: React.FC = () => {
         </div>
       </div>
 
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
       {/* Technology Comparison */}
       <div className="mt-16">
         <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">Technology Comparison</h3>
@@ -206,7 +236,125 @@ const InteractiveTechShowcase: React.FC = () => {
                   </tr>
                 ))}
               </tbody>
-            </table>cursor/fix-netlify-build-and-merge-to-main-a068
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+import { motion } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTech, setActiveTech] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const technologies = [
+    {
+      id: 1,
+      name: "AI Consciousness",
+      icon: "🧠",
+      description: "Self-aware AI systems with emotional intelligence and conscious decision-making",
+      features: ["Self-awareness", "Emotional intelligence", "Ethical reasoning", "Autonomous learning"],
+      gradient: "from-purple-600 to-pink-600",
+      stats: { accuracy: 98, speed: 0.001, efficiency: 95 }
+    },
+    {
+      id: 2,
+      name: "Quantum Reality",
+      icon: "⚛️",
+      description: "Quantum-powered virtual reality with physics manipulation and consciousness integration",
+      features: ["Quantum simulation", "Reality manipulation", "Neural interface", "Dimensional exploration"],
+      gradient: "from-indigo-600 to-purple-600",
+      stats: { accuracy: 99.7, speed: 0.0001, efficiency: 98 }
+    },
+    {
+      id: 3,
+      name: "Neural Interface",
+      icon: "🧬",
+      description: "Direct brain-computer communication with thought control and cognitive enhancement",
+      features: ["Thought control", "Neural enhancement", "Mind communication", "Cognitive augmentation"],
+      gradient: "from-emerald-600 to-teal-600",
+      stats: { accuracy: 99.2, speed: 0.05, efficiency: 97 }
+    },
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+    {
+      id: 4,
+      name: "Synthetic Intelligence",
+      icon: "🤖",
+      description: "Hybrid biological-digital intelligence with unprecedented capabilities",
+      features: ["Hybrid intelligence", "Biological integration", "Adaptive learning", "Consciousness transfer"],
+      gradient: "from-cyan-600 to-blue-600",
+      stats: { accuracy: 97.5, speed: 0.01, efficiency: 96 }
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const techCategories = [
+    {
+      id: 0,
+      name: "AI Revolution",
+      icon: "🤖",
+      color: "from-purple-600 to-pink-600",
+      description: "Experience the future of artificial intelligence",
+      features: [
+        "Autonomous AI Agents",
+        "Quantum-Enhanced AI",
+        "Synthetic Intelligence",
+        "Edge AI Networks"
+      ]
+    },
+    {
+      id: 1,
+      name: "Quantum Computing",
+      icon: "⚡",
+      color: "from-cyan-600 to-blue-600",
+      description: "Unlock exponential computing power",
+      features: [
+        "Exponential Speed",
+        "Quantum Cryptography",
+        "Molecular Simulation",
+        "Optimization Problems"
+      ]
+    },
+    {
+      id: 2,
+      name: "Neural Interfaces",
+      icon: "🧬",
+      color: "from-green-600 to-emerald-600",
+      description: "Bridge the gap between mind and machine",
+      features: [
+        "Brain-Computer Interfaces",
+        "Neural Implants",
+        "Thought-Controlled Systems",
+        "Cognitive Enhancement"
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const InteractiveTechShowcase: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('ai');
+  
+  const technologies = {
+    ai: {
+      title: "Artificial Intelligence",
+      subtitle: "Consciousness-Level AI Systems",
+      icon: "🧠",
+      color: "from-blue-500 to-purple-500",
+      description: "Experience the next generation of AI with consciousness-like capabilities, emotional intelligence, and autonomous decision-making.",
+      features: [
+        "Self-aware AI systems",
+        "Emotional intelligence processing",
+        "Autonomous problem solving",
+        "Human-AI collaboration",
+        "Real-time learning adaptation",
+        "Ethical decision making"
+      ],
+      stats: [
+        { label: "Processing Power", value: "10x faster", icon: "⚡" },
+        { label: "Accuracy Rate", value: "99.9%", icon: "🎯" },
+        { label: "Learning Speed", value: "1000x", icon: "📈" }
+      ]
+    },
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
     }
   ];
 
@@ -223,8 +371,14 @@ const InteractiveTechShowcase: React.FC = () => {
   }, [technologies.length]);
 
   const currentTech = technologies[activeTech];
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
 
   const currentTech = technologies[activeTech];
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1912
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
 
   const currentTech = technologies[activeTech];
       ]
@@ -233,7 +387,10 @@ const InteractiveTechShowcase: React.FC = () => {
 
 
   const currentTech = technologies[activeTech];
-cursor/fix-netlify-build-and-merge-to-main-a068
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+
+>>>>>>> main
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
     quantum: {
       title: "Quantum Computing",
       subtitle: "Exponential Computational Power",
@@ -306,7 +463,69 @@ cursor/fix-netlify-build-and-merge-to-main-a068
       color: "from-slate-600 to-gray-600",
       features: ["AI-Powered Insights", "Real-time Visualization", "Predictive Modeling", "Custom Metrics"],
       demo: "View Live Dashboard",
-      link: "/pages/AdvancedAnalyticsDashboard2026"cursor/fix-netlify-build-and-merge-to-main-a068
+>>>>>>> main
+    }
+  ];
+
+  const currentTech = technologies[activeTech];
+
+>>>>>>> cursor/create-and-deploy-new-content-8069
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+  return (
+    <div className="mb-16">
+      <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold mb-6">Interactive Technology Showcase</h2>
+          <p className="text-xl text-gray-300">Click through our revolutionary technologies</p>
+        </div>
+
+        {/* Technology Selector */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
+            {technologies.map((tech, index) => (
+              </a>
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+              <button
+                onClick={() => setIsAnimating(!isAnimating)}
+                className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold"
+              >
+                {isAnimating ? '⏸️ Pause Animation' : '▶️ Start Animation'}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Main Technology Display */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          {/* Technology Info */}
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
+            <div className={`bg-gradient-to-br ${currentTech.color}/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full`}>
+              <div className="text-8xl mb-6 text-center animate-pulse">
+                {currentTech.icon}
+              </div>
+              <h3 className="text-4xl font-bold mb-6 text-center">
+                {currentTech.name}
+              </h3>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                {currentTech.description}
+              </p>
+              
+              {/* Features */}
+              <div className="mb-8">
+                <h4 className="text-2xl font-bold mb-4">Key Features</h4>
+                <div className="grid grid-cols-2 gap-3">
+                  {currentTech.features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
 
               {/* Demo Button */}
               <div className="text-center">
@@ -340,7 +559,173 @@ cursor/fix-netlify-build-and-merge-to-main-a068
             </button>
             <button className="border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
               Download Brochure
-            </button>cursor/fix-netlify-build-and-merge-to-main-a068
+>>>>>>> cursor/create-and-deploy-new-content-9601
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+          {/* Technology Visual */}
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
+            <div className="relative h-full min-h-[400px]">
+              <div className={`absolute inset-0 bg-gradient-to-br ${currentTech.color} rounded-2xl opacity-20`}></div>
+              <div className="relative z-10 flex items-center justify-center h-full">
+                <motion.div
+                  key={activeTech}
+                  initial={{ scale: 0, rotate: -180 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="text-9xl"
+                >
+                  {currentTech.icon}
+                </motion.div>
+              </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                {[...Array(20)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute w-2 h-2 bg-white rounded-full opacity-30"
+                    style={{
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`,
+                    }}
+                    animate={{
+                      y: [0, -100, 0],
+                      opacity: [0.3, 1, 0.3],
+                      scale: [1, 2, 1],
+                    }}
+                    transition={{
+                      duration: 3 + Math.random() * 2,
+                      repeat: Infinity,
+                      delay: Math.random() * 2,
+                    }}
+                  />
+                ))}
+          {/* Interactive Demo */}
+          <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform -translate-x-8' : 'opacity-100 transform translate-x-0'}`}>
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full">
+              <h4 className="text-3xl font-bold mb-6 text-center">Interactive Demo</h4>
+              
+              {/* Demo Visualization */}
+              <div className="relative mb-8">
+                <div className="w-full h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-white/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl mb-4 animate-bounce">
+                      {currentTech.icon}
+                    </div>
+                    <p className="text-gray-400">Interactive {currentTech.name} Demo</p>
+                    <p className="text-sm text-gray-500 mt-2">Click to interact</p>
+                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full animate-ping"></div>
+                <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                <div className="absolute top-1/2 left-4 w-1 h-1 bg-pink-400 rounded-full animate-bounce"></div>
+              </div>
+
+              {/* Demo Controls */}
+              <div className="space-y-4">
+                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Start Interactive Demo
+                </button>
+                <button className="w-full border border-purple-400 text-purple-400 py-3 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors">
+                  View Documentation
+                </button>
+                <button className="w-full border border-cyan-400 text-cyan-400 py-3 rounded-lg hover:bg-cyan-50 hover:text-cyan-600 transition-colors">
+                  Schedule Live Demo
+                </button>
+              </div>
+
+              {/* Real-time Data */}
+              <div className="mt-8 p-4 bg-gray-800/50 rounded-lg">
+                <h5 className="text-lg font-bold mb-3 text-center">Real-time Data</h5>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-purple-400">
+                      {Math.floor(Math.random() * 100) + 80}%
+                    </div>
+                    <div className="text-sm text-gray-400">Active</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-cyan-400">
+                      {Math.floor(Math.random() * 1000) + 500}
+                    </div>
+                    <div className="text-sm text-gray-400">Processes</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-emerald-400">
+                      {Math.floor(Math.random() * 50) + 25}ms
+                    </div>
+                    <div className="text-sm text-gray-400">Latency</div>
+                  </div>
+                </div>
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1912
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-1912
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+              </div>
+            </div>
+          </div>
+
+          {/* Visual Element */}
+          <div className="hidden md:block">
+            <div className="text-8xl opacity-30 text-center">
+              {technologies[activeTech].icon}
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+        {/* Technology Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">∞</div>
+            <div className="text-gray-300">Computational Power</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">0ms</div>
+            <div className="text-gray-300">Processing Latency</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">100%</div>
+            <div className="text-gray-300">Accuracy Rate</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-white mb-2">∞</div>
+            <div className="text-gray-300">Learning Capacity</div>
+          </div>
+        </div>
+            </motion.div>
+          ))}
+>>>>>>> cursor/create-and-deploy-new-content-04f4
+>>>>>>> main
+        </div>
+            </motion.div>
+          ))}
+>>>>>>> cursor/create-and-deploy-new-content-f995
+        </div>
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
       {/* Technology Grid */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         {technologies.map((tech, index) => (
@@ -357,12 +742,16 @@ cursor/fix-netlify-build-and-merge-to-main-a068
             </div>
           </div>
         ))}
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
       </div>
     </div>
   );
 };
 
 export default InteractiveTechShowcase;
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
         {/* Technology Comparison */}
         <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
           <h3 className="text-3xl font-bold text-center mb-8">Technology Comparison</h3>
@@ -472,6 +861,9 @@ export default InteractiveTechShowcase;
               </button>
             </motion.div>
 
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
@@ -496,6 +888,10 @@ export default InteractiveTechShowcase;
               </button>
             </motion.div>
 export default InteractiveTechShowcase;
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
+>>>>>>> cursor/create-and-deploy-new-content-1912
+>>>>>>> cursor/create-and-deploy-new-content-1c02
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup
 
               {/* Demo Button */}
               <div className="text-center">
@@ -517,4 +913,19 @@ export default InteractiveTechShowcase;
           </div>
         </div>
 
+>>>>>>> cursor/create-and-deploy-new-content-502e
+>>>>>>> cursor/create-and-deploy-new-content-5863
+>>>>>>> cursor/create-and-deploy-new-content-01e2
+>>>>>>> cursor/create-and-deploy-new-content-36f9
+>>>>>>> main
+>>>>>>> main
+>>>>>>> cursor/create-and-deploy-new-content-f995
+>>>>>>> cursor/create-and-deploy-new-content-3fd6
 export default InteractiveTechShowcase;
+>>>>>>> cursor/create-and-deploy-new-content-b461
+>>>>>>> cursor/create-and-deploy-new-content-079e
+>>>>>>> cursor/create-and-deploy-new-content-e4b8
+export default InteractiveTechShowcase;
+>>>>>>> a7d9dd3a70ff86f87fa115e469bc3b5277dcb081
+>>>>>>> cursor/create-and-deploy-new-content-bec3
+>>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c:src/components/InteractiveTechShowcase.tsx.backup

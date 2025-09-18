@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Play
   Pause
@@ -106,13 +105,9 @@ const InteractiveTechDemo2025PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    
+    <div>
       {isVisible && (
         <div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 overflow-hidden"
         >
           {/* Background Pattern */}
@@ -120,16 +115,12 @@ const InteractiveTechDemo2025PromotionBanner = () => {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.1),transparent_50%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(168,85,247,0.1),transparent_50%)]" />
           </div>
-
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center justify-between">
               {/* Left Content */}
               <div className="flex-1 pr-8">
                 <div
                   key={currentDemo}
-                  initial={{ opacity: 0x: 20 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.5 }}
                   className="space-y-4"
                 >
                   {/* Badge */}
@@ -137,28 +128,23 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                     <Play className="w-4 h-4 text-blue-400 mr-2" />
                     <span className="text-sm font-medium text-white">Interactive Demo Available</span>
                   </div>
-
                   {/* Title */}
                   <h2 className="text-3xl md:text-4xl font-bold text-white">
                     {demos[currentDemo].title}
                   </h2>
-
                   {/* Subtitle */}
                   <p className="text-lg text-indigo-200 font-medium">
                     {demos[currentDemo].subtitle}
                   </p>
-
                   {/* Description */}
                   <p className="text-gray-300 text-base max-w-2xl">
                     {demos[currentDemo].description}
                   </p>
-
                   {/* Metrics */}
                   <div className="flex items-center text-sm text-gray-400">
                     <TrendingUp className="w-4 h-4 mr-2" />
                     <span>{demos[currentDemo].metrics}</span>
                   </div>
-
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mt-4">
                     {features.slice(0, 3).map((feature, index) => {
@@ -171,7 +157,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       );
                     })}
                   </div>
-
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 mt-6">
                     <button 
@@ -189,14 +174,10 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg:block flex-shrink-0">
                 <div
                   key={currentDemo}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  transition={{ duration: 0.5 }}
                   className="relative w-80 h-48"
                 >
                   {/* Demo Container */}
@@ -210,7 +191,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         <p className="text-gray-300 text-sm">Interactive Experience</p>
                       </div>
                     </div>
-                    
                     {/* Demo Visualization */}
                     <div className="relative h-24 bg-gradient-to-br from-slate-800 to-slate-900 rounded-lg overflow-hidden border border-white/10 mb-4">
                       {/* Animated Elements */}
@@ -220,11 +200,9 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                             {[...Array(8)].map((_, i) => (
                               <div
                                 key={i}
-                                animate={{
                                   scale: isPlaying ? [1.21] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
                                 }}
-                                transition={{
                                   duration: 2,
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.1
@@ -234,17 +212,14 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Quantum') && (
                           <div className="relative">
                             {[...Array(4)].map((_, i) => (
                               <div
                                 key={i}
-                                animate={{
                                   rotate: isPlaying ? 360 : 0,
                                   scale: isPlaying ? [1.1] : 1
                                 }}
-                                transition={{
                                   duration: 3,
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.2
@@ -258,17 +233,14 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Brain-Computer') && (
                           <div className="w-full h-16 relative">
                             {[...Array(3)].map((_, i) => (
                               <div
                                 key={i}
-                                animate={{
                                   scaleY: isPlaying ? [121] : 1,
                                   opacity: isPlaying ? [0.510.5] : 0.7
                                 }}
-                                transition={{
                                   duration: 1.5,
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.2
@@ -282,17 +254,14 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                             ))}
                           </div>
                         )}
-                        
                         {demos[currentDemo].title.includes('Edge AI') && (
                           <div className="grid grid-cols-3 gap-2">
                             {[...Array(6)].map((_, i) => (
                               <div
                                 key={i}
-                                animate={{
                                   scale: isPlaying ? [1.31] : 1,
                                   opacity: isPlaying ? [0.610.6] : 0.8
                                 }}
-                                transition={{
                                   duration: 2,
                                   repeat: isPlaying ? Infinity : 0,
                                   delay: i * 0.1
@@ -304,7 +273,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                         )}
                       </div>
                     </div>
-
                     {/* Demo Controls */}
                     <div className="flex items-center justify-center space-x-2">
                       <button 
@@ -321,19 +289,14 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                       </button>
                     </div>
                   </div>
-
                   {/* Floating Elements */}
                   <div
-                    animate={{ y: [0-10] }}
-                    transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center"
                   >
                     <Eye className="w-6 h-6 text-white" />
                   </div>
 
                   <div
-                    animate={{ y: [010] }}
-                    transition={{ duration: 2.5repeat: Infinityease: "easeInOut" }}
                     className="absolute -bottom-2 -left-2 w-10 h-10 bg-gradient-to-r from-green-400 to-teal-500 rounded-full flex items-center justify-center"
                   >
                     <MousePointer className="w-5 h-5 text-white" />
@@ -341,7 +304,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
                 </div>
               </div>
             </div>
-
             {/* Demo Indicators */}
             <div className="flex justify-center mt-6 space-x-2">
               {demos.map((_, index) => (
@@ -357,7 +319,6 @@ const InteractiveTechDemo2025PromotionBanner = () => {
               ))}
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={() => setIsDismissed(true)}
@@ -367,8 +328,10 @@ const InteractiveTechDemo2025PromotionBanner = () => {
           </button>
         </div>
       )}
-    
+    </div>
   );
-};
+
+
 
 export default InteractiveTechDemo2025PromotionBanner;
+</div></div></div></div></div></div>

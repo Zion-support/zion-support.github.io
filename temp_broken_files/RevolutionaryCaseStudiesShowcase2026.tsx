@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   ArrowRight
   CheckCircle
@@ -144,9 +143,6 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -159,9 +155,6 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
 
         {/* Overall Stats */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -177,9 +170,6 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
 
         {/* Case Study Selector */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {caseStudies.map((caseStudyindex) => (
@@ -203,13 +193,8 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
         </div>
 
         {/* Active Case Study Details */}
-        <AnimatePresence mode="wait">
           <div
             key={activeCase}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
             className="bg-white rounded-2xl shadow-xl p-8 mb-12"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -227,18 +212,15 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
                     <p className="text-gray-500">{caseStudies[activeCase].industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
                     <p className="text-gray-600">{caseStudies[activeCase].challenge}</p>
                   </div>
-
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
                     <p className="text-gray-600">{caseStudies[activeCase].solution}</p>
                   </div>
-
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
@@ -251,7 +233,6 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Right Column - Results & Testimonial */}
               <div>
                 <h4 className="font-semibold text-gray-900 mb-4">Results</h4>
@@ -273,7 +254,6 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
                     <div className="text-sm text-gray-600">Satisfaction</div>
                   </div>
                 </div>
-
                 <div className="flex items-center space-x-6 mb-6 text-sm text-gray-600">
                   <div className="flex items-center space-x-2">
                     <Clock className="w-4 h-4" />
@@ -284,7 +264,6 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
                     <span>{caseStudies[activeCase].team}</span>
                   </div>
                 </div>
-
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Client Testimonial</h4>
                   <p className="text-gray-600 italic mb-4">"{caseStudies[activeCase].testimonial.content}"</p>
@@ -296,13 +275,10 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
@@ -329,5 +305,6 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {
     </section>
   );
 };
+
 
 export default RevolutionaryCaseStudiesShowcase2026;

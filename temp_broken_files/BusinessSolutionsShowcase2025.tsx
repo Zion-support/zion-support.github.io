@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Building2
   TrendingUp
@@ -153,18 +152,13 @@ const BusinessSolutionsShowcase2025 = () => {
   const currentCategory = categories[activeCategory];
 
   return (
-    <motion.section
+    <divsection
       className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50"
-      variants={containerVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16" variants={itemVariants}>
           <div
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 text-sm font-medium mb-4"
-            whileHover={{ scale: 1.05 }}
           >
             <Building2 className="w-4 h-4 mr-2" />
             Business Solutions 2025
@@ -179,7 +173,6 @@ const BusinessSolutionsShowcase2025 = () => {
         </div>
 
         {/* Category Navigation */}
-        <div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">
             {categories.map((categoryindex) => {
               const Icon = category.icon;
@@ -202,21 +195,14 @@ const BusinessSolutionsShowcase2025 = () => {
         </div>
 
         {/* Solutions Grid */}
-        <AnimatePresence mode="wait">
           <div
             key={activeCategory}
-            variants={itemVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {currentCategory.solutions.map((solutionindex) => (
               <div
                 key={index}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
-                whileHover={{ y: -5scale: 1.02 }}
-                variants={itemVariants}
               >
                 {/* Header */}
                 <div className="mb-6">
@@ -230,7 +216,6 @@ const BusinessSolutionsShowcase2025 = () => {
                     {solution.description}
                   </p>
                 </div>
-
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Features</h4>
@@ -243,7 +228,6 @@ const BusinessSolutionsShowcase2025 = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 bg-gray-50 rounded-lg">
@@ -255,7 +239,6 @@ const BusinessSolutionsShowcase2025 = () => {
                     <div className="text-xs text-gray-500">Time to Value</div>
                   </div>
                 </div>
-
                 {/* Action Button */}
                 <button className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-3 rounded-xl font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center group">
                   <span>Learn More</span>
@@ -264,10 +247,9 @@ const BusinessSolutionsShowcase2025 = () => {
               </div>
             ))}
           </div>
-        
+        </div>
 
         {/* Success Stories */}
-        <div className="mt-20" variants={itemVariants}>
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-4">Proven Results</h3>
@@ -275,7 +257,6 @@ const BusinessSolutionsShowcase2025 = () => {
                 Join thousands of businesses that have transformed their operations
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">10,000+</div>
@@ -294,7 +275,6 @@ const BusinessSolutionsShowcase2025 = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16" variants={itemVariants}>
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Business?
@@ -315,8 +295,9 @@ const BusinessSolutionsShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </divsection>
   );
-};
+
+
 
 export default BusinessSolutionsShowcase2025;

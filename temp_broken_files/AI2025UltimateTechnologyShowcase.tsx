@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Brain
   Cpu
@@ -137,13 +136,9 @@ const AI2025UltimateTechnologyShowcase = () => {
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -173,9 +168,6 @@ const AI2025UltimateTechnologyShowcase = () => {
 
         {/* Technology Tabs */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -202,9 +194,6 @@ const AI2025UltimateTechnologyShowcase = () => {
         {/* Active Technology Display */}
         <div
           key={activeTab}
-          initial={{ opacity: 0x: 20 }}
-          animate={{ opacity: 1x: 0 }}
-          transition={{ duration: 0.5 }}
           className="bg-white/5 backdrop-blur-lg rounded-3xl p-8 mb-16 border border-white/10"
         >
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -218,7 +207,6 @@ const AI2025UltimateTechnologyShowcase = () => {
                   <p className="text-gray-300">{currentTech.description}</p>
                 </div>
               </div>
-
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-white/10 rounded-xl p-4 text-center">
                   <div className="text-3xl font-bold text-white mb-2">{currentTech.stats.value}</div>
@@ -229,7 +217,6 @@ const AI2025UltimateTechnologyShowcase = () => {
                   <div className="text-gray-400 text-sm">Launch Year</div>
                 </div>
               </div>
-
               <a
                 href={currentTech.link}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -238,7 +225,6 @@ const AI2025UltimateTechnologyShowcase = () => {
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
-
             <div>
               <h4 className="text-xl font-semibold text-white mb-6">Key Features</h4>
               <div className="grid grid-cols-1 gap-3">
@@ -255,9 +241,6 @@ const AI2025UltimateTechnologyShowcase = () => {
 
         {/* Success Stories */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
@@ -278,9 +261,6 @@ const AI2025UltimateTechnologyShowcase = () => {
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl p-12 border border-white/10"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -307,6 +287,7 @@ const AI2025UltimateTechnologyShowcase = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default AI2025UltimateTechnologyShowcase;

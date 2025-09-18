@@ -1,62 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-
 const UltimateContentPromotionalBanner2027: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const ultimateContent = [
-    {
-      title: "Ultimate Tech Revolution 2027",
-      description: "The most advanced technologies ever conceived - consciousness, quantum mechanics, and synthetic reality converge",
-      icon: "🚀",
-      link: "/pages/UltimateTechRevolution2027",
-      gradient: "from-purple-600 to-pink-600",
-      features: ["Consciousness Computing", "Quantum Consciousness", "Synthetic Reality", "Transcendent AI"],
-      badge: "BREAKTHROUGH"
-    },
-    {
-      title: "Consciousness Computing 2027",
-      description: "AI systems that achieve true consciousness, self-awareness, and transcend human limitations",
-      icon: "🧠",
-      link: "/pages/ConsciousnessComputing2027",
-      gradient: "from-cyan-600 to-blue-600",
-      features: ["Self-aware AI", "Digital Immortality", "Consciousness Merging", "Reality Creation"],
-      badge: "REVOLUTIONARY"
-    },
-    {
-      title: "Quantum Consciousness Revolution",
-      description: "The ultimate convergence of quantum mechanics and consciousness for reality manipulation",
-      icon: "⚛️",
-      link: "/pages/QuantumConsciousnessRevolution2027",
-      gradient: "from-emerald-600 to-teal-600",
-      features: ["Quantum Entanglement", "Superposition Thoughts", "Reality Tunneling", "Universal Coherence"],
-      badge: "UNPRECEDENTED"
-    }
-  ];
-
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % ultimateContent.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, ultimateContent.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % ultimateContent.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + ultimateContent.length) % ultimateContent.length);
-  };
-
   return (
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
       {/* Animated Background */}
@@ -64,50 +8,38 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="absolute top-0 left-0 w-full h-full">
           <div
-            animate={{ 
               x: [0, 100, 0],
               y: [0, 50, 0],
               rotate: [0, 180, 360]
             }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full"
           ></div>
           <div
-            animate={{ 
               x: [0, -80, 0],
               y: [0, 100, 0],
               rotate: [360, 180, 0]
             }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
             className="absolute top-32 right-20 w-16 h-16 bg-pink-500/20 rounded-full"
           ></div>
           <div
-            animate={{ 
               x: [0, 60, 0],
               y: [0, -30, 0],
               rotate: [0, -180, -360]
             }}
-            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="absolute bottom-20 left-1/4 w-12 h-12 bg-cyan-500/20 rounded-full"
           ></div>
           <div
-            animate={{ 
               x: [0, -40, 0],
               y: [0, 80, 0],
               rotate: [360, 0, -360]
             }}
-            transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
             className="absolute bottom-32 right-1/3 w-14 h-14 bg-emerald-500/20 rounded-full"
           ></div>
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -125,13 +57,8 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
         {/* Main Carousel */}
         <div className="relative max-w-8xl mx-auto">
           <div className="relative overflow-hidden rounded-3xl">
-            <AnimatePresence mode="wait">
               <div
                 key={currentSlide}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.7 }}
                 className="relative"
               >
                 <div className={`bg-gradient-to-br ${ultimateContent[currentSlide].gradient} p-16 rounded-3xl`}>
@@ -147,21 +74,16 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                         </div>
                       </div>
                       <p className="text-2xl opacity-90 mb-8 leading-relaxed">{ultimateContent[currentSlide].description}</p>
-                      
                       <div className="grid grid-cols-2 gap-4 mb-8">
                         {ultimateContent[currentSlide].features.map((feature, index) => (
                           <div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center hover:scale-105 transition-all duration-300"
                           >
                             <span className="text-lg font-semibold">{feature}</span>
                           </div>
                         ))}
                       </div>
-                      
                       <div className="flex gap-6">
                         <a
                           href={ultimateContent[currentSlide].link}
@@ -174,7 +96,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                         </button>
                       </div>
                     </div>
-                    
                     <div className="relative">
                       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-10">
                         <h4 className="text-3xl font-bold mb-6">Why This Matters</h4>
@@ -205,9 +126,8 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
                   </div>
                 </div>
               </div>
-            
+            </div>
           </div>
-
           {/* Navigation Controls */}
           <button
             onClick={prevSlide}
@@ -217,7 +137,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
           <button
             onClick={nextSlide}
             className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-4 rounded-full hover:bg-white/30 transition-all duration-300 hover:scale-110"
@@ -226,7 +145,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Play/Pause Button */}
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -243,7 +161,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             )}
           </button>
         </div>
-
         {/* Slide Indicators */}
         <div className="flex justify-center space-x-4 mt-12">
           {ultimateContent.map((_, index) => (
@@ -256,7 +173,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Quick Access Grid */}
         <div className="mt-20">
           <h3 className="text-4xl font-bold text-center mb-12">Quick Access to All Ultimate Content</h3>
@@ -264,9 +180,7 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             {ultimateContent.map((item, index) => (
               <div
                 key={item.title}
-                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-gradient-to-br ${item.gradient} p-8 rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer`}
                 onClick={() => setCurrentSlide(index)}
               >
@@ -288,12 +202,9 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12">
@@ -320,4 +231,6 @@ const UltimateContentPromotionalBanner2027: React.FC = () => {
   );
 };
 
+
 export default UltimateContentPromotionalBanner2027;
+</p></p></p></p>

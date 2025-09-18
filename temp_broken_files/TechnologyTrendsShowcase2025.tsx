@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Zap
@@ -151,35 +150,28 @@ const TechnologyTrendsShowcase2025 = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 text-sm font-medium mb-4"
           >
             <TrendingUp className="w-4 h-4 mr-2" />
             Technology Trends Showcase 2025
           </div>
           
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+          <divh2
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"
           >
             The Future of Technology is
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Here Today</span>
-          </motion.h2>
+          </divh2>
           
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
+          <divp
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6delay: 0.2 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
             Discover the cutting-edge technologies that will shape the next decade and learn how to prepare your business for the future.
-          </motion.p>
+          </divp>
         </div>
-
         {/* Trend Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {trends.map((trendindex) => {
@@ -191,8 +183,6 @@ const TechnologyTrendsShowcase2025 = () => {
                   setActiveTrend(index);
                   setIsPlaying(false);
                 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeTrend === index
                     ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
@@ -205,19 +195,12 @@ const TechnologyTrendsShowcase2025 = () => {
             );
           })}
         </div>
-
         {/* Main Trend Display */}
-        <AnimatePresence mode="wait">
           <div
             key={activeTrend}
-            initial={{ opacity: 0x: 20 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -20 }}
-            transition={{ duration: 0.5 }}
             className="bg-white rounded-2xl shadow-xl overflow-hidden mb-12"
           >
             <div className={`h-2 bg-gradient-to-r ${currentTrend.color}`} />
-            
             <div className="p-8 md:p-12">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left Side - Trend Details */}
@@ -245,11 +228,9 @@ const TechnologyTrendsShowcase2025 = () => {
                       </div>
                     </div>
                   </div>
-
                   <p className="text-lg text-gray-600 mb-8">
                     {currentTrend.description}
                   </p>
-
                   {/* Stats Grid */}
                   <div className="grid grid-cols-3 gap-4 mb-8">
                     <div className="text-center p-4 bg-gray-50 rounded-lg">
@@ -271,15 +252,11 @@ const TechnologyTrendsShowcase2025 = () => {
                       <div className="text-sm text-gray-600">Cost Reduction</div>
                     </div>
                   </div>
-
                   {/* Features */}
                   <div className="space-y-3">
                     {currentTrend.features.map((featureindex) => (
                       <div
                         key={index}
-                        initial={{ opacity: 0x: -20 }}
-                        animate={{ opacity: 1x: 0 }}
-                        transition={{ delay: index * 0.1 }}
                         className="flex items-center"
                       >
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -288,11 +265,9 @@ const TechnologyTrendsShowcase2025 = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Right Side - Visual */}
                 <div className="relative">
                   <div
-                    whileHover={{ scale: 1.02 }}
                     className={`h-80 rounded-xl bg-gradient-to-br ${currentTrend.color} p-8 text-white relative overflow-hidden`}
                   >
                     <div className="absolute inset-0 bg-black/10" />
@@ -317,7 +292,7 @@ const TechnologyTrendsShowcase2025 = () => {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {/* Auto-play Controls */}
         <div className="flex items-center justify-center gap-4 mb-12">
@@ -333,13 +308,10 @@ const TechnologyTrendsShowcase2025 = () => {
             {isPlaying ? 'Auto-playing' : 'Paused'}
           </button>
         </div>
-
         {/* Future Predictions */}
         <div className="mb-16">
           <div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -354,9 +326,7 @@ const TechnologyTrendsShowcase2025 = () => {
             {predictions.map((predictionindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-lg p-6 text-center"
               >
                 <div className="text-3xl font-bold text-purple-600 mb-2">
@@ -386,12 +356,9 @@ const TechnologyTrendsShowcase2025 = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white"
         >
           <h3 className="text-3xl font-bold mb-4">
@@ -402,16 +369,12 @@ const TechnologyTrendsShowcase2025 = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-white text-purple-600 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center"
             >
               <Rocket className="w-5 h-5 mr-2" />
               Explore Solutions
             </button>
             <button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
             >
               <Lightbulb className="w-5 h-5 mr-2" />
@@ -422,6 +385,8 @@ const TechnologyTrendsShowcase2025 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default TechnologyTrendsShowcase2025;
+</div></div></div></div></div></div></div>

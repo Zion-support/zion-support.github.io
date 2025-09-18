@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Sparkles
@@ -198,23 +197,18 @@ const AIPoweredContentRecommendationSystem = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-700 text-sm font-medium mb-6">
             <Brain className="w-4 h-4 mr-2" />
             AI-Powered Recommendations
           </div>
-          
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Intelligent Content
             <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
               Recommendation System
             </span>
           </h1>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Discover the most relevant content tailored to your interests using our advanced AI algorithms. 
             Get personalized recommendations that match your reading patterns and preferences.
@@ -223,9 +217,6 @@ const AIPoweredContentRecommendationSystem = () => {
 
         {/* AI Stats */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12"
         >
           {[
@@ -246,9 +237,6 @@ const AIPoweredContentRecommendationSystem = () => {
 
         {/* Category Filter */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-8"
         >
           <div className="flex flex-wrap gap-2 justify-center">
@@ -275,8 +263,6 @@ const AIPoweredContentRecommendationSystem = () => {
         {/* AI Processing Indicator */}
         {isLoading && (
           <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             className="text-center mb-8"
           >
             <div className="inline-flex items-center px-6 py-3 bg-purple-100 rounded-full text-purple-700">
@@ -285,23 +271,16 @@ const AIPoweredContentRecommendationSystem = () => {
             </div>
           </div>
         )}
-
         {/* Recommendations Grid */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          
+          <div>
             {recommendations.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type);
               return (
                 <div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
                 >
                   {/* Header */}
@@ -332,13 +311,10 @@ const AIPoweredContentRecommendationSystem = () => {
                         )}
                       </div>
                     </div>
-                    
                     <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
                       {item.title}
                     </h3>
-                    
                     <p className="text-sm text-gray-600 mb-4">by {item.author}</p>
-                    
                     <div className="flex flex-wrap gap-2 mb-4">
                       {item.tags.slice(03).map((tagIndex) => (
                         <span key={tagIndex} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
@@ -347,7 +323,6 @@ const AIPoweredContentRecommendationSystem = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* AI Insights */}
                   <div className="p-6 bg-gray-50">
                     <div className="flex items-center justify-between mb-4">
@@ -359,9 +334,7 @@ const AIPoweredContentRecommendationSystem = () => {
                         {item.confidence}% match
                       </div>
                     </div>
-                    
                     <p className="text-sm text-gray-600 mb-4">{item.reason}</p>
-                    
                     <div className="flex items-center justify-between">
                       <div className="flex items-center">
                         <span className="text-sm text-gray-500 mr-2">AI Score:</span>
@@ -375,7 +348,6 @@ const AIPoweredContentRecommendationSystem = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Actions */}
                   <div className="p-6 bg-white">
                     <div className="flex items-center justify-between">
@@ -402,14 +374,11 @@ const AIPoweredContentRecommendationSystem = () => {
                 </div>
               );
             })}
-          
+          </div>
         </div>
 
         {/* Load More */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-12"
         >
           <button 
@@ -423,6 +392,7 @@ const AIPoweredContentRecommendationSystem = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default AIPoweredContentRecommendationSystem;

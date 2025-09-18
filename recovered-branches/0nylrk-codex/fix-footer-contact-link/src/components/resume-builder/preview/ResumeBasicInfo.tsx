@@ -1,16 +1,12 @@
+import React from 'react';
 
-import { ResumeBasicInfo } from '@/types/resume';
-
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo;
-}
-
-export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
+const ResumeBasicInfo: React.FC = () => {
   return (
-    <div className="space-y-2 border-b pb-4 mb-6">
-      <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
-      {basicInfo.summary && (
-        <p className="text-sm">{basicInfo.summary}</p>
-      )}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ResumeBasicInfo</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-}
+  );
+};
+
+export default ResumeBasicInfo;

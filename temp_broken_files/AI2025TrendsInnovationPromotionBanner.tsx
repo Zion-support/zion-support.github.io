@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   Brain
@@ -44,18 +43,14 @@ const AI2025TrendsInnovationPromotionBanner = () => {
     <section className="py-16 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.03%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%3D%221.5%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40"></div>
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div
-            initial={{ opacity: 0x: -50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8 }}
             className="space-y-8"
           >
             {/* Badge */}
@@ -63,7 +58,6 @@ const AI2025TrendsInnovationPromotionBanner = () => {
               <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-blue-300 font-medium">New: AI Trends 2025</span>
             </div>
-
             {/* Main Heading */}
             <div>
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -72,21 +66,16 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                 <br />
                 of AI Innovation
               </h2>
-              
               <p className="text-xl text-gray-300 leading-relaxed mb-8">
                 Explore revolutionary AI trends and cutting-edge innovations that will transform your business in 2025. 
                 Stay ahead with the latest technology insights and implementation strategies.
               </p>
             </div>
-
             {/* Features List */}
             <div className="space-y-4">
               {features.map((featureindex) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0x: -20 }}
-                  animate={isVisible ? { opacity: 1x: 0 } : {}}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="flex items-center space-x-3"
                 >
                   <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
@@ -94,12 +83,9 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                 </div>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center"
               >
                 Explore AI Trends
@@ -107,8 +93,6 @@ const AI2025TrendsInnovationPromotionBanner = () => {
               </button>
               
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Clock className="w-5 h-5 mr-2" />
@@ -119,9 +103,6 @@ const AI2025TrendsInnovationPromotionBanner = () => {
 
           {/* Right Content - Stats Display */}
           <div
-            initial={{ opacity: 0x: 50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : {}}
-            transition={{ duration: 0.8delay: 0.2 }}
             className="relative"
           >
             {/* Main Stats Card */}
@@ -130,14 +111,10 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">Proven Results</h3>
                 <p className="text-gray-300">Real impact from AI implementation</p>
               </div>
-
               {/* Animated Stat Display */}
               <div className="text-center mb-8">
                 <div
                   key={currentStat}
-                  initial={{ scale: 0.8opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.5 }}
                   className="space-y-4"
                 >
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
@@ -151,7 +128,6 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                   </div>
                 </div>
               </div>
-
               {/* Progress Indicators */}
               <div className="flex justify-center space-x-2">
                 {stats.map((_index) => (
@@ -164,31 +140,22 @@ const AI2025TrendsInnovationPromotionBanner = () => {
                 ))}
               </div>
             </div>
-
             {/* Floating Elements */}
             <div
-              animate={{ y: [0-10] }}
-              transition={{ duration: 3repeat: Infinity }}
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center"
             >
               <Star className="w-8 h-8 text-white" />
             </div>
 
             <div
-              animate={{ y: [010] }}
-              transition={{ duration: 4repeat: Infinitydelay: 1 }}
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center"
             >
               <Zap className="w-6 h-6 text-white" />
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
@@ -208,4 +175,6 @@ const AI2025TrendsInnovationPromotionBanner = () => {
   );
 };
 
+
 export default AI2025TrendsInnovationPromotionBanner;
+</div></div></div>

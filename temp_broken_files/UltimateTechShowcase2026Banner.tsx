@@ -1,7 +1,4 @@
-'use client';
-
 import React from 'react';
-
 ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAward
 
 const UltimateTechShowcase2026Banner = () => {
@@ -51,27 +48,22 @@ const UltimateTechShowcase2026Banner = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
             <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-blue-300 font-medium">2026 Ultimate Technology Showcase</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Experience the
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Future</span>
             <br />
             of Technology
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover the most advanced AIquantum computingand neural interface technologies 
             that are reshaping industries and transforming the way we work and live.
@@ -80,17 +72,13 @@ const UltimateTechShowcase2026Banner = () => {
 
         {/* Technology Showcase */}
         <div
-          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           {technologies.map((techindex) => (
             <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-6">
@@ -106,11 +94,9 @@ const UltimateTechShowcase2026Banner = () => {
                   </div>
                 </div>
               </div>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {tech.description}
               </p>
-              
               <div className="space-y-3">
                 <div className="flex justify-between text-sm text-gray-400">
                   <span>Development Progress</span>
@@ -118,9 +104,7 @@ const UltimateTechShowcase2026Banner = () => {
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
                   <div
-                    initial={{ width: 0 }}
                     whileInView={{ width: `${tech.progress}%` }}
-                    transition={{ duration: 1delay: index * 0.2 }}
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
                   ></div>
                 </div>
@@ -131,22 +115,17 @@ const UltimateTechShowcase2026Banner = () => {
 
         {/* Achievements */}
         <div
-          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
             Trusted by Industry Leaders
           </h3>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {achievements.map((achievementindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
               >
                 <div className="flex justify-center mb-4">
@@ -163,25 +142,19 @@ const UltimateTechShowcase2026Banner = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-3xl p-12">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of forward-thinking organizations already using our 
               cutting-edge technology to revolutionize their operations and achieve unprecedented growth.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
@@ -192,8 +165,6 @@ const UltimateTechShowcase2026Banner = () => {
               </button>
               
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
               >
                 Schedule Demo
@@ -206,4 +177,6 @@ const UltimateTechShowcase2026Banner = () => {
   );
 };
 
+
 export default UltimateTechShowcase2026Banner;
+</div></div>

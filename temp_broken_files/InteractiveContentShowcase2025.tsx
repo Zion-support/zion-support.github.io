@@ -1,53 +1,5 @@
-import React, { useState } from 'react';
-
-const InteractiveContentShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
   const contentData = {
     ai: {
-      title: "Revolutionary AI Breakthrough 2025",
-      description: "Experience the most advanced AI technologies reshaping industries",
-      icon: "🧠",
-      color: "from-purple-600 to-pink-600",
-      features: [
-        "Autonomous AI Consciousness",
-        "Quantum-Enhanced AI Systems", 
-        "Neural Interface AI",
-        "Creative AI Synthesis",
-        "Predictive AI Systems",
-        "Autonomous AI Agents"
-      ],
-      link: "/pages/RevolutionaryAIBreakthrough2025"
-    },
-    quantum: {
-      title: "Quantum Computing Revolution 2025",
-      description: "Witness quantum supremacy solving impossible problems",
-      icon: "⚡",
-      color: "from-cyan-600 to-blue-600",
-      features: [
-        "1000+ Qubit Processors",
-        "Quantum AI Integration",
-        "Quantum Cryptography",
-        "Molecular Simulation",
-        "Quantum Internet",
-        "Quantum Optimization"
-      ],
-      link: "/pages/QuantumComputingRevolution2025"
-    },
-    neural: {
-      title: "Neural Interface Revolution 2025",
-      description: "Bridge mind and machine with direct brain-computer communication",
-      icon: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      features: [
-        "Non-Invasive BCI",
-        "Thought Control Systems",
-        "Cognitive Augmentation",
-        "Neural AI Networks",
-        "Creative Expression",
-        "Medical Applications"
-      ],
-      link: "/pages/NeuralInterfaceRevolution2025"
       title: 'AI Revolution',
       icon: '🧠',
       color: 'from-purple-600 to-pink-600',
@@ -93,25 +45,22 @@ const InteractiveContentShowcase2025: React.FC = () => {
           'Longevity and anti-aging therapies'
         ],
         link: '/pages/AdvancedBiotechRevolution2026'
-      }cursor/fix-netlify-build-and-merge-to-main-a068
           </p>
         </div>
-
+  const [activeTab, setActiveTab] = useState('breakthrough');
+    }
+  };
+  const activeContent = contentTabs[activeTab as keyof typeof contentTabs];
+  return (
+            </div>
+          ))}
+        </div>
+        </div>
+      </div>
+    </div>
+  );
+};
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 flex space-x-2">
-            {Object.entries(contentData).map(([key, content]) => (
-              <button
-                key={key}
-                onClick={() => setActiveTab(key)}
-                className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
-                  activeTab === key
-                    ? `bg-gradient-to-r ${content.color} text-white shadow-lg`
-                    : 'text-white/70 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                <span className="text-2xl mr-2">{content.icon}</span>
-                {content.title.split(' ')[0]}
         <div className="flex justify-center mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">
             {Object.entries(contentTabs).map(([key, tab]) => (
@@ -125,7 +74,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
                 }`}
               >
                 <span className="text-xl mr-2">{tab.icon}</span>
-                {tab.title}cursor/fix-netlify-build-and-merge-to-main-a068
               </div>
               <div className="text-center">
                 <div className="text-8xl mb-4 opacity-50">
@@ -135,31 +83,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
                   Interactive Experience
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h3 className="text-3xl font-bold mb-4">Ready to Experience the Future?</h3>
-            <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
-              Join thousands of forward-thinking organizations already leveraging these revolutionary technologies
-            </p>
-            <div className="flex justify-center space-x-4">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-xl"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="/pages/ComprehensiveServices2025"
-                className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-xl"
-              >
-                View All Services
-              </a>
-            </div>
         {/* Additional Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           <div className="text-center">
@@ -177,10 +100,3 @@ const InteractiveContentShowcase2025: React.FC = () => {
             <h3 className="text-lg font-semibold mb-2">Future Predictions</h3>
             <p className="text-sm opacity-90">AI-powered predictions about technology trends and developments</p>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default InteractiveContentShowcase2025;

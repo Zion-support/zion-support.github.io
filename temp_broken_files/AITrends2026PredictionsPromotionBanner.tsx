@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   TrendingUp
   Brain
@@ -72,19 +71,14 @@ const AITrends2026PredictionsPromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    
+    <div>
       {isVisible && (
         <div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 overflow-hidden"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-[url('/api/placeholder/1920/200')] bg-cover bg-center opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 via-purple-900/80 to-indigo-900/80"></div>
-          
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(20)].map((_i) => (
@@ -95,11 +89,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                 }}
-                animate={{
                   y: [0-30],
                   opacity: [0.40.80.4],
                 }}
-                transition={{
                   duration: 3 + Math.random() * 2,
                   repeat: Infinity,
                   delay: Math.random() * 2,
@@ -107,29 +99,23 @@ const AITrends2026PredictionsPromotionBanner = () => {
               />
             ))}
           </div>
-
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
                 <div
-                  initial={{ opacity: 0x: -30 }}
-                  animate={{ opacity: 1x: 0 }}
-                  transition={{ duration: 0.6delay: 0.2 }}
                   className="mb-6"
                 >
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-bold mb-4">
                     <TrendingUp className="w-4 h-4 mr-2" />
                     AI TRENDS & PREDICTIONS 2026
                   </div>
-                  
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Future Technology
                     <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                       Predictions
                     </span>
                   </h2>
-                  
                   <p className="text-lg text-gray-300 max-w-2xl">
                     Expert predictions and probability assessments for the most significant 
                     technological breakthroughs expected in 2026.
@@ -139,10 +125,6 @@ const AITrends2026PredictionsPromotionBanner = () => {
                 {/* Rotating Predictions */}
                 <div
                   key={currentPrediction}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
                   className="flex items-center justify-center lg:justify-start mb-6"
                 >
                   <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${predictions[currentPrediction].color} flex items-center justify-center mr-4`}>
@@ -170,9 +152,6 @@ const AITrends2026PredictionsPromotionBanner = () => {
                   {stats.map((statindex) => (
                     <div
                       key={index}
-                      initial={{ opacity: 0scale: 0.8 }}
-                      animate={{ opacity: 1scale: 1 }}
-                      transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                       className="text-center"
                     >
                       <div className="flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-2">
@@ -183,7 +162,6 @@ const AITrends2026PredictionsPromotionBanner = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <a
@@ -194,7 +172,6 @@ const AITrends2026PredictionsPromotionBanner = () => {
                     View Predictions
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </a>
-                  
                   <a
                     href="/newsletter-signup"
                     className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-bold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
@@ -204,21 +181,14 @@ const AITrends2026PredictionsPromotionBanner = () => {
                   </a>
                 </div>
               </div>
-
               {/* Right Content - Prediction Cards */}
               <div
-                initial={{ opacity: 0x: 30 }}
-                animate={{ opacity: 1x: 0 }}
-                transition={{ duration: 0.6delay: 0.4 }}
                 className="flex-shrink-0 w-full lg:w-96"
               >
                 <div className="grid grid-cols-1 gap-4">
                   {predictions.map((predictionindex) => (
                     <div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                       className={`p-4 rounded-xl bg-gradient-to-r ${prediction.color} bg-opacity-20 backdrop-blur-lg border border-white/20 hover:border-white/40 transition-all duration-300 ${
                         currentPrediction === index ? 'ring-2 ring-indigo-400 ring-opacity-50' : ''
                       }`}
@@ -238,7 +208,6 @@ const AITrends2026PredictionsPromotionBanner = () => {
                           <div className="text-xs text-gray-300">probability</div>
                         </div>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <div className="flex items-center text-xs text-gray-300">
                           <CheckCircle className="w-3 h-3 mr-1" />
@@ -252,7 +221,6 @@ const AITrends2026PredictionsPromotionBanner = () => {
               </div>
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={() => setIsDismissed(true)}
@@ -262,8 +230,9 @@ const AITrends2026PredictionsPromotionBanner = () => {
           </button>
         </div>
       )}
-    
+    </div>
   );
 };
+
 
 export default AITrends2026PredictionsPromotionBanner;

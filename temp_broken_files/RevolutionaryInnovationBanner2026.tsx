@@ -1,7 +1,4 @@
-'use client';
-
 import React from 'react';
-
 ArrowRightSparklesZapBrainRocketStarTrendingUpUsersGlobeShieldAwardLightbulb
 
 const RevolutionaryInnovationBanner2026 = () => {
@@ -52,27 +49,22 @@ const RevolutionaryInnovationBanner2026 = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-pink-400/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
             <Lightbulb className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-blue-300 font-medium">Revolutionary Innovations 2026</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             The Next Wave of
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Innovation</span>
             <br />
             is Here
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover groundbreaking technologies that will reshape entire industries and 
             create new possibilities that were once thought impossible.
@@ -81,17 +73,13 @@ const RevolutionaryInnovationBanner2026 = () => {
 
         {/* Innovations Grid */}
         <div
-          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
         >
           {innovations.map((innovationindex) => (
             <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-6">
@@ -110,11 +98,9 @@ const RevolutionaryInnovationBanner2026 = () => {
                   <span className="text-blue-300 text-sm font-medium">{innovation.impact}</span>
                 </div>
               </div>
-              
               <p className="text-gray-300 leading-relaxed mb-4">
                 {innovation.description}
               </p>
-              
               <div className="flex items-center text-sm text-gray-400">
                 <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
                 <span>In Active Development</span>
@@ -125,22 +111,17 @@ const RevolutionaryInnovationBanner2026 = () => {
 
         {/* Stats Section */}
         <div
-          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
             Unprecedented Performance Metrics
           </h3>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((statindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"
               >
                 <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
@@ -153,25 +134,19 @@ const RevolutionaryInnovationBanner2026 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-3xl p-12">
             <h3 className="text-3xl font-bold text-white mb-4">
               Be Among the First to Experience the Future
             </h3>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join our exclusive early access program and be the first to experience 
               these revolutionary technologies that will define the next decade.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl overflow-hidden"
               >
                 <span className="relative z-10 flex items-center">
@@ -182,8 +157,6 @@ const RevolutionaryInnovationBanner2026 = () => {
               </button>
               
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-colors"
               >
                 Learn More
@@ -196,4 +169,6 @@ const RevolutionaryInnovationBanner2026 = () => {
   );
 };
 
+
 export default RevolutionaryInnovationBanner2026;
+</div></div>

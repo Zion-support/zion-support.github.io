@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Play
   Pause
@@ -135,9 +134,6 @@ const InteractiveAIToolsDemo2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -151,9 +147,6 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Demo Selector */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {demos.map((demoindex) => (
@@ -177,9 +170,6 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Interactive Demo Area */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="bg-white bg-opacity-10 rounded-2xl p-8 mb-12"
         >
           <div className="flex items-center justify-between mb-6">
@@ -215,7 +205,6 @@ const InteractiveAIToolsDemo2026 = () => {
               </button>
             </div>
           </div>
-
           {/* Progress Bar */}
           <div className="mb-6">
             <div className="flex justify-between items-center mb-2">
@@ -226,11 +215,9 @@ const InteractiveAIToolsDemo2026 = () => {
               <div
                 className={`h-2 rounded-full bg-gradient-to-r ${demos[activeDemo].color}`}
                 style={{ width: `${progress}%` }}
-                transition={{ duration: 0.1 }}
               />
             </div>
           </div>
-
           {/* Demo Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Features */}
@@ -245,7 +232,6 @@ const InteractiveAIToolsDemo2026 = () => {
                 ))}
               </div>
             </div>
-
             {/* Metrics */}
             <div>
               <h4 className="text-lg font-semibold mb-4">Performance Metrics</h4>
@@ -269,9 +255,6 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* Testimonials */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="mb-12"
         >
           <h3 className="text-3xl font-bold text-center mb-12">
@@ -297,9 +280,6 @@ const InteractiveAIToolsDemo2026 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">
@@ -326,5 +306,6 @@ const InteractiveAIToolsDemo2026 = () => {
     </section>
   );
 };
+
 
 export default InteractiveAIToolsDemo2026;

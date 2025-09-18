@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   ArrowRight
   Star
@@ -204,23 +203,18 @@ const CaseStudyShowcase2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
             <Award className="w-4 h-4 mr-2" />
             Success Stories 2026
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Real Results from
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Real Companies
             </span>
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover how leading companies across industries have transformed their operations and achieved remarkable results using our AI and technology solutions.
           </p>
@@ -228,9 +222,6 @@ const CaseStudyShowcase2026 = () => {
 
         {/* Industry Filter */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.1 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {Object.entries(industries).map(([keyindustry]) => {
@@ -253,21 +244,13 @@ const CaseStudyShowcase2026 = () => {
         </div>
 
         {/* Case Studies Grid */}
-        <AnimatePresence mode="wait">
           <div
             key={activeIndustry}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredCaseStudies.map((caseStudyindex) => (
               <div
                 key={caseStudy.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: index * 0.1 }}
                 onHoverStart={() => setHoveredCase(caseStudy.id)}
                 onHoverEnd={() => setHoveredCase(null)}
                 className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
@@ -280,7 +263,6 @@ const CaseStudyShowcase2026 = () => {
                     </span>
                   </div>
                 )}
-
                 {/* Trending Badge */}
                 {caseStudy.trending && (
                   <div className="absolute top-4 right-4 z-10">
@@ -290,7 +272,6 @@ const CaseStudyShowcase2026 = () => {
                     </span>
                   </div>
                 )}
-
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -300,19 +281,16 @@ const CaseStudyShowcase2026 = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-
                 {/* Content */}
                 <div className="p-6">
                   {/* Company */}
                   <div className="text-sm text-blue-600 font-medium mb-2">
                     {caseStudy.company}
                   </div>
-
                   {/* Title */}
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                     {caseStudy.title}
                   </h3>
-
                   {/* Challenge */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-1">Challenge:</h4>
@@ -320,7 +298,6 @@ const CaseStudyShowcase2026 = () => {
                       {caseStudy.challenge}
                     </p>
                   </div>
-
                   {/* Solution */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-1">Solution:</h4>
@@ -328,7 +305,6 @@ const CaseStudyShowcase2026 = () => {
                       {caseStudy.solution}
                     </p>
                   </div>
-
                   {/* Results */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Results:</h4>
@@ -343,7 +319,6 @@ const CaseStudyShowcase2026 = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Technologies */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-1">
@@ -362,25 +337,20 @@ const CaseStudyShowcase2026 = () => {
                       )}
                     </div>
                   </div>
-
                   {/* Meta Info */}
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <span>{caseStudy.duration}</span>
                     <span>•</span>
                     <span>{caseStudy.teamSize}</span>
                   </div>
-
                   {/* CTA Button */}
                   <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                     View Case Study
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
-
                 {/* Hover Overlay */}
                 <div
-                  initial={{ opacity: 0 }}
-                  animate={{ 
                     opacity: hoveredCase === caseStudy.id ? 1 : 0 
                   }}
                   className="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-purple-600/90 flex items-center justify-center"
@@ -396,13 +366,10 @@ const CaseStudyShowcase2026 = () => {
               </div>
             ))}
           </div>
-        
+        </div>
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.5 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -424,6 +391,7 @@ const CaseStudyShowcase2026 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default CaseStudyShowcase2026;

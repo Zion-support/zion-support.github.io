@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { supabase } from "../../utils/supabase/client";
-
+import { AnimatePresence, motion } from "framer-motion";
 
 type TalentSuggestion = {
   id: string;

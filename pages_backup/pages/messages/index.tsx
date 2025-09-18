@@ -1,42 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-const Messages: NextPage = () => {
+const index: React.FC = () => {
   return (
-    <div className="space-y-6 pb-16">
-      <Head>
-        <title>Messages - Zion</title>
-      </Head>
-
-
-      <h1 className="text-2xl font-semibold">Messages</h1>
-      <EmptyState
-        title="No messages yet"
-        description="Start a conversation by requesting a quote or responding to an existing one."
-
-
-
-
-        icon={<span>📫</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        primaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        secondaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      />;
-    </div>;
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>index | Zion Tech Group</title>
+        <meta name="description" content="index - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">index</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-},;
-export default Messages;
+};
 
-
-
-
+export default index;

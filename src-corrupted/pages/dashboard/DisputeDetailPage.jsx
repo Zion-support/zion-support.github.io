@@ -1,32 +1,22 @@
-import React from 'react';'''
-import SEO from '@/components/SEO';'''
-import {DisputeDetail} from '@/components/disputes';'''
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-function DisputeDetailPage(props: any) {}
-    return (<ProtectedRoute>
-      <>
-        <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details" />
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-        <DisputeDetail  />
+const DisputeDetailPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>DisputeDetailPage | Zion Tech Group</title>
+        <meta name="description" content="DisputeDetailPage - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">DisputeDetailPage</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-      </>
-    </ProtectedRoute>)};
-export {DisputeDetailPage};
 export default DisputeDetailPage;
-;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-export default DisputeDetailPage;
-
-export {DisputeDetailPage};
-
-export {DisputeDetailPage};
-
-export {DisputeDetailPage};
-
-export {DisputeDetailPage};
-
-export {DisputeDetailPage};

@@ -1,18 +1,9 @@
-}
-}
- ></div> ></div> ></div> ></div> ></div> ></div> )}export { Contact }export { Contact }export { Contact }export { Contact }
 import React from 'react';
-interface ContactProps {
-  // Add props here as needed
-}
-export default function Contact({}: ContactProps) {
+
+const Contact: React.FC = () => {
   return (
-    <div>
-      <h1>Contact</h1>
-      <p>This component is currently under development.</p>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Contact</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-}
-}
-}
-

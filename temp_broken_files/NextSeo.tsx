@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 
-interface NextSeoProps {
-  title?: string;
-  description?: string;
-  openGraph?: Record<string, unknown>;
-}
+const NextSeo = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">NextSeo</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-const NextSeo: React.FC<NextSeoProps> = () => null;
-
-export { NextSeo };
 export default NextSeo;
-

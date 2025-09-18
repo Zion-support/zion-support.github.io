@@ -1,7 +1,5 @@
 import React from 'react';
-import Layout from '../components/layout/Layout';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Heart, DollarSign, Factory, ShoppingCart, Building2, 
   GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
@@ -187,33 +185,23 @@ const SolutionsPage: React.FC = () => {
           <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
           <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
         </Head>
-
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <motion.h1 
+            <divh1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
             >
               Revolutionary Solutions
-            </motion.h1>
-            <motion.p 
+            </divh1>
+            <divp 
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
             >
               Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, we deliver innovation that drives results.
-            </motion.p>
+            </divp>
             
             {/* Stats Grid */}
             <div 
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
             >
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -227,15 +215,12 @@ const SolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -251,23 +236,18 @@ const SolutionsPage: React.FC = () => {
                 <div
                   key={index}
                   className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {solution.icon}
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                     {solution.title}
                   </h3>
-                  
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {solution.description}
                   </p>
-                  
                   <ul className="space-y-3 mb-8">
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -276,7 +256,6 @@ const SolutionsPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <a
                     href={solution.href}
                     className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1"
@@ -311,14 +290,11 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Solutions Grid */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-7xl mx-auto">
           <div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -334,9 +310,7 @@ const SolutionsPage: React.FC = () => {
             {industrySolutions.map((category, categoryIndex) => (
               <div
                 key={category.category}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
               >
                 <h3 className="text-3xl font-bold text-white mb-8 text-center">
@@ -346,9 +320,7 @@ const SolutionsPage: React.FC = () => {
                   {category.solutions.map((solution, solutionIndex) => (
                     <div
                       key={solution.name}
-                      initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: solutionIndex * 0.1 }}
                       viewport={{ once: true }}
                       className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${
                         solution.featured ? 'border-green-500/30' : 'border-gray-700/50'
@@ -379,14 +351,11 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <div
-            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -417,4 +386,6 @@ const SolutionsPage: React.FC = () => {
   );
 };
 
+
 export default Solutions;
+</div></div>

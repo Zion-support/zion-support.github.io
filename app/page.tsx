@@ -1,85 +1,3 @@
-import React, { Suspense, lazy } from 'react';
-import Link from 'next/link';
-import ErrorBoundary from './components/ErrorBoundary';
-import SEO from './components/SEO';
-import LoadingSpinner from './components/LoadingSpinner';
-
-// Import new advanced AI components
-import AdvancedContentRecommendationEngine from './components/AdvancedContentRecommendationEngine';
-import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
-import IntelligentSearchEngine from './components/IntelligentSearchEngine';
-import AdvancedAIAssistant from './components/AdvancedAIAssistant';
-import BusinessIntelligenceDashboard from './components/BusinessIntelligenceDashboard';
-import AdvancedSecurityMonitor from './components/AdvancedSecurityMonitor';
-import AdvancedAnalyticsEngine from './components/AdvancedAnalyticsEngine';
-import AutomationWorkflowEngine from './components/AutomationWorkflowEngine';
-import EnterpriseDataManagement from './components/EnterpriseDataManagement';
-import APIManagementSystem from './components/APIManagementSystem';
-
-// Lazy load heavy components
-const ROICalculator = lazy(() => import('./components/ROICalculator'));
-const StructuredData = lazy(() => import('./components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
-const TechnologyStack = lazy(() => import('./components/TechnologyStack'));
-
-// Import key promotional components
-import NewContentPromotionBanner from './components/NewContentPromotionBanner';
-import InteractiveContentDiscoveryWidget from './components/InteractiveContentDiscoveryWidget';
-import ComprehensiveSolutionsBanner2025 from './components/ComprehensiveSolutionsBanner2025';
-import NewServicesShowcase2025 from './components/NewServicesShowcase2025';
-import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
-import NewContent2026Showcase from './components/NewContent2026Showcase';
-import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
-import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
-import EnhancedContentPromotionBanner2026 from './components/EnhancedContentPromotionBanner2026';
-import ComprehensiveContentShowcase2026 from './components/ComprehensiveContentShowcase2026';
-import RevolutionaryContent2025Banner from './components/RevolutionaryContent2025Banner';
-import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
-
-// Import new promotional components
-import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
-import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
-import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
-import SuccessMetricsShowcase2026 from './components/SuccessMetricsShowcase2026';
-
-// Import additional promotional components
-import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
-import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
-import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
-
-// Import new AI 2026 promotional components
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
-import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
-import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
-import RevolutionaryContentBanner2025 from './components/RevolutionaryContentBanner2025';
-
-// Import new promotional components
-import RevolutionaryAI2026ContentBanner from './components/RevolutionaryAI2026ContentBanner';
-import NewContent2026UltimateShowcase from './components/NewContent2026UltimateShowcase';
-
-// Import new 2025 quantum AI promotional components
-import QuantumAIRevolutionBanner2025 from './components/QuantumAIRevolutionBanner2025';
-import NewContent2025UltimateShowcase from './components/NewContent2025UltimateShowcase';
-
-// Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
-import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
-
-// Import new 2025 advanced automation promotional components
-import NewContent2025AdvancedAutomationBanner from './components/NewContent2025AdvancedAutomationBanner';
-import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
-
-// Import new 2025 analytics promotional components
-import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
-import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
-import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
-import AutonomousAnalytics2025PromoBanner from './components/AutonomousAnalytics2025PromoBanner';
-import Link from 'next/link';
-import Link from 'next/link';
-import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -105,8 +23,6 @@ export default function HomePage() {
               <p className="text-gray-600 mt-2">A concise SLO set for safety, quality, reliability, and cost—ready to adopt.</p>
             </div>
             <div className="flex gap-3">
-              <Link href="/content/ai-2026-agent-platform-slos" className="inline-block bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-emerald-700">Read Guide</Link>
-              <Link href="/blog/ai-2026-agent-platform-slos-best-practices" className="inline-block border border-emerald-600 text-emerald-700 px-5 py-3 rounded-lg font-semibold hover:bg-emerald-50">Best Practices</Link>
       {/* New Promo: September 2025 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,20 +52,13 @@ export default function HomePage() {
               <div>
                 <p className="text-sm font-semibold text-purple-700">Just published</p>
                 <h2 className="text-2xl font-bold text-gray-900 mt-1">Explore our newest guides</h2>
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
                 <p className="text-gray-600 mt-2">Now featuring GenAI Governance 2026 and Agent Observability 2026.</p>
               </div>
               <div className="flex gap-3">
                 <Link href="/content/genai-governance-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">GenAI Governance</Link>
                 <Link href="/content/agent-observability-2026" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Agent Observability</Link>
-                <p className="text-gray-600 mt-2">Now featuring Evaluations Cookbook, Reliability Release Checklists, and Evals Maturity Model 2026.</p>
-              </div>
-              <div className="flex gap-3">
-                <Link href="/content/ai-2026-eval-cookbook" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-700">Evals Cookbook</Link>
-                <Link href="/content/ai-2026-reliability-checklists" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Reliability Checklists</Link>
-                <Link href="/content/ai-2026-evals-maturity-model" className="hidden md:inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evals Maturity</Link>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       {/* New Promo: Agentic Sandbox Patterns (Sept 2025) */}
@@ -378,7 +287,6 @@ export default function HomePage() {
         <NewMultimodalAgents2025Banner />
         {/* New Content 2025 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent2025AnalyticsRevolutionBanner />
-        
         {/* New Content Promo: Sept 15, 2025 - Agent Safety + Observability + Evals */}
         <section className="py-10 bg-gradient-to-r from-indigo-50 to-purple-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -420,7 +328,6 @@ export default function HomePage() {
         <NewContent2025AnalyticsRevolutionBanner />
         {/* New Content 2026 Autonomous Revenue Agents Promo - NEW */}
         <NewAutonomousRevenueAgentsPromo />
-        
         {/* New Content Promo: Risk Management & Compliance (2026) */}
         <section className="py-10 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -458,7 +365,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* Analytics Content Showcase 2025 - NEW FEATURED */}
         <AnalyticsContentShowcase2025 />
         
@@ -484,7 +390,6 @@ export default function HomePage() {
                 <p className="text-gray-600 max-w-2xl">How enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 2025.</p>
               </div>
               <div className="shrink-0">
-                <Link href="/blog/ai-2025-enterprise-ai-agents-breakthrough" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
                 <Link href="/blog/ai-2026-multimodal-agents-enterprise-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">Read Article</Link>
               </div>
             </div>
@@ -502,7 +407,6 @@ export default function HomePage() {
               </div>
               <div className="shrink-0">
                 <Link href="/blog/ai-2026-enterprise-ai-security-blueprint" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
-                <Link href="/blog/ai-2025-multimodal-agents-practical-guide" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700">
                   Read Article
                 </Link>
               </div>
@@ -672,6 +576,8 @@ export default function HomePage() {
         {/* Featured Content Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c
             <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div>
                 <div className="text-sm font-semibold text-teal-700 mb-2">New Blueprint</div>
@@ -681,38 +587,6 @@ export default function HomePage() {
               <div className="shrink-0">
                 <Link href="/content/ai-2026-operational-evals-blueprint" className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700">Read Blueprint</Link>
               </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Content</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Hyperautomation Blueprint 2026</h3>
-                <p className="text-gray-600 mb-4">A hands-on blueprint for scaling AI-driven automation across the enterprise.</p>
-                <Link href="/content/hyperautomation-blueprint-2026" className="text-purple-600 font-semibold hover:text-purple-800">Read Guide →</Link>
-              </article>
-              <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-blue-700 mb-2">Article</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Edge AI Agents: Real-Time Autonomy</h3>
-                <p className="text-gray-600 mb-4">Unlock ultra-low-latency decisioning and control with edge-native agents.</p>
-                <Link href="/content/edge-ai-agents-2026" className="text-blue-600 font-semibold hover:text-blue-800">Read Article →</Link>
-              </article>
-              <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-indigo-700 mb-2">Framework</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">GenAI Governance 2026</h3>
-                <p className="text-gray-600 mb-4">Policies, controls, and guardrails for safe and compliant GenAI at scale.</p>
-                <Link href="/content/genai-governance-2026" className="text-indigo-700 font-semibold hover:text-indigo-900">Read Framework →</Link>
-              </article>
-              <article className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-sm font-semibold text-green-700 mb-2">Guide</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Agent Observability 2026</h3>
-                <p className="text-gray-600 mb-4">Metrics, traces, and evals to ship reliable agentic systems.</p>
-                <Link href="/content/agent-observability-2026" className="text-green-700 font-semibold hover:text-green-900">Read Guide →</Link>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Content Showcase 2025 - NEW FEATURED */}
-        <LatestContentShowcase2025 />
         {/* Latest Content Showcase 2025 - NEW FEATURED */}
         <LatestContentShowcase2025 />
 
@@ -866,4 +740,4 @@ export default function HomePage() {
       </div>
     </ErrorBoundary>
   );
-}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

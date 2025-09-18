@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const NextGenSpaceTech2030: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
@@ -9,9 +8,6 @@ const NextGenSpaceTech2030: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -34,13 +30,10 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Space Technology Categories */}
       <div className="container mx-auto px-4 py-20">
         <div
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6">🌌 Space Technology Categories</h2>
@@ -52,9 +45,7 @@ const NextGenSpaceTech2030: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Advanced Propulsion Systems */}
           <div
-            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🚀</div>
@@ -76,9 +67,7 @@ const NextGenSpaceTech2030: React.FC = () => {
 
           {/* Space Habitats */}
           <div
-            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🏠</div>
@@ -100,9 +89,7 @@ const NextGenSpaceTech2030: React.FC = () => {
 
           {/* Asteroid Mining */}
           <div
-            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">⛏️</div>
@@ -124,9 +111,7 @@ const NextGenSpaceTech2030: React.FC = () => {
 
           {/* Interplanetary Communication */}
           <div
-            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
             className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">📡</div>
@@ -148,9 +133,7 @@ const NextGenSpaceTech2030: React.FC = () => {
 
           {/* Space Manufacturing */}
           <div
-            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-violet-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🏭</div>
@@ -172,9 +155,7 @@ const NextGenSpaceTech2030: React.FC = () => {
 
           {/* Space Defense */}
           <div
-            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
             className="bg-gradient-to-br from-red-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-red-400/30 hover:scale-105 transition-all duration-300"
           >
             <div className="text-6xl mb-4 text-center">🛡️</div>
@@ -195,14 +176,11 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Mission Timeline */}
       <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm py-20">
         <div className="container mx-auto px-4">
           <div
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">📅 Mission Timeline 2030</h2>
@@ -213,9 +191,7 @@ const NextGenSpaceTech2030: React.FC = () => {
 
           <div className="space-y-8">
             <div
-              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
               className="flex items-center space-x-6"
             >
               <div className="flex-shrink-0 w-4 h-4 bg-blue-500 rounded-full"></div>
@@ -226,9 +202,7 @@ const NextGenSpaceTech2030: React.FC = () => {
             </div>
 
             <div
-              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
               className="flex items-center space-x-6"
             >
               <div className="flex-shrink-0 w-4 h-4 bg-purple-500 rounded-full"></div>
@@ -239,9 +213,7 @@ const NextGenSpaceTech2030: React.FC = () => {
             </div>
 
             <div
-              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="flex items-center space-x-6"
             >
               <div className="flex-shrink-0 w-4 h-4 bg-emerald-500 rounded-full"></div>
@@ -252,9 +224,7 @@ const NextGenSpaceTech2030: React.FC = () => {
             </div>
 
             <div
-              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
               className="flex items-center space-x-6"
             >
               <div className="flex-shrink-0 w-4 h-4 bg-orange-500 rounded-full"></div>
@@ -266,13 +236,10 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Technology Showcase */}
       <div className="container mx-auto px-4 py-20">
         <div
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-6">🔬 Technology Showcase</h2>
@@ -283,9 +250,7 @@ const NextGenSpaceTech2030: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30"
           >
             <h3 className="text-2xl font-bold mb-4">🚀 Fusion Propulsion Engine</h3>
@@ -309,9 +274,7 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
 
           <div
-            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
           >
             <h3 className="text-2xl font-bold mb-4">🏠 Modular Space Habitat</h3>
@@ -335,13 +298,10 @@ const NextGenSpaceTech2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div
-          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center bg-gradient-to-r from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-2xl p-12 border border-blue-400/30"
         >
           <h2 className="text-4xl font-bold mb-6">Join the Space Revolution</h2>
@@ -361,5 +321,6 @@ const NextGenSpaceTech2030: React.FC = () => {
     </div>
   );
 };
+
 
 export default NextGenSpaceTech2030;

@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   ArrowRight
   Star
@@ -160,23 +159,18 @@ const FeaturedBlogPost2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium mb-6">
             <FileText className="w-4 h-4 mr-2" />
             Featured Blog Posts 2026
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Latest Insights &
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Technology Trends
             </span>
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Stay ahead of the curve with our expert analysisbreakthrough researchand cutting-edge insights into the world of AIquantum computingand emerging technologies.
           </p>
@@ -186,9 +180,6 @@ const FeaturedBlogPost2026 = () => {
           {/* Featured Post */}
           <div className="lg:col-span-2">
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.1 }}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
               {/* Post Image */}
@@ -199,14 +190,12 @@ const FeaturedBlogPost2026 = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                
                 {/* Featured Badge */}
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-medium rounded-full">
                     Featured
                   </span>
                 </div>
-
                 {/* Trending Badge */}
                 {blogPosts[currentPost].trending && (
                   <div className="absolute top-4 right-4">
@@ -217,7 +206,6 @@ const FeaturedBlogPost2026 = () => {
                   </div>
                 )}
               </div>
-
               {/* Post Content */}
               <div className="p-8">
                 {/* Category */}
@@ -226,17 +214,14 @@ const FeaturedBlogPost2026 = () => {
                     {blogPosts[currentPost].category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                   {blogPosts[currentPost].title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                   {blogPosts[currentPost].excerpt}
                 </p>
-
                 {/* Author Info */}
                 <div className="flex items-center space-x-4 mb-6">
                   <img
@@ -253,7 +238,6 @@ const FeaturedBlogPost2026 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6">
                   <div className="flex items-center space-x-4">
@@ -276,7 +260,6 @@ const FeaturedBlogPost2026 = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {blogPosts[currentPost].tags.map((tagindex) => (
@@ -288,7 +271,6 @@ const FeaturedBlogPost2026 = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* CTA Button */}
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                   Read Full Article
@@ -297,14 +279,10 @@ const FeaturedBlogPost2026 = () => {
               </div>
             </div>
           </div>
-
           {/* Sidebar */}
           <div className="space-y-8">
             {/* Categories */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.2 }}
               className="bg-white rounded-2xl shadow-lg p-6"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-6">Categories</h3>
@@ -330,9 +308,6 @@ const FeaturedBlogPost2026 = () => {
 
             {/* Popular Posts */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.3 }}
               className="bg-white rounded-2xl shadow-lg p-6"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-6">Popular Posts</h3>
@@ -361,9 +336,6 @@ const FeaturedBlogPost2026 = () => {
 
             {/* Newsletter Signup */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: 0.4 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white"
             >
               <h3 className="text-xl font-bold mb-4">Stay Updated</h3>
@@ -383,12 +355,8 @@ const FeaturedBlogPost2026 = () => {
             </div>
           </div>
         </div>
-
         {/* View All Posts CTA */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.5 }}
           className="text-center mt-16"
         >
           <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center mx-auto">
@@ -401,4 +369,6 @@ const FeaturedBlogPost2026 = () => {
   );
 };
 
+
 export default FeaturedBlogPost2026;
+</div></div>

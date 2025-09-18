@@ -37,6 +37,9 @@ export default function CommunityProfilePage({ }: CommunityProfilePageProps) {
     </div>
   );
 
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 :src.disabled/src/pages.disabled/CommunityProfilePage.jsx
 }
 }

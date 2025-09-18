@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import { 
   Mail, 
   Send, 
@@ -15,19 +14,15 @@ const NewsletterSignup2025: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubscribed(true);
     setIsLoading(false);
     setEmail('');
   };
-
   const benefits = [
     {
       icon: <Zap className="w-6 h-6 text-yellow-400" />,
@@ -45,22 +40,16 @@ const NewsletterSignup2025: React.FC = () => {
       description: "Deep dives into the latest breakthroughs in consciousness and quantum computing"
     }
   ];
-
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm"></div>
-        
         <div className="relative z-10 text-center">
           <div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-green-500 rounded-full mb-6">
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
-            
             <h2 className="text-4xl font-bold mb-4">
               🎉 Welcome to the Future!
             </h2>
@@ -68,7 +57,6 @@ const NewsletterSignup2025: React.FC = () => {
               You're now part of our exclusive community. Get ready for mind-blowing 
               updates on the latest revolutionary technologies!
             </p>
-            
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-md mx-auto">
               <h3 className="text-lg font-bold mb-4">What's Next?</h3>
               <div className="space-y-2 text-left">
@@ -91,17 +79,12 @@ const NewsletterSignup2025: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 rounded-3xl p-12 mb-12 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25224%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       <div className="relative z-10">
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-8 animate-pulse">
@@ -109,7 +92,6 @@ const NewsletterSignup2025: React.FC = () => {
             <span>JOIN THE REVOLUTION</span>
             <Star className="w-6 h-6" />
           </div>
-          
           <h2 className="text-6xl font-bold mb-6">
             🚀 Stay Ahead of the Future
           </h2>
@@ -123,18 +105,12 @@ const NewsletterSignup2025: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Benefits */}
           <div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-3xl font-bold mb-8">Why Join Our Community?</h3>
             <div className="space-y-6">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
                   <div className="flex-shrink-0 p-3 bg-white/10 rounded-xl">
@@ -151,15 +127,11 @@ const NewsletterSignup2025: React.FC = () => {
 
           {/* Signup Form */}
           <div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
           >
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
               Get Started Today
             </h3>
-            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-2">
@@ -178,7 +150,6 @@ const NewsletterSignup2025: React.FC = () => {
                   />
                 </div>
               </div>
-              
               <button
                 type="submit"
                 disabled={isLoading}
@@ -198,7 +169,6 @@ const NewsletterSignup2025: React.FC = () => {
                 )}
               </button>
             </form>
-            
             <p className="text-sm text-gray-400 mt-4 text-center">
               By subscribing, you agree to receive updates about our revolutionary technologies. 
               Unsubscribe at any time.
@@ -207,15 +177,11 @@ const NewsletterSignup2025: React.FC = () => {
         </div>
 
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full text-lg font-bold mb-6 inline-block">
             🌟 10,000+ Innovators Already Joined
           </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/pages/UltimateTechRevolution2025"
@@ -234,6 +200,7 @@ const NewsletterSignup2025: React.FC = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default NewsletterSignup2025;

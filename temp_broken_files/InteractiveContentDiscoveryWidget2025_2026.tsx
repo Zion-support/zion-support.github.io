@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Search
   Filter
@@ -198,9 +197,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
       <div
-        initial={{ opacity: 0, y: -20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
         className="mb-8"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -213,9 +209,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
 
       {/* Search and Filters */}
       <div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isVisible ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6delay: 0.2 }}
         className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
       >
         <div className="flex flex-col lg:flex-row gap-4">
@@ -230,7 +223,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
               className="w-full pl-12 pr-4 py-3 bg-slate-700/50 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
             />
           </div>
-
           {/* Category Filter */}
           <div className="relative">
             <select
@@ -246,7 +238,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             </select>
             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
           </div>
-
           {/* Sort */}
           <div className="relative">
             <select
@@ -260,7 +251,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             </select>
             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
           </div>
-
           {/* View Mode */}
           <div className="flex bg-slate-700/50 rounded-xl p-1">
             <button
@@ -285,27 +275,19 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
 
       {/* Content Grid */}
       <div
-        initial={{ opacity: 0 }}
-        animate={isVisible ? { opacity: 1 } : {}}
-        transition={{ duration: 0.6delay: 0.4 }}
         className={`grid gap-6 ${
           viewMode === 'grid' 
             ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}
       >
-        
+        <div>
           {sortedContent.map((itemindex) => {
             const TypeIcon = getTypeIcon(item.type);
             const CategoryIcon = getCategoryIcon(item.category);
-            
             return (
               <div
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 group cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
@@ -321,7 +303,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                      
                       {/* Badges */}
                       <div className="absolute top-4 left-4 flex gap-2">
                         {item.featured && (
@@ -337,14 +318,12 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                           </span>
                         )}
                       </div>
-
                       {/* Type Icon */}
                       <div className="absolute top-4 right-4">
                         <div className="bg-black/50 backdrop-blur-sm rounded-full p-2">
                           <TypeIcon className="w-5 h-5 text-white" />
                         </div>
                       </div>
-
                       {/* Category */}
                       <div className="absolute bottom-4 left-4">
                         <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-2">
@@ -355,7 +334,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* Content */}
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
@@ -364,7 +342,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">
                         {item.description}
                       </p>
-
                       {/* Meta */}
                       <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                         <div className="flex items-center gap-4">
@@ -379,7 +356,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                         </div>
                         <span>{item.author}</span>
                       </div>
-
                       {/* Stats */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
@@ -450,23 +426,17 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
               </div>
             );
           })}
-        
+        </div>
       </div>
 
       {/* Content Detail Modal */}
-      
+      <div>
         {selectedContent && (
           <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedContent(null)}
           >
             <div
-              initial={{ scale: 0.8opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8opacity: 0 }}
               className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -483,7 +453,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              
               <div className="p-8">
                 <h2 className="text-3xl font-bold text-white mb-4">
                   {selectedContent.title}
@@ -491,7 +460,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                 <p className="text-gray-300 text-lg mb-6">
                   {selectedContent.description}
                 </p>
-                
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-gray-400" />
@@ -506,7 +474,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                     <span className="text-gray-400">{selectedContent.likes} likes</span>
                   </div>
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedContent.tags.map((tagindex) => (
                     <span
@@ -517,7 +484,6 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                     </span>
                   ))}
                 </div>
-
                 <div className="flex gap-4">
                   <button className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2">
                     <Play className="w-5 h-5" />
@@ -536,9 +502,10 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             </div>
           </div>
         )}
-      
+      </div>
     </div>
   );
-};
+
+
 
 export default InteractiveContentDiscoveryWidget2025_2026;

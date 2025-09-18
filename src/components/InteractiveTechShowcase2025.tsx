@@ -1,0 +1,22 @@
+import React, { useState } from 'react';
+
+const InteractiveTechShowcase2025: React.FC = () => {
+    }
+  };
+
+
+  const currentCategory = techCategories[activeCategory as keyof typeof techCategories];
+  const colors = getColorClasses(currentCategory.color);
+
+  return (
+          </div>
+        </div>
+      </div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default InteractiveTechShowcase2025;

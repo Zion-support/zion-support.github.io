@@ -1,60 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-
-
-function PortfolioBuilderContent() {
-  const [activeTab, setActiveTab] = useState('resume'),
-  
-
+const PortfolioBuilder: React.FC = () => {
   return (
-    <>
-      <SEO
-        title="Portfolio Builder | Zion AI Marketplace"
-        description="Create and customize your resume and portfolio to showcase your skills and experience."
-import { useState } from 'react';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ResumeWizard } from '@/components/resume-builder/ResumeWizard';
-import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
-
-function PortfolioBuilderContent() {
-  const [activeTab, setActiveTab] = useState('resume');
-  
-  return (
-    <>
-      <SEO 
-        title="Portfolio Builder | Zion AI Marketplace" 
-        description="Create and customize your resume and portfolio to showcase your skills and experience." 
-      />
-      <AppHeader />
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="bg-muted/60 p-0">
-            <TabsTrigger value="resume" className="data-[state=active]:bg-background">Resume</TabsTrigger>
-            <TabsTrigger value="portfolio" className="data-[state=active]:bg-background">Portfolio</TabsTrigger>
-          </TabsList>
-          <TabsContent value="portfolio" className="space-y-6">
-            <PortfolioSection />
-          </TabsContent>
-        </Tabs>
-      </main>
-      <Footer />
-    </>
-}
-
-export default function PortfolioBuilder() {
-  return (
-
-
-
-
-
-    <ProtectedRoute>
-      <PortfolioBuilderContent />
-    </ProtectedRoute>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>PortfolioBuilder | Zion Tech Group</title>
+        <meta name="description" content="PortfolioBuilder - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">PortfolioBuilder</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default PortfolioBuilder;

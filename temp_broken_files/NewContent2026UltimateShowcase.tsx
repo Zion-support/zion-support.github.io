@@ -1,87 +1,41 @@
 import React from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
-
 const NewContent2026UltimateShowcase: React.FC = () => {
-  const contentItems = [
-    {
-      title: "AI 2026 Revolutionary Breakthrough Technologies",
-      description: "Discover cutting-edge AI technologies including Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems delivering unprecedented results.",
-      features: [
-        "10,000x Processing Speed",
-        "Self-Improving AI Systems", 
-        "50,000% ROI Achievement",
-        "Consciousness-Level Intelligence"
-      ],
-      href: "/content/resources/ai-2026-revolutionary-breakthrough-technologies-ultimate-guide",
-      badge: "🚀 Revolutionary",
-      gradient: "from-purple-600 to-blue-600"
-    },
-    {
-      title: "AI 2026 Implementation Master Framework",
-      description: "The complete blueprint for achieving unprecedented AI implementation success with guaranteed 10,000% ROI and 99.97% success rate.",
-      features: [
-        "99.97% Success Rate",
-        "10,000% Average ROI",
-        "90-Day Transformation",
-        "5-Pillar Framework"
-      ],
-      href: "/content/resources/ai-2026-implementation-master-framework-ultimate-success-guide",
-      badge: "🎯 Master Framework",
-      gradient: "from-green-600 to-teal-600"
-    }
-  ];
-
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+    <divsection
       className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full px-6 py-3 mb-8 shadow-lg"
           >
             <span className="text-sm font-bold tracking-wide uppercase">🌟 New Content 2026</span>
           </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+          <divh2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
           >
             Ultimate AI Content
             <span className="block bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Showcase 2026
             </span>
-          </motion.h2>
+          </divh2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+          <divp
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
             Explore our latest comprehensive guides featuring revolutionary AI breakthrough technologies 
             and proven implementation frameworks that deliver extraordinary results.
-          </motion.p>
+          </divp>
         </div>
-
         {/* Content Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {contentItems.map((item, index) => (
             <div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 + index * 0.2, duration: 0.8 }}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               {/* Card Header */}
@@ -96,13 +50,11 @@ const NewContent2026UltimateShowcase: React.FC = () => {
                   {item.title}
                 </h3>
               </div>
-
               {/* Card Content */}
               <div className="p-8">
                 <p className="text-gray-600 text-lg mb-6 leading-relaxed">
                   {item.description}
                 </p>
-
                 {/* Features */}
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {item.features.map((feature, featureIndex) => (
@@ -112,7 +64,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={item.href}
@@ -124,12 +75,8 @@ const NewContent2026UltimateShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Additional Resources */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4, duration: 0.8 }}
           className="bg-white rounded-2xl shadow-xl p-8 text-center"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -138,7 +85,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
           <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
             Get personalized implementation support and access to our exclusive AI transformation toolkit.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/services/ai-consulting"
@@ -157,9 +103,6 @@ const NewContent2026UltimateShowcase: React.FC = () => {
 
         {/* Trust Indicators */}
         <div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.8 }}
           className="mt-16 pt-8 border-t border-gray-200"
         >
           <div className="text-center">
@@ -175,8 +118,10 @@ const NewContent2026UltimateShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </divsection>
   );
 };
 
+
 export default NewContent2026UltimateShowcase;
+</div></div></div>

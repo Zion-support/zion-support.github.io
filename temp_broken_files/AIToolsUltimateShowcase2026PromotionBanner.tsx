@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Zap
@@ -109,21 +108,15 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
   if (isDismissed) return null;
 
   return (
-    
+    <div>
       {isVisible && (
         <div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.6ease: "easeOut" }}
           className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 border-b border-indigo-500/30"
         >
           {/* Background Effects */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-          
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
           {/* Animated Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-indigo-600/20 animate-pulse"></div>
-          
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
               {/* Left Content */}
@@ -133,7 +126,6 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     <Sparkles className="w-4 h-4 text-indigo-400 mr-2" />
                     <span className="text-indigo-300 font-medium text-sm">AI TOOLS ULTIMATE 2026</span>
                   </div>
-                  
                   <div className="flex items-center text-yellow-400">
                     {[...Array(5)].map((_i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
@@ -141,29 +133,21 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     <span className="ml-2 text-sm font-medium">4.8/5 Rating</span>
                   </div>
                 </div>
-
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3">
                   🚀 50+ Powerful AI Tools
                   <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
                     for Every Business Need
                   </span>
                 </h2>
-
                 <p className="text-lg text-gray-300 mb-6 max-w-2xl">
                   Discover our comprehensive collection of AI-powered tools for productivity
                   developmentanalyticsmultimediasecurityand communication. 
                   <span className="text-yellow-400 font-bold"> Start your free trial today!</span>
                 </p>
-
                 {/* Tool Rotation */}
                 <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
-                  <AnimatePresence mode="wait">
                     <div
                       key={currentTool}
-                      initial={{ opacity: 0x: 20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      exit={{ opacity: 0x: -20 }}
-                      transition={{ duration: 0.5 }}
                       className="flex items-center gap-3"
                     >
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${tools[currentTool].color}`}>
@@ -176,9 +160,8 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                         </div>
                       </div>
                     </div>
-                  
+                  </div>
                 </div>
-
                 {/* Features */}
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-6">
                   {features.map((featureindex) => (
@@ -188,7 +171,6 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <button className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25">
@@ -196,22 +178,17 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                     Explore All Tools
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
-                  
                   <button className="group border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 hover:scale-105 flex items-center justify-center">
                     <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                     Watch Demo
                   </button>
                 </div>
               </div>
-
               {/* Right Content - Interactive Preview */}
               <div className="flex-shrink-0">
                 <div className="relative">
                   {/* Main Card */}
                   <div
-                    initial={{ scale: 0.8opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.6delay: 0.3 }}
                     className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 w-80 shadow-2xl"
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -221,7 +198,6 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                         <span className="text-sm text-green-400">Live</span>
                       </div>
                     </div>
-
                     {/* Categories Grid */}
                     <div className="grid grid-cols-2 gap-3 mb-4">
                       {categories.slice(04).map((categoryindex) => {
@@ -235,7 +211,6 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                         );
                       })}
                     </div>
-
                     {/* Active Tool */}
                     <div className="bg-white/5 rounded-lg p-4 mb-4">
                       <div className="flex items-center gap-3 mb-2">
@@ -255,7 +230,6 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                         <div className="text-gray-400">{tools[currentTool].users}</div>
                       </div>
                     </div>
-
                     {/* Progress Indicator */}
                     <div className="flex justify-center gap-2">
                       {tools.map((_index) => (
@@ -271,11 +245,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
 
                   {/* Floating Elements */}
                   <div
-                    animate={{ 
                       y: [0-10],
                       rotate: [050]
                     }}
-                    transition={{ 
                       duration: 3,
                       repeat: Infinity,
                       ease: "easeInOut"
@@ -286,11 +258,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                   </div>
 
                   <div
-                    animate={{ 
                       y: [010],
                       x: [050]
                     }}
-                    transition={{ 
                       duration: 4,
                       repeat: Infinity,
                       ease: "easeInOut",
@@ -302,11 +272,9 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
                   </div>
 
                   <div
-                    animate={{ 
                       scale: [1.1],
                       opacity: [0.710.7]
                     }}
-                    transition={{ 
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",
@@ -320,7 +288,6 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
               </div>
             </div>
           </div>
-
           {/* Dismiss Button */}
           <button
             onClick={() => setIsDismissed(true)}
@@ -328,13 +295,13 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {
           >
             <X className="w-5 h-5" />
           </button>
-
           {/* Bottom Gradient */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>
         </div>
       )}
-    
+    </div>
   );
-};
+
+
 
 export default AIToolsUltimateShowcase2026PromotionBanner;

@@ -1,5 +1,2 @@
 
-
-</motion>
-</any>
-</any>
+export default SimpleNavigation;

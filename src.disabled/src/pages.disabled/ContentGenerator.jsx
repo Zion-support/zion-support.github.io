@@ -37,6 +37,9 @@ export default function ContentGenerator({ }: ContentGeneratorProps) {
     </div>
   );
 
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 :src.disabled/src/pages.disabled/ContentGenerator.jsx
 }
 }

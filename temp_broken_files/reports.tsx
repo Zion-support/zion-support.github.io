@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-
 import { 
   FileText, 
   Download, 
@@ -116,9 +115,7 @@ const ReportsPage: React.FC = () => {
           <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>
           <meta name="description" content="Access Zion Tech Group's comprehensive research reports, whitepapers, and industry analysis covering AI, quantum computing, cybersecurity, and emerging technologies." />
         </Head>
-
         <QuickNavigation />
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category) => (
             <Link 
@@ -127,21 +124,15 @@ const ReportsPage: React.FC = () => {
               className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover:border-cyan-400/50 transition-all hover:scale-105"
             >
               Research Reports
-            </motion.h1>
-            <motion.p 
+            </divh1>
+            <divp 
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
             >
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.
-            </motion.p>
+            </divp>
             
             <div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
             >
               <span className="flex items-center space-x-2">
                 <FileText className="w-5 h-5" />
@@ -158,15 +149,12 @@ const ReportsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -178,9 +166,7 @@ const ReportsPage: React.FC = () => {
               <div
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
                 <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">
@@ -199,7 +185,6 @@ const ReportsPage: React.FC = () => {
                     </div>
                     <h3 className="text-3xl font-bold text-white mb-4">{report.title}</h3>
                     <p className="text-xl text-gray-300 leading-relaxed mb-6">{report.excerpt}</p>
-                    
                     <div className="flex flex-wrap items-center gap-6 mb-6">
                       <span className="text-gray-400 text-sm flex items-center space-x-1">
                         <User className="w-4 h-4" />
@@ -218,7 +203,6 @@ const ReportsPage: React.FC = () => {
                         <span>{formatNumber(report.views)} views</span>
                       </span>
                     </div>
-                    
                     <div className="flex flex-wrap gap-2 mb-6">
                       {report.tags.map((tag, tagIndex) => (
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">
@@ -228,7 +212,6 @@ const ReportsPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">
                     <Download className="w-5 h-5" />
@@ -243,15 +226,12 @@ const ReportsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -265,9 +245,7 @@ const ReportsPage: React.FC = () => {
             {/* Category Pills */}
             <div 
               className="flex flex-wrap justify-center gap-4 mb-12"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
               {categories.map((category, index) => (
@@ -287,18 +265,15 @@ const ReportsPage: React.FC = () => {
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {reports.filter(report => !report.featured).map((report, index) => (
-                <motion.article
+                <article
                   key={index}
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>
                     {report.icon}
                   </div>
-                  
                   <div className="flex items-center space-x-4 mb-4">
                     <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
                       {report.category}
@@ -308,10 +283,8 @@ const ReportsPage: React.FC = () => {
                       <span>{formatDate(report.date)}</span>
                     </span>
                   </div>
-                  
                   <h3 className="text-xl font-bold text-white mb-4 line-clamp-3">{report.title}</h3>
                   <p className="text-gray-300 mb-6 line-clamp-4">{report.excerpt}</p>
-                  
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-gray-400 text-sm flex items-center space-x-1">
                       <FileText className="w-4 h-4" />
@@ -322,7 +295,6 @@ const ReportsPage: React.FC = () => {
                       <span>{formatNumber(report.downloads)}</span>
                     </span>
                   </div>
-                  
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm flex items-center space-x-1">
                       <User className="w-4 h-4" />
@@ -333,20 +305,17 @@ const ReportsPage: React.FC = () => {
                       <Download className="w-4 h-4" />
                     </button>
                   </div>
-                </motion.article>
+                </article>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12"
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -378,4 +347,6 @@ const ReportsPage: React.FC = () => {
   );
 };
 
+
 export default ReportsPage;
+</div></div>

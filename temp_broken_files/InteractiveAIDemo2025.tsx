@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Bot
   MessageCircle
@@ -130,21 +129,16 @@ const InteractiveAIDemo2025 = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20"></div>
       </div>
 
       <div
         className="relative z-10 container mx-auto px-4 py-16"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
       >
         {/* Header */}
-        <div variants={itemVariants} className="text-center mb-12">
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
-            whileHover={{ scale: 1.05 }}
           >
             <Bot className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Interactive AI Demo 2025</span>
@@ -157,7 +151,6 @@ const InteractiveAIDemo2025 = () => {
               Future of AI
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Experience our revolutionary AI technology firsthand. Ask questions about neural interfaces
             quantum computingbusiness automationand future predictions.
@@ -166,7 +159,6 @@ const InteractiveAIDemo2025 = () => {
 
         {/* Chat Interface */}
         <div
-          variants={itemVariants}
           className="max-w-4xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
         >
           {/* Chat Header */}
@@ -185,16 +177,12 @@ const InteractiveAIDemo2025 = () => {
               </div>
             </div>
           </div>
-
           {/* Messages Container */}
           <div className="h-96 overflow-y-auto p-6 space-y-6">
-            
+            <div>
               {messages.map((message) => (
                 <div
                   key={message.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`max-w-xs lg:max-w-md ${
@@ -203,7 +191,6 @@ const InteractiveAIDemo2025 = () => {
                       : 'bg-white/10 text-gray-100'
                   } rounded-2xl p-4`}>
                     <p className="text-sm leading-relaxed">{message.content}</p>
-                    
                     {message.features && (
                       <div className="mt-3 flex flex-wrap gap-2">
                         {message.features.map((featureindex) => (
@@ -216,20 +203,17 @@ const InteractiveAIDemo2025 = () => {
                         ))}
                       </div>
                     )}
-                    
                     <div className="text-xs opacity-70 mt-2">
                       {message.timestamp.toLocaleTimeString()}
                     </div>
                   </div>
                 </div>
               ))}
-            
+            </div>
 
             {/* Typing Indicator */}
             {isTyping && (
               <div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
                 className="flex justify-start"
               >
                 <div className="bg-white/10 text-gray-100 rounded-2xl p-4 flex items-center gap-2">
@@ -239,7 +223,6 @@ const InteractiveAIDemo2025 = () => {
               </div>
             )}
           </div>
-
           {/* Input Area */}
           <div className="border-t border-white/10 p-6">
             <div className="flex gap-4">
@@ -258,8 +241,6 @@ const InteractiveAIDemo2025 = () => {
                 onClick={handleSendMessage}
                 disabled={!inputValue.trim() || isTyping}
                 className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 {isTyping ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -274,7 +255,6 @@ const InteractiveAIDemo2025 = () => {
 
         {/* Features Showcase */}
         <div
-          variants={itemVariants}
           className="mt-16 grid md:grid-cols-4 gap-6"
         >
           {[
@@ -288,7 +268,6 @@ const InteractiveAIDemo2025 = () => {
               <div
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
-                whileHover={{ y: -5scale: 1.02 }}
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-6 h-6 text-white" />
@@ -302,6 +281,7 @@ const InteractiveAIDemo2025 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default InteractiveAIDemo2025;

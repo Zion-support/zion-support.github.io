@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Sparkles
   Zap
@@ -70,30 +69,24 @@ const RevolutionaryTechShowcase2026Banner = () => {
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
             <Sparkles className="w-4 h-4" />
             REVOLUTIONARY TECH SHOWCASE 2026
           </div>
-          
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
             The Future is
             <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Here Today
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience groundbreaking technologies that are reshaping our world and 
             defining the next decade of human progress.
@@ -103,13 +96,8 @@ const RevolutionaryTechShowcase2026Banner = () => {
         {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">
           {/* Slide Content */}
-          <AnimatePresence mode="wait">
             <div
               key={currentSlide}
-              initial={{ opacity: 0x: 50 }}
-              animate={{ opacity: 1x: 0 }}
-              exit={{ opacity: 0x: -50 }}
-              transition={{ duration: 0.8 }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
               {/* Content */}
@@ -126,30 +114,23 @@ const RevolutionaryTechShowcase2026Banner = () => {
                     </div>
                   </div>
                 </div>
-
                 <h4 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   {currentSlideData.title}
                 </h4>
-
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   {currentSlideData.description}
                 </p>
-
                 {/* Features */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                   {currentSlideData.features.map((featureindex) => (
                     <div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6delay: index * 0.1 }}
                       className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center"
                     >
                       <div className="text-white font-semibold">{feature}</div>
                     </div>
                   ))}
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2">
@@ -162,7 +143,6 @@ const RevolutionaryTechShowcase2026Banner = () => {
                   </button>
                 </div>
               </div>
-
               {/* Visual */}
               <div className="relative">
                 <div className={`relative bg-gradient-to-br ${currentSlideData.color} rounded-3xl p-8 aspect-square flex items-center justify-center`}>
@@ -172,19 +152,17 @@ const RevolutionaryTechShowcase2026Banner = () => {
                     <div className="text-white text-2xl font-bold mb-2">{currentSlideData.title}</div>
                     <div className="text-white/80 text-lg">{currentSlideData.subtitle}</div>
                   </div>
-                  
                   {/* Floating Elements */}
                   <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
                   <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full animate-pulse delay-1000"></div>
                   <div className="absolute top-1/2 left-4 w-4 h-4 bg-white/20 rounded-full animate-pulse delay-500"></div>
                 </div>
-
                 {/* Decorative Elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-20 blur-xl"></div>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 blur-xl"></div>
               </div>
             </div>
-          
+          </div>
 
           {/* Slide Indicators */}
           <div className="flex justify-center gap-3 mt-12">
@@ -201,12 +179,8 @@ const RevolutionaryTechShowcase2026Banner = () => {
             ))}
           </div>
         </div>
-
         {/* Bottom Stats */}
         <div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mt-20"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
@@ -218,9 +192,6 @@ const RevolutionaryTechShowcase2026Banner = () => {
             ].map((statindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                 className="text-center"
               >
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
@@ -236,5 +207,6 @@ const RevolutionaryTechShowcase2026Banner = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryTechShowcase2026Banner;

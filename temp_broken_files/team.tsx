@@ -1,8 +1,16 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
+import React from "react";
 
-const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false });
+const function TeamPage() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function TeamPage() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default function TeamPage() {
-  return <OrgChartPage />;
-}
+export default function TeamPage() {;

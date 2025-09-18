@@ -2,60 +2,21 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 ArrowRightStarTrendingUpUsersGlobeZapAwardClock
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
 
 const UltimateContentShowcasePromotionBanner: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentStat(prev => (prev + 1) % 4);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-
-  const stats = [
-    { icon: TrendingUpvalue: "5,000%"label: "ROI Increase"color: "from-green-500 to-emerald-500" },
-    { icon: Usersvalue: "10M+"label: "Users Impacted"color: "from-blue-500 to-cyan-500" },
-    { icon: Awardvalue: "99.9%"label: "Success Rate"color: "from-purple-500 to-pink-500" },
-    { icon: Globevalue: "150+"label: "Countries"color: "from-orange-500 to-red-500" }
-  ];
-
-  const solutions = [
-    "AI 2025 Ultimate Innovation",
-    "Quantum Computing Revolution",
-    "Advanced Automation Solutions",
-    "Enterprise Transformation"
-  ];
-
-  const features = [
-    { icon: Startext: "5-Star Rated Solutions"color: "text-yellow-500" },
-    { icon: Zaptext: "Lightning Fast Implementation"color: "text-blue-500" },
-    { icon: Userstext: "10M+ Satisfied Customers"color: "text-green-500" }
-  ];
-
   return (
     <div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-      transition={{ duration: 0.6 }}
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-12"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Cpath%20d%3D%22M20%2020c0-11.046-8.954-20-20-20v20h20z%22%2F%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             <div
-              initial={{ opacity: 0x: -30 }}
-              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 }}
-              transition={{ delay: 0.2duration: 0.6 }}
               className="mb-4"
             >
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
@@ -73,9 +34,6 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
 
             {/* Solutions List */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.4duration: 0.6 }}
               className="grid grid-cols-2 gap-2 mb-6"
             >
               {solutions.map((solutionindex) => (
@@ -88,9 +46,6 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
 
             {/* Features */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.5duration: 0.6 }}
               className="flex flex-wrap gap-4 mb-6"
             >
               {features.map((featureindex) => (
@@ -103,9 +58,6 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ delay: 0.6duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
@@ -123,23 +75,15 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Right Stats */}
           <div
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 }}
-            transition={{ delay: 0.3duration: 0.6 }}
             className="flex-shrink-0"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 min-w-[300px]">
               <h3 className="text-xl font-bold text-white text-center mb-6">Proven Results</h3>
-              
               {/* Animated Stat */}
               <div
                 key={currentStat}
-                initial={{ opacity: 0scale: 0.8 }}
-                animate={{ opacity: 1scale: 1 }}
-                transition={{ duration: 0.5 }}
                 className="text-center mb-6"
               >
                 <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${stats[currentStat].color} mb-4`}>
@@ -168,12 +112,8 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
                   <span className="text-purple-400 font-semibold">99.9%</span>
                 </div>
               </div>
-
               {/* Urgency Indicator */}
               <div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1duration: 0.5 }}
                 className="mt-6 flex items-center justify-center gap-2 text-orange-400 text-sm"
               >
                 <Clock className="w-4 h-4" />
@@ -186,5 +126,6 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
     </div>
   );
 };
+
 
 export default UltimateContentShowcasePromotionBanner;

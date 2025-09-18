@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 
 const QuantumSupremacy2026: React.FC = () => {
   const [quantumStatus, setQuantumStatus] = useState('idle');
-
   const startQuantumDemo = () => {
     setQuantumStatus('running');
     setTimeout(() => setQuantumStatus('completed'), 5000);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
@@ -44,14 +42,12 @@ const QuantumSupremacy2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Capabilities */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">⚡ Quantum Capabilities</h2>
           <p className="text-xl text-blue-200">Revolutionary quantum computing power that surpasses classical systems</p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -72,7 +68,6 @@ const QuantumSupremacy2026: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +87,6 @@ const QuantumSupremacy2026: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +106,6 @@ const QuantumSupremacy2026: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +125,6 @@ const QuantumSupremacy2026: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -152,7 +144,6 @@ const QuantumSupremacy2026: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +165,6 @@ const QuantumSupremacy2026: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Quantum Demo Section */}
       <div className="container mx-auto px-4 py-20">
         <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-sm rounded-2xl p-12 border border-blue-400/30">
@@ -182,7 +172,6 @@ const QuantumSupremacy2026: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">⚡ Live Quantum Computing Demo</h2>
             <p className="text-xl text-blue-200">Watch our quantum computer solve complex problems in real-time</p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <div className="bg-black/20 rounded-xl p-8 mb-6">
               <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +196,6 @@ const QuantumSupremacy2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-4">Current Operation</h3>
                   <div className="bg-gray-800 rounded-lg p-4">
@@ -236,7 +224,6 @@ const QuantumSupremacy2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="text-center">
               <button 
                 onClick={startQuantumDemo}
@@ -250,14 +237,12 @@ const QuantumSupremacy2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Quantum Applications */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">🚀 Quantum Applications</h2>
           <p className="text-xl text-blue-200">Revolutionary applications powered by quantum supremacy</p>
         </div>
-        
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
             <h3 className="text-2xl font-bold text-white mb-4">🔬 Scientific Research</h3>
@@ -274,7 +259,6 @@ const QuantumSupremacy2026: React.FC = () => {
               </div>
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <h3 className="text-2xl font-bold text-white mb-4">💼 Business Applications</h3>
             <ul className="text-purple-100 space-y-2 mb-6">
@@ -290,7 +274,6 @@ const QuantumSupremacy2026: React.FC = () => {
               </div>
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30">
             <h3 className="text-2xl font-bold text-white mb-4">🤖 AI and Machine Learning</h3>
             <ul className="text-emerald-100 space-y-2 mb-6">
@@ -306,7 +289,6 @@ const QuantumSupremacy2026: React.FC = () => {
               </div>
             </div>
           </div>
-          
           <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
             <h3 className="text-2xl font-bold text-white mb-4">🔐 Security and Cryptography</h3>
             <ul className="text-orange-100 space-y-2 mb-6">
@@ -324,7 +306,6 @@ const QuantumSupremacy2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Performance Comparison */}
       <div className="container mx-auto px-4 py-20">
         <div className="bg-gradient-to-br from-slate-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-12 border border-blue-400/30">
@@ -332,7 +313,6 @@ const QuantumSupremacy2026: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">📊 Performance Comparison</h2>
             <p className="text-xl text-blue-200">Quantum vs Classical Computing Performance</p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Classical Computer</h3>
@@ -346,7 +326,6 @@ const QuantumSupremacy2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Computer</h3>
               <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-lg p-6">
@@ -359,7 +338,6 @@ const QuantumSupremacy2026: React.FC = () => {
                 </div>
               </div>
             </div>
-            
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Speedup Factor</h3>
               <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-lg p-6">
@@ -375,7 +353,6 @@ const QuantumSupremacy2026: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -396,5 +373,6 @@ const QuantumSupremacy2026: React.FC = () => {
     </div>
   );
 };
+
 
 export default QuantumSupremacy2026;

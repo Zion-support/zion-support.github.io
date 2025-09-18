@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Zap
@@ -97,42 +96,28 @@ const FuturisticAIServices2026Showcase = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-bounce" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         <div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
           className="text-center mb-16"
         >
-          <div variants={itemVariants} className="flex items-center justify-center mb-6">
             <Zap className="w-12 h-12 text-yellow-400 mr-4" />
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
               Futuristic AI Services 2026
             </h2>
           </div>
           
-          <motion.p variants={itemVariants} className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the next generation of artificial intelligence with our revolutionary 2026 service portfolio.
             Powered by quantum computingneural interfacesand autonomous systems.
-          </motion.p>
+          </divp>
         </div>
 
         {/* Main Service Showcase */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div
-            variants={itemVariants}
-            initial="hidden"
-            animate="visible"
             className="space-y-8"
           >
-            <AnimatePresence mode="wait">
               <div
                 key={currentService}
-                initial={{ opacity: 0x: -50 }}
-                animate={{ opacity: 1x: 0 }}
-                exit={{ opacity: 0x: 50 }}
-                transition={{ duration: 0.5 }}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${services[currentService].color} shadow-2xl`}
               >
                 <div className="flex items-center mb-6">
@@ -148,14 +133,10 @@ const FuturisticAIServices2026Showcase = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   {services[currentService].features.map((featureindex) => (
                     <div
                       key={index}
-                      initial={{ opacity: 0x: -20 }}
-                      animate={{ opacity: 1x: 0 }}
-                      transition={{ delay: index * 0.1 }}
                       className="flex items-center text-white"
                     >
                       <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
@@ -163,15 +144,12 @@ const FuturisticAIServices2026Showcase = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-white">
                     <TrendingUp className="w-5 h-5 mr-2" />
                     <span className="font-bold text-xl">{services[currentService].stats}</span>
                   </div>
                   <button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
                     className="px-6 py-3 bg-white/20 hover:bg-white/30 rounded-full text-white font-semibold transition-colors duration-300 flex items-center"
                   >
                     Learn More
@@ -179,7 +157,7 @@ const FuturisticAIServices2026Showcase = () => {
                   </button>
                 </div>
               </div>
-            
+            </div>
 
             {/* Service Navigation */}
             <div className="flex justify-center space-x-4">
@@ -192,7 +170,6 @@ const FuturisticAIServices2026Showcase = () => {
                       ? 'bg-white scale-125' 
                       : 'bg-white/50 hover:bg-white/70'
                   }`}
-                  whileHover={{ scale: 1.2 }}
                 />
               ))}
             </div>
@@ -200,9 +177,6 @@ const FuturisticAIServices2026Showcase = () => {
 
           {/* Stats Grid */}
           <div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
             className="grid grid-cols-2 gap-6"
           >
             {[
@@ -213,7 +187,6 @@ const FuturisticAIServices2026Showcase = () => {
             ].map((statindex) => (
               <div
                 key={index}
-                variants={itemVariants}
                 className="p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:bg-white/20 transition-colors duration-300"
               >
                 <div className="text-blue-400 mb-3">{stat.icon}</div>
@@ -223,17 +196,11 @@ const FuturisticAIServices2026Showcase = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
           className="text-center"
         >
           <button
-            whileHover={{ scale: 1.05y: -2 }}
-            whileTap={{ scale: 0.95 }}
             className="px-12 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold text-lg rounded-full shadow-2xl transition-all duration-300 transform hover:shadow-blue-500/25"
           >
             Experience the Future Today
@@ -245,4 +212,6 @@ const FuturisticAIServices2026Showcase = () => {
   );
 };
 
+
 export default FuturisticAIServices2026Showcase;
+</div></div></div></div>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from 'react';
-
 import { 
   FaRocket, 
   FaBrain, 
@@ -265,54 +264,11 @@ const services: Service[] = [
 ];
 
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-
-  const filteredServices = useMemo(() => {
-    let filtered = services;
-    
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-    
-    if (searchTerm) {
-      filtered = filtered.filter(service => 
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
-    
-    return filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return a.pricing.starter - b.pricing.starter;
-        case 'category':
-          return a.category.localeCompare(b.category);
-        default:
-          return a.title.localeCompare(b.title);
-      }
-    });
-  }, [selectedCategory, searchTerm, sortBy]);
-
-  const handleServiceSelect = (service: Service) => {
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {
-    setSelectedService(null);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Header */}
       <div className="container mx-auto px-4 py-16">
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -326,9 +282,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Search and Filters */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
@@ -342,7 +295,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               />
               <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
-            
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
@@ -357,9 +309,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Category Tabs */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -392,18 +341,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 
         {/* Services Grid */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
             <div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300"
               onClick={() => handleServiceSelect(service)}
             >
@@ -416,9 +358,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   <p className="text-sm text-gray-400">{serviceCategories.find(c => c.id === service.category)?.name}</p>
                 </div>
               </div>
-              
               <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-              
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.technologies.slice(0, 3).map((tech) => (
                   <span
@@ -434,7 +374,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </span>
                 )}
               </div>
-              
               <div className="flex items-center justify-between">
                 <div className="text-2xl font-bold text-blue-400">
                   ${service.pricing.starter}
@@ -451,8 +390,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         {/* No Results */}
         {filteredServices.length === 0 && (
           <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             className="text-center py-16"
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -461,21 +398,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* Service Detail Modal */}
-      
+      <div>
         {selectedService && (
           <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
             <div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -496,9 +426,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   <span className="text-2xl">×</span>
                 </button>
               </div>
-
               <p className="text-gray-300 text-lg mb-8">{selectedService.description}</p>
-
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Features */}
                 <div>
@@ -512,7 +440,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
                 {/* Benefits */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Benefits</h3>
@@ -526,7 +453,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </ul>
                 </div>
               </div>
-
               {/* Technologies */}
               <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
@@ -541,7 +467,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Pricing */}
               <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>
@@ -566,9 +491,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </div>
           </div>
         )}
-      
+      </div>
     </div>
   );
 };
+
 
 export default EnhancedServicesShowcase2025;

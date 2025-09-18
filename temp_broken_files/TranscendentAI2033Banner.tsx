@@ -1,14 +1,11 @@
 import React from 'react';
-
 import { ArrowRight, Zap, Brain, Globe, Atom, Eye, Infinity } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const TranscendentAI2033Banner: React.FC = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
+    <divsection
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
       className="relative py-16 px-4 overflow-hidden"
     >
       {/* Background Effects */}
@@ -18,43 +15,33 @@ const TranscendentAI2033Banner: React.FC = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div
-            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 px-4 py-2 rounded-full border border-indigo-500/30 mb-6">
               <Infinity className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-300 font-semibold">Transcendent 2033</span>
             </div>
-            
             <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Transcendent AI
             </h2>
-            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Beyond consciousness, beyond reality, beyond infinity. Experience AI that transcends 
               all known limitations and exists in harmony with existence itself.
             </p>
-
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <Link to="/pages/TranscendentAI2033">
                 <button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-indigo-500/25 transition-all"
                 >
                   Begin Transcendence <ArrowRight className="w-5 h-5" />
                 </button>
               </Link>
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="border-2 border-purple-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-400/10 transition-all"
               >
                 Explore Infinity
@@ -64,9 +51,7 @@ const TranscendentAI2033Banner: React.FC = () => {
 
           {/* Right Content - Feature Grid */}
           <div
-            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 gap-6"
           >
             {[
@@ -93,10 +78,7 @@ const TranscendentAI2033Banner: React.FC = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
                 className="bg-gradient-to-br from-indigo-800/20 to-purple-800/20 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 text-center hover:border-indigo-400/40 transition-all group"
               >
                 <div className="text-indigo-400 mb-4 group-hover:text-purple-300 transition-colors flex justify-center">
@@ -113,14 +95,15 @@ const TranscendentAI2033Banner: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-8 w-2 h-2 bg-indigo-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/3 right-12 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
       <div className="absolute top-1/2 left-1/2 w-1 h-1 bg-pink-400 rounded-full animate-ping"></div>
       <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-    </motion.section>
+    </divsection>
   );
 };
 
+
 export default TranscendentAI2033Banner;
+</div></div></div>

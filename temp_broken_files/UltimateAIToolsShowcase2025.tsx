@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Zap
@@ -160,9 +159,7 @@ const UltimateAIToolsShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
@@ -183,9 +180,7 @@ const UltimateAIToolsShowcase2025 = () => {
 
         {/* Search and Filter */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -200,7 +195,6 @@ const UltimateAIToolsShowcase2025 = () => {
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
             </div>
-
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -226,17 +220,13 @@ const UltimateAIToolsShowcase2025 = () => {
 
         {/* Tools Grid */}
         <div
-          variants={containerVariants}
-          initial="hidden"
           whileInView="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          
+          <div>
             {filteredTools.map((tool) => (
               <div
                 key={tool.id}
-                variants={itemVariants}
-                layout
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
                 onHoverStart={() => setHoveredTool(tool.id)}
                 onHoverEnd={() => setHoveredTool(null)}
@@ -262,7 +252,6 @@ const UltimateAIToolsShowcase2025 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Tool Content */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -274,11 +263,9 @@ const UltimateAIToolsShowcase2025 = () => {
                       <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                     </div>
                   </div>
-
                   <p className="text-gray-600 mb-4 line-clamp-2">
                     {tool.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-2 mb-6">
                     {tool.features.slice(02).map((featureindex) => (
@@ -288,7 +275,6 @@ const UltimateAIToolsShowcase2025 = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center text-sm text-gray-500">
@@ -299,7 +285,6 @@ const UltimateAIToolsShowcase2025 = () => {
                       {tool.price}
                     </div>
                   </div>
-
                   {/* Actions */}
                   <div className="flex gap-3">
                     <button className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center">
@@ -319,14 +304,12 @@ const UltimateAIToolsShowcase2025 = () => {
                 </div>
               </div>
             ))}
-          
+          </div>
         </div>
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -352,5 +335,6 @@ const UltimateAIToolsShowcase2025 = () => {
     </div>
   );
 };
+
 
 export default UltimateAIToolsShowcase2025;

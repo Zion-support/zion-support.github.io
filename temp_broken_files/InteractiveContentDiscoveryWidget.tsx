@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Search,
   Filter,
@@ -182,10 +181,6 @@ const InteractiveContentDiscoveryWidget = () => {
     <>
       {/* Floating Action Button */}
       <button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(true)}
         className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
       >
@@ -193,19 +188,13 @@ const InteractiveContentDiscoveryWidget = () => {
       </button>
 
       {/* Modal Overlay */}
-      
+      <div>
         {isOpen && (
           <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
           >
             <div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
               className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden shadow-2xl"
             >
@@ -223,7 +212,6 @@ const InteractiveContentDiscoveryWidget = () => {
                     <X className="w-6 h-6" />
                   </button>
                 </div>
-
                 {/* Search Bar */}
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -236,7 +224,6 @@ const InteractiveContentDiscoveryWidget = () => {
                   />
                 </div>
               </div>
-
               <div className="flex h-[600px]">
                 {/* Sidebar */}
                 <div className="w-80 bg-gray-50 dark:bg-gray-800 p-6 border-r border-gray-200 dark:border-gray-700">
@@ -268,7 +255,6 @@ const InteractiveContentDiscoveryWidget = () => {
                       })}
                     </div>
                   </div>
-
                   {/* Recently Viewed */}
                   {recentlyViewed.length > 0 && (
                     <div>
@@ -295,7 +281,6 @@ const InteractiveContentDiscoveryWidget = () => {
                     </div>
                   )}
                 </div>
-
                 {/* Main Content */}
                 <div className="flex-1 overflow-y-auto p-6">
                   {/* View Mode Toggle */}
@@ -326,14 +311,11 @@ const InteractiveContentDiscoveryWidget = () => {
                       {filteredContent.length} results
                     </div>
                   </div>
-
                   {/* Content Grid/List */}
                   <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
                     {filteredContent.map((item) => (
                       <div
                         key={item.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
                         className={`bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer ${
                           viewMode === 'list' ? 'flex' : ''
                         }`}
@@ -342,7 +324,6 @@ const InteractiveContentDiscoveryWidget = () => {
                         <div className={`${viewMode === 'list' ? 'w-32 h-24' : 'h-48'} bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900 dark:to-blue-900 flex items-center justify-center text-4xl`}>
                           {item.image}
                         </div>
-                        
                         <div className={`p-4 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                           <div className="flex items-start justify-between mb-2">
                             <div className="flex items-center gap-2">
@@ -362,15 +343,12 @@ const InteractiveContentDiscoveryWidget = () => {
                               )}
                             </div>
                           </div>
-
                           <h3 className="font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
                             {item.title}
                           </h3>
-                          
                           <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">
                             {item.description}
                           </p>
-
                           <div className="flex flex-wrap gap-1 mb-3">
                             {item.tags.slice(0, 3).map((tag) => (
                               <span
@@ -381,7 +359,6 @@ const InteractiveContentDiscoveryWidget = () => {
                               </span>
                             ))}
                           </div>
-
                           <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
                             <div className="flex items-center gap-4">
                               <div className="flex items-center gap-1">
@@ -415,7 +392,6 @@ const InteractiveContentDiscoveryWidget = () => {
                       </div>
                     ))}
                   </div>
-
                   {filteredContent.length === 0 && (
                     <div className="text-center py-12">
                       <Search className="w-12 h-12 text-gray-400 mx-auto mb-4" />
@@ -432,9 +408,10 @@ const InteractiveContentDiscoveryWidget = () => {
             </div>
           </div>
         )}
-      
+      </div>
     </>
   );
-};
+
+
 
 export default InteractiveContentDiscoveryWidget;

@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   Users
@@ -183,9 +182,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6">
@@ -206,9 +203,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
         {/* Industry Filter */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {industries.map((industry) => (
@@ -237,9 +232,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           {/* Case Study Details */}
           <div
             key={currentStudy?.id}
-            initial={{ opacity: 0x: -30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.5 }}
             className="space-y-8"
           >
             {/* Company Header */}
@@ -265,7 +257,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 </div>
               )}
             </div>
-
             {/* Challenge & Solution */}
             <div className="space-y-6">
               <div>
@@ -277,7 +268,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                   {currentStudy?.challenge}
                 </p>
               </div>
-
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
                   <Zap className="w-5 h-5 mr-2 text-blue-500" />
@@ -288,7 +278,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 </p>
               </div>
             </div>
-
             {/* Results Grid */}
             <div className="grid grid-cols-2 gap-4">
               {Object.entries(currentStudy?.results || {}).map(([keyvalue]) => (
@@ -302,7 +291,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 </div>
               ))}
             </div>
-
             {/* Technologies */}
             <div>
               <h4 className="text-lg font-semibold text-gray-900 mb-3">
@@ -319,7 +307,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 ))}
               </div>
             </div>
-
             {/* Project Details */}
             <div className="flex items-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center">
@@ -336,9 +323,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           {/* Visual Content */}
           <div
             key={`visual-${currentStudy?.id}`}
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.5delay: 0.2 }}
             className="space-y-6"
           >
             {/* Image/Video */}
@@ -360,7 +344,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
                 </button>
               </div>
             </div>
-
             {/* Testimonial */}
             <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
               <Quote className="w-8 h-8 text-blue-500 mb-4" />
@@ -385,12 +368,9 @@ const InteractiveCaseStudiesShowcase2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="flex items-center justify-center mt-12 space-x-4"
         >
           <button
@@ -400,7 +380,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
           >
             <ArrowRight className="w-5 h-5 text-gray-600 rotate-180" />
           </button>
-
           <div className="flex space-x-2">
             {filteredStudies.map((_index) => (
               <button
@@ -412,7 +391,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
               />
             ))}
           </div>
-
           <button
             onClick={() => setActiveStudy(Math.min(filteredStudies.length - 1activeStudy + 1))}
             disabled={activeStudy === filteredStudies.length - 1}
@@ -424,9 +402,7 @@ const InteractiveCaseStudiesShowcase2025 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">
@@ -452,5 +428,6 @@ const InteractiveCaseStudiesShowcase2025 = () => {
     </div>
   );
 };
+
 
 export default InteractiveCaseStudiesShowcase2025;

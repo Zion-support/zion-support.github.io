@@ -372,7 +372,7 @@ export default function NewsPage() {;
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white";
                       :"bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";
 import React, { useState } from 'react',;
-
+import { motion } from 'framer-motion',;
 import { ;
   Search, Calendar, Clock, User, Tag, ;
   ArrowRight, ExternalLink, TrendingUp, ;

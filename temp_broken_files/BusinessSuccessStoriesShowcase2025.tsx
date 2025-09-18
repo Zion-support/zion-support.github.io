@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   Users
@@ -153,13 +152,9 @@ const BusinessSuccessStoriesShowcase2025 = () => {
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-l from-green-400/20 to-blue-400/20 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl -z-10" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-green-900 to-blue-900 bg-clip-text text-transparent mb-6">
@@ -172,9 +167,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
         {/* Overall Stats */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
         >
           {overallStats.map((statindex) => (
@@ -190,9 +182,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
         {/* Success Stories Navigation */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {successStories.map((storyindex) => (
@@ -211,13 +200,8 @@ const BusinessSuccessStoriesShowcase2025 = () => {
         </div>
 
         {/* Active Success Story */}
-        <AnimatePresence mode="wait">
           <div
             key={activeStory}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
             className="bg-white rounded-3xl p-8 shadow-xl mb-16"
           >
             <div className="grid lg:grid-cols-2 gap-8">
@@ -232,15 +216,12 @@ const BusinessSuccessStoriesShowcase2025 = () => {
                     <p className="text-slate-600">{successStories[activeStory].industry} Industry</p>
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-slate-900 mb-2">Challenge:</h4>
                   <p className="text-slate-600 mb-4">{successStories[activeStory].challenge}</p>
-                  
                   <h4 className="font-semibold text-slate-900 mb-2">Solution:</h4>
                   <p className="text-slate-600 mb-4">{successStories[activeStory].solution}</p>
                 </div>
-
                 <div className="grid grid-cols-2 gap-4">
                   {successStories[activeStory].metrics.map((metricindex) => (
                     <div key={index} className="text-center p-4 bg-slate-50 rounded-xl">
@@ -251,7 +232,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
                   ))}
                 </div>
               </div>
-
               {/* Testimonial */}
               <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6">
                 <div className="flex items-center mb-4">
@@ -274,13 +254,10 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {/* Results Summary */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="bg-gradient-to-r from-green-600 to-blue-600 rounded-3xl p-12 text-white mb-16"
         >
           <div className="text-center mb-8">
@@ -289,7 +266,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
               Our solutions have delivered measurable results for companies of all sizes and industries.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">350%</div>
@@ -312,9 +288,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.8 }}
           className="text-center"
         >
           <h3 className="text-3xl font-bold text-slate-900 mb-4">Ready to Write Your Success Story?</h3>
@@ -337,4 +310,6 @@ const BusinessSuccessStoriesShowcase2025 = () => {
   );
 };
 
+
 export default BusinessSuccessStoriesShowcase2025;
+</div></div>

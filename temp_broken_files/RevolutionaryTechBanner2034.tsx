@@ -1,60 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-
 const RevolutionaryTechBanner2034: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const bannerContent = [
-    {
-      title: "Ultimate Tech Revolution 2034",
-      subtitle: "Omniversal Technology Convergence",
-      description: "Experience the convergence of all technologies into a unified omniversal system",
-      icon: "🌌",
-      color: "from-cyan-500 to-pink-500",
-      link: "/pages/UltimateTechRevolution2034"
-    },
-    {
-      title: "Neural Reality Engine 2035",
-      subtitle: "Thought-Controlled Reality",
-      description: "Control reality itself through pure thought and advanced neural networks",
-      icon: "🧬",
-      color: "from-emerald-500 to-cyan-500",
-      link: "/pages/NeuralRealityEngine2035"
-    },
-    {
-      title: "Omniversal Consciousness 2036",
-      subtitle: "Infinite Mind Integration",
-      description: "Join the ultimate evolution of consciousness across infinite realities",
-      icon: "🌟",
-      color: "from-violet-500 to-fuchsia-500",
-      link: "/pages/OmniversalConsciousness2036"
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bannerContent.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-purple-900 to-indigo-900 text-white">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-pink-600/10"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%2523ffffff%2522%2520fill-opacity%253D%25220.05%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25224%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Main Banner */}
         <div
           key={currentSlide}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
           <div className="flex items-center justify-center space-x-4 mb-6">
@@ -69,11 +27,9 @@ const RevolutionaryTechBanner2034: React.FC = () => {
             </div>
             <span className="text-6xl animate-bounce">{bannerContent[currentSlide].icon}</span>
           </div>
-          
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             {bannerContent[currentSlide].description}
           </p>
-
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-full text-lg font-semibold animate-pulse">
               ✨ REVOLUTIONARY BREAKTHROUGH
@@ -85,7 +41,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
               🌟 INFINITE POSSIBILITIES
             </span>
           </div>
-
           <div className="flex justify-center space-x-4">
             <a
               href={bannerContent[currentSlide].link}
@@ -111,18 +66,14 @@ const RevolutionaryTechBanner2034: React.FC = () => {
             />
           ))}
         </div>
-
         {/* Quick Access Grid */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="grid md:grid-cols-3 gap-6"
         >
           {bannerContent.map((content, index) => (
             <div
               key={index}
-              whileHover={{ scale: 1.05 }}
               className={`bg-gradient-to-r ${content.color} rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 cursor-pointer`}
               onClick={() => setCurrentSlide(index)}
             >
@@ -136,9 +87,7 @@ const RevolutionaryTechBanner2034: React.FC = () => {
 
         {/* Bottom Stats */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-12 text-center"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -164,5 +113,6 @@ const RevolutionaryTechBanner2034: React.FC = () => {
     </div>
   );
 };
+
 
 export default RevolutionaryTechBanner2034;

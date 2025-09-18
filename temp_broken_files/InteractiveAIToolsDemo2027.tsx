@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Play
   Pause
@@ -55,14 +54,9 @@ interface UserProfileCardProps {
 
 export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 max-w-sm">
-      <div className="flex items-center space-x-4">
-        <Avatar src={user.avatar} alt={user.name} />
-        <div>
-          <h3 className="text-lg font-semibold">{user.name}</h3>
-          <p className="text-gray-600">{user.bio}</p>
-        </div>
-      </div>
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">InteractiveAIToolsDemo2027</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
 };`,
@@ -78,18 +72,15 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
       demo: {
         input: 'Analyze sales data for Q4 2024 and identify trends',
         output: `## Q4 2024 Sales Analysis
-
 ### Key Insights:
 - **Total Revenue**: $2.4M (+23% vs Q3)
 - **Top Product**: Premium AI Tools (34% of sales)
 - **Growth Rate**: 23% month-over-month
 - **Customer Acquisition**: 1,247 new customers
-
 ### Trends Identified:
 1. **Peak Performance**: December showed 45% increase
 2. **Geographic Growth**: European market up 67%
 3. **Customer Segment**: Enterprise clients driving 78% of growth
-
 ### Recommendations:
 - Focus on European expansion
 - Increase premium product marketing
@@ -118,21 +109,15 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
       demo: {
         input: 'Write a blog post about the future of AI in healthcare',
         output: `# The Future of AI in Healthcare: A Revolutionary Transformation
-
 ## Introduction
 Artificial Intelligence is poised to revolutionize healthcare in ways 'we', 've never imagined. From diagnostic accuracy to personalized treatment plansAI is transforming every aspect of medical care.
-
 ## Key Applications
-
 ### 1. Diagnostic Imaging
 AI-powered systems can now detect diseases with superhuman accuracyidentifying conditions like cancerheart diseaseand neurological disorders earlier than ever before.
-
 ### 2. Drug Discovery
 Machine learning algorithms are accelerating drug developmentreducing the time from discovery to market from years to months.
-
 ### 3. Personalized Medicine
 AI analyzes patient data to create customized treatment plansensuring optimal outcomes for each individual.
-
 ## The Road Ahead
 As AI continues to evolvewe can expect even more groundbreaking innovations that will save lives and improve quality of care for millions worldwide.`,
         time: 2.8
@@ -163,17 +148,14 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       }
     }
   ];
-
   const runDemo = async () => {
     setIsRunning(true);
     setProgress(0);
     setResults([]);
-
     const tool = aiTools[activeTool];
     const duration = tool.demo.time * 1000;
     const interval = 50;
     const increment = (interval / duration) * 100;
-
     const timer = setInterval(() => {
       setProgress(prev => {
         if (prev >= 100) {
@@ -191,23 +173,17 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       });
     }interval);
   };
-
   const resetDemo = () => {
     setIsRunning(false);
     setProgress(0);
     setResults([]);
   };
-
   if (!isVisible) return null;
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -226,9 +202,6 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Tool Selection */}
           <div
-            initial={{ opacity: 0x: -30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8delay: 0.2 }}
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Choose an AI Tool</h3>
@@ -263,9 +236,6 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
 
           {/* Demo Interface */}
           <div
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8delay: 0.4 }}
             className="bg-white rounded-2xl shadow-xl p-8"
           >
             <div className="flex items-center justify-between mb-6">
@@ -290,7 +260,6 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                 </button>
               </div>
             </div>
-
             {/* Input Section */}
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -302,7 +271,6 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                 </p>
               </div>
             </div>
-
             {/* Progress Bar */}
             {isRunning && (
               <div className="mb-6">
@@ -314,24 +282,19 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                   <div
                     className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
                     style={{ width: `${progress}%` }}
-                    transition={{ duration: 0.1 }}
                   />
                 </div>
               </div>
             )}
-
             {/* Output Section */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 AI Output
               </label>
               <div className="bg-gray-900 rounded-lg p-4 border min-h-[200px]">
-                
+                <div>
                   {results.length > 0 ? (
                     <div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
                       className="space-y-4"
                     >
                       <div className="flex items-center gap-2 text-green-400 text-sm">
@@ -358,17 +321,13 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
                       <p>Click "Run Demo" to see AI magic in action</p>
                     </div>
                   )}
-                
+                </div>
               </div>
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-white">
@@ -393,6 +352,7 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
       </div>
     </section>
   );
-};
+
+
 
 export default InteractiveAIToolsDemo2027;

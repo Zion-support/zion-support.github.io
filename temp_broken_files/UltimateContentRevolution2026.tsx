@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Sparkles
   Zap
@@ -135,9 +134,6 @@ const UltimateContentRevolution2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-6 animate-pulse">
@@ -155,9 +151,6 @@ const UltimateContentRevolution2026 = () => {
 
         {/* Content Tabs */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -176,15 +169,9 @@ const UltimateContentRevolution2026 = () => {
               </button>
             ))}
           </div>
-
           {/* Tab Content */}
-          <AnimatePresence mode="wait">
             <div
               key={activeTab}
-              initial={{ opacity: 0x: 20 }}
-              animate={{ opacity: 1x: 0 }}
-              exit={{ opacity: 0x: -20 }}
-              transition={{ duration: 0.5 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
             >
               <div className="grid lg:grid-cols-2 gap-8">
@@ -195,7 +182,6 @@ const UltimateContentRevolution2026 = () => {
                   <p className="text-lg text-gray-300 mb-6">
                     {contentSections[activeTab].content.description}
                   </p>
-                  
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     {contentSections[activeTab].content.stats.map((statindex) => (
                       <div key={index} className="bg-white/10 rounded-lg p-4 text-center">
@@ -206,7 +192,6 @@ const UltimateContentRevolution2026 = () => {
                     ))}
                   </div>
                 </div>
-                
                 <div>
                   <h4 className="text-xl font-semibold mb-4 text-white">Key Features</h4>
                   <div className="space-y-3">
@@ -220,14 +205,11 @@ const UltimateContentRevolution2026 = () => {
                 </div>
               </div>
             </div>
-          
+          </div>
         </div>
 
         {/* Testimonials */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-center mb-12 text-white">
@@ -237,9 +219,6 @@ const UltimateContentRevolution2026 = () => {
             {testimonials.map((testimonialindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5delay: 0.1 * index }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -266,9 +245,6 @@ const UltimateContentRevolution2026 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -292,5 +268,6 @@ const UltimateContentRevolution2026 = () => {
     </div>
   );
 };
+
 
 export default UltimateContentRevolution2026;

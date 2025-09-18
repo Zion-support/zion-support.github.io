@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   ArrowRight
   TrendingUp
@@ -142,9 +141,6 @@ const EnterpriseSuccessStories = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -164,9 +160,6 @@ const EnterpriseSuccessStories = () => {
 
         {/* Key Metrics */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="grid md:grid-cols-4 gap-6 mb-16"
         >
           {keyMetrics.map((metricindex) => (
@@ -186,9 +179,6 @@ const EnterpriseSuccessStories = () => {
 
         {/* Story Navigation */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {successStories.map((storyindex) => (
@@ -209,9 +199,6 @@ const EnterpriseSuccessStories = () => {
         {/* Active Story Display */}
         <div
           key={activeStory}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
           className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-16"
         >
           {/* Story Header */}
@@ -231,7 +218,6 @@ const EnterpriseSuccessStories = () => {
               </div>
             </div>
           </div>
-
           {/* Story Content */}
           <div className="p-8">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -239,11 +225,9 @@ const EnterpriseSuccessStories = () => {
               <div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Challenge</h4>
                 <p className="text-gray-600 mb-6">{successStories[activeStory].challenge}</p>
-                
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Solution</h4>
                 <p className="text-gray-600">{successStories[activeStory].solution}</p>
               </div>
-
               {/* Results */}
               <div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Results</h4>
@@ -267,7 +251,6 @@ const EnterpriseSuccessStories = () => {
                 </div>
               </div>
             </div>
-
             {/* Quote */}
             <div className="bg-gray-50 rounded-2xl p-6">
               <Quote className="w-8 h-8 text-gray-400 mb-4" />
@@ -281,9 +264,6 @@ const EnterpriseSuccessStories = () => {
 
         {/* Benefits Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -301,9 +281,6 @@ const EnterpriseSuccessStories = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -328,5 +305,6 @@ const EnterpriseSuccessStories = () => {
     </div>
   );
 };
+
 
 export default EnterpriseSuccessStories;

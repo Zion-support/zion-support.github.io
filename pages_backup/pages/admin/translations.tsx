@@ -1,40 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import dynamic from 'next/dynamic';
-
-
-import dynamic from 'next/dynamic'
-import dynamic from 'next/dynamic',;
-import dynamic from 'next/dynamic'
-
-const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
-
-const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
-
-
-export default function TranslationsAdminPage() {
+const translations: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <TranslationPreview />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>translations | Zion Tech Group</title>
+        <meta name="description" content="translations - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">translations</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
     </div>
-
   );
 };
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-import dynamic from 'next/dynamic';
-const _TranslationPreview = dynamic__(() => import('../../components/admin/TranslationPreview'), {_ssr: false});
-export default function TranslationsAdminPage() {_return (
-    <div className="container mx-auto px-4 py-8">
-      <TranslationPreview />
-    </div>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
+export default translations;

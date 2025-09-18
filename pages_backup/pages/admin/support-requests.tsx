@@ -1,154 +1,22 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-
-
-
-
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
-
-
-
-
-import { GetServerSideProps } from 'next',;
-import { useState } from 'react',;
-import { readJson } from '../../utils/fsDb',;
-
-
-
-
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const requests = readJson<any[]>('support/requests.json', [])
-  return { props: { initialRequests: requests } }
-}
-export default function SupportRequests({ initialRequests }: { initialRequests: any[] }) {
-  const [requests, setRequests] = useState(initialRequests)
-  async function resolve(id: string) {
-    await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
-
-    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
-
-
-
-
-
-
-
-
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
-export const getServerSideProps: GetServerSideProps = async () => {;
-  const requests = readJson<any[]>('support/requests.json', []),;
-  return { props: { initialRequests: requests }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
-
-
-
-
-  }
-
-
-
-
-  }
-}
-},;
-export default function SupportRequests(req, res) {
-  try {
-  const [requests, setRequests] = useState(initialRequests);
-  async function resolve(id: string) {;
-    await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
-    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
+const support-requests: React.FC = () => {
   return (
-
-
-}
-
-              <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
-          </div>))}
-      </div>;
-    </div>);
-}
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Support Requests</h1>
-      <div className="grid gap-3">
-        {requests.length === 0 && <div className="opacity-70">No requests found.</div>}
-
-        {requests.length === 0 && <div className="opacity-70">No requests found.</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-
-
-
-        {requests.map((r) => (
-          <div key={r.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between">
-            <div className="text-sm">
-              <div className="font-medium">{r.id}</div>
-              <div className="opacity-80">Session: {r.sessionId}</div>
-              <div className="opacity-80">Tag: {r.tag}</div>
-              <div className="opacity-80">Reason: {r.reason}</div>
-              <div className="opacity-80">Status: {r.status}</div>
-            </div>
-            {r.status !== 'resolved' && (
-              <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
-
-            )}
-          </div>
-        ))}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>support-requests | Zion Tech Group</title>
+        <meta name="description" content="support-requests - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">support-requests</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
       </div>
     </div>
-  )
   );
 };
 
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-
-}
-}
-
-
-
-
-
-
-
-
-
+export default support-requests;

@@ -1,10 +1,12 @@
-import React from "react"
-import type { NextPage } from 'next'
+import React from 'react';
 
-const Contact: NextPage = () => {
+const contact-backup: React.FC = () => {
   return (
-    <div>Contact Backup</div>
-  )
-}
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">contact-backup</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
 
-export default Contact
+export default contact-backup;

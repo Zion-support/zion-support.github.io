@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Search
   Filter
@@ -190,7 +189,6 @@ const EnhancedContentDiscoveryWidget2025 = () => {
             that are transforming industries worldwide.
           </p>
         </div>
-
         {/* Search and Filters */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -205,7 +203,6 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div className="relative">
               <button
@@ -217,12 +214,9 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${showFilters ? 'rotate-180' : ''}`} />
               </button>
 
-              
+              <div>
                 {showFilters && (
                   <div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50"
                   >
                     <div className="p-2">
@@ -249,9 +243,8 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                     </div>
                   </div>
                 )}
-              
+              </div>
             </div>
-
             {/* Sort Options */}
             <div className="flex gap-2">
               {sortOptions.map((option) => (
@@ -271,19 +264,14 @@ const EnhancedContentDiscoveryWidget2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
+          <div>
             {filteredContent.map((itemindex) => {
               const TypeIcon = getContentTypeIcon(item.type);
               return (
                 <div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
                   className={`group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 ${
                     item.featured ? 'ring-2 ring-blue-500/30' : ''
                   }`}
@@ -293,7 +281,6 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                       Featured
                     </div>
                   )}
-
                   <div className="p-6">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -306,17 +293,14 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                         <span className="text-sm text-gray-300">{item.rating}</span>
                       </div>
                     </div>
-
                     {/* Title */}
                     <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200 line-clamp-2">
                       {item.title}
                     </h3>
-
                     {/* Description */}
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                       {item.description}
                     </p>
-
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {item.tags.slice(03).map((tag) => (
@@ -328,7 +312,6 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                         </span>
                       ))}
                     </div>
-
                     {/* Stats */}
                     <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                       <div className="flex items-center gap-4">
@@ -352,7 +335,6 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                         </div>
                       </div>
                     </div>
-
                     {/* CTA */}
                     <a
                       href={`/${item.type === 'case-study' ? 'case-studies' : 'blog'}/${item.title.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ')}`}
@@ -365,9 +347,8 @@ const EnhancedContentDiscoveryWidget2025 = () => {
                 </div>
               );
             })}
-          
+          </div>
         </div>
-
         {/* Load More */}
         <div className="text-center mt-12">
           <button className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -378,6 +359,7 @@ const EnhancedContentDiscoveryWidget2025 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default EnhancedContentDiscoveryWidget2025;

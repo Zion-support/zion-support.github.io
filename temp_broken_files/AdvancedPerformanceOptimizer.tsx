@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -24,120 +23,6 @@ interface OptimizationRecommendations {
 }
 
 const AdvancedPerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    bundleSize: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    cacheHitRate: 0,
-    errorRate: 0
-  });
-
-  const [recommendations, setRecommendations] = useState<OptimizationRecommendations>({
-    lazyLoading: false,
-    codeSplitting: false,
-    imageOptimization: false,
-    caching: false,
-    compression: false,
-    preloading: false,
-    serviceWorker: false,
-    cdn: false
-  });
-
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationProgress, setOptimizationProgress] = useState(0);
-
-  // Simulate performance metrics collection
-  const collectMetrics = useCallback(() => {
-    const mockMetrics: PerformanceMetrics = {
-      loadTime: Math.random() * 3000 + 1000,
-      renderTime: Math.random() * 500 + 100,
-      bundleSize: Math.random() * 2000 + 500,
-      memoryUsage: Math.random() * 100 + 50,
-      cpuUsage: Math.random() * 50 + 10,
-      networkLatency: Math.random() * 200 + 50,
-      cacheHitRate: Math.random() * 40 + 60,
-      errorRate: Math.random() * 5
-    };
-
-    setMetrics(mockMetrics);
-
-    // Generate recommendations based on metrics
-    const newRecommendations: OptimizationRecommendations = {
-      lazyLoading: mockMetrics.loadTime > 2000,
-      codeSplitting: mockMetrics.bundleSize > 1000,
-      imageOptimization: mockMetrics.loadTime > 1500,
-      caching: mockMetrics.cacheHitRate < 80,
-      compression: mockMetrics.bundleSize > 800,
-      preloading: mockMetrics.loadTime > 2500,
-      serviceWorker: mockMetrics.cacheHitRate < 70,
-      cdn: mockMetrics.networkLatency > 150
-    };
-
-    setRecommendations(newRecommendations);
-  }, []);
-
-  useEffect(() => {
-    collectMetrics();
-    const interval = setInterval(collectMetrics, 5000);
-    return () => clearInterval(interval);
-  }, [collectMetrics]);
-
-  const runOptimization = async () => {
-    setIsOptimizing(true);
-    setOptimizationProgress(0);
-
-    const steps = [
-      'Analyzing performance metrics...',
-      'Optimizing bundle size...',
-      'Implementing lazy loading...',
-      'Enabling code splitting...',
-      'Optimizing images...',
-      'Configuring caching...',
-      'Setting up compression...',
-      'Implementing service worker...',
-      'Finalizing optimizations...'
-    ];
-
-    for (let i = 0; i < steps.length; i++) {
-      await new Promise(resolve => setTimeout(resolve, 800));
-      setOptimizationProgress(((i + 1) / steps.length) * 100);
-    }
-
-    setIsOptimizing(false);
-    
-    // Update metrics after optimization
-    setTimeout(() => {
-      setMetrics(prev => ({
-        ...prev,
-        loadTime: prev.loadTime * 0.6,
-        renderTime: prev.renderTime * 0.7,
-        bundleSize: prev.bundleSize * 0.5,
-        memoryUsage: prev.memoryUsage * 0.8,
-        cpuUsage: prev.cpuUsage * 0.9,
-        networkLatency: prev.networkLatency * 0.5,
-        cacheHitRate: Math.min(95, prev.cacheHitRate + 15),
-        errorRate: prev.errorRate * 0.3
-      }));
-    }, 1000);
-  };
-
-  const getPerformanceGrade = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return { grade: 'A', color: 'text-green-600', bgColor: 'bg-green-100' };
-    if (value <= thresholds.poor) return { grade: 'B', color: 'text-yellow-600', bgColor: 'bg-yellow-100' };
-    return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' };
-  };
-
-  const formatMetric = (value: number, unit: string = 'ms') => {
-    return `${Math.round(value)}${unit}`;
-  };
-
-  const getRecommendationIcon = (recommended: boolean) => {
-    return recommended ? '⚠️' : '✅';
-  };
-
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
       <div className="text-center mb-8">
@@ -148,14 +33,12 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           Real-time performance monitoring and optimization recommendations
         </p>
       </div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Performance Metrics */}
         <div className="space-y-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
             Performance Metrics
           </h3>
-          
           <div className="grid grid-cols-2 gap-4">
             <div className={`p-4 rounded-lg ${getPerformanceGrade(metrics.loadTime, { good: 1500, poor: 3000 }).bgColor} dark:bg-gray-700`}>
               <div className="text-sm text-gray-600 dark:text-gray-400">Load Time</div>
@@ -166,7 +49,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                 Grade: {getPerformanceGrade(metrics.loadTime, { good: 1500, poor: 3000 }).grade}
               </div>
             </div>
-
             <div className={`p-4 rounded-lg ${getPerformanceGrade(metrics.renderTime, { good: 200, poor: 500 }).bgColor} dark:bg-gray-700`}>
               <div className="text-sm text-gray-600 dark:text-gray-400">Render Time</div>
               <div className={`text-2xl font-bold ${getPerformanceGrade(metrics.renderTime, { good: 200, poor: 500 }).color}`}>
@@ -176,7 +58,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                 Grade: {getPerformanceGrade(metrics.renderTime, { good: 200, poor: 500 }).grade}
               </div>
             </div>
-
             <div className={`p-4 rounded-lg ${getPerformanceGrade(metrics.bundleSize, { good: 800, poor: 1500 }).bgColor} dark:bg-gray-700`}>
               <div className="text-sm text-gray-600 dark:text-gray-400">Bundle Size</div>
               <div className={`text-2xl font-bold ${getPerformanceGrade(metrics.bundleSize, { good: 800, poor: 1500 }).color}`}>
@@ -186,7 +67,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                 Grade: {getPerformanceGrade(metrics.bundleSize, { good: 800, poor: 1500 }).grade}
               </div>
             </div>
-
             <div className={`p-4 rounded-lg ${getPerformanceGrade(metrics.memoryUsage, { good: 70, poor: 90 }).bgColor} dark:bg-gray-700`}>
               <div className="text-sm text-gray-600 dark:text-gray-400">Memory Usage</div>
               <div className={`text-2xl font-bold ${getPerformanceGrade(metrics.memoryUsage, { good: 70, poor: 90 }).color}`}>
@@ -196,7 +76,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                 Grade: {getPerformanceGrade(metrics.memoryUsage, { good: 70, poor: 90 }).grade}
               </div>
             </div>
-
             <div className={`p-4 rounded-lg ${getPerformanceGrade(metrics.networkLatency, { good: 100, poor: 200 }).bgColor} dark:bg-gray-700`}>
               <div className="text-sm text-gray-600 dark:text-gray-400">Network Latency</div>
               <div className={`text-2xl font-bold ${getPerformanceGrade(metrics.networkLatency, { good: 100, poor: 200 }).color}`}>
@@ -206,7 +85,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                 Grade: {getPerformanceGrade(metrics.networkLatency, { good: 100, poor: 200 }).grade}
               </div>
             </div>
-
             <div className={`p-4 rounded-lg ${getPerformanceGrade(100 - metrics.cacheHitRate, { good: 20, poor: 40 }).bgColor} dark:bg-gray-700`}>
               <div className="text-sm text-gray-600 dark:text-gray-400">Cache Hit Rate</div>
               <div className={`text-2xl font-bold ${getPerformanceGrade(100 - metrics.cacheHitRate, { good: 20, poor: 40 }).color}`}>
@@ -218,20 +96,15 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Optimization Recommendations */}
         <div className="space-y-6">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
             Optimization Recommendations
           </h3>
-
           <div className="space-y-4">
             {Object.entries(recommendations).map(([key, recommended]) => (
               <div
                 key={key}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3 }}
                 className={`p-4 rounded-lg border-2 ${
                   recommended 
                     ? 'border-yellow-300 bg-yellow-50 dark:bg-yellow-900/20' 
@@ -261,7 +134,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
               </div>
             ))}
           </div>
-
           {/* Optimization Button */}
           <div className="pt-6">
             <button
@@ -271,7 +143,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
             >
               {isOptimizing ? 'Optimizing...' : 'Run Performance Optimization'}
             </button>
-
             {isOptimizing && (
               <div className="mt-4">
                 <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
@@ -281,9 +152,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                   <div
                     className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${optimizationProgress}%` }}
-                    transition={{ duration: 0.3 }}
                   />
                 </div>
               </div>
@@ -291,7 +159,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Performance Summary */}
       <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg">
         <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -321,5 +188,6 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
     </div>
   );
 };
+
 
 export default AdvancedPerformanceOptimizer;

@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Brain
   Zap
@@ -179,9 +178,6 @@ const UltimateContentRevolution2025 = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -213,7 +209,6 @@ const UltimateContentRevolution2025 = () => {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="py-16 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,9 +216,6 @@ const UltimateContentRevolution2025 = () => {
             {stats.map((statindex) => (
               <div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4">
@@ -236,7 +228,6 @@ const UltimateContentRevolution2025 = () => {
           </div>
         </div>
       </div>
-
       {/* Content Tabs */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,7 +239,6 @@ const UltimateContentRevolution2025 = () => {
               {contentSections[activeTab].subtitle}
             </p>
           </div>
-
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center mb-12">
             {Object.keys(contentSections).map((tab) => (
@@ -265,23 +255,14 @@ const UltimateContentRevolution2025 = () => {
               </button>
             ))}
           </div>
-
           {/* Content Grid */}
-          <AnimatePresence mode="wait">
             <div
               key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
               {contentSections[activeTab].items.map((itemindex) => (
                 <div
                   key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105"
                 >
                   <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${item.color} rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -296,10 +277,9 @@ const UltimateContentRevolution2025 = () => {
                 </div>
               ))}
             </div>
-          
+          </div>
         </div>
       </div>
-
       {/* Testimonials Section */}
       <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,15 +287,9 @@ const UltimateContentRevolution2025 = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Client Success Stories</h2>
             <p className="text-xl text-gray-300">Hear from industry leaders 'who', 've transformed their businesses with our AI solutions</p>
           </div>
-
           <div className="relative">
-            <AnimatePresence mode="wait">
               <div
                 key={currentSlide}
-                initial={{ opacity: 0x: 50 }}
-                animate={{ opacity: 1x: 0 }}
-                exit={{ opacity: 0x: -50 }}
-                transition={{ duration: 0.5 }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
               >
                 <div className="flex items-center mb-6">
@@ -334,7 +308,7 @@ const UltimateContentRevolution2025 = () => {
                 </div>
                 <p className="text-lg text-gray-300 italic">"{testimonials[currentSlide].content}"</p>
               </div>
-            
+            </div>
 
             {/* Testimonial Navigation */}
             <div className="flex justify-center mt-8 space-x-2">
@@ -351,7 +325,6 @@ const UltimateContentRevolution2025 = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -383,5 +356,6 @@ const UltimateContentRevolution2025 = () => {
     </div>
   );
 };
+
 
 export default UltimateContentRevolution2025;

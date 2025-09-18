@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Zap
@@ -48,25 +47,17 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-indigo-500/10"></div>
-      
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
-      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div
-            initial={{ opacity: 0x: -50 }}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -50 }}
-            transition={{ duration: 0.8 }}
           >
             {/* Badge */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.6delay: 0.2 }}
               className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"
             >
               <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
@@ -74,57 +65,40 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
             </div>
 
             {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8delay: 0.3 }}
+            <divh1
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
               Experience the
               <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Future of Technology
               </span>
-            </motion.h1>
+            </divh1>
 
             {/* Subheading */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8delay: 0.4 }}
+            <divp
               className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
               Discover cutting-edge AIquantum computingblockchainand IoT solutions that are transforming industries and creating unprecedented opportunities for growth.
-            </motion.p>
+            </divp>
 
             {/* Rotating Features */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.8delay: 0.5 }}
               className="mb-8"
             >
               <div className="flex items-center text-lg text-gray-300">
                 <span className="mr-3">Featured:</span>
-                <AnimatePresence mode="wait">
-                  <motion.span
+                  <divspan
                     key={currentFeature}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5 }}
                     className="text-purple-400 font-semibold"
                   >
                     {features[currentFeature]}
-                  </motion.span>
-                
+                  </divspan>
+                </div>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center group">
@@ -140,9 +114,6 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
 
           {/* Right Content - Stats & Visual */}
           <div
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8delay: 0.4 }}
             className="relative"
           >
             {/* Main Visual */}
@@ -158,15 +129,11 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
                   </div>
                 </div>
               </div>
-
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((statindex) => (
                   <div
                     key={stat.label}
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
-                    transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
@@ -174,23 +141,17 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
                   </div>
                 ))}
               </div>
-
               {/* Floating Elements */}
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-purple-400/30 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-pink-400/30 rounded-full animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 -right-6 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-500"></div>
             </div>
-
             {/* Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-3xl blur-3xl -z-10"></div>
           </div>
         </div>
-
         {/* Bottom Stats Bar */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 1.0 }}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
@@ -201,9 +162,6 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
           ].map((itemindex) => (
             <div
               key={item.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
-              transition={{ duration: 0.6delay: 1.2 + index * 0.1 }}
               className="text-center"
             >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
@@ -219,4 +177,6 @@ const RevolutionaryTechShowcase2025PromotionBanner = () => {
   );
 };
 
+
 export default RevolutionaryTechShowcase2025PromotionBanner;
+</div></div>

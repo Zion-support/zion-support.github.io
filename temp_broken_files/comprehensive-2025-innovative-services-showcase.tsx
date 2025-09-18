@@ -1,7 +1,5 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-
 import { 
   Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
   Rocket, Lock, Palette, Factory, Database, Cloud, 
@@ -46,7 +44,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           'autonomous systems'
         ]}
       />
-      
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
         {/* Enhanced Background Elements */}
@@ -57,19 +54,12 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400/20 rounded-full animate-pulse delay-500"></div>
           <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-green-400/20 transform rotate-12 animate-pulse delay-1500"></div>
         </div>
-        
         <div className="text-center max-w-6xl mx-auto relative z-10">
           <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             className="space-y-6"
           >
             {/* Enhanced Company Badge */}
             <div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
             >
               <Star className="w-5 h-5" />
@@ -82,12 +72,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
               Pioneering the future with cutting-edge micro SAAS services, quantum computing solutions, and autonomous AI platforms
             </p>
-            
             {/* Enhanced Stats */}
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
               className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             >
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">
@@ -110,15 +96,12 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Categories */}
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -136,9 +119,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               return (
                 <div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -159,14 +140,11 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -184,9 +162,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               return (
                 <div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -197,7 +173,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                         Popular
                       </div>
                     )}
-                    
                     <div className="text-center mb-6">
                       <div className={`w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-4xl`}>
                         {service.icon}
@@ -208,7 +183,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                         {service.price}<span className="text-lg text-gray-400">/{service.period}</span>
                       </div>
                     </div>
-                    
                     <div className="space-y-3 mb-6">
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
@@ -217,7 +191,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    
                     {/* Market Info */}
                     <div className="border-t border-white/10 pt-4 space-y-2">
                       <div className="text-xs text-gray-400">
@@ -234,15 +207,12 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* All Services Grid */}
       <section className="py-20 px-4 bg-black/30 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -260,9 +230,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               return (
                 <div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.05 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -289,14 +257,11 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
@@ -306,7 +271,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Get in touch with our team to discuss how our innovative services can drive your success
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
@@ -322,7 +286,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 Email Us
               </a>
             </div>
-            
             <div className="text-sm text-gray-400">
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
@@ -332,6 +295,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       </section>
     </Layout>
   );
-};
+
+
 
 export default Comprehensive2025InnovativeServicesShowcase;

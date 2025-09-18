@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   Users
@@ -138,9 +137,6 @@ const BusinessTransformation2025Showcase = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-cyan-200 bg-clip-text text-transparent mb-6">
@@ -153,9 +149,6 @@ const BusinessTransformation2025Showcase = () => {
 
         {/* Navigation Tabs */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {sections.map((section) => {
@@ -180,10 +173,6 @@ const BusinessTransformation2025Showcase = () => {
         {/* Metrics Display */}
         <div
           key={activeSection}
-          initial={{ opacity: 0x: 50 }}
-          animate={{ opacity: 1x: 0 }}
-          exit={{ opacity: 0x: -50 }}
-          transition={{ duration: 0.5 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
           {transformationData[activeSection as keyof typeof transformationData].metrics.map((metricindex) => {
@@ -191,23 +180,16 @@ const BusinessTransformation2025Showcase = () => {
             return (
               <div
                 key={index}
-                variants={itemVariants}
-                initial="hidden"
-                animate="visible"
-                transition={{ delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
                 <div className="relative z-10">
                   <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${transformationData[activeSection as keyof typeof transformationData].color} mb-4`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <div className={`text-3xl font-bold ${metric.color} mb-2`}>
                     {metric.value}
                   </div>
-                  
                   <div className="text-gray-300 font-medium">
                     {metric.label}
                   </div>
@@ -219,29 +201,20 @@ const BusinessTransformation2025Showcase = () => {
 
         {/* Success Stories */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="mb-16"
         >
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             Success Stories
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((storyindex) => {
               const Icon = story.icon;
               return (
                 <div
                   key={index}
-                  variants={itemVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: index * 0.1 }}
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
                       <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 mr-3">
@@ -252,7 +225,6 @@ const BusinessTransformation2025Showcase = () => {
                         <p className="text-gray-400 text-sm">{story.industry}</p>
                       </div>
                     </div>
-                    
                     <div className="space-y-3 mb-6">
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 mb-1">Challenge</h4>
@@ -267,7 +239,6 @@ const BusinessTransformation2025Showcase = () => {
                         <p className="text-gray-300 text-sm">{story.results}</p>
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between">
                       <div className="text-2xl font-bold text-green-400">
                         {story.revenue}
@@ -286,9 +257,6 @@ const BusinessTransformation2025Showcase = () => {
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-3xl p-12">
@@ -315,6 +283,8 @@ const BusinessTransformation2025Showcase = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default BusinessTransformation2025Showcase;
+</div></div>

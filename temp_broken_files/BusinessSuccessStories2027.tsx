@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   TrendingUp
   Users
@@ -164,7 +163,6 @@ const BusinessSuccessStories2027 = () => {
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
         <div
           className="absolute top-0 left-0 w-full h-full"
-          animate={{
             background: [
               'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
               'radial-gradient(circle at 80% 20%rgba(25511980.2) 0%transparent 50%)',
@@ -172,23 +170,17 @@ const BusinessSuccessStories2027 = () => {
               'radial-gradient(circle at 20% 50%rgba(12011980.2) 0%transparent 50%)',
             ]
           }}
-          transition={{ duration: 20repeat: Infinity }}
         />
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 mb-6">
             <Award className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-medium">Success Stories 2027</span>
           </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
               Business Success
@@ -198,7 +190,6 @@ const BusinessSuccessStories2027 = () => {
               Stories 2027
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover how leading companies achieved extraordinary results using our 
             revolutionary AI and automation solutions. Real storiesreal resultsreal transformation.
@@ -207,9 +198,6 @@ const BusinessSuccessStories2027 = () => {
 
         {/* Story Navigation */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="flex justify-center mb-8"
         >
           <div className="flex items-center gap-4">
@@ -219,7 +207,6 @@ const BusinessSuccessStories2027 = () => {
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
-            
             <div className="flex gap-2">
               {successStories.map((_index) => (
                 <button
@@ -231,14 +218,12 @@ const BusinessSuccessStories2027 = () => {
                 />
               ))}
             </div>
-            
             <button
               onClick={nextStory}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
-            
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className={`p-3 rounded-full transition-all duration-300 ${
@@ -251,13 +236,8 @@ const BusinessSuccessStories2027 = () => {
         </div>
 
         {/* Story Content */}
-        <AnimatePresence mode="wait">
           <div
             key={currentStory}
-            initial={{ opacity: 0x: 50 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -50 }}
-            transition={{ duration: 0.5 }}
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-8"
           >
             {/* Company Header */}
@@ -270,7 +250,6 @@ const BusinessSuccessStories2027 = () => {
                 <p className="text-gray-300 text-lg">{currentStoryData.industry}</p>
               </div>
             </div>
-
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Challenge & Solution */}
               <div>
@@ -281,7 +260,6 @@ const BusinessSuccessStories2027 = () => {
                   </h4>
                   <p className="text-gray-300 leading-relaxed">{currentStoryData.challenge}</p>
                 </div>
-                
                 <div className="mb-6">
                   <h4 className="text-xl font-semibold text-white mb-3 flex items-center gap-2">
                     <Brain className="w-5 h-5 text-green-400" />
@@ -289,7 +267,6 @@ const BusinessSuccessStories2027 = () => {
                   </h4>
                   <p className="text-gray-300 leading-relaxed">{currentStoryData.solution}</p>
                 </div>
-
                 {/* Testimonial */}
                 <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl p-6 border border-purple-500/30">
                   <Quote className="w-8 h-8 text-purple-400 mb-4" />
@@ -307,14 +284,12 @@ const BusinessSuccessStories2027 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Results & Metrics */}
               <div>
                 <h4 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-green-400" />
                   Results
                 </h4>
-                
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="p-4 rounded-lg bg-green-500/20 border border-green-500/30">
                     <div className="text-2xl font-bold text-green-400 mb-1">{currentStoryData.results.efficiency}</div>
@@ -333,7 +308,6 @@ const BusinessSuccessStories2027 = () => {
                     <div className="text-sm text-gray-300">ROI</div>
                   </div>
                 </div>
-
                 {/* Key Metrics */}
                 <div className="space-y-3">
                   {currentStoryData.metrics.map((metricindex) => (
@@ -348,7 +322,6 @@ const BusinessSuccessStories2027 = () => {
                 </div>
               </div>
             </div>
-
             {/* Timeline */}
             <div className="mt-8">
               <h4 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
@@ -368,13 +341,10 @@ const BusinessSuccessStories2027 = () => {
               </div>
             </div>
           </div>
-        
+        </div>
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-purple-500/30">
@@ -399,5 +369,6 @@ const BusinessSuccessStories2027 = () => {
     </div>
   );
 };
+
 
 export default BusinessSuccessStories2027;

@@ -1,4 +1,12 @@
-import _React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"
-import React from \"react\"; import { SEO } from \"@/components/SEO\"; export default function FeaturedListingsSection() {return (; <div className = \"min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950\">\"; <SEO title=\"FeaturedListingsSection - Zion Tech Group\" description=\"Professional FeaturedListingsSection services by Zion Tech Group\" />\"; <div className=\"container mx-auto px-4 py-20\">\"; <h1 className=\"text-4xl font-bold text-white mb-8\">FeaturedListingsSection</h1>\"; <p className=\"text-gray-300 text-lg\"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );\"}\"
-const React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"""
-import _React from "react"; import { SEO } from "@/components/SEO"; export default function FeaturedListingsSection() {return (; <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"; <SEO title="FeaturedListingsSection - Zion Tech Group" description="Professional FeaturedListingsSection services by Zion Tech Group" />"; <div className="container mx-auto px-4 py-20">"; <h1 className="text-4xl font-bold text-white mb-8">FeaturedListingsSection</h1>"; <p className="text-gray-300 text-lg"> Professional FeaturedListingsSection services to help your business grow.; ></div> ></div> );"}"
+import React from 'react';
+
+const FeaturedListingsSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">FeaturedListingsSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default FeaturedListingsSection;

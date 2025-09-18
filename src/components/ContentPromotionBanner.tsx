@@ -1,0 +1,6 @@
+import React from 'react';
+const ContentPromotionBanner: React.FC = () => {
+    </div>
+  );
+  };
+export default ContentPromotionBanner;

@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Brain
   Zap
@@ -31,9 +30,6 @@ const AI2026UltimateServicesPromotionBanner = () => {
   return (
     <div
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 px-4"
-      initial={{ opacity: 0, y: 50 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8 }}
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20" />
@@ -42,21 +38,16 @@ const AI2026UltimateServicesPromotionBanner = () => {
         <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl animate-pulse delay-1000" />
         <div className="absolute bottom-10 left-1/4 w-40 h-40 bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-2000" />
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div
             className="space-y-8"
-            initial={{ opacity: 0x: -50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -50 }}
-            transition={{ duration: 0.8delay: 0.2 }}
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
               <Star className="w-4 h-4" />
               AI 2026 Ultimate Services
             </div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
               Revolutionary AI
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -67,45 +58,34 @@ const AI2026UltimateServicesPromotionBanner = () => {
                 Transforming the Future
               </span>
             </h1>
-
             <p className="text-xl text-gray-300 leading-relaxed">
               Experience the next generation of AI services that are revolutionizing industries
               enhancing human capabilitiesand creating unprecedented opportunities for growth and innovation.
             </p>
-
             <div className="space-y-4">
               {features.map((featureindex) => (
                 <div
                   key={index}
                   className="flex items-center gap-3"
-                  initial={{ opacity: 0x: -20 }}
-                  animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -20 }}
-                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{feature}</span>
                 </div>
               ))}
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center gap-3 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 Explore Services
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </button>
               <button
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 Watch Demo
               </button>
             </div>
-
             <div className="flex items-center gap-8 text-gray-300">
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-purple-400" />
@@ -121,17 +101,12 @@ const AI2026UltimateServicesPromotionBanner = () => {
           {/* Right Content - Visual Elements */}
           <div
             className="relative"
-            initial={{ opacity: 0x: 50 }}
-            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: 50 }}
-            transition={{ duration: 0.8delay: 0.4 }}
           >
             <div className="relative">
               {/* Main Service Cards */}
               <div className="grid grid-cols-2 gap-4">
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-                  whileHover={{ scale: 1.05rotate: 2 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-4">
                     <Brain className="w-6 h-6 text-white" />
@@ -142,8 +117,6 @@ const AI2026UltimateServicesPromotionBanner = () => {
 
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-                  whileHover={{ scale: 1.05rotate: -2 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-4">
                     <Zap className="w-6 h-6 text-white" />
@@ -154,8 +127,6 @@ const AI2026UltimateServicesPromotionBanner = () => {
 
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-                  whileHover={{ scale: 1.05rotate: 2 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
                     <Sparkles className="w-6 h-6 text-white" />
@@ -166,8 +137,6 @@ const AI2026UltimateServicesPromotionBanner = () => {
 
                 <div
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
-                  whileHover={{ scale: 1.05rotate: -2 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl flex items-center justify-center mb-4">
                     <Brain className="w-6 h-6 text-white" />
@@ -176,15 +145,12 @@ const AI2026UltimateServicesPromotionBanner = () => {
                   <p className="text-gray-300 text-sm">99.9% threat detection</p>
                 </div>
               </div>
-
               {/* Floating Elements */}
               <div
                 className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-60"
-                animate={{
                   y: [0-20],
                   scale: [1.1],
                 }}
-                transition={{
                   duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut"
@@ -192,11 +158,9 @@ const AI2026UltimateServicesPromotionBanner = () => {
               />
               <div
                 className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-60"
-                animate={{
                   y: [020],
                   scale: [1.21],
                 }}
-                transition={{
                   duration: 3,
                   repeat: Infinity,
                   ease: "easeInOut",
@@ -211,4 +175,6 @@ const AI2026UltimateServicesPromotionBanner = () => {
   );
 };
 
+
 export default AI2026UltimateServicesPromotionBanner;
+</div></div></div></div></div></div></div></div>

@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   ArrowRight
   Star
@@ -233,9 +232,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -253,9 +250,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* Featured Stories */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.2 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Featured Success Stories</h3>
@@ -263,14 +258,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             {featuredStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry);
               const industryColor = getIndustryColor(story.industry);
-
               return (
                 <div
                   key={story.id}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
-                  whileHover={{ y: -5scale: 1.02 }}
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
                   onClick={() => setActiveStory(story.id - 1)}
                 >
@@ -295,7 +286,6 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       <span className="bg-white/20 px-2 py-1 rounded-full">Featured</span>
                     </div>
                   </div>
-
                   {/* Content */}
                   <div className="p-6">
                     {/* Challenge */}
@@ -303,13 +293,11 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       <h5 className="font-semibold text-slate-900 mb-2">Challenge</h5>
                       <p className="text-sm text-slate-600 line-clamp-2">{story.challenge}</p>
                     </div>
-
                     {/* Solution */}
                     <div className="mb-4">
                       <h5 className="font-semibold text-slate-900 mb-2">Solution</h5>
                       <p className="text-sm text-slate-600 line-clamp-2">{story.solution}</p>
                     </div>
-
                     {/* Key Results */}
                     <div className="mb-6">
                       <h5 className="font-semibold text-slate-900 mb-3">Key Results</h5>
@@ -322,7 +310,6 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                         ))}
                       </div>
                     </div>
-
                     {/* Technologies */}
                     <div className="mb-4">
                       <h5 className="font-semibold text-slate-900 mb-2">Technologies Used</h5>
@@ -337,7 +324,6 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                         ))}
                       </div>
                     </div>
-
                     {/* Stats */}
                     <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
                       <div className="flex items-center gap-4">
@@ -355,7 +341,6 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                         <span>{story.duration}</span>
                       </div>
                     </div>
-
                     {/* Actions */}
                     <div className="flex gap-2">
                       <button className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
@@ -375,9 +360,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* All Stories Grid */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.4 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">All Success Stories</h3>
@@ -385,14 +368,10 @@ const BusinessSuccessStoriesShowcase2026 = () => {
             {allStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry);
               const industryColor = getIndustryColor(story.industry);
-
               return (
                 <div
                   key={story.id}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5delay: index * 0.1 }}
-                  whileHover={{ y: -3scale: 1.01 }}
                   className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer"
                   onClick={() => setActiveStory(story.id - 1)}
                 >
@@ -414,11 +393,9 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Content */}
                   <div className="p-4">
                     <h5 className="font-semibold text-slate-900 mb-2 line-clamp-1">{story.challenge}</h5>
-                    
                     {/* Key Results */}
                     <div className="grid grid-cols-2 gap-2 mb-3">
                       {Object.entries(story.results).slice(02).map(([keyvalue]resultIndex) => (
@@ -428,7 +405,6 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                         </div>
                       ))}
                     </div>
-
                     {/* Stats */}
                     <div className="flex items-center justify-between text-xs text-slate-500 mb-3">
                       <div className="flex items-center gap-1">
@@ -444,7 +420,6 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                         <span>{story.duration}</span>
                       </div>
                     </div>
-
                     <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-1">
                       <Play className="w-3 h-3" />
                       Read Story
@@ -458,9 +433,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
@@ -486,6 +459,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default BusinessSuccessStoriesShowcase2026;

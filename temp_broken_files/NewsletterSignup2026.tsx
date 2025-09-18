@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Mail
   CheckCircle
@@ -86,28 +85,21 @@ const NewsletterSignup2026 = () => {
 
   return (
     <div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.6ease: "easeOut" }}
       className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-purple-500/20"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/api/placeholder/1920/600')] bg-cover bg-center opacity-10" />
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-blue-900/30" />
-      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-30"
-            animate={{
               x: [0Math.random() * 200 - 100],
               y: [0Math.random() * 200 - 100],
               scale: [010],
             }}
-            transition={{
               duration: Math.random() * 8 + 6,
               repeat: Infinity,
               delay: Math.random() * 3,
@@ -119,7 +111,6 @@ const NewsletterSignup2026 = () => {
           />
         ))}
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Close Button */}
         <button
@@ -128,32 +119,25 @@ const NewsletterSignup2026 = () => {
         >
           <X className="w-5 h-5" />
         </button>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div
-            initial={{ opacity: 0x: -30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8 }}
           >
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Bell className="w-4 h-4 mr-2" />
               NEWSLETTER 2026
             </div>
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Ahead of the
               <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Revolution
               </span>
             </h2>
-            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join 50,000+ innovatorsresearchersand technology leaders who get exclusive access 
               to the latest AI breakthroughsautomation insightsand future predictions.
             </p>
-
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {benefits.map((benefitindex) => {
@@ -161,9 +145,6 @@ const NewsletterSignup2026 = () => {
                 return (
                   <div
                     key={benefit.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6delay: 0.2 + index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
                     <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
@@ -177,15 +158,11 @@ const NewsletterSignup2026 = () => {
                 );
               })}
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {stats.map((statindex) => (
                 <div
                   key={stat.label}
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                   className="text-center"
                 >
                   <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
@@ -197,19 +174,11 @@ const NewsletterSignup2026 = () => {
 
           {/* Right Content - Newsletter Form */}
           <div
-            initial={{ opacity: 0x: 30 }}
-            animate={{ opacity: 1x: 0 }}
-            transition={{ duration: 0.8delay: 0.2 }}
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
           >
-            <AnimatePresence mode="wait">
               {!isSubscribed ? (
                 <div
                   key="form"
-                  initial={{ opacity: 0scale: 0.9 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  exit={{ opacity: 0scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -222,7 +191,6 @@ const NewsletterSignup2026 = () => {
                       Enter your email to join our exclusive community
                     </p>
                   </div>
-
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -238,17 +206,13 @@ const NewsletterSignup2026 = () => {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       />
                     </div>
-
                     {error && (
                       <div
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
                         className="text-red-400 text-sm"
                       >
                         {error}
                       </div>
                     )}
-
                     <button
                       type="submit"
                       disabled={isLoading}
@@ -267,7 +231,6 @@ const NewsletterSignup2026 = () => {
                         </>
                       )}
                     </button>
-
                     <div className="flex items-center text-sm text-gray-400">
                       <Shield className="w-4 h-4 mr-2" />
                       <span>We respect your privacy. Unsubscribe at any time.</span>
@@ -277,25 +240,18 @@ const NewsletterSignup2026 = () => {
               ) : (
                 <div
                   key="success"
-                  initial={{ opacity: 0scale: 0.9 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  exit={{ opacity: 0scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Welcome to the Future! 🚀
                   </h3>
-                  
                   <p className="text-gray-300 mb-6">
                     'You', 're now part of our exclusive community. Check your email for a confirmation 
                     and get ready for amazing content delivered to your inbox.
                   </p>
-
                   <div className="bg-white/10 rounded-lg p-4 mb-6">
                     <h4 className="text-white font-medium mb-2">'What', 's Next?</h4>
                     <ul className="text-sm text-gray-300 space-y-1">
@@ -305,7 +261,6 @@ const NewsletterSignup2026 = () => {
                       <li>• Invitation to our private Discord</li>
                     </ul>
                   </div>
-
                   <button
                     onClick={() => setIsSubscribed(false)}
                     className="text-purple-400 hover:text-purple-300 text-sm font-medium"
@@ -314,15 +269,11 @@ const NewsletterSignup2026 = () => {
                   </button>
                 </div>
               )}
-            
+            </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center mt-12"
         >
           <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
@@ -352,6 +303,8 @@ const NewsletterSignup2026 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default NewsletterSignup2026;
+</div></div></div>

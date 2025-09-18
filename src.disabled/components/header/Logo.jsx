@@ -1,4 +1,12 @@
-import _React from';react' import { Link } from';';react-router-dom' import { Zap } from';';lucide-react' "export": function Logo({ customLogo,customColor,className = '';'}) { "if": (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}>' <img'' src={customLogo} '''; alt='Logo'''; className='h-"8": w-auto' / / / / / /> </Link>' )'}'; const logoColor = customColor || '#3b82f6''';`
-import React from\';react\' import { Link } from\';\';react-router-dom\' import { Zap } from\';\';lucide-react\' \"export\": function Logo({ customLogo,customColor,className = \'';\'}) { \"if\": (customLogo) { return ( <Link to=\'/\' className={`flex-shrink-0 group ${className}`}>\' <img\'' src={customLogo} \''\'; alt=\'Logo\''\'; className=\'h-\"8\": w-auto\' / / / / / /> </Link>\' )\'}\'; const logoColor = customColor || \'#3b82f6\''\';`
-const React from";react" import { Link } from";";react-router-dom" import { Zap } from";";lucide-react" export: function Logo({ customLogo,customColor,className = "";"}) { if: (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}>" <img"" src={customLogo} """; alt="Logo"""; className="h-8: w-auto" / / / / / /> </Link>" )"}"; const logoColor = customColor | "#3b82f6""";`'"`'"`
-import _React from';react' import { Link } from';';react-router-dom' import { Zap } from';';lucide-react' "export": function Logo({ customLogo,customColor,className = '';'}) { "if": (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}>' <img'' src={customLogo} '''; alt='Logo'''; className='h-"8": w-auto' / / / / / /> </Link>' )'}'; const logoColor = customColor || '#3b82f6''';`
+import React from 'react';
+
+const Logo: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">Logo</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default Logo;

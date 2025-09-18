@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Sparkles
   Zap
@@ -179,12 +178,10 @@ const AIToolsShowcase2026 = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 y: [0-50],
                 opacity: [010],
                 scale: [0.510.5],
               }}
-              transition={{
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 3,
@@ -193,13 +190,9 @@ const AIToolsShowcase2026 = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-medium mb-6">
@@ -217,9 +210,6 @@ const AIToolsShowcase2026 = () => {
 
         {/* Category Filter */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category) => {
@@ -246,20 +236,14 @@ const AIToolsShowcase2026 = () => {
 
         {/* Tools Grid */}
         <div
-          layout
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          
+          <div>
             {filteredTools.map((toolindex) => {
               const Icon = tool.icon;
               return (
                 <div
                   key={tool.id}
-                  layout
-                  initial={{ opacity: 0scale: 0.8 }}
-                  animate={{ opacity: 1scale: 1 }}
-                  exit={{ opacity: 0scale: 0.8 }}
-                  transition={{ duration: 0.3delay: index * 0.05 }}
                   onHoverStart={() => setHoveredTool(tool.id)}
                   onHoverEnd={() => setHoveredTool(null)}
                   className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10"
@@ -282,16 +266,13 @@ const AIToolsShowcase2026 = () => {
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
-
                   {/* Tool Info */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {tool.name}
                   </h3>
-                  
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {tool.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-2 mb-6">
                     {tool.features.slice(02).map((featureIndex) => (
@@ -301,7 +282,6 @@ const AIToolsShowcase2026 = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-1">
@@ -312,7 +292,6 @@ const AIToolsShowcase2026 = () => {
                       {tool.users} users
                     </div>
                   </div>
-
                   {/* Price */}
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-white">
@@ -323,14 +302,10 @@ const AIToolsShowcase2026 = () => {
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
-
                   {/* Hover Overlay */}
-                  
+                  <div>
                     {hoveredTool === tool.id && (
                       <div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
                         className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm rounded-2xl flex items-center justify-center"
                       >
                         <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
@@ -338,18 +313,15 @@ const AIToolsShowcase2026 = () => {
                         </button>
                       </div>
                     )}
-                  
+                  </div>
                 </div>
               );
             })}
-          
+          </div>
         </div>
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -372,6 +344,7 @@ const AIToolsShowcase2026 = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default AIToolsShowcase2026;

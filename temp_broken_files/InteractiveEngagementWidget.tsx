@@ -1,15 +1,12 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
 
 interface EngagementData {
   visitors: number;
   timeOnSite: number;
   bounceRate: number;
   conversionRate: number;
-}
+};
+
+
 
 export default function InteractiveEngagementWidget() {
   const [isVisiblesetIsVisible] = useState(false);
@@ -20,7 +17,6 @@ export default function InteractiveEngagementWidget() {
     conversionRate: 0
   });
   const [currentTestimonialsetCurrentTestimonial] = useState(0);
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -44,7 +40,6 @@ export default function InteractiveEngagementWidget() {
       rating: 5
     }
   ];
-
   useEffect(() => {
     // Simulate real-time data updates
     const interval = setInterval(() => {
@@ -55,34 +50,25 @@ export default function InteractiveEngagementWidget() {
         conversionRate: Math.max(0Math.min(100prev.conversionRate + (Math.random() - 0.5) * 1))
       }));
     }2000);
-
     // Rotate testimonials
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonial((prev: number) => (prev + 1) % testimonials.length);
     }5000);
-
     return () => {
       clearInterval(interval);
       clearInterval(testimonialInterval);
     };
   }[testimonials.length]);
-
   useEffect(() => {
     // Show widget after 3 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
     }3000);
-
     return () => clearTimeout(timer);
   }[]);
-
   if (!isVisible) return null;
-
   return (
     <div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
       className="fixed bottom-4 left-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-w-sm z-40"
     >
       <div className="flex justify-between items-center mb-3">
@@ -92,51 +78,33 @@ export default function InteractiveEngagementWidget() {
           className="text-gray-400 hover:text-gray-600 text-xs"
         >
           ✕
-        </button>
-      </div>
-
       {/* Real-time metrics */}
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div className="text-center">
           <div className="text-lg font-bold text-blue-600">{engagementData.visitors.toLocaleString()}</div>
           <div className="text-xs text-gray-500">Active Visitors</div>
-        </div>
         <div className="text-center">
           <div className="text-lg font-bold text-green-600">{engagementData.timeOnSite.toFixed(1)}m</div>
           <div className="text-xs text-gray-500">Avg. Time</div>
-        </div>
         <div className="text-center">
           <div className="text-lg font-bold text-orange-600">{engagementData.bounceRate.toFixed(1)}%</div>
           <div className="text-xs text-gray-500">Bounce Rate</div>
-        </div>
         <div className="text-center">
           <div className="text-lg font-bold text-purple-600">{engagementData.conversionRate.toFixed(1)}%</div>
           <div className="text-xs text-gray-500">Conversion</div>
-        </div>
-      </div>
-
       {/* Rotating testimonials */}
       <div className="border-t pt-3">
-        <AnimatePresence mode="wait">
           <div
             key={currentTestimonial}
-            initial={{ opacity: 0x: 20 }}
-            animate={{ opacity: 1x: 0 }}
-            exit={{ opacity: 0x: -20 }}
-            transition={{ duration: 0.3 }}
           >
             <div className="text-xs text-gray-600 mb-2">
               "{testimonials[currentTestimonial].content}"
-            </div>
             <div className="flex justify-between items-center">
               <div>
                 <div className="text-xs font-semibold text-gray-800">
                   {testimonials[currentTestimonial].name}
-                </div>
                 <div className="text-xs text-gray-500">
                   {testimonials[currentTestimonial].role}{testimonials[currentTestimonial].company}
-                </div>
-              </div>
               <div className="flex">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_i) => (
                   <span key={i} className="text-yellow-400 text-xs">★</span>
@@ -144,7 +112,7 @@ export default function InteractiveEngagementWidget() {
               </div>
             </div>
           </div>
-        
+        </div>
       </div>
 
       {/* Call to action */}
@@ -155,4 +123,23 @@ export default function InteractiveEngagementWidget() {
       </div>
     </div>
   );
-}
+
+
+
+export default InteractiveEngagementWidget;
+import React from "react";
+
+const function InteractiveEngagementWidget() { = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">function InteractiveEngagementWidget() {</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function InteractiveEngagementWidget() {;

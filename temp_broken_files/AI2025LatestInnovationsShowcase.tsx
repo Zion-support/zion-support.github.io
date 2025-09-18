@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe
 
 const AI2025LatestInnovationsShowcase = () => {
@@ -73,14 +72,10 @@ const AI2025LatestInnovationsShowcase = () => {
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill%3D%22%239C92AC%22 fill-opacity%3D%220.1%22%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -101,13 +96,8 @@ const AI2025LatestInnovationsShowcase = () => {
         {/* Main Innovation Showcase */}
         <div className="relative mb-16">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden">
-            <AnimatePresence mode="wait">
               <div
                 key={currentSlide}
-                initial={{ opacity: 0scale: 1.1 }}
-                animate={{ opacity: 1scale: 1 }}
-                exit={{ opacity: 0scale: 0.9 }}
-                transition={{ duration: 0.5 }}
                 className="absolute inset-0"
               >
                 <div className={`h-full bg-gradient-to-br ${innovations[currentSlide].color} relative overflow-hidden`}>
@@ -127,16 +117,14 @@ const AI2025LatestInnovationsShowcase = () => {
                       </div>
                     </div>
                   </div>
-                  
                   {/* Animated Background Elements */}
                   <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
                   <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/5 rounded-full animate-bounce"></div>
                   <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-ping"></div>
                 </div>
               </div>
-            
+            </div>
           </div>
-
           {/* Navigation Dots */}
           <div className="flex justify-center gap-3 mt-6">
             {innovations.map((_index) => (
@@ -152,12 +140,8 @@ const AI2025LatestInnovationsShowcase = () => {
             ))}
           </div>
         </div>
-
         {/* Features Grid */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.3 }}
           className="grid md:grid-cols-3 gap-8 mb-16"
         >
           {features.map((featureindex) => (
@@ -176,9 +160,6 @@ const AI2025LatestInnovationsShowcase = () => {
 
         {/* CTA Section */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -203,5 +184,6 @@ const AI2025LatestInnovationsShowcase = () => {
     </div>
   );
 };
+
 
 export default AI2025LatestInnovationsShowcase;

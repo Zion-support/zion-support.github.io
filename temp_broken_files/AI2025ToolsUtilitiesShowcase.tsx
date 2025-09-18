@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Wrench
   Zap
@@ -155,26 +154,20 @@ const AI2025ToolsUtilitiesShowcase = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width%3D%2260%22 height%3D%2260%22 viewBox%3D%220%200%2060%2060%22 xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg fill%3D%22none%22 fill-rule%3D%22evenodd%22%3E%3Cg fill="%23ffffff" fill-opacity="0.04"%3E%3Ccircle cx%3D%2230%22 cy%3D%2230%22 r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-      
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.04%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 mb-6">
             <Wrench className="w-5 h-5 text-yellow-400 mr-2" />
             <span className="text-indigo-300 font-medium">AI Tools & Utilities</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Powerful AI Tools for
             <span className="bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent"> Every Need</span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Discover our comprehensive suite of AI-powered tools and utilities designed to streamline your workflow
             boost productivityand drive innovation across all aspects of your business.
@@ -210,17 +203,11 @@ const AI2025ToolsUtilitiesShowcase = () => {
             ))}
           </div>
         </div>
-
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <AnimatePresence mode="wait">
             {filteredTools.map((toolindex) => (
               <div
                 key={tool.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5delay: index * 0.1 }}
                 className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-indigo-500/50 transition-all duration-300 group"
               >
                 {/* Tool Header */}
@@ -236,16 +223,13 @@ const AI2025ToolsUtilitiesShowcase = () => {
                     <div className="text-sm text-gray-400">{tool.users} users</div>
                   </div>
                 </div>
-
                 {/* Tool Info */}
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
                   {tool.name}
                 </h3>
-                
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {tool.description}
                 </p>
-
                 {/* Features */}
                 <div className="space-y-2 mb-6">
                   {tool.features.map((featureIndex) => (
@@ -255,7 +239,6 @@ const AI2025ToolsUtilitiesShowcase = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Price and Actions */}
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-white">{tool.price}</div>
@@ -273,9 +256,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
                 </div>
               </div>
             ))}
-          
+          </div>
         </div>
-
         {/* Key Features */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Tools?</h3>
@@ -283,9 +265,6 @@ const AI2025ToolsUtilitiesShowcase = () => {
             {features.map((featureindex) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 mb-4">
@@ -297,12 +276,8 @@ const AI2025ToolsUtilitiesShowcase = () => {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-2xl p-8 border border-indigo-500/20">
@@ -325,5 +300,6 @@ const AI2025ToolsUtilitiesShowcase = () => {
     </section>
   );
 };
+
 
 export default AI2025ToolsUtilitiesShowcase;

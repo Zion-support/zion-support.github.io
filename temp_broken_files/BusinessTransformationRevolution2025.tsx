@@ -2,7 +2,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import { 
   Target
   TrendingUp
@@ -134,28 +133,21 @@ const BusinessTransformationRevolution2025 = () => {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-bounce" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-spin-slow" />
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
           className="text-center mb-16"
         >
-          <div variants={itemVariants} className="flex items-center justify-center mb-6">
             <Briefcase className="w-12 h-12 text-yellow-400 mr-4" />
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
               Business Revolution 2025
             </h2>
           </div>
           
-          <motion.p variants={itemVariants} className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Revolutionary business transformation solutions that deliver unprecedented results. 
             Join thousands of companies already experiencing exponential growth.
-          </motion.p>
+          </divp>
 
-          <div variants={itemVariants} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-black font-bold text-lg shadow-2xl">
             <Clock className="w-5 h-5 mr-2" />
             Limited Time: 50% Off Implementation
           </div>
@@ -163,9 +155,6 @@ const BusinessTransformationRevolution2025 = () => {
 
         {/* Stats Section */}
         <div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           {[
@@ -176,7 +165,6 @@ const BusinessTransformationRevolution2025 = () => {
           ].map((statindex) => (
             <div
               key={index}
-              variants={itemVariants}
               className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
             >
               <div className="text-blue-400 mb-4 flex justify-center">{stat.icon}</div>
@@ -192,9 +180,6 @@ const BusinessTransformationRevolution2025 = () => {
         <div className="mb-16">
           {/* Tab Navigation */}
           <div
-            variants={itemVariants}
-            initial="hidden"
-            animate="visible"
             className="flex justify-center mb-8"
           >
             <div className="flex bg-white/10 backdrop-blur-lg rounded-full p-2">
@@ -207,8 +192,6 @@ const BusinessTransformationRevolution2025 = () => {
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                       : 'text-gray-300 hover:text-white hover:bg-white/10'
                   }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                 >
                   {tab.icon}
                   <span className="ml-2">{tab.title}</span>
@@ -220,9 +203,6 @@ const BusinessTransformationRevolution2025 = () => {
           {/* Tab Content */}
           <div
             key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
             className="grid lg:grid-cols-2 gap-12 items-center"
           >
             <div className="space-y-6">
@@ -233,14 +213,10 @@ const BusinessTransformationRevolution2025 = () => {
               <p className="text-xl text-gray-300 mb-8">
                 {tabs[activeTab].content.description}
               </p>
-              
               <div className="space-y-4">
                 {tabs[activeTab].content.benefits.map((benefitindex) => (
                   <div
                     key={index}
-                    initial={{ opacity: 0x: -20 }}
-                    animate={{ opacity: 1x: 0 }}
-                    transition={{ delay: index * 0.1 }}
                     className="flex items-center text-white"
                   >
                     <CheckCircle2 className="w-6 h-6 mr-4 text-green-400" />
@@ -249,7 +225,6 @@ const BusinessTransformationRevolution2025 = () => {
                 ))}
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="p-8 bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl border border-white/20">
                 <h4 className="text-2xl font-bold text-white mb-6">Ready to Transform?</h4>
@@ -269,15 +244,12 @@ const BusinessTransformationRevolution2025 = () => {
                 </div>
 
                 <button
-                  whileHover={{ scale: 1.05y: -2 }}
-                  whileTap={{ scale: 0.95 }}
                   className="w-full px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold text-lg rounded-full shadow-2xl transition-all duration-300 flex items-center justify-center"
                 >
                   Start Your Transformation
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-4 bg-white/5 rounded-lg text-center">
                   <Lightbulb className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
@@ -293,12 +265,8 @@ const BusinessTransformationRevolution2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Final CTA */}
         <div
-          variants={itemVariants}
-          initial="hidden"
-          animate="visible"
           className="text-center"
         >
           <div className="inline-block p-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl border border-white/20">
@@ -310,8 +278,6 @@ const BusinessTransformationRevolution2025 = () => {
               and join thousands of successful companies already experiencing exponential growth.
             </p>
             <button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-300"
             >
               Get Started Now - 50% Off
@@ -323,4 +289,6 @@ const BusinessTransformationRevolution2025 = () => {
   );
 };
 
+
 export default BusinessTransformationRevolution2025;
+</div></div></div></div>

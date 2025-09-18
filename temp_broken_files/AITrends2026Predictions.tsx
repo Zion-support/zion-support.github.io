@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   TrendingUp
   Brain
@@ -254,7 +253,6 @@ const AITrends2026Predictions = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20"></div>
-      
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(25)].map((_i) => (
@@ -265,11 +263,9 @@ const AITrends2026Predictions = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
-            animate={{
               y: [0-100],
               opacity: [0.30.80.3],
             }}
-            transition={{
               duration: 4 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
@@ -277,27 +273,21 @@ const AITrends2026Predictions = () => {
           />
         ))}
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium mb-6">
             <TrendingUp className="w-4 h-4 mr-2" />
             AI TRENDS & PREDICTIONS 2026
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Future Technology
             <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               Predictions
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Expert predictions and probability assessments for the most significant 
             technological breakthroughs expected in 2026.
@@ -306,9 +296,6 @@ const AITrends2026Predictions = () => {
 
         {/* Statistics */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.2 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
         >
           <div className="text-center">
@@ -339,9 +326,6 @@ const AITrends2026Predictions = () => {
 
         {/* Category Tabs */}
         <div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categoryTabs.map((tab) => {
@@ -367,17 +351,11 @@ const AITrends2026Predictions = () => {
         {/* Predictions Grid */}
         <div
           key={activeCategory}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {categories[activeCategory as keyof typeof categories].predictions.map((predictionindex) => (
             <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6delay: index * 0.1 }}
               className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
             >
               {/* Probability Badge */}
@@ -390,7 +368,6 @@ const AITrends2026Predictions = () => {
                   {prediction.probability}% likely
                 </div>
               </div>
-
               {/* Impact Badge */}
               <div className="absolute top-4 left-4">
                 <div className={`px-3 py-1 rounded-full text-xs font-bold ${
@@ -401,22 +378,18 @@ const AITrends2026Predictions = () => {
                   {prediction.impact}
                 </div>
               </div>
-
               {/* Content */}
               <div className="pt-8">
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-300 transition-colors">
                   {prediction.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {prediction.description}
                 </p>
-
                 <div className="flex items-center text-sm text-gray-400 mb-6">
                   <Calendar className="w-4 h-4 mr-2" />
                   Expected: {prediction.timeline}
                 </div>
-
                 {/* Implications */}
                 <div className="space-y-3 mb-8">
                   <h4 className="text-sm font-bold text-white uppercase tracking-wide">Key Implications:</h4>
@@ -427,7 +400,6 @@ const AITrends2026Predictions = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Action Button */}
                 <a
                   href={`/ai-trends-2026/${activeCategory}`}
@@ -437,7 +409,6 @@ const AITrends2026Predictions = () => {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
-
               {/* Hover Effect Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
@@ -446,9 +417,6 @@ const AITrends2026Predictions = () => {
 
         {/* Call to Action */}
         <div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8delay: 0.8 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -480,6 +448,7 @@ const AITrends2026Predictions = () => {
       </div>
     </div>
   );
-};
+
+
 
 export default AITrends2026Predictions;

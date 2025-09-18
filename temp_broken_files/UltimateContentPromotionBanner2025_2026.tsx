@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link'; // Replaced with regular anchor tags for React compatibility
-
 import { 
   Star
   Zap
@@ -80,12 +79,10 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-              animate={{
                 opacity: [010],
                 scale: [010],
                 y: [0-20],
               }}
-              transition={{
                 duration: 4,
                 repeat: Infinity,
                 delay: Math.random() * 4,
@@ -94,30 +91,18 @@ const UltimateContentPromotionBanner2025_2026 = () => {
           ))}
         </div>
       </div>
-
       <div className="relative z-10 h-full flex items-center">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div
-              initial={{ opacity: 0x: -50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8 }}
               className="text-white"
             >
-              <AnimatePresence mode="wait">
                 <div
                   key={currentSlide}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
                 >
                   {/* Badge */}
                   <div
-                    initial={{ opacity: 0scale: 0.8 }}
-                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
-                    transition={{ duration: 0.6delay: 0.2 }}
                     className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20"
                   >
                     <Sparkles className="w-4 h-4 text-yellow-400" />
@@ -130,25 +115,19 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                       {currentSlideData.title}
                     </span>
                   </h1>
-
                   {/* Subtitle */}
                   <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-200">
                     {currentSlideData.subtitle}
                   </h2>
-
                   {/* Description */}
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-lg">
                     {currentSlideData.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-3 mb-8">
                     {currentSlideData.features.map((featureindex) => (
                       <div
                         key={feature}
-                        initial={{ opacity: 0x: -20 }}
-                        animate={isVisible ? { opacity: 1x: 0 } : {}}
-                        transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                         className="flex items-center gap-3"
                       >
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -156,12 +135,9 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
                     <button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                       className={`bg-gradient-to-r ${currentSlideData.gradient} text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:shadow-2xl transition-all duration-300`}
                     >
                       <Rocket className="w-5 h-5" />
@@ -170,8 +146,6 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                     </button>
                     
                     <button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                       className="border-2 border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-3 hover:bg-white/10 transition-all duration-300"
                     >
                       <Play className="w-5 h-5" />
@@ -179,29 +153,21 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                     </button>
                   </div>
                 </div>
-              
+              </div>
             </div>
 
             {/* Visual */}
             <div
-              initial={{ opacity: 0x: 50 }}
-              animate={isVisible ? { opacity: 1x: 0 } : {}}
-              transition={{ duration: 0.8delay: 0.4 }}
               className="relative"
             >
               <div className="relative w-full h-96">
                 {/* Main Visual */}
                 <div
                   key={currentSlide}
-                  initial={{ opacity: 0scale: 0.8rotateY: 90 }}
-                  animate={{ opacity: 1scale: 1rotateY: 0 }}
-                  transition={{ duration: 0.8 }}
                   className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center"
                 >
                   <div className="text-center">
                     <div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 20repeat: Infinityease: "linear" }}
                       className="w-32 h-32 mx-auto mb-6"
                     >
                       <currentSlideData.icon className="w-full h-full text-white/80" />
@@ -224,11 +190,9 @@ const UltimateContentPromotionBanner2025_2026 = () => {
                       left: `${20 + (i * 15)}%`,
                       top: `${30 + (i * 10)}%`,
                     }}
-                    animate={{
                       y: [0-20],
                       opacity: [0.310.3],
                     }}
-                    transition={{
                       duration: 3,
                       repeat: Infinity,
                       delay: i * 0.5,
@@ -240,7 +204,6 @@ const UltimateContentPromotionBanner2025_2026 = () => {
           </div>
         </div>
       </div>
-
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
         {slides.map((_index) => (
@@ -255,18 +218,16 @@ const UltimateContentPromotionBanner2025_2026 = () => {
           />
         ))}
       </div>
-
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-white/10">
         <div
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
-          initial={{ width: '0%' }}
-          animate={{ width: '100%' }}
-          transition={{ duration: 5repeat: Infinityease: "linear" }}
         />
       </div>
     </div>
   );
 };
 
+
 export default UltimateContentPromotionBanner2025_2026;
+</div></div></div></div></div>

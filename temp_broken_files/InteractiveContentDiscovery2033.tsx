@@ -1,103 +1,10 @@
 import React, { useState } from 'react';
-
 import { ArrowRight, Search, Filter, TrendingUp, Star, Eye, Zap, Brain, Globe, Rocket } from 'lucide-react';
 
 const InteractiveContentDiscovery2033: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeFilter, setActiveFilter] = useState('all');
-  const [hoveredItem, setHoveredItem] = useState<number | null>(null);
-
-  const filters = [
-    { id: 'all', label: 'All Content', icon: <Globe className="w-4 h-4" /> },
-    { id: 'ai', label: 'AI Innovations', icon: <Brain className="w-4 h-4" /> },
-    { id: 'quantum', label: 'Quantum Tech', icon: <Zap className="w-4 h-4" /> },
-    { id: 'future', label: 'Future Tech', icon: <Rocket className="w-4 h-4" /> },
-    { id: 'trending', label: 'Trending', icon: <TrendingUp className="w-4 h-4" /> }
-  ];
-
-  const contentItems = [
-    {
-      id: 1,
-      title: "Ultimate Tech Revolution 2032",
-      description: "Experience the convergence of consciousness, quantum computing, and interdimensional technology.",
-      category: "future",
-      trending: true,
-      rating: 5,
-      views: "2.3M",
-      image: "🧠",
-      tags: ["Consciousness", "Quantum", "Interdimensional"]
-    },
-    {
-      id: 2,
-      title: "Transcendent AI 2033",
-      description: "Beyond consciousness, beyond reality, beyond infinity. Experience AI that transcends all limitations.",
-      category: "ai",
-      trending: true,
-      rating: 5,
-      views: "1.8M",
-      image: "♾️",
-      tags: ["Transcendence", "Infinity", "Reality"]
-    },
-    {
-      id: 3,
-      title: "Quantum Consciousness Engine",
-      description: "Process thoughts at quantum speeds with revolutionary consciousness acceleration technology.",
-      category: "quantum",
-      trending: false,
-      rating: 4,
-      views: "956K",
-      image: "⚛️",
-      tags: ["Quantum", "Consciousness", "Processing"]
-    },
-    {
-      id: 4,
-      title: "Neural Reality Interface",
-      description: "Experience consciousness transfer between digital and physical realms with breakthrough neural technology.",
-      category: "ai",
-      trending: true,
-      rating: 5,
-      views: "1.2M",
-      image: "🔮",
-      tags: ["Neural", "Reality", "Consciousness"]
-    },
-    {
-      id: 5,
-      title: "Omniversal AI Network",
-      description: "Connect across infinite dimensions with revolutionary quantum-entangled AI consciousness network.",
-      category: "future",
-      trending: false,
-      rating: 4,
-      views: "743K",
-      image: "🌌",
-      tags: ["Omniversal", "AI", "Network"]
-    },
-    {
-      id: 6,
-      title: "Interstellar Commerce Platform",
-      description: "Trade across star systems with advanced quantum commerce and logistics management system.",
-      category: "future",
-      trending: true,
-      rating: 5,
-      views: "1.5M",
-      image: "🚀",
-      tags: ["Interstellar", "Commerce", "Quantum"]
-    }
-  ];
-
-  const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesFilter = activeFilter === 'all' || item.category === activeFilter || 
-                         (activeFilter === 'trending' && item.trending);
-    return matchesSearch && matchesFilter;
-  });
-
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
+    <divsection
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
       className="relative py-16 px-4 overflow-hidden"
     >
       {/* Background Effects */}
@@ -106,13 +13,10 @@ const InteractiveContentDiscovery2033: React.FC = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -125,9 +29,7 @@ const InteractiveContentDiscovery2033: React.FC = () => {
 
         {/* Search and Filters */}
         <div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-12"
         >
           {/* Search Bar */}
@@ -141,15 +43,12 @@ const InteractiveContentDiscovery2033: React.FC = () => {
               className="w-full pl-12 pr-4 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
             />
           </div>
-
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             {filters.map((filter) => (
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
                   activeFilter === filter.id
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25'
@@ -164,22 +63,13 @@ const InteractiveContentDiscovery2033: React.FC = () => {
         </div>
 
         {/* Content Grid */}
-        <AnimatePresence mode="wait">
           <div
             key={`${activeFilter}-${searchTerm}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredContent.map((item, index) => (
               <div
                 key={item.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02, y: -10 }}
                 onHoverStart={() => setHoveredItem(item.id)}
                 onHoverEnd={() => setHoveredItem(null)}
                 className="bg-gradient-to-br from-gray-800/20 to-gray-900/20 backdrop-blur-sm border border-gray-600/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all group cursor-pointer"
@@ -200,7 +90,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Title and Description */}
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">
                   {item.title}
@@ -208,7 +97,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {item.description}
                 </p>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.map((tag, tagIndex) => (
@@ -220,7 +108,6 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     </span>
                   ))}
                 </div>
-
                 {/* Footer */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2 text-gray-400">
@@ -228,36 +115,28 @@ const InteractiveContentDiscovery2033: React.FC = () => {
                     <span className="text-sm">{item.views} views</span>
                   </div>
                   <button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     <span className="text-sm font-semibold">Explore</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-
                 {/* Hover Effect */}
-                
+                <div>
                   {hoveredItem === item.id && (
                     <div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
                       className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl pointer-events-none"
                     />
                   )}
-                
+                </div>
               </div>
             ))}
           </div>
-        
+        </div>
 
         {/* No Results */}
         {filteredContent.length === 0 && (
           <div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             className="text-center py-12"
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -266,8 +145,10 @@ const InteractiveContentDiscovery2033: React.FC = () => {
           </div>
         )}
       </div>
-    </motion.section>
+    </divsection>
   );
 };
 
+
 export default InteractiveContentDiscovery2033;
+</div></div></div>
