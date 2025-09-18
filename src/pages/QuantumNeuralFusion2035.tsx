@@ -23,7 +23,8 @@ const QuantumNeuralFusion2035: React.FC = () => {
               </button>
               <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors font-semibold text-lg">
                 Watch Demo
-          </div>
+              </button>
+            </div>
         </div>
       </div>
       {/* Fusion Technology */}
