@@ -5,6 +5,8 @@ import ScrollToTop from './src/ScrollToTop';
 import EnhancedHeroSection from './src/components/EnhancedHeroSection';
 import FeaturedContentSection from './src/components/FeaturedContentSection';
 import CaseStudyPage from './src/CaseStudyPage';
+import About from './src/pages/About';
+import Blog from './src/pages/Blog';
 // Commented out missing imports - these files don't exist in the pages directory
 // import InnovationLanding2025 from './src/pages/InnovationLanding2025';
 // import InnovativeServicesShowcase2025 from './src/pages/InnovativeServicesShowcase2025';
@@ -27,6 +29,10 @@ import CaseStudyPage from './src/CaseStudyPage';
 // import NeuralInterfaceFuture from './src/pages/NeuralInterfaceFuture';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
+import NewTechShowcase2025 from './src/components/NewTechShowcase2025';
+import AIInnovationHub2026 from './src/pages/AIInnovationHub2026';
+import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
+import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import './src/index.css';
 // import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 // import NewShowcase2025 from './src/pages/NewShowcase2025';
@@ -49,7 +55,6 @@ export default function App(): JSX.Element {
         <Header />
 
         <Routes>
-<<<<<<< HEAD
           <Route path="/" element={
             <main className="relative">
               {/* Hero Section with New Content Promotions */}
@@ -76,55 +81,19 @@ export default function App(): JSX.Element {
 
               <EnhancedHeroSection />
               <FeaturedContentSection />
+              <NewTechShowcase2025 />
               <DynamicContentCarousel />
               <InteractiveTechShowcase />
               <EnhancedContentShowcase />
             </main>
           } />
           
-          {/* Commented out missing routes - these pages don't exist */}
-          {/* <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
-          <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
-          <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />
-          <Route path="/pages/AdvancedTechSolutions2025" element={<AdvancedTechSolutions2025 />} />
-          <Route path="/pages/NewAIUseCases2025" element={<NewAIUseCases2025 />} />
-          <Route path="/pages/EdgeAIandIoT2025" element={<EdgeAIandIoT2025 />} />
-          <Route path="/pages/FutureTechTrends2025" element={<FutureTechTrends2025 />} />
-          <Route path="/pages/ComprehensiveServices2025" element={<ComprehensiveServices2025 />} />
-          <Route path="/pages/AIInnovationPlaybook2025" element={<AIInnovationPlaybook2025 />} />
-          <Route path="/pages/TechnologyInsights2025" element={<TechnologyInsights2025 />} />
-          <Route path="/pages/AITransformationGuide2025" element={<AITransformationGuide2025 />} />
-          <Route path="/pages/QuantumComputingSolutions2025" element={<QuantumComputingSolutions2025 />} />
-          <Route path="/pages/AIInnovationHub2025" element={<AIInnovationHub2025 />} />
-          <Route path="/pages/DigitalTransformation2025" element={<DigitalTransformation2025 />} />
-          <Route path="/pages/AdvancedAnalytics2025" element={<AdvancedAnalytics2025 />} />
-          <Route path="/pages/CybersecurityFortress2025" element={<CybersecurityFortress2025 />} />
-          <Route path="/pages/AIRevolution2025" element={<AIRevolution2025 />} />
-          <Route path="/pages/QuantumComputingBreakthrough" element={<QuantumComputingBreakthrough />} />
-          <Route path="/pages/NeuralInterfaceFuture" element={<NeuralInterfaceFuture />} />
-          <Route path="/pages/AIEnterpriseCopilot2025" element={<AIEnterpriseCopilot2025 />} />
-          <Route path="/pages/NewShowcase2025" element={<NewShowcase2025 />} />
-          <Route path="/pages/SyntheticIntelligence2026" element={<SyntheticIntelligence2026 />} />
-          <Route path="/pages/QuantumNeuralFusion2026" element={<QuantumNeuralFusion2026 />} />
-          <Route path="/pages/CyberPhysicalSystems2026" element={<CyberPhysicalSystems2026 />} />
-          <Route path="/pages/AdvancedBiotechSolutions2026" element={<AdvancedBiotechSolutions2026 />} />
-          <Route path="/pages/NextGenAIRevolution2026" element={<NextGenAIRevolution2026 />} />
-          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
-          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
-          <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
-          <Route path="/pages/ComprehensiveTechInsights2026" element={<ComprehensiveTechInsights2026 />} /> */}
-          
           <Route path="/case-study/:id" element={<CaseStudyPage />} />
           
-          <Route
-            path="/"
-            element={
-              <div>
-                <EnhancedHeroSection />
-                <FeaturedContentSection />
-              </div>
-            }
-          />
+          {/* New Tech Showcase 2026 Routes */}
+          <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
+          <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
+          <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
 
           {/* Legacy Routes */}
           <Route path="/about" element={<About />} />
