@@ -21,11 +21,10 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-## No Next.js plugin needed for Vite SPA
-
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+  included_files = ["zion-website/public/**/*"]
 
 [build.processing]
   skip_processing = true
