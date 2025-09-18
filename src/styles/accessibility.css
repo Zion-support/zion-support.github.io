@@ -44,39 +44,6 @@
   border-color: var(--border) !important;
 }
 
-.high-contrast button,
-.high-contrast .btn {
-  background-color: var(--bg-secondary) !important;
-  color: var(--text-secondary) !important;
-  border: 2px solid var(--border) !important;
-}
-
-.high-contrast a {
-  color: var(--accent) !important;
-  text-decoration: underline !important;
-}
-
-.high-contrast input,
-.high-contrast textarea,
-.high-contrast select {
-  background-color: var(--bg-secondary) !important;
-  color: var(--text-secondary) !important;
-  border: 2px solid var(--border) !important;
-}
-
-/* Large Text Mode */
-.large-text {
-  font-size: 1.2rem !important;
-}
-
-.large-text h1 { font-size: 2.5rem !important; }
-.large-text h2 { font-size: 2rem !important; }
-.large-text h3 { font-size: 1.75rem !important; }
-.large-text h4 { font-size: 1.5rem !important; }
-.large-text h5 { font-size: 1.25rem !important; }
-.large-text h6 { font-size: 1.125rem !important; }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
-
 /* Reduced Motion */
 .reduced-motion *,
 .reduced-motion *::before,
@@ -87,7 +54,6 @@
   scroll-behavior: auto !important;
 }
 
-<<<<<<< HEAD
 /* High Saturation */
 .high-saturation {
   filter: saturate(1.5);
@@ -268,15 +234,13 @@
   color: white;
   padding: 8px;
   text-decoration: none;
-  border-radius: 4px;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .skip-link:focus {
   top: 6px;
 }
 
-<<<<<<< HEAD
 /* High Contrast Focus */
 .high-contrast .enhanced-focus *:focus {
   outline: 3px solid var(--accent-color) !important;
@@ -384,7 +348,6 @@
   border: 0;
 }
 
-<<<<<<< HEAD
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -493,11 +456,26 @@ p, li, span, div {
   margin: -10px 0 0 -10px;
   border: 2px solid var(--accent-color);
   border-top-color: transparent;
+/* Focus Indicators */
+*:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--accent-color);
+>>>>>>> 5cb52c052f3725dfa7421157b9ed227f93e74865
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
+<<<<<<< HEAD
   to {
     transform: rotate(360deg);
   }
@@ -541,3 +519,8 @@ h3 { font-size: 1.25rem; font-weight: bold; }
 h4 { font-size: 1.125rem; font-weight: bold; }
 h5 { font-size: 1rem; font-weight: bold; }
 h6 { font-size: 0.875rem; font-weight: bold; }
+=======
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+>>>>>>> 5cb52c052f3725dfa7421157b9ed227f93e74865
