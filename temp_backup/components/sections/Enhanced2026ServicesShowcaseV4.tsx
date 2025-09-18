@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Enhanced2026ServicesShowcaseV4: React.FC = () => {
   return (

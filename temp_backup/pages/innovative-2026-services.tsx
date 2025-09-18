@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const innovative-2026-services: React.FC = () => {
   return (
@@ -19,4 +18,5 @@ const innovative-2026-services: React.FC = () => {
   );
 };
 
-export default innovative-2026-services;
+
+export default AdvancedNeuralInterface2026;

@@ -1,9 +1,79 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 const EnhancedContentCarousel2036: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const slides = [
+    {
+      id: 1,
+      title: "Conscious AI Revolution",
+      subtitle: "The first truly conscious artificial intelligence systems",
+      description: "Experience AI that can think, feel, and create with genuine consciousness and emotional intelligence.",
+      image: "🧠",
+      gradient: "from-purple-600 to-pink-600",
+      features: ["Self-aware AI", "Emotional intelligence", "Creative problem solving", "Ethical reasoning"],
+      link: "/pages/UltimateTechBreakthrough2036"
+    },
+    {
+      id: 2,
+      title: "Quantum Reality Engine",
+      subtitle: "Computing across infinite dimensions",
+      description: "Quantum computing that can manipulate reality itself, processing information across multiple dimensions simultaneously.",
+      image: "⚛️",
+      gradient: "from-cyan-600 to-blue-600",
+      features: ["Reality manipulation", "Multi-dimensional processing", "Infinite computing", "Quantum teleportation"],
+      link: "/pages/RevolutionaryTechShowcase2036"
+    },
+    {
+      id: 3,
+      title: "Interdimensional Technology",
+      subtitle: "Bridging realities and dimensions",
+      description: "Technology that can access and compute across multiple dimensions, opening infinite possibilities for human advancement.",
+      image: "🌌",
+      gradient: "from-emerald-600 to-teal-600",
+      features: ["Cross-dimensional access", "Reality bridging", "Multi-universe computing", "Infinite storage"],
+      link: "/pages/NextGenInnovationHub2036"
+    },
+    {
+      id: 4,
+      title: "Neural Interface 2.0",
+      subtitle: "Direct mind-to-machine communication",
+      description: "Revolutionary neural interfaces that enable perfect communication between human minds and digital systems.",
+      image: "🧬",
+      gradient: "from-orange-600 to-red-600",
+      features: ["Thought control", "Memory transfer", "Skill downloading", "Consciousness backup"],
+      link: "/pages/RevolutionaryTechShowcase2036"
+    }
+  ];
+
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, slides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 rounded-2xl p-8 mb-12 text-white overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-8">
@@ -17,6 +87,7 @@ const EnhancedContentCarousel2036: React.FC = () => {
             Explore the most advanced technologies that will define the future of humanity
           </p>
         </div>
+
         {/* Carousel Container */}
         <div className="relative">
           {/* Main Slide Display */}
@@ -37,6 +108,7 @@ const EnhancedContentCarousel2036: React.FC = () => {
                   <p className="text-lg opacity-90 mb-6">
                     {slides[currentSlide].description}
                   </p>
+                  
                   {/* Features */}
                   <div className="grid grid-cols-2 gap-2 mb-8">
                     {slides[currentSlide].features.map((feature, index) => (
@@ -46,6 +118,7 @@ const EnhancedContentCarousel2036: React.FC = () => {
                       </div>
                     ))}
                   </div>
+                  
                   <a 
                     href={slides[currentSlide].link}
                     className={`inline-block bg-gradient-to-r ${slides[currentSlide].gradient} text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg`}
@@ -53,6 +126,7 @@ const EnhancedContentCarousel2036: React.FC = () => {
                     Explore Technology →
                   </a>
                 </div>
+
                 {/* Visual Element */}
                 <div className="hidden md:block">
                   <div className={`bg-gradient-to-br ${slides[currentSlide].gradient} rounded-2xl p-8 text-center`}>
@@ -70,6 +144,7 @@ const EnhancedContentCarousel2036: React.FC = () => {
               </div>
             </div>
           </div>
+
           {/* Navigation Controls */}
           <div className="flex justify-between items-center mt-6">
             <div className="flex space-x-2">
@@ -86,6 +161,7 @@ const EnhancedContentCarousel2036: React.FC = () => {
                 →
               </button>
             </div>
+
             <div className="flex space-x-2">
               {slides.map((_, index) => (
                 <button
@@ -99,6 +175,7 @@ const EnhancedContentCarousel2036: React.FC = () => {
                 />
               ))}
             </div>
+
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
               className={`px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -111,6 +188,7 @@ const EnhancedContentCarousel2036: React.FC = () => {
             </button>
           </div>
         </div>
+
         {/* Quick Access Grid */}
         <div className="grid md:grid-cols-4 gap-4 mt-12">
           {slides.map((slide, index) => (
@@ -130,7 +208,6 @@ const EnhancedContentCarousel2036: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
 export default EnhancedContentCarousel2036;

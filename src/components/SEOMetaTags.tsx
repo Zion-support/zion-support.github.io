@@ -1,55 +1,74 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 interface SEOMetaTagsProps {
   title: string;
   description: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  keywords: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+}
+
 const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
   title,
   description,
-  keywords = 'AI, artificial intelligence, quantum computing, neural interfaces, technology, innovation, future tech, consciousness, reality engine',
-  image = '/og-image.jpg',
-  url = window.location.href,
-  type = 'website'
+  keywords,
+  canonicalUrl,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image'
 }) => {
+  const fullTitle = `${title} | Zion Tech Group`;
+  const keywordsString = keywords.join(', ');
+  const siteUrl = 'https://ziontechgroup.com';
+
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{title}</title>
-      <meta name="title" content={title} />
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
+      <meta name="keywords" content={keywordsString} />
       <meta name="author" content="Zion Tech Group" />
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      {/* Additional SEO Tags */}
+      <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#8B5CF6" />
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={`${siteUrl}${canonicalUrl}`} />}
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={`${siteUrl}${canonicalUrl || ''}`} />
+      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#6366f1" />
+      <meta name="msapplication-TileColor" content="#6366f1" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
+          "url": siteUrl,
+          "logo": `${siteUrl}/logo.png`,
           "description": "Leading the future of technology with AI, blockchain, and innovative solutions",
           "sameAs": [
             "https://twitter.com/ziontechgroup",
@@ -66,7 +85,6 @@ const SEOMetaTags: React.FC<SEOMetaTagsProps> = ({
       </script>
     </Helmet>
   );
-
 };
 
 export default SEOMetaTags;

@@ -1,4 +1,8 @@
+  const revolutionaryContent = [
+    {
+      id: 1,
       title: "AI Consciousness Revolution 2025",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
       description: "The first artificial intelligence systems that demonstrate genuine consciousness and self-awareness, capable of creative thought and emotional understanding.",
       image: "🧠",
       gradient: "from-purple-600 to-pink-600",
@@ -53,12 +57,8 @@
       bgColor: "from-pink-600/30 to-rose-600/30",
       features: ["Digital consciousness", "Immortality technology", "Mind uploading", "Virtual existence"],
       link: "/pages/ConsciousnessComputingRevolution2030"
-        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-        setActiveIndex((prevIndex) => (prevIndex + 1) % revolutionaryContent.length);
-        setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
     setCurrentSlide((prev) => (prev + 1) % revolutionaryContent.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + revolutionaryContent.length) % revolutionaryContent.length);
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -74,7 +74,6 @@
             Experience the most groundbreaking technological content that's reshaping our understanding of what's possible
           </p>
         </div>
-
         {/* Main Carousel */}
         <div className="relative max-w-6xl mx-auto">
                   <div className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-2xl p-12 border ${content.borderColor}/30`}>
@@ -132,7 +131,6 @@
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
           {/* Play/Pause Button */}
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
@@ -149,7 +147,6 @@
             )}
           </button>
         </div>
-
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-8">
           {revolutionaryContent.map((_, index) => (
@@ -164,14 +161,12 @@
             />
           ))}
         </div>
-
         {/* Content Grid */}
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Explore All Revolutionary Content</h3>
             <p className="text-lg opacity-90">Discover the full spectrum of our breakthrough technologies</p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {revolutionaryContent.map((content) => (
               <div key={content.id} className={`bg-gradient-to-br ${content.bgColor} backdrop-blur-sm rounded-xl p-6 border ${content.borderColor}/30 hover:scale-105 transition-all duration-300`}>
@@ -185,3 +180,47 @@
                   Explore →
                 </a>
               </div>
+          {/* Dots Indicator */}
+          <div className="flex justify-center space-x-2 mt-8">
+            {revolutionaryContent.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === activeIndex 
+                    ? 'bg-purple-500 scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Access Grid */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Revolutionary Content</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {revolutionaryContent.map((content) => (
+              <a
+                key={content.id}
+                href={content.link}
+                className={`bg-gradient-to-br ${content.gradient} p-6 rounded-xl hover:scale-105 transition-all duration-300 group`}
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {content.image}
+                </div>
+                <h4 className="text-xl font-bold text-white mb-2">{content.title}</h4>
+                <p className="text-white/80 text-sm">{content.description}</p>
+                <div className="mt-4 text-white/60 text-sm">Explore →</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RevolutionaryContentShowcase2025;
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

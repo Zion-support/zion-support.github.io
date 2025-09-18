@@ -1,3 +1,10 @@
+import React from 'react';
+
+const AIConsciousnessRevolution2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -167,6 +174,11 @@
             </p>
             <div className="text-sm text-emerald-200">
               <span className="font-semibold">Result:</span> 35% increase in strategic accuracy
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center bg-gradient-to-r from-purple-600/30 to-blue-600/30 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30">
@@ -180,3 +192,12 @@
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400/10 transition-colors font-semibold text-lg">
               Schedule Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AIConsciousnessRevolution2025;

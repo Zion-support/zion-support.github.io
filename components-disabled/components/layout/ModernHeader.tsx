@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ModernHeader: React.FC = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const QuantumHolographicCard: React.FC = () => {
   return (

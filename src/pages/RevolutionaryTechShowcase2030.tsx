@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 const RevolutionaryTechShowcase2030: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -57,9 +55,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
       ],
       icon: "🌟",
       color: "from-pink-600 to-rose-600"
-    }
-  ];
-
+    };
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -78,25 +74,23 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
       role: "Reality Engineering Lead, Tokyo Tech",
       quote: "The synthetic reality engine has opened possibilities we never imagined. We're creating perfect virtual worlds that are indistinguishable from reality.",
       avatar: "👨‍🔬"
-    }
-  ];
-
+    };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 1 }}
+        initial={{ opacity: "0", y: 50 }};
+        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+        transition={{ duration: 1 }};
         className="relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: isVisible ? 1 : 0 }}
-              transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
+              initial={{ scale: 0 }};
+              animate={{ scale: isVisible ? 1 : 0 }};
+              transition={{ delay: 0.5, duration: 0.8, type: "spring" }};
               className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
             >
               🚀 REVOLUTIONARY TECHNOLOGY 2030
@@ -110,15 +104,15 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
             </p>
             <div className="flex justify-center space-x-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
               >
                 Explore Technologies
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="border border-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400/20 transition-all duration-300"
               >
                 Watch Demo
@@ -128,7 +122,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Technology Showcase */}
+      {/* Technology Showcase */};
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
@@ -138,12 +132,12 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {technologies.map((tech, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-              className={`bg-gradient-to-br ${tech.color} rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer`}
-              onClick={() => setActiveTab(index)}
+              key={index};
+              initial={{ opacity: "0", y: 50 }};
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+              transition={{ delay: index * 0.2, duration: 0.8 }};
+              className={`bg-gradient-to-br ${tech.color} rounded-2xl p-8 hover:scale-105 transition-all duration-300 cursor-pointer`};
+              onClick={() => setActiveTab(index)};
             >
               <div className="text-6xl mb-4 text-center">{tech.icon}</div>
               <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
@@ -154,11 +148,14 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                     <span className="text-green-400">✓</span>
                     <span className="text-sm">{feature}</span>
                   </li>
-                ))}
+                ))};
               </ul>
             </motion.div>
-          ))}
-      {/* Interactive Demo Section */}
+          ))};
+        </div>
+      </div>
+
+      {/* Interactive Demo Section */};
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -168,7 +165,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
             >
               <div className="text-4xl mb-4 text-center">🧠</div>
@@ -177,8 +174,8 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 Experience what it's like to have quantum-enhanced consciousness
               </p>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-3 rounded-lg font-semibold"
               >
                 Start Simulation
@@ -186,7 +183,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
             </motion.div>
 
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30"
             >
               <div className="text-4xl mb-4 text-center">🌌</div>
@@ -195,8 +192,8 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 Navigate through parallel dimensions and explore alternate realities
               </p>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 py-3 rounded-lg font-semibold"
               >
                 Enter Dimension
@@ -204,7 +201,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
             </motion.div>
 
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05 }};
               className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30"
             >
               <div className="text-4xl mb-4 text-center">🌍</div>
@@ -213,14 +210,17 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 Design and create your own synthetic reality from scratch
               </p>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }};
+                whileTap={{ scale: 0.95 }};
                 className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 py-3 rounded-lg font-semibold"
               >
                 Create Reality
               </motion.button>
             </motion.div>
-      {/* Testimonials */}
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">What Experts Say</h2>
@@ -230,10 +230,10 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
+              key={index};
+              initial={{ opacity: "0", y: 50 }};
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }};
+              transition={{ delay: index * 0.2, duration: 0.8 }};
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700"
             >
               <div className="text-4xl mb-4 text-center">{testimonial.avatar}</div>
@@ -245,11 +245,11 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
                 <div className="text-sm text-gray-400">{testimonial.role}</div>
               </div>
             </motion.div>
-          ))}
+          ))};
         </div>
       </div>
 
-      {/* Call to Action */}
+      {/* Call to Action */};
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Experience the Future?</h2>
@@ -258,16 +258,23 @@ const RevolutionaryTechShowcase2030: React.FC = () => {
           </p>
           <div className="flex justify-center space-x-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }};
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
             >
               Get Started Today
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }};
+              whileTap={{ scale: 0.95 }};
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
             >
               Schedule Demo
             </motion.button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+  };
+export default RevolutionaryTechShowcase2030;

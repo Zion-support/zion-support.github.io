@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/components/SEOHead.tsx.backup
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -7,7 +8,6 @@ interface SEOHeadProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
-<<<<<<< HEAD
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -16,7 +16,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = "AI, artificial intelligence, quantum computing, neural interfaces, technology, innovation, 2025, revolutionary tech, Zion Tech Group",
   canonical,
   ogImage = "/og-image.jpg"
-=======
   structuredData?: any;
 }
 
@@ -55,11 +54,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
-
-  return (
-    <Helmet>
-<<<<<<< HEAD
 =======
+import React from "react";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/SEOHead.tsx
+
+const SEOHead = () => {
+  return (
+<<<<<<< HEAD:src/components/SEOHead.tsx.backup
+    <Helmet>
       {/* Basic Meta Tags */}
 >>>>>>> 529ca24e68a672837e67d717ac7c2494da562120
       <title>{title}</title>
@@ -67,7 +69,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonical} />
       
-<<<<<<< HEAD
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
@@ -86,7 +87,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-=======
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -122,7 +122,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-<<<<<<< HEAD
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of revolutionary AI, quantum computing, and neural interface technologies",
@@ -132,7 +131,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
           ]
-=======
           "@type": "Service",
           "name": "Revolutionary Technology Solutions",
           "description": "Advanced technology solutions including quantum consciousness, interdimensional technology, and AI systems",
@@ -176,4 +174,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   );
 };
 
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">SEOHead</h1>
+          <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default SEOHead;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d67d:src/components/SEOHead.tsx

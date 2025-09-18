@@ -1,9 +1,4 @@
-
-const COMPONENT: React.FC = () => {
-  return (
-      </div>
-    </div>
+import React from 'react';
   );
-};
-
-export default COMPONENT;
+  };
+export default NewContentPromotionBanner2026;

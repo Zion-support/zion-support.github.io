@@ -6,10 +6,18 @@ import subprocess
 import sys
 import os
 
+GITHUB_API = "https://api.github.com"
+REPO = "Zion-Holdings/zion.app"
+
 def get_open_prs():
     """Get list of open PRs"""
-    url = "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100"
-    response = requests.get(url)
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = f"token {token}"
+
+    url = f"{GITHUB_API}/repos/{REPO}/pulls?state=open&per_page=100"
+    response = requests.get(url, headers=headers)
     if response.status_code == 200:
         return response.json()
     else:
@@ -21,8 +29,13 @@ def merge_pr(pr_number, pr_title):
     print(f"🔄 Processing PR #{pr_number}: {pr_title}")
     
     # Get PR details
-    pr_url = f"https://api.github.com/repos/Zion-Holdings/zion.app/pulls/{pr_number}"
-    pr_response = requests.get(pr_url)
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    headers = {"Accept": "application/vnd.github+json"}
+    if token:
+        headers["Authorization"] = f"token {token}"
+
+    pr_url = f"{GITHUB_API}/repos/{REPO}/pulls/{pr_number}"
+    pr_response = requests.get(pr_url, headers=headers)
     
     if pr_response.status_code != 200:
         print(f"❌ Failed to fetch PR #{pr_number}")

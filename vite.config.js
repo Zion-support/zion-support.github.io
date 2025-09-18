@@ -1,38 +1,35 @@
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@': '/workspace/src'
-    }
-  },
-  define: {
-    global: 'globalThis',
-  },
-  optimizeDeps: {
-    include: ['framer-motion']
-  },
-  plugins: [
-    react()
-  ],
+  plugins: [react()],
   build: {
+    target: 'es2015',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
-      external: ['fs', 'path', 'os', 'crypto', 'stream', 'util', 'events', 'child_process', 'https', 'http', 'url', 'querystring', 'framer-motion'],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['lucide-react', 'react-helmet-async'],
-          router: ['react-router-dom']
-        }
-      }
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog'],
+        },
+      },
     },
-    commonjsOptions: {
-      include: [/node_modules/]
-    }
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
-    host: true
-  }
+    open: true,
+  },
+  preview: {
+    port: 4173,
+    open: true,
+  },
 });

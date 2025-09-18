@@ -1,22 +1,6 @@
-=======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 import _React from 'react';'''; import { EnterpriseHero } from '@/components/enterprise/EnterpriseHero';'''; import { EnterprisePricingTable } from '@/components/enterprise/EnterprisePricingTable';'''; import { EnterpriseFeatures } from '@/components/enterprise/EnterpriseFeatures';'''; import { EnterpriseCTA } from '@/components/enterprise/EnterpriseCTA';'''; import { EnterpriseTrustBadges } from '@/components/enterprise/EnterpriseTrustBadges';'''; import { EnterpriseTestimonials } from '@/components/enterprise/EnterpriseTestimonials';'''; import { SEO } from '@/components/SEO'; export {}; return null} return(); <> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };
 import React from \'react\';\''\'; import { EnterpriseHero } from \'@/components/enterprise/EnterpriseHero\';\''\'; import { EnterprisePricingTable } from \'@/components/enterprise/EnterprisePricingTable\';\''\'; import { EnterpriseFeatures } from \'@/components/enterprise/EnterpriseFeatures\';\''\'; import { EnterpriseCTA } from \'@/components/enterprise/EnterpriseCTA\';\''\'; import { EnterpriseTrustBadges } from \'@/components/enterprise/EnterpriseTrustBadges\';\''\'; import { EnterpriseTestimonials } from \'@/components/enterprise/EnterpriseTestimonials\';\''\'; import { SEO } from \'@/components/SEO\'; export {}; return null} return(); <> <div>Broken JSX</div> />\"; <main className=\"min-h-screen bg-background\"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };
 const React from "react";"""; import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero";"""; import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable";"""; import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";"""; import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";"""; import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";"""; import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";"""; import { SEO } from "@/components/SEO"; export {}; return null} return(); <> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };"""
 import _React from 'react';'''; import { EnterpriseHero } from '@/components/enterprise/EnterpriseHero';'''; import { EnterprisePricingTable } from '@/components/enterprise/EnterprisePricingTable';'''; import { EnterpriseFeatures } from '@/components/enterprise/EnterpriseFeatures';'''; import { EnterpriseCTA } from '@/components/enterprise/EnterpriseCTA';'''; import { EnterpriseTrustBadges } from '@/components/enterprise/EnterpriseTrustBadges';'''; import { EnterpriseTestimonials } from '@/components/enterprise/EnterpriseTestimonials';'''; import { SEO } from '@/components/SEO'; export {}; return null} return(); <> <div>Broken JSX</div> />"; <main className="min-h-screen bg-background"> <EnterpriseHero /> <EnterprisePricingTable /> <EnterpriseFeatures /> <EnterpriseTestimonials /> <EnterpriseTrustBadges /> <EnterpriseCTA /> ></div> </>)} ; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans }; export { EnterprisePlans };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
->>>>>>> origin/merged-prs
-=======
->>>>>>> 223483ef1209b0284879b571c698436a9a71d005
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

@@ -1,12 +1,12 @@
 import React from 'react';
-const EnhancedContentShowcase= () => {
+
+const EnhancedContentShowcase = () => {
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">EnhancedContentShowcase</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+    <div className="bg-white rounded-lg shadow-lg p-6">
+      <h3 className="text-xl font-semibold mb-4">Enhanced Content Showcase</h3>
+      <p className="text-gray-600">Enhanced content showcase coming soon...</p>
     </div>
   );
-
 };
 
 export default EnhancedContentShowcase;

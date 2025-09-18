@@ -1,22 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const PerformanceMonitor: React.FC = () => {
-  useEffect(() => {
-    // Monitor performance in development
-    if (process.env.NODE_ENV === 'development') {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('Performance entry:', entry);
-        }
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
       });
-      
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-      
-      return () => observer.disconnect();
+    };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
-  }, []);
 
-  return null;
-};
-
-export default PerformanceMonitor;
+        >
+          ×
+        </button>
+      </div>
+    </div>
+  );
+}

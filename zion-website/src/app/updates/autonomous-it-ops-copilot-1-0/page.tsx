@@ -1,47 +1,50 @@
-import React from 'react';
+import React from 'react'
 
-export default function AutonomousItOpsCopilotPage() {
+export default function AutonomousItOpsCopilotV1Page() {
   return (
     <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-4xl px-6 pt-24">
-        <div className="prose prose-invert max-w-none">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8">
-            Autonomous IT Ops Copilot v1.0
+      <div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
+        <div className="mb-8">
+          <div className="text-xs text-blue-300">Launch • 2025-09-15</div>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Autonomous IT Operations Copilot 1.0
           </h1>
-          
-          <div className="text-lg text-gray-300 mb-8">
-            AI-powered IT operations automation with intelligent incident response and proactive monitoring.
-          </div>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Proactive incident detection, remediation playbooks, and SLA-aware routing with live evals.
+            The IT Ops Copilot watches signals across logs, metrics, and traces to surface actionable
+            insights and automate safe responses.
+          </p>
+        </div>
 
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
-            <p className="text-gray-300 leading-relaxed">
-              The Autonomous IT Ops Copilot v1.0 revolutionizes IT operations with AI-driven automation, 
-              intelligent incident response, and proactive monitoring capabilities. This comprehensive 
-              solution reduces manual overhead while improving system reliability and performance.
-            </p>
-          </div>
-
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
-            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
-            <ul className="text-gray-300 space-y-2">
-              <li>• Intelligent incident detection and classification</li>
-              <li>• Automated root cause analysis and remediation</li>
-              <li>• Proactive monitoring and alerting</li>
-              <li>• Self-healing infrastructure capabilities</li>
-              <li>• Integration with existing IT tools and workflows</li>
+        <div className="space-y-8">
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-4">Key Features</h2>
+            <ul className="list-disc pl-6 space-y-2 text-gray-300">
+              <li>Early anomaly detection from telemetry and agent traces</li>
+              <li>Runbook automation with approvals and audit trails</li>
+              <li>SLA-aware routing with quality, latency, and cost budgets</li>
+              <li>Real-time evals and guardrails on actions and tool use</li>
+              <li>Incident evidence bundles for postmortems and audits</li>
             </ul>
           </div>
 
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
-            <h2 className="text-2xl font-semibold text-white mb-4">Implementation</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Deploy the Autonomous IT Ops Copilot in your environment with our step-by-step implementation guide. 
-              Includes configuration templates, integration examples, and best practices for production deployment.
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-4">Benefits</h2>
+            <p className="text-gray-300">
+              See how teams reduce MTTR and noise fatigue with autonomous, governed operations.
             </p>
+          </div>
+
+          <div className="pt-8">
+            <a
+              href="/contact"
+              className="inline-flex items-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200"
+            >
+              Talk to an expert
+            </a>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

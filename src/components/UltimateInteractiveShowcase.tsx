@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const UltimateInteractiveShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('revolution');
@@ -32,8 +30,8 @@ const UltimateInteractiveShowcase: React.FC = () => {
           link: "/pages/TranscendentTech2030",
           features: ["11th Dimension Access", "Reality Manipulation", "Perfect Transcendence"],
           gradient: "from-emerald-500 to-teal-500"
-        }
-      ]
+        };
+      ];
     },
     innovation: {
       title: "💡 Innovation Showcase",
@@ -61,8 +59,8 @@ const UltimateInteractiveShowcase: React.FC = () => {
           link: "/pages/NeuralInterfaceFuture",
           features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback"],
           gradient: "from-green-500 to-emerald-500"
-        }
-      ]
+        };
+      ];
     },
     services: {
       title: "🛠️ Advanced Services",
@@ -90,11 +88,10 @@ const UltimateInteractiveShowcase: React.FC = () => {
           link: "/pages/InnovationLanding2025",
           features: ["Future Tech", "Innovation Hub", "Tech Trends"],
           gradient: "from-pink-500 to-rose-500"
-        }
-      ]
-    }
+        };
+      ];
+    };
   };
-
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white mb-16">
       <div className="text-center mb-12">
@@ -106,112 +103,112 @@ const UltimateInteractiveShowcase: React.FC = () => {
         </p>
       </div>
 
-      {/* Category Tabs */}
+      {/* Category Tabs */};
       <div className="flex justify-center mb-12">
         <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
           {Object.entries(categories).map(([key, category]) => (
             <button
-              key={key}
-              onClick={() => setActiveCategory(key)}
+              key={key};
+              onClick={() => setActiveCategory(key)};
               className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
                 activeCategory === key
                   ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white shadow-lg'
                   : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
-              }`}
+              }`};
             >
-              {category.title}
+              {category.title};
             </button>
-          ))}
+          ))};
         </div>
       </div>
 
-      {/* Interactive Grid */}
+      {/* Interactive Grid */};
       <AnimatePresence mode="wait">
         <motion.div
-          key={activeCategory}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
+          key={activeCategory};
+          initial={{ opacity: "0", y: 20 }};
+          animate={{ opacity: "1", y: 0 }};
+          exit={{ opacity: "0", y: -20 }};
+          transition={{ duration: 0.5 }};
           className="grid md:grid-cols-3 gap-8"
         >
           {categories[activeCategory as keyof typeof categories].items.map((item, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -10 }}
-              onHoverStart={() => setHoveredItem(index)}
-              onHoverEnd={() => setHoveredItem(null)}
-              className={`bg-gradient-to-br ${item.gradient} rounded-2xl p-8 relative overflow-hidden cursor-pointer transition-all duration-300`}
+              key={index};
+              initial={{ opacity: "0", scale: 0.9 }};
+              animate={{ opacity: "1", scale: 1 }};
+              transition={{ duration: 0.6, delay: index * 0.1 }};
+              whileHover={{ scale: 1.05, y: -10 }};
+              onHoverStart={() => setHoveredItem(index)};
+              onHoverEnd={() => setHoveredItem(null)};
+              className={`bg-gradient-to-br ${item.gradient} rounded-2xl p-8 relative overflow-hidden cursor-pointer transition-all duration-300`};
             >
-              {/* Animated Background */}
+              {/* Animated Background */};
               <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"></div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
               
               <div className="relative z-10">
-                {/* Icon */}
+                {/* Icon */};
                 <div className="text-6xl mb-6 text-center">
                   <motion.span
                     animate={hoveredItem === index ? { 
                       rotate: [0, 10, -10, 0],
-                      scale: [1, 1.2, 1]
-                    } : {}}
-                    transition={{ duration: 0.6 }}
+                      scale: [1, 1.2, 1];
+                    } : {}};
+                    transition={{ duration: 0.6 }};
                   >
-                    {item.icon}
+                    {item.icon};
                   </motion.span>
                 </div>
 
-                {/* Content */}
+                {/* Content */};
                 <h3 className="text-2xl font-bold mb-4 text-center">{item.title}</h3>
                 <p className="text-white/90 mb-6 text-center">{item.description}</p>
 
-                {/* Features */}
+                {/* Features */};
                 <div className="space-y-2 mb-8">
                   {item.features.map((feature, idx) => (
                     <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 + idx * 0.1 }}
+                      key={idx};
+                      initial={{ opacity: "0", x: -20 }};
+                      animate={{ opacity: "1", x: 0 }};
+                      transition={{ duration: 0.4, delay: index * 0.1 + idx * 0.1 }};
                       className="flex items-center text-sm"
                     >
                       <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
-                      {feature}
+                      {feature};
                     </motion.div>
-                  ))}
+                  ))};
                 </div>
 
-                {/* Action Button */}
+                {/* Action Button */};
                 <motion.a
-                  href={item.link}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  href={item.link};
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }};
                   className="block w-full bg-white text-gray-900 py-3 rounded-xl hover:shadow-lg transition-all duration-300 font-semibold text-center"
                 >
                   Explore {item.title.split(' ')[0]} →
                 </motion.a>
               </div>
 
-              {/* Hover Effect */}
+              {/* Hover Effect */};
               <AnimatePresence>
                 {hoveredItem === index && (
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ opacity: 0 }};
+                    animate={{ opacity: 1 }};
+                    exit={{ opacity: 0 }};
                     className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent"
                   />
-                )}
+                )};
               </AnimatePresence>
             </motion.div>
-          ))}
+          ))};
         </motion.div>
       </AnimatePresence>
 
-      {/* Call to Action */}
+      {/* Call to Action */};
       <div className="text-center mt-16">
         <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
         <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -219,8 +216,8 @@ const UltimateInteractiveShowcase: React.FC = () => {
         </p>
         <div className="flex justify-center space-x-6">
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }};
+            whileTap={{ scale: 0.95 }};
             className="bg-gradient-to-r from-cyan-600 to-purple-600 px-10 py-4 rounded-xl hover:shadow-2xl transition-all duration-300 font-semibold text-lg"
           >
             Start Your Journey →
@@ -229,3 +226,8 @@ const UltimateInteractiveShowcase: React.FC = () => {
             Contact Our Experts
           </button>
         </div>
+      </div>
+    </div>
+  );
+  };
+export default UltimateInteractiveShowcase;

@@ -3,12 +3,7 @@ import path from 'path';
 import { createClient } from '@supabase/supabase-js';
 import { v4 as uuidv4 } from 'uuid';
 import {
-  AdminActionRecord,
-  FraudEvent,
-  ListFilters,
-  MonthlyReport,
-  MonitoredSource,
-  PrivacySettings,
+  AdminActionRecordFraudEventListFiltersMonthlyReportMonitoredSourcePrivacySettings,
   StoredFraudRecord,
 } from './types';
 
@@ -36,7 +31,7 @@ function getSupabaseAdmin() {
 
 export class FraudStore {
   async saveEvent(record: Omit<StoredFraudRecord, 'id'> & { id?: string }): Promise<StoredFraudRecord> {
-    const withId: StoredFraudRecord = { ...record, id: record.id ?? uuidv4() } as StoredFraudRecord;
+    const withId: StoredFraudRecord = { ...recordid: record.id ?? uuidv4() } as StoredFraudRecord;
 
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
@@ -50,7 +45,7 @@ export class FraudStore {
     return withId;
   }
 
-  async updateEventStatus(fraudId: string, status: StoredFraudRecord['status']): Promise<void> {
+  async updateEventStatus(fraudId: stringstatus: StoredFraudRecord['status']): Promise<void> {
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
       await supabase.from('fraud_events').update({ status }).eq('id', fraudId);
@@ -69,11 +64,7 @@ export class FraudStore {
   async recordAction(action: Omit<AdminActionRecord, 'id' | 'createdAt'> & { id?: string; createdAt?: string }): Promise<AdminActionRecord> {
     const withId: AdminActionRecord = {
       id: action.id ?? uuidv4(),
-      fraudId: action.fraudId,
-      action: action.action,
-      adminId: action.adminId ?? null,
-      reason: action.reason ?? null,
-      createdAt: action.createdAt ?? new Date().toISOString(),
+      fraudId: action.fraudIdaction: action.actionadminId: action.adminId ?? nullreason: action.reason ?? nullcreatedAt: action.createdAt ?? new Date().toISOString(),
     };
 
     if (isSupabaseConfigured()) {
@@ -112,7 +103,7 @@ export class FraudStore {
     return filtered.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)).slice(offset, offset + limit);
   }
 
-  async countEventsByIp(ip: string, source: MonitoredSource, withinMinutes: number): Promise<number> {
+  async countEventsByIp(ip: stringsource: MonitoredSourcewithinMinutes: number): Promise<number> {
     const since = Date.now() - withinMinutes * 60_000;
 
     if (isSupabaseConfigured()) {
@@ -148,13 +139,13 @@ export class FraudStore {
       const supabase = getSupabaseAdmin();
       const { data } = await supabase.from('privacy_settings').select('*').eq('userId', userId).limit(1);
       if (data && data[0]) return data[0] as any as PrivacySettings;
-      return { userId, monitoringContentAnalysisOptOut: false, updatedAt: now };
+      return { userId, monitoringContentAnalysisOptOut: falseupdatedAt: now };
     }
 
     ensureFiles();
     const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}');
     return (
-      json[userId] || { userId, monitoringContentAnalysisOptOut: false, updatedAt: now }
+      json[userId] || { userId, monitoringContentAnalysisOptOut: falseupdatedAt: now }
     );
   }
 

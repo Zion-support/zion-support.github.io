@@ -9,7 +9,7 @@ type CompatLinkProps = NextLinkProps & AnchorProps & {
 
 // A compatibility wrapper that ensures a single anchor child is provided to Next.js Link
 // and gracefully supports multiple children by wrapping them inside the anchor.
-export default function Link({ children, href, as, replace, scroll, shallow, passHref, prefetch, locale, ...anchorProps }: CompatLinkProps) {
+export default function Link({ children, href, as, replace, scroll, shallow, prefetch, locale, ...anchorProps }: CompatLinkProps) {
   return (
     <NextLink
       href={href}

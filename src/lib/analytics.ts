@@ -15,7 +15,7 @@ export const initGA = () => {
   } else {
     console.warn("GA4 gtag function not found. 'config' not sent.");
   };
-export const fireEvent = (eventName: string, eventParams?: Record<string, any>) => {
+export const fireEvent = (eventName: "string", eventParams?: Record<string, any>) => {
   if (!window.gtag) {
     console.error("gtag is not defined. Make sure GA4 is initialized.");
     return;

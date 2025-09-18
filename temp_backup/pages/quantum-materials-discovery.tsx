@@ -1,7 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const quantum-materials-discovery: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <Helmet>
@@ -19,4 +16,5 @@ const quantum-materials-discovery: React.FC = () => {
   );
 };
 
-export default quantum-materials-discovery;
+
+export default UltimateTechRevolution2042;

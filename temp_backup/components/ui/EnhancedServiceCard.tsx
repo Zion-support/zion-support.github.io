@@ -1,4 +1,3 @@
-import React from 'react';
 
 const EnhancedServiceCard: React.FC = () => {
   return (

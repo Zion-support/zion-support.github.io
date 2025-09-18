@@ -6,7 +6,5 @@ const AutonomousBusinessOperations2026Showcase: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-
-};
-
+  };
 export default AutonomousBusinessOperations2026Showcase;

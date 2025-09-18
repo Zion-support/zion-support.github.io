@@ -1,8 +1,8 @@
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Star } from "lucide-react";
 
 export function HeroSection() {
