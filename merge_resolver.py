@@ -38,6 +38,7 @@ def run_command(command, timeout=30):
             timeout=timeout
         )
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if result.returncode == 0:
             print(f"✅ {description} completed successfully")
@@ -78,6 +79,8 @@ def clean_merge_conflicts():
                     content = re.sub(r'<<<<<<< HEAD\n?', '', content)
                     content = re.sub(r'=======\n?', '', content)
                     content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
+=======
+>>>>>>> origin/backup-main-20250918-004015
                     
                     if content != original_content:
                         with open(file_path, 'w', encoding='utf-8') as f:

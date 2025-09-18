@@ -1,0 +1,120 @@
+<<<<<<< HEAD
+import Head from 'next/head'
+
+export default function AgentReleaseScorecards() {
+  return (
+    <>
+      <Head>
+        <title>Agent Release Scorecards — Evidence‑First (2026) | Zion Tech Group</title>
+        <meta name="description" content="Executive scorecards wired to SLOs, evals, incidents, and budgets for safe, reliable agent releases." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-agent-release-scorecards" />
+      </Head>
+      <main className="container mx-auto px-4 py-16 prose prose-invert">
+        <h1>Agent Release Scorecards — Evidence‑First (2026)</h1>
+        <p>
+          A practical framework for summarizing release health using objective signals:
+          service SLOs, eval results, guardrail events, incident trends, and spend.
+        </p>
+        <h2>What to Track</h2>
+        <ul>
+          <li>Reliability: pass rates, MTTR, incident density</li>
+          <li>Safety: policy violations, override rates, red‑team findings</li>
+          <li>Quality: eval pass/fail by scenario, groundedness</li>
+          <li>Efficiency: latency percentiles, cost per action</li>
+        </ul>
+      </main>
+    </>
+  )
+}
+
+import Head from 'next/head'
+import Link from 'next/link'
+
+export default function AgentReleaseScorecards2026() {
+  return (
+    <>
+      <Head>
+        <title>Agent Release Scorecards — Evidence‑First (2026) | Zion Tech Group</title>
+        <meta name="description" content="Executive‑friendly release scorecards for agent reliability, safety, quality, and cost with live SLOs and eval signals." />
+        <meta property="og:title" content="Agent Release Scorecards — Evidence‑First (2026)" />
+        <meta property="og:description" content="Translate traces and evals into decisions. Evidence‑first release scorecards for agents." />
+      </Head>
+
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
+        <main className='container mx-auto px-6 py-12'>
+          <div className='max-w-4xl mx-auto'>
+            <nav className='mb-8'>
+              <Link href='/blog' className='text-cyan-400 hover:text-cyan-300 transition-colors'>
+                ← Back to Blog
+              </Link>
+            </nav>
+
+            <article className='prose prose-invert prose-lg max-w-none'>
+              <header className='mb-12 text-center'>
+                <div className='flex items-center gap-3 justify-center mb-4'>
+                  <span className='px-3 py-1 bg-emerald-400/20 text-emerald-300 text-sm rounded-full border border-emerald-300/30'>
+                    Operations
+                  </span>
+                  <span className='text-white/60 text-sm'>September 16, 2025</span>
+                  <span className='text-white/60 text-sm'>•</span>
+                  <span className='text-white/60 text-sm'>7 min read</span>
+                </div>
+                <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
+                  Agent Release Scorecards — Evidence‑First (2026)
+                </h1>
+                <p className='text-xl text-white/80 max-w-3xl mx-auto'>
+                  Tie rollout decisions to measurable evidence: eval results, incidents, policy events, and SLOs surfaced as a single scorecard.
+                </p>
+              </header>
+
+              <section className='mb-12'>
+                <h2 className='text-2xl font-semibold mb-6 text-emerald-400'>Core Dimensions</h2>
+                <ul className='space-y-2 text-white/90'>
+                  <li>• Reliability: task success rate, MTTR, rollback frequency</li>
+                  <li>• Safety: policy violations, override rates, containment</li>
+                  <li>• Quality: groundedness, factuality, user satisfaction</li>
+                  <li>• Cost: per‑task spend, model routing efficiency, budgets</li>
+                </ul>
+              </section>
+
+              <section className='mb-12'>
+                <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>Operationalizing</h2>
+                <p className='text-white/90 mb-4'>Automate gates with minimum thresholds per dimension. Require evidence bundles attached to every release and incident.</p>
+                <ul className='space-y-2 text-white/90'>
+                  <li>• Scorecard thresholds wired to deployment approvals</li>
+                  <li>• Post‑release monitoring with auto‑halt on regression</li>
+                  <li>• Shared dashboards for engineering and risk teams</li>
+                </ul>
+              </section>
+            </article>
+          </div>
+        </main>
+      </div>
+    </>
+  )
+}
+
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Ai2026AgentReleaseScorecards: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Ai2026AgentReleaseScorecards - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026AgentReleaseScorecards blog post" />
+      </Head>
+      
+      <main>
+        <h1>Ai2026AgentReleaseScorecards</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default Ai2026AgentReleaseScorecards;
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

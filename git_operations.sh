@@ -46,4 +46,8 @@ git merge cursor/fix-netlify-build-and-merge-to-main-2e0b
 echo "Pushing to main branch..."
 git push origin main
 
+<<<<<<< HEAD
 echo "All operations completed successfully!"
+=======
+echo "All operations completed successfully!"
+>>>>>>> origin/backup-main-20250918-004015

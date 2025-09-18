@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Comprehensive Merge Conflict Resolution Script
+<<<<<<< HEAD
 # This script will resolve all merge conflicts and merge PRs into main branch
 
 set -e
@@ -49,6 +50,51 @@ merge_branch() {
     fi
 }
 
+=======
+                    
+                    log "✅ Resolved conflicts in $file"
+                else
+                    # For other files, try to resolve by taking the incoming changes
+                    git checkout --theirs "$file" 2>/dev/null || {
+                        log "⚠️  Could not checkout theirs for $file, trying ours..."
+                        git checkout --ours "$file" 2>/dev/null || {
+                            log "❌ Could not resolve $file automatically"
+                            continue
+                        }
+                    }
+                fi
+            done
+            
+            # Add resolved files
+            git add .
+            
+            # Complete the merge
+            if git commit --no-edit; then
+                log "✅ Successfully resolved and merged PR #$pr_number"
+                return 0
+            else
+                log "❌ Failed to complete merge for PR #$pr_number"
+                git merge --abort 2>/dev/null || true
+                return 1
+            fi
+        else
+            log "❌ No conflict markers found but merge failed for PR #$pr_number"
+=======
+# This script will resolve all merge conflicts and merge PRs into main branch
+
+set -e
+
+echo "🚀 Starting comprehensive merge conflict resolution and PR merging process..."
+
+# Function to resolve merge conflicts by accepting our changes
+resolve_conflicts() {
+    echo "📝 Resolving merge conflicts by accepting our changes..."
+    
+    # Remove all conflict markers
+    find . -type f -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.json" -o -name "*.md" -o -name "*.html" | while read file; do
+        if [ -f "$file" ]; then
+            # Remove conflict markers
+>>>>>>> origin/backup-main-20250918-004015
 # Function to clean up old branches
 cleanup_branches() {
     echo "🧹 Cleaning up old branches..."

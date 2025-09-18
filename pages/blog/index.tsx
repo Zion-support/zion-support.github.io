@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -87,6 +88,12 @@ posts.unshift(
 )
 
 export default function BlogIndexPage() {
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+
+const Index: NextPage = () => {
+>>>>>>> origin/backup-main-20250918-004015
   return (
     <div>
       <Head>
@@ -101,4 +108,10 @@ export default function BlogIndexPage() {
       </main>
     </div>
   );
+<<<<<<< HEAD
 };
+=======
+};
+
+export default Index;
+>>>>>>> origin/backup-main-20250918-004015

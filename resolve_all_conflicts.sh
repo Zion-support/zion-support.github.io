@@ -1,6 +1,56 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+echo "Resolving all merge conflicts by accepting our version..."
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+>>>>>>> origin/backup-main-20250918-004015
 echo "Resolving all merge conflicts by accepting our version..."
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -106,6 +156,7 @@ git status --porcelain | grep "^UU\|^AA\|^DD" | awk '{print $2}' | while read fi
     fi
 done
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
 >>>>>>> cursor/create-and-deploy-new-content-bec3
 >>>>>>> origin/cursor/create-and-deploy-new-content-fd6a
@@ -236,3 +287,81 @@ echo "All merge conflicts resolved!"
 >>>>>>> 79074ad98eccd23a739dfc8527c7f6ffbf7293ab
 >>>>>>> origin/cursor/create-and-deploy-new-content-fe56
 >>>>>>> 8452eec82dbead09881ecc02125b309d82846988
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+echo "🎉 All conflict resolution complete!"
+=======
+=======
+echo "Resolving all merge conflicts by using main branch version..."
+
+# Find all files with merge conflicts
+=======
+echo "All merge conflicts resolved!"
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+echo "Conflict resolution complete!"
+echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+=======
+# For files that were deleted by us but modified by them, keep them deleted
+git status --porcelain | grep "^DU" | awk '{print $2}' | while read file; do
+    echo "Keeping deleted: $file"
+    git rm "$file"
+done
+
+# For files that were added by them but not by us, remove them
+git status --porcelain | grep "^AU" | awk '{print $2}' | while read file; do
+    echo "Removing added file: $file"
+    git rm "$file"
+done
+
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Resolve merge conflicts by accepting our clean version"
+>>>>>>> origin/backup-main-20250918-004015

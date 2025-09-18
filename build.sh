@@ -19,4 +19,8 @@ fi
 echo "Building project with npm run build:netlify ..."
 npm run build:netlify
 
+<<<<<<< HEAD
 echo "Build completed successfully!"
+=======
+echo "Build completed successfully!"
+>>>>>>> origin/backup-main-20250918-004015
