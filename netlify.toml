@@ -1,12 +1,10 @@
 [build]
-  # Build from zion-website subdirectory
   base = "zion-website"
-  # Install dependencies and build the Next.js app
   command = "npm ci --no-audit --no-fund && npm run build"
-  # Publish the built Next.js app from the correct directory
   publish = ".next"
   command_timeout = "30m"
-  # No-op: trigger Netlify rebuild at 2025-09-18T16:40:00Z
+
+# Trigger Netlify build: no-op change on 2025-09-18T12:45:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -18,19 +16,19 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
+  NEXT_TELEMETRY_DISABLED = "1"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Functions configuration (lives at repo root `netlify/functions`)
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["public/**/*"]
+  included_files = ["zion-website/public/**/*"]
 
 [build.processing]
   skip_processing = true
 
-# Next.js handles routing; no SPA fallback redirect
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -220,6 +218,8 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-#
+# Note: Next.js routing is handled by @netlify/plugin-nextjs
+
+# No-op: trigger deploy 2025-09-18 12:45
+
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T16:40:00Z
