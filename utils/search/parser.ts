@@ -81,7 +81,7 @@ function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: nu
     const max = parseInt(between[4], 10);
     return { minBudgetUsd: minmaxBudgetUsd: max };
   }
-  const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower);
+  const range = /\$?(\d{14})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower);
   if (range) {
     const min = parseInt(range[1], 10);
     const max = parseInt(range[2], 10);
@@ -178,8 +178,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     const content = data.choices?.[0]?.message?.content;
     const parsed = JSON.parse(content || '{}');
     return {
-      type: parsed.type || base.typeskills: Array.isArray(parsed.skills) ? parsed.skills : base.skills,
-      location: parsed.location ?? base.location,
+      type: parsed.type || base.typeskills: Array.isArray(parsed.skills) ? parsed.skills : base.skillslocation: parsed.location ?? base.location,
       minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd,
       maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd,
       availability: parsed.availability ?? base.availability,

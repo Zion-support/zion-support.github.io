@@ -9,6 +9,5 @@ const ScrollToTop: React.FC = () => {
   }, [pathname]);
 
   return null;
-  }
-
+  };
 export default ScrollToTop;

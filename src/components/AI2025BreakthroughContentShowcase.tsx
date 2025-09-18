@@ -11,6 +11,5 @@ const AI2025BreakthroughContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025BreakthroughContentShowcase;

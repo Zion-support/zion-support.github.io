@@ -6,8 +6,7 @@ interface PerformanceConfig {
   enableCodeSplitting?: boolean;
   enablePrefetching?: boolean;
   enableCaching?: boolean;
-}
-
+};
 export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
   const {
     enableLazyLoading = true,
@@ -37,12 +36,12 @@ export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
               img.src = src;
               img.removeAttribute('data-src');
               img.classList.add('loaded');
-            }
+            };
             observerRef.current?.unobserve(img);
-          }
+          };
         });
       },
-      { rootMargin: '50px' }
+        { rootMargin: '50px' }
     );
 
     images.forEach((img) => observerRef.current?.observe(img));
@@ -97,7 +96,7 @@ export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
       localStorage.setItem(`cache_${key}`, JSON.stringify(cacheData));
     } catch (error) {
       console.warn('Failed to cache resource:', error);
-    }
+    };
   }, [enableCaching]);
 
   const getCachedResource = useCallback((key: string) => {
@@ -112,13 +111,12 @@ export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
       if (Date.now() - timestamp > ttl) {
         localStorage.removeItem(`cache_${key}`);
         return null;
-      }
-
+      };
       return data;
     } catch (error) {
       console.warn('Failed to retrieve cached resource:', error);
       return null;
-    }
+    };
   }, [enableCaching]);
 
   // Performance monitoring
@@ -129,8 +127,7 @@ export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
     
     if (process.env.NODE_ENV === 'development') {
       console.log(`${name} took ${end - start} milliseconds`);
-    }
-    
+    };
     return end - start;
   }, []);
 
@@ -159,7 +156,7 @@ export const usePerformanceOptimization = (config: PerformanceConfig = {}) => {
         func(...args);
         inThrottle = true;
         setTimeout(() => inThrottle = false, limit);
-      }
+      };
     };
   }, []);
 

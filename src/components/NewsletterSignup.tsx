@@ -7,6 +7,5 @@ const NewsletterSignup: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-  }
-];
+  };
 export default NewsletterSignup;

@@ -11,6 +11,5 @@ const InteractiveContentDiscovery2033: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveContentDiscovery2033;

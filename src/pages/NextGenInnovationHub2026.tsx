@@ -12,7 +12,7 @@ const NextGenInnovationHub2026: React.FC = () => {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🧠 NEXT-GEN INNOVATION • JANUARY 2026
@@ -25,7 +25,7 @@ const NextGenInnovationHub2026: React.FC = () => {
           </p>
         </div>
 
-        {/* Innovation Categories */}
+        {/* Innovation Categories */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
             <div className="text-4xl mb-4">🧠</div>
@@ -61,7 +61,7 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Innovation Showcase */}
+        {/* Innovation Showcase */};
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">🌟 Innovation Showcase</h3>
@@ -95,7 +95,7 @@ const NextGenInnovationHub2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12">
             <h3 className="text-4xl font-bold mb-6">🚀 Ready to Innovate?</h3>
@@ -115,6 +115,5 @@ const NextGenInnovationHub2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NextGenInnovationHub2026;

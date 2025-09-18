@@ -11,6 +11,5 @@ const AI2035SingularityBreakthrough: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2035SingularityBreakthrough;

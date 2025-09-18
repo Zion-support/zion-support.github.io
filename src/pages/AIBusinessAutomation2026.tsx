@@ -45,6 +45,5 @@ const AIBusinessAutomation2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIBusinessAutomation2026;

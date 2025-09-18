@@ -11,6 +11,5 @@ const PerformanceOptimizer2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default PerformanceOptimizer2026;

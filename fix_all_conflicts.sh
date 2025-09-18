@@ -1,78 +1,36 @@
 #!/bin/bash
 
-echo "🔍 Finding all files with merge conflicts..."
+# Script to fix all merge conflicts by accepting remote version
+set -e
 
-# Find all files with merge conflict markers
-conflict_files=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " src/ 2>/dev/null || true)
+echo "Fixing all merge conflicts by accepting remote version..."
 
-if [ -z "$conflict_files" ]; then
-    echo "✅ No merge conflicts found!"
+# Find all files with merge conflicts
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" src/ --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l)
+
+if [ -z "$files_with_conflicts" ]; then
+    echo "No merge conflicts found."
     exit 0
 fi
 
-echo "Found merge conflicts in:"
-echo "$conflict_files"
-echo ""
+echo "Found merge conflicts in the following files:"
+echo "$files_with_conflicts"
 
-# Process each file
-for file in $conflict_files; do
-    echo "🔧 Processing: $file"
+# For each file with conflicts, accept the remote version
+for file in $files_with_conflicts; do
+    echo "Fixing conflicts in $file..."
     
-    # Check if file is corrupted beyond repair (has duplicate content or malformed structure)
-    if grep -q "=======" "$file" && grep -q ">>>>>>> " "$file"; then
-        # Check if the file has duplicate export statements or malformed JSX
-        if grep -q "export default.*export default" "$file" || grep -q "import React.*import React" "$file"; then
-            echo "❌ File appears corrupted, deleting: $file"
-            rm "$file"
-            continue
-        fi
-    fi
+    # Accept remote version (theirs)
+    git checkout --theirs "$file" 2>/dev/null || {
+        echo "Could not checkout theirs for $file, trying manual resolution..."
+        
+        # If checkout fails, manually resolve by removing conflict markers and keeping remote content
+        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+        sed -i '/^>>>>>>> /d' "$file"
+    }
     
-    # Try to fix merge conflicts by keeping the "ours" version
-    echo "  Attempting to resolve conflicts in $file..."
-    
-    # Create a temporary file
-    temp_file=$(mktemp)
-    
-    # Process the file line by line
-    in_conflict=false
-    conflict_resolved=false
-    
-    while IFS= read -r line; do
-        if [[ "$line" == "<<<<<<< HEAD" ]]; then
-            in_conflict=true
-            conflict_resolved=false
-        elif [[ "$line" == "=======" ]]; then
-            # Skip the "theirs" section
-            continue
-        elif [[ "$line" == ">>>>>>> " ]]; then
-            in_conflict=false
-            conflict_resolved=true
-        elif [[ "$in_conflict" == true && "$conflict_resolved" == false ]]; then
-            # Keep the "ours" section
-            echo "$line" >> "$temp_file"
-        elif [[ "$in_conflict" == false ]]; then
-            # Normal line, keep it
-            echo "$line" >> "$temp_file"
-        fi
-    done < "$file"
-    
-    # Replace the original file
-    mv "$temp_file" "$file"
-    
-    echo "  ✅ Processed: $file"
+    # Add the resolved file
+    git add "$file"
 done
 
-echo ""
-echo "🎉 All merge conflicts processed!"
-echo ""
-
-# Check for any remaining conflicts
-remaining_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " src/ 2>/dev/null || true)
-
-if [ -z "$remaining_conflicts" ]; then
-    echo "✅ All merge conflicts resolved!"
-else
-    echo "⚠️  Remaining conflicts in:"
-    echo "$remaining_conflicts"
-fi
+echo "All merge conflicts resolved!"

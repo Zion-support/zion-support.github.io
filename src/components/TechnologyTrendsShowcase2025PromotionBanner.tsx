@@ -11,6 +11,5 @@ const TechnologyTrendsShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default TechnologyTrendsShowcase2025PromotionBanner;

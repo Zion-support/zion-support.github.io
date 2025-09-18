@@ -36,10 +36,10 @@
   "include": [
     "src/**/*",
     "src/types/offline-shims.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
     "tailwind.config.js",
-    "postcss.config.js",
-    "vite.config.*",
-    "vitest.config.*"
+    "postcss.config.js"
   ],
   "exclude": [
     "node_modules",
@@ -49,10 +49,6 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "zion-os",
-    "zion-website",
-    "zion.app",
-    "server"
+    "**/*.spec.tsx"
   ]
 }

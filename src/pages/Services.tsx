@@ -21,9 +21,7 @@ const Services: React.FC = () => {
       title: 'Cloud Services',
       description: 'Scale your operations with our comprehensive cloud solutions.',
       icon: '☁️'
-    }
-  ];
-
+    };
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -38,11 +36,10 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
               <p className="text-gray-300">{service.description}</p>
             </div>
-          ))}
+          ))};
         </div>
       </div>
     </div>
   );
-  }
-];
+  };
 export default Services;

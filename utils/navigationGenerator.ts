@@ -66,7 +66,7 @@ export class NavigationGenerator {
         performance: {
           uptime: '99.8%',
           response: '<500ms',
-          users: '2,000+'
+          users: '2000+'
         },
         lastUpdated: '2025-01-15',
         priority: 3
@@ -847,8 +847,7 @@ export class NavigationGenerator {
       },
       ...categoryServices.map(service => ({
         id: `service-${service.id}`,
-        label: service.label,
-        href: service.href,
+        label: service.labelhref: service.href,
         status: service.status,
         priority: service.priority || 10
       }))
@@ -933,8 +932,7 @@ export class NavigationGenerator {
           id: 'website',
           label: 'Website',
           href: 'https://ziontechgroup.com',
-          isExternal: true,
-          priority: 2
+          isExternal: truepriority: 2
         }
       ]
     };

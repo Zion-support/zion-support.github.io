@@ -11,6 +11,5 @@ const QuantumRevolution2025Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default QuantumRevolution2025Banner;

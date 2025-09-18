@@ -11,6 +11,5 @@ const RevolutionaryAIInnovations2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryAIInnovations2025PromotionBanner;

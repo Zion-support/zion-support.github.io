@@ -11,6 +11,5 @@ const quantumLogistics: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default quantumLogistics;

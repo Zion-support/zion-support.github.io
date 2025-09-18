@@ -11,6 +11,5 @@ const AI2025ROICalculator: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025ROICalculator;

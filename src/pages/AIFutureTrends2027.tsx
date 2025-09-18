@@ -4,7 +4,7 @@ const AIFutureTrends2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <div className="text-center mb-16">
           <div className="inline-block px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full text-lg font-bold mb-6 animate-pulse">
             🔮 FUTURE TECHNOLOGY • 2027 VISION
@@ -17,7 +17,7 @@ const AIFutureTrends2027: React.FC = () => {
           </p>
         </div>
 
-        {/* Revolutionary AI Trends */}
+        {/* Revolutionary AI Trends */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 border-2 border-indigo-200 hover:border-indigo-400">
             <div className="text-8xl mb-6 text-center">🧠</div>
@@ -65,7 +65,7 @@ const AIFutureTrends2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Advanced Technology Showcase */}
+        {/* Advanced Technology Showcase */};
         <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-12 mb-16 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
           <div className="relative z-10">
@@ -116,7 +116,7 @@ const AIFutureTrends2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Future Applications */}
+        {/* Future Applications */};
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Future Applications</h2>
@@ -150,7 +150,7 @@ const AIFutureTrends2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-white">
             <h2 className="text-4xl font-bold mb-6">Ready to Shape the Future?</h2>
@@ -170,6 +170,5 @@ const AIFutureTrends2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIFutureTrends2027;

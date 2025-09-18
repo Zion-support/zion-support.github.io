@@ -11,6 +11,5 @@ const FuturePredictionsShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default FuturePredictionsShowcase2025PromotionBanner;

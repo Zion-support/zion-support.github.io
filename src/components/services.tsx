@@ -11,6 +11,5 @@ const services: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default services;

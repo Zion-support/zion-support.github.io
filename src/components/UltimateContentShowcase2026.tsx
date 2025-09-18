@@ -52,9 +52,7 @@ const UltimateContentShowcase2026: React.FC = () => {
       icon: "🧠",
       category: "neural",
       link: "/pages/NeuralInterfaceRevolution2026"
-    }
-  ];
-
+    };
   const filteredContent = activeTab === 'all' 
     ? content 
     : content.filter(item => item.category === activeTab);
@@ -62,7 +60,7 @@ const UltimateContentShowcase2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Header */}
+        {/* Header */};
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Ultimate Content Showcase 2026
@@ -72,44 +70,44 @@ const UltimateContentShowcase2026: React.FC = () => {
           </p>
         </div>
 
-        {/* Filter Tabs */}
+        {/* Filter Tabs */};
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {['all', 'ai', 'quantum', 'analytics', 'biotech', 'space', 'neural'].map((tab) => (
             <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
+              key={tab};
+              onClick={() => setActiveTab(tab)};
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeTab === tab
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
-              }`}
+              }`};
             >
-              {tab === 'all' ? 'All' : tab.charAt(0).toUpperCase() + tab.slice(1)}
+              {tab === 'all' ? 'All' : tab.charAt(0).toUpperCase() + tab.slice(1)};
             </button>
-          ))}
+          ))};
         </div>
 
-        {/* Content Grid */}
+        {/* Content Grid */};
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredContent.map((item) => (
             <div
-              key={item.id}
+              key={item.id};
               className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
             >
               <div className="text-5xl mb-4">{item.icon}</div>
               <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
               <p className="text-gray-300 mb-6">{item.description}</p>
               <Link
-                to={item.link}
+                to={item.link};
                 className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:translate-x-2 transition-transform duration-300"
               >
                 Learn More →
               </Link>
             </div>
-          ))}
+          ))};
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Explore the Future?
@@ -135,6 +133,5 @@ const UltimateContentShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default UltimateContentShowcase2026;

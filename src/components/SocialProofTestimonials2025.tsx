@@ -11,6 +11,5 @@ const SocialProofTestimonials2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default SocialProofTestimonials2025;

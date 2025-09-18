@@ -24,7 +24,7 @@ const Home: React.FC = () => {
     setIsLoaded(true);
     if (isInView) {
       setIsVisible(true);
-    }
+    };
   }, [isInView]);
 
   const handleGetStarted = useCallback(() => {
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    };
   }, []);
 
   const handleLearnMore = useCallback(() => {
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
     const aboutSection = document.getElementById('about');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    };
   }, []);
 
   return (
@@ -59,11 +59,11 @@ const Home: React.FC = () => {
       
       <div className="container mx-auto px-4 py-20">
         <motion.div 
-          ref={ref}
+          ref={ref};
           className="text-center"
-          initial={{ opacity: "0", y: 50 }}
-          animate={isVisible ? { opacity: "1", y: 0 } : { opacity: "0", y: 50 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: "0", y: 50 }};
+          animate={isVisible ? { opacity: "1", y: 0 } : { opacity: "0", y: 50 }};
+          transition={{ duration: 0.8, ease: "easeOut" }};
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Zion Tech Group
@@ -77,14 +77,14 @@ const Home: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              onClick={handleGetStarted}
+              onClick={handleGetStarted};
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
               aria-label="Get started with our services"
             >
               Get Started
             </button>
             <button 
-              onClick={handleLearnMore}
+              onClick={handleLearnMore};
               className="border border-white text-white hover:bg-white hover:text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white"
               aria-label="Learn more about our company"
             >
@@ -93,22 +93,22 @@ const Home: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* NEW: Ultimate Tech Showcase 2027 Banner */}
+        {/* NEW: Ultimate Tech Showcase 2027 Banner */};
         <div className="container mx-auto px-4">
           <UltimateTechShowcase2027Banner />
         </div>
 
-        {/* NEW: Comprehensive Services 2028 Banner */}
+        {/* NEW: Comprehensive Services 2028 Banner */};
         <div className="container mx-auto px-4">
           <ComprehensiveServices2028Banner />
         </div>
 
-        {/* NEW: Revolutionary Tech Blog 2027 Banner */}
+        {/* NEW: Revolutionary Tech Blog 2027 Banner */};
         <div className="container mx-auto px-4">
           <RevolutionaryTechBlog2027Banner />
         </div>
 
-        {/* NEW: Ultimate Tech Showcase Banner */}
+        {/* NEW: Ultimate Tech Showcase Banner */};
         <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/50 to-cyan-600/50 backdrop-blur-sm"></div>
           <div className="relative z-10">
@@ -135,24 +135,24 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* NEW: Ultimate Breakthrough Banner */}
+        {/* NEW: Ultimate Breakthrough Banner */};
         <div className="container mx-auto px-4">
           <UltimateBreakthroughBanner />
         </div>
 
-        {/* NEW: Neural Reality Interface Banner */}
+        {/* NEW: Neural Reality Interface Banner */};
         <div className="container mx-auto px-4">
           <NeuralRealityBanner />
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid */};
         <div id="services" className="container mx-auto px-4 py-20">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: "0", y: 30 }}
-            whileInView={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: "0", y: 30 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.6 }};
+            viewport={{ once: true }};
           >
             <h2 className="text-4xl font-bold mb-4">Revolutionary Technology Solutions</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
@@ -162,9 +162,9 @@ const Home: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: "0", y: 50 }}
-              whileInView={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: "0", y: 50 }};
+              whileInView={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.6 }};
               className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">🤖</div>
@@ -180,9 +180,9 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: "0", y: 50 }}
-              whileInView={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: "0", y: 50 }};
+              whileInView={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.6, delay: 0.2 }};
               className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">⚡</div>
@@ -198,9 +198,9 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: "0", y: 50 }}
-              whileInView={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: "0", y: 50 }};
+              whileInView={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.6, delay: 0.4 }};
               className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">🧠</div>
@@ -216,9 +216,9 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: "0", y: 50 }}
-              whileInView={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={{ opacity: "0", y: 50 }};
+              whileInView={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.6, delay: 0.6 }};
               className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">🧬</div>
@@ -234,9 +234,9 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: "0", y: 50 }}
-              whileInView={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial={{ opacity: "0", y: 50 }};
+              whileInView={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.6, delay: 0.8 }};
               className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">🚀</div>
@@ -252,9 +252,9 @@ const Home: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: "0", y: 50 }}
-              whileInView={{ opacity: "1", y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
+              initial={{ opacity: "0", y: 50 }};
+              whileInView={{ opacity: "1", y: 0 }};
+              transition={{ duration: 0.6, delay: 1.0 }};
               className="bg-gradient-to-br from-indigo-600/30 to-purple-600/30 backdrop-blur-sm rounded-xl p-8 border border-indigo-400/30 hover:scale-105 transition-all duration-300"
             >
               <div className="text-6xl mb-4 text-center">📚</div>
@@ -271,7 +271,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Content Showcases */}
+        {/* Content Showcases */};
         <div className="container mx-auto px-4 py-20">
           <EnhancedContentShowcase />
         </div>
@@ -280,16 +280,16 @@ const Home: React.FC = () => {
           <RevolutionaryContentShowcase />
         </div>
 
-        {/* Enhanced Content Advertising */}
+        {/* Enhanced Content Advertising */};
         <EnhancedContentAdvertising />
 
-        {/* Revolutionary Tech Advertising Banner */}
+        {/* Revolutionary Tech Advertising Banner */};
         <RevolutionaryTechAdvertisingBanner />
 
-        {/* Interactive Tech Showcase */}
+        {/* Interactive Tech Showcase */};
         <InteractiveTechShowcase />
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <motion.section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center">
@@ -309,7 +309,7 @@ const Home: React.FC = () => {
         </div>
         </motion.section>
 
-        {/* Lazy Loaded Components */}
+        {/* Lazy Loaded Components */};
         <React.Suspense fallback={<div className="py-20 text-center">Loading...</div>}>
           <CategoriesSection />
           <BenefitsSection />
@@ -336,14 +336,14 @@ const Home: React.FC = () => {
           <RevolutionaryContentShowcase2027 />
         </React.Suspense>
 
-        {/* About Section */}
+        {/* About Section */};
         <div id="about" className="container mx-auto px-4 py-20">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: "0", y: 30 }}
-            whileInView={{ opacity: "1", y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ opacity: "0", y: 30 }};
+            whileInView={{ opacity: "1", y: 0 }};
+            transition={{ duration: 0.6 }};
+            viewport={{ once: true }};
           >
             <h2 className="text-4xl font-bold mb-8">About Zion Tech Group</h2>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
@@ -373,6 +373,5 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default Home;

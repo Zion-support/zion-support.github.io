@@ -11,6 +11,5 @@ const MobileResponsivenessEnhancer: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default MobileResponsivenessEnhancer;

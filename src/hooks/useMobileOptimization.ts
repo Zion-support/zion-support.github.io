@@ -12,8 +12,7 @@ export const useMobileOptimization = () => {
       setIsMobile(isMobileDevice);
       setIsTablet(isTabletDevice);
       setIsDesktop(isDesktopDevice);
-  }
-];
+  };
     checkDevice();
     window.addEventListener('resize', checkDevice);
     return () => window.removeEventListener('resize', checkDevice);
@@ -23,8 +22,6 @@ export const useMobileOptimization = () => {
     isTablet,
     isDesktop,
     deviceType: isMobile ? 'mobile' : isTablet ? 'tablet' : 'desktop'
-  }
-];
-  }
-];
+  };
+  };
 export default useMobileOptimization;

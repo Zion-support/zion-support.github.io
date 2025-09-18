@@ -8,9 +8,7 @@ const RevolutionaryAdBanner2033: React.FC = () => {
     { icon: "🧠", text: "Conscious AI Systems", color: "text-purple-400" },
     { icon: "⚛️", text: "Quantum Computing", color: "text-cyan-400" },
     { icon: "🌌", text: "Reality Manipulation", color: "text-emerald-400" },
-    { icon: "🧬", text: "Neural Interface", color: "text-pink-400" }
-  ];
-
+    { icon: "🧬", text: "Neural Interface", color: "text-pink-400" };
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -21,7 +19,7 @@ const RevolutionaryAdBanner2033: React.FC = () => {
 
   return (
     <div className={`relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-      {/* Animated Background */}
+      {/* Animated Background */};
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-pink-600/30 animate-pulse"></div>
         <div className="absolute inset-0">
@@ -30,7 +28,7 @@ const RevolutionaryAdBanner2033: React.FC = () => {
         </div>
       </div>
 
-      {/* Animated Grid Pattern */}
+      {/* Animated Grid Pattern */};
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 25% 25%, #8b5cf6 2px, transparent 2px),
@@ -39,7 +37,7 @@ const RevolutionaryAdBanner2033: React.FC = () => {
         }}></div>
       </div>
 
-      {/* Floating Tech Icons */}
+      {/* Floating Tech Icons */};
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 text-4xl opacity-30 animate-float">🚀</div>
         <div className="absolute top-1/3 right-1/4 text-3xl opacity-30 animate-float delay-500">⚡</div>
@@ -47,7 +45,7 @@ const RevolutionaryAdBanner2033: React.FC = () => {
         <div className="absolute bottom-1/3 right-1/3 text-3xl opacity-30 animate-float delay-1500">🌟</div>
       </div>
 
-      {/* Content */}
+      {/* Content */};
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="text-center">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -62,13 +60,13 @@ const RevolutionaryAdBanner2033: React.FC = () => {
             Revolutionary technology that will reshape reality as we know it
           </p>
 
-          {/* Feature Showcase */}
+          {/* Feature Showcase */};
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-4 mb-6">
               <div className="text-6xl animate-bounce">{features[currentFeature].icon}</div>
               <div>
                 <h3 className={`text-2xl font-bold ${features[currentFeature].color}`}>
-                  {features[currentFeature].text}
+                  {features[currentFeature].text};
                 </h3>
                 <p className="text-lg opacity-80">
                   The most advanced {features[currentFeature].text.toLowerCase()} ever created
@@ -79,19 +77,19 @@ const RevolutionaryAdBanner2033: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {features.map((feature, index) => (
                 <div
-                  key={index}
+                  key={index};
                   className={`text-center p-4 rounded-lg transition-all duration-300 ${
                     index === currentFeature ? 'bg-white/20' : 'bg-white/5'
-                  }`}
+                  }`};
                 >
                   <div className="text-3xl mb-2">{feature.icon}</div>
                   <div className={`text-sm font-semibold ${feature.color}`}>{feature.text}</div>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
 
-          {/* Call to Action Buttons */}
+          {/* Call to Action Buttons */};
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <a
               href="/pages/UltimateTechBreakthrough2033"
@@ -113,7 +111,7 @@ const RevolutionaryAdBanner2033: React.FC = () => {
             </a>
           </div>
 
-          {/* Statistics */}
+          {/* Statistics */};
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
@@ -135,12 +133,11 @@ const RevolutionaryAdBanner2033: React.FC = () => {
         </div>
       </div>
 
-      {/* Animated Border Effect */}
+      {/* Animated Border Effect */};
       <div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-indigo-500 to-pink-500 rounded-lg">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-lg m-0.5"></div>
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryAdBanner2033;

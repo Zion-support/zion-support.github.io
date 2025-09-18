@@ -45,6 +45,5 @@ const QuantumAIRevolution2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default QuantumAIRevolution2026;

@@ -11,6 +11,5 @@ const NewFeaturesShowcase2025PromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default NewFeaturesShowcase2025PromotionBanner;

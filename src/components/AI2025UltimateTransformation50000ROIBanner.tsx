@@ -11,6 +11,5 @@ const AI2025UltimateTransformation50000ROIBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025UltimateTransformation50000ROIBanner;

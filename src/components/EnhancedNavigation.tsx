@@ -11,6 +11,5 @@ const EnhancedNavigation: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default EnhancedNavigation;

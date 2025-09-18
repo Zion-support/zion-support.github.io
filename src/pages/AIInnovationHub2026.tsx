@@ -3,7 +3,7 @@ import React from 'react';
 const AIInnovationHub2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>
         <div className="relative z-10 container mx-auto px-4 py-20">
@@ -30,7 +30,7 @@ const AIInnovationHub2026: React.FC = () => {
         </div>
       </div>
 
-      {/* AI Innovation Categories */}
+      {/* AI Innovation Categories */};
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">🌟 AI Innovation Categories</h2>
@@ -143,7 +143,7 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Innovation Statistics */}
+        {/* Innovation Statistics */};
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">📊 Innovation Impact</h2>
@@ -172,7 +172,7 @@ const AIInnovationHub2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action */};
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Join the AI Innovation Revolution</h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
@@ -190,6 +190,5 @@ const AIInnovationHub2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIInnovationHub2026;

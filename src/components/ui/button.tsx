@@ -20,28 +20,26 @@ const buttonVariants = cva(
         icon: 'h-10 w-10'}},
     defaultVariants: {
       variant: 'default',
-      size: 'default'}}
+      size: 'default'}};
 );
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   className?: string;
-}
-
-,const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+};
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
       <button
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
+        className={cn(buttonVariants({ variant, size, className }))};
+        ref={ref};
+        {...props};
       />
     );
-  }
+  };
 );
 Button.displayName = 'Button';
 
 export { Button, buttonVariants
-  }
-];
+  };

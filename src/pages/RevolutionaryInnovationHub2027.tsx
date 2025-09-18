@@ -45,6 +45,5 @@ const RevolutionaryInnovationHub2027: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default RevolutionaryInnovationHub2027;

@@ -11,6 +11,5 @@ const AI2025ContentGenerationStudio: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AI2025ContentGenerationStudio;

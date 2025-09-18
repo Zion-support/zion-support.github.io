@@ -11,6 +11,5 @@ const AIPoweredContentRecommendationSystemPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AIPoweredContentRecommendationSystemPromotionBanner;

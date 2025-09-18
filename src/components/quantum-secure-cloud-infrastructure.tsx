@@ -11,6 +11,5 @@ const quantumSecureCloudInfrastructure: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default quantumSecureCloudInfrastructure;

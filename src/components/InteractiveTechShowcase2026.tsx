@@ -52,9 +52,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
       gradient: "from-green-600 via-emerald-600 to-teal-600",
       icon: "🌐",
       badge: "NEURAL"
-    }
-  ];
-
+    };
   const techDemos = [
     {
       id: "1",
@@ -76,12 +74,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
       description: "Direct brain-computer connection",
       icon: "🌐",
       color: "green"
-    }
-  ];
-
+    };
   return (
     <div className="relative mb-16 overflow-hidden">
-      {/* Main Showcase Banner */}
+      {/* Main Showcase Banner */};
       <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm"></div>
         <div className="relative z-10">
@@ -95,17 +91,17 @@ const InteractiveTechShowcase2026: React.FC = () => {
             </p>
           </div>
 
-          {/* Interactive Demo Carousel */}
+          {/* Interactive Demo Carousel */};
           <div 
             className="relative h-96 rounded-2xl overflow-hidden mb-8"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={() => setIsHovered(true)};
+            onMouseLeave={() => setIsHovered(false)};
           >
             <div
-              key={activeShowcase}
+              key={activeShowcase};
               className={`absolute inset-0 bg-gradient-to-br ${showcases[activeShowcase].gradient} p-12 rounded-2xl transition-opacity duration-800 ${
                 activeShowcase === activeShowcase ? 'opacity-100' : 'opacity-0'
-              }`}
+              }`};
             >
                 <div className="flex items-center justify-between h-full">
                   <div className="flex-1">
@@ -113,14 +109,14 @@ const InteractiveTechShowcase2026: React.FC = () => {
                       <span className="text-8xl animate-bounce">{showcases[activeShowcase].icon}</span>
                       <div>
                         <span className="px-4 py-2 bg-white/20 rounded-full text-sm font-bold mb-2">
-                          {showcases[activeShowcase].badge}
+                          {showcases[activeShowcase].badge};
                         </span>
                         <h3 className="text-4xl font-bold mb-2">{showcases[activeShowcase].title}</h3>
                         <p className="text-2xl opacity-90">{showcases[activeShowcase].subtitle}</p>
                       </div>
                     </div>
                     <p className="text-xl mb-8 opacity-90 max-w-3xl">
-                      {showcases[activeShowcase].description}
+                      {showcases[activeShowcase].description};
                     </p>
                     <div className="grid md:grid-cols-2 gap-8">
                       <div>
@@ -131,12 +127,12 @@ const InteractiveTechShowcase2026: React.FC = () => {
                               <span className="text-green-400 text-xl">✓</span>
                               <span>{feature}</span>
                             </li>
-                          ))}
+                          ))};
                         </ul>
                       </div>
                       <div className="flex items-center justify-center">
                         <a 
-                          href={showcases[activeShowcase].link}
+                          href={showcases[activeShowcase].link};
                           className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold text-lg border border-white/30"
                         >
                           🚀 Try Interactive Demo →
@@ -147,35 +143,35 @@ const InteractiveTechShowcase2026: React.FC = () => {
                 </div>
               </div>
 
-            {/* Navigation Controls */}
+            {/* Navigation Controls */};
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
               {showcases.map((_, index) => (
                 <button
-                  key={index}
-                  onClick={() => setActiveShowcase(index)}
+                  key={index};
+                  onClick={() => setActiveShowcase(index)};
                   className={`w-4 h-4 rounded-full transition-all duration-300 ${
                     index === activeShowcase ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-                  }`}
+                  }`};
                 />
-              ))}
+              ))};
             </div>
           </div>
         </div>
       </div>
 
-      {/* Interactive Tech Grid */}
+      {/* Interactive Tech Grid */};
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
         {showcases.map((showcase, index) => (
           <div
-            key={showcase.id}
-            className={`bg-gradient-to-br ${showcase.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 group`}
-            onClick={() => setActiveShowcase(index)}
+            key={showcase.id};
+            className={`bg-gradient-to-br ${showcase.gradient} text-white rounded-xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer border border-white/20 group`};
+            onClick={() => setActiveShowcase(index)};
           >
             <div className="flex items-center space-x-3 mb-4">
               <span className="text-4xl group-hover:animate-bounce">{showcase.icon}</span>
               <div>
                 <span className="px-2 py-1 bg-white/20 rounded-full text-xs font-bold">
-                  {showcase.badge}
+                  {showcase.badge};
                 </span>
               </div>
             </div>
@@ -186,10 +182,10 @@ const InteractiveTechShowcase2026: React.FC = () => {
               <span className="text-2xl opacity-50 group-hover:translate-x-1 transition-transform">→</span>
             </div>
           </div>
-        ))}
+        ))};
       </div>
 
-      {/* Live Demo Statistics */}
+      {/* Live Demo Statistics */};
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white mb-12">
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold mb-4">📊 Live Demo Statistics</h3>
@@ -215,7 +211,7 @@ const InteractiveTechShowcase2026: React.FC = () => {
         </div>
       </div>
 
-      {/* Call to Action */}
+      {/* Call to Action */};
       <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-12 text-white text-center">
         <h3 className="text-4xl font-bold mb-6">🌟 Ready to Experience the Future?</h3>
         <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
@@ -233,6 +229,5 @@ const InteractiveTechShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default InteractiveTechShowcase2026;

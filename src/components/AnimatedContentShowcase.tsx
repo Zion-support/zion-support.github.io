@@ -11,6 +11,5 @@ const AnimatedContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AnimatedContentShowcase;

@@ -11,6 +11,5 @@ const BusinessSuccessStories2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default BusinessSuccessStories2025;

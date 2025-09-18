@@ -45,6 +45,5 @@ const AdvancedAITransformation2025: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AdvancedAITransformation2025;

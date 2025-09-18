@@ -11,6 +11,5 @@ const AISuccessStories2025Banner: React.FC = () => {
       </div>
     </div>
   );
-  }
-];
+  };
 export default AISuccessStories2025Banner;
