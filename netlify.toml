@@ -1,4 +1,4 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T19:25:00Z
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T19:45:00Z
 [build]
   # Build the Next.js site in the monorepo subdirectory
   base = "zion-website"
@@ -220,5 +220,4 @@
 
 ## Note: Do not add SPA fallback for Next.js; plugin handles routing.
 ## End of Netlify configuration
-# No-op: trigger deploy 2025-09-18T19:20:00Z
-# trigger: 2025-09-18T12:55:16Z
+# No-op: trigger deploy 2025-09-18T19:45:00Z
