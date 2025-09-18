@@ -1,6 +1,7 @@
 [build]
+  base = "zion-website"
   command = "npm run build"
-  publish = "dist"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
@@ -14,14 +15,19 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
+# Use the Next.js Netlify plugin for proper routing/functions
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-  included_files = ["public/**/*"]
+  included_files = ["public/**/*", "zion-website/public/**/*"]
 
 [build.processing]
   skip_processing = true
 
+# Use the Next.js Netlify plugin for proper routing/functions
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
