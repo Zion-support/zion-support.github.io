@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // @ts-nocheck
 import { getLatestUpdates } from '@/data/updates'
 import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
@@ -25,9 +24,6 @@ const solutions = [
   { name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business' },
   { name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management' },
 ]
-=======
-import React from 'react'
->>>>>>> 9773d9320f6bbcbcd66674053ade2fbe286da10f
 
 export default function HomePage() {
   const latest = getLatestUpdates(6)
@@ -58,7 +54,6 @@ export default function HomePage() {
 
   return (
     <div className="bg-black min-h-screen">
-<<<<<<< HEAD
       {/* Promo banner for fresh content */}
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
@@ -222,8 +217,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-=======
->>>>>>> 9773d9320f6bbcbcd66674053ade2fbe286da10f
     </div>
   )
 }

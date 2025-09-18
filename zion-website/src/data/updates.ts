@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 export type UpdateTag = 'Launch' | 'Guide' | 'Case Study' | 'Report' | 'Announcement' | 'Course' | 'Challenge' | 'Research' | 'Release' | 'Blueprint' | 'Field Guide' | 'Blog'
 
 export interface UpdateItem {
   id: string
-=======
->>>>>>> 9773d9320f6bbcbcd66674053ade2fbe286da10f
   title: string
   description: string
   href: string
-<<<<<<< HEAD
   date: string
   category: UpdateTag
 }
@@ -61,21 +57,6 @@ export const updates: UpdateItem[] = [
     href: '/updates/autonomous-support-copilot-1-1',
     date: '2025-09-15',
     category: 'Launch'
-=======
-  date?: string
-  tag?: string
-}
-
-    href: '/updates/ai-governance-maturity-model-2026',
-    date: '2025-09-16',
-    tag: 'Framework'
-  },
-  {
-    title: 'Guide: Production RAG Latency Budgets (2026)',
-    summary: 'A pragmatic framework to set and enforce latency budgets for production RAG systems.',
-    href: '/blog/ai-2026-production-rag-latency-budgets',
-    date: '2025-09-16',
-    tag: 'Guide'
   },
   {
     title: 'Launch: Real-Time Agent Cost Optimizer v1.0',
@@ -148,7 +129,4 @@ export const getLatestUpdates = (limit = 6): UpdateItem[] => {
   return [...updates]
     .sort((a, b) => safeDate(b.date) - safeDate(a.date))
     .slice(0, limit)
-<<<<<<< HEAD
 }
-=======
->>>>>>> 9773d9320f6bbcbcd66674053ade2fbe286da10f
