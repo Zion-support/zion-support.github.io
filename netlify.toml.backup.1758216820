@@ -1,10 +1,20 @@
+<<<<<<< HEAD
+# Updated: Fixed for Next.js deployment - 2025-01-20T00:00:00Z
+=======
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-19T00:45:00Z (run-12)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b2f3
 [build]
   base = "."
   command = "npm ci --no-audit --no-fund && npm run build"
   publish = ".next"
   command_timeout = "30m"
+<<<<<<< HEAD
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+=======
 # No-op: trigger Netlify rebuild at 2025-09-19T00:45:00Z (run-12)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b2f3
 
 [build.environment]
   NODE_VERSION = "20"
@@ -137,7 +147,11 @@
   [headers.values]
     Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: *.netlify.app *.netlify.com; style-src 'self' 'unsafe-inline' https: *.googleapis.com; img-src 'self' data: https:; font-src 'self' https: *.gstatic.com *.googleapis.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 
+<<<<<<< HEAD
+# Redirects for legacy URLs (timestamp refresh 2025-09-19T01:05:00Z)
+=======
 # Redirects for legacy URLs (timestamp refresh 2025-09-19T00:45:00Z)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b2f3
 [[redirects]]
   from = "/api/*"
   to = "https://backend.example.com/:splat"
@@ -223,6 +237,19 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
+<<<<<<< HEAD
+# SPA routing fallback - redirect all routes to index.html for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# No-op: trigger deploy 2025-09-19 01:30 (run-13)
+
+## End of Netlify configuration
+# No-op: trigger deploy 2025-09-19T01:30:00Z (refresh 2025-09-19T01:30:00Z)
+# trigger: 2025-09-19T01:30:00Z (refresh) re-run-13
+=======
 # Note: Next.js routing is handled by @netlify/plugin-nextjs (touched 2025-09-19 00:45)
 
 # No-op: trigger deploy 2025-09-19 00:45 (run-12)
@@ -230,3 +257,4 @@
 ## End of Netlify configuration
 # No-op: trigger deploy 2025-09-19T00:45:00Z (refresh 2025-09-19T00:45:00Z)
 # trigger: 2025-09-19T00:45:00Z (refresh) re-run-12
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-b2f3
