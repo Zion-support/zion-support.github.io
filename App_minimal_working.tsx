@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
