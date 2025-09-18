@@ -1,7 +1,7 @@
 [build]
-  base = "zion-website"
-  command = "npm run build"
-  publish = ".next"
+  base = "."
+  command = "npm run build:netlify"
+  publish = "dist"
   command_timeout = "30m"
 
 [build.environment]
