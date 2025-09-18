@@ -30,23 +30,13 @@ import Blog from './src/pages/Blog';
 import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import NewTechShowcase2025 from './src/components/NewTechShowcase2025';
+import AdvancedTechShowcase2026 from './src/components/AdvancedTechShowcase2026';
+import PerformanceOptimization from './src/components/PerformanceOptimization';
 import AIInnovationHub2026 from './src/pages/AIInnovationHub2026';
 import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
-import './src/index.css';
-// import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
-// import NewShowcase2025 from './src/pages/NewShowcase2025';
-// import SyntheticIntelligence2026 from './src/pages/SyntheticIntelligence2026';
-// import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
+import InnovationHub2026 from './src/pages/InnovationHub2026';
 import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
-// import CyberPhysicalSystems2026 from './src/pages/CyberPhysicalSystems2026';
-// import AdvancedBiotechSolutions2026 from './src/pages/AdvancedBiotechSolutions2026';
-// import NextGenAIRevolution2026 from './src/pages/NextGenAIRevolution2026';
-// import QuantumComputingRevolution2026 from './src/pages/QuantumComputingRevolution2026';
-// import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
-// import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
-// import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
-
 import './src/index.css';
 import './src/styles/accessibility.css';
 import './src/styles/optimizations.css';
@@ -86,6 +76,8 @@ export default function App(): JSX.Element {
               <EnhancedHeroSection />
               <FeaturedContentSection />
               <NewTechShowcase2025 />
+              <AdvancedTechShowcase2026 />
+              <PerformanceOptimization />
               <DynamicContentCarousel />
               <InteractiveTechShowcase />
               <EnhancedContentShowcase />
@@ -98,6 +90,7 @@ export default function App(): JSX.Element {
           <Route path="/pages/AIInnovationHub2026" element={<AIInnovationHub2026 />} />
           <Route path="/pages/QuantumComputingRevolution2026" element={<QuantumComputingRevolution2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
+          <Route path="/pages/InnovationHub2026" element={<InnovationHub2026 />} />
 
           {/* Legacy Routes */}
           <Route path="/about" element={<About />} />

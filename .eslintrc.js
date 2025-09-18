@@ -22,6 +22,8 @@ module.exports = {
     'scripts/',
     'automation/',
     'netlify/',
-    'apps/'
+    'apps/',
+    'src/components-disabled/',
+    'src/utils-disabled/'
   ]
 };
