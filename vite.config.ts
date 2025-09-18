@@ -20,11 +20,11 @@ export default defineConfig({
 	css: {
 		postcss: false
 	},
-	esbuild: {
-		loader: 'tsx',
-		include: /src\/.*\.[jt]sx?$/,
-		exclude: [],
-	},
+esbuild: {
+    loader: 'tsx',
+    include: /(src\/.*\.[jt]sx?|App\.tsx)$/,
+    exclude: [],
+},
 
 	build: {
 		target: 'esnext',
