@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
           </Link>
         </div>
       </div>
-import { GradientHeading } from "@/components/GradientHeading";
+import { GradientHeading } from "../components/GradientHeading";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import SEO from "@/components/SEO";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
+import SEO from "../components/SEO";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function AIContentGenerator() {
@@ -30,10 +30,10 @@ export default function AIContentGenerator() {
     ];
     const contentTypes = [
         {
-            import: { SEO }, from, "@/components/SEO": ,
-            import: { Button }, from, "@/components/ui/button": ,
-            import: { Card, CardContent, CardDescription, CardHeader, CardTitle }, from, "@/components/ui/card": ,
-            import: { Badge }, from, "@/components/ui/badge": ,
+            import: { SEO }, from, "../components/SEO": ,
+            import: { Button }, from, "../components/ui/button": ,
+            import: { Card, CardContent, CardDescription, CardHeader, CardTitle }, from, "../components/ui/card": ,
+            import: { Badge }, from, "../components/ui/badge": ,
             import: { Check, Brain, Zap, FileText, Globe, Users, Shield, Clock, Star }, from, "lucide-react": ,
             import: { Link }, from, "react-router-dom": ,
             function: AIContentGenerator()

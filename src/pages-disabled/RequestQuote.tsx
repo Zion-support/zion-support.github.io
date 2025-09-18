@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import SEO from "@/components/SEO";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { QuoteRequestForm } from "../components/QuoteRequestForm";
+import SEO from "../components/SEO";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function RequestQuote() {
   return (
@@ -95,8 +95,8 @@ export default function RequestQuote() {
       
       <Footer />
     </div>
-import SEO from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import SEO from "../components/SEO";
+import { GradientHeading } from "../components/GradientHeading";
 
 export default function RequestQuote() {
   return (

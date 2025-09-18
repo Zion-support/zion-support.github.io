@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export type SEOProps = {
   title?: string;
@@ -9,8 +10,6 @@ export type SEOProps = {
   type?: string;
 };
 
-<<<<<<< HEAD
-=======
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
@@ -22,7 +21,6 @@ const SEO: React.FC<SEOProps> = ({
   return (
     <Helmet>
       <title>{title}</title>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
@@ -36,11 +34,8 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-<<<<<<< HEAD
-=======
     </Helmet>
   );
 };
 
 export default SEO;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb

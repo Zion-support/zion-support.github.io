@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/seo/SEOHead';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/badge';
 import {
   Shield,
   Lock,
@@ -31,10 +31,10 @@ import {
   DollarSign,
   Code
 } from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { QuoteFormSection } from '@/components/QuoteFormSection';
+import { ENHANCED_SERVICES } from '../data/enhancedServices';
+import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import { TrustedBySection } from '../components/TrustedBySection';
+import { QuoteFormSection } from '../components/QuoteFormSection';
 
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>

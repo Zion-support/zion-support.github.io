@@ -335,9 +335,6 @@ const Terms: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
 };
 
 export default Terms;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-0ddb

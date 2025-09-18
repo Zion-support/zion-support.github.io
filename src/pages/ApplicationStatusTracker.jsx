@@ -1,9 +1,9 @@
-import SEO from "@/components/SEO";
-import { ApplicationsTracker } from "@/components/jobs/applications";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import SEO from "../components/SEO";
+import { ApplicationsTracker } from "../components/jobs/applications";
+import { Card, CardHeader, CardTitle, CardContent } from "../components/ui/card";
 import { Inbox } from "lucide-react";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+import { useIsMobile } from "../hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
     const isMobile = useIsMobile();
     return (<>
