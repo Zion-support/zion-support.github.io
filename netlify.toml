@@ -27,10 +27,6 @@
 [build.processing]
   skip_processing = true
 
-# Use the Next.js Netlify plugin for proper routing/functions
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 [[headers]]
   for = "/assets/*"
   [headers.values]
