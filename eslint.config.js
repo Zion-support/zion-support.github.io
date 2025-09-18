@@ -8,7 +8,7 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   js.configs.recommended,
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -42,6 +42,7 @@ export default [
       ],
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
@@ -53,12 +54,28 @@ export default [
     },
   },
   {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+      },
+    },
+  },
+  {
     ignores: [
-      'node_modules/**',
       'dist/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.ts',
       'build/**',
       '.next/**',
       'coverage/**',
+      '*.min.js',
     ],
   },
 ];
