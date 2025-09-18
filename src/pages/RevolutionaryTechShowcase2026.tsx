@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
