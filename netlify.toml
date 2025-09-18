@@ -22,9 +22,6 @@
 [build.processing]
   skip_processing = true
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -215,3 +212,9 @@
   status = 301
 
 # Note: Next.js routing is handled by @netlify/plugin-nextjs
+
+# SPA fallback for Vite/React single-page app
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
