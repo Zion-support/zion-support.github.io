@@ -1,5 +1,4 @@
 import React from 'react';
-
 const UltimateContentBanner2026: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white py-8 mb-12 relative overflow-hidden">
@@ -40,7 +39,6 @@ const UltimateContentBanner2026: React.FC = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%2520width%253D%252260%2522%2520height%253D%252260%2522%2520viewBox%253D%25220%25200%252060%252060%2522%2520xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%2520fill%253D%2522none%2522%2520fill-rule%253D%2522evenodd%2522%253E%253Cg%2520fill%253D%2522%25239C92AC%2522%2520fill-opacity%253D%25220.1%2522%253E%253Ccircle%2520cx%253D%252230%2522%2520cy%253D%252230%2522%2520r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>
-      
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -52,7 +50,6 @@ const UltimateContentBanner2026: React.FC = () => {
           <p className="text-2xl opacity-90 max-w-4xl mx-auto mb-8">
             Experience the most revolutionary technology content featuring AI Innovation, Quantum Computing, and Neural Interfaces
           </p>
-=======
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/50 to-pink-600/50 backdrop-blur-sm"></div>
       <div className="relative z-10">
@@ -78,7 +75,6 @@ const UltimateContentBanner2026: React.FC = () => {
             🌌 Interdimensional Tech →
           </a>
         </div>
-
         {/* Additional Content Showcase */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
@@ -89,7 +85,6 @@ const UltimateContentBanner2026: React.FC = () => {
               Explore →
             </a>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
             <div className="text-4xl mb-3">📊</div>
             <h4 className="text-lg font-semibold mb-2">Revolutionary Case Studies</h4>
@@ -98,7 +93,6 @@ const UltimateContentBanner2026: React.FC = () => {
               View Cases →
             </a>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
             <div className="text-4xl mb-3">📝</div>
             <h4 className="text-lg font-semibold mb-2">Ultimate Tech Blog</h4>
@@ -107,7 +101,6 @@ const UltimateContentBanner2026: React.FC = () => {
               Read Blog →
             </a>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
             <div className="text-4xl mb-3">🚀</div>
             <h4 className="text-lg font-semibold mb-2">Next-Gen Innovation Hub</h4>
@@ -117,7 +110,6 @@ const UltimateContentBanner2026: React.FC = () => {
             </a>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>
@@ -144,7 +136,6 @@ const UltimateContentBanner2026: React.FC = () => {
               🧠 Innovation Hub →
             </a>
           </div>
-=======
         <div className="mt-6 text-lg opacity-90">
           🚀 50+ Active Innovations • 99.9% Success Rate • Infinite Possibilities 🚀
         </div>
@@ -152,5 +143,3 @@ const UltimateContentBanner2026: React.FC = () => {
     </div>
   );
 };
-
-export default UltimateContentBanner2026;

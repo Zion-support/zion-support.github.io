@@ -1,0 +1,8 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+<<<<<<< HEAD
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
+}
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress

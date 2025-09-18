@@ -1,140 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-const Navigation: React.FC = () => {
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-'use client'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-<<<<<<< HEAD
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research', tag: 'New' },
-  { name: 'New', href: '/updates/real-time-ai-analytics-dashboard-v3-0' },
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-  { name: 'Contact', href: '/contact' },
-=======
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
->>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-23cd
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
-=======
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'Contact', href: '/contact' },
->>>>>>> cursor/create-and-deploy-new-content-3afb
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> 6b23b02814abc4e2b48cf43d809846f0fbf77db0
-]
-
->>>>>>> cursor/create-and-deploy-new-content-dc9e
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
-=======
-  { name: 'Blog', href: '/blog' },
-  { name: 'Updates', href: '/updates' },
-  { name: 'New', href: '/updates/real-time-agent-cost-controller-1-0' },
->>>>>>> cursor/create-and-deploy-new-content-2def
-]
-
-<<<<<<< HEAD
-=======
->>>>>>> 764f38a25b6ac8e639cc80767ab314d644c44287
->>>>>>> origin/cursor/create-and-deploy-new-content-24fa
 export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
->>>>>>> origin/cursor/create-and-deploy-new-content-62f5
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Navigation</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
-export default Navigation;
-=======
-"use client"
-
-import React from 'react'
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const navigation = [
-=======
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
-const navLinks = [
-	{ name: 'About', href: '/about' },
-	{ name: 'Services', href: '/services' },
-	{ name: 'Solutions', href: '/solutions' },
-	{ name: 'Research', href: '/research' },
-	{ name: 'Updates', href: '/updates', badge: 'New' },
-]
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-49e8
-=======
->>>>>>> dfce83fecd5efb7c91a4f4abe3933d9108eb5d24
-export default function Navigation() {
-	return (
-		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-			<nav className="mx-auto max-w-7xl flex items-center justify-between p-4" aria-label="Global">
-				<a href="/" className="text-white font-bold">Zion</a>
-				<div className="hidden md:flex gap-x-6">
-					{navLinks.map((item) => (
-						<a key={item.name} href={item.href} className="relative inline-flex items-center gap-1 text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200 hover:-translate-y-0.5">
-							<span>{item.name}</span>
-							{(item as any).badge ? (
-								<span className="ml-1 rounded bg-blue-600 px-1.5 py-0.5 text-[10px] font-bold text-white">{(item as any).badge}</span>
-							) : null}
-						</a>
-					))}
-				</div>
-				<div className="hidden md:flex">
-					<a href="/contact" className="text-sm font-semibold leading-6 text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-200 hover:scale-105">Get Started</a>
-				</div>
-			</nav>
-		</header>
-	)
+    <nav className="bg-gray-900 text-white py-4">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex justify-between items-center">
+          <div className="text-xl font-bold">Zion</div>
+          <div className="space-x-6">
+            <a href="/" className="hover:text-blue-400">Home</a>
+            <a href="/about" className="hover:text-blue-400">About</a>
+            <a href="/contact" className="hover:text-blue-400">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
 }
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d

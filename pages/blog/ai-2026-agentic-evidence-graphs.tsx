@@ -1,86 +1,31 @@
-import Head from 'next/head'
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function AgenticEvidenceGraphsPage() {
+const Ai2026AgenticEvidenceGraphs: NextPage = () => {
   return (
-    <UltraFuturisticBackground intensity="medium">
+    <div>
       <Head>
-        <title>Agentic Evidence Graphs (2026) | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Connect evals, traces, policy events, and incidents into an auditable evidence graph."
-        />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2026-agentic-evidence-graphs"
-        />
+        <title>Ai2026AgenticEvidenceGraphs - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026AgenticEvidenceGraphs blog post" />
       </Head>
-      <article className="container mx-auto px-4 py-16 prose prose-invert max-w-3xl">
-        <h1>Agentic Evidence Graphs (2026)</h1>
-        <p>
-          Production AI needs verifiable decision trails. Evidence graphs connect evaluations,
-          traces, policy events, and incidents so every action and outcome is explainable and
-          auditable.
-        </p>
-        <h2>Nodes and Edges</h2>
-        <ul>
-          <li>Nodes: evaluations, spans, artifacts, policy events, incidents</li>
-          <li>Edges: causedBy, derivedFrom, approves, rolledBackBy</li>
-        </ul>
-        <h2>Operational Use</h2>
-        <ol>
-          <li>Tie rollbacks to scorecards and policy thresholds</li>
-          <li>Automate postmortems with traversals over incidents</li>
-          <li>Generate executive views from queries over the graph</li>
-        </ol>
-      </article>
-    </UltraFuturisticBackground>
-  )
-}
-
-import Head from 'next/head'
-import Link from 'next/link'
-
-export default function AgenticEvidenceGraphs() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white">
-      <Head>
-        <title>Agentic Evidence Graphs | Zion Tech Group</title>
-        <meta name="description" content="Connect evals, traces, policy events, and incidents into an auditable evidence graph for trustworthy agent ops." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-agentic-evidence-graphs" />
-      </Head>
-
-      <main className="container mx-auto px-6 py-12">
-        <nav className="mb-8">
-          <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">← Back to Blog</Link>
-        </nav>
-
-        <article className="prose prose-invert prose-lg max-w-3xl mx-auto">
-          <header className="mb-10">
-            <h1>Agentic Evidence Graphs</h1>
-            <p className="text-white/80">Connect evals, traces, policy events, and incidents into an auditable graph.</p>
-          </header>
-
-          <h2>Why evidence graphs</h2>
-          <p>
-            Agent systems produce rich telemetry that often lives in silos. An evidence graph unifies these
-            streams into linked facts that support audits, RCA, and approvals.
-          </p>
-
-          <h2>Core nodes and edges</h2>
-          <ul>
-            <li>Traces ↔ Evals: attach scenario outcomes to spans and tool calls</li>
-            <li>Policy events ↔ Incidents: correlate violations to mitigations and impact</li>
-            <li>Releases ↔ Scorecards: snapshot KPIs per deploy for auditability</li>
-          </ul>
-
-          <h2>Operational outcomes</h2>
-          <p>
-            Faster incident triage, safer rollouts, and executive scorecards grounded in verifiable runtime data.
-          </p>
-        </article>
+      
+      <main>
+        <h1>Ai2026AgenticEvidenceGraphs</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
       </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026AgenticEvidenceGraphs;
+=======
+export default Ai2026AgenticEvidenceGraphs;
+>>>>>>> origin/backup-main-20250918-004015

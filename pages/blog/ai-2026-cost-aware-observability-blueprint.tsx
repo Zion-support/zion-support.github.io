@@ -1,31 +1,31 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function CostAwareObservabilityBlueprint2026() {
+const Ai2026CostAwareObservabilityBlueprint: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>AI 2026: Cost‑Aware Observability Blueprint | Zion Tech Group</title>
-        <meta name="description" content="Unify traces, evals, and spend to keep systems fast and on budget." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-cost-aware-observability-blueprint" />
+        <title>Ai2026CostAwareObservabilityBlueprint - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026CostAwareObservabilityBlueprint blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>Cost‑Aware Observability Blueprint (2026)</h1>
-        <p>
-          Connect performance, reliability, safety, and cost signals to guide engineering trade‑offs. Make
-          budgets first‑class with SLOs, alerts, and dashboards that include spend per request and per user.
-        </p>
-
-        <h2>What to Instrument</h2>
-        <ul>
-          <li>Latency, error rate, token usage, and cache hit rate</li>
-          <li>Eval pass rates and safety violations</li>
-          <li>Spend per scenario and per endpoint</li>
-        </ul>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026CostAwareObservabilityBlueprint</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026CostAwareObservabilityBlueprint;
+=======
+export default Ai2026CostAwareObservabilityBlueprint;
+>>>>>>> origin/backup-main-20250918-004015

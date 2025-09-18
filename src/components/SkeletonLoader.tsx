@@ -13,5 +13,4 @@ const SkeletonLoader = () => {
 
 };
 
-
 export default SkeletonLoader;

@@ -1,0 +1,155 @@
+PR Merge Automation Started: 2025-09-18T02:25:55.716Z
+[2025-09-18T02:25:55.717Z] [INFO] Running: Getting all remote branches
+[2025-09-18T02:25:55.767Z] [SUCCESS] ✅ Getting all remote branches completed
+[2025-09-18T02:25:55.779Z] [INFO] Found 15419 branches to process
+[2025-09-18T02:25:55.779Z] [INFO] Total branches to process: 15419
+[2025-09-18T02:25:55.779Z] [INFO] Processing in batches of 50
+[2025-09-18T02:25:55.779Z] [INFO] Maximum batches: 100 (5000 branches)
+[2025-09-18T02:25:55.779Z] [INFO] 
+🔄 Processing Batch 1/100
+[2025-09-18T02:25:55.779Z] [INFO] Batch contains 50 branches
+[2025-09-18T02:25:55.780Z] [INFO] 
+[1/50] Processing: 0nylrk-codex/fix-footer-contact-link
+[2025-09-18T02:25:55.780Z] [INFO] Processing branch: 0nylrk-codex/fix-footer-contact-link
+[2025-09-18T02:25:55.780Z] [INFO] Running: Switching to main
+[2025-09-18T02:25:56.122Z] [SUCCESS] ✅ Switching to main completed
+[2025-09-18T02:25:56.122Z] [INFO] Running: Pulling latest main
+[2025-09-18T02:25:56.348Z] [SUCCESS] ✅ Pulling latest main completed
+[2025-09-18T02:25:56.348Z] [INFO] Running: Fetching latest changes
+[2025-09-18T02:25:56.784Z] [SUCCESS] ✅ Fetching latest changes completed
+[2025-09-18T02:25:56.784Z] [INFO] Running: Checking out 0nylrk-codex/fix-footer-contact-link
+[2025-09-18T02:26:04.255Z] [SUCCESS] ✅ Checking out 0nylrk-codex/fix-footer-contact-link completed
+[2025-09-18T02:26:04.255Z] [INFO] Running: Merging main into 0nylrk-codex/fix-footer-contact-link
+[2025-09-18T02:26:22.674Z] [ERROR] ❌ Merging main into 0nylrk-codex/fix-footer-contact-link failed: spawnSync /bin/sh ENOBUFS
+[2025-09-18T02:26:22.674Z] [WARNING] ⚠️  Merge conflicts in 0nylrk-codex/fix-footer-contact-link, resolving...
+[2025-09-18T02:26:23.250Z] [INFO] Resolving conflicts in 0 files for 0nylrk-codex/fix-footer-contact-link
+[2025-09-18T02:26:23.251Z] [INFO] Running: Adding resolved files
+[2025-09-18T02:26:23.255Z] [ERROR] ❌ Adding resolved files failed: Command failed: git add .
+fatal: Unable to create '/workspace/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+[2025-09-18T02:26:23.255Z] [ERROR] ❌ Failed to process 0nylrk-codex/fix-footer-contact-link: Command failed: git add .
+fatal: Unable to create '/workspace/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+[2025-09-18T02:26:23.255Z] [INFO] Running: Switching back to main after error
+[2025-09-18T02:26:23.259Z] [ERROR] ❌ Switching back to main after error failed: Command failed: git checkout main
+fatal: Unable to create '/workspace/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+[2025-09-18T02:26:23.259Z] [ERROR] Error switching back to main: Command failed: git checkout main
+fatal: Unable to create '/workspace/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+[2025-09-18T02:26:24.259Z] [INFO] 
+[2/50] Processing: 0parff-codex/centralize-api-error-handling-and-add-errorboundary
+[2025-09-18T02:26:24.259Z] [INFO] Processing branch: 0parff-codex/centralize-api-error-handling-and-add-errorboundary
+[2025-09-18T02:26:24.259Z] [INFO] Running: Switching to main
+[2025-09-18T02:26:24.919Z] [SUCCESS] ✅ Switching to main completed
+[2025-09-18T02:26:24.919Z] [INFO] Running: Pulling latest main
+[2025-09-18T02:26:25.172Z] [SUCCESS] ✅ Pulling latest main completed
+[2025-09-18T02:26:25.172Z] [INFO] Running: Fetching latest changes
+[2025-09-18T02:26:25.634Z] [SUCCESS] ✅ Fetching latest changes completed
+[2025-09-18T02:26:25.634Z] [INFO] Running: Checking out 0parff-codex/centralize-api-error-handling-and-add-errorboundary
+[2025-09-18T02:26:27.685Z] [ERROR] ❌ Checking out 0parff-codex/centralize-api-error-handling-and-add-errorboundary failed: Command failed: git checkout 0parff-codex/centralize-api-error-handling-and-add-errorboundary
+error: Your local changes to the following files would be overwritten by checkout:
+	App.tsx
+	bulk-merge-all-prs.sh
+	dist/index.html
+	index.html
+	package-lock.json
+	src/index.css
+	yarn.lock
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+[2025-09-18T02:26:27.685Z] [WARNING] ⚠️  Could not checkout 0parff-codex/centralize-api-error-handling-and-add-errorboundary, skipping...
+[2025-09-18T02:26:28.687Z] [INFO] 
+[3/50] Processing: 0smfo8-codex/fix-404-error-for-non-existent-route
+[2025-09-18T02:26:28.687Z] [INFO] Processing branch: 0smfo8-codex/fix-404-error-for-non-existent-route
+[2025-09-18T02:26:28.687Z] [INFO] Running: Switching to main
+[2025-09-18T02:26:29.092Z] [SUCCESS] ✅ Switching to main completed
+[2025-09-18T02:26:29.093Z] [INFO] Running: Pulling latest main
+[2025-09-18T02:26:29.346Z] [SUCCESS] ✅ Pulling latest main completed
+[2025-09-18T02:26:29.346Z] [INFO] Running: Fetching latest changes
+[2025-09-18T02:26:29.818Z] [SUCCESS] ✅ Fetching latest changes completed
+[2025-09-18T02:26:29.818Z] [INFO] Running: Checking out 0smfo8-codex/fix-404-error-for-non-existent-route
+[2025-09-18T02:26:31.746Z] [ERROR] ❌ Checking out 0smfo8-codex/fix-404-error-for-non-existent-route failed: Command failed: git checkout 0smfo8-codex/fix-404-error-for-non-existent-route
+error: Your local changes to the following files would be overwritten by checkout:
+	App.tsx
+	bulk-merge-all-prs.sh
+	dist/index.html
+	index.html
+	package-lock.json
+	src/index.css
+	yarn.lock
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+[2025-09-18T02:26:31.746Z] [WARNING] ⚠️  Could not checkout 0smfo8-codex/fix-404-error-for-non-existent-route, skipping...
+[2025-09-18T02:26:32.747Z] [INFO] 
+[4/50] Processing: 0t8m4m-codex/update-project-color-palette
+[2025-09-18T02:26:32.747Z] [INFO] Processing branch: 0t8m4m-codex/update-project-color-palette
+[2025-09-18T02:26:32.747Z] [INFO] Running: Switching to main
+[2025-09-18T02:26:33.138Z] [SUCCESS] ✅ Switching to main completed
+[2025-09-18T02:26:33.138Z] [INFO] Running: Pulling latest main
+[2025-09-18T02:26:33.689Z] [SUCCESS] ✅ Pulling latest main completed
+[2025-09-18T02:26:33.689Z] [INFO] Running: Fetching latest changes
+[2025-09-18T02:26:34.229Z] [SUCCESS] ✅ Fetching latest changes completed
+[2025-09-18T02:26:34.229Z] [INFO] Running: Checking out 0t8m4m-codex/update-project-color-palette
+[2025-09-18T02:26:36.379Z] [ERROR] ❌ Checking out 0t8m4m-codex/update-project-color-palette failed: Command failed: git checkout 0t8m4m-codex/update-project-color-palette
+error: Your local changes to the following files would be overwritten by checkout:
+	App.tsx
+	bulk-merge-all-prs.sh
+	dist/index.html
+	index.html
+	package-lock.json
+	src/index.css
+	yarn.lock
+Please commit your changes or stash them before you switch branches.
+error: The following untracked working tree files would be overwritten by checkout:
+	comprehensive-pr-merger.cjs
+Please move or remove them before you switch branches.
+Aborting
+
+[2025-09-18T02:26:36.379Z] [WARNING] ⚠️  Could not checkout 0t8m4m-codex/update-project-color-palette, skipping...
+[2025-09-18T02:26:37.379Z] [INFO] 
+[5/50] Processing: 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-18T02:26:37.379Z] [INFO] Processing branch: 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-18T02:26:37.379Z] [INFO] Running: Switching to main
+[2025-09-18T02:26:37.766Z] [SUCCESS] ✅ Switching to main completed
+[2025-09-18T02:26:37.766Z] [INFO] Running: Pulling latest main
+[2025-09-18T02:26:38.005Z] [SUCCESS] ✅ Pulling latest main completed
+[2025-09-18T02:26:38.005Z] [INFO] Running: Fetching latest changes
+[2025-09-18T02:26:38.601Z] [SUCCESS] ✅ Fetching latest changes completed
+[2025-09-18T02:26:38.601Z] [INFO] Running: Checking out 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+[2025-09-18T02:26:38.606Z] [ERROR] ❌ Checking out 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh failed: Command failed: git checkout 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh
+fatal: Unable to create '/workspace/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+[2025-09-18T02:26:38.607Z] [WARNING] ⚠️  Could not checkout 0une71-codex/fix-unsupported-shell-syntax-in-setup.sh, skipping...

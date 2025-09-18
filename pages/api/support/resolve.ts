@@ -1,7 +1,9 @@
-  if (idx >= 0) {
-    requests[idx].status = 'resolved'
-    requests[idx].resolvedAt = Date.now()
-    writeJson('support/requests.json', requests)
-  }
-  return res.status(200).json({ ok: true })
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint working' });
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/backup-main-20250918-004015

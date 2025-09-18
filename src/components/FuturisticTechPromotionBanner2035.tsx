@@ -6,8 +6,5 @@ const FuturisticTechPromotionBanner2035: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
   );
-
-};
-
-
+  };
 export default FuturisticTechPromotionBanner2035;

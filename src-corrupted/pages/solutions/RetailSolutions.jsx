@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-
-import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store export default function RetailSolutions
-export { RetailSolutions }() {
-    const features = [
-        {
-            icon: Brain,
-            title: "AI-Powered Customer Insights",
-            description: "Machine learning models to understand customer behavior and preferences"
-        },
-        {icon: BarChart3,
-            title: "Real-time Analytics",
-            description: "Live monitoring of sales, inventory, and customer engagement metrics"},
-        {icon: Target,
-            title: "Personalized Marketing",
-            description: "AI-driven targeted marketing campaigns and product recommendations"},
-        {icon: Zap,
-            title: "Inventory Optimization",
-            description: "Intelligent inventory management and demand forecasting"},
-        {icon: Shield,
-            title: "E-commerce Security",
-            description: "Advanced security for online retail and payment processing"},
-        {
-            icon: Smartphone,
-            title: "Omnichannel Experience",
-            description: "Seamless integration across online and offline retail channels"
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const RetailSolutions: React.FC = () => {
   return (

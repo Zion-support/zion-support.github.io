@@ -1,10 +1,84 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 const RevolutionaryContentCarousel2025: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      title: "AI Consciousness Revolution",
+      description: "The first truly conscious AI systems that can think, feel, and create independently",
+      icon: "🧠",
+      color: "from-purple-600 to-pink-600",
+      features: ["Self-aware AI", "Emotional processing", "Creative problem solving", "Ethical decision making"]
+    },
+    {
+      id: 2,
+      title: "Quantum Reality Engine",
+      description: "Manipulate reality itself with quantum computing that transcends physical limitations",
+      icon: "⚛️",
+      color: "from-cyan-600 to-blue-600",
+      features: ["Reality manipulation", "Quantum superposition", "Multidimensional processing", "Instantaneous transfer"]
+    },
+    {
+      id: 3,
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces that merge human consciousness with digital systems",
+      icon: "🧬",
+      color: "from-emerald-600 to-teal-600",
+      features: ["Non-invasive interfaces", "Thought control", "Memory enhancement", "Telepathic communication"]
+    },
+    {
+      id: 4,
+      title: "Interdimensional Computing",
+      description: "Computing systems that operate across multiple dimensions and realities",
+      icon: "🌌",
+      color: "from-violet-600 to-purple-600",
+      features: ["Multi-dimensional processing", "Parallel universe computing", "Dimensional storage", "Cross-reality communication"]
+    },
+    {
+      id: 5,
+      title: "Synthetic Intelligence",
+      description: "Artificially created intelligence that surpasses human cognitive capabilities",
+      icon: "🤖",
+      color: "from-orange-600 to-red-600",
+      features: ["Superhuman intelligence", "Synthetic creativity", "Advanced reasoning", "Autonomous learning"]
+    },
+    {
+      id: 6,
+      title: "Universal Consciousness",
+      description: "Connect with the universal consciousness through advanced technology",
+      icon: "🌟",
+      color: "from-pink-600 to-rose-600",
+      features: ["Universal knowledge", "Collective intelligence", "Cosmic awareness", "Transcendent understanding"]
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-cyan-600/10 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%253E%253Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+      
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
@@ -17,6 +91,7 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
             Experience the most revolutionary technological advances that will reshape our world
           </p>
         </div>
+
         {/* Carousel Container */}
         <div className="relative max-w-6xl mx-auto">
           <div className="overflow-hidden rounded-2xl">
@@ -53,6 +128,7 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
               ))}
             </div>
           </div>
+
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
@@ -71,6 +147,7 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
             </svg>
           </button>
         </div>
+
         {/* Dots Indicator */}
         <div className="flex justify-center space-x-2 mt-8">
           {slides.map((_, index) => (
@@ -83,6 +160,7 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
             />
           ))}
         </div>
+
         {/* Action Buttons */}
         <div className="flex justify-center space-x-4 mt-8">
           <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
@@ -95,9 +173,6 @@ const RevolutionaryContentCarousel2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
 
-
 export default RevolutionaryContentCarousel2025;
-</p></p>

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import * as React from 'react';
-import Link from 'next/link';
-import MainLayout from '../components/layout/MainLayout';
-
-import { BarChart3,Building2,Database,Server,Shield,Users,CheckCircle,ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const enterprise-solutions: React.FC = () => {
   return (

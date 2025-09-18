@@ -67,7 +67,6 @@ const AIInnovationShowcase2026: React.FC = () => {
                 <p className="text-sm opacity-90">{innovation.description}</p>
               </divbutton>
             );
-};
           })}
         </div>
         {/* Detailed Innovation Display */}
@@ -272,8 +271,6 @@ const AIInnovationShowcase2026: React.FC = () => {
       </div>
     </div>
   );
-
-
-
+};
 export default AIInnovationShowcase2026;
 </div></div></div>

@@ -37,25 +37,15 @@ export default function Mobile({ }: MobileProps) {
     </div>
   );
 <<<<<<< HEAD
+=======
+
 
 =======
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> origin/backup-main-20250918-004015
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
 }
->>>>>>> origin/merged-prs
 :src.disabled/src/pages.disabled/Mobile.jsx
 }
 }

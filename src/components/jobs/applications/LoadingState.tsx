@@ -10,8 +10,5 @@ const LoadingState = () => {
       </div>
     </div>
   );
-
-};
-
-
+  };
 export default LoadingState;

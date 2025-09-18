@@ -1,22 +1,31 @@
-import React from 'react';
+import type { NextPage } from 'next';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-const description-generator: React.FC = () => {
+const DescriptionGenerator: NextPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>description-generator | Zion Tech Group</title>
-        <meta name="description" content="description-generator - Revolutionary technology solutions" />
-      </Helmet>
+    <div>
+      <Head>
+        <title>DescriptionGenerator - Zion Tech Solutions</title>
+        <meta name="description" content="DescriptionGenerator service" />
+      </Head>
       
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">description-generator</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
+      <main>
+        <h1>DescriptionGenerator</h1>
+        <p>Service details coming soon...</p>
+        <Link href="/services">Back to Services</Link>
+      </main>
     </div>
   );
 };
 
-export default description-generator;
+<<<<<<< HEAD
+export default DescriptionGenerator;
+=======
+export default DescriptionGenerator;
+>>>>>>> origin/backup-main-20250918-004015

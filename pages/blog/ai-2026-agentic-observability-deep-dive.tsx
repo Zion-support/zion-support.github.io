@@ -1,46 +1,31 @@
-import Head from 'next/head'
+import type { NextPage } from 'next';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+>>>>>>> origin/backup-main-20250918-004015
 
-export default function AgenticObservabilityDeepDive2026() {
+const Ai2026AgenticObservabilityDeepDive: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div>
       <Head>
-        <title>AI 2026: Agentic Observability — Deep Dive | Zion Tech Group</title>
-        <meta name="description" content="Traces, metrics, and evidence that keep agents reliable in production." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2026-agentic-observability-deep-dive" />
+        <title>Ai2026AgenticObservabilityDeepDive - Zion Tech Solutions</title>
+        <meta name="description" content="Ai2026AgenticObservabilityDeepDive blog post" />
       </Head>
-
-      <article className="prose prose-invert max-w-3xl mx-auto">
-        <h1>AI 2026: Agentic Observability — Deep Dive</h1>
-        <p>
-          Agent workflows are dynamic and stateful. Observability must capture prompts, tools, decisions, context, and
-          outcomes with policy signals to ensure reliability and safety.
-        </p>
-
-        <h2>Telemetry You Need</h2>
-        <ul>
-          <li>Structured traces of prompts, tools, model calls, and results</li>
-          <li>Evaluation metrics aligned to safety, quality, and cost</li>
-          <li>Policy events: overrides, violations, approvals, and budgets</li>
-          <li>Business KPIs linked to tasks and incidents</li>
-        </ul>
-
-        <h2>Evidence Hub</h2>
-        <p>
-          Centralize evals, traces, and policy events in an auditable evidence hub. Link incidents to signals and
-          decisions for postmortems and governance.
-        </p>
-
-        <h2>Rollout Checklist</h2>
-        <ol>
-          <li>Instrument traces with consistent schemas</li>
-          <li>Wire evals to preflight, canary, and runtime gates</li>
-          <li>Capture decisions and policy signals with context</li>
-          <li>Build dashboards for SLOs, incidents, and regressions</li>
-        </ol>
-
-        <p className="mt-8 text-sm text-gray-400">Last updated: 2025-09-16 • Author: Zion Tech Group</p>
-      </article>
+      
+      <main>
+        <h1>Ai2026AgenticObservabilityDeepDive</h1>
+        <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
+export default Ai2026AgenticObservabilityDeepDive;
+=======
+export default Ai2026AgenticObservabilityDeepDive;
+>>>>>>> origin/backup-main-20250918-004015

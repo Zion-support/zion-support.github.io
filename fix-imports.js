@@ -1,52 +1,60 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Read the App.tsx file
-const appPath = '/workspace/src/App.tsx';
-let content = fs.readFileSync(appPath, 'utf8');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Get all import lines from pages
-const importLines = content.match(/^import .* from '\.\/pages\/[^']+';$/gm) || [];
-
-console.log(`Found ${importLines.length} page imports to check...`);
-
-let fixedCount = 0;
-let commentedCount = 0;
-
-for (const line of importLines) {
-  // Extract the component name and file path
-  const match = line.match(/import (\w+) from '\.\/pages\/([^']+)';$/);
-  if (!match) continue;
+// Function to fix import statements
+function fixImports(content) {
+  // Fix comma before 'from' in import statements
+  let fixed = content.replace(/,\s*from\s+/g, ' from ');
   
-  const [, componentName, filePath] = match;
-  const fullPath = `/workspace/src/pages/${filePath}.tsx`;
-  const componentPath = `/workspace/src/components/${filePath}.tsx`;
+  // Fix other common syntax issues
+  fixed = fixed.replace(/,\s*}/g, '}');
+  fixed = fixed.replace(/,\s*]/g, ']');
+  fixed = fixed.replace(/,\s*\)/g, ')');
   
-  // Check if file exists in pages
-  if (fs.existsSync(fullPath)) {
-    console.log(`✓ ${filePath} exists in pages`);
-    continue;
+  return fixed;
+}
+
+// Get all TypeScript files
+function getAllTsFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.includes('node_modules')) {
+      files.push(...getAllTsFiles(fullPath));
+    } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
   }
   
-  // Check if file exists in components
-  if (fs.existsSync(componentPath)) {
-    console.log(`→ Moving ${filePath} from pages to components`);
-    content = content.replace(
-      `import ${componentName} from './pages/${filePath}';`,
-      `import ${componentName} from './components/${filePath}';`
-    );
-    fixedCount++;
-  } else {
-    console.log(`✗ ${filePath} not found anywhere - commenting out`);
-    content = content.replace(
-      `import ${componentName} from './pages/${filePath}';`,
-      `// import ${componentName} from './pages/${filePath}'; // File not found`
-    );
-    commentedCount++;
+  return files;
+}
+
+// Fix all files
+const srcDir = path.join(__dirname, 'src');
+const tsFiles = getAllTsFiles(srcDir);
+
+let fixedCount = 0;
+for (const file of tsFiles) {
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+    const fixed = fixImports(content);
+    
+    if (fixed !== content) {
+      fs.writeFileSync(file, fixed);
+      console.log(`Fixed imports in: ${file}`);
+      fixedCount++;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${file}:`, error.message);
   }
 }
 
-// Write the fixed content back
-fs.writeFileSync(appPath, content);
-
-console.log(`\nFixed ${fixedCount} imports, commented out ${commentedCount} missing files.`);
+console.log(`Fixed imports in ${fixedCount} files`);

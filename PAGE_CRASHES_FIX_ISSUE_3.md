@@ -57,9 +57,17 @@ rm .env.local
 
 **Created new .env.local with proper Auth0 configuration:**
 ```bash
-# ==============================================
+<<<<<<< HEAD
+# ====
+# AUTH0 AUTHENTICATION CONFIGURATION (Required)
+=======
 # AUTH0 AUTHENTICATION CONFIGURATION (Required)
 # ==============================================
+=======
+# ====
+# AUTH0 AUTHENTICATION CONFIGURATION (Required)
+>>>>>>> origin/backup-main-20250918-004015
+# ====
 AUTH0_SECRET=a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456
 AUTH0_BASE_URL=http://localhost:3000
 AUTH0_ISSUER_BASE_URL=https://dev-zion.us.auth0.com

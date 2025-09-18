@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { 
-  ShoppingCart, 
-  CreditCard, 
-  Package, 
-  Truck, 
-  ArrowRight, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Globe,
-  Shield,
-  Zap
-} from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-8b4d
 
 const ecommerce: React.FC = () => {
   return (

@@ -114,8 +114,5 @@ const QuantumComputingRevolution2025: React.FC = () => {
       </div>
     </div>
   );
-
 };
-
-
 export default QuantumComputingRevolution2025;
