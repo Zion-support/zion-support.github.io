@@ -89,6 +89,497 @@
   ],
   "items": [
     {
+      "title": "Governed Real‑Time Observability (2026)",
+      "href": "/blog/ai-2026-governed-real-time-observability",
+      "desc": "Streaming metrics and governed traces for reliable, auditable autonomy.",
+      "createdAt": "2025-09-16T23:59:59.995Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Production De‑Risking Checklist",
+      "href": "/blog/ai-2026-production-de-risking-checklist",
+      "desc": "High‑leverage preflight, canary, and post‑release checks to avoid incidents.
+",
+      "createdAt": "2025-09-16T23:59:59.990Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Evidence‑First Release Engineering",
+      "href": "/blog/ai-2026-evidence-first-release-engineering",
+      "desc": "Make every release auditable with scorecards, traces, policy events.",
+      "createdAt": "2025-09-16T23:59:59.985Z",
+      "source": "blog"
+    },
+    {
+      "title": "Production Agent Postmortems — Playbook (2026)",
+      "href": "/blog/ai-2026-production-agent-postmortems-playbook",
+      "desc": "Evidence-first templates and workflows to turn incidents into improvements.",
+      "createdAt": "2025-09-16T23:59:59.980Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Agent Governance Blueprint",
+      "href": "/blog/ai-2026-agent-governance-blueprint",
+      "desc": "Approvals, audit trails, policy checks, and rollback patterns for safe autonomy.",
+      "createdAt": "2025-09-16T23:59:59.970Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Real-Time Agent Posture Management",
+      "href": "/blog/ai-2026-agent-posture-management",
+      "desc": "Continuously assess, score, and adapt agent capabilities with policy-aware controls.",
+      "createdAt": "2025-09-16T23:59:59.960Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Evidence Bundles — Executive Guide",
+      "href": "/blog/ai-2026-evidence-bundles-exec-guide",
+      "desc": "Make AI decisions auditable by bundling traces, evals, policy events, and incidents.",
+      "createdAt": "2025-09-16T23:59:59.955Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Real‑Time Evals & Inference Guardrails",
+      "href": "/blog/ai-2026-real-time-evals-inference-guardrails",
+      "desc": "Live evaluation hooks and runtime guardrails to keep quality high in prod.",
+      "createdAt": "2025-09-16T23:59:59.950Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Edge Agents in Production — Field Guide",
+      "href": "/blog/ai-2026-edge-agents-production-guide",
+      "desc": "Architectural patterns and safeguards for running agents on the edge.",
+      "createdAt": "2025-09-16T23:59:59.940Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Low‑Latency Agent Observability",
+      "href": "/blog/ai-2026-low-latency-agent-observability.md",
+      "desc": "Streaming metrics and lean traces for real-time reliability with minimal overhead.",
+      "createdAt": "2025-09-16T23:59:59.900Z",
+      "source": "blog"
+    },
+    {
+      "title": "Guide — Low‑Latency Observability for Agentic Systems",
+      "href": "/reports/guides/guide-2025-09-low-latency-observability.md",
+      "desc": "Monitor agents in real time without adding drag.",
+      "createdAt": "2025-09-16T23:59:50.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Agent Rollback with Evaluation Scorecards",
+      "href": "/reports/briefs/brief-2025-09-agent-rollback-scorecards.md",
+      "desc": "Tie rollback decisions to live evidence for safe autonomy.",
+      "createdAt": "2025-09-16T23:59:40.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "AI 2026: Low‑Latency Agent Observability",
+      "href": "/blog/ai-2026-low-latency-agent-observability",
+      "desc": "Streaming metrics and lean traces for real-time reliability with minimal overhead.",
+      "createdAt": "2025-09-16T23:59:59.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Agent Safety Evidence Integration",
+      "href": "/blog/ai-2026-agent-safety-evidence-integration",
+      "desc": "Unify policy events, evaluations, and artifacts into a queryable evidence layer.",
+      "createdAt": "2025-09-16T23:59:58.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Cost‑Aware Real‑Time Routing",
+      "href": "/blog/ai-2026-cost-aware-real-time-routing",
+      "desc": "Budget-aligned policy routing with graceful fallbacks and online evals.",
+      "createdAt": "2025-09-16T23:59:57.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Agent Release Control Plane — Blueprint",
+      "href": "/blog/ai-2026-agent-release-control-plane-blueprint",
+      "desc": "Approvals, canary, rollback, and evidence capture wired to SLOs.",
+      "createdAt": "2025-09-16T23:59:30.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Incident Response Runbooks for Agentic Systems",
+      "href": "/blog/ai-2026-incident-response-runbooks",
+      "desc": "Scorecard-driven containment, evidence-first postmortems, and MTTR reduction.",
+      "createdAt": "2025-09-16T23:59:20.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Evidence Bundles in Practice",
+      "href": "/blog/ai-2026-evidence-bundles-in-practice",
+      "desc": "Bundle evals, traces, policy events, and incidents per release.",
+      "createdAt": "2025-09-16T23:59:10.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Safe Agent Rollouts Checklist",
+      "href": "/blog/ai-2026-safe-agent-rollouts-checklist",
+      "desc": "Practical preflight, canary, and rollback steps to ship safely",
+      "createdAt": "2025-09-16T23:59:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Production Evidence Hubs — Blueprint",
+      "href": "/blog/ai-2026-evidence-hubs-blueprint",
+      "desc": "Traces, artifacts, and policy events for auditable AI",
+      "createdAt": "2025-09-16T23:58:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Agent Runbooks with Guardrails (2026)",
+      "href": "/reports/ai-lab/articles/agent-runbooks-guardrails-1758092400000.md",
+      "desc": "Scorecard-driven incident response with policy events and containment",
+      "createdAt": "2025-09-16T23:40:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Evaluation Gates and Scorecards (2026)",
+      "href": "/reports/ai-lab/articles/eval-gates-scorecards-1758096000000.md",
+      "desc": "Wire preflight, canary, and post-release gates to outcomes",
+      "createdAt": "2025-09-16T23:50:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Cost Controls Blueprint (2026)",
+      "href": "/reports/ai-lab/articles/cost-controls-blueprint-1758099600000.md",
+      "desc": "Budgets, quotas, and routing bands for predictable spend",
+      "createdAt": "2025-09-17T00:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Observability Traces Schema (2026)",
+      "href": "/reports/ai-lab/articles/observability-traces-schema-1758103200000.md",
+      "desc": "Minimal, privacy-aware traces for auditable AI",
+      "createdAt": "2025-09-17T01:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Incident Postmortems — Evidence-First Templates (2026)",
+      "href": "/reports/ai-lab/articles/incident-postmortems-templates-1758106800000.md",
+      "desc": "Repeatable templates that turn incidents into improvements",
+      "createdAt": "2025-09-17T02:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Zero‑Downtime Releases — Advanced Guide (2026)",
+      "href": "/reports/ai-lab/articles/zero-downtime-releases-advanced-1758110400000.md",
+      "desc": "Blue/green, canary, rollback with eval gates in prod",
+      "createdAt": "2025-09-17T03:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Guide — Operational Evaluation Maturity Model",
+      "href": "/reports/guides/guide-2025-09-operational-eval-maturity-model.md",
+      "desc": "A ladder from ad-hoc checks to evidence-first gates",
+      "createdAt": "2025-09-16T22:59:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Zero‑Downtime Agent Releases: Blue/Green, Canary, Eval Gates",
+      "href": "/reports/ai-lab/articles/zero-downtime-agent-releases-1758081600000.md",
+      "desc": "Release agents safely with progressive delivery and evaluation gates",
+      "createdAt": "2025-09-16T22:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Safe Tooling Permissions: Tiered Adapters and Runtime Policy Checks",
+      "href": "/reports/ai-lab/articles/safe-tooling-permissions-1758085200000.md",
+      "desc": "Tiered permissions and policy checks that reduce risk",
+      "createdAt": "2025-09-16T23:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Case Study — 41% Incident Reduction with Eval Gates",
+      "href": "/reports/cases/case-2025-09-eval-gates-reduced-incidents.md",
+      "desc": "Preflight and canary checks reduced incidents and blast radius",
+      "createdAt": "2025-09-16T22:58:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Executive Summary: Evaluation Gates",
+      "href": "/reports/briefs/brief-2025-09-exec-summary-eval-gates.md",
+      "desc": "Why eval gates matter and how to roll out safely",
+      "createdAt": "2025-09-16T22:57:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Guide — Trusted RAG Playbook (2026)",
+      "href": "/pages/TrustedRAGPlaybook2026",
+      "desc": "Evidence-first patterns to ship grounded Retrieval-Augmented Generation",
+      "createdAt": "2025-09-16T22:30:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Agent Ops Control Plane (2026)",
+      "href": "/pages/AgentOpsControlPlane2026",
+      "desc": "Approvals, observability, rollback, and policy-aware permissions",
+      "createdAt": "2025-09-16T22:28:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Guide — Responsible Autonomy (2026)",
+      "href": "/pages/ResponsibleAutonomyGuide2026",
+      "desc": "Practical steps to translate policy into runtime safeguards",
+      "createdAt": "2025-09-16T22:26:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Starter — Operational Evaluation Gates (2026)",
+      "href": "/pages/OperationalEvalGates2026",
+      "desc": "Preflight, canary, and post-release gates that keep AI reliable",
+      "createdAt": "2025-09-16T22:24:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Guide — Shipping Trustworthy RAG in 48 Hours",
+      "href": "/pages/EdgeAICompliance2026",
+      "desc": "A rapid, practical path to grounded retrieval with eval gates",
+      "createdAt": "2025-09-16T22:10:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Safe Autonomy Rollouts: Canary, Kill‑Switch, Rollback",
+      "href": "/pages/AIIncidentResponse2026",
+      "desc": "Operational controls to keep agentic systems reliable in prod",
+      "createdAt": "2025-09-16T22:08:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Case Study — 30% Cost Reduction via Policy‑Aware Routing",
+      "href": "/pages/AdvancedAnalyticsDashboard2026",
+      "desc": "Routing policies tied to budget and latency targets at scale",
+      "createdAt": "2025-09-16T22:06:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Blueprint — Agent Ops Control Plane (v3.2)",
+      "href": "/pages/AgenticOpsControls2026",
+      "desc": "Approvals, observability, and rollback patterns wired to SLOs",
+      "createdAt": "2025-09-16T22:04:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Blog — Practical Eval Gates Without Slowing Teams",
+      "href": "/pages/InnovationShowcase2026",
+      "desc": "How to maintain velocity while improving quality with evals",
+      "createdAt": "2025-09-16T22:02:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Feature — Smart Workflow Templates (Q4 2025)",
+      "href": "/reports/features/feature-2025-09-smart-workflow-templates",
+      "desc": "Prebuilt templates to launch eval‑gated agent workflows fast",
+      "createdAt": "2025-09-16T21:05:00.000Z",
+      "source": "product"
+    },
+    {
+      "title": "Guide — Ship Trusted RAG in a Week",
+      "href": "/reports/guides/guide-2025-09-trusted-rag-in-a-week",
+      "desc": "Grounding, guardrails, and online evals to productionize RAG quickly",
+      "createdAt": "2025-09-16T21:00:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 2x Faster Onboarding with Agent Assist",
+      "href": "/reports/cases/case-2025-09-onboarding-agent-assist",
+      "desc": "Automated runbooks and contextual help halved time‑to‑productivity",
+      "createdAt": "2025-09-16T20:55:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Policy‑Aware Tool Permissions",
+      "href": "/reports/briefs/brief-2025-09-policy-aware-tool-permissions",
+      "desc": "Tiered adapters and runtime checks to reduce risk without friction",
+      "createdAt": "2025-09-16T20:50:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Agent Release Controls v3.1",
+      "href": "/reports/blueprints/blueprint-2025-09-agent-release-controls-v3-1",
+      "desc": "Approvals, rollback, and audit trails wired to SLOs",
+      "createdAt": "2025-09-16T20:45:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Blog — Production Guardrails That Don’t Slow You Down",
+      "href": "/blog/production-guardrails-without-slowdown-2025-09",
+      "desc": "Maintain velocity with evidence‑first quality and incident controls",
+      "createdAt": "2025-09-16T20:40:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Brief — Safe Agent Rollouts in Production",
+      "href": "/reports/briefs/brief-2025-09-safe-agent-rollouts",
+      "desc": "A pragmatic approach to preflight, canary, and rollback for agentic apps",
+      "createdAt": "2025-09-16T19:35:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Guide — Building Reliable Agentic Systems",
+      "href": "/reports/guides/guide-2025-09-reliable-agentic-systems",
+      "desc": "Design patterns, evaluation gates, and observability practices to keep agents reliable",
+      "createdAt": "2025-09-16T19:34:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — Agentic Ops Reduces Cost by 26%",
+      "href": "/reports/cases/case-2025-09-agentic-ops-cost-savings",
+      "desc": "Policy-aware routing and eval gates lowered spend without sacrificing quality",
+      "createdAt": "2025-09-16T19:33:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Guide — Production Eval Gates: A Zero‑to‑One Starter",
+      "href": "/reports/guides/guide-2025-09-prod-eval-gates-zero-to-one",
+      "desc": "Practical steps to add preflight, canary, and post‑release evaluation gates",
+      "createdAt": "2025-09-16T19:05:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 44% Incident Containment With Guarded Autonomy",
+      "href": "/reports/cases/case-2025-09-guarded-autonomy-containment",
+      "desc": "How policy‑gated actions reduced incident blast radius across 3 teams",
+      "createdAt": "2025-09-16T19:03:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Cost‑Aware Model Routing Patterns",
+      "href": "/reports/briefs/brief-2025-09-cost-aware-routing-patterns",
+      "desc": "Budget and latency sensitive routing with graceful fallbacks",
+      "createdAt": "2025-09-16T19:02:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Agent Ops Control Plane (v3)",
+      "href": "/reports/blueprints/blueprint-2025-09-agent-ops-control-plane-v3",
+      "desc": "Reference architecture for approvals, rollback, and observability at scale",
+      "createdAt": "2025-09-16T19:01:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Blog — Responsible Autonomy: From Policy to Runtime Controls",
+      "href": "/blog/ai-2026-responsible-autonomy-runtime-controls",
+      "desc": "Turning governance policies into live safeguards with evidence",
+      "createdAt": "2025-09-16T19:00:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Launch Notes — September 2025 Highlights",
+      "href": "/reports/updates/update-2025-09-16-highlights",
+      "desc": "What shipped this month: new content surfaces and reliability upgrades",
+      "createdAt": "2025-09-16T18:59:00.000Z",
+      "source": "release-notes"
+    },
+    {
+      "title": "Guide — Shipping Eval-Gated Agents (2026)",
+      "href": "/reports/guides/guide-2026-eval-gated-agents",
+      "desc": "End-to-end playbook for preflight, canary, and post-release gates",
+      "createdAt": "2025-09-16T18:45:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 38% MTTR Reduction with Agent Runbooks",
+      "href": "/reports/cases/case-2025-09-agent-runbooks-mttr-38",
+      "desc": "Incident response acceleration using policy events and eval scorecards",
+      "createdAt": "2025-09-16T18:40:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Budget-Aware Model Routing 101",
+      "href": "/reports/briefs/brief-2025-09-budget-aware-routing-101",
+      "desc": "Starter patterns for predictable spend with quality safeguards",
+      "createdAt": "2025-09-16T18:35:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Agent Ops Control Plane v2",
+      "href": "/reports/blueprints/blueprint-2025-09-agent-ops-control-plane-v2",
+      "desc": "Reference controls for approvals, rollback, and observability",
+      "createdAt": "2025-09-16T18:30:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Guide — Shipping AI Safely: Evaluation Gates Playbook (2025)",
+      "href": "/reports/guides/guide-2025-09-evaluation-gates-playbook",
+      "desc": "A practical, staged approach to preflight, canary, and post-release evals",
+      "createdAt": "2025-09-16T17:30:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 29% Churn Reduction with Agentic CX",
+      "href": "/reports/cases/case-2025-09-agentic-cx-churn-reduction",
+      "desc": "Personalized interventions using risk signals and guarded tools",
+      "createdAt": "2025-09-16T17:25:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Blueprint — Safe Tooling Permissions for Agents (v2)",
+      "href": "/reports/blueprints/blueprint-2025-09-safe-tooling-permissions-v2",
+      "desc": "Risk-tiered adapters, approvals, and runtime policy checks",
+      "createdAt": "2025-09-16T17:20:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Brief — Budget-Aware Model Routing for CFOs",
+      "href": "/reports/briefs/brief-2025-09-budget-aware-model-routing",
+      "desc": "Tie routing policy to cost, latency, and quality targets",
+      "createdAt": "2025-09-16T17:15:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Launch Notes — September 2025 Improvements",
+      "href": "/reports/updates/update-2025-09-16-launch-notes-extended",
+      "desc": "New content surfaces, reliability upgrades, and observability hooks",
+      "createdAt": "2025-09-16T17:10:00.000Z",
+      "source": "release-notes"
+    },
+    {
+      "title": "Guide — Shipping Reliable Agentic Apps (Q4 2025)",
+      "href": "/reports/guides/guide-2025-09-shipping-reliable-agentic-apps",
+      "desc": "Checklists, patterns, and guardrails for production-ready agents",
+      "createdAt": "2025-09-16T16:05:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 35% Ticket Deflection with AI Assist",
+      "href": "/reports/cases/case-2025-09-ai-assist-ticket-deflection",
+      "desc": "How an AI assistant reduced support volume while improving CSAT",
+      "createdAt": "2025-09-16T16:10:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Executive Primer on Evaluation Gates",
+      "href": "/reports/briefs/brief-2025-09-exec-eval-gates-primer",
+      "desc": "Why eval gates matter and how to budget them",
+      "createdAt": "2025-09-16T16:15:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "AI 2026: Agentic Observability Deep Dive",
+      "href": "/blog/ai-2026-agentic-observability-deep-dive",
+      "desc": "Traces, metrics, and evidence that keep agents reliable in prod",
+      "createdAt": "2025-09-16T00:00:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Trustworthy Model Routing",
+      "href": "/blog/ai-2026-trustworthy-model-routing",
+      "desc": "Policy-driven routing with budgets, evals, and fallbacks",
+      "createdAt": "2025-09-16T00:01:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "AI 2026: Operational Evals Starter Kit",
+      "href": "/blog/ai-2026-operational-evals-starter-kit",
+      "desc": "Minimal suite to measure groundedness, utility, and violations",
+      "createdAt": "2025-09-16T00:02:00.000Z",
+      "source": "blog"
+    },
+    {
       "title": "Reference Architecture — Autonomous Content Mesh",
       "href": "/reports/blueprints/blueprint-2025-08-15-000055",
       "desc": "New autonomous content",
@@ -106,6 +597,461 @@
       "title": "Case Study — Trigger Homepage",
       "href": "/reports/cases/case-2025-08-15-000055",
       "desc": "New autonomous content",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "2025-09 Research Brief — Agentic Business Ops",
+      "href": "/reports/briefs/brief-2025-09-agentic-business-ops",
+      "desc": "Practical playbook for operationalizing agentic workflows",
+      "createdAt": "2025-09-16T00:00:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Autonomous IT Service Desk (v1)",
+      "href": "/reports/blueprints/blueprint-2025-09-autonomous-it-service-desk",
+      "desc": "LLM-powered triage, routing, and remediation patterns",
+      "createdAt": "2025-09-16T00:10:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — 32% Cost Savings with FinOps AI",
+      "href": "/reports/cases/case-2025-09-finops-ai-savings",
+      "desc": "How FinOps AI reduced cloud waste at scale",
+      "createdAt": "2025-09-16T00:20:00.000Z",
+      "source": "cloud-deep-research-factory"
+    }
+    ,
+    {
+      "title": "Guide — Real‑Time Guardrail Metrics (2026)",
+      "href": "/reports/guides/guide-2026-real-time-guardrail-metrics",
+      "desc": "Operational metrics to monitor safety and reliability live in prod",
+      "createdAt": "2025-09-16T22:59:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Brief — Reliable Autonomy & Billing Controls",
+      "href": "/reports/briefs/brief-2025-09-reliable-autonomy-billing-controls",
+      "desc": "Align agent behavior with budget and compliance constraints",
+      "createdAt": "2025-09-16T22:58:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Case Study — Real‑World Eval Gates Impact",
+      "href": "/reports/cases/case-2025-09-real-world-eval-gates-impact",
+      "desc": "How evaluation gates reduced incidents and improved MTTR",
+      "createdAt": "2025-09-16T22:57:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Playbook — Agent Governance Checklist (2026)",
+      "href": "/reports/playbooks/playbook-2026-agent-governance-checklist",
+      "desc": "Approvals, audit trails, and rollback as first‑class controls",
+      "createdAt": "2025-09-16T22:56:00.000Z",
+      "source": "release-notes"
+    },
+    {
+      "title": "Guide — Continuous Eval‑Driven SLOs",
+      "href": "/reports/guides/guide-2025-09-continuous-eval-driven-slos",
+      "desc": "Instrument SLIs that matter and tie them to SLOs",
+      "createdAt": "2025-09-16T22:55:00.000Z",
+      "source": "ai-content-factory"
+    }
+    ,
+    {
+      "title": "Guide — Agent SLO Blueprints for Reliable Autonomy",
+      "href": "/reports/guides/guide-2025-09-agent-slo-blueprints",
+      "desc": "Evidence-first SLIs/SLOs wired to preflight, canary, and post-release gates",
+      "createdAt": "2025-09-16T22:05:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 2x Faster Agent Onboarding",
+      "href": "/reports/cases/case-2025-09-agent-onboarding-velocity",
+      "desc": "Governed tool access and runbooks halved time-to-productivity",
+      "createdAt": "2025-09-16T22:06:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Guide — Production Eval Gates: A Zero‑to‑One Starter (2026)",
+      "href": "/reports/guides/guide-2026-zero-to-one-eval-gates",
+      "desc": "Practical steps to add preflight, canary, and post‑release evaluation gates",
+      "createdAt": "2025-09-16T20:05:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 44% Incident Containment With Guarded Autonomy (2026)",
+      "href": "/reports/cases/case-2026-guarded-autonomy-containment-44",
+      "desc": "How policy‑gated actions reduced incident blast radius across 3 teams",
+      "createdAt": "2025-09-16T20:06:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Cost‑Aware Model Routing Patterns (2026)",
+      "href": "/reports/briefs/brief-2026-cost-aware-model-routing-patterns",
+      "desc": "Budget and latency sensitive routing with graceful fallbacks",
+      "createdAt": "2025-09-16T20:07:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Playbook — Ship AI Features Safely in 2 Weeks",
+      "href": "/reports/playbooks/playbook-2025-09-ship-ai-safely-2-weeks",
+      "desc": "A stepwise rollout with evaluation gates, canaries, and rollback",
+      "createdAt": "2025-09-16T16:20:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 41% MTTR Reduction with Agentic Runbooks",
+      "href": "/reports/cases/case-2025-09-agentic-runbooks-mttr",
+      "desc": "Incident response accelerated via eval-gated autonomous actions",
+      "createdAt": "2025-09-16T16:25:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Practical AI Procurement Controls (2026)",
+      "href": "/reports/briefs/brief-2026-practical-ai-procurement-controls",
+      "desc": "Vendor risk, red-teaming, and acceptance criteria for GenAI",
+      "createdAt": "2025-09-16T16:30:00.000Z",
+      "source": "ai-research-scout"
+    }
+    ,
+    {
+      "title": "Guide — Practical GenAI Patterns for Teams",
+      "href": "/reports/guides/genai-patterns-for-teams-2025-09",
+      "desc": "Battle-tested prompts and workflows for real adoption",
+      "createdAt": "2025-09-16T09:30:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — Autonomous Support Desk v2",
+      "href": "/reports/blueprints/blueprint-2025-09-autonomous-support-v2",
+      "desc": "Closed-loop L3 assist with safe auto-remediation",
+      "createdAt": "2025-09-16T09:40:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Brief — CFO’s Guide to AI Cost Controls",
+      "href": "/reports/briefs/brief-2025-09-cfo-ai-cost-controls",
+      "desc": "A lightweight playbook to align AI with FinOps",
+      "createdAt": "2025-09-16T09:50:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Production Eval Gates in the Wild: Lessons from Real Deployments",
+      "href": "/reports/ai-lab/articles/production-eval-gates-in-the-wild-1758049200000.md",
+      "desc": "What works when moving evaluation gates into live release workflows",
+      "createdAt": "2025-09-16T12:00:00.000Z",
+      "source": "Zion AI Lab"
+    }
+    ,
+    {
+      "title": "Launch Notes — Product Updates September 2025",
+      "href": "/reports/updates/update-2025-09-16-launch-notes",
+      "desc": "Highlights of the latest features and improvements shipped this month",
+      "createdAt": "2025-09-16T10:05:00.000Z",
+      "source": "release-notes"
+    },
+    {
+      "title": "Guide — Implementing Agentic Workflows Safely",
+      "href": "/reports/guides/guide-2025-09-agentic-workflows-safety",
+      "desc": "Controls, guardrails, and observability patterns for production agents",
+      "createdAt": "2025-09-16T10:10:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 48% Faster Support with LLM Triage",
+      "href": "/reports/cases/case-2025-09-llm-triage-support",
+      "desc": "Reducing average handle time while improving CSAT using LLM routing",
+      "createdAt": "2025-09-16T10:15:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — How To Pilot Agents in 30 Days",
+      "href": "/reports/briefs/brief-2025-09-pilot-agents-30-days",
+      "desc": "A pragmatic path to stand up a safe agent pilot in one month",
+      "createdAt": "2025-09-16T13:00:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Autonomous Sales Assistant",
+      "href": "/reports/blueprints/blueprint-2025-09-autonomous-sales-assistant",
+      "desc": "Lead qualification, meeting prep, and follow-ups with human-in-the-loop",
+      "createdAt": "2025-09-16T13:10:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Guide — Evaluation Gates for GenAI Apps",
+      "href": "/reports/guides/guide-2025-09-eval-gates-for-genai",
+      "desc": "Designing preflight, canary, and post-release evaluation gates",
+      "createdAt": "2025-09-16T13:20:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 21% Uplift with AI Knowledge Surfacing",
+      "href": "/reports/cases/case-2025-09-knowledge-surfacing-uplift",
+      "desc": "Reducing time-to-answer by contextual surfacing across tools",
+      "createdAt": "2025-09-16T13:30:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Playbook — Responsible Agent Operations",
+      "href": "/reports/playbooks/playbook-2025-09-responsible-agent-ops",
+      "desc": "Guardrails, incident response, and observability for agentic systems",
+      "createdAt": "2025-09-16T13:40:00.000Z",
+      "source": "release-notes"
+    },
+    {
+      "title": "Guide — Shipping Agentic Apps Faster (Q4 2025)",
+      "href": "/reports/guides/guide-2025-09-ship-agentic-apps-fast",
+      "desc": "Templates, checklists, and guardrails to accelerate safe delivery",
+      "createdAt": "2025-09-16T14:00:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blueprint — AI Ops Control Plane",
+      "href": "/reports/blueprints/blueprint-2025-09-ai-ops-control-plane",
+      "desc": "Reference patterns for observability, eval gates, and rollback",
+      "createdAt": "2025-09-16T14:05:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Case Study — Agent CRM Increases Pipeline by 27%",
+      "href": "/reports/cases/case-2025-09-agent-crm-pipeline-uplift",
+      "desc": "Operational playbook behind measurable revenue impact",
+      "createdAt": "2025-09-16T14:10:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Evaluations that Actually Move Metrics",
+      "href": "/reports/briefs/brief-2025-09-evals-that-matter",
+      "desc": "From vanity evals to production signal alignment",
+      "createdAt": "2025-09-16T14:15:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Playbook — Responsible Autonomy Field Guide",
+      "href": "/reports/playbooks/playbook-2025-09-responsible-autonomy-field-guide",
+      "desc": "Incident response, kill-switches, and safety reviews",
+      "createdAt": "2025-09-16T14:20:00.000Z",
+      "source": "release-notes"
+    }
+    ,
+    {
+      "title": "Autonomous Systems Safety Blueprint (2026)",
+      "href": "/blog/ai-2026-autonomous-systems-safety-blueprint",
+      "desc": "Practical gates, guardrails, and ops patterns to ship safe autonomy",
+      "createdAt": "2025-09-16T16:00:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Reliable Autonomy Operations (2026)",
+      "href": "/blog/ai-2026-reliable-autonomy-operations",
+      "desc": "Operate agents safely with SLOs, eval gates, incidents, and governed tools",
+      "createdAt": "2025-09-16T16:20:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Agentic Observability — Deep Dive (2026)",
+      "href": "/blog/ai-2026-agentic-observability-deep-dive",
+      "desc": "Traces, policy events, and evidence that keep agents reliable in prod",
+      "createdAt": "2025-09-16T16:25:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Agentic Benchmarking Field Guide (2026)",
+      "href": "/blog/ai-2026-agentic-benchmarking-field-guide",
+      "desc": "Benchmark agentic systems with scenario suites and business-aligned SLIs",
+      "createdAt": "2025-09-16T16:35:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Operationalizing AI Safety Controls (2026)",
+      "href": "/blog/ai-2026-operationalizing-ai-safety-controls",
+      "desc": "Turn policies into runtime controls wired to SLOs and incidents",
+      "createdAt": "2025-09-16T16:36:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Guide — Edge AI Compliance 2026",
+      "href": "/pages/EdgeAICompliance2026",
+      "desc": "Device attestation, data residency, and auditability patterns at the edge",
+      "createdAt": "2025-09-16T15:00:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Handbook — AI Incident Response 2026",
+      "href": "/pages/AIIncidentResponse2026",
+      "desc": "Containment, forensics, and gameday readiness for agentic systems",
+      "createdAt": "2025-09-16T15:05:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Controls — Agentic Ops Control Plane 2026",
+      "href": "/pages/AgenticOpsControls2026",
+      "desc": "Guardrails, approvals, and rollback patterns aligned to SLOs",
+      "createdAt": "2025-09-16T15:10:00.000Z",
+      "source": "cloud-blueprint-factory"
+    }
+    ,
+    {
+      "title": "Guide — Zero-Downtime Agent Releases",
+      "href": "/reports/guides/guide-2025-09-zero-downtime-agent-releases",
+      "desc": "Blue/green, canary, and eval-gated rollouts for agentic apps",
+      "createdAt": "2025-09-16T19:10:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 24% Cost Cut with Policy Routing",
+      "href": "/reports/cases/case-2025-09-policy-routing-cost-cut",
+      "desc": "How policy-driven routing reduced spend while improving reliability",
+      "createdAt": "2025-09-16T19:05:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — SLIs That Matter for Agents",
+      "href": "/reports/briefs/brief-2025-09-agent-slis-that-matter",
+      "desc": "From token counts to evidence-backed outcomes that tie to SLOs",
+      "createdAt": "2025-09-16T19:00:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Agent Incident Response v1.1",
+      "href": "/reports/blueprints/blueprint-2025-09-agent-incident-response-v1-1",
+      "desc": "Kill-switches, containment, and forensic evidence capture",
+      "createdAt": "2025-09-16T18:55:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Playbook — Proof-of-Value in 14 Days",
+      "href": "/reports/playbooks/playbook-2025-09-pov-in-14-days",
+      "desc": "Tightly scoped pilot with guardrails, KPIs, and rollback criteria",
+      "createdAt": "2025-09-16T18:50:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Blog — The Evidence-First Agent Stack",
+      "href": "/blog/evidence-first-agent-stack-2025-09",
+      "desc": "Designing for verifiability: traces, artifacts, and policy events",
+      "createdAt": "2025-09-16T18:49:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Blog — Practical Eval Gates in Prod",
+      "href": "/blog/practical-eval-gates-in-prod-2025-09",
+      "desc": "How to keep quality high without blocking velocity",
+      "createdAt": "2025-09-16T18:48:00.000Z",
+      "source": "blog"
+    }
+    ,
+    {
+      "title": "Blog — Evidence-First Agent Stack (Guide)",
+      "href": "/blog/ai-2026-evidence-first-agent-stack-guide",
+      "desc": "Verifiable traces, evals, and policy events wired to delivery",
+      "createdAt": "2025-09-16T19:20:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Blog — Practical Eval Gates (Dev→Prod)",
+      "href": "/blog/ai-2026-practical-eval-gates",
+      "desc": "Preflight, canary, and post-release evaluations with rollback",
+      "createdAt": "2025-09-16T19:21:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Blog — Trusted RAG in Production",
+      "href": "/blog/trusted-rag-in-production-2026",
+      "desc": "Grounded, budget-aware RAG with online evals and scorecards",
+      "createdAt": "2025-09-16T19:22:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Agent Runbooks: Incident Response for LLM Agents",
+      "href": "/reports/ai-lab/articles/agent-runbooks-incident-response-1758070800000.md",
+      "desc": "Runbooks to cut MTTR for agent incidents with evidence",
+      "createdAt": "2025-09-16T19:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Observability Traces Blueprint: Evidence for Auditable AI",
+      "href": "/reports/ai-lab/articles/observability-traces-blueprint-1758074400000.md",
+      "desc": "A minimal trace schema for verifiable, privacy-aware evidence",
+      "createdAt": "2025-09-16T20:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Cost Controls for Agents: Budgets, Quotas, and Safe Degradation",
+      "href": "/reports/ai-lab/articles/cost-controls-for-agents-1758078000000.md",
+      "desc": "Budgets, quotas, and graceful fallbacks to tame spend",
+      "createdAt": "2025-09-16T21:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Agent Incident Postmortems — Evidence‑First Templates",
+      "href": "/reports/ai-lab/articles/agent-incident-postmortems-evidence-first-templates-1758087000000.md",
+      "desc": "Repeatable postmortems with traces, policy events, and scorecards",
+      "createdAt": "2025-09-16T23:30:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Agent Billing Controls — Policy‑Aware Budgets",
+      "href": "/reports/ai-lab/articles/agent-billing-controls-policy-aware-budgets-1758088800000.md",
+      "desc": "Policy‑aware routing and quotas for predictable costs",
+      "createdAt": "2025-09-17T00:00:00.000Z",
+      "source": "Zion AI Lab"
+    },
+    {
+      "title": "Guide — Eval-Gated Deployments: Zero→Prod in 7 Days",
+      "href": "/reports/guides/guide-2025-09-eval-gated-deployments-7-days",
+      "desc": "Practical rollout with preflight, canary, scorecards, and rollback",
+      "createdAt": "2025-09-16T23:10:00.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 37% Latency Reduction via Policy Routing",
+      "href": "/reports/cases/case-2025-09-latency-reduction-policy-routing",
+      "desc": "Latency-aware routing with graceful model fallbacks at scale",
+      "createdAt": "2025-09-16T23:08:00.000Z",
+      "source": "cloud-deep-research-factory"
+    },
+    {
+      "title": "Brief — Agent SLOs for Executives",
+      "href": "/reports/briefs/brief-2025-09-agent-slos-for-executives",
+      "desc": "Outcome-aligned SLIs/SLOs your leadership will actually care about",
+      "createdAt": "2025-09-16T23:06:00.000Z",
+      "source": "ai-research-scout"
+    },
+    {
+      "title": "Blueprint — Evidence-First Agent Stack v1.2",
+      "href": "/reports/blueprints/blueprint-2025-09-evidence-first-agent-stack-v1-2",
+      "desc": "Traces, evals, and policy events wired to delivery workflows",
+      "createdAt": "2025-09-16T23:04:00.000Z",
+      "source": "cloud-blueprint-factory"
+    },
+    {
+      "title": "Blog — Cutting MTTR with Agent Runbooks",
+      "href": "/blog/cutting-mttr-with-agent-runbooks-2025-09",
+      "desc": "Scorecard-driven incident response for agentic systems",
+      "createdAt": "2025-09-16T23:02:00.000Z",
+      "source": "blog"
+    },
+    {
+      "title": "Playbook — Safe Tool Permissions in 30 Minutes",
+      "href": "/reports/playbooks/playbook-2025-09-safe-tool-permissions-30m",
+      "desc": "Tiered adapters and approvals with runtime policy checks",
+      "createdAt": "2025-09-16T23:00:00.000Z",
+      "source": "release-notes"
+    },
+    {
+      "title": "Guide — Budget-Aware Model Routing",
+      "href": "/reports/guides/guide-2025-09-budget-aware-model-routing",
+      "desc": "Predictable spend with target-aligned quality and latency",
+      "createdAt": "2025-09-16T22:59:30.000Z",
+      "source": "ai-content-factory"
+    },
+    {
+      "title": "Case Study — 22% Churn Reduction via Responsible Autonomy",
+      "href": "/reports/cases/case-2025-09-churn-reduction-responsible-autonomy",
+      "desc": "Guardrails and evals improved retention with safe interventions",
+      "createdAt": "2025-09-16T22:58:30.000Z",
       "source": "cloud-deep-research-factory"
     }
   ]
