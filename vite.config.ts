@@ -4,7 +4,20 @@ import path from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
+	plugins: [
+		react({
+			// Enable React Fast Refresh for better development experience
+			fastRefresh: true,
+			// Optimize JSX runtime
+			jsxRuntime: 'automatic',
+			// Enable babel plugins for better tree shaking
+			babel: {
+				plugins: [
+					['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }]
+				]
+			}
+		})
+	],
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, './src'),
@@ -18,22 +31,39 @@ export default defineConfig({
 		}
 	},
 	css: {
-		postcss: false
+		postcss: false,
+		// Enable CSS code splitting and optimization
+		devSourcemap: false
 	},
-esbuild: {
-    loader: 'tsx',
-    include: /(src\/.*\.[jt]sx?|App\.tsx)$/,
-    exclude: [],
-},
+	esbuild: {
+		loader: 'tsx',
+		include: /(src\/.*\.[jt]sx?|App\.tsx)$/,
+		exclude: [],
+		// Optimize for production
+		target: 'es2020',
+		// Enable tree shaking
+		treeShaking: true,
+		// Minify in production
+		minify: true,
+		// Drop console logs in production
+		drop: ['console', 'debugger']
+	},
 
 	build: {
 		target: 'esnext',
 		minify: 'terser',
 		sourcemap: false,
+		// Enable CSS code splitting
+		cssCodeSplit: true,
+		// Optimize asset handling
+		assetsInlineLimit: 4096,
 		rollupOptions: {
 			output: {
 				manualChunks: {
 					'react-vendor': ['react', 'react-dom'],
+					'router-vendor': ['react-router-dom'],
+					'ui-vendor': ['framer-motion', 'lucide-react'],
+					'utils-vendor': ['clsx', 'tailwind-merge']
 				},
 				chunkFileNames: 'js/[name]-[hash].js',
 				entryFileNames: 'js/[name]-[hash].js',
@@ -46,7 +76,9 @@ esbuild: {
 				}
 			}
 		},
-		chunkSizeWarningLimit: 1000
+		chunkSizeWarningLimit: 1000,
+		// Enable compression
+		reportCompressedSize: true
 	},
 	optimizeDeps: {
 		include: [
@@ -58,8 +90,35 @@ esbuild: {
 			'clsx',
 			'tailwind-merge'
 		],
-		exclude: ['@radix-ui/react-icons']
+		exclude: ['@radix-ui/react-icons'],
+		// Enable pre-bundling for faster dev startup
+		force: false
 	},
-	server: { port: 3000, host: true, open: true },
-	preview: { port: 4173, host: true, open: true }
+	server: { 
+		port: 3000, 
+		host: true, 
+		open: true,
+		// Enable HMR for better development experience
+		hmr: {
+			overlay: false
+		}
+	},
+	preview: { 
+		port: 4173, 
+		host: true, 
+		open: true,
+		// Enable gzip compression in preview
+		compress: true
+	},
+	// Enable experimental features for better performance
+	experimental: {
+		// Enable renderBuiltUrl for better asset handling
+		renderBuiltUrl(filename: string, { hostType }: { hostType: 'js' | 'css' | 'html' }) {
+			if (hostType === 'js') {
+				return { js: `/${filename}` }
+			} else {
+				return { relative: true }
+			}
+		}
+	}
 })

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, Suspense } from 'react'
+import { useEffect, Suspense, useCallback } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
 interface AnalyticsEvent {
@@ -23,6 +23,30 @@ interface PageView {
 function AnalyticsInner() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
+
+  const trackEvent = useCallback((event: AnalyticsEvent) => {
+    const eventData = {
+      ...event,
+      timestamp: new Date().toISOString(),
+      session_id: getSessionId(),
+      user_id: getUserId(),
+      page_url: window.location.href,
+      page_title: document.title
+    }
+
+    // Send to analytics endpoint
+    if (process.env.NODE_ENV === 'production') {
+      fetch('/api/analytics/event', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(eventData),
+      }).catch(err => console.error('Failed to track event:', err))
+    }
+
+    console.log('Event tracked:', eventData)
+  }, [])
 
   useEffect(() => {
     // Track page view
@@ -139,31 +163,7 @@ function AnalyticsInner() {
       window.removeEventListener('beforeunload', trackTimeOnPage)
       window.removeEventListener('pagehide', trackTimeOnPage)
     }
-  }, [pathname, searchParams])
-
-  const trackEvent = (event: AnalyticsEvent) => {
-    const eventData = {
-      ...event,
-      timestamp: new Date().toISOString(),
-      session_id: getSessionId(),
-      user_id: getUserId(),
-      page_url: window.location.href,
-      page_title: document.title
-    }
-
-    // Send to analytics endpoint
-    if (process.env.NODE_ENV === 'production') {
-      fetch('/api/analytics/event', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(eventData),
-      }).catch(err => console.error('Failed to track event:', err))
-    }
-
-    console.log('Event tracked:', eventData)
-  }
+  }, [pathname, searchParams, trackEvent])
 
   const getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('analytics_session_id')
@@ -184,7 +184,7 @@ function AnalyticsInner() {
     return () => {
       delete (window as any).trackEvent
     }
-  }, [])
+  }, [trackEvent])
 
   return null
 }
