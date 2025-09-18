@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase';
 import RevolutionaryContentShowcase from '../components/RevolutionaryContentShowcase';
@@ -21,7 +22,7 @@ const Home: React.FC = () => {
             <Link to="/pages/QuantumComputingRevolution2026" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">⚛️ Quantum Computing Revolution</Link>
             <Link to="/pages/ComprehensiveServices2025" className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">🛡️ Cybersecurity Solutions</Link>
           </div>
-        </motion.div>
+        </div>
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 border border-white/20">
             <div className="text-6xl mb-6 text-center">🤖</div>
@@ -89,76 +90,59 @@ const Home: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-          </div>
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-2xl font-semibold text-white mb-4">AI Innovation</h3>
+              <p className="text-gray-300 mb-4">
+                Revolutionary AI technologies that will reshape 
+                the future of artificial intelligence.
+              </p>
+              <Link 
+                to="/pages/AIInnovationHub2026" 
+                className="text-blue-400 hover:text-blue-300 font-semibold"
+              >
+                Explore AI →
+              </Link>
+            </motion.div>
           
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="text-4xl mb-4">⚛️</div>
-            <h3 className="text-2xl font-semibold text-white mb-4">Quantum Computing</h3>
-            <p className="text-gray-300 mb-4">
-              Revolutionary quantum computing technologies that will reshape 
-              the future of computation and problem-solving.
-            </p>
-            <Link 
-              to="/pages/TechTrends2026" 
-              className="text-purple-400 hover:text-purple-300 font-semibold"
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Explore Trends →
-            </Link>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="text-4xl mb-4">🔒</div>
-            <h3 className="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
-            <p className="text-gray-300 mb-4">
-              Comprehensive cybersecurity solutions to protect your business 
-              from evolving threats in the digital landscape.
-            </p>
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Revolutionary Technology Showcase 2026
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience the future of technology with our comprehensive collection of 
-              cutting-edge innovations, AI breakthroughs, and quantum computing advancements.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">AI Innovation Hub</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Discover the latest AI technologies and their real-world applications.
-                </p>
-                <Link 
-                  to="/pages/AIInnovationHub2026" 
-                  className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  Explore Hub
-                </Link>
-              </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Tech Trends 2026</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Stay ahead with the most important technology trends of 2026.
-                </p>
-                <Link 
-                  to="/pages/TechTrends2026" 
-                  className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  View Trends
-                </Link>
-              </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">Tech Insights</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Deep dive into comprehensive technology insights and analysis.
-                </p>
-                <Link 
-                  to="/pages/ComprehensiveTechInsights2026" 
-                  className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition-colors"
-                >
-                  Get Insights
-                </Link>
-              </div>
-            </div>
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Quantum Computing</h3>
+              <p className="text-gray-300 mb-4">
+                Revolutionary quantum computing technologies that will reshape 
+                the future of computation and problem-solving.
+              </p>
+              <Link 
+                to="/pages/TechTrends2026" 
+                className="text-purple-400 hover:text-purple-300 font-semibold"
+              >
+                Explore Trends →
+              </Link>
+            </motion.div>
+            
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
+              <p className="text-gray-300 mb-4">
+                Comprehensive cybersecurity solutions to protect your business 
+                from evolving threats in the digital landscape.
+              </p>
+              <Link 
+                to="/pages/CybersecurityFortress2025" 
+                className="text-green-400 hover:text-green-300 font-semibold"
+              >
+                Secure Your Future →
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
