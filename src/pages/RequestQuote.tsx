@@ -1,12 +1,7 @@
 
 import React from 'react';
-<<<<<<< HEAD
-import SEO from "../components/SEO";
-import { GradientHeading } from "../components/GradientHeading";
-=======
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-4b51
 
 export default function RequestQuote() {
   return (
