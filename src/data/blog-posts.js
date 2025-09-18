@@ -3568,7 +3568,7 @@ const latestContent2026 = [
 ];
 
 // Merge new content with existing blog posts
-export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...latestContent2026];
+export const allBlogPosts = [...blogPosts, ...extraContent2029, ...latest2025, ...newPromoted2025, ...latestContent2026];
 // Keep compatibility export; prefer BLOG_POSTS as unified list
 export const BLOG_POSTS_ALL = allBlogPosts;
 // Back-compat named export expected by some routes/components
