@@ -224,15 +224,11 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-<<<<<<< HEAD
 # SPA routing fallback - all routes go to index.html for Vite React app
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-=======
-# Note: Next.js routing is handled by @netlify/plugin-nextjs (touched 2025-09-19 00:45)
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
 
 # No-op: trigger deploy 2025-09-19 00:45 (run-12)
 
