@@ -1,22 +1,23 @@
-[build]
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = "dist"
-  base = "."
-  command_timeout = "30m"
+## Duplicated legacy block commented out to avoid conflicts. See Vite block below.
+# [build]
+#   command = "npm ci --no-audit --no-fund && npm run build"
+#   publish = "dist"
+#   base = "."
+#   command_timeout = "30m"
 
-[build.environment]
-  NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=6144"
-  NETLIFY_USE_NPM = "true"
-  CANONICAL_URL = "https://ziontechgroup.com"
-  GIT_SUBMODULE_STRATEGY = "none"
-  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
-  NPM_CONFIG_STRICT_SSL = "false"
-  NPM_CONFIG_BUILD_FROM_SOURCE = "false"
-  NPM_CONFIG_PREFER_OFFLINE = "true"
+# [build.environment]
+#   NODE_VERSION = "20"
+#   NODE_OPTIONS = "--max-old-space-size=6144"
+#   NETLIFY_USE_NPM = "true"
+#   CANONICAL_URL = "https://ziontechgroup.com"
+#   GIT_SUBMODULE_STRATEGY = "none"
+#   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+#   NPM_CONFIG_STRICT_SSL = "false"
+#   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
+#   NPM_CONFIG_PREFER_OFFLINE = "true"
 
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
 
 [functions]
   directory = "netlify/functions"
