@@ -78,12 +78,28 @@
     </script>
     
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="manifest" href="/manifest.json" />
     <title>Zion Tech Group - Revolutionary Technology Solutions</title>
     <meta name="description" content="Revolutionary technology solutions for the future" />
-    <script type="module" crossorigin src="/assets/index-CCpMfeVC.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-dQmRRRGP.css">
+    <script type="module" crossorigin src="/assets/index-DsFTuTlL.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-fFgmCVzP.css">
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

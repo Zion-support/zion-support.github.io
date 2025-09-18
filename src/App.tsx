@@ -11,6 +11,7 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { SidebarProvider } from './context/SidebarContext';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Core pages
 const Home = lazy(() => import('./pages/Home'));
@@ -62,6 +63,7 @@ const App = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
+            <PerformanceOptimizer />
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
               <Header />
               <main className="flex-1">
