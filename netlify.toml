@@ -1,7 +1,7 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T16:35:00Z (run-12)
 [build]
   base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "npm install --no-audit --no-fund && npm run build"
   publish = ".next"
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-18T16:35:00Z (run-12)
