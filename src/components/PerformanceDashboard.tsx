@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { usePerformance } from '../hooks/use-performance';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-=======
 import { usePerformance } from '@/hooks/use-performance';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { BarChart3, Zap, Clock, Target, RefreshCw, Eye, EyeOff } from 'lucide-react';

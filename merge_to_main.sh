@@ -25,14 +25,16 @@ git commit -m "Fix Netlify build: Install dependencies and ensure build compatib
 echo "Switching to main branch..."
 git checkout main
 
-echo "Pulling latest changes..."
+# Pull latest changes from origin
+echo "Pulling latest changes from origin..."
 git pull origin main
 
 # Merge the feature branch
 echo "Merging cursor/fix-netlify-build-and-merge-to-main-0ddb..."
 git merge cursor/fix-netlify-build-and-merge-to-main-0ddb --no-ff -m "Merge fix-netlify-build-and-merge-to-main-0ddb: Fix Netlify build issues"
 
-echo "Pushing to main..."
+# Push to origin main
+echo "Pushing to origin main..."
 git push origin main
 
 echo "Merge completed successfully!"

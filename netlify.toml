@@ -1,7 +1,7 @@
-# Updated: Fixed for Vite React SPA deployment at 2025-09-19T01:00:00Z (run-13)
+# Updated: Fixed for Vite React SPA deployment at 2025-01-19T12:00:00Z
 [build]
   base = "."
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "npm install --include=optional && npm run build:netlify"
   publish = "dist"
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-19T00:45:00Z (run-12)
@@ -224,7 +224,15 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
+<<<<<<< HEAD
+# SPA routing fallback - all routes go to index.html for Vite React app
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+=======
 # Note: Next.js routing is handled by @netlify/plugin-nextjs (touched 2025-09-19 00:45)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
 
 # No-op: trigger deploy 2025-09-19 00:45 (run-12)
 

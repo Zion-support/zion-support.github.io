@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import SEO from "../components/SEO";
-import { GradientHeading } from "../components/GradientHeading";
+import { SEO } from '../components/SEO';
+import { GradientHeading } from '../components/GradientHeading';
+
 
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<number[]>([]);

@@ -1,14 +1,7 @@
 import React from 'react';
-            </div>
-          </div>
-        </div>
 
-            </div>
-          </div>
-        </div>
-
-          </div>
-        </div>
+const QuantumComputingRevolution2026 = () => {
+  return (
       </div>
     </div>
   );

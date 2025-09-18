@@ -1,13 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
-import Header from "../components/Header";
+import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import SEO from "../components/SEO";
+import { SEO } from "../components/SEO";
+
 import { GradientHeading } from "../components/GradientHeading";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
-=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
@@ -15,7 +14,9 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
+
+=======
+
 import { 
   Brain, 
   Zap, 

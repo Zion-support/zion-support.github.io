@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Page() {
   return (
     <div className="bg-black min-h-screen">
@@ -5,3 +6,15 @@ export default function Page() {
     </div>
   );
 }
+=======
+import React from 'react'
+
+
+export default function Page() {
+  return (
+    <div className="bg-black min-h-screen">
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> 9773d9320f6bbcbcd66674053ade2fbe286da10f

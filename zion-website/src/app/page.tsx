@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // @ts-nocheck
 import { getLatestUpdates } from '@/data/updates'
 import { ChartBarIcon, CpuChipIcon, GlobeAltIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
@@ -24,12 +25,40 @@ const solutions = [
   { name: 'Autonomous Business Operations', description: 'AI-powered automation for enterprise efficiency.', href: '/solutions/autonomous-business' },
   { name: 'IT Asset Management', description: 'Intelligent management of digital infrastructure.', href: '/solutions/it-asset-management' },
 ]
+=======
+import React from 'react'
+>>>>>>> 9773d9320f6bbcbcd66674053ade2fbe286da10f
 
 export default function HomePage() {
   const latest = getLatestUpdates(6)
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://zion.app",
+    "logo": "https://zion.app/logo.png",
+    "description": "Leading AI and Technology Solutions for Enterprise Innovation",
+    "foundingDate": "2020",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "url": "https://zion.app/contact"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontech",
+      "https://linkedin.com/company/zion-tech-group"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "category": "AI and Technology Services",
+      "description": "Cutting-edge AI, quantum computing, and autonomous solutions"
+    }
+  }
 
   return (
     <div className="bg-black min-h-screen">
+<<<<<<< HEAD
       {/* Promo banner for fresh content */}
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
@@ -193,6 +222,8 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+=======
+>>>>>>> 9773d9320f6bbcbcd66674053ade2fbe286da10f
     </div>
   )
 }
