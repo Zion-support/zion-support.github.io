@@ -1,7 +1,7 @@
 [build]
   base = "zion-website"
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  publish = "dist"
   command_timeout = "30m"
 
 # Trigger Netlify build: no-op change on 2025-09-18T14:35:00Z
@@ -17,21 +17,14 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Vite build - no specific plugin needed
 
-[functions]
-  # With base = "zion-website", paths are resolved relative to that base.
-  # Our functions live at repo-root "netlify/functions", so use a path that escapes the base.
-  directory = "../netlify/functions"
-  node_bundler = "esbuild"
-  # Static assets for functions should reference the base directory's public folder directly
-  included_files = ["public/**/*"]
+# Functions configuration removed for Vite build
 
 [build.processing]
   skip_processing = true
 
-# Next.js handles routing; no SPA fallback redirect
+# Vite SPA routing - add fallback redirect
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -221,7 +214,11 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# Note: Next.js routing is handled by @netlify/plugin-nextjs
+# SPA fallback for Vite routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
  
 ## End of Netlify configuration
 # No-op: trigger deploy 2025-09-18 14:35 UTC
