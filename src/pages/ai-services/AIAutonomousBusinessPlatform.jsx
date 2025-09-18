@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu } from 'lucide-react';
+<<<<<<< HEAD
 import SEO from '../components/SEO';
+=======
+import { SEO } from '../components/SEO.jsx';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-ca65
 const features = [
     {
         title: "Cloud-Native Architecture",
