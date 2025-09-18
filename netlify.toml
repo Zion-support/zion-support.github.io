@@ -20,7 +20,7 @@
 
 # Functions configuration (lives at repo root `netlify/functions`)
 [functions]
-  directory = "netlify/functions"
+  directory = "../netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
