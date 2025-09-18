@@ -4,6 +4,8 @@
   publish = ".next"
   command_timeout = "30m"
 
+# Trigger Netlify build: no-op change on 2025-09-18
+
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
