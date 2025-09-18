@@ -47,6 +47,10 @@ import EnhancedContentShowcase from './src/components/EnhancedContentShowcase';
 // import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 // import ComprehensiveTechInsights2026 from './src/pages/ComprehensiveTechInsights2026';
 
+import './src/index.css';
+import './src/styles/accessibility.css';
+import './src/styles/optimizations.css';
+
 export default function App(): JSX.Element {
   return (
     <Router>
@@ -124,5 +128,3 @@ export default function App(): JSX.Element {
     </Router>
   );
 }
-
-export default App;
