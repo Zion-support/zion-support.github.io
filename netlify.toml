@@ -16,6 +16,7 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
+  NEXT_TELEMETRY_DISABLED = "1"
 
 [build.processing]
   skip_processing = true
