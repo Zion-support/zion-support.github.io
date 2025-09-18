@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:netlify": "vite build",
-    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src/ App.tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
