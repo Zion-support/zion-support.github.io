@@ -276,7 +276,7 @@ const TranscendentAI2026: React.FC = () => {
 
               </div>
         {/* Revolutionary Applications */}
-        <divsection
+        <div
           className="mb-16"
         >
           <div className="text-center mb-12">

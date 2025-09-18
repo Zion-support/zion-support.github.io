@@ -73,6 +73,9 @@ const RevolutionaryTechShowcase2042: React.FC = () => {
                 key={key}
                 onClick={() => setActiveTab(key)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeTab === key 
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' 
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
                 }`}
               >
                 {tech.icon} {tech.title}
