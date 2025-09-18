@@ -1,9 +1,8 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T23:30:00Z
 [build]
-  # Build the Next.js site in the monorepo subdirectory
-  base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
+  # Build the Next.js site located in the monorepo subdirectory from the repo root
+  command = "cd zion-website && npm ci --no-audit --no-fund && npm run build"
+  publish = "zion-website/.next"
   command_timeout = "30m"
 
 [build.environment]
@@ -20,7 +19,8 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  directory = "../netlify/functions"
+  # Functions live at the repository root
+  directory = "netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
