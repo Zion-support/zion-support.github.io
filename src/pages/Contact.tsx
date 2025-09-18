@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, ...props }) => (
+  <button {...props} className={`px-4 py-2 rounded bg-blue-600 text-white ${props.className || ''}`}>{children}</button>
+);
+const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = (props) => (
+  <input {...props} className={`border rounded px-3 py-2 w-full ${props.className || ''}`} />
+);
+const Textarea: React.FC<React.TextareaHTMLAttributes<HTMLTextAreaElement>> = (props) => (
+  <textarea {...props} className={`border rounded px-3 py-2 w-full ${props.className || ''}`} />
+);
+const Label: React.FC<React.LabelHTMLAttributes<HTMLLabelElement>> = ({ children, ...props }) => (
+  <label {...props}>{children}</label>
+);
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
