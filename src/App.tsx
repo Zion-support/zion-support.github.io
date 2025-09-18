@@ -1,4 +1,7 @@
 
+import React, { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 // Core pages
 const Home = lazy(() => import('./pages/Home'));
 const ServicesPage = lazy(() => import('./pages/Services'));
@@ -48,7 +51,7 @@ const LoadingSpinner = () => (
 );
 
 const App = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  // const [sidebarOpen, setSidebarOpen] = useState(false); // Commented out unused state
   
   return (
               

@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 
 const UltimateTechBreakthrough2026: React.FC = () => {
   return (
-          </div>
-        </div>
+    <div>
+      <div>
 
         {/* Main Content */}
         <div className="container mx-auto px-4 py-16">

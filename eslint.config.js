@@ -23,7 +23,6 @@ export default [
       'zion.app/**',
       'zion_academy/**',
       'zion-ai-assistant/**',
-      'zion-os/**',
       'token/**',
       'dao/**',
       'server/**',
@@ -167,6 +166,14 @@ export default [
         IntersectionObserverEntry: 'readonly',
         // React
         React: 'readonly',
+        // React Router
+        Routes: 'readonly',
+        Route: 'readonly',
+        // React imports
+        lazy: 'readonly',
+        useState: 'readonly',
+        Suspense: 'readonly',
+        // Test globals
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
