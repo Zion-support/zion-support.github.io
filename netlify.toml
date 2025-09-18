@@ -1,8 +1,6 @@
 [build]
   # Build the Next.js site located in the monorepo subdirectory from the repo root
   base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
@@ -217,9 +215,7 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-## Note: Do not add SPA fallback for Next.js; plugin handles routing.
-
-## End of Netlify configuration
 =======
-# No-op: trigger deploy 2025-09-18T21:45:00Z
->>>>>>> origin/chore/netlify-deploy-bump-2025-09-18-2145
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+>>>>>>> origin/chore/netlify-next-plugin
