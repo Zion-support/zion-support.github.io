@@ -1,9 +1,12 @@
-# Updated: Fixed for Vite React app deployment - 2025-01-20T00:00:00Z
+# Updated: Fixed for Next.js deployment - 2025-01-20T00:00:00Z
 [build]
   base = "."
   command = "npm ci --no-audit --no-fund && npm run build"
-  publish = "dist"
+  publish = ".next"
   command_timeout = "30m"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [build.environment]
   NODE_VERSION = "20"
