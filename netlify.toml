@@ -24,6 +24,9 @@
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [build.processing]
   skip_processing = true
 [[headers]]
@@ -216,6 +219,5 @@
   status = 301
 
 =======
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
->>>>>>> origin/chore/netlify-next-plugin
+
+>>>>>>> origin/chore/netlify-nextjs-plugin
