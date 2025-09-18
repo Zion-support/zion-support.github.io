@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ children, ...props }) => (
   <button {...props} className={`px-4 py-2 rounded bg-blue-600 text-white ${props.className || ''}`}>{children}</button>
@@ -15,7 +13,6 @@ const Label: React.FC<React.LabelHTMLAttributes<HTMLLabelElement>> = ({ children
 );
 
 const ContactPage: React.FC = () => {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
   const [formData, setFormData] = useState({
     name: '',
     email: '',

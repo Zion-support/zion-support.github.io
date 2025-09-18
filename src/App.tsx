@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-import React, { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-=======
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -16,7 +11,6 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { SidebarProvider } from './context/SidebarContext';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
 
 // Core pages
 const Home = lazy(() => import('./pages/Home'));
@@ -123,8 +117,6 @@ const App = () => {
                 </Suspense>
               </main>
               
-<<<<<<< HEAD
-=======
               <Footer />
               <SonnerToaster />
             </div>
@@ -135,7 +127,6 @@ const App = () => {
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
   );
 };
 

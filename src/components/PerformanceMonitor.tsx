@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-      });
-    };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-        >
-          ×
-        </button>
-=======
 import React, { useState, useEffect } from 'react';
 import { usePerformance } from '../hooks/usePerformance';
 
@@ -68,7 +48,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             <div>Memory: {metrics.memoryUsage.toFixed(2)}MB</div>
           )}
         </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
       </div>
     </div>
   );
