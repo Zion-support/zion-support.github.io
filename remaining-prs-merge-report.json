@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "totalBranches": 10,
+    "successfullyMerged": 1,
+    "failedBranches": 9,
+    "duration": "127 seconds"
+  },
+  "processedBranches": [
+    "87zh7m-codex/fix-netlify-build-failures-due-to-typescript-errors",
+    "candidate/netlify-build-fix-2025-09-17",
+    "candidate/netlify-fix",
+    "chore/clean-netlify-config",
+    "chore/fix-netlify-build",
+    "chore/fix-netlify-build-1757338849",
+    "chore/fix-netlify-build-config",
+    "chore/fix-netlify-build-merge-main-202509171043",
+    "chore/fix-netlify-build-scope",
+    "chore/front-automation-with-netlify"
+  ],
+  "mergedBranches": [
+    "chore/fix-netlify-build-merge-main-202509171043"
+  ],
+  "failedBranches": [
+    {
+      "branch": "87zh7m-codex/fix-netlify-build-failures-due-to-typescript-errors",
+      "error": "Command failed: git checkout main\nfatal: Unable to create '/workspace/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+    },
+    {
+      "branch": "candidate/netlify-build-fix-2025-09-17",
+      "error": "Command failed: git checkout main\nfatal: Unable to create '/workspace/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+    },
+    {
+      "branch": "candidate/netlify-fix",
+      "error": "Command failed: git checkout main\nfatal: Unable to create '/workspace/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+    },
+    {
+      "branch": "chore/clean-netlify-config",
+      "error": "Command failed: git checkout main\nfatal: Unable to create '/workspace/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+    },
+    {
+      "branch": "chore/fix-netlify-build",
+      "error": "Command failed: git checkout main\nfatal: Unable to create '/workspace/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+    },
+    {
+      "branch": "chore/fix-netlify-build-1757338849",
+      "error": "Command failed: git checkout main\nfatal: Unable to create '/workspace/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+    },
+    {
+      "branch": "chore/fix-netlify-build-config",
+      "error": "Command failed: git commit -m \"Resolve merge conflicts with main\""
+    },
+    {
+      "branch": "chore/fix-netlify-build-scope",
+      "error": "Command failed: git commit -m \"Resolve merge conflicts with main\""
+    },
+    {
+      "branch": "chore/front-automation-with-netlify",
+      "error": "Command failed: git merge chore/front-automation-with-netlify"
+    }
+  ],
+  "timestamp": "2025-09-18T02:19:29.485Z"
+}
