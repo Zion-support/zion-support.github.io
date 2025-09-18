@@ -223,4 +223,8 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
+# Note: Next.js routing is handled by @netlify/plugin-nextjs
+
+# No-op: trigger deploy 2025-09-18
+
 ## End of Netlify configuration
