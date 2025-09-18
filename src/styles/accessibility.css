@@ -13,7 +13,6 @@
 
 /* High Contrast Mode */
 .high-contrast {
-<<<<<<< HEAD
   --text-primary: #ffffff;
   --text-secondary: #e5e7eb;
   --bg-primary: #000000;
@@ -38,14 +37,6 @@
 .large-text h4 { font-size: 1.5rem; }
 .large-text h5 { font-size: 1.25rem; }
 .large-text h6 { font-size: 1.125rem; }
-=======
-  --bg-primary: #000000;
-  --bg-secondary: #ffffff;
-  --text-primary: #ffffff;
-  --text-secondary: #000000;
-  --accent: #ffff00;
-  --border: #ffffff;
-}
 
 .high-contrast * {
   background-color: var(--bg-primary) !important;
@@ -209,12 +200,6 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
-=======
-/* Screen Reader Mode */
-.screen-reader-mode {
-  /* Hide decorative elements */
-  .decoration,
-  .ornament,
   .visual-only {
     display: none !important;
   }
@@ -272,7 +257,6 @@
 *:focus {
   outline: 2px solid #0066cc;
   outline-offset: 2px;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 }
 
 /* Skip Links */
@@ -388,9 +372,6 @@
 }
 
 /* Utility Classes */
-=======
-/* ARIA Live Regions */
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 .sr-only {
   position: absolute;
   width: 1px;
@@ -447,12 +428,18 @@
 
 .loading::after {
   content: '';
-=======
-/* High contrast for form elements */
-.high-contrast input[type="text"],
-.high-contrast input[type="email"],
-.high-contrast input[type="password"],
-.high-contrast textarea,
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--accent-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
 .high-contrast select {
   background-color: #ffffff !important;
   color: #000000 !important;
@@ -498,36 +485,23 @@ p, li, span, div {
 
 .loading::after {
   content: "";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   position: absolute;
   top: 50%;
   left: 50%;
   width: 20px;
   height: 20px;
   margin: -10px 0 0 -10px;
-<<<<<<< HEAD
   border: 2px solid var(--accent-color);
   border-top-color: transparent;
-=======
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #3498db;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-<<<<<<< HEAD
   to {
     transform: rotate(360deg);
   }
 }
-=======
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Reduced motion version of loading animation */
 .reduced-motion .loading::after {
   animation: none;
   border: 2px solid #3498db;
@@ -567,4 +541,3 @@ h3 { font-size: 1.25rem; font-weight: bold; }
 h4 { font-size: 1.125rem; font-weight: bold; }
 h5 { font-size: 1rem; font-weight: bold; }
 h6 { font-size: 0.875rem; font-weight: bold; }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
