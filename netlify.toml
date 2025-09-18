@@ -1,4 +1,4 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T00:00:00Z (refresh 2025-09-18T00:00:00Z-5)
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T16:00:00Z (refresh 2025-09-18T16:00:00Z-5)
 [build]
   # Build the Next.js site located in the monorepo subdirectory from the repo root
   base = "zion-website"
@@ -228,6 +228,11 @@
 >>>>>>> origin/chore/netlify-nextjs-plugin
 =======
 ## End of Netlify configuration
+<<<<<<< HEAD
 # No-op: trigger deploy 2025-09-18T00:00:00Z (refresh 2025-09-18T00:00:00Z-5)
 # trigger: 2025-09-18T00:00:00Z (refresh) re-run-11
 >>>>>>> ee0cd2b02fcefc0003e3a2a5cf6ba752fe252239
+=======
+# No-op: trigger deploy 2025-09-18T16:00:00Z (refresh 2025-09-18T16:00:00Z-5)
+# trigger: 2025-09-18T16:00:00Z (refresh) re-run-15
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-1b24
