@@ -1,0 +1,78 @@
+<<<<<<< HEAD
+# Security Headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.zionholdings.com https://www.google-analytics.com; frame-ancestors 'none';
+
+# Cache Control for Static Assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache Control for HTML
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Cache Control for Service Worker
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Cache Control for Manifest
+/manifest.json
+  Cache-Control: public, max-age=86400
+=======
+<<<<<<< HEAD
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Cache static assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Don't cache HTML files
+*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Fonts and images
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+=======
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=()
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/public/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/automation/*.json
+  Cache-Control: public, max-age=300
+>>>>>>> origin/auto/autonomy-17186719616
+>>>>>>> origin/2xbrce-codex/introduce-automated-testing-with-jest-and-cypress
