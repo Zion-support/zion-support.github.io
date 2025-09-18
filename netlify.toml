@@ -1,15 +1,15 @@
-# Updated: bump timestamp to trigger Netlify deploy at 2025-09-19T00:15:00Z (run-11)
+# Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T16:35:00Z (run-12)
 [build]
   base = "zion-website"
-  command = "corepack enable && corepack prepare yarn@4.9.4 --activate && yarn install --immutable && yarn build"
+  command = "npm ci --no-audit --no-fund && npm run build"
   publish = ".next"
   command_timeout = "30m"
-# No-op: trigger Netlify rebuild at 2025-09-19T00:15:00Z (run-11)
+# No-op: trigger Netlify rebuild at 2025-09-18T16:35:00Z (run-12)
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
-  NETLIFY_USE_YARN = "true"
+  NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
@@ -17,6 +17,7 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
   NEXT_TELEMETRY_DISABLED = "1"
+  NEXT_PRIVATE_TARGET = "server"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
