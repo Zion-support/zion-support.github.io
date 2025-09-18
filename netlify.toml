@@ -1,14 +1,14 @@
 # Updated: Fixed for Next.js app deployment - 2025-09-18T17:10:00Z (run-13)
 [build]
   base = "zion-website"
-  command = "npm ci --no-audit --no-fund && npm run clean && npm run build"
+  command = "yarn install --frozen-lockfile && yarn build"
   publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
-  NETLIFY_USE_NPM = "true"
+  NETLIFY_USE_YARN = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
