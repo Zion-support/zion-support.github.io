@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --zion-purple: #8b5cf6;
+  --zion-purple-light: #a78bfa;
+  --zion-purple-dark: #7c3aed;
+  --zion-cyan: #06b6d4;
+  --zion-cyan-light: #22d3ee;
+  --zion-cyan-dark: #0891b2;
+  --zion-slate: #64748b;
+  --zion-slate-light: #cbd5e1;
+  --zion-slate-dark: #475569;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -420,11 +432,11 @@ body {
 
 /* Custom Components */
 .btn-primary {
-  @apply bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  @apply bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-400 hover:to-purple-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
 }
 
 .btn-secondary {
-  @apply border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  @apply border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-6 py-3 rounded-lg font-medium transition-all duration-300;
 }
 
 .card {
@@ -432,7 +444,7 @@ body {
 }
 
 .card-hover {
-  @apply card hover:shadow-xl hover:border-zion-purple/20 transition-all duration-300;
+  @apply card hover:shadow-xl hover:border-purple-500/20 transition-all duration-300;
 }
 
 /* Responsive Design */
