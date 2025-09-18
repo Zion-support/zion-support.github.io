@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
+import PerformanceMonitor from '@/components/PerformanceMonitor'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -26,7 +27,14 @@ export const metadata: Metadata = {
     'innovation',
     'zion tech group',
     'machine learning',
-    'automation'
+    'automation',
+    'AI governance',
+    'agent observability',
+    'real-time AI',
+    'production AI',
+    'AI evaluation',
+    'AI safety',
+    'AI reliability'
   ],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
@@ -77,6 +85,17 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  category: 'technology',
+  classification: 'Business',
+  other: {
+    'application-name': 'Zion Tech Group',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'black-translucent',
+    'apple-mobile-web-app-title': 'Zion Tech',
+    'mobile-web-app-capable': 'yes',
+    'msapplication-TileColor': '#000000',
+    'msapplication-config': '/browserconfig.xml',
+  },
 }
 
 export const viewport: Viewport = {
@@ -102,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="color-scheme" content="dark" />
       </head>
       <body className={`${inter.className} antialiased`}>
+        <PerformanceMonitor />
         <div className="relative flex min-h-screen flex-col">
           <Navigation />
           <main className="flex-1">
