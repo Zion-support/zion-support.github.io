@@ -2,7 +2,7 @@
   base = "zion-website"
   command = "npm ci --no-audit --no-fund && npm run build"
   command_timeout = "30m"
-  # Trigger Netlify build: no-op change on 2025-09-18T15:45:00Z
+  # No-op: trigger Netlify rebuild at 2025-09-18T15:45:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -15,17 +15,14 @@
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
 
-# Vite build - no specific plugin needed
-
-# Functions configuration removed for Vite build
-
+# Enable Next.js adapter
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [build.processing]
   skip_processing = true
 
-# Vite SPA routing - add fallback redirect
+# Next.js handles routing; no SPA fallback redirect
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -215,11 +212,7 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-# SPA fallback for Vite routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+ 
  
 ## End of Netlify configuration
 # No-op: trigger deploy 2025-09-18T15:45:00Z
