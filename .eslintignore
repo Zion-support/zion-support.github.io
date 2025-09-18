@@ -1,84 +1,47 @@
-# Build outputs
+# Build artifacts and generated files
 dist/
-build/
 .next/
-out/
-
-# Dependencies
 node_modules/
+*.min.js
+*.bundle.js
 
-# Disabled/backup directories
+# Disabled directories
 zion-os.disabled/
 zion-os/
 zion-website/
-zion-ai-assistant/
 zion.app/
 zion_academy/
-src-clean/
-apps.backup/
-backup/
-backups/
-backup-merge-conflicts/
-backup-problematic-files/
-broken_components/
-broken_files_backup/
-app-disabled/
-api.disabled/
-api.disabled.temp/
-api-backup/
-automation_backup/
-recovered-branches/
 
-# Generated files
-*.min.js
-*.bundle.js
-*.chunk.js
-*.backup
-*.backup.*
-*.conflicted
-*.temp
+# Build outputs
+build/
+out/
 
-# Logs and reports
-*.log
-*.txt
-*.md
-*.json
-*.tsv
-*.cjs
-*.py
-*.sh
+# Service worker files
+sw.js
+service-worker.js
+
+# Config files that don't need linting
+*.config.js
+postcss.config.js
+tailwind.config.js
+next.config.js
 
 # Static files
 public/
 static/
 
-# Test files
-__tests__/
-__mocks__/
-*.test.*
-*.spec.*
+# Backup files
+*.backup
+*.backup.*
 
-# IDE files
-.vscode/
-.idea/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Coverage
+# Test artifacts
 coverage/
+.nyc_output/
+
+# Logs
+*.log
+logs/
 
 # Temporary files
-*.tmp
-*.temp
-
-# Only lint src directory
-!src/
+tmp/
+temp/
