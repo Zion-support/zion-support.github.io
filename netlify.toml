@@ -1,8 +1,8 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-18T18:05:00Z
 [build]
-  # Build Vite app from repo root
+  # Build Vite app from repo root with Yarn (Corepack)
   # No-op change to trigger Netlify deploy at 2025-09-18T18:05:00Z
-  command = "npm ci --no-audit --no-fund && npm run build:netlify"
+  command = "corepack enable && yarn --version && yarn install --immutable --mode=skip-build && yarn build:netlify"
   publish = "dist"
   command_timeout = "30m"
   # No-op: trigger Netlify rebuild at 2025-09-18T18:05:00Z
@@ -10,13 +10,13 @@
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=6144"
-  NETLIFY_USE_NPM = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
   GIT_SUBMODULE_STRATEGY = "none"
   NPM_CONFIG_LEGACY_PEER_DEPS = "true"
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
+  YARN_ENABLE_IMMUTABLE_INSTALLS = "true"
 ## No Next.js plugin needed for Vite static build
 
 # Functions configuration (lives at repo root `netlify/functions`)
