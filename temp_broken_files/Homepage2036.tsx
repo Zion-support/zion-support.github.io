@@ -392,7 +392,6 @@ export default function Homepage2036() {
     </Layout>
   );
 }
-=======
 import React from "react";
 
 const function Homepage2036() { = () => {

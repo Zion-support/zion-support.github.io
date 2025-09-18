@@ -43,7 +43,6 @@ const DynamicContentCarousel = () => {
     return () => clearInterval(interval);
   }, [carouselItems.length]);
   return (
-<<<<<<< HEAD:temp_broken_files/DynamicContentCarousel.jsx
     <div className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -90,13 +89,11 @@ const DynamicContentCarousel = () => {
             }`}
           />
         ))}
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988:src/components/DynamicContentCarousel.jsx
       </div>
     </div>
   );
 
 };
 
-<<<<<<< HEAD:temp_broken_files/DynamicContentCarousel.jsx
 
 export default DynamicContentCarousel;

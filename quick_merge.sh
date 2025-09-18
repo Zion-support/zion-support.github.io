@@ -73,4 +73,7 @@ else
 fi
 
 echo "📋 To check for other open PRs, visit: https://github.com/Zion-Holdings/zion.app/pulls"
+<<<<<<< HEAD
 >>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
+=======
+>>>>>>> origin/backup-main-20250918-004015

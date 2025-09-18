@@ -5,10 +5,8 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
 const QuantumComputingRevolution2025: React.FC = () => {
   return (
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white">
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100">
-=======
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-cyan-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
@@ -832,7 +830,6 @@ const QuantumComputingRevolution2025: React.FC = () => {
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
-=======
         <div className="text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum Revolution?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

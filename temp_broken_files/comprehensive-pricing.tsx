@@ -549,7 +549,6 @@ export default function ComprehensivePricingPage() {
 
 
 export default comprehensive-pricing;
-=======
 import React from "react";
 
 const function ComprehensivePricingPage() { = () => {

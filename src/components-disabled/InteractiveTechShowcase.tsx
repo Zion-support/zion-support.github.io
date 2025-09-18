@@ -56,7 +56,6 @@ const InteractiveTechShowcase: React.FC = () => {
     setActiveTech(techId);
   };
 
->>>>>>> cursor/create-and-deploy-new-content-da36
   return (
     <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="container mx-auto px-4">
@@ -164,7 +163,6 @@ const InteractiveTechShowcase: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
       </div>
     </div>
   );
@@ -173,4 +171,3 @@ export default InteractiveTechShowcase;
 };
 
 export default InteractiveTechShowcase;
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988

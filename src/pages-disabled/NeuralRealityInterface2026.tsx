@@ -7,12 +7,10 @@ const NeuralRealityInterface2026: React.FC = () => {
         <title>NeuralRealityInterface2026 | Zion Tech Group</title>
         <meta name="description" content="NeuralRealityInterface2026 - Revolutionary technology solutions" />
       </Helmet>
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">NeuralRealityInterface2026</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
       
       <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
         {/* Hero Section */}
@@ -285,7 +283,6 @@ const NeuralRealityInterface2026: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>

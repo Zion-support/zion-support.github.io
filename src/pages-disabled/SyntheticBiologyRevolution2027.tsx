@@ -205,7 +205,6 @@ const SyntheticBiologyRevolution2027: React.FC = () => {
             <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg">
               Contact Our Team
             </button>
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
           </div>
         </div>
       </div>

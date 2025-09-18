@@ -232,7 +232,6 @@ export default function AIDiagnosticPlatform() {
     </Layout>
   );
 }
-=======
 import React from "react";
 
 const function AIDiagnosticPlatform() { = () => {

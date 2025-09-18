@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 const RevolutionaryCaseStudies2026: React.FC = () => {
   const caseStudies = [
@@ -262,7 +261,6 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
             <button className="border-2 border-indigo-400 text-indigo-400 px-12 py-4 rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-300 font-semibold text-xl">
               Schedule Consultation
             </button>
-=======
 const RevolutionaryCaseStudies2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -287,7 +285,6 @@ const RevolutionaryCaseStudies2026: React.FC = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-xl font-semibold mb-4">Future Ready</h3>
             <p className="text-gray-600">Preparing for tomorrow's challenges</p>
->>>>>>> da2eb06a15a0119517a5cf6f65fb46cca69fd217
           </div>
         </div>
       </main>

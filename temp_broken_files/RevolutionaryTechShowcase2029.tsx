@@ -196,7 +196,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {
             </button>
             <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold text-lg">
               Join Research Program
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 

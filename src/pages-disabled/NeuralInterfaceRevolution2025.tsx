@@ -199,7 +199,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
                 </div>
               </div>
             </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-da36
           </div>
 
           <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300">
@@ -232,7 +231,6 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
         </motion.div>
 
         {/* Neural Features */}
->>>>>>> cursor/create-and-deploy-new-content-376e
             <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
               Revolutionary applications of neural interface technology across healthcare, communication, and human augmentation
             </p>
@@ -472,11 +470,7 @@ const NeuralInterfaceRevolution2025: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> cursor/create-and-deploy-new-content-634d
->>>>>>> cursor/create-and-deploy-new-content-de62
         </div>
->>>>>>> cursor/create-and-deploy-new-content-376e
->>>>>>> cursor/create-and-deploy-new-content-da36
       </div>
     </div>
   );

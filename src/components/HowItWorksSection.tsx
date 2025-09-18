@@ -33,7 +33,6 @@ const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ className, style 
     },
   ];
 
-<<<<<<< HEAD
   return (
     <section className={cn("py-16 bg-white", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -44,7 +43,6 @@ const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ className, style 
         />
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -110,10 +108,8 @@ const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ className, style 
               <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
               <p className="text-gray-600">{step.description}</p>
             </div>
-<<<<<<< HEAD
           ))}
         </div>
-=======
             <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
               Start Your Project
             </button>

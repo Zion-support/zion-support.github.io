@@ -40,7 +40,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
       link: "/pages/NeuralInterfaceRevolution2025",
       color: "from-emerald-600 to-teal-600",
       icon: "🧬"
-=======
     }
   };
 
@@ -174,7 +173,6 @@ const InteractiveContentShowcase2025: React.FC = () => {
               See Predictions
             </button>
           </div>
-=======
             </div>
           ))}
         </div>

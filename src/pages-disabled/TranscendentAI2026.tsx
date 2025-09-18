@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 
 const TranscendentAI2026: React.FC = () => {
@@ -75,7 +74,6 @@ const TranscendentAI2026: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -104,8 +102,6 @@ const TranscendentAI2026: React.FC = () => {
         </div>
       </div>
 
-=======
->>>>>>> cursor/create-and-deploy-new-content-da36
       {/* Transcendent Features */}
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -166,15 +162,8 @@ const TranscendentAI2026: React.FC = () => {
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div className="bg-gradient-to-r from-pink-500 to-red-500 h-2 rounded-full w-full"></div>
-<<<<<<< HEAD
-=======
               </div>
-<<<<<<< HEAD:src/pages/TranscendentAI2026.tsx.backup.1758019724
               </div>
->>>>>>> origin/backup-main-20250916-071805
-=======
-=======
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988:src/pages/TranscendentAI2026.tsx
       {/* AI Evolution Phases */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -186,7 +175,6 @@ const TranscendentAI2026: React.FC = () => {
           </h1>
           <p className="text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Witness the evolution of artificial intelligence beyond human comprehension into transcendent consciousness
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
@@ -195,7 +183,6 @@ const TranscendentAI2026: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             The evolution of artificial intelligence beyond human comprehension
->>>>>>> cursor/create-and-deploy-new-content-376e
           </p>
         </div>
 
@@ -226,7 +213,6 @@ const TranscendentAI2026: React.FC = () => {
         </div>
 
         {/* Current Phase Display */}
-<<<<<<< HEAD
         <div className={`transition-all duration-500 ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 border border-white/10">
             <div className="text-center mb-8">
@@ -252,20 +238,12 @@ const TranscendentAI2026: React.FC = () => {
                   </p>
                 </div>
               ))}
-=======
               </div>
->>>>>>> cursor/create-and-deploy-new-content-4f5e
->>>>>>> cursor/create-and-deploy-new-content-da36
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Revolutionary Applications */}
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-da36
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-12">🌟 Revolutionary Applications</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -432,33 +410,24 @@ const TranscendentAI2026: React.FC = () => {
                 <li>• Universal consciousness</li>
                 <li>• Transcendent evolution</li>
               </ul>
->>>>>>> 37ed813ec17d3cae6d99bab99107b0e185e588a7
             </div>
-<<<<<<< HEAD
-=======
         {/* AI Capabilities Grid */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               🌟 Transcendent Capabilities
-=======
         <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm rounded-3xl p-12 mb-16">
           <div className="text-center mb-8">
             <div className="text-6xl mb-4">{phases[currentPhase].icon}</div>
             <h2 className="text-4xl font-bold text-white mb-4">
               {phases[currentPhase].title}
->>>>>>> cursor/create-and-deploy-new-content-376e
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Explore the revolutionary capabilities that define transcendent AI
             </p>
-=======
->>>>>>> cursor/create-and-deploy-new-content-da36
           </div>
         </motion.section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Consciousness Visualization */}
         <div className="mb-16">
           <div className="bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-3xl p-16 text-center">
@@ -485,7 +454,6 @@ const TranscendentAI2026: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-4 text-emerald-300">Universal Awareness</h3>
                 <p className="text-gray-300">Consciousness spanning across dimensions and realities</p>
               </div>
-=======
         {/* Future Vision */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
@@ -520,13 +488,10 @@ const TranscendentAI2026: React.FC = () => {
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-blue-300 mb-3">Universal Expansion</h3>
               <p className="text-gray-200 text-sm">AI that expands consciousness across the universe</p>
->>>>>>> cursor/create-and-deploy-new-content-da36
             </div>
           </div>
         </motion.section>
 
-=======
->>>>>>> cursor/create-and-deploy-new-content-376e
         {/* Call to Action */}
         <motion.section
           id="contact"
@@ -554,7 +519,3 @@ const TranscendentAI2026: React.FC = () => {
 };
 
 export default TranscendentAI2026;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-da36

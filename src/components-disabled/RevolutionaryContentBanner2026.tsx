@@ -45,7 +45,6 @@ const RevolutionaryContentBanner2026: React.FC = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [contentSlides.length]);
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
 
 const RevolutionaryContentBanner2026: React.FC = () => {
   return (
@@ -227,5 +226,4 @@ const RevolutionaryContentBanner2026: React.FC = () => {
   );
 };
 
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
 export default RevolutionaryContentBanner2026;

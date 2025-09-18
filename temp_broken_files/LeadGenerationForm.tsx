@@ -217,7 +217,6 @@ const LeadGenerationForm: React.FC = () => {
         </p>
       </form>
 import React from "react";
-=======
     </div>
   );
 };

@@ -115,7 +115,6 @@ const UltimateTechShowcase2026: React.FC = () => {
           </div>
         </div>
 
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
         {/* Revolutionary Stats */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-cyan-400/30">
           <div className="text-center mb-12">
@@ -246,7 +245,6 @@ const UltimateTechShowcase2026: React.FC = () => {
                 </div>
               </motion.div>
             ))}
->>>>>>> 8452eec82dbead09881ecc02125b309d82846988
           </div>
         </div>
 
@@ -272,7 +270,6 @@ const UltimateTechShowcase2026: React.FC = () => {
               </button>
             </div>
           </motion.div>
->>>>>>> cursor/create-and-deploy-new-content-376e
         </div>
       </div>
     </>

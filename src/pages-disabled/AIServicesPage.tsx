@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Brain, ArrowRight } from 'lucide-react';
 
 const AIServicesPage = () => {
@@ -63,7 +62,6 @@ const AIServicesPage = () => {
                 Learn More
               </button>
             </divdiv>
-=======
 import { Link } from 'react-router-dom';
 
 export default function AIServicesPage() {
@@ -178,12 +176,10 @@ export default function AIServicesPage() {
                 </button>
               </Link>
             </div>
->>>>>>> origin/website-improvements-v2
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -242,7 +238,6 @@ export default function AIServicesPage() {
 };
 
 export default AIServicesPage;
-=======
       {/* Contact Section */}
       <section className="bg-gray-900 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -265,4 +260,3 @@ export default AIServicesPage;
     </div>
   );
 }
->>>>>>> origin/website-improvements-v2

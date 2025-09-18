@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 const UltimateInnovation2026: React.FC = () => {
   return (
@@ -12,7 +11,6 @@ const UltimateInnovation2026: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-6">UltimateInnovation2026</h1>
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-=======
 
 const UltimateInnovation2026: React.FC = () => {
   return (
@@ -245,7 +243,6 @@ const UltimateInnovation2026: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> origin/merge-new-content-1757989975
         </div>
       </div>
     </div>
