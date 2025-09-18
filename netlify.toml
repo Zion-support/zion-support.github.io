@@ -1,5 +1,5 @@
 [build]
-  command = "npm ci --no-audit --no-fund && npm run build"
+  command = "npm run build:netlify"
   publish = "dist"
   base = "."
   command_timeout = "30m"
@@ -224,12 +224,12 @@
   NODE_VERSION = "20"
 
 [context.deploy-preview]
-  command = "npm run build"
+  command = "npm run build:netlify"
   [context.deploy-preview.environment]
     NODE_VERSION = "20"
 
 [context.branch-deploy]
-  command = "npm run build"
+  command = "npm run build:netlify"
   [context.branch-deploy.environment]
     NODE_VERSION = "20"
 
