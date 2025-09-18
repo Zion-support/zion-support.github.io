@@ -29,6 +29,7 @@ const queryClient = new QueryClient({
     },
     mutations: {
       retry: 1,
+    },
   },
 });
 const AppOptimized: React.FC = () => {

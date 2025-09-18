@@ -17,12 +17,17 @@ const HomeLanding: React.FC = () => {
       </div>
     </div>
   );
-  };
+};
+
 const AppEntrypoint: React.FC = () => {
+  return (
     <Router>
       <Routes>
         <Route path="/" element={<HomeLanding />} />
         <Route path="/pages/AutonomousAgentsInProduction2025" element={<AutonomousAgentsInProduction2025 />} />
       </Routes>
     </Router>
+  );
+};
+
 export default AppEntrypoint;

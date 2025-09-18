@@ -1,16 +1,13 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 // Sidebar is optional in this build; component may be disabled
 // import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
 import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import { SidebarProvider } from './context/SidebarContext';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 
 // Core pages
