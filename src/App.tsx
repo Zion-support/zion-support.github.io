@@ -63,7 +63,6 @@ const LoadingSpinner = () => (
 
 const App = () => {
   // const [sidebarOpen, setSidebarOpen] = useState(false); // Commented out unused state
-  
   return (
     <EnhancedErrorBoundary>
       <ThemeProvider>

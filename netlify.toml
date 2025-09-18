@@ -1,13 +1,8 @@
 # Updated: bump timestamp to trigger Netlify deploy at 2025-09-19T00:45:00Z (run-12)
 [build]
-<<<<<<< HEAD
+  base = "."
   command = "npm install --include=optional && npm run build:netlify"
   publish = "dist"
-=======
-  base = "."
-  command = "npm ci --no-audit --no-fund && npm run build"
-  publish = ".next"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d955
   command_timeout = "30m"
 # No-op: trigger Netlify rebuild at 2025-09-19T00:45:00Z (run-12)
 
