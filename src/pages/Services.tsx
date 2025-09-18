@@ -262,6 +262,7 @@ export default function Services() {
 					</section>
 
 				</div>
-			</main>
+			</motion.div>
+		</main>
 		</>);
 }
