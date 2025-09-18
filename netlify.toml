@@ -3,6 +3,7 @@
   # Build the Next.js site in the monorepo subdirectory
   base = "zion-website"
   command = "npm ci --no-audit --no-fund && npm run build"
+  publish = ".next"
   command_timeout = "30m"
 
 [build.environment]
@@ -18,9 +19,8 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Functions configuration (lives at repo root `netlify/functions`)
 [functions]
-  directory = "netlify/functions"
+  directory = "../netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
