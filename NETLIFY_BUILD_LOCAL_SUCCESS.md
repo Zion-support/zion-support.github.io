@@ -1,4 +1,4 @@
-Netlify local build verification
+Netlify local build verification - updated: 2025-09-18T15:20:19Z
 
 - Verified on: 2025-09-18T23:59:59Z
 - Directory: `zion-website`
