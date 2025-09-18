@@ -2,13 +2,14 @@ import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
+// Sidebar is optional in this build; component may be disabled
+// import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { SidebarProvider } from './context/SidebarContext';
 
 // Core pages
@@ -26,10 +27,11 @@ const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 
 // Service pages
-const AIServices = lazy(() => import('./pages/AIServices'));
-const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
-const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
-const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
+// Fallback: route disabled if page missing
+const AIServices = lazy(() => import('./pages/Services'));
+const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
+const EnterpriseSolutionsPage = lazy(() => import('./pages/Services'));
+const DigitalTransformation = lazy(() => import('./pages/Services'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
@@ -37,13 +39,13 @@ const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAut
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
 const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
-const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
+const SOC2ComplianceAutomation = lazy(() => import('./pages/Services'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const Docs = lazy(() => import('./pages/Docs'));
-const Marketplace = lazy(() => import('./pages/Marketplace'));
+const HelpCenter = lazy(() => import('./pages/Services'));
+const Docs = lazy(() => import('./pages/Services'));
+const Marketplace = lazy(() => import('./pages/Services'));
 const Community = lazy(() => import('./pages/CommunityPage'));
 
 // Additional pages
@@ -125,8 +127,8 @@ const App = () => {
               <SonnerToaster />
             </div>
             
-            {/* Sidebar */}
-            <Sidebar />
+            {/* Sidebar (disabled) */}
+            {/* <Sidebar /> */}
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>

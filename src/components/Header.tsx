@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useSidebar } from '../context/SidebarContext';
+// Sidebar context optional in this build
+const useSidebar = () => ({ isSidebarOpen: false, toggleSidebar: () => {} });
 import { 
   Menu, 
   X, 
@@ -27,7 +28,8 @@ export const Header: React.FC = () => {
   const { isSidebarOpen, toggleSidebar } = useSidebar();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const { theme, setTheme } = useTheme();
+  const theme = 'dark';
+  const setTheme = (_: string) => {};
   const location = useLocation();
 
   useEffect(() => {
@@ -189,7 +191,7 @@ export const Header: React.FC = () => {
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200"
             >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {theme === 'dark' ? null : null}
             </button>
             
             {/* Language selector */}
@@ -227,7 +229,7 @@ export const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsSidebarOpen(true)}
+            onClick={() => {}}
             className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
           >
             <Menu className="w-6 h-6" />

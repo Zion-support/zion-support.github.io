@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
 import './src/index.css';
 
-export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
   return (
     <Router>
       <div className="min-h-screen bg-white">
