@@ -4,7 +4,7 @@
   publish = ".next"
   command_timeout = "30m"
 
-# Trigger Netlify build: no-op change on 2025-09-18
+# Trigger Netlify build: no-op change on 2025-09-18T00:00:00Z
 
 [build.environment]
   NODE_VERSION = "20"
@@ -16,7 +16,6 @@
   NPM_CONFIG_STRICT_SSL = "false"
   NPM_CONFIG_BUILD_FROM_SOURCE = "false"
   NPM_CONFIG_PREFER_OFFLINE = "true"
-  YARN_ENABLE_IMMUTABLE_INSTALL = "false"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -24,11 +23,16 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+  included_files = ["zion-website/public/**/*"]
 
 [build.processing]
   skip_processing = true
 
-## Next.js routing is handled by @netlify/plugin-nextjs
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/assets/*"
@@ -219,5 +223,8 @@
   to = "/services/affiliate-attribution-suite/"
   status = 301
 
-## End of Netlify configuration
+# Note: Next.js routing is handled by @netlify/plugin-nextjs
+
 # No-op: trigger deploy 2025-09-18
+
+## End of Netlify configuration
