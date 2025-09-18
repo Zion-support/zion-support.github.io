@@ -1,6 +1,7 @@
 import React from 'react';
 import { SEO } from "../../components/SEO";
-import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
+import { Brain, Shield, Database, TrendingUp, Cpu } from 'lucide-react';
+import { motion } from 'framer-motion';
 const AIServices = () => {
     const features = [
         {

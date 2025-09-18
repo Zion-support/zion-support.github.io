@@ -644,7 +644,8 @@ const TranscendentAI2026: React.FC = () => {
               Explore the revolutionary capabilities that define transcendent AI
             </p>
           </div>
-        </divsection>
+        </div>
+      </section>
 
           </div>
         </motion.section>
