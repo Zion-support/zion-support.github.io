@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# Handle client-side routing for SPA
-/*    /index.html   200
-=======
 # Vite React SPA routing configuration
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 # Normalize trailing slashes for key marketing pages
 /services      /services     301!
@@ -22,9 +17,6 @@
 /ai-content-marketing-automation /ai-content-generator 301
 /ai-customer-success-automation /ai-customer-success-platform 301
 /browser-automation-cloud/ /browser-automation-cloud 301
-<<<<<<< HEAD
-=======
 
 # SPA fallback for Vite React app - all routes go to index.html
 /*    /index.html   200
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
