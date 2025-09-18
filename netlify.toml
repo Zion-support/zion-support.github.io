@@ -22,7 +22,7 @@
 
 [functions]
   # Functions live at the repository root
-  directory = "../netlify/functions"
+  directory = "netlify/functions"
   node_bundler = "esbuild"
   included_files = ["public/**/*"]
 
