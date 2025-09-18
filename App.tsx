@@ -41,7 +41,6 @@ import DynamicContentCarousel from './src/components/DynamicContentCarousel';
 import InteractiveTechShowcase from './src/components/InteractiveTechShowcase';
 import InteractiveTechShowcase2026 from './src/components/InteractiveTechShowcase2026';
 import InteractiveTechShowcase2027 from './src/components/InteractiveTechShowcase2027';
-import InteractiveTechShowcase2028 from './src/components/InteractiveTechShowcase2028';
 import RevolutionaryContentBanner2025 from './src/components/RevolutionaryContentBanner2025';
 import UltimateContentBanner2025 from './src/components/UltimateContentBanner2025';
 import InteractiveTechShowcase2025 from './src/components/InteractiveTechShowcase2025';
@@ -51,7 +50,7 @@ import './src/styles/optimizations.css';
 import './src/styles/accessibility.css';
 import AIEnterpriseCopilot2025 from './src/pages/AIEnterpriseCopilot2025';
 import NewShowcase2025 from './src/pages/NewShowcase2025';
-import AdvancedAITransformation2025 from './src/pages/AdvancedAITransformation2025';
+import AdvancedAITransformation2026 from './src/pages/AdvancedAITransformation2026';
 import QuantumComputingRevolution2025 from './src/pages/QuantumComputingRevolution2025';
 import NeuralInterfaceRevolution2025 from './src/pages/NeuralInterfaceRevolution2025';
 import NextGenTechShowcase2025 from './src/pages/NextGenTechShowcase2025';
@@ -955,7 +954,6 @@ export default function App(): JSX.Element {
 
                 {/* Interactive Technology Showcase 2028 */}
                 <div className="mb-12">
-                  <InteractiveTechShowcase2028 />
                 </div>
 
                 {/* NEW: Interactive Technology Showcase 2026 */}
