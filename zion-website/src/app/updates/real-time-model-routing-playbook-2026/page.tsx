@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 // @ts-nocheck
 export default function RealTimeModelRoutingPlaybook2026Page() {
   return (
