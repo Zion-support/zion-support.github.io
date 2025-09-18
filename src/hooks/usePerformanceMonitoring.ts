@@ -22,7 +22,7 @@ export const usePerformanceMonitoring = () => {
     if ('memory' in performance) {
       const memoryUsage = performance.memory.usedJSHeapSize / 1024 / 1024; // MB
       setMetrics(prev => ({ ...prev, memoryUsage }));
-    };
+    }
     // Cleanup
     return () => {
       // Cleanup logic if needed
@@ -47,17 +47,17 @@ export const useLazyLoading = (importFunction, deps = []) => {
         if (isMounted) {
           setComponent(() => module.default);
           setError(null);
-        };
+        }
       } catch (err) {
         if (isMounted) {
           setError(err);
           console.error('Failed to load component:', err);
-        };
+        }
       } finally {
         if (isMounted) {
           setLoading(false);
-        };
-      };
+        }
+      }
   };
     loadComponent();
 

@@ -36,7 +36,6 @@ export default function ReviewsModeration({ }: ReviewsModerationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
 
 
 }

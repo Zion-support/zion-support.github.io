@@ -2,30 +2,25 @@
  * Advanced Performance Monitoring
  * Tracks Core Web Vitals, custom metrics, and user interactions
  */
-
 export interface PerformanceMetrics {
   // Core Web Vitals
   LCP?: number; // Largest Contentful Paint
   FID?: number; // First Input Delay
   CLS?: number; // Cumulative Layout Shift
-  
   // Additional metrics
   FCP?: number; // First Contentful Paint
   TTFB?: number; // Time to First Byte
   TTI?: number; // Time to Interactive
-  
   // Custom metrics
   memory?: number; // Memory usage in MB
   loadTime?: number; // Total page load time
   domContentLoaded?: number; // DOMContentLoaded time
   windowLoad?: number; // Window load time
-  
   // User interaction metrics
   firstClick?: number; // Time to first click
   scrollDepth?: number; // Maximum scroll depth
   timeOnPage?: number; // Time spent on page
 }
-
 export interface PerformanceThresholds {
   LCP: number; // 2.5s
   FID: number; // 100ms
@@ -34,7 +29,6 @@ export interface PerformanceThresholds {
   TTFB: number; // 600ms
   TTI: number; // 3.8s
 }
-
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: PerformanceMetrics = {};
@@ -49,27 +43,22 @@ export class PerformanceMonitor {
   private observers: PerformanceObserver[] = [];
   private startTime: number = performance.now();
   private isInitialized = false;
-
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor();
     }
     return PerformanceMonitor.instance;
   }
-
   init(): void {
     if (this.isInitialized) return;
-    
     this.startTime = performance.now();
     this.setupCoreWebVitals();
     this.setupCustomMetrics();
     this.setupUserInteractionTracking();
     this.setupMemoryMonitoring();
     this.isInitialized = true;
-    
     console.log('Performance Monitor: Initialized');
   }
-
   private setupCoreWebVitals(): void {
     // Largest Contentful Paint
     this.observeMetric('largest-contentful-paint', (entries) => {
@@ -77,7 +66,6 @@ export class PerformanceMonitor {
       this.metrics.LCP = lastEntry.startTime;
       this.checkThreshold('LCP', lastEntry.startTime);
     });
-
     // First Input Delay
     this.observeMetric('first-input', (entries) => {
       entries.forEach((entry: any) => {
@@ -85,7 +73,6 @@ export class PerformanceMonitor {
         this.checkThreshold('FID', this.metrics.FID);
       });
     });
-
     // Cumulative Layout Shift
     this.observeMetric('layout-shift', (entries) => {
       let clsValue = 0;
@@ -97,7 +84,6 @@ export class PerformanceMonitor {
       this.metrics.CLS = clsValue;
       this.checkThreshold('CLS', clsValue);
     });
-
     // First Contentful Paint
     this.observeMetric('paint', (entries) => {
       entries.forEach((entry: any) => {
@@ -108,14 +94,12 @@ export class PerformanceMonitor {
       });
     });
   }
-
   private setupCustomMetrics(): void {
     // Time to First Byte
     if (performance.timing) {
       this.metrics.TTFB = performance.timing.responseStart - performance.timing.navigationStart;
       this.checkThreshold('TTFB', this.metrics.TTFB);
     }
-
     // Navigation timing
     if (performance.navigation) {
       const navTiming = performance.getEntriesByType('navigation')[0] as any;
@@ -126,12 +110,10 @@ export class PerformanceMonitor {
       }
     }
   }
-
   private setupUserInteractionTracking(): void {
     let firstClickTime: number | null = null;
     let maxScrollDepth = 0;
     let pageStartTime = Date.now();
-
     // Track first click
     const clickHandler = () => {
       if (!firstClickTime) {
@@ -141,7 +123,6 @@ export class PerformanceMonitor {
       }
     };
     document.addEventListener('click', clickHandler);
-
     // Track scroll depth
     const scrollHandler = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -151,29 +132,24 @@ export class PerformanceMonitor {
       this.metrics.scrollDepth = maxScrollDepth;
     };
     window.addEventListener('scroll', scrollHandler);
-
     // Track time on page
     const beforeUnloadHandler = () => {
       this.metrics.timeOnPage = Date.now() - pageStartTime;
     };
     window.addEventListener('beforeunload', beforeUnloadHandler);
   }
-
   private setupMemoryMonitoring(): void {
     if ('memory' in performance) {
       const updateMemory = () => {
         const memoryInfo = (performance as any).memory;
         this.metrics.memory = memoryInfo.usedJSHeapSize / 1024 / 1024; // Convert to MB
       };
-
       updateMemory();
       setInterval(updateMemory, 5000); // Update every 5 seconds
     }
   }
-
   private observeMetric(entryType: string, callback: (entries: PerformanceEntry[]) => void): void {
     if (!('PerformanceObserver' in window)) return;
-
     try {
       const observer = new PerformanceObserver((list) => {
         callback(list.getEntries());
@@ -184,7 +160,6 @@ export class PerformanceMonitor {
       console.warn(`Performance monitoring not supported for ${entryType}:`, error);
     }
   }
-
   private checkThreshold(metric: keyof PerformanceThresholds, value: number): void {
     const threshold = this.thresholds[metric];
     if (value > threshold) {
@@ -192,7 +167,6 @@ export class PerformanceMonitor {
       this.reportThresholdExceeded(metric, value, threshold);
     }
   }
-
   private reportThresholdExceeded(metric: string, value: number, threshold: number): void {
     // Send to analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -203,7 +177,6 @@ export class PerformanceMonitor {
         event_category: 'Performance'
       });
     }
-
     // Send to custom analytics endpoint
     this.sendToAnalytics({
       type: 'performance_threshold_exceeded',
@@ -215,28 +188,22 @@ export class PerformanceMonitor {
       userAgent: navigator.userAgent
     });
   }
-
   private sendToAnalytics(data: any): void {
     // In a real application, you would send this to your analytics service
     console.log('Analytics data:', data);
   }
-
   getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
-
   getThresholds(): PerformanceThresholds {
     return { ...this.thresholds };
   }
-
   setThresholds(thresholds: Partial<PerformanceThresholds>): void {
     this.thresholds = { ...this.thresholds, ...thresholds };
   }
-
   reportMetrics(): void {
     const metrics = this.getMetrics();
     console.log('Performance Metrics:', metrics);
-    
     // Send to analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
       Object.entries(metrics).forEach(([key, value]) => {
@@ -249,7 +216,6 @@ export class PerformanceMonitor {
         }
       });
     }
-
     // Send comprehensive report
     this.sendToAnalytics({
       type: 'performance_report',
@@ -259,40 +225,32 @@ export class PerformanceMonitor {
       userAgent: navigator.userAgent
     });
   }
-
   getPerformanceScore(): number {
     const metrics = this.getMetrics();
     const thresholds = this.getThresholds();
-    
     let score = 100;
-    
     // LCP scoring
     if (metrics.LCP) {
       if (metrics.LCP > thresholds.LCP * 2) score -= 30;
       else if (metrics.LCP > thresholds.LCP) score -= 15;
     }
-    
     // FID scoring
     if (metrics.FID) {
       if (metrics.FID > thresholds.FID * 2) score -= 25;
       else if (metrics.FID > thresholds.FID) score -= 10;
     }
-    
     // CLS scoring
     if (metrics.CLS) {
       if (metrics.CLS > thresholds.CLS * 2) score -= 25;
       else if (metrics.CLS > thresholds.CLS) score -= 10;
     }
-    
     // FCP scoring
     if (metrics.FCP) {
       if (metrics.FCP > thresholds.FCP * 2) score -= 20;
       else if (metrics.FCP > thresholds.FCP) score -= 10;
     }
-    
     return Math.max(0, score);
   }
-
   cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
@@ -300,5 +258,4 @@ export class PerformanceMonitor {
     console.log('Performance Monitor: Cleaned up');
   }
 }
-
 export default PerformanceMonitor;

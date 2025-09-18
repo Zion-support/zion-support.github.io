@@ -1,5 +1,4 @@
 import { useEffect, useCallback, useRef } from 'react';
-
 interface AnalyticsEvent {
   action: string;
   category: string;
@@ -7,34 +6,28 @@ interface AnalyticsEvent {
   value?: number;
   custom_parameters?: Record<string, any>;
 }
-
 interface PageView {
   page_title: string;
   page_location: string;
   page_path: string;
   custom_parameters?: Record<string, any>;
 }
-
 interface UserProperties {
   user_id?: string;
   session_id?: string;
   custom_properties?: Record<string, any>;
 }
-
 export const useAnalytics = () => {
   const sessionIdRef = useRef<string>(generateSessionId());
   const userIdRef = useRef<string | null>(null);
   const isInitializedRef = useRef<boolean>(false);
-
   // Generate a unique session ID
   function generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-
   // Initialize analytics
   const initializeAnalytics = useCallback(() => {
     if (isInitializedRef.current) return;
-
     // Set up user properties
     const storedUserId = localStorage.getItem('analytics_user_id');
     if (storedUserId) {
@@ -44,17 +37,14 @@ export const useAnalytics = () => {
       userIdRef.current = newUserId;
       localStorage.setItem('analytics_user_id', newUserId);
     }
-
     // Track page view on initialization
     trackPageView({
       page_title: document.title,
       page_location: window.location.href,
       page_path: window.location.pathname
     });
-
     isInitializedRef.current = true;
   }, []);
-
   // Track page views
   const trackPageView = useCallback((pageView: PageView) => {
     const event = {
@@ -67,16 +57,13 @@ export const useAnalytics = () => {
       timestamp: new Date().toISOString(),
       custom_parameters: pageView.custom_parameters || {}
     };
-
     // Send to analytics service
     sendAnalyticsEvent(event);
-
     // Log in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Analytics Page View:', event);
     }
   }, []);
-
   // Track custom events
   const trackEvent = useCallback((event: AnalyticsEvent) => {
     const analyticsEvent = {
@@ -90,16 +77,13 @@ export const useAnalytics = () => {
       timestamp: new Date().toISOString(),
       custom_parameters: event.custom_parameters || {}
     };
-
     // Send to analytics service
     sendAnalyticsEvent(analyticsEvent);
-
     // Log in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Analytics Event:', analyticsEvent);
     }
   }, []);
-
   // Track user interactions
   const trackInteraction = useCallback((
     element: string,
@@ -116,7 +100,6 @@ export const useAnalytics = () => {
       }
     });
   }, [trackEvent]);
-
   // Track performance metrics
   const trackPerformance = useCallback((metrics: {
     load_time?: number;
@@ -131,7 +114,6 @@ export const useAnalytics = () => {
       custom_parameters: metrics
     });
   }, [trackEvent]);
-
   // Track errors
   const trackError = useCallback((error: Error, context?: string) => {
     trackEvent({
@@ -147,7 +129,6 @@ export const useAnalytics = () => {
       }
     });
   }, [trackEvent]);
-
   // Track conversions
   const trackConversion = useCallback((
     conversionType: string,
@@ -165,7 +146,6 @@ export const useAnalytics = () => {
       }
     });
   }, [trackEvent]);
-
   // Send analytics event to service
   const sendAnalyticsEvent = useCallback((event: any) => {
     // In production, this would send to your analytics service
@@ -174,19 +154,15 @@ export const useAnalytics = () => {
       // gtag('event', event.event, event);
       // mixpanel.track(event.event, event);
     }
-
     // Store locally for debugging
     const events = JSON.parse(localStorage.getItem('analytics_events') || '[]');
     events.push(event);
-    
     // Keep only last 100 events
     if (events.length > 100) {
       events.splice(0, events.length - 100);
     }
-    
     localStorage.setItem('analytics_events', JSON.stringify(events));
   }, []);
-
   // Get analytics data
   const getAnalyticsData = useCallback(() => {
     const events = JSON.parse(localStorage.getItem('analytics_events') || '[]');
@@ -197,7 +173,6 @@ export const useAnalytics = () => {
       total_events: events.length
     };
   }, []);
-
   // Clear analytics data
   const clearAnalyticsData = useCallback(() => {
     localStorage.removeItem('analytics_events');
@@ -206,24 +181,20 @@ export const useAnalytics = () => {
     userIdRef.current = null;
     isInitializedRef.current = false;
   }, []);
-
   // Set user properties
   const setUserProperties = useCallback((properties: UserProperties) => {
     if (properties.user_id) {
       userIdRef.current = properties.user_id;
       localStorage.setItem('analytics_user_id', properties.user_id);
     }
-
     if (properties.custom_properties) {
       localStorage.setItem('analytics_user_properties', JSON.stringify(properties.custom_properties));
     }
   }, []);
-
   // Initialize on mount
   useEffect(() => {
     initializeAnalytics();
   }, [initializeAnalytics]);
-
   return {
     trackPageView,
     trackEvent,

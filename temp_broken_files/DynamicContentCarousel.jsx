@@ -5,11 +5,11 @@ const DynamicContentCarousel = () => {
   const carouselItems = [
     {
       id: 1,
-      title: "AI Innovation Hub",
-      description: "Discover cutting-edge AI technologies and applications",
-      image: "🤖",
+      title: "AI Innovation Hub 2026",
+      description: "Explore cutting-edge AI technologies and breakthrough innovations",
+      image: "🧠",
       gradient: "from-purple-600 to-pink-600",
-      link: "/pages/AIInnovationHub2025"
+      link: "/pages/AIInnovationHub2026"
     },
     {
       id: 2,
@@ -86,28 +86,9 @@ const DynamicContentCarousel = () => {
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
               currentSlide === index ? 'bg-blue-600' : 'bg-gray-300'
-=======
-              currentSlide === index ? 'bg-white' : 'bg-white/50'
-=======
             }`}
           />
         ))}
-=======
-            </motion.div>
-          </AnimatePresence>
-        </div>
-        {/* Navigation Dots */}
-        <div className="flex justify-center mt-6 space-x-2">
-          {carouselItems.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                currentSlide === index ? 'bg-purple-600' : 'bg-gray-300'
-              }`}
-            />
-          ))}
-        </div>
       </div>
     </div>
   );

@@ -7,30 +7,36 @@ const posts = [
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+>>>>>>> cursor/create-and-deploy-new-content-7720
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
->>>>>>> cursor/create-and-deploy-new-content-ee06
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-7720
     slug: 'ai-2026-trustworthy-model-routing-2026-preview',
     title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
-    summary: 'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+    summary:
+      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
   },
   {
     slug: 'ai-2026-autonomous-workflow-architecture',
     title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
-    summary: 'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+    summary:
+      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
   },
   {
     slug: 'ai-2026-production-agent-postmortems',
     title: 'AI 2026: Production Agent Postmortems',
-<<<<<<< HEAD
     summary:
       'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
   },
@@ -40,12 +46,69 @@ const posts = [
     summary:
       'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
 <<<<<<< HEAD
+  },
+  {
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+    slug: 'ai-2026-agent-orchestration-enterprise-guide',
+    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
+    summary:
+      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
+>>>>>>> cursor/create-and-deploy-new-content-e453
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+>>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+=======
+  },
+  {
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-e453
+    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
+    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
+    summary:
+      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
+  },
+  {
+    slug: 'ai-2026-autonomous-workflow-architecture',
+    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
+    summary:
+      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
+  },
+  {
+    slug: 'ai-2026-production-agent-postmortems',
+    title: 'AI 2026: Production Agent Postmortems',
+    summary:
+      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
+  },
+  {
+    slug: 'ai-2026-real-time-model-routing-playbook',
+    title: 'AI 2026: Real-Time Model Routing — Playbook',
+    summary:
+      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e453
 <<<<<<< HEAD
 >>>>>>> cursor/create-and-deploy-new-content-8472
 =======
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-81d0
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/create-and-deploy-new-content-8472
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-7720
     slug: 'ai-2026-agent-orchestration-enterprise-guide',
     title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
     summary:
@@ -77,7 +140,16 @@ const posts = [
 >>>>>>> cursor/create-and-deploy-new-content-8472
 =======
 >>>>>>> cursor/create-and-deploy-new-content-3afb
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
+=======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b0b6
+>>>>>>> cursor/create-and-deploy-new-content-e453
+=======
+>>>>>>> cursor/create-and-deploy-new-content-dc9e
+>>>>>>> cursor/create-and-deploy-new-content-7720
   },
   {
     slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
@@ -271,40 +343,36 @@ const posts = [
     slug: 'ai-2026-real-time-retrieval-architectures',
     title: 'AI 2026: Real‑Time Retrieval Architectures',
     summary: 'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.'
-=======
-    summary: 'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
->>>>>>> cursor/create-and-deploy-new-content-ee06
   }
 ]
 
-export default function BlogPage() {
+export default function BlogIndexPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">Blog</h1>
-          <p className="mt-4 text-xl text-gray-600">Latest insights and updates</p>
+    <div className="min-h-screen bg-white">
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Blog</h1>
+          <p className="text-gray-600 mb-10">Insights, frameworks, and blueprints from Zion Tech Group.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {posts.map((post) => (
+              <article key={post.slug} className="bg-gray-50 rounded-xl border border-gray-100 p-6 hover:shadow-sm transition">
+                <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-purple-700">
+                    {post.title}
+                  </Link>
+                </h2>
+                <p className="text-gray-600">{post.summary}</p>
+                <div className="mt-4">
+                  <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold">
+                    Read →
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-        
-        <div className="mt-12 grid gap-8 lg:grid-cols-3">
-          {posts.map((post) => (
-            <article key={post.slug} className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">
-                <Link href={`/blog/${post.slug}`} className="hover:text-blue-600">
-                  {post.title}
-                </Link>
-              </h2>
-              <p className="text-gray-600 mb-4">{post.summary}</p>
-              <Link 
-                href={`/blog/${post.slug}`}
-                className="text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Read more →
-              </Link>
-            </article>
-          ))}
-        </div>
-      </div>
+      </section>
     </div>
   )
 }
+

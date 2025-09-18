@@ -3,7 +3,7 @@ import React, { useEffect, useRef }  from 'react';
 interface FocusTrapProps {
   children: React.ReactNode;
   active?: boolean;
-};
+}
 export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active = true }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -25,13 +25,13 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active = true })
         if (document.activeElement === firstElement) {
           lastElement?.focus();
           e.preventDefault();
-        };
+        }
       } else {
         if (document.activeElement === lastElement) {
           firstElement?.focus();
           e.preventDefault();
-        };
-      };
+        }
+      }
   };
     document.addEventListener('keydown', handleTabKey);
     firstElement?.focus();

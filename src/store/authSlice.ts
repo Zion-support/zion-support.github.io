@@ -5,13 +5,13 @@ interface User {
   email: string;
   name: string;
   avatar?: string;
-};
+}
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
   error: string | null;
-};
+}
 const initialState: AuthState = {
   user: "null",
   isAuthenticated: "false",

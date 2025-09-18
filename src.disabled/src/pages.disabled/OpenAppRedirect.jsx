@@ -36,7 +36,6 @@ export default function OpenAppRedirect({ }: OpenAppRedirectProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
 
 
 }

@@ -18,6 +18,6 @@ try {
 } catch (e) {
   console.warn('Firestore storage unavailable, using memory cache.', e);
   db = initializeFirestore(app, { localCache: memoryLocalCache() });
-};
+}
 export { db
   };

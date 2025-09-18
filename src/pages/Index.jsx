@@ -1,8 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
-import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { FloatingCTA } from "@/components/FloatingCTA";
+import { EnhancedTestimonialsSection } from "@/components/EnhancedTestimonialsSection";
+import { RevolutionaryCTASection2034 } from "@/components/RevolutionaryCTASection2034";
 import { HeroSection } from "@/components/HeroSection";
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
@@ -100,7 +100,7 @@ export default function Index() {
       
       <HowItWorksSection />
       <FeaturedListingsSection />
-      <TestimonialCarousel />
+      <EnhancedTestimonialsSection />
       <TrustedBySection />
       <BlogSection />
       
@@ -108,7 +108,7 @@ export default function Index() {
       <SocialShareSection />
       
       <WaitlistSection />
-      <FloatingCTA />
+      <RevolutionaryCTASection2034 />
       <Footer />
     </div>);
 }

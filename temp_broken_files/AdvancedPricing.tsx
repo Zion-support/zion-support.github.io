@@ -147,7 +147,6 @@ export default function AdvancedPricing() {
 
 
 export default AdvancedPricing;
-=======
 import React from "react";
 
 const function AdvancedPricing() { = () => {

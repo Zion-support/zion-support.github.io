@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -9,12 +8,10 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
 }
-
 interface ModernAccessibilityEnhancerProps {
   showControls?: boolean;
   onSettingsChange?: (settings: AccessibilitySettings) => void;
 }
-
 const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = ({
   showControls = false,
   onSettingsChange
@@ -27,9 +24,7 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
     screenReader: false,
     keyboardNavigation: true
   });
-
   const [isVisible, setIsVisible] = useState(false);
-
   // Load settings from localStorage
   useEffect(() => {
     const savedSettings = localStorage.getItem('accessibility-settings');
@@ -42,52 +37,44 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
       }
     }
   }, []);
-
   // Save settings to localStorage
   useEffect(() => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
     onSettingsChange?.(settings);
   }, [settings, onSettingsChange]);
-
   // Apply accessibility settings to document
   useEffect(() => {
     const root = document.documentElement;
-    
     // High contrast
     if (settings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-
     // Large text
     if (settings.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
-
     // Reduced motion
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-
     // Focus visible
     if (settings.focusVisible) {
       root.classList.add('focus-visible');
     } else {
       root.classList.remove('focus-visible');
     }
-
     // Screen reader optimizations
     if (settings.screenReader) {
       root.classList.add('screen-reader-optimized');
     } else {
       root.classList.remove('screen-reader-optimized');
     }
-
     // Keyboard navigation
     if (settings.keyboardNavigation) {
       root.classList.add('keyboard-navigation');
@@ -95,7 +82,6 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
       root.classList.remove('keyboard-navigation');
     }
   }, [settings]);
-
   // Detect screen reader usage
   useEffect(() => {
     const detectScreenReader = () => {
@@ -105,13 +91,10 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
         navigator.userAgent.includes('NVDA') ||
         navigator.userAgent.includes('JAWS') ||
         navigator.userAgent.includes('VoiceOver');
-      
       setSettings(prev => ({ ...prev, screenReader: !!isScreenReader }));
     };
-
     detectScreenReader();
   }, []);
-
   // Handle keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -120,7 +103,6 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
         event.preventDefault();
         setIsVisible(prev => !prev);
       }
-
       // Alt + 1-6 for quick settings
       if (event.altKey && event.key >= '1' && event.key <= '6') {
         event.preventDefault();
@@ -132,22 +114,18 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
           'screenReader',
           'keyboardNavigation'
         ] as const;
-        
         const settingKey = settingKeys[parseInt(event.key) - 1];
         if (settingKey) {
           setSettings(prev => ({ ...prev, [settingKey]: !prev[settingKey] }));
         }
       }
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
-
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: boolean) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   }, []);
-
   const resetSettings = useCallback(() => {
     setSettings({
       highContrast: false,
@@ -158,11 +136,9 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
       keyboardNavigation: true
     });
   }, []);
-
   if (!showControls) {
     return null;
   }
-
   return (
     <>
       {/* Accessibility Controls Panel */}
@@ -184,7 +160,6 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
                 ✕
               </button>
             </div>
-
             <div className="space-y-4">
               {Object.entries(settings).map(([key, value]) => (
                 <div key={key} className="flex items-center justify-between">
@@ -204,7 +179,6 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
                 </div>
               ))}
             </div>
-
             <div className="mt-4 pt-4 border-t border-gray-700">
               <button
                 onClick={resetSettings}
@@ -213,7 +187,6 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
                 Reset to Defaults
               </button>
             </div>
-
             <div className="mt-2 text-xs text-gray-400">
               <p>Keyboard shortcuts:</p>
               <p>Alt + A: Toggle panel</p>
@@ -222,7 +195,6 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Toggle button */}
       <motion.button
         initial={{ opacity: 0 }}
@@ -235,7 +207,6 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
       >
         ♿
       </motion.button>
-
       {/* Skip Links */}
       <div className="sr-only focus-within:not-sr-only">
         <a 
@@ -260,5 +231,4 @@ const ModernAccessibilityEnhancer: React.FC<ModernAccessibilityEnhancerProps> = 
     </>
   );
 };
-
 export default ModernAccessibilityEnhancer;

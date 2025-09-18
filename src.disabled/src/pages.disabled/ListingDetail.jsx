@@ -36,7 +36,6 @@ export default function ListingDetail({ }: ListingDetailProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
 
 
 }

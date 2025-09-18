@@ -36,7 +36,6 @@ export default function NewProductsPage({ }: NewProductsPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-=======
 
 
 }
