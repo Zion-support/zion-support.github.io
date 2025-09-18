@@ -11,3 +11,5 @@ netlify/
 apps/
 src/components-disabled/
 src/utils-disabled/
+**/components-disabled/**
+**/utils-disabled/**
