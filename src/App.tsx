@@ -43,17 +43,18 @@ const SOC2ComplianceAutomation = lazy(() => import('./pages/Services'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const Docs = lazy(() => import('./pages/Docs'));
-const Marketplace = lazy(() => import('./pages/Marketplace'));
-const Community = lazy(() => import('./pages/Community'));
+const HelpCenter = lazy(() => import('./pages/Services'));
+const Docs = lazy(() => import('./pages/Services'));
+const Marketplace = lazy(() => import('./pages/Services'));
+const Community = lazy(() => import('./pages/CommunityPage'));
 
-// Additional Pages
+// Additional pages
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Cookies = lazy(() => import('./pages/Cookies'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 
+// Loading spinner component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
@@ -62,7 +63,6 @@ const LoadingSpinner = () => (
 
 const App = () => {
   // const [sidebarOpen, setSidebarOpen] = useState(false); // Commented out unused state
-
   return (
     <EnhancedErrorBoundary>
       <ThemeProvider>
@@ -78,16 +78,16 @@ const App = () => {
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/about" element={<AboutPage />} />
-
+                    
                     {/* Service Routes */}
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/services-showcase" element={<ServicesShowcase />} />
                     <Route path="/ai-matcher" element={<AIMatcherPage />} />
                     <Route path="/talent-directory" element={<TalentDirectory />} />
                     <Route path="/talents" element={<TalentsPage />} />
-                    <Route path="/emerging-tech" element={<EmergingTech />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-
+                                         <Route path="/emerging-tech" element={<EmergingTech />} />
+                     <Route path="/pricing" element={<PricingPage />} />
+                    
                     {/* AI Service Routes */}
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
@@ -95,7 +95,7 @@ const App = () => {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/ai-marketing-automation" element={<AIMarketingAutomation />} />
-
+                    
                     {/* Missing Pages from Analysis */}
                     <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
                     <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
@@ -108,23 +108,23 @@ const App = () => {
                     <Route path="/docs" element={<Docs />} />
                     <Route path="/marketplace" element={<Marketplace />} />
                     <Route path="/community" element={<Community />} />
-
+                    
                     {/* Additional Pages */}
                     <Route path="/privacy" element={<Privacy />} />
                     <Route path="/terms" element={<Terms />} />
                     <Route path="/cookies" element={<Cookies />} />
                     <Route path="/faq" element={<FAQ />} />
-
+                    
                     {/* 404 Route */}
                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center text-white">Page not found</div>} />
                   </Routes>
                 </Suspense>
               </main>
-
+              
               <Footer />
               <SonnerToaster />
             </div>
-
+            
             {/* Sidebar (disabled) */}
             {/* <Sidebar /> */}
           </Router>
